@@ -30,7 +30,7 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      * <ul>
      * <li>
      * <p>
-     * <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is either
+     * <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is either
      * because a user has stopped the stack set operation, or because the failure tolerance of the stack set operation
      * has been exceeded.
      * </p>
@@ -73,7 +73,7 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      * <ul>
      * <li>
      * <p>
-     * <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is either
+     * <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is either
      * because a user has stopped the stack set operation, or because the failure tolerance of the stack set operation
      * has been exceeded.
      * </p>
@@ -113,7 +113,7 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      * @param detailedStatus
      *        <li>
      *        <p>
-     *        <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is
+     *        <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is
      *        either because a user has stopped the stack set operation, or because the failure tolerance of the stack
      *        set operation has been exceeded.
      *        </p>
@@ -154,7 +154,7 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      * <ul>
      * <li>
      * <p>
-     * <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is either
+     * <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is either
      * because a user has stopped the stack set operation, or because the failure tolerance of the stack set operation
      * has been exceeded.
      * </p>
@@ -193,7 +193,7 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      * 
      * @return <li>
      *         <p>
-     *         <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is
+     *         <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is
      *         either because a user has stopped the stack set operation, or because the failure tolerance of the stack
      *         set operation has been exceeded.
      *         </p>
@@ -234,7 +234,7 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      * <ul>
      * <li>
      * <p>
-     * <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is either
+     * <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is either
      * because a user has stopped the stack set operation, or because the failure tolerance of the stack set operation
      * has been exceeded.
      * </p>
@@ -274,7 +274,7 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      * @param detailedStatus
      *        <li>
      *        <p>
-     *        <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is
+     *        <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is
      *        either because a user has stopped the stack set operation, or because the failure tolerance of the stack
      *        set operation has been exceeded.
      *        </p>
@@ -317,7 +317,7 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      * <ul>
      * <li>
      * <p>
-     * <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is either
+     * <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is either
      * because a user has stopped the stack set operation, or because the failure tolerance of the stack set operation
      * has been exceeded.
      * </p>
@@ -357,7 +357,7 @@ public class StackInstanceComprehensiveStatus implements Serializable, Cloneable
      * @param detailedStatus
      *        <li>
      *        <p>
-     *        <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is
+     *        <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is
      *        either because a user has stopped the stack set operation, or because the failure tolerance of the stack
      *        set operation has been exceeded.
      *        </p>

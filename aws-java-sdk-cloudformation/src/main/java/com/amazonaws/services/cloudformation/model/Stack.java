@@ -101,12 +101,12 @@ public class Stack implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>true</code>: disable rollback
+     * <code>true</code>: disable rollback.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>false</code>: enable rollback
+     * <code>false</code>: enable rollback.
      * </p>
      * </li>
      * </ul>
@@ -114,7 +114,7 @@ public class Stack implements Serializable, Cloneable {
     private Boolean disableRollback;
     /**
      * <p>
-     * SNS topic ARNs to which stack related events are published.
+     * Amazon SNS topic Amazon Resource Names (ARNs) to which stack related events are published.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> notificationARNs;
@@ -138,7 +138,7 @@ public class Stack implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<Output> outputs;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that is associated with the stack.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that's associated with the stack.
      * During a stack operation, CloudFormation uses this role's credentials to make calls on your behalf.
      * </p>
      */
@@ -722,12 +722,12 @@ public class Stack implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>true</code>: disable rollback
+     * <code>true</code>: disable rollback.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>false</code>: enable rollback
+     * <code>false</code>: enable rollback.
      * </p>
      * </li>
      * </ul>
@@ -737,12 +737,12 @@ public class Stack implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>true</code>: disable rollback
+     *        <code>true</code>: disable rollback.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>false</code>: enable rollback
+     *        <code>false</code>: enable rollback.
      *        </p>
      *        </li>
      */
@@ -758,12 +758,12 @@ public class Stack implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>true</code>: disable rollback
+     * <code>true</code>: disable rollback.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>false</code>: enable rollback
+     * <code>false</code>: enable rollback.
      * </p>
      * </li>
      * </ul>
@@ -772,12 +772,12 @@ public class Stack implements Serializable, Cloneable {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>true</code>: disable rollback
+     *         <code>true</code>: disable rollback.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>false</code>: enable rollback
+     *         <code>false</code>: enable rollback.
      *         </p>
      *         </li>
      */
@@ -793,12 +793,12 @@ public class Stack implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>true</code>: disable rollback
+     * <code>true</code>: disable rollback.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>false</code>: enable rollback
+     * <code>false</code>: enable rollback.
      * </p>
      * </li>
      * </ul>
@@ -808,12 +808,12 @@ public class Stack implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>true</code>: disable rollback
+     *        <code>true</code>: disable rollback.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>false</code>: enable rollback
+     *        <code>false</code>: enable rollback.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -831,12 +831,12 @@ public class Stack implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>true</code>: disable rollback
+     * <code>true</code>: disable rollback.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>false</code>: enable rollback
+     * <code>false</code>: enable rollback.
      * </p>
      * </li>
      * </ul>
@@ -845,12 +845,12 @@ public class Stack implements Serializable, Cloneable {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>true</code>: disable rollback
+     *         <code>true</code>: disable rollback.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>false</code>: enable rollback
+     *         <code>false</code>: enable rollback.
      *         </p>
      *         </li>
      */
@@ -861,10 +861,10 @@ public class Stack implements Serializable, Cloneable {
 
     /**
      * <p>
-     * SNS topic ARNs to which stack related events are published.
+     * Amazon SNS topic Amazon Resource Names (ARNs) to which stack related events are published.
      * </p>
      * 
-     * @return SNS topic ARNs to which stack related events are published.
+     * @return Amazon SNS topic Amazon Resource Names (ARNs) to which stack related events are published.
      */
 
     public java.util.List<String> getNotificationARNs() {
@@ -876,11 +876,11 @@ public class Stack implements Serializable, Cloneable {
 
     /**
      * <p>
-     * SNS topic ARNs to which stack related events are published.
+     * Amazon SNS topic Amazon Resource Names (ARNs) to which stack related events are published.
      * </p>
      * 
      * @param notificationARNs
-     *        SNS topic ARNs to which stack related events are published.
+     *        Amazon SNS topic Amazon Resource Names (ARNs) to which stack related events are published.
      */
 
     public void setNotificationARNs(java.util.Collection<String> notificationARNs) {
@@ -894,7 +894,7 @@ public class Stack implements Serializable, Cloneable {
 
     /**
      * <p>
-     * SNS topic ARNs to which stack related events are published.
+     * Amazon SNS topic Amazon Resource Names (ARNs) to which stack related events are published.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -903,7 +903,7 @@ public class Stack implements Serializable, Cloneable {
      * </p>
      * 
      * @param notificationARNs
-     *        SNS topic ARNs to which stack related events are published.
+     *        Amazon SNS topic Amazon Resource Names (ARNs) to which stack related events are published.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -919,11 +919,11 @@ public class Stack implements Serializable, Cloneable {
 
     /**
      * <p>
-     * SNS topic ARNs to which stack related events are published.
+     * Amazon SNS topic Amazon Resource Names (ARNs) to which stack related events are published.
      * </p>
      * 
      * @param notificationARNs
-     *        SNS topic ARNs to which stack related events are published.
+     *        Amazon SNS topic Amazon Resource Names (ARNs) to which stack related events are published.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1148,12 +1148,12 @@ public class Stack implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that is associated with the stack.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that's associated with the stack.
      * During a stack operation, CloudFormation uses this role's credentials to make calls on your behalf.
      * </p>
      * 
      * @param roleARN
-     *        The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that is associated with the
+     *        The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that's associated with the
      *        stack. During a stack operation, CloudFormation uses this role's credentials to make calls on your behalf.
      */
 
@@ -1163,12 +1163,12 @@ public class Stack implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that is associated with the stack.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that's associated with the stack.
      * During a stack operation, CloudFormation uses this role's credentials to make calls on your behalf.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that is associated with
-     *         the stack. During a stack operation, CloudFormation uses this role's credentials to make calls on your
+     * @return The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that's associated with the
+     *         stack. During a stack operation, CloudFormation uses this role's credentials to make calls on your
      *         behalf.
      */
 
@@ -1178,12 +1178,12 @@ public class Stack implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that is associated with the stack.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that's associated with the stack.
      * During a stack operation, CloudFormation uses this role's credentials to make calls on your behalf.
      * </p>
      * 
      * @param roleARN
-     *        The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that is associated with the
+     *        The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that's associated with the
      *        stack. During a stack operation, CloudFormation uses this role's credentials to make calls on your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

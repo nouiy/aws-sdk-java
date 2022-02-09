@@ -30,7 +30,7 @@ public class GetTemplateRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name or the unique stack ID that is associated with the stack, which are not always interchangeable:
+     * The name or the unique stack ID that's associated with the stack, which aren't always interchangeable:
      * </p>
      * <ul>
      * <li>
@@ -71,7 +71,7 @@ public class GetTemplateRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name or the unique stack ID that is associated with the stack, which are not always interchangeable:
+     * The name or the unique stack ID that's associated with the stack, which aren't always interchangeable:
      * </p>
      * <ul>
      * <li>
@@ -90,8 +90,7 @@ public class GetTemplateRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param stackName
-     *        The name or the unique stack ID that is associated with the stack, which are not always
-     *        interchangeable:</p>
+     *        The name or the unique stack ID that's associated with the stack, which aren't always interchangeable:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -114,7 +113,7 @@ public class GetTemplateRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name or the unique stack ID that is associated with the stack, which are not always interchangeable:
+     * The name or the unique stack ID that's associated with the stack, which aren't always interchangeable:
      * </p>
      * <ul>
      * <li>
@@ -132,7 +131,7 @@ public class GetTemplateRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Default: There is no default value.
      * </p>
      * 
-     * @return The name or the unique stack ID that is associated with the stack, which are not always
+     * @return The name or the unique stack ID that's associated with the stack, which aren't always
      *         interchangeable:</p>
      *         <ul>
      *         <li>
@@ -156,7 +155,7 @@ public class GetTemplateRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name or the unique stack ID that is associated with the stack, which are not always interchangeable:
+     * The name or the unique stack ID that's associated with the stack, which aren't always interchangeable:
      * </p>
      * <ul>
      * <li>
@@ -175,8 +174,7 @@ public class GetTemplateRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param stackName
-     *        The name or the unique stack ID that is associated with the stack, which are not always
-     *        interchangeable:</p>
+     *        The name or the unique stack ID that's associated with the stack, which aren't always interchangeable:</p>
      *        <ul>
      *        <li>
      *        <p>

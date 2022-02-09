@@ -97,6 +97,31 @@ public class StackEventStaxUnmarshaller implements Unmarshaller<StackEvent, Stax
                     stackEvent.setClientRequestToken(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("HookType", targetDepth)) {
+                    stackEvent.setHookType(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("HookStatus", targetDepth)) {
+                    stackEvent.setHookStatus(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("HookStatusReason", targetDepth)) {
+                    stackEvent.setHookStatusReason(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("HookInvocationPoint", targetDepth)) {
+                    stackEvent.setHookInvocationPoint(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("HookFailureMode", targetDepth)) {
+                    stackEvent.setHookFailureMode(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return stackEvent;

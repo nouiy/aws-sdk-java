@@ -34,6 +34,13 @@ public class Change implements Serializable, Cloneable {
     private String type;
     /**
      * <p>
+     * Is either <code>null</code>, if no hooks invoke for the resource, or contains the number of hooks that will
+     * invoke for the resource.
+     * </p>
+     */
+    private Integer hookInvocationCount;
+    /**
+     * <p>
      * A <code>ResourceChange</code> structure that describes the resource and action that CloudFormation will perform.
      * </p>
      */
@@ -114,6 +121,52 @@ public class Change implements Serializable, Cloneable {
 
     /**
      * <p>
+     * Is either <code>null</code>, if no hooks invoke for the resource, or contains the number of hooks that will
+     * invoke for the resource.
+     * </p>
+     * 
+     * @param hookInvocationCount
+     *        Is either <code>null</code>, if no hooks invoke for the resource, or contains the number of hooks that
+     *        will invoke for the resource.
+     */
+
+    public void setHookInvocationCount(Integer hookInvocationCount) {
+        this.hookInvocationCount = hookInvocationCount;
+    }
+
+    /**
+     * <p>
+     * Is either <code>null</code>, if no hooks invoke for the resource, or contains the number of hooks that will
+     * invoke for the resource.
+     * </p>
+     * 
+     * @return Is either <code>null</code>, if no hooks invoke for the resource, or contains the number of hooks that
+     *         will invoke for the resource.
+     */
+
+    public Integer getHookInvocationCount() {
+        return this.hookInvocationCount;
+    }
+
+    /**
+     * <p>
+     * Is either <code>null</code>, if no hooks invoke for the resource, or contains the number of hooks that will
+     * invoke for the resource.
+     * </p>
+     * 
+     * @param hookInvocationCount
+     *        Is either <code>null</code>, if no hooks invoke for the resource, or contains the number of hooks that
+     *        will invoke for the resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Change withHookInvocationCount(Integer hookInvocationCount) {
+        setHookInvocationCount(hookInvocationCount);
+        return this;
+    }
+
+    /**
+     * <p>
      * A <code>ResourceChange</code> structure that describes the resource and action that CloudFormation will perform.
      * </p>
      * 
@@ -169,6 +222,8 @@ public class Change implements Serializable, Cloneable {
         sb.append("{");
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
+        if (getHookInvocationCount() != null)
+            sb.append("HookInvocationCount: ").append(getHookInvocationCount()).append(",");
         if (getResourceChange() != null)
             sb.append("ResourceChange: ").append(getResourceChange());
         sb.append("}");
@@ -189,6 +244,10 @@ public class Change implements Serializable, Cloneable {
             return false;
         if (other.getType() != null && other.getType().equals(this.getType()) == false)
             return false;
+        if (other.getHookInvocationCount() == null ^ this.getHookInvocationCount() == null)
+            return false;
+        if (other.getHookInvocationCount() != null && other.getHookInvocationCount().equals(this.getHookInvocationCount()) == false)
+            return false;
         if (other.getResourceChange() == null ^ this.getResourceChange() == null)
             return false;
         if (other.getResourceChange() != null && other.getResourceChange().equals(this.getResourceChange()) == false)
@@ -202,6 +261,7 @@ public class Change implements Serializable, Cloneable {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getHookInvocationCount() == null) ? 0 : getHookInvocationCount().hashCode());
         hashCode = prime * hashCode + ((getResourceChange() == null) ? 0 : getResourceChange().hashCode());
         return hashCode;
     }

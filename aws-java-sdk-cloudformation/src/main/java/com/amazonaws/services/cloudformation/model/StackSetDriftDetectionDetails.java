@@ -21,15 +21,15 @@ import javax.annotation.Generated;
  * </p>
  * <p>
  * For stack sets, contains information about the last <i>completed</i> drift operation performed on the stack set.
- * Information about drift operations in-progress is not included.
+ * Information about drift operations in-progress isn't included.
  * </p>
  * <p>
  * For stack set operations, includes information about drift operations currently being performed on the stack set.
  * </p>
  * <p>
  * For more information, see <a
- * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html">Detecting Unmanaged
- * Changes in Stack Sets</a> in the <i>CloudFormation User Guide</i>.
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html">Detecting unmanaged
+ * changes in stack sets</a> in the <i>CloudFormation User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/StackSetDriftDetectionDetails"
@@ -54,7 +54,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      * </p>
      * </li>
      * <li>
@@ -94,7 +94,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>STOPPED</code>: The user has cancelled the drift detection operation.
+     * <code>STOPPED</code>: The user has canceled the drift detection operation.
      * </p>
      * </li>
      * </ul>
@@ -103,7 +103,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
     /**
      * <p>
      * Most recent time when CloudFormation performed a drift detection operation on the stack set. This value will be
-     * <code>NULL</code> for any stack set on which drift detection has not yet been performed.
+     * <code>NULL</code> for any stack set on which drift detection hasn't yet been performed.
      * </p>
      */
     private java.util.Date lastDriftCheckTimestamp;
@@ -142,7 +142,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * <p>
      * The number of stack instances that have drifted from the expected template and parameter configuration of the
      * stack set. A stack instance is considered to have drifted if one or more of the resources in the associated stack
-     * do not match their expected configuration.
+     * don't match their expected configuration.
      * </p>
      */
     private Integer driftedStackInstancesCount;
@@ -181,7 +181,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      * </p>
      * </li>
      * <li>
@@ -206,7 +206,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     *        <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      *        </p>
      *        </li>
      *        <li>
@@ -238,7 +238,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      * </p>
      * </li>
      * <li>
@@ -262,7 +262,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     *         <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      *         </p>
      *         </li>
      *         <li>
@@ -294,7 +294,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      * </p>
      * </li>
      * <li>
@@ -319,7 +319,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     *        <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      *        </p>
      *        </li>
      *        <li>
@@ -353,7 +353,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      * </p>
      * </li>
      * <li>
@@ -378,7 +378,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     *        <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      *        </p>
      *        </li>
      *        <li>
@@ -424,7 +424,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>STOPPED</code>: The user has cancelled the drift detection operation.
+     * <code>STOPPED</code>: The user has canceled the drift detection operation.
      * </p>
      * </li>
      * </ul>
@@ -455,7 +455,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>STOPPED</code>: The user has cancelled the drift detection operation.
+     *        <code>STOPPED</code>: The user has canceled the drift detection operation.
      *        </p>
      *        </li>
      * @see StackSetDriftDetectionStatus
@@ -493,7 +493,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>STOPPED</code>: The user has cancelled the drift detection operation.
+     * <code>STOPPED</code>: The user has canceled the drift detection operation.
      * </p>
      * </li>
      * </ul>
@@ -523,7 +523,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>STOPPED</code>: The user has cancelled the drift detection operation.
+     *         <code>STOPPED</code>: The user has canceled the drift detection operation.
      *         </p>
      *         </li>
      * @see StackSetDriftDetectionStatus
@@ -561,7 +561,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>STOPPED</code>: The user has cancelled the drift detection operation.
+     * <code>STOPPED</code>: The user has canceled the drift detection operation.
      * </p>
      * </li>
      * </ul>
@@ -592,7 +592,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>STOPPED</code>: The user has cancelled the drift detection operation.
+     *        <code>STOPPED</code>: The user has canceled the drift detection operation.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -632,7 +632,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>STOPPED</code>: The user has cancelled the drift detection operation.
+     * <code>STOPPED</code>: The user has canceled the drift detection operation.
      * </p>
      * </li>
      * </ul>
@@ -663,7 +663,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>STOPPED</code>: The user has cancelled the drift detection operation.
+     *        <code>STOPPED</code>: The user has canceled the drift detection operation.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -678,12 +678,12 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
     /**
      * <p>
      * Most recent time when CloudFormation performed a drift detection operation on the stack set. This value will be
-     * <code>NULL</code> for any stack set on which drift detection has not yet been performed.
+     * <code>NULL</code> for any stack set on which drift detection hasn't yet been performed.
      * </p>
      * 
      * @param lastDriftCheckTimestamp
      *        Most recent time when CloudFormation performed a drift detection operation on the stack set. This value
-     *        will be <code>NULL</code> for any stack set on which drift detection has not yet been performed.
+     *        will be <code>NULL</code> for any stack set on which drift detection hasn't yet been performed.
      */
 
     public void setLastDriftCheckTimestamp(java.util.Date lastDriftCheckTimestamp) {
@@ -693,11 +693,11 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
     /**
      * <p>
      * Most recent time when CloudFormation performed a drift detection operation on the stack set. This value will be
-     * <code>NULL</code> for any stack set on which drift detection has not yet been performed.
+     * <code>NULL</code> for any stack set on which drift detection hasn't yet been performed.
      * </p>
      * 
      * @return Most recent time when CloudFormation performed a drift detection operation on the stack set. This value
-     *         will be <code>NULL</code> for any stack set on which drift detection has not yet been performed.
+     *         will be <code>NULL</code> for any stack set on which drift detection hasn't yet been performed.
      */
 
     public java.util.Date getLastDriftCheckTimestamp() {
@@ -707,12 +707,12 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
     /**
      * <p>
      * Most recent time when CloudFormation performed a drift detection operation on the stack set. This value will be
-     * <code>NULL</code> for any stack set on which drift detection has not yet been performed.
+     * <code>NULL</code> for any stack set on which drift detection hasn't yet been performed.
      * </p>
      * 
      * @param lastDriftCheckTimestamp
      *        Most recent time when CloudFormation performed a drift detection operation on the stack set. This value
-     *        will be <code>NULL</code> for any stack set on which drift detection has not yet been performed.
+     *        will be <code>NULL</code> for any stack set on which drift detection hasn't yet been performed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -752,7 +752,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </ul>
      * 
      * @param totalStackInstancesCount
-     *        The total number of stack instances belonging to this stack set. </p>
+     *        The total number of stack instances belonging to this stack set.</p>
      *        <p>
      *        The total number of stack instances is equal to the total of:
      *        </p>
@@ -813,7 +813,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </li>
      * </ul>
      * 
-     * @return The total number of stack instances belonging to this stack set. </p>
+     * @return The total number of stack instances belonging to this stack set.</p>
      *         <p>
      *         The total number of stack instances is equal to the total of:
      *         </p>
@@ -875,7 +875,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </ul>
      * 
      * @param totalStackInstancesCount
-     *        The total number of stack instances belonging to this stack set. </p>
+     *        The total number of stack instances belonging to this stack set.</p>
      *        <p>
      *        The total number of stack instances is equal to the total of:
      *        </p>
@@ -912,13 +912,13 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * <p>
      * The number of stack instances that have drifted from the expected template and parameter configuration of the
      * stack set. A stack instance is considered to have drifted if one or more of the resources in the associated stack
-     * do not match their expected configuration.
+     * don't match their expected configuration.
      * </p>
      * 
      * @param driftedStackInstancesCount
      *        The number of stack instances that have drifted from the expected template and parameter configuration of
      *        the stack set. A stack instance is considered to have drifted if one or more of the resources in the
-     *        associated stack do not match their expected configuration.
+     *        associated stack don't match their expected configuration.
      */
 
     public void setDriftedStackInstancesCount(Integer driftedStackInstancesCount) {
@@ -929,12 +929,12 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * <p>
      * The number of stack instances that have drifted from the expected template and parameter configuration of the
      * stack set. A stack instance is considered to have drifted if one or more of the resources in the associated stack
-     * do not match their expected configuration.
+     * don't match their expected configuration.
      * </p>
      * 
      * @return The number of stack instances that have drifted from the expected template and parameter configuration of
      *         the stack set. A stack instance is considered to have drifted if one or more of the resources in the
-     *         associated stack do not match their expected configuration.
+     *         associated stack don't match their expected configuration.
      */
 
     public Integer getDriftedStackInstancesCount() {
@@ -945,13 +945,13 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * <p>
      * The number of stack instances that have drifted from the expected template and parameter configuration of the
      * stack set. A stack instance is considered to have drifted if one or more of the resources in the associated stack
-     * do not match their expected configuration.
+     * don't match their expected configuration.
      * </p>
      * 
      * @param driftedStackInstancesCount
      *        The number of stack instances that have drifted from the expected template and parameter configuration of
      *        the stack set. A stack instance is considered to have drifted if one or more of the resources in the
-     *        associated stack do not match their expected configuration.
+     *        associated stack don't match their expected configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

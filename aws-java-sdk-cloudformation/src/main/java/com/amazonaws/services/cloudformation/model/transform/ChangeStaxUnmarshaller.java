@@ -48,6 +48,11 @@ public class ChangeStaxUnmarshaller implements Unmarshaller<Change, StaxUnmarsha
                     continue;
                 }
 
+                if (context.testExpression("HookInvocationCount", targetDepth)) {
+                    change.setHookInvocationCount(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("ResourceChange", targetDepth)) {
                     change.setResourceChange(ResourceChangeStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

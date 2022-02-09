@@ -28,13 +28,14 @@ public class LoggingConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
+     * The Amazon Resource Name (ARN) of the role that CloudFormation should assume when sending log entries to
+     * CloudWatch Logs.
      * </p>
      */
     private String logRoleArn;
     /**
      * <p>
-     * The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the
+     * The Amazon CloudWatch Logs group to which CloudFormation sends error logging information when invoking the
      * extension's handlers.
      * </p>
      */
@@ -42,11 +43,13 @@ public class LoggingConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
+     * The Amazon Resource Name (ARN) of the role that CloudFormation should assume when sending log entries to
+     * CloudWatch Logs.
      * </p>
      * 
      * @param logRoleArn
-     *        The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
+     *        The Amazon Resource Name (ARN) of the role that CloudFormation should assume when sending log entries to
+     *        CloudWatch Logs.
      */
 
     public void setLogRoleArn(String logRoleArn) {
@@ -55,10 +58,12 @@ public class LoggingConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
+     * The Amazon Resource Name (ARN) of the role that CloudFormation should assume when sending log entries to
+     * CloudWatch Logs.
      * </p>
      * 
-     * @return The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
+     * @return The Amazon Resource Name (ARN) of the role that CloudFormation should assume when sending log entries to
+     *         CloudWatch Logs.
      */
 
     public String getLogRoleArn() {
@@ -67,11 +72,13 @@ public class LoggingConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
+     * The Amazon Resource Name (ARN) of the role that CloudFormation should assume when sending log entries to
+     * CloudWatch Logs.
      * </p>
      * 
      * @param logRoleArn
-     *        The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
+     *        The Amazon Resource Name (ARN) of the role that CloudFormation should assume when sending log entries to
+     *        CloudWatch Logs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -82,12 +89,12 @@ public class LoggingConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the
+     * The Amazon CloudWatch Logs group to which CloudFormation sends error logging information when invoking the
      * extension's handlers.
      * </p>
      * 
      * @param logGroupName
-     *        The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the
+     *        The Amazon CloudWatch Logs group to which CloudFormation sends error logging information when invoking the
      *        extension's handlers.
      */
 
@@ -97,12 +104,12 @@ public class LoggingConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the
+     * The Amazon CloudWatch Logs group to which CloudFormation sends error logging information when invoking the
      * extension's handlers.
      * </p>
      * 
-     * @return The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the
-     *         extension's handlers.
+     * @return The Amazon CloudWatch Logs group to which CloudFormation sends error logging information when invoking
+     *         the extension's handlers.
      */
 
     public String getLogGroupName() {
@@ -111,12 +118,12 @@ public class LoggingConfig implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the
+     * The Amazon CloudWatch Logs group to which CloudFormation sends error logging information when invoking the
      * extension's handlers.
      * </p>
      * 
      * @param logGroupName
-     *        The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the
+     *        The Amazon CloudWatch Logs group to which CloudFormation sends error logging information when invoking the
      *        extension's handlers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

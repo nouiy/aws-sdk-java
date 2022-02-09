@@ -19,7 +19,7 @@ import javax.annotation.Generated;
  * <p>
  * A structure that contains information about a stack set. A stack set enables you to provision stacks into Amazon Web
  * Services accounts and across Regions by using a single CloudFormation template. In the stack set, you specify the
- * template to use, as well as any parameters and capabilities that the template requires.
+ * template to use, in addition to any parameters and capabilities that the template requires.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/StackSet" target="_top">AWS API
@@ -113,7 +113,7 @@ public class StackSet implements Serializable, Cloneable {
      * </p>
      * <p>
      * For stack sets, contains information about the last <i>completed</i> drift operation performed on the stack set.
-     * Information about drift operations currently in progress is not included.
+     * Information about drift operations currently in progress isn't included.
      * </p>
      */
     private StackSetDriftDetectionDetails stackSetDriftDetectionDetails;
@@ -807,7 +807,7 @@ public class StackSet implements Serializable, Cloneable {
      * </p>
      * 
      * @param executionRoleName
-     *        The name of the IAM execution role used to create or update the stack set. </p>
+     *        The name of the IAM execution role used to create or update the stack set.</p>
      *        <p>
      *        Use customized execution roles to control which stack resources users and groups can include in their
      *        stack sets.
@@ -825,7 +825,7 @@ public class StackSet implements Serializable, Cloneable {
      * Use customized execution roles to control which stack resources users and groups can include in their stack sets.
      * </p>
      * 
-     * @return The name of the IAM execution role used to create or update the stack set. </p>
+     * @return The name of the IAM execution role used to create or update the stack set.</p>
      *         <p>
      *         Use customized execution roles to control which stack resources users and groups can include in their
      *         stack sets.
@@ -844,7 +844,7 @@ public class StackSet implements Serializable, Cloneable {
      * </p>
      * 
      * @param executionRoleName
-     *        The name of the IAM execution role used to create or update the stack set. </p>
+     *        The name of the IAM execution role used to create or update the stack set.</p>
      *        <p>
      *        Use customized execution roles to control which stack resources users and groups can include in their
      *        stack sets.
@@ -862,14 +862,14 @@ public class StackSet implements Serializable, Cloneable {
      * </p>
      * <p>
      * For stack sets, contains information about the last <i>completed</i> drift operation performed on the stack set.
-     * Information about drift operations currently in progress is not included.
+     * Information about drift operations currently in progress isn't included.
      * </p>
      * 
      * @param stackSetDriftDetectionDetails
      *        Detailed information about the drift status of the stack set.</p>
      *        <p>
      *        For stack sets, contains information about the last <i>completed</i> drift operation performed on the
-     *        stack set. Information about drift operations currently in progress is not included.
+     *        stack set. Information about drift operations currently in progress isn't included.
      */
 
     public void setStackSetDriftDetectionDetails(StackSetDriftDetectionDetails stackSetDriftDetectionDetails) {
@@ -882,13 +882,13 @@ public class StackSet implements Serializable, Cloneable {
      * </p>
      * <p>
      * For stack sets, contains information about the last <i>completed</i> drift operation performed on the stack set.
-     * Information about drift operations currently in progress is not included.
+     * Information about drift operations currently in progress isn't included.
      * </p>
      * 
      * @return Detailed information about the drift status of the stack set.</p>
      *         <p>
      *         For stack sets, contains information about the last <i>completed</i> drift operation performed on the
-     *         stack set. Information about drift operations currently in progress is not included.
+     *         stack set. Information about drift operations currently in progress isn't included.
      */
 
     public StackSetDriftDetectionDetails getStackSetDriftDetectionDetails() {
@@ -901,14 +901,14 @@ public class StackSet implements Serializable, Cloneable {
      * </p>
      * <p>
      * For stack sets, contains information about the last <i>completed</i> drift operation performed on the stack set.
-     * Information about drift operations currently in progress is not included.
+     * Information about drift operations currently in progress isn't included.
      * </p>
      * 
      * @param stackSetDriftDetectionDetails
      *        Detailed information about the drift status of the stack set.</p>
      *        <p>
      *        For stack sets, contains information about the last <i>completed</i> drift operation performed on the
-     *        stack set. Information about drift operations currently in progress is not included.
+     *        stack set. Information about drift operations currently in progress isn't included.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

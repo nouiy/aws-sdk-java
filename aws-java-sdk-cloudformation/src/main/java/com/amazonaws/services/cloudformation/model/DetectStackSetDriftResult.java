@@ -28,7 +28,7 @@ public class DetectStackSetDriftResult extends com.amazonaws.AmazonWebServiceRes
      * The ID of the drift detection stack set operation.
      * </p>
      * <p>
-     * you can use this operation id with <code> <a>DescribeStackSetOperation</a> </code> to monitor the progress of the
+     * You can use this operation ID with <code> <a>DescribeStackSetOperation</a> </code> to monitor the progress of the
      * drift detection operation.
      * </p>
      */
@@ -39,14 +39,14 @@ public class DetectStackSetDriftResult extends com.amazonaws.AmazonWebServiceRes
      * The ID of the drift detection stack set operation.
      * </p>
      * <p>
-     * you can use this operation id with <code> <a>DescribeStackSetOperation</a> </code> to monitor the progress of the
+     * You can use this operation ID with <code> <a>DescribeStackSetOperation</a> </code> to monitor the progress of the
      * drift detection operation.
      * </p>
      * 
      * @param operationId
-     *        The ID of the drift detection stack set operation. </p>
+     *        The ID of the drift detection stack set operation.</p>
      *        <p>
-     *        you can use this operation id with <code> <a>DescribeStackSetOperation</a> </code> to monitor the progress
+     *        You can use this operation ID with <code> <a>DescribeStackSetOperation</a> </code> to monitor the progress
      *        of the drift detection operation.
      */
 
@@ -59,13 +59,13 @@ public class DetectStackSetDriftResult extends com.amazonaws.AmazonWebServiceRes
      * The ID of the drift detection stack set operation.
      * </p>
      * <p>
-     * you can use this operation id with <code> <a>DescribeStackSetOperation</a> </code> to monitor the progress of the
+     * You can use this operation ID with <code> <a>DescribeStackSetOperation</a> </code> to monitor the progress of the
      * drift detection operation.
      * </p>
      * 
-     * @return The ID of the drift detection stack set operation. </p>
+     * @return The ID of the drift detection stack set operation.</p>
      *         <p>
-     *         you can use this operation id with <code> <a>DescribeStackSetOperation</a> </code> to monitor the
+     *         You can use this operation ID with <code> <a>DescribeStackSetOperation</a> </code> to monitor the
      *         progress of the drift detection operation.
      */
 
@@ -78,14 +78,14 @@ public class DetectStackSetDriftResult extends com.amazonaws.AmazonWebServiceRes
      * The ID of the drift detection stack set operation.
      * </p>
      * <p>
-     * you can use this operation id with <code> <a>DescribeStackSetOperation</a> </code> to monitor the progress of the
+     * You can use this operation ID with <code> <a>DescribeStackSetOperation</a> </code> to monitor the progress of the
      * drift detection operation.
      * </p>
      * 
      * @param operationId
-     *        The ID of the drift detection stack set operation. </p>
+     *        The ID of the drift detection stack set operation.</p>
      *        <p>
-     *        you can use this operation id with <code> <a>DescribeStackSetOperation</a> </code> to monitor the progress
+     *        You can use this operation ID with <code> <a>DescribeStackSetOperation</a> </code> to monitor the progress
      *        of the drift detection operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

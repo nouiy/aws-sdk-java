@@ -203,7 +203,7 @@ public class SetTypeConfigurationRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param configuration
-     *        The configuration data for the extension, in this account and region. </p>
+     *        The configuration data for the extension, in this account and region.</p>
      *        <p>
      *        The configuration data must be formatted as JSON, and validate against the schema returned in the
      *        <code>ConfigurationSchema</code> response element of <a
@@ -231,7 +231,7 @@ public class SetTypeConfigurationRequest extends com.amazonaws.AmazonWebServiceR
      * >Defining account-level configuration data for an extension</a> in the <i>CloudFormation CLI User Guide</i>.
      * </p>
      * 
-     * @return The configuration data for the extension, in this account and region. </p>
+     * @return The configuration data for the extension, in this account and region.</p>
      *         <p>
      *         The configuration data must be formatted as JSON, and validate against the schema returned in the
      *         <code>ConfigurationSchema</code> response element of <a
@@ -260,7 +260,7 @@ public class SetTypeConfigurationRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param configuration
-     *        The configuration data for the extension, in this account and region. </p>
+     *        The configuration data for the extension, in this account and region.</p>
      *        <p>
      *        The configuration data must be formatted as JSON, and validate against the schema returned in the
      *        <code>ConfigurationSchema</code> response element of <a

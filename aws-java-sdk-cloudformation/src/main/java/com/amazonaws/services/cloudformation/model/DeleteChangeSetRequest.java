@@ -36,8 +36,8 @@ public class DeleteChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     private String changeSetName;
     /**
      * <p>
-     * If you specified the name of a change set to delete, specify the stack name or ID (ARN) that is associated with
-     * it.
+     * If you specified the name of a change set to delete, specify the stack name or Amazon Resource Name (ARN) that's
+     * associated with it.
      * </p>
      */
     private String stackName;
@@ -84,13 +84,13 @@ public class DeleteChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * If you specified the name of a change set to delete, specify the stack name or ID (ARN) that is associated with
-     * it.
+     * If you specified the name of a change set to delete, specify the stack name or Amazon Resource Name (ARN) that's
+     * associated with it.
      * </p>
      * 
      * @param stackName
-     *        If you specified the name of a change set to delete, specify the stack name or ID (ARN) that is associated
-     *        with it.
+     *        If you specified the name of a change set to delete, specify the stack name or Amazon Resource Name (ARN)
+     *        that's associated with it.
      */
 
     public void setStackName(String stackName) {
@@ -99,12 +99,12 @@ public class DeleteChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * If you specified the name of a change set to delete, specify the stack name or ID (ARN) that is associated with
-     * it.
+     * If you specified the name of a change set to delete, specify the stack name or Amazon Resource Name (ARN) that's
+     * associated with it.
      * </p>
      * 
-     * @return If you specified the name of a change set to delete, specify the stack name or ID (ARN) that is
-     *         associated with it.
+     * @return If you specified the name of a change set to delete, specify the stack name or Amazon Resource Name (ARN)
+     *         that's associated with it.
      */
 
     public String getStackName() {
@@ -113,13 +113,13 @@ public class DeleteChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * If you specified the name of a change set to delete, specify the stack name or ID (ARN) that is associated with
-     * it.
+     * If you specified the name of a change set to delete, specify the stack name or Amazon Resource Name (ARN) that's
+     * associated with it.
      * </p>
      * 
      * @param stackName
-     *        If you specified the name of a change set to delete, specify the stack name or ID (ARN) that is associated
-     *        with it.
+     *        If you specified the name of a change set to delete, specify the stack name or Amazon Resource Name (ARN)
+     *        that's associated with it.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

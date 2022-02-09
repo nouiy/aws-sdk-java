@@ -56,7 +56,7 @@ public class PropertyDifference implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>ADD</code>: A value has been added to a resource property that is an array or list data type.
+     * <code>ADD</code>: A value has been added to a resource property that's an array or list data type.
      * </p>
      * </li>
      * <li>
@@ -207,7 +207,7 @@ public class PropertyDifference implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>ADD</code>: A value has been added to a resource property that is an array or list data type.
+     * <code>ADD</code>: A value has been added to a resource property that's an array or list data type.
      * </p>
      * </li>
      * <li>
@@ -228,7 +228,7 @@ public class PropertyDifference implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ADD</code>: A value has been added to a resource property that is an array or list data type.
+     *        <code>ADD</code>: A value has been added to a resource property that's an array or list data type.
      *        </p>
      *        </li>
      *        <li>
@@ -256,7 +256,7 @@ public class PropertyDifference implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>ADD</code>: A value has been added to a resource property that is an array or list data type.
+     * <code>ADD</code>: A value has been added to a resource property that's an array or list data type.
      * </p>
      * </li>
      * <li>
@@ -276,7 +276,7 @@ public class PropertyDifference implements Serializable, Cloneable {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>ADD</code>: A value has been added to a resource property that is an array or list data type.
+     *         <code>ADD</code>: A value has been added to a resource property that's an array or list data type.
      *         </p>
      *         </li>
      *         <li>
@@ -304,7 +304,7 @@ public class PropertyDifference implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>ADD</code>: A value has been added to a resource property that is an array or list data type.
+     * <code>ADD</code>: A value has been added to a resource property that's an array or list data type.
      * </p>
      * </li>
      * <li>
@@ -325,7 +325,7 @@ public class PropertyDifference implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ADD</code>: A value has been added to a resource property that is an array or list data type.
+     *        <code>ADD</code>: A value has been added to a resource property that's an array or list data type.
      *        </p>
      *        </li>
      *        <li>
@@ -355,7 +355,7 @@ public class PropertyDifference implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>ADD</code>: A value has been added to a resource property that is an array or list data type.
+     * <code>ADD</code>: A value has been added to a resource property that's an array or list data type.
      * </p>
      * </li>
      * <li>
@@ -376,7 +376,7 @@ public class PropertyDifference implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ADD</code>: A value has been added to a resource property that is an array or list data type.
+     *        <code>ADD</code>: A value has been added to a resource property that's an array or list data type.
      *        </p>
      *        </li>
      *        <li>

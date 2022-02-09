@@ -34,19 +34,19 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
     private String changeSetName;
     /**
      * <p>
-     * The ARN of the change set.
+     * The Amazon Resource Name (ARN) of the change set.
      * </p>
      */
     private String changeSetId;
     /**
      * <p>
-     * The ARN of the stack that is associated with the change set.
+     * The Amazon Resource Name (ARN) of the stack that's associated with the change set.
      * </p>
      */
     private String stackId;
     /**
      * <p>
-     * The name of the stack that is associated with the change set.
+     * The name of the stack that's associated with the change set.
      * </p>
      */
     private String stackName;
@@ -73,7 +73,7 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
     private java.util.Date creationTime;
     /**
      * <p>
-     * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
+     * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can't
      * execute the change set, the status indicates why. For example, a change set might be in an
      * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
      * because the stack was already updated.
@@ -196,11 +196,11 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The ARN of the change set.
+     * The Amazon Resource Name (ARN) of the change set.
      * </p>
      * 
      * @param changeSetId
-     *        The ARN of the change set.
+     *        The Amazon Resource Name (ARN) of the change set.
      */
 
     public void setChangeSetId(String changeSetId) {
@@ -209,10 +209,10 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The ARN of the change set.
+     * The Amazon Resource Name (ARN) of the change set.
      * </p>
      * 
-     * @return The ARN of the change set.
+     * @return The Amazon Resource Name (ARN) of the change set.
      */
 
     public String getChangeSetId() {
@@ -221,11 +221,11 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The ARN of the change set.
+     * The Amazon Resource Name (ARN) of the change set.
      * </p>
      * 
      * @param changeSetId
-     *        The ARN of the change set.
+     *        The Amazon Resource Name (ARN) of the change set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -236,11 +236,11 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The ARN of the stack that is associated with the change set.
+     * The Amazon Resource Name (ARN) of the stack that's associated with the change set.
      * </p>
      * 
      * @param stackId
-     *        The ARN of the stack that is associated with the change set.
+     *        The Amazon Resource Name (ARN) of the stack that's associated with the change set.
      */
 
     public void setStackId(String stackId) {
@@ -249,10 +249,10 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The ARN of the stack that is associated with the change set.
+     * The Amazon Resource Name (ARN) of the stack that's associated with the change set.
      * </p>
      * 
-     * @return The ARN of the stack that is associated with the change set.
+     * @return The Amazon Resource Name (ARN) of the stack that's associated with the change set.
      */
 
     public String getStackId() {
@@ -261,11 +261,11 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The ARN of the stack that is associated with the change set.
+     * The Amazon Resource Name (ARN) of the stack that's associated with the change set.
      * </p>
      * 
      * @param stackId
-     *        The ARN of the stack that is associated with the change set.
+     *        The Amazon Resource Name (ARN) of the stack that's associated with the change set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -276,11 +276,11 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The name of the stack that is associated with the change set.
+     * The name of the stack that's associated with the change set.
      * </p>
      * 
      * @param stackName
-     *        The name of the stack that is associated with the change set.
+     *        The name of the stack that's associated with the change set.
      */
 
     public void setStackName(String stackName) {
@@ -289,10 +289,10 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The name of the stack that is associated with the change set.
+     * The name of the stack that's associated with the change set.
      * </p>
      * 
-     * @return The name of the stack that is associated with the change set.
+     * @return The name of the stack that's associated with the change set.
      */
 
     public String getStackName() {
@@ -301,11 +301,11 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The name of the stack that is associated with the change set.
+     * The name of the stack that's associated with the change set.
      * </p>
      * 
      * @param stackName
-     *        The name of the stack that is associated with the change set.
+     *        The name of the stack that's associated with the change set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -493,14 +493,14 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
+     * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can't
      * execute the change set, the status indicates why. For example, a change set might be in an
      * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
      * because the stack was already updated.
      * </p>
      * 
      * @param executionStatus
-     *        If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
+     *        If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can't
      *        execute the change set, the status indicates why. For example, a change set might be in an
      *        <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code>
      *        state because the stack was already updated.
@@ -513,14 +513,14 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
+     * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can't
      * execute the change set, the status indicates why. For example, a change set might be in an
      * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
      * because the stack was already updated.
      * </p>
      * 
      * @return If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you
-     *         can’t execute the change set, the status indicates why. For example, a change set might be in an
+     *         can't execute the change set, the status indicates why. For example, a change set might be in an
      *         <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code>
      *         state because the stack was already updated.
      * @see ExecutionStatus
@@ -532,14 +532,14 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
+     * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can't
      * execute the change set, the status indicates why. For example, a change set might be in an
      * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
      * because the stack was already updated.
      * </p>
      * 
      * @param executionStatus
-     *        If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
+     *        If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can't
      *        execute the change set, the status indicates why. For example, a change set might be in an
      *        <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code>
      *        state because the stack was already updated.
@@ -554,14 +554,14 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
+     * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can't
      * execute the change set, the status indicates why. For example, a change set might be in an
      * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
      * because the stack was already updated.
      * </p>
      * 
      * @param executionStatus
-     *        If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
+     *        If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can't
      *        execute the change set, the status indicates why. For example, a change set might be in an
      *        <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code>
      *        state because the stack was already updated.
@@ -574,14 +574,14 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
+     * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can't
      * execute the change set, the status indicates why. For example, a change set might be in an
      * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
      * because the stack was already updated.
      * </p>
      * 
      * @param executionStatus
-     *        If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
+     *        If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can't
      *        execute the change set, the status indicates why. For example, a change set might be in an
      *        <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code>
      *        state because the stack was already updated.

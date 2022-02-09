@@ -20,8 +20,8 @@ import javax.annotation.Generated;
  * An CloudFormation stack, in a specific account and Region, that's part of a stack set operation. A stack instance is
  * a reference to an attempted or actual stack in a given account within a given Region. A stack instance can exist
  * without a stack—for example, if the stack couldn't be created for some reason. A stack instance is associated with
- * only one stack set. Each stack instance contains the ID of its associated stack set, as well as the ID of the actual
- * stack and the stack status.
+ * only one stack set. Each stack instance contains the ID of its associated stack set, in addition to the ID of the
+ * actual stack and the stack status.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/StackInstance" target="_top">AWS API
@@ -108,7 +108,7 @@ public class StackInstance implements Serializable, Cloneable {
     private StackInstanceComprehensiveStatus stackInstanceStatus;
     /**
      * <p>
-     * The explanation for the specific status code that is assigned to this stack instance.
+     * The explanation for the specific status code that's assigned to this stack instance.
      * </p>
      */
     private String statusReason;
@@ -135,8 +135,8 @@ public class StackInstance implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack instance differs from its expected stack
-     * set configuration.
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack instance differs from its expected stack set
+     * configuration.
      * </p>
      * </li>
      * <li>
@@ -155,7 +155,7 @@ public class StackInstance implements Serializable, Cloneable {
     /**
      * <p>
      * Most recent time when CloudFormation performed a drift detection operation on the stack instance. This value will
-     * be <code>NULL</code> for any stack instance on which drift detection has not yet been performed.
+     * be <code>NULL</code> for any stack instance on which drift detection hasn't yet been performed.
      * </p>
      */
     private java.util.Date lastDriftCheckTimestamp;
@@ -841,11 +841,11 @@ public class StackInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The explanation for the specific status code that is assigned to this stack instance.
+     * The explanation for the specific status code that's assigned to this stack instance.
      * </p>
      * 
      * @param statusReason
-     *        The explanation for the specific status code that is assigned to this stack instance.
+     *        The explanation for the specific status code that's assigned to this stack instance.
      */
 
     public void setStatusReason(String statusReason) {
@@ -854,10 +854,10 @@ public class StackInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The explanation for the specific status code that is assigned to this stack instance.
+     * The explanation for the specific status code that's assigned to this stack instance.
      * </p>
      * 
-     * @return The explanation for the specific status code that is assigned to this stack instance.
+     * @return The explanation for the specific status code that's assigned to this stack instance.
      */
 
     public String getStatusReason() {
@@ -866,11 +866,11 @@ public class StackInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The explanation for the specific status code that is assigned to this stack instance.
+     * The explanation for the specific status code that's assigned to this stack instance.
      * </p>
      * 
      * @param statusReason
-     *        The explanation for the specific status code that is assigned to this stack instance.
+     *        The explanation for the specific status code that's assigned to this stack instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -949,8 +949,8 @@ public class StackInstance implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack instance differs from its expected stack
-     * set configuration.
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack instance differs from its expected stack set
+     * configuration.
      * </p>
      * </li>
      * <li>
@@ -967,7 +967,7 @@ public class StackInstance implements Serializable, Cloneable {
      * 
      * @param driftStatus
      *        Status of the stack instance's actual configuration compared to the expected template and parameter
-     *        configuration of the stack set to which it belongs. </p>
+     *        configuration of the stack set to which it belongs.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -978,7 +978,7 @@ public class StackInstance implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack instance differs from its expected
+     *        <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack instance differs from its expected
      *        stack set configuration.
      *        </p>
      *        </li>
@@ -1015,8 +1015,8 @@ public class StackInstance implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack instance differs from its expected stack
-     * set configuration.
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack instance differs from its expected stack set
+     * configuration.
      * </p>
      * </li>
      * <li>
@@ -1032,7 +1032,7 @@ public class StackInstance implements Serializable, Cloneable {
      * </ul>
      * 
      * @return Status of the stack instance's actual configuration compared to the expected template and parameter
-     *         configuration of the stack set to which it belongs. </p>
+     *         configuration of the stack set to which it belongs.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -1043,7 +1043,7 @@ public class StackInstance implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack instance differs from its expected
+     *         <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack instance differs from its expected
      *         stack set configuration.
      *         </p>
      *         </li>
@@ -1080,8 +1080,8 @@ public class StackInstance implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack instance differs from its expected stack
-     * set configuration.
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack instance differs from its expected stack set
+     * configuration.
      * </p>
      * </li>
      * <li>
@@ -1098,7 +1098,7 @@ public class StackInstance implements Serializable, Cloneable {
      * 
      * @param driftStatus
      *        Status of the stack instance's actual configuration compared to the expected template and parameter
-     *        configuration of the stack set to which it belongs. </p>
+     *        configuration of the stack set to which it belongs.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1109,7 +1109,7 @@ public class StackInstance implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack instance differs from its expected
+     *        <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack instance differs from its expected
      *        stack set configuration.
      *        </p>
      *        </li>
@@ -1148,8 +1148,8 @@ public class StackInstance implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack instance differs from its expected stack
-     * set configuration.
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack instance differs from its expected stack set
+     * configuration.
      * </p>
      * </li>
      * <li>
@@ -1166,7 +1166,7 @@ public class StackInstance implements Serializable, Cloneable {
      * 
      * @param driftStatus
      *        Status of the stack instance's actual configuration compared to the expected template and parameter
-     *        configuration of the stack set to which it belongs. </p>
+     *        configuration of the stack set to which it belongs.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1177,7 +1177,7 @@ public class StackInstance implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack instance differs from its expected
+     *        <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack instance differs from its expected
      *        stack set configuration.
      *        </p>
      *        </li>
@@ -1214,8 +1214,8 @@ public class StackInstance implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack instance differs from its expected stack
-     * set configuration.
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack instance differs from its expected stack set
+     * configuration.
      * </p>
      * </li>
      * <li>
@@ -1232,7 +1232,7 @@ public class StackInstance implements Serializable, Cloneable {
      * 
      * @param driftStatus
      *        Status of the stack instance's actual configuration compared to the expected template and parameter
-     *        configuration of the stack set to which it belongs. </p>
+     *        configuration of the stack set to which it belongs.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1243,7 +1243,7 @@ public class StackInstance implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack instance differs from its expected
+     *        <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack instance differs from its expected
      *        stack set configuration.
      *        </p>
      *        </li>
@@ -1270,13 +1270,12 @@ public class StackInstance implements Serializable, Cloneable {
     /**
      * <p>
      * Most recent time when CloudFormation performed a drift detection operation on the stack instance. This value will
-     * be <code>NULL</code> for any stack instance on which drift detection has not yet been performed.
+     * be <code>NULL</code> for any stack instance on which drift detection hasn't yet been performed.
      * </p>
      * 
      * @param lastDriftCheckTimestamp
      *        Most recent time when CloudFormation performed a drift detection operation on the stack instance. This
-     *        value will be <code>NULL</code> for any stack instance on which drift detection has not yet been
-     *        performed.
+     *        value will be <code>NULL</code> for any stack instance on which drift detection hasn't yet been performed.
      */
 
     public void setLastDriftCheckTimestamp(java.util.Date lastDriftCheckTimestamp) {
@@ -1286,11 +1285,11 @@ public class StackInstance implements Serializable, Cloneable {
     /**
      * <p>
      * Most recent time when CloudFormation performed a drift detection operation on the stack instance. This value will
-     * be <code>NULL</code> for any stack instance on which drift detection has not yet been performed.
+     * be <code>NULL</code> for any stack instance on which drift detection hasn't yet been performed.
      * </p>
      * 
      * @return Most recent time when CloudFormation performed a drift detection operation on the stack instance. This
-     *         value will be <code>NULL</code> for any stack instance on which drift detection has not yet been
+     *         value will be <code>NULL</code> for any stack instance on which drift detection hasn't yet been
      *         performed.
      */
 
@@ -1301,13 +1300,12 @@ public class StackInstance implements Serializable, Cloneable {
     /**
      * <p>
      * Most recent time when CloudFormation performed a drift detection operation on the stack instance. This value will
-     * be <code>NULL</code> for any stack instance on which drift detection has not yet been performed.
+     * be <code>NULL</code> for any stack instance on which drift detection hasn't yet been performed.
      * </p>
      * 
      * @param lastDriftCheckTimestamp
      *        Most recent time when CloudFormation performed a drift detection operation on the stack instance. This
-     *        value will be <code>NULL</code> for any stack instance on which drift detection has not yet been
-     *        performed.
+     *        value will be <code>NULL</code> for any stack instance on which drift detection hasn't yet been performed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

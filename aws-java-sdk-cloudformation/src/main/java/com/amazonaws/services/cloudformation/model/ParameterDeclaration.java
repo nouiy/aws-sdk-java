@@ -28,7 +28,7 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name that is associated with the parameter.
+     * The name that's associated with the parameter.
      * </p>
      */
     private String parameterKey;
@@ -53,7 +53,7 @@ public class ParameterDeclaration implements Serializable, Cloneable {
     private Boolean noEcho;
     /**
      * <p>
-     * The description that is associate with the parameter.
+     * The description that's associate with the parameter.
      * </p>
      */
     private String description;
@@ -66,11 +66,11 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name that is associated with the parameter.
+     * The name that's associated with the parameter.
      * </p>
      * 
      * @param parameterKey
-     *        The name that is associated with the parameter.
+     *        The name that's associated with the parameter.
      */
 
     public void setParameterKey(String parameterKey) {
@@ -79,10 +79,10 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name that is associated with the parameter.
+     * The name that's associated with the parameter.
      * </p>
      * 
-     * @return The name that is associated with the parameter.
+     * @return The name that's associated with the parameter.
      */
 
     public String getParameterKey() {
@@ -91,11 +91,11 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name that is associated with the parameter.
+     * The name that's associated with the parameter.
      * </p>
      * 
      * @param parameterKey
-     *        The name that is associated with the parameter.
+     *        The name that's associated with the parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -246,11 +246,11 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The description that is associate with the parameter.
+     * The description that's associate with the parameter.
      * </p>
      * 
      * @param description
-     *        The description that is associate with the parameter.
+     *        The description that's associate with the parameter.
      */
 
     public void setDescription(String description) {
@@ -259,10 +259,10 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The description that is associate with the parameter.
+     * The description that's associate with the parameter.
      * </p>
      * 
-     * @return The description that is associate with the parameter.
+     * @return The description that's associate with the parameter.
      */
 
     public String getDescription() {
@@ -271,11 +271,11 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The description that is associate with the parameter.
+     * The description that's associate with the parameter.
      * </p>
      * 
      * @param description
-     *        The description that is associate with the parameter.
+     *        The description that's associate with the parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

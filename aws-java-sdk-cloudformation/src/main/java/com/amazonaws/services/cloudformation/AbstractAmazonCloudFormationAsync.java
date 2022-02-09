@@ -238,6 +238,19 @@ public class AbstractAmazonCloudFormationAsync extends AbstractAmazonCloudFormat
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeChangeSetHooksResult> describeChangeSetHooksAsync(DescribeChangeSetHooksRequest request) {
+
+        return describeChangeSetHooksAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeChangeSetHooksResult> describeChangeSetHooksAsync(DescribeChangeSetHooksRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeChangeSetHooksRequest, DescribeChangeSetHooksResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribePublisherResult> describePublisherAsync(DescribePublisherRequest request) {
 
         return describePublisherAsync(request, null);

@@ -88,7 +88,7 @@ public class DescribeTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param type
-     *        The kind of extension. </p>
+     *        The kind of extension.</p>
      *        <p>
      *        Conditional: You must specify either <code>TypeName</code> and <code>Type</code>, or <code>Arn</code>.
      * @see RegistryType
@@ -106,7 +106,7 @@ public class DescribeTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Conditional: You must specify either <code>TypeName</code> and <code>Type</code>, or <code>Arn</code>.
      * </p>
      * 
-     * @return The kind of extension. </p>
+     * @return The kind of extension.</p>
      *         <p>
      *         Conditional: You must specify either <code>TypeName</code> and <code>Type</code>, or <code>Arn</code>.
      * @see RegistryType
@@ -125,7 +125,7 @@ public class DescribeTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param type
-     *        The kind of extension. </p>
+     *        The kind of extension.</p>
      *        <p>
      *        Conditional: You must specify either <code>TypeName</code> and <code>Type</code>, or <code>Arn</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -146,7 +146,7 @@ public class DescribeTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param type
-     *        The kind of extension. </p>
+     *        The kind of extension.</p>
      *        <p>
      *        Conditional: You must specify either <code>TypeName</code> and <code>Type</code>, or <code>Arn</code>.
      * @return Returns a reference to this object so that method calls can be chained together.

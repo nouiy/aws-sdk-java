@@ -24,7 +24,7 @@ import javax.annotation.Generated;
  * Unregulated Configuration Changes to Stacks and Resources</a>.
  * </p>
  * <p>
- * Resources that do not currently support drift detection cannot be checked. For a list of resources that support drift
+ * Resources that don't currently support drift detection can't be checked. For a list of resources that support drift
  * detection, see <a
  * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html"
  * >Resources that Support Drift Detection</a>.
@@ -62,7 +62,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
     /**
      * <p>
      * Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses context
-     * key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely identify that
+     * key-value pairs in cases where a resource's logical and physical IDs aren't enough to uniquely identify that
      * resource. Each context key-value pair specifies a unique resource that contains the targeted resource.
      * </p>
      */
@@ -103,7 +103,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<PropertyDifference> propertyDifferences;
     /**
      * <p>
-     * Status of the resource's actual configuration compared to its expected configuration
+     * Status of the resource's actual configuration compared to its expected configuration.
      * </p>
      * <ul>
      * <li>
@@ -120,7 +120,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>IN_SYNC</code>: The resources's actual configuration matches its expected template configuration.
+     * <code>IN_SYNC</code>: The resource's actual configuration matches its expected template configuration.
      * </p>
      * </li>
      * <li>
@@ -274,12 +274,12 @@ public class StackResourceDrift implements Serializable, Cloneable {
     /**
      * <p>
      * Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses context
-     * key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely identify that
+     * key-value pairs in cases where a resource's logical and physical IDs aren't enough to uniquely identify that
      * resource. Each context key-value pair specifies a unique resource that contains the targeted resource.
      * </p>
      * 
      * @return Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses
-     *         context key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely
+     *         context key-value pairs in cases where a resource's logical and physical IDs aren't enough to uniquely
      *         identify that resource. Each context key-value pair specifies a unique resource that contains the
      *         targeted resource.
      */
@@ -294,13 +294,13 @@ public class StackResourceDrift implements Serializable, Cloneable {
     /**
      * <p>
      * Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses context
-     * key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely identify that
+     * key-value pairs in cases where a resource's logical and physical IDs aren't enough to uniquely identify that
      * resource. Each context key-value pair specifies a unique resource that contains the targeted resource.
      * </p>
      * 
      * @param physicalResourceIdContext
      *        Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses
-     *        context key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely
+     *        context key-value pairs in cases where a resource's logical and physical IDs aren't enough to uniquely
      *        identify that resource. Each context key-value pair specifies a unique resource that contains the targeted
      *        resource.
      */
@@ -317,7 +317,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
     /**
      * <p>
      * Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses context
-     * key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely identify that
+     * key-value pairs in cases where a resource's logical and physical IDs aren't enough to uniquely identify that
      * resource. Each context key-value pair specifies a unique resource that contains the targeted resource.
      * </p>
      * <p>
@@ -328,7 +328,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * 
      * @param physicalResourceIdContext
      *        Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses
-     *        context key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely
+     *        context key-value pairs in cases where a resource's logical and physical IDs aren't enough to uniquely
      *        identify that resource. Each context key-value pair specifies a unique resource that contains the targeted
      *        resource.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -347,13 +347,13 @@ public class StackResourceDrift implements Serializable, Cloneable {
     /**
      * <p>
      * Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses context
-     * key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely identify that
+     * key-value pairs in cases where a resource's logical and physical IDs aren't enough to uniquely identify that
      * resource. Each context key-value pair specifies a unique resource that contains the targeted resource.
      * </p>
      * 
      * @param physicalResourceIdContext
      *        Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses
-     *        context key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely
+     *        context key-value pairs in cases where a resource's logical and physical IDs aren't enough to uniquely
      *        identify that resource. Each context key-value pair specifies a unique resource that contains the targeted
      *        resource.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -416,7 +416,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * 
      * @param expectedProperties
      *        A JSON structure containing the expected property values of the stack resource, as defined in the stack
-     *        template and any values specified as template parameters. </p>
+     *        template and any values specified as template parameters.</p>
      *        <p>
      *        For resources whose <code>StackResourceDriftStatus</code> is <code>DELETED</code>, this structure will not
      *        be present.
@@ -437,7 +437,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * </p>
      * 
      * @return A JSON structure containing the expected property values of the stack resource, as defined in the stack
-     *         template and any values specified as template parameters. </p>
+     *         template and any values specified as template parameters.</p>
      *         <p>
      *         For resources whose <code>StackResourceDriftStatus</code> is <code>DELETED</code>, this structure will
      *         not be present.
@@ -459,7 +459,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * 
      * @param expectedProperties
      *        A JSON structure containing the expected property values of the stack resource, as defined in the stack
-     *        template and any values specified as template parameters. </p>
+     *        template and any values specified as template parameters.</p>
      *        <p>
      *        For resources whose <code>StackResourceDriftStatus</code> is <code>DELETED</code>, this structure will not
      *        be present.
@@ -615,7 +615,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Status of the resource's actual configuration compared to its expected configuration
+     * Status of the resource's actual configuration compared to its expected configuration.
      * </p>
      * <ul>
      * <li>
@@ -632,7 +632,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>IN_SYNC</code>: The resources's actual configuration matches its expected template configuration.
+     * <code>IN_SYNC</code>: The resource's actual configuration matches its expected template configuration.
      * </p>
      * </li>
      * <li>
@@ -643,7 +643,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * </ul>
      * 
      * @param stackResourceDriftStatus
-     *        Status of the resource's actual configuration compared to its expected configuration</p>
+     *        Status of the resource's actual configuration compared to its expected configuration.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -659,7 +659,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IN_SYNC</code>: The resources's actual configuration matches its expected template configuration.
+     *        <code>IN_SYNC</code>: The resource's actual configuration matches its expected template configuration.
      *        </p>
      *        </li>
      *        <li>
@@ -676,7 +676,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Status of the resource's actual configuration compared to its expected configuration
+     * Status of the resource's actual configuration compared to its expected configuration.
      * </p>
      * <ul>
      * <li>
@@ -693,7 +693,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>IN_SYNC</code>: The resources's actual configuration matches its expected template configuration.
+     * <code>IN_SYNC</code>: The resource's actual configuration matches its expected template configuration.
      * </p>
      * </li>
      * <li>
@@ -703,7 +703,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * </li>
      * </ul>
      * 
-     * @return Status of the resource's actual configuration compared to its expected configuration</p>
+     * @return Status of the resource's actual configuration compared to its expected configuration.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -719,7 +719,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>IN_SYNC</code>: The resources's actual configuration matches its expected template configuration.
+     *         <code>IN_SYNC</code>: The resource's actual configuration matches its expected template configuration.
      *         </p>
      *         </li>
      *         <li>
@@ -736,7 +736,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Status of the resource's actual configuration compared to its expected configuration
+     * Status of the resource's actual configuration compared to its expected configuration.
      * </p>
      * <ul>
      * <li>
@@ -753,7 +753,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>IN_SYNC</code>: The resources's actual configuration matches its expected template configuration.
+     * <code>IN_SYNC</code>: The resource's actual configuration matches its expected template configuration.
      * </p>
      * </li>
      * <li>
@@ -764,7 +764,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * </ul>
      * 
      * @param stackResourceDriftStatus
-     *        Status of the resource's actual configuration compared to its expected configuration</p>
+     *        Status of the resource's actual configuration compared to its expected configuration.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -780,7 +780,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IN_SYNC</code>: The resources's actual configuration matches its expected template configuration.
+     *        <code>IN_SYNC</code>: The resource's actual configuration matches its expected template configuration.
      *        </p>
      *        </li>
      *        <li>
@@ -799,7 +799,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Status of the resource's actual configuration compared to its expected configuration
+     * Status of the resource's actual configuration compared to its expected configuration.
      * </p>
      * <ul>
      * <li>
@@ -816,7 +816,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>IN_SYNC</code>: The resources's actual configuration matches its expected template configuration.
+     * <code>IN_SYNC</code>: The resource's actual configuration matches its expected template configuration.
      * </p>
      * </li>
      * <li>
@@ -827,7 +827,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * </ul>
      * 
      * @param stackResourceDriftStatus
-     *        Status of the resource's actual configuration compared to its expected configuration</p>
+     *        Status of the resource's actual configuration compared to its expected configuration.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -843,7 +843,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IN_SYNC</code>: The resources's actual configuration matches its expected template configuration.
+     *        <code>IN_SYNC</code>: The resource's actual configuration matches its expected template configuration.
      *        </p>
      *        </li>
      *        <li>

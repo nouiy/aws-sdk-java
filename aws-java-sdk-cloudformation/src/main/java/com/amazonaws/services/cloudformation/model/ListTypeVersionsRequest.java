@@ -100,7 +100,7 @@ public class ListTypeVersionsRequest extends com.amazonaws.AmazonWebServiceReque
      * The publisher ID of the extension publisher.
      * </p>
      * <p>
-     * Extensions published by Amazon are not assigned a publisher ID.
+     * Extensions published by Amazon aren't assigned a publisher ID.
      * </p>
      */
     private String publisherId;
@@ -627,13 +627,13 @@ public class ListTypeVersionsRequest extends com.amazonaws.AmazonWebServiceReque
      * The publisher ID of the extension publisher.
      * </p>
      * <p>
-     * Extensions published by Amazon are not assigned a publisher ID.
+     * Extensions published by Amazon aren't assigned a publisher ID.
      * </p>
      * 
      * @param publisherId
      *        The publisher ID of the extension publisher.</p>
      *        <p>
-     *        Extensions published by Amazon are not assigned a publisher ID.
+     *        Extensions published by Amazon aren't assigned a publisher ID.
      */
 
     public void setPublisherId(String publisherId) {
@@ -645,12 +645,12 @@ public class ListTypeVersionsRequest extends com.amazonaws.AmazonWebServiceReque
      * The publisher ID of the extension publisher.
      * </p>
      * <p>
-     * Extensions published by Amazon are not assigned a publisher ID.
+     * Extensions published by Amazon aren't assigned a publisher ID.
      * </p>
      * 
      * @return The publisher ID of the extension publisher.</p>
      *         <p>
-     *         Extensions published by Amazon are not assigned a publisher ID.
+     *         Extensions published by Amazon aren't assigned a publisher ID.
      */
 
     public String getPublisherId() {
@@ -662,13 +662,13 @@ public class ListTypeVersionsRequest extends com.amazonaws.AmazonWebServiceReque
      * The publisher ID of the extension publisher.
      * </p>
      * <p>
-     * Extensions published by Amazon are not assigned a publisher ID.
+     * Extensions published by Amazon aren't assigned a publisher ID.
      * </p>
      * 
      * @param publisherId
      *        The publisher ID of the extension publisher.</p>
      *        <p>
-     *        Extensions published by Amazon are not assigned a publisher ID.
+     *        Extensions published by Amazon aren't assigned a publisher ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

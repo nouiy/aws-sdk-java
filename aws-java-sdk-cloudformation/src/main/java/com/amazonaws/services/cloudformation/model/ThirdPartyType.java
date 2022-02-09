@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum ThirdPartyType {
 
     RESOURCE("RESOURCE"),
-    MODULE("MODULE");
+    MODULE("MODULE"),
+    HOOK("HOOK");
 
     private String value;
 

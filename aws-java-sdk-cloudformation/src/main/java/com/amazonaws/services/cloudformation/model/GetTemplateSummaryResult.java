@@ -34,7 +34,7 @@ public class GetTemplateSummaryResult extends com.amazonaws.AmazonWebServiceResu
     private com.amazonaws.internal.SdkInternalList<ParameterDeclaration> parameters;
     /**
      * <p>
-     * The value that is defined in the <code>Description</code> property of the template.
+     * The value that's defined in the <code>Description</code> property of the template.
      * </p>
      */
     private String description;
@@ -73,7 +73,7 @@ public class GetTemplateSummaryResult extends com.amazonaws.AmazonWebServiceResu
     private String version;
     /**
      * <p>
-     * The value that is defined for the <code>Metadata</code> property of the template.
+     * The value that's defined for the <code>Metadata</code> property of the template.
      * </p>
      */
     private String metadata;
@@ -167,11 +167,11 @@ public class GetTemplateSummaryResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The value that is defined in the <code>Description</code> property of the template.
+     * The value that's defined in the <code>Description</code> property of the template.
      * </p>
      * 
      * @param description
-     *        The value that is defined in the <code>Description</code> property of the template.
+     *        The value that's defined in the <code>Description</code> property of the template.
      */
 
     public void setDescription(String description) {
@@ -180,10 +180,10 @@ public class GetTemplateSummaryResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The value that is defined in the <code>Description</code> property of the template.
+     * The value that's defined in the <code>Description</code> property of the template.
      * </p>
      * 
-     * @return The value that is defined in the <code>Description</code> property of the template.
+     * @return The value that's defined in the <code>Description</code> property of the template.
      */
 
     public String getDescription() {
@@ -192,11 +192,11 @@ public class GetTemplateSummaryResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The value that is defined in the <code>Description</code> property of the template.
+     * The value that's defined in the <code>Description</code> property of the template.
      * </p>
      * 
      * @param description
-     *        The value that is defined in the <code>Description</code> property of the template.
+     *        The value that's defined in the <code>Description</code> property of the template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -548,11 +548,11 @@ public class GetTemplateSummaryResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The value that is defined for the <code>Metadata</code> property of the template.
+     * The value that's defined for the <code>Metadata</code> property of the template.
      * </p>
      * 
      * @param metadata
-     *        The value that is defined for the <code>Metadata</code> property of the template.
+     *        The value that's defined for the <code>Metadata</code> property of the template.
      */
 
     public void setMetadata(String metadata) {
@@ -561,10 +561,10 @@ public class GetTemplateSummaryResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The value that is defined for the <code>Metadata</code> property of the template.
+     * The value that's defined for the <code>Metadata</code> property of the template.
      * </p>
      * 
-     * @return The value that is defined for the <code>Metadata</code> property of the template.
+     * @return The value that's defined for the <code>Metadata</code> property of the template.
      */
 
     public String getMetadata() {
@@ -573,11 +573,11 @@ public class GetTemplateSummaryResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The value that is defined for the <code>Metadata</code> property of the template.
+     * The value that's defined for the <code>Metadata</code> property of the template.
      * </p>
      * 
      * @param metadata
-     *        The value that is defined for the <code>Metadata</code> property of the template.
+     *        The value that's defined for the <code>Metadata</code> property of the template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

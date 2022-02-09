@@ -48,7 +48,7 @@ public class TypeConfigurationDetails implements Serializable, Cloneable {
      * A JSON string specifying the configuration data for the extension, in this account and region.
      * </p>
      * <p>
-     * If a configuration has not been set for a specified extension, CloudFormation returns <code>{}</code>.
+     * If a configuration hasn't been set for a specified extension, CloudFormation returns <code>{}</code>.
      * </p>
      */
     private String configuration;
@@ -57,7 +57,7 @@ public class TypeConfigurationDetails implements Serializable, Cloneable {
      * When the configuration data was last updated for this extension.
      * </p>
      * <p>
-     * If a configuration has not been set for a specified extension, CloudFormation returns <code>null</code>.
+     * If a configuration hasn't been set for a specified extension, CloudFormation returns <code>null</code>.
      * </p>
      */
     private java.util.Date lastUpdated;
@@ -172,13 +172,13 @@ public class TypeConfigurationDetails implements Serializable, Cloneable {
      * A JSON string specifying the configuration data for the extension, in this account and region.
      * </p>
      * <p>
-     * If a configuration has not been set for a specified extension, CloudFormation returns <code>{}</code>.
+     * If a configuration hasn't been set for a specified extension, CloudFormation returns <code>{}</code>.
      * </p>
      * 
      * @param configuration
-     *        A JSON string specifying the configuration data for the extension, in this account and region. </p>
+     *        A JSON string specifying the configuration data for the extension, in this account and region.</p>
      *        <p>
-     *        If a configuration has not been set for a specified extension, CloudFormation returns <code>{}</code>.
+     *        If a configuration hasn't been set for a specified extension, CloudFormation returns <code>{}</code>.
      */
 
     public void setConfiguration(String configuration) {
@@ -190,12 +190,12 @@ public class TypeConfigurationDetails implements Serializable, Cloneable {
      * A JSON string specifying the configuration data for the extension, in this account and region.
      * </p>
      * <p>
-     * If a configuration has not been set for a specified extension, CloudFormation returns <code>{}</code>.
+     * If a configuration hasn't been set for a specified extension, CloudFormation returns <code>{}</code>.
      * </p>
      * 
-     * @return A JSON string specifying the configuration data for the extension, in this account and region. </p>
+     * @return A JSON string specifying the configuration data for the extension, in this account and region.</p>
      *         <p>
-     *         If a configuration has not been set for a specified extension, CloudFormation returns <code>{}</code>.
+     *         If a configuration hasn't been set for a specified extension, CloudFormation returns <code>{}</code>.
      */
 
     public String getConfiguration() {
@@ -207,13 +207,13 @@ public class TypeConfigurationDetails implements Serializable, Cloneable {
      * A JSON string specifying the configuration data for the extension, in this account and region.
      * </p>
      * <p>
-     * If a configuration has not been set for a specified extension, CloudFormation returns <code>{}</code>.
+     * If a configuration hasn't been set for a specified extension, CloudFormation returns <code>{}</code>.
      * </p>
      * 
      * @param configuration
-     *        A JSON string specifying the configuration data for the extension, in this account and region. </p>
+     *        A JSON string specifying the configuration data for the extension, in this account and region.</p>
      *        <p>
-     *        If a configuration has not been set for a specified extension, CloudFormation returns <code>{}</code>.
+     *        If a configuration hasn't been set for a specified extension, CloudFormation returns <code>{}</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -227,13 +227,13 @@ public class TypeConfigurationDetails implements Serializable, Cloneable {
      * When the configuration data was last updated for this extension.
      * </p>
      * <p>
-     * If a configuration has not been set for a specified extension, CloudFormation returns <code>null</code>.
+     * If a configuration hasn't been set for a specified extension, CloudFormation returns <code>null</code>.
      * </p>
      * 
      * @param lastUpdated
      *        When the configuration data was last updated for this extension.</p>
      *        <p>
-     *        If a configuration has not been set for a specified extension, CloudFormation returns <code>null</code>.
+     *        If a configuration hasn't been set for a specified extension, CloudFormation returns <code>null</code>.
      */
 
     public void setLastUpdated(java.util.Date lastUpdated) {
@@ -245,12 +245,12 @@ public class TypeConfigurationDetails implements Serializable, Cloneable {
      * When the configuration data was last updated for this extension.
      * </p>
      * <p>
-     * If a configuration has not been set for a specified extension, CloudFormation returns <code>null</code>.
+     * If a configuration hasn't been set for a specified extension, CloudFormation returns <code>null</code>.
      * </p>
      * 
      * @return When the configuration data was last updated for this extension.</p>
      *         <p>
-     *         If a configuration has not been set for a specified extension, CloudFormation returns <code>null</code>.
+     *         If a configuration hasn't been set for a specified extension, CloudFormation returns <code>null</code>.
      */
 
     public java.util.Date getLastUpdated() {
@@ -262,13 +262,13 @@ public class TypeConfigurationDetails implements Serializable, Cloneable {
      * When the configuration data was last updated for this extension.
      * </p>
      * <p>
-     * If a configuration has not been set for a specified extension, CloudFormation returns <code>null</code>.
+     * If a configuration hasn't been set for a specified extension, CloudFormation returns <code>null</code>.
      * </p>
      * 
      * @param lastUpdated
      *        When the configuration data was last updated for this extension.</p>
      *        <p>
-     *        If a configuration has not been set for a specified extension, CloudFormation returns <code>null</code>.
+     *        If a configuration hasn't been set for a specified extension, CloudFormation returns <code>null</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

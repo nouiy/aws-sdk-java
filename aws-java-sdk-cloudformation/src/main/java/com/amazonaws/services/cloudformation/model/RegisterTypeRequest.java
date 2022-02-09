@@ -52,7 +52,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </ul>
      * <note>
      * <p>
-     * The following organization namespaces are reserved and cannot be used in your extension names:
+     * The following organization namespaces are reserved and can't be used in your extension names:
      * </p>
      * <ul>
      * <li>
@@ -91,7 +91,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String typeName;
     /**
      * <p>
-     * A url to the S3 bucket containing the extension project package that contains the neccessary files for the
+     * A URL to the S3 bucket containing the extension project package that contains the necessary files for the
      * extension you want to register.
      * </p>
      * <p>
@@ -101,9 +101,9 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <note>
      * <p>
-     * The user registering the extension must be able to access the package in the S3 bucket. That is, the user needs
-     * to have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a> permissions
-     * for the schema handler package. For more information, see <a
+     * The user registering the extension must be able to access the package in the S3 bucket. That's, the user needs to
+     * have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a> permissions for
+     * the schema handler package. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html">Actions, Resources, and Condition Keys
      * for Amazon S3</a> in the <i>Identity and Access Management User Guide</i>.
      * </p>
@@ -140,7 +140,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * A unique identifier that acts as an idempotency key for this registration request. Specifying a client request
-     * token prevents CloudFormation from generating more than one version of an extension from the same registeration
+     * token prevents CloudFormation from generating more than one version of an extension from the same registration
      * request, even if the request is submitted multiple times.
      * </p>
      */
@@ -226,7 +226,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </ul>
      * <note>
      * <p>
-     * The following organization namespaces are reserved and cannot be used in your extension names:
+     * The following organization namespaces are reserved and can't be used in your extension names:
      * </p>
      * <ul>
      * <li>
@@ -281,7 +281,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </ul>
      *        <note>
      *        <p>
-     *        The following organization namespaces are reserved and cannot be used in your extension names:
+     *        The following organization namespaces are reserved and can't be used in your extension names:
      *        </p>
      *        <ul>
      *        <li>
@@ -342,7 +342,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </ul>
      * <note>
      * <p>
-     * The following organization namespaces are reserved and cannot be used in your extension names:
+     * The following organization namespaces are reserved and can't be used in your extension names:
      * </p>
      * <ul>
      * <li>
@@ -396,7 +396,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </ul>
      *         <note>
      *         <p>
-     *         The following organization namespaces are reserved and cannot be used in your extension names:
+     *         The following organization namespaces are reserved and can't be used in your extension names:
      *         </p>
      *         <ul>
      *         <li>
@@ -457,7 +457,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </ul>
      * <note>
      * <p>
-     * The following organization namespaces are reserved and cannot be used in your extension names:
+     * The following organization namespaces are reserved and can't be used in your extension names:
      * </p>
      * <ul>
      * <li>
@@ -512,7 +512,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </ul>
      *        <note>
      *        <p>
-     *        The following organization namespaces are reserved and cannot be used in your extension names:
+     *        The following organization namespaces are reserved and can't be used in your extension names:
      *        </p>
      *        <ul>
      *        <li>
@@ -556,7 +556,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A url to the S3 bucket containing the extension project package that contains the neccessary files for the
+     * A URL to the S3 bucket containing the extension project package that contains the necessary files for the
      * extension you want to register.
      * </p>
      * <p>
@@ -566,16 +566,16 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <note>
      * <p>
-     * The user registering the extension must be able to access the package in the S3 bucket. That is, the user needs
-     * to have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a> permissions
-     * for the schema handler package. For more information, see <a
+     * The user registering the extension must be able to access the package in the S3 bucket. That's, the user needs to
+     * have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a> permissions for
+     * the schema handler package. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html">Actions, Resources, and Condition Keys
      * for Amazon S3</a> in the <i>Identity and Access Management User Guide</i>.
      * </p>
      * </note>
      * 
      * @param schemaHandlerPackage
-     *        A url to the S3 bucket containing the extension project package that contains the neccessary files for the
+     *        A URL to the S3 bucket containing the extension project package that contains the necessary files for the
      *        extension you want to register.</p>
      *        <p>
      *        For information on generating a schema handler package for the extension you want to register, see <a
@@ -585,7 +585,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </p>
      *        <note>
      *        <p>
-     *        The user registering the extension must be able to access the package in the S3 bucket. That is, the user
+     *        The user registering the extension must be able to access the package in the S3 bucket. That's, the user
      *        needs to have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a>
      *        permissions for the schema handler package. For more information, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html">Actions, Resources, and
@@ -599,7 +599,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A url to the S3 bucket containing the extension project package that contains the neccessary files for the
+     * A URL to the S3 bucket containing the extension project package that contains the necessary files for the
      * extension you want to register.
      * </p>
      * <p>
@@ -609,16 +609,16 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <note>
      * <p>
-     * The user registering the extension must be able to access the package in the S3 bucket. That is, the user needs
-     * to have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a> permissions
-     * for the schema handler package. For more information, see <a
+     * The user registering the extension must be able to access the package in the S3 bucket. That's, the user needs to
+     * have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a> permissions for
+     * the schema handler package. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html">Actions, Resources, and Condition Keys
      * for Amazon S3</a> in the <i>Identity and Access Management User Guide</i>.
      * </p>
      * </note>
      * 
-     * @return A url to the S3 bucket containing the extension project package that contains the neccessary files for
-     *         the extension you want to register.</p>
+     * @return A URL to the S3 bucket containing the extension project package that contains the necessary files for the
+     *         extension you want to register.</p>
      *         <p>
      *         For information on generating a schema handler package for the extension you want to register, see <a
      *         href
@@ -627,7 +627,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </p>
      *         <note>
      *         <p>
-     *         The user registering the extension must be able to access the package in the S3 bucket. That is, the user
+     *         The user registering the extension must be able to access the package in the S3 bucket. That's, the user
      *         needs to have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a>
      *         permissions for the schema handler package. For more information, see <a
      *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html">Actions, Resources, and
@@ -641,7 +641,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A url to the S3 bucket containing the extension project package that contains the neccessary files for the
+     * A URL to the S3 bucket containing the extension project package that contains the necessary files for the
      * extension you want to register.
      * </p>
      * <p>
@@ -651,16 +651,16 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <note>
      * <p>
-     * The user registering the extension must be able to access the package in the S3 bucket. That is, the user needs
-     * to have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a> permissions
-     * for the schema handler package. For more information, see <a
+     * The user registering the extension must be able to access the package in the S3 bucket. That's, the user needs to
+     * have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a> permissions for
+     * the schema handler package. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html">Actions, Resources, and Condition Keys
      * for Amazon S3</a> in the <i>Identity and Access Management User Guide</i>.
      * </p>
      * </note>
      * 
      * @param schemaHandlerPackage
-     *        A url to the S3 bucket containing the extension project package that contains the neccessary files for the
+     *        A URL to the S3 bucket containing the extension project package that contains the necessary files for the
      *        extension you want to register.</p>
      *        <p>
      *        For information on generating a schema handler package for the extension you want to register, see <a
@@ -670,7 +670,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </p>
      *        <note>
      *        <p>
-     *        The user registering the extension must be able to access the package in the S3 bucket. That is, the user
+     *        The user registering the extension must be able to access the package in the S3 bucket. That's, the user
      *        needs to have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a>
      *        permissions for the schema handler package. For more information, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html">Actions, Resources, and
@@ -857,14 +857,14 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * A unique identifier that acts as an idempotency key for this registration request. Specifying a client request
-     * token prevents CloudFormation from generating more than one version of an extension from the same registeration
+     * token prevents CloudFormation from generating more than one version of an extension from the same registration
      * request, even if the request is submitted multiple times.
      * </p>
      * 
      * @param clientRequestToken
      *        A unique identifier that acts as an idempotency key for this registration request. Specifying a client
      *        request token prevents CloudFormation from generating more than one version of an extension from the same
-     *        registeration request, even if the request is submitted multiple times.
+     *        registration request, even if the request is submitted multiple times.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -874,13 +874,13 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * A unique identifier that acts as an idempotency key for this registration request. Specifying a client request
-     * token prevents CloudFormation from generating more than one version of an extension from the same registeration
+     * token prevents CloudFormation from generating more than one version of an extension from the same registration
      * request, even if the request is submitted multiple times.
      * </p>
      * 
      * @return A unique identifier that acts as an idempotency key for this registration request. Specifying a client
      *         request token prevents CloudFormation from generating more than one version of an extension from the same
-     *         registeration request, even if the request is submitted multiple times.
+     *         registration request, even if the request is submitted multiple times.
      */
 
     public String getClientRequestToken() {
@@ -890,14 +890,14 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * A unique identifier that acts as an idempotency key for this registration request. Specifying a client request
-     * token prevents CloudFormation from generating more than one version of an extension from the same registeration
+     * token prevents CloudFormation from generating more than one version of an extension from the same registration
      * request, even if the request is submitted multiple times.
      * </p>
      * 
      * @param clientRequestToken
      *        A unique identifier that acts as an idempotency key for this registration request. Specifying a client
      *        request token prevents CloudFormation from generating more than one version of an extension from the same
-     *        registeration request, even if the request is submitted multiple times.
+     *        registration request, even if the request is submitted multiple times.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

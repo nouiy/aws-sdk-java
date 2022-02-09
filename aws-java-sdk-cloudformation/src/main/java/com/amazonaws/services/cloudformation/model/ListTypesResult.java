@@ -31,7 +31,7 @@ public class ListTypesResult extends com.amazonaws.AmazonWebServiceResult<com.am
     private com.amazonaws.internal.SdkInternalList<TypeSummary> typeSummaries;
     /**
      * <p>
-     * If the request doesn't return all of the remaining results, <code>NextToken</code> is set to a token. To retrieve
+     * If the request doesn't return all the remaining results, <code>NextToken</code> is set to a token. To retrieve
      * the next set of results, call this action again and assign that token to the request object's
      * <code>NextToken</code> parameter. If the request returns all results, <code>NextToken</code> is set to
      * <code>null</code>.
@@ -114,14 +114,14 @@ public class ListTypesResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * If the request doesn't return all of the remaining results, <code>NextToken</code> is set to a token. To retrieve
+     * If the request doesn't return all the remaining results, <code>NextToken</code> is set to a token. To retrieve
      * the next set of results, call this action again and assign that token to the request object's
      * <code>NextToken</code> parameter. If the request returns all results, <code>NextToken</code> is set to
      * <code>null</code>.
      * </p>
      * 
      * @param nextToken
-     *        If the request doesn't return all of the remaining results, <code>NextToken</code> is set to a token. To
+     *        If the request doesn't return all the remaining results, <code>NextToken</code> is set to a token. To
      *        retrieve the next set of results, call this action again and assign that token to the request object's
      *        <code>NextToken</code> parameter. If the request returns all results, <code>NextToken</code> is set to
      *        <code>null</code>.
@@ -133,13 +133,13 @@ public class ListTypesResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * If the request doesn't return all of the remaining results, <code>NextToken</code> is set to a token. To retrieve
+     * If the request doesn't return all the remaining results, <code>NextToken</code> is set to a token. To retrieve
      * the next set of results, call this action again and assign that token to the request object's
      * <code>NextToken</code> parameter. If the request returns all results, <code>NextToken</code> is set to
      * <code>null</code>.
      * </p>
      * 
-     * @return If the request doesn't return all of the remaining results, <code>NextToken</code> is set to a token. To
+     * @return If the request doesn't return all the remaining results, <code>NextToken</code> is set to a token. To
      *         retrieve the next set of results, call this action again and assign that token to the request object's
      *         <code>NextToken</code> parameter. If the request returns all results, <code>NextToken</code> is set to
      *         <code>null</code>.
@@ -151,14 +151,14 @@ public class ListTypesResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * If the request doesn't return all of the remaining results, <code>NextToken</code> is set to a token. To retrieve
+     * If the request doesn't return all the remaining results, <code>NextToken</code> is set to a token. To retrieve
      * the next set of results, call this action again and assign that token to the request object's
      * <code>NextToken</code> parameter. If the request returns all results, <code>NextToken</code> is set to
      * <code>null</code>.
      * </p>
      * 
      * @param nextToken
-     *        If the request doesn't return all of the remaining results, <code>NextToken</code> is set to a token. To
+     *        If the request doesn't return all the remaining results, <code>NextToken</code> is set to a token. To
      *        retrieve the next set of results, call this action again and assign that token to the request object's
      *        <code>NextToken</code> parameter. If the request returns all results, <code>NextToken</code> is set to
      *        <code>null</code>.

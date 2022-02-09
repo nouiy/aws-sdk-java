@@ -30,7 +30,7 @@ public class DescribePublisherRequest extends com.amazonaws.AmazonWebServiceRequ
      * The ID of the extension publisher.
      * </p>
      * <p>
-     * If you do not supply a <code>PublisherId</code>, and you have registered as an extension publisher,
+     * If you don't supply a <code>PublisherId</code>, and you have registered as an extension publisher,
      * <code>DescribePublisher</code> returns information about your own publisher account.
      * </p>
      */
@@ -41,14 +41,14 @@ public class DescribePublisherRequest extends com.amazonaws.AmazonWebServiceRequ
      * The ID of the extension publisher.
      * </p>
      * <p>
-     * If you do not supply a <code>PublisherId</code>, and you have registered as an extension publisher,
+     * If you don't supply a <code>PublisherId</code>, and you have registered as an extension publisher,
      * <code>DescribePublisher</code> returns information about your own publisher account.
      * </p>
      * 
      * @param publisherId
      *        The ID of the extension publisher.</p>
      *        <p>
-     *        If you do not supply a <code>PublisherId</code>, and you have registered as an extension publisher,
+     *        If you don't supply a <code>PublisherId</code>, and you have registered as an extension publisher,
      *        <code>DescribePublisher</code> returns information about your own publisher account.
      */
 
@@ -61,13 +61,13 @@ public class DescribePublisherRequest extends com.amazonaws.AmazonWebServiceRequ
      * The ID of the extension publisher.
      * </p>
      * <p>
-     * If you do not supply a <code>PublisherId</code>, and you have registered as an extension publisher,
+     * If you don't supply a <code>PublisherId</code>, and you have registered as an extension publisher,
      * <code>DescribePublisher</code> returns information about your own publisher account.
      * </p>
      * 
      * @return The ID of the extension publisher.</p>
      *         <p>
-     *         If you do not supply a <code>PublisherId</code>, and you have registered as an extension publisher,
+     *         If you don't supply a <code>PublisherId</code>, and you have registered as an extension publisher,
      *         <code>DescribePublisher</code> returns information about your own publisher account.
      */
 
@@ -80,14 +80,14 @@ public class DescribePublisherRequest extends com.amazonaws.AmazonWebServiceRequ
      * The ID of the extension publisher.
      * </p>
      * <p>
-     * If you do not supply a <code>PublisherId</code>, and you have registered as an extension publisher,
+     * If you don't supply a <code>PublisherId</code>, and you have registered as an extension publisher,
      * <code>DescribePublisher</code> returns information about your own publisher account.
      * </p>
      * 
      * @param publisherId
      *        The ID of the extension publisher.</p>
      *        <p>
-     *        If you do not supply a <code>PublisherId</code>, and you have registered as an extension publisher,
+     *        If you don't supply a <code>PublisherId</code>, and you have registered as an extension publisher,
      *        <code>DescribePublisher</code> returns information about your own publisher account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

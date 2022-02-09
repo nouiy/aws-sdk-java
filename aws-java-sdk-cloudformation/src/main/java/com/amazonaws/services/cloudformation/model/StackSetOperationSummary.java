@@ -36,7 +36,7 @@ public class StackSetOperationSummary implements Serializable, Cloneable {
      * <p>
      * The type of operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create and delete
      * operations affect only the specified stack instances that are associated with the specified stack set. Update
-     * operations affect both the stack set itself as well as <i>all</i> associated stack set instances.
+     * operations affect both the stack set itself and <i>all</i> associated stack set instances.
      * </p>
      */
     private String action;
@@ -69,7 +69,7 @@ public class StackSetOperationSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>STOPPED</code>: The user has cancelled the operation.
+     * <code>STOPPED</code>: The user has canceled the operation.
      * </p>
      * </li>
      * <li>
@@ -148,13 +148,13 @@ public class StackSetOperationSummary implements Serializable, Cloneable {
      * <p>
      * The type of operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create and delete
      * operations affect only the specified stack instances that are associated with the specified stack set. Update
-     * operations affect both the stack set itself as well as <i>all</i> associated stack set instances.
+     * operations affect both the stack set itself and <i>all</i> associated stack set instances.
      * </p>
      * 
      * @param action
      *        The type of operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create and delete
      *        operations affect only the specified stack instances that are associated with the specified stack set.
-     *        Update operations affect both the stack set itself as well as <i>all</i> associated stack set instances.
+     *        Update operations affect both the stack set itself and <i>all</i> associated stack set instances.
      * @see StackSetOperationAction
      */
 
@@ -166,13 +166,12 @@ public class StackSetOperationSummary implements Serializable, Cloneable {
      * <p>
      * The type of operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create and delete
      * operations affect only the specified stack instances that are associated with the specified stack set. Update
-     * operations affect both the stack set itself as well as <i>all</i> associated stack set instances.
+     * operations affect both the stack set itself and <i>all</i> associated stack set instances.
      * </p>
      * 
      * @return The type of operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create and
      *         delete operations affect only the specified stack instances that are associated with the specified stack
-     *         set. Update operations affect both the stack set itself as well as <i>all</i> associated stack set
-     *         instances.
+     *         set. Update operations affect both the stack set itself and <i>all</i> associated stack set instances.
      * @see StackSetOperationAction
      */
 
@@ -184,13 +183,13 @@ public class StackSetOperationSummary implements Serializable, Cloneable {
      * <p>
      * The type of operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create and delete
      * operations affect only the specified stack instances that are associated with the specified stack set. Update
-     * operations affect both the stack set itself as well as <i>all</i> associated stack set instances.
+     * operations affect both the stack set itself and <i>all</i> associated stack set instances.
      * </p>
      * 
      * @param action
      *        The type of operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create and delete
      *        operations affect only the specified stack instances that are associated with the specified stack set.
-     *        Update operations affect both the stack set itself as well as <i>all</i> associated stack set instances.
+     *        Update operations affect both the stack set itself and <i>all</i> associated stack set instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StackSetOperationAction
      */
@@ -204,13 +203,13 @@ public class StackSetOperationSummary implements Serializable, Cloneable {
      * <p>
      * The type of operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create and delete
      * operations affect only the specified stack instances that are associated with the specified stack set. Update
-     * operations affect both the stack set itself as well as <i>all</i> associated stack set instances.
+     * operations affect both the stack set itself and <i>all</i> associated stack set instances.
      * </p>
      * 
      * @param action
      *        The type of operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create and delete
      *        operations affect only the specified stack instances that are associated with the specified stack set.
-     *        Update operations affect both the stack set itself as well as <i>all</i> associated stack set instances.
+     *        Update operations affect both the stack set itself and <i>all</i> associated stack set instances.
      * @see StackSetOperationAction
      */
 
@@ -222,13 +221,13 @@ public class StackSetOperationSummary implements Serializable, Cloneable {
      * <p>
      * The type of operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create and delete
      * operations affect only the specified stack instances that are associated with the specified stack set. Update
-     * operations affect both the stack set itself as well as <i>all</i> associated stack set instances.
+     * operations affect both the stack set itself and <i>all</i> associated stack set instances.
      * </p>
      * 
      * @param action
      *        The type of operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create and delete
      *        operations affect only the specified stack instances that are associated with the specified stack set.
-     *        Update operations affect both the stack set itself as well as <i>all</i> associated stack set instances.
+     *        Update operations affect both the stack set itself and <i>all</i> associated stack set instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StackSetOperationAction
      */
@@ -267,7 +266,7 @@ public class StackSetOperationSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>STOPPED</code>: The user has cancelled the operation.
+     * <code>STOPPED</code>: The user has canceled the operation.
      * </p>
      * </li>
      * <li>
@@ -310,7 +309,7 @@ public class StackSetOperationSummary implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>STOPPED</code>: The user has cancelled the operation.
+     *        <code>STOPPED</code>: The user has canceled the operation.
      *        </p>
      *        </li>
      *        <li>
@@ -360,7 +359,7 @@ public class StackSetOperationSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>STOPPED</code>: The user has cancelled the operation.
+     * <code>STOPPED</code>: The user has canceled the operation.
      * </p>
      * </li>
      * <li>
@@ -402,7 +401,7 @@ public class StackSetOperationSummary implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>STOPPED</code>: The user has cancelled the operation.
+     *         <code>STOPPED</code>: The user has canceled the operation.
      *         </p>
      *         </li>
      *         <li>
@@ -452,7 +451,7 @@ public class StackSetOperationSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>STOPPED</code>: The user has cancelled the operation.
+     * <code>STOPPED</code>: The user has canceled the operation.
      * </p>
      * </li>
      * <li>
@@ -495,7 +494,7 @@ public class StackSetOperationSummary implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>STOPPED</code>: The user has cancelled the operation.
+     *        <code>STOPPED</code>: The user has canceled the operation.
      *        </p>
      *        </li>
      *        <li>
@@ -547,7 +546,7 @@ public class StackSetOperationSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>STOPPED</code>: The user has cancelled the operation.
+     * <code>STOPPED</code>: The user has canceled the operation.
      * </p>
      * </li>
      * <li>
@@ -590,7 +589,7 @@ public class StackSetOperationSummary implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>STOPPED</code>: The user has cancelled the operation.
+     *        <code>STOPPED</code>: The user has canceled the operation.
      *        </p>
      *        </li>
      *        <li>
@@ -640,7 +639,7 @@ public class StackSetOperationSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>STOPPED</code>: The user has cancelled the operation.
+     * <code>STOPPED</code>: The user has canceled the operation.
      * </p>
      * </li>
      * <li>
@@ -683,7 +682,7 @@ public class StackSetOperationSummary implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>STOPPED</code>: The user has cancelled the operation.
+     *        <code>STOPPED</code>: The user has canceled the operation.
      *        </p>
      *        </li>
      *        <li>

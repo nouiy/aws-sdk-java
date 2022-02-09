@@ -35,7 +35,7 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to update
      * parameter values for stack instances. The overridden parameter values will be applied to all stack instances in
-     * the specified accounts and Regions.
+     * the specified accounts and Amazon Web Services Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -56,8 +56,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     private DeploymentTargets deploymentTargets;
     /**
      * <p>
-     * The names of one or more Regions in which you want to update parameter values for stack instances. The overridden
-     * parameter values will be applied to all stack instances in the specified accounts and Regions.
+     * The names of one or more Amazon Web Services Regions in which you want to update parameter values for stack
+     * instances. The overridden parameter values will be applied to all stack instances in the specified accounts and
+     * Amazon Web Services Regions.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> regions;
@@ -66,9 +67,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * A list of input parameters whose values you want to update for the specified stack instances.
      * </p>
      * <p>
-     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
-     * instance update operations:
+     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Amazon Web
+     * Services Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter
+     * values during stack instance update operations:
      * </p>
      * <ul>
      * <li>
@@ -79,24 +80,24 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * <li>
      * <p>
      * To leave an overridden parameter set to its present value, include the parameter and specify
-     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but don't
      * include the parameter in the list.
      * </p>
      * </li>
      * <li>
      * <p>
-     * To leave all parameters set to their present values, do not specify this property at all.
+     * To leave all parameters set to their present values, don't specify this property at all.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * During stack set updates, any parameter values overridden for a stack instance are not updated, but retain their
+     * During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain their
      * overridden value.
      * </p>
      * <p>
@@ -203,7 +204,7 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to update
      * parameter values for stack instances. The overridden parameter values will be applied to all stack instances in
-     * the specified accounts and Regions.
+     * the specified accounts and Amazon Web Services Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -211,7 +212,7 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * 
      * @return [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to
      *         update parameter values for stack instances. The overridden parameter values will be applied to all stack
-     *         instances in the specified accounts and Regions.</p>
+     *         instances in the specified accounts and Amazon Web Services Regions.</p>
      *         <p>
      *         You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      */
@@ -227,7 +228,7 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to update
      * parameter values for stack instances. The overridden parameter values will be applied to all stack instances in
-     * the specified accounts and Regions.
+     * the specified accounts and Amazon Web Services Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -236,7 +237,7 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * @param accounts
      *        [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to
      *        update parameter values for stack instances. The overridden parameter values will be applied to all stack
-     *        instances in the specified accounts and Regions.</p>
+     *        instances in the specified accounts and Amazon Web Services Regions.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      */
@@ -254,7 +255,7 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to update
      * parameter values for stack instances. The overridden parameter values will be applied to all stack instances in
-     * the specified accounts and Regions.
+     * the specified accounts and Amazon Web Services Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -268,7 +269,7 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * @param accounts
      *        [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to
      *        update parameter values for stack instances. The overridden parameter values will be applied to all stack
-     *        instances in the specified accounts and Regions.</p>
+     *        instances in the specified accounts and Amazon Web Services Regions.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -288,7 +289,7 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to update
      * parameter values for stack instances. The overridden parameter values will be applied to all stack instances in
-     * the specified accounts and Regions.
+     * the specified accounts and Amazon Web Services Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -297,7 +298,7 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * @param accounts
      *        [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to
      *        update parameter values for stack instances. The overridden parameter values will be applied to all stack
-     *        instances in the specified accounts and Regions.</p>
+     *        instances in the specified accounts and Amazon Web Services Regions.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -383,12 +384,14 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The names of one or more Regions in which you want to update parameter values for stack instances. The overridden
-     * parameter values will be applied to all stack instances in the specified accounts and Regions.
+     * The names of one or more Amazon Web Services Regions in which you want to update parameter values for stack
+     * instances. The overridden parameter values will be applied to all stack instances in the specified accounts and
+     * Amazon Web Services Regions.
      * </p>
      * 
-     * @return The names of one or more Regions in which you want to update parameter values for stack instances. The
-     *         overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
+     * @return The names of one or more Amazon Web Services Regions in which you want to update parameter values for
+     *         stack instances. The overridden parameter values will be applied to all stack instances in the specified
+     *         accounts and Amazon Web Services Regions.
      */
 
     public java.util.List<String> getRegions() {
@@ -400,13 +403,15 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The names of one or more Regions in which you want to update parameter values for stack instances. The overridden
-     * parameter values will be applied to all stack instances in the specified accounts and Regions.
+     * The names of one or more Amazon Web Services Regions in which you want to update parameter values for stack
+     * instances. The overridden parameter values will be applied to all stack instances in the specified accounts and
+     * Amazon Web Services Regions.
      * </p>
      * 
      * @param regions
-     *        The names of one or more Regions in which you want to update parameter values for stack instances. The
-     *        overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
+     *        The names of one or more Amazon Web Services Regions in which you want to update parameter values for
+     *        stack instances. The overridden parameter values will be applied to all stack instances in the specified
+     *        accounts and Amazon Web Services Regions.
      */
 
     public void setRegions(java.util.Collection<String> regions) {
@@ -420,8 +425,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The names of one or more Regions in which you want to update parameter values for stack instances. The overridden
-     * parameter values will be applied to all stack instances in the specified accounts and Regions.
+     * The names of one or more Amazon Web Services Regions in which you want to update parameter values for stack
+     * instances. The overridden parameter values will be applied to all stack instances in the specified accounts and
+     * Amazon Web Services Regions.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -430,8 +436,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param regions
-     *        The names of one or more Regions in which you want to update parameter values for stack instances. The
-     *        overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
+     *        The names of one or more Amazon Web Services Regions in which you want to update parameter values for
+     *        stack instances. The overridden parameter values will be applied to all stack instances in the specified
+     *        accounts and Amazon Web Services Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -447,13 +454,15 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The names of one or more Regions in which you want to update parameter values for stack instances. The overridden
-     * parameter values will be applied to all stack instances in the specified accounts and Regions.
+     * The names of one or more Amazon Web Services Regions in which you want to update parameter values for stack
+     * instances. The overridden parameter values will be applied to all stack instances in the specified accounts and
+     * Amazon Web Services Regions.
      * </p>
      * 
      * @param regions
-     *        The names of one or more Regions in which you want to update parameter values for stack instances. The
-     *        overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
+     *        The names of one or more Amazon Web Services Regions in which you want to update parameter values for
+     *        stack instances. The overridden parameter values will be applied to all stack instances in the specified
+     *        accounts and Amazon Web Services Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -467,9 +476,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * A list of input parameters whose values you want to update for the specified stack instances.
      * </p>
      * <p>
-     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
-     * instance update operations:
+     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Amazon Web
+     * Services Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter
+     * values during stack instance update operations:
      * </p>
      * <ul>
      * <li>
@@ -480,24 +489,24 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * <li>
      * <p>
      * To leave an overridden parameter set to its present value, include the parameter and specify
-     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but don't
      * include the parameter in the list.
      * </p>
      * </li>
      * <li>
      * <p>
-     * To leave all parameters set to their present values, do not specify this property at all.
+     * To leave all parameters set to their present values, don't specify this property at all.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * During stack set updates, any parameter values overridden for a stack instance are not updated, but retain their
+     * During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain their
      * overridden value.
      * </p>
      * <p>
@@ -510,11 +519,11 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * value using <code>UpdateStackInstances</code>.
      * </p>
      * 
-     * @return A list of input parameters whose values you want to update for the specified stack instances. </p>
+     * @return A list of input parameters whose values you want to update for the specified stack instances.</p>
      *         <p>
      *         Any overridden parameter values will be applied to all stack instances in the specified accounts and
-     *         Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter
-     *         values during stack instance update operations:
+     *         Amazon Web Services Regions. When specifying parameters and their values, be aware of how CloudFormation
+     *         sets parameter values during stack instance update operations:
      *         </p>
      *         <ul>
      *         <li>
@@ -525,25 +534,25 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *         <li>
      *         <p>
      *         To leave an overridden parameter set to its present value, include the parameter and specify
-     *         <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     *         <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      *         <code>UsePreviousValue</code> to <code>true</code>.)
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         To set an overridden parameter back to the value specified in the stack set, specify a parameter list but
-     *         do not include the parameter in the list.
+     *         don't include the parameter in the list.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         To leave all parameters set to their present values, do not specify this property at all.
+     *         To leave all parameters set to their present values, don't specify this property at all.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         During stack set updates, any parameter values overridden for a stack instance are not updated, but
-     *         retain their overridden value.
+     *         During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain
+     *         their overridden value.
      *         </p>
      *         <p>
      *         You can only override the parameter <i>values</i> that are specified in the stack set; to add or delete a
@@ -568,9 +577,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * A list of input parameters whose values you want to update for the specified stack instances.
      * </p>
      * <p>
-     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
-     * instance update operations:
+     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Amazon Web
+     * Services Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter
+     * values during stack instance update operations:
      * </p>
      * <ul>
      * <li>
@@ -581,24 +590,24 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * <li>
      * <p>
      * To leave an overridden parameter set to its present value, include the parameter and specify
-     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but don't
      * include the parameter in the list.
      * </p>
      * </li>
      * <li>
      * <p>
-     * To leave all parameters set to their present values, do not specify this property at all.
+     * To leave all parameters set to their present values, don't specify this property at all.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * During stack set updates, any parameter values overridden for a stack instance are not updated, but retain their
+     * During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain their
      * overridden value.
      * </p>
      * <p>
@@ -612,11 +621,11 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param parameterOverrides
-     *        A list of input parameters whose values you want to update for the specified stack instances. </p>
+     *        A list of input parameters whose values you want to update for the specified stack instances.</p>
      *        <p>
      *        Any overridden parameter values will be applied to all stack instances in the specified accounts and
-     *        Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter values
-     *        during stack instance update operations:
+     *        Amazon Web Services Regions. When specifying parameters and their values, be aware of how CloudFormation
+     *        sets parameter values during stack instance update operations:
      *        </p>
      *        <ul>
      *        <li>
@@ -627,24 +636,24 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        <li>
      *        <p>
      *        To leave an overridden parameter set to its present value, include the parameter and specify
-     *        <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     *        <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      *        <code>UsePreviousValue</code> to <code>true</code>.)
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        To set an overridden parameter back to the value specified in the stack set, specify a parameter list but
-     *        do not include the parameter in the list.
+     *        don't include the parameter in the list.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        To leave all parameters set to their present values, do not specify this property at all.
+     *        To leave all parameters set to their present values, don't specify this property at all.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        During stack set updates, any parameter values overridden for a stack instance are not updated, but retain
+     *        During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain
      *        their overridden value.
      *        </p>
      *        <p>
@@ -671,9 +680,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * A list of input parameters whose values you want to update for the specified stack instances.
      * </p>
      * <p>
-     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
-     * instance update operations:
+     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Amazon Web
+     * Services Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter
+     * values during stack instance update operations:
      * </p>
      * <ul>
      * <li>
@@ -684,24 +693,24 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * <li>
      * <p>
      * To leave an overridden parameter set to its present value, include the parameter and specify
-     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but don't
      * include the parameter in the list.
      * </p>
      * </li>
      * <li>
      * <p>
-     * To leave all parameters set to their present values, do not specify this property at all.
+     * To leave all parameters set to their present values, don't specify this property at all.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * During stack set updates, any parameter values overridden for a stack instance are not updated, but retain their
+     * During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain their
      * overridden value.
      * </p>
      * <p>
@@ -720,11 +729,11 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param parameterOverrides
-     *        A list of input parameters whose values you want to update for the specified stack instances. </p>
+     *        A list of input parameters whose values you want to update for the specified stack instances.</p>
      *        <p>
      *        Any overridden parameter values will be applied to all stack instances in the specified accounts and
-     *        Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter values
-     *        during stack instance update operations:
+     *        Amazon Web Services Regions. When specifying parameters and their values, be aware of how CloudFormation
+     *        sets parameter values during stack instance update operations:
      *        </p>
      *        <ul>
      *        <li>
@@ -735,24 +744,24 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        <li>
      *        <p>
      *        To leave an overridden parameter set to its present value, include the parameter and specify
-     *        <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     *        <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      *        <code>UsePreviousValue</code> to <code>true</code>.)
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        To set an overridden parameter back to the value specified in the stack set, specify a parameter list but
-     *        do not include the parameter in the list.
+     *        don't include the parameter in the list.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        To leave all parameters set to their present values, do not specify this property at all.
+     *        To leave all parameters set to their present values, don't specify this property at all.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        During stack set updates, any parameter values overridden for a stack instance are not updated, but retain
+     *        During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain
      *        their overridden value.
      *        </p>
      *        <p>
@@ -781,9 +790,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * A list of input parameters whose values you want to update for the specified stack instances.
      * </p>
      * <p>
-     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
-     * instance update operations:
+     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Amazon Web
+     * Services Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter
+     * values during stack instance update operations:
      * </p>
      * <ul>
      * <li>
@@ -794,24 +803,24 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * <li>
      * <p>
      * To leave an overridden parameter set to its present value, include the parameter and specify
-     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but don't
      * include the parameter in the list.
      * </p>
      * </li>
      * <li>
      * <p>
-     * To leave all parameters set to their present values, do not specify this property at all.
+     * To leave all parameters set to their present values, don't specify this property at all.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * During stack set updates, any parameter values overridden for a stack instance are not updated, but retain their
+     * During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain their
      * overridden value.
      * </p>
      * <p>
@@ -825,11 +834,11 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param parameterOverrides
-     *        A list of input parameters whose values you want to update for the specified stack instances. </p>
+     *        A list of input parameters whose values you want to update for the specified stack instances.</p>
      *        <p>
      *        Any overridden parameter values will be applied to all stack instances in the specified accounts and
-     *        Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter values
-     *        during stack instance update operations:
+     *        Amazon Web Services Regions. When specifying parameters and their values, be aware of how CloudFormation
+     *        sets parameter values during stack instance update operations:
      *        </p>
      *        <ul>
      *        <li>
@@ -840,24 +849,24 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        <li>
      *        <p>
      *        To leave an overridden parameter set to its present value, include the parameter and specify
-     *        <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     *        <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      *        <code>UsePreviousValue</code> to <code>true</code>.)
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        To set an overridden parameter back to the value specified in the stack set, specify a parameter list but
-     *        do not include the parameter in the list.
+     *        don't include the parameter in the list.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        To leave all parameters set to their present values, do not specify this property at all.
+     *        To leave all parameters set to their present values, don't specify this property at all.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        During stack set updates, any parameter values overridden for a stack instance are not updated, but retain
+     *        During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain
      *        their overridden value.
      *        </p>
      *        <p>
@@ -930,7 +939,7 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param operationId
-     *        The unique identifier for this stack set operation. </p>
+     *        The unique identifier for this stack set operation.</p>
      *        <p>
      *        The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack
      *        set operation only once, even if you retry the request multiple times. You might retry stack set operation
@@ -957,7 +966,7 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you don't specify an operation ID, the SDK generates one automatically.
      * </p>
      * 
-     * @return The unique identifier for this stack set operation. </p>
+     * @return The unique identifier for this stack set operation.</p>
      *         <p>
      *         The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack
      *         set operation only once, even if you retry the request multiple times. You might retry stack set
@@ -985,7 +994,7 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param operationId
-     *        The unique identifier for this stack set operation. </p>
+     *        The unique identifier for this stack set operation.</p>
      *        <p>
      *        The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack
      *        set operation only once, even if you retry the request multiple times. You might retry stack set operation

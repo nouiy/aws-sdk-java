@@ -18,7 +18,7 @@ import javax.annotation.Generated;
  * <p>
  * Error reserved for use by the <a
  * href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html">CloudFormation
- * CLI</a>. CloudFormation does not return this error to users.
+ * CLI</a>. CloudFormation doesn't return this error to users.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

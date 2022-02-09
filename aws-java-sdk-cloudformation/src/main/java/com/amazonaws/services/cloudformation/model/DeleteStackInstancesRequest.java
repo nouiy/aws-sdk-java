@@ -52,7 +52,7 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     private DeploymentTargets deploymentTargets;
     /**
      * <p>
-     * The Regions where you want to delete stack set instances.
+     * The Amazon Web Services Regions where you want to delete stack set instances.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> regions;
@@ -319,10 +319,10 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Regions where you want to delete stack set instances.
+     * The Amazon Web Services Regions where you want to delete stack set instances.
      * </p>
      * 
-     * @return The Regions where you want to delete stack set instances.
+     * @return The Amazon Web Services Regions where you want to delete stack set instances.
      */
 
     public java.util.List<String> getRegions() {
@@ -334,11 +334,11 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Regions where you want to delete stack set instances.
+     * The Amazon Web Services Regions where you want to delete stack set instances.
      * </p>
      * 
      * @param regions
-     *        The Regions where you want to delete stack set instances.
+     *        The Amazon Web Services Regions where you want to delete stack set instances.
      */
 
     public void setRegions(java.util.Collection<String> regions) {
@@ -352,7 +352,7 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Regions where you want to delete stack set instances.
+     * The Amazon Web Services Regions where you want to delete stack set instances.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -361,7 +361,7 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param regions
-     *        The Regions where you want to delete stack set instances.
+     *        The Amazon Web Services Regions where you want to delete stack set instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -377,11 +377,11 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Regions where you want to delete stack set instances.
+     * The Amazon Web Services Regions where you want to delete stack set instances.
      * </p>
      * 
      * @param regions
-     *        The Regions where you want to delete stack set instances.
+     *        The Amazon Web Services Regions where you want to delete stack set instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

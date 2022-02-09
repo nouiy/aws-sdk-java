@@ -30,13 +30,13 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name that is associated with the stack. The name must be unique in the Region in which you are creating the
+     * The name that's associated with the stack. The name must be unique in the Region in which you are creating the
      * stack.
      * </p>
      * <note>
      * <p>
      * A stack name can contain only alphanumeric characters (case sensitive) and hyphens. It must start with an
-     * alphabetical character and cannot be longer than 128 characters.
+     * alphabetical character and can't be longer than 128 characters.
      * </p>
      * </note>
      */
@@ -45,7 +45,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes. For
      * more information, go to <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template anatomy</a>
      * in the CloudFormation User Guide.
      * </p>
      * <p>
@@ -56,9 +56,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String templateBody;
     /**
      * <p>
-     * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that is
+     * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that's
      * located in an Amazon S3 bucket or a Systems Manager document. For more information, go to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template anatomy</a>
      * in the CloudFormation User Guide.
      * </p>
      * <p>
@@ -102,8 +102,8 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     private Integer timeoutInMinutes;
     /**
      * <p>
-     * The Simple Notification Service (SNS) topic ARNs to publish stack related events. You can find your SNS topic
-     * ARNs using the SNS console or your Command Line Interface (CLI).
+     * The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related events. You can find your
+     * Amazon SNS topic ARNs using the Amazon SNS console or your Command Line Interface (CLI).
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> notificationARNs;
@@ -163,8 +163,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -231,7 +232,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
-     * Macros to Perform Custom Processing on Templates</a>.
+     * macros to perform custom processing on templates</a>.
      * </p>
      * </li>
      * </ul>
@@ -260,20 +261,21 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to
      * create the stack. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation always
-     * uses this role for all future operations on the stack. As long as users have permission to operate on the stack,
-     * CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants
-     * least privilege.
+     * uses this role for all future operations on the stack. Provided that users have permission to operate on the
+     * stack, CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role
+     * grants least privilege.
      * </p>
      * <p>
      * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
-     * role is available, CloudFormation uses a temporary session that is generated from your user credentials.
+     * role is available, CloudFormation uses a temporary session that's generated from your user credentials.
      * </p>
      */
     private String roleARN;
     /**
      * <p>
-     * Determines what action will be taken if stack creation fails. This must be one of: DO_NOTHING, ROLLBACK, or
-     * DELETE. You can specify either <code>OnFailure</code> or <code>DisableRollback</code>, but not both.
+     * Determines what action will be taken if stack creation fails. This must be one of: <code>DO_NOTHING</code>,
+     * <code>ROLLBACK</code>, or <code>DELETE</code>. You can specify either <code>OnFailure</code> or
+     * <code>DisableRollback</code>, but not both.
      * </p>
      * <p>
      * Default: <code>ROLLBACK</code>
@@ -311,7 +313,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CreateStack</code> requests to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
-     * All events triggered by a given stack operation are assigned the same client request token, which you can use to
+     * All events initiated by a given stack operation are assigned the same client request token, which you can use to
      * track operations. For example, if you execute a <code>CreateStack</code> operation with the token
      * <code>token1</code>, then all the <code>StackEvents</code> generated by that operation will have
      * <code>ClientRequestToken</code> set as <code>token1</code>.
@@ -329,34 +331,34 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Whether to enable termination protection on the specified stack. If a user attempts to delete a stack with
      * termination protection enabled, the operation fails and the stack remains unchanged. For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
-     * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection is disabled on
+     * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection is deactivated on
      * stacks by default.
      * </p>
      * <p>
      * For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
-     * stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack.
+     * stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack.
      * </p>
      */
     private Boolean enableTerminationProtection;
 
     /**
      * <p>
-     * The name that is associated with the stack. The name must be unique in the Region in which you are creating the
+     * The name that's associated with the stack. The name must be unique in the Region in which you are creating the
      * stack.
      * </p>
      * <note>
      * <p>
      * A stack name can contain only alphanumeric characters (case sensitive) and hyphens. It must start with an
-     * alphabetical character and cannot be longer than 128 characters.
+     * alphabetical character and can't be longer than 128 characters.
      * </p>
      * </note>
      * 
      * @param stackName
-     *        The name that is associated with the stack. The name must be unique in the Region in which you are
-     *        creating the stack.</p> <note>
+     *        The name that's associated with the stack. The name must be unique in the Region in which you are creating
+     *        the stack.</p> <note>
      *        <p>
      *        A stack name can contain only alphanumeric characters (case sensitive) and hyphens. It must start with an
-     *        alphabetical character and cannot be longer than 128 characters.
+     *        alphabetical character and can't be longer than 128 characters.
      *        </p>
      */
 
@@ -366,21 +368,21 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name that is associated with the stack. The name must be unique in the Region in which you are creating the
+     * The name that's associated with the stack. The name must be unique in the Region in which you are creating the
      * stack.
      * </p>
      * <note>
      * <p>
      * A stack name can contain only alphanumeric characters (case sensitive) and hyphens. It must start with an
-     * alphabetical character and cannot be longer than 128 characters.
+     * alphabetical character and can't be longer than 128 characters.
      * </p>
      * </note>
      * 
-     * @return The name that is associated with the stack. The name must be unique in the Region in which you are
+     * @return The name that's associated with the stack. The name must be unique in the Region in which you are
      *         creating the stack.</p> <note>
      *         <p>
      *         A stack name can contain only alphanumeric characters (case sensitive) and hyphens. It must start with an
-     *         alphabetical character and cannot be longer than 128 characters.
+     *         alphabetical character and can't be longer than 128 characters.
      *         </p>
      */
 
@@ -390,22 +392,22 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name that is associated with the stack. The name must be unique in the Region in which you are creating the
+     * The name that's associated with the stack. The name must be unique in the Region in which you are creating the
      * stack.
      * </p>
      * <note>
      * <p>
      * A stack name can contain only alphanumeric characters (case sensitive) and hyphens. It must start with an
-     * alphabetical character and cannot be longer than 128 characters.
+     * alphabetical character and can't be longer than 128 characters.
      * </p>
      * </note>
      * 
      * @param stackName
-     *        The name that is associated with the stack. The name must be unique in the Region in which you are
-     *        creating the stack.</p> <note>
+     *        The name that's associated with the stack. The name must be unique in the Region in which you are creating
+     *        the stack.</p> <note>
      *        <p>
      *        A stack name can contain only alphanumeric characters (case sensitive) and hyphens. It must start with an
-     *        alphabetical character and cannot be longer than 128 characters.
+     *        alphabetical character and can't be longer than 128 characters.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -419,7 +421,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes. For
      * more information, go to <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template anatomy</a>
      * in the CloudFormation User Guide.
      * </p>
      * <p>
@@ -431,7 +433,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200
      *        bytes. For more information, go to <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the CloudFormation User Guide.</p>
+     *        anatomy</a> in the CloudFormation User Guide.</p>
      *        <p>
      *        Conditional: You must specify either the <code>TemplateBody</code> or the <code>TemplateURL</code>
      *        parameter, but not both.
@@ -445,7 +447,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes. For
      * more information, go to <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template anatomy</a>
      * in the CloudFormation User Guide.
      * </p>
      * <p>
@@ -456,7 +458,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * @return Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200
      *         bytes. For more information, go to <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *         Anatomy</a> in the CloudFormation User Guide.</p>
+     *         anatomy</a> in the CloudFormation User Guide.</p>
      *         <p>
      *         Conditional: You must specify either the <code>TemplateBody</code> or the <code>TemplateURL</code>
      *         parameter, but not both.
@@ -470,7 +472,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes. For
      * more information, go to <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template anatomy</a>
      * in the CloudFormation User Guide.
      * </p>
      * <p>
@@ -482,7 +484,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200
      *        bytes. For more information, go to <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the CloudFormation User Guide.</p>
+     *        anatomy</a> in the CloudFormation User Guide.</p>
      *        <p>
      *        Conditional: You must specify either the <code>TemplateBody</code> or the <code>TemplateURL</code>
      *        parameter, but not both.
@@ -496,9 +498,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that is
+     * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that's
      * located in an Amazon S3 bucket or a Systems Manager document. For more information, go to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template anatomy</a>
      * in the CloudFormation User Guide.
      * </p>
      * <p>
@@ -508,9 +510,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param templateURL
      *        Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes)
-     *        that is located in an Amazon S3 bucket or a Systems Manager document. For more information, go to the <a
+     *        that's located in an Amazon S3 bucket or a Systems Manager document. For more information, go to the <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the CloudFormation User Guide.</p>
+     *        anatomy</a> in the CloudFormation User Guide.</p>
      *        <p>
      *        Conditional: You must specify either the <code>TemplateBody</code> or the <code>TemplateURL</code>
      *        parameter, but not both.
@@ -522,9 +524,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that is
+     * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that's
      * located in an Amazon S3 bucket or a Systems Manager document. For more information, go to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template anatomy</a>
      * in the CloudFormation User Guide.
      * </p>
      * <p>
@@ -533,9 +535,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @return Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes)
-     *         that is located in an Amazon S3 bucket or a Systems Manager document. For more information, go to the <a
+     *         that's located in an Amazon S3 bucket or a Systems Manager document. For more information, go to the <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *         Anatomy</a> in the CloudFormation User Guide.</p>
+     *         anatomy</a> in the CloudFormation User Guide.</p>
      *         <p>
      *         Conditional: You must specify either the <code>TemplateBody</code> or the <code>TemplateURL</code>
      *         parameter, but not both.
@@ -547,9 +549,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that is
+     * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that's
      * located in an Amazon S3 bucket or a Systems Manager document. For more information, go to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template anatomy</a>
      * in the CloudFormation User Guide.
      * </p>
      * <p>
@@ -559,9 +561,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param templateURL
      *        Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes)
-     *        that is located in an Amazon S3 bucket or a Systems Manager document. For more information, go to the <a
+     *        that's located in an Amazon S3 bucket or a Systems Manager document. For more information, go to the <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the CloudFormation User Guide.</p>
+     *        anatomy</a> in the CloudFormation User Guide.</p>
      *        <p>
      *        Conditional: You must specify either the <code>TemplateBody</code> or the <code>TemplateURL</code>
      *        parameter, but not both.
@@ -844,12 +846,12 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Simple Notification Service (SNS) topic ARNs to publish stack related events. You can find your SNS topic
-     * ARNs using the SNS console or your Command Line Interface (CLI).
+     * The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related events. You can find your
+     * Amazon SNS topic ARNs using the Amazon SNS console or your Command Line Interface (CLI).
      * </p>
      * 
-     * @return The Simple Notification Service (SNS) topic ARNs to publish stack related events. You can find your SNS
-     *         topic ARNs using the SNS console or your Command Line Interface (CLI).
+     * @return The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related events. You can
+     *         find your Amazon SNS topic ARNs using the Amazon SNS console or your Command Line Interface (CLI).
      */
 
     public java.util.List<String> getNotificationARNs() {
@@ -861,13 +863,13 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Simple Notification Service (SNS) topic ARNs to publish stack related events. You can find your SNS topic
-     * ARNs using the SNS console or your Command Line Interface (CLI).
+     * The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related events. You can find your
+     * Amazon SNS topic ARNs using the Amazon SNS console or your Command Line Interface (CLI).
      * </p>
      * 
      * @param notificationARNs
-     *        The Simple Notification Service (SNS) topic ARNs to publish stack related events. You can find your SNS
-     *        topic ARNs using the SNS console or your Command Line Interface (CLI).
+     *        The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related events. You can
+     *        find your Amazon SNS topic ARNs using the Amazon SNS console or your Command Line Interface (CLI).
      */
 
     public void setNotificationARNs(java.util.Collection<String> notificationARNs) {
@@ -881,8 +883,8 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Simple Notification Service (SNS) topic ARNs to publish stack related events. You can find your SNS topic
-     * ARNs using the SNS console or your Command Line Interface (CLI).
+     * The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related events. You can find your
+     * Amazon SNS topic ARNs using the Amazon SNS console or your Command Line Interface (CLI).
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -891,8 +893,8 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param notificationARNs
-     *        The Simple Notification Service (SNS) topic ARNs to publish stack related events. You can find your SNS
-     *        topic ARNs using the SNS console or your Command Line Interface (CLI).
+     *        The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related events. You can
+     *        find your Amazon SNS topic ARNs using the Amazon SNS console or your Command Line Interface (CLI).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -908,13 +910,13 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Simple Notification Service (SNS) topic ARNs to publish stack related events. You can find your SNS topic
-     * ARNs using the SNS console or your Command Line Interface (CLI).
+     * The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related events. You can find your
+     * Amazon SNS topic ARNs using the Amazon SNS console or your Command Line Interface (CLI).
      * </p>
      * 
      * @param notificationARNs
-     *        The Simple Notification Service (SNS) topic ARNs to publish stack related events. You can find your SNS
-     *        topic ARNs using the SNS console or your Command Line Interface (CLI).
+     *        The Amazon Simple Notification Service (Amazon SNS) topic ARNs to publish stack related events. You can
+     *        find your Amazon SNS topic ARNs using the Amazon SNS console or your Command Line Interface (CLI).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -979,8 +981,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -1047,7 +1050,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
-     * Macros to Perform Custom Processing on Templates</a>.
+     * macros to perform custom processing on templates</a>.
      * </p>
      * </li>
      * </ul>
@@ -1107,8 +1110,8 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         <li>
      *         <p>
      *         <a href=
-     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     *         AWS::IAM::InstanceProfile</a>
+     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
+     *         >AWS::IAM::InstanceProfile</a>
      *         </p>
      *         </li>
      *         <li>
@@ -1132,8 +1135,8 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         <li>
      *         <p>
      *         <a href=
-     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     *         AWS::IAM::UserToGroupAddition</a>
+     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
+     *         >AWS::IAM::UserToGroupAddition</a>
      *         </p>
      *         </li>
      *         </ul>
@@ -1177,7 +1180,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         <p>
      *         For more information, see <a
      *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
-     *         CloudFormation Macros to Perform Custom Processing on Templates</a>.
+     *         CloudFormation macros to perform custom processing on templates</a>.
      *         </p>
      *         </li>
      * @see Capability
@@ -1246,8 +1249,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -1314,7 +1318,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
-     * Macros to Perform Custom Processing on Templates</a>.
+     * macros to perform custom processing on templates</a>.
      * </p>
      * </li>
      * </ul>
@@ -1375,8 +1379,8 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     *        AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
+     *        >AWS::IAM::InstanceProfile</a>
      *        </p>
      *        </li>
      *        <li>
@@ -1400,8 +1404,8 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     *        AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
+     *        >AWS::IAM::UserToGroupAddition</a>
      *        </p>
      *        </li>
      *        </ul>
@@ -1445,7 +1449,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
-     *        CloudFormation Macros to Perform Custom Processing on Templates</a>.
+     *        CloudFormation macros to perform custom processing on templates</a>.
      *        </p>
      *        </li>
      * @see Capability
@@ -1516,8 +1520,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -1584,7 +1589,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
-     * Macros to Perform Custom Processing on Templates</a>.
+     * macros to perform custom processing on templates</a>.
      * </p>
      * </li>
      * </ul>
@@ -1650,8 +1655,8 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     *        AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
+     *        >AWS::IAM::InstanceProfile</a>
      *        </p>
      *        </li>
      *        <li>
@@ -1675,8 +1680,8 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     *        AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
+     *        >AWS::IAM::UserToGroupAddition</a>
      *        </p>
      *        </li>
      *        </ul>
@@ -1720,7 +1725,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
-     *        CloudFormation Macros to Perform Custom Processing on Templates</a>.
+     *        CloudFormation macros to perform custom processing on templates</a>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1793,8 +1798,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -1861,7 +1867,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
-     * Macros to Perform Custom Processing on Templates</a>.
+     * macros to perform custom processing on templates</a>.
      * </p>
      * </li>
      * </ul>
@@ -1922,8 +1928,8 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     *        AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
+     *        >AWS::IAM::InstanceProfile</a>
      *        </p>
      *        </li>
      *        <li>
@@ -1947,8 +1953,8 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     *        AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
+     *        >AWS::IAM::UserToGroupAddition</a>
      *        </p>
      *        </li>
      *        </ul>
@@ -1992,7 +1998,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
-     *        CloudFormation Macros to Perform Custom Processing on Templates</a>.
+     *        CloudFormation macros to perform custom processing on templates</a>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2060,8 +2066,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -2128,7 +2135,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
-     * Macros to Perform Custom Processing on Templates</a>.
+     * macros to perform custom processing on templates</a>.
      * </p>
      * </li>
      * </ul>
@@ -2189,8 +2196,8 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     *        AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
+     *        >AWS::IAM::InstanceProfile</a>
      *        </p>
      *        </li>
      *        <li>
@@ -2214,8 +2221,8 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     *        AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
+     *        >AWS::IAM::UserToGroupAddition</a>
      *        </p>
      *        </li>
      *        </ul>
@@ -2259,7 +2266,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
-     *        CloudFormation Macros to Perform Custom Processing on Templates</a>.
+     *        CloudFormation macros to perform custom processing on templates</a>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2460,24 +2467,24 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to
      * create the stack. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation always
-     * uses this role for all future operations on the stack. As long as users have permission to operate on the stack,
-     * CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants
-     * least privilege.
+     * uses this role for all future operations on the stack. Provided that users have permission to operate on the
+     * stack, CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role
+     * grants least privilege.
      * </p>
      * <p>
      * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
-     * role is available, CloudFormation uses a temporary session that is generated from your user credentials.
+     * role is available, CloudFormation uses a temporary session that's generated from your user credentials.
      * </p>
      * 
      * @param roleARN
      *        The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes
      *        to create the stack. CloudFormation uses the role's credentials to make calls on your behalf.
-     *        CloudFormation always uses this role for all future operations on the stack. As long as users have
+     *        CloudFormation always uses this role for all future operations on the stack. Provided that users have
      *        permission to operate on the stack, CloudFormation uses this role even if the users don't have permission
      *        to pass it. Ensure that the role grants least privilege.</p>
      *        <p>
      *        If you don't specify a value, CloudFormation uses the role that was previously associated with the stack.
-     *        If no role is available, CloudFormation uses a temporary session that is generated from your user
+     *        If no role is available, CloudFormation uses a temporary session that's generated from your user
      *        credentials.
      */
 
@@ -2489,23 +2496,23 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to
      * create the stack. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation always
-     * uses this role for all future operations on the stack. As long as users have permission to operate on the stack,
-     * CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants
-     * least privilege.
+     * uses this role for all future operations on the stack. Provided that users have permission to operate on the
+     * stack, CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role
+     * grants least privilege.
      * </p>
      * <p>
      * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
-     * role is available, CloudFormation uses a temporary session that is generated from your user credentials.
+     * role is available, CloudFormation uses a temporary session that's generated from your user credentials.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation
      *         assumes to create the stack. CloudFormation uses the role's credentials to make calls on your behalf.
-     *         CloudFormation always uses this role for all future operations on the stack. As long as users have
+     *         CloudFormation always uses this role for all future operations on the stack. Provided that users have
      *         permission to operate on the stack, CloudFormation uses this role even if the users don't have permission
      *         to pass it. Ensure that the role grants least privilege.</p>
      *         <p>
      *         If you don't specify a value, CloudFormation uses the role that was previously associated with the stack.
-     *         If no role is available, CloudFormation uses a temporary session that is generated from your user
+     *         If no role is available, CloudFormation uses a temporary session that's generated from your user
      *         credentials.
      */
 
@@ -2517,24 +2524,24 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to
      * create the stack. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation always
-     * uses this role for all future operations on the stack. As long as users have permission to operate on the stack,
-     * CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants
-     * least privilege.
+     * uses this role for all future operations on the stack. Provided that users have permission to operate on the
+     * stack, CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role
+     * grants least privilege.
      * </p>
      * <p>
      * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
-     * role is available, CloudFormation uses a temporary session that is generated from your user credentials.
+     * role is available, CloudFormation uses a temporary session that's generated from your user credentials.
      * </p>
      * 
      * @param roleARN
      *        The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes
      *        to create the stack. CloudFormation uses the role's credentials to make calls on your behalf.
-     *        CloudFormation always uses this role for all future operations on the stack. As long as users have
+     *        CloudFormation always uses this role for all future operations on the stack. Provided that users have
      *        permission to operate on the stack, CloudFormation uses this role even if the users don't have permission
      *        to pass it. Ensure that the role grants least privilege.</p>
      *        <p>
      *        If you don't specify a value, CloudFormation uses the role that was previously associated with the stack.
-     *        If no role is available, CloudFormation uses a temporary session that is generated from your user
+     *        If no role is available, CloudFormation uses a temporary session that's generated from your user
      *        credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2546,17 +2553,18 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Determines what action will be taken if stack creation fails. This must be one of: DO_NOTHING, ROLLBACK, or
-     * DELETE. You can specify either <code>OnFailure</code> or <code>DisableRollback</code>, but not both.
+     * Determines what action will be taken if stack creation fails. This must be one of: <code>DO_NOTHING</code>,
+     * <code>ROLLBACK</code>, or <code>DELETE</code>. You can specify either <code>OnFailure</code> or
+     * <code>DisableRollback</code>, but not both.
      * </p>
      * <p>
      * Default: <code>ROLLBACK</code>
      * </p>
      * 
      * @param onFailure
-     *        Determines what action will be taken if stack creation fails. This must be one of: DO_NOTHING, ROLLBACK,
-     *        or DELETE. You can specify either <code>OnFailure</code> or <code>DisableRollback</code>, but not
-     *        both.</p>
+     *        Determines what action will be taken if stack creation fails. This must be one of: <code>DO_NOTHING</code>
+     *        , <code>ROLLBACK</code>, or <code>DELETE</code>. You can specify either <code>OnFailure</code> or
+     *        <code>DisableRollback</code>, but not both.</p>
      *        <p>
      *        Default: <code>ROLLBACK</code>
      * @see OnFailure
@@ -2568,16 +2576,17 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Determines what action will be taken if stack creation fails. This must be one of: DO_NOTHING, ROLLBACK, or
-     * DELETE. You can specify either <code>OnFailure</code> or <code>DisableRollback</code>, but not both.
+     * Determines what action will be taken if stack creation fails. This must be one of: <code>DO_NOTHING</code>,
+     * <code>ROLLBACK</code>, or <code>DELETE</code>. You can specify either <code>OnFailure</code> or
+     * <code>DisableRollback</code>, but not both.
      * </p>
      * <p>
      * Default: <code>ROLLBACK</code>
      * </p>
      * 
-     * @return Determines what action will be taken if stack creation fails. This must be one of: DO_NOTHING, ROLLBACK,
-     *         or DELETE. You can specify either <code>OnFailure</code> or <code>DisableRollback</code>, but not
-     *         both.</p>
+     * @return Determines what action will be taken if stack creation fails. This must be one of:
+     *         <code>DO_NOTHING</code>, <code>ROLLBACK</code>, or <code>DELETE</code>. You can specify either
+     *         <code>OnFailure</code> or <code>DisableRollback</code>, but not both.</p>
      *         <p>
      *         Default: <code>ROLLBACK</code>
      * @see OnFailure
@@ -2589,17 +2598,18 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Determines what action will be taken if stack creation fails. This must be one of: DO_NOTHING, ROLLBACK, or
-     * DELETE. You can specify either <code>OnFailure</code> or <code>DisableRollback</code>, but not both.
+     * Determines what action will be taken if stack creation fails. This must be one of: <code>DO_NOTHING</code>,
+     * <code>ROLLBACK</code>, or <code>DELETE</code>. You can specify either <code>OnFailure</code> or
+     * <code>DisableRollback</code>, but not both.
      * </p>
      * <p>
      * Default: <code>ROLLBACK</code>
      * </p>
      * 
      * @param onFailure
-     *        Determines what action will be taken if stack creation fails. This must be one of: DO_NOTHING, ROLLBACK,
-     *        or DELETE. You can specify either <code>OnFailure</code> or <code>DisableRollback</code>, but not
-     *        both.</p>
+     *        Determines what action will be taken if stack creation fails. This must be one of: <code>DO_NOTHING</code>
+     *        , <code>ROLLBACK</code>, or <code>DELETE</code>. You can specify either <code>OnFailure</code> or
+     *        <code>DisableRollback</code>, but not both.</p>
      *        <p>
      *        Default: <code>ROLLBACK</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2613,17 +2623,18 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Determines what action will be taken if stack creation fails. This must be one of: DO_NOTHING, ROLLBACK, or
-     * DELETE. You can specify either <code>OnFailure</code> or <code>DisableRollback</code>, but not both.
+     * Determines what action will be taken if stack creation fails. This must be one of: <code>DO_NOTHING</code>,
+     * <code>ROLLBACK</code>, or <code>DELETE</code>. You can specify either <code>OnFailure</code> or
+     * <code>DisableRollback</code>, but not both.
      * </p>
      * <p>
      * Default: <code>ROLLBACK</code>
      * </p>
      * 
      * @param onFailure
-     *        Determines what action will be taken if stack creation fails. This must be one of: DO_NOTHING, ROLLBACK,
-     *        or DELETE. You can specify either <code>OnFailure</code> or <code>DisableRollback</code>, but not
-     *        both.</p>
+     *        Determines what action will be taken if stack creation fails. This must be one of: <code>DO_NOTHING</code>
+     *        , <code>ROLLBACK</code>, or <code>DELETE</code>. You can specify either <code>OnFailure</code> or
+     *        <code>DisableRollback</code>, but not both.</p>
      *        <p>
      *        Default: <code>ROLLBACK</code>
      * @see OnFailure
@@ -2635,17 +2646,18 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Determines what action will be taken if stack creation fails. This must be one of: DO_NOTHING, ROLLBACK, or
-     * DELETE. You can specify either <code>OnFailure</code> or <code>DisableRollback</code>, but not both.
+     * Determines what action will be taken if stack creation fails. This must be one of: <code>DO_NOTHING</code>,
+     * <code>ROLLBACK</code>, or <code>DELETE</code>. You can specify either <code>OnFailure</code> or
+     * <code>DisableRollback</code>, but not both.
      * </p>
      * <p>
      * Default: <code>ROLLBACK</code>
      * </p>
      * 
      * @param onFailure
-     *        Determines what action will be taken if stack creation fails. This must be one of: DO_NOTHING, ROLLBACK,
-     *        or DELETE. You can specify either <code>OnFailure</code> or <code>DisableRollback</code>, but not
-     *        both.</p>
+     *        Determines what action will be taken if stack creation fails. This must be one of: <code>DO_NOTHING</code>
+     *        , <code>ROLLBACK</code>, or <code>DELETE</code>. You can specify either <code>OnFailure</code> or
+     *        <code>DisableRollback</code>, but not both.</p>
      *        <p>
      *        Default: <code>ROLLBACK</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2855,7 +2867,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CreateStack</code> requests to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
-     * All events triggered by a given stack operation are assigned the same client request token, which you can use to
+     * All events initiated by a given stack operation are assigned the same client request token, which you can use to
      * track operations. For example, if you execute a <code>CreateStack</code> operation with the token
      * <code>token1</code>, then all the <code>StackEvents</code> generated by that operation will have
      * <code>ClientRequestToken</code> set as <code>token1</code>.
@@ -2873,7 +2885,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        might retry <code>CreateStack</code> requests to ensure that CloudFormation successfully received
      *        them.</p>
      *        <p>
-     *        All events triggered by a given stack operation are assigned the same client request token, which you can
+     *        All events initiated by a given stack operation are assigned the same client request token, which you can
      *        use to track operations. For example, if you execute a <code>CreateStack</code> operation with the token
      *        <code>token1</code>, then all the <code>StackEvents</code> generated by that operation will have
      *        <code>ClientRequestToken</code> set as <code>token1</code>.
@@ -2897,7 +2909,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CreateStack</code> requests to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
-     * All events triggered by a given stack operation are assigned the same client request token, which you can use to
+     * All events initiated by a given stack operation are assigned the same client request token, which you can use to
      * track operations. For example, if you execute a <code>CreateStack</code> operation with the token
      * <code>token1</code>, then all the <code>StackEvents</code> generated by that operation will have
      * <code>ClientRequestToken</code> set as <code>token1</code>.
@@ -2914,7 +2926,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         You might retry <code>CreateStack</code> requests to ensure that CloudFormation successfully received
      *         them.</p>
      *         <p>
-     *         All events triggered by a given stack operation are assigned the same client request token, which you can
+     *         All events initiated by a given stack operation are assigned the same client request token, which you can
      *         use to track operations. For example, if you execute a <code>CreateStack</code> operation with the token
      *         <code>token1</code>, then all the <code>StackEvents</code> generated by that operation will have
      *         <code>ClientRequestToken</code> set as <code>token1</code>.
@@ -2938,7 +2950,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CreateStack</code> requests to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
-     * All events triggered by a given stack operation are assigned the same client request token, which you can use to
+     * All events initiated by a given stack operation are assigned the same client request token, which you can use to
      * track operations. For example, if you execute a <code>CreateStack</code> operation with the token
      * <code>token1</code>, then all the <code>StackEvents</code> generated by that operation will have
      * <code>ClientRequestToken</code> set as <code>token1</code>.
@@ -2956,7 +2968,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        might retry <code>CreateStack</code> requests to ensure that CloudFormation successfully received
      *        them.</p>
      *        <p>
-     *        All events triggered by a given stack operation are assigned the same client request token, which you can
+     *        All events initiated by a given stack operation are assigned the same client request token, which you can
      *        use to track operations. For example, if you execute a <code>CreateStack</code> operation with the token
      *        <code>token1</code>, then all the <code>StackEvents</code> generated by that operation will have
      *        <code>ClientRequestToken</code> set as <code>token1</code>.
@@ -2980,12 +2992,12 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Whether to enable termination protection on the specified stack. If a user attempts to delete a stack with
      * termination protection enabled, the operation fails and the stack remains unchanged. For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
-     * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection is disabled on
+     * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection is deactivated on
      * stacks by default.
      * </p>
      * <p>
      * For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
-     * stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack.
+     * stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack.
      * </p>
      * 
      * @param enableTerminationProtection
@@ -2993,11 +3005,11 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        termination protection enabled, the operation fails and the stack remains unchanged. For more information,
      *        see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">
      *        Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection
-     *        is disabled on stacks by default.</p>
+     *        is deactivated on stacks by default.</p>
      *        <p>
      *        For <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
-     *        stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested
+     *        stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested
      *        stack.
      */
 
@@ -3010,12 +3022,12 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Whether to enable termination protection on the specified stack. If a user attempts to delete a stack with
      * termination protection enabled, the operation fails and the stack remains unchanged. For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
-     * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection is disabled on
+     * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection is deactivated on
      * stacks by default.
      * </p>
      * <p>
      * For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
-     * stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack.
+     * stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack.
      * </p>
      * 
      * @return Whether to enable termination protection on the specified stack. If a user attempts to delete a stack
@@ -3023,10 +3035,10 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         information, see <a
      *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
      *         >Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination
-     *         protection is disabled on stacks by default.</p>
+     *         protection is deactivated on stacks by default.</p>
      *         <p>
      *         For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">
-     *         nested stacks</a>, termination protection is set on the root stack and cannot be changed directly on the
+     *         nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the
      *         nested stack.
      */
 
@@ -3039,12 +3051,12 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Whether to enable termination protection on the specified stack. If a user attempts to delete a stack with
      * termination protection enabled, the operation fails and the stack remains unchanged. For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
-     * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection is disabled on
+     * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection is deactivated on
      * stacks by default.
      * </p>
      * <p>
      * For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
-     * stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack.
+     * stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack.
      * </p>
      * 
      * @param enableTerminationProtection
@@ -3052,11 +3064,11 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        termination protection enabled, the operation fails and the stack remains unchanged. For more information,
      *        see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">
      *        Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection
-     *        is disabled on stacks by default.</p>
+     *        is deactivated on stacks by default.</p>
      *        <p>
      *        For <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
-     *        stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested
+     *        stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested
      *        stack.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -3071,12 +3083,12 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Whether to enable termination protection on the specified stack. If a user attempts to delete a stack with
      * termination protection enabled, the operation fails and the stack remains unchanged. For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
-     * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection is disabled on
+     * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection is deactivated on
      * stacks by default.
      * </p>
      * <p>
      * For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
-     * stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack.
+     * stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack.
      * </p>
      * 
      * @return Whether to enable termination protection on the specified stack. If a user attempts to delete a stack
@@ -3084,10 +3096,10 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         information, see <a
      *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
      *         >Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination
-     *         protection is disabled on stacks by default.</p>
+     *         protection is deactivated on stacks by default.</p>
      *         <p>
      *         For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">
-     *         nested stacks</a>, termination protection is set on the root stack and cannot be changed directly on the
+     *         nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the
      *         nested stack.
      */
 

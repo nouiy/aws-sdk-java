@@ -57,6 +57,8 @@ public enum CloudFormationActions implements Action {
     DescribeAccountLimits("cloudformation:DescribeAccountLimits"),
     /** Action for the DescribeChangeSet operation. */
     DescribeChangeSet("cloudformation:DescribeChangeSet"),
+    /** Action for the DescribeChangeSetHooks operation. */
+    DescribeChangeSetHooks("cloudformation:DescribeChangeSetHooks"),
     /** Action for the DescribePublisher operation. */
     DescribePublisher("cloudformation:DescribePublisher"),
     /** Action for the DescribeStackDriftDetectionStatus operation. */

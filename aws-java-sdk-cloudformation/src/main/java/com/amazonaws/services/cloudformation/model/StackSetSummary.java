@@ -97,13 +97,13 @@ public class StackSetSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>IN_SYNC</code>: All of the stack instances belonging to the stack set stack match from the expected
-     * template and parameter configuration.
+     * <code>IN_SYNC</code>: All the stack instances belonging to the stack set stack match from the expected template
+     * and parameter configuration.
      * </p>
      * </li>
      * <li>
@@ -117,7 +117,7 @@ public class StackSetSummary implements Serializable, Cloneable {
     /**
      * <p>
      * Most recent time when CloudFormation performed a drift detection operation on the stack set. This value will be
-     * <code>NULL</code> for any stack set on which drift detection has not yet been performed.
+     * <code>NULL</code> for any stack set on which drift detection hasn't yet been performed.
      * </p>
      */
     private java.util.Date lastDriftCheckTimestamp;
@@ -631,13 +631,13 @@ public class StackSetSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>IN_SYNC</code>: All of the stack instances belonging to the stack set stack match from the expected
-     * template and parameter configuration.
+     * <code>IN_SYNC</code>: All the stack instances belonging to the stack set stack match from the expected template
+     * and parameter configuration.
      * </p>
      * </li>
      * <li>
@@ -661,12 +661,12 @@ public class StackSetSummary implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     *        <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IN_SYNC</code>: All of the stack instances belonging to the stack set stack match from the expected
+     *        <code>IN_SYNC</code>: All the stack instances belonging to the stack set stack match from the expected
      *        template and parameter configuration.
      *        </p>
      *        </li>
@@ -698,13 +698,13 @@ public class StackSetSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>IN_SYNC</code>: All of the stack instances belonging to the stack set stack match from the expected
-     * template and parameter configuration.
+     * <code>IN_SYNC</code>: All the stack instances belonging to the stack set stack match from the expected template
+     * and parameter configuration.
      * </p>
      * </li>
      * <li>
@@ -727,12 +727,12 @@ public class StackSetSummary implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     *         <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>IN_SYNC</code>: All of the stack instances belonging to the stack set stack match from the expected
+     *         <code>IN_SYNC</code>: All the stack instances belonging to the stack set stack match from the expected
      *         template and parameter configuration.
      *         </p>
      *         </li>
@@ -764,13 +764,13 @@ public class StackSetSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>IN_SYNC</code>: All of the stack instances belonging to the stack set stack match from the expected
-     * template and parameter configuration.
+     * <code>IN_SYNC</code>: All the stack instances belonging to the stack set stack match from the expected template
+     * and parameter configuration.
      * </p>
      * </li>
      * <li>
@@ -794,12 +794,12 @@ public class StackSetSummary implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     *        <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IN_SYNC</code>: All of the stack instances belonging to the stack set stack match from the expected
+     *        <code>IN_SYNC</code>: All the stack instances belonging to the stack set stack match from the expected
      *        template and parameter configuration.
      *        </p>
      *        </li>
@@ -833,13 +833,13 @@ public class StackSetSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>IN_SYNC</code>: All of the stack instances belonging to the stack set stack match from the expected
-     * template and parameter configuration.
+     * <code>IN_SYNC</code>: All the stack instances belonging to the stack set stack match from the expected template
+     * and parameter configuration.
      * </p>
      * </li>
      * <li>
@@ -863,12 +863,12 @@ public class StackSetSummary implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     *        <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IN_SYNC</code>: All of the stack instances belonging to the stack set stack match from the expected
+     *        <code>IN_SYNC</code>: All the stack instances belonging to the stack set stack match from the expected
      *        template and parameter configuration.
      *        </p>
      *        </li>
@@ -900,13 +900,13 @@ public class StackSetSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>IN_SYNC</code>: All of the stack instances belonging to the stack set stack match from the expected
-     * template and parameter configuration.
+     * <code>IN_SYNC</code>: All the stack instances belonging to the stack set stack match from the expected template
+     * and parameter configuration.
      * </p>
      * </li>
      * <li>
@@ -930,12 +930,12 @@ public class StackSetSummary implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
+     *        <code>NOT_CHECKED</code>: CloudFormation hasn't checked the stack set for drift.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IN_SYNC</code>: All of the stack instances belonging to the stack set stack match from the expected
+     *        <code>IN_SYNC</code>: All the stack instances belonging to the stack set stack match from the expected
      *        template and parameter configuration.
      *        </p>
      *        </li>
@@ -956,12 +956,12 @@ public class StackSetSummary implements Serializable, Cloneable {
     /**
      * <p>
      * Most recent time when CloudFormation performed a drift detection operation on the stack set. This value will be
-     * <code>NULL</code> for any stack set on which drift detection has not yet been performed.
+     * <code>NULL</code> for any stack set on which drift detection hasn't yet been performed.
      * </p>
      * 
      * @param lastDriftCheckTimestamp
      *        Most recent time when CloudFormation performed a drift detection operation on the stack set. This value
-     *        will be <code>NULL</code> for any stack set on which drift detection has not yet been performed.
+     *        will be <code>NULL</code> for any stack set on which drift detection hasn't yet been performed.
      */
 
     public void setLastDriftCheckTimestamp(java.util.Date lastDriftCheckTimestamp) {
@@ -971,11 +971,11 @@ public class StackSetSummary implements Serializable, Cloneable {
     /**
      * <p>
      * Most recent time when CloudFormation performed a drift detection operation on the stack set. This value will be
-     * <code>NULL</code> for any stack set on which drift detection has not yet been performed.
+     * <code>NULL</code> for any stack set on which drift detection hasn't yet been performed.
      * </p>
      * 
      * @return Most recent time when CloudFormation performed a drift detection operation on the stack set. This value
-     *         will be <code>NULL</code> for any stack set on which drift detection has not yet been performed.
+     *         will be <code>NULL</code> for any stack set on which drift detection hasn't yet been performed.
      */
 
     public java.util.Date getLastDriftCheckTimestamp() {
@@ -985,12 +985,12 @@ public class StackSetSummary implements Serializable, Cloneable {
     /**
      * <p>
      * Most recent time when CloudFormation performed a drift detection operation on the stack set. This value will be
-     * <code>NULL</code> for any stack set on which drift detection has not yet been performed.
+     * <code>NULL</code> for any stack set on which drift detection hasn't yet been performed.
      * </p>
      * 
      * @param lastDriftCheckTimestamp
      *        Most recent time when CloudFormation performed a drift detection operation on the stack set. This value
-     *        will be <code>NULL</code> for any stack set on which drift detection has not yet been performed.
+     *        will be <code>NULL</code> for any stack set on which drift detection hasn't yet been performed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

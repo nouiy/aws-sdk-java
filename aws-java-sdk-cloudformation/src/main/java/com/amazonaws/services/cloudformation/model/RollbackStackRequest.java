@@ -27,7 +27,7 @@ public class RollbackStackRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name that is associated with the stack.
+     * The name that's associated with the stack.
      * </p>
      */
     private String stackName;
@@ -47,11 +47,11 @@ public class RollbackStackRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name that is associated with the stack.
+     * The name that's associated with the stack.
      * </p>
      * 
      * @param stackName
-     *        The name that is associated with the stack.
+     *        The name that's associated with the stack.
      */
 
     public void setStackName(String stackName) {
@@ -60,10 +60,10 @@ public class RollbackStackRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name that is associated with the stack.
+     * The name that's associated with the stack.
      * </p>
      * 
-     * @return The name that is associated with the stack.
+     * @return The name that's associated with the stack.
      */
 
     public String getStackName() {
@@ -72,11 +72,11 @@ public class RollbackStackRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name that is associated with the stack.
+     * The name that's associated with the stack.
      * </p>
      * 
      * @param stackName
-     *        The name that is associated with the stack.
+     *        The name that's associated with the stack.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -33,12 +33,12 @@ public class ModuleInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A concantenated list of the the module type or types containing the resource. Module types are listed starting
-     * with the inner-most nested module, and separated by <code>/</code>.
+     * A concatenated list of the module type or types containing the resource. Module types are listed starting with
+     * the inner-most nested module, and separated by <code>/</code>.
      * </p>
      * <p>
      * In the following example, the resource was created from a module of type <code>AWS::First::Example::MODULE</code>
-     * , that is nested inside a parent module of type <code>AWS::Second::Example::MODULE</code>.
+     * , that's nested inside a parent module of type <code>AWS::Second::Example::MODULE</code>.
      * </p>
      * <p>
      * <code>AWS::First::Example::MODULE/AWS::Second::Example::MODULE</code>
@@ -47,11 +47,11 @@ public class ModuleInfo implements Serializable, Cloneable {
     private String typeHierarchy;
     /**
      * <p>
-     * A concantenated list of the logical IDs of the module or modules containing the resource. Modules are listed
+     * A concatenated list of the logical IDs of the module or modules containing the resource. Modules are listed
      * starting with the inner-most nested module, and separated by <code>/</code>.
      * </p>
      * <p>
-     * In the following example, the resource was created from a module, <code>moduleA</code>, that is nested inside a
+     * In the following example, the resource was created from a module, <code>moduleA</code>, that's nested inside a
      * parent module, <code>moduleB</code>.
      * </p>
      * <p>
@@ -67,23 +67,23 @@ public class ModuleInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A concantenated list of the the module type or types containing the resource. Module types are listed starting
-     * with the inner-most nested module, and separated by <code>/</code>.
+     * A concatenated list of the module type or types containing the resource. Module types are listed starting with
+     * the inner-most nested module, and separated by <code>/</code>.
      * </p>
      * <p>
      * In the following example, the resource was created from a module of type <code>AWS::First::Example::MODULE</code>
-     * , that is nested inside a parent module of type <code>AWS::Second::Example::MODULE</code>.
+     * , that's nested inside a parent module of type <code>AWS::Second::Example::MODULE</code>.
      * </p>
      * <p>
      * <code>AWS::First::Example::MODULE/AWS::Second::Example::MODULE</code>
      * </p>
      * 
      * @param typeHierarchy
-     *        A concantenated list of the the module type or types containing the resource. Module types are listed
-     *        starting with the inner-most nested module, and separated by <code>/</code>.</p>
+     *        A concatenated list of the module type or types containing the resource. Module types are listed starting
+     *        with the inner-most nested module, and separated by <code>/</code>.</p>
      *        <p>
      *        In the following example, the resource was created from a module of type
-     *        <code>AWS::First::Example::MODULE</code>, that is nested inside a parent module of type
+     *        <code>AWS::First::Example::MODULE</code>, that's nested inside a parent module of type
      *        <code>AWS::Second::Example::MODULE</code>.
      *        </p>
      *        <p>
@@ -96,22 +96,22 @@ public class ModuleInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A concantenated list of the the module type or types containing the resource. Module types are listed starting
-     * with the inner-most nested module, and separated by <code>/</code>.
+     * A concatenated list of the module type or types containing the resource. Module types are listed starting with
+     * the inner-most nested module, and separated by <code>/</code>.
      * </p>
      * <p>
      * In the following example, the resource was created from a module of type <code>AWS::First::Example::MODULE</code>
-     * , that is nested inside a parent module of type <code>AWS::Second::Example::MODULE</code>.
+     * , that's nested inside a parent module of type <code>AWS::Second::Example::MODULE</code>.
      * </p>
      * <p>
      * <code>AWS::First::Example::MODULE/AWS::Second::Example::MODULE</code>
      * </p>
      * 
-     * @return A concantenated list of the the module type or types containing the resource. Module types are listed
-     *         starting with the inner-most nested module, and separated by <code>/</code>.</p>
+     * @return A concatenated list of the module type or types containing the resource. Module types are listed starting
+     *         with the inner-most nested module, and separated by <code>/</code>.</p>
      *         <p>
      *         In the following example, the resource was created from a module of type
-     *         <code>AWS::First::Example::MODULE</code>, that is nested inside a parent module of type
+     *         <code>AWS::First::Example::MODULE</code>, that's nested inside a parent module of type
      *         <code>AWS::Second::Example::MODULE</code>.
      *         </p>
      *         <p>
@@ -124,23 +124,23 @@ public class ModuleInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A concantenated list of the the module type or types containing the resource. Module types are listed starting
-     * with the inner-most nested module, and separated by <code>/</code>.
+     * A concatenated list of the module type or types containing the resource. Module types are listed starting with
+     * the inner-most nested module, and separated by <code>/</code>.
      * </p>
      * <p>
      * In the following example, the resource was created from a module of type <code>AWS::First::Example::MODULE</code>
-     * , that is nested inside a parent module of type <code>AWS::Second::Example::MODULE</code>.
+     * , that's nested inside a parent module of type <code>AWS::Second::Example::MODULE</code>.
      * </p>
      * <p>
      * <code>AWS::First::Example::MODULE/AWS::Second::Example::MODULE</code>
      * </p>
      * 
      * @param typeHierarchy
-     *        A concantenated list of the the module type or types containing the resource. Module types are listed
-     *        starting with the inner-most nested module, and separated by <code>/</code>.</p>
+     *        A concatenated list of the module type or types containing the resource. Module types are listed starting
+     *        with the inner-most nested module, and separated by <code>/</code>.</p>
      *        <p>
      *        In the following example, the resource was created from a module of type
-     *        <code>AWS::First::Example::MODULE</code>, that is nested inside a parent module of type
+     *        <code>AWS::First::Example::MODULE</code>, that's nested inside a parent module of type
      *        <code>AWS::Second::Example::MODULE</code>.
      *        </p>
      *        <p>
@@ -155,11 +155,11 @@ public class ModuleInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A concantenated list of the logical IDs of the module or modules containing the resource. Modules are listed
+     * A concatenated list of the logical IDs of the module or modules containing the resource. Modules are listed
      * starting with the inner-most nested module, and separated by <code>/</code>.
      * </p>
      * <p>
-     * In the following example, the resource was created from a module, <code>moduleA</code>, that is nested inside a
+     * In the following example, the resource was created from a module, <code>moduleA</code>, that's nested inside a
      * parent module, <code>moduleB</code>.
      * </p>
      * <p>
@@ -172,10 +172,10 @@ public class ModuleInfo implements Serializable, Cloneable {
      * </p>
      * 
      * @param logicalIdHierarchy
-     *        A concantenated list of the logical IDs of the module or modules containing the resource. Modules are
+     *        A concatenated list of the logical IDs of the module or modules containing the resource. Modules are
      *        listed starting with the inner-most nested module, and separated by <code>/</code>.</p>
      *        <p>
-     *        In the following example, the resource was created from a module, <code>moduleA</code>, that is nested
+     *        In the following example, the resource was created from a module, <code>moduleA</code>, that's nested
      *        inside a parent module, <code>moduleB</code>.
      *        </p>
      *        <p>
@@ -193,11 +193,11 @@ public class ModuleInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A concantenated list of the logical IDs of the module or modules containing the resource. Modules are listed
+     * A concatenated list of the logical IDs of the module or modules containing the resource. Modules are listed
      * starting with the inner-most nested module, and separated by <code>/</code>.
      * </p>
      * <p>
-     * In the following example, the resource was created from a module, <code>moduleA</code>, that is nested inside a
+     * In the following example, the resource was created from a module, <code>moduleA</code>, that's nested inside a
      * parent module, <code>moduleB</code>.
      * </p>
      * <p>
@@ -209,10 +209,10 @@ public class ModuleInfo implements Serializable, Cloneable {
      * in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
-     * @return A concantenated list of the logical IDs of the module or modules containing the resource. Modules are
+     * @return A concatenated list of the logical IDs of the module or modules containing the resource. Modules are
      *         listed starting with the inner-most nested module, and separated by <code>/</code>.</p>
      *         <p>
-     *         In the following example, the resource was created from a module, <code>moduleA</code>, that is nested
+     *         In the following example, the resource was created from a module, <code>moduleA</code>, that's nested
      *         inside a parent module, <code>moduleB</code>.
      *         </p>
      *         <p>
@@ -230,11 +230,11 @@ public class ModuleInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A concantenated list of the logical IDs of the module or modules containing the resource. Modules are listed
+     * A concatenated list of the logical IDs of the module or modules containing the resource. Modules are listed
      * starting with the inner-most nested module, and separated by <code>/</code>.
      * </p>
      * <p>
-     * In the following example, the resource was created from a module, <code>moduleA</code>, that is nested inside a
+     * In the following example, the resource was created from a module, <code>moduleA</code>, that's nested inside a
      * parent module, <code>moduleB</code>.
      * </p>
      * <p>
@@ -247,10 +247,10 @@ public class ModuleInfo implements Serializable, Cloneable {
      * </p>
      * 
      * @param logicalIdHierarchy
-     *        A concantenated list of the logical IDs of the module or modules containing the resource. Modules are
+     *        A concatenated list of the logical IDs of the module or modules containing the resource. Modules are
      *        listed starting with the inner-most nested module, and separated by <code>/</code>.</p>
      *        <p>
-     *        In the following example, the resource was created from a module, <code>moduleA</code>, that is nested
+     *        In the following example, the resource was created from a module, <code>moduleA</code>, that's nested
      *        inside a parent module, <code>moduleB</code>.
      *        </p>
      *        <p>

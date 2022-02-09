@@ -53,7 +53,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      * configuration.
      * </p>
      * </li>
@@ -78,7 +78,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      * <li>
      * <p>
      * <code>DETECTION_COMPLETE</code>: The stack drift detection operation has successfully completed for all resources
-     * in the stack that support drift detection. (Resources that do not currently support stack detection remain
+     * in the stack that support drift detection. (Resources that don't currently support stack detection remain
      * unchecked.)
      * </p>
      * <p>
@@ -235,7 +235,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      * configuration.
      * </p>
      * </li>
@@ -262,7 +262,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     *        <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      *        configuration.
      *        </p>
      *        </li>
@@ -296,7 +296,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      * configuration.
      * </p>
      * </li>
@@ -322,7 +322,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     *         <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      *         configuration.
      *         </p>
      *         </li>
@@ -356,7 +356,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      * configuration.
      * </p>
      * </li>
@@ -383,7 +383,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     *        <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      *        configuration.
      *        </p>
      *        </li>
@@ -419,7 +419,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      * configuration.
      * </p>
      * </li>
@@ -446,7 +446,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     *        <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      *        configuration.
      *        </p>
      *        </li>
@@ -477,7 +477,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      * <li>
      * <p>
      * <code>DETECTION_COMPLETE</code>: The stack drift detection operation has successfully completed for all resources
-     * in the stack that support drift detection. (Resources that do not currently support stack detection remain
+     * in the stack that support drift detection. (Resources that don't currently support stack detection remain
      * unchecked.)
      * </p>
      * <p>
@@ -504,7 +504,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      *        <li>
      *        <p>
      *        <code>DETECTION_COMPLETE</code>: The stack drift detection operation has successfully completed for all
-     *        resources in the stack that support drift detection. (Resources that do not currently support stack
+     *        resources in the stack that support drift detection. (Resources that don't currently support stack
      *        detection remain unchecked.)
      *        </p>
      *        <p>
@@ -539,7 +539,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      * <li>
      * <p>
      * <code>DETECTION_COMPLETE</code>: The stack drift detection operation has successfully completed for all resources
-     * in the stack that support drift detection. (Resources that do not currently support stack detection remain
+     * in the stack that support drift detection. (Resources that don't currently support stack detection remain
      * unchecked.)
      * </p>
      * <p>
@@ -565,7 +565,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      *         <li>
      *         <p>
      *         <code>DETECTION_COMPLETE</code>: The stack drift detection operation has successfully completed for all
-     *         resources in the stack that support drift detection. (Resources that do not currently support stack
+     *         resources in the stack that support drift detection. (Resources that don't currently support stack
      *         detection remain unchecked.)
      *         </p>
      *         <p>
@@ -600,7 +600,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      * <li>
      * <p>
      * <code>DETECTION_COMPLETE</code>: The stack drift detection operation has successfully completed for all resources
-     * in the stack that support drift detection. (Resources that do not currently support stack detection remain
+     * in the stack that support drift detection. (Resources that don't currently support stack detection remain
      * unchecked.)
      * </p>
      * <p>
@@ -627,7 +627,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      *        <li>
      *        <p>
      *        <code>DETECTION_COMPLETE</code>: The stack drift detection operation has successfully completed for all
-     *        resources in the stack that support drift detection. (Resources that do not currently support stack
+     *        resources in the stack that support drift detection. (Resources that don't currently support stack
      *        detection remain unchecked.)
      *        </p>
      *        <p>
@@ -664,7 +664,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      * <li>
      * <p>
      * <code>DETECTION_COMPLETE</code>: The stack drift detection operation has successfully completed for all resources
-     * in the stack that support drift detection. (Resources that do not currently support stack detection remain
+     * in the stack that support drift detection. (Resources that don't currently support stack detection remain
      * unchecked.)
      * </p>
      * <p>
@@ -691,7 +691,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      *        <li>
      *        <p>
      *        <code>DETECTION_COMPLETE</code>: The stack drift detection operation has successfully completed for all
-     *        resources in the stack that support drift detection. (Resources that do not currently support stack
+     *        resources in the stack that support drift detection. (Resources that don't currently support stack
      *        detection remain unchecked.)
      *        </p>
      *        <p>

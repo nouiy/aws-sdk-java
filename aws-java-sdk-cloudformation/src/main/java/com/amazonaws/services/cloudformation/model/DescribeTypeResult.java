@@ -48,7 +48,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
     private String typeName;
     /**
      * <p>
-     * The ID of the default version of the extension. The default version is used when the extension version is not
+     * The ID of the default version of the extension. The default version is used when the extension version isn't
      * specified.
      * </p>
      * <p>
@@ -75,11 +75,11 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
     private Boolean isDefaultVersion;
     /**
      * <p>
-     * The contract test status of the registered extension version. To return the extension test status of a specifc
+     * The contract test status of the registered extension version. To return the extension test status of a specific
      * extension version, you must specify <code>VersionId</code>.
      * </p>
      * <p>
-     * This applies only to registered private extension versions. CloudFormation does not return this information for
+     * This applies only to registered private extension versions. CloudFormation doesn't return this information for
      * public extensions, whether or not they are activated in your account.
      * </p>
      * <ul>
@@ -106,7 +106,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </li>
      * <li>
      * <p>
-     * <code>NOT_TESTED</code>: Contract tests have not been performed on the extension.
+     * <code>NOT_TESTED</code>: Contract tests haven't been performed on the extension.
      * </p>
      * </li>
      * </ul>
@@ -114,11 +114,11 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
     private String typeTestsStatus;
     /**
      * <p>
-     * The description of the test status. To return the extension test status of a specifc extension version, you must
+     * The description of the test status. To return the extension test status of a specific extension version, you must
      * specify <code>VersionId</code>.
      * </p>
      * <p>
-     * This applies only to registered private extension versions. CloudFormation does not return this information for
+     * This applies only to registered private extension versions. CloudFormation doesn't return this information for
      * public extensions, whether or not they are activated in your account.
      * </p>
      */
@@ -157,14 +157,14 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </li>
      * <li>
      * <p>
-     * <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be updated and
+     * <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated and
      * must instead be replaced during stack update operations.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_PROVISIONABLE</code>: The resource type does not include all of the following handlers, and therefore
-     * cannot actually be provisioned.
+     * <code>NON_PROVISIONABLE</code>: The resource type doesn't include all the following handlers, and therefore can't
+     * actually be provisioned.
      * </p>
      * <ul>
      * <li>
@@ -261,7 +261,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </li>
      * <li>
      * <p>
-     * <code>PUBLIC</code>: The extension is publically visible and usable within any Amazon account.
+     * <code>PUBLIC</code>: The extension is publicly visible and usable within any Amazon account.
      * </p>
      * </li>
      * </ul>
@@ -324,7 +324,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p>
      * This applies only to public third-party extensions. For private registered extensions, and extensions provided by
-     * Amazon, CloudFormation returns <code>null</code>.
+     * Amazon Web Services, CloudFormation returns <code>null</code>.
      * </p>
      */
     private String publisherId;
@@ -364,7 +364,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * The latest version of a public extension <i>that is available</i> for use.
      * </p>
      * <p>
-     * This only applies if you specify a public extension, and you do not specify a version. For all other requests,
+     * This only applies if you specify a public extension, and you don't specify a version. For all other requests,
      * CloudFormation returns <code>null</code>.
      * </p>
      */
@@ -561,7 +561,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The ID of the default version of the extension. The default version is used when the extension version is not
+     * The ID of the default version of the extension. The default version is used when the extension version isn't
      * specified.
      * </p>
      * <p>
@@ -575,8 +575,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param defaultVersionId
-     *        The ID of the default version of the extension. The default version is used when the extension version is
-     *        not specified.</p>
+     *        The ID of the default version of the extension. The default version is used when the extension version
+     *        isn't specified.</p>
      *        <p>
      *        This applies only to private extensions you have registered in your account. For public extensions, both
      *        those provided by Amazon and published by third parties, CloudFormation returns <code>null</code>. For
@@ -594,7 +594,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The ID of the default version of the extension. The default version is used when the extension version is not
+     * The ID of the default version of the extension. The default version is used when the extension version isn't
      * specified.
      * </p>
      * <p>
@@ -607,8 +607,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * To set the default version of an extension, use <code> <a>SetTypeDefaultVersion</a> </code>.
      * </p>
      * 
-     * @return The ID of the default version of the extension. The default version is used when the extension version is
-     *         not specified.</p>
+     * @return The ID of the default version of the extension. The default version is used when the extension version
+     *         isn't specified.</p>
      *         <p>
      *         This applies only to private extensions you have registered in your account. For public extensions, both
      *         those provided by Amazon and published by third parties, CloudFormation returns <code>null</code>. For
@@ -626,7 +626,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The ID of the default version of the extension. The default version is used when the extension version is not
+     * The ID of the default version of the extension. The default version is used when the extension version isn't
      * specified.
      * </p>
      * <p>
@@ -640,8 +640,8 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param defaultVersionId
-     *        The ID of the default version of the extension. The default version is used when the extension version is
-     *        not specified.</p>
+     *        The ID of the default version of the extension. The default version is used when the extension version
+     *        isn't specified.</p>
      *        <p>
      *        This applies only to private extensions you have registered in your account. For public extensions, both
      *        those provided by Amazon and published by third parties, CloudFormation returns <code>null</code>. For
@@ -749,11 +749,11 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The contract test status of the registered extension version. To return the extension test status of a specifc
+     * The contract test status of the registered extension version. To return the extension test status of a specific
      * extension version, you must specify <code>VersionId</code>.
      * </p>
      * <p>
-     * This applies only to registered private extension versions. CloudFormation does not return this information for
+     * This applies only to registered private extension versions. CloudFormation doesn't return this information for
      * public extensions, whether or not they are activated in your account.
      * </p>
      * <ul>
@@ -780,17 +780,17 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </li>
      * <li>
      * <p>
-     * <code>NOT_TESTED</code>: Contract tests have not been performed on the extension.
+     * <code>NOT_TESTED</code>: Contract tests haven't been performed on the extension.
      * </p>
      * </li>
      * </ul>
      * 
      * @param typeTestsStatus
      *        The contract test status of the registered extension version. To return the extension test status of a
-     *        specifc extension version, you must specify <code>VersionId</code>. </p>
+     *        specific extension version, you must specify <code>VersionId</code>.</p>
      *        <p>
-     *        This applies only to registered private extension versions. CloudFormation does not return this
-     *        information for public extensions, whether or not they are activated in your account.
+     *        This applies only to registered private extension versions. CloudFormation doesn't return this information
+     *        for public extensions, whether or not they are activated in your account.
      *        </p>
      *        <ul>
      *        <li>
@@ -817,7 +817,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_TESTED</code>: Contract tests have not been performed on the extension.
+     *        <code>NOT_TESTED</code>: Contract tests haven't been performed on the extension.
      *        </p>
      *        </li>
      * @see TypeTestsStatus
@@ -829,11 +829,11 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The contract test status of the registered extension version. To return the extension test status of a specifc
+     * The contract test status of the registered extension version. To return the extension test status of a specific
      * extension version, you must specify <code>VersionId</code>.
      * </p>
      * <p>
-     * This applies only to registered private extension versions. CloudFormation does not return this information for
+     * This applies only to registered private extension versions. CloudFormation doesn't return this information for
      * public extensions, whether or not they are activated in your account.
      * </p>
      * <ul>
@@ -860,15 +860,15 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </li>
      * <li>
      * <p>
-     * <code>NOT_TESTED</code>: Contract tests have not been performed on the extension.
+     * <code>NOT_TESTED</code>: Contract tests haven't been performed on the extension.
      * </p>
      * </li>
      * </ul>
      * 
      * @return The contract test status of the registered extension version. To return the extension test status of a
-     *         specifc extension version, you must specify <code>VersionId</code>. </p>
+     *         specific extension version, you must specify <code>VersionId</code>.</p>
      *         <p>
-     *         This applies only to registered private extension versions. CloudFormation does not return this
+     *         This applies only to registered private extension versions. CloudFormation doesn't return this
      *         information for public extensions, whether or not they are activated in your account.
      *         </p>
      *         <ul>
@@ -896,7 +896,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NOT_TESTED</code>: Contract tests have not been performed on the extension.
+     *         <code>NOT_TESTED</code>: Contract tests haven't been performed on the extension.
      *         </p>
      *         </li>
      * @see TypeTestsStatus
@@ -908,11 +908,11 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The contract test status of the registered extension version. To return the extension test status of a specifc
+     * The contract test status of the registered extension version. To return the extension test status of a specific
      * extension version, you must specify <code>VersionId</code>.
      * </p>
      * <p>
-     * This applies only to registered private extension versions. CloudFormation does not return this information for
+     * This applies only to registered private extension versions. CloudFormation doesn't return this information for
      * public extensions, whether or not they are activated in your account.
      * </p>
      * <ul>
@@ -939,17 +939,17 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </li>
      * <li>
      * <p>
-     * <code>NOT_TESTED</code>: Contract tests have not been performed on the extension.
+     * <code>NOT_TESTED</code>: Contract tests haven't been performed on the extension.
      * </p>
      * </li>
      * </ul>
      * 
      * @param typeTestsStatus
      *        The contract test status of the registered extension version. To return the extension test status of a
-     *        specifc extension version, you must specify <code>VersionId</code>. </p>
+     *        specific extension version, you must specify <code>VersionId</code>.</p>
      *        <p>
-     *        This applies only to registered private extension versions. CloudFormation does not return this
-     *        information for public extensions, whether or not they are activated in your account.
+     *        This applies only to registered private extension versions. CloudFormation doesn't return this information
+     *        for public extensions, whether or not they are activated in your account.
      *        </p>
      *        <ul>
      *        <li>
@@ -976,7 +976,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_TESTED</code>: Contract tests have not been performed on the extension.
+     *        <code>NOT_TESTED</code>: Contract tests haven't been performed on the extension.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -990,11 +990,11 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The contract test status of the registered extension version. To return the extension test status of a specifc
+     * The contract test status of the registered extension version. To return the extension test status of a specific
      * extension version, you must specify <code>VersionId</code>.
      * </p>
      * <p>
-     * This applies only to registered private extension versions. CloudFormation does not return this information for
+     * This applies only to registered private extension versions. CloudFormation doesn't return this information for
      * public extensions, whether or not they are activated in your account.
      * </p>
      * <ul>
@@ -1021,17 +1021,17 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </li>
      * <li>
      * <p>
-     * <code>NOT_TESTED</code>: Contract tests have not been performed on the extension.
+     * <code>NOT_TESTED</code>: Contract tests haven't been performed on the extension.
      * </p>
      * </li>
      * </ul>
      * 
      * @param typeTestsStatus
      *        The contract test status of the registered extension version. To return the extension test status of a
-     *        specifc extension version, you must specify <code>VersionId</code>. </p>
+     *        specific extension version, you must specify <code>VersionId</code>.</p>
      *        <p>
-     *        This applies only to registered private extension versions. CloudFormation does not return this
-     *        information for public extensions, whether or not they are activated in your account.
+     *        This applies only to registered private extension versions. CloudFormation doesn't return this information
+     *        for public extensions, whether or not they are activated in your account.
      *        </p>
      *        <ul>
      *        <li>
@@ -1058,7 +1058,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_TESTED</code>: Contract tests have not been performed on the extension.
+     *        <code>NOT_TESTED</code>: Contract tests haven't been performed on the extension.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1072,20 +1072,20 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The description of the test status. To return the extension test status of a specifc extension version, you must
+     * The description of the test status. To return the extension test status of a specific extension version, you must
      * specify <code>VersionId</code>.
      * </p>
      * <p>
-     * This applies only to registered private extension versions. CloudFormation does not return this information for
+     * This applies only to registered private extension versions. CloudFormation doesn't return this information for
      * public extensions, whether or not they are activated in your account.
      * </p>
      * 
      * @param typeTestsStatusDescription
-     *        The description of the test status. To return the extension test status of a specifc extension version,
-     *        you must specify <code>VersionId</code>. </p>
+     *        The description of the test status. To return the extension test status of a specific extension version,
+     *        you must specify <code>VersionId</code>.</p>
      *        <p>
-     *        This applies only to registered private extension versions. CloudFormation does not return this
-     *        information for public extensions, whether or not they are activated in your account.
+     *        This applies only to registered private extension versions. CloudFormation doesn't return this information
+     *        for public extensions, whether or not they are activated in your account.
      */
 
     public void setTypeTestsStatusDescription(String typeTestsStatusDescription) {
@@ -1094,18 +1094,18 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The description of the test status. To return the extension test status of a specifc extension version, you must
+     * The description of the test status. To return the extension test status of a specific extension version, you must
      * specify <code>VersionId</code>.
      * </p>
      * <p>
-     * This applies only to registered private extension versions. CloudFormation does not return this information for
+     * This applies only to registered private extension versions. CloudFormation doesn't return this information for
      * public extensions, whether or not they are activated in your account.
      * </p>
      * 
-     * @return The description of the test status. To return the extension test status of a specifc extension version,
-     *         you must specify <code>VersionId</code>. </p>
+     * @return The description of the test status. To return the extension test status of a specific extension version,
+     *         you must specify <code>VersionId</code>.</p>
      *         <p>
-     *         This applies only to registered private extension versions. CloudFormation does not return this
+     *         This applies only to registered private extension versions. CloudFormation doesn't return this
      *         information for public extensions, whether or not they are activated in your account.
      */
 
@@ -1115,20 +1115,20 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The description of the test status. To return the extension test status of a specifc extension version, you must
+     * The description of the test status. To return the extension test status of a specific extension version, you must
      * specify <code>VersionId</code>.
      * </p>
      * <p>
-     * This applies only to registered private extension versions. CloudFormation does not return this information for
+     * This applies only to registered private extension versions. CloudFormation doesn't return this information for
      * public extensions, whether or not they are activated in your account.
      * </p>
      * 
      * @param typeTestsStatusDescription
-     *        The description of the test status. To return the extension test status of a specifc extension version,
-     *        you must specify <code>VersionId</code>. </p>
+     *        The description of the test status. To return the extension test status of a specific extension version,
+     *        you must specify <code>VersionId</code>.</p>
      *        <p>
-     *        This applies only to registered private extension versions. CloudFormation does not return this
-     *        information for public extensions, whether or not they are activated in your account.
+     *        This applies only to registered private extension versions. CloudFormation doesn't return this information
+     *        for public extensions, whether or not they are activated in your account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1261,14 +1261,14 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </li>
      * <li>
      * <p>
-     * <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be updated and
+     * <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated and
      * must instead be replaced during stack update operations.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_PROVISIONABLE</code>: The resource type does not include all of the following handlers, and therefore
-     * cannot actually be provisioned.
+     * <code>NON_PROVISIONABLE</code>: The resource type doesn't include all the following handlers, and therefore can't
+     * actually be provisioned.
      * </p>
      * <ul>
      * <li>
@@ -1306,14 +1306,14 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be
-     *        updated and must instead be replaced during stack update operations.
+     *        <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated
+     *        and must instead be replaced during stack update operations.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NON_PROVISIONABLE</code>: The resource type does not include all of the following handlers, and
-     *        therefore cannot actually be provisioned.
+     *        <code>NON_PROVISIONABLE</code>: The resource type doesn't include all the following handlers, and
+     *        therefore can't actually be provisioned.
      *        </p>
      *        <ul>
      *        <li>
@@ -1357,14 +1357,14 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </li>
      * <li>
      * <p>
-     * <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be updated and
+     * <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated and
      * must instead be replaced during stack update operations.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_PROVISIONABLE</code>: The resource type does not include all of the following handlers, and therefore
-     * cannot actually be provisioned.
+     * <code>NON_PROVISIONABLE</code>: The resource type doesn't include all the following handlers, and therefore can't
+     * actually be provisioned.
      * </p>
      * <ul>
      * <li>
@@ -1401,14 +1401,14 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *         </li>
      *         <li>
      *         <p>
-     *         <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be
-     *         updated and must instead be replaced during stack update operations.
+     *         <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated
+     *         and must instead be replaced during stack update operations.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NON_PROVISIONABLE</code>: The resource type does not include all of the following handlers, and
-     *         therefore cannot actually be provisioned.
+     *         <code>NON_PROVISIONABLE</code>: The resource type doesn't include all the following handlers, and
+     *         therefore can't actually be provisioned.
      *         </p>
      *         <ul>
      *         <li>
@@ -1452,14 +1452,14 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </li>
      * <li>
      * <p>
-     * <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be updated and
+     * <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated and
      * must instead be replaced during stack update operations.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_PROVISIONABLE</code>: The resource type does not include all of the following handlers, and therefore
-     * cannot actually be provisioned.
+     * <code>NON_PROVISIONABLE</code>: The resource type doesn't include all the following handlers, and therefore can't
+     * actually be provisioned.
      * </p>
      * <ul>
      * <li>
@@ -1497,14 +1497,14 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be
-     *        updated and must instead be replaced during stack update operations.
+     *        <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated
+     *        and must instead be replaced during stack update operations.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NON_PROVISIONABLE</code>: The resource type does not include all of the following handlers, and
-     *        therefore cannot actually be provisioned.
+     *        <code>NON_PROVISIONABLE</code>: The resource type doesn't include all the following handlers, and
+     *        therefore can't actually be provisioned.
      *        </p>
      *        <ul>
      *        <li>
@@ -1550,14 +1550,14 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </li>
      * <li>
      * <p>
-     * <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be updated and
+     * <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated and
      * must instead be replaced during stack update operations.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_PROVISIONABLE</code>: The resource type does not include all of the following handlers, and therefore
-     * cannot actually be provisioned.
+     * <code>NON_PROVISIONABLE</code>: The resource type doesn't include all the following handlers, and therefore can't
+     * actually be provisioned.
      * </p>
      * <ul>
      * <li>
@@ -1595,14 +1595,14 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be
-     *        updated and must instead be replaced during stack update operations.
+     *        <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated
+     *        and must instead be replaced during stack update operations.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NON_PROVISIONABLE</code>: The resource type does not include all of the following handlers, and
-     *        therefore cannot actually be provisioned.
+     *        <code>NON_PROVISIONABLE</code>: The resource type doesn't include all the following handlers, and
+     *        therefore can't actually be provisioned.
      *        </p>
      *        <ul>
      *        <li>
@@ -2104,7 +2104,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </li>
      * <li>
      * <p>
-     * <code>PUBLIC</code>: The extension is publically visible and usable within any Amazon account.
+     * <code>PUBLIC</code>: The extension is publicly visible and usable within any Amazon account.
      * </p>
      * </li>
      * </ul>
@@ -2123,7 +2123,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        </li>
      *        <li>
      *        <p>
-     *        <code>PUBLIC</code>: The extension is publically visible and usable within any Amazon account.
+     *        <code>PUBLIC</code>: The extension is publicly visible and usable within any Amazon account.
      *        </p>
      *        </li>
      * @see Visibility
@@ -2149,7 +2149,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </li>
      * <li>
      * <p>
-     * <code>PUBLIC</code>: The extension is publically visible and usable within any Amazon account.
+     * <code>PUBLIC</code>: The extension is publicly visible and usable within any Amazon account.
      * </p>
      * </li>
      * </ul>
@@ -2167,7 +2167,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *         </li>
      *         <li>
      *         <p>
-     *         <code>PUBLIC</code>: The extension is publically visible and usable within any Amazon account.
+     *         <code>PUBLIC</code>: The extension is publicly visible and usable within any Amazon account.
      *         </p>
      *         </li>
      * @see Visibility
@@ -2193,7 +2193,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </li>
      * <li>
      * <p>
-     * <code>PUBLIC</code>: The extension is publically visible and usable within any Amazon account.
+     * <code>PUBLIC</code>: The extension is publicly visible and usable within any Amazon account.
      * </p>
      * </li>
      * </ul>
@@ -2212,7 +2212,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        </li>
      *        <li>
      *        <p>
-     *        <code>PUBLIC</code>: The extension is publically visible and usable within any Amazon account.
+     *        <code>PUBLIC</code>: The extension is publicly visible and usable within any Amazon account.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2240,7 +2240,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </li>
      * <li>
      * <p>
-     * <code>PUBLIC</code>: The extension is publically visible and usable within any Amazon account.
+     * <code>PUBLIC</code>: The extension is publicly visible and usable within any Amazon account.
      * </p>
      * </li>
      * </ul>
@@ -2259,7 +2259,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        </li>
      *        <li>
      *        <p>
-     *        <code>PUBLIC</code>: The extension is publically visible and usable within any Amazon account.
+     *        <code>PUBLIC</code>: The extension is publicly visible and usable within any Amazon account.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2606,14 +2606,14 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p>
      * This applies only to public third-party extensions. For private registered extensions, and extensions provided by
-     * Amazon, CloudFormation returns <code>null</code>.
+     * Amazon Web Services, CloudFormation returns <code>null</code>.
      * </p>
      * 
      * @param publisherId
      *        The publisher ID of the extension publisher.</p>
      *        <p>
      *        This applies only to public third-party extensions. For private registered extensions, and extensions
-     *        provided by Amazon, CloudFormation returns <code>null</code>.
+     *        provided by Amazon Web Services, CloudFormation returns <code>null</code>.
      */
 
     public void setPublisherId(String publisherId) {
@@ -2626,13 +2626,13 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p>
      * This applies only to public third-party extensions. For private registered extensions, and extensions provided by
-     * Amazon, CloudFormation returns <code>null</code>.
+     * Amazon Web Services, CloudFormation returns <code>null</code>.
      * </p>
      * 
      * @return The publisher ID of the extension publisher.</p>
      *         <p>
      *         This applies only to public third-party extensions. For private registered extensions, and extensions
-     *         provided by Amazon, CloudFormation returns <code>null</code>.
+     *         provided by Amazon Web Services, CloudFormation returns <code>null</code>.
      */
 
     public String getPublisherId() {
@@ -2645,14 +2645,14 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p>
      * This applies only to public third-party extensions. For private registered extensions, and extensions provided by
-     * Amazon, CloudFormation returns <code>null</code>.
+     * Amazon Web Services, CloudFormation returns <code>null</code>.
      * </p>
      * 
      * @param publisherId
      *        The publisher ID of the extension publisher.</p>
      *        <p>
      *        This applies only to public third-party extensions. For private registered extensions, and extensions
-     *        provided by Amazon, CloudFormation returns <code>null</code>.
+     *        provided by Amazon Web Services, CloudFormation returns <code>null</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2861,14 +2861,14 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * The latest version of a public extension <i>that is available</i> for use.
      * </p>
      * <p>
-     * This only applies if you specify a public extension, and you do not specify a version. For all other requests,
+     * This only applies if you specify a public extension, and you don't specify a version. For all other requests,
      * CloudFormation returns <code>null</code>.
      * </p>
      * 
      * @param latestPublicVersion
      *        The latest version of a public extension <i>that is available</i> for use.</p>
      *        <p>
-     *        This only applies if you specify a public extension, and you do not specify a version. For all other
+     *        This only applies if you specify a public extension, and you don't specify a version. For all other
      *        requests, CloudFormation returns <code>null</code>.
      */
 
@@ -2881,13 +2881,13 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * The latest version of a public extension <i>that is available</i> for use.
      * </p>
      * <p>
-     * This only applies if you specify a public extension, and you do not specify a version. For all other requests,
+     * This only applies if you specify a public extension, and you don't specify a version. For all other requests,
      * CloudFormation returns <code>null</code>.
      * </p>
      * 
      * @return The latest version of a public extension <i>that is available</i> for use.</p>
      *         <p>
-     *         This only applies if you specify a public extension, and you do not specify a version. For all other
+     *         This only applies if you specify a public extension, and you don't specify a version. For all other
      *         requests, CloudFormation returns <code>null</code>.
      */
 
@@ -2900,14 +2900,14 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * The latest version of a public extension <i>that is available</i> for use.
      * </p>
      * <p>
-     * This only applies if you specify a public extension, and you do not specify a version. For all other requests,
+     * This only applies if you specify a public extension, and you don't specify a version. For all other requests,
      * CloudFormation returns <code>null</code>.
      * </p>
      * 
      * @param latestPublicVersion
      *        The latest version of a public extension <i>that is available</i> for use.</p>
      *        <p>
-     *        This only applies if you specify a public extension, and you do not specify a version. For all other
+     *        This only applies if you specify a public extension, and you don't specify a version. For all other
      *        requests, CloudFormation returns <code>null</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

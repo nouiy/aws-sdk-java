@@ -51,7 +51,7 @@ public class ImportStacksToStackSetRequest extends com.amazonaws.AmazonWebServic
     private String stackIdsUrl;
     /**
      * <p>
-     * The list of OU ID’s to which the stacks being imported has to be mapped as deployment target.
+     * The list of OU ID's to which the stacks being imported has to be mapped as deployment target.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> organizationalUnitIds;
@@ -276,10 +276,10 @@ public class ImportStacksToStackSetRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The list of OU ID’s to which the stacks being imported has to be mapped as deployment target.
+     * The list of OU ID's to which the stacks being imported has to be mapped as deployment target.
      * </p>
      * 
-     * @return The list of OU ID’s to which the stacks being imported has to be mapped as deployment target.
+     * @return The list of OU ID's to which the stacks being imported has to be mapped as deployment target.
      */
 
     public java.util.List<String> getOrganizationalUnitIds() {
@@ -291,11 +291,11 @@ public class ImportStacksToStackSetRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The list of OU ID’s to which the stacks being imported has to be mapped as deployment target.
+     * The list of OU ID's to which the stacks being imported has to be mapped as deployment target.
      * </p>
      * 
      * @param organizationalUnitIds
-     *        The list of OU ID’s to which the stacks being imported has to be mapped as deployment target.
+     *        The list of OU ID's to which the stacks being imported has to be mapped as deployment target.
      */
 
     public void setOrganizationalUnitIds(java.util.Collection<String> organizationalUnitIds) {
@@ -309,7 +309,7 @@ public class ImportStacksToStackSetRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The list of OU ID’s to which the stacks being imported has to be mapped as deployment target.
+     * The list of OU ID's to which the stacks being imported has to be mapped as deployment target.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -318,7 +318,7 @@ public class ImportStacksToStackSetRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param organizationalUnitIds
-     *        The list of OU ID’s to which the stacks being imported has to be mapped as deployment target.
+     *        The list of OU ID's to which the stacks being imported has to be mapped as deployment target.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -334,11 +334,11 @@ public class ImportStacksToStackSetRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The list of OU ID’s to which the stacks being imported has to be mapped as deployment target.
+     * The list of OU ID's to which the stacks being imported has to be mapped as deployment target.
      * </p>
      * 
      * @param organizationalUnitIds
-     *        The list of OU ID’s to which the stacks being imported has to be mapped as deployment target.
+     *        The list of OU ID's to which the stacks being imported has to be mapped as deployment target.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

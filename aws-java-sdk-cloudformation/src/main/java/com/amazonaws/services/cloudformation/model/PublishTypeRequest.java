@@ -66,8 +66,7 @@ public class PublishTypeRequest extends com.amazonaws.AmazonWebServiceRequest im
      * For more information, see <a href="https://semver.org/">Semantic Versioning 2.0.0</a>.
      * </p>
      * <p>
-     * If you do not specify a version number, CloudFormation increments the version number by one minor version
-     * release.
+     * If you don't specify a version number, CloudFormation increments the version number by one minor version release.
      * </p>
      * <p>
      * You cannot specify a version number the first time you publish a type. CloudFormation automatically sets the
@@ -279,8 +278,7 @@ public class PublishTypeRequest extends com.amazonaws.AmazonWebServiceRequest im
      * For more information, see <a href="https://semver.org/">Semantic Versioning 2.0.0</a>.
      * </p>
      * <p>
-     * If you do not specify a version number, CloudFormation increments the version number by one minor version
-     * release.
+     * If you don't specify a version number, CloudFormation increments the version number by one minor version release.
      * </p>
      * <p>
      * You cannot specify a version number the first time you publish a type. CloudFormation automatically sets the
@@ -300,7 +298,7 @@ public class PublishTypeRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        For more information, see <a href="https://semver.org/">Semantic Versioning 2.0.0</a>.
      *        </p>
      *        <p>
-     *        If you do not specify a version number, CloudFormation increments the version number by one minor version
+     *        If you don't specify a version number, CloudFormation increments the version number by one minor version
      *        release.
      *        </p>
      *        <p>
@@ -326,8 +324,7 @@ public class PublishTypeRequest extends com.amazonaws.AmazonWebServiceRequest im
      * For more information, see <a href="https://semver.org/">Semantic Versioning 2.0.0</a>.
      * </p>
      * <p>
-     * If you do not specify a version number, CloudFormation increments the version number by one minor version
-     * release.
+     * If you don't specify a version number, CloudFormation increments the version number by one minor version release.
      * </p>
      * <p>
      * You cannot specify a version number the first time you publish a type. CloudFormation automatically sets the
@@ -346,7 +343,7 @@ public class PublishTypeRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         For more information, see <a href="https://semver.org/">Semantic Versioning 2.0.0</a>.
      *         </p>
      *         <p>
-     *         If you do not specify a version number, CloudFormation increments the version number by one minor version
+     *         If you don't specify a version number, CloudFormation increments the version number by one minor version
      *         release.
      *         </p>
      *         <p>
@@ -372,8 +369,7 @@ public class PublishTypeRequest extends com.amazonaws.AmazonWebServiceRequest im
      * For more information, see <a href="https://semver.org/">Semantic Versioning 2.0.0</a>.
      * </p>
      * <p>
-     * If you do not specify a version number, CloudFormation increments the version number by one minor version
-     * release.
+     * If you don't specify a version number, CloudFormation increments the version number by one minor version release.
      * </p>
      * <p>
      * You cannot specify a version number the first time you publish a type. CloudFormation automatically sets the
@@ -393,7 +389,7 @@ public class PublishTypeRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        For more information, see <a href="https://semver.org/">Semantic Versioning 2.0.0</a>.
      *        </p>
      *        <p>
-     *        If you do not specify a version number, CloudFormation increments the version number by one minor version
+     *        If you don't specify a version number, CloudFormation increments the version number by one minor version
      *        release.
      *        </p>
      *        <p>

@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * [Service-managed permissions] The Organizations accounts to which StackSets deploys. StackSets does not deploy stack
+ * [Service-managed permissions] The Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack
  * instances to the organization management account, even if the organization management account is in your organization
  * or in an OU in your organization.
  * </p>

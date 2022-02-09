@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 /**
  * <p>
  * The specified change set name or ID doesn't exit. To view valid change sets for a stack, use the
- * <code>ListChangeSets</code> action.
+ * <code>ListChangeSets</code> operation.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

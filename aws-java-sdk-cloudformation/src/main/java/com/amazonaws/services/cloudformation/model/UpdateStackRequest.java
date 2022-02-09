@@ -49,7 +49,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String templateBody;
     /**
      * <p>
-     * Location of file containing the template body. The URL must point to a template that is located in an Amazon S3
+     * Location of file containing the template body. The URL must point to a template that's located in an Amazon S3
      * bucket or a Systems Manager document. For more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
      * in the CloudFormation User Guide.
@@ -158,8 +158,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -250,9 +251,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to
      * update the stack. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation always
-     * uses this role for all future operations on the stack. As long as users have permission to operate on the stack,
-     * CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants
-     * least privilege.
+     * uses this role for all future operations on the stack. Provided that users have permission to operate on the
+     * stack, CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role
+     * grants least privilege.
      * </p>
      * <p>
      * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
@@ -274,7 +275,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * You might update the stack policy, for example, in order to protect a new resource that you created during a
-     * stack update. If you do not specify a stack policy, the current policy that is associated with the stack is
+     * stack update. If you don't specify a stack policy, the current policy that is associated with the stack is
      * unchanged.
      * </p>
      */
@@ -287,7 +288,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * You might update the stack policy, for example, in order to protect a new resource that you created during a
-     * stack update. If you do not specify a stack policy, the current policy that is associated with the stack is
+     * stack update. If you don't specify a stack policy, the current policy that is associated with the stack is
      * unchanged.
      * </p>
      */
@@ -461,7 +462,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Location of file containing the template body. The URL must point to a template that is located in an Amazon S3
+     * Location of file containing the template body. The URL must point to a template that's located in an Amazon S3
      * bucket or a Systems Manager document. For more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
      * in the CloudFormation User Guide.
@@ -472,7 +473,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param templateURL
-     *        Location of file containing the template body. The URL must point to a template that is located in an
+     *        Location of file containing the template body. The URL must point to a template that's located in an
      *        Amazon S3 bucket or a Systems Manager document. For more information, go to <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
      *        Anatomy</a> in the CloudFormation User Guide.</p>
@@ -487,7 +488,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Location of file containing the template body. The URL must point to a template that is located in an Amazon S3
+     * Location of file containing the template body. The URL must point to a template that's located in an Amazon S3
      * bucket or a Systems Manager document. For more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
      * in the CloudFormation User Guide.
@@ -497,7 +498,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>TemplateURL</code>, or set the <code>UsePreviousTemplate</code> to <code>true</code>.
      * </p>
      * 
-     * @return Location of file containing the template body. The URL must point to a template that is located in an
+     * @return Location of file containing the template body. The URL must point to a template that's located in an
      *         Amazon S3 bucket or a Systems Manager document. For more information, go to <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
      *         Anatomy</a> in the CloudFormation User Guide.</p>
@@ -512,7 +513,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Location of file containing the template body. The URL must point to a template that is located in an Amazon S3
+     * Location of file containing the template body. The URL must point to a template that's located in an Amazon S3
      * bucket or a Systems Manager document. For more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
      * in the CloudFormation User Guide.
@@ -523,7 +524,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param templateURL
-     *        Location of file containing the template body. The URL must point to a template that is located in an
+     *        Location of file containing the template body. The URL must point to a template that's located in an
      *        Amazon S3 bucket or a Systems Manager document. For more information, go to <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
      *        Anatomy</a> in the CloudFormation User Guide.</p>
@@ -919,8 +920,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -1047,8 +1049,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         <li>
      *         <p>
      *         <a href=
-     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     *         AWS::IAM::InstanceProfile</a>
+     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
+     *         >AWS::IAM::InstanceProfile</a>
      *         </p>
      *         </li>
      *         <li>
@@ -1072,8 +1074,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         <li>
      *         <p>
      *         <a href=
-     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     *         AWS::IAM::UserToGroupAddition</a>
+     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
+     *         >AWS::IAM::UserToGroupAddition</a>
      *         </p>
      *         </li>
      *         </ul>
@@ -1186,8 +1188,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -1315,8 +1318,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     *        AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
+     *        >AWS::IAM::InstanceProfile</a>
      *        </p>
      *        </li>
      *        <li>
@@ -1340,8 +1343,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     *        AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
+     *        >AWS::IAM::UserToGroupAddition</a>
      *        </p>
      *        </li>
      *        </ul>
@@ -1456,8 +1459,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -1590,8 +1594,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     *        AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
+     *        >AWS::IAM::InstanceProfile</a>
      *        </p>
      *        </li>
      *        <li>
@@ -1615,8 +1619,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     *        AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
+     *        >AWS::IAM::UserToGroupAddition</a>
      *        </p>
      *        </li>
      *        </ul>
@@ -1733,8 +1737,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -1862,8 +1867,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     *        AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
+     *        >AWS::IAM::InstanceProfile</a>
      *        </p>
      *        </li>
      *        <li>
@@ -1887,8 +1892,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     *        AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
+     *        >AWS::IAM::UserToGroupAddition</a>
      *        </p>
      *        </li>
      *        </ul>
@@ -2000,8 +2005,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -2129,8 +2135,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     *        AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
+     *        >AWS::IAM::InstanceProfile</a>
      *        </p>
      *        </li>
      *        <li>
@@ -2154,8 +2160,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     *        AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
+     *        >AWS::IAM::UserToGroupAddition</a>
      *        </p>
      *        </li>
      *        </ul>
@@ -2356,9 +2362,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to
      * update the stack. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation always
-     * uses this role for all future operations on the stack. As long as users have permission to operate on the stack,
-     * CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants
-     * least privilege.
+     * uses this role for all future operations on the stack. Provided that users have permission to operate on the
+     * stack, CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role
+     * grants least privilege.
      * </p>
      * <p>
      * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
@@ -2368,7 +2374,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * @param roleARN
      *        The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes
      *        to update the stack. CloudFormation uses the role's credentials to make calls on your behalf.
-     *        CloudFormation always uses this role for all future operations on the stack. As long as users have
+     *        CloudFormation always uses this role for all future operations on the stack. Provided that users have
      *        permission to operate on the stack, CloudFormation uses this role even if the users don't have permission
      *        to pass it. Ensure that the role grants least privilege.</p>
      *        <p>
@@ -2385,9 +2391,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to
      * update the stack. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation always
-     * uses this role for all future operations on the stack. As long as users have permission to operate on the stack,
-     * CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants
-     * least privilege.
+     * uses this role for all future operations on the stack. Provided that users have permission to operate on the
+     * stack, CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role
+     * grants least privilege.
      * </p>
      * <p>
      * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
@@ -2396,7 +2402,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @return The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation
      *         assumes to update the stack. CloudFormation uses the role's credentials to make calls on your behalf.
-     *         CloudFormation always uses this role for all future operations on the stack. As long as users have
+     *         CloudFormation always uses this role for all future operations on the stack. Provided that users have
      *         permission to operate on the stack, CloudFormation uses this role even if the users don't have permission
      *         to pass it. Ensure that the role grants least privilege.</p>
      *         <p>
@@ -2413,9 +2419,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to
      * update the stack. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation always
-     * uses this role for all future operations on the stack. As long as users have permission to operate on the stack,
-     * CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants
-     * least privilege.
+     * uses this role for all future operations on the stack. Provided that users have permission to operate on the
+     * stack, CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role
+     * grants least privilege.
      * </p>
      * <p>
      * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
@@ -2425,7 +2431,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * @param roleARN
      *        The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes
      *        to update the stack. CloudFormation uses the role's credentials to make calls on your behalf.
-     *        CloudFormation always uses this role for all future operations on the stack. As long as users have
+     *        CloudFormation always uses this role for all future operations on the stack. Provided that users have
      *        permission to operate on the stack, CloudFormation uses this role even if the users don't have permission
      *        to pass it. Ensure that the role grants least privilege.</p>
      *        <p>
@@ -2493,7 +2499,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * You might update the stack policy, for example, in order to protect a new resource that you created during a
-     * stack update. If you do not specify a stack policy, the current policy that is associated with the stack is
+     * stack update. If you don't specify a stack policy, the current policy that is associated with the stack is
      * unchanged.
      * </p>
      * 
@@ -2502,7 +2508,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        the <code>StackPolicyURL</code> parameter, but not both.</p>
      *        <p>
      *        You might update the stack policy, for example, in order to protect a new resource that you created during
-     *        a stack update. If you do not specify a stack policy, the current policy that is associated with the stack
+     *        a stack update. If you don't specify a stack policy, the current policy that is associated with the stack
      *        is unchanged.
      */
 
@@ -2517,7 +2523,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * You might update the stack policy, for example, in order to protect a new resource that you created during a
-     * stack update. If you do not specify a stack policy, the current policy that is associated with the stack is
+     * stack update. If you don't specify a stack policy, the current policy that is associated with the stack is
      * unchanged.
      * </p>
      * 
@@ -2525,7 +2531,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         the <code>StackPolicyURL</code> parameter, but not both.</p>
      *         <p>
      *         You might update the stack policy, for example, in order to protect a new resource that you created
-     *         during a stack update. If you do not specify a stack policy, the current policy that is associated with
+     *         during a stack update. If you don't specify a stack policy, the current policy that is associated with
      *         the stack is unchanged.
      */
 
@@ -2540,7 +2546,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * You might update the stack policy, for example, in order to protect a new resource that you created during a
-     * stack update. If you do not specify a stack policy, the current policy that is associated with the stack is
+     * stack update. If you don't specify a stack policy, the current policy that is associated with the stack is
      * unchanged.
      * </p>
      * 
@@ -2549,7 +2555,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        the <code>StackPolicyURL</code> parameter, but not both.</p>
      *        <p>
      *        You might update the stack policy, for example, in order to protect a new resource that you created during
-     *        a stack update. If you do not specify a stack policy, the current policy that is associated with the stack
+     *        a stack update. If you don't specify a stack policy, the current policy that is associated with the stack
      *        is unchanged.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2567,7 +2573,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * You might update the stack policy, for example, in order to protect a new resource that you created during a
-     * stack update. If you do not specify a stack policy, the current policy that is associated with the stack is
+     * stack update. If you don't specify a stack policy, the current policy that is associated with the stack is
      * unchanged.
      * </p>
      * 
@@ -2577,7 +2583,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <code>StackPolicyBody</code> or the <code>StackPolicyURL</code> parameter, but not both.</p>
      *        <p>
      *        You might update the stack policy, for example, in order to protect a new resource that you created during
-     *        a stack update. If you do not specify a stack policy, the current policy that is associated with the stack
+     *        a stack update. If you don't specify a stack policy, the current policy that is associated with the stack
      *        is unchanged.
      */
 
@@ -2593,7 +2599,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * You might update the stack policy, for example, in order to protect a new resource that you created during a
-     * stack update. If you do not specify a stack policy, the current policy that is associated with the stack is
+     * stack update. If you don't specify a stack policy, the current policy that is associated with the stack is
      * unchanged.
      * </p>
      * 
@@ -2602,7 +2608,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         <code>StackPolicyBody</code> or the <code>StackPolicyURL</code> parameter, but not both.</p>
      *         <p>
      *         You might update the stack policy, for example, in order to protect a new resource that you created
-     *         during a stack update. If you do not specify a stack policy, the current policy that is associated with
+     *         during a stack update. If you don't specify a stack policy, the current policy that is associated with
      *         the stack is unchanged.
      */
 
@@ -2618,7 +2624,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * You might update the stack policy, for example, in order to protect a new resource that you created during a
-     * stack update. If you do not specify a stack policy, the current policy that is associated with the stack is
+     * stack update. If you don't specify a stack policy, the current policy that is associated with the stack is
      * unchanged.
      * </p>
      * 
@@ -2628,7 +2634,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <code>StackPolicyBody</code> or the <code>StackPolicyURL</code> parameter, but not both.</p>
      *        <p>
      *        You might update the stack policy, for example, in order to protect a new resource that you created during
-     *        a stack update. If you do not specify a stack policy, the current policy that is associated with the stack
+     *        a stack update. If you don't specify a stack policy, the current policy that is associated with the stack
      *        is unchanged.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

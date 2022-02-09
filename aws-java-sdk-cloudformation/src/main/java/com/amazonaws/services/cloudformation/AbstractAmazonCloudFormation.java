@@ -119,6 +119,11 @@ public class AbstractAmazonCloudFormation implements AmazonCloudFormation {
     }
 
     @Override
+    public DescribeChangeSetHooksResult describeChangeSetHooks(DescribeChangeSetHooksRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribePublisherResult describePublisher(DescribePublisherRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

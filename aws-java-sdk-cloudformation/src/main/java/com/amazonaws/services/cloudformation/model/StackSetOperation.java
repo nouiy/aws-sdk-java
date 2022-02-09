@@ -42,7 +42,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <p>
      * The type of stack set operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create and
      * delete operations affect only the specified stack set instances that are associated with the specified stack set.
-     * Update operations affect both the stack set itself, as well as <i>all</i> associated stack set instances.
+     * Update operations affect both the stack set itself, in addition to <i>all</i> associated stack set instances.
      * </p>
      */
     private String action;
@@ -75,7 +75,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>STOPPED</code>: The user has cancelled the operation.
+     * <code>STOPPED</code>: The user has canceled the operation.
      * </p>
      * </li>
      * <li>
@@ -101,7 +101,7 @@ public class StackSetOperation implements Serializable, Cloneable {
     /**
      * <p>
      * For stack set operations of action type <code>DELETE</code>, specifies whether to remove the stack instances from
-     * the specified stack set, but doesn't delete the stacks. You can't reassociate a retained stack, or add an
+     * the specified stack set, but doesn't delete the stacks. You can't re-associate a retained stack, or add an
      * existing, saved stack to a new stack set.
      * </p>
      */
@@ -156,7 +156,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * currently being performed on the stack set.
      * </p>
      * <p>
-     * this information will only be present for stack set operations whose <code>Action</code> type is
+     * This information will only be present for stack set operations whose <code>Action</code> type is
      * <code>DETECT_DRIFT</code>.
      * </p>
      * <p>
@@ -251,14 +251,14 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <p>
      * The type of stack set operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create and
      * delete operations affect only the specified stack set instances that are associated with the specified stack set.
-     * Update operations affect both the stack set itself, as well as <i>all</i> associated stack set instances.
+     * Update operations affect both the stack set itself, in addition to <i>all</i> associated stack set instances.
      * </p>
      * 
      * @param action
      *        The type of stack set operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create
      *        and delete operations affect only the specified stack set instances that are associated with the specified
-     *        stack set. Update operations affect both the stack set itself, as well as <i>all</i> associated stack set
-     *        instances.
+     *        stack set. Update operations affect both the stack set itself, in addition to <i>all</i> associated stack
+     *        set instances.
      * @see StackSetOperationAction
      */
 
@@ -270,13 +270,13 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <p>
      * The type of stack set operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create and
      * delete operations affect only the specified stack set instances that are associated with the specified stack set.
-     * Update operations affect both the stack set itself, as well as <i>all</i> associated stack set instances.
+     * Update operations affect both the stack set itself, in addition to <i>all</i> associated stack set instances.
      * </p>
      * 
      * @return The type of stack set operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create
      *         and delete operations affect only the specified stack set instances that are associated with the
-     *         specified stack set. Update operations affect both the stack set itself, as well as <i>all</i> associated
-     *         stack set instances.
+     *         specified stack set. Update operations affect both the stack set itself, in addition to <i>all</i>
+     *         associated stack set instances.
      * @see StackSetOperationAction
      */
 
@@ -288,14 +288,14 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <p>
      * The type of stack set operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create and
      * delete operations affect only the specified stack set instances that are associated with the specified stack set.
-     * Update operations affect both the stack set itself, as well as <i>all</i> associated stack set instances.
+     * Update operations affect both the stack set itself, in addition to <i>all</i> associated stack set instances.
      * </p>
      * 
      * @param action
      *        The type of stack set operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create
      *        and delete operations affect only the specified stack set instances that are associated with the specified
-     *        stack set. Update operations affect both the stack set itself, as well as <i>all</i> associated stack set
-     *        instances.
+     *        stack set. Update operations affect both the stack set itself, in addition to <i>all</i> associated stack
+     *        set instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StackSetOperationAction
      */
@@ -309,14 +309,14 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <p>
      * The type of stack set operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create and
      * delete operations affect only the specified stack set instances that are associated with the specified stack set.
-     * Update operations affect both the stack set itself, as well as <i>all</i> associated stack set instances.
+     * Update operations affect both the stack set itself, in addition to <i>all</i> associated stack set instances.
      * </p>
      * 
      * @param action
      *        The type of stack set operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create
      *        and delete operations affect only the specified stack set instances that are associated with the specified
-     *        stack set. Update operations affect both the stack set itself, as well as <i>all</i> associated stack set
-     *        instances.
+     *        stack set. Update operations affect both the stack set itself, in addition to <i>all</i> associated stack
+     *        set instances.
      * @see StackSetOperationAction
      */
 
@@ -328,14 +328,14 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <p>
      * The type of stack set operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create and
      * delete operations affect only the specified stack set instances that are associated with the specified stack set.
-     * Update operations affect both the stack set itself, as well as <i>all</i> associated stack set instances.
+     * Update operations affect both the stack set itself, in addition to <i>all</i> associated stack set instances.
      * </p>
      * 
      * @param action
      *        The type of stack set operation: <code>CREATE</code>, <code>UPDATE</code>, or <code>DELETE</code>. Create
      *        and delete operations affect only the specified stack set instances that are associated with the specified
-     *        stack set. Update operations affect both the stack set itself, as well as <i>all</i> associated stack set
-     *        instances.
+     *        stack set. Update operations affect both the stack set itself, in addition to <i>all</i> associated stack
+     *        set instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StackSetOperationAction
      */
@@ -374,7 +374,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>STOPPED</code>: The user has cancelled the operation.
+     * <code>STOPPED</code>: The user has canceled the operation.
      * </p>
      * </li>
      * <li>
@@ -391,7 +391,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * </ul>
      * 
      * @param status
-     *        The status of the operation. </p>
+     *        The status of the operation.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -417,7 +417,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>STOPPED</code>: The user has cancelled the operation.
+     *        <code>STOPPED</code>: The user has canceled the operation.
      *        </p>
      *        </li>
      *        <li>
@@ -467,7 +467,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>STOPPED</code>: The user has cancelled the operation.
+     * <code>STOPPED</code>: The user has canceled the operation.
      * </p>
      * </li>
      * <li>
@@ -483,7 +483,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * </li>
      * </ul>
      * 
-     * @return The status of the operation. </p>
+     * @return The status of the operation.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -509,7 +509,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>STOPPED</code>: The user has cancelled the operation.
+     *         <code>STOPPED</code>: The user has canceled the operation.
      *         </p>
      *         </li>
      *         <li>
@@ -559,7 +559,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>STOPPED</code>: The user has cancelled the operation.
+     * <code>STOPPED</code>: The user has canceled the operation.
      * </p>
      * </li>
      * <li>
@@ -576,7 +576,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * </ul>
      * 
      * @param status
-     *        The status of the operation. </p>
+     *        The status of the operation.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -602,7 +602,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>STOPPED</code>: The user has cancelled the operation.
+     *        <code>STOPPED</code>: The user has canceled the operation.
      *        </p>
      *        </li>
      *        <li>
@@ -654,7 +654,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>STOPPED</code>: The user has cancelled the operation.
+     * <code>STOPPED</code>: The user has canceled the operation.
      * </p>
      * </li>
      * <li>
@@ -671,7 +671,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * </ul>
      * 
      * @param status
-     *        The status of the operation. </p>
+     *        The status of the operation.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -697,7 +697,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>STOPPED</code>: The user has cancelled the operation.
+     *        <code>STOPPED</code>: The user has canceled the operation.
      *        </p>
      *        </li>
      *        <li>
@@ -747,7 +747,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>STOPPED</code>: The user has cancelled the operation.
+     * <code>STOPPED</code>: The user has canceled the operation.
      * </p>
      * </li>
      * <li>
@@ -764,7 +764,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * </ul>
      * 
      * @param status
-     *        The status of the operation. </p>
+     *        The status of the operation.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -790,7 +790,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>STOPPED</code>: The user has cancelled the operation.
+     *        <code>STOPPED</code>: The user has canceled the operation.
      *        </p>
      *        </li>
      *        <li>
@@ -856,13 +856,13 @@ public class StackSetOperation implements Serializable, Cloneable {
     /**
      * <p>
      * For stack set operations of action type <code>DELETE</code>, specifies whether to remove the stack instances from
-     * the specified stack set, but doesn't delete the stacks. You can't reassociate a retained stack, or add an
+     * the specified stack set, but doesn't delete the stacks. You can't re-associate a retained stack, or add an
      * existing, saved stack to a new stack set.
      * </p>
      * 
      * @param retainStacks
      *        For stack set operations of action type <code>DELETE</code>, specifies whether to remove the stack
-     *        instances from the specified stack set, but doesn't delete the stacks. You can't reassociate a retained
+     *        instances from the specified stack set, but doesn't delete the stacks. You can't re-associate a retained
      *        stack, or add an existing, saved stack to a new stack set.
      */
 
@@ -873,12 +873,12 @@ public class StackSetOperation implements Serializable, Cloneable {
     /**
      * <p>
      * For stack set operations of action type <code>DELETE</code>, specifies whether to remove the stack instances from
-     * the specified stack set, but doesn't delete the stacks. You can't reassociate a retained stack, or add an
+     * the specified stack set, but doesn't delete the stacks. You can't re-associate a retained stack, or add an
      * existing, saved stack to a new stack set.
      * </p>
      * 
      * @return For stack set operations of action type <code>DELETE</code>, specifies whether to remove the stack
-     *         instances from the specified stack set, but doesn't delete the stacks. You can't reassociate a retained
+     *         instances from the specified stack set, but doesn't delete the stacks. You can't re-associate a retained
      *         stack, or add an existing, saved stack to a new stack set.
      */
 
@@ -889,13 +889,13 @@ public class StackSetOperation implements Serializable, Cloneable {
     /**
      * <p>
      * For stack set operations of action type <code>DELETE</code>, specifies whether to remove the stack instances from
-     * the specified stack set, but doesn't delete the stacks. You can't reassociate a retained stack, or add an
+     * the specified stack set, but doesn't delete the stacks. You can't re-associate a retained stack, or add an
      * existing, saved stack to a new stack set.
      * </p>
      * 
      * @param retainStacks
      *        For stack set operations of action type <code>DELETE</code>, specifies whether to remove the stack
-     *        instances from the specified stack set, but doesn't delete the stacks. You can't reassociate a retained
+     *        instances from the specified stack set, but doesn't delete the stacks. You can't re-associate a retained
      *        stack, or add an existing, saved stack to a new stack set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -908,12 +908,12 @@ public class StackSetOperation implements Serializable, Cloneable {
     /**
      * <p>
      * For stack set operations of action type <code>DELETE</code>, specifies whether to remove the stack instances from
-     * the specified stack set, but doesn't delete the stacks. You can't reassociate a retained stack, or add an
+     * the specified stack set, but doesn't delete the stacks. You can't re-associate a retained stack, or add an
      * existing, saved stack to a new stack set.
      * </p>
      * 
      * @return For stack set operations of action type <code>DELETE</code>, specifies whether to remove the stack
-     *         instances from the specified stack set, but doesn't delete the stacks. You can't reassociate a retained
+     *         instances from the specified stack set, but doesn't delete the stacks. You can't re-associate a retained
      *         stack, or add an existing, saved stack to a new stack set.
      */
 
@@ -933,7 +933,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * </p>
      * 
      * @param administrationRoleARN
-     *        The Amazon Resource Number (ARN) of the IAM role used to perform this stack set operation. </p>
+     *        The Amazon Resource Number (ARN) of the IAM role used to perform this stack set operation.</p>
      *        <p>
      *        Use customized administrator roles to control which users or groups can manage specific stack sets within
      *        the same administrator account. For more information, see <a
@@ -956,7 +956,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * for Multiple Administrators</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
-     * @return The Amazon Resource Number (ARN) of the IAM role used to perform this stack set operation. </p>
+     * @return The Amazon Resource Number (ARN) of the IAM role used to perform this stack set operation.</p>
      *         <p>
      *         Use customized administrator roles to control which users or groups can manage specific stack sets within
      *         the same administrator account. For more information, see <a
@@ -980,7 +980,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * </p>
      * 
      * @param administrationRoleARN
-     *        The Amazon Resource Number (ARN) of the IAM role used to perform this stack set operation. </p>
+     *        The Amazon Resource Number (ARN) of the IAM role used to perform this stack set operation.</p>
      *        <p>
      *        Use customized administrator roles to control which users or groups can manage specific stack sets within
      *        the same administrator account. For more information, see <a
@@ -1208,7 +1208,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * currently being performed on the stack set.
      * </p>
      * <p>
-     * this information will only be present for stack set operations whose <code>Action</code> type is
+     * This information will only be present for stack set operations whose <code>Action</code> type is
      * <code>DETECT_DRIFT</code>.
      * </p>
      * <p>
@@ -1221,7 +1221,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        Detailed information about the drift status of the stack set. This includes information about drift
      *        operations currently being performed on the stack set.</p>
      *        <p>
-     *        this information will only be present for stack set operations whose <code>Action</code> type is
+     *        This information will only be present for stack set operations whose <code>Action</code> type is
      *        <code>DETECT_DRIFT</code>.
      *        </p>
      *        <p>
@@ -1240,7 +1240,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * currently being performed on the stack set.
      * </p>
      * <p>
-     * this information will only be present for stack set operations whose <code>Action</code> type is
+     * This information will only be present for stack set operations whose <code>Action</code> type is
      * <code>DETECT_DRIFT</code>.
      * </p>
      * <p>
@@ -1252,7 +1252,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * @return Detailed information about the drift status of the stack set. This includes information about drift
      *         operations currently being performed on the stack set.</p>
      *         <p>
-     *         this information will only be present for stack set operations whose <code>Action</code> type is
+     *         This information will only be present for stack set operations whose <code>Action</code> type is
      *         <code>DETECT_DRIFT</code>.
      *         </p>
      *         <p>
@@ -1271,7 +1271,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * currently being performed on the stack set.
      * </p>
      * <p>
-     * this information will only be present for stack set operations whose <code>Action</code> type is
+     * This information will only be present for stack set operations whose <code>Action</code> type is
      * <code>DETECT_DRIFT</code>.
      * </p>
      * <p>
@@ -1284,7 +1284,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        Detailed information about the drift status of the stack set. This includes information about drift
      *        operations currently being performed on the stack set.</p>
      *        <p>
-     *        this information will only be present for stack set operations whose <code>Action</code> type is
+     *        This information will only be present for stack set operations whose <code>Action</code> type is
      *        <code>DETECT_DRIFT</code>.
      *        </p>
      *        <p>

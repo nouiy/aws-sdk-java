@@ -55,7 +55,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>IN_SYNC</code>: The resources's actual configuration matches its expected configuration.
+     * <code>IN_SYNC</code>: The resource's actual configuration matches its expected configuration.
      * </p>
      * </li>
      * </ul>
@@ -96,7 +96,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>IN_SYNC</code>: The resources's actual configuration matches its expected configuration.
+     * <code>IN_SYNC</code>: The resource's actual configuration matches its expected configuration.
      * </p>
      * </li>
      * </ul>
@@ -128,7 +128,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IN_SYNC</code>: The resources's actual configuration matches its expected configuration.
+     *        <code>IN_SYNC</code>: The resource's actual configuration matches its expected configuration.
      *        </p>
      *        </li>
      * @see StackResourceDriftStatus
@@ -166,7 +166,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>IN_SYNC</code>: The resources's actual configuration matches its expected configuration.
+     * <code>IN_SYNC</code>: The resource's actual configuration matches its expected configuration.
      * </p>
      * </li>
      * </ul>
@@ -197,7 +197,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>IN_SYNC</code>: The resources's actual configuration matches its expected configuration.
+     *         <code>IN_SYNC</code>: The resource's actual configuration matches its expected configuration.
      *         </p>
      *         </li>
      * @see StackResourceDriftStatus
@@ -235,7 +235,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>IN_SYNC</code>: The resources's actual configuration matches its expected configuration.
+     * <code>IN_SYNC</code>: The resource's actual configuration matches its expected configuration.
      * </p>
      * </li>
      * </ul>
@@ -267,7 +267,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IN_SYNC</code>: The resources's actual configuration matches its expected configuration.
+     *        <code>IN_SYNC</code>: The resource's actual configuration matches its expected configuration.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -307,7 +307,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>IN_SYNC</code>: The resources's actual configuration matches its expected configuration.
+     * <code>IN_SYNC</code>: The resource's actual configuration matches its expected configuration.
      * </p>
      * </li>
      * </ul>
@@ -339,7 +339,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IN_SYNC</code>: The resources's actual configuration matches its expected configuration.
+     *        <code>IN_SYNC</code>: The resource's actual configuration matches its expected configuration.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

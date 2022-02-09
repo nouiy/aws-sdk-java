@@ -136,8 +136,9 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -184,7 +185,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <important>
      * <p>
-     * Stack sets with service-managed permissions do not currently support the use of macros in templates. (This
+     * Stack sets with service-managed permissions don't currently support the use of macros in templates. (This
      * includes the <a href=
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
@@ -758,8 +759,9 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -806,7 +808,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <important>
      * <p>
-     * Stack sets with service-managed permissions do not currently support the use of macros in templates. (This
+     * Stack sets with service-managed permissions don't currently support the use of macros in templates. (This
      * includes the <a href=
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
@@ -873,8 +875,8 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <li>
      *         <p>
      *         <a href=
-     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     *         AWS::IAM::InstanceProfile</a>
+     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
+     *         >AWS::IAM::InstanceProfile</a>
      *         </p>
      *         </li>
      *         <li>
@@ -898,8 +900,8 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <li>
      *         <p>
      *         <a href=
-     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     *         AWS::IAM::UserToGroupAddition</a>
+     *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
+     *         >AWS::IAM::UserToGroupAddition</a>
      *         </p>
      *         </li>
      *         </ul>
@@ -923,8 +925,8 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *         </p>
      *         <important>
      *         <p>
-     *         Stack sets with service-managed permissions do not currently support the use of macros in templates.
-     *         (This includes the <a href=
+     *         Stack sets with service-managed permissions don't currently support the use of macros in templates. (This
+     *         includes the <a href=
      *         "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *         >AWS::Include</a> and <a
      *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
@@ -999,8 +1001,9 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -1047,7 +1050,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <important>
      * <p>
-     * Stack sets with service-managed permissions do not currently support the use of macros in templates. (This
+     * Stack sets with service-managed permissions don't currently support the use of macros in templates. (This
      * includes the <a href=
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
@@ -1115,8 +1118,8 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     *        AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
+     *        >AWS::IAM::InstanceProfile</a>
      *        </p>
      *        </li>
      *        <li>
@@ -1140,8 +1143,8 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     *        AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
+     *        >AWS::IAM::UserToGroupAddition</a>
      *        </p>
      *        </li>
      *        </ul>
@@ -1164,7 +1167,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </p>
      *        <important>
      *        <p>
-     *        Stack sets with service-managed permissions do not currently support the use of macros in templates. (This
+     *        Stack sets with service-managed permissions don't currently support the use of macros in templates. (This
      *        includes the <a href=
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *        >AWS::Include</a> and <a
@@ -1242,8 +1245,9 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -1290,7 +1294,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <important>
      * <p>
-     * Stack sets with service-managed permissions do not currently support the use of macros in templates. (This
+     * Stack sets with service-managed permissions don't currently support the use of macros in templates. (This
      * includes the <a href=
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
@@ -1363,8 +1367,8 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     *        AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
+     *        >AWS::IAM::InstanceProfile</a>
      *        </p>
      *        </li>
      *        <li>
@@ -1388,8 +1392,8 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     *        AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
+     *        >AWS::IAM::UserToGroupAddition</a>
      *        </p>
      *        </li>
      *        </ul>
@@ -1412,7 +1416,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </p>
      *        <important>
      *        <p>
-     *        Stack sets with service-managed permissions do not currently support the use of macros in templates. (This
+     *        Stack sets with service-managed permissions don't currently support the use of macros in templates. (This
      *        includes the <a href=
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *        >AWS::Include</a> and <a
@@ -1492,8 +1496,9 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -1540,7 +1545,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <important>
      * <p>
-     * Stack sets with service-managed permissions do not currently support the use of macros in templates. (This
+     * Stack sets with service-managed permissions don't currently support the use of macros in templates. (This
      * includes the <a href=
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
@@ -1608,8 +1613,8 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     *        AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
+     *        >AWS::IAM::InstanceProfile</a>
      *        </p>
      *        </li>
      *        <li>
@@ -1633,8 +1638,8 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     *        AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
+     *        >AWS::IAM::UserToGroupAddition</a>
      *        </p>
      *        </li>
      *        </ul>
@@ -1657,7 +1662,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </p>
      *        <important>
      *        <p>
-     *        Stack sets with service-managed permissions do not currently support the use of macros in templates. (This
+     *        Stack sets with service-managed permissions don't currently support the use of macros in templates. (This
      *        includes the <a href=
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *        >AWS::Include</a> and <a
@@ -1732,8 +1737,9 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     * AWS::IAM::InstanceProfile</a>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">AWS
+     * ::IAM::InstanceProfile</a>
      * </p>
      * </li>
      * <li>
@@ -1780,7 +1786,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <important>
      * <p>
-     * Stack sets with service-managed permissions do not currently support the use of macros in templates. (This
+     * Stack sets with service-managed permissions don't currently support the use of macros in templates. (This
      * includes the <a href=
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
@@ -1848,8 +1854,8 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html">
-     *        AWS::IAM::InstanceProfile</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html"
+     *        >AWS::IAM::InstanceProfile</a>
      *        </p>
      *        </li>
      *        <li>
@@ -1873,8 +1879,8 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <li>
      *        <p>
      *        <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html">
-     *        AWS::IAM::UserToGroupAddition</a>
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-addusertogroup.html"
+     *        >AWS::IAM::UserToGroupAddition</a>
      *        </p>
      *        </li>
      *        </ul>
@@ -1897,7 +1903,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </p>
      *        <important>
      *        <p>
-     *        Stack sets with service-managed permissions do not currently support the use of macros in templates. (This
+     *        Stack sets with service-managed permissions don't currently support the use of macros in templates. (This
      *        includes the <a href=
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *        >AWS::Include</a> and <a
@@ -2061,7 +2067,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param administrationRoleARN
-     *        The Amazon Resource Number (ARN) of the IAM role to use to create this stack set. </p>
+     *        The Amazon Resource Number (ARN) of the IAM role to use to create this stack set.</p>
      *        <p>
      *        Specify an IAM role only if you are using customized administrator roles to control which users or groups
      *        can manage specific stack sets within the same administrator account. For more information, see <a
@@ -2084,7 +2090,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
-     * @return The Amazon Resource Number (ARN) of the IAM role to use to create this stack set. </p>
+     * @return The Amazon Resource Number (ARN) of the IAM role to use to create this stack set.</p>
      *         <p>
      *         Specify an IAM role only if you are using customized administrator roles to control which users or groups
      *         can manage specific stack sets within the same administrator account. For more information, see <a
@@ -2109,7 +2115,7 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param administrationRoleARN
-     *        The Amazon Resource Number (ARN) of the IAM role to use to create this stack set. </p>
+     *        The Amazon Resource Number (ARN) of the IAM role to use to create this stack set.</p>
      *        <p>
      *        Specify an IAM role only if you are using customized administrator roles to control which users or groups
      *        can manage specific stack sets within the same administrator account. For more information, see <a

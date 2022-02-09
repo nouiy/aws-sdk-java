@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The specified extension configuration cannot be found.
+ * The specified extension configuration can't be found.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

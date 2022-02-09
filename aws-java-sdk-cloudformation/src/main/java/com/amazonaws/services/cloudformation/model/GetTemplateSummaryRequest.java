@@ -32,7 +32,7 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes. For
      * more information about templates, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template anatomy</a>
      * in the CloudFormation User Guide.
      * </p>
      * <p>
@@ -43,9 +43,9 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
     private String templateBody;
     /**
      * <p>
-     * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that is
+     * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that's
      * located in an Amazon S3 bucket or a Systems Manager document. For more information about templates, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template anatomy</a>
      * in the CloudFormation User Guide.
      * </p>
      * <p>
@@ -56,7 +56,7 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
     private String templateURL;
     /**
      * <p>
-     * The name or the stack ID that is associated with the stack, which are not always interchangeable. For running
+     * The name or the stack ID that's associated with the stack, which aren't always interchangeable. For running
      * stacks, you can specify either the stack's name or its unique stack ID. For deleted stack, you must specify the
      * unique stack ID.
      * </p>
@@ -109,7 +109,7 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes. For
      * more information about templates, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template anatomy</a>
      * in the CloudFormation User Guide.
      * </p>
      * <p>
@@ -121,7 +121,7 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
      *        Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200
      *        bytes. For more information about templates, see <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the CloudFormation User Guide.</p>
+     *        anatomy</a> in the CloudFormation User Guide.</p>
      *        <p>
      *        Conditional: You must specify only one of the following parameters: <code>StackName</code>,
      *        <code>StackSetName</code>, <code>TemplateBody</code>, or <code>TemplateURL</code>.
@@ -135,7 +135,7 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes. For
      * more information about templates, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template anatomy</a>
      * in the CloudFormation User Guide.
      * </p>
      * <p>
@@ -146,7 +146,7 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
      * @return Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200
      *         bytes. For more information about templates, see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *         Anatomy</a> in the CloudFormation User Guide.</p>
+     *         anatomy</a> in the CloudFormation User Guide.</p>
      *         <p>
      *         Conditional: You must specify only one of the following parameters: <code>StackName</code>,
      *         <code>StackSetName</code>, <code>TemplateBody</code>, or <code>TemplateURL</code>.
@@ -160,7 +160,7 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes. For
      * more information about templates, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template anatomy</a>
      * in the CloudFormation User Guide.
      * </p>
      * <p>
@@ -172,7 +172,7 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
      *        Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200
      *        bytes. For more information about templates, see <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the CloudFormation User Guide.</p>
+     *        anatomy</a> in the CloudFormation User Guide.</p>
      *        <p>
      *        Conditional: You must specify only one of the following parameters: <code>StackName</code>,
      *        <code>StackSetName</code>, <code>TemplateBody</code>, or <code>TemplateURL</code>.
@@ -186,9 +186,9 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that is
+     * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that's
      * located in an Amazon S3 bucket or a Systems Manager document. For more information about templates, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template anatomy</a>
      * in the CloudFormation User Guide.
      * </p>
      * <p>
@@ -198,10 +198,10 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
      * 
      * @param templateURL
      *        Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes)
-     *        that is located in an Amazon S3 bucket or a Systems Manager document. For more information about
-     *        templates, see <a
+     *        that's located in an Amazon S3 bucket or a Systems Manager document. For more information about templates,
+     *        see <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the CloudFormation User Guide.</p>
+     *        anatomy</a> in the CloudFormation User Guide.</p>
      *        <p>
      *        Conditional: You must specify only one of the following parameters: <code>StackName</code>,
      *        <code>StackSetName</code>, <code>TemplateBody</code>, or <code>TemplateURL</code>.
@@ -213,9 +213,9 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that is
+     * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that's
      * located in an Amazon S3 bucket or a Systems Manager document. For more information about templates, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template anatomy</a>
      * in the CloudFormation User Guide.
      * </p>
      * <p>
@@ -224,10 +224,10 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @return Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes)
-     *         that is located in an Amazon S3 bucket or a Systems Manager document. For more information about
+     *         that's located in an Amazon S3 bucket or a Systems Manager document. For more information about
      *         templates, see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *         Anatomy</a> in the CloudFormation User Guide.</p>
+     *         anatomy</a> in the CloudFormation User Guide.</p>
      *         <p>
      *         Conditional: You must specify only one of the following parameters: <code>StackName</code>,
      *         <code>StackSetName</code>, <code>TemplateBody</code>, or <code>TemplateURL</code>.
@@ -239,9 +239,9 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that is
+     * Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that's
      * located in an Amazon S3 bucket or a Systems Manager document. For more information about templates, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template anatomy</a>
      * in the CloudFormation User Guide.
      * </p>
      * <p>
@@ -251,10 +251,10 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
      * 
      * @param templateURL
      *        Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes)
-     *        that is located in an Amazon S3 bucket or a Systems Manager document. For more information about
-     *        templates, see <a
+     *        that's located in an Amazon S3 bucket or a Systems Manager document. For more information about templates,
+     *        see <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the CloudFormation User Guide.</p>
+     *        anatomy</a> in the CloudFormation User Guide.</p>
      *        <p>
      *        Conditional: You must specify only one of the following parameters: <code>StackName</code>,
      *        <code>StackSetName</code>, <code>TemplateBody</code>, or <code>TemplateURL</code>.
@@ -268,7 +268,7 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The name or the stack ID that is associated with the stack, which are not always interchangeable. For running
+     * The name or the stack ID that's associated with the stack, which aren't always interchangeable. For running
      * stacks, you can specify either the stack's name or its unique stack ID. For deleted stack, you must specify the
      * unique stack ID.
      * </p>
@@ -278,7 +278,7 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param stackName
-     *        The name or the stack ID that is associated with the stack, which are not always interchangeable. For
+     *        The name or the stack ID that's associated with the stack, which aren't always interchangeable. For
      *        running stacks, you can specify either the stack's name or its unique stack ID. For deleted stack, you
      *        must specify the unique stack ID.</p>
      *        <p>
@@ -292,7 +292,7 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The name or the stack ID that is associated with the stack, which are not always interchangeable. For running
+     * The name or the stack ID that's associated with the stack, which aren't always interchangeable. For running
      * stacks, you can specify either the stack's name or its unique stack ID. For deleted stack, you must specify the
      * unique stack ID.
      * </p>
@@ -301,7 +301,7 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
      * <code>StackSetName</code>, <code>TemplateBody</code>, or <code>TemplateURL</code>.
      * </p>
      * 
-     * @return The name or the stack ID that is associated with the stack, which are not always interchangeable. For
+     * @return The name or the stack ID that's associated with the stack, which aren't always interchangeable. For
      *         running stacks, you can specify either the stack's name or its unique stack ID. For deleted stack, you
      *         must specify the unique stack ID.</p>
      *         <p>
@@ -315,7 +315,7 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The name or the stack ID that is associated with the stack, which are not always interchangeable. For running
+     * The name or the stack ID that's associated with the stack, which aren't always interchangeable. For running
      * stacks, you can specify either the stack's name or its unique stack ID. For deleted stack, you must specify the
      * unique stack ID.
      * </p>
@@ -325,7 +325,7 @@ public class GetTemplateSummaryRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param stackName
-     *        The name or the stack ID that is associated with the stack, which are not always interchangeable. For
+     *        The name or the stack ID that's associated with the stack, which aren't always interchangeable. For
      *        running stacks, you can specify either the stack's name or its unique stack ID. For deleted stack, you
      *        must specify the unique stack ID.</p>
      *        <p>

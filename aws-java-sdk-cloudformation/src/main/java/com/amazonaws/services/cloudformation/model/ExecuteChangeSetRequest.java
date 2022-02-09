@@ -30,14 +30,14 @@ public class ExecuteChangeSetRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name or ARN of the change set that you want use to update the specified stack.
+     * The name or Amazon Resource Name (ARN) of the change set that you want use to update the specified stack.
      * </p>
      */
     private String changeSetName;
     /**
      * <p>
-     * If you specified the name of a change set, specify the stack name or ID (ARN) that is associated with the change
-     * set you want to execute.
+     * If you specified the name of a change set, specify the stack name or Amazon Resource Name (ARN) that's associated
+     * with the change set you want to execute.
      * </p>
      */
     private String stackName;
@@ -62,11 +62,11 @@ public class ExecuteChangeSetRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name or ARN of the change set that you want use to update the specified stack.
+     * The name or Amazon Resource Name (ARN) of the change set that you want use to update the specified stack.
      * </p>
      * 
      * @param changeSetName
-     *        The name or ARN of the change set that you want use to update the specified stack.
+     *        The name or Amazon Resource Name (ARN) of the change set that you want use to update the specified stack.
      */
 
     public void setChangeSetName(String changeSetName) {
@@ -75,10 +75,10 @@ public class ExecuteChangeSetRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name or ARN of the change set that you want use to update the specified stack.
+     * The name or Amazon Resource Name (ARN) of the change set that you want use to update the specified stack.
      * </p>
      * 
-     * @return The name or ARN of the change set that you want use to update the specified stack.
+     * @return The name or Amazon Resource Name (ARN) of the change set that you want use to update the specified stack.
      */
 
     public String getChangeSetName() {
@@ -87,11 +87,11 @@ public class ExecuteChangeSetRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name or ARN of the change set that you want use to update the specified stack.
+     * The name or Amazon Resource Name (ARN) of the change set that you want use to update the specified stack.
      * </p>
      * 
      * @param changeSetName
-     *        The name or ARN of the change set that you want use to update the specified stack.
+     *        The name or Amazon Resource Name (ARN) of the change set that you want use to update the specified stack.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -102,13 +102,13 @@ public class ExecuteChangeSetRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * If you specified the name of a change set, specify the stack name or ID (ARN) that is associated with the change
-     * set you want to execute.
+     * If you specified the name of a change set, specify the stack name or Amazon Resource Name (ARN) that's associated
+     * with the change set you want to execute.
      * </p>
      * 
      * @param stackName
-     *        If you specified the name of a change set, specify the stack name or ID (ARN) that is associated with the
-     *        change set you want to execute.
+     *        If you specified the name of a change set, specify the stack name or Amazon Resource Name (ARN) that's
+     *        associated with the change set you want to execute.
      */
 
     public void setStackName(String stackName) {
@@ -117,12 +117,12 @@ public class ExecuteChangeSetRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * If you specified the name of a change set, specify the stack name or ID (ARN) that is associated with the change
-     * set you want to execute.
+     * If you specified the name of a change set, specify the stack name or Amazon Resource Name (ARN) that's associated
+     * with the change set you want to execute.
      * </p>
      * 
-     * @return If you specified the name of a change set, specify the stack name or ID (ARN) that is associated with the
-     *         change set you want to execute.
+     * @return If you specified the name of a change set, specify the stack name or Amazon Resource Name (ARN) that's
+     *         associated with the change set you want to execute.
      */
 
     public String getStackName() {
@@ -131,13 +131,13 @@ public class ExecuteChangeSetRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * If you specified the name of a change set, specify the stack name or ID (ARN) that is associated with the change
-     * set you want to execute.
+     * If you specified the name of a change set, specify the stack name or Amazon Resource Name (ARN) that's associated
+     * with the change set you want to execute.
      * </p>
      * 
      * @param stackName
-     *        If you specified the name of a change set, specify the stack name or ID (ARN) that is associated with the
-     *        change set you want to execute.
+     *        If you specified the name of a change set, specify the stack name or Amazon Resource Name (ARN) that's
+     *        associated with the change set you want to execute.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

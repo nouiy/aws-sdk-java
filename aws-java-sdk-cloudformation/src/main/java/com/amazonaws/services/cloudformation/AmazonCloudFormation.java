@@ -27,22 +27,22 @@ import com.amazonaws.services.cloudformation.waiters.AmazonCloudFormationWaiters
  * {@link com.amazonaws.services.cloudformation.AbstractAmazonCloudFormation} instead.
  * </p>
  * <p>
- * <fullname>AWS CloudFormation</fullname>
+ * <fullname>CloudFormation</fullname>
  * <p>
  * CloudFormation allows you to create and manage Amazon Web Services infrastructure deployments predictably and
  * repeatedly. You can use CloudFormation to leverage Amazon Web Services products, such as Amazon Elastic Compute
  * Cloud, Amazon Elastic Block Store, Amazon Simple Notification Service, Elastic Load Balancing, and Auto Scaling to
- * build highly-reliable, highly scalable, cost-effective applications without creating or configuring the underlying
+ * build highly reliable, highly scalable, cost-effective applications without creating or configuring the underlying
  * Amazon Web Services infrastructure.
  * </p>
  * <p>
- * With CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a
+ * With CloudFormation, you declare all your resources and dependencies in a template file. The template defines a
  * collection of resources as a single unit called a stack. CloudFormation creates and deletes all member resources of
  * the stack together and manages all dependencies between the resources for you.
  * </p>
  * <p>
  * For more information about CloudFormation, see the <a href="http://aws.amazon.com/cloudformation/">CloudFormation
- * Product Page</a>.
+ * product page</a>.
  * </p>
  * <p>
  * CloudFormation makes use of other Amazon Web Services products. If you need additional technical information about a
@@ -132,7 +132,7 @@ public interface AmazonCloudFormation {
      * @throws CFNRegistryException
      *         An error occurred during a CloudFormation registry operation.
      * @throws TypeNotFoundException
-     *         The specified extension does not exist in the CloudFormation registry.
+     *         The specified extension doesn't exist in the CloudFormation registry.
      * @sample AmazonCloudFormation.ActivateType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ActivateType" target="_top">AWS
      *      API Documentation</a>
@@ -153,7 +153,7 @@ public interface AmazonCloudFormation {
      * @param batchDescribeTypeConfigurationsRequest
      * @return Result of the BatchDescribeTypeConfigurations operation returned by the service.
      * @throws TypeConfigurationNotFoundException
-     *         The specified extension configuration cannot be found.
+     *         The specified extension configuration can't be found.
      * @throws CFNRegistryException
      *         An error occurred during a CloudFormation registry operation.
      * @sample AmazonCloudFormation.BatchDescribeTypeConfigurations
@@ -169,7 +169,7 @@ public interface AmazonCloudFormation {
      * </p>
      * <note>
      * <p>
-     * You can cancel only stacks that are in the UPDATE_IN_PROGRESS state.
+     * You can cancel only stacks that are in the <code>UPDATE_IN_PROGRESS</code> state.
      * </p>
      * </note>
      * 
@@ -186,15 +186,15 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
-     * For a specified stack that is in the <code>UPDATE_ROLLBACK_FAILED</code> state, continues rolling it back to the
+     * For a specified stack that's in the <code>UPDATE_ROLLBACK_FAILED</code> state, continues rolling it back to the
      * <code>UPDATE_ROLLBACK_COMPLETE</code> state. Depending on the cause of the failure, you can manually <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html#troubleshooting-errors-update-rollback-failed"
      * > fix the error</a> and continue the rollback. By continuing the rollback, you can return your stack to a working
      * state (the <code>UPDATE_ROLLBACK_COMPLETE</code> state), and then try to update the stack again.
      * </p>
      * <p>
-     * A stack goes into the <code>UPDATE_ROLLBACK_FAILED</code> state when CloudFormation cannot roll back all changes
-     * after a failed stack update. For example, you might have a stack that is rolling back to an old database instance
+     * A stack goes into the <code>UPDATE_ROLLBACK_FAILED</code> state when CloudFormation can't roll back all changes
+     * after a failed stack update. For example, you might have a stack that's rolling back to an old database instance
      * that was deleted outside of CloudFormation. Because CloudFormation doesn't know the database was deleted, it
      * assumes that the database instance still exists and attempts to roll back to it, causing the update rollback to
      * fail.
@@ -234,7 +234,7 @@ public interface AmazonCloudFormation {
      * <a>ExecuteChangeSet</a> action. CloudFormation doesn't make changes until you execute the change set.
      * </p>
      * <p>
-     * To create a change set for the entire stack hierachy, set <code>IncludeNestedStacks</code> to <code>True</code>.
+     * To create a change set for the entire stack hierarchy, set <code>IncludeNestedStacks</code> to <code>True</code>.
      * </p>
      * 
      * @param createChangeSetRequest
@@ -249,7 +249,7 @@ public interface AmazonCloudFormation {
      *         <p>
      *         For information on resource and stack limitations, see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html"
-     *         >Limits</a> in the <i>CloudFormation User Guide</i>.
+     *         >CloudFormation quotas</a> in the <i>CloudFormation User Guide</i>.
      * @sample AmazonCloudFormation.CreateChangeSet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/CreateChangeSet" target="_top">AWS
      *      API Documentation</a>
@@ -259,7 +259,7 @@ public interface AmazonCloudFormation {
     /**
      * <p>
      * Creates a stack as specified in the template. After the call completes successfully, the stack creation starts.
-     * You can check the status of the stack via the <a>DescribeStacks</a> API.
+     * You can check the status of the stack through the <a>DescribeStacks</a>operation.
      * </p>
      * 
      * @param createStackRequest
@@ -270,7 +270,7 @@ public interface AmazonCloudFormation {
      *         <p>
      *         For information on resource and stack limitations, see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html"
-     *         >Limits</a> in the <i>CloudFormation User Guide</i>.
+     *         >CloudFormation quotas</a> in the <i>CloudFormation User Guide</i>.
      * @throws AlreadyExistsException
      *         The resource with the name requested already exists.
      * @throws TokenAlreadyExistsException
@@ -285,9 +285,10 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
-     * Creates stack instances for the specified accounts, within the specified Regions. A stack instance refers to a
-     * stack in a specific account and Region. You must specify at least one value for either <code>Accounts</code> or
-     * <code>DeploymentTargets</code>, and you must specify at least one value for <code>Regions</code>.
+     * Creates stack instances for the specified accounts, within the specified Amazon Web Services Regions. A stack
+     * instance refers to a stack in a specific account and Region. You must specify at least one value for either
+     * <code>Accounts</code> or <code>DeploymentTargets</code>, and you must specify at least one value for
+     * <code>Regions</code>.
      * </p>
      * 
      * @param createStackInstancesRequest
@@ -308,7 +309,7 @@ public interface AmazonCloudFormation {
      *         <p>
      *         For information on resource and stack limitations, see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html"
-     *         >Limits</a> in the <i>CloudFormation User Guide</i>.
+     *         >CloudFormation quotas</a> in the <i>CloudFormation User Guide</i>.
      * @sample AmazonCloudFormation.CreateStackInstances
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/CreateStackInstances"
      *      target="_top">AWS API Documentation</a>
@@ -331,7 +332,7 @@ public interface AmazonCloudFormation {
      *         <p>
      *         For information on resource and stack limitations, see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html"
-     *         >Limits</a> in the <i>CloudFormation User Guide</i>.
+     *         >CloudFormation quotas</a> in the <i>CloudFormation User Guide</i>.
      * @sample AmazonCloudFormation.CreateStackSet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/CreateStackSet" target="_top">AWS
      *      API Documentation</a>
@@ -343,9 +344,9 @@ public interface AmazonCloudFormation {
      * Deactivates a public extension that was previously activated in this account and region.
      * </p>
      * <p>
-     * Once deactivated, an extension cannot be used in any CloudFormation operation. This includes stack update
+     * Once deactivated, an extension can't be used in any CloudFormation operation. This includes stack update
      * operations where the stack template includes the extension, even if no updates are being made to the extension.
-     * In addition, deactivated extensions are not automatically updated if a new version of the extension is released.
+     * In addition, deactivated extensions aren't automatically updated if a new version of the extension is released.
      * </p>
      * 
      * @param deactivateTypeRequest
@@ -353,7 +354,7 @@ public interface AmazonCloudFormation {
      * @throws CFNRegistryException
      *         An error occurred during a CloudFormation registry operation.
      * @throws TypeNotFoundException
-     *         The specified extension does not exist in the CloudFormation registry.
+     *         The specified extension doesn't exist in the CloudFormation registry.
      * @sample AmazonCloudFormation.DeactivateType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DeactivateType" target="_top">AWS
      *      API Documentation</a>
@@ -387,8 +388,8 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
-     * Deletes a specified stack. Once the call completes successfully, stack deletion starts. Deleted stacks do not
-     * show up in the <a>DescribeStacks</a> API if the deletion has been completed successfully.
+     * Deletes a specified stack. Once the call completes successfully, stack deletion starts. Deleted stacks don't show
+     * up in the <a>DescribeStacks</a> operation if the deletion has been completed successfully.
      * </p>
      * 
      * @param deleteStackRequest
@@ -404,7 +405,7 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
-     * Deletes stack instances for the specified accounts, in the specified Regions.
+     * Deletes stack instances for the specified accounts, in the specified Amazon Web Services Regions.
      * </p>
      * 
      * @param deleteStackInstancesRequest
@@ -457,8 +458,8 @@ public interface AmazonCloudFormation {
      * deregistered and marked as deprecated in the registry.
      * </p>
      * <p>
-     * You cannot deregister the default version of an extension if there are other active version of that extension. If
-     * you do deregister the default version of an extension, the textensionype itself is deregistered as well and
+     * You can't deregister the default version of an extension if there are other active version of that extension. If
+     * you do deregister the default version of an extension, the extension type itself is deregistered as well and
      * marked as deprecated.
      * </p>
      * <p>
@@ -471,7 +472,7 @@ public interface AmazonCloudFormation {
      * @throws CFNRegistryException
      *         An error occurred during a CloudFormation registry operation.
      * @throws TypeNotFoundException
-     *         The specified extension does not exist in the CloudFormation registry.
+     *         The specified extension doesn't exist in the CloudFormation registry.
      * @sample AmazonCloudFormation.DeregisterType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DeregisterType" target="_top">AWS
      *      API Documentation</a>
@@ -483,7 +484,7 @@ public interface AmazonCloudFormation {
      * Retrieves your account's CloudFormation limits, such as the maximum number of stacks that you can create in your
      * account. For more information about account limits, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html">CloudFormation
-     * Limits</a> in the <i>CloudFormation User Guide</i>.
+     * Quotas</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param describeAccountLimitsRequest
@@ -508,7 +509,7 @@ public interface AmazonCloudFormation {
      * @return Result of the DescribeChangeSet operation returned by the service.
      * @throws ChangeSetNotFoundException
      *         The specified change set name or ID doesn't exit. To view valid change sets for a stack, use the
-     *         <code>ListChangeSets</code> action.
+     *         <code>ListChangeSets</code> operation.
      * @sample AmazonCloudFormation.DescribeChangeSet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeChangeSet"
      *      target="_top">AWS API Documentation</a>
@@ -517,10 +518,27 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
+     * Returns hook-related information for the change set and a list of changes that CloudFormation makes when you run
+     * the change set.
+     * </p>
+     * 
+     * @param describeChangeSetHooksRequest
+     * @return Result of the DescribeChangeSetHooks operation returned by the service.
+     * @throws ChangeSetNotFoundException
+     *         The specified change set name or ID doesn't exit. To view valid change sets for a stack, use the
+     *         <code>ListChangeSets</code> operation.
+     * @sample AmazonCloudFormation.DescribeChangeSetHooks
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeChangeSetHooks"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeChangeSetHooksResult describeChangeSetHooks(DescribeChangeSetHooksRequest describeChangeSetHooksRequest);
+
+    /**
+     * <p>
      * Returns information about a CloudFormation extension publisher.
      * </p>
      * <p>
-     * If you do not supply a <code>PublisherId</code>, and you have registered as an extension publisher,
+     * If you don't supply a <code>PublisherId</code>, and you have registered as an extension publisher,
      * <code>DescribePublisher</code> returns information about your own publisher account.
      * </p>
      * <p>
@@ -644,9 +662,9 @@ public interface AmazonCloudFormation {
      * </p>
      * <p>
      * For a given stack, there will be one <code>StackResourceDrift</code> for each stack resource that has been
-     * checked for drift. Resources that haven't yet been checked for drift are not included. Resources that do not
-     * currently support drift detection are not checked, and so not included. For a list of resources that support
-     * drift detection, see <a
+     * checked for drift. Resources that haven't yet been checked for drift aren't included. Resources that don't
+     * currently support drift detection aren't checked, and so not included. For a list of resources that support drift
+     * detection, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html"
      * >Resources that Support Drift Detection</a>.
      * </p>
@@ -741,7 +759,7 @@ public interface AmazonCloudFormation {
      * </p>
      * <note>
      * <p>
-     * If the stack does not exist, an <code>ValidationError</code> is returned.
+     * If the stack doesn't exist, an <code>ValidationError</code> is returned.
      * </p>
      * </note>
      * 
@@ -775,7 +793,7 @@ public interface AmazonCloudFormation {
      * @throws CFNRegistryException
      *         An error occurred during a CloudFormation registry operation.
      * @throws TypeNotFoundException
-     *         The specified extension does not exist in the CloudFormation registry.
+     *         The specified extension doesn't exist in the CloudFormation registry.
      * @sample AmazonCloudFormation.DescribeType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/DescribeType" target="_top">AWS
      *      API Documentation</a>
@@ -833,7 +851,7 @@ public interface AmazonCloudFormation {
      * drift information about the stack and its resources.
      * </p>
      * <p>
-     * When detecting drift on a stack, CloudFormation does not detect drift on any nested stacks belonging to that
+     * When detecting drift on a stack, CloudFormation doesn't detect drift on any nested stacks belonging to that
      * stack. Perform <code>DetectStackDrift</code> directly on the nested stack itself.
      * </p>
      * 
@@ -860,7 +878,7 @@ public interface AmazonCloudFormation {
      * detect drift on all resources in a given stack that support drift detection.
      * </p>
      * <p>
-     * Resources that do not currently support drift detection cannot be checked. For a list of resources that support
+     * Resources that don't currently support drift detection can't be checked. For a list of resources that support
      * drift detection, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html"
      * >Resources that Support Drift Detection</a>.
@@ -879,13 +897,13 @@ public interface AmazonCloudFormation {
      * Detect drift on a stack set. When CloudFormation performs drift detection on a stack set, it performs drift
      * detection on the stack associated with each stack instance in the stack set. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html">How CloudFormation
-     * Performs Drift Detection on a Stack Set</a>.
+     * performs drift detection on a stack set</a>.
      * </p>
      * <p>
      * <code>DetectStackSetDrift</code> returns the <code>OperationId</code> of the stack set drift detection operation.
      * Use this operation id with <code> <a>DescribeStackSetOperation</a> </code> to monitor the progress of the drift
      * detection operation. The drift detection operation may take some time, depending on the number of stack instances
-     * included in the stack set, as well as the number of resources included in each stack.
+     * included in the stack set, in addition to the number of resources included in each stack.
      * </p>
      * <p>
      * Once the operation has completed, use the following actions to return drift information:
@@ -895,7 +913,7 @@ public interface AmazonCloudFormation {
      * <p>
      * Use <code> <a>DescribeStackSet</a> </code> to return detailed information about the stack set, including detailed
      * information about the last <i>completed</i> drift operation performed on the stack set. (Information about drift
-     * operations that are in progress is not included.)
+     * operations that are in progress isn't included.)
      * </p>
      * </li>
      * <li>
@@ -913,8 +931,8 @@ public interface AmazonCloudFormation {
      * </ul>
      * <p>
      * For more information on performing a drift detection operation on a stack set, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html">Detecting Unmanaged
-     * Changes in Stack Sets</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html">Detecting unmanaged
+     * changes in stack sets</a>.
      * </p>
      * <p>
      * You can only run a single drift detection operation on a given stack set at one time.
@@ -975,7 +993,7 @@ public interface AmazonCloudFormation {
      * specify a temporary stack policy that overrides the current policy.
      * </p>
      * <p>
-     * To create a change set for the entire stack hierachy, <code>IncludeNestedStacks</code> must have been set to
+     * To create a change set for the entire stack hierarchy, <code>IncludeNestedStacks</code> must have been set to
      * <code>True</code>.
      * </p>
      * 
@@ -987,7 +1005,7 @@ public interface AmazonCloudFormation {
      *         <code>CREATE_IN_PROGRESS</code>, or the stack status might be <code>UPDATE_IN_PROGRESS</code>.
      * @throws ChangeSetNotFoundException
      *         The specified change set name or ID doesn't exit. To view valid change sets for a stack, use the
-     *         <code>ListChangeSets</code> action.
+     *         <code>ListChangeSets</code> operation.
      * @throws InsufficientCapabilitiesException
      *         The template contains resources with capabilities that weren't specified in the Capabilities parameter.
      * @throws TokenAlreadyExistsException
@@ -1017,11 +1035,12 @@ public interface AmazonCloudFormation {
      * Returns the template body for a specified stack. You can get the template for running or deleted stacks.
      * </p>
      * <p>
-     * For deleted stacks, GetTemplate returns the template for up to 90 days after the stack has been deleted.
+     * For deleted stacks, <code>GetTemplate</code> returns the template for up to 90 days after the stack has been
+     * deleted.
      * </p>
      * <note>
      * <p>
-     * If the template does not exist, a <code>ValidationError</code> is returned.
+     * If the template doesn't exist, a <code>ValidationError</code> is returned.
      * </p>
      * </note>
      * 
@@ -1030,7 +1049,7 @@ public interface AmazonCloudFormation {
      * @return Result of the GetTemplate operation returned by the service.
      * @throws ChangeSetNotFoundException
      *         The specified change set name or ID doesn't exit. To view valid change sets for a stack, use the
-     *         <code>ListChangeSets</code> action.
+     *         <code>ListChangeSets</code> operation.
      * @sample AmazonCloudFormation.GetTemplate
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/GetTemplate" target="_top">AWS API
      *      Documentation</a>
@@ -1049,7 +1068,7 @@ public interface AmazonCloudFormation {
      * </p>
      * <p>
      * For deleted stacks, <code>GetTemplateSummary</code> returns the template information for up to 90 days after the
-     * stack has been deleted. If the template does not exist, a <code>ValidationError</code> is returned.
+     * stack has been deleted. If the template doesn't exist, a <code>ValidationError</code> is returned.
      * </p>
      * 
      * @param getTemplateSummaryRequest
@@ -1072,12 +1091,15 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
-     * Use the stack import operations for self-managed or service-managed StackSets. For self-managed StackSets, the
-     * import operation can import stacks in the administrator account or in different target accounts and Amazon Web
-     * Services Regions. For service-managed StackSets, the import operation can import any stack in the same AWS
-     * Organizations as the management account. The import operation can import up to 10 stacks using inline stack IDs
-     * or up to 10,000 stacks using an Amazon S3 object.
+     * Import existing stacks into a new stack sets. Use the stack import operation to import up to 10 stacks into a new
+     * stack set in the same account as the source stack or in a different administrator account and Region, by
+     * specifying the stack ID of the stack you intend to import.
      * </p>
+     * <note>
+     * <p>
+     * <code>ImportStacksToStackSet</code> is only supported by self-managed permissions.
+     * </p>
+     * </note>
      * 
      * @param importStacksToStackSetRequest
      * @return Result of the ImportStacksToStackSet operation returned by the service.
@@ -1086,7 +1108,7 @@ public interface AmazonCloudFormation {
      *         <p>
      *         For information on resource and stack limitations, see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html"
-     *         >Limits</a> in the <i>CloudFormation User Guide</i>.
+     *         >CloudFormation quotas</a> in the <i>CloudFormation User Guide</i>.
      * @throws StackSetNotFoundException
      *         The specified stack set doesn't exist.
      * @throws InvalidOperationException
@@ -1097,7 +1119,7 @@ public interface AmazonCloudFormation {
      * @throws OperationIdAlreadyExistsException
      *         The specified operation ID already exists.
      * @throws StackNotFoundException
-     *         The specified stack ARN doesn’t exist or stack doesn’t exist corresponding to the ARN in input.
+     *         The specified stack ARN doesn't exist or stack doesn't exist corresponding to the ARN in input.
      * @throws StaleRequestException
      *         Another operation has been performed on this stack set since the specified operation was performed.
      * @sample AmazonCloudFormation.ImportStacksToStackSet
@@ -1131,7 +1153,7 @@ public interface AmazonCloudFormation {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-exports.html">
-     * CloudFormation Export Stack Output Values</a>.
+     * CloudFormation export stack output values</a>.
      * </p>
      * 
      * @param listExportsRequest
@@ -1352,7 +1374,7 @@ public interface AmazonCloudFormation {
      * @throws CFNRegistryException
      *         An error occurred during a CloudFormation registry operation.
      * @throws TypeNotFoundException
-     *         The specified extension does not exist in the CloudFormation registry.
+     *         The specified extension doesn't exist in the CloudFormation registry.
      * @sample AmazonCloudFormation.PublishType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/PublishType" target="_top">AWS API
      *      Documentation</a>
@@ -1366,7 +1388,7 @@ public interface AmazonCloudFormation {
      * <p>
      * Reserved for use by the <a
      * href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html"
-     * >CloudFormation CLI</a>. Do not use this API in your code.
+     * >CloudFormation CLI</a>. Don't use this API in your code.
      * </p>
      * 
      * @param recordHandlerProgressRequest
@@ -1374,11 +1396,11 @@ public interface AmazonCloudFormation {
      * @throws InvalidStateTransitionException
      *         Error reserved for use by the <a
      *         href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html"
-     *         >CloudFormation CLI</a>. CloudFormation does not return this error to users.
+     *         >CloudFormation CLI</a>. CloudFormation doesn't return this error to users.
      * @throws OperationStatusCheckFailedException
      *         Error reserved for use by the <a
      *         href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html"
-     *         >CloudFormation CLI</a>. CloudFormation does not return this error to users.
+     *         >CloudFormation CLI</a>. CloudFormation doesn't return this error to users.
      * @sample AmazonCloudFormation.RecordHandlerProgress
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/RecordHandlerProgress"
      *      target="_top">AWS API Documentation</a>
@@ -1416,22 +1438,22 @@ public interface AmazonCloudFormation {
      * <ul>
      * <li>
      * <p>
-     * Validating the extension schema
+     * Validating the extension schema.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Determining which handlers, if any, have been specified for the extension
+     * Determining which handlers, if any, have been specified for the extension.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Making the extension available for use in your account
+     * Making the extension available for use in your account.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For more information on how to develop extensions and ready them for registeration, see <a
+     * For more information on how to develop extensions and ready them for registration, see <a
      * href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-types.html">Creating Resource
      * Providers</a> in the <i>CloudFormation CLI User Guide</i>.
      * </p>
@@ -1465,7 +1487,7 @@ public interface AmazonCloudFormation {
     /**
      * <p>
      * When specifying <code>RollbackStack</code>, you preserve the state of previously provisioned resources when an
-     * operation fails. You can check the status of the stack through the <a>DescribeStacks</a> API.
+     * operation fails. You can check the status of the stack through the <a>DescribeStacks</a> operation.
      * </p>
      * <p>
      * Rolls back the specified stack to the last known stable state from <code>CREATE_FAILED</code> or
@@ -1540,7 +1562,7 @@ public interface AmazonCloudFormation {
      * </p>
      * <important>
      * <p>
-     * It is strongly recommended that you use dynamic references to restrict sensitive configuration definitions, such
+     * It's strongly recommended that you use dynamic references to restrict sensitive configuration definitions, such
      * as third-party credentials. For more details on dynamic references, see <a
      * href="https://docs.aws.amazon.com/">Using dynamic references to specify template values</a> in the
      * <i>CloudFormation User Guide</i>.
@@ -1552,7 +1574,7 @@ public interface AmazonCloudFormation {
      * @throws CFNRegistryException
      *         An error occurred during a CloudFormation registry operation.
      * @throws TypeNotFoundException
-     *         The specified extension does not exist in the CloudFormation registry.
+     *         The specified extension doesn't exist in the CloudFormation registry.
      * @sample AmazonCloudFormation.SetTypeConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/SetTypeConfiguration"
      *      target="_top">AWS API Documentation</a>
@@ -1570,7 +1592,7 @@ public interface AmazonCloudFormation {
      * @throws CFNRegistryException
      *         An error occurred during a CloudFormation registry operation.
      * @throws TypeNotFoundException
-     *         The specified extension does not exist in the CloudFormation registry.
+     *         The specified extension doesn't exist in the CloudFormation registry.
      * @sample AmazonCloudFormation.SetTypeDefaultVersion
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/SetTypeDefaultVersion"
      *      target="_top">AWS API Documentation</a>
@@ -1579,11 +1601,11 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
-     * Sends a signal to the specified resource with a success or failure status. You can use the SignalResource API in
-     * conjunction with a creation policy or update policy. CloudFormation doesn't proceed with a stack creation or
-     * update until resources receive the required number of signals or the timeout period is exceeded. The
-     * SignalResource API is useful in cases where you want to send signals from anywhere other than an Amazon EC2
-     * instance.
+     * Sends a signal to the specified resource with a success or failure status. You can use the
+     * <code>SignalResource</code> operation in conjunction with a creation policy or update policy. CloudFormation
+     * doesn't proceed with a stack creation or update until resources receive the required number of signals or the
+     * timeout period is exceeded. The <code>SignalResource</code> operation is useful in cases where you want to send
+     * signals from anywhere other than an Amazon EC2 instance.
      * </p>
      * 
      * @param signalResourceRequest
@@ -1597,7 +1619,8 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
-     * Stops an in-progress operation on a stack set and its associated stack instances.
+     * Stops an in-progress operation on a stack set and its associated stack instances. StackSets will cancel all the
+     * unstarted stack instance deployments and wait for those are in-progress to complete.
      * </p>
      * 
      * @param stopStackSetOperationRequest
@@ -1637,7 +1660,7 @@ public interface AmazonCloudFormation {
      * >Testing your public extension prior to publishing</a> in the <i>CloudFormation CLI User Guide</i>.
      * </p>
      * <p>
-     * If you do not specify a version, CloudFormation uses the default version of the extension in your account and
+     * If you don't specify a version, CloudFormation uses the default version of the extension in your account and
      * region for testing.
      * </p>
      * <p>
@@ -1660,7 +1683,7 @@ public interface AmazonCloudFormation {
      * @throws CFNRegistryException
      *         An error occurred during a CloudFormation registry operation.
      * @throws TypeNotFoundException
-     *         The specified extension does not exist in the CloudFormation registry.
+     *         The specified extension doesn't exist in the CloudFormation registry.
      * @sample AmazonCloudFormation.TestType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/TestType" target="_top">AWS API
      *      Documentation</a>
@@ -1670,7 +1693,7 @@ public interface AmazonCloudFormation {
     /**
      * <p>
      * Updates a stack as specified in the template. After the call completes successfully, the stack update starts. You
-     * can check the status of the stack via the <a>DescribeStacks</a> action.
+     * can check the status of the stack through the <a>DescribeStacks</a> action.
      * </p>
      * <p>
      * To get a copy of the template for an existing stack, you can use the <a>GetTemplate</a> action.
@@ -1697,17 +1720,17 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
-     * Updates the parameter values for stack instances for the specified accounts, within the specified Regions. A
-     * stack instance refers to a stack in a specific account and Region.
+     * Updates the parameter values for stack instances for the specified accounts, within the specified Amazon Web
+     * Services Regions. A stack instance refers to a stack in a specific account and Region.
      * </p>
      * <p>
-     * You can only update stack instances in Regions and accounts where they already exist; to create additional stack
-     * instances, use <a
+     * You can only update stack instances in Amazon Web Services Regions and accounts where they already exist; to
+     * create additional stack instances, use <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStackInstances.html"
      * >CreateStackInstances</a>.
      * </p>
      * <p>
-     * During stack set updates, any parameters overridden for a stack instance are not updated, but retain their
+     * During stack set updates, any parameters overridden for a stack instance aren't updated, but retain their
      * overridden value.
      * </p>
      * <p>
@@ -1745,7 +1768,7 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
-     * Updates the stack set, and associated stack instances in the specified accounts and Regions.
+     * Updates the stack set, and associated stack instances in the specified accounts and Amazon Web Services Regions.
      * </p>
      * <p>
      * Even if the stack set operation created by updating the stack set fails (completely or partially, below or above
@@ -1783,7 +1806,7 @@ public interface AmazonCloudFormation {
      * </p>
      * <p>
      * For <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
-     * stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack.
+     * stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack.
      * </p>
      * 
      * @param updateTerminationProtectionRequest

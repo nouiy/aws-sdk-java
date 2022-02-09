@@ -31,7 +31,7 @@ public class ResourceChange implements Serializable, Cloneable {
      * <p>
      * The action that CloudFormation takes on the resource, such as <code>Add</code> (adds a new resource),
      * <code>Modify</code> (changes a resource), <code>Remove</code> (deletes a resource), <code>Import</code> (imports
-     * a resource), or <code>Dynamic</code> (exact action for the resource cannot be determined).
+     * a resource), or <code>Dynamic</code> (exact action for the resource can't be determined).
      * </p>
      */
     private String action;
@@ -102,13 +102,13 @@ public class ResourceChange implements Serializable, Cloneable {
      * <p>
      * The action that CloudFormation takes on the resource, such as <code>Add</code> (adds a new resource),
      * <code>Modify</code> (changes a resource), <code>Remove</code> (deletes a resource), <code>Import</code> (imports
-     * a resource), or <code>Dynamic</code> (exact action for the resource cannot be determined).
+     * a resource), or <code>Dynamic</code> (exact action for the resource can't be determined).
      * </p>
      * 
      * @param action
      *        The action that CloudFormation takes on the resource, such as <code>Add</code> (adds a new resource),
      *        <code>Modify</code> (changes a resource), <code>Remove</code> (deletes a resource), <code>Import</code>
-     *        (imports a resource), or <code>Dynamic</code> (exact action for the resource cannot be determined).
+     *        (imports a resource), or <code>Dynamic</code> (exact action for the resource can't be determined).
      * @see ChangeAction
      */
 
@@ -120,12 +120,12 @@ public class ResourceChange implements Serializable, Cloneable {
      * <p>
      * The action that CloudFormation takes on the resource, such as <code>Add</code> (adds a new resource),
      * <code>Modify</code> (changes a resource), <code>Remove</code> (deletes a resource), <code>Import</code> (imports
-     * a resource), or <code>Dynamic</code> (exact action for the resource cannot be determined).
+     * a resource), or <code>Dynamic</code> (exact action for the resource can't be determined).
      * </p>
      * 
      * @return The action that CloudFormation takes on the resource, such as <code>Add</code> (adds a new resource),
      *         <code>Modify</code> (changes a resource), <code>Remove</code> (deletes a resource), <code>Import</code>
-     *         (imports a resource), or <code>Dynamic</code> (exact action for the resource cannot be determined).
+     *         (imports a resource), or <code>Dynamic</code> (exact action for the resource can't be determined).
      * @see ChangeAction
      */
 
@@ -137,13 +137,13 @@ public class ResourceChange implements Serializable, Cloneable {
      * <p>
      * The action that CloudFormation takes on the resource, such as <code>Add</code> (adds a new resource),
      * <code>Modify</code> (changes a resource), <code>Remove</code> (deletes a resource), <code>Import</code> (imports
-     * a resource), or <code>Dynamic</code> (exact action for the resource cannot be determined).
+     * a resource), or <code>Dynamic</code> (exact action for the resource can't be determined).
      * </p>
      * 
      * @param action
      *        The action that CloudFormation takes on the resource, such as <code>Add</code> (adds a new resource),
      *        <code>Modify</code> (changes a resource), <code>Remove</code> (deletes a resource), <code>Import</code>
-     *        (imports a resource), or <code>Dynamic</code> (exact action for the resource cannot be determined).
+     *        (imports a resource), or <code>Dynamic</code> (exact action for the resource can't be determined).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ChangeAction
      */
@@ -157,13 +157,13 @@ public class ResourceChange implements Serializable, Cloneable {
      * <p>
      * The action that CloudFormation takes on the resource, such as <code>Add</code> (adds a new resource),
      * <code>Modify</code> (changes a resource), <code>Remove</code> (deletes a resource), <code>Import</code> (imports
-     * a resource), or <code>Dynamic</code> (exact action for the resource cannot be determined).
+     * a resource), or <code>Dynamic</code> (exact action for the resource can't be determined).
      * </p>
      * 
      * @param action
      *        The action that CloudFormation takes on the resource, such as <code>Add</code> (adds a new resource),
      *        <code>Modify</code> (changes a resource), <code>Remove</code> (deletes a resource), <code>Import</code>
-     *        (imports a resource), or <code>Dynamic</code> (exact action for the resource cannot be determined).
+     *        (imports a resource), or <code>Dynamic</code> (exact action for the resource can't be determined).
      * @see ChangeAction
      */
 
@@ -175,13 +175,13 @@ public class ResourceChange implements Serializable, Cloneable {
      * <p>
      * The action that CloudFormation takes on the resource, such as <code>Add</code> (adds a new resource),
      * <code>Modify</code> (changes a resource), <code>Remove</code> (deletes a resource), <code>Import</code> (imports
-     * a resource), or <code>Dynamic</code> (exact action for the resource cannot be determined).
+     * a resource), or <code>Dynamic</code> (exact action for the resource can't be determined).
      * </p>
      * 
      * @param action
      *        The action that CloudFormation takes on the resource, such as <code>Add</code> (adds a new resource),
      *        <code>Modify</code> (changes a resource), <code>Remove</code> (deletes a resource), <code>Import</code>
-     *        (imports a resource), or <code>Dynamic</code> (exact action for the resource cannot be determined).
+     *        (imports a resource), or <code>Dynamic</code> (exact action for the resource can't be determined).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ChangeAction
      */

@@ -30,22 +30,22 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * representing the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive
  * notification when an asynchronous operation completes.
  * <p>
- * <fullname>AWS CloudFormation</fullname>
+ * <fullname>CloudFormation</fullname>
  * <p>
  * CloudFormation allows you to create and manage Amazon Web Services infrastructure deployments predictably and
  * repeatedly. You can use CloudFormation to leverage Amazon Web Services products, such as Amazon Elastic Compute
  * Cloud, Amazon Elastic Block Store, Amazon Simple Notification Service, Elastic Load Balancing, and Auto Scaling to
- * build highly-reliable, highly scalable, cost-effective applications without creating or configuring the underlying
+ * build highly reliable, highly scalable, cost-effective applications without creating or configuring the underlying
  * Amazon Web Services infrastructure.
  * </p>
  * <p>
- * With CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a
+ * With CloudFormation, you declare all your resources and dependencies in a template file. The template defines a
  * collection of resources as a single unit called a stack. CloudFormation creates and deletes all member resources of
  * the stack together and manages all dependencies between the resources for you.
  * </p>
  * <p>
  * For more information about CloudFormation, see the <a href="http://aws.amazon.com/cloudformation/">CloudFormation
- * Product Page</a>.
+ * product page</a>.
  * </p>
  * <p>
  * CloudFormation makes use of other Amazon Web Services products. If you need additional technical information about a
@@ -792,6 +792,39 @@ public class AmazonCloudFormationAsyncClient extends AmazonCloudFormationClient 
 
                 try {
                     result = executeDescribeChangeSet(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeChangeSetHooksResult> describeChangeSetHooksAsync(DescribeChangeSetHooksRequest request) {
+
+        return describeChangeSetHooksAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeChangeSetHooksResult> describeChangeSetHooksAsync(final DescribeChangeSetHooksRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeChangeSetHooksRequest, DescribeChangeSetHooksResult> asyncHandler) {
+        final DescribeChangeSetHooksRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeChangeSetHooksResult>() {
+            @Override
+            public DescribeChangeSetHooksResult call() throws Exception {
+                DescribeChangeSetHooksResult result = null;
+
+                try {
+                    result = executeDescribeChangeSetHooks(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

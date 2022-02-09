@@ -46,9 +46,9 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * evaluation.
      * </p>
      * <p>
-     * For <code>Dynamic</code> evaluations, cannot determine the target value because it depends on the result of an
+     * For <code>Dynamic</code> evaluations, can't determine the target value because it depends on the result of an
      * intrinsic function, such as a <code>Ref</code> or <code>Fn::GetAtt</code> intrinsic function, when the stack is
-     * updated. For example, if your template includes a reference to a resource that is conditionally recreated, the
+     * updated. For example, if your template includes a reference to a resource that's conditionally recreated, the
      * value of the reference (the physical ID of the resource) might change, depending on if the resource is recreated.
      * If the resource is recreated, it will have a new physical ID, so all references to that resource will also be
      * updated.
@@ -97,7 +97,7 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
     private String changeSource;
     /**
      * <p>
-     * The identity of the entity that triggered this change. This entity is a member of the group that is specified by
+     * The identity of the entity that triggered this change. This entity is a member of the group that's specified by
      * the <code>ChangeSource</code> field. For example, if you modified the value of the <code>KeyPairName</code>
      * parameter, the <code>CausingEntity</code> is the name of the parameter (<code>KeyPairName</code>).
      * </p>
@@ -166,9 +166,9 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * evaluation.
      * </p>
      * <p>
-     * For <code>Dynamic</code> evaluations, cannot determine the target value because it depends on the result of an
+     * For <code>Dynamic</code> evaluations, can't determine the target value because it depends on the result of an
      * intrinsic function, such as a <code>Ref</code> or <code>Fn::GetAtt</code> intrinsic function, when the stack is
-     * updated. For example, if your template includes a reference to a resource that is conditionally recreated, the
+     * updated. For example, if your template includes a reference to a resource that's conditionally recreated, the
      * value of the reference (the physical ID of the resource) might change, depending on if the resource is recreated.
      * If the resource is recreated, it will have a new physical ID, so all references to that resource will also be
      * updated.
@@ -184,12 +184,12 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      *        evaluation.
      *        </p>
      *        <p>
-     *        For <code>Dynamic</code> evaluations, cannot determine the target value because it depends on the result
-     *        of an intrinsic function, such as a <code>Ref</code> or <code>Fn::GetAtt</code> intrinsic function, when
-     *        the stack is updated. For example, if your template includes a reference to a resource that is
-     *        conditionally recreated, the value of the reference (the physical ID of the resource) might change,
-     *        depending on if the resource is recreated. If the resource is recreated, it will have a new physical ID,
-     *        so all references to that resource will also be updated.
+     *        For <code>Dynamic</code> evaluations, can't determine the target value because it depends on the result of
+     *        an intrinsic function, such as a <code>Ref</code> or <code>Fn::GetAtt</code> intrinsic function, when the
+     *        stack is updated. For example, if your template includes a reference to a resource that's conditionally
+     *        recreated, the value of the reference (the physical ID of the resource) might change, depending on if the
+     *        resource is recreated. If the resource is recreated, it will have a new physical ID, so all references to
+     *        that resource will also be updated.
      * @see EvaluationType
      */
 
@@ -209,9 +209,9 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * evaluation.
      * </p>
      * <p>
-     * For <code>Dynamic</code> evaluations, cannot determine the target value because it depends on the result of an
+     * For <code>Dynamic</code> evaluations, can't determine the target value because it depends on the result of an
      * intrinsic function, such as a <code>Ref</code> or <code>Fn::GetAtt</code> intrinsic function, when the stack is
-     * updated. For example, if your template includes a reference to a resource that is conditionally recreated, the
+     * updated. For example, if your template includes a reference to a resource that's conditionally recreated, the
      * value of the reference (the physical ID of the resource) might change, depending on if the resource is recreated.
      * If the resource is recreated, it will have a new physical ID, so all references to that resource will also be
      * updated.
@@ -226,9 +226,9 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      *         <code>Static</code> evaluation.
      *         </p>
      *         <p>
-     *         For <code>Dynamic</code> evaluations, cannot determine the target value because it depends on the result
+     *         For <code>Dynamic</code> evaluations, can't determine the target value because it depends on the result
      *         of an intrinsic function, such as a <code>Ref</code> or <code>Fn::GetAtt</code> intrinsic function, when
-     *         the stack is updated. For example, if your template includes a reference to a resource that is
+     *         the stack is updated. For example, if your template includes a reference to a resource that's
      *         conditionally recreated, the value of the reference (the physical ID of the resource) might change,
      *         depending on if the resource is recreated. If the resource is recreated, it will have a new physical ID,
      *         so all references to that resource will also be updated.
@@ -251,9 +251,9 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * evaluation.
      * </p>
      * <p>
-     * For <code>Dynamic</code> evaluations, cannot determine the target value because it depends on the result of an
+     * For <code>Dynamic</code> evaluations, can't determine the target value because it depends on the result of an
      * intrinsic function, such as a <code>Ref</code> or <code>Fn::GetAtt</code> intrinsic function, when the stack is
-     * updated. For example, if your template includes a reference to a resource that is conditionally recreated, the
+     * updated. For example, if your template includes a reference to a resource that's conditionally recreated, the
      * value of the reference (the physical ID of the resource) might change, depending on if the resource is recreated.
      * If the resource is recreated, it will have a new physical ID, so all references to that resource will also be
      * updated.
@@ -269,12 +269,12 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      *        evaluation.
      *        </p>
      *        <p>
-     *        For <code>Dynamic</code> evaluations, cannot determine the target value because it depends on the result
-     *        of an intrinsic function, such as a <code>Ref</code> or <code>Fn::GetAtt</code> intrinsic function, when
-     *        the stack is updated. For example, if your template includes a reference to a resource that is
-     *        conditionally recreated, the value of the reference (the physical ID of the resource) might change,
-     *        depending on if the resource is recreated. If the resource is recreated, it will have a new physical ID,
-     *        so all references to that resource will also be updated.
+     *        For <code>Dynamic</code> evaluations, can't determine the target value because it depends on the result of
+     *        an intrinsic function, such as a <code>Ref</code> or <code>Fn::GetAtt</code> intrinsic function, when the
+     *        stack is updated. For example, if your template includes a reference to a resource that's conditionally
+     *        recreated, the value of the reference (the physical ID of the resource) might change, depending on if the
+     *        resource is recreated. If the resource is recreated, it will have a new physical ID, so all references to
+     *        that resource will also be updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EvaluationType
      */
@@ -296,9 +296,9 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * evaluation.
      * </p>
      * <p>
-     * For <code>Dynamic</code> evaluations, cannot determine the target value because it depends on the result of an
+     * For <code>Dynamic</code> evaluations, can't determine the target value because it depends on the result of an
      * intrinsic function, such as a <code>Ref</code> or <code>Fn::GetAtt</code> intrinsic function, when the stack is
-     * updated. For example, if your template includes a reference to a resource that is conditionally recreated, the
+     * updated. For example, if your template includes a reference to a resource that's conditionally recreated, the
      * value of the reference (the physical ID of the resource) might change, depending on if the resource is recreated.
      * If the resource is recreated, it will have a new physical ID, so all references to that resource will also be
      * updated.
@@ -314,12 +314,12 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      *        evaluation.
      *        </p>
      *        <p>
-     *        For <code>Dynamic</code> evaluations, cannot determine the target value because it depends on the result
-     *        of an intrinsic function, such as a <code>Ref</code> or <code>Fn::GetAtt</code> intrinsic function, when
-     *        the stack is updated. For example, if your template includes a reference to a resource that is
-     *        conditionally recreated, the value of the reference (the physical ID of the resource) might change,
-     *        depending on if the resource is recreated. If the resource is recreated, it will have a new physical ID,
-     *        so all references to that resource will also be updated.
+     *        For <code>Dynamic</code> evaluations, can't determine the target value because it depends on the result of
+     *        an intrinsic function, such as a <code>Ref</code> or <code>Fn::GetAtt</code> intrinsic function, when the
+     *        stack is updated. For example, if your template includes a reference to a resource that's conditionally
+     *        recreated, the value of the reference (the physical ID of the resource) might change, depending on if the
+     *        resource is recreated. If the resource is recreated, it will have a new physical ID, so all references to
+     *        that resource will also be updated.
      * @see EvaluationType
      */
 
@@ -339,9 +339,9 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * evaluation.
      * </p>
      * <p>
-     * For <code>Dynamic</code> evaluations, cannot determine the target value because it depends on the result of an
+     * For <code>Dynamic</code> evaluations, can't determine the target value because it depends on the result of an
      * intrinsic function, such as a <code>Ref</code> or <code>Fn::GetAtt</code> intrinsic function, when the stack is
-     * updated. For example, if your template includes a reference to a resource that is conditionally recreated, the
+     * updated. For example, if your template includes a reference to a resource that's conditionally recreated, the
      * value of the reference (the physical ID of the resource) might change, depending on if the resource is recreated.
      * If the resource is recreated, it will have a new physical ID, so all references to that resource will also be
      * updated.
@@ -357,12 +357,12 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      *        evaluation.
      *        </p>
      *        <p>
-     *        For <code>Dynamic</code> evaluations, cannot determine the target value because it depends on the result
-     *        of an intrinsic function, such as a <code>Ref</code> or <code>Fn::GetAtt</code> intrinsic function, when
-     *        the stack is updated. For example, if your template includes a reference to a resource that is
-     *        conditionally recreated, the value of the reference (the physical ID of the resource) might change,
-     *        depending on if the resource is recreated. If the resource is recreated, it will have a new physical ID,
-     *        so all references to that resource will also be updated.
+     *        For <code>Dynamic</code> evaluations, can't determine the target value because it depends on the result of
+     *        an intrinsic function, such as a <code>Ref</code> or <code>Fn::GetAtt</code> intrinsic function, when the
+     *        stack is updated. For example, if your template includes a reference to a resource that's conditionally
+     *        recreated, the value of the reference (the physical ID of the resource) might change, depending on if the
+     *        resource is recreated. If the resource is recreated, it will have a new physical ID, so all references to
+     *        that resource will also be updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EvaluationType
      */
@@ -782,7 +782,7 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The identity of the entity that triggered this change. This entity is a member of the group that is specified by
+     * The identity of the entity that triggered this change. This entity is a member of the group that's specified by
      * the <code>ChangeSource</code> field. For example, if you modified the value of the <code>KeyPairName</code>
      * parameter, the <code>CausingEntity</code> is the name of the parameter (<code>KeyPairName</code>).
      * </p>
@@ -792,7 +792,7 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * </p>
      * 
      * @param causingEntity
-     *        The identity of the entity that triggered this change. This entity is a member of the group that is
+     *        The identity of the entity that triggered this change. This entity is a member of the group that's
      *        specified by the <code>ChangeSource</code> field. For example, if you modified the value of the
      *        <code>KeyPairName</code> parameter, the <code>CausingEntity</code> is the name of the parameter (
      *        <code>KeyPairName</code>).</p>
@@ -807,7 +807,7 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The identity of the entity that triggered this change. This entity is a member of the group that is specified by
+     * The identity of the entity that triggered this change. This entity is a member of the group that's specified by
      * the <code>ChangeSource</code> field. For example, if you modified the value of the <code>KeyPairName</code>
      * parameter, the <code>CausingEntity</code> is the name of the parameter (<code>KeyPairName</code>).
      * </p>
@@ -816,7 +816,7 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * <code>CausingEntity</code>.
      * </p>
      * 
-     * @return The identity of the entity that triggered this change. This entity is a member of the group that is
+     * @return The identity of the entity that triggered this change. This entity is a member of the group that's
      *         specified by the <code>ChangeSource</code> field. For example, if you modified the value of the
      *         <code>KeyPairName</code> parameter, the <code>CausingEntity</code> is the name of the parameter (
      *         <code>KeyPairName</code>).</p>
@@ -831,7 +831,7 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The identity of the entity that triggered this change. This entity is a member of the group that is specified by
+     * The identity of the entity that triggered this change. This entity is a member of the group that's specified by
      * the <code>ChangeSource</code> field. For example, if you modified the value of the <code>KeyPairName</code>
      * parameter, the <code>CausingEntity</code> is the name of the parameter (<code>KeyPairName</code>).
      * </p>
@@ -841,7 +841,7 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * </p>
      * 
      * @param causingEntity
-     *        The identity of the entity that triggered this change. This entity is a member of the group that is
+     *        The identity of the entity that triggered this change. This entity is a member of the group that's
      *        specified by the <code>ChangeSource</code> field. For example, if you modified the value of the
      *        <code>KeyPairName</code> parameter, the <code>CausingEntity</code> is the name of the parameter (
      *        <code>KeyPairName</code>).</p>

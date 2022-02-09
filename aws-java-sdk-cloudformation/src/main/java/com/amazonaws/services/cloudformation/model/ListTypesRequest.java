@@ -79,14 +79,14 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be updated and
+     * <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated and
      * must instead be replaced during stack update operations.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_PROVISIONABLE</code>: The resource type does not include create, read, and delete handlers, and
-     * therefore cannot actually be provisioned.
+     * <code>NON_PROVISIONABLE</code>: The resource type doesn't include create, read, and delete handlers, and
+     * therefore can't actually be provisioned.
      * </p>
      * </li>
      * </ul>
@@ -476,14 +476,14 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be updated and
+     * <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated and
      * must instead be replaced during stack update operations.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_PROVISIONABLE</code>: The resource type does not include create, read, and delete handlers, and
-     * therefore cannot actually be provisioned.
+     * <code>NON_PROVISIONABLE</code>: The resource type doesn't include create, read, and delete handlers, and
+     * therefore can't actually be provisioned.
      * </p>
      * </li>
      * </ul>
@@ -507,14 +507,14 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be
-     *        updated and must instead be replaced during stack update operations.
+     *        <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated
+     *        and must instead be replaced during stack update operations.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NON_PROVISIONABLE</code>: The resource type does not include create, read, and delete handlers, and
-     *        therefore cannot actually be provisioned.
+     *        <code>NON_PROVISIONABLE</code>: The resource type doesn't include create, read, and delete handlers, and
+     *        therefore can't actually be provisioned.
      *        </p>
      *        </li>
      *        </ul>
@@ -544,14 +544,14 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be updated and
+     * <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated and
      * must instead be replaced during stack update operations.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_PROVISIONABLE</code>: The resource type does not include create, read, and delete handlers, and
-     * therefore cannot actually be provisioned.
+     * <code>NON_PROVISIONABLE</code>: The resource type doesn't include create, read, and delete handlers, and
+     * therefore can't actually be provisioned.
      * </p>
      * </li>
      * </ul>
@@ -574,14 +574,14 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         </li>
      *         <li>
      *         <p>
-     *         <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be
-     *         updated and must instead be replaced during stack update operations.
+     *         <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated
+     *         and must instead be replaced during stack update operations.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NON_PROVISIONABLE</code>: The resource type does not include create, read, and delete handlers, and
-     *         therefore cannot actually be provisioned.
+     *         <code>NON_PROVISIONABLE</code>: The resource type doesn't include create, read, and delete handlers, and
+     *         therefore can't actually be provisioned.
      *         </p>
      *         </li>
      *         </ul>
@@ -611,14 +611,14 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be updated and
+     * <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated and
      * must instead be replaced during stack update operations.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_PROVISIONABLE</code>: The resource type does not include create, read, and delete handlers, and
-     * therefore cannot actually be provisioned.
+     * <code>NON_PROVISIONABLE</code>: The resource type doesn't include create, read, and delete handlers, and
+     * therefore can't actually be provisioned.
      * </p>
      * </li>
      * </ul>
@@ -642,14 +642,14 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be
-     *        updated and must instead be replaced during stack update operations.
+     *        <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated
+     *        and must instead be replaced during stack update operations.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NON_PROVISIONABLE</code>: The resource type does not include create, read, and delete handlers, and
-     *        therefore cannot actually be provisioned.
+     *        <code>NON_PROVISIONABLE</code>: The resource type doesn't include create, read, and delete handlers, and
+     *        therefore can't actually be provisioned.
      *        </p>
      *        </li>
      *        </ul>
@@ -681,14 +681,14 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * <li>
      * <p>
-     * <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be updated and
+     * <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated and
      * must instead be replaced during stack update operations.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_PROVISIONABLE</code>: The resource type does not include create, read, and delete handlers, and
-     * therefore cannot actually be provisioned.
+     * <code>NON_PROVISIONABLE</code>: The resource type doesn't include create, read, and delete handlers, and
+     * therefore can't actually be provisioned.
      * </p>
      * </li>
      * </ul>
@@ -712,14 +712,14 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IMMUTABLE</code>: The resource type does not include an update handler, so the type cannot be
-     *        updated and must instead be replaced during stack update operations.
+     *        <code>IMMUTABLE</code>: The resource type doesn't include an update handler, so the type can't be updated
+     *        and must instead be replaced during stack update operations.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NON_PROVISIONABLE</code>: The resource type does not include create, read, and delete handlers, and
-     *        therefore cannot actually be provisioned.
+     *        <code>NON_PROVISIONABLE</code>: The resource type doesn't include create, read, and delete handlers, and
+     *        therefore can't actually be provisioned.
      *        </p>
      *        </li>
      *        </ul>

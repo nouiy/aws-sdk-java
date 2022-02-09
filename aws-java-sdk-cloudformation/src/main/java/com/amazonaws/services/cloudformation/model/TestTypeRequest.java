@@ -27,7 +27,7 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the extension.
+     * The Amazon Resource Name (ARN) of the extension.
      * </p>
      * <p>
      * Conditional: You must specify <code>Arn</code>, or <code>TypeName</code> and <code>Type</code>.
@@ -60,7 +60,7 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * You can specify the version id with either <code>Arn</code>, or with <code>TypeName</code> and <code>Type</code>.
      * </p>
      * <p>
-     * If you do not specify a version, CloudFormation uses the default version of the extension in this account and
+     * If you don't specify a version, CloudFormation uses the default version of the extension in this account and
      * region for testing.
      * </p>
      */
@@ -80,12 +80,12 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * <ul>
      * <li>
      * <p>
-     * GetObject
+     * <code>GetObject</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * PutObject
+     * <code>PutObject</code>
      * </p>
      * </li>
      * </ul>
@@ -99,14 +99,14 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the extension.
+     * The Amazon Resource Name (ARN) of the extension.
      * </p>
      * <p>
      * Conditional: You must specify <code>Arn</code>, or <code>TypeName</code> and <code>Type</code>.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Number (ARN) of the extension.</p>
+     *        The Amazon Resource Name (ARN) of the extension.</p>
      *        <p>
      *        Conditional: You must specify <code>Arn</code>, or <code>TypeName</code> and <code>Type</code>.
      */
@@ -117,13 +117,13 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the extension.
+     * The Amazon Resource Name (ARN) of the extension.
      * </p>
      * <p>
      * Conditional: You must specify <code>Arn</code>, or <code>TypeName</code> and <code>Type</code>.
      * </p>
      * 
-     * @return The Amazon Resource Number (ARN) of the extension.</p>
+     * @return The Amazon Resource Name (ARN) of the extension.</p>
      *         <p>
      *         Conditional: You must specify <code>Arn</code>, or <code>TypeName</code> and <code>Type</code>.
      */
@@ -134,14 +134,14 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the extension.
+     * The Amazon Resource Name (ARN) of the extension.
      * </p>
      * <p>
      * Conditional: You must specify <code>Arn</code>, or <code>TypeName</code> and <code>Type</code>.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Number (ARN) of the extension.</p>
+     *        The Amazon Resource Name (ARN) of the extension.</p>
      *        <p>
      *        Conditional: You must specify <code>Arn</code>, or <code>TypeName</code> and <code>Type</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -294,7 +294,7 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * You can specify the version id with either <code>Arn</code>, or with <code>TypeName</code> and <code>Type</code>.
      * </p>
      * <p>
-     * If you do not specify a version, CloudFormation uses the default version of the extension in this account and
+     * If you don't specify a version, CloudFormation uses the default version of the extension in this account and
      * region for testing.
      * </p>
      * 
@@ -305,7 +305,7 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      *        <code>Type</code>.
      *        </p>
      *        <p>
-     *        If you do not specify a version, CloudFormation uses the default version of the extension in this account
+     *        If you don't specify a version, CloudFormation uses the default version of the extension in this account
      *        and region for testing.
      */
 
@@ -321,7 +321,7 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * You can specify the version id with either <code>Arn</code>, or with <code>TypeName</code> and <code>Type</code>.
      * </p>
      * <p>
-     * If you do not specify a version, CloudFormation uses the default version of the extension in this account and
+     * If you don't specify a version, CloudFormation uses the default version of the extension in this account and
      * region for testing.
      * </p>
      * 
@@ -331,7 +331,7 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      *         <code>Type</code>.
      *         </p>
      *         <p>
-     *         If you do not specify a version, CloudFormation uses the default version of the extension in this account
+     *         If you don't specify a version, CloudFormation uses the default version of the extension in this account
      *         and region for testing.
      */
 
@@ -347,7 +347,7 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * You can specify the version id with either <code>Arn</code>, or with <code>TypeName</code> and <code>Type</code>.
      * </p>
      * <p>
-     * If you do not specify a version, CloudFormation uses the default version of the extension in this account and
+     * If you don't specify a version, CloudFormation uses the default version of the extension in this account and
      * region for testing.
      * </p>
      * 
@@ -358,7 +358,7 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      *        <code>Type</code>.
      *        </p>
      *        <p>
-     *        If you do not specify a version, CloudFormation uses the default version of the extension in this account
+     *        If you don't specify a version, CloudFormation uses the default version of the extension in this account
      *        and region for testing.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -383,12 +383,12 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * <ul>
      * <li>
      * <p>
-     * GetObject
+     * <code>GetObject</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * PutObject
+     * <code>PutObject</code>
      * </p>
      * </li>
      * </ul>
@@ -411,12 +411,12 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      *        <ul>
      *        <li>
      *        <p>
-     *        GetObject
+     *        <code>GetObject</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        PutObject
+     *        <code>PutObject</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -446,12 +446,12 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * <ul>
      * <li>
      * <p>
-     * GetObject
+     * <code>GetObject</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * PutObject
+     * <code>PutObject</code>
      * </p>
      * </li>
      * </ul>
@@ -473,12 +473,12 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      *         <ul>
      *         <li>
      *         <p>
-     *         GetObject
+     *         <code>GetObject</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         PutObject
+     *         <code>PutObject</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -508,12 +508,12 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * <ul>
      * <li>
      * <p>
-     * GetObject
+     * <code>GetObject</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * PutObject
+     * <code>PutObject</code>
      * </p>
      * </li>
      * </ul>
@@ -536,12 +536,12 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      *        <ul>
      *        <li>
      *        <p>
-     *        GetObject
+     *        <code>GetObject</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        PutObject
+     *        <code>PutObject</code>
      *        </p>
      *        </li>
      *        </ul>

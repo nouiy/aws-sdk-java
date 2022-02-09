@@ -42,7 +42,7 @@ import javax.annotation.Generated;
  * <p>
  * For more information about these account limits, and other CloudFormation limits, see <a
  * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html">CloudFormation
- * Limits</a> in the <i>CloudFormation User Guide</i>.
+ * quotas</a> in the <i>CloudFormation User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/AccountLimit" target="_top">AWS API
@@ -62,7 +62,7 @@ public class AccountLimit implements Serializable, Cloneable {
     private String name;
     /**
      * <p>
-     * The value that is associated with the account limit name.
+     * The value that's associated with the account limit name.
      * </p>
      */
     private Integer value;
@@ -124,11 +124,11 @@ public class AccountLimit implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The value that is associated with the account limit name.
+     * The value that's associated with the account limit name.
      * </p>
      * 
      * @param value
-     *        The value that is associated with the account limit name.
+     *        The value that's associated with the account limit name.
      */
 
     public void setValue(Integer value) {
@@ -137,10 +137,10 @@ public class AccountLimit implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The value that is associated with the account limit name.
+     * The value that's associated with the account limit name.
      * </p>
      * 
-     * @return The value that is associated with the account limit name.
+     * @return The value that's associated with the account limit name.
      */
 
     public Integer getValue() {
@@ -149,11 +149,11 @@ public class AccountLimit implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The value that is associated with the account limit name.
+     * The value that's associated with the account limit name.
      * </p>
      * 
      * @param value
-     *        The value that is associated with the account limit name.
+     *        The value that's associated with the account limit name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

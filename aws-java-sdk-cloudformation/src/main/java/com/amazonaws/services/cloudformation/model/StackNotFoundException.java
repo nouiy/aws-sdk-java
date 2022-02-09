@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The specified stack ARN doesn’t exist or stack doesn’t exist corresponding to the ARN in input.
+ * The specified stack ARN doesn't exist or stack doesn't exist corresponding to the ARN in input.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

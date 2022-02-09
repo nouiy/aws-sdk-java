@@ -43,7 +43,7 @@ public class EstimateTemplateCostRequest extends com.amazonaws.AmazonWebServiceR
     private String templateBody;
     /**
      * <p>
-     * Location of file containing the template body. The URL must point to a template that is located in an Amazon S3
+     * Location of file containing the template body. The URL must point to a template that's located in an Amazon S3
      * bucket or a Systems Manager document. For more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
      * in the CloudFormation User Guide.
@@ -142,7 +142,7 @@ public class EstimateTemplateCostRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Location of file containing the template body. The URL must point to a template that is located in an Amazon S3
+     * Location of file containing the template body. The URL must point to a template that's located in an Amazon S3
      * bucket or a Systems Manager document. For more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
      * in the CloudFormation User Guide.
@@ -153,7 +153,7 @@ public class EstimateTemplateCostRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param templateURL
-     *        Location of file containing the template body. The URL must point to a template that is located in an
+     *        Location of file containing the template body. The URL must point to a template that's located in an
      *        Amazon S3 bucket or a Systems Manager document. For more information, go to <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
      *        Anatomy</a> in the CloudFormation User Guide.</p>
@@ -168,7 +168,7 @@ public class EstimateTemplateCostRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Location of file containing the template body. The URL must point to a template that is located in an Amazon S3
+     * Location of file containing the template body. The URL must point to a template that's located in an Amazon S3
      * bucket or a Systems Manager document. For more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
      * in the CloudFormation User Guide.
@@ -178,7 +178,7 @@ public class EstimateTemplateCostRequest extends com.amazonaws.AmazonWebServiceR
      * <code>TemplateBody</code> is used.
      * </p>
      * 
-     * @return Location of file containing the template body. The URL must point to a template that is located in an
+     * @return Location of file containing the template body. The URL must point to a template that's located in an
      *         Amazon S3 bucket or a Systems Manager document. For more information, go to <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
      *         Anatomy</a> in the CloudFormation User Guide.</p>
@@ -193,7 +193,7 @@ public class EstimateTemplateCostRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Location of file containing the template body. The URL must point to a template that is located in an Amazon S3
+     * Location of file containing the template body. The URL must point to a template that's located in an Amazon S3
      * bucket or a Systems Manager document. For more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
      * in the CloudFormation User Guide.
@@ -204,7 +204,7 @@ public class EstimateTemplateCostRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param templateURL
-     *        Location of file containing the template body. The URL must point to a template that is located in an
+     *        Location of file containing the template body. The URL must point to a template that's located in an
      *        Amazon S3 bucket or a Systems Manager document. For more information, go to <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
      *        Anatomy</a> in the CloudFormation User Guide.</p>

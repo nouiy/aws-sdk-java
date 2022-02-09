@@ -30,7 +30,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name or the unique stack ID that is associated with the stack, which are not always interchangeable:
+     * The name or the unique stack ID that is associated with the stack, which aren't always interchangeable:
      * </p>
      * <ul>
      * <li>
@@ -48,7 +48,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
      * Default: There is no default value.
      * </p>
      * <p>
-     * Required: Conditional. If you do not specify <code>StackName</code>, you must specify
+     * Required: Conditional. If you don't specify <code>StackName</code>, you must specify
      * <code>PhysicalResourceId</code>.
      * </p>
      */
@@ -73,7 +73,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
      * to find which stack the instance belongs to and what other resources are part of the stack.
      * </p>
      * <p>
-     * Required: Conditional. If you do not specify <code>PhysicalResourceId</code>, you must specify
+     * Required: Conditional. If you don't specify <code>PhysicalResourceId</code>, you must specify
      * <code>StackName</code>.
      * </p>
      * <p>
@@ -84,7 +84,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name or the unique stack ID that is associated with the stack, which are not always interchangeable:
+     * The name or the unique stack ID that is associated with the stack, which aren't always interchangeable:
      * </p>
      * <ul>
      * <li>
@@ -102,12 +102,12 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
      * Default: There is no default value.
      * </p>
      * <p>
-     * Required: Conditional. If you do not specify <code>StackName</code>, you must specify
+     * Required: Conditional. If you don't specify <code>StackName</code>, you must specify
      * <code>PhysicalResourceId</code>.
      * </p>
      * 
      * @param stackName
-     *        The name or the unique stack ID that is associated with the stack, which are not always
+     *        The name or the unique stack ID that is associated with the stack, which aren't always
      *        interchangeable:</p>
      *        <ul>
      *        <li>
@@ -125,7 +125,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
      *        Default: There is no default value.
      *        </p>
      *        <p>
-     *        Required: Conditional. If you do not specify <code>StackName</code>, you must specify
+     *        Required: Conditional. If you don't specify <code>StackName</code>, you must specify
      *        <code>PhysicalResourceId</code>.
      */
 
@@ -135,7 +135,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name or the unique stack ID that is associated with the stack, which are not always interchangeable:
+     * The name or the unique stack ID that is associated with the stack, which aren't always interchangeable:
      * </p>
      * <ul>
      * <li>
@@ -153,11 +153,11 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
      * Default: There is no default value.
      * </p>
      * <p>
-     * Required: Conditional. If you do not specify <code>StackName</code>, you must specify
+     * Required: Conditional. If you don't specify <code>StackName</code>, you must specify
      * <code>PhysicalResourceId</code>.
      * </p>
      * 
-     * @return The name or the unique stack ID that is associated with the stack, which are not always
+     * @return The name or the unique stack ID that is associated with the stack, which aren't always
      *         interchangeable:</p>
      *         <ul>
      *         <li>
@@ -175,7 +175,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
      *         Default: There is no default value.
      *         </p>
      *         <p>
-     *         Required: Conditional. If you do not specify <code>StackName</code>, you must specify
+     *         Required: Conditional. If you don't specify <code>StackName</code>, you must specify
      *         <code>PhysicalResourceId</code>.
      */
 
@@ -185,7 +185,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name or the unique stack ID that is associated with the stack, which are not always interchangeable:
+     * The name or the unique stack ID that is associated with the stack, which aren't always interchangeable:
      * </p>
      * <ul>
      * <li>
@@ -203,12 +203,12 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
      * Default: There is no default value.
      * </p>
      * <p>
-     * Required: Conditional. If you do not specify <code>StackName</code>, you must specify
+     * Required: Conditional. If you don't specify <code>StackName</code>, you must specify
      * <code>PhysicalResourceId</code>.
      * </p>
      * 
      * @param stackName
-     *        The name or the unique stack ID that is associated with the stack, which are not always
+     *        The name or the unique stack ID that is associated with the stack, which aren't always
      *        interchangeable:</p>
      *        <ul>
      *        <li>
@@ -226,7 +226,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
      *        Default: There is no default value.
      *        </p>
      *        <p>
-     *        Required: Conditional. If you do not specify <code>StackName</code>, you must specify
+     *        Required: Conditional. If you don't specify <code>StackName</code>, you must specify
      *        <code>PhysicalResourceId</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -302,7 +302,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
      * to find which stack the instance belongs to and what other resources are part of the stack.
      * </p>
      * <p>
-     * Required: Conditional. If you do not specify <code>PhysicalResourceId</code>, you must specify
+     * Required: Conditional. If you don't specify <code>PhysicalResourceId</code>, you must specify
      * <code>StackName</code>.
      * </p>
      * <p>
@@ -319,7 +319,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
      *        are part of the stack.
      *        </p>
      *        <p>
-     *        Required: Conditional. If you do not specify <code>PhysicalResourceId</code>, you must specify
+     *        Required: Conditional. If you don't specify <code>PhysicalResourceId</code>, you must specify
      *        <code>StackName</code>.
      *        </p>
      *        <p>
@@ -341,7 +341,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
      * to find which stack the instance belongs to and what other resources are part of the stack.
      * </p>
      * <p>
-     * Required: Conditional. If you do not specify <code>PhysicalResourceId</code>, you must specify
+     * Required: Conditional. If you don't specify <code>PhysicalResourceId</code>, you must specify
      * <code>StackName</code>.
      * </p>
      * <p>
@@ -357,7 +357,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
      *         are part of the stack.
      *         </p>
      *         <p>
-     *         Required: Conditional. If you do not specify <code>PhysicalResourceId</code>, you must specify
+     *         Required: Conditional. If you don't specify <code>PhysicalResourceId</code>, you must specify
      *         <code>StackName</code>.
      *         </p>
      *         <p>
@@ -379,7 +379,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
      * to find which stack the instance belongs to and what other resources are part of the stack.
      * </p>
      * <p>
-     * Required: Conditional. If you do not specify <code>PhysicalResourceId</code>, you must specify
+     * Required: Conditional. If you don't specify <code>PhysicalResourceId</code>, you must specify
      * <code>StackName</code>.
      * </p>
      * <p>
@@ -396,7 +396,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
      *        are part of the stack.
      *        </p>
      *        <p>
-     *        Required: Conditional. If you do not specify <code>PhysicalResourceId</code>, you must specify
+     *        Required: Conditional. If you don't specify <code>PhysicalResourceId</code>, you must specify
      *        <code>StackName</code>.
      *        </p>
      *        <p>

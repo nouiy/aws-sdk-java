@@ -30,7 +30,7 @@ public class CancelUpdateStackRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The name or the unique stack ID that is associated with the stack.
+     * The name or the unique stack ID that's associated with the stack.
      * </p>
      */
     private String stackName;
@@ -46,11 +46,11 @@ public class CancelUpdateStackRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The name or the unique stack ID that is associated with the stack.
+     * The name or the unique stack ID that's associated with the stack.
      * </p>
      * 
      * @param stackName
-     *        The name or the unique stack ID that is associated with the stack.
+     *        The name or the unique stack ID that's associated with the stack.
      */
 
     public void setStackName(String stackName) {
@@ -59,10 +59,10 @@ public class CancelUpdateStackRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The name or the unique stack ID that is associated with the stack.
+     * The name or the unique stack ID that's associated with the stack.
      * </p>
      * 
-     * @return The name or the unique stack ID that is associated with the stack.
+     * @return The name or the unique stack ID that's associated with the stack.
      */
 
     public String getStackName() {
@@ -71,11 +71,11 @@ public class CancelUpdateStackRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The name or the unique stack ID that is associated with the stack.
+     * The name or the unique stack ID that's associated with the stack.
      * </p>
      * 
      * @param stackName
-     *        The name or the unique stack ID that is associated with the stack.
+     *        The name or the unique stack ID that's associated with the stack.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

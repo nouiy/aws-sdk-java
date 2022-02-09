@@ -44,7 +44,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * [Service-managed permissions] The Organizations accounts for which to create stack instances in the specified
-     * Regions.
+     * Amazon Web Services Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -53,8 +53,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     private DeploymentTargets deploymentTargets;
     /**
      * <p>
-     * The names of one or more Regions where you want to create stack instances using the specified Amazon Web Services
-     * accounts.
+     * The names of one or more Amazon Web Services Regions where you want to create stack instances using the specified
+     * Amazon Web Services accounts.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> regions;
@@ -63,9 +63,9 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * A list of stack set parameters whose values you want to override in the selected stack instances.
      * </p>
      * <p>
-     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
-     * instance operations:
+     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Amazon Web
+     * Services Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter
+     * values during stack instance operations:
      * </p>
      * <ul>
      * <li>
@@ -76,24 +76,24 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * <li>
      * <p>
      * To leave an overridden parameter set to its present value, include the parameter and specify
-     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but don't
      * include the parameter in the list.
      * </p>
      * </li>
      * <li>
      * <p>
-     * To leave all parameters set to their present values, do not specify this property at all.
+     * To leave all parameters set to their present values, don't specify this property at all.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * During stack set updates, any parameter values overridden for a stack instance are not updated, but retain their
+     * During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain their
      * overridden value.
      * </p>
      * <p>
@@ -301,7 +301,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * [Service-managed permissions] The Organizations accounts for which to create stack instances in the specified
-     * Regions.
+     * Amazon Web Services Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -309,7 +309,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * 
      * @param deploymentTargets
      *        [Service-managed permissions] The Organizations accounts for which to create stack instances in the
-     *        specified Regions.</p>
+     *        specified Amazon Web Services Regions.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      */
@@ -321,14 +321,14 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * [Service-managed permissions] The Organizations accounts for which to create stack instances in the specified
-     * Regions.
+     * Amazon Web Services Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * </p>
      * 
      * @return [Service-managed permissions] The Organizations accounts for which to create stack instances in the
-     *         specified Regions.</p>
+     *         specified Amazon Web Services Regions.</p>
      *         <p>
      *         You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      */
@@ -340,7 +340,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * [Service-managed permissions] The Organizations accounts for which to create stack instances in the specified
-     * Regions.
+     * Amazon Web Services Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -348,7 +348,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * 
      * @param deploymentTargets
      *        [Service-managed permissions] The Organizations accounts for which to create stack instances in the
-     *        specified Regions.</p>
+     *        specified Amazon Web Services Regions.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -361,12 +361,12 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The names of one or more Regions where you want to create stack instances using the specified Amazon Web Services
-     * accounts.
+     * The names of one or more Amazon Web Services Regions where you want to create stack instances using the specified
+     * Amazon Web Services accounts.
      * </p>
      * 
-     * @return The names of one or more Regions where you want to create stack instances using the specified Amazon Web
-     *         Services accounts.
+     * @return The names of one or more Amazon Web Services Regions where you want to create stack instances using the
+     *         specified Amazon Web Services accounts.
      */
 
     public java.util.List<String> getRegions() {
@@ -378,13 +378,13 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The names of one or more Regions where you want to create stack instances using the specified Amazon Web Services
-     * accounts.
+     * The names of one or more Amazon Web Services Regions where you want to create stack instances using the specified
+     * Amazon Web Services accounts.
      * </p>
      * 
      * @param regions
-     *        The names of one or more Regions where you want to create stack instances using the specified Amazon Web
-     *        Services accounts.
+     *        The names of one or more Amazon Web Services Regions where you want to create stack instances using the
+     *        specified Amazon Web Services accounts.
      */
 
     public void setRegions(java.util.Collection<String> regions) {
@@ -398,8 +398,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The names of one or more Regions where you want to create stack instances using the specified Amazon Web Services
-     * accounts.
+     * The names of one or more Amazon Web Services Regions where you want to create stack instances using the specified
+     * Amazon Web Services accounts.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -408,8 +408,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param regions
-     *        The names of one or more Regions where you want to create stack instances using the specified Amazon Web
-     *        Services accounts.
+     *        The names of one or more Amazon Web Services Regions where you want to create stack instances using the
+     *        specified Amazon Web Services accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -425,13 +425,13 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The names of one or more Regions where you want to create stack instances using the specified Amazon Web Services
-     * accounts.
+     * The names of one or more Amazon Web Services Regions where you want to create stack instances using the specified
+     * Amazon Web Services accounts.
      * </p>
      * 
      * @param regions
-     *        The names of one or more Regions where you want to create stack instances using the specified Amazon Web
-     *        Services accounts.
+     *        The names of one or more Amazon Web Services Regions where you want to create stack instances using the
+     *        specified Amazon Web Services accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -445,9 +445,9 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * A list of stack set parameters whose values you want to override in the selected stack instances.
      * </p>
      * <p>
-     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
-     * instance operations:
+     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Amazon Web
+     * Services Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter
+     * values during stack instance operations:
      * </p>
      * <ul>
      * <li>
@@ -458,24 +458,24 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * <li>
      * <p>
      * To leave an overridden parameter set to its present value, include the parameter and specify
-     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but don't
      * include the parameter in the list.
      * </p>
      * </li>
      * <li>
      * <p>
-     * To leave all parameters set to their present values, do not specify this property at all.
+     * To leave all parameters set to their present values, don't specify this property at all.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * During stack set updates, any parameter values overridden for a stack instance are not updated, but retain their
+     * During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain their
      * overridden value.
      * </p>
      * <p>
@@ -488,8 +488,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * @return A list of stack set parameters whose values you want to override in the selected stack instances.</p>
      *         <p>
      *         Any overridden parameter values will be applied to all stack instances in the specified accounts and
-     *         Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter
-     *         values during stack instance operations:
+     *         Amazon Web Services Regions. When specifying parameters and their values, be aware of how CloudFormation
+     *         sets parameter values during stack instance operations:
      *         </p>
      *         <ul>
      *         <li>
@@ -500,25 +500,25 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *         <li>
      *         <p>
      *         To leave an overridden parameter set to its present value, include the parameter and specify
-     *         <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     *         <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      *         <code>UsePreviousValue</code> to <code>true</code>.)
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         To set an overridden parameter back to the value specified in the stack set, specify a parameter list but
-     *         do not include the parameter in the list.
+     *         don't include the parameter in the list.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         To leave all parameters set to their present values, do not specify this property at all.
+     *         To leave all parameters set to their present values, don't specify this property at all.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         During stack set updates, any parameter values overridden for a stack instance are not updated, but
-     *         retain their overridden value.
+     *         During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain
+     *         their overridden value.
      *         </p>
      *         <p>
      *         You can only override the parameter <i>values</i> that are specified in the stack set; to add or delete a
@@ -539,9 +539,9 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * A list of stack set parameters whose values you want to override in the selected stack instances.
      * </p>
      * <p>
-     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
-     * instance operations:
+     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Amazon Web
+     * Services Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter
+     * values during stack instance operations:
      * </p>
      * <ul>
      * <li>
@@ -552,24 +552,24 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * <li>
      * <p>
      * To leave an overridden parameter set to its present value, include the parameter and specify
-     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but don't
      * include the parameter in the list.
      * </p>
      * </li>
      * <li>
      * <p>
-     * To leave all parameters set to their present values, do not specify this property at all.
+     * To leave all parameters set to their present values, don't specify this property at all.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * During stack set updates, any parameter values overridden for a stack instance are not updated, but retain their
+     * During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain their
      * overridden value.
      * </p>
      * <p>
@@ -583,8 +583,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        A list of stack set parameters whose values you want to override in the selected stack instances.</p>
      *        <p>
      *        Any overridden parameter values will be applied to all stack instances in the specified accounts and
-     *        Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter values
-     *        during stack instance operations:
+     *        Amazon Web Services Regions. When specifying parameters and their values, be aware of how CloudFormation
+     *        sets parameter values during stack instance operations:
      *        </p>
      *        <ul>
      *        <li>
@@ -595,24 +595,24 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        <li>
      *        <p>
      *        To leave an overridden parameter set to its present value, include the parameter and specify
-     *        <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     *        <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      *        <code>UsePreviousValue</code> to <code>true</code>.)
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        To set an overridden parameter back to the value specified in the stack set, specify a parameter list but
-     *        do not include the parameter in the list.
+     *        don't include the parameter in the list.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        To leave all parameters set to their present values, do not specify this property at all.
+     *        To leave all parameters set to their present values, don't specify this property at all.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        During stack set updates, any parameter values overridden for a stack instance are not updated, but retain
+     *        During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain
      *        their overridden value.
      *        </p>
      *        <p>
@@ -636,9 +636,9 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * A list of stack set parameters whose values you want to override in the selected stack instances.
      * </p>
      * <p>
-     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
-     * instance operations:
+     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Amazon Web
+     * Services Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter
+     * values during stack instance operations:
      * </p>
      * <ul>
      * <li>
@@ -649,24 +649,24 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * <li>
      * <p>
      * To leave an overridden parameter set to its present value, include the parameter and specify
-     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but don't
      * include the parameter in the list.
      * </p>
      * </li>
      * <li>
      * <p>
-     * To leave all parameters set to their present values, do not specify this property at all.
+     * To leave all parameters set to their present values, don't specify this property at all.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * During stack set updates, any parameter values overridden for a stack instance are not updated, but retain their
+     * During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain their
      * overridden value.
      * </p>
      * <p>
@@ -685,8 +685,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        A list of stack set parameters whose values you want to override in the selected stack instances.</p>
      *        <p>
      *        Any overridden parameter values will be applied to all stack instances in the specified accounts and
-     *        Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter values
-     *        during stack instance operations:
+     *        Amazon Web Services Regions. When specifying parameters and their values, be aware of how CloudFormation
+     *        sets parameter values during stack instance operations:
      *        </p>
      *        <ul>
      *        <li>
@@ -697,24 +697,24 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        <li>
      *        <p>
      *        To leave an overridden parameter set to its present value, include the parameter and specify
-     *        <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     *        <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      *        <code>UsePreviousValue</code> to <code>true</code>.)
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        To set an overridden parameter back to the value specified in the stack set, specify a parameter list but
-     *        do not include the parameter in the list.
+     *        don't include the parameter in the list.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        To leave all parameters set to their present values, do not specify this property at all.
+     *        To leave all parameters set to their present values, don't specify this property at all.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        During stack set updates, any parameter values overridden for a stack instance are not updated, but retain
+     *        During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain
      *        their overridden value.
      *        </p>
      *        <p>
@@ -740,9 +740,9 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * A list of stack set parameters whose values you want to override in the selected stack instances.
      * </p>
      * <p>
-     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
-     * instance operations:
+     * Any overridden parameter values will be applied to all stack instances in the specified accounts and Amazon Web
+     * Services Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter
+     * values during stack instance operations:
      * </p>
      * <ul>
      * <li>
@@ -753,24 +753,24 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * <li>
      * <p>
      * To leave an overridden parameter set to its present value, include the parameter and specify
-     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but don't
      * include the parameter in the list.
      * </p>
      * </li>
      * <li>
      * <p>
-     * To leave all parameters set to their present values, do not specify this property at all.
+     * To leave all parameters set to their present values, don't specify this property at all.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * During stack set updates, any parameter values overridden for a stack instance are not updated, but retain their
+     * During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain their
      * overridden value.
      * </p>
      * <p>
@@ -784,8 +784,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        A list of stack set parameters whose values you want to override in the selected stack instances.</p>
      *        <p>
      *        Any overridden parameter values will be applied to all stack instances in the specified accounts and
-     *        Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter values
-     *        during stack instance operations:
+     *        Amazon Web Services Regions. When specifying parameters and their values, be aware of how CloudFormation
+     *        sets parameter values during stack instance operations:
      *        </p>
      *        <ul>
      *        <li>
@@ -796,24 +796,24 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        <li>
      *        <p>
      *        To leave an overridden parameter set to its present value, include the parameter and specify
-     *        <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     *        <code>UsePreviousValue</code> as <code>true</code>. (You can't specify both a value and set
      *        <code>UsePreviousValue</code> to <code>true</code>.)
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        To set an overridden parameter back to the value specified in the stack set, specify a parameter list but
-     *        do not include the parameter in the list.
+     *        don't include the parameter in the list.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        To leave all parameters set to their present values, do not specify this property at all.
+     *        To leave all parameters set to their present values, don't specify this property at all.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        During stack set updates, any parameter values overridden for a stack instance are not updated, but retain
+     *        During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain
      *        their overridden value.
      *        </p>
      *        <p>

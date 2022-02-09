@@ -41,7 +41,7 @@ public class TypeVersionSummary implements Serializable, Cloneable {
     /**
      * <p>
      * The ID of a specific version of the extension. The version ID is the value at the end of the Amazon Resource Name
-     * (ARN) assigned to the extension version when it is registered.
+     * (ARN) assigned to the extension version when it's registered.
      * </p>
      */
     private String versionId;
@@ -51,8 +51,7 @@ public class TypeVersionSummary implements Serializable, Cloneable {
      * </p>
      * <p>
      * This applies only to private extensions you have registered in your account, and extensions published by Amazon.
-     * For public third-party extensions, whether or not they are activated in your account, CloudFormation returns
-     * <code>null</code>.
+     * For public third-party extensions, CloudFormation returns <code>null</code>.
      * </p>
      */
     private Boolean isDefaultVersion;
@@ -82,7 +81,7 @@ public class TypeVersionSummary implements Serializable, Cloneable {
      * </p>
      * <p>
      * How you specified <code>AutoUpdate</code> when enabling the extension affects whether CloudFormation
-     * automatically updates the extention in this account and region when a new version is released. For more
+     * automatically updates the extension in this account and region when a new version is released. For more
      * information, see <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable-auto"
      * >Setting CloudFormation to automatically use new versions of extensions</a> in the <i>CloudFormation User
@@ -193,12 +192,12 @@ public class TypeVersionSummary implements Serializable, Cloneable {
     /**
      * <p>
      * The ID of a specific version of the extension. The version ID is the value at the end of the Amazon Resource Name
-     * (ARN) assigned to the extension version when it is registered.
+     * (ARN) assigned to the extension version when it's registered.
      * </p>
      * 
      * @param versionId
      *        The ID of a specific version of the extension. The version ID is the value at the end of the Amazon
-     *        Resource Name (ARN) assigned to the extension version when it is registered.
+     *        Resource Name (ARN) assigned to the extension version when it's registered.
      */
 
     public void setVersionId(String versionId) {
@@ -208,11 +207,11 @@ public class TypeVersionSummary implements Serializable, Cloneable {
     /**
      * <p>
      * The ID of a specific version of the extension. The version ID is the value at the end of the Amazon Resource Name
-     * (ARN) assigned to the extension version when it is registered.
+     * (ARN) assigned to the extension version when it's registered.
      * </p>
      * 
      * @return The ID of a specific version of the extension. The version ID is the value at the end of the Amazon
-     *         Resource Name (ARN) assigned to the extension version when it is registered.
+     *         Resource Name (ARN) assigned to the extension version when it's registered.
      */
 
     public String getVersionId() {
@@ -222,12 +221,12 @@ public class TypeVersionSummary implements Serializable, Cloneable {
     /**
      * <p>
      * The ID of a specific version of the extension. The version ID is the value at the end of the Amazon Resource Name
-     * (ARN) assigned to the extension version when it is registered.
+     * (ARN) assigned to the extension version when it's registered.
      * </p>
      * 
      * @param versionId
      *        The ID of a specific version of the extension. The version ID is the value at the end of the Amazon
-     *        Resource Name (ARN) assigned to the extension version when it is registered.
+     *        Resource Name (ARN) assigned to the extension version when it's registered.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -242,16 +241,14 @@ public class TypeVersionSummary implements Serializable, Cloneable {
      * </p>
      * <p>
      * This applies only to private extensions you have registered in your account, and extensions published by Amazon.
-     * For public third-party extensions, whether or not they are activated in your account, CloudFormation returns
-     * <code>null</code>.
+     * For public third-party extensions, CloudFormation returns <code>null</code>.
      * </p>
      * 
      * @param isDefaultVersion
      *        Whether the specified extension version is set as the default version.</p>
      *        <p>
      *        This applies only to private extensions you have registered in your account, and extensions published by
-     *        Amazon. For public third-party extensions, whether or not they are activated in your account,
-     *        CloudFormation returns <code>null</code>.
+     *        Amazon. For public third-party extensions, CloudFormation returns <code>null</code>.
      */
 
     public void setIsDefaultVersion(Boolean isDefaultVersion) {
@@ -264,15 +261,13 @@ public class TypeVersionSummary implements Serializable, Cloneable {
      * </p>
      * <p>
      * This applies only to private extensions you have registered in your account, and extensions published by Amazon.
-     * For public third-party extensions, whether or not they are activated in your account, CloudFormation returns
-     * <code>null</code>.
+     * For public third-party extensions, CloudFormation returns <code>null</code>.
      * </p>
      * 
      * @return Whether the specified extension version is set as the default version.</p>
      *         <p>
      *         This applies only to private extensions you have registered in your account, and extensions published by
-     *         Amazon. For public third-party extensions, whether or not they are activated in your account,
-     *         CloudFormation returns <code>null</code>.
+     *         Amazon. For public third-party extensions, CloudFormation returns <code>null</code>.
      */
 
     public Boolean getIsDefaultVersion() {
@@ -285,16 +280,14 @@ public class TypeVersionSummary implements Serializable, Cloneable {
      * </p>
      * <p>
      * This applies only to private extensions you have registered in your account, and extensions published by Amazon.
-     * For public third-party extensions, whether or not they are activated in your account, CloudFormation returns
-     * <code>null</code>.
+     * For public third-party extensions, CloudFormation returns <code>null</code>.
      * </p>
      * 
      * @param isDefaultVersion
      *        Whether the specified extension version is set as the default version.</p>
      *        <p>
      *        This applies only to private extensions you have registered in your account, and extensions published by
-     *        Amazon. For public third-party extensions, whether or not they are activated in your account,
-     *        CloudFormation returns <code>null</code>.
+     *        Amazon. For public third-party extensions, CloudFormation returns <code>null</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -309,15 +302,13 @@ public class TypeVersionSummary implements Serializable, Cloneable {
      * </p>
      * <p>
      * This applies only to private extensions you have registered in your account, and extensions published by Amazon.
-     * For public third-party extensions, whether or not they are activated in your account, CloudFormation returns
-     * <code>null</code>.
+     * For public third-party extensions, CloudFormation returns <code>null</code>.
      * </p>
      * 
      * @return Whether the specified extension version is set as the default version.</p>
      *         <p>
      *         This applies only to private extensions you have registered in your account, and extensions published by
-     *         Amazon. For public third-party extensions, whether or not they are activated in your account,
-     *         CloudFormation returns <code>null</code>.
+     *         Amazon. For public third-party extensions, CloudFormation returns <code>null</code>.
      */
 
     public Boolean isDefaultVersion() {
@@ -452,7 +443,7 @@ public class TypeVersionSummary implements Serializable, Cloneable {
      * </p>
      * <p>
      * How you specified <code>AutoUpdate</code> when enabling the extension affects whether CloudFormation
-     * automatically updates the extention in this account and region when a new version is released. For more
+     * automatically updates the extension in this account and region when a new version is released. For more
      * information, see <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable-auto"
      * >Setting CloudFormation to automatically use new versions of extensions</a> in the <i>CloudFormation User
@@ -465,7 +456,7 @@ public class TypeVersionSummary implements Serializable, Cloneable {
      *        than activated third-arty extensions, CloudFormation returns <code>null</code>.</p>
      *        <p>
      *        How you specified <code>AutoUpdate</code> when enabling the extension affects whether CloudFormation
-     *        automatically updates the extention in this account and region when a new version is released. For more
+     *        automatically updates the extension in this account and region when a new version is released. For more
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable-auto"
      *        >Setting CloudFormation to automatically use new versions of extensions</a> in the <i>CloudFormation User
@@ -484,7 +475,7 @@ public class TypeVersionSummary implements Serializable, Cloneable {
      * </p>
      * <p>
      * How you specified <code>AutoUpdate</code> when enabling the extension affects whether CloudFormation
-     * automatically updates the extention in this account and region when a new version is released. For more
+     * automatically updates the extension in this account and region when a new version is released. For more
      * information, see <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable-auto"
      * >Setting CloudFormation to automatically use new versions of extensions</a> in the <i>CloudFormation User
@@ -496,7 +487,7 @@ public class TypeVersionSummary implements Serializable, Cloneable {
      *         than activated third-arty extensions, CloudFormation returns <code>null</code>.</p>
      *         <p>
      *         How you specified <code>AutoUpdate</code> when enabling the extension affects whether CloudFormation
-     *         automatically updates the extention in this account and region when a new version is released. For more
+     *         automatically updates the extension in this account and region when a new version is released. For more
      *         information, see <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable-auto"
      *         >Setting CloudFormation to automatically use new versions of extensions</a> in the <i>CloudFormation User
@@ -515,7 +506,7 @@ public class TypeVersionSummary implements Serializable, Cloneable {
      * </p>
      * <p>
      * How you specified <code>AutoUpdate</code> when enabling the extension affects whether CloudFormation
-     * automatically updates the extention in this account and region when a new version is released. For more
+     * automatically updates the extension in this account and region when a new version is released. For more
      * information, see <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable-auto"
      * >Setting CloudFormation to automatically use new versions of extensions</a> in the <i>CloudFormation User
@@ -528,7 +519,7 @@ public class TypeVersionSummary implements Serializable, Cloneable {
      *        than activated third-arty extensions, CloudFormation returns <code>null</code>.</p>
      *        <p>
      *        How you specified <code>AutoUpdate</code> when enabling the extension affects whether CloudFormation
-     *        automatically updates the extention in this account and region when a new version is released. For more
+     *        automatically updates the extension in this account and region when a new version is released. For more
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable-auto"
      *        >Setting CloudFormation to automatically use new versions of extensions</a> in the <i>CloudFormation User

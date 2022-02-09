@@ -45,7 +45,7 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is either
+     * <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is either
      * because a user has stopped the stack set operation, or because the failure tolerance of the stack set operation
      * has been exceeded.
      * </p>
@@ -86,7 +86,7 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
     /**
      * <p>
      * The results of the account gate function CloudFormation invokes, if present, before proceeding with stack set
-     * operations in an account
+     * operations in an account.
      * </p>
      */
     private AccountGateResult accountGateResult;
@@ -186,7 +186,7 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is either
+     * <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is either
      * because a user has stopped the stack set operation, or because the failure tolerance of the stack set operation
      * has been exceeded.
      * </p>
@@ -222,7 +222,7 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is
+     *        <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is
      *        either because a user has stopped the stack set operation, or because the failure tolerance of the stack
      *        set operation has been exceeded.
      *        </p>
@@ -265,7 +265,7 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is either
+     * <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is either
      * because a user has stopped the stack set operation, or because the failure tolerance of the stack set operation
      * has been exceeded.
      * </p>
@@ -300,7 +300,7 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is
+     *         <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is
      *         either because a user has stopped the stack set operation, or because the failure tolerance of the stack
      *         set operation has been exceeded.
      *         </p>
@@ -343,7 +343,7 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is either
+     * <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is either
      * because a user has stopped the stack set operation, or because the failure tolerance of the stack set operation
      * has been exceeded.
      * </p>
@@ -379,7 +379,7 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is
+     *        <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is
      *        either because a user has stopped the stack set operation, or because the failure tolerance of the stack
      *        set operation has been exceeded.
      *        </p>
@@ -424,7 +424,7 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is either
+     * <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is either
      * because a user has stopped the stack set operation, or because the failure tolerance of the stack set operation
      * has been exceeded.
      * </p>
@@ -460,7 +460,7 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is
+     *        <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is
      *        either because a user has stopped the stack set operation, or because the failure tolerance of the stack
      *        set operation has been exceeded.
      *        </p>
@@ -503,7 +503,7 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is either
+     * <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is either
      * because a user has stopped the stack set operation, or because the failure tolerance of the stack set operation
      * has been exceeded.
      * </p>
@@ -539,7 +539,7 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CANCELLED</code>: The operation in the specified account and Region has been cancelled. This is
+     *        <code>CANCELLED</code>: The operation in the specified account and Region has been canceled. This is
      *        either because a user has stopped the stack set operation, or because the failure tolerance of the stack
      *        set operation has been exceeded.
      *        </p>
@@ -620,12 +620,12 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
     /**
      * <p>
      * The results of the account gate function CloudFormation invokes, if present, before proceeding with stack set
-     * operations in an account
+     * operations in an account.
      * </p>
      * 
      * @param accountGateResult
      *        The results of the account gate function CloudFormation invokes, if present, before proceeding with stack
-     *        set operations in an account
+     *        set operations in an account.
      */
 
     public void setAccountGateResult(AccountGateResult accountGateResult) {
@@ -635,11 +635,11 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
     /**
      * <p>
      * The results of the account gate function CloudFormation invokes, if present, before proceeding with stack set
-     * operations in an account
+     * operations in an account.
      * </p>
      * 
      * @return The results of the account gate function CloudFormation invokes, if present, before proceeding with stack
-     *         set operations in an account
+     *         set operations in an account.
      */
 
     public AccountGateResult getAccountGateResult() {
@@ -649,12 +649,12 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
     /**
      * <p>
      * The results of the account gate function CloudFormation invokes, if present, before proceeding with stack set
-     * operations in an account
+     * operations in an account.
      * </p>
      * 
      * @param accountGateResult
      *        The results of the account gate function CloudFormation invokes, if present, before proceeding with stack
-     *        set operations in an account
+     *        set operations in an account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

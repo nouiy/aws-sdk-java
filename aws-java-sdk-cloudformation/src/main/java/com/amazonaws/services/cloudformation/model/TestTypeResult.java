@@ -25,18 +25,18 @@ public class TestTypeResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the extension.
+     * The Amazon Resource Name (ARN) of the extension.
      * </p>
      */
     private String typeVersionArn;
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the extension.
+     * The Amazon Resource Name (ARN) of the extension.
      * </p>
      * 
      * @param typeVersionArn
-     *        The Amazon Resource Number (ARN) of the extension.
+     *        The Amazon Resource Name (ARN) of the extension.
      */
 
     public void setTypeVersionArn(String typeVersionArn) {
@@ -45,10 +45,10 @@ public class TestTypeResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the extension.
+     * The Amazon Resource Name (ARN) of the extension.
      * </p>
      * 
-     * @return The Amazon Resource Number (ARN) of the extension.
+     * @return The Amazon Resource Name (ARN) of the extension.
      */
 
     public String getTypeVersionArn() {
@@ -57,11 +57,11 @@ public class TestTypeResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the extension.
+     * The Amazon Resource Name (ARN) of the extension.
      * </p>
      * 
      * @param typeVersionArn
-     *        The Amazon Resource Number (ARN) of the extension.
+     *        The Amazon Resource Name (ARN) of the extension.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

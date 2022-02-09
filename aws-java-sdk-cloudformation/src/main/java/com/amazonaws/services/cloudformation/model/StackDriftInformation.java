@@ -41,7 +41,7 @@ public class StackDriftInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      * configuration.
      * </p>
      * </li>
@@ -79,7 +79,7 @@ public class StackDriftInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      * configuration.
      * </p>
      * </li>
@@ -96,7 +96,7 @@ public class StackDriftInformation implements Serializable, Cloneable {
      * </ul>
      * 
      * @param stackDriftStatus
-     *        Status of the stack's actual configuration compared to its expected template configuration. </p>
+     *        Status of the stack's actual configuration compared to its expected template configuration.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -106,7 +106,7 @@ public class StackDriftInformation implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     *        <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      *        configuration.
      *        </p>
      *        </li>
@@ -140,7 +140,7 @@ public class StackDriftInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      * configuration.
      * </p>
      * </li>
@@ -156,7 +156,7 @@ public class StackDriftInformation implements Serializable, Cloneable {
      * </li>
      * </ul>
      * 
-     * @return Status of the stack's actual configuration compared to its expected template configuration. </p>
+     * @return Status of the stack's actual configuration compared to its expected template configuration.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -166,7 +166,7 @@ public class StackDriftInformation implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     *         <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      *         configuration.
      *         </p>
      *         </li>
@@ -200,7 +200,7 @@ public class StackDriftInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      * configuration.
      * </p>
      * </li>
@@ -217,7 +217,7 @@ public class StackDriftInformation implements Serializable, Cloneable {
      * </ul>
      * 
      * @param stackDriftStatus
-     *        Status of the stack's actual configuration compared to its expected template configuration. </p>
+     *        Status of the stack's actual configuration compared to its expected template configuration.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -227,7 +227,7 @@ public class StackDriftInformation implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     *        <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      *        configuration.
      *        </p>
      *        </li>
@@ -263,7 +263,7 @@ public class StackDriftInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     * <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      * configuration.
      * </p>
      * </li>
@@ -280,7 +280,7 @@ public class StackDriftInformation implements Serializable, Cloneable {
      * </ul>
      * 
      * @param stackDriftStatus
-     *        Status of the stack's actual configuration compared to its expected template configuration. </p>
+     *        Status of the stack's actual configuration compared to its expected template configuration.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -290,7 +290,7 @@ public class StackDriftInformation implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     *        <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the stack differs from its expected template
      *        configuration.
      *        </p>
      *        </li>
