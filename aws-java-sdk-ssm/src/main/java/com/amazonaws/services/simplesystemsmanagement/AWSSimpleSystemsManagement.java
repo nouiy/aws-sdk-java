@@ -3774,13 +3774,6 @@ public interface AWSSimpleSystemsManagement {
      * 
      * @param terminateSessionRequest
      * @return Result of the TerminateSession operation returned by the service.
-     * @throws DoesNotExistException
-     *         Error returned when the ID specified for a resource, such as a maintenance window or patch baseline,
-     *         doesn't exist.</p>
-     *         <p>
-     *         For information about resource quotas in Amazon Web Services Systems Manager, see <a
-     *         href="https://docs.aws.amazon.com/general/latest/gr/ssm.html#limits_ssm">Systems Manager service
-     *         quotas</a> in the <i>Amazon Web Services General Reference</i>.
      * @throws InternalServerErrorException
      *         An error occurred on the server side.
      * @sample AWSSimpleSystemsManagement.TerminateSession

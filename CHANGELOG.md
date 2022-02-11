@@ -1,3 +1,8 @@
+# __1.12.158__ __2022-02-11__
+## __Amazon Simple Systems Manager (SSM)__
+  - ### Features
+    - Documentation updates for AWS Systems Manager.
+
 # __1.12.157__ __2022-02-10__
 ## __AWS CloudFormation__
   - ### Features
