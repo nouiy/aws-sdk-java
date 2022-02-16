@@ -95,6 +95,13 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
     private String httpProtocolIpv6;
     /**
      * <p>
+     * Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     * <code>disabled</code> to turn off access to instance tags from the instance metadata. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
      * </p>
      */
     private String instanceMetadataTags;
@@ -620,9 +627,23 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
 
     /**
      * <p>
+     * Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     * <code>disabled</code> to turn off access to instance tags from the instance metadata. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
      * </p>
      * 
      * @param instanceMetadataTags
+     *        Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     *        <code>disabled</code> to turn off access to instance tags from the instance metadata. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
+     *        with instance tags using the instance metadata</a>.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
      * @see LaunchTemplateInstanceMetadataTagsState
      */
 
@@ -632,9 +653,22 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
 
     /**
      * <p>
+     * Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     * <code>disabled</code> to turn off access to instance tags from the instance metadata. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
      * </p>
      * 
-     * @return
+     * @return Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     *         <code>disabled</code> to turn off access to instance tags from the instance metadata. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
+     *         with instance tags using the instance metadata</a>.</p>
+     *         <p>
+     *         Default: <code>disabled</code>
      * @see LaunchTemplateInstanceMetadataTagsState
      */
 
@@ -644,9 +678,23 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
 
     /**
      * <p>
+     * Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     * <code>disabled</code> to turn off access to instance tags from the instance metadata. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
      * </p>
      * 
      * @param instanceMetadataTags
+     *        Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     *        <code>disabled</code> to turn off access to instance tags from the instance metadata. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
+     *        with instance tags using the instance metadata</a>.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LaunchTemplateInstanceMetadataTagsState
      */
@@ -658,9 +706,23 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
 
     /**
      * <p>
+     * Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     * <code>disabled</code> to turn off access to instance tags from the instance metadata. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
      * </p>
      * 
      * @param instanceMetadataTags
+     *        Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     *        <code>disabled</code> to turn off access to instance tags from the instance metadata. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
+     *        with instance tags using the instance metadata</a>.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LaunchTemplateInstanceMetadataTagsState
      */

@@ -110,12 +110,36 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
      * <p>
      * The maximum number of targets this task can be run for, in parallel.
      * </p>
+     * <note>
+     * <p>
+     * Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     * updating a <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     * >targetless task</a> You must provide a value in all other cases.
+     * </p>
+     * <p>
+     * For maintenance window tasks without a target specified, you can't supply a value for this option. Instead, the
+     * system inserts a placeholder value of <code>1</code>. This value doesn't affect the running of your task.
+     * </p>
+     * </note>
      */
     private String maxConcurrency;
     /**
      * <p>
      * The maximum number of errors allowed before this task stops being scheduled.
      * </p>
+     * <note>
+     * <p>
+     * Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     * updating a <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     * >targetless task</a> You must provide a value in all other cases.
+     * </p>
+     * <p>
+     * For maintenance window tasks without a target specified, you can't supply a value for this option. Instead, the
+     * system inserts a placeholder value of <code>1</code>. This value doesn't affect the running of your task.
+     * </p>
+     * </note>
      */
     private String maxErrors;
     /**
@@ -732,9 +756,32 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
      * <p>
      * The maximum number of targets this task can be run for, in parallel.
      * </p>
+     * <note>
+     * <p>
+     * Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     * updating a <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     * >targetless task</a> You must provide a value in all other cases.
+     * </p>
+     * <p>
+     * For maintenance window tasks without a target specified, you can't supply a value for this option. Instead, the
+     * system inserts a placeholder value of <code>1</code>. This value doesn't affect the running of your task.
+     * </p>
+     * </note>
      * 
      * @param maxConcurrency
-     *        The maximum number of targets this task can be run for, in parallel.
+     *        The maximum number of targets this task can be run for, in parallel.</p> <note>
+     *        <p>
+     *        Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     *        updating a <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     *        >targetless task</a> You must provide a value in all other cases.
+     *        </p>
+     *        <p>
+     *        For maintenance window tasks without a target specified, you can't supply a value for this option.
+     *        Instead, the system inserts a placeholder value of <code>1</code>. This value doesn't affect the running
+     *        of your task.
+     *        </p>
      */
 
     public void setMaxConcurrency(String maxConcurrency) {
@@ -745,8 +792,31 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
      * <p>
      * The maximum number of targets this task can be run for, in parallel.
      * </p>
+     * <note>
+     * <p>
+     * Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     * updating a <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     * >targetless task</a> You must provide a value in all other cases.
+     * </p>
+     * <p>
+     * For maintenance window tasks without a target specified, you can't supply a value for this option. Instead, the
+     * system inserts a placeholder value of <code>1</code>. This value doesn't affect the running of your task.
+     * </p>
+     * </note>
      * 
-     * @return The maximum number of targets this task can be run for, in parallel.
+     * @return The maximum number of targets this task can be run for, in parallel.</p> <note>
+     *         <p>
+     *         Although this element is listed as "Required: No", a value can be omitted only when you are registering
+     *         or updating a <a href=
+     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     *         >targetless task</a> You must provide a value in all other cases.
+     *         </p>
+     *         <p>
+     *         For maintenance window tasks without a target specified, you can't supply a value for this option.
+     *         Instead, the system inserts a placeholder value of <code>1</code>. This value doesn't affect the running
+     *         of your task.
+     *         </p>
      */
 
     public String getMaxConcurrency() {
@@ -757,9 +827,32 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
      * <p>
      * The maximum number of targets this task can be run for, in parallel.
      * </p>
+     * <note>
+     * <p>
+     * Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     * updating a <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     * >targetless task</a> You must provide a value in all other cases.
+     * </p>
+     * <p>
+     * For maintenance window tasks without a target specified, you can't supply a value for this option. Instead, the
+     * system inserts a placeholder value of <code>1</code>. This value doesn't affect the running of your task.
+     * </p>
+     * </note>
      * 
      * @param maxConcurrency
-     *        The maximum number of targets this task can be run for, in parallel.
+     *        The maximum number of targets this task can be run for, in parallel.</p> <note>
+     *        <p>
+     *        Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     *        updating a <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     *        >targetless task</a> You must provide a value in all other cases.
+     *        </p>
+     *        <p>
+     *        For maintenance window tasks without a target specified, you can't supply a value for this option.
+     *        Instead, the system inserts a placeholder value of <code>1</code>. This value doesn't affect the running
+     *        of your task.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -772,9 +865,32 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
      * <p>
      * The maximum number of errors allowed before this task stops being scheduled.
      * </p>
+     * <note>
+     * <p>
+     * Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     * updating a <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     * >targetless task</a> You must provide a value in all other cases.
+     * </p>
+     * <p>
+     * For maintenance window tasks without a target specified, you can't supply a value for this option. Instead, the
+     * system inserts a placeholder value of <code>1</code>. This value doesn't affect the running of your task.
+     * </p>
+     * </note>
      * 
      * @param maxErrors
-     *        The maximum number of errors allowed before this task stops being scheduled.
+     *        The maximum number of errors allowed before this task stops being scheduled.</p> <note>
+     *        <p>
+     *        Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     *        updating a <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     *        >targetless task</a> You must provide a value in all other cases.
+     *        </p>
+     *        <p>
+     *        For maintenance window tasks without a target specified, you can't supply a value for this option.
+     *        Instead, the system inserts a placeholder value of <code>1</code>. This value doesn't affect the running
+     *        of your task.
+     *        </p>
      */
 
     public void setMaxErrors(String maxErrors) {
@@ -785,8 +901,31 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
      * <p>
      * The maximum number of errors allowed before this task stops being scheduled.
      * </p>
+     * <note>
+     * <p>
+     * Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     * updating a <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     * >targetless task</a> You must provide a value in all other cases.
+     * </p>
+     * <p>
+     * For maintenance window tasks without a target specified, you can't supply a value for this option. Instead, the
+     * system inserts a placeholder value of <code>1</code>. This value doesn't affect the running of your task.
+     * </p>
+     * </note>
      * 
-     * @return The maximum number of errors allowed before this task stops being scheduled.
+     * @return The maximum number of errors allowed before this task stops being scheduled.</p> <note>
+     *         <p>
+     *         Although this element is listed as "Required: No", a value can be omitted only when you are registering
+     *         or updating a <a href=
+     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     *         >targetless task</a> You must provide a value in all other cases.
+     *         </p>
+     *         <p>
+     *         For maintenance window tasks without a target specified, you can't supply a value for this option.
+     *         Instead, the system inserts a placeholder value of <code>1</code>. This value doesn't affect the running
+     *         of your task.
+     *         </p>
      */
 
     public String getMaxErrors() {
@@ -797,9 +936,32 @@ public class MaintenanceWindowTask implements Serializable, Cloneable, Structure
      * <p>
      * The maximum number of errors allowed before this task stops being scheduled.
      * </p>
+     * <note>
+     * <p>
+     * Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     * updating a <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     * >targetless task</a> You must provide a value in all other cases.
+     * </p>
+     * <p>
+     * For maintenance window tasks without a target specified, you can't supply a value for this option. Instead, the
+     * system inserts a placeholder value of <code>1</code>. This value doesn't affect the running of your task.
+     * </p>
+     * </note>
      * 
      * @param maxErrors
-     *        The maximum number of errors allowed before this task stops being scheduled.
+     *        The maximum number of errors allowed before this task stops being scheduled.</p> <note>
+     *        <p>
+     *        Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     *        updating a <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     *        >targetless task</a> You must provide a value in all other cases.
+     *        </p>
+     *        <p>
+     *        For maintenance window tasks without a target specified, you can't supply a value for this option.
+     *        Instead, the system inserts a placeholder value of <code>1</code>. This value doesn't affect the running
+     *        of your task.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -140,11 +140,6 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * The type of network interface.
      * </p>
      * <p>
-     * To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">Elastic Fabric Adapter</a> in the <i>Amazon
-     * Elastic Compute Cloud User Guide</i>.
-     * </p>
-     * <p>
      * Valid values: <code>interface</code> | <code>efa</code>
      * </p>
      */
@@ -1068,21 +1063,11 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * The type of network interface.
      * </p>
      * <p>
-     * To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">Elastic Fabric Adapter</a> in the <i>Amazon
-     * Elastic Compute Cloud User Guide</i>.
-     * </p>
-     * <p>
      * Valid values: <code>interface</code> | <code>efa</code>
      * </p>
      * 
      * @param interfaceType
      *        The type of network interface.</p>
-     *        <p>
-     *        To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">Elastic Fabric Adapter</a> in the
-     *        <i>Amazon Elastic Compute Cloud User Guide</i>.
-     *        </p>
      *        <p>
      *        Valid values: <code>interface</code> | <code>efa</code>
      */
@@ -1096,20 +1081,10 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * The type of network interface.
      * </p>
      * <p>
-     * To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">Elastic Fabric Adapter</a> in the <i>Amazon
-     * Elastic Compute Cloud User Guide</i>.
-     * </p>
-     * <p>
      * Valid values: <code>interface</code> | <code>efa</code>
      * </p>
      * 
      * @return The type of network interface.</p>
-     *         <p>
-     *         To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">Elastic Fabric Adapter</a> in the
-     *         <i>Amazon Elastic Compute Cloud User Guide</i>.
-     *         </p>
      *         <p>
      *         Valid values: <code>interface</code> | <code>efa</code>
      */
@@ -1123,21 +1098,11 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * The type of network interface.
      * </p>
      * <p>
-     * To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">Elastic Fabric Adapter</a> in the <i>Amazon
-     * Elastic Compute Cloud User Guide</i>.
-     * </p>
-     * <p>
      * Valid values: <code>interface</code> | <code>efa</code>
      * </p>
      * 
      * @param interfaceType
      *        The type of network interface.</p>
-     *        <p>
-     *        To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html">Elastic Fabric Adapter</a> in the
-     *        <i>Amazon Elastic Compute Cloud User Guide</i>.
-     *        </p>
      *        <p>
      *        Valid values: <code>interface</code> | <code>efa</code>
      * @return Returns a reference to this object so that method calls can be chained together.

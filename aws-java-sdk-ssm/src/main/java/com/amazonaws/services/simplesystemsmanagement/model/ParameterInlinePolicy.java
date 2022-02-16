@@ -36,7 +36,7 @@ public class ParameterInlinePolicy implements Serializable, Cloneable, Structure
     private String policyText;
     /**
      * <p>
-     * The type of policy. Parameter Store, a capablility of Amazon Web Services Systems Manager, supports the following
+     * The type of policy. Parameter Store, a capability of Amazon Web Services Systems Manager, supports the following
      * policy types: Expiration, ExpirationNotification, and NoChangeNotification.
      * </p>
      */
@@ -92,12 +92,12 @@ public class ParameterInlinePolicy implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The type of policy. Parameter Store, a capablility of Amazon Web Services Systems Manager, supports the following
+     * The type of policy. Parameter Store, a capability of Amazon Web Services Systems Manager, supports the following
      * policy types: Expiration, ExpirationNotification, and NoChangeNotification.
      * </p>
      * 
      * @param policyType
-     *        The type of policy. Parameter Store, a capablility of Amazon Web Services Systems Manager, supports the
+     *        The type of policy. Parameter Store, a capability of Amazon Web Services Systems Manager, supports the
      *        following policy types: Expiration, ExpirationNotification, and NoChangeNotification.
      */
 
@@ -107,11 +107,11 @@ public class ParameterInlinePolicy implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The type of policy. Parameter Store, a capablility of Amazon Web Services Systems Manager, supports the following
+     * The type of policy. Parameter Store, a capability of Amazon Web Services Systems Manager, supports the following
      * policy types: Expiration, ExpirationNotification, and NoChangeNotification.
      * </p>
      * 
-     * @return The type of policy. Parameter Store, a capablility of Amazon Web Services Systems Manager, supports the
+     * @return The type of policy. Parameter Store, a capability of Amazon Web Services Systems Manager, supports the
      *         following policy types: Expiration, ExpirationNotification, and NoChangeNotification.
      */
 
@@ -121,12 +121,12 @@ public class ParameterInlinePolicy implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The type of policy. Parameter Store, a capablility of Amazon Web Services Systems Manager, supports the following
+     * The type of policy. Parameter Store, a capability of Amazon Web Services Systems Manager, supports the following
      * policy types: Expiration, ExpirationNotification, and NoChangeNotification.
      * </p>
      * 
      * @param policyType
-     *        The type of policy. Parameter Store, a capablility of Amazon Web Services Systems Manager, supports the
+     *        The type of policy. Parameter Store, a capability of Amazon Web Services Systems Manager, supports the
      *        following policy types: Expiration, ExpirationNotification, and NoChangeNotification.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

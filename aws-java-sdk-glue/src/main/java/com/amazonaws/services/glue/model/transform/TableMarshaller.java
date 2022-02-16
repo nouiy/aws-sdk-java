@@ -67,6 +67,8 @@ public class TableMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TargetTable").build();
     private static final MarshallingInfo<String> CATALOGID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("CatalogId").build();
+    private static final MarshallingInfo<String> VERSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("VersionId").build();
 
     private static final TableMarshaller instance = new TableMarshaller();
 
@@ -103,6 +105,7 @@ public class TableMarshaller {
             protocolMarshaller.marshall(table.getIsRegisteredWithLakeFormation(), ISREGISTEREDWITHLAKEFORMATION_BINDING);
             protocolMarshaller.marshall(table.getTargetTable(), TARGETTABLE_BINDING);
             protocolMarshaller.marshall(table.getCatalogId(), CATALOGID_BINDING);
+            protocolMarshaller.marshall(table.getVersionId(), VERSIONID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -172,7 +172,9 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      * >Supported instance types</a>.
      * </p>
      * <p>
-     * This parameter is not returned by .
+     * This parameter is not returned by <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
+     * >DescribeImageAttribute</a>.
      * </p>
      */
     private Boolean encrypted;
@@ -1043,7 +1045,9 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      * >Supported instance types</a>.
      * </p>
      * <p>
-     * This parameter is not returned by .
+     * This parameter is not returned by <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
+     * >DescribeImageAttribute</a>.
      * </p>
      * 
      * @param encrypted
@@ -1063,7 +1067,9 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      *        >Supported instance types</a>.
      *        </p>
      *        <p>
-     *        This parameter is not returned by .
+     *        This parameter is not returned by <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
+     *        >DescribeImageAttribute</a>.
      */
 
     public void setEncrypted(Boolean encrypted) {
@@ -1089,7 +1095,9 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      * >Supported instance types</a>.
      * </p>
      * <p>
-     * This parameter is not returned by .
+     * This parameter is not returned by <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
+     * >DescribeImageAttribute</a>.
      * </p>
      * 
      * @return Indicates whether the encryption state of an EBS volume is changed while being restored from a backing
@@ -1108,7 +1116,9 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      *         >Supported instance types</a>.
      *         </p>
      *         <p>
-     *         This parameter is not returned by .
+     *         This parameter is not returned by <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
+     *         >DescribeImageAttribute</a>.
      */
 
     public Boolean getEncrypted() {
@@ -1134,7 +1144,9 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      * >Supported instance types</a>.
      * </p>
      * <p>
-     * This parameter is not returned by .
+     * This parameter is not returned by <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
+     * >DescribeImageAttribute</a>.
      * </p>
      * 
      * @param encrypted
@@ -1154,7 +1166,9 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      *        >Supported instance types</a>.
      *        </p>
      *        <p>
-     *        This parameter is not returned by .
+     *        This parameter is not returned by <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
+     *        >DescribeImageAttribute</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1182,7 +1196,9 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      * >Supported instance types</a>.
      * </p>
      * <p>
-     * This parameter is not returned by .
+     * This parameter is not returned by <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
+     * >DescribeImageAttribute</a>.
      * </p>
      * 
      * @return Indicates whether the encryption state of an EBS volume is changed while being restored from a backing
@@ -1201,7 +1217,9 @@ public class EbsBlockDevice implements Serializable, Cloneable {
      *         >Supported instance types</a>.
      *         </p>
      *         <p>
-     *         This parameter is not returned by .
+     *         This parameter is not returned by <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html"
+     *         >DescribeImageAttribute</a>.
      */
 
     public Boolean isEncrypted() {

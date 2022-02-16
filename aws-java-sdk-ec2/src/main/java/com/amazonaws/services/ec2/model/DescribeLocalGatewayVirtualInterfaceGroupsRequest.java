@@ -44,12 +44,18 @@ public class DescribeLocalGatewayVirtualInterfaceGroupsRequest extends AmazonWeb
      * </li>
      * <li>
      * <p>
+     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface
+     * group.
      * </p>
      * </li>
      * </ul>
@@ -156,12 +162,18 @@ public class DescribeLocalGatewayVirtualInterfaceGroupsRequest extends AmazonWeb
      * </li>
      * <li>
      * <p>
+     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface
+     * group.
      * </p>
      * </li>
      * </ul>
@@ -175,12 +187,18 @@ public class DescribeLocalGatewayVirtualInterfaceGroupsRequest extends AmazonWeb
      *         </li>
      *         <li>
      *         <p>
+     *         <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     *         <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual
+     *         interface group.
      *         </p>
      *         </li>
      */
@@ -204,12 +222,18 @@ public class DescribeLocalGatewayVirtualInterfaceGroupsRequest extends AmazonWeb
      * </li>
      * <li>
      * <p>
+     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface
+     * group.
      * </p>
      * </li>
      * </ul>
@@ -224,12 +248,18 @@ public class DescribeLocalGatewayVirtualInterfaceGroupsRequest extends AmazonWeb
      *        </li>
      *        <li>
      *        <p>
+     *        <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual
+     *        interface group.
      *        </p>
      *        </li>
      */
@@ -255,12 +285,18 @@ public class DescribeLocalGatewayVirtualInterfaceGroupsRequest extends AmazonWeb
      * </li>
      * <li>
      * <p>
+     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface
+     * group.
      * </p>
      * </li>
      * </ul>
@@ -280,12 +316,18 @@ public class DescribeLocalGatewayVirtualInterfaceGroupsRequest extends AmazonWeb
      *        </li>
      *        <li>
      *        <p>
+     *        <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual
+     *        interface group.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -313,12 +355,18 @@ public class DescribeLocalGatewayVirtualInterfaceGroupsRequest extends AmazonWeb
      * </li>
      * <li>
      * <p>
+     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface
+     * group.
      * </p>
      * </li>
      * </ul>
@@ -333,12 +381,18 @@ public class DescribeLocalGatewayVirtualInterfaceGroupsRequest extends AmazonWeb
      *        </li>
      *        <li>
      *        <p>
+     *        <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual
+     *        interface group.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

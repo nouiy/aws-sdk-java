@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The AWS Systems Manager (SSM) action definition details.
+ * The Amazon Web Services Systems Manager (SSM) action definition details.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

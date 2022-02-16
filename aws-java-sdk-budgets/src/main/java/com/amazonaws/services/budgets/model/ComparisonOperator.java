@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The comparison operator of a notification. Currently the service supports the following operators:
+ * The comparison operator of a notification. Currently, the service supports the following operators:
  * </p>
  * <p>
  * <code>GREATER_THAN</code>, <code>LESS_THAN</code>, <code>EQUAL_TO</code>

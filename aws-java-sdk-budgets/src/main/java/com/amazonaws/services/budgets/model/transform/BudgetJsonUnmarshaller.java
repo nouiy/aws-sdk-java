@@ -92,6 +92,10 @@ public class BudgetJsonUnmarshaller implements Unmarshaller<Budget, JsonUnmarsha
                     context.nextToken();
                     budget.setLastUpdatedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("AutoAdjustData", targetDepth)) {
+                    context.nextToken();
+                    budget.setAutoAdjustData(AutoAdjustDataJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

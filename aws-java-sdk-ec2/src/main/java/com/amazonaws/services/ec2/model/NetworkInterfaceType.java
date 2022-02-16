@@ -23,7 +23,20 @@ public enum NetworkInterfaceType {
     Interface("interface"),
     NatGateway("natGateway"),
     Efa("efa"),
-    Trunk("trunk");
+    Trunk("trunk"),
+    Load_balancer("load_balancer"),
+    Network_load_balancer("network_load_balancer"),
+    Vpc_endpoint("vpc_endpoint"),
+    Branch("branch"),
+    Transit_gateway("transit_gateway"),
+    Lambda("lambda"),
+    Quicksight("quicksight"),
+    Global_accelerator_managed("global_accelerator_managed"),
+    Api_gateway_managed("api_gateway_managed"),
+    Gateway_load_balancer("gateway_load_balancer"),
+    Gateway_load_balancer_endpoint("gateway_load_balancer_endpoint"),
+    Iot_rules_managed("iot_rules_managed"),
+    Aws_codestar_connections_managed("aws_codestar_connections_managed");
 
     private String value;
 

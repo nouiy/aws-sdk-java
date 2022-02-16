@@ -342,6 +342,11 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <code>aws:ec2:image</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>aws:ssm:integration</code>
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * When you create a <code>String</code> parameter and specify <code>aws:ec2:image</code>, Amazon Web Services
@@ -2743,6 +2748,11 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <code>aws:ec2:image</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>aws:ssm:integration</code>
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * When you create a <code>String</code> parameter and specify <code>aws:ec2:image</code>, Amazon Web Services
@@ -2769,6 +2779,11 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        <code>aws:ec2:image</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>aws:ssm:integration</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -2805,6 +2820,11 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <code>aws:ec2:image</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>aws:ssm:integration</code>
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * When you create a <code>String</code> parameter and specify <code>aws:ec2:image</code>, Amazon Web Services
@@ -2830,6 +2850,11 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <li>
      *         <p>
      *         <code>aws:ec2:image</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>aws:ssm:integration</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -2866,6 +2891,11 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <code>aws:ec2:image</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>aws:ssm:integration</code>
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * When you create a <code>String</code> parameter and specify <code>aws:ec2:image</code>, Amazon Web Services
@@ -2892,6 +2922,11 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        <code>aws:ec2:image</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>aws:ssm:integration</code>
      *        </p>
      *        </li>
      *        </ul>

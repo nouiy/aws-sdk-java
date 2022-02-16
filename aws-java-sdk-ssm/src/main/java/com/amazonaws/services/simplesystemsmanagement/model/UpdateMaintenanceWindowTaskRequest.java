@@ -141,13 +141,18 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The new <code>MaxConcurrency</code> value you want to specify. <code>MaxConcurrency</code> is the number of
-     * targets that are allowed to run this task in parallel.
+     * targets that are allowed to run this task, in parallel.
      * </p>
      * <note>
      * <p>
+     * Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     * updating a <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     * >targetless task</a> You must provide a value in all other cases.
+     * </p>
+     * <p>
      * For maintenance window tasks without a target specified, you can't supply a value for this option. Instead, the
-     * system inserts a placeholder value of <code>1</code>, which may be reported in the response to this command. This
-     * value doesn't affect the running of your task and can be ignored.
+     * system inserts a placeholder value of <code>1</code>. This value doesn't affect the running of your task.
      * </p>
      * </note>
      */
@@ -159,9 +164,14 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <note>
      * <p>
+     * Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     * updating a <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     * >targetless task</a> You must provide a value in all other cases.
+     * </p>
+     * <p>
      * For maintenance window tasks without a target specified, you can't supply a value for this option. Instead, the
-     * system inserts a placeholder value of <code>1</code>, which may be reported in the response to this command. This
-     * value doesn't affect the running of your task and can be ignored.
+     * system inserts a placeholder value of <code>1</code>. This value doesn't affect the running of your task.
      * </p>
      * </note>
      */
@@ -1017,23 +1027,34 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The new <code>MaxConcurrency</code> value you want to specify. <code>MaxConcurrency</code> is the number of
-     * targets that are allowed to run this task in parallel.
+     * targets that are allowed to run this task, in parallel.
      * </p>
      * <note>
      * <p>
+     * Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     * updating a <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     * >targetless task</a> You must provide a value in all other cases.
+     * </p>
+     * <p>
      * For maintenance window tasks without a target specified, you can't supply a value for this option. Instead, the
-     * system inserts a placeholder value of <code>1</code>, which may be reported in the response to this command. This
-     * value doesn't affect the running of your task and can be ignored.
+     * system inserts a placeholder value of <code>1</code>. This value doesn't affect the running of your task.
      * </p>
      * </note>
      * 
      * @param maxConcurrency
      *        The new <code>MaxConcurrency</code> value you want to specify. <code>MaxConcurrency</code> is the number
-     *        of targets that are allowed to run this task in parallel.</p> <note>
+     *        of targets that are allowed to run this task, in parallel.</p> <note>
+     *        <p>
+     *        Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     *        updating a <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     *        >targetless task</a> You must provide a value in all other cases.
+     *        </p>
      *        <p>
      *        For maintenance window tasks without a target specified, you can't supply a value for this option.
-     *        Instead, the system inserts a placeholder value of <code>1</code>, which may be reported in the response
-     *        to this command. This value doesn't affect the running of your task and can be ignored.
+     *        Instead, the system inserts a placeholder value of <code>1</code>. This value doesn't affect the running
+     *        of your task.
      *        </p>
      */
 
@@ -1044,22 +1065,33 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The new <code>MaxConcurrency</code> value you want to specify. <code>MaxConcurrency</code> is the number of
-     * targets that are allowed to run this task in parallel.
+     * targets that are allowed to run this task, in parallel.
      * </p>
      * <note>
      * <p>
+     * Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     * updating a <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     * >targetless task</a> You must provide a value in all other cases.
+     * </p>
+     * <p>
      * For maintenance window tasks without a target specified, you can't supply a value for this option. Instead, the
-     * system inserts a placeholder value of <code>1</code>, which may be reported in the response to this command. This
-     * value doesn't affect the running of your task and can be ignored.
+     * system inserts a placeholder value of <code>1</code>. This value doesn't affect the running of your task.
      * </p>
      * </note>
      * 
      * @return The new <code>MaxConcurrency</code> value you want to specify. <code>MaxConcurrency</code> is the number
-     *         of targets that are allowed to run this task in parallel.</p> <note>
+     *         of targets that are allowed to run this task, in parallel.</p> <note>
+     *         <p>
+     *         Although this element is listed as "Required: No", a value can be omitted only when you are registering
+     *         or updating a <a href=
+     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     *         >targetless task</a> You must provide a value in all other cases.
+     *         </p>
      *         <p>
      *         For maintenance window tasks without a target specified, you can't supply a value for this option.
-     *         Instead, the system inserts a placeholder value of <code>1</code>, which may be reported in the response
-     *         to this command. This value doesn't affect the running of your task and can be ignored.
+     *         Instead, the system inserts a placeholder value of <code>1</code>. This value doesn't affect the running
+     *         of your task.
      *         </p>
      */
 
@@ -1070,23 +1102,34 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The new <code>MaxConcurrency</code> value you want to specify. <code>MaxConcurrency</code> is the number of
-     * targets that are allowed to run this task in parallel.
+     * targets that are allowed to run this task, in parallel.
      * </p>
      * <note>
      * <p>
+     * Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     * updating a <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     * >targetless task</a> You must provide a value in all other cases.
+     * </p>
+     * <p>
      * For maintenance window tasks without a target specified, you can't supply a value for this option. Instead, the
-     * system inserts a placeholder value of <code>1</code>, which may be reported in the response to this command. This
-     * value doesn't affect the running of your task and can be ignored.
+     * system inserts a placeholder value of <code>1</code>. This value doesn't affect the running of your task.
      * </p>
      * </note>
      * 
      * @param maxConcurrency
      *        The new <code>MaxConcurrency</code> value you want to specify. <code>MaxConcurrency</code> is the number
-     *        of targets that are allowed to run this task in parallel.</p> <note>
+     *        of targets that are allowed to run this task, in parallel.</p> <note>
+     *        <p>
+     *        Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     *        updating a <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     *        >targetless task</a> You must provide a value in all other cases.
+     *        </p>
      *        <p>
      *        For maintenance window tasks without a target specified, you can't supply a value for this option.
-     *        Instead, the system inserts a placeholder value of <code>1</code>, which may be reported in the response
-     *        to this command. This value doesn't affect the running of your task and can be ignored.
+     *        Instead, the system inserts a placeholder value of <code>1</code>. This value doesn't affect the running
+     *        of your task.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1103,9 +1146,14 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <note>
      * <p>
+     * Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     * updating a <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     * >targetless task</a> You must provide a value in all other cases.
+     * </p>
+     * <p>
      * For maintenance window tasks without a target specified, you can't supply a value for this option. Instead, the
-     * system inserts a placeholder value of <code>1</code>, which may be reported in the response to this command. This
-     * value doesn't affect the running of your task and can be ignored.
+     * system inserts a placeholder value of <code>1</code>. This value doesn't affect the running of your task.
      * </p>
      * </note>
      * 
@@ -1113,9 +1161,15 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
      *        The new <code>MaxErrors</code> value to specify. <code>MaxErrors</code> is the maximum number of errors
      *        that are allowed before the task stops being scheduled.</p> <note>
      *        <p>
+     *        Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     *        updating a <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     *        >targetless task</a> You must provide a value in all other cases.
+     *        </p>
+     *        <p>
      *        For maintenance window tasks without a target specified, you can't supply a value for this option.
-     *        Instead, the system inserts a placeholder value of <code>1</code>, which may be reported in the response
-     *        to this command. This value doesn't affect the running of your task and can be ignored.
+     *        Instead, the system inserts a placeholder value of <code>1</code>. This value doesn't affect the running
+     *        of your task.
      *        </p>
      */
 
@@ -1130,18 +1184,29 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <note>
      * <p>
+     * Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     * updating a <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     * >targetless task</a> You must provide a value in all other cases.
+     * </p>
+     * <p>
      * For maintenance window tasks without a target specified, you can't supply a value for this option. Instead, the
-     * system inserts a placeholder value of <code>1</code>, which may be reported in the response to this command. This
-     * value doesn't affect the running of your task and can be ignored.
+     * system inserts a placeholder value of <code>1</code>. This value doesn't affect the running of your task.
      * </p>
      * </note>
      * 
      * @return The new <code>MaxErrors</code> value to specify. <code>MaxErrors</code> is the maximum number of errors
      *         that are allowed before the task stops being scheduled.</p> <note>
      *         <p>
+     *         Although this element is listed as "Required: No", a value can be omitted only when you are registering
+     *         or updating a <a href=
+     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     *         >targetless task</a> You must provide a value in all other cases.
+     *         </p>
+     *         <p>
      *         For maintenance window tasks without a target specified, you can't supply a value for this option.
-     *         Instead, the system inserts a placeholder value of <code>1</code>, which may be reported in the response
-     *         to this command. This value doesn't affect the running of your task and can be ignored.
+     *         Instead, the system inserts a placeholder value of <code>1</code>. This value doesn't affect the running
+     *         of your task.
      *         </p>
      */
 
@@ -1156,9 +1221,14 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <note>
      * <p>
+     * Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     * updating a <a
+     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     * >targetless task</a> You must provide a value in all other cases.
+     * </p>
+     * <p>
      * For maintenance window tasks without a target specified, you can't supply a value for this option. Instead, the
-     * system inserts a placeholder value of <code>1</code>, which may be reported in the response to this command. This
-     * value doesn't affect the running of your task and can be ignored.
+     * system inserts a placeholder value of <code>1</code>. This value doesn't affect the running of your task.
      * </p>
      * </note>
      * 
@@ -1166,9 +1236,15 @@ public class UpdateMaintenanceWindowTaskRequest extends com.amazonaws.AmazonWebS
      *        The new <code>MaxErrors</code> value to specify. <code>MaxErrors</code> is the maximum number of errors
      *        that are allowed before the task stops being scheduled.</p> <note>
      *        <p>
+     *        Although this element is listed as "Required: No", a value can be omitted only when you are registering or
+     *        updating a <a href=
+     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html"
+     *        >targetless task</a> You must provide a value in all other cases.
+     *        </p>
+     *        <p>
      *        For maintenance window tasks without a target specified, you can't supply a value for this option.
-     *        Instead, the system inserts a placeholder value of <code>1</code>, which may be reported in the response
-     *        to this command. This value doesn't affect the running of your task and can be ignored.
+     *        Instead, the system inserts a placeholder value of <code>1</code>. This value doesn't affect the running
+     *        of your task.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

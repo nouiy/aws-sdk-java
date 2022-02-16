@@ -29,7 +29,8 @@ public class LaunchTemplateTagSpecificationRequest implements Serializable, Clon
     /**
      * <p>
      * The type of resource to tag. Currently, the resource types that support tagging on creation are
-     * <code>instance</code> and <code>volume</code>. To tag a resource after it has been created, see <a
+     * <code>instance</code>, <code>volume</code>, <code>elastic-gpu</code>, <code>network-interface</code>, and
+     * <code>spot-instances-request</code>. To tag a resource after it has been created, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      * </p>
      */
@@ -44,13 +45,15 @@ public class LaunchTemplateTagSpecificationRequest implements Serializable, Clon
     /**
      * <p>
      * The type of resource to tag. Currently, the resource types that support tagging on creation are
-     * <code>instance</code> and <code>volume</code>. To tag a resource after it has been created, see <a
+     * <code>instance</code>, <code>volume</code>, <code>elastic-gpu</code>, <code>network-interface</code>, and
+     * <code>spot-instances-request</code>. To tag a resource after it has been created, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      * </p>
      * 
      * @param resourceType
      *        The type of resource to tag. Currently, the resource types that support tagging on creation are
-     *        <code>instance</code> and <code>volume</code>. To tag a resource after it has been created, see <a
+     *        <code>instance</code>, <code>volume</code>, <code>elastic-gpu</code>, <code>network-interface</code>, and
+     *        <code>spot-instances-request</code>. To tag a resource after it has been created, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      * @see ResourceType
      */
@@ -62,12 +65,14 @@ public class LaunchTemplateTagSpecificationRequest implements Serializable, Clon
     /**
      * <p>
      * The type of resource to tag. Currently, the resource types that support tagging on creation are
-     * <code>instance</code> and <code>volume</code>. To tag a resource after it has been created, see <a
+     * <code>instance</code>, <code>volume</code>, <code>elastic-gpu</code>, <code>network-interface</code>, and
+     * <code>spot-instances-request</code>. To tag a resource after it has been created, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      * </p>
      * 
      * @return The type of resource to tag. Currently, the resource types that support tagging on creation are
-     *         <code>instance</code> and <code>volume</code>. To tag a resource after it has been created, see <a
+     *         <code>instance</code>, <code>volume</code>, <code>elastic-gpu</code>, <code>network-interface</code>, and
+     *         <code>spot-instances-request</code>. To tag a resource after it has been created, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      * @see ResourceType
      */
@@ -79,13 +84,15 @@ public class LaunchTemplateTagSpecificationRequest implements Serializable, Clon
     /**
      * <p>
      * The type of resource to tag. Currently, the resource types that support tagging on creation are
-     * <code>instance</code> and <code>volume</code>. To tag a resource after it has been created, see <a
+     * <code>instance</code>, <code>volume</code>, <code>elastic-gpu</code>, <code>network-interface</code>, and
+     * <code>spot-instances-request</code>. To tag a resource after it has been created, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      * </p>
      * 
      * @param resourceType
      *        The type of resource to tag. Currently, the resource types that support tagging on creation are
-     *        <code>instance</code> and <code>volume</code>. To tag a resource after it has been created, see <a
+     *        <code>instance</code>, <code>volume</code>, <code>elastic-gpu</code>, <code>network-interface</code>, and
+     *        <code>spot-instances-request</code>. To tag a resource after it has been created, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
@@ -99,13 +106,15 @@ public class LaunchTemplateTagSpecificationRequest implements Serializable, Clon
     /**
      * <p>
      * The type of resource to tag. Currently, the resource types that support tagging on creation are
-     * <code>instance</code> and <code>volume</code>. To tag a resource after it has been created, see <a
+     * <code>instance</code>, <code>volume</code>, <code>elastic-gpu</code>, <code>network-interface</code>, and
+     * <code>spot-instances-request</code>. To tag a resource after it has been created, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      * </p>
      * 
      * @param resourceType
      *        The type of resource to tag. Currently, the resource types that support tagging on creation are
-     *        <code>instance</code> and <code>volume</code>. To tag a resource after it has been created, see <a
+     *        <code>instance</code>, <code>volume</code>, <code>elastic-gpu</code>, <code>network-interface</code>, and
+     *        <code>spot-instances-request</code>. To tag a resource after it has been created, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType

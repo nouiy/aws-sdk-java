@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The AWS Identity and Access Management (IAM) action definition details.
+ * The Identity and Access Management (IAM) action definition details.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

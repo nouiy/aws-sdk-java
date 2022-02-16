@@ -50,7 +50,7 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
     private String classification;
     /**
      * <p>
-     * The severity of the patchsuch as <code>Critical</code>, <code>Important</code>, and <code>Moderate</code>.
+     * The severity of the patch such as <code>Critical</code>, <code>Important</code>, and <code>Moderate</code>.
      * </p>
      */
     private String severity;
@@ -207,11 +207,12 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The severity of the patchsuch as <code>Critical</code>, <code>Important</code>, and <code>Moderate</code>.
+     * The severity of the patch such as <code>Critical</code>, <code>Important</code>, and <code>Moderate</code>.
      * </p>
      * 
      * @param severity
-     *        The severity of the patchsuch as <code>Critical</code>, <code>Important</code>, and <code>Moderate</code>.
+     *        The severity of the patch such as <code>Critical</code>, <code>Important</code>, and <code>Moderate</code>
+     *        .
      */
 
     public void setSeverity(String severity) {
@@ -220,11 +221,11 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The severity of the patchsuch as <code>Critical</code>, <code>Important</code>, and <code>Moderate</code>.
+     * The severity of the patch such as <code>Critical</code>, <code>Important</code>, and <code>Moderate</code>.
      * </p>
      * 
-     * @return The severity of the patchsuch as <code>Critical</code>, <code>Important</code>, and <code>Moderate</code>
-     *         .
+     * @return The severity of the patch such as <code>Critical</code>, <code>Important</code>, and
+     *         <code>Moderate</code>.
      */
 
     public String getSeverity() {
@@ -233,11 +234,12 @@ public class PatchComplianceData implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The severity of the patchsuch as <code>Critical</code>, <code>Important</code>, and <code>Moderate</code>.
+     * The severity of the patch such as <code>Critical</code>, <code>Important</code>, and <code>Moderate</code>.
      * </p>
      * 
      * @param severity
-     *        The severity of the patchsuch as <code>Critical</code>, <code>Important</code>, and <code>Moderate</code>.
+     *        The severity of the patch such as <code>Critical</code>, <code>Important</code>, and <code>Moderate</code>
+     *        .
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

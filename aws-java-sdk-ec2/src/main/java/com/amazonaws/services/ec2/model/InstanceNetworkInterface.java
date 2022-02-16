@@ -118,7 +118,7 @@ public class InstanceNetworkInterface implements Serializable, Cloneable {
     private String vpcId;
     /**
      * <p>
-     * Describes the type of network interface.
+     * The type of network interface.
      * </p>
      * <p>
      * Valid values: <code>interface</code> | <code>efa</code> | <code>trunk</code>
@@ -884,14 +884,14 @@ public class InstanceNetworkInterface implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Describes the type of network interface.
+     * The type of network interface.
      * </p>
      * <p>
      * Valid values: <code>interface</code> | <code>efa</code> | <code>trunk</code>
      * </p>
      * 
      * @param interfaceType
-     *        Describes the type of network interface.</p>
+     *        The type of network interface.</p>
      *        <p>
      *        Valid values: <code>interface</code> | <code>efa</code> | <code>trunk</code>
      */
@@ -902,13 +902,13 @@ public class InstanceNetworkInterface implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Describes the type of network interface.
+     * The type of network interface.
      * </p>
      * <p>
      * Valid values: <code>interface</code> | <code>efa</code> | <code>trunk</code>
      * </p>
      * 
-     * @return Describes the type of network interface.</p>
+     * @return The type of network interface.</p>
      *         <p>
      *         Valid values: <code>interface</code> | <code>efa</code> | <code>trunk</code>
      */
@@ -919,14 +919,14 @@ public class InstanceNetworkInterface implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Describes the type of network interface.
+     * The type of network interface.
      * </p>
      * <p>
      * Valid values: <code>interface</code> | <code>efa</code> | <code>trunk</code>
      * </p>
      * 
      * @param interfaceType
-     *        Describes the type of network interface.</p>
+     *        The type of network interface.</p>
      *        <p>
      *        Valid values: <code>interface</code> | <code>efa</code> | <code>trunk</code>
      * @return Returns a reference to this object so that method calls can be chained together.

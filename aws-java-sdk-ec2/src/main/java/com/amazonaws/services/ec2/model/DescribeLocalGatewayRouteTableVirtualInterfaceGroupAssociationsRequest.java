@@ -44,6 +44,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      * </li>
      * <li>
      * <p>
+     * <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route table for
+     * the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
      * </p>
      * </li>
@@ -55,6 +61,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      * <li>
      * <p>
      * <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface
+     * group association.
      * </p>
      * </li>
      * <li>
@@ -170,6 +182,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      * </li>
      * <li>
      * <p>
+     * <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route table for
+     * the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
      * </p>
      * </li>
@@ -181,6 +199,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      * <li>
      * <p>
      * <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface
+     * group association.
      * </p>
      * </li>
      * <li>
@@ -199,6 +223,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      *         </li>
      *         <li>
      *         <p>
+     *         <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route
+     *         table for the virtual interface group.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
      *         </p>
      *         </li>
@@ -212,6 +242,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      *         <p>
      *         <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface
      *         group.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual
+     *         interface group association.
      *         </p>
      *         </li>
      *         <li>
@@ -240,6 +276,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      * </li>
      * <li>
      * <p>
+     * <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route table for
+     * the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
      * </p>
      * </li>
@@ -251,6 +293,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      * <li>
      * <p>
      * <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface
+     * group association.
      * </p>
      * </li>
      * <li>
@@ -270,6 +318,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      *        </li>
      *        <li>
      *        <p>
+     *        <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route
+     *        table for the virtual interface group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
      *        </p>
      *        </li>
@@ -281,6 +335,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      *        <li>
      *        <p>
      *        <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual
+     *        interface group association.
      *        </p>
      *        </li>
      *        <li>
@@ -311,6 +371,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      * </li>
      * <li>
      * <p>
+     * <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route table for
+     * the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
      * </p>
      * </li>
@@ -322,6 +388,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      * <li>
      * <p>
      * <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface
+     * group association.
      * </p>
      * </li>
      * <li>
@@ -346,6 +418,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      *        </li>
      *        <li>
      *        <p>
+     *        <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route
+     *        table for the virtual interface group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
      *        </p>
      *        </li>
@@ -357,6 +435,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      *        <li>
      *        <p>
      *        <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual
+     *        interface group association.
      *        </p>
      *        </li>
      *        <li>
@@ -389,6 +473,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      * </li>
      * <li>
      * <p>
+     * <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route table for
+     * the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
      * </p>
      * </li>
@@ -400,6 +490,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      * <li>
      * <p>
      * <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface
+     * group association.
      * </p>
      * </li>
      * <li>
@@ -419,6 +515,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      *        </li>
      *        <li>
      *        <p>
+     *        <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route
+     *        table for the virtual interface group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
      *        </p>
      *        </li>
@@ -430,6 +532,12 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
      *        <li>
      *        <p>
      *        <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual
+     *        interface group association.
      *        </p>
      *        </li>
      *        <li>

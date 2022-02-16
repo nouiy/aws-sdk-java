@@ -33,19 +33,17 @@ public class DescribeCoipPoolsRequest extends AmazonWebServiceRequest implements
     private com.amazonaws.internal.SdkInternalList<String> poolIds;
     /**
      * <p>
-     * The filters. The following are the possible values:
+     * One or more filters.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>coip-pool.pool-id</code>
+     * <code>coip-pool.local-gateway-route-table-id</code> - The ID of the local gateway route table.
      * </p>
      * </li>
-     * </ul>
-     * <ul>
      * <li>
      * <p>
-     * <code>coip-pool.local-gateway-route-table-id</code>
+     * <code>coip-pool.pool-id</code> - The ID of the address pool.
      * </p>
      * </li>
      * </ul>
@@ -140,35 +138,31 @@ public class DescribeCoipPoolsRequest extends AmazonWebServiceRequest implements
 
     /**
      * <p>
-     * The filters. The following are the possible values:
+     * One or more filters.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>coip-pool.pool-id</code>
+     * <code>coip-pool.local-gateway-route-table-id</code> - The ID of the local gateway route table.
      * </p>
      * </li>
-     * </ul>
-     * <ul>
      * <li>
      * <p>
-     * <code>coip-pool.local-gateway-route-table-id</code>
+     * <code>coip-pool.pool-id</code> - The ID of the address pool.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The filters. The following are the possible values:</p>
+     * @return One or more filters.</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>coip-pool.pool-id</code>
+     *         <code>coip-pool.local-gateway-route-table-id</code> - The ID of the local gateway route table.
      *         </p>
      *         </li>
-     *         </ul>
-     *         <ul>
      *         <li>
      *         <p>
-     *         <code>coip-pool.local-gateway-route-table-id</code>
+     *         <code>coip-pool.pool-id</code> - The ID of the address pool.
      *         </p>
      *         </li>
      */
@@ -182,36 +176,32 @@ public class DescribeCoipPoolsRequest extends AmazonWebServiceRequest implements
 
     /**
      * <p>
-     * The filters. The following are the possible values:
+     * One or more filters.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>coip-pool.pool-id</code>
+     * <code>coip-pool.local-gateway-route-table-id</code> - The ID of the local gateway route table.
      * </p>
      * </li>
-     * </ul>
-     * <ul>
      * <li>
      * <p>
-     * <code>coip-pool.local-gateway-route-table-id</code>
+     * <code>coip-pool.pool-id</code> - The ID of the address pool.
      * </p>
      * </li>
      * </ul>
      * 
      * @param filters
-     *        The filters. The following are the possible values:</p>
+     *        One or more filters.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-pool.pool-id</code>
+     *        <code>coip-pool.local-gateway-route-table-id</code> - The ID of the local gateway route table.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-pool.local-gateway-route-table-id</code>
+     *        <code>coip-pool.pool-id</code> - The ID of the address pool.
      *        </p>
      *        </li>
      */
@@ -227,19 +217,17 @@ public class DescribeCoipPoolsRequest extends AmazonWebServiceRequest implements
 
     /**
      * <p>
-     * The filters. The following are the possible values:
+     * One or more filters.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>coip-pool.pool-id</code>
+     * <code>coip-pool.local-gateway-route-table-id</code> - The ID of the local gateway route table.
      * </p>
      * </li>
-     * </ul>
-     * <ul>
      * <li>
      * <p>
-     * <code>coip-pool.local-gateway-route-table-id</code>
+     * <code>coip-pool.pool-id</code> - The ID of the address pool.
      * </p>
      * </li>
      * </ul>
@@ -250,18 +238,16 @@ public class DescribeCoipPoolsRequest extends AmazonWebServiceRequest implements
      * </p>
      * 
      * @param filters
-     *        The filters. The following are the possible values:</p>
+     *        One or more filters.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-pool.pool-id</code>
+     *        <code>coip-pool.local-gateway-route-table-id</code> - The ID of the local gateway route table.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-pool.local-gateway-route-table-id</code>
+     *        <code>coip-pool.pool-id</code> - The ID of the address pool.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -279,36 +265,32 @@ public class DescribeCoipPoolsRequest extends AmazonWebServiceRequest implements
 
     /**
      * <p>
-     * The filters. The following are the possible values:
+     * One or more filters.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>coip-pool.pool-id</code>
+     * <code>coip-pool.local-gateway-route-table-id</code> - The ID of the local gateway route table.
      * </p>
      * </li>
-     * </ul>
-     * <ul>
      * <li>
      * <p>
-     * <code>coip-pool.local-gateway-route-table-id</code>
+     * <code>coip-pool.pool-id</code> - The ID of the address pool.
      * </p>
      * </li>
      * </ul>
      * 
      * @param filters
-     *        The filters. The following are the possible values:</p>
+     *        One or more filters.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-pool.pool-id</code>
+     *        <code>coip-pool.local-gateway-route-table-id</code> - The ID of the local gateway route table.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-pool.local-gateway-route-table-id</code>
+     *        <code>coip-pool.pool-id</code> - The ID of the address pool.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

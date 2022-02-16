@@ -152,8 +152,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * </li>
      * <li>
      * <p>
-     * <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
-     * <code>required</code> | <code>unsupported</code>).
+     * <code>instance-storage-info.encryption-support</code> - Indicates whether data is encrypted at rest (
+     * <code>required</code> | <code>supported</code> | <code>unsupported</code>).
      * </p>
      * </li>
      * <li>
@@ -224,6 +224,11 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * <p>
      * <code>network-info.ipv6-supported</code> - Indicates whether the instance type supports IPv6 (<code>true</code> |
      * <code>false</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-info.maximum-network-cards</code> - The maximum number of network cards per instance.
      * </p>
      * </li>
      * <li>
@@ -550,8 +555,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * </li>
      * <li>
      * <p>
-     * <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
-     * <code>required</code> | <code>unsupported</code>).
+     * <code>instance-storage-info.encryption-support</code> - Indicates whether data is encrypted at rest (
+     * <code>required</code> | <code>supported</code> | <code>unsupported</code>).
      * </p>
      * </li>
      * <li>
@@ -622,6 +627,11 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * <p>
      * <code>network-info.ipv6-supported</code> - Indicates whether the instance type supports IPv6 (<code>true</code> |
      * <code>false</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-info.maximum-network-cards</code> - The maximum number of network cards per instance.
      * </p>
      * </li>
      * <li>
@@ -810,8 +820,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *         </li>
      *         <li>
      *         <p>
-     *         <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
-     *         <code>required</code> | <code>unsupported</code>).
+     *         <code>instance-storage-info.encryption-support</code> - Indicates whether data is encrypted at rest (
+     *         <code>required</code> | <code>supported</code> | <code>unsupported</code>).
      *         </p>
      *         </li>
      *         <li>
@@ -882,6 +892,11 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *         <p>
      *         <code>network-info.ipv6-supported</code> - Indicates whether the instance type supports IPv6 (
      *         <code>true</code> | <code>false</code>).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-info.maximum-network-cards</code> - The maximum number of network cards per instance.
      *         </p>
      *         </li>
      *         <li>
@@ -1082,8 +1097,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * </li>
      * <li>
      * <p>
-     * <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
-     * <code>required</code> | <code>unsupported</code>).
+     * <code>instance-storage-info.encryption-support</code> - Indicates whether data is encrypted at rest (
+     * <code>required</code> | <code>supported</code> | <code>unsupported</code>).
      * </p>
      * </li>
      * <li>
@@ -1154,6 +1169,11 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * <p>
      * <code>network-info.ipv6-supported</code> - Indicates whether the instance type supports IPv6 (<code>true</code> |
      * <code>false</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-info.maximum-network-cards</code> - The maximum number of network cards per instance.
      * </p>
      * </li>
      * <li>
@@ -1343,8 +1363,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        </li>
      *        <li>
      *        <p>
-     *        <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
-     *        <code>required</code> | <code>unsupported</code>).
+     *        <code>instance-storage-info.encryption-support</code> - Indicates whether data is encrypted at rest (
+     *        <code>required</code> | <code>supported</code> | <code>unsupported</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -1415,6 +1435,11 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        <p>
      *        <code>network-info.ipv6-supported</code> - Indicates whether the instance type supports IPv6 (
      *        <code>true</code> | <code>false</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-info.maximum-network-cards</code> - The maximum number of network cards per instance.
      *        </p>
      *        </li>
      *        <li>
@@ -1617,8 +1642,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * </li>
      * <li>
      * <p>
-     * <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
-     * <code>required</code> | <code>unsupported</code>).
+     * <code>instance-storage-info.encryption-support</code> - Indicates whether data is encrypted at rest (
+     * <code>required</code> | <code>supported</code> | <code>unsupported</code>).
      * </p>
      * </li>
      * <li>
@@ -1689,6 +1714,11 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * <p>
      * <code>network-info.ipv6-supported</code> - Indicates whether the instance type supports IPv6 (<code>true</code> |
      * <code>false</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-info.maximum-network-cards</code> - The maximum number of network cards per instance.
      * </p>
      * </li>
      * <li>
@@ -1883,8 +1913,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        </li>
      *        <li>
      *        <p>
-     *        <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
-     *        <code>required</code> | <code>unsupported</code>).
+     *        <code>instance-storage-info.encryption-support</code> - Indicates whether data is encrypted at rest (
+     *        <code>required</code> | <code>supported</code> | <code>unsupported</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -1955,6 +1985,11 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        <p>
      *        <code>network-info.ipv6-supported</code> - Indicates whether the instance type supports IPv6 (
      *        <code>true</code> | <code>false</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-info.maximum-network-cards</code> - The maximum number of network cards per instance.
      *        </p>
      *        </li>
      *        <li>
@@ -2159,8 +2194,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * </li>
      * <li>
      * <p>
-     * <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
-     * <code>required</code> | <code>unsupported</code>).
+     * <code>instance-storage-info.encryption-support</code> - Indicates whether data is encrypted at rest (
+     * <code>required</code> | <code>supported</code> | <code>unsupported</code>).
      * </p>
      * </li>
      * <li>
@@ -2231,6 +2266,11 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * <p>
      * <code>network-info.ipv6-supported</code> - Indicates whether the instance type supports IPv6 (<code>true</code> |
      * <code>false</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-info.maximum-network-cards</code> - The maximum number of network cards per instance.
      * </p>
      * </li>
      * <li>
@@ -2420,8 +2460,8 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        </li>
      *        <li>
      *        <p>
-     *        <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
-     *        <code>required</code> | <code>unsupported</code>).
+     *        <code>instance-storage-info.encryption-support</code> - Indicates whether data is encrypted at rest (
+     *        <code>required</code> | <code>supported</code> | <code>unsupported</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -2492,6 +2532,11 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        <p>
      *        <code>network-info.ipv6-supported</code> - Indicates whether the instance type supports IPv6 (
      *        <code>true</code> | <code>false</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-info.maximum-network-cards</code> - The maximum number of network cards per instance.
      *        </p>
      *        </li>
      *        <li>

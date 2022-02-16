@@ -28,6 +28,12 @@ public class DescribeLocalGatewaysRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
+     * The IDs of the local gateways.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<String> localGatewayIds;
+    /**
+     * <p>
      * One or more filters.
      * </p>
      * <ul>
@@ -38,22 +44,12 @@ public class DescribeLocalGatewaysRequest extends AmazonWebServiceRequest implem
      * </li>
      * <li>
      * <p>
-     * <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>local-gateway-route-table-virtual-interface-group-association-id</code> - The ID of the association.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface group.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway.
      * </p>
      * </li>
      * <li>
@@ -62,12 +58,6 @@ public class DescribeLocalGatewaysRequest extends AmazonWebServiceRequest implem
      * </p>
      * </li>
      * </ul>
-     */
-    private com.amazonaws.internal.SdkInternalList<String> localGatewayIds;
-    /**
-     * <p>
-     * One or more filters.
-     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Filter> filters;
     /**
@@ -86,6 +76,79 @@ public class DescribeLocalGatewaysRequest extends AmazonWebServiceRequest implem
 
     /**
      * <p>
+     * The IDs of the local gateways.
+     * </p>
+     * 
+     * @return The IDs of the local gateways.
+     */
+
+    public java.util.List<String> getLocalGatewayIds() {
+        if (localGatewayIds == null) {
+            localGatewayIds = new com.amazonaws.internal.SdkInternalList<String>();
+        }
+        return localGatewayIds;
+    }
+
+    /**
+     * <p>
+     * The IDs of the local gateways.
+     * </p>
+     * 
+     * @param localGatewayIds
+     *        The IDs of the local gateways.
+     */
+
+    public void setLocalGatewayIds(java.util.Collection<String> localGatewayIds) {
+        if (localGatewayIds == null) {
+            this.localGatewayIds = null;
+            return;
+        }
+
+        this.localGatewayIds = new com.amazonaws.internal.SdkInternalList<String>(localGatewayIds);
+    }
+
+    /**
+     * <p>
+     * The IDs of the local gateways.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLocalGatewayIds(java.util.Collection)} or {@link #withLocalGatewayIds(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param localGatewayIds
+     *        The IDs of the local gateways.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeLocalGatewaysRequest withLocalGatewayIds(String... localGatewayIds) {
+        if (this.localGatewayIds == null) {
+            setLocalGatewayIds(new com.amazonaws.internal.SdkInternalList<String>(localGatewayIds.length));
+        }
+        for (String ele : localGatewayIds) {
+            this.localGatewayIds.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The IDs of the local gateways.
+     * </p>
+     * 
+     * @param localGatewayIds
+     *        The IDs of the local gateways.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeLocalGatewaysRequest withLocalGatewayIds(java.util.Collection<String> localGatewayIds) {
+        setLocalGatewayIds(localGatewayIds);
+        return this;
+    }
+
+    /**
+     * <p>
      * One or more filters.
      * </p>
      * <ul>
@@ -96,22 +159,12 @@ public class DescribeLocalGatewaysRequest extends AmazonWebServiceRequest implem
      * </li>
      * <li>
      * <p>
-     * <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>local-gateway-route-table-virtual-interface-group-association-id</code> - The ID of the association.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface group.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway.
      * </p>
      * </li>
      * <li>
@@ -130,24 +183,12 @@ public class DescribeLocalGatewaysRequest extends AmazonWebServiceRequest implem
      *         </li>
      *         <li>
      *         <p>
-     *         <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>local-gateway-route-table-virtual-interface-group-association-id</code> - The ID of the
-     *         association.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface
-     *         group.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway.
      *         </p>
      *         </li>
      *         <li>
@@ -155,268 +196,6 @@ public class DescribeLocalGatewaysRequest extends AmazonWebServiceRequest implem
      *         <code>state</code> - The state of the association.
      *         </p>
      *         </li>
-     */
-
-    public java.util.List<String> getLocalGatewayIds() {
-        if (localGatewayIds == null) {
-            localGatewayIds = new com.amazonaws.internal.SdkInternalList<String>();
-        }
-        return localGatewayIds;
-    }
-
-    /**
-     * <p>
-     * One or more filters.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>local-gateway-id</code> - The ID of a local gateway.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>local-gateway-route-table-virtual-interface-group-association-id</code> - The ID of the association.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface group.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>state</code> - The state of the association.
-     * </p>
-     * </li>
-     * </ul>
-     * 
-     * @param localGatewayIds
-     *        One or more filters.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>local-gateway-id</code> - The ID of a local gateway.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>local-gateway-route-table-virtual-interface-group-association-id</code> - The ID of the association.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface group.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>state</code> - The state of the association.
-     *        </p>
-     *        </li>
-     */
-
-    public void setLocalGatewayIds(java.util.Collection<String> localGatewayIds) {
-        if (localGatewayIds == null) {
-            this.localGatewayIds = null;
-            return;
-        }
-
-        this.localGatewayIds = new com.amazonaws.internal.SdkInternalList<String>(localGatewayIds);
-    }
-
-    /**
-     * <p>
-     * One or more filters.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>local-gateway-id</code> - The ID of a local gateway.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>local-gateway-route-table-virtual-interface-group-association-id</code> - The ID of the association.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface group.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>state</code> - The state of the association.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setLocalGatewayIds(java.util.Collection)} or {@link #withLocalGatewayIds(java.util.Collection)} if you
-     * want to override the existing values.
-     * </p>
-     * 
-     * @param localGatewayIds
-     *        One or more filters.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>local-gateway-id</code> - The ID of a local gateway.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>local-gateway-route-table-virtual-interface-group-association-id</code> - The ID of the association.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface group.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>state</code> - The state of the association.
-     *        </p>
-     *        </li>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeLocalGatewaysRequest withLocalGatewayIds(String... localGatewayIds) {
-        if (this.localGatewayIds == null) {
-            setLocalGatewayIds(new com.amazonaws.internal.SdkInternalList<String>(localGatewayIds.length));
-        }
-        for (String ele : localGatewayIds) {
-            this.localGatewayIds.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p>
-     * One or more filters.
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>local-gateway-id</code> - The ID of a local gateway.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>local-gateway-route-table-virtual-interface-group-association-id</code> - The ID of the association.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface group.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>state</code> - The state of the association.
-     * </p>
-     * </li>
-     * </ul>
-     * 
-     * @param localGatewayIds
-     *        One or more filters.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>local-gateway-id</code> - The ID of a local gateway.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>local-gateway-route-table-id</code> - The ID of the local gateway route table.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>local-gateway-route-table-virtual-interface-group-association-id</code> - The ID of the association.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>local-gateway-route-table-virtual-interface-group-id</code> - The ID of the virtual interface group.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>state</code> - The state of the association.
-     *        </p>
-     *        </li>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribeLocalGatewaysRequest withLocalGatewayIds(java.util.Collection<String> localGatewayIds) {
-        setLocalGatewayIds(localGatewayIds);
-        return this;
-    }
-
-    /**
-     * <p>
-     * One or more filters.
-     * </p>
-     * 
-     * @return One or more filters.
      */
 
     public java.util.List<Filter> getFilters() {
@@ -430,9 +209,52 @@ public class DescribeLocalGatewaysRequest extends AmazonWebServiceRequest implem
      * <p>
      * One or more filters.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>local-gateway-id</code> - The ID of a local gateway.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>state</code> - The state of the association.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
-     *        One or more filters.
+     *        One or more filters.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>local-gateway-id</code> - The ID of a local gateway.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>state</code> - The state of the association.
+     *        </p>
+     *        </li>
      */
 
     public void setFilters(java.util.Collection<Filter> filters) {
@@ -448,6 +270,28 @@ public class DescribeLocalGatewaysRequest extends AmazonWebServiceRequest implem
      * <p>
      * One or more filters.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>local-gateway-id</code> - The ID of a local gateway.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>state</code> - The state of the association.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFilters(java.util.Collection)} or {@link #withFilters(java.util.Collection)} if you want to override
@@ -455,7 +299,28 @@ public class DescribeLocalGatewaysRequest extends AmazonWebServiceRequest implem
      * </p>
      * 
      * @param filters
-     *        One or more filters.
+     *        One or more filters.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>local-gateway-id</code> - The ID of a local gateway.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>state</code> - The state of the association.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -473,9 +338,52 @@ public class DescribeLocalGatewaysRequest extends AmazonWebServiceRequest implem
      * <p>
      * One or more filters.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>local-gateway-id</code> - The ID of a local gateway.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>state</code> - The state of the association.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
-     *        One or more filters.
+     *        One or more filters.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>local-gateway-id</code> - The ID of a local gateway.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>state</code> - The state of the association.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

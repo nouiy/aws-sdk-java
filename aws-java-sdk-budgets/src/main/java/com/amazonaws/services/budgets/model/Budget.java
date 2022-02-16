@@ -23,7 +23,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * data file information, and the current status of the <code>budget</code> object.
  * </p>
  * <p>
- * This is the ARN pattern for a budget:
+ * This is the Amazon Resource Name (ARN) pattern for a budget:
  * </p>
  * <p>
  * <code>arn:aws:budgets::AccountId:budget/budgetName</code>
@@ -46,7 +46,7 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * <code>BudgetLimit</code> is required for cost or usage budgets, but optional for RI or Savings Plans utilization
-     * or coverage budgets. RI and Savings Plans utilization or coverage budgets default to <code>100</code>, which is
+     * or coverage budgets. RI and Savings Plans utilization or coverage budgets default to <code>100</code>. This is
      * the only valid value for RI or Savings Plans utilization or coverage budgets. You can't use
      * <code>BudgetLimit</code> with <code>PlannedBudgetLimits</code> for <code>CreateBudget</code> and
      * <code>UpdateBudget</code> actions.
@@ -58,7 +58,7 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * A map containing multiple <code>BudgetLimit</code>, including current or future limits.
      * </p>
      * <p>
-     * <code>PlannedBudgetLimits</code> is available for cost or usage budget and supports monthly and quarterly
+     * <code>PlannedBudgetLimits</code> is available for cost or usage budget and supports both monthly and quarterly
      * <code>TimeUnit</code>.
      * </p>
      * <p>
@@ -67,12 +67,12 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * epoch seconds.
      * </p>
      * <p>
-     * For quarterly budgets, provide 4 quarters of <code>PlannedBudgetLimits</code> value entries in standard calendar
-     * quarter increments. This must start from the current quarter and include the next 3 quarters. The
+     * For quarterly budgets, provide four quarters of <code>PlannedBudgetLimits</code> value entries in standard
+     * calendar quarter increments. This must start from the current quarter and include the next three quarters. The
      * <code>key</code> is the start of the quarter, <code>UTC</code> in epoch seconds.
      * </p>
      * <p>
-     * If the planned budget expires before 12 months for monthly or 4 quarters for quarterly, provide the
+     * If the planned budget expires before 12 months for monthly or four quarters for quarterly, provide the
      * <code>PlannedBudgetLimits</code> values only for the remaining periods.
      * </p>
      * <p>
@@ -86,24 +86,25 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * <code>DescribeBudget</code> and <code>DescribeBudgets</code> response along with <code>PlannedBudgetLimits</code>
-     * will also contain <code>BudgetLimit</code> representing the current month or quarter limit present in
-     * <code>PlannedBudgetLimits</code>. This only applies to budgets created with <code>PlannedBudgetLimits</code>.
-     * Budgets created without <code>PlannedBudgetLimits</code> will only contain <code>BudgetLimit</code>, and no
-     * <code>PlannedBudgetLimits</code>.
+     * also contain <code>BudgetLimit</code> representing the current month or quarter limit present in
+     * <code>PlannedBudgetLimits</code>. This only applies to budgets that are created with
+     * <code>PlannedBudgetLimits</code>. Budgets that are created without <code>PlannedBudgetLimits</code> only contain
+     * <code>BudgetLimit</code>. They don't contain <code>PlannedBudgetLimits</code>.
      * </p>
      */
     private java.util.Map<String, Spend> plannedBudgetLimits;
     /**
      * <p>
-     * The cost filters, such as service or tag, that are applied to a budget.
+     * The cost filters, such as <code>Region</code>, <code>Service</code>, <code>member account</code>,
+     * <code>Tag</code>, or <code>Cost Category</code>, that are applied to a budget.
      * </p>
      * <p>
-     * AWS Budgets supports the following services as a filter for RI budgets:
+     * Amazon Web Services Budgets supports the following services as a <code>Service</code> filter for RI budgets:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Amazon Elastic Compute Cloud - Compute
+     * Amazon EC2
      * </p>
      * </li>
      * <li>
@@ -123,7 +124,7 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Amazon Elasticsearch Service
+     * Amazon OpenSearch Service
      * </p>
      * </li>
      * </ul>
@@ -147,22 +148,23 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
     private String timeUnit;
     /**
      * <p>
-     * The period of time that is covered by a budget. The period has a start date and an end date. The start date must
-     * come before the end date. The end date must come before <code>06/15/87 00:00 UTC</code>.
+     * The period of time that's covered by a budget. You setthe start date and end date. The start date must come
+     * before the end date. The end date must come before <code>06/15/87 00:00 UTC</code>.
      * </p>
      * <p>
-     * If you create your budget and don't specify a start date, AWS defaults to the start of your chosen time period
-     * (DAILY, MONTHLY, QUARTERLY, or ANNUALLY). For example, if you created your budget on January 24, 2018, chose
-     * <code>DAILY</code>, and didn't set a start date, AWS set your start date to <code>01/24/18 00:00 UTC</code>. If
-     * you chose <code>MONTHLY</code>, AWS set your start date to <code>01/01/18 00:00 UTC</code>. If you didn't specify
-     * an end date, AWS set your end date to <code>06/15/87 00:00 UTC</code>. The defaults are the same for the AWS
-     * Billing and Cost Management console and the API.
+     * If you create your budget and don't specify a start date, Amazon Web Services defaults to the start of your
+     * chosen time period (DAILY, MONTHLY, QUARTERLY, or ANNUALLY). For example, if you created your budget on January
+     * 24, 2018, chose <code>DAILY</code>, and didn't set a start date, Amazon Web Services set your start date to
+     * <code>01/24/18 00:00 UTC</code>. If you chose <code>MONTHLY</code>, Amazon Web Services set your start date to
+     * <code>01/01/18 00:00 UTC</code>. If you didn't specify an end date, Amazon Web Services set your end date to
+     * <code>06/15/87 00:00 UTC</code>. The defaults are the same for the Billing and Cost Management console and the
+     * API.
      * </p>
      * <p>
      * You can change either date with the <code>UpdateBudget</code> operation.
      * </p>
      * <p>
-     * After the end date, AWS deletes the budget and all associated notifications and subscribers.
+     * After the end date, Amazon Web Services deletes the budget and all the associated notifications and subscribers.
      * </p>
      */
     private TimePeriod timePeriod;
@@ -174,8 +176,8 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
     private CalculatedSpend calculatedSpend;
     /**
      * <p>
-     * Whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or Savings Plans
-     * coverage.
+     * Specifies whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or
+     * Savings Plans coverage.
      * </p>
      */
     private String budgetType;
@@ -185,6 +187,12 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date lastUpdatedTime;
+    /**
+     * <p>
+     * The parameters that determine the budget amount for an auto-adjusting budget.
+     * </p>
+     */
+    private AutoAdjustData autoAdjustData;
 
     /**
      * <p>
@@ -239,7 +247,7 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * <code>BudgetLimit</code> is required for cost or usage budgets, but optional for RI or Savings Plans utilization
-     * or coverage budgets. RI and Savings Plans utilization or coverage budgets default to <code>100</code>, which is
+     * or coverage budgets. RI and Savings Plans utilization or coverage budgets default to <code>100</code>. This is
      * the only valid value for RI or Savings Plans utilization or coverage budgets. You can't use
      * <code>BudgetLimit</code> with <code>PlannedBudgetLimits</code> for <code>CreateBudget</code> and
      * <code>UpdateBudget</code> actions.
@@ -251,7 +259,7 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        <code>BudgetLimit</code> is required for cost or usage budgets, but optional for RI or Savings Plans
      *        utilization or coverage budgets. RI and Savings Plans utilization or coverage budgets default to
-     *        <code>100</code>, which is the only valid value for RI or Savings Plans utilization or coverage budgets.
+     *        <code>100</code>. This is the only valid value for RI or Savings Plans utilization or coverage budgets.
      *        You can't use <code>BudgetLimit</code> with <code>PlannedBudgetLimits</code> for <code>CreateBudget</code>
      *        and <code>UpdateBudget</code> actions.
      */
@@ -267,7 +275,7 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * <code>BudgetLimit</code> is required for cost or usage budgets, but optional for RI or Savings Plans utilization
-     * or coverage budgets. RI and Savings Plans utilization or coverage budgets default to <code>100</code>, which is
+     * or coverage budgets. RI and Savings Plans utilization or coverage budgets default to <code>100</code>. This is
      * the only valid value for RI or Savings Plans utilization or coverage budgets. You can't use
      * <code>BudgetLimit</code> with <code>PlannedBudgetLimits</code> for <code>CreateBudget</code> and
      * <code>UpdateBudget</code> actions.
@@ -278,7 +286,7 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         <code>BudgetLimit</code> is required for cost or usage budgets, but optional for RI or Savings Plans
      *         utilization or coverage budgets. RI and Savings Plans utilization or coverage budgets default to
-     *         <code>100</code>, which is the only valid value for RI or Savings Plans utilization or coverage budgets.
+     *         <code>100</code>. This is the only valid value for RI or Savings Plans utilization or coverage budgets.
      *         You can't use <code>BudgetLimit</code> with <code>PlannedBudgetLimits</code> for
      *         <code>CreateBudget</code> and <code>UpdateBudget</code> actions.
      */
@@ -294,7 +302,7 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * <code>BudgetLimit</code> is required for cost or usage budgets, but optional for RI or Savings Plans utilization
-     * or coverage budgets. RI and Savings Plans utilization or coverage budgets default to <code>100</code>, which is
+     * or coverage budgets. RI and Savings Plans utilization or coverage budgets default to <code>100</code>. This is
      * the only valid value for RI or Savings Plans utilization or coverage budgets. You can't use
      * <code>BudgetLimit</code> with <code>PlannedBudgetLimits</code> for <code>CreateBudget</code> and
      * <code>UpdateBudget</code> actions.
@@ -306,7 +314,7 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        <code>BudgetLimit</code> is required for cost or usage budgets, but optional for RI or Savings Plans
      *        utilization or coverage budgets. RI and Savings Plans utilization or coverage budgets default to
-     *        <code>100</code>, which is the only valid value for RI or Savings Plans utilization or coverage budgets.
+     *        <code>100</code>. This is the only valid value for RI or Savings Plans utilization or coverage budgets.
      *        You can't use <code>BudgetLimit</code> with <code>PlannedBudgetLimits</code> for <code>CreateBudget</code>
      *        and <code>UpdateBudget</code> actions.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -322,7 +330,7 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * A map containing multiple <code>BudgetLimit</code>, including current or future limits.
      * </p>
      * <p>
-     * <code>PlannedBudgetLimits</code> is available for cost or usage budget and supports monthly and quarterly
+     * <code>PlannedBudgetLimits</code> is available for cost or usage budget and supports both monthly and quarterly
      * <code>TimeUnit</code>.
      * </p>
      * <p>
@@ -331,12 +339,12 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * epoch seconds.
      * </p>
      * <p>
-     * For quarterly budgets, provide 4 quarters of <code>PlannedBudgetLimits</code> value entries in standard calendar
-     * quarter increments. This must start from the current quarter and include the next 3 quarters. The
+     * For quarterly budgets, provide four quarters of <code>PlannedBudgetLimits</code> value entries in standard
+     * calendar quarter increments. This must start from the current quarter and include the next three quarters. The
      * <code>key</code> is the start of the quarter, <code>UTC</code> in epoch seconds.
      * </p>
      * <p>
-     * If the planned budget expires before 12 months for monthly or 4 quarters for quarterly, provide the
+     * If the planned budget expires before 12 months for monthly or four quarters for quarterly, provide the
      * <code>PlannedBudgetLimits</code> values only for the remaining periods.
      * </p>
      * <p>
@@ -350,16 +358,16 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * <code>DescribeBudget</code> and <code>DescribeBudgets</code> response along with <code>PlannedBudgetLimits</code>
-     * will also contain <code>BudgetLimit</code> representing the current month or quarter limit present in
-     * <code>PlannedBudgetLimits</code>. This only applies to budgets created with <code>PlannedBudgetLimits</code>.
-     * Budgets created without <code>PlannedBudgetLimits</code> will only contain <code>BudgetLimit</code>, and no
-     * <code>PlannedBudgetLimits</code>.
+     * also contain <code>BudgetLimit</code> representing the current month or quarter limit present in
+     * <code>PlannedBudgetLimits</code>. This only applies to budgets that are created with
+     * <code>PlannedBudgetLimits</code>. Budgets that are created without <code>PlannedBudgetLimits</code> only contain
+     * <code>BudgetLimit</code>. They don't contain <code>PlannedBudgetLimits</code>.
      * </p>
      * 
      * @return A map containing multiple <code>BudgetLimit</code>, including current or future limits.</p>
      *         <p>
-     *         <code>PlannedBudgetLimits</code> is available for cost or usage budget and supports monthly and quarterly
-     *         <code>TimeUnit</code>.
+     *         <code>PlannedBudgetLimits</code> is available for cost or usage budget and supports both monthly and
+     *         quarterly <code>TimeUnit</code>.
      *         </p>
      *         <p>
      *         For monthly budgets, provide 12 months of <code>PlannedBudgetLimits</code> values. This must start from
@@ -367,12 +375,12 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      *         <code>UTC</code> in epoch seconds.
      *         </p>
      *         <p>
-     *         For quarterly budgets, provide 4 quarters of <code>PlannedBudgetLimits</code> value entries in standard
-     *         calendar quarter increments. This must start from the current quarter and include the next 3 quarters.
-     *         The <code>key</code> is the start of the quarter, <code>UTC</code> in epoch seconds.
+     *         For quarterly budgets, provide four quarters of <code>PlannedBudgetLimits</code> value entries in
+     *         standard calendar quarter increments. This must start from the current quarter and include the next three
+     *         quarters. The <code>key</code> is the start of the quarter, <code>UTC</code> in epoch seconds.
      *         </p>
      *         <p>
-     *         If the planned budget expires before 12 months for monthly or 4 quarters for quarterly, provide the
+     *         If the planned budget expires before 12 months for monthly or four quarters for quarterly, provide the
      *         <code>PlannedBudgetLimits</code> values only for the remaining periods.
      *         </p>
      *         <p>
@@ -386,10 +394,10 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      *         </p>
      *         <p>
      *         <code>DescribeBudget</code> and <code>DescribeBudgets</code> response along with
-     *         <code>PlannedBudgetLimits</code> will also contain <code>BudgetLimit</code> representing the current
-     *         month or quarter limit present in <code>PlannedBudgetLimits</code>. This only applies to budgets created
-     *         with <code>PlannedBudgetLimits</code>. Budgets created without <code>PlannedBudgetLimits</code> will only
-     *         contain <code>BudgetLimit</code>, and no <code>PlannedBudgetLimits</code>.
+     *         <code>PlannedBudgetLimits</code> also contain <code>BudgetLimit</code> representing the current month or
+     *         quarter limit present in <code>PlannedBudgetLimits</code>. This only applies to budgets that are created
+     *         with <code>PlannedBudgetLimits</code>. Budgets that are created without <code>PlannedBudgetLimits</code>
+     *         only contain <code>BudgetLimit</code>. They don't contain <code>PlannedBudgetLimits</code>.
      */
 
     public java.util.Map<String, Spend> getPlannedBudgetLimits() {
@@ -401,7 +409,7 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * A map containing multiple <code>BudgetLimit</code>, including current or future limits.
      * </p>
      * <p>
-     * <code>PlannedBudgetLimits</code> is available for cost or usage budget and supports monthly and quarterly
+     * <code>PlannedBudgetLimits</code> is available for cost or usage budget and supports both monthly and quarterly
      * <code>TimeUnit</code>.
      * </p>
      * <p>
@@ -410,12 +418,12 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * epoch seconds.
      * </p>
      * <p>
-     * For quarterly budgets, provide 4 quarters of <code>PlannedBudgetLimits</code> value entries in standard calendar
-     * quarter increments. This must start from the current quarter and include the next 3 quarters. The
+     * For quarterly budgets, provide four quarters of <code>PlannedBudgetLimits</code> value entries in standard
+     * calendar quarter increments. This must start from the current quarter and include the next three quarters. The
      * <code>key</code> is the start of the quarter, <code>UTC</code> in epoch seconds.
      * </p>
      * <p>
-     * If the planned budget expires before 12 months for monthly or 4 quarters for quarterly, provide the
+     * If the planned budget expires before 12 months for monthly or four quarters for quarterly, provide the
      * <code>PlannedBudgetLimits</code> values only for the remaining periods.
      * </p>
      * <p>
@@ -429,17 +437,17 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * <code>DescribeBudget</code> and <code>DescribeBudgets</code> response along with <code>PlannedBudgetLimits</code>
-     * will also contain <code>BudgetLimit</code> representing the current month or quarter limit present in
-     * <code>PlannedBudgetLimits</code>. This only applies to budgets created with <code>PlannedBudgetLimits</code>.
-     * Budgets created without <code>PlannedBudgetLimits</code> will only contain <code>BudgetLimit</code>, and no
-     * <code>PlannedBudgetLimits</code>.
+     * also contain <code>BudgetLimit</code> representing the current month or quarter limit present in
+     * <code>PlannedBudgetLimits</code>. This only applies to budgets that are created with
+     * <code>PlannedBudgetLimits</code>. Budgets that are created without <code>PlannedBudgetLimits</code> only contain
+     * <code>BudgetLimit</code>. They don't contain <code>PlannedBudgetLimits</code>.
      * </p>
      * 
      * @param plannedBudgetLimits
      *        A map containing multiple <code>BudgetLimit</code>, including current or future limits.</p>
      *        <p>
-     *        <code>PlannedBudgetLimits</code> is available for cost or usage budget and supports monthly and quarterly
-     *        <code>TimeUnit</code>.
+     *        <code>PlannedBudgetLimits</code> is available for cost or usage budget and supports both monthly and
+     *        quarterly <code>TimeUnit</code>.
      *        </p>
      *        <p>
      *        For monthly budgets, provide 12 months of <code>PlannedBudgetLimits</code> values. This must start from
@@ -447,12 +455,12 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      *        <code>UTC</code> in epoch seconds.
      *        </p>
      *        <p>
-     *        For quarterly budgets, provide 4 quarters of <code>PlannedBudgetLimits</code> value entries in standard
-     *        calendar quarter increments. This must start from the current quarter and include the next 3 quarters. The
-     *        <code>key</code> is the start of the quarter, <code>UTC</code> in epoch seconds.
+     *        For quarterly budgets, provide four quarters of <code>PlannedBudgetLimits</code> value entries in standard
+     *        calendar quarter increments. This must start from the current quarter and include the next three quarters.
+     *        The <code>key</code> is the start of the quarter, <code>UTC</code> in epoch seconds.
      *        </p>
      *        <p>
-     *        If the planned budget expires before 12 months for monthly or 4 quarters for quarterly, provide the
+     *        If the planned budget expires before 12 months for monthly or four quarters for quarterly, provide the
      *        <code>PlannedBudgetLimits</code> values only for the remaining periods.
      *        </p>
      *        <p>
@@ -466,10 +474,10 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <p>
      *        <code>DescribeBudget</code> and <code>DescribeBudgets</code> response along with
-     *        <code>PlannedBudgetLimits</code> will also contain <code>BudgetLimit</code> representing the current month
-     *        or quarter limit present in <code>PlannedBudgetLimits</code>. This only applies to budgets created with
-     *        <code>PlannedBudgetLimits</code>. Budgets created without <code>PlannedBudgetLimits</code> will only
-     *        contain <code>BudgetLimit</code>, and no <code>PlannedBudgetLimits</code>.
+     *        <code>PlannedBudgetLimits</code> also contain <code>BudgetLimit</code> representing the current month or
+     *        quarter limit present in <code>PlannedBudgetLimits</code>. This only applies to budgets that are created
+     *        with <code>PlannedBudgetLimits</code>. Budgets that are created without <code>PlannedBudgetLimits</code>
+     *        only contain <code>BudgetLimit</code>. They don't contain <code>PlannedBudgetLimits</code>.
      */
 
     public void setPlannedBudgetLimits(java.util.Map<String, Spend> plannedBudgetLimits) {
@@ -481,7 +489,7 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * A map containing multiple <code>BudgetLimit</code>, including current or future limits.
      * </p>
      * <p>
-     * <code>PlannedBudgetLimits</code> is available for cost or usage budget and supports monthly and quarterly
+     * <code>PlannedBudgetLimits</code> is available for cost or usage budget and supports both monthly and quarterly
      * <code>TimeUnit</code>.
      * </p>
      * <p>
@@ -490,12 +498,12 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * epoch seconds.
      * </p>
      * <p>
-     * For quarterly budgets, provide 4 quarters of <code>PlannedBudgetLimits</code> value entries in standard calendar
-     * quarter increments. This must start from the current quarter and include the next 3 quarters. The
+     * For quarterly budgets, provide four quarters of <code>PlannedBudgetLimits</code> value entries in standard
+     * calendar quarter increments. This must start from the current quarter and include the next three quarters. The
      * <code>key</code> is the start of the quarter, <code>UTC</code> in epoch seconds.
      * </p>
      * <p>
-     * If the planned budget expires before 12 months for monthly or 4 quarters for quarterly, provide the
+     * If the planned budget expires before 12 months for monthly or four quarters for quarterly, provide the
      * <code>PlannedBudgetLimits</code> values only for the remaining periods.
      * </p>
      * <p>
@@ -509,17 +517,17 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * <code>DescribeBudget</code> and <code>DescribeBudgets</code> response along with <code>PlannedBudgetLimits</code>
-     * will also contain <code>BudgetLimit</code> representing the current month or quarter limit present in
-     * <code>PlannedBudgetLimits</code>. This only applies to budgets created with <code>PlannedBudgetLimits</code>.
-     * Budgets created without <code>PlannedBudgetLimits</code> will only contain <code>BudgetLimit</code>, and no
-     * <code>PlannedBudgetLimits</code>.
+     * also contain <code>BudgetLimit</code> representing the current month or quarter limit present in
+     * <code>PlannedBudgetLimits</code>. This only applies to budgets that are created with
+     * <code>PlannedBudgetLimits</code>. Budgets that are created without <code>PlannedBudgetLimits</code> only contain
+     * <code>BudgetLimit</code>. They don't contain <code>PlannedBudgetLimits</code>.
      * </p>
      * 
      * @param plannedBudgetLimits
      *        A map containing multiple <code>BudgetLimit</code>, including current or future limits.</p>
      *        <p>
-     *        <code>PlannedBudgetLimits</code> is available for cost or usage budget and supports monthly and quarterly
-     *        <code>TimeUnit</code>.
+     *        <code>PlannedBudgetLimits</code> is available for cost or usage budget and supports both monthly and
+     *        quarterly <code>TimeUnit</code>.
      *        </p>
      *        <p>
      *        For monthly budgets, provide 12 months of <code>PlannedBudgetLimits</code> values. This must start from
@@ -527,12 +535,12 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      *        <code>UTC</code> in epoch seconds.
      *        </p>
      *        <p>
-     *        For quarterly budgets, provide 4 quarters of <code>PlannedBudgetLimits</code> value entries in standard
-     *        calendar quarter increments. This must start from the current quarter and include the next 3 quarters. The
-     *        <code>key</code> is the start of the quarter, <code>UTC</code> in epoch seconds.
+     *        For quarterly budgets, provide four quarters of <code>PlannedBudgetLimits</code> value entries in standard
+     *        calendar quarter increments. This must start from the current quarter and include the next three quarters.
+     *        The <code>key</code> is the start of the quarter, <code>UTC</code> in epoch seconds.
      *        </p>
      *        <p>
-     *        If the planned budget expires before 12 months for monthly or 4 quarters for quarterly, provide the
+     *        If the planned budget expires before 12 months for monthly or four quarters for quarterly, provide the
      *        <code>PlannedBudgetLimits</code> values only for the remaining periods.
      *        </p>
      *        <p>
@@ -546,10 +554,10 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <p>
      *        <code>DescribeBudget</code> and <code>DescribeBudgets</code> response along with
-     *        <code>PlannedBudgetLimits</code> will also contain <code>BudgetLimit</code> representing the current month
-     *        or quarter limit present in <code>PlannedBudgetLimits</code>. This only applies to budgets created with
-     *        <code>PlannedBudgetLimits</code>. Budgets created without <code>PlannedBudgetLimits</code> will only
-     *        contain <code>BudgetLimit</code>, and no <code>PlannedBudgetLimits</code>.
+     *        <code>PlannedBudgetLimits</code> also contain <code>BudgetLimit</code> representing the current month or
+     *        quarter limit present in <code>PlannedBudgetLimits</code>. This only applies to budgets that are created
+     *        with <code>PlannedBudgetLimits</code>. Budgets that are created without <code>PlannedBudgetLimits</code>
+     *        only contain <code>BudgetLimit</code>. They don't contain <code>PlannedBudgetLimits</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -588,15 +596,16 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The cost filters, such as service or tag, that are applied to a budget.
+     * The cost filters, such as <code>Region</code>, <code>Service</code>, <code>member account</code>,
+     * <code>Tag</code>, or <code>Cost Category</code>, that are applied to a budget.
      * </p>
      * <p>
-     * AWS Budgets supports the following services as a filter for RI budgets:
+     * Amazon Web Services Budgets supports the following services as a <code>Service</code> filter for RI budgets:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Amazon Elastic Compute Cloud - Compute
+     * Amazon EC2
      * </p>
      * </li>
      * <li>
@@ -616,19 +625,21 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Amazon Elasticsearch Service
+     * Amazon OpenSearch Service
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The cost filters, such as service or tag, that are applied to a budget.</p>
+     * @return The cost filters, such as <code>Region</code>, <code>Service</code>, <code>member account</code>,
+     *         <code>Tag</code>, or <code>Cost Category</code>, that are applied to a budget.</p>
      *         <p>
-     *         AWS Budgets supports the following services as a filter for RI budgets:
+     *         Amazon Web Services Budgets supports the following services as a <code>Service</code> filter for RI
+     *         budgets:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         Amazon Elastic Compute Cloud - Compute
+     *         Amazon EC2
      *         </p>
      *         </li>
      *         <li>
@@ -648,7 +659,7 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         Amazon Elasticsearch Service
+     *         Amazon OpenSearch Service
      *         </p>
      *         </li>
      */
@@ -659,15 +670,16 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The cost filters, such as service or tag, that are applied to a budget.
+     * The cost filters, such as <code>Region</code>, <code>Service</code>, <code>member account</code>,
+     * <code>Tag</code>, or <code>Cost Category</code>, that are applied to a budget.
      * </p>
      * <p>
-     * AWS Budgets supports the following services as a filter for RI budgets:
+     * Amazon Web Services Budgets supports the following services as a <code>Service</code> filter for RI budgets:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Amazon Elastic Compute Cloud - Compute
+     * Amazon EC2
      * </p>
      * </li>
      * <li>
@@ -687,20 +699,22 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Amazon Elasticsearch Service
+     * Amazon OpenSearch Service
      * </p>
      * </li>
      * </ul>
      * 
      * @param costFilters
-     *        The cost filters, such as service or tag, that are applied to a budget.</p>
+     *        The cost filters, such as <code>Region</code>, <code>Service</code>, <code>member account</code>,
+     *        <code>Tag</code>, or <code>Cost Category</code>, that are applied to a budget.</p>
      *        <p>
-     *        AWS Budgets supports the following services as a filter for RI budgets:
+     *        Amazon Web Services Budgets supports the following services as a <code>Service</code> filter for RI
+     *        budgets:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Amazon Elastic Compute Cloud - Compute
+     *        Amazon EC2
      *        </p>
      *        </li>
      *        <li>
@@ -720,7 +734,7 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        Amazon Elasticsearch Service
+     *        Amazon OpenSearch Service
      *        </p>
      *        </li>
      */
@@ -731,15 +745,16 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The cost filters, such as service or tag, that are applied to a budget.
+     * The cost filters, such as <code>Region</code>, <code>Service</code>, <code>member account</code>,
+     * <code>Tag</code>, or <code>Cost Category</code>, that are applied to a budget.
      * </p>
      * <p>
-     * AWS Budgets supports the following services as a filter for RI budgets:
+     * Amazon Web Services Budgets supports the following services as a <code>Service</code> filter for RI budgets:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Amazon Elastic Compute Cloud - Compute
+     * Amazon EC2
      * </p>
      * </li>
      * <li>
@@ -759,20 +774,22 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Amazon Elasticsearch Service
+     * Amazon OpenSearch Service
      * </p>
      * </li>
      * </ul>
      * 
      * @param costFilters
-     *        The cost filters, such as service or tag, that are applied to a budget.</p>
+     *        The cost filters, such as <code>Region</code>, <code>Service</code>, <code>member account</code>,
+     *        <code>Tag</code>, or <code>Cost Category</code>, that are applied to a budget.</p>
      *        <p>
-     *        AWS Budgets supports the following services as a filter for RI budgets:
+     *        Amazon Web Services Budgets supports the following services as a <code>Service</code> filter for RI
+     *        budgets:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Amazon Elastic Compute Cloud - Compute
+     *        Amazon EC2
      *        </p>
      *        </li>
      *        <li>
@@ -792,7 +809,7 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        Amazon Elasticsearch Service
+     *        Amazon OpenSearch Service
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -970,41 +987,43 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The period of time that is covered by a budget. The period has a start date and an end date. The start date must
-     * come before the end date. The end date must come before <code>06/15/87 00:00 UTC</code>.
+     * The period of time that's covered by a budget. You setthe start date and end date. The start date must come
+     * before the end date. The end date must come before <code>06/15/87 00:00 UTC</code>.
      * </p>
      * <p>
-     * If you create your budget and don't specify a start date, AWS defaults to the start of your chosen time period
-     * (DAILY, MONTHLY, QUARTERLY, or ANNUALLY). For example, if you created your budget on January 24, 2018, chose
-     * <code>DAILY</code>, and didn't set a start date, AWS set your start date to <code>01/24/18 00:00 UTC</code>. If
-     * you chose <code>MONTHLY</code>, AWS set your start date to <code>01/01/18 00:00 UTC</code>. If you didn't specify
-     * an end date, AWS set your end date to <code>06/15/87 00:00 UTC</code>. The defaults are the same for the AWS
-     * Billing and Cost Management console and the API.
+     * If you create your budget and don't specify a start date, Amazon Web Services defaults to the start of your
+     * chosen time period (DAILY, MONTHLY, QUARTERLY, or ANNUALLY). For example, if you created your budget on January
+     * 24, 2018, chose <code>DAILY</code>, and didn't set a start date, Amazon Web Services set your start date to
+     * <code>01/24/18 00:00 UTC</code>. If you chose <code>MONTHLY</code>, Amazon Web Services set your start date to
+     * <code>01/01/18 00:00 UTC</code>. If you didn't specify an end date, Amazon Web Services set your end date to
+     * <code>06/15/87 00:00 UTC</code>. The defaults are the same for the Billing and Cost Management console and the
+     * API.
      * </p>
      * <p>
      * You can change either date with the <code>UpdateBudget</code> operation.
      * </p>
      * <p>
-     * After the end date, AWS deletes the budget and all associated notifications and subscribers.
+     * After the end date, Amazon Web Services deletes the budget and all the associated notifications and subscribers.
      * </p>
      * 
      * @param timePeriod
-     *        The period of time that is covered by a budget. The period has a start date and an end date. The start
-     *        date must come before the end date. The end date must come before <code>06/15/87 00:00 UTC</code>. </p>
+     *        The period of time that's covered by a budget. You setthe start date and end date. The start date must
+     *        come before the end date. The end date must come before <code>06/15/87 00:00 UTC</code>. </p>
      *        <p>
-     *        If you create your budget and don't specify a start date, AWS defaults to the start of your chosen time
-     *        period (DAILY, MONTHLY, QUARTERLY, or ANNUALLY). For example, if you created your budget on January 24,
-     *        2018, chose <code>DAILY</code>, and didn't set a start date, AWS set your start date to
-     *        <code>01/24/18 00:00 UTC</code>. If you chose <code>MONTHLY</code>, AWS set your start date to
-     *        <code>01/01/18 00:00 UTC</code>. If you didn't specify an end date, AWS set your end date to
-     *        <code>06/15/87 00:00 UTC</code>. The defaults are the same for the AWS Billing and Cost Management console
-     *        and the API.
+     *        If you create your budget and don't specify a start date, Amazon Web Services defaults to the start of
+     *        your chosen time period (DAILY, MONTHLY, QUARTERLY, or ANNUALLY). For example, if you created your budget
+     *        on January 24, 2018, chose <code>DAILY</code>, and didn't set a start date, Amazon Web Services set your
+     *        start date to <code>01/24/18 00:00 UTC</code>. If you chose <code>MONTHLY</code>, Amazon Web Services set
+     *        your start date to <code>01/01/18 00:00 UTC</code>. If you didn't specify an end date, Amazon Web Services
+     *        set your end date to <code>06/15/87 00:00 UTC</code>. The defaults are the same for the Billing and Cost
+     *        Management console and the API.
      *        </p>
      *        <p>
      *        You can change either date with the <code>UpdateBudget</code> operation.
      *        </p>
      *        <p>
-     *        After the end date, AWS deletes the budget and all associated notifications and subscribers.
+     *        After the end date, Amazon Web Services deletes the budget and all the associated notifications and
+     *        subscribers.
      */
 
     public void setTimePeriod(TimePeriod timePeriod) {
@@ -1013,40 +1032,42 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The period of time that is covered by a budget. The period has a start date and an end date. The start date must
-     * come before the end date. The end date must come before <code>06/15/87 00:00 UTC</code>.
+     * The period of time that's covered by a budget. You setthe start date and end date. The start date must come
+     * before the end date. The end date must come before <code>06/15/87 00:00 UTC</code>.
      * </p>
      * <p>
-     * If you create your budget and don't specify a start date, AWS defaults to the start of your chosen time period
-     * (DAILY, MONTHLY, QUARTERLY, or ANNUALLY). For example, if you created your budget on January 24, 2018, chose
-     * <code>DAILY</code>, and didn't set a start date, AWS set your start date to <code>01/24/18 00:00 UTC</code>. If
-     * you chose <code>MONTHLY</code>, AWS set your start date to <code>01/01/18 00:00 UTC</code>. If you didn't specify
-     * an end date, AWS set your end date to <code>06/15/87 00:00 UTC</code>. The defaults are the same for the AWS
-     * Billing and Cost Management console and the API.
+     * If you create your budget and don't specify a start date, Amazon Web Services defaults to the start of your
+     * chosen time period (DAILY, MONTHLY, QUARTERLY, or ANNUALLY). For example, if you created your budget on January
+     * 24, 2018, chose <code>DAILY</code>, and didn't set a start date, Amazon Web Services set your start date to
+     * <code>01/24/18 00:00 UTC</code>. If you chose <code>MONTHLY</code>, Amazon Web Services set your start date to
+     * <code>01/01/18 00:00 UTC</code>. If you didn't specify an end date, Amazon Web Services set your end date to
+     * <code>06/15/87 00:00 UTC</code>. The defaults are the same for the Billing and Cost Management console and the
+     * API.
      * </p>
      * <p>
      * You can change either date with the <code>UpdateBudget</code> operation.
      * </p>
      * <p>
-     * After the end date, AWS deletes the budget and all associated notifications and subscribers.
+     * After the end date, Amazon Web Services deletes the budget and all the associated notifications and subscribers.
      * </p>
      * 
-     * @return The period of time that is covered by a budget. The period has a start date and an end date. The start
-     *         date must come before the end date. The end date must come before <code>06/15/87 00:00 UTC</code>. </p>
+     * @return The period of time that's covered by a budget. You setthe start date and end date. The start date must
+     *         come before the end date. The end date must come before <code>06/15/87 00:00 UTC</code>. </p>
      *         <p>
-     *         If you create your budget and don't specify a start date, AWS defaults to the start of your chosen time
-     *         period (DAILY, MONTHLY, QUARTERLY, or ANNUALLY). For example, if you created your budget on January 24,
-     *         2018, chose <code>DAILY</code>, and didn't set a start date, AWS set your start date to
-     *         <code>01/24/18 00:00 UTC</code>. If you chose <code>MONTHLY</code>, AWS set your start date to
-     *         <code>01/01/18 00:00 UTC</code>. If you didn't specify an end date, AWS set your end date to
-     *         <code>06/15/87 00:00 UTC</code>. The defaults are the same for the AWS Billing and Cost Management
-     *         console and the API.
+     *         If you create your budget and don't specify a start date, Amazon Web Services defaults to the start of
+     *         your chosen time period (DAILY, MONTHLY, QUARTERLY, or ANNUALLY). For example, if you created your budget
+     *         on January 24, 2018, chose <code>DAILY</code>, and didn't set a start date, Amazon Web Services set your
+     *         start date to <code>01/24/18 00:00 UTC</code>. If you chose <code>MONTHLY</code>, Amazon Web Services set
+     *         your start date to <code>01/01/18 00:00 UTC</code>. If you didn't specify an end date, Amazon Web
+     *         Services set your end date to <code>06/15/87 00:00 UTC</code>. The defaults are the same for the Billing
+     *         and Cost Management console and the API.
      *         </p>
      *         <p>
      *         You can change either date with the <code>UpdateBudget</code> operation.
      *         </p>
      *         <p>
-     *         After the end date, AWS deletes the budget and all associated notifications and subscribers.
+     *         After the end date, Amazon Web Services deletes the budget and all the associated notifications and
+     *         subscribers.
      */
 
     public TimePeriod getTimePeriod() {
@@ -1055,41 +1076,43 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The period of time that is covered by a budget. The period has a start date and an end date. The start date must
-     * come before the end date. The end date must come before <code>06/15/87 00:00 UTC</code>.
+     * The period of time that's covered by a budget. You setthe start date and end date. The start date must come
+     * before the end date. The end date must come before <code>06/15/87 00:00 UTC</code>.
      * </p>
      * <p>
-     * If you create your budget and don't specify a start date, AWS defaults to the start of your chosen time period
-     * (DAILY, MONTHLY, QUARTERLY, or ANNUALLY). For example, if you created your budget on January 24, 2018, chose
-     * <code>DAILY</code>, and didn't set a start date, AWS set your start date to <code>01/24/18 00:00 UTC</code>. If
-     * you chose <code>MONTHLY</code>, AWS set your start date to <code>01/01/18 00:00 UTC</code>. If you didn't specify
-     * an end date, AWS set your end date to <code>06/15/87 00:00 UTC</code>. The defaults are the same for the AWS
-     * Billing and Cost Management console and the API.
+     * If you create your budget and don't specify a start date, Amazon Web Services defaults to the start of your
+     * chosen time period (DAILY, MONTHLY, QUARTERLY, or ANNUALLY). For example, if you created your budget on January
+     * 24, 2018, chose <code>DAILY</code>, and didn't set a start date, Amazon Web Services set your start date to
+     * <code>01/24/18 00:00 UTC</code>. If you chose <code>MONTHLY</code>, Amazon Web Services set your start date to
+     * <code>01/01/18 00:00 UTC</code>. If you didn't specify an end date, Amazon Web Services set your end date to
+     * <code>06/15/87 00:00 UTC</code>. The defaults are the same for the Billing and Cost Management console and the
+     * API.
      * </p>
      * <p>
      * You can change either date with the <code>UpdateBudget</code> operation.
      * </p>
      * <p>
-     * After the end date, AWS deletes the budget and all associated notifications and subscribers.
+     * After the end date, Amazon Web Services deletes the budget and all the associated notifications and subscribers.
      * </p>
      * 
      * @param timePeriod
-     *        The period of time that is covered by a budget. The period has a start date and an end date. The start
-     *        date must come before the end date. The end date must come before <code>06/15/87 00:00 UTC</code>. </p>
+     *        The period of time that's covered by a budget. You setthe start date and end date. The start date must
+     *        come before the end date. The end date must come before <code>06/15/87 00:00 UTC</code>. </p>
      *        <p>
-     *        If you create your budget and don't specify a start date, AWS defaults to the start of your chosen time
-     *        period (DAILY, MONTHLY, QUARTERLY, or ANNUALLY). For example, if you created your budget on January 24,
-     *        2018, chose <code>DAILY</code>, and didn't set a start date, AWS set your start date to
-     *        <code>01/24/18 00:00 UTC</code>. If you chose <code>MONTHLY</code>, AWS set your start date to
-     *        <code>01/01/18 00:00 UTC</code>. If you didn't specify an end date, AWS set your end date to
-     *        <code>06/15/87 00:00 UTC</code>. The defaults are the same for the AWS Billing and Cost Management console
-     *        and the API.
+     *        If you create your budget and don't specify a start date, Amazon Web Services defaults to the start of
+     *        your chosen time period (DAILY, MONTHLY, QUARTERLY, or ANNUALLY). For example, if you created your budget
+     *        on January 24, 2018, chose <code>DAILY</code>, and didn't set a start date, Amazon Web Services set your
+     *        start date to <code>01/24/18 00:00 UTC</code>. If you chose <code>MONTHLY</code>, Amazon Web Services set
+     *        your start date to <code>01/01/18 00:00 UTC</code>. If you didn't specify an end date, Amazon Web Services
+     *        set your end date to <code>06/15/87 00:00 UTC</code>. The defaults are the same for the Billing and Cost
+     *        Management console and the API.
      *        </p>
      *        <p>
      *        You can change either date with the <code>UpdateBudget</code> operation.
      *        </p>
      *        <p>
-     *        After the end date, AWS deletes the budget and all associated notifications and subscribers.
+     *        After the end date, Amazon Web Services deletes the budget and all the associated notifications and
+     *        subscribers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1140,13 +1163,13 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or Savings Plans
-     * coverage.
+     * Specifies whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or
+     * Savings Plans coverage.
      * </p>
      * 
      * @param budgetType
-     *        Whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or
-     *        Savings Plans coverage.
+     *        Specifies whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization,
+     *        or Savings Plans coverage.
      * @see BudgetType
      */
 
@@ -1156,12 +1179,12 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or Savings Plans
-     * coverage.
+     * Specifies whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or
+     * Savings Plans coverage.
      * </p>
      * 
-     * @return Whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or
-     *         Savings Plans coverage.
+     * @return Specifies whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans
+     *         utilization, or Savings Plans coverage.
      * @see BudgetType
      */
 
@@ -1171,13 +1194,13 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or Savings Plans
-     * coverage.
+     * Specifies whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or
+     * Savings Plans coverage.
      * </p>
      * 
      * @param budgetType
-     *        Whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or
-     *        Savings Plans coverage.
+     *        Specifies whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization,
+     *        or Savings Plans coverage.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BudgetType
      */
@@ -1189,13 +1212,13 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or Savings Plans
-     * coverage.
+     * Specifies whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or
+     * Savings Plans coverage.
      * </p>
      * 
      * @param budgetType
-     *        Whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or
-     *        Savings Plans coverage.
+     *        Specifies whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization,
+     *        or Savings Plans coverage.
      * @see BudgetType
      */
 
@@ -1205,13 +1228,13 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or Savings Plans
-     * coverage.
+     * Specifies whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or
+     * Savings Plans coverage.
      * </p>
      * 
      * @param budgetType
-     *        Whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or
-     *        Savings Plans coverage.
+     *        Specifies whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization,
+     *        or Savings Plans coverage.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BudgetType
      */
@@ -1262,6 +1285,46 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The parameters that determine the budget amount for an auto-adjusting budget.
+     * </p>
+     * 
+     * @param autoAdjustData
+     *        The parameters that determine the budget amount for an auto-adjusting budget.
+     */
+
+    public void setAutoAdjustData(AutoAdjustData autoAdjustData) {
+        this.autoAdjustData = autoAdjustData;
+    }
+
+    /**
+     * <p>
+     * The parameters that determine the budget amount for an auto-adjusting budget.
+     * </p>
+     * 
+     * @return The parameters that determine the budget amount for an auto-adjusting budget.
+     */
+
+    public AutoAdjustData getAutoAdjustData() {
+        return this.autoAdjustData;
+    }
+
+    /**
+     * <p>
+     * The parameters that determine the budget amount for an auto-adjusting budget.
+     * </p>
+     * 
+     * @param autoAdjustData
+     *        The parameters that determine the budget amount for an auto-adjusting budget.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Budget withAutoAdjustData(AutoAdjustData autoAdjustData) {
+        setAutoAdjustData(autoAdjustData);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1292,7 +1355,9 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
         if (getBudgetType() != null)
             sb.append("BudgetType: ").append(getBudgetType()).append(",");
         if (getLastUpdatedTime() != null)
-            sb.append("LastUpdatedTime: ").append(getLastUpdatedTime());
+            sb.append("LastUpdatedTime: ").append(getLastUpdatedTime()).append(",");
+        if (getAutoAdjustData() != null)
+            sb.append("AutoAdjustData: ").append(getAutoAdjustData());
         sb.append("}");
         return sb.toString();
     }
@@ -1347,6 +1412,10 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLastUpdatedTime() != null && other.getLastUpdatedTime().equals(this.getLastUpdatedTime()) == false)
             return false;
+        if (other.getAutoAdjustData() == null ^ this.getAutoAdjustData() == null)
+            return false;
+        if (other.getAutoAdjustData() != null && other.getAutoAdjustData().equals(this.getAutoAdjustData()) == false)
+            return false;
         return true;
     }
 
@@ -1365,6 +1434,7 @@ public class Budget implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCalculatedSpend() == null) ? 0 : getCalculatedSpend().hashCode());
         hashCode = prime * hashCode + ((getBudgetType() == null) ? 0 : getBudgetType().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedTime() == null) ? 0 : getLastUpdatedTime().hashCode());
+        hashCode = prime * hashCode + ((getAutoAdjustData() == null) ? 0 : getAutoAdjustData().hashCode());
         return hashCode;
     }
 

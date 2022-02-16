@@ -28,7 +28,7 @@ public class AvailabilityZone implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The state of the Availability Zone, Local Zone, or Wavelength Zone.
+     * The state of the Availability Zone, Local Zone, or Wavelength Zone. This value is always <code>available</code>.
      * </p>
      */
     private String state;
@@ -108,11 +108,12 @@ public class AvailabilityZone implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The state of the Availability Zone, Local Zone, or Wavelength Zone.
+     * The state of the Availability Zone, Local Zone, or Wavelength Zone. This value is always <code>available</code>.
      * </p>
      * 
      * @param state
-     *        The state of the Availability Zone, Local Zone, or Wavelength Zone.
+     *        The state of the Availability Zone, Local Zone, or Wavelength Zone. This value is always
+     *        <code>available</code>.
      * @see AvailabilityZoneState
      */
 
@@ -122,10 +123,11 @@ public class AvailabilityZone implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The state of the Availability Zone, Local Zone, or Wavelength Zone.
+     * The state of the Availability Zone, Local Zone, or Wavelength Zone. This value is always <code>available</code>.
      * </p>
      * 
-     * @return The state of the Availability Zone, Local Zone, or Wavelength Zone.
+     * @return The state of the Availability Zone, Local Zone, or Wavelength Zone. This value is always
+     *         <code>available</code>.
      * @see AvailabilityZoneState
      */
 
@@ -135,11 +137,12 @@ public class AvailabilityZone implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The state of the Availability Zone, Local Zone, or Wavelength Zone.
+     * The state of the Availability Zone, Local Zone, or Wavelength Zone. This value is always <code>available</code>.
      * </p>
      * 
      * @param state
-     *        The state of the Availability Zone, Local Zone, or Wavelength Zone.
+     *        The state of the Availability Zone, Local Zone, or Wavelength Zone. This value is always
+     *        <code>available</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AvailabilityZoneState
      */
@@ -151,11 +154,12 @@ public class AvailabilityZone implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The state of the Availability Zone, Local Zone, or Wavelength Zone.
+     * The state of the Availability Zone, Local Zone, or Wavelength Zone. This value is always <code>available</code>.
      * </p>
      * 
      * @param state
-     *        The state of the Availability Zone, Local Zone, or Wavelength Zone.
+     *        The state of the Availability Zone, Local Zone, or Wavelength Zone. This value is always
+     *        <code>available</code>.
      * @see AvailabilityZoneState
      */
 
@@ -165,11 +169,12 @@ public class AvailabilityZone implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The state of the Availability Zone, Local Zone, or Wavelength Zone.
+     * The state of the Availability Zone, Local Zone, or Wavelength Zone. This value is always <code>available</code>.
      * </p>
      * 
      * @param state
-     *        The state of the Availability Zone, Local Zone, or Wavelength Zone.
+     *        The state of the Availability Zone, Local Zone, or Wavelength Zone. This value is always
+     *        <code>available</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AvailabilityZoneState
      */

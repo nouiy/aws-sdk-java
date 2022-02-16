@@ -58,7 +58,7 @@ public class FleetData implements Serializable, Cloneable {
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     * Idempotency</a>.
+     * idempotency</a>.
      * </p>
      * <p>
      * Constraints: Maximum 64 ASCII characters
@@ -406,7 +406,7 @@ public class FleetData implements Serializable, Cloneable {
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     * Idempotency</a>.
+     * idempotency</a>.
      * </p>
      * <p>
      * Constraints: Maximum 64 ASCII characters
@@ -416,7 +416,7 @@ public class FleetData implements Serializable, Cloneable {
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     *        Idempotency</a>.</p>
+     *        idempotency</a>.</p>
      *        <p>
      *        Constraints: Maximum 64 ASCII characters
      */
@@ -430,7 +430,7 @@ public class FleetData implements Serializable, Cloneable {
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     * Idempotency</a>.
+     * idempotency</a>.
      * </p>
      * <p>
      * Constraints: Maximum 64 ASCII characters
@@ -439,7 +439,7 @@ public class FleetData implements Serializable, Cloneable {
      * @return Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     *         Idempotency</a>.</p>
+     *         idempotency</a>.</p>
      *         <p>
      *         Constraints: Maximum 64 ASCII characters
      */
@@ -453,7 +453,7 @@ public class FleetData implements Serializable, Cloneable {
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     * Idempotency</a>.
+     * idempotency</a>.
      * </p>
      * <p>
      * Constraints: Maximum 64 ASCII characters
@@ -463,7 +463,7 @@ public class FleetData implements Serializable, Cloneable {
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensuring
-     *        Idempotency</a>.</p>
+     *        idempotency</a>.</p>
      *        <p>
      *        Constraints: Maximum 64 ASCII characters
      * @return Returns a reference to this object so that method calls can be chained together.

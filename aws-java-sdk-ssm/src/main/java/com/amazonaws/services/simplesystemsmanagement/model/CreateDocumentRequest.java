@@ -119,6 +119,11 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * The type of document to create.
      * </p>
+     * <note>
+     * <p>
+     * The <code>DeploymentStrategy</code> document type is an internal-use-only document type reserved for AppConfig.
+     * </p>
+     * </note>
      */
     private String documentType;
     /**
@@ -807,9 +812,18 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * The type of document to create.
      * </p>
+     * <note>
+     * <p>
+     * The <code>DeploymentStrategy</code> document type is an internal-use-only document type reserved for AppConfig.
+     * </p>
+     * </note>
      * 
      * @param documentType
-     *        The type of document to create.
+     *        The type of document to create.</p> <note>
+     *        <p>
+     *        The <code>DeploymentStrategy</code> document type is an internal-use-only document type reserved for
+     *        AppConfig.
+     *        </p>
      * @see DocumentType
      */
 
@@ -821,8 +835,17 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * The type of document to create.
      * </p>
+     * <note>
+     * <p>
+     * The <code>DeploymentStrategy</code> document type is an internal-use-only document type reserved for AppConfig.
+     * </p>
+     * </note>
      * 
-     * @return The type of document to create.
+     * @return The type of document to create.</p> <note>
+     *         <p>
+     *         The <code>DeploymentStrategy</code> document type is an internal-use-only document type reserved for
+     *         AppConfig.
+     *         </p>
      * @see DocumentType
      */
 
@@ -834,9 +857,18 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * The type of document to create.
      * </p>
+     * <note>
+     * <p>
+     * The <code>DeploymentStrategy</code> document type is an internal-use-only document type reserved for AppConfig.
+     * </p>
+     * </note>
      * 
      * @param documentType
-     *        The type of document to create.
+     *        The type of document to create.</p> <note>
+     *        <p>
+     *        The <code>DeploymentStrategy</code> document type is an internal-use-only document type reserved for
+     *        AppConfig.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DocumentType
      */
@@ -850,9 +882,18 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * The type of document to create.
      * </p>
+     * <note>
+     * <p>
+     * The <code>DeploymentStrategy</code> document type is an internal-use-only document type reserved for AppConfig.
+     * </p>
+     * </note>
      * 
      * @param documentType
-     *        The type of document to create.
+     *        The type of document to create.</p> <note>
+     *        <p>
+     *        The <code>DeploymentStrategy</code> document type is an internal-use-only document type reserved for
+     *        AppConfig.
+     *        </p>
      * @see DocumentType
      */
 
@@ -864,9 +905,18 @@ public class CreateDocumentRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * The type of document to create.
      * </p>
+     * <note>
+     * <p>
+     * The <code>DeploymentStrategy</code> document type is an internal-use-only document type reserved for AppConfig.
+     * </p>
+     * </note>
      * 
      * @param documentType
-     *        The type of document to create.
+     *        The type of document to create.</p> <note>
+     *        <p>
+     *        The <code>DeploymentStrategy</code> document type is an internal-use-only document type reserved for
+     *        AppConfig.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DocumentType
      */

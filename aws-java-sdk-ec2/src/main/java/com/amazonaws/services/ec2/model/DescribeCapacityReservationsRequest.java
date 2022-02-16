@@ -187,6 +187,12 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      * </li>
      * </ul>
      * </li>
+     * <li>
+     * <p>
+     * <code>placement-group-arn</code> - The ARN of the cluster placement group in which the Capacity Reservation was
+     * created.
+     * </p>
+     * </li>
      * </ul>
      */
     private com.amazonaws.internal.SdkInternalList<Filter> filters;
@@ -497,6 +503,12 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      * </li>
      * </ul>
      * </li>
+     * <li>
+     * <p>
+     * <code>placement-group-arn</code> - The ARN of the cluster placement group in which the Capacity Reservation was
+     * created.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return One or more filters.</p>
@@ -637,6 +649,12 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      *         </p>
      *         </li>
      *         </ul>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>placement-group-arn</code> - The ARN of the cluster placement group in which the Capacity
+     *         Reservation was created.
+     *         </p>
      *         </li>
      */
 
@@ -788,6 +806,12 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      * </li>
      * </ul>
      * </li>
+     * <li>
+     * <p>
+     * <code>placement-group-arn</code> - The ARN of the cluster placement group in which the Capacity Reservation was
+     * created.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param filters
@@ -929,6 +953,12 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      *        </p>
      *        </li>
      *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>placement-group-arn</code> - The ARN of the cluster placement group in which the Capacity
+     *        Reservation was created.
+     *        </p>
      *        </li>
      */
 
@@ -1082,6 +1112,12 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      * </li>
      * </ul>
      * </li>
+     * <li>
+     * <p>
+     * <code>placement-group-arn</code> - The ARN of the cluster placement group in which the Capacity Reservation was
+     * created.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1228,6 +1264,12 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      *        </p>
      *        </li>
      *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>placement-group-arn</code> - The ARN of the cluster placement group in which the Capacity
+     *        Reservation was created.
+     *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1383,6 +1425,12 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      * </li>
      * </ul>
      * </li>
+     * <li>
+     * <p>
+     * <code>placement-group-arn</code> - The ARN of the cluster placement group in which the Capacity Reservation was
+     * created.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param filters
@@ -1524,6 +1572,12 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      *        </p>
      *        </li>
      *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>placement-group-arn</code> - The ARN of the cluster placement group in which the Capacity
+     *        Reservation was created.
+     *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

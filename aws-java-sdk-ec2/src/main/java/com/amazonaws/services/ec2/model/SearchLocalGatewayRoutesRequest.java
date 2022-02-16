@@ -36,6 +36,40 @@ public class SearchLocalGatewayRoutesRequest extends AmazonWebServiceRequest imp
      * <p>
      * One or more filters.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>route-search.exact-match</code> - The exact match of the specified filter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>route-search.longest-prefix-match</code> - The longest prefix that matches the route.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>route-search.subnet-of-match</code> - The routes with a subnet that match the specified CIDR filter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>route-search.supernet-of-match</code> - The routes with a CIDR that encompass the CIDR filter. For example,
+     * if you have 10.0.1.0/29 and 10.0.1.0/31 routes in your route table and you specify <code>supernet-of-match</code>
+     * as 10.0.1.0/30, then the result returns 10.0.1.0/29.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>state</code> - The state of the route.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>type</code> - The route type.
+     * </p>
+     * </li>
+     * </ul>
      */
     private com.amazonaws.internal.SdkInternalList<Filter> filters;
     /**
@@ -96,8 +130,76 @@ public class SearchLocalGatewayRoutesRequest extends AmazonWebServiceRequest imp
      * <p>
      * One or more filters.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>route-search.exact-match</code> - The exact match of the specified filter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>route-search.longest-prefix-match</code> - The longest prefix that matches the route.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>route-search.subnet-of-match</code> - The routes with a subnet that match the specified CIDR filter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>route-search.supernet-of-match</code> - The routes with a CIDR that encompass the CIDR filter. For example,
+     * if you have 10.0.1.0/29 and 10.0.1.0/31 routes in your route table and you specify <code>supernet-of-match</code>
+     * as 10.0.1.0/30, then the result returns 10.0.1.0/29.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>state</code> - The state of the route.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>type</code> - The route type.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return One or more filters.
+     * @return One or more filters.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>route-search.exact-match</code> - The exact match of the specified filter.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>route-search.longest-prefix-match</code> - The longest prefix that matches the route.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>route-search.subnet-of-match</code> - The routes with a subnet that match the specified CIDR
+     *         filter.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>route-search.supernet-of-match</code> - The routes with a CIDR that encompass the CIDR filter. For
+     *         example, if you have 10.0.1.0/29 and 10.0.1.0/31 routes in your route table and you specify
+     *         <code>supernet-of-match</code> as 10.0.1.0/30, then the result returns 10.0.1.0/29.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>state</code> - The state of the route.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>type</code> - The route type.
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<Filter> getFilters() {
@@ -111,9 +213,76 @@ public class SearchLocalGatewayRoutesRequest extends AmazonWebServiceRequest imp
      * <p>
      * One or more filters.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>route-search.exact-match</code> - The exact match of the specified filter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>route-search.longest-prefix-match</code> - The longest prefix that matches the route.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>route-search.subnet-of-match</code> - The routes with a subnet that match the specified CIDR filter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>route-search.supernet-of-match</code> - The routes with a CIDR that encompass the CIDR filter. For example,
+     * if you have 10.0.1.0/29 and 10.0.1.0/31 routes in your route table and you specify <code>supernet-of-match</code>
+     * as 10.0.1.0/30, then the result returns 10.0.1.0/29.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>state</code> - The state of the route.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>type</code> - The route type.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
-     *        One or more filters.
+     *        One or more filters.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>route-search.exact-match</code> - The exact match of the specified filter.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>route-search.longest-prefix-match</code> - The longest prefix that matches the route.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>route-search.subnet-of-match</code> - The routes with a subnet that match the specified CIDR filter.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>route-search.supernet-of-match</code> - The routes with a CIDR that encompass the CIDR filter. For
+     *        example, if you have 10.0.1.0/29 and 10.0.1.0/31 routes in your route table and you specify
+     *        <code>supernet-of-match</code> as 10.0.1.0/30, then the result returns 10.0.1.0/29.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>state</code> - The state of the route.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>type</code> - The route type.
+     *        </p>
+     *        </li>
      */
 
     public void setFilters(java.util.Collection<Filter> filters) {
@@ -129,6 +298,40 @@ public class SearchLocalGatewayRoutesRequest extends AmazonWebServiceRequest imp
      * <p>
      * One or more filters.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>route-search.exact-match</code> - The exact match of the specified filter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>route-search.longest-prefix-match</code> - The longest prefix that matches the route.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>route-search.subnet-of-match</code> - The routes with a subnet that match the specified CIDR filter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>route-search.supernet-of-match</code> - The routes with a CIDR that encompass the CIDR filter. For example,
+     * if you have 10.0.1.0/29 and 10.0.1.0/31 routes in your route table and you specify <code>supernet-of-match</code>
+     * as 10.0.1.0/30, then the result returns 10.0.1.0/29.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>state</code> - The state of the route.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>type</code> - The route type.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFilters(java.util.Collection)} or {@link #withFilters(java.util.Collection)} if you want to override
@@ -136,7 +339,40 @@ public class SearchLocalGatewayRoutesRequest extends AmazonWebServiceRequest imp
      * </p>
      * 
      * @param filters
-     *        One or more filters.
+     *        One or more filters.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>route-search.exact-match</code> - The exact match of the specified filter.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>route-search.longest-prefix-match</code> - The longest prefix that matches the route.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>route-search.subnet-of-match</code> - The routes with a subnet that match the specified CIDR filter.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>route-search.supernet-of-match</code> - The routes with a CIDR that encompass the CIDR filter. For
+     *        example, if you have 10.0.1.0/29 and 10.0.1.0/31 routes in your route table and you specify
+     *        <code>supernet-of-match</code> as 10.0.1.0/30, then the result returns 10.0.1.0/29.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>state</code> - The state of the route.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>type</code> - The route type.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -154,9 +390,76 @@ public class SearchLocalGatewayRoutesRequest extends AmazonWebServiceRequest imp
      * <p>
      * One or more filters.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>route-search.exact-match</code> - The exact match of the specified filter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>route-search.longest-prefix-match</code> - The longest prefix that matches the route.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>route-search.subnet-of-match</code> - The routes with a subnet that match the specified CIDR filter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>route-search.supernet-of-match</code> - The routes with a CIDR that encompass the CIDR filter. For example,
+     * if you have 10.0.1.0/29 and 10.0.1.0/31 routes in your route table and you specify <code>supernet-of-match</code>
+     * as 10.0.1.0/30, then the result returns 10.0.1.0/29.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>state</code> - The state of the route.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>type</code> - The route type.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
-     *        One or more filters.
+     *        One or more filters.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>route-search.exact-match</code> - The exact match of the specified filter.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>route-search.longest-prefix-match</code> - The longest prefix that matches the route.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>route-search.subnet-of-match</code> - The routes with a subnet that match the specified CIDR filter.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>route-search.supernet-of-match</code> - The routes with a CIDR that encompass the CIDR filter. For
+     *        example, if you have 10.0.1.0/29 and 10.0.1.0/31 routes in your route table and you specify
+     *        <code>supernet-of-match</code> as 10.0.1.0/30, then the result returns 10.0.1.0/29.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>state</code> - The state of the route.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>type</code> - The route type.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

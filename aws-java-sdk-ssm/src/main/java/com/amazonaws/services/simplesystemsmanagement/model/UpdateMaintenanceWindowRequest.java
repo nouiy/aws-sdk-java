@@ -45,9 +45,8 @@ public class UpdateMaintenanceWindowRequest extends com.amazonaws.AmazonWebServi
     private String description;
     /**
      * <p>
-     * The time zone that the scheduled maintenance window executions are based on, in Internet Assigned Numbers
-     * Authority (IANA) format. For example: "America/Los_Angeles", "UTC", or "Asia/Seoul". For more information, see
-     * the <a href="https://www.iana.org/time-zones">Time Zone Database</a> on the IANA website.
+     * The date and time, in ISO-8601 Extended format, for when you want the maintenance window to become active.
+     * <code>StartDate</code> allows you to delay activation of the maintenance window until the specified future date.
      * </p>
      */
     private String startDate;
@@ -245,15 +244,14 @@ public class UpdateMaintenanceWindowRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The time zone that the scheduled maintenance window executions are based on, in Internet Assigned Numbers
-     * Authority (IANA) format. For example: "America/Los_Angeles", "UTC", or "Asia/Seoul". For more information, see
-     * the <a href="https://www.iana.org/time-zones">Time Zone Database</a> on the IANA website.
+     * The date and time, in ISO-8601 Extended format, for when you want the maintenance window to become active.
+     * <code>StartDate</code> allows you to delay activation of the maintenance window until the specified future date.
      * </p>
      * 
      * @param startDate
-     *        The time zone that the scheduled maintenance window executions are based on, in Internet Assigned Numbers
-     *        Authority (IANA) format. For example: "America/Los_Angeles", "UTC", or "Asia/Seoul". For more information,
-     *        see the <a href="https://www.iana.org/time-zones">Time Zone Database</a> on the IANA website.
+     *        The date and time, in ISO-8601 Extended format, for when you want the maintenance window to become active.
+     *        <code>StartDate</code> allows you to delay activation of the maintenance window until the specified future
+     *        date.
      */
 
     public void setStartDate(String startDate) {
@@ -262,15 +260,13 @@ public class UpdateMaintenanceWindowRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The time zone that the scheduled maintenance window executions are based on, in Internet Assigned Numbers
-     * Authority (IANA) format. For example: "America/Los_Angeles", "UTC", or "Asia/Seoul". For more information, see
-     * the <a href="https://www.iana.org/time-zones">Time Zone Database</a> on the IANA website.
+     * The date and time, in ISO-8601 Extended format, for when you want the maintenance window to become active.
+     * <code>StartDate</code> allows you to delay activation of the maintenance window until the specified future date.
      * </p>
      * 
-     * @return The time zone that the scheduled maintenance window executions are based on, in Internet Assigned Numbers
-     *         Authority (IANA) format. For example: "America/Los_Angeles", "UTC", or "Asia/Seoul". For more
-     *         information, see the <a href="https://www.iana.org/time-zones">Time Zone Database</a> on the IANA
-     *         website.
+     * @return The date and time, in ISO-8601 Extended format, for when you want the maintenance window to become
+     *         active. <code>StartDate</code> allows you to delay activation of the maintenance window until the
+     *         specified future date.
      */
 
     public String getStartDate() {
@@ -279,15 +275,14 @@ public class UpdateMaintenanceWindowRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The time zone that the scheduled maintenance window executions are based on, in Internet Assigned Numbers
-     * Authority (IANA) format. For example: "America/Los_Angeles", "UTC", or "Asia/Seoul". For more information, see
-     * the <a href="https://www.iana.org/time-zones">Time Zone Database</a> on the IANA website.
+     * The date and time, in ISO-8601 Extended format, for when you want the maintenance window to become active.
+     * <code>StartDate</code> allows you to delay activation of the maintenance window until the specified future date.
      * </p>
      * 
      * @param startDate
-     *        The time zone that the scheduled maintenance window executions are based on, in Internet Assigned Numbers
-     *        Authority (IANA) format. For example: "America/Los_Angeles", "UTC", or "Asia/Seoul". For more information,
-     *        see the <a href="https://www.iana.org/time-zones">Time Zone Database</a> on the IANA website.
+     *        The date and time, in ISO-8601 Extended format, for when you want the maintenance window to become active.
+     *        <code>StartDate</code> allows you to delay activation of the maintenance window until the specified future
+     *        date.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

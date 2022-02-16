@@ -44,12 +44,22 @@ public class DescribeLocalGatewayRouteTablesRequest extends AmazonWebServiceRequ
      * </li>
      * <li>
      * <p>
+     * <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route table.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>local-gateway-route-table-id</code> - The ID of a local gateway route table.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway route table.
      * </p>
      * </li>
      * <li>
@@ -159,12 +169,22 @@ public class DescribeLocalGatewayRouteTablesRequest extends AmazonWebServiceRequ
      * </li>
      * <li>
      * <p>
+     * <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route table.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>local-gateway-route-table-id</code> - The ID of a local gateway route table.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway route table.
      * </p>
      * </li>
      * <li>
@@ -183,12 +203,24 @@ public class DescribeLocalGatewayRouteTablesRequest extends AmazonWebServiceRequ
      *         </li>
      *         <li>
      *         <p>
+     *         <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route
+     *         table.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>local-gateway-route-table-id</code> - The ID of a local gateway route table.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway route
+     *         table.
      *         </p>
      *         </li>
      *         <li>
@@ -217,12 +249,22 @@ public class DescribeLocalGatewayRouteTablesRequest extends AmazonWebServiceRequ
      * </li>
      * <li>
      * <p>
+     * <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route table.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>local-gateway-route-table-id</code> - The ID of a local gateway route table.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway route table.
      * </p>
      * </li>
      * <li>
@@ -242,12 +284,23 @@ public class DescribeLocalGatewayRouteTablesRequest extends AmazonWebServiceRequ
      *        </li>
      *        <li>
      *        <p>
+     *        <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route
+     *        table.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>local-gateway-route-table-id</code> - The ID of a local gateway route table.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway route table.
      *        </p>
      *        </li>
      *        <li>
@@ -278,12 +331,22 @@ public class DescribeLocalGatewayRouteTablesRequest extends AmazonWebServiceRequ
      * </li>
      * <li>
      * <p>
+     * <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route table.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>local-gateway-route-table-id</code> - The ID of a local gateway route table.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway route table.
      * </p>
      * </li>
      * <li>
@@ -308,12 +371,23 @@ public class DescribeLocalGatewayRouteTablesRequest extends AmazonWebServiceRequ
      *        </li>
      *        <li>
      *        <p>
+     *        <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route
+     *        table.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>local-gateway-route-table-id</code> - The ID of a local gateway route table.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway route table.
      *        </p>
      *        </li>
      *        <li>
@@ -346,12 +420,22 @@ public class DescribeLocalGatewayRouteTablesRequest extends AmazonWebServiceRequ
      * </li>
      * <li>
      * <p>
+     * <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route table.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>local-gateway-route-table-id</code> - The ID of a local gateway route table.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway route table.
      * </p>
      * </li>
      * <li>
@@ -371,12 +455,23 @@ public class DescribeLocalGatewayRouteTablesRequest extends AmazonWebServiceRequ
      *        </li>
      *        <li>
      *        <p>
+     *        <code>local-gateway-route-table-arn</code> - The Amazon Resource Name (ARN) of the local gateway route
+     *        table.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>local-gateway-route-table-id</code> - The ID of a local gateway route table.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>outpost-arn</code> - The Amazon Resource Name (ARN) of the Outpost.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway route table.
      *        </p>
      *        </li>
      *        <li>

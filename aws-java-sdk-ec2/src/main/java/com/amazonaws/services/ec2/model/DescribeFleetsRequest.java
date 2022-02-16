@@ -40,8 +40,14 @@ public class DescribeFleetsRequest extends AmazonWebServiceRequest implements Se
     private String nextToken;
     /**
      * <p>
-     * The ID of the EC2 Fleets.
+     * The IDs of the EC2 Fleets.
      * </p>
+     * <note>
+     * <p>
+     * If a fleet is of type <code>instant</code>, you must specify the fleet ID, otherwise it does not appear in the
+     * response.
+     * </p>
+     * </note>
      */
     private com.amazonaws.internal.SdkInternalList<String> fleetIds;
     /**
@@ -174,10 +180,20 @@ public class DescribeFleetsRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * The ID of the EC2 Fleets.
+     * The IDs of the EC2 Fleets.
      * </p>
+     * <note>
+     * <p>
+     * If a fleet is of type <code>instant</code>, you must specify the fleet ID, otherwise it does not appear in the
+     * response.
+     * </p>
+     * </note>
      * 
-     * @return The ID of the EC2 Fleets.
+     * @return The IDs of the EC2 Fleets.</p> <note>
+     *         <p>
+     *         If a fleet is of type <code>instant</code>, you must specify the fleet ID, otherwise it does not appear
+     *         in the response.
+     *         </p>
      */
 
     public java.util.List<String> getFleetIds() {
@@ -189,11 +205,21 @@ public class DescribeFleetsRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * The ID of the EC2 Fleets.
+     * The IDs of the EC2 Fleets.
      * </p>
+     * <note>
+     * <p>
+     * If a fleet is of type <code>instant</code>, you must specify the fleet ID, otherwise it does not appear in the
+     * response.
+     * </p>
+     * </note>
      * 
      * @param fleetIds
-     *        The ID of the EC2 Fleets.
+     *        The IDs of the EC2 Fleets.</p> <note>
+     *        <p>
+     *        If a fleet is of type <code>instant</code>, you must specify the fleet ID, otherwise it does not appear in
+     *        the response.
+     *        </p>
      */
 
     public void setFleetIds(java.util.Collection<String> fleetIds) {
@@ -207,8 +233,14 @@ public class DescribeFleetsRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * The ID of the EC2 Fleets.
+     * The IDs of the EC2 Fleets.
      * </p>
+     * <note>
+     * <p>
+     * If a fleet is of type <code>instant</code>, you must specify the fleet ID, otherwise it does not appear in the
+     * response.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFleetIds(java.util.Collection)} or {@link #withFleetIds(java.util.Collection)} if you want to override
@@ -216,7 +248,11 @@ public class DescribeFleetsRequest extends AmazonWebServiceRequest implements Se
      * </p>
      * 
      * @param fleetIds
-     *        The ID of the EC2 Fleets.
+     *        The IDs of the EC2 Fleets.</p> <note>
+     *        <p>
+     *        If a fleet is of type <code>instant</code>, you must specify the fleet ID, otherwise it does not appear in
+     *        the response.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -232,11 +268,21 @@ public class DescribeFleetsRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * The ID of the EC2 Fleets.
+     * The IDs of the EC2 Fleets.
      * </p>
+     * <note>
+     * <p>
+     * If a fleet is of type <code>instant</code>, you must specify the fleet ID, otherwise it does not appear in the
+     * response.
+     * </p>
+     * </note>
      * 
      * @param fleetIds
-     *        The ID of the EC2 Fleets.
+     *        The IDs of the EC2 Fleets.</p> <note>
+     *        <p>
+     *        If a fleet is of type <code>instant</code>, you must specify the fleet ID, otherwise it does not appear in
+     *        the response.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

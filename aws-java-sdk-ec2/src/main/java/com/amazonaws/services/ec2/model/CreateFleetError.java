@@ -42,7 +42,7 @@ public class CreateFleetError implements Serializable, Cloneable {
     /**
      * <p>
      * The error code that indicates why the instance could not be launched. For more information about error codes, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error Codes</a>.
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error codes</a>.
      * </p>
      */
     private String errorCode;
@@ -50,7 +50,7 @@ public class CreateFleetError implements Serializable, Cloneable {
      * <p>
      * The error message that describes why the instance could not be launched. For more information about error
      * messages, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error
-     * Codes</a>.
+     * codes</a>.
      * </p>
      */
     private String errorMessage;
@@ -163,13 +163,13 @@ public class CreateFleetError implements Serializable, Cloneable {
     /**
      * <p>
      * The error code that indicates why the instance could not be launched. For more information about error codes, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error Codes</a>.
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error codes</a>.
      * </p>
      * 
      * @param errorCode
      *        The error code that indicates why the instance could not be launched. For more information about error
      *        codes, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error Codes</a>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error codes</a>.
      */
 
     public void setErrorCode(String errorCode) {
@@ -179,12 +179,12 @@ public class CreateFleetError implements Serializable, Cloneable {
     /**
      * <p>
      * The error code that indicates why the instance could not be launched. For more information about error codes, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error Codes</a>.
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error codes</a>.
      * </p>
      * 
      * @return The error code that indicates why the instance could not be launched. For more information about error
      *         codes, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error Codes</a>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error codes</a>.
      */
 
     public String getErrorCode() {
@@ -194,13 +194,13 @@ public class CreateFleetError implements Serializable, Cloneable {
     /**
      * <p>
      * The error code that indicates why the instance could not be launched. For more information about error codes, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error Codes</a>.
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error codes</a>.
      * </p>
      * 
      * @param errorCode
      *        The error code that indicates why the instance could not be launched. For more information about error
      *        codes, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error Codes</a>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error codes</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -213,13 +213,13 @@ public class CreateFleetError implements Serializable, Cloneable {
      * <p>
      * The error message that describes why the instance could not be launched. For more information about error
      * messages, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error
-     * Codes</a>.
+     * codes</a>.
      * </p>
      * 
      * @param errorMessage
      *        The error message that describes why the instance could not be launched. For more information about error
      *        messages, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error Codes</a>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error codes</a>.
      */
 
     public void setErrorMessage(String errorMessage) {
@@ -230,12 +230,12 @@ public class CreateFleetError implements Serializable, Cloneable {
      * <p>
      * The error message that describes why the instance could not be launched. For more information about error
      * messages, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error
-     * Codes</a>.
+     * codes</a>.
      * </p>
      * 
      * @return The error message that describes why the instance could not be launched. For more information about error
      *         messages, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error Codes</a>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error codes</a>.
      */
 
     public String getErrorMessage() {
@@ -246,13 +246,13 @@ public class CreateFleetError implements Serializable, Cloneable {
      * <p>
      * The error message that describes why the instance could not be launched. For more information about error
      * messages, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error
-     * Codes</a>.
+     * codes</a>.
      * </p>
      * 
      * @param errorMessage
      *        The error message that describes why the instance could not be launched. For more information about error
      *        messages, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error Codes</a>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/errors-overview.html.html">Error codes</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

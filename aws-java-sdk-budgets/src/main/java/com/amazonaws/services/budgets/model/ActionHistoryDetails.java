@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The description of details of the event.
+ * The description of the details for the event.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

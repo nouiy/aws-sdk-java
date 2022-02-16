@@ -49,6 +49,8 @@ public class BudgetMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BudgetType").build();
     private static final MarshallingInfo<java.util.Date> LASTUPDATEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastUpdatedTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<StructuredPojo> AUTOADJUSTDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AutoAdjustData").build();
 
     private static final BudgetMarshaller instance = new BudgetMarshaller();
 
@@ -76,6 +78,7 @@ public class BudgetMarshaller {
             protocolMarshaller.marshall(budget.getCalculatedSpend(), CALCULATEDSPEND_BINDING);
             protocolMarshaller.marshall(budget.getBudgetType(), BUDGETTYPE_BINDING);
             protocolMarshaller.marshall(budget.getLastUpdatedTime(), LASTUPDATEDTIME_BINDING);
+            protocolMarshaller.marshall(budget.getAutoAdjustData(), AUTOADJUSTDATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

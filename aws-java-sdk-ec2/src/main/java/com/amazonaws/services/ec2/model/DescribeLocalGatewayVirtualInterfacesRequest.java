@@ -36,6 +36,54 @@ public class DescribeLocalGatewayVirtualInterfacesRequest extends AmazonWebServi
      * <p>
      * One or more filters.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>local-address</code> - The local address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-bgp-asn</code> - The Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the local
+     * gateway.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-gateway-id</code> - The ID of the local gateway.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peer-address</code> - The peer address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peer-bgp-asn</code> - The peer BGP ASN.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>vlan</code> - The ID of the VLAN.
+     * </p>
+     * </li>
+     * </ul>
      */
     private com.amazonaws.internal.SdkInternalList<Filter> filters;
     /**
@@ -129,8 +177,104 @@ public class DescribeLocalGatewayVirtualInterfacesRequest extends AmazonWebServi
      * <p>
      * One or more filters.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>local-address</code> - The local address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-bgp-asn</code> - The Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the local
+     * gateway.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-gateway-id</code> - The ID of the local gateway.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peer-address</code> - The peer address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peer-bgp-asn</code> - The peer BGP ASN.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>vlan</code> - The ID of the VLAN.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return One or more filters.
+     * @return One or more filters.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>local-address</code> - The local address.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>local-bgp-asn</code> - The Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the
+     *         local gateway.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>local-gateway-id</code> - The ID of the local gateway.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual
+     *         interface.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>peer-address</code> - The peer address.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>peer-bgp-asn</code> - The peer BGP ASN.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>vlan</code> - The ID of the VLAN.
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<Filter> getFilters() {
@@ -144,9 +288,105 @@ public class DescribeLocalGatewayVirtualInterfacesRequest extends AmazonWebServi
      * <p>
      * One or more filters.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>local-address</code> - The local address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-bgp-asn</code> - The Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the local
+     * gateway.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-gateway-id</code> - The ID of the local gateway.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peer-address</code> - The peer address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peer-bgp-asn</code> - The peer BGP ASN.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>vlan</code> - The ID of the VLAN.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
-     *        One or more filters.
+     *        One or more filters.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>local-address</code> - The local address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>local-bgp-asn</code> - The Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the local
+     *        gateway.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>local-gateway-id</code> - The ID of the local gateway.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual
+     *        interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>peer-address</code> - The peer address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>peer-bgp-asn</code> - The peer BGP ASN.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>vlan</code> - The ID of the VLAN.
+     *        </p>
+     *        </li>
      */
 
     public void setFilters(java.util.Collection<Filter> filters) {
@@ -162,6 +402,54 @@ public class DescribeLocalGatewayVirtualInterfacesRequest extends AmazonWebServi
      * <p>
      * One or more filters.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>local-address</code> - The local address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-bgp-asn</code> - The Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the local
+     * gateway.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-gateway-id</code> - The ID of the local gateway.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peer-address</code> - The peer address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peer-bgp-asn</code> - The peer BGP ASN.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>vlan</code> - The ID of the VLAN.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFilters(java.util.Collection)} or {@link #withFilters(java.util.Collection)} if you want to override
@@ -169,7 +457,55 @@ public class DescribeLocalGatewayVirtualInterfacesRequest extends AmazonWebServi
      * </p>
      * 
      * @param filters
-     *        One or more filters.
+     *        One or more filters.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>local-address</code> - The local address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>local-bgp-asn</code> - The Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the local
+     *        gateway.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>local-gateway-id</code> - The ID of the local gateway.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual
+     *        interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>peer-address</code> - The peer address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>peer-bgp-asn</code> - The peer BGP ASN.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>vlan</code> - The ID of the VLAN.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -187,9 +523,105 @@ public class DescribeLocalGatewayVirtualInterfacesRequest extends AmazonWebServi
      * <p>
      * One or more filters.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>local-address</code> - The local address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-bgp-asn</code> - The Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the local
+     * gateway.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-gateway-id</code> - The ID of the local gateway.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual interface.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peer-address</code> - The peer address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>peer-bgp-asn</code> - The peer BGP ASN.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>vlan</code> - The ID of the VLAN.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
-     *        One or more filters.
+     *        One or more filters.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>local-address</code> - The local address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>local-bgp-asn</code> - The Border Gateway Protocol (BGP) Autonomous System Number (ASN) of the local
+     *        gateway.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>local-gateway-id</code> - The ID of the local gateway.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>local-gateway-virtual-interface-id</code> - The ID of the virtual interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>local-gateway-virtual-interface-group-id</code> - The ID of the virtual interface group.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>owner-id</code> - The ID of the Amazon Web Services account that owns the local gateway virtual
+     *        interface.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>peer-address</code> - The peer address.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>peer-bgp-asn</code> - The peer BGP ASN.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>vlan</code> - The ID of the VLAN.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

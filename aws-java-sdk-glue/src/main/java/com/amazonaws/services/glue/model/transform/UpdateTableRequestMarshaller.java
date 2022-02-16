@@ -37,6 +37,8 @@ public class UpdateTableRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SkipArchive").build();
     private static final MarshallingInfo<String> TRANSACTIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TransactionId").build();
+    private static final MarshallingInfo<String> VERSIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("VersionId").build();
 
     private static final UpdateTableRequestMarshaller instance = new UpdateTableRequestMarshaller();
 
@@ -59,6 +61,7 @@ public class UpdateTableRequestMarshaller {
             protocolMarshaller.marshall(updateTableRequest.getTableInput(), TABLEINPUT_BINDING);
             protocolMarshaller.marshall(updateTableRequest.getSkipArchive(), SKIPARCHIVE_BINDING);
             protocolMarshaller.marshall(updateTableRequest.getTransactionId(), TRANSACTIONID_BINDING);
+            protocolMarshaller.marshall(updateTableRequest.getVersionId(), VERSIONID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

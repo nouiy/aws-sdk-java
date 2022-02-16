@@ -114,10 +114,10 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
     private Integer ipv6PrefixCount;
     /**
      * <p>
-     * Indicates the type of network interface. To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For
-     * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html"> Elastic Fabric
-     * Adapter</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. To create a trunk network interface, specify
-     * <code>trunk</code>.
+     * The type of network interface. The default is <code>interface</code>.
+     * </p>
+     * <p>
+     * The only supported values are <code>efa</code> and <code>trunk</code>.
      * </p>
      */
     private String interfaceType;
@@ -867,18 +867,16 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Indicates the type of network interface. To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For
-     * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html"> Elastic Fabric
-     * Adapter</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. To create a trunk network interface, specify
-     * <code>trunk</code>.
+     * The type of network interface. The default is <code>interface</code>.
+     * </p>
+     * <p>
+     * The only supported values are <code>efa</code> and <code>trunk</code>.
      * </p>
      * 
      * @param interfaceType
-     *        Indicates the type of network interface. To create an Elastic Fabric Adapter (EFA), specify
-     *        <code>efa</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html"> Elastic Fabric Adapter</a> in the
-     *        <i>Amazon Elastic Compute Cloud User Guide</i>. To create a trunk network interface, specify
-     *        <code>trunk</code>.
+     *        The type of network interface. The default is <code>interface</code>.</p>
+     *        <p>
+     *        The only supported values are <code>efa</code> and <code>trunk</code>.
      * @see NetworkInterfaceCreationType
      */
 
@@ -888,17 +886,15 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Indicates the type of network interface. To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For
-     * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html"> Elastic Fabric
-     * Adapter</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. To create a trunk network interface, specify
-     * <code>trunk</code>.
+     * The type of network interface. The default is <code>interface</code>.
+     * </p>
+     * <p>
+     * The only supported values are <code>efa</code> and <code>trunk</code>.
      * </p>
      * 
-     * @return Indicates the type of network interface. To create an Elastic Fabric Adapter (EFA), specify
-     *         <code>efa</code>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html"> Elastic Fabric Adapter</a> in the
-     *         <i>Amazon Elastic Compute Cloud User Guide</i>. To create a trunk network interface, specify
-     *         <code>trunk</code>.
+     * @return The type of network interface. The default is <code>interface</code>.</p>
+     *         <p>
+     *         The only supported values are <code>efa</code> and <code>trunk</code>.
      * @see NetworkInterfaceCreationType
      */
 
@@ -908,18 +904,16 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Indicates the type of network interface. To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For
-     * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html"> Elastic Fabric
-     * Adapter</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. To create a trunk network interface, specify
-     * <code>trunk</code>.
+     * The type of network interface. The default is <code>interface</code>.
+     * </p>
+     * <p>
+     * The only supported values are <code>efa</code> and <code>trunk</code>.
      * </p>
      * 
      * @param interfaceType
-     *        Indicates the type of network interface. To create an Elastic Fabric Adapter (EFA), specify
-     *        <code>efa</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html"> Elastic Fabric Adapter</a> in the
-     *        <i>Amazon Elastic Compute Cloud User Guide</i>. To create a trunk network interface, specify
-     *        <code>trunk</code>.
+     *        The type of network interface. The default is <code>interface</code>.</p>
+     *        <p>
+     *        The only supported values are <code>efa</code> and <code>trunk</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see NetworkInterfaceCreationType
      */
@@ -931,18 +925,16 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Indicates the type of network interface. To create an Elastic Fabric Adapter (EFA), specify <code>efa</code>. For
-     * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html"> Elastic Fabric
-     * Adapter</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. To create a trunk network interface, specify
-     * <code>trunk</code>.
+     * The type of network interface. The default is <code>interface</code>.
+     * </p>
+     * <p>
+     * The only supported values are <code>efa</code> and <code>trunk</code>.
      * </p>
      * 
      * @param interfaceType
-     *        Indicates the type of network interface. To create an Elastic Fabric Adapter (EFA), specify
-     *        <code>efa</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html"> Elastic Fabric Adapter</a> in the
-     *        <i>Amazon Elastic Compute Cloud User Guide</i>. To create a trunk network interface, specify
-     *        <code>trunk</code>.
+     *        The type of network interface. The default is <code>interface</code>.</p>
+     *        <p>
+     *        The only supported values are <code>efa</code> and <code>trunk</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see NetworkInterfaceCreationType
      */

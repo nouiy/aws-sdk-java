@@ -149,6 +149,8 @@ public class Table implements Serializable, Cloneable, StructuredPojo {
      */
     private String catalogId;
 
+    private String versionId;
+
     /**
      * <p>
      * The table name. For Hive compatibility, this must be entirely lowercase.
@@ -1039,6 +1041,32 @@ public class Table implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * @param versionId
+     */
+
+    public void setVersionId(String versionId) {
+        this.versionId = versionId;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getVersionId() {
+        return this.versionId;
+    }
+
+    /**
+     * @param versionId
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Table withVersionId(String versionId) {
+        setVersionId(versionId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1087,7 +1115,9 @@ public class Table implements Serializable, Cloneable, StructuredPojo {
         if (getTargetTable() != null)
             sb.append("TargetTable: ").append(getTargetTable()).append(",");
         if (getCatalogId() != null)
-            sb.append("CatalogId: ").append(getCatalogId());
+            sb.append("CatalogId: ").append(getCatalogId()).append(",");
+        if (getVersionId() != null)
+            sb.append("VersionId: ").append(getVersionId());
         sb.append("}");
         return sb.toString();
     }
@@ -1179,6 +1209,10 @@ public class Table implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCatalogId() != null && other.getCatalogId().equals(this.getCatalogId()) == false)
             return false;
+        if (other.getVersionId() == null ^ this.getVersionId() == null)
+            return false;
+        if (other.getVersionId() != null && other.getVersionId().equals(this.getVersionId()) == false)
+            return false;
         return true;
     }
 
@@ -1206,6 +1240,7 @@ public class Table implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getIsRegisteredWithLakeFormation() == null) ? 0 : getIsRegisteredWithLakeFormation().hashCode());
         hashCode = prime * hashCode + ((getTargetTable() == null) ? 0 : getTargetTable().hashCode());
         hashCode = prime * hashCode + ((getCatalogId() == null) ? 0 : getCatalogId().hashCode());
+        hashCode = prime * hashCode + ((getVersionId() == null) ? 0 : getVersionId().hashCode());
         return hashCode;
     }
 

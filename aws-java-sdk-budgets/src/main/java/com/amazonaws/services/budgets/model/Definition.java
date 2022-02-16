@@ -27,7 +27,7 @@ public class Definition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Identity and Access Management (IAM) action definition details.
+     * The Identity and Access Management (IAM) action definition details.
      * </p>
      */
     private IamActionDefinition iamActionDefinition;
@@ -39,18 +39,18 @@ public class Definition implements Serializable, Cloneable, StructuredPojo {
     private ScpActionDefinition scpActionDefinition;
     /**
      * <p>
-     * The AWS Systems Manager (SSM) action definition details.
+     * The Amazon Web Services Systems Manager (SSM) action definition details.
      * </p>
      */
     private SsmActionDefinition ssmActionDefinition;
 
     /**
      * <p>
-     * The AWS Identity and Access Management (IAM) action definition details.
+     * The Identity and Access Management (IAM) action definition details.
      * </p>
      * 
      * @param iamActionDefinition
-     *        The AWS Identity and Access Management (IAM) action definition details.
+     *        The Identity and Access Management (IAM) action definition details.
      */
 
     public void setIamActionDefinition(IamActionDefinition iamActionDefinition) {
@@ -59,10 +59,10 @@ public class Definition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Identity and Access Management (IAM) action definition details.
+     * The Identity and Access Management (IAM) action definition details.
      * </p>
      * 
-     * @return The AWS Identity and Access Management (IAM) action definition details.
+     * @return The Identity and Access Management (IAM) action definition details.
      */
 
     public IamActionDefinition getIamActionDefinition() {
@@ -71,11 +71,11 @@ public class Definition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Identity and Access Management (IAM) action definition details.
+     * The Identity and Access Management (IAM) action definition details.
      * </p>
      * 
      * @param iamActionDefinition
-     *        The AWS Identity and Access Management (IAM) action definition details.
+     *        The Identity and Access Management (IAM) action definition details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,11 +126,11 @@ public class Definition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Systems Manager (SSM) action definition details.
+     * The Amazon Web Services Systems Manager (SSM) action definition details.
      * </p>
      * 
      * @param ssmActionDefinition
-     *        The AWS Systems Manager (SSM) action definition details.
+     *        The Amazon Web Services Systems Manager (SSM) action definition details.
      */
 
     public void setSsmActionDefinition(SsmActionDefinition ssmActionDefinition) {
@@ -139,10 +139,10 @@ public class Definition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Systems Manager (SSM) action definition details.
+     * The Amazon Web Services Systems Manager (SSM) action definition details.
      * </p>
      * 
-     * @return The AWS Systems Manager (SSM) action definition details.
+     * @return The Amazon Web Services Systems Manager (SSM) action definition details.
      */
 
     public SsmActionDefinition getSsmActionDefinition() {
@@ -151,11 +151,11 @@ public class Definition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Systems Manager (SSM) action definition details.
+     * The Amazon Web Services Systems Manager (SSM) action definition details.
      * </p>
      * 
      * @param ssmActionDefinition
-     *        The AWS Systems Manager (SSM) action definition details.
+     *        The Amazon Web Services Systems Manager (SSM) action definition details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

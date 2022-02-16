@@ -1,3 +1,24 @@
+# __1.12.160__ __2022-02-16__
+## __AWS Budgets__
+  - ### Features
+    - Adds support for auto-adjusting budgets, a new budget method alongside fixed and planned. Auto-adjusting budgets introduces new metadata to configure a budget limit baseline using a historical lookback average or current period forecast.
+
+## __AWS Cost Explorer Service__
+  - ### Features
+    - AWS Cost Anomaly Detection now supports SNS FIFO topic subscribers.
+
+## __AWS Glue__
+  - ### Features
+    - Support for optimistic locking in UpdateTable
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Documentation updates for EC2.
+
+## __Amazon Simple Systems Manager (SSM)__
+  - ### Features
+    - Assorted ticket fixes and updates for AWS Systems Manager.
+
 # __1.12.159__ __2022-02-14__
 ## __Amazon Appflow__
   - ### Features

@@ -23,7 +23,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <p>
  * <code>USAGE</code>, <code>RI_UTILIZATION</code>, <code>RI_COVERAGE</code>, <code>SAVINGS_PLANS_UTILIZATION</code>,
- * and <code>SAVINGS_PLANS_COVERAGE</code> budgets do not have <code>CostTypes</code>.
+ * and <code>SAVINGS_PLANS_COVERAGE</code> budgets don't have <code>CostTypes</code>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

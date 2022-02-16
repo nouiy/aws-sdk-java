@@ -44,7 +44,8 @@ public class BudgetPerformanceHistory implements Serializable, Cloneable, Struct
     private String timeUnit;
     /**
      * <p>
-     * A list of amounts of cost or usage that you created budgets for, compared to your actual costs or usage.
+     * A list of amounts of cost or usage that you created budgets for, which are compared to your actual costs or
+     * usage.
      * </p>
      */
     private java.util.List<BudgetedAndActualAmounts> budgetedAndActualAmountsList;
@@ -265,10 +266,12 @@ public class BudgetPerformanceHistory implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A list of amounts of cost or usage that you created budgets for, compared to your actual costs or usage.
+     * A list of amounts of cost or usage that you created budgets for, which are compared to your actual costs or
+     * usage.
      * </p>
      * 
-     * @return A list of amounts of cost or usage that you created budgets for, compared to your actual costs or usage.
+     * @return A list of amounts of cost or usage that you created budgets for, which are compared to your actual costs
+     *         or usage.
      */
 
     public java.util.List<BudgetedAndActualAmounts> getBudgetedAndActualAmountsList() {
@@ -277,11 +280,13 @@ public class BudgetPerformanceHistory implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A list of amounts of cost or usage that you created budgets for, compared to your actual costs or usage.
+     * A list of amounts of cost or usage that you created budgets for, which are compared to your actual costs or
+     * usage.
      * </p>
      * 
      * @param budgetedAndActualAmountsList
-     *        A list of amounts of cost or usage that you created budgets for, compared to your actual costs or usage.
+     *        A list of amounts of cost or usage that you created budgets for, which are compared to your actual costs
+     *        or usage.
      */
 
     public void setBudgetedAndActualAmountsList(java.util.Collection<BudgetedAndActualAmounts> budgetedAndActualAmountsList) {
@@ -295,7 +300,8 @@ public class BudgetPerformanceHistory implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A list of amounts of cost or usage that you created budgets for, compared to your actual costs or usage.
+     * A list of amounts of cost or usage that you created budgets for, which are compared to your actual costs or
+     * usage.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -304,7 +310,8 @@ public class BudgetPerformanceHistory implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param budgetedAndActualAmountsList
-     *        A list of amounts of cost or usage that you created budgets for, compared to your actual costs or usage.
+     *        A list of amounts of cost or usage that you created budgets for, which are compared to your actual costs
+     *        or usage.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -320,11 +327,13 @@ public class BudgetPerformanceHistory implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A list of amounts of cost or usage that you created budgets for, compared to your actual costs or usage.
+     * A list of amounts of cost or usage that you created budgets for, which are compared to your actual costs or
+     * usage.
      * </p>
      * 
      * @param budgetedAndActualAmountsList
-     *        A list of amounts of cost or usage that you created budgets for, compared to your actual costs or usage.
+     *        A list of amounts of cost or usage that you created budgets for, which are compared to your actual costs
+     *        or usage.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

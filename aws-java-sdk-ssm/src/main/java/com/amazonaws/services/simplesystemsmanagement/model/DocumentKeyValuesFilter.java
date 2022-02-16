@@ -59,11 +59,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </li>
  * <li>
  * <p>
- * <code>DeploymentStrategy</code>
- * </p>
- * </li>
- * <li>
- * <p>
  * <code>Package</code>
  * </p>
  * </li>

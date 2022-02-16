@@ -3137,8 +3137,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Availability Zone, or subnet.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html">Launching
-     * an EC2 Fleet</a> in the <i>Amazon EC2 User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html">EC2
+     * Fleet</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param createFleetRequest
@@ -3158,8 +3158,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Availability Zone, or subnet.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html">Launching
-     * an EC2 Fleet</a> in the <i>Amazon EC2 User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html">EC2
+     * Fleet</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param createFleetRequest
@@ -6696,7 +6696,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/manage-ec2-fleet.html#delete-fleet">Deleting an EC2
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/manage-ec2-fleet.html#delete-fleet">Delete an EC2
      * Fleet</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
@@ -6744,7 +6744,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/manage-ec2-fleet.html#delete-fleet">Deleting an EC2
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/manage-ec2-fleet.html#delete-fleet">Delete an EC2
      * Fleet</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
@@ -9078,9 +9078,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * c
-     * </p>
-     * <p>
      * Deregisters tag keys to prevent tags that have the specified tag keys from being included in scheduled event
      * notifications for resources in the Region.
      * </p>
@@ -9097,9 +9094,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
             DeregisterInstanceEventNotificationAttributesRequest deregisterInstanceEventNotificationAttributesRequest);
 
     /**
-     * <p>
-     * c
-     * </p>
      * <p>
      * Deregisters tag keys to prevent tags that have the specified tag keys from being included in scheduled event
      * notifications for resources in the Region.
@@ -10433,8 +10427,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html#monitor-ec2-fleet">Monitoring your EC2
-     * Fleet</a> in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/manage-ec2-fleet.html#monitor-ec2-fleet">Monitor your
+     * EC2 Fleet</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param describeFleetInstancesRequest
@@ -10451,8 +10445,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html#monitor-ec2-fleet">Monitoring your EC2
-     * Fleet</a> in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/manage-ec2-fleet.html#monitor-ec2-fleet">Monitor your
+     * EC2 Fleet</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param describeFleetInstancesRequest
@@ -10474,8 +10468,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html#monitor-ec2-fleet">Monitoring your EC2
-     * Fleet</a> in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/manage-ec2-fleet.html#monitor-ec2-fleet">Monitor your
+     * EC2 Fleet</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param describeFleetsRequest
@@ -10492,8 +10486,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html#monitor-ec2-fleet">Monitoring your EC2
-     * Fleet</a> in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/manage-ec2-fleet.html#monitor-ec2-fleet">Monitor your
+     * EC2 Fleet</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param describeFleetsRequest
@@ -21897,7 +21891,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * using CloudWatch</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
-     * To disable detailed monitoring, see .
+     * To disable detailed monitoring, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_UnmonitorInstances.html">UnmonitorInstances</a>.
      * </p>
      * 
      * @param monitorInstancesRequest
@@ -21915,7 +21910,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * using CloudWatch</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
-     * To disable detailed monitoring, see .
+     * To disable detailed monitoring, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_UnmonitorInstances.html">UnmonitorInstances</a>.
      * </p>
      * 
      * @param monitorInstancesRequest
@@ -22526,7 +22522,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Registers a set of tag keys to include in scheduled event notifications for your resources.
      * </p>
      * <p>
-     * To remove tags, use .
+     * To remove tags, use <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeregisterInstanceEventNotificationAttributes.html"
+     * >DeregisterInstanceEventNotificationAttributes</a>.
      * </p>
      * 
      * @param registerInstanceEventNotificationAttributesRequest
@@ -22544,7 +22542,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Registers a set of tag keys to include in scheduled event notifications for your resources.
      * </p>
      * <p>
-     * To remove tags, use .
+     * To remove tags, use <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeregisterInstanceEventNotificationAttributes.html"
+     * >DeregisterInstanceEventNotificationAttributes</a>.
      * </p>
      * 
      * @param registerInstanceEventNotificationAttributesRequest

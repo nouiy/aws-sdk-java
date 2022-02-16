@@ -68,7 +68,7 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
     private String approvalModel;
     /**
      * <p>
-     * The status of action.
+     * The status of the action.
      * </p>
      */
     private String status;
@@ -429,11 +429,11 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of action.
+     * The status of the action.
      * </p>
      * 
      * @param status
-     *        The status of action.
+     *        The status of the action.
      * @see ActionStatus
      */
 
@@ -443,10 +443,10 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of action.
+     * The status of the action.
      * </p>
      * 
-     * @return The status of action.
+     * @return The status of the action.
      * @see ActionStatus
      */
 
@@ -456,11 +456,11 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of action.
+     * The status of the action.
      * </p>
      * 
      * @param status
-     *        The status of action.
+     *        The status of the action.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ActionStatus
      */
@@ -472,11 +472,11 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of action.
+     * The status of the action.
      * </p>
      * 
      * @param status
-     *        The status of action.
+     *        The status of the action.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ActionStatus
      */

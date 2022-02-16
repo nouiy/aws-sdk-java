@@ -27,7 +27,7 @@ public class UpdateOpsMetadataRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resoure Name (ARN) of the OpsMetadata Object to update.
+     * The Amazon Resource Name (ARN) of the OpsMetadata Object to update.
      * </p>
      */
     private String opsMetadataArn;
@@ -46,11 +46,11 @@ public class UpdateOpsMetadataRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resoure Name (ARN) of the OpsMetadata Object to update.
+     * The Amazon Resource Name (ARN) of the OpsMetadata Object to update.
      * </p>
      * 
      * @param opsMetadataArn
-     *        The Amazon Resoure Name (ARN) of the OpsMetadata Object to update.
+     *        The Amazon Resource Name (ARN) of the OpsMetadata Object to update.
      */
 
     public void setOpsMetadataArn(String opsMetadataArn) {
@@ -59,10 +59,10 @@ public class UpdateOpsMetadataRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resoure Name (ARN) of the OpsMetadata Object to update.
+     * The Amazon Resource Name (ARN) of the OpsMetadata Object to update.
      * </p>
      * 
-     * @return The Amazon Resoure Name (ARN) of the OpsMetadata Object to update.
+     * @return The Amazon Resource Name (ARN) of the OpsMetadata Object to update.
      */
 
     public String getOpsMetadataArn() {
@@ -71,11 +71,11 @@ public class UpdateOpsMetadataRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resoure Name (ARN) of the OpsMetadata Object to update.
+     * The Amazon Resource Name (ARN) of the OpsMetadata Object to update.
      * </p>
      * 
      * @param opsMetadataArn
-     *        The Amazon Resoure Name (ARN) of the OpsMetadata Object to update.
+     *        The Amazon Resource Name (ARN) of the OpsMetadata Object to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

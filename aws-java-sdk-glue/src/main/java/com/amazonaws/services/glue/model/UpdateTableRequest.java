@@ -59,6 +59,8 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      */
     private String transactionId;
 
+    private String versionId;
+
     /**
      * <p>
      * The ID of the Data Catalog where the table resides. If none is provided, the Amazon Web Services account ID is
@@ -296,6 +298,32 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * @param versionId
+     */
+
+    public void setVersionId(String versionId) {
+        this.versionId = versionId;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getVersionId() {
+        return this.versionId;
+    }
+
+    /**
+     * @param versionId
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateTableRequest withVersionId(String versionId) {
+        setVersionId(versionId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -316,7 +344,9 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getSkipArchive() != null)
             sb.append("SkipArchive: ").append(getSkipArchive()).append(",");
         if (getTransactionId() != null)
-            sb.append("TransactionId: ").append(getTransactionId());
+            sb.append("TransactionId: ").append(getTransactionId()).append(",");
+        if (getVersionId() != null)
+            sb.append("VersionId: ").append(getVersionId());
         sb.append("}");
         return sb.toString();
     }
@@ -351,6 +381,10 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getTransactionId() != null && other.getTransactionId().equals(this.getTransactionId()) == false)
             return false;
+        if (other.getVersionId() == null ^ this.getVersionId() == null)
+            return false;
+        if (other.getVersionId() != null && other.getVersionId().equals(this.getVersionId()) == false)
+            return false;
         return true;
     }
 
@@ -364,6 +398,7 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getTableInput() == null) ? 0 : getTableInput().hashCode());
         hashCode = prime * hashCode + ((getSkipArchive() == null) ? 0 : getSkipArchive().hashCode());
         hashCode = prime * hashCode + ((getTransactionId() == null) ? 0 : getTransactionId().hashCode());
+        hashCode = prime * hashCode + ((getVersionId() == null) ? 0 : getVersionId().hashCode());
         return hashCode;
     }
 

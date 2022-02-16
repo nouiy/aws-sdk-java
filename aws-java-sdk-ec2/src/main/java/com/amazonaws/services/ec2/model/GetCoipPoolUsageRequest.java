@@ -33,33 +33,29 @@ public class GetCoipPoolUsageRequest extends AmazonWebServiceRequest implements 
     private String poolId;
     /**
      * <p>
-     * The filters. The following are the possible values:
+     * One or more filters.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>coip-address-usage.allocation-id</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>coip-address-usage.aws-account-id</code>
+     * <code>coip-address-usage.allocation-id</code> - The allocation ID of the address.
      * </p>
      * </li>
-     * </ul>
-     * <ul>
      * <li>
      * <p>
-     * <code>coip-address-usage.aws-service</code>
+     * <code>coip-address-usage.aws-account-id</code> - The ID of the Amazon Web Services account that is using the
+     * customer-owned IP address.
      * </p>
      * </li>
-     * </ul>
-     * <ul>
      * <li>
      * <p>
-     * <code>coip-address-usage.co-ip</code>
+     * <code>coip-address-usage.aws-service</code> - The Amazon Web Services service that is using the customer-owned IP
+     * address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>coip-address-usage.co-ip</code> - The customer-owned IP address.
      * </p>
      * </li>
      * </ul>
@@ -121,63 +117,55 @@ public class GetCoipPoolUsageRequest extends AmazonWebServiceRequest implements 
 
     /**
      * <p>
-     * The filters. The following are the possible values:
+     * One or more filters.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>coip-address-usage.allocation-id</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>coip-address-usage.aws-account-id</code>
+     * <code>coip-address-usage.allocation-id</code> - The allocation ID of the address.
      * </p>
      * </li>
-     * </ul>
-     * <ul>
      * <li>
      * <p>
-     * <code>coip-address-usage.aws-service</code>
+     * <code>coip-address-usage.aws-account-id</code> - The ID of the Amazon Web Services account that is using the
+     * customer-owned IP address.
      * </p>
      * </li>
-     * </ul>
-     * <ul>
      * <li>
      * <p>
-     * <code>coip-address-usage.co-ip</code>
+     * <code>coip-address-usage.aws-service</code> - The Amazon Web Services service that is using the customer-owned IP
+     * address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>coip-address-usage.co-ip</code> - The customer-owned IP address.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The filters. The following are the possible values:</p>
+     * @return One or more filters.</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>coip-address-usage.allocation-id</code>
+     *         <code>coip-address-usage.allocation-id</code> - The allocation ID of the address.
      *         </p>
      *         </li>
-     *         </ul>
-     *         <ul>
      *         <li>
      *         <p>
-     *         <code>coip-address-usage.aws-account-id</code>
+     *         <code>coip-address-usage.aws-account-id</code> - The ID of the Amazon Web Services account that is using
+     *         the customer-owned IP address.
      *         </p>
      *         </li>
-     *         </ul>
-     *         <ul>
      *         <li>
      *         <p>
-     *         <code>coip-address-usage.aws-service</code>
+     *         <code>coip-address-usage.aws-service</code> - The Amazon Web Services service that is using the
+     *         customer-owned IP address.
      *         </p>
      *         </li>
-     *         </ul>
-     *         <ul>
      *         <li>
      *         <p>
-     *         <code>coip-address-usage.co-ip</code>
+     *         <code>coip-address-usage.co-ip</code> - The customer-owned IP address.
      *         </p>
      *         </li>
      */
@@ -191,64 +179,56 @@ public class GetCoipPoolUsageRequest extends AmazonWebServiceRequest implements 
 
     /**
      * <p>
-     * The filters. The following are the possible values:
+     * One or more filters.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>coip-address-usage.allocation-id</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>coip-address-usage.aws-account-id</code>
+     * <code>coip-address-usage.allocation-id</code> - The allocation ID of the address.
      * </p>
      * </li>
-     * </ul>
-     * <ul>
      * <li>
      * <p>
-     * <code>coip-address-usage.aws-service</code>
+     * <code>coip-address-usage.aws-account-id</code> - The ID of the Amazon Web Services account that is using the
+     * customer-owned IP address.
      * </p>
      * </li>
-     * </ul>
-     * <ul>
      * <li>
      * <p>
-     * <code>coip-address-usage.co-ip</code>
+     * <code>coip-address-usage.aws-service</code> - The Amazon Web Services service that is using the customer-owned IP
+     * address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>coip-address-usage.co-ip</code> - The customer-owned IP address.
      * </p>
      * </li>
      * </ul>
      * 
      * @param filters
-     *        The filters. The following are the possible values:</p>
+     *        One or more filters.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-address-usage.allocation-id</code>
+     *        <code>coip-address-usage.allocation-id</code> - The allocation ID of the address.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-address-usage.aws-account-id</code>
+     *        <code>coip-address-usage.aws-account-id</code> - The ID of the Amazon Web Services account that is using
+     *        the customer-owned IP address.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-address-usage.aws-service</code>
+     *        <code>coip-address-usage.aws-service</code> - The Amazon Web Services service that is using the
+     *        customer-owned IP address.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-address-usage.co-ip</code>
+     *        <code>coip-address-usage.co-ip</code> - The customer-owned IP address.
      *        </p>
      *        </li>
      */
@@ -264,33 +244,29 @@ public class GetCoipPoolUsageRequest extends AmazonWebServiceRequest implements 
 
     /**
      * <p>
-     * The filters. The following are the possible values:
+     * One or more filters.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>coip-address-usage.allocation-id</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>coip-address-usage.aws-account-id</code>
+     * <code>coip-address-usage.allocation-id</code> - The allocation ID of the address.
      * </p>
      * </li>
-     * </ul>
-     * <ul>
      * <li>
      * <p>
-     * <code>coip-address-usage.aws-service</code>
+     * <code>coip-address-usage.aws-account-id</code> - The ID of the Amazon Web Services account that is using the
+     * customer-owned IP address.
      * </p>
      * </li>
-     * </ul>
-     * <ul>
      * <li>
      * <p>
-     * <code>coip-address-usage.co-ip</code>
+     * <code>coip-address-usage.aws-service</code> - The Amazon Web Services service that is using the customer-owned IP
+     * address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>coip-address-usage.co-ip</code> - The customer-owned IP address.
      * </p>
      * </li>
      * </ul>
@@ -301,32 +277,28 @@ public class GetCoipPoolUsageRequest extends AmazonWebServiceRequest implements 
      * </p>
      * 
      * @param filters
-     *        The filters. The following are the possible values:</p>
+     *        One or more filters.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-address-usage.allocation-id</code>
+     *        <code>coip-address-usage.allocation-id</code> - The allocation ID of the address.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-address-usage.aws-account-id</code>
+     *        <code>coip-address-usage.aws-account-id</code> - The ID of the Amazon Web Services account that is using
+     *        the customer-owned IP address.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-address-usage.aws-service</code>
+     *        <code>coip-address-usage.aws-service</code> - The Amazon Web Services service that is using the
+     *        customer-owned IP address.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-address-usage.co-ip</code>
+     *        <code>coip-address-usage.co-ip</code> - The customer-owned IP address.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -344,64 +316,56 @@ public class GetCoipPoolUsageRequest extends AmazonWebServiceRequest implements 
 
     /**
      * <p>
-     * The filters. The following are the possible values:
+     * One or more filters.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>coip-address-usage.allocation-id</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>coip-address-usage.aws-account-id</code>
+     * <code>coip-address-usage.allocation-id</code> - The allocation ID of the address.
      * </p>
      * </li>
-     * </ul>
-     * <ul>
      * <li>
      * <p>
-     * <code>coip-address-usage.aws-service</code>
+     * <code>coip-address-usage.aws-account-id</code> - The ID of the Amazon Web Services account that is using the
+     * customer-owned IP address.
      * </p>
      * </li>
-     * </ul>
-     * <ul>
      * <li>
      * <p>
-     * <code>coip-address-usage.co-ip</code>
+     * <code>coip-address-usage.aws-service</code> - The Amazon Web Services service that is using the customer-owned IP
+     * address.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>coip-address-usage.co-ip</code> - The customer-owned IP address.
      * </p>
      * </li>
      * </ul>
      * 
      * @param filters
-     *        The filters. The following are the possible values:</p>
+     *        One or more filters.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-address-usage.allocation-id</code>
+     *        <code>coip-address-usage.allocation-id</code> - The allocation ID of the address.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-address-usage.aws-account-id</code>
+     *        <code>coip-address-usage.aws-account-id</code> - The ID of the Amazon Web Services account that is using
+     *        the customer-owned IP address.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-address-usage.aws-service</code>
+     *        <code>coip-address-usage.aws-service</code> - The Amazon Web Services service that is using the
+     *        customer-owned IP address.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <ul>
      *        <li>
      *        <p>
-     *        <code>coip-address-usage.co-ip</code>
+     *        <code>coip-address-usage.co-ip</code> - The customer-owned IP address.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

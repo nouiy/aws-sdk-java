@@ -69,7 +69,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      * <li>
      * <p>
      * <code>state</code> - The state of the Availability Zone, the Local Zone, or the Wavelength Zone (
-     * <code>available</code> | <code>information</code> | <code>impaired</code> | <code>unavailable</code>).
+     * <code>available</code>).
      * </p>
      * </li>
      * <li>
@@ -164,7 +164,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      * <li>
      * <p>
      * <code>state</code> - The state of the Availability Zone, the Local Zone, or the Wavelength Zone (
-     * <code>available</code> | <code>information</code> | <code>impaired</code> | <code>unavailable</code>).
+     * <code>available</code>).
      * </p>
      * </li>
      * <li>
@@ -233,7 +233,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      *         <li>
      *         <p>
      *         <code>state</code> - The state of the Availability Zone, the Local Zone, or the Wavelength Zone (
-     *         <code>available</code> | <code>information</code> | <code>impaired</code> | <code>unavailable</code>).
+     *         <code>available</code>).
      *         </p>
      *         </li>
      *         <li>
@@ -312,7 +312,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      * <li>
      * <p>
      * <code>state</code> - The state of the Availability Zone, the Local Zone, or the Wavelength Zone (
-     * <code>available</code> | <code>information</code> | <code>impaired</code> | <code>unavailable</code>).
+     * <code>available</code>).
      * </p>
      * </li>
      * <li>
@@ -382,7 +382,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <code>state</code> - The state of the Availability Zone, the Local Zone, or the Wavelength Zone (
-     *        <code>available</code> | <code>information</code> | <code>impaired</code> | <code>unavailable</code>).
+     *        <code>available</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -463,7 +463,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      * <li>
      * <p>
      * <code>state</code> - The state of the Availability Zone, the Local Zone, or the Wavelength Zone (
-     * <code>available</code> | <code>information</code> | <code>impaired</code> | <code>unavailable</code>).
+     * <code>available</code>).
      * </p>
      * </li>
      * <li>
@@ -538,7 +538,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <code>state</code> - The state of the Availability Zone, the Local Zone, or the Wavelength Zone (
-     *        <code>available</code> | <code>information</code> | <code>impaired</code> | <code>unavailable</code>).
+     *        <code>available</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -621,7 +621,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      * <li>
      * <p>
      * <code>state</code> - The state of the Availability Zone, the Local Zone, or the Wavelength Zone (
-     * <code>available</code> | <code>information</code> | <code>impaired</code> | <code>unavailable</code>).
+     * <code>available</code>).
      * </p>
      * </li>
      * <li>
@@ -691,7 +691,7 @@ public class DescribeAvailabilityZonesRequest extends AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        <code>state</code> - The state of the Availability Zone, the Local Zone, or the Wavelength Zone (
-     *        <code>available</code> | <code>information</code> | <code>impaired</code> | <code>unavailable</code>).
+     *        <code>available</code>).
      *        </p>
      *        </li>
      *        <li>
