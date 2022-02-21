@@ -151,6 +151,43 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
 
     /**
      * <p>
+     * Creates an integration workflow. An integration workflow is an async process which ingests historic data and sets
+     * up an integration for ongoing updates. The supported Amazon AppFlow sources are Salesforce, ServiceNow, and
+     * Marketo.
+     * </p>
+     * 
+     * @param createIntegrationWorkflowRequest
+     * @return A Java Future containing the result of the CreateIntegrationWorkflow operation returned by the service.
+     * @sample AmazonCustomerProfilesAsync.CreateIntegrationWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/CreateIntegrationWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIntegrationWorkflowResult> createIntegrationWorkflowAsync(
+            CreateIntegrationWorkflowRequest createIntegrationWorkflowRequest);
+
+    /**
+     * <p>
+     * Creates an integration workflow. An integration workflow is an async process which ingests historic data and sets
+     * up an integration for ongoing updates. The supported Amazon AppFlow sources are Salesforce, ServiceNow, and
+     * Marketo.
+     * </p>
+     * 
+     * @param createIntegrationWorkflowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateIntegrationWorkflow operation returned by the service.
+     * @sample AmazonCustomerProfilesAsyncHandler.CreateIntegrationWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/CreateIntegrationWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIntegrationWorkflowResult> createIntegrationWorkflowAsync(
+            CreateIntegrationWorkflowRequest createIntegrationWorkflowRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateIntegrationWorkflowRequest, CreateIntegrationWorkflowResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a standard profile.
      * </p>
      * <p>
@@ -377,6 +414,37 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      */
     java.util.concurrent.Future<DeleteProfileObjectTypeResult> deleteProfileObjectTypeAsync(DeleteProfileObjectTypeRequest deleteProfileObjectTypeRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteProfileObjectTypeRequest, DeleteProfileObjectTypeResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the specified workflow and all its corresponding resources. This is an async process.
+     * </p>
+     * 
+     * @param deleteWorkflowRequest
+     * @return A Java Future containing the result of the DeleteWorkflow operation returned by the service.
+     * @sample AmazonCustomerProfilesAsync.DeleteWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/DeleteWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteWorkflowResult> deleteWorkflowAsync(DeleteWorkflowRequest deleteWorkflowRequest);
+
+    /**
+     * <p>
+     * Deletes the specified workflow and all its corresponding resources. This is an async process.
+     * </p>
+     * 
+     * @param deleteWorkflowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteWorkflow operation returned by the service.
+     * @sample AmazonCustomerProfilesAsyncHandler.DeleteWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/DeleteWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteWorkflowResult> deleteWorkflowAsync(DeleteWorkflowRequest deleteWorkflowRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteWorkflowRequest, DeleteWorkflowResult> asyncHandler);
 
     /**
      * <p>
@@ -611,11 +679,6 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      * FullName
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * BusinessName
-     * </p>
-     * </li>
      * </ul>
      * <p>
      * For example, two or more profiles—with spelling mistakes such as <b>John Doe</b> and <b>Jhn Doe</b>, or different
@@ -699,11 +762,6 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      * <li>
      * <p>
      * FullName
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * BusinessName
      * </p>
      * </li>
      * </ul>
@@ -802,6 +860,68 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
     java.util.concurrent.Future<GetProfileObjectTypeTemplateResult> getProfileObjectTypeTemplateAsync(
             GetProfileObjectTypeTemplateRequest getProfileObjectTypeTemplateRequest,
             com.amazonaws.handlers.AsyncHandler<GetProfileObjectTypeTemplateRequest, GetProfileObjectTypeTemplateResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get details of specified workflow.
+     * </p>
+     * 
+     * @param getWorkflowRequest
+     * @return A Java Future containing the result of the GetWorkflow operation returned by the service.
+     * @sample AmazonCustomerProfilesAsync.GetWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetWorkflow" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetWorkflowResult> getWorkflowAsync(GetWorkflowRequest getWorkflowRequest);
+
+    /**
+     * <p>
+     * Get details of specified workflow.
+     * </p>
+     * 
+     * @param getWorkflowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetWorkflow operation returned by the service.
+     * @sample AmazonCustomerProfilesAsyncHandler.GetWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetWorkflow" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetWorkflowResult> getWorkflowAsync(GetWorkflowRequest getWorkflowRequest,
+            com.amazonaws.handlers.AsyncHandler<GetWorkflowRequest, GetWorkflowResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get granular list of steps in workflow.
+     * </p>
+     * 
+     * @param getWorkflowStepsRequest
+     * @return A Java Future containing the result of the GetWorkflowSteps operation returned by the service.
+     * @sample AmazonCustomerProfilesAsync.GetWorkflowSteps
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetWorkflowSteps"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetWorkflowStepsResult> getWorkflowStepsAsync(GetWorkflowStepsRequest getWorkflowStepsRequest);
+
+    /**
+     * <p>
+     * Get granular list of steps in workflow.
+     * </p>
+     * 
+     * @param getWorkflowStepsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetWorkflowSteps operation returned by the service.
+     * @sample AmazonCustomerProfilesAsyncHandler.GetWorkflowSteps
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetWorkflowSteps"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetWorkflowStepsResult> getWorkflowStepsAsync(GetWorkflowStepsRequest getWorkflowStepsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetWorkflowStepsRequest, GetWorkflowStepsResult> asyncHandler);
 
     /**
      * <p>
@@ -1060,6 +1180,37 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Query to list all workflows.
+     * </p>
+     * 
+     * @param listWorkflowsRequest
+     * @return A Java Future containing the result of the ListWorkflows operation returned by the service.
+     * @sample AmazonCustomerProfilesAsync.ListWorkflows
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/ListWorkflows"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListWorkflowsResult> listWorkflowsAsync(ListWorkflowsRequest listWorkflowsRequest);
+
+    /**
+     * <p>
+     * Query to list all workflows.
+     * </p>
+     * 
+     * @param listWorkflowsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListWorkflows operation returned by the service.
+     * @sample AmazonCustomerProfilesAsyncHandler.ListWorkflows
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/ListWorkflows"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListWorkflowsResult> listWorkflowsAsync(ListWorkflowsRequest listWorkflowsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListWorkflowsRequest, ListWorkflowsResult> asyncHandler);
 
     /**
      * <p>

@@ -74,6 +74,12 @@ public class ListIntegrationItem implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private java.util.Map<String, String> objectTypeNames;
+    /**
+     * <p>
+     * Unique identifier for the workflow.
+     * </p>
+     */
+    private String workflowId;
 
     /**
      * <p>
@@ -439,6 +445,46 @@ public class ListIntegrationItem implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * Unique identifier for the workflow.
+     * </p>
+     * 
+     * @param workflowId
+     *        Unique identifier for the workflow.
+     */
+
+    public void setWorkflowId(String workflowId) {
+        this.workflowId = workflowId;
+    }
+
+    /**
+     * <p>
+     * Unique identifier for the workflow.
+     * </p>
+     * 
+     * @return Unique identifier for the workflow.
+     */
+
+    public String getWorkflowId() {
+        return this.workflowId;
+    }
+
+    /**
+     * <p>
+     * Unique identifier for the workflow.
+     * </p>
+     * 
+     * @param workflowId
+     *        Unique identifier for the workflow.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListIntegrationItem withWorkflowId(String workflowId) {
+        setWorkflowId(workflowId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -463,7 +509,9 @@ public class ListIntegrationItem implements Serializable, Cloneable, StructuredP
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getObjectTypeNames() != null)
-            sb.append("ObjectTypeNames: ").append(getObjectTypeNames());
+            sb.append("ObjectTypeNames: ").append(getObjectTypeNames()).append(",");
+        if (getWorkflowId() != null)
+            sb.append("WorkflowId: ").append(getWorkflowId());
         sb.append("}");
         return sb.toString();
     }
@@ -506,6 +554,10 @@ public class ListIntegrationItem implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getObjectTypeNames() != null && other.getObjectTypeNames().equals(this.getObjectTypeNames()) == false)
             return false;
+        if (other.getWorkflowId() == null ^ this.getWorkflowId() == null)
+            return false;
+        if (other.getWorkflowId() != null && other.getWorkflowId().equals(this.getWorkflowId()) == false)
+            return false;
         return true;
     }
 
@@ -521,6 +573,7 @@ public class ListIntegrationItem implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getLastUpdatedAt() == null) ? 0 : getLastUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getObjectTypeNames() == null) ? 0 : getObjectTypeNames().hashCode());
+        hashCode = prime * hashCode + ((getWorkflowId() == null) ? 0 : getWorkflowId().hashCode());
         return hashCode;
     }
 

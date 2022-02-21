@@ -123,6 +123,31 @@ public interface AmazonCustomerProfiles {
 
     /**
      * <p>
+     * Creates an integration workflow. An integration workflow is an async process which ingests historic data and sets
+     * up an integration for ongoing updates. The supported Amazon AppFlow sources are Salesforce, ServiceNow, and
+     * Marketo.
+     * </p>
+     * 
+     * @param createIntegrationWorkflowRequest
+     * @return Result of the CreateIntegrationWorkflow operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.CreateIntegrationWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/CreateIntegrationWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateIntegrationWorkflowResult createIntegrationWorkflow(CreateIntegrationWorkflowRequest createIntegrationWorkflowRequest);
+
+    /**
+     * <p>
      * Creates a standard profile.
      * </p>
      * <p>
@@ -287,6 +312,29 @@ public interface AmazonCustomerProfiles {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteProfileObjectTypeResult deleteProfileObjectType(DeleteProfileObjectTypeRequest deleteProfileObjectTypeRequest);
+
+    /**
+     * <p>
+     * Deletes the specified workflow and all its corresponding resources. This is an async process.
+     * </p>
+     * 
+     * @param deleteWorkflowRequest
+     * @return Result of the DeleteWorkflow operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.DeleteWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/DeleteWorkflow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteWorkflowResult deleteWorkflow(DeleteWorkflowRequest deleteWorkflowRequest);
 
     /**
      * <p>
@@ -469,11 +517,6 @@ public interface AmazonCustomerProfiles {
      * FullName
      * </p>
      * </li>
-     * <li>
-     * <p>
-     * BusinessName
-     * </p>
-     * </li>
      * </ul>
      * <p>
      * For example, two or more profiles—with spelling mistakes such as <b>John Doe</b> and <b>Jhn Doe</b>, or different
@@ -550,6 +593,52 @@ public interface AmazonCustomerProfiles {
      *      target="_top">AWS API Documentation</a>
      */
     GetProfileObjectTypeTemplateResult getProfileObjectTypeTemplate(GetProfileObjectTypeTemplateRequest getProfileObjectTypeTemplateRequest);
+
+    /**
+     * <p>
+     * Get details of specified workflow.
+     * </p>
+     * 
+     * @param getWorkflowRequest
+     * @return Result of the GetWorkflow operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.GetWorkflow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetWorkflow" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetWorkflowResult getWorkflow(GetWorkflowRequest getWorkflowRequest);
+
+    /**
+     * <p>
+     * Get granular list of steps in workflow.
+     * </p>
+     * 
+     * @param getWorkflowStepsRequest
+     * @return Result of the GetWorkflowSteps operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.GetWorkflowSteps
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetWorkflowSteps"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetWorkflowStepsResult getWorkflowSteps(GetWorkflowStepsRequest getWorkflowStepsRequest);
 
     /**
      * <p>
@@ -732,6 +821,29 @@ public interface AmazonCustomerProfiles {
      *      target="_top">AWS API Documentation</a>
      */
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Query to list all workflows.
+     * </p>
+     * 
+     * @param listWorkflowsRequest
+     * @return Result of the ListWorkflows operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.ListWorkflows
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/ListWorkflows"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListWorkflowsResult listWorkflows(ListWorkflowsRequest listWorkflowsRequest);
 
     /**
      * <p>

@@ -65,6 +65,12 @@ public class Distribution implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private S3ExportConfiguration s3ExportConfiguration;
+    /**
+     * <p>
+     * The Windows faster-launching configurations to use for AMI distribution.
+     * </p>
+     */
+    private java.util.List<FastLaunchConfiguration> fastLaunchConfigurations;
 
     /**
      * <p>
@@ -373,6 +379,76 @@ public class Distribution implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Windows faster-launching configurations to use for AMI distribution.
+     * </p>
+     * 
+     * @return The Windows faster-launching configurations to use for AMI distribution.
+     */
+
+    public java.util.List<FastLaunchConfiguration> getFastLaunchConfigurations() {
+        return fastLaunchConfigurations;
+    }
+
+    /**
+     * <p>
+     * The Windows faster-launching configurations to use for AMI distribution.
+     * </p>
+     * 
+     * @param fastLaunchConfigurations
+     *        The Windows faster-launching configurations to use for AMI distribution.
+     */
+
+    public void setFastLaunchConfigurations(java.util.Collection<FastLaunchConfiguration> fastLaunchConfigurations) {
+        if (fastLaunchConfigurations == null) {
+            this.fastLaunchConfigurations = null;
+            return;
+        }
+
+        this.fastLaunchConfigurations = new java.util.ArrayList<FastLaunchConfiguration>(fastLaunchConfigurations);
+    }
+
+    /**
+     * <p>
+     * The Windows faster-launching configurations to use for AMI distribution.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setFastLaunchConfigurations(java.util.Collection)} or
+     * {@link #withFastLaunchConfigurations(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param fastLaunchConfigurations
+     *        The Windows faster-launching configurations to use for AMI distribution.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Distribution withFastLaunchConfigurations(FastLaunchConfiguration... fastLaunchConfigurations) {
+        if (this.fastLaunchConfigurations == null) {
+            setFastLaunchConfigurations(new java.util.ArrayList<FastLaunchConfiguration>(fastLaunchConfigurations.length));
+        }
+        for (FastLaunchConfiguration ele : fastLaunchConfigurations) {
+            this.fastLaunchConfigurations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Windows faster-launching configurations to use for AMI distribution.
+     * </p>
+     * 
+     * @param fastLaunchConfigurations
+     *        The Windows faster-launching configurations to use for AMI distribution.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Distribution withFastLaunchConfigurations(java.util.Collection<FastLaunchConfiguration> fastLaunchConfigurations) {
+        setFastLaunchConfigurations(fastLaunchConfigurations);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -395,7 +471,9 @@ public class Distribution implements Serializable, Cloneable, StructuredPojo {
         if (getLaunchTemplateConfigurations() != null)
             sb.append("LaunchTemplateConfigurations: ").append(getLaunchTemplateConfigurations()).append(",");
         if (getS3ExportConfiguration() != null)
-            sb.append("S3ExportConfiguration: ").append(getS3ExportConfiguration());
+            sb.append("S3ExportConfiguration: ").append(getS3ExportConfiguration()).append(",");
+        if (getFastLaunchConfigurations() != null)
+            sb.append("FastLaunchConfigurations: ").append(getFastLaunchConfigurations());
         sb.append("}");
         return sb.toString();
     }
@@ -435,6 +513,10 @@ public class Distribution implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getS3ExportConfiguration() != null && other.getS3ExportConfiguration().equals(this.getS3ExportConfiguration()) == false)
             return false;
+        if (other.getFastLaunchConfigurations() == null ^ this.getFastLaunchConfigurations() == null)
+            return false;
+        if (other.getFastLaunchConfigurations() != null && other.getFastLaunchConfigurations().equals(this.getFastLaunchConfigurations()) == false)
+            return false;
         return true;
     }
 
@@ -449,6 +531,7 @@ public class Distribution implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getLicenseConfigurationArns() == null) ? 0 : getLicenseConfigurationArns().hashCode());
         hashCode = prime * hashCode + ((getLaunchTemplateConfigurations() == null) ? 0 : getLaunchTemplateConfigurations().hashCode());
         hashCode = prime * hashCode + ((getS3ExportConfiguration() == null) ? 0 : getS3ExportConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getFastLaunchConfigurations() == null) ? 0 : getFastLaunchConfigurations().hashCode());
         return hashCode;
     }
 

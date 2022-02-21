@@ -33,6 +33,8 @@ public class ListIntegrationsRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("next-token").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("max-results").build();
+    private static final MarshallingInfo<Boolean> INCLUDEHIDDEN_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("include-hidden").build();
 
     private static final ListIntegrationsRequestMarshaller instance = new ListIntegrationsRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class ListIntegrationsRequestMarshaller {
             protocolMarshaller.marshall(listIntegrationsRequest.getDomainName(), DOMAINNAME_BINDING);
             protocolMarshaller.marshall(listIntegrationsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listIntegrationsRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listIntegrationsRequest.getIncludeHidden(), INCLUDEHIDDEN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

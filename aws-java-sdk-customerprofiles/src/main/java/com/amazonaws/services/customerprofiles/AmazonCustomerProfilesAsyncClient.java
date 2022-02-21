@@ -155,6 +155,39 @@ public class AmazonCustomerProfilesAsyncClient extends AmazonCustomerProfilesCli
     }
 
     @Override
+    public java.util.concurrent.Future<CreateIntegrationWorkflowResult> createIntegrationWorkflowAsync(CreateIntegrationWorkflowRequest request) {
+
+        return createIntegrationWorkflowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIntegrationWorkflowResult> createIntegrationWorkflowAsync(final CreateIntegrationWorkflowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateIntegrationWorkflowRequest, CreateIntegrationWorkflowResult> asyncHandler) {
+        final CreateIntegrationWorkflowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateIntegrationWorkflowResult>() {
+            @Override
+            public CreateIntegrationWorkflowResult call() throws Exception {
+                CreateIntegrationWorkflowResult result = null;
+
+                try {
+                    result = executeCreateIntegrationWorkflow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateProfileResult> createProfileAsync(CreateProfileRequest request) {
 
         return createProfileAsync(request, null);
@@ -386,6 +419,39 @@ public class AmazonCustomerProfilesAsyncClient extends AmazonCustomerProfilesCli
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteWorkflowResult> deleteWorkflowAsync(DeleteWorkflowRequest request) {
+
+        return deleteWorkflowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteWorkflowResult> deleteWorkflowAsync(final DeleteWorkflowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteWorkflowRequest, DeleteWorkflowResult> asyncHandler) {
+        final DeleteWorkflowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteWorkflowResult>() {
+            @Override
+            public DeleteWorkflowResult call() throws Exception {
+                DeleteWorkflowResult result = null;
+
+                try {
+                    result = executeDeleteWorkflow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAutoMergingPreviewResult> getAutoMergingPreviewAsync(GetAutoMergingPreviewRequest request) {
 
         return getAutoMergingPreviewAsync(request, null);
@@ -601,6 +667,72 @@ public class AmazonCustomerProfilesAsyncClient extends AmazonCustomerProfilesCli
 
                 try {
                     result = executeGetProfileObjectTypeTemplate(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkflowResult> getWorkflowAsync(GetWorkflowRequest request) {
+
+        return getWorkflowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkflowResult> getWorkflowAsync(final GetWorkflowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetWorkflowRequest, GetWorkflowResult> asyncHandler) {
+        final GetWorkflowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetWorkflowResult>() {
+            @Override
+            public GetWorkflowResult call() throws Exception {
+                GetWorkflowResult result = null;
+
+                try {
+                    result = executeGetWorkflow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkflowStepsResult> getWorkflowStepsAsync(GetWorkflowStepsRequest request) {
+
+        return getWorkflowStepsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkflowStepsResult> getWorkflowStepsAsync(final GetWorkflowStepsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetWorkflowStepsRequest, GetWorkflowStepsResult> asyncHandler) {
+        final GetWorkflowStepsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetWorkflowStepsResult>() {
+            @Override
+            public GetWorkflowStepsResult call() throws Exception {
+                GetWorkflowStepsResult result = null;
+
+                try {
+                    result = executeGetWorkflowSteps(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -866,6 +998,39 @@ public class AmazonCustomerProfilesAsyncClient extends AmazonCustomerProfilesCli
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWorkflowsResult> listWorkflowsAsync(ListWorkflowsRequest request) {
+
+        return listWorkflowsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWorkflowsResult> listWorkflowsAsync(final ListWorkflowsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListWorkflowsRequest, ListWorkflowsResult> asyncHandler) {
+        final ListWorkflowsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListWorkflowsResult>() {
+            @Override
+            public ListWorkflowsResult call() throws Exception {
+                ListWorkflowsResult result = null;
+
+                try {
+                    result = executeListWorkflows(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

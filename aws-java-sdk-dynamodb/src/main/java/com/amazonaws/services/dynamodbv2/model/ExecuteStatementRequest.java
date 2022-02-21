@@ -52,6 +52,17 @@ public class ExecuteStatementRequest extends com.amazonaws.AmazonWebServiceReque
     private String nextToken;
 
     private String returnConsumedCapacity;
+    /**
+     * <p>
+     * The maximum number of items to evaluate (not necessarily the number of matching items). If DynamoDB processes the
+     * number of items up to the limit while processing the results, it stops the operation and returns the matching
+     * values up to that point, along with a key in <code>LastEvaluatedKey</code> to apply in a subsequent operation so
+     * you can pick up where you left off. Also, if the processed dataset size exceeds 1 MB before DynamoDB reaches this
+     * limit, it stops the operation and returns the matching values up to the limit, and a key in
+     * <code>LastEvaluatedKey</code> to apply in a subsequent operation to continue the operation.
+     * </p>
+     */
+    private Integer limit;
 
     /**
      * <p>
@@ -305,6 +316,79 @@ public class ExecuteStatementRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The maximum number of items to evaluate (not necessarily the number of matching items). If DynamoDB processes the
+     * number of items up to the limit while processing the results, it stops the operation and returns the matching
+     * values up to that point, along with a key in <code>LastEvaluatedKey</code> to apply in a subsequent operation so
+     * you can pick up where you left off. Also, if the processed dataset size exceeds 1 MB before DynamoDB reaches this
+     * limit, it stops the operation and returns the matching values up to the limit, and a key in
+     * <code>LastEvaluatedKey</code> to apply in a subsequent operation to continue the operation.
+     * </p>
+     * 
+     * @param limit
+     *        The maximum number of items to evaluate (not necessarily the number of matching items). If DynamoDB
+     *        processes the number of items up to the limit while processing the results, it stops the operation and
+     *        returns the matching values up to that point, along with a key in <code>LastEvaluatedKey</code> to apply
+     *        in a subsequent operation so you can pick up where you left off. Also, if the processed dataset size
+     *        exceeds 1 MB before DynamoDB reaches this limit, it stops the operation and returns the matching values up
+     *        to the limit, and a key in <code>LastEvaluatedKey</code> to apply in a subsequent operation to continue
+     *        the operation.
+     */
+
+    public void setLimit(Integer limit) {
+        this.limit = limit;
+    }
+
+    /**
+     * <p>
+     * The maximum number of items to evaluate (not necessarily the number of matching items). If DynamoDB processes the
+     * number of items up to the limit while processing the results, it stops the operation and returns the matching
+     * values up to that point, along with a key in <code>LastEvaluatedKey</code> to apply in a subsequent operation so
+     * you can pick up where you left off. Also, if the processed dataset size exceeds 1 MB before DynamoDB reaches this
+     * limit, it stops the operation and returns the matching values up to the limit, and a key in
+     * <code>LastEvaluatedKey</code> to apply in a subsequent operation to continue the operation.
+     * </p>
+     * 
+     * @return The maximum number of items to evaluate (not necessarily the number of matching items). If DynamoDB
+     *         processes the number of items up to the limit while processing the results, it stops the operation and
+     *         returns the matching values up to that point, along with a key in <code>LastEvaluatedKey</code> to apply
+     *         in a subsequent operation so you can pick up where you left off. Also, if the processed dataset size
+     *         exceeds 1 MB before DynamoDB reaches this limit, it stops the operation and returns the matching values
+     *         up to the limit, and a key in <code>LastEvaluatedKey</code> to apply in a subsequent operation to
+     *         continue the operation.
+     */
+
+    public Integer getLimit() {
+        return this.limit;
+    }
+
+    /**
+     * <p>
+     * The maximum number of items to evaluate (not necessarily the number of matching items). If DynamoDB processes the
+     * number of items up to the limit while processing the results, it stops the operation and returns the matching
+     * values up to that point, along with a key in <code>LastEvaluatedKey</code> to apply in a subsequent operation so
+     * you can pick up where you left off. Also, if the processed dataset size exceeds 1 MB before DynamoDB reaches this
+     * limit, it stops the operation and returns the matching values up to the limit, and a key in
+     * <code>LastEvaluatedKey</code> to apply in a subsequent operation to continue the operation.
+     * </p>
+     * 
+     * @param limit
+     *        The maximum number of items to evaluate (not necessarily the number of matching items). If DynamoDB
+     *        processes the number of items up to the limit while processing the results, it stops the operation and
+     *        returns the matching values up to that point, along with a key in <code>LastEvaluatedKey</code> to apply
+     *        in a subsequent operation so you can pick up where you left off. Also, if the processed dataset size
+     *        exceeds 1 MB before DynamoDB reaches this limit, it stops the operation and returns the matching values up
+     *        to the limit, and a key in <code>LastEvaluatedKey</code> to apply in a subsequent operation to continue
+     *        the operation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExecuteStatementRequest withLimit(Integer limit) {
+        setLimit(limit);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -325,7 +409,9 @@ public class ExecuteStatementRequest extends com.amazonaws.AmazonWebServiceReque
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getReturnConsumedCapacity() != null)
-            sb.append("ReturnConsumedCapacity: ").append(getReturnConsumedCapacity());
+            sb.append("ReturnConsumedCapacity: ").append(getReturnConsumedCapacity()).append(",");
+        if (getLimit() != null)
+            sb.append("Limit: ").append(getLimit());
         sb.append("}");
         return sb.toString();
     }
@@ -360,6 +446,10 @@ public class ExecuteStatementRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getReturnConsumedCapacity() != null && other.getReturnConsumedCapacity().equals(this.getReturnConsumedCapacity()) == false)
             return false;
+        if (other.getLimit() == null ^ this.getLimit() == null)
+            return false;
+        if (other.getLimit() != null && other.getLimit().equals(this.getLimit()) == false)
+            return false;
         return true;
     }
 
@@ -373,6 +463,7 @@ public class ExecuteStatementRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getConsistentRead() == null) ? 0 : getConsistentRead().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getReturnConsumedCapacity() == null) ? 0 : getReturnConsumedCapacity().hashCode());
+        hashCode = prime * hashCode + ((getLimit() == null) ? 0 : getLimit().hashCode());
         return hashCode;
     }
 

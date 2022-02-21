@@ -256,8 +256,22 @@ public class AWSimagebuilderClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Creates a new component that can be used to build, validate, test, and assess your image.
+     * Creates a new component that can be used to build, validate, test, and assess your image. The component is based
+     * on a YAML document that you specify using exactly one of the following methods:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Inline, using the <code>data</code> property in the request body.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * A URL that points to a YAML document file stored in Amazon S3, using the <code>uri</code> property in the request
+     * body.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param createComponentRequest
      * @return Result of the CreateComponent operation returned by the service.

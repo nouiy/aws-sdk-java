@@ -38,6 +38,8 @@ public class ExecuteStatementRequestMarshaller {
             .marshallLocationName("NextToken").build();
     private static final MarshallingInfo<String> RETURNCONSUMEDCAPACITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReturnConsumedCapacity").build();
+    private static final MarshallingInfo<Integer> LIMIT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Limit").build();
 
     private static final ExecuteStatementRequestMarshaller instance = new ExecuteStatementRequestMarshaller();
 
@@ -60,6 +62,7 @@ public class ExecuteStatementRequestMarshaller {
             protocolMarshaller.marshall(executeStatementRequest.getConsistentRead(), CONSISTENTREAD_BINDING);
             protocolMarshaller.marshall(executeStatementRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(executeStatementRequest.getReturnConsumedCapacity(), RETURNCONSUMEDCAPACITY_BINDING);
+            protocolMarshaller.marshall(executeStatementRequest.getLimit(), LIMIT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

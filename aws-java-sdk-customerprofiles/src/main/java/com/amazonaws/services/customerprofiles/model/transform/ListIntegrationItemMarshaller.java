@@ -43,6 +43,8 @@ public class ListIntegrationItemMarshaller {
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<Map> OBJECTTYPENAMES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ObjectTypeNames").build();
+    private static final MarshallingInfo<String> WORKFLOWID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WorkflowId").build();
 
     private static final ListIntegrationItemMarshaller instance = new ListIntegrationItemMarshaller();
 
@@ -67,6 +69,7 @@ public class ListIntegrationItemMarshaller {
             protocolMarshaller.marshall(listIntegrationItem.getLastUpdatedAt(), LASTUPDATEDAT_BINDING);
             protocolMarshaller.marshall(listIntegrationItem.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(listIntegrationItem.getObjectTypeNames(), OBJECTTYPENAMES_BINDING);
+            protocolMarshaller.marshall(listIntegrationItem.getWorkflowId(), WORKFLOWID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

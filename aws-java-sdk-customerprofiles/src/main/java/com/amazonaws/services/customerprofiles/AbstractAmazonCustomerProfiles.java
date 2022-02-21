@@ -38,6 +38,11 @@ public class AbstractAmazonCustomerProfiles implements AmazonCustomerProfiles {
     }
 
     @Override
+    public CreateIntegrationWorkflowResult createIntegrationWorkflow(CreateIntegrationWorkflowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateProfileResult createProfile(CreateProfileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -73,6 +78,11 @@ public class AbstractAmazonCustomerProfiles implements AmazonCustomerProfiles {
     }
 
     @Override
+    public DeleteWorkflowResult deleteWorkflow(DeleteWorkflowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetAutoMergingPreviewResult getAutoMergingPreview(GetAutoMergingPreviewRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -104,6 +114,16 @@ public class AbstractAmazonCustomerProfiles implements AmazonCustomerProfiles {
 
     @Override
     public GetProfileObjectTypeTemplateResult getProfileObjectTypeTemplate(GetProfileObjectTypeTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetWorkflowResult getWorkflow(GetWorkflowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetWorkflowStepsResult getWorkflowSteps(GetWorkflowStepsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -144,6 +164,11 @@ public class AbstractAmazonCustomerProfiles implements AmazonCustomerProfiles {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListWorkflowsResult listWorkflows(ListWorkflowsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

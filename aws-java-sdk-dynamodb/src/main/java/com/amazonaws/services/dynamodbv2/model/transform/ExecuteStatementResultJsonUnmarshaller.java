@@ -64,6 +64,11 @@ public class ExecuteStatementResultJsonUnmarshaller implements Unmarshaller<Exec
                     context.nextToken();
                     executeStatementResult.setConsumedCapacity(ConsumedCapacityJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("LastEvaluatedKey", targetDepth)) {
+                    context.nextToken();
+                    executeStatementResult.setLastEvaluatedKey(new MapUnmarshaller<String, AttributeValue>(context.getUnmarshaller(String.class),
+                            AttributeValueJsonUnmarshaller.getInstance()).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

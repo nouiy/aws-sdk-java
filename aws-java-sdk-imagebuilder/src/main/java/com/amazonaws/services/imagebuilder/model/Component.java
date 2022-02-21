@@ -97,7 +97,7 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     private String owner;
     /**
      * <p>
-     * The data of the component.
+     * Component data contains the YAML document content for the component.
      * </p>
      */
     private String data;
@@ -674,11 +674,11 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data of the component.
+     * Component data contains the YAML document content for the component.
      * </p>
      * 
      * @param data
-     *        The data of the component.
+     *        Component data contains the YAML document content for the component.
      */
 
     public void setData(String data) {
@@ -687,10 +687,10 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data of the component.
+     * Component data contains the YAML document content for the component.
      * </p>
      * 
-     * @return The data of the component.
+     * @return Component data contains the YAML document content for the component.
      */
 
     public String getData() {
@@ -699,11 +699,11 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data of the component.
+     * Component data contains the YAML document content for the component.
      * </p>
      * 
      * @param data
-     *        The data of the component.
+     *        Component data contains the YAML document content for the component.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

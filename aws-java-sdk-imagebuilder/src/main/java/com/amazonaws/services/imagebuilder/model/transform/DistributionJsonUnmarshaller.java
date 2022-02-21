@@ -77,6 +77,13 @@ public class DistributionJsonUnmarshaller implements Unmarshaller<Distribution, 
                     context.nextToken();
                     distribution.setS3ExportConfiguration(S3ExportConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("fastLaunchConfigurations", targetDepth)) {
+                    context.nextToken();
+                    distribution.setFastLaunchConfigurations(new ListUnmarshaller<FastLaunchConfiguration>(FastLaunchConfigurationJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

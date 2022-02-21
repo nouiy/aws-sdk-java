@@ -43,6 +43,12 @@ public class ListAccountIntegrationsRequest extends com.amazonaws.AmazonWebServi
      * </p>
      */
     private Integer maxResults;
+    /**
+     * <p>
+     * Boolean to indicate if hidden integration should be returned. Defaults to <code>False</code>.
+     * </p>
+     */
+    private Boolean includeHidden;
 
     /**
      * <p>
@@ -165,6 +171,58 @@ public class ListAccountIntegrationsRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * Boolean to indicate if hidden integration should be returned. Defaults to <code>False</code>.
+     * </p>
+     * 
+     * @param includeHidden
+     *        Boolean to indicate if hidden integration should be returned. Defaults to <code>False</code>.
+     */
+
+    public void setIncludeHidden(Boolean includeHidden) {
+        this.includeHidden = includeHidden;
+    }
+
+    /**
+     * <p>
+     * Boolean to indicate if hidden integration should be returned. Defaults to <code>False</code>.
+     * </p>
+     * 
+     * @return Boolean to indicate if hidden integration should be returned. Defaults to <code>False</code>.
+     */
+
+    public Boolean getIncludeHidden() {
+        return this.includeHidden;
+    }
+
+    /**
+     * <p>
+     * Boolean to indicate if hidden integration should be returned. Defaults to <code>False</code>.
+     * </p>
+     * 
+     * @param includeHidden
+     *        Boolean to indicate if hidden integration should be returned. Defaults to <code>False</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListAccountIntegrationsRequest withIncludeHidden(Boolean includeHidden) {
+        setIncludeHidden(includeHidden);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Boolean to indicate if hidden integration should be returned. Defaults to <code>False</code>.
+     * </p>
+     * 
+     * @return Boolean to indicate if hidden integration should be returned. Defaults to <code>False</code>.
+     */
+
+    public Boolean isIncludeHidden() {
+        return this.includeHidden;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -181,7 +239,9 @@ public class ListAccountIntegrationsRequest extends com.amazonaws.AmazonWebServi
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getIncludeHidden() != null)
+            sb.append("IncludeHidden: ").append(getIncludeHidden());
         sb.append("}");
         return sb.toString();
     }
@@ -208,6 +268,10 @@ public class ListAccountIntegrationsRequest extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
+        if (other.getIncludeHidden() == null ^ this.getIncludeHidden() == null)
+            return false;
+        if (other.getIncludeHidden() != null && other.getIncludeHidden().equals(this.getIncludeHidden()) == false)
+            return false;
         return true;
     }
 
@@ -219,6 +283,7 @@ public class ListAccountIntegrationsRequest extends com.amazonaws.AmazonWebServi
         hashCode = prime * hashCode + ((getUri() == null) ? 0 : getUri().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getIncludeHidden() == null) ? 0 : getIncludeHidden().hashCode());
         return hashCode;
     }
 

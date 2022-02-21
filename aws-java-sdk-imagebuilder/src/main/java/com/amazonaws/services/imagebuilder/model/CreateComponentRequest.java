@@ -81,16 +81,21 @@ public class CreateComponentRequest extends com.amazonaws.AmazonWebServiceReques
     private java.util.List<String> supportedOsVersions;
     /**
      * <p>
-     * The data of the component. Used to specify the data inline. Either <code>data</code> or <code>uri</code> can be
-     * used to specify the data within the component.
+     * Component <code>data</code> contains inline YAML document content for the component. Alternatively, you can
+     * specify the <code>uri</code> of a YAML document file stored in Amazon S3. However, you cannot specify both
+     * properties.
      * </p>
      */
     private String data;
     /**
      * <p>
-     * The uri of the component. Must be an Amazon S3 URL and the requester must have permission to access the Amazon S3
-     * bucket. If you use Amazon S3, you can specify component content up to your service quota. Either
-     * <code>data</code> or <code>uri</code> can be used to specify the data within the component.
+     * The <code>uri</code> of a YAML component document file. This must be an S3 URL (<code>s3://bucket/key</code>),
+     * and the requester must have permission to access the S3 bucket it points to. If you use Amazon S3, you can
+     * specify component content up to your service quota.
+     * </p>
+     * <p>
+     * Alternatively, you can specify the YAML document inline, using the component <code>data</code> property. You
+     * cannot specify both properties.
      * </p>
      */
     private String uri;
@@ -508,13 +513,15 @@ public class CreateComponentRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The data of the component. Used to specify the data inline. Either <code>data</code> or <code>uri</code> can be
-     * used to specify the data within the component.
+     * Component <code>data</code> contains inline YAML document content for the component. Alternatively, you can
+     * specify the <code>uri</code> of a YAML document file stored in Amazon S3. However, you cannot specify both
+     * properties.
      * </p>
      * 
      * @param data
-     *        The data of the component. Used to specify the data inline. Either <code>data</code> or <code>uri</code>
-     *        can be used to specify the data within the component.
+     *        Component <code>data</code> contains inline YAML document content for the component. Alternatively, you
+     *        can specify the <code>uri</code> of a YAML document file stored in Amazon S3. However, you cannot specify
+     *        both properties.
      */
 
     public void setData(String data) {
@@ -523,12 +530,14 @@ public class CreateComponentRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The data of the component. Used to specify the data inline. Either <code>data</code> or <code>uri</code> can be
-     * used to specify the data within the component.
+     * Component <code>data</code> contains inline YAML document content for the component. Alternatively, you can
+     * specify the <code>uri</code> of a YAML document file stored in Amazon S3. However, you cannot specify both
+     * properties.
      * </p>
      * 
-     * @return The data of the component. Used to specify the data inline. Either <code>data</code> or <code>uri</code>
-     *         can be used to specify the data within the component.
+     * @return Component <code>data</code> contains inline YAML document content for the component. Alternatively, you
+     *         can specify the <code>uri</code> of a YAML document file stored in Amazon S3. However, you cannot specify
+     *         both properties.
      */
 
     public String getData() {
@@ -537,13 +546,15 @@ public class CreateComponentRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The data of the component. Used to specify the data inline. Either <code>data</code> or <code>uri</code> can be
-     * used to specify the data within the component.
+     * Component <code>data</code> contains inline YAML document content for the component. Alternatively, you can
+     * specify the <code>uri</code> of a YAML document file stored in Amazon S3. However, you cannot specify both
+     * properties.
      * </p>
      * 
      * @param data
-     *        The data of the component. Used to specify the data inline. Either <code>data</code> or <code>uri</code>
-     *        can be used to specify the data within the component.
+     *        Component <code>data</code> contains inline YAML document content for the component. Alternatively, you
+     *        can specify the <code>uri</code> of a YAML document file stored in Amazon S3. However, you cannot specify
+     *        both properties.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -554,15 +565,22 @@ public class CreateComponentRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The uri of the component. Must be an Amazon S3 URL and the requester must have permission to access the Amazon S3
-     * bucket. If you use Amazon S3, you can specify component content up to your service quota. Either
-     * <code>data</code> or <code>uri</code> can be used to specify the data within the component.
+     * The <code>uri</code> of a YAML component document file. This must be an S3 URL (<code>s3://bucket/key</code>),
+     * and the requester must have permission to access the S3 bucket it points to. If you use Amazon S3, you can
+     * specify component content up to your service quota.
+     * </p>
+     * <p>
+     * Alternatively, you can specify the YAML document inline, using the component <code>data</code> property. You
+     * cannot specify both properties.
      * </p>
      * 
      * @param uri
-     *        The uri of the component. Must be an Amazon S3 URL and the requester must have permission to access the
-     *        Amazon S3 bucket. If you use Amazon S3, you can specify component content up to your service quota. Either
-     *        <code>data</code> or <code>uri</code> can be used to specify the data within the component.
+     *        The <code>uri</code> of a YAML component document file. This must be an S3 URL (
+     *        <code>s3://bucket/key</code>), and the requester must have permission to access the S3 bucket it points
+     *        to. If you use Amazon S3, you can specify component content up to your service quota.</p>
+     *        <p>
+     *        Alternatively, you can specify the YAML document inline, using the component <code>data</code> property.
+     *        You cannot specify both properties.
      */
 
     public void setUri(String uri) {
@@ -571,14 +589,21 @@ public class CreateComponentRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The uri of the component. Must be an Amazon S3 URL and the requester must have permission to access the Amazon S3
-     * bucket. If you use Amazon S3, you can specify component content up to your service quota. Either
-     * <code>data</code> or <code>uri</code> can be used to specify the data within the component.
+     * The <code>uri</code> of a YAML component document file. This must be an S3 URL (<code>s3://bucket/key</code>),
+     * and the requester must have permission to access the S3 bucket it points to. If you use Amazon S3, you can
+     * specify component content up to your service quota.
+     * </p>
+     * <p>
+     * Alternatively, you can specify the YAML document inline, using the component <code>data</code> property. You
+     * cannot specify both properties.
      * </p>
      * 
-     * @return The uri of the component. Must be an Amazon S3 URL and the requester must have permission to access the
-     *         Amazon S3 bucket. If you use Amazon S3, you can specify component content up to your service quota.
-     *         Either <code>data</code> or <code>uri</code> can be used to specify the data within the component.
+     * @return The <code>uri</code> of a YAML component document file. This must be an S3 URL (
+     *         <code>s3://bucket/key</code>), and the requester must have permission to access the S3 bucket it points
+     *         to. If you use Amazon S3, you can specify component content up to your service quota.</p>
+     *         <p>
+     *         Alternatively, you can specify the YAML document inline, using the component <code>data</code> property.
+     *         You cannot specify both properties.
      */
 
     public String getUri() {
@@ -587,15 +612,22 @@ public class CreateComponentRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The uri of the component. Must be an Amazon S3 URL and the requester must have permission to access the Amazon S3
-     * bucket. If you use Amazon S3, you can specify component content up to your service quota. Either
-     * <code>data</code> or <code>uri</code> can be used to specify the data within the component.
+     * The <code>uri</code> of a YAML component document file. This must be an S3 URL (<code>s3://bucket/key</code>),
+     * and the requester must have permission to access the S3 bucket it points to. If you use Amazon S3, you can
+     * specify component content up to your service quota.
+     * </p>
+     * <p>
+     * Alternatively, you can specify the YAML document inline, using the component <code>data</code> property. You
+     * cannot specify both properties.
      * </p>
      * 
      * @param uri
-     *        The uri of the component. Must be an Amazon S3 URL and the requester must have permission to access the
-     *        Amazon S3 bucket. If you use Amazon S3, you can specify component content up to your service quota. Either
-     *        <code>data</code> or <code>uri</code> can be used to specify the data within the component.
+     *        The <code>uri</code> of a YAML component document file. This must be an S3 URL (
+     *        <code>s3://bucket/key</code>), and the requester must have permission to access the S3 bucket it points
+     *        to. If you use Amazon S3, you can specify component content up to your service quota.</p>
+     *        <p>
+     *        Alternatively, you can specify the YAML document inline, using the component <code>data</code> property.
+     *        You cannot specify both properties.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -54,6 +54,19 @@ public class AbstractAmazonCustomerProfilesAsync extends AbstractAmazonCustomerP
     }
 
     @Override
+    public java.util.concurrent.Future<CreateIntegrationWorkflowResult> createIntegrationWorkflowAsync(CreateIntegrationWorkflowRequest request) {
+
+        return createIntegrationWorkflowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateIntegrationWorkflowResult> createIntegrationWorkflowAsync(CreateIntegrationWorkflowRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateIntegrationWorkflowRequest, CreateIntegrationWorkflowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateProfileResult> createProfileAsync(CreateProfileRequest request) {
 
         return createProfileAsync(request, null);
@@ -145,6 +158,19 @@ public class AbstractAmazonCustomerProfilesAsync extends AbstractAmazonCustomerP
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteWorkflowResult> deleteWorkflowAsync(DeleteWorkflowRequest request) {
+
+        return deleteWorkflowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteWorkflowResult> deleteWorkflowAsync(DeleteWorkflowRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteWorkflowRequest, DeleteWorkflowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAutoMergingPreviewResult> getAutoMergingPreviewAsync(GetAutoMergingPreviewRequest request) {
 
         return getAutoMergingPreviewAsync(request, null);
@@ -231,6 +257,32 @@ public class AbstractAmazonCustomerProfilesAsync extends AbstractAmazonCustomerP
     @Override
     public java.util.concurrent.Future<GetProfileObjectTypeTemplateResult> getProfileObjectTypeTemplateAsync(GetProfileObjectTypeTemplateRequest request,
             com.amazonaws.handlers.AsyncHandler<GetProfileObjectTypeTemplateRequest, GetProfileObjectTypeTemplateResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkflowResult> getWorkflowAsync(GetWorkflowRequest request) {
+
+        return getWorkflowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkflowResult> getWorkflowAsync(GetWorkflowRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetWorkflowRequest, GetWorkflowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkflowStepsResult> getWorkflowStepsAsync(GetWorkflowStepsRequest request) {
+
+        return getWorkflowStepsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkflowStepsResult> getWorkflowStepsAsync(GetWorkflowStepsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetWorkflowStepsRequest, GetWorkflowStepsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -335,6 +387,19 @@ public class AbstractAmazonCustomerProfilesAsync extends AbstractAmazonCustomerP
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWorkflowsResult> listWorkflowsAsync(ListWorkflowsRequest request) {
+
+        return listWorkflowsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWorkflowsResult> listWorkflowsAsync(ListWorkflowsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListWorkflowsRequest, ListWorkflowsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
