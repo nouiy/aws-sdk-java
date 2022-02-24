@@ -115,7 +115,7 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
-     * Conditional: Required if you are adding an <code>ELB</code> health check.
+     * Required if you are adding an <code>ELB</code> health check.
      * </p>
      */
     private Integer healthCheckGracePeriod;
@@ -770,7 +770,7 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
-     * Conditional: Required if you are adding an <code>ELB</code> health check.
+     * Required if you are adding an <code>ELB</code> health check.
      * </p>
      * 
      * @param healthCheckGracePeriod
@@ -780,7 +780,7 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period"
      *        >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
      *        <p>
-     *        Conditional: Required if you are adding an <code>ELB</code> health check.
+     *        Required if you are adding an <code>ELB</code> health check.
      */
 
     public void setHealthCheckGracePeriod(Integer healthCheckGracePeriod) {
@@ -796,7 +796,7 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
-     * Conditional: Required if you are adding an <code>ELB</code> health check.
+     * Required if you are adding an <code>ELB</code> health check.
      * </p>
      * 
      * @return The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of
@@ -805,7 +805,7 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period"
      *         >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
      *         <p>
-     *         Conditional: Required if you are adding an <code>ELB</code> health check.
+     *         Required if you are adding an <code>ELB</code> health check.
      */
 
     public Integer getHealthCheckGracePeriod() {
@@ -821,7 +821,7 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <p>
-     * Conditional: Required if you are adding an <code>ELB</code> health check.
+     * Required if you are adding an <code>ELB</code> health check.
      * </p>
      * 
      * @param healthCheckGracePeriod
@@ -831,7 +831,7 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html#health-check-grace-period"
      *        >Health check grace period</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.</p>
      *        <p>
-     *        Conditional: Required if you are adding an <code>ELB</code> health check.
+     *        Required if you are adding an <code>ELB</code> health check.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

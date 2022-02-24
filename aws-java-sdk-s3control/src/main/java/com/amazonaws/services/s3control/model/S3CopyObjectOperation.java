@@ -105,6 +105,14 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
      * </p>
      */
     private Boolean bucketKeyEnabled;
+    /**
+     * <p>
+     * Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
+     * integrity</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     */
+    private String checksumAlgorithm;
 
     /**
      * <p>
@@ -957,6 +965,81 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
+     * integrity</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     * 
+     * @param checksumAlgorithm
+     *        Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
+     *        integrity</a> in the <i>Amazon S3 User Guide</i>.
+     * @see S3ChecksumAlgorithm
+     */
+
+    public void setChecksumAlgorithm(String checksumAlgorithm) {
+        this.checksumAlgorithm = checksumAlgorithm;
+    }
+
+    /**
+     * <p>
+     * Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
+     * integrity</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     * 
+     * @return Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
+     *         href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
+     *         integrity</a> in the <i>Amazon S3 User Guide</i>.
+     * @see S3ChecksumAlgorithm
+     */
+
+    public String getChecksumAlgorithm() {
+        return this.checksumAlgorithm;
+    }
+
+    /**
+     * <p>
+     * Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
+     * integrity</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     * 
+     * @param checksumAlgorithm
+     *        Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
+     *        integrity</a> in the <i>Amazon S3 User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see S3ChecksumAlgorithm
+     */
+
+    public S3CopyObjectOperation withChecksumAlgorithm(String checksumAlgorithm) {
+        setChecksumAlgorithm(checksumAlgorithm);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
+     * integrity</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     * 
+     * @param checksumAlgorithm
+     *        Indicates the algorithm you want Amazon S3 to use to create the checksum. For more information see <a
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/CheckingObjectIntegrity.xml"> Checking object
+     *        integrity</a> in the <i>Amazon S3 User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see S3ChecksumAlgorithm
+     */
+
+    public S3CopyObjectOperation withChecksumAlgorithm(S3ChecksumAlgorithm checksumAlgorithm) {
+        this.checksumAlgorithm = checksumAlgorithm.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1001,7 +1084,9 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
         if (getObjectLockRetainUntilDate() != null)
             sb.append("ObjectLockRetainUntilDate: ").append(getObjectLockRetainUntilDate()).append(",");
         if (getBucketKeyEnabled() != null)
-            sb.append("BucketKeyEnabled: ").append(getBucketKeyEnabled());
+            sb.append("BucketKeyEnabled: ").append(getBucketKeyEnabled()).append(",");
+        if (getChecksumAlgorithm() != null)
+            sb.append("ChecksumAlgorithm: ").append(getChecksumAlgorithm());
         sb.append("}");
         return sb.toString();
     }
@@ -1084,6 +1169,10 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
             return false;
         if (other.getBucketKeyEnabled() != null && other.getBucketKeyEnabled().equals(this.getBucketKeyEnabled()) == false)
             return false;
+        if (other.getChecksumAlgorithm() == null ^ this.getChecksumAlgorithm() == null)
+            return false;
+        if (other.getChecksumAlgorithm() != null && other.getChecksumAlgorithm().equals(this.getChecksumAlgorithm()) == false)
+            return false;
         return true;
     }
 
@@ -1109,6 +1198,7 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getObjectLockMode() == null) ? 0 : getObjectLockMode().hashCode());
         hashCode = prime * hashCode + ((getObjectLockRetainUntilDate() == null) ? 0 : getObjectLockRetainUntilDate().hashCode());
         hashCode = prime * hashCode + ((getBucketKeyEnabled() == null) ? 0 : getBucketKeyEnabled().hashCode());
+        hashCode = prime * hashCode + ((getChecksumAlgorithm() == null) ? 0 : getChecksumAlgorithm().hashCode());
         return hashCode;
     }
 

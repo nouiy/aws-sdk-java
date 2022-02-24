@@ -23,8 +23,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <p>
  * Access keys grant full programmatic access to the specified bucket and its objects. You can have a maximum of two
- * access keys per bucket. Use the <a>CreateBucketAccessKey</a> action to create an access key for a specific bucket.
- * For more information about access keys, see <a
+ * access keys per bucket. Use the <a
+ * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_CreateBucketAccessKey.html"
+ * >CreateBucketAccessKey</a> action to create an access key for a specific bucket. For more information about access
+ * keys, see <a
  * href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-creating-bucket-access-keys">Creating
  * access keys for a bucket in Amazon Lightsail</a> in the <i>Amazon Lightsail Developer Guide</i>.
  * </p>
@@ -79,9 +81,10 @@ public class AccessKey implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This object does not include data in the response of a <a>CreateBucketAccessKey</a> action. If the access key has
-     * not been used, the <code>region</code> and <code>serviceName</code> values are <code>N/A</code>, and the
-     * <code>lastUsedDate</code> value is null.
+     * This object does not include data in the response of a <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_CreateBucketAccessKey.html"
+     * >CreateBucketAccessKey</a> action. If the access key has not been used, the <code>region</code> and
+     * <code>serviceName</code> values are <code>N/A</code>, and the <code>lastUsedDate</code> value is null.
      * </p>
      * </note>
      */
@@ -313,18 +316,20 @@ public class AccessKey implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This object does not include data in the response of a <a>CreateBucketAccessKey</a> action. If the access key has
-     * not been used, the <code>region</code> and <code>serviceName</code> values are <code>N/A</code>, and the
-     * <code>lastUsedDate</code> value is null.
+     * This object does not include data in the response of a <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_CreateBucketAccessKey.html"
+     * >CreateBucketAccessKey</a> action. If the access key has not been used, the <code>region</code> and
+     * <code>serviceName</code> values are <code>N/A</code>, and the <code>lastUsedDate</code> value is null.
      * </p>
      * </note>
      * 
      * @param lastUsed
      *        An object that describes the last time the access key was used.</p> <note>
      *        <p>
-     *        This object does not include data in the response of a <a>CreateBucketAccessKey</a> action. If the access
-     *        key has not been used, the <code>region</code> and <code>serviceName</code> values are <code>N/A</code>,
-     *        and the <code>lastUsedDate</code> value is null.
+     *        This object does not include data in the response of a <a
+     *        href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_CreateBucketAccessKey.html"
+     *        >CreateBucketAccessKey</a> action. If the access key has not been used, the <code>region</code> and
+     *        <code>serviceName</code> values are <code>N/A</code>, and the <code>lastUsedDate</code> value is null.
      *        </p>
      */
 
@@ -338,17 +343,19 @@ public class AccessKey implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This object does not include data in the response of a <a>CreateBucketAccessKey</a> action. If the access key has
-     * not been used, the <code>region</code> and <code>serviceName</code> values are <code>N/A</code>, and the
-     * <code>lastUsedDate</code> value is null.
+     * This object does not include data in the response of a <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_CreateBucketAccessKey.html"
+     * >CreateBucketAccessKey</a> action. If the access key has not been used, the <code>region</code> and
+     * <code>serviceName</code> values are <code>N/A</code>, and the <code>lastUsedDate</code> value is null.
      * </p>
      * </note>
      * 
      * @return An object that describes the last time the access key was used.</p> <note>
      *         <p>
-     *         This object does not include data in the response of a <a>CreateBucketAccessKey</a> action. If the access
-     *         key has not been used, the <code>region</code> and <code>serviceName</code> values are <code>N/A</code>,
-     *         and the <code>lastUsedDate</code> value is null.
+     *         This object does not include data in the response of a <a
+     *         href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_CreateBucketAccessKey.html"
+     *         >CreateBucketAccessKey</a> action. If the access key has not been used, the <code>region</code> and
+     *         <code>serviceName</code> values are <code>N/A</code>, and the <code>lastUsedDate</code> value is null.
      *         </p>
      */
 
@@ -362,18 +369,20 @@ public class AccessKey implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This object does not include data in the response of a <a>CreateBucketAccessKey</a> action. If the access key has
-     * not been used, the <code>region</code> and <code>serviceName</code> values are <code>N/A</code>, and the
-     * <code>lastUsedDate</code> value is null.
+     * This object does not include data in the response of a <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_CreateBucketAccessKey.html"
+     * >CreateBucketAccessKey</a> action. If the access key has not been used, the <code>region</code> and
+     * <code>serviceName</code> values are <code>N/A</code>, and the <code>lastUsedDate</code> value is null.
      * </p>
      * </note>
      * 
      * @param lastUsed
      *        An object that describes the last time the access key was used.</p> <note>
      *        <p>
-     *        This object does not include data in the response of a <a>CreateBucketAccessKey</a> action. If the access
-     *        key has not been used, the <code>region</code> and <code>serviceName</code> values are <code>N/A</code>,
-     *        and the <code>lastUsedDate</code> value is null.
+     *        This object does not include data in the response of a <a
+     *        href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_CreateBucketAccessKey.html"
+     *        >CreateBucketAccessKey</a> action. If the access key has not been used, the <code>region</code> and
+     *        <code>serviceName</code> values are <code>N/A</code>, and the <code>lastUsedDate</code> value is null.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

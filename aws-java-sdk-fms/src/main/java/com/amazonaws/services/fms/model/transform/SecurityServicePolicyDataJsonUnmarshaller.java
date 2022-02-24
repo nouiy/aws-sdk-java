@@ -56,6 +56,10 @@ public class SecurityServicePolicyDataJsonUnmarshaller implements Unmarshaller<S
                     context.nextToken();
                     securityServicePolicyData.setManagedServiceData(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("PolicyOption", targetDepth)) {
+                    context.nextToken();
+                    securityServicePolicyData.setPolicyOption(PolicyOptionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -51,6 +51,12 @@ public class WarmPoolConfiguration implements Serializable, Cloneable {
      * </p>
      */
     private String status;
+    /**
+     * <p>
+     * The instance reuse policy.
+     * </p>
+     */
+    private InstanceReusePolicy instanceReusePolicy;
 
     /**
      * <p>
@@ -257,6 +263,46 @@ public class WarmPoolConfiguration implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The instance reuse policy.
+     * </p>
+     * 
+     * @param instanceReusePolicy
+     *        The instance reuse policy.
+     */
+
+    public void setInstanceReusePolicy(InstanceReusePolicy instanceReusePolicy) {
+        this.instanceReusePolicy = instanceReusePolicy;
+    }
+
+    /**
+     * <p>
+     * The instance reuse policy.
+     * </p>
+     * 
+     * @return The instance reuse policy.
+     */
+
+    public InstanceReusePolicy getInstanceReusePolicy() {
+        return this.instanceReusePolicy;
+    }
+
+    /**
+     * <p>
+     * The instance reuse policy.
+     * </p>
+     * 
+     * @param instanceReusePolicy
+     *        The instance reuse policy.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WarmPoolConfiguration withInstanceReusePolicy(InstanceReusePolicy instanceReusePolicy) {
+        setInstanceReusePolicy(instanceReusePolicy);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -275,7 +321,9 @@ public class WarmPoolConfiguration implements Serializable, Cloneable {
         if (getPoolState() != null)
             sb.append("PoolState: ").append(getPoolState()).append(",");
         if (getStatus() != null)
-            sb.append("Status: ").append(getStatus());
+            sb.append("Status: ").append(getStatus()).append(",");
+        if (getInstanceReusePolicy() != null)
+            sb.append("InstanceReusePolicy: ").append(getInstanceReusePolicy());
         sb.append("}");
         return sb.toString();
     }
@@ -306,6 +354,10 @@ public class WarmPoolConfiguration implements Serializable, Cloneable {
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
+        if (other.getInstanceReusePolicy() == null ^ this.getInstanceReusePolicy() == null)
+            return false;
+        if (other.getInstanceReusePolicy() != null && other.getInstanceReusePolicy().equals(this.getInstanceReusePolicy()) == false)
+            return false;
         return true;
     }
 
@@ -318,6 +370,7 @@ public class WarmPoolConfiguration implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getMinSize() == null) ? 0 : getMinSize().hashCode());
         hashCode = prime * hashCode + ((getPoolState() == null) ? 0 : getPoolState().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getInstanceReusePolicy() == null) ? 0 : getInstanceReusePolicy().hashCode());
         return hashCode;
     }
 

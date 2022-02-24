@@ -81,6 +81,11 @@ public class RemediationActionJsonUnmarshaller implements Unmarshaller<Remediati
                     context.nextToken();
                     remediationAction.setEC2CreateRouteTableAction(EC2CreateRouteTableActionJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("FMSPolicyUpdateFirewallCreationConfigAction", targetDepth)) {
+                    context.nextToken();
+                    remediationAction.setFMSPolicyUpdateFirewallCreationConfigAction(FMSPolicyUpdateFirewallCreationConfigActionJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

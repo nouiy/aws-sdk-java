@@ -35,6 +35,12 @@ public class GetKeyPairsRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private String pageToken;
+    /**
+     * <p>
+     * A Boolean value that indicates whether to include the default key pair in the response of your request.
+     * </p>
+     */
+    private Boolean includeDefaultKeyPair;
 
     /**
      * <p>
@@ -99,6 +105,58 @@ public class GetKeyPairsRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * A Boolean value that indicates whether to include the default key pair in the response of your request.
+     * </p>
+     * 
+     * @param includeDefaultKeyPair
+     *        A Boolean value that indicates whether to include the default key pair in the response of your request.
+     */
+
+    public void setIncludeDefaultKeyPair(Boolean includeDefaultKeyPair) {
+        this.includeDefaultKeyPair = includeDefaultKeyPair;
+    }
+
+    /**
+     * <p>
+     * A Boolean value that indicates whether to include the default key pair in the response of your request.
+     * </p>
+     * 
+     * @return A Boolean value that indicates whether to include the default key pair in the response of your request.
+     */
+
+    public Boolean getIncludeDefaultKeyPair() {
+        return this.includeDefaultKeyPair;
+    }
+
+    /**
+     * <p>
+     * A Boolean value that indicates whether to include the default key pair in the response of your request.
+     * </p>
+     * 
+     * @param includeDefaultKeyPair
+     *        A Boolean value that indicates whether to include the default key pair in the response of your request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetKeyPairsRequest withIncludeDefaultKeyPair(Boolean includeDefaultKeyPair) {
+        setIncludeDefaultKeyPair(includeDefaultKeyPair);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A Boolean value that indicates whether to include the default key pair in the response of your request.
+     * </p>
+     * 
+     * @return A Boolean value that indicates whether to include the default key pair in the response of your request.
+     */
+
+    public Boolean isIncludeDefaultKeyPair() {
+        return this.includeDefaultKeyPair;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -111,7 +169,9 @@ public class GetKeyPairsRequest extends com.amazonaws.AmazonWebServiceRequest im
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getPageToken() != null)
-            sb.append("PageToken: ").append(getPageToken());
+            sb.append("PageToken: ").append(getPageToken()).append(",");
+        if (getIncludeDefaultKeyPair() != null)
+            sb.append("IncludeDefaultKeyPair: ").append(getIncludeDefaultKeyPair());
         sb.append("}");
         return sb.toString();
     }
@@ -130,6 +190,10 @@ public class GetKeyPairsRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getPageToken() != null && other.getPageToken().equals(this.getPageToken()) == false)
             return false;
+        if (other.getIncludeDefaultKeyPair() == null ^ this.getIncludeDefaultKeyPair() == null)
+            return false;
+        if (other.getIncludeDefaultKeyPair() != null && other.getIncludeDefaultKeyPair().equals(this.getIncludeDefaultKeyPair()) == false)
+            return false;
         return true;
     }
 
@@ -139,6 +203,7 @@ public class GetKeyPairsRequest extends com.amazonaws.AmazonWebServiceRequest im
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getPageToken() == null) ? 0 : getPageToken().hashCode());
+        hashCode = prime * hashCode + ((getIncludeDefaultKeyPair() == null) ? 0 : getIncludeDefaultKeyPair().hashCode());
         return hashCode;
     }
 

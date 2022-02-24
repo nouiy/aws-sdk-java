@@ -68,6 +68,10 @@ public class ResourceViolationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DnsRuleGroupLimitExceededViolation").build();
     private static final MarshallingInfo<StructuredPojo> POSSIBLEREMEDIATIONACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PossibleRemediationActions").build();
+    private static final MarshallingInfo<StructuredPojo> FIREWALLSUBNETISOUTOFSCOPEVIOLATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FirewallSubnetIsOutOfScopeViolation").build();
+    private static final MarshallingInfo<StructuredPojo> ROUTEHASOUTOFSCOPEENDPOINTVIOLATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RouteHasOutOfScopeEndpointViolation").build();
 
     private static final ResourceViolationMarshaller instance = new ResourceViolationMarshaller();
 
@@ -108,6 +112,8 @@ public class ResourceViolationMarshaller {
             protocolMarshaller.marshall(resourceViolation.getDnsDuplicateRuleGroupViolation(), DNSDUPLICATERULEGROUPVIOLATION_BINDING);
             protocolMarshaller.marshall(resourceViolation.getDnsRuleGroupLimitExceededViolation(), DNSRULEGROUPLIMITEXCEEDEDVIOLATION_BINDING);
             protocolMarshaller.marshall(resourceViolation.getPossibleRemediationActions(), POSSIBLEREMEDIATIONACTIONS_BINDING);
+            protocolMarshaller.marshall(resourceViolation.getFirewallSubnetIsOutOfScopeViolation(), FIREWALLSUBNETISOUTOFSCOPEVIOLATION_BINDING);
+            protocolMarshaller.marshall(resourceViolation.getRouteHasOutOfScopeEndpointViolation(), ROUTEHASOUTOFSCOPEENDPOINTVIOLATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

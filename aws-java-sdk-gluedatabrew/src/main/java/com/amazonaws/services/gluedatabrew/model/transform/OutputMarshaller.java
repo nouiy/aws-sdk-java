@@ -40,6 +40,8 @@ public class OutputMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Overwrite").build();
     private static final MarshallingInfo<StructuredPojo> FORMATOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FormatOptions").build();
+    private static final MarshallingInfo<Integer> MAXOUTPUTFILES_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxOutputFiles").build();
 
     private static final OutputMarshaller instance = new OutputMarshaller();
 
@@ -63,6 +65,7 @@ public class OutputMarshaller {
             protocolMarshaller.marshall(output.getLocation(), LOCATION_BINDING);
             protocolMarshaller.marshall(output.getOverwrite(), OVERWRITE_BINDING);
             protocolMarshaller.marshall(output.getFormatOptions(), FORMATOPTIONS_BINDING);
+            protocolMarshaller.marshall(output.getMaxOutputFiles(), MAXOUTPUTFILES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

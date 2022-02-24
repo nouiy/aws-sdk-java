@@ -47,7 +47,8 @@ public class GetBucketsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * A Boolean value that indicates whether to include Lightsail instances that were given access to the bucket using
-     * the <a>SetResourceAccessForBucket</a> action.
+     * the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html">
+     * SetResourceAccessForBucket</a> action.
      * </p>
      */
     private Boolean includeConnectedResources;
@@ -172,12 +173,15 @@ public class GetBucketsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * A Boolean value that indicates whether to include Lightsail instances that were given access to the bucket using
-     * the <a>SetResourceAccessForBucket</a> action.
+     * the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html">
+     * SetResourceAccessForBucket</a> action.
      * </p>
      * 
      * @param includeConnectedResources
      *        A Boolean value that indicates whether to include Lightsail instances that were given access to the bucket
-     *        using the <a>SetResourceAccessForBucket</a> action.
+     *        using the <a href=
+     *        "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     *        >SetResourceAccessForBucket</a> action.
      */
 
     public void setIncludeConnectedResources(Boolean includeConnectedResources) {
@@ -187,11 +191,14 @@ public class GetBucketsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * A Boolean value that indicates whether to include Lightsail instances that were given access to the bucket using
-     * the <a>SetResourceAccessForBucket</a> action.
+     * the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html">
+     * SetResourceAccessForBucket</a> action.
      * </p>
      * 
      * @return A Boolean value that indicates whether to include Lightsail instances that were given access to the
-     *         bucket using the <a>SetResourceAccessForBucket</a> action.
+     *         bucket using the <a href=
+     *         "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     *         >SetResourceAccessForBucket</a> action.
      */
 
     public Boolean getIncludeConnectedResources() {
@@ -201,12 +208,15 @@ public class GetBucketsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * A Boolean value that indicates whether to include Lightsail instances that were given access to the bucket using
-     * the <a>SetResourceAccessForBucket</a> action.
+     * the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html">
+     * SetResourceAccessForBucket</a> action.
      * </p>
      * 
      * @param includeConnectedResources
      *        A Boolean value that indicates whether to include Lightsail instances that were given access to the bucket
-     *        using the <a>SetResourceAccessForBucket</a> action.
+     *        using the <a href=
+     *        "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     *        >SetResourceAccessForBucket</a> action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -218,11 +228,14 @@ public class GetBucketsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * A Boolean value that indicates whether to include Lightsail instances that were given access to the bucket using
-     * the <a>SetResourceAccessForBucket</a> action.
+     * the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html">
+     * SetResourceAccessForBucket</a> action.
      * </p>
      * 
      * @return A Boolean value that indicates whether to include Lightsail instances that were given access to the
-     *         bucket using the <a>SetResourceAccessForBucket</a> action.
+     *         bucket using the <a href=
+     *         "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     *         >SetResourceAccessForBucket</a> action.
      */
 
     public Boolean isIncludeConnectedResources() {

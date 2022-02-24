@@ -45,19 +45,18 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      * instances until the desired capacity is totally fulfilled, even if this results in an overage. For example, if
      * there are two units remaining to fulfill capacity, and Amazon EC2 Auto Scaling can only launch an instance with a
      * <code>WeightedCapacity</code> of five units, the instance is launched, and the desired capacity is exceeded by
-     * three units. For more information, see <a
-     * href="https://docs.aws.amazon.com/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html">Instance
-     * weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. Value must be in the
-     * range of 1–999.
+     * three units. For more information, see <a href=
+     * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html"
+     * >Configuring instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * Value must be in the range of 1–999.
      * </p>
      */
     private String weightedCapacity;
     /**
      * <p>
-     * Provides the launch template to be used when launching the instance type specified in <code>InstanceType</code>.
-     * For example, some instance types might require a launch template with a different AMI. If not provided, Amazon
-     * EC2 Auto Scaling uses the launch template that's defined for your mixed instances policy. For more information,
-     * see <a href=
+     * Provides a launch template for the specified instance type or instance requirements. For example, some instance
+     * types might require a launch template with a different AMI. If not provided, Amazon EC2 Auto Scaling uses the
+     * launch template that's defined for your mixed instances policy. For more information, see <a href=
      * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html"
      * >Specifying a different launch template for an instance type</a> in the <i>Amazon EC2 Auto Scaling User
      * Guide</i>.
@@ -139,10 +138,10 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      * instances until the desired capacity is totally fulfilled, even if this results in an overage. For example, if
      * there are two units remaining to fulfill capacity, and Amazon EC2 Auto Scaling can only launch an instance with a
      * <code>WeightedCapacity</code> of five units, the instance is launched, and the desired capacity is exceeded by
-     * three units. For more information, see <a
-     * href="https://docs.aws.amazon.com/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html">Instance
-     * weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. Value must be in the
-     * range of 1–999.
+     * three units. For more information, see <a href=
+     * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html"
+     * >Configuring instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * Value must be in the range of 1–999.
      * </p>
      * 
      * @param weightedCapacity
@@ -152,10 +151,10 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      *        Scaling launches instances until the desired capacity is totally fulfilled, even if this results in an
      *        overage. For example, if there are two units remaining to fulfill capacity, and Amazon EC2 Auto Scaling
      *        can only launch an instance with a <code>WeightedCapacity</code> of five units, the instance is launched,
-     *        and the desired capacity is exceeded by three units. For more information, see <a
-     *        href="https://docs.aws.amazon.com/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html"
-     *        >Instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
-     *        Value must be in the range of 1–999.
+     *        and the desired capacity is exceeded by three units. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html"
+     *        >Configuring instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+     *        Guide</i>. Value must be in the range of 1–999.
      */
 
     public void setWeightedCapacity(String weightedCapacity) {
@@ -170,10 +169,10 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      * instances until the desired capacity is totally fulfilled, even if this results in an overage. For example, if
      * there are two units remaining to fulfill capacity, and Amazon EC2 Auto Scaling can only launch an instance with a
      * <code>WeightedCapacity</code> of five units, the instance is launched, and the desired capacity is exceeded by
-     * three units. For more information, see <a
-     * href="https://docs.aws.amazon.com/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html">Instance
-     * weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. Value must be in the
-     * range of 1–999.
+     * three units. For more information, see <a href=
+     * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html"
+     * >Configuring instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * Value must be in the range of 1–999.
      * </p>
      * 
      * @return The number of capacity units provided by the instance type specified in <code>InstanceType</code> in
@@ -182,10 +181,10 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      *         Auto Scaling launches instances until the desired capacity is totally fulfilled, even if this results in
      *         an overage. For example, if there are two units remaining to fulfill capacity, and Amazon EC2 Auto
      *         Scaling can only launch an instance with a <code>WeightedCapacity</code> of five units, the instance is
-     *         launched, and the desired capacity is exceeded by three units. For more information, see <a
-     *         href="https://docs.aws.amazon.com/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html"
-     *         >Instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
-     *         Value must be in the range of 1–999.
+     *         launched, and the desired capacity is exceeded by three units. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html"
+     *         >Configuring instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+     *         Guide</i>. Value must be in the range of 1–999.
      */
 
     public String getWeightedCapacity() {
@@ -200,10 +199,10 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      * instances until the desired capacity is totally fulfilled, even if this results in an overage. For example, if
      * there are two units remaining to fulfill capacity, and Amazon EC2 Auto Scaling can only launch an instance with a
      * <code>WeightedCapacity</code> of five units, the instance is launched, and the desired capacity is exceeded by
-     * three units. For more information, see <a
-     * href="https://docs.aws.amazon.com/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html">Instance
-     * weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. Value must be in the
-     * range of 1–999.
+     * three units. For more information, see <a href=
+     * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html"
+     * >Configuring instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
+     * Value must be in the range of 1–999.
      * </p>
      * 
      * @param weightedCapacity
@@ -213,10 +212,10 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      *        Scaling launches instances until the desired capacity is totally fulfilled, even if this results in an
      *        overage. For example, if there are two units remaining to fulfill capacity, and Amazon EC2 Auto Scaling
      *        can only launch an instance with a <code>WeightedCapacity</code> of five units, the instance is launched,
-     *        and the desired capacity is exceeded by three units. For more information, see <a
-     *        href="https://docs.aws.amazon.com/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html"
-     *        >Instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
-     *        Value must be in the range of 1–999.
+     *        and the desired capacity is exceeded by three units. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-instance-weighting.html"
+     *        >Configuring instance weighting for Amazon EC2 Auto Scaling</a> in the <i>Amazon EC2 Auto Scaling User
+     *        Guide</i>. Value must be in the range of 1–999.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -227,20 +226,19 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the launch template to be used when launching the instance type specified in <code>InstanceType</code>.
-     * For example, some instance types might require a launch template with a different AMI. If not provided, Amazon
-     * EC2 Auto Scaling uses the launch template that's defined for your mixed instances policy. For more information,
-     * see <a href=
+     * Provides a launch template for the specified instance type or instance requirements. For example, some instance
+     * types might require a launch template with a different AMI. If not provided, Amazon EC2 Auto Scaling uses the
+     * launch template that's defined for your mixed instances policy. For more information, see <a href=
      * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html"
      * >Specifying a different launch template for an instance type</a> in the <i>Amazon EC2 Auto Scaling User
      * Guide</i>.
      * </p>
      * 
      * @param launchTemplateSpecification
-     *        Provides the launch template to be used when launching the instance type specified in
-     *        <code>InstanceType</code>. For example, some instance types might require a launch template with a
-     *        different AMI. If not provided, Amazon EC2 Auto Scaling uses the launch template that's defined for your
-     *        mixed instances policy. For more information, see <a href=
+     *        Provides a launch template for the specified instance type or instance requirements. For example, some
+     *        instance types might require a launch template with a different AMI. If not provided, Amazon EC2 Auto
+     *        Scaling uses the launch template that's defined for your mixed instances policy. For more information, see
+     *        <a href=
      *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html"
      *        >Specifying a different launch template for an instance type</a> in the <i>Amazon EC2 Auto Scaling User
      *        Guide</i>.
@@ -252,19 +250,18 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the launch template to be used when launching the instance type specified in <code>InstanceType</code>.
-     * For example, some instance types might require a launch template with a different AMI. If not provided, Amazon
-     * EC2 Auto Scaling uses the launch template that's defined for your mixed instances policy. For more information,
-     * see <a href=
+     * Provides a launch template for the specified instance type or instance requirements. For example, some instance
+     * types might require a launch template with a different AMI. If not provided, Amazon EC2 Auto Scaling uses the
+     * launch template that's defined for your mixed instances policy. For more information, see <a href=
      * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html"
      * >Specifying a different launch template for an instance type</a> in the <i>Amazon EC2 Auto Scaling User
      * Guide</i>.
      * </p>
      * 
-     * @return Provides the launch template to be used when launching the instance type specified in
-     *         <code>InstanceType</code>. For example, some instance types might require a launch template with a
-     *         different AMI. If not provided, Amazon EC2 Auto Scaling uses the launch template that's defined for your
-     *         mixed instances policy. For more information, see <a href=
+     * @return Provides a launch template for the specified instance type or instance requirements. For example, some
+     *         instance types might require a launch template with a different AMI. If not provided, Amazon EC2 Auto
+     *         Scaling uses the launch template that's defined for your mixed instances policy. For more information,
+     *         see <a href=
      *         "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html"
      *         >Specifying a different launch template for an instance type</a> in the <i>Amazon EC2 Auto Scaling User
      *         Guide</i>.
@@ -276,20 +273,19 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Provides the launch template to be used when launching the instance type specified in <code>InstanceType</code>.
-     * For example, some instance types might require a launch template with a different AMI. If not provided, Amazon
-     * EC2 Auto Scaling uses the launch template that's defined for your mixed instances policy. For more information,
-     * see <a href=
+     * Provides a launch template for the specified instance type or instance requirements. For example, some instance
+     * types might require a launch template with a different AMI. If not provided, Amazon EC2 Auto Scaling uses the
+     * launch template that's defined for your mixed instances policy. For more information, see <a href=
      * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html"
      * >Specifying a different launch template for an instance type</a> in the <i>Amazon EC2 Auto Scaling User
      * Guide</i>.
      * </p>
      * 
      * @param launchTemplateSpecification
-     *        Provides the launch template to be used when launching the instance type specified in
-     *        <code>InstanceType</code>. For example, some instance types might require a launch template with a
-     *        different AMI. If not provided, Amazon EC2 Auto Scaling uses the launch template that's defined for your
-     *        mixed instances policy. For more information, see <a href=
+     *        Provides a launch template for the specified instance type or instance requirements. For example, some
+     *        instance types might require a launch template with a different AMI. If not provided, Amazon EC2 Auto
+     *        Scaling uses the launch template that's defined for your mixed instances policy. For more information, see
+     *        <a href=
      *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups-launch-template-overrides.html"
      *        >Specifying a different launch template for an instance type</a> in the <i>Amazon EC2 Auto Scaling User
      *        Guide</i>.

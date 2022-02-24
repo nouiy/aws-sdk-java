@@ -43,6 +43,9 @@ public class RemediationActionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EC2AssociateRouteTableAction").build();
     private static final MarshallingInfo<StructuredPojo> EC2CREATEROUTETABLEACTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EC2CreateRouteTableAction").build();
+    private static final MarshallingInfo<StructuredPojo> FMSPOLICYUPDATEFIREWALLCREATIONCONFIGACTION_BINDING = MarshallingInfo
+            .builder(MarshallingType.STRUCTURED).marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FMSPolicyUpdateFirewallCreationConfigAction")
+            .build();
 
     private static final RemediationActionMarshaller instance = new RemediationActionMarshaller();
 
@@ -68,6 +71,8 @@ public class RemediationActionMarshaller {
             protocolMarshaller.marshall(remediationAction.getEC2ReplaceRouteTableAssociationAction(), EC2REPLACEROUTETABLEASSOCIATIONACTION_BINDING);
             protocolMarshaller.marshall(remediationAction.getEC2AssociateRouteTableAction(), EC2ASSOCIATEROUTETABLEACTION_BINDING);
             protocolMarshaller.marshall(remediationAction.getEC2CreateRouteTableAction(), EC2CREATEROUTETABLEACTION_BINDING);
+            protocolMarshaller
+                    .marshall(remediationAction.getFMSPolicyUpdateFirewallCreationConfigAction(), FMSPOLICYUPDATEFIREWALLCREATIONCONFIGACTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

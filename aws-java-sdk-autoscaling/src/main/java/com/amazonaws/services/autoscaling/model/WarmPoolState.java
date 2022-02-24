@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum WarmPoolState {
 
     Stopped("Stopped"),
-    Running("Running");
+    Running("Running"),
+    Hibernated("Hibernated");
 
     private String value;
 

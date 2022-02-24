@@ -135,6 +135,18 @@ public class ResourceViolation implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private PossibleRemediationActions possibleRemediationActions;
+    /**
+     * <p>
+     * Contains details about the firewall subnet that violates the policy scope.
+     * </p>
+     */
+    private FirewallSubnetIsOutOfScopeViolation firewallSubnetIsOutOfScopeViolation;
+    /**
+     * <p>
+     * Contains details about the route endpoint that violates the policy scope.
+     * </p>
+     */
+    private RouteHasOutOfScopeEndpointViolation routeHasOutOfScopeEndpointViolation;
 
     /**
      * <p>
@@ -870,6 +882,86 @@ public class ResourceViolation implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * Contains details about the firewall subnet that violates the policy scope.
+     * </p>
+     * 
+     * @param firewallSubnetIsOutOfScopeViolation
+     *        Contains details about the firewall subnet that violates the policy scope.
+     */
+
+    public void setFirewallSubnetIsOutOfScopeViolation(FirewallSubnetIsOutOfScopeViolation firewallSubnetIsOutOfScopeViolation) {
+        this.firewallSubnetIsOutOfScopeViolation = firewallSubnetIsOutOfScopeViolation;
+    }
+
+    /**
+     * <p>
+     * Contains details about the firewall subnet that violates the policy scope.
+     * </p>
+     * 
+     * @return Contains details about the firewall subnet that violates the policy scope.
+     */
+
+    public FirewallSubnetIsOutOfScopeViolation getFirewallSubnetIsOutOfScopeViolation() {
+        return this.firewallSubnetIsOutOfScopeViolation;
+    }
+
+    /**
+     * <p>
+     * Contains details about the firewall subnet that violates the policy scope.
+     * </p>
+     * 
+     * @param firewallSubnetIsOutOfScopeViolation
+     *        Contains details about the firewall subnet that violates the policy scope.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceViolation withFirewallSubnetIsOutOfScopeViolation(FirewallSubnetIsOutOfScopeViolation firewallSubnetIsOutOfScopeViolation) {
+        setFirewallSubnetIsOutOfScopeViolation(firewallSubnetIsOutOfScopeViolation);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains details about the route endpoint that violates the policy scope.
+     * </p>
+     * 
+     * @param routeHasOutOfScopeEndpointViolation
+     *        Contains details about the route endpoint that violates the policy scope.
+     */
+
+    public void setRouteHasOutOfScopeEndpointViolation(RouteHasOutOfScopeEndpointViolation routeHasOutOfScopeEndpointViolation) {
+        this.routeHasOutOfScopeEndpointViolation = routeHasOutOfScopeEndpointViolation;
+    }
+
+    /**
+     * <p>
+     * Contains details about the route endpoint that violates the policy scope.
+     * </p>
+     * 
+     * @return Contains details about the route endpoint that violates the policy scope.
+     */
+
+    public RouteHasOutOfScopeEndpointViolation getRouteHasOutOfScopeEndpointViolation() {
+        return this.routeHasOutOfScopeEndpointViolation;
+    }
+
+    /**
+     * <p>
+     * Contains details about the route endpoint that violates the policy scope.
+     * </p>
+     * 
+     * @param routeHasOutOfScopeEndpointViolation
+     *        Contains details about the route endpoint that violates the policy scope.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceViolation withRouteHasOutOfScopeEndpointViolation(RouteHasOutOfScopeEndpointViolation routeHasOutOfScopeEndpointViolation) {
+        setRouteHasOutOfScopeEndpointViolation(routeHasOutOfScopeEndpointViolation);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -914,7 +1006,11 @@ public class ResourceViolation implements Serializable, Cloneable, StructuredPoj
         if (getDnsRuleGroupLimitExceededViolation() != null)
             sb.append("DnsRuleGroupLimitExceededViolation: ").append(getDnsRuleGroupLimitExceededViolation()).append(",");
         if (getPossibleRemediationActions() != null)
-            sb.append("PossibleRemediationActions: ").append(getPossibleRemediationActions());
+            sb.append("PossibleRemediationActions: ").append(getPossibleRemediationActions()).append(",");
+        if (getFirewallSubnetIsOutOfScopeViolation() != null)
+            sb.append("FirewallSubnetIsOutOfScopeViolation: ").append(getFirewallSubnetIsOutOfScopeViolation()).append(",");
+        if (getRouteHasOutOfScopeEndpointViolation() != null)
+            sb.append("RouteHasOutOfScopeEndpointViolation: ").append(getRouteHasOutOfScopeEndpointViolation());
         sb.append("}");
         return sb.toString();
     }
@@ -1011,6 +1107,16 @@ public class ResourceViolation implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getPossibleRemediationActions() != null && other.getPossibleRemediationActions().equals(this.getPossibleRemediationActions()) == false)
             return false;
+        if (other.getFirewallSubnetIsOutOfScopeViolation() == null ^ this.getFirewallSubnetIsOutOfScopeViolation() == null)
+            return false;
+        if (other.getFirewallSubnetIsOutOfScopeViolation() != null
+                && other.getFirewallSubnetIsOutOfScopeViolation().equals(this.getFirewallSubnetIsOutOfScopeViolation()) == false)
+            return false;
+        if (other.getRouteHasOutOfScopeEndpointViolation() == null ^ this.getRouteHasOutOfScopeEndpointViolation() == null)
+            return false;
+        if (other.getRouteHasOutOfScopeEndpointViolation() != null
+                && other.getRouteHasOutOfScopeEndpointViolation().equals(this.getRouteHasOutOfScopeEndpointViolation()) == false)
+            return false;
         return true;
     }
 
@@ -1044,6 +1150,8 @@ public class ResourceViolation implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getDnsDuplicateRuleGroupViolation() == null) ? 0 : getDnsDuplicateRuleGroupViolation().hashCode());
         hashCode = prime * hashCode + ((getDnsRuleGroupLimitExceededViolation() == null) ? 0 : getDnsRuleGroupLimitExceededViolation().hashCode());
         hashCode = prime * hashCode + ((getPossibleRemediationActions() == null) ? 0 : getPossibleRemediationActions().hashCode());
+        hashCode = prime * hashCode + ((getFirewallSubnetIsOutOfScopeViolation() == null) ? 0 : getFirewallSubnetIsOutOfScopeViolation().hashCode());
+        hashCode = prime * hashCode + ((getRouteHasOutOfScopeEndpointViolation() == null) ? 0 : getRouteHasOutOfScopeEndpointViolation().hashCode());
         return hashCode;
     }
 

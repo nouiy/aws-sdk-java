@@ -129,6 +129,16 @@ public class ResourceViolationJsonUnmarshaller implements Unmarshaller<ResourceV
                     context.nextToken();
                     resourceViolation.setPossibleRemediationActions(PossibleRemediationActionsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("FirewallSubnetIsOutOfScopeViolation", targetDepth)) {
+                    context.nextToken();
+                    resourceViolation.setFirewallSubnetIsOutOfScopeViolation(FirewallSubnetIsOutOfScopeViolationJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
+                if (context.testExpression("RouteHasOutOfScopeEndpointViolation", targetDepth)) {
+                    context.nextToken();
+                    resourceViolation.setRouteHasOutOfScopeEndpointViolation(RouteHasOutOfScopeEndpointViolationJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

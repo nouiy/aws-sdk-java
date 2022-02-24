@@ -139,6 +139,11 @@ public class S3CopyObjectOperationStaxUnmarshaller implements Unmarshaller<S3Cop
                     s3CopyObjectOperation.setBucketKeyEnabled(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("ChecksumAlgorithm", targetDepth)) {
+                    s3CopyObjectOperation.setChecksumAlgorithm(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return s3CopyObjectOperation;

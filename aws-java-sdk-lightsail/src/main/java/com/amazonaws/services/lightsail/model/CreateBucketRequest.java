@@ -44,10 +44,12 @@ public class CreateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket.
      * </p>
      * <p>
-     * Use the <a>GetBucketBundles</a> action to get a list of bundle IDs that you can specify.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBucketBundles.html">
+     * GetBucketBundles</a> action to get a list of bundle IDs that you can specify.
      * </p>
      * <p>
-     * Use the <a>UpdateBucketBundle</a> action to change the bundle after the bucket is created.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
+     * UpdateBucketBundle</a> action to change the bundle after the bucket is created.
      * </p>
      */
     private String bundleId;
@@ -56,7 +58,9 @@ public class CreateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The tag keys and optional values to add to the bucket during creation.
      * </p>
      * <p>
-     * Use the <a>TagResource</a> action to tag the bucket after it's created.
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_TagResource.html">TagResource</a> action
+     * to tag the bucket after it's created.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -148,10 +152,12 @@ public class CreateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket.
      * </p>
      * <p>
-     * Use the <a>GetBucketBundles</a> action to get a list of bundle IDs that you can specify.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBucketBundles.html">
+     * GetBucketBundles</a> action to get a list of bundle IDs that you can specify.
      * </p>
      * <p>
-     * Use the <a>UpdateBucketBundle</a> action to change the bundle after the bucket is created.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
+     * UpdateBucketBundle</a> action to change the bundle after the bucket is created.
      * </p>
      * 
      * @param bundleId
@@ -160,10 +166,14 @@ public class CreateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket.
      *        </p>
      *        <p>
-     *        Use the <a>GetBucketBundles</a> action to get a list of bundle IDs that you can specify.
+     *        Use the <a
+     *        href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBucketBundles.html">
+     *        GetBucketBundles</a> action to get a list of bundle IDs that you can specify.
      *        </p>
      *        <p>
-     *        Use the <a>UpdateBucketBundle</a> action to change the bundle after the bucket is created.
+     *        Use the <a
+     *        href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html"
+     *        >UpdateBucketBundle</a> action to change the bundle after the bucket is created.
      */
 
     public void setBundleId(String bundleId) {
@@ -178,10 +188,12 @@ public class CreateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket.
      * </p>
      * <p>
-     * Use the <a>GetBucketBundles</a> action to get a list of bundle IDs that you can specify.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBucketBundles.html">
+     * GetBucketBundles</a> action to get a list of bundle IDs that you can specify.
      * </p>
      * <p>
-     * Use the <a>UpdateBucketBundle</a> action to change the bundle after the bucket is created.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
+     * UpdateBucketBundle</a> action to change the bundle after the bucket is created.
      * </p>
      * 
      * @return The ID of the bundle to use for the bucket.</p>
@@ -189,10 +201,14 @@ public class CreateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket.
      *         </p>
      *         <p>
-     *         Use the <a>GetBucketBundles</a> action to get a list of bundle IDs that you can specify.
+     *         Use the <a
+     *         href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBucketBundles.html"
+     *         >GetBucketBundles</a> action to get a list of bundle IDs that you can specify.
      *         </p>
      *         <p>
-     *         Use the <a>UpdateBucketBundle</a> action to change the bundle after the bucket is created.
+     *         Use the <a
+     *         href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html"
+     *         >UpdateBucketBundle</a> action to change the bundle after the bucket is created.
      */
 
     public String getBundleId() {
@@ -207,10 +223,12 @@ public class CreateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket.
      * </p>
      * <p>
-     * Use the <a>GetBucketBundles</a> action to get a list of bundle IDs that you can specify.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBucketBundles.html">
+     * GetBucketBundles</a> action to get a list of bundle IDs that you can specify.
      * </p>
      * <p>
-     * Use the <a>UpdateBucketBundle</a> action to change the bundle after the bucket is created.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
+     * UpdateBucketBundle</a> action to change the bundle after the bucket is created.
      * </p>
      * 
      * @param bundleId
@@ -219,10 +237,14 @@ public class CreateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket.
      *        </p>
      *        <p>
-     *        Use the <a>GetBucketBundles</a> action to get a list of bundle IDs that you can specify.
+     *        Use the <a
+     *        href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBucketBundles.html">
+     *        GetBucketBundles</a> action to get a list of bundle IDs that you can specify.
      *        </p>
      *        <p>
-     *        Use the <a>UpdateBucketBundle</a> action to change the bundle after the bucket is created.
+     *        Use the <a
+     *        href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html"
+     *        >UpdateBucketBundle</a> action to change the bundle after the bucket is created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -236,12 +258,16 @@ public class CreateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The tag keys and optional values to add to the bucket during creation.
      * </p>
      * <p>
-     * Use the <a>TagResource</a> action to tag the bucket after it's created.
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_TagResource.html">TagResource</a> action
+     * to tag the bucket after it's created.
      * </p>
      * 
      * @return The tag keys and optional values to add to the bucket during creation.</p>
      *         <p>
-     *         Use the <a>TagResource</a> action to tag the bucket after it's created.
+     *         Use the <a
+     *         href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_TagResource.html">TagResource
+     *         </a> action to tag the bucket after it's created.
      */
 
     public java.util.List<Tag> getTags() {
@@ -253,13 +279,17 @@ public class CreateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The tag keys and optional values to add to the bucket during creation.
      * </p>
      * <p>
-     * Use the <a>TagResource</a> action to tag the bucket after it's created.
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_TagResource.html">TagResource</a> action
+     * to tag the bucket after it's created.
      * </p>
      * 
      * @param tags
      *        The tag keys and optional values to add to the bucket during creation.</p>
      *        <p>
-     *        Use the <a>TagResource</a> action to tag the bucket after it's created.
+     *        Use the <a
+     *        href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_TagResource.html">TagResource</a>
+     *        action to tag the bucket after it's created.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -276,7 +306,9 @@ public class CreateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The tag keys and optional values to add to the bucket during creation.
      * </p>
      * <p>
-     * Use the <a>TagResource</a> action to tag the bucket after it's created.
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_TagResource.html">TagResource</a> action
+     * to tag the bucket after it's created.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -287,7 +319,9 @@ public class CreateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * @param tags
      *        The tag keys and optional values to add to the bucket during creation.</p>
      *        <p>
-     *        Use the <a>TagResource</a> action to tag the bucket after it's created.
+     *        Use the <a
+     *        href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_TagResource.html">TagResource</a>
+     *        action to tag the bucket after it's created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -306,13 +340,17 @@ public class CreateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The tag keys and optional values to add to the bucket during creation.
      * </p>
      * <p>
-     * Use the <a>TagResource</a> action to tag the bucket after it's created.
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_TagResource.html">TagResource</a> action
+     * to tag the bucket after it's created.
      * </p>
      * 
      * @param tags
      *        The tag keys and optional values to add to the bucket during creation.</p>
      *        <p>
-     *        Use the <a>TagResource</a> action to tag the bucket after it's created.
+     *        Use the <a
+     *        href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_TagResource.html">TagResource</a>
+     *        action to tag the bucket after it's created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

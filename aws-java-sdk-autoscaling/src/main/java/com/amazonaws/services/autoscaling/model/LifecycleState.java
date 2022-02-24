@@ -41,7 +41,8 @@ public enum LifecycleState {
     WarmedTerminatingProceed("Warmed:Terminating:Proceed"),
     WarmedTerminated("Warmed:Terminated"),
     WarmedStopped("Warmed:Stopped"),
-    WarmedRunning("Warmed:Running");
+    WarmedRunning("Warmed:Running"),
+    WarmedHibernated("Warmed:Hibernated");
 
     private String value;
 

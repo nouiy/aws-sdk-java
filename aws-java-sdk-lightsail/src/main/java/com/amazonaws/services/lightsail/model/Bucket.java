@@ -54,7 +54,8 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket.
      * </p>
      * <p>
-     * Use the <a>UpdateBucketBundle</a> action to change the bundle of a bucket.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
+     * UpdateBucketBundle</a> action to change the bundle of a bucket.
      * </p>
      */
     private String bundleId;
@@ -128,7 +129,8 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * You can update a bucket's bundle only one time within a monthly AWS billing cycle.
      * </p>
      * <p>
-     * Use the <a>UpdateBucketBundle</a> action to change a bucket's bundle.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
+     * UpdateBucketBundle</a> action to change a bucket's bundle.
      * </p>
      */
     private Boolean ableToUpdateBundle;
@@ -143,7 +145,9 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * An array of objects that describe Lightsail instances that have access to the bucket.
      * </p>
      * <p>
-     * Use the <a>SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     * >SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
      * </p>
      */
     private java.util.List<ResourceReceivingAccess> resourcesReceivingAccess;
@@ -288,7 +292,8 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket.
      * </p>
      * <p>
-     * Use the <a>UpdateBucketBundle</a> action to change the bundle of a bucket.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
+     * UpdateBucketBundle</a> action to change the bundle of a bucket.
      * </p>
      * 
      * @param bundleId
@@ -297,7 +302,9 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      *        A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket.
      *        </p>
      *        <p>
-     *        Use the <a>UpdateBucketBundle</a> action to change the bundle of a bucket.
+     *        Use the <a
+     *        href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html"
+     *        >UpdateBucketBundle</a> action to change the bundle of a bucket.
      */
 
     public void setBundleId(String bundleId) {
@@ -312,7 +319,8 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket.
      * </p>
      * <p>
-     * Use the <a>UpdateBucketBundle</a> action to change the bundle of a bucket.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
+     * UpdateBucketBundle</a> action to change the bundle of a bucket.
      * </p>
      * 
      * @return The ID of the bundle currently applied to the bucket.</p>
@@ -320,7 +328,9 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      *         A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket.
      *         </p>
      *         <p>
-     *         Use the <a>UpdateBucketBundle</a> action to change the bundle of a bucket.
+     *         Use the <a
+     *         href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html"
+     *         >UpdateBucketBundle</a> action to change the bundle of a bucket.
      */
 
     public String getBundleId() {
@@ -335,7 +345,8 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket.
      * </p>
      * <p>
-     * Use the <a>UpdateBucketBundle</a> action to change the bundle of a bucket.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
+     * UpdateBucketBundle</a> action to change the bundle of a bucket.
      * </p>
      * 
      * @param bundleId
@@ -344,7 +355,9 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      *        A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket.
      *        </p>
      *        <p>
-     *        Use the <a>UpdateBucketBundle</a> action to change the bundle of a bucket.
+     *        Use the <a
+     *        href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html"
+     *        >UpdateBucketBundle</a> action to change the bundle of a bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -802,7 +815,8 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * You can update a bucket's bundle only one time within a monthly AWS billing cycle.
      * </p>
      * <p>
-     * Use the <a>UpdateBucketBundle</a> action to change a bucket's bundle.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
+     * UpdateBucketBundle</a> action to change a bucket's bundle.
      * </p>
      * 
      * @param ableToUpdateBundle
@@ -811,7 +825,9 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      *        You can update a bucket's bundle only one time within a monthly AWS billing cycle.
      *        </p>
      *        <p>
-     *        Use the <a>UpdateBucketBundle</a> action to change a bucket's bundle.
+     *        Use the <a
+     *        href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html"
+     *        >UpdateBucketBundle</a> action to change a bucket's bundle.
      */
 
     public void setAbleToUpdateBundle(Boolean ableToUpdateBundle) {
@@ -826,7 +842,8 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * You can update a bucket's bundle only one time within a monthly AWS billing cycle.
      * </p>
      * <p>
-     * Use the <a>UpdateBucketBundle</a> action to change a bucket's bundle.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
+     * UpdateBucketBundle</a> action to change a bucket's bundle.
      * </p>
      * 
      * @return Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle.</p>
@@ -834,7 +851,9 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      *         You can update a bucket's bundle only one time within a monthly AWS billing cycle.
      *         </p>
      *         <p>
-     *         Use the <a>UpdateBucketBundle</a> action to change a bucket's bundle.
+     *         Use the <a
+     *         href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html"
+     *         >UpdateBucketBundle</a> action to change a bucket's bundle.
      */
 
     public Boolean getAbleToUpdateBundle() {
@@ -849,7 +868,8 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * You can update a bucket's bundle only one time within a monthly AWS billing cycle.
      * </p>
      * <p>
-     * Use the <a>UpdateBucketBundle</a> action to change a bucket's bundle.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
+     * UpdateBucketBundle</a> action to change a bucket's bundle.
      * </p>
      * 
      * @param ableToUpdateBundle
@@ -858,7 +878,9 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      *        You can update a bucket's bundle only one time within a monthly AWS billing cycle.
      *        </p>
      *        <p>
-     *        Use the <a>UpdateBucketBundle</a> action to change a bucket's bundle.
+     *        Use the <a
+     *        href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html"
+     *        >UpdateBucketBundle</a> action to change a bucket's bundle.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -875,7 +897,8 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * You can update a bucket's bundle only one time within a monthly AWS billing cycle.
      * </p>
      * <p>
-     * Use the <a>UpdateBucketBundle</a> action to change a bucket's bundle.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
+     * UpdateBucketBundle</a> action to change a bucket's bundle.
      * </p>
      * 
      * @return Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle.</p>
@@ -883,7 +906,9 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      *         You can update a bucket's bundle only one time within a monthly AWS billing cycle.
      *         </p>
      *         <p>
-     *         Use the <a>UpdateBucketBundle</a> action to change a bucket's bundle.
+     *         Use the <a
+     *         href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html"
+     *         >UpdateBucketBundle</a> action to change a bucket's bundle.
      */
 
     public Boolean isAbleToUpdateBundle() {
@@ -965,12 +990,16 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * An array of objects that describe Lightsail instances that have access to the bucket.
      * </p>
      * <p>
-     * Use the <a>SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     * >SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
      * </p>
      * 
      * @return An array of objects that describe Lightsail instances that have access to the bucket.</p>
      *         <p>
-     *         Use the <a>SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
+     *         Use the <a href=
+     *         "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     *         >SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
      */
 
     public java.util.List<ResourceReceivingAccess> getResourcesReceivingAccess() {
@@ -982,13 +1011,17 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * An array of objects that describe Lightsail instances that have access to the bucket.
      * </p>
      * <p>
-     * Use the <a>SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     * >SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
      * </p>
      * 
      * @param resourcesReceivingAccess
      *        An array of objects that describe Lightsail instances that have access to the bucket.</p>
      *        <p>
-     *        Use the <a>SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
+     *        Use the <a href=
+     *        "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     *        >SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
      */
 
     public void setResourcesReceivingAccess(java.util.Collection<ResourceReceivingAccess> resourcesReceivingAccess) {
@@ -1005,7 +1038,9 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * An array of objects that describe Lightsail instances that have access to the bucket.
      * </p>
      * <p>
-     * Use the <a>SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     * >SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1016,7 +1051,9 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * @param resourcesReceivingAccess
      *        An array of objects that describe Lightsail instances that have access to the bucket.</p>
      *        <p>
-     *        Use the <a>SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
+     *        Use the <a href=
+     *        "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     *        >SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1035,13 +1072,17 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * An array of objects that describe Lightsail instances that have access to the bucket.
      * </p>
      * <p>
-     * Use the <a>SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     * >SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
      * </p>
      * 
      * @param resourcesReceivingAccess
      *        An array of objects that describe Lightsail instances that have access to the bucket.</p>
      *        <p>
-     *        Use the <a>SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
+     *        Use the <a href=
+     *        "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     *        >SetResourceAccessForBucket</a> action to update the instances that have access to a bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

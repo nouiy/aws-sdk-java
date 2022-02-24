@@ -36,7 +36,8 @@ public class DeleteBucketAccessKeyRequest extends com.amazonaws.AmazonWebService
      * The ID of the access key to delete.
      * </p>
      * <p>
-     * Use the <a>GetBucketAccessKeys</a> action to get a list of access key IDs that you can specify.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBucketAccessKeys.html">
+     * GetBucketAccessKeys</a> action to get a list of access key IDs that you can specify.
      * </p>
      */
     private String accessKeyId;
@@ -86,13 +87,16 @@ public class DeleteBucketAccessKeyRequest extends com.amazonaws.AmazonWebService
      * The ID of the access key to delete.
      * </p>
      * <p>
-     * Use the <a>GetBucketAccessKeys</a> action to get a list of access key IDs that you can specify.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBucketAccessKeys.html">
+     * GetBucketAccessKeys</a> action to get a list of access key IDs that you can specify.
      * </p>
      * 
      * @param accessKeyId
      *        The ID of the access key to delete.</p>
      *        <p>
-     *        Use the <a>GetBucketAccessKeys</a> action to get a list of access key IDs that you can specify.
+     *        Use the <a
+     *        href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBucketAccessKeys.html"
+     *        >GetBucketAccessKeys</a> action to get a list of access key IDs that you can specify.
      */
 
     public void setAccessKeyId(String accessKeyId) {
@@ -104,12 +108,15 @@ public class DeleteBucketAccessKeyRequest extends com.amazonaws.AmazonWebService
      * The ID of the access key to delete.
      * </p>
      * <p>
-     * Use the <a>GetBucketAccessKeys</a> action to get a list of access key IDs that you can specify.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBucketAccessKeys.html">
+     * GetBucketAccessKeys</a> action to get a list of access key IDs that you can specify.
      * </p>
      * 
      * @return The ID of the access key to delete.</p>
      *         <p>
-     *         Use the <a>GetBucketAccessKeys</a> action to get a list of access key IDs that you can specify.
+     *         Use the <a
+     *         href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBucketAccessKeys.html"
+     *         >GetBucketAccessKeys</a> action to get a list of access key IDs that you can specify.
      */
 
     public String getAccessKeyId() {
@@ -121,13 +128,16 @@ public class DeleteBucketAccessKeyRequest extends com.amazonaws.AmazonWebService
      * The ID of the access key to delete.
      * </p>
      * <p>
-     * Use the <a>GetBucketAccessKeys</a> action to get a list of access key IDs that you can specify.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBucketAccessKeys.html">
+     * GetBucketAccessKeys</a> action to get a list of access key IDs that you can specify.
      * </p>
      * 
      * @param accessKeyId
      *        The ID of the access key to delete.</p>
      *        <p>
-     *        Use the <a>GetBucketAccessKeys</a> action to get a list of access key IDs that you can specify.
+     *        Use the <a
+     *        href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBucketAccessKeys.html"
+     *        >GetBucketAccessKeys</a> action to get a list of access key IDs that you can specify.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

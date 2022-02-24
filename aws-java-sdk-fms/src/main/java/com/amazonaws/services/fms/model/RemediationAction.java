@@ -76,6 +76,12 @@ public class RemediationAction implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private EC2CreateRouteTableAction eC2CreateRouteTableAction;
+    /**
+     * <p>
+     * The remedial action to take when updating a firewall configuration.
+     * </p>
+     */
+    private FMSPolicyUpdateFirewallCreationConfigAction fMSPolicyUpdateFirewallCreationConfigAction;
 
     /**
      * <p>
@@ -398,6 +404,47 @@ public class RemediationAction implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The remedial action to take when updating a firewall configuration.
+     * </p>
+     * 
+     * @param fMSPolicyUpdateFirewallCreationConfigAction
+     *        The remedial action to take when updating a firewall configuration.
+     */
+
+    public void setFMSPolicyUpdateFirewallCreationConfigAction(FMSPolicyUpdateFirewallCreationConfigAction fMSPolicyUpdateFirewallCreationConfigAction) {
+        this.fMSPolicyUpdateFirewallCreationConfigAction = fMSPolicyUpdateFirewallCreationConfigAction;
+    }
+
+    /**
+     * <p>
+     * The remedial action to take when updating a firewall configuration.
+     * </p>
+     * 
+     * @return The remedial action to take when updating a firewall configuration.
+     */
+
+    public FMSPolicyUpdateFirewallCreationConfigAction getFMSPolicyUpdateFirewallCreationConfigAction() {
+        return this.fMSPolicyUpdateFirewallCreationConfigAction;
+    }
+
+    /**
+     * <p>
+     * The remedial action to take when updating a firewall configuration.
+     * </p>
+     * 
+     * @param fMSPolicyUpdateFirewallCreationConfigAction
+     *        The remedial action to take when updating a firewall configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RemediationAction withFMSPolicyUpdateFirewallCreationConfigAction(
+            FMSPolicyUpdateFirewallCreationConfigAction fMSPolicyUpdateFirewallCreationConfigAction) {
+        setFMSPolicyUpdateFirewallCreationConfigAction(fMSPolicyUpdateFirewallCreationConfigAction);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -424,7 +471,9 @@ public class RemediationAction implements Serializable, Cloneable, StructuredPoj
         if (getEC2AssociateRouteTableAction() != null)
             sb.append("EC2AssociateRouteTableAction: ").append(getEC2AssociateRouteTableAction()).append(",");
         if (getEC2CreateRouteTableAction() != null)
-            sb.append("EC2CreateRouteTableAction: ").append(getEC2CreateRouteTableAction());
+            sb.append("EC2CreateRouteTableAction: ").append(getEC2CreateRouteTableAction()).append(",");
+        if (getFMSPolicyUpdateFirewallCreationConfigAction() != null)
+            sb.append("FMSPolicyUpdateFirewallCreationConfigAction: ").append(getFMSPolicyUpdateFirewallCreationConfigAction());
         sb.append("}");
         return sb.toString();
     }
@@ -472,6 +521,11 @@ public class RemediationAction implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getEC2CreateRouteTableAction() != null && other.getEC2CreateRouteTableAction().equals(this.getEC2CreateRouteTableAction()) == false)
             return false;
+        if (other.getFMSPolicyUpdateFirewallCreationConfigAction() == null ^ this.getFMSPolicyUpdateFirewallCreationConfigAction() == null)
+            return false;
+        if (other.getFMSPolicyUpdateFirewallCreationConfigAction() != null
+                && other.getFMSPolicyUpdateFirewallCreationConfigAction().equals(this.getFMSPolicyUpdateFirewallCreationConfigAction()) == false)
+            return false;
         return true;
     }
 
@@ -488,6 +542,8 @@ public class RemediationAction implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getEC2ReplaceRouteTableAssociationAction() == null) ? 0 : getEC2ReplaceRouteTableAssociationAction().hashCode());
         hashCode = prime * hashCode + ((getEC2AssociateRouteTableAction() == null) ? 0 : getEC2AssociateRouteTableAction().hashCode());
         hashCode = prime * hashCode + ((getEC2CreateRouteTableAction() == null) ? 0 : getEC2CreateRouteTableAction().hashCode());
+        hashCode = prime * hashCode
+                + ((getFMSPolicyUpdateFirewallCreationConfigAction() == null) ? 0 : getFMSPolicyUpdateFirewallCreationConfigAction().hashCode());
         return hashCode;
     }
 

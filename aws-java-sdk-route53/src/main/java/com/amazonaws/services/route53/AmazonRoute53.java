@@ -137,6 +137,36 @@ public interface AmazonRoute53 {
      * hosted zone must first submit a <code>CreateVPCAssociationAuthorization</code> request. Then the account that
      * created the VPC must submit an <code>AssociateVPCWithHostedZone</code> request.
      * </p>
+     * </note> <note>
+     * <p>
+     * When granting access, the hosted zone and the Amazon VPC must belong to the same partition. A partition is a
+     * group of Amazon Web Services Regions. Each Amazon Web Services account is scoped to one partition.
+     * </p>
+     * <p>
+     * The following are the supported partitions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>aws</code> - Amazon Web Services Regions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>aws-cn</code> - China Regions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>aws-us-gov</code> - Amazon Web Services GovCloud (US) Region
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access Management</a> in the
+     * <i>Amazon Web Services General Reference</i>.
+     * </p>
      * </note>
      * 
      * @param associateVPCWithHostedZoneRequest
@@ -270,8 +300,7 @@ public interface AmazonRoute53 {
      * </li>
      * <li>
      * <p>
-     * <code>UPSERT</code>: If a resource record set does not already exist, Amazon Web Services creates it. If a
-     * resource set does exist, Route 53 updates it with the values in the request.
+     * <code>UPSERT</code>: If a resource set exists Route 53 updates it with the values in the request.
      * </p>
      * </li>
      * </ul>
@@ -519,6 +548,38 @@ public interface AmazonRoute53 {
      * The <code>CreateHostedZone</code> request requires the caller to have an <code>ec2:DescribeVpcs</code>
      * permission.
      * </p>
+     * <note>
+     * <p>
+     * When creating private hosted zones, the Amazon VPC must belong to the same partition where the hosted zone is
+     * created. A partition is a group of Amazon Web Services Regions. Each Amazon Web Services account is scoped to one
+     * partition.
+     * </p>
+     * <p>
+     * The following are the supported partitions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>aws</code> - Amazon Web Services Regions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>aws-cn</code> - China Regions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>aws-us-gov</code> - Amazon Web Services GovCloud (US) Region
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access Management</a> in the
+     * <i>Amazon Web Services General Reference</i>.
+     * </p>
+     * </note>
      * 
      * @param createHostedZoneRequest
      *        A complex type that contains information about the request to create a public or private hosted zone.
@@ -719,6 +780,29 @@ public interface AmazonRoute53 {
      * </p>
      * <p>
      * <code>arn:aws:logs:us-east-1:123412341234:log-group:/aws/route53/*</code>
+     * </p>
+     * <p>
+     * To avoid the confused deputy problem, a security issue where an entity without a permission for an action can
+     * coerce a more-privileged entity to perform it, you can optionally limit the permissions that a service has to a
+     * resource in a resource-based policy by supplying the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For <code>aws:SourceArn</code>, supply the hosted zone ARN used in creating the query logging configuration. For
+     * example, <code>aws:SourceArn: arn:aws:route53:::hostedzone/hosted zone ID</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>aws:SourceAccount</code>, supply the account ID for the account that creates the query logging
+     * configuration. For example, <code>aws:SourceAccount:111111111111</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html">The
+     * confused deputy problem</a> in the <i>Amazon Web Services IAM User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -1551,6 +1635,37 @@ public interface AmazonRoute53 {
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * When revoking access, the hosted zone and the Amazon VPC must belong to the same partition. A partition is a
+     * group of Amazon Web Services Regions. Each Amazon Web Services account is scoped to one partition.
+     * </p>
+     * <p>
+     * The following are the supported partitions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>aws</code> - Amazon Web Services Regions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>aws-cn</code> - China Regions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>aws-us-gov</code> - Amazon Web Services GovCloud (US) Region
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access Management</a> in the
+     * <i>Amazon Web Services General Reference</i>.
+     * </p>
+     * </note>
      * 
      * @param disassociateVPCFromHostedZoneRequest
      *        A complex type that contains information about the VPC that you want to disassociate from a specified
@@ -2280,6 +2395,38 @@ public interface AmazonRoute53 {
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * When listing private hosted zones, the hosted zone and the Amazon VPC must belong to the same partition where the
+     * hosted zones were created. A partition is a group of Amazon Web Services Regions. Each Amazon Web Services
+     * account is scoped to one partition.
+     * </p>
+     * <p>
+     * The following are the supported partitions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>aws</code> - Amazon Web Services Regions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>aws-cn</code> - China Regions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>aws-us-gov</code> - Amazon Web Services GovCloud (US) Region
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Access Management</a> in the
+     * <i>Amazon Web Services General Reference</i>.
+     * </p>
+     * </note>
      * 
      * @param listHostedZonesByVPCRequest
      *        Lists all the private hosted zones that a specified VPC is associated with, regardless of which Amazon Web

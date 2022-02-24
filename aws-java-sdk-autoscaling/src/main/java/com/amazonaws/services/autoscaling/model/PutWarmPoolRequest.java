@@ -71,6 +71,13 @@ public class PutWarmPoolRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private String poolState;
+    /**
+     * <p>
+     * Indicates whether instances in the Auto Scaling group can be returned to the warm pool on scale in. The default
+     * is to terminate instances in the Auto Scaling group when the group scales in.
+     * </p>
+     */
+    private InstanceReusePolicy instanceReusePolicy;
 
     /**
      * <p>
@@ -384,6 +391,52 @@ public class PutWarmPoolRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * Indicates whether instances in the Auto Scaling group can be returned to the warm pool on scale in. The default
+     * is to terminate instances in the Auto Scaling group when the group scales in.
+     * </p>
+     * 
+     * @param instanceReusePolicy
+     *        Indicates whether instances in the Auto Scaling group can be returned to the warm pool on scale in. The
+     *        default is to terminate instances in the Auto Scaling group when the group scales in.
+     */
+
+    public void setInstanceReusePolicy(InstanceReusePolicy instanceReusePolicy) {
+        this.instanceReusePolicy = instanceReusePolicy;
+    }
+
+    /**
+     * <p>
+     * Indicates whether instances in the Auto Scaling group can be returned to the warm pool on scale in. The default
+     * is to terminate instances in the Auto Scaling group when the group scales in.
+     * </p>
+     * 
+     * @return Indicates whether instances in the Auto Scaling group can be returned to the warm pool on scale in. The
+     *         default is to terminate instances in the Auto Scaling group when the group scales in.
+     */
+
+    public InstanceReusePolicy getInstanceReusePolicy() {
+        return this.instanceReusePolicy;
+    }
+
+    /**
+     * <p>
+     * Indicates whether instances in the Auto Scaling group can be returned to the warm pool on scale in. The default
+     * is to terminate instances in the Auto Scaling group when the group scales in.
+     * </p>
+     * 
+     * @param instanceReusePolicy
+     *        Indicates whether instances in the Auto Scaling group can be returned to the warm pool on scale in. The
+     *        default is to terminate instances in the Auto Scaling group when the group scales in.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutWarmPoolRequest withInstanceReusePolicy(InstanceReusePolicy instanceReusePolicy) {
+        setInstanceReusePolicy(instanceReusePolicy);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -402,7 +455,9 @@ public class PutWarmPoolRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getMinSize() != null)
             sb.append("MinSize: ").append(getMinSize()).append(",");
         if (getPoolState() != null)
-            sb.append("PoolState: ").append(getPoolState());
+            sb.append("PoolState: ").append(getPoolState()).append(",");
+        if (getInstanceReusePolicy() != null)
+            sb.append("InstanceReusePolicy: ").append(getInstanceReusePolicy());
         sb.append("}");
         return sb.toString();
     }
@@ -433,6 +488,10 @@ public class PutWarmPoolRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getPoolState() != null && other.getPoolState().equals(this.getPoolState()) == false)
             return false;
+        if (other.getInstanceReusePolicy() == null ^ this.getInstanceReusePolicy() == null)
+            return false;
+        if (other.getInstanceReusePolicy() != null && other.getInstanceReusePolicy().equals(this.getInstanceReusePolicy()) == false)
+            return false;
         return true;
     }
 
@@ -445,6 +504,7 @@ public class PutWarmPoolRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getMaxGroupPreparedCapacity() == null) ? 0 : getMaxGroupPreparedCapacity().hashCode());
         hashCode = prime * hashCode + ((getMinSize() == null) ? 0 : getMinSize().hashCode());
         hashCode = prime * hashCode + ((getPoolState() == null) ? 0 : getPoolState().hashCode());
+        hashCode = prime * hashCode + ((getInstanceReusePolicy() == null) ? 0 : getInstanceReusePolicy().hashCode());
         return hashCode;
     }
 

@@ -30,7 +30,9 @@ public class DeleteBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The name of the bucket to delete.
      * </p>
      * <p>
-     * Use the <a>GetBuckets</a> action to get a list of bucket names that you can specify.
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBuckets.html">GetBuckets</a> action
+     * to get a list of bucket names that you can specify.
      * </p>
      */
     private String bucketName;
@@ -49,7 +51,9 @@ public class DeleteBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * The bucket has instances that were granted access to it using the <a>SetResourceAccessForBucket</a> action.
+     * The bucket has instances that were granted access to it using the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     * >SetResourceAccessForBucket</a> action.
      * </p>
      * </li>
      * <li>
@@ -77,13 +81,17 @@ public class DeleteBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The name of the bucket to delete.
      * </p>
      * <p>
-     * Use the <a>GetBuckets</a> action to get a list of bucket names that you can specify.
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBuckets.html">GetBuckets</a> action
+     * to get a list of bucket names that you can specify.
      * </p>
      * 
      * @param bucketName
      *        The name of the bucket to delete.</p>
      *        <p>
-     *        Use the <a>GetBuckets</a> action to get a list of bucket names that you can specify.
+     *        Use the <a
+     *        href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBuckets.html">GetBuckets</a>
+     *        action to get a list of bucket names that you can specify.
      */
 
     public void setBucketName(String bucketName) {
@@ -95,12 +103,16 @@ public class DeleteBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The name of the bucket to delete.
      * </p>
      * <p>
-     * Use the <a>GetBuckets</a> action to get a list of bucket names that you can specify.
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBuckets.html">GetBuckets</a> action
+     * to get a list of bucket names that you can specify.
      * </p>
      * 
      * @return The name of the bucket to delete.</p>
      *         <p>
-     *         Use the <a>GetBuckets</a> action to get a list of bucket names that you can specify.
+     *         Use the <a
+     *         href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBuckets.html">GetBuckets</a>
+     *         action to get a list of bucket names that you can specify.
      */
 
     public String getBucketName() {
@@ -112,13 +124,17 @@ public class DeleteBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The name of the bucket to delete.
      * </p>
      * <p>
-     * Use the <a>GetBuckets</a> action to get a list of bucket names that you can specify.
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBuckets.html">GetBuckets</a> action
+     * to get a list of bucket names that you can specify.
      * </p>
      * 
      * @param bucketName
      *        The name of the bucket to delete.</p>
      *        <p>
-     *        Use the <a>GetBuckets</a> action to get a list of bucket names that you can specify.
+     *        Use the <a
+     *        href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBuckets.html">GetBuckets</a>
+     *        action to get a list of bucket names that you can specify.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,7 +158,9 @@ public class DeleteBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * The bucket has instances that were granted access to it using the <a>SetResourceAccessForBucket</a> action.
+     * The bucket has instances that were granted access to it using the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     * >SetResourceAccessForBucket</a> action.
      * </p>
      * </li>
      * <li>
@@ -176,8 +194,9 @@ public class DeleteBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
-     *        The bucket has instances that were granted access to it using the <a>SetResourceAccessForBucket</a>
-     *        action.
+     *        The bucket has instances that were granted access to it using the <a href=
+     *        "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     *        >SetResourceAccessForBucket</a> action.
      *        </p>
      *        </li>
      *        <li>
@@ -217,7 +236,9 @@ public class DeleteBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * The bucket has instances that were granted access to it using the <a>SetResourceAccessForBucket</a> action.
+     * The bucket has instances that were granted access to it using the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     * >SetResourceAccessForBucket</a> action.
      * </p>
      * </li>
      * <li>
@@ -250,8 +271,9 @@ public class DeleteBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </li>
      *         <li>
      *         <p>
-     *         The bucket has instances that were granted access to it using the <a>SetResourceAccessForBucket</a>
-     *         action.
+     *         The bucket has instances that were granted access to it using the <a href=
+     *         "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     *         >SetResourceAccessForBucket</a> action.
      *         </p>
      *         </li>
      *         <li>
@@ -291,7 +313,9 @@ public class DeleteBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * The bucket has instances that were granted access to it using the <a>SetResourceAccessForBucket</a> action.
+     * The bucket has instances that were granted access to it using the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     * >SetResourceAccessForBucket</a> action.
      * </p>
      * </li>
      * <li>
@@ -325,8 +349,9 @@ public class DeleteBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
-     *        The bucket has instances that were granted access to it using the <a>SetResourceAccessForBucket</a>
-     *        action.
+     *        The bucket has instances that were granted access to it using the <a href=
+     *        "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     *        >SetResourceAccessForBucket</a> action.
      *        </p>
      *        </li>
      *        <li>
@@ -368,7 +393,9 @@ public class DeleteBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * The bucket has instances that were granted access to it using the <a>SetResourceAccessForBucket</a> action.
+     * The bucket has instances that were granted access to it using the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     * >SetResourceAccessForBucket</a> action.
      * </p>
      * </li>
      * <li>
@@ -401,8 +428,9 @@ public class DeleteBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </li>
      *         <li>
      *         <p>
-     *         The bucket has instances that were granted access to it using the <a>SetResourceAccessForBucket</a>
-     *         action.
+     *         The bucket has instances that were granted access to it using the <a href=
+     *         "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_SetResourceAccessForBucket.html"
+     *         >SetResourceAccessForBucket</a> action.
      *         </p>
      *         </li>
      *         <li>

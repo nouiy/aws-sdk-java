@@ -31,6 +31,8 @@ public class SecurityServicePolicyDataMarshaller {
             .marshallLocationName("Type").build();
     private static final MarshallingInfo<String> MANAGEDSERVICEDATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ManagedServiceData").build();
+    private static final MarshallingInfo<StructuredPojo> POLICYOPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PolicyOption").build();
 
     private static final SecurityServicePolicyDataMarshaller instance = new SecurityServicePolicyDataMarshaller();
 
@@ -50,6 +52,7 @@ public class SecurityServicePolicyDataMarshaller {
         try {
             protocolMarshaller.marshall(securityServicePolicyData.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(securityServicePolicyData.getManagedServiceData(), MANAGEDSERVICEDATA_BINDING);
+            protocolMarshaller.marshall(securityServicePolicyData.getPolicyOption(), POLICYOPTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

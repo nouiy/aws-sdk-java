@@ -56,6 +56,10 @@ public class DownloadDefaultKeyPairResultJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     downloadDefaultKeyPairResult.setPrivateKeyBase64(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("createdAt", targetDepth)) {
+                    context.nextToken();
+                    downloadDefaultKeyPairResult.setCreatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

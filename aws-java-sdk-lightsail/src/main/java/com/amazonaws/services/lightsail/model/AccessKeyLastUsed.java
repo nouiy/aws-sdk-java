@@ -23,7 +23,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <note>
  * <p>
- * This object does not include data in the response of a <a>CreateBucketAccessKey</a> action.
+ * This object does not include data in the response of a <a
+ * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_CreateBucketAccessKey.html"
+ * >CreateBucketAccessKey</a> action.
  * </p>
  * </note>
  * 

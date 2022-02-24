@@ -29,6 +29,8 @@ public class DeleteKeyPairRequestMarshaller {
 
     private static final MarshallingInfo<String> KEYPAIRNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("keyPairName").build();
+    private static final MarshallingInfo<String> EXPECTEDFINGERPRINT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("expectedFingerprint").build();
 
     private static final DeleteKeyPairRequestMarshaller instance = new DeleteKeyPairRequestMarshaller();
 
@@ -47,6 +49,7 @@ public class DeleteKeyPairRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(deleteKeyPairRequest.getKeyPairName(), KEYPAIRNAME_BINDING);
+            protocolMarshaller.marshall(deleteKeyPairRequest.getExpectedFingerprint(), EXPECTEDFINGERPRINT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

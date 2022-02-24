@@ -29,6 +29,8 @@ public class GetKeyPairsRequestMarshaller {
 
     private static final MarshallingInfo<String> PAGETOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("pageToken").build();
+    private static final MarshallingInfo<Boolean> INCLUDEDEFAULTKEYPAIR_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("includeDefaultKeyPair").build();
 
     private static final GetKeyPairsRequestMarshaller instance = new GetKeyPairsRequestMarshaller();
 
@@ -47,6 +49,7 @@ public class GetKeyPairsRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(getKeyPairsRequest.getPageToken(), PAGETOKEN_BINDING);
+            protocolMarshaller.marshall(getKeyPairsRequest.getIncludeDefaultKeyPair(), INCLUDEDEFAULTKEYPAIR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

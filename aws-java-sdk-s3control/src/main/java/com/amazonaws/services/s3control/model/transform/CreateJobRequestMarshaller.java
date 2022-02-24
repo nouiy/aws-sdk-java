@@ -270,6 +270,10 @@ public class CreateJobRequestMarshaller implements Marshaller<Request<CreateJobR
                                 if (s3PutObjectCopy.getBucketKeyEnabled() != null) {
                                     xmlWriter.startElement("BucketKeyEnabled").value(s3PutObjectCopy.getBucketKeyEnabled()).endElement();
                                 }
+
+                                if (s3PutObjectCopy.getChecksumAlgorithm() != null) {
+                                    xmlWriter.startElement("ChecksumAlgorithm").value(s3PutObjectCopy.getChecksumAlgorithm()).endElement();
+                                }
                                 xmlWriter.endElement();
                             }
                         }

@@ -17,8 +17,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Describes a lifecycle hook, which enables an Auto Scaling group to be aware of events in the Auto Scaling instance
- * lifecycle, and then perform a custom action when the corresponding lifecycle event occurs.
+ * Describes a lifecycle hook. A lifecycle hook lets you create solutions that are aware of events in the Auto Scaling
+ * instance lifecycle, and then perform a custom action on instances when the corresponding lifecycle event occurs.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/LifecycleHook" target="_top">AWS API
@@ -66,7 +66,8 @@ public class LifecycleHook implements Serializable, Cloneable {
     private String notificationTargetARN;
     /**
      * <p>
-     * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
+     * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target (an
+     * Amazon SNS topic or an Amazon SQS queue).
      * </p>
      */
     private String roleARN;
@@ -343,12 +344,13 @@ public class LifecycleHook implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
+     * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target (an
+     * Amazon SNS topic or an Amazon SQS queue).
      * </p>
      * 
      * @param roleARN
-     *        The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification
-     *        target.
+     *        The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target
+     *        (an Amazon SNS topic or an Amazon SQS queue).
      */
 
     public void setRoleARN(String roleARN) {
@@ -357,11 +359,12 @@ public class LifecycleHook implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
+     * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target (an
+     * Amazon SNS topic or an Amazon SQS queue).
      * </p>
      * 
      * @return The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification
-     *         target.
+     *         target (an Amazon SNS topic or an Amazon SQS queue).
      */
 
     public String getRoleARN() {
@@ -370,12 +373,13 @@ public class LifecycleHook implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
+     * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target (an
+     * Amazon SNS topic or an Amazon SQS queue).
      * </p>
      * 
      * @param roleARN
-     *        The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification
-     *        target.
+     *        The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target
+     *        (an Amazon SNS topic or an Amazon SQS queue).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

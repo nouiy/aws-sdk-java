@@ -109,7 +109,8 @@ public class LightsailDistribution implements Serializable, Cloneable, Structure
     private String certificateName;
     /**
      * <p>
-     * An object that describes the origin resource of the distribution, such as a Lightsail instance or load balancer.
+     * An object that describes the origin resource of the distribution, such as a Lightsail instance, bucket, or load
+     * balancer.
      * </p>
      * <p>
      * The distribution pulls, caches, and serves content from the origin.
@@ -753,15 +754,16 @@ public class LightsailDistribution implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An object that describes the origin resource of the distribution, such as a Lightsail instance or load balancer.
+     * An object that describes the origin resource of the distribution, such as a Lightsail instance, bucket, or load
+     * balancer.
      * </p>
      * <p>
      * The distribution pulls, caches, and serves content from the origin.
      * </p>
      * 
      * @param origin
-     *        An object that describes the origin resource of the distribution, such as a Lightsail instance or load
-     *        balancer.</p>
+     *        An object that describes the origin resource of the distribution, such as a Lightsail instance, bucket, or
+     *        load balancer.</p>
      *        <p>
      *        The distribution pulls, caches, and serves content from the origin.
      */
@@ -772,14 +774,15 @@ public class LightsailDistribution implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An object that describes the origin resource of the distribution, such as a Lightsail instance or load balancer.
+     * An object that describes the origin resource of the distribution, such as a Lightsail instance, bucket, or load
+     * balancer.
      * </p>
      * <p>
      * The distribution pulls, caches, and serves content from the origin.
      * </p>
      * 
-     * @return An object that describes the origin resource of the distribution, such as a Lightsail instance or load
-     *         balancer.</p>
+     * @return An object that describes the origin resource of the distribution, such as a Lightsail instance, bucket,
+     *         or load balancer.</p>
      *         <p>
      *         The distribution pulls, caches, and serves content from the origin.
      */
@@ -790,15 +793,16 @@ public class LightsailDistribution implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An object that describes the origin resource of the distribution, such as a Lightsail instance or load balancer.
+     * An object that describes the origin resource of the distribution, such as a Lightsail instance, bucket, or load
+     * balancer.
      * </p>
      * <p>
      * The distribution pulls, caches, and serves content from the origin.
      * </p>
      * 
      * @param origin
-     *        An object that describes the origin resource of the distribution, such as a Lightsail instance or load
-     *        balancer.</p>
+     *        An object that describes the origin resource of the distribution, such as a Lightsail instance, bucket, or
+     *        load balancer.</p>
      *        <p>
      *        The distribution pulls, caches, and serves content from the origin.
      * @return Returns a reference to this object so that method calls can be chained together.

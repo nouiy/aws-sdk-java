@@ -49,6 +49,12 @@ public class ComplianceViolator implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String resourceType;
+    /**
+     * <p>
+     * Metadata about the resource that doesn't comply with the policy scope.
+     * </p>
+     */
+    private java.util.Map<String, String> metadata;
 
     /**
      * <p>
@@ -211,6 +217,74 @@ public class ComplianceViolator implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Metadata about the resource that doesn't comply with the policy scope.
+     * </p>
+     * 
+     * @return Metadata about the resource that doesn't comply with the policy scope.
+     */
+
+    public java.util.Map<String, String> getMetadata() {
+        return metadata;
+    }
+
+    /**
+     * <p>
+     * Metadata about the resource that doesn't comply with the policy scope.
+     * </p>
+     * 
+     * @param metadata
+     *        Metadata about the resource that doesn't comply with the policy scope.
+     */
+
+    public void setMetadata(java.util.Map<String, String> metadata) {
+        this.metadata = metadata;
+    }
+
+    /**
+     * <p>
+     * Metadata about the resource that doesn't comply with the policy scope.
+     * </p>
+     * 
+     * @param metadata
+     *        Metadata about the resource that doesn't comply with the policy scope.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComplianceViolator withMetadata(java.util.Map<String, String> metadata) {
+        setMetadata(metadata);
+        return this;
+    }
+
+    /**
+     * Add a single Metadata entry
+     *
+     * @see ComplianceViolator#withMetadata
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComplianceViolator addMetadataEntry(String key, String value) {
+        if (null == this.metadata) {
+            this.metadata = new java.util.HashMap<String, String>();
+        }
+        if (this.metadata.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.metadata.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Metadata.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComplianceViolator clearMetadataEntries() {
+        this.metadata = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -227,7 +301,9 @@ public class ComplianceViolator implements Serializable, Cloneable, StructuredPo
         if (getViolationReason() != null)
             sb.append("ViolationReason: ").append(getViolationReason()).append(",");
         if (getResourceType() != null)
-            sb.append("ResourceType: ").append(getResourceType());
+            sb.append("ResourceType: ").append(getResourceType()).append(",");
+        if (getMetadata() != null)
+            sb.append("Metadata: ").append(getMetadata());
         sb.append("}");
         return sb.toString();
     }
@@ -254,6 +330,10 @@ public class ComplianceViolator implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getResourceType() != null && other.getResourceType().equals(this.getResourceType()) == false)
             return false;
+        if (other.getMetadata() == null ^ this.getMetadata() == null)
+            return false;
+        if (other.getMetadata() != null && other.getMetadata().equals(this.getMetadata()) == false)
+            return false;
         return true;
     }
 
@@ -265,6 +345,7 @@ public class ComplianceViolator implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getResourceId() == null) ? 0 : getResourceId().hashCode());
         hashCode = prime * hashCode + ((getViolationReason() == null) ? 0 : getViolationReason().hashCode());
         hashCode = prime * hashCode + ((getResourceType() == null) ? 0 : getResourceType().hashCode());
+        hashCode = prime * hashCode + ((getMetadata() == null) ? 0 : getMetadata().hashCode());
         return hashCode;
     }
 

@@ -60,6 +60,11 @@ public class ComplianceViolatorJsonUnmarshaller implements Unmarshaller<Complian
                     context.nextToken();
                     complianceViolator.setResourceType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Metadata", targetDepth)) {
+                    context.nextToken();
+                    complianceViolator.setMetadata(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

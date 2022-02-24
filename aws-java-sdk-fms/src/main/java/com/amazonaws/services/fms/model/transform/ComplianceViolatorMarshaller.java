@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.fms.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +35,8 @@ public class ComplianceViolatorMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ViolationReason").build();
     private static final MarshallingInfo<String> RESOURCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceType").build();
+    private static final MarshallingInfo<Map> METADATA_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Metadata").build();
 
     private static final ComplianceViolatorMarshaller instance = new ComplianceViolatorMarshaller();
 
@@ -53,6 +57,7 @@ public class ComplianceViolatorMarshaller {
             protocolMarshaller.marshall(complianceViolator.getResourceId(), RESOURCEID_BINDING);
             protocolMarshaller.marshall(complianceViolator.getViolationReason(), VIOLATIONREASON_BINDING);
             protocolMarshaller.marshall(complianceViolator.getResourceType(), RESOURCETYPE_BINDING);
+            protocolMarshaller.marshall(complianceViolator.getMetadata(), METADATA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

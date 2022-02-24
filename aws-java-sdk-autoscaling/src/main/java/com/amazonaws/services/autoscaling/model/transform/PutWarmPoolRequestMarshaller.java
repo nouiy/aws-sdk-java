@@ -56,6 +56,16 @@ public class PutWarmPoolRequestMarshaller implements Marshaller<Request<PutWarmP
             request.addParameter("PoolState", StringUtils.fromString(putWarmPoolRequest.getPoolState()));
         }
 
+        {
+            InstanceReusePolicy instanceReusePolicy = putWarmPoolRequest.getInstanceReusePolicy();
+            if (instanceReusePolicy != null) {
+
+                if (instanceReusePolicy.getReuseOnScaleIn() != null) {
+                    request.addParameter("InstanceReusePolicy.ReuseOnScaleIn", StringUtils.fromBoolean(instanceReusePolicy.getReuseOnScaleIn()));
+                }
+            }
+        }
+
         return request;
     }
 

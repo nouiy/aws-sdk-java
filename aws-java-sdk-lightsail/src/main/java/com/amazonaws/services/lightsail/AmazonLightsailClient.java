@@ -1073,8 +1073,10 @@ public class AmazonLightsailClient extends AmazonWebServiceClient implements Ama
      * </p>
      * <p>
      * Access keys grant full programmatic access to the specified bucket and its objects. You can have a maximum of two
-     * access keys per bucket. Use the <a>GetBucketAccessKeys</a> action to get a list of current access keys for a
-     * specific bucket. For more information about access keys, see <a
+     * access keys per bucket. Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBucketAccessKeys.html"
+     * >GetBucketAccessKeys</a> action to get a list of current access keys for a specific bucket. For more information
+     * about access keys, see <a
      * href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-creating-bucket-access-keys"
      * >Creating access keys for a bucket in Amazon Lightsail</a> in the <i>Amazon Lightsail Developer Guide</i>.
      * </p>
@@ -2439,8 +2441,15 @@ public class AmazonLightsailClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Creates an SSH key pair.
+     * Creates a custom SSH key pair that you can use with an Amazon Lightsail instance.
      * </p>
+     * <note>
+     * <p>
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_DownloadDefaultKeyPair.html">
+     * DownloadDefaultKeyPair</a> action to create a Lightsail default key pair in an Amazon Web Services Region where a
+     * default key pair does not currently exist.
+     * </p>
+     * </note>
      * <p>
      * The <code>create key pair</code> operation supports tag-based access control via request tags. For more
      * information, see the <a
@@ -4155,7 +4164,17 @@ public class AmazonLightsailClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Deletes a specific SSH key pair.
+     * Deletes the specified key pair by removing the public key from Amazon Lightsail.
+     * </p>
+     * <p>
+     * You can delete key pairs that were created using the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_ImportKeyPair.html">ImportKeyPair</a>
+     * and <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_CreateKeyPair.html">CreateKeyPair</a>
+     * actions, as well as the Lightsail default key pair. A new default key pair will not be created unless you launch
+     * an instance without specifying a custom key pair, or you call the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_DownloadDefaultKeyPair.html"
+     * >DownloadDefaultKeyPair</a> API.
      * </p>
      * <p>
      * The <code>delete key pair</code> operation supports tag-based access control via resource tags applied to the
@@ -5065,7 +5084,11 @@ public class AmazonLightsailClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Downloads the default SSH key pair from the user's account.
+     * Downloads the regional Amazon Lightsail default key pair.
+     * </p>
+     * <p>
+     * This action also creates a Lightsail default key pair if a default key pair does not currently exist in the
+     * Amazon Web Services Region.
      * </p>
      * 
      * @param downloadDefaultKeyPairRequest
@@ -5639,8 +5662,9 @@ public class AmazonLightsailClient extends AmazonWebServiceClient implements Ama
      * <important>
      * <p>
      * This action does not return the secret access key value of an access key. You can get a secret access key only
-     * when you create it from the response of the <a>CreateBucketAccessKey</a> action. If you lose the secret access
-     * key, you must create a new access key.
+     * when you create it from the response of the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_CreateBucketAccessKey.html"
+     * >CreateBucketAccessKey</a> action. If you lose the secret access key, you must create a new access key.
      * </p>
      * </important>
      * 
@@ -5719,7 +5743,8 @@ public class AmazonLightsailClient extends AmazonWebServiceClient implements Ama
      * The bucket bundle specifies the monthly cost, storage quota, and data transfer quota for a bucket.
      * </p>
      * <p>
-     * Use the <a>UpdateBucketBundle</a> action to update the bundle for a bucket.
+     * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
+     * UpdateBucketBundle</a> action to update the bundle for a bucket.
      * </p>
      * 
      * @param getBucketBundlesRequest
@@ -7574,8 +7599,9 @@ public class AmazonLightsailClient extends AmazonWebServiceClient implements Ama
      * Returns all export snapshot records created as a result of the <code>export snapshot</code> operation.
      * </p>
      * <p>
-     * An export snapshot record can be used to create a new Amazon EC2 instance and its related resources with the
-     * <a>CreateCloudFormationStack</a> action.
+     * An export snapshot record can be used to create a new Amazon EC2 instance and its related resources with the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_CreateCloudFormationStack.html">
+     * CreateCloudFormationStack</a> action.
      * </p>
      * 
      * @param getExportSnapshotRecordsRequest
@@ -12075,8 +12101,10 @@ public class AmazonLightsailClient extends AmazonWebServiceClient implements Ama
      * <p>
      * A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket. You can update a
      * bucket's bundle only one time within a monthly AWS billing cycle. To determine if you can update a bucket's
-     * bundle, use the <a>GetBuckets</a> action. The <code>ableToUpdateBundle</code> parameter in the response will
-     * indicate whether you can currently update a bucket's bundle.
+     * bundle, use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetBuckets.html">GetBuckets</a> action.
+     * The <code>ableToUpdateBundle</code> parameter in the response will indicate whether you can currently update a
+     * bucket's bundle.
      * </p>
      * <p>
      * Update a bucket's bundle if it's consistently going over its storage space or data transfer quota, or if a

@@ -28,9 +28,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <code>cacheBehavior</code> is <code>dont-cache</code>, then a per-path cache behavior can be used to specify a
  * directory, file, or file type that your distribution will not cache.
  * </p>
- * <p>
- * if the cacheBehavior's behavior is set to 'cache', then
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/CacheBehaviorPerPath" target="_top">AWS API
  *      Documentation</a>

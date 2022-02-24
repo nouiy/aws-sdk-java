@@ -89,8 +89,11 @@ public class LifecycleHookSpecification implements Serializable, Cloneable {
     private String notificationTargetARN;
     /**
      * <p>
-     * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target, for
-     * example, an Amazon SNS topic or an Amazon SQS queue.
+     * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
+     * </p>
+     * <p>
+     * Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue. Required for new lifecycle
+     * hooks, but optional when updating existing hooks.
      * </p>
      */
     private String roleARN;
@@ -460,13 +463,19 @@ public class LifecycleHookSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target, for
-     * example, an Amazon SNS topic or an Amazon SQS queue.
+     * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
+     * </p>
+     * <p>
+     * Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue. Required for new lifecycle
+     * hooks, but optional when updating existing hooks.
      * </p>
      * 
      * @param roleARN
      *        The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification
-     *        target, for example, an Amazon SNS topic or an Amazon SQS queue.
+     *        target.</p>
+     *        <p>
+     *        Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue. Required for new
+     *        lifecycle hooks, but optional when updating existing hooks.
      */
 
     public void setRoleARN(String roleARN) {
@@ -475,12 +484,18 @@ public class LifecycleHookSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target, for
-     * example, an Amazon SNS topic or an Amazon SQS queue.
+     * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
+     * </p>
+     * <p>
+     * Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue. Required for new lifecycle
+     * hooks, but optional when updating existing hooks.
      * </p>
      * 
      * @return The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification
-     *         target, for example, an Amazon SNS topic or an Amazon SQS queue.
+     *         target.</p>
+     *         <p>
+     *         Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue. Required for new
+     *         lifecycle hooks, but optional when updating existing hooks.
      */
 
     public String getRoleARN() {
@@ -489,13 +504,19 @@ public class LifecycleHookSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target, for
-     * example, an Amazon SNS topic or an Amazon SQS queue.
+     * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
+     * </p>
+     * <p>
+     * Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue. Required for new lifecycle
+     * hooks, but optional when updating existing hooks.
      * </p>
      * 
      * @param roleARN
      *        The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification
-     *        target, for example, an Amazon SNS topic or an Amazon SQS queue.
+     *        target.</p>
+     *        <p>
+     *        Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue. Required for new
+     *        lifecycle hooks, but optional when updating existing hooks.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
