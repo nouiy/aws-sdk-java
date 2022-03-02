@@ -31,6 +31,8 @@ public class QueryStatisticsForDescribeQueryMarshaller {
             .marshallLocationName("EventsMatched").build();
     private static final MarshallingInfo<Long> EVENTSSCANNED_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("EventsScanned").build();
+    private static final MarshallingInfo<Long> BYTESSCANNED_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("BytesScanned").build();
     private static final MarshallingInfo<Integer> EXECUTIONTIMEINMILLIS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExecutionTimeInMillis").build();
     private static final MarshallingInfo<java.util.Date> CREATIONTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -54,6 +56,7 @@ public class QueryStatisticsForDescribeQueryMarshaller {
         try {
             protocolMarshaller.marshall(queryStatisticsForDescribeQuery.getEventsMatched(), EVENTSMATCHED_BINDING);
             protocolMarshaller.marshall(queryStatisticsForDescribeQuery.getEventsScanned(), EVENTSSCANNED_BINDING);
+            protocolMarshaller.marshall(queryStatisticsForDescribeQuery.getBytesScanned(), BYTESSCANNED_BINDING);
             protocolMarshaller.marshall(queryStatisticsForDescribeQuery.getExecutionTimeInMillis(), EXECUTIONTIMEINMILLIS_BINDING);
             protocolMarshaller.marshall(queryStatisticsForDescribeQuery.getCreationTime(), CREATIONTIME_BINDING);
         } catch (Exception e) {

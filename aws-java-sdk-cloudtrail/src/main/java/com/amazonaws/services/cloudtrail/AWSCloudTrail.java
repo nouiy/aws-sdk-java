@@ -198,10 +198,10 @@ public interface AWSCloudTrail {
 
     /**
      * <p>
-     * Cancels a query if the query is not in a terminated state, such as <code>CANCELLED</code>, <code>FAILED</code> or
-     * <code>FINISHED</code>. You must specify an ARN value for <code>EventDataStore</code>. The ID of the query that
-     * you want to cancel is also required. When you run <code>CancelQuery</code>, the query status might show as
-     * <code>CANCELLED</code> even if the operation is not yet finished.
+     * Cancels a query if the query is not in a terminated state, such as <code>CANCELLED</code>, <code>FAILED</code>,
+     * <code>TIMED_OUT</code>, or <code>FINISHED</code>. You must specify an ARN value for <code>EventDataStore</code>.
+     * The ID of the query that you want to cancel is also required. When you run <code>CancelQuery</code>, the query
+     * status might show as <code>CANCELLED</code> even if the operation is not yet finished.
      * </p>
      * 
      * @param cancelQueryRequest
@@ -214,7 +214,7 @@ public interface AWSCloudTrail {
      *         The event data store against which you ran your query is inactive.
      * @throws InactiveQueryException
      *         The specified query cannot be canceled because it is in the <code>FINISHED</code>, <code>FAILED</code>,
-     *         or <code>CANCELLED</code> state.
+     *         <code>TIMED_OUT</code>, or <code>CANCELLED</code> state.
      * @throws InvalidParameterException
      *         The request includes a parameter that is not valid.
      * @throws QueryIdNotFoundException
@@ -975,7 +975,8 @@ public interface AWSCloudTrail {
      * <code>EventDataStore</code>. Optionally, to shorten the list of results, you can specify a time range, formatted
      * as timestamps, by adding <code>StartTime</code> and <code>EndTime</code> parameters, and a
      * <code>QueryStatus</code> value. Valid values for <code>QueryStatus</code> include <code>QUEUED</code>,
-     * <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>.
+     * <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, <code>TIMED_OUT</code>, or
+     * <code>CANCELLED</code>.
      * </p>
      * 
      * @param listQueriesRequest

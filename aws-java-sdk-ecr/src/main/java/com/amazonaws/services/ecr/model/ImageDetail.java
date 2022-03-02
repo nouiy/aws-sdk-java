@@ -99,6 +99,21 @@ public class ImageDetail implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String artifactMediaType;
+    /**
+     * <p>
+     * The date and time, expressed in standard JavaScript date format, when Amazon ECR recorded the last image pull.
+     * </p>
+     * <note>
+     * <p>
+     * Amazon ECR refreshes the last image pull timestamp at least once every 24 hours. For example, if you pull an
+     * image once a day then the <code>lastRecordedPullTime</code> timestamp will indicate the exact time that the image
+     * was last pulled. However, if you pull an image once an hour, because Amazon ECR refreshes the
+     * <code>lastRecordedPullTime</code> timestamp at least once every 24 hours, the result may not be the exact time
+     * that the image was last pulled.
+     * </p>
+     * </note>
+     */
+    private java.util.Date lastRecordedPullTime;
 
     /**
      * <p>
@@ -594,6 +609,97 @@ public class ImageDetail implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The date and time, expressed in standard JavaScript date format, when Amazon ECR recorded the last image pull.
+     * </p>
+     * <note>
+     * <p>
+     * Amazon ECR refreshes the last image pull timestamp at least once every 24 hours. For example, if you pull an
+     * image once a day then the <code>lastRecordedPullTime</code> timestamp will indicate the exact time that the image
+     * was last pulled. However, if you pull an image once an hour, because Amazon ECR refreshes the
+     * <code>lastRecordedPullTime</code> timestamp at least once every 24 hours, the result may not be the exact time
+     * that the image was last pulled.
+     * </p>
+     * </note>
+     * 
+     * @param lastRecordedPullTime
+     *        The date and time, expressed in standard JavaScript date format, when Amazon ECR recorded the last image
+     *        pull.</p> <note>
+     *        <p>
+     *        Amazon ECR refreshes the last image pull timestamp at least once every 24 hours. For example, if you pull
+     *        an image once a day then the <code>lastRecordedPullTime</code> timestamp will indicate the exact time that
+     *        the image was last pulled. However, if you pull an image once an hour, because Amazon ECR refreshes the
+     *        <code>lastRecordedPullTime</code> timestamp at least once every 24 hours, the result may not be the exact
+     *        time that the image was last pulled.
+     *        </p>
+     */
+
+    public void setLastRecordedPullTime(java.util.Date lastRecordedPullTime) {
+        this.lastRecordedPullTime = lastRecordedPullTime;
+    }
+
+    /**
+     * <p>
+     * The date and time, expressed in standard JavaScript date format, when Amazon ECR recorded the last image pull.
+     * </p>
+     * <note>
+     * <p>
+     * Amazon ECR refreshes the last image pull timestamp at least once every 24 hours. For example, if you pull an
+     * image once a day then the <code>lastRecordedPullTime</code> timestamp will indicate the exact time that the image
+     * was last pulled. However, if you pull an image once an hour, because Amazon ECR refreshes the
+     * <code>lastRecordedPullTime</code> timestamp at least once every 24 hours, the result may not be the exact time
+     * that the image was last pulled.
+     * </p>
+     * </note>
+     * 
+     * @return The date and time, expressed in standard JavaScript date format, when Amazon ECR recorded the last image
+     *         pull.</p> <note>
+     *         <p>
+     *         Amazon ECR refreshes the last image pull timestamp at least once every 24 hours. For example, if you pull
+     *         an image once a day then the <code>lastRecordedPullTime</code> timestamp will indicate the exact time
+     *         that the image was last pulled. However, if you pull an image once an hour, because Amazon ECR refreshes
+     *         the <code>lastRecordedPullTime</code> timestamp at least once every 24 hours, the result may not be the
+     *         exact time that the image was last pulled.
+     *         </p>
+     */
+
+    public java.util.Date getLastRecordedPullTime() {
+        return this.lastRecordedPullTime;
+    }
+
+    /**
+     * <p>
+     * The date and time, expressed in standard JavaScript date format, when Amazon ECR recorded the last image pull.
+     * </p>
+     * <note>
+     * <p>
+     * Amazon ECR refreshes the last image pull timestamp at least once every 24 hours. For example, if you pull an
+     * image once a day then the <code>lastRecordedPullTime</code> timestamp will indicate the exact time that the image
+     * was last pulled. However, if you pull an image once an hour, because Amazon ECR refreshes the
+     * <code>lastRecordedPullTime</code> timestamp at least once every 24 hours, the result may not be the exact time
+     * that the image was last pulled.
+     * </p>
+     * </note>
+     * 
+     * @param lastRecordedPullTime
+     *        The date and time, expressed in standard JavaScript date format, when Amazon ECR recorded the last image
+     *        pull.</p> <note>
+     *        <p>
+     *        Amazon ECR refreshes the last image pull timestamp at least once every 24 hours. For example, if you pull
+     *        an image once a day then the <code>lastRecordedPullTime</code> timestamp will indicate the exact time that
+     *        the image was last pulled. However, if you pull an image once an hour, because Amazon ECR refreshes the
+     *        <code>lastRecordedPullTime</code> timestamp at least once every 24 hours, the result may not be the exact
+     *        time that the image was last pulled.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImageDetail withLastRecordedPullTime(java.util.Date lastRecordedPullTime) {
+        setLastRecordedPullTime(lastRecordedPullTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -624,7 +730,9 @@ public class ImageDetail implements Serializable, Cloneable, StructuredPojo {
         if (getImageManifestMediaType() != null)
             sb.append("ImageManifestMediaType: ").append(getImageManifestMediaType()).append(",");
         if (getArtifactMediaType() != null)
-            sb.append("ArtifactMediaType: ").append(getArtifactMediaType());
+            sb.append("ArtifactMediaType: ").append(getArtifactMediaType()).append(",");
+        if (getLastRecordedPullTime() != null)
+            sb.append("LastRecordedPullTime: ").append(getLastRecordedPullTime());
         sb.append("}");
         return sb.toString();
     }
@@ -679,6 +787,10 @@ public class ImageDetail implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getArtifactMediaType() != null && other.getArtifactMediaType().equals(this.getArtifactMediaType()) == false)
             return false;
+        if (other.getLastRecordedPullTime() == null ^ this.getLastRecordedPullTime() == null)
+            return false;
+        if (other.getLastRecordedPullTime() != null && other.getLastRecordedPullTime().equals(this.getLastRecordedPullTime()) == false)
+            return false;
         return true;
     }
 
@@ -697,6 +809,7 @@ public class ImageDetail implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getImageScanFindingsSummary() == null) ? 0 : getImageScanFindingsSummary().hashCode());
         hashCode = prime * hashCode + ((getImageManifestMediaType() == null) ? 0 : getImageManifestMediaType().hashCode());
         hashCode = prime * hashCode + ((getArtifactMediaType() == null) ? 0 : getArtifactMediaType().hashCode());
+        hashCode = prime * hashCode + ((getLastRecordedPullTime() == null) ? 0 : getLastRecordedPullTime().hashCode());
         return hashCode;
     }
 

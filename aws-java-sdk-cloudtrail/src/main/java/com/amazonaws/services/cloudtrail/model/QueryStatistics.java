@@ -40,6 +40,13 @@ public class QueryStatistics implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private Integer totalResultsCount;
+    /**
+     * <p>
+     * The total bytes that the query scanned in the event data store. This value matches the number of bytes for which
+     * your account is billed for the query, unless the query is still running.
+     * </p>
+     */
+    private Long bytesScanned;
 
     /**
      * <p>
@@ -122,6 +129,52 @@ public class QueryStatistics implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * The total bytes that the query scanned in the event data store. This value matches the number of bytes for which
+     * your account is billed for the query, unless the query is still running.
+     * </p>
+     * 
+     * @param bytesScanned
+     *        The total bytes that the query scanned in the event data store. This value matches the number of bytes for
+     *        which your account is billed for the query, unless the query is still running.
+     */
+
+    public void setBytesScanned(Long bytesScanned) {
+        this.bytesScanned = bytesScanned;
+    }
+
+    /**
+     * <p>
+     * The total bytes that the query scanned in the event data store. This value matches the number of bytes for which
+     * your account is billed for the query, unless the query is still running.
+     * </p>
+     * 
+     * @return The total bytes that the query scanned in the event data store. This value matches the number of bytes
+     *         for which your account is billed for the query, unless the query is still running.
+     */
+
+    public Long getBytesScanned() {
+        return this.bytesScanned;
+    }
+
+    /**
+     * <p>
+     * The total bytes that the query scanned in the event data store. This value matches the number of bytes for which
+     * your account is billed for the query, unless the query is still running.
+     * </p>
+     * 
+     * @param bytesScanned
+     *        The total bytes that the query scanned in the event data store. This value matches the number of bytes for
+     *        which your account is billed for the query, unless the query is still running.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public QueryStatistics withBytesScanned(Long bytesScanned) {
+        setBytesScanned(bytesScanned);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -136,7 +189,9 @@ public class QueryStatistics implements Serializable, Cloneable, StructuredPojo 
         if (getResultsCount() != null)
             sb.append("ResultsCount: ").append(getResultsCount()).append(",");
         if (getTotalResultsCount() != null)
-            sb.append("TotalResultsCount: ").append(getTotalResultsCount());
+            sb.append("TotalResultsCount: ").append(getTotalResultsCount()).append(",");
+        if (getBytesScanned() != null)
+            sb.append("BytesScanned: ").append(getBytesScanned());
         sb.append("}");
         return sb.toString();
     }
@@ -159,6 +214,10 @@ public class QueryStatistics implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getTotalResultsCount() != null && other.getTotalResultsCount().equals(this.getTotalResultsCount()) == false)
             return false;
+        if (other.getBytesScanned() == null ^ this.getBytesScanned() == null)
+            return false;
+        if (other.getBytesScanned() != null && other.getBytesScanned().equals(this.getBytesScanned()) == false)
+            return false;
         return true;
     }
 
@@ -169,6 +228,7 @@ public class QueryStatistics implements Serializable, Cloneable, StructuredPojo 
 
         hashCode = prime * hashCode + ((getResultsCount() == null) ? 0 : getResultsCount().hashCode());
         hashCode = prime * hashCode + ((getTotalResultsCount() == null) ? 0 : getTotalResultsCount().hashCode());
+        hashCode = prime * hashCode + ((getBytesScanned() == null) ? 0 : getBytesScanned().hashCode());
         return hashCode;
     }
 

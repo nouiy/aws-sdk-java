@@ -38,7 +38,7 @@ public class DescribeQueryResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * The status of a query. Values for <code>QueryStatus</code> include <code>QUEUED</code>, <code>RUNNING</code>,
-     * <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>
+     * <code>FINISHED</code>, <code>FAILED</code>, <code>TIMED_OUT</code>, or <code>CANCELLED</code>
      * </p>
      */
     private String queryStatus;
@@ -139,12 +139,13 @@ public class DescribeQueryResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * The status of a query. Values for <code>QueryStatus</code> include <code>QUEUED</code>, <code>RUNNING</code>,
-     * <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>
+     * <code>FINISHED</code>, <code>FAILED</code>, <code>TIMED_OUT</code>, or <code>CANCELLED</code>
      * </p>
      * 
      * @param queryStatus
      *        The status of a query. Values for <code>QueryStatus</code> include <code>QUEUED</code>,
-     *        <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>
+     *        <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, <code>TIMED_OUT</code>, or
+     *        <code>CANCELLED</code>
      * @see QueryStatus
      */
 
@@ -155,11 +156,12 @@ public class DescribeQueryResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * The status of a query. Values for <code>QueryStatus</code> include <code>QUEUED</code>, <code>RUNNING</code>,
-     * <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>
+     * <code>FINISHED</code>, <code>FAILED</code>, <code>TIMED_OUT</code>, or <code>CANCELLED</code>
      * </p>
      * 
      * @return The status of a query. Values for <code>QueryStatus</code> include <code>QUEUED</code>,
-     *         <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>
+     *         <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, <code>TIMED_OUT</code>, or
+     *         <code>CANCELLED</code>
      * @see QueryStatus
      */
 
@@ -170,12 +172,13 @@ public class DescribeQueryResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * The status of a query. Values for <code>QueryStatus</code> include <code>QUEUED</code>, <code>RUNNING</code>,
-     * <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>
+     * <code>FINISHED</code>, <code>FAILED</code>, <code>TIMED_OUT</code>, or <code>CANCELLED</code>
      * </p>
      * 
      * @param queryStatus
      *        The status of a query. Values for <code>QueryStatus</code> include <code>QUEUED</code>,
-     *        <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>
+     *        <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, <code>TIMED_OUT</code>, or
+     *        <code>CANCELLED</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QueryStatus
      */
@@ -188,12 +191,13 @@ public class DescribeQueryResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * The status of a query. Values for <code>QueryStatus</code> include <code>QUEUED</code>, <code>RUNNING</code>,
-     * <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>
+     * <code>FINISHED</code>, <code>FAILED</code>, <code>TIMED_OUT</code>, or <code>CANCELLED</code>
      * </p>
      * 
      * @param queryStatus
      *        The status of a query. Values for <code>QueryStatus</code> include <code>QUEUED</code>,
-     *        <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>
+     *        <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, <code>TIMED_OUT</code>, or
+     *        <code>CANCELLED</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QueryStatus
      */

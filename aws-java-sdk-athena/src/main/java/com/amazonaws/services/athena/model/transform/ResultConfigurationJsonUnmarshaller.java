@@ -60,6 +60,10 @@ public class ResultConfigurationJsonUnmarshaller implements Unmarshaller<ResultC
                     context.nextToken();
                     resultConfiguration.setExpectedBucketOwner(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("AclConfiguration", targetDepth)) {
+                    context.nextToken();
+                    resultConfiguration.setAclConfiguration(AclConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -48,6 +48,8 @@ public class ImageDetailMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("imageManifestMediaType").build();
     private static final MarshallingInfo<String> ARTIFACTMEDIATYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("artifactMediaType").build();
+    private static final MarshallingInfo<java.util.Date> LASTRECORDEDPULLTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastRecordedPullTime").timestampFormat("unixTimestamp").build();
 
     private static final ImageDetailMarshaller instance = new ImageDetailMarshaller();
 
@@ -75,6 +77,7 @@ public class ImageDetailMarshaller {
             protocolMarshaller.marshall(imageDetail.getImageScanFindingsSummary(), IMAGESCANFINDINGSSUMMARY_BINDING);
             protocolMarshaller.marshall(imageDetail.getImageManifestMediaType(), IMAGEMANIFESTMEDIATYPE_BINDING);
             protocolMarshaller.marshall(imageDetail.getArtifactMediaType(), ARTIFACTMEDIATYPE_BINDING);
+            protocolMarshaller.marshall(imageDetail.getLastRecordedPullTime(), LASTRECORDEDPULLTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

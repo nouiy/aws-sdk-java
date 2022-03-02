@@ -56,6 +56,10 @@ public class QueryStatisticsForDescribeQueryJsonUnmarshaller implements Unmarsha
                     context.nextToken();
                     queryStatisticsForDescribeQuery.setEventsScanned(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("BytesScanned", targetDepth)) {
+                    context.nextToken();
+                    queryStatisticsForDescribeQuery.setBytesScanned(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
                 if (context.testExpression("ExecutionTimeInMillis", targetDepth)) {
                     context.nextToken();
                     queryStatisticsForDescribeQuery.setExecutionTimeInMillis(context.getUnmarshaller(Integer.class).unmarshall(context));

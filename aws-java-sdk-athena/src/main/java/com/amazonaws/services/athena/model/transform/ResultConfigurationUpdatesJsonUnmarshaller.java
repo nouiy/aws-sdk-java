@@ -72,6 +72,14 @@ public class ResultConfigurationUpdatesJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     resultConfigurationUpdates.setRemoveExpectedBucketOwner(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("AclConfiguration", targetDepth)) {
+                    context.nextToken();
+                    resultConfigurationUpdates.setAclConfiguration(AclConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("RemoveAclConfiguration", targetDepth)) {
+                    context.nextToken();
+                    resultConfigurationUpdates.setRemoveAclConfiguration(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

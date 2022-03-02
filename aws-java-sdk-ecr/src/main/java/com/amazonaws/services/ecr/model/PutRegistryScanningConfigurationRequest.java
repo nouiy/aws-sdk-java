@@ -30,13 +30,15 @@ public class PutRegistryScanningConfigurationRequest extends com.amazonaws.Amazo
      * The scanning type to set for the registry.
      * </p>
      * <p>
-     * By default, the <code>BASIC</code> scan type is used. When basic scanning is set, you may specify filters to
-     * determine which individual repositories, or all repositories, are scanned when new images are pushed.
-     * Alternatively, you can do manual scans of images with basic scanning.
+     * When a registry scanning configuration is not defined, by default the <code>BASIC</code> scan type is used. When
+     * basic scanning is used, you may specify filters to determine which individual repositories, or all repositories,
+     * are scanned when new images are pushed to those repositories. Alternatively, you can do manual scans of images
+     * with basic scanning.
      * </p>
      * <p>
-     * When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated, continuous scanning of all
-     * repositories in your registry.
+     * When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated vulnerability scanning. You
+     * may choose between continuous scanning or scan on push and you may specify filters to determine which individual
+     * repositories, or all repositories, are scanned.
      * </p>
      */
     private String scanType;
@@ -53,25 +55,29 @@ public class PutRegistryScanningConfigurationRequest extends com.amazonaws.Amazo
      * The scanning type to set for the registry.
      * </p>
      * <p>
-     * By default, the <code>BASIC</code> scan type is used. When basic scanning is set, you may specify filters to
-     * determine which individual repositories, or all repositories, are scanned when new images are pushed.
-     * Alternatively, you can do manual scans of images with basic scanning.
+     * When a registry scanning configuration is not defined, by default the <code>BASIC</code> scan type is used. When
+     * basic scanning is used, you may specify filters to determine which individual repositories, or all repositories,
+     * are scanned when new images are pushed to those repositories. Alternatively, you can do manual scans of images
+     * with basic scanning.
      * </p>
      * <p>
-     * When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated, continuous scanning of all
-     * repositories in your registry.
+     * When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated vulnerability scanning. You
+     * may choose between continuous scanning or scan on push and you may specify filters to determine which individual
+     * repositories, or all repositories, are scanned.
      * </p>
      * 
      * @param scanType
      *        The scanning type to set for the registry.</p>
      *        <p>
-     *        By default, the <code>BASIC</code> scan type is used. When basic scanning is set, you may specify filters
-     *        to determine which individual repositories, or all repositories, are scanned when new images are pushed.
-     *        Alternatively, you can do manual scans of images with basic scanning.
+     *        When a registry scanning configuration is not defined, by default the <code>BASIC</code> scan type is
+     *        used. When basic scanning is used, you may specify filters to determine which individual repositories, or
+     *        all repositories, are scanned when new images are pushed to those repositories. Alternatively, you can do
+     *        manual scans of images with basic scanning.
      *        </p>
      *        <p>
-     *        When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated, continuous scanning
-     *        of all repositories in your registry.
+     *        When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated vulnerability
+     *        scanning. You may choose between continuous scanning or scan on push and you may specify filters to
+     *        determine which individual repositories, or all repositories, are scanned.
      * @see ScanType
      */
 
@@ -84,24 +90,28 @@ public class PutRegistryScanningConfigurationRequest extends com.amazonaws.Amazo
      * The scanning type to set for the registry.
      * </p>
      * <p>
-     * By default, the <code>BASIC</code> scan type is used. When basic scanning is set, you may specify filters to
-     * determine which individual repositories, or all repositories, are scanned when new images are pushed.
-     * Alternatively, you can do manual scans of images with basic scanning.
+     * When a registry scanning configuration is not defined, by default the <code>BASIC</code> scan type is used. When
+     * basic scanning is used, you may specify filters to determine which individual repositories, or all repositories,
+     * are scanned when new images are pushed to those repositories. Alternatively, you can do manual scans of images
+     * with basic scanning.
      * </p>
      * <p>
-     * When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated, continuous scanning of all
-     * repositories in your registry.
+     * When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated vulnerability scanning. You
+     * may choose between continuous scanning or scan on push and you may specify filters to determine which individual
+     * repositories, or all repositories, are scanned.
      * </p>
      * 
      * @return The scanning type to set for the registry.</p>
      *         <p>
-     *         By default, the <code>BASIC</code> scan type is used. When basic scanning is set, you may specify filters
-     *         to determine which individual repositories, or all repositories, are scanned when new images are pushed.
-     *         Alternatively, you can do manual scans of images with basic scanning.
+     *         When a registry scanning configuration is not defined, by default the <code>BASIC</code> scan type is
+     *         used. When basic scanning is used, you may specify filters to determine which individual repositories, or
+     *         all repositories, are scanned when new images are pushed to those repositories. Alternatively, you can do
+     *         manual scans of images with basic scanning.
      *         </p>
      *         <p>
-     *         When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated, continuous scanning
-     *         of all repositories in your registry.
+     *         When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated vulnerability
+     *         scanning. You may choose between continuous scanning or scan on push and you may specify filters to
+     *         determine which individual repositories, or all repositories, are scanned.
      * @see ScanType
      */
 
@@ -114,25 +124,29 @@ public class PutRegistryScanningConfigurationRequest extends com.amazonaws.Amazo
      * The scanning type to set for the registry.
      * </p>
      * <p>
-     * By default, the <code>BASIC</code> scan type is used. When basic scanning is set, you may specify filters to
-     * determine which individual repositories, or all repositories, are scanned when new images are pushed.
-     * Alternatively, you can do manual scans of images with basic scanning.
+     * When a registry scanning configuration is not defined, by default the <code>BASIC</code> scan type is used. When
+     * basic scanning is used, you may specify filters to determine which individual repositories, or all repositories,
+     * are scanned when new images are pushed to those repositories. Alternatively, you can do manual scans of images
+     * with basic scanning.
      * </p>
      * <p>
-     * When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated, continuous scanning of all
-     * repositories in your registry.
+     * When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated vulnerability scanning. You
+     * may choose between continuous scanning or scan on push and you may specify filters to determine which individual
+     * repositories, or all repositories, are scanned.
      * </p>
      * 
      * @param scanType
      *        The scanning type to set for the registry.</p>
      *        <p>
-     *        By default, the <code>BASIC</code> scan type is used. When basic scanning is set, you may specify filters
-     *        to determine which individual repositories, or all repositories, are scanned when new images are pushed.
-     *        Alternatively, you can do manual scans of images with basic scanning.
+     *        When a registry scanning configuration is not defined, by default the <code>BASIC</code> scan type is
+     *        used. When basic scanning is used, you may specify filters to determine which individual repositories, or
+     *        all repositories, are scanned when new images are pushed to those repositories. Alternatively, you can do
+     *        manual scans of images with basic scanning.
      *        </p>
      *        <p>
-     *        When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated, continuous scanning
-     *        of all repositories in your registry.
+     *        When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated vulnerability
+     *        scanning. You may choose between continuous scanning or scan on push and you may specify filters to
+     *        determine which individual repositories, or all repositories, are scanned.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ScanType
      */
@@ -147,25 +161,29 @@ public class PutRegistryScanningConfigurationRequest extends com.amazonaws.Amazo
      * The scanning type to set for the registry.
      * </p>
      * <p>
-     * By default, the <code>BASIC</code> scan type is used. When basic scanning is set, you may specify filters to
-     * determine which individual repositories, or all repositories, are scanned when new images are pushed.
-     * Alternatively, you can do manual scans of images with basic scanning.
+     * When a registry scanning configuration is not defined, by default the <code>BASIC</code> scan type is used. When
+     * basic scanning is used, you may specify filters to determine which individual repositories, or all repositories,
+     * are scanned when new images are pushed to those repositories. Alternatively, you can do manual scans of images
+     * with basic scanning.
      * </p>
      * <p>
-     * When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated, continuous scanning of all
-     * repositories in your registry.
+     * When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated vulnerability scanning. You
+     * may choose between continuous scanning or scan on push and you may specify filters to determine which individual
+     * repositories, or all repositories, are scanned.
      * </p>
      * 
      * @param scanType
      *        The scanning type to set for the registry.</p>
      *        <p>
-     *        By default, the <code>BASIC</code> scan type is used. When basic scanning is set, you may specify filters
-     *        to determine which individual repositories, or all repositories, are scanned when new images are pushed.
-     *        Alternatively, you can do manual scans of images with basic scanning.
+     *        When a registry scanning configuration is not defined, by default the <code>BASIC</code> scan type is
+     *        used. When basic scanning is used, you may specify filters to determine which individual repositories, or
+     *        all repositories, are scanned when new images are pushed to those repositories. Alternatively, you can do
+     *        manual scans of images with basic scanning.
      *        </p>
      *        <p>
-     *        When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated, continuous scanning
-     *        of all repositories in your registry.
+     *        When the <code>ENHANCED</code> scan type is set, Amazon Inspector provides automated vulnerability
+     *        scanning. You may choose between continuous scanning or scan on push and you may specify filters to
+     *        determine which individual repositories, or all repositories, are scanned.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ScanType
      */

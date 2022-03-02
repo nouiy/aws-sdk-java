@@ -90,6 +90,10 @@ public class ImageDetailJsonUnmarshaller implements Unmarshaller<ImageDetail, Js
                     context.nextToken();
                     imageDetail.setArtifactMediaType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("lastRecordedPullTime", targetDepth)) {
+                    context.nextToken();
+                    imageDetail.setLastRecordedPullTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

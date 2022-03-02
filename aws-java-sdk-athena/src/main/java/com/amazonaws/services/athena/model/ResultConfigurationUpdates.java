@@ -99,6 +99,23 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
      * </p>
      */
     private Boolean removeExpectedBucketOwner;
+    /**
+     * <p>
+     * The ACL configuration for the query results.
+     * </p>
+     */
+    private AclConfiguration aclConfiguration;
+    /**
+     * <p>
+     * If set to <code>true</code>, indicates that the previously-specified ACL configuration for queries in this
+     * workgroup should be ignored and set to null. If set to <code>false</code> or not set, and a value is present in
+     * the <code>AclConfiguration</code> of <code>ResultConfigurationUpdates</code>, the <code>AclConfiguration</code>
+     * in the workgroup's <code>ResultConfiguration</code> is updated with the new value. For more information, see <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     */
+    private Boolean removeAclConfiguration;
 
     /**
      * <p>
@@ -624,6 +641,142 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * The ACL configuration for the query results.
+     * </p>
+     * 
+     * @param aclConfiguration
+     *        The ACL configuration for the query results.
+     */
+
+    public void setAclConfiguration(AclConfiguration aclConfiguration) {
+        this.aclConfiguration = aclConfiguration;
+    }
+
+    /**
+     * <p>
+     * The ACL configuration for the query results.
+     * </p>
+     * 
+     * @return The ACL configuration for the query results.
+     */
+
+    public AclConfiguration getAclConfiguration() {
+        return this.aclConfiguration;
+    }
+
+    /**
+     * <p>
+     * The ACL configuration for the query results.
+     * </p>
+     * 
+     * @param aclConfiguration
+     *        The ACL configuration for the query results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResultConfigurationUpdates withAclConfiguration(AclConfiguration aclConfiguration) {
+        setAclConfiguration(aclConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If set to <code>true</code>, indicates that the previously-specified ACL configuration for queries in this
+     * workgroup should be ignored and set to null. If set to <code>false</code> or not set, and a value is present in
+     * the <code>AclConfiguration</code> of <code>ResultConfigurationUpdates</code>, the <code>AclConfiguration</code>
+     * in the workgroup's <code>ResultConfiguration</code> is updated with the new value. For more information, see <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     * 
+     * @param removeAclConfiguration
+     *        If set to <code>true</code>, indicates that the previously-specified ACL configuration for queries in this
+     *        workgroup should be ignored and set to null. If set to <code>false</code> or not set, and a value is
+     *        present in the <code>AclConfiguration</code> of <code>ResultConfigurationUpdates</code>, the
+     *        <code>AclConfiguration</code> in the workgroup's <code>ResultConfiguration</code> is updated with the new
+     *        value. For more information, see <a
+     *        href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *        Override Client-Side Settings</a>.
+     */
+
+    public void setRemoveAclConfiguration(Boolean removeAclConfiguration) {
+        this.removeAclConfiguration = removeAclConfiguration;
+    }
+
+    /**
+     * <p>
+     * If set to <code>true</code>, indicates that the previously-specified ACL configuration for queries in this
+     * workgroup should be ignored and set to null. If set to <code>false</code> or not set, and a value is present in
+     * the <code>AclConfiguration</code> of <code>ResultConfigurationUpdates</code>, the <code>AclConfiguration</code>
+     * in the workgroup's <code>ResultConfiguration</code> is updated with the new value. For more information, see <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     * 
+     * @return If set to <code>true</code>, indicates that the previously-specified ACL configuration for queries in
+     *         this workgroup should be ignored and set to null. If set to <code>false</code> or not set, and a value is
+     *         present in the <code>AclConfiguration</code> of <code>ResultConfigurationUpdates</code>, the
+     *         <code>AclConfiguration</code> in the workgroup's <code>ResultConfiguration</code> is updated with the new
+     *         value. For more information, see <a
+     *         href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *         Override Client-Side Settings</a>.
+     */
+
+    public Boolean getRemoveAclConfiguration() {
+        return this.removeAclConfiguration;
+    }
+
+    /**
+     * <p>
+     * If set to <code>true</code>, indicates that the previously-specified ACL configuration for queries in this
+     * workgroup should be ignored and set to null. If set to <code>false</code> or not set, and a value is present in
+     * the <code>AclConfiguration</code> of <code>ResultConfigurationUpdates</code>, the <code>AclConfiguration</code>
+     * in the workgroup's <code>ResultConfiguration</code> is updated with the new value. For more information, see <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     * 
+     * @param removeAclConfiguration
+     *        If set to <code>true</code>, indicates that the previously-specified ACL configuration for queries in this
+     *        workgroup should be ignored and set to null. If set to <code>false</code> or not set, and a value is
+     *        present in the <code>AclConfiguration</code> of <code>ResultConfigurationUpdates</code>, the
+     *        <code>AclConfiguration</code> in the workgroup's <code>ResultConfiguration</code> is updated with the new
+     *        value. For more information, see <a
+     *        href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *        Override Client-Side Settings</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResultConfigurationUpdates withRemoveAclConfiguration(Boolean removeAclConfiguration) {
+        setRemoveAclConfiguration(removeAclConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If set to <code>true</code>, indicates that the previously-specified ACL configuration for queries in this
+     * workgroup should be ignored and set to null. If set to <code>false</code> or not set, and a value is present in
+     * the <code>AclConfiguration</code> of <code>ResultConfigurationUpdates</code>, the <code>AclConfiguration</code>
+     * in the workgroup's <code>ResultConfiguration</code> is updated with the new value. For more information, see <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     * 
+     * @return If set to <code>true</code>, indicates that the previously-specified ACL configuration for queries in
+     *         this workgroup should be ignored and set to null. If set to <code>false</code> or not set, and a value is
+     *         present in the <code>AclConfiguration</code> of <code>ResultConfigurationUpdates</code>, the
+     *         <code>AclConfiguration</code> in the workgroup's <code>ResultConfiguration</code> is updated with the new
+     *         value. For more information, see <a
+     *         href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *         Override Client-Side Settings</a>.
+     */
+
+    public Boolean isRemoveAclConfiguration() {
+        return this.removeAclConfiguration;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -646,7 +799,11 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
         if (getExpectedBucketOwner() != null)
             sb.append("ExpectedBucketOwner: ").append(getExpectedBucketOwner()).append(",");
         if (getRemoveExpectedBucketOwner() != null)
-            sb.append("RemoveExpectedBucketOwner: ").append(getRemoveExpectedBucketOwner());
+            sb.append("RemoveExpectedBucketOwner: ").append(getRemoveExpectedBucketOwner()).append(",");
+        if (getAclConfiguration() != null)
+            sb.append("AclConfiguration: ").append(getAclConfiguration()).append(",");
+        if (getRemoveAclConfiguration() != null)
+            sb.append("RemoveAclConfiguration: ").append(getRemoveAclConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -686,6 +843,14 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
             return false;
         if (other.getRemoveExpectedBucketOwner() != null && other.getRemoveExpectedBucketOwner().equals(this.getRemoveExpectedBucketOwner()) == false)
             return false;
+        if (other.getAclConfiguration() == null ^ this.getAclConfiguration() == null)
+            return false;
+        if (other.getAclConfiguration() != null && other.getAclConfiguration().equals(this.getAclConfiguration()) == false)
+            return false;
+        if (other.getRemoveAclConfiguration() == null ^ this.getRemoveAclConfiguration() == null)
+            return false;
+        if (other.getRemoveAclConfiguration() != null && other.getRemoveAclConfiguration().equals(this.getRemoveAclConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -700,6 +865,8 @@ public class ResultConfigurationUpdates implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getRemoveEncryptionConfiguration() == null) ? 0 : getRemoveEncryptionConfiguration().hashCode());
         hashCode = prime * hashCode + ((getExpectedBucketOwner() == null) ? 0 : getExpectedBucketOwner().hashCode());
         hashCode = prime * hashCode + ((getRemoveExpectedBucketOwner() == null) ? 0 : getRemoveExpectedBucketOwner().hashCode());
+        hashCode = prime * hashCode + ((getAclConfiguration() == null) ? 0 : getAclConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getRemoveAclConfiguration() == null) ? 0 : getRemoveAclConfiguration().hashCode());
         return hashCode;
     }
 

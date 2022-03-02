@@ -1160,6 +1160,12 @@ public interface AmazonECRAsync extends AmazonECR {
             com.amazonaws.handlers.AsyncHandler<PutImageRequest, PutImageResult> asyncHandler);
 
     /**
+     * <important>
+     * <p>
+     * The <code>PutImageScanningConfiguration</code> API is being deprecated, in favor of specifying the image scanning
+     * configuration at the registry level. For more information, see <a>PutRegistryScanningConfiguration</a>.
+     * </p>
+     * </important>
      * <p>
      * Updates the image scanning configuration for the specified repository.
      * </p>
@@ -1175,6 +1181,12 @@ public interface AmazonECRAsync extends AmazonECR {
             PutImageScanningConfigurationRequest putImageScanningConfigurationRequest);
 
     /**
+     * <important>
+     * <p>
+     * The <code>PutImageScanningConfiguration</code> API is being deprecated, in favor of specifying the image scanning
+     * configuration at the registry level. For more information, see <a>PutRegistryScanningConfiguration</a>.
+     * </p>
+     * </important>
      * <p>
      * Updates the image scanning configuration for the specified repository.
      * </p>

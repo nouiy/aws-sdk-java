@@ -43,6 +43,13 @@ public class QueryStatisticsForDescribeQuery implements Serializable, Cloneable,
     private Long eventsScanned;
     /**
      * <p>
+     * The total bytes that the query scanned in the event data store. This value matches the number of bytes for which
+     * your account is billed for the query, unless the query is still running.
+     * </p>
+     */
+    private Long bytesScanned;
+    /**
+     * <p>
      * The query's run time, in milliseconds.
      * </p>
      */
@@ -131,6 +138,52 @@ public class QueryStatisticsForDescribeQuery implements Serializable, Cloneable,
 
     public QueryStatisticsForDescribeQuery withEventsScanned(Long eventsScanned) {
         setEventsScanned(eventsScanned);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The total bytes that the query scanned in the event data store. This value matches the number of bytes for which
+     * your account is billed for the query, unless the query is still running.
+     * </p>
+     * 
+     * @param bytesScanned
+     *        The total bytes that the query scanned in the event data store. This value matches the number of bytes for
+     *        which your account is billed for the query, unless the query is still running.
+     */
+
+    public void setBytesScanned(Long bytesScanned) {
+        this.bytesScanned = bytesScanned;
+    }
+
+    /**
+     * <p>
+     * The total bytes that the query scanned in the event data store. This value matches the number of bytes for which
+     * your account is billed for the query, unless the query is still running.
+     * </p>
+     * 
+     * @return The total bytes that the query scanned in the event data store. This value matches the number of bytes
+     *         for which your account is billed for the query, unless the query is still running.
+     */
+
+    public Long getBytesScanned() {
+        return this.bytesScanned;
+    }
+
+    /**
+     * <p>
+     * The total bytes that the query scanned in the event data store. This value matches the number of bytes for which
+     * your account is billed for the query, unless the query is still running.
+     * </p>
+     * 
+     * @param bytesScanned
+     *        The total bytes that the query scanned in the event data store. This value matches the number of bytes for
+     *        which your account is billed for the query, unless the query is still running.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public QueryStatisticsForDescribeQuery withBytesScanned(Long bytesScanned) {
+        setBytesScanned(bytesScanned);
         return this;
     }
 
@@ -230,6 +283,8 @@ public class QueryStatisticsForDescribeQuery implements Serializable, Cloneable,
             sb.append("EventsMatched: ").append(getEventsMatched()).append(",");
         if (getEventsScanned() != null)
             sb.append("EventsScanned: ").append(getEventsScanned()).append(",");
+        if (getBytesScanned() != null)
+            sb.append("BytesScanned: ").append(getBytesScanned()).append(",");
         if (getExecutionTimeInMillis() != null)
             sb.append("ExecutionTimeInMillis: ").append(getExecutionTimeInMillis()).append(",");
         if (getCreationTime() != null)
@@ -256,6 +311,10 @@ public class QueryStatisticsForDescribeQuery implements Serializable, Cloneable,
             return false;
         if (other.getEventsScanned() != null && other.getEventsScanned().equals(this.getEventsScanned()) == false)
             return false;
+        if (other.getBytesScanned() == null ^ this.getBytesScanned() == null)
+            return false;
+        if (other.getBytesScanned() != null && other.getBytesScanned().equals(this.getBytesScanned()) == false)
+            return false;
         if (other.getExecutionTimeInMillis() == null ^ this.getExecutionTimeInMillis() == null)
             return false;
         if (other.getExecutionTimeInMillis() != null && other.getExecutionTimeInMillis().equals(this.getExecutionTimeInMillis()) == false)
@@ -274,6 +333,7 @@ public class QueryStatisticsForDescribeQuery implements Serializable, Cloneable,
 
         hashCode = prime * hashCode + ((getEventsMatched() == null) ? 0 : getEventsMatched().hashCode());
         hashCode = prime * hashCode + ((getEventsScanned() == null) ? 0 : getEventsScanned().hashCode());
+        hashCode = prime * hashCode + ((getBytesScanned() == null) ? 0 : getBytesScanned().hashCode());
         hashCode = prime * hashCode + ((getExecutionTimeInMillis() == null) ? 0 : getExecutionTimeInMillis().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         return hashCode;

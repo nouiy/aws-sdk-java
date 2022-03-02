@@ -60,7 +60,8 @@ public class ListQueriesRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The status of queries that you want to return in results. Valid values for <code>QueryStatus</code> include
-     * <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>.
+     * <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, <code>TIMED_OUT</code>, or
+     * <code>CANCELLED</code>.
      * </p>
      */
     private String queryStatus;
@@ -280,13 +281,14 @@ public class ListQueriesRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The status of queries that you want to return in results. Valid values for <code>QueryStatus</code> include
-     * <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>.
+     * <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, <code>TIMED_OUT</code>, or
+     * <code>CANCELLED</code>.
      * </p>
      * 
      * @param queryStatus
      *        The status of queries that you want to return in results. Valid values for <code>QueryStatus</code>
-     *        include <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, or
-     *        <code>CANCELLED</code>.
+     *        include <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>,
+     *        <code>TIMED_OUT</code>, or <code>CANCELLED</code>.
      * @see QueryStatus
      */
 
@@ -297,12 +299,13 @@ public class ListQueriesRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The status of queries that you want to return in results. Valid values for <code>QueryStatus</code> include
-     * <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>.
+     * <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, <code>TIMED_OUT</code>, or
+     * <code>CANCELLED</code>.
      * </p>
      * 
      * @return The status of queries that you want to return in results. Valid values for <code>QueryStatus</code>
-     *         include <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, or
-     *         <code>CANCELLED</code>.
+     *         include <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>,
+     *         <code>TIMED_OUT</code>, or <code>CANCELLED</code>.
      * @see QueryStatus
      */
 
@@ -313,13 +316,14 @@ public class ListQueriesRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The status of queries that you want to return in results. Valid values for <code>QueryStatus</code> include
-     * <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>.
+     * <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, <code>TIMED_OUT</code>, or
+     * <code>CANCELLED</code>.
      * </p>
      * 
      * @param queryStatus
      *        The status of queries that you want to return in results. Valid values for <code>QueryStatus</code>
-     *        include <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, or
-     *        <code>CANCELLED</code>.
+     *        include <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>,
+     *        <code>TIMED_OUT</code>, or <code>CANCELLED</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QueryStatus
      */
@@ -332,13 +336,14 @@ public class ListQueriesRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The status of queries that you want to return in results. Valid values for <code>QueryStatus</code> include
-     * <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, or <code>CANCELLED</code>.
+     * <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, <code>TIMED_OUT</code>, or
+     * <code>CANCELLED</code>.
      * </p>
      * 
      * @param queryStatus
      *        The status of queries that you want to return in results. Valid values for <code>QueryStatus</code>
-     *        include <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>, or
-     *        <code>CANCELLED</code>.
+     *        include <code>QUEUED</code>, <code>RUNNING</code>, <code>FINISHED</code>, <code>FAILED</code>,
+     *        <code>TIMED_OUT</code>, or <code>CANCELLED</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see QueryStatus
      */

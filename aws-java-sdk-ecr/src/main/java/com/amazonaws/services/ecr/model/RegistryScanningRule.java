@@ -30,7 +30,10 @@ public class RegistryScanningRule implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The frequency that scans are performed at for a private registry.
+     * The frequency that scans are performed at for a private registry. When the <code>ENHANCED</code> scan type is
+     * specified, the supported scan frequencies are <code>CONTINUOUS_SCAN</code> and <code>SCAN_ON_PUSH</code>. When
+     * the <code>BASIC</code> scan type is specified, the <code>SCAN_ON_PUSH</code> and <code>MANUAL</code> scan
+     * frequencies are supported.
      * </p>
      */
     private String scanFrequency;
@@ -43,11 +46,17 @@ public class RegistryScanningRule implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The frequency that scans are performed at for a private registry.
+     * The frequency that scans are performed at for a private registry. When the <code>ENHANCED</code> scan type is
+     * specified, the supported scan frequencies are <code>CONTINUOUS_SCAN</code> and <code>SCAN_ON_PUSH</code>. When
+     * the <code>BASIC</code> scan type is specified, the <code>SCAN_ON_PUSH</code> and <code>MANUAL</code> scan
+     * frequencies are supported.
      * </p>
      * 
      * @param scanFrequency
-     *        The frequency that scans are performed at for a private registry.
+     *        The frequency that scans are performed at for a private registry. When the <code>ENHANCED</code> scan type
+     *        is specified, the supported scan frequencies are <code>CONTINUOUS_SCAN</code> and
+     *        <code>SCAN_ON_PUSH</code>. When the <code>BASIC</code> scan type is specified, the
+     *        <code>SCAN_ON_PUSH</code> and <code>MANUAL</code> scan frequencies are supported.
      * @see ScanFrequency
      */
 
@@ -57,10 +66,16 @@ public class RegistryScanningRule implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The frequency that scans are performed at for a private registry.
+     * The frequency that scans are performed at for a private registry. When the <code>ENHANCED</code> scan type is
+     * specified, the supported scan frequencies are <code>CONTINUOUS_SCAN</code> and <code>SCAN_ON_PUSH</code>. When
+     * the <code>BASIC</code> scan type is specified, the <code>SCAN_ON_PUSH</code> and <code>MANUAL</code> scan
+     * frequencies are supported.
      * </p>
      * 
-     * @return The frequency that scans are performed at for a private registry.
+     * @return The frequency that scans are performed at for a private registry. When the <code>ENHANCED</code> scan
+     *         type is specified, the supported scan frequencies are <code>CONTINUOUS_SCAN</code> and
+     *         <code>SCAN_ON_PUSH</code>. When the <code>BASIC</code> scan type is specified, the
+     *         <code>SCAN_ON_PUSH</code> and <code>MANUAL</code> scan frequencies are supported.
      * @see ScanFrequency
      */
 
@@ -70,11 +85,17 @@ public class RegistryScanningRule implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The frequency that scans are performed at for a private registry.
+     * The frequency that scans are performed at for a private registry. When the <code>ENHANCED</code> scan type is
+     * specified, the supported scan frequencies are <code>CONTINUOUS_SCAN</code> and <code>SCAN_ON_PUSH</code>. When
+     * the <code>BASIC</code> scan type is specified, the <code>SCAN_ON_PUSH</code> and <code>MANUAL</code> scan
+     * frequencies are supported.
      * </p>
      * 
      * @param scanFrequency
-     *        The frequency that scans are performed at for a private registry.
+     *        The frequency that scans are performed at for a private registry. When the <code>ENHANCED</code> scan type
+     *        is specified, the supported scan frequencies are <code>CONTINUOUS_SCAN</code> and
+     *        <code>SCAN_ON_PUSH</code>. When the <code>BASIC</code> scan type is specified, the
+     *        <code>SCAN_ON_PUSH</code> and <code>MANUAL</code> scan frequencies are supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ScanFrequency
      */
@@ -86,11 +107,17 @@ public class RegistryScanningRule implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The frequency that scans are performed at for a private registry.
+     * The frequency that scans are performed at for a private registry. When the <code>ENHANCED</code> scan type is
+     * specified, the supported scan frequencies are <code>CONTINUOUS_SCAN</code> and <code>SCAN_ON_PUSH</code>. When
+     * the <code>BASIC</code> scan type is specified, the <code>SCAN_ON_PUSH</code> and <code>MANUAL</code> scan
+     * frequencies are supported.
      * </p>
      * 
      * @param scanFrequency
-     *        The frequency that scans are performed at for a private registry.
+     *        The frequency that scans are performed at for a private registry. When the <code>ENHANCED</code> scan type
+     *        is specified, the supported scan frequencies are <code>CONTINUOUS_SCAN</code> and
+     *        <code>SCAN_ON_PUSH</code>. When the <code>BASIC</code> scan type is specified, the
+     *        <code>SCAN_ON_PUSH</code> and <code>MANUAL</code> scan frequencies are supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ScanFrequency
      */

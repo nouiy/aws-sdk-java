@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The specified query cannot be canceled because it is in the <code>FINISHED</code>, <code>FAILED</code>, or
- * <code>CANCELLED</code> state.
+ * The specified query cannot be canceled because it is in the <code>FINISHED</code>, <code>FAILED</code>,
+ * <code>TIMED_OUT</code>, or <code>CANCELLED</code> state.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

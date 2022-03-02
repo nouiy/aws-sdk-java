@@ -71,6 +71,18 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private String expectedBucketOwner;
+    /**
+     * <p>
+     * Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query results. Currently the
+     * only supported canned ACL is <code>BUCKET_OWNER_FULL_CONTROL</code>. This is a client-side setting. If workgroup
+     * settings override client-side settings, then the query uses the ACL configuration that is specified for the
+     * workgroup, and also uses the location for storing query results specified in the workgroup. For more information,
+     * see <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     */
+    private AclConfiguration aclConfiguration;
 
     /**
      * <p>
@@ -334,6 +346,82 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query results. Currently the
+     * only supported canned ACL is <code>BUCKET_OWNER_FULL_CONTROL</code>. This is a client-side setting. If workgroup
+     * settings override client-side settings, then the query uses the ACL configuration that is specified for the
+     * workgroup, and also uses the location for storing query results specified in the workgroup. For more information,
+     * see <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     * 
+     * @param aclConfiguration
+     *        Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query results.
+     *        Currently the only supported canned ACL is <code>BUCKET_OWNER_FULL_CONTROL</code>. This is a client-side
+     *        setting. If workgroup settings override client-side settings, then the query uses the ACL configuration
+     *        that is specified for the workgroup, and also uses the location for storing query results specified in the
+     *        workgroup. For more information, see <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     *        href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *        Override Client-Side Settings</a>.
+     */
+
+    public void setAclConfiguration(AclConfiguration aclConfiguration) {
+        this.aclConfiguration = aclConfiguration;
+    }
+
+    /**
+     * <p>
+     * Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query results. Currently the
+     * only supported canned ACL is <code>BUCKET_OWNER_FULL_CONTROL</code>. This is a client-side setting. If workgroup
+     * settings override client-side settings, then the query uses the ACL configuration that is specified for the
+     * workgroup, and also uses the location for storing query results specified in the workgroup. For more information,
+     * see <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     * 
+     * @return Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query results.
+     *         Currently the only supported canned ACL is <code>BUCKET_OWNER_FULL_CONTROL</code>. This is a client-side
+     *         setting. If workgroup settings override client-side settings, then the query uses the ACL configuration
+     *         that is specified for the workgroup, and also uses the location for storing query results specified in
+     *         the workgroup. For more information, see <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and
+     *         <a href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup
+     *         Settings Override Client-Side Settings</a>.
+     */
+
+    public AclConfiguration getAclConfiguration() {
+        return this.aclConfiguration;
+    }
+
+    /**
+     * <p>
+     * Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query results. Currently the
+     * only supported canned ACL is <code>BUCKET_OWNER_FULL_CONTROL</code>. This is a client-side setting. If workgroup
+     * settings override client-side settings, then the query uses the ACL configuration that is specified for the
+     * workgroup, and also uses the location for storing query results specified in the workgroup. For more information,
+     * see <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings Override
+     * Client-Side Settings</a>.
+     * </p>
+     * 
+     * @param aclConfiguration
+     *        Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query results.
+     *        Currently the only supported canned ACL is <code>BUCKET_OWNER_FULL_CONTROL</code>. This is a client-side
+     *        setting. If workgroup settings override client-side settings, then the query uses the ACL configuration
+     *        that is specified for the workgroup, and also uses the location for storing query results specified in the
+     *        workgroup. For more information, see <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
+     *        href="https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html">Workgroup Settings
+     *        Override Client-Side Settings</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResultConfiguration withAclConfiguration(AclConfiguration aclConfiguration) {
+        setAclConfiguration(aclConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -350,7 +438,9 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
         if (getEncryptionConfiguration() != null)
             sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration()).append(",");
         if (getExpectedBucketOwner() != null)
-            sb.append("ExpectedBucketOwner: ").append(getExpectedBucketOwner());
+            sb.append("ExpectedBucketOwner: ").append(getExpectedBucketOwner()).append(",");
+        if (getAclConfiguration() != null)
+            sb.append("AclConfiguration: ").append(getAclConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -377,6 +467,10 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getExpectedBucketOwner() != null && other.getExpectedBucketOwner().equals(this.getExpectedBucketOwner()) == false)
             return false;
+        if (other.getAclConfiguration() == null ^ this.getAclConfiguration() == null)
+            return false;
+        if (other.getAclConfiguration() != null && other.getAclConfiguration().equals(this.getAclConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -388,6 +482,7 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getOutputLocation() == null) ? 0 : getOutputLocation().hashCode());
         hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
         hashCode = prime * hashCode + ((getExpectedBucketOwner() == null) ? 0 : getExpectedBucketOwner().hashCode());
+        hashCode = prime * hashCode + ((getAclConfiguration() == null) ? 0 : getAclConfiguration().hashCode());
         return hashCode;
     }
 
