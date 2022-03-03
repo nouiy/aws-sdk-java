@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides the configuration information of the endpoint for your Amazon Kendra experience.
+ * Provides the configuration information for the endpoint for your Amazon Kendra experience.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ExperienceEndpoint" target="_top">AWS API

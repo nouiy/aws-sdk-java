@@ -119,7 +119,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
     private java.util.List<String> urlExclusionPatterns;
     /**
      * <p>
-     * Provides configuration information required to connect to your internal websites via a web proxy.
+     * Configuration information required to connect to your internal websites via a web proxy.
      * </p>
      * <p>
      * You must provide the website host name and port number. For example, the host name of
@@ -134,7 +134,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
     private ProxyConfiguration proxyConfiguration;
     /**
      * <p>
-     * Provides configuration information required to connect to websites using authentication.
+     * Configuration information required to connect to websites using authentication.
      * </p>
      * <p>
      * You can connect to websites using basic authentication of user name and password.
@@ -777,7 +777,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information required to connect to your internal websites via a web proxy.
+     * Configuration information required to connect to your internal websites via a web proxy.
      * </p>
      * <p>
      * You must provide the website host name and port number. For example, the host name of
@@ -790,7 +790,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param proxyConfiguration
-     *        Provides configuration information required to connect to your internal websites via a web proxy.</p>
+     *        Configuration information required to connect to your internal websites via a web proxy.</p>
      *        <p>
      *        You must provide the website host name and port number. For example, the host name of
      *        https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS.
@@ -807,7 +807,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information required to connect to your internal websites via a web proxy.
+     * Configuration information required to connect to your internal websites via a web proxy.
      * </p>
      * <p>
      * You must provide the website host name and port number. For example, the host name of
@@ -819,7 +819,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">Secrets Manager</a>.
      * </p>
      * 
-     * @return Provides configuration information required to connect to your internal websites via a web proxy.</p>
+     * @return Configuration information required to connect to your internal websites via a web proxy.</p>
      *         <p>
      *         You must provide the website host name and port number. For example, the host name of
      *         https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS.
@@ -836,7 +836,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information required to connect to your internal websites via a web proxy.
+     * Configuration information required to connect to your internal websites via a web proxy.
      * </p>
      * <p>
      * You must provide the website host name and port number. For example, the host name of
@@ -849,7 +849,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param proxyConfiguration
-     *        Provides configuration information required to connect to your internal websites via a web proxy.</p>
+     *        Configuration information required to connect to your internal websites via a web proxy.</p>
      *        <p>
      *        You must provide the website host name and port number. For example, the host name of
      *        https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS.
@@ -868,7 +868,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information required to connect to websites using authentication.
+     * Configuration information required to connect to websites using authentication.
      * </p>
      * <p>
      * You can connect to websites using basic authentication of user name and password.
@@ -881,7 +881,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param authenticationConfiguration
-     *        Provides configuration information required to connect to websites using authentication.</p>
+     *        Configuration information required to connect to websites using authentication.</p>
      *        <p>
      *        You can connect to websites using basic authentication of user name and password.
      *        </p>
@@ -898,7 +898,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information required to connect to websites using authentication.
+     * Configuration information required to connect to websites using authentication.
      * </p>
      * <p>
      * You can connect to websites using basic authentication of user name and password.
@@ -910,7 +910,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * store your authentication credentials.
      * </p>
      * 
-     * @return Provides configuration information required to connect to websites using authentication.</p>
+     * @return Configuration information required to connect to websites using authentication.</p>
      *         <p>
      *         You can connect to websites using basic authentication of user name and password.
      *         </p>
@@ -927,7 +927,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information required to connect to websites using authentication.
+     * Configuration information required to connect to websites using authentication.
      * </p>
      * <p>
      * You can connect to websites using basic authentication of user name and password.
@@ -940,7 +940,7 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param authenticationConfiguration
-     *        Provides configuration information required to connect to websites using authentication.</p>
+     *        Configuration information required to connect to websites using authentication.</p>
      *        <p>
      *        You can connect to websites using basic authentication of user name and password.
      *        </p>

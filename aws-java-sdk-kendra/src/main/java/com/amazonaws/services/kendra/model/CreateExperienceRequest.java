@@ -48,7 +48,7 @@ public class CreateExperienceRequest extends com.amazonaws.AmazonWebServiceReque
     private String roleArn;
     /**
      * <p>
-     * Provides the configuration information for your Amazon Kendra experience. This includes
+     * Configuration information for your Amazon Kendra experience. This includes
      * <code>ContentSourceConfiguration</code>, which specifies the data source IDs and/or FAQ IDs, and
      * <code>UserIdentityConfiguration</code>, which specifies the user or group information to grant access to your
      * Amazon Kendra experience.
@@ -209,14 +209,14 @@ public class CreateExperienceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Provides the configuration information for your Amazon Kendra experience. This includes
+     * Configuration information for your Amazon Kendra experience. This includes
      * <code>ContentSourceConfiguration</code>, which specifies the data source IDs and/or FAQ IDs, and
      * <code>UserIdentityConfiguration</code>, which specifies the user or group information to grant access to your
      * Amazon Kendra experience.
      * </p>
      * 
      * @param configuration
-     *        Provides the configuration information for your Amazon Kendra experience. This includes
+     *        Configuration information for your Amazon Kendra experience. This includes
      *        <code>ContentSourceConfiguration</code>, which specifies the data source IDs and/or FAQ IDs, and
      *        <code>UserIdentityConfiguration</code>, which specifies the user or group information to grant access to
      *        your Amazon Kendra experience.
@@ -228,13 +228,13 @@ public class CreateExperienceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Provides the configuration information for your Amazon Kendra experience. This includes
+     * Configuration information for your Amazon Kendra experience. This includes
      * <code>ContentSourceConfiguration</code>, which specifies the data source IDs and/or FAQ IDs, and
      * <code>UserIdentityConfiguration</code>, which specifies the user or group information to grant access to your
      * Amazon Kendra experience.
      * </p>
      * 
-     * @return Provides the configuration information for your Amazon Kendra experience. This includes
+     * @return Configuration information for your Amazon Kendra experience. This includes
      *         <code>ContentSourceConfiguration</code>, which specifies the data source IDs and/or FAQ IDs, and
      *         <code>UserIdentityConfiguration</code>, which specifies the user or group information to grant access to
      *         your Amazon Kendra experience.
@@ -246,14 +246,14 @@ public class CreateExperienceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Provides the configuration information for your Amazon Kendra experience. This includes
+     * Configuration information for your Amazon Kendra experience. This includes
      * <code>ContentSourceConfiguration</code>, which specifies the data source IDs and/or FAQ IDs, and
      * <code>UserIdentityConfiguration</code>, which specifies the user or group information to grant access to your
      * Amazon Kendra experience.
      * </p>
      * 
      * @param configuration
-     *        Provides the configuration information for your Amazon Kendra experience. This includes
+     *        Configuration information for your Amazon Kendra experience. This includes
      *        <code>ContentSourceConfiguration</code>, which specifies the data source IDs and/or FAQ IDs, and
      *        <code>UserIdentityConfiguration</code>, which specifies the user or group information to grant access to
      *        your Amazon Kendra experience.

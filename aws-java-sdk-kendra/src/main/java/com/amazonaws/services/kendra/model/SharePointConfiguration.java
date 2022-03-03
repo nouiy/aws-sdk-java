@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides configuration information for connecting to a Microsoft SharePoint data source.
+ * Provides the configuration information to connect to Microsoft SharePoint as your data source.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/SharePointConfiguration" target="_top">AWS API

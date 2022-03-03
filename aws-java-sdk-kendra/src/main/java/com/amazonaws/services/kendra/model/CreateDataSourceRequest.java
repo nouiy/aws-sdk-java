@@ -46,7 +46,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private String type;
     /**
      * <p>
-     * The connector configuration information that is required to access the repository.
+     * Configuration information that is required to access the data source repository.
      * </p>
      * <p>
      * You can't specify the <code>Configuration</code> parameter when the <code>Type</code> parameter is set to
@@ -273,7 +273,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The connector configuration information that is required to access the repository.
+     * Configuration information that is required to access the data source repository.
      * </p>
      * <p>
      * You can't specify the <code>Configuration</code> parameter when the <code>Type</code> parameter is set to
@@ -284,7 +284,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param configuration
-     *        The connector configuration information that is required to access the repository.</p>
+     *        Configuration information that is required to access the data source repository.</p>
      *        <p>
      *        You can't specify the <code>Configuration</code> parameter when the <code>Type</code> parameter is set to
      *        <code>CUSTOM</code>. If you do, you receive a <code>ValidationException</code> exception.
@@ -299,7 +299,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The connector configuration information that is required to access the repository.
+     * Configuration information that is required to access the data source repository.
      * </p>
      * <p>
      * You can't specify the <code>Configuration</code> parameter when the <code>Type</code> parameter is set to
@@ -309,7 +309,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * The <code>Configuration</code> parameter is required for all other data sources.
      * </p>
      * 
-     * @return The connector configuration information that is required to access the repository.</p>
+     * @return Configuration information that is required to access the data source repository.</p>
      *         <p>
      *         You can't specify the <code>Configuration</code> parameter when the <code>Type</code> parameter is set to
      *         <code>CUSTOM</code>. If you do, you receive a <code>ValidationException</code> exception.
@@ -324,7 +324,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The connector configuration information that is required to access the repository.
+     * Configuration information that is required to access the data source repository.
      * </p>
      * <p>
      * You can't specify the <code>Configuration</code> parameter when the <code>Type</code> parameter is set to
@@ -335,7 +335,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param configuration
-     *        The connector configuration information that is required to access the repository.</p>
+     *        Configuration information that is required to access the data source repository.</p>
      *        <p>
      *        You can't specify the <code>Configuration</code> parameter when the <code>Type</code> parameter is set to
      *        <code>CUSTOM</code>. If you do, you receive a <code>ValidationException</code> exception.

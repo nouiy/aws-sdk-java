@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides configuration information for a data source to index documents in an Amazon S3 bucket.
+ * Provides the configuration information to connect to an Amazon S3 bucket.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/S3DataSourceConfiguration" target="_top">AWS

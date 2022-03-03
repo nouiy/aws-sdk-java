@@ -61,6 +61,12 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
      * </p>
      */
     private java.util.List<Warning> warnings;
+    /**
+     * <p>
+     * A list of information related to suggested spell corrections for a query.
+     * </p>
+     */
+    private java.util.List<SpellCorrectedQuery> spellCorrectedQueries;
 
     /**
      * <p>
@@ -417,6 +423,76 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
     }
 
     /**
+     * <p>
+     * A list of information related to suggested spell corrections for a query.
+     * </p>
+     * 
+     * @return A list of information related to suggested spell corrections for a query.
+     */
+
+    public java.util.List<SpellCorrectedQuery> getSpellCorrectedQueries() {
+        return spellCorrectedQueries;
+    }
+
+    /**
+     * <p>
+     * A list of information related to suggested spell corrections for a query.
+     * </p>
+     * 
+     * @param spellCorrectedQueries
+     *        A list of information related to suggested spell corrections for a query.
+     */
+
+    public void setSpellCorrectedQueries(java.util.Collection<SpellCorrectedQuery> spellCorrectedQueries) {
+        if (spellCorrectedQueries == null) {
+            this.spellCorrectedQueries = null;
+            return;
+        }
+
+        this.spellCorrectedQueries = new java.util.ArrayList<SpellCorrectedQuery>(spellCorrectedQueries);
+    }
+
+    /**
+     * <p>
+     * A list of information related to suggested spell corrections for a query.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSpellCorrectedQueries(java.util.Collection)} or
+     * {@link #withSpellCorrectedQueries(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param spellCorrectedQueries
+     *        A list of information related to suggested spell corrections for a query.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public QueryResult withSpellCorrectedQueries(SpellCorrectedQuery... spellCorrectedQueries) {
+        if (this.spellCorrectedQueries == null) {
+            setSpellCorrectedQueries(new java.util.ArrayList<SpellCorrectedQuery>(spellCorrectedQueries.length));
+        }
+        for (SpellCorrectedQuery ele : spellCorrectedQueries) {
+            this.spellCorrectedQueries.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of information related to suggested spell corrections for a query.
+     * </p>
+     * 
+     * @param spellCorrectedQueries
+     *        A list of information related to suggested spell corrections for a query.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public QueryResult withSpellCorrectedQueries(java.util.Collection<SpellCorrectedQuery> spellCorrectedQueries) {
+        setSpellCorrectedQueries(spellCorrectedQueries);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -437,7 +513,9 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
         if (getTotalNumberOfResults() != null)
             sb.append("TotalNumberOfResults: ").append(getTotalNumberOfResults()).append(",");
         if (getWarnings() != null)
-            sb.append("Warnings: ").append(getWarnings());
+            sb.append("Warnings: ").append(getWarnings()).append(",");
+        if (getSpellCorrectedQueries() != null)
+            sb.append("SpellCorrectedQueries: ").append(getSpellCorrectedQueries());
         sb.append("}");
         return sb.toString();
     }
@@ -472,6 +550,10 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
             return false;
         if (other.getWarnings() != null && other.getWarnings().equals(this.getWarnings()) == false)
             return false;
+        if (other.getSpellCorrectedQueries() == null ^ this.getSpellCorrectedQueries() == null)
+            return false;
+        if (other.getSpellCorrectedQueries() != null && other.getSpellCorrectedQueries().equals(this.getSpellCorrectedQueries()) == false)
+            return false;
         return true;
     }
 
@@ -485,6 +567,7 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
         hashCode = prime * hashCode + ((getFacetResults() == null) ? 0 : getFacetResults().hashCode());
         hashCode = prime * hashCode + ((getTotalNumberOfResults() == null) ? 0 : getTotalNumberOfResults().hashCode());
         hashCode = prime * hashCode + ((getWarnings() == null) ? 0 : getWarnings().hashCode());
+        hashCode = prime * hashCode + ((getSpellCorrectedQueries() == null) ? 0 : getSpellCorrectedQueries().hashCode());
         return hashCode;
     }
 

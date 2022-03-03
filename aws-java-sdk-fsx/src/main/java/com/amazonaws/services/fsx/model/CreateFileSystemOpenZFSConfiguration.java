@@ -54,7 +54,7 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
     /**
      * <p>
      * Specifies the file system deployment type. Amazon FSx for OpenZFS supports <code>SINGLE_AZ_1</code>.
-     * <code>SINGLE_AZ_1</code> is a file system configured for a single Availability Zone (AZ) of redundancy.
+     * <code>SINGLE_AZ_1</code> deployment type is configured for redundancy within a single Availability Zone.
      * </p>
      */
     private String deploymentType;
@@ -305,12 +305,12 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
     /**
      * <p>
      * Specifies the file system deployment type. Amazon FSx for OpenZFS supports <code>SINGLE_AZ_1</code>.
-     * <code>SINGLE_AZ_1</code> is a file system configured for a single Availability Zone (AZ) of redundancy.
+     * <code>SINGLE_AZ_1</code> deployment type is configured for redundancy within a single Availability Zone.
      * </p>
      * 
      * @param deploymentType
      *        Specifies the file system deployment type. Amazon FSx for OpenZFS supports <code>SINGLE_AZ_1</code>.
-     *        <code>SINGLE_AZ_1</code> is a file system configured for a single Availability Zone (AZ) of redundancy.
+     *        <code>SINGLE_AZ_1</code> deployment type is configured for redundancy within a single Availability Zone.
      * @see OpenZFSDeploymentType
      */
 
@@ -321,11 +321,11 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
     /**
      * <p>
      * Specifies the file system deployment type. Amazon FSx for OpenZFS supports <code>SINGLE_AZ_1</code>.
-     * <code>SINGLE_AZ_1</code> is a file system configured for a single Availability Zone (AZ) of redundancy.
+     * <code>SINGLE_AZ_1</code> deployment type is configured for redundancy within a single Availability Zone.
      * </p>
      * 
      * @return Specifies the file system deployment type. Amazon FSx for OpenZFS supports <code>SINGLE_AZ_1</code>.
-     *         <code>SINGLE_AZ_1</code> is a file system configured for a single Availability Zone (AZ) of redundancy.
+     *         <code>SINGLE_AZ_1</code> deployment type is configured for redundancy within a single Availability Zone.
      * @see OpenZFSDeploymentType
      */
 
@@ -336,12 +336,12 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
     /**
      * <p>
      * Specifies the file system deployment type. Amazon FSx for OpenZFS supports <code>SINGLE_AZ_1</code>.
-     * <code>SINGLE_AZ_1</code> is a file system configured for a single Availability Zone (AZ) of redundancy.
+     * <code>SINGLE_AZ_1</code> deployment type is configured for redundancy within a single Availability Zone.
      * </p>
      * 
      * @param deploymentType
      *        Specifies the file system deployment type. Amazon FSx for OpenZFS supports <code>SINGLE_AZ_1</code>.
-     *        <code>SINGLE_AZ_1</code> is a file system configured for a single Availability Zone (AZ) of redundancy.
+     *        <code>SINGLE_AZ_1</code> deployment type is configured for redundancy within a single Availability Zone.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OpenZFSDeploymentType
      */
@@ -354,12 +354,12 @@ public class CreateFileSystemOpenZFSConfiguration implements Serializable, Clone
     /**
      * <p>
      * Specifies the file system deployment type. Amazon FSx for OpenZFS supports <code>SINGLE_AZ_1</code>.
-     * <code>SINGLE_AZ_1</code> is a file system configured for a single Availability Zone (AZ) of redundancy.
+     * <code>SINGLE_AZ_1</code> deployment type is configured for redundancy within a single Availability Zone.
      * </p>
      * 
      * @param deploymentType
      *        Specifies the file system deployment type. Amazon FSx for OpenZFS supports <code>SINGLE_AZ_1</code>.
-     *        <code>SINGLE_AZ_1</code> is a file system configured for a single Availability Zone (AZ) of redundancy.
+     *        <code>SINGLE_AZ_1</code> deployment type is configured for redundancy within a single Availability Zone.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OpenZFSDeploymentType
      */

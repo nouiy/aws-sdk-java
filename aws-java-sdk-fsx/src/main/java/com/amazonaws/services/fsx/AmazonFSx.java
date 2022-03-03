@@ -639,7 +639,7 @@ public interface AmazonFSx {
 
     /**
      * <p>
-     * Creates an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS storage volume.
+     * Creates an FSx for ONTAP or Amazon FSx for OpenZFS storage volume.
      * </p>
      * 
      * @param createVolumeRequest
@@ -659,7 +659,7 @@ public interface AmazonFSx {
      *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
      *         contacting Amazon Web Services Support.
      * @throws StorageVirtualMachineNotFoundException
-     *         No Amazon FSx for NetApp ONTAP SVMs were found based upon the supplied parameters.
+     *         No FSx for ONTAP SVMs were found based upon the supplied parameters.
      * @throws UnsupportedOperationException
      *         The requested operation is not supported for this resource or API.
      * @sample AmazonFSx.CreateVolume
@@ -692,7 +692,7 @@ public interface AmazonFSx {
      *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
      *         contacting Amazon Web Services Support.
      * @throws StorageVirtualMachineNotFoundException
-     *         No Amazon FSx for NetApp ONTAP SVMs were found based upon the supplied parameters.
+     *         No FSx for ONTAP SVMs were found based upon the supplied parameters.
      * @sample AmazonFSx.CreateVolumeFromBackup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateVolumeFromBackup" target="_top">AWS API
      *      Documentation</a>
@@ -859,7 +859,7 @@ public interface AmazonFSx {
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @throws StorageVirtualMachineNotFoundException
-     *         No Amazon FSx for NetApp ONTAP SVMs were found based upon the supplied parameters.
+     *         No FSx for ONTAP SVMs were found based upon the supplied parameters.
      * @sample AmazonFSx.DeleteStorageVirtualMachine
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DeleteStorageVirtualMachine"
      *      target="_top">AWS API Documentation</a>
@@ -1149,7 +1149,7 @@ public interface AmazonFSx {
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @throws StorageVirtualMachineNotFoundException
-     *         No Amazon FSx for NetApp ONTAP SVMs were found based upon the supplied parameters.
+     *         No FSx for ONTAP SVMs were found based upon the supplied parameters.
      * @sample AmazonFSx.DescribeStorageVirtualMachines
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeStorageVirtualMachines"
      *      target="_top">AWS API Documentation</a>
@@ -1589,7 +1589,7 @@ public interface AmazonFSx {
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @throws StorageVirtualMachineNotFoundException
-     *         No Amazon FSx for NetApp ONTAP SVMs were found based upon the supplied parameters.
+     *         No FSx for ONTAP SVMs were found based upon the supplied parameters.
      * @throws UnsupportedOperationException
      *         The requested operation is not supported for this resource or API.
      * @sample AmazonFSx.UpdateStorageVirtualMachine

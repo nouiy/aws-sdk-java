@@ -46,7 +46,7 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private String indexId;
     /**
      * <p>
-     * Configuration information for an Amazon Kendra data source.
+     * Configuration information for an Amazon Kendra data source you want to update.
      * </p>
      */
     private DataSourceConfiguration configuration;
@@ -219,11 +219,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration information for an Amazon Kendra data source.
+     * Configuration information for an Amazon Kendra data source you want to update.
      * </p>
      * 
      * @param configuration
-     *        Configuration information for an Amazon Kendra data source.
+     *        Configuration information for an Amazon Kendra data source you want to update.
      */
 
     public void setConfiguration(DataSourceConfiguration configuration) {
@@ -232,10 +232,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration information for an Amazon Kendra data source.
+     * Configuration information for an Amazon Kendra data source you want to update.
      * </p>
      * 
-     * @return Configuration information for an Amazon Kendra data source.
+     * @return Configuration information for an Amazon Kendra data source you want to update.
      */
 
     public DataSourceConfiguration getConfiguration() {
@@ -244,11 +244,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration information for an Amazon Kendra data source.
+     * Configuration information for an Amazon Kendra data source you want to update.
      * </p>
      * 
      * @param configuration
-     *        Configuration information for an Amazon Kendra data source.
+     *        Configuration information for an Amazon Kendra data source you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

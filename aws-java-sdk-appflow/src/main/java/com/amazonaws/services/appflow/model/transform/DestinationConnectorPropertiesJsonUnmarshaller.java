@@ -88,6 +88,10 @@ public class DestinationConnectorPropertiesJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     destinationConnectorProperties.setZendesk(ZendeskDestinationPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Marketo", targetDepth)) {
+                    context.nextToken();
+                    destinationConnectorProperties.setMarketo(MarketoDestinationPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("CustomConnector", targetDepth)) {
                     context.nextToken();
                     destinationConnectorProperties.setCustomConnector(CustomConnectorDestinationPropertiesJsonUnmarshaller.getInstance().unmarshall(context));

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides configuration information for processing attachments to Salesforce standard objects.
+ * Provides the configuration information for processing attachments to Salesforce standard objects.
  * </p>
  * 
  * @see <a

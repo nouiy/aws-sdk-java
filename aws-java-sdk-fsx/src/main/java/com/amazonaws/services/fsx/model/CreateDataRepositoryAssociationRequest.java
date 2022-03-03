@@ -38,6 +38,13 @@ public class CreateDataRepositoryAssociationRequest extends com.amazonaws.Amazon
      * This path specifies where in your file system files will be exported from or imported to. This file system
      * directory can be linked to only one Amazon S3 bucket, and no other S3 bucket can be linked to the directory.
      * </p>
+     * <note>
+     * <p>
+     * If you specify only a forward slash (<code>/</code>) as the file system path, you can link only 1 data repository
+     * to the file system. You can only specify "/" as the file system path for the first data repository associated
+     * with a file system.
+     * </p>
+     * </note>
      */
     private String fileSystemPath;
     /**
@@ -119,6 +126,13 @@ public class CreateDataRepositoryAssociationRequest extends com.amazonaws.Amazon
      * This path specifies where in your file system files will be exported from or imported to. This file system
      * directory can be linked to only one Amazon S3 bucket, and no other S3 bucket can be linked to the directory.
      * </p>
+     * <note>
+     * <p>
+     * If you specify only a forward slash (<code>/</code>) as the file system path, you can link only 1 data repository
+     * to the file system. You can only specify "/" as the file system path for the first data repository associated
+     * with a file system.
+     * </p>
+     * </note>
      * 
      * @param fileSystemPath
      *        A path on the file system that points to a high-level directory (such as <code>/ns1/</code>) or
@@ -131,6 +145,13 @@ public class CreateDataRepositoryAssociationRequest extends com.amazonaws.Amazon
      *        This path specifies where in your file system files will be exported from or imported to. This file system
      *        directory can be linked to only one Amazon S3 bucket, and no other S3 bucket can be linked to the
      *        directory.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        If you specify only a forward slash (<code>/</code>) as the file system path, you can link only 1 data
+     *        repository to the file system. You can only specify "/" as the file system path for the first data
+     *        repository associated with a file system.
+     *        </p>
      */
 
     public void setFileSystemPath(String fileSystemPath) {
@@ -149,6 +170,13 @@ public class CreateDataRepositoryAssociationRequest extends com.amazonaws.Amazon
      * This path specifies where in your file system files will be exported from or imported to. This file system
      * directory can be linked to only one Amazon S3 bucket, and no other S3 bucket can be linked to the directory.
      * </p>
+     * <note>
+     * <p>
+     * If you specify only a forward slash (<code>/</code>) as the file system path, you can link only 1 data repository
+     * to the file system. You can only specify "/" as the file system path for the first data repository associated
+     * with a file system.
+     * </p>
+     * </note>
      * 
      * @return A path on the file system that points to a high-level directory (such as <code>/ns1/</code>) or
      *         subdirectory (such as <code>/ns1/subdir/</code>) that will be mapped 1-1 with
@@ -160,6 +188,13 @@ public class CreateDataRepositoryAssociationRequest extends com.amazonaws.Amazon
      *         This path specifies where in your file system files will be exported from or imported to. This file
      *         system directory can be linked to only one Amazon S3 bucket, and no other S3 bucket can be linked to the
      *         directory.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         If you specify only a forward slash (<code>/</code>) as the file system path, you can link only 1 data
+     *         repository to the file system. You can only specify "/" as the file system path for the first data
+     *         repository associated with a file system.
+     *         </p>
      */
 
     public String getFileSystemPath() {
@@ -178,6 +213,13 @@ public class CreateDataRepositoryAssociationRequest extends com.amazonaws.Amazon
      * This path specifies where in your file system files will be exported from or imported to. This file system
      * directory can be linked to only one Amazon S3 bucket, and no other S3 bucket can be linked to the directory.
      * </p>
+     * <note>
+     * <p>
+     * If you specify only a forward slash (<code>/</code>) as the file system path, you can link only 1 data repository
+     * to the file system. You can only specify "/" as the file system path for the first data repository associated
+     * with a file system.
+     * </p>
+     * </note>
      * 
      * @param fileSystemPath
      *        A path on the file system that points to a high-level directory (such as <code>/ns1/</code>) or
@@ -190,6 +232,13 @@ public class CreateDataRepositoryAssociationRequest extends com.amazonaws.Amazon
      *        This path specifies where in your file system files will be exported from or imported to. This file system
      *        directory can be linked to only one Amazon S3 bucket, and no other S3 bucket can be linked to the
      *        directory.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        If you specify only a forward slash (<code>/</code>) as the file system path, you can link only 1 data
+     *        repository to the file system. You can only specify "/" as the file system path for the first data
+     *        repository associated with a file system.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Network File System NFS) configurations for mounting an Amazon FSx for OpenZFS file system.
+ * The Network File System (NFS) configurations for mounting an Amazon FSx for OpenZFS file system.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/OpenZFSNfsExport" target="_top">AWS API

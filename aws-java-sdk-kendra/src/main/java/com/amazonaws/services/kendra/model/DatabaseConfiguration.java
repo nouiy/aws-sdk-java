@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides the information necessary to connect a database to an index.
+ * Provides the configuration information to connect to a index.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DatabaseConfiguration" target="_top">AWS API
@@ -36,7 +36,7 @@ public class DatabaseConfiguration implements Serializable, Cloneable, Structure
     private String databaseEngineType;
     /**
      * <p>
-     * The information necessary to connect to a database.
+     * Configuration information that's required to connect to a database.
      * </p>
      */
     private ConnectionConfiguration connectionConfiguration;
@@ -123,11 +123,11 @@ public class DatabaseConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The information necessary to connect to a database.
+     * Configuration information that's required to connect to a database.
      * </p>
      * 
      * @param connectionConfiguration
-     *        The information necessary to connect to a database.
+     *        Configuration information that's required to connect to a database.
      */
 
     public void setConnectionConfiguration(ConnectionConfiguration connectionConfiguration) {
@@ -136,10 +136,10 @@ public class DatabaseConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The information necessary to connect to a database.
+     * Configuration information that's required to connect to a database.
      * </p>
      * 
-     * @return The information necessary to connect to a database.
+     * @return Configuration information that's required to connect to a database.
      */
 
     public ConnectionConfiguration getConnectionConfiguration() {
@@ -148,11 +148,11 @@ public class DatabaseConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The information necessary to connect to a database.
+     * Configuration information that's required to connect to a database.
      * </p>
      * 
      * @param connectionConfiguration
-     *        The information necessary to connect to a database.
+     *        Configuration information that's required to connect to a database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

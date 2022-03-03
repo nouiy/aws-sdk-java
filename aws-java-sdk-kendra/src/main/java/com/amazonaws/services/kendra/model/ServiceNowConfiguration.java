@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides configuration information required to connect to a ServiceNow data source.
+ * Provides the configuration information to connect to ServiceNow as your data source.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ServiceNowConfiguration" target="_top">AWS API
@@ -51,13 +51,13 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
     private String serviceNowBuildVersion;
     /**
      * <p>
-     * Provides configuration information for crawling knowledge articles in the ServiceNow site.
+     * Configuration information for crawling knowledge articles in the ServiceNow site.
      * </p>
      */
     private ServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration;
     /**
      * <p>
-     * Provides configuration information for crawling service catalogs in the ServiceNow site.
+     * Configuration information for crawling service catalogs in the ServiceNow site.
      * </p>
      */
     private ServiceNowServiceCatalogConfiguration serviceCatalogConfiguration;
@@ -239,11 +239,11 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information for crawling knowledge articles in the ServiceNow site.
+     * Configuration information for crawling knowledge articles in the ServiceNow site.
      * </p>
      * 
      * @param knowledgeArticleConfiguration
-     *        Provides configuration information for crawling knowledge articles in the ServiceNow site.
+     *        Configuration information for crawling knowledge articles in the ServiceNow site.
      */
 
     public void setKnowledgeArticleConfiguration(ServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration) {
@@ -252,10 +252,10 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information for crawling knowledge articles in the ServiceNow site.
+     * Configuration information for crawling knowledge articles in the ServiceNow site.
      * </p>
      * 
-     * @return Provides configuration information for crawling knowledge articles in the ServiceNow site.
+     * @return Configuration information for crawling knowledge articles in the ServiceNow site.
      */
 
     public ServiceNowKnowledgeArticleConfiguration getKnowledgeArticleConfiguration() {
@@ -264,11 +264,11 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information for crawling knowledge articles in the ServiceNow site.
+     * Configuration information for crawling knowledge articles in the ServiceNow site.
      * </p>
      * 
      * @param knowledgeArticleConfiguration
-     *        Provides configuration information for crawling knowledge articles in the ServiceNow site.
+     *        Configuration information for crawling knowledge articles in the ServiceNow site.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -279,11 +279,11 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information for crawling service catalogs in the ServiceNow site.
+     * Configuration information for crawling service catalogs in the ServiceNow site.
      * </p>
      * 
      * @param serviceCatalogConfiguration
-     *        Provides configuration information for crawling service catalogs in the ServiceNow site.
+     *        Configuration information for crawling service catalogs in the ServiceNow site.
      */
 
     public void setServiceCatalogConfiguration(ServiceNowServiceCatalogConfiguration serviceCatalogConfiguration) {
@@ -292,10 +292,10 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information for crawling service catalogs in the ServiceNow site.
+     * Configuration information for crawling service catalogs in the ServiceNow site.
      * </p>
      * 
-     * @return Provides configuration information for crawling service catalogs in the ServiceNow site.
+     * @return Configuration information for crawling service catalogs in the ServiceNow site.
      */
 
     public ServiceNowServiceCatalogConfiguration getServiceCatalogConfiguration() {
@@ -304,11 +304,11 @@ public class ServiceNowConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information for crawling service catalogs in the ServiceNow site.
+     * Configuration information for crawling service catalogs in the ServiceNow site.
      * </p>
      * 
      * @param serviceCatalogConfiguration
-     *        Provides configuration information for crawling service catalogs in the ServiceNow site.
+     *        Configuration information for crawling service catalogs in the ServiceNow site.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

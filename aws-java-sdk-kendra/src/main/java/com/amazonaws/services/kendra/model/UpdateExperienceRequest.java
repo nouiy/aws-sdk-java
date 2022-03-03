@@ -54,8 +54,7 @@ public class UpdateExperienceRequest extends com.amazonaws.AmazonWebServiceReque
     private String roleArn;
     /**
      * <p>
-     * Provides the user configuration information. This includes the Amazon Web Services SSO field name that contains
-     * the identifiers of your users, such as their emails.
+     * Configuration information for your Amazon Kendra you want to update.
      * </p>
      */
     private ExperienceConfiguration configuration;
@@ -246,13 +245,11 @@ public class UpdateExperienceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Provides the user configuration information. This includes the Amazon Web Services SSO field name that contains
-     * the identifiers of your users, such as their emails.
+     * Configuration information for your Amazon Kendra you want to update.
      * </p>
      * 
      * @param configuration
-     *        Provides the user configuration information. This includes the Amazon Web Services SSO field name that
-     *        contains the identifiers of your users, such as their emails.
+     *        Configuration information for your Amazon Kendra you want to update.
      */
 
     public void setConfiguration(ExperienceConfiguration configuration) {
@@ -261,12 +258,10 @@ public class UpdateExperienceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Provides the user configuration information. This includes the Amazon Web Services SSO field name that contains
-     * the identifiers of your users, such as their emails.
+     * Configuration information for your Amazon Kendra you want to update.
      * </p>
      * 
-     * @return Provides the user configuration information. This includes the Amazon Web Services SSO field name that
-     *         contains the identifiers of your users, such as their emails.
+     * @return Configuration information for your Amazon Kendra you want to update.
      */
 
     public ExperienceConfiguration getConfiguration() {
@@ -275,13 +270,11 @@ public class UpdateExperienceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Provides the user configuration information. This includes the Amazon Web Services SSO field name that contains
-     * the identifiers of your users, such as their emails.
+     * Configuration information for your Amazon Kendra you want to update.
      * </p>
      * 
      * @param configuration
-     *        Provides the user configuration information. This includes the Amazon Web Services SSO field name that
-     *        contains the identifiers of your users, such as their emails.
+     *        Configuration information for your Amazon Kendra you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

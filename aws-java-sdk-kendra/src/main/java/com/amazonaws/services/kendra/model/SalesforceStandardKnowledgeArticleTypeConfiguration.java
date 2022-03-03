@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides configuration information for standard Salesforce knowledge articles.
+ * Configuration information for standard Salesforce knowledge articles.
  * </p>
  * 
  * @see <a

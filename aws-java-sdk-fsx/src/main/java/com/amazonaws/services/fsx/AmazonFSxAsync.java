@@ -963,7 +963,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Creates an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS storage volume.
+     * Creates an FSx for ONTAP or Amazon FSx for OpenZFS storage volume.
      * </p>
      * 
      * @param createVolumeRequest
@@ -976,7 +976,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Creates an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS storage volume.
+     * Creates an FSx for ONTAP or Amazon FSx for OpenZFS storage volume.
      * </p>
      * 
      * @param createVolumeRequest

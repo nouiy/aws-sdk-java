@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines configuration for syncing a Salesforce chatter feed. The contents of the object comes from the Salesforce
- * FeedItem table.
+ * The configuration information for syncing a Salesforce chatter feed. The contents of the object comes from the
+ * Salesforce FeedItem table.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/SalesforceChatterFeedConfiguration"

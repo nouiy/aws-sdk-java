@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides the configuration information of the sitemap URLs to crawl.
+ * Provides the configuration information for the sitemap URLs to crawl.
  * </p>
  * <p>
  * <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon Acceptable

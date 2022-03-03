@@ -25,7 +25,7 @@ public class ListIndicesResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * An array of summary information for one or more indexes.
+     * An array of summary information on the configuration of one or more indexes.
      * </p>
      */
     private java.util.List<IndexConfigurationSummary> indexConfigurationSummaryItems;
@@ -39,10 +39,10 @@ public class ListIndicesResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * An array of summary information for one or more indexes.
+     * An array of summary information on the configuration of one or more indexes.
      * </p>
      * 
-     * @return An array of summary information for one or more indexes.
+     * @return An array of summary information on the configuration of one or more indexes.
      */
 
     public java.util.List<IndexConfigurationSummary> getIndexConfigurationSummaryItems() {
@@ -51,11 +51,11 @@ public class ListIndicesResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * An array of summary information for one or more indexes.
+     * An array of summary information on the configuration of one or more indexes.
      * </p>
      * 
      * @param indexConfigurationSummaryItems
-     *        An array of summary information for one or more indexes.
+     *        An array of summary information on the configuration of one or more indexes.
      */
 
     public void setIndexConfigurationSummaryItems(java.util.Collection<IndexConfigurationSummary> indexConfigurationSummaryItems) {
@@ -69,7 +69,7 @@ public class ListIndicesResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * An array of summary information for one or more indexes.
+     * An array of summary information on the configuration of one or more indexes.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -78,7 +78,7 @@ public class ListIndicesResult extends com.amazonaws.AmazonWebServiceResult<com.
      * </p>
      * 
      * @param indexConfigurationSummaryItems
-     *        An array of summary information for one or more indexes.
+     *        An array of summary information on the configuration of one or more indexes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,11 +94,11 @@ public class ListIndicesResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * An array of summary information for one or more indexes.
+     * An array of summary information on the configuration of one or more indexes.
      * </p>
      * 
      * @param indexConfigurationSummaryItems
-     *        An array of summary information for one or more indexes.
+     *        An array of summary information on the configuration of one or more indexes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

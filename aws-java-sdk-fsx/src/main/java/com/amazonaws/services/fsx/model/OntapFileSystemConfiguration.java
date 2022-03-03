@@ -41,6 +41,13 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * <p>
      * The IP address range in which the endpoints to access your file system are created.
      * </p>
+     * <important>
+     * <p>
+     * The Endpoint IP address range you select for your file system must exist outside the VPC's CIDR range and must be
+     * at least /30 or larger. If you do not specify this optional parameter, Amazon FSx will automatically select a
+     * CIDR block for you.
+     * </p>
+     * </important>
      */
     private String endpointIpAddressRange;
     /**
@@ -185,9 +192,21 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * <p>
      * The IP address range in which the endpoints to access your file system are created.
      * </p>
+     * <important>
+     * <p>
+     * The Endpoint IP address range you select for your file system must exist outside the VPC's CIDR range and must be
+     * at least /30 or larger. If you do not specify this optional parameter, Amazon FSx will automatically select a
+     * CIDR block for you.
+     * </p>
+     * </important>
      * 
      * @param endpointIpAddressRange
-     *        The IP address range in which the endpoints to access your file system are created.
+     *        The IP address range in which the endpoints to access your file system are created.</p> <important>
+     *        <p>
+     *        The Endpoint IP address range you select for your file system must exist outside the VPC's CIDR range and
+     *        must be at least /30 or larger. If you do not specify this optional parameter, Amazon FSx will
+     *        automatically select a CIDR block for you.
+     *        </p>
      */
 
     public void setEndpointIpAddressRange(String endpointIpAddressRange) {
@@ -198,8 +217,20 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * <p>
      * The IP address range in which the endpoints to access your file system are created.
      * </p>
+     * <important>
+     * <p>
+     * The Endpoint IP address range you select for your file system must exist outside the VPC's CIDR range and must be
+     * at least /30 or larger. If you do not specify this optional parameter, Amazon FSx will automatically select a
+     * CIDR block for you.
+     * </p>
+     * </important>
      * 
-     * @return The IP address range in which the endpoints to access your file system are created.
+     * @return The IP address range in which the endpoints to access your file system are created.</p> <important>
+     *         <p>
+     *         The Endpoint IP address range you select for your file system must exist outside the VPC's CIDR range and
+     *         must be at least /30 or larger. If you do not specify this optional parameter, Amazon FSx will
+     *         automatically select a CIDR block for you.
+     *         </p>
      */
 
     public String getEndpointIpAddressRange() {
@@ -210,9 +241,21 @@ public class OntapFileSystemConfiguration implements Serializable, Cloneable, St
      * <p>
      * The IP address range in which the endpoints to access your file system are created.
      * </p>
+     * <important>
+     * <p>
+     * The Endpoint IP address range you select for your file system must exist outside the VPC's CIDR range and must be
+     * at least /30 or larger. If you do not specify this optional parameter, Amazon FSx will automatically select a
+     * CIDR block for you.
+     * </p>
+     * </important>
      * 
      * @param endpointIpAddressRange
-     *        The IP address range in which the endpoints to access your file system are created.
+     *        The IP address range in which the endpoints to access your file system are created.</p> <important>
+     *        <p>
+     *        The Endpoint IP address range you select for your file system must exist outside the VPC's CIDR range and
+     *        must be at least /30 or larger. If you do not specify this optional parameter, Amazon FSx will
+     *        automatically select a CIDR block for you.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -48,8 +48,8 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
     private String fileSystemType;
     /**
      * <p>
-     * Provides the configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx.
-     * Your Amazon FSx instance must reside inside your VPC.
+     * Configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx. Your Amazon FSx
+     * instance must reside inside your VPC.
      * </p>
      */
     private DataSourceVpcConfiguration vpcConfiguration;
@@ -69,7 +69,8 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
      * </li>
      * <li>
      * <p>
-     * password—The password of the active directory user with read and mounting access Amazon FSx Windows file system.
+     * password—The password of the Active Directory user account with read and mounting access to the Amazon FSx
+     * Windows file system.
      * </p>
      * </li>
      * </ul>
@@ -96,8 +97,8 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * A list of <code>DataSourceToIndexFieldMapping</code> objects that map Amazon FSx data source attributes or field
-     * names to Amazon Kendra index field names in Amazon Kendra. To create custom fields, use the
-     * <code>UpdateIndex</code> API before you map to Amazon FSx fields. For more information, see <a
+     * names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before
+     * you map to Amazon FSx fields. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Amazon
      * FSx data source field names must exist in your Amazon FSx custom metadata.
      * </p>
@@ -238,13 +239,13 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Provides the configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx.
-     * Your Amazon FSx instance must reside inside your VPC.
+     * Configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx. Your Amazon FSx
+     * instance must reside inside your VPC.
      * </p>
      * 
      * @param vpcConfiguration
-     *        Provides the configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon
-     *        FSx. Your Amazon FSx instance must reside inside your VPC.
+     *        Configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx. Your
+     *        Amazon FSx instance must reside inside your VPC.
      */
 
     public void setVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
@@ -253,12 +254,12 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Provides the configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx.
-     * Your Amazon FSx instance must reside inside your VPC.
+     * Configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx. Your Amazon FSx
+     * instance must reside inside your VPC.
      * </p>
      * 
-     * @return Provides the configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon
-     *         FSx. Your Amazon FSx instance must reside inside your VPC.
+     * @return Configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx. Your
+     *         Amazon FSx instance must reside inside your VPC.
      */
 
     public DataSourceVpcConfiguration getVpcConfiguration() {
@@ -267,13 +268,13 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Provides the configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx.
-     * Your Amazon FSx instance must reside inside your VPC.
+     * Configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx. Your Amazon FSx
+     * instance must reside inside your VPC.
      * </p>
      * 
      * @param vpcConfiguration
-     *        Provides the configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon
-     *        FSx. Your Amazon FSx instance must reside inside your VPC.
+     *        Configuration information for connecting to an Amazon Virtual Private Cloud for your Amazon FSx. Your
+     *        Amazon FSx instance must reside inside your VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -298,7 +299,8 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
      * </li>
      * <li>
      * <p>
-     * password—The password of the active directory user with read and mounting access Amazon FSx Windows file system.
+     * password—The password of the Active Directory user account with read and mounting access to the Amazon FSx
+     * Windows file system.
      * </p>
      * </li>
      * </ul>
@@ -317,8 +319,8 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
      *        </li>
      *        <li>
      *        <p>
-     *        password—The password of the active directory user with read and mounting access Amazon FSx Windows file
-     *        system.
+     *        password—The password of the Active Directory user account with read and mounting access to the Amazon FSx
+     *        Windows file system.
      *        </p>
      *        </li>
      */
@@ -343,7 +345,8 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
      * </li>
      * <li>
      * <p>
-     * password—The password of the active directory user with read and mounting access Amazon FSx Windows file system.
+     * password—The password of the Active Directory user account with read and mounting access to the Amazon FSx
+     * Windows file system.
      * </p>
      * </li>
      * </ul>
@@ -361,8 +364,8 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
      *         </li>
      *         <li>
      *         <p>
-     *         password—The password of the active directory user with read and mounting access Amazon FSx Windows file
-     *         system.
+     *         password—The password of the Active Directory user account with read and mounting access to the Amazon
+     *         FSx Windows file system.
      *         </p>
      *         </li>
      */
@@ -387,7 +390,8 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
      * </li>
      * <li>
      * <p>
-     * password—The password of the active directory user with read and mounting access Amazon FSx Windows file system.
+     * password—The password of the Active Directory user account with read and mounting access to the Amazon FSx
+     * Windows file system.
      * </p>
      * </li>
      * </ul>
@@ -406,8 +410,8 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
      *        </li>
      *        <li>
      *        <p>
-     *        password—The password of the active directory user with read and mounting access Amazon FSx Windows file
-     *        system.
+     *        password—The password of the Active Directory user account with read and mounting access to the Amazon FSx
+     *        Windows file system.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -609,14 +613,14 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * A list of <code>DataSourceToIndexFieldMapping</code> objects that map Amazon FSx data source attributes or field
-     * names to Amazon Kendra index field names in Amazon Kendra. To create custom fields, use the
-     * <code>UpdateIndex</code> API before you map to Amazon FSx fields. For more information, see <a
+     * names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before
+     * you map to Amazon FSx fields. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Amazon
      * FSx data source field names must exist in your Amazon FSx custom metadata.
      * </p>
      * 
      * @return A list of <code>DataSourceToIndexFieldMapping</code> objects that map Amazon FSx data source attributes
-     *         or field names to Amazon Kendra index field names in Amazon Kendra. To create custom fields, use the
+     *         or field names to Amazon Kendra index field names. To create custom fields, use the
      *         <code>UpdateIndex</code> API before you map to Amazon FSx fields. For more information, see <a
      *         href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>.
      *         The Amazon FSx data source field names must exist in your Amazon FSx custom metadata.
@@ -629,16 +633,16 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * A list of <code>DataSourceToIndexFieldMapping</code> objects that map Amazon FSx data source attributes or field
-     * names to Amazon Kendra index field names in Amazon Kendra. To create custom fields, use the
-     * <code>UpdateIndex</code> API before you map to Amazon FSx fields. For more information, see <a
+     * names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before
+     * you map to Amazon FSx fields. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Amazon
      * FSx data source field names must exist in your Amazon FSx custom metadata.
      * </p>
      * 
      * @param fieldMappings
      *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map Amazon FSx data source attributes or
-     *        field names to Amazon Kendra index field names in Amazon Kendra. To create custom fields, use the
-     *        <code>UpdateIndex</code> API before you map to Amazon FSx fields. For more information, see <a
+     *        field names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to Amazon FSx fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
      *        Amazon FSx data source field names must exist in your Amazon FSx custom metadata.
      */
@@ -655,8 +659,8 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * A list of <code>DataSourceToIndexFieldMapping</code> objects that map Amazon FSx data source attributes or field
-     * names to Amazon Kendra index field names in Amazon Kendra. To create custom fields, use the
-     * <code>UpdateIndex</code> API before you map to Amazon FSx fields. For more information, see <a
+     * names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before
+     * you map to Amazon FSx fields. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Amazon
      * FSx data source field names must exist in your Amazon FSx custom metadata.
      * </p>
@@ -668,8 +672,8 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
      * 
      * @param fieldMappings
      *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map Amazon FSx data source attributes or
-     *        field names to Amazon Kendra index field names in Amazon Kendra. To create custom fields, use the
-     *        <code>UpdateIndex</code> API before you map to Amazon FSx fields. For more information, see <a
+     *        field names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to Amazon FSx fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
      *        Amazon FSx data source field names must exist in your Amazon FSx custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -688,16 +692,16 @@ public class FsxConfiguration implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * A list of <code>DataSourceToIndexFieldMapping</code> objects that map Amazon FSx data source attributes or field
-     * names to Amazon Kendra index field names in Amazon Kendra. To create custom fields, use the
-     * <code>UpdateIndex</code> API before you map to Amazon FSx fields. For more information, see <a
+     * names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code> API before
+     * you map to Amazon FSx fields. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The Amazon
      * FSx data source field names must exist in your Amazon FSx custom metadata.
      * </p>
      * 
      * @param fieldMappings
      *        A list of <code>DataSourceToIndexFieldMapping</code> objects that map Amazon FSx data source attributes or
-     *        field names to Amazon Kendra index field names in Amazon Kendra. To create custom fields, use the
-     *        <code>UpdateIndex</code> API before you map to Amazon FSx fields. For more information, see <a
+     *        field names to Amazon Kendra index field names. To create custom fields, use the <code>UpdateIndex</code>
+     *        API before you map to Amazon FSx fields. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html">Mapping data source fields</a>. The
      *        Amazon FSx data source field names must exist in your Amazon FSx custom metadata.
      * @return Returns a reference to this object so that method calls can be chained together.

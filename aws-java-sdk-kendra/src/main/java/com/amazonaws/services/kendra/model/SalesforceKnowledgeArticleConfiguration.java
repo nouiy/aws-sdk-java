@@ -19,9 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies configuration information for the knowledge article types that Amazon Kendra indexes. Amazon Kendra indexes
- * standard knowledge articles and the standard fields of knowledge articles, or the custom fields of custom knowledge
- * articles, but not both
+ * Provides the configuration information for the knowledge article types that Amazon Kendra indexes. Amazon Kendra
+ * indexes standard knowledge articles and the standard fields of knowledge articles, or the custom fields of custom
+ * knowledge articles, but not both
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/SalesforceKnowledgeArticleConfiguration"
@@ -39,13 +39,13 @@ public class SalesforceKnowledgeArticleConfiguration implements Serializable, Cl
     private java.util.List<String> includedStates;
     /**
      * <p>
-     * Provides configuration information for standard Salesforce knowledge articles.
+     * Configuration information for standard Salesforce knowledge articles.
      * </p>
      */
     private SalesforceStandardKnowledgeArticleTypeConfiguration standardKnowledgeArticleTypeConfiguration;
     /**
      * <p>
-     * Provides configuration information for custom Salesforce knowledge articles.
+     * Configuration information for custom Salesforce knowledge articles.
      * </p>
      */
     private java.util.List<SalesforceCustomKnowledgeArticleTypeConfiguration> customKnowledgeArticleTypeConfigurations;
@@ -160,11 +160,11 @@ public class SalesforceKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * Provides configuration information for standard Salesforce knowledge articles.
+     * Configuration information for standard Salesforce knowledge articles.
      * </p>
      * 
      * @param standardKnowledgeArticleTypeConfiguration
-     *        Provides configuration information for standard Salesforce knowledge articles.
+     *        Configuration information for standard Salesforce knowledge articles.
      */
 
     public void setStandardKnowledgeArticleTypeConfiguration(SalesforceStandardKnowledgeArticleTypeConfiguration standardKnowledgeArticleTypeConfiguration) {
@@ -173,10 +173,10 @@ public class SalesforceKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * Provides configuration information for standard Salesforce knowledge articles.
+     * Configuration information for standard Salesforce knowledge articles.
      * </p>
      * 
-     * @return Provides configuration information for standard Salesforce knowledge articles.
+     * @return Configuration information for standard Salesforce knowledge articles.
      */
 
     public SalesforceStandardKnowledgeArticleTypeConfiguration getStandardKnowledgeArticleTypeConfiguration() {
@@ -185,11 +185,11 @@ public class SalesforceKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * Provides configuration information for standard Salesforce knowledge articles.
+     * Configuration information for standard Salesforce knowledge articles.
      * </p>
      * 
      * @param standardKnowledgeArticleTypeConfiguration
-     *        Provides configuration information for standard Salesforce knowledge articles.
+     *        Configuration information for standard Salesforce knowledge articles.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -201,10 +201,10 @@ public class SalesforceKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * Provides configuration information for custom Salesforce knowledge articles.
+     * Configuration information for custom Salesforce knowledge articles.
      * </p>
      * 
-     * @return Provides configuration information for custom Salesforce knowledge articles.
+     * @return Configuration information for custom Salesforce knowledge articles.
      */
 
     public java.util.List<SalesforceCustomKnowledgeArticleTypeConfiguration> getCustomKnowledgeArticleTypeConfigurations() {
@@ -213,11 +213,11 @@ public class SalesforceKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * Provides configuration information for custom Salesforce knowledge articles.
+     * Configuration information for custom Salesforce knowledge articles.
      * </p>
      * 
      * @param customKnowledgeArticleTypeConfigurations
-     *        Provides configuration information for custom Salesforce knowledge articles.
+     *        Configuration information for custom Salesforce knowledge articles.
      */
 
     public void setCustomKnowledgeArticleTypeConfigurations(
@@ -233,7 +233,7 @@ public class SalesforceKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * Provides configuration information for custom Salesforce knowledge articles.
+     * Configuration information for custom Salesforce knowledge articles.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -243,7 +243,7 @@ public class SalesforceKnowledgeArticleConfiguration implements Serializable, Cl
      * </p>
      * 
      * @param customKnowledgeArticleTypeConfigurations
-     *        Provides configuration information for custom Salesforce knowledge articles.
+     *        Configuration information for custom Salesforce knowledge articles.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -261,11 +261,11 @@ public class SalesforceKnowledgeArticleConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * Provides configuration information for custom Salesforce knowledge articles.
+     * Configuration information for custom Salesforce knowledge articles.
      * </p>
      * 
      * @param customKnowledgeArticleTypeConfigurations
-     *        Provides configuration information for custom Salesforce knowledge articles.
+     *        Configuration information for custom Salesforce knowledge articles.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

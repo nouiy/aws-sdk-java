@@ -38,7 +38,7 @@ public class Urls implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides the configuration of the seed or starting point URLs of the websites you want to crawl.
+     * Configuration of the seed or starting point URLs of the websites you want to crawl.
      * </p>
      * <p>
      * You can choose to crawl only the website host names, or the website host names with subdomains, or the website
@@ -51,7 +51,7 @@ public class Urls implements Serializable, Cloneable, StructuredPojo {
     private SeedUrlConfiguration seedUrlConfiguration;
     /**
      * <p>
-     * Provides the configuration of the sitemap URLs of the websites you want to crawl.
+     * Configuration of the sitemap URLs of the websites you want to crawl.
      * </p>
      * <p>
      * Only URLs belonging to the same website host names are crawled. You can list up to three sitemap URLs.
@@ -61,7 +61,7 @@ public class Urls implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides the configuration of the seed or starting point URLs of the websites you want to crawl.
+     * Configuration of the seed or starting point URLs of the websites you want to crawl.
      * </p>
      * <p>
      * You can choose to crawl only the website host names, or the website host names with subdomains, or the website
@@ -72,7 +72,7 @@ public class Urls implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param seedUrlConfiguration
-     *        Provides the configuration of the seed or starting point URLs of the websites you want to crawl.</p>
+     *        Configuration of the seed or starting point URLs of the websites you want to crawl.</p>
      *        <p>
      *        You can choose to crawl only the website host names, or the website host names with subdomains, or the
      *        website host names with subdomains and other domains that the webpages link to.
@@ -87,7 +87,7 @@ public class Urls implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides the configuration of the seed or starting point URLs of the websites you want to crawl.
+     * Configuration of the seed or starting point URLs of the websites you want to crawl.
      * </p>
      * <p>
      * You can choose to crawl only the website host names, or the website host names with subdomains, or the website
@@ -97,7 +97,7 @@ public class Urls implements Serializable, Cloneable, StructuredPojo {
      * You can list up to 100 seed URLs.
      * </p>
      * 
-     * @return Provides the configuration of the seed or starting point URLs of the websites you want to crawl.</p>
+     * @return Configuration of the seed or starting point URLs of the websites you want to crawl.</p>
      *         <p>
      *         You can choose to crawl only the website host names, or the website host names with subdomains, or the
      *         website host names with subdomains and other domains that the webpages link to.
@@ -112,7 +112,7 @@ public class Urls implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides the configuration of the seed or starting point URLs of the websites you want to crawl.
+     * Configuration of the seed or starting point URLs of the websites you want to crawl.
      * </p>
      * <p>
      * You can choose to crawl only the website host names, or the website host names with subdomains, or the website
@@ -123,7 +123,7 @@ public class Urls implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param seedUrlConfiguration
-     *        Provides the configuration of the seed or starting point URLs of the websites you want to crawl.</p>
+     *        Configuration of the seed or starting point URLs of the websites you want to crawl.</p>
      *        <p>
      *        You can choose to crawl only the website host names, or the website host names with subdomains, or the
      *        website host names with subdomains and other domains that the webpages link to.
@@ -140,14 +140,14 @@ public class Urls implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides the configuration of the sitemap URLs of the websites you want to crawl.
+     * Configuration of the sitemap URLs of the websites you want to crawl.
      * </p>
      * <p>
      * Only URLs belonging to the same website host names are crawled. You can list up to three sitemap URLs.
      * </p>
      * 
      * @param siteMapsConfiguration
-     *        Provides the configuration of the sitemap URLs of the websites you want to crawl.</p>
+     *        Configuration of the sitemap URLs of the websites you want to crawl.</p>
      *        <p>
      *        Only URLs belonging to the same website host names are crawled. You can list up to three sitemap URLs.
      */
@@ -158,13 +158,13 @@ public class Urls implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides the configuration of the sitemap URLs of the websites you want to crawl.
+     * Configuration of the sitemap URLs of the websites you want to crawl.
      * </p>
      * <p>
      * Only URLs belonging to the same website host names are crawled. You can list up to three sitemap URLs.
      * </p>
      * 
-     * @return Provides the configuration of the sitemap URLs of the websites you want to crawl.</p>
+     * @return Configuration of the sitemap URLs of the websites you want to crawl.</p>
      *         <p>
      *         Only URLs belonging to the same website host names are crawled. You can list up to three sitemap URLs.
      */
@@ -175,14 +175,14 @@ public class Urls implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides the configuration of the sitemap URLs of the websites you want to crawl.
+     * Configuration of the sitemap URLs of the websites you want to crawl.
      * </p>
      * <p>
      * Only URLs belonging to the same website host names are crawled. You can list up to three sitemap URLs.
      * </p>
      * 
      * @param siteMapsConfiguration
-     *        Provides the configuration of the sitemap URLs of the websites you want to crawl.</p>
+     *        Configuration of the sitemap URLs of the websites you want to crawl.</p>
      *        <p>
      *        Only URLs belonging to the same website host names are crawled. You can list up to three sitemap URLs.
      * @return Returns a reference to this object so that method calls can be chained together.

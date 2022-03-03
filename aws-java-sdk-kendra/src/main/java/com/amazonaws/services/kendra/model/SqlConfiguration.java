@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides information that configures Amazon Kendra to use a SQL database.
+ * Provides the configuration information to use a SQL database.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/SqlConfiguration" target="_top">AWS API

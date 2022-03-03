@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies the configuration information for your Amazon Kendra experience. This includes the data source IDs and/or
+ * Provides the configuration information for your Amazon Kendra experience. This includes the data source IDs and/or
  * FAQ IDs, and user or group information to grant access to your Amazon Kendra experience.
  * </p>
  * 

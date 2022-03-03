@@ -47,6 +47,8 @@ public class DestinationConnectorPropertiesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomerProfiles").build();
     private static final MarshallingInfo<StructuredPojo> ZENDESK_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Zendesk").build();
+    private static final MarshallingInfo<StructuredPojo> MARKETO_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Marketo").build();
     private static final MarshallingInfo<StructuredPojo> CUSTOMCONNECTOR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomConnector").build();
     private static final MarshallingInfo<StructuredPojo> SAPODATA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -78,6 +80,7 @@ public class DestinationConnectorPropertiesMarshaller {
             protocolMarshaller.marshall(destinationConnectorProperties.getHoneycode(), HONEYCODE_BINDING);
             protocolMarshaller.marshall(destinationConnectorProperties.getCustomerProfiles(), CUSTOMERPROFILES_BINDING);
             protocolMarshaller.marshall(destinationConnectorProperties.getZendesk(), ZENDESK_BINDING);
+            protocolMarshaller.marshall(destinationConnectorProperties.getMarketo(), MARKETO_BINDING);
             protocolMarshaller.marshall(destinationConnectorProperties.getCustomConnector(), CUSTOMCONNECTOR_BINDING);
             protocolMarshaller.marshall(destinationConnectorProperties.getSAPOData(), SAPODATA_BINDING);
         } catch (Exception e) {

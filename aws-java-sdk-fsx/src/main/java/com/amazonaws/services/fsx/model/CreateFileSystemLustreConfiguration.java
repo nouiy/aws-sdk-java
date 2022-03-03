@@ -200,13 +200,14 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </li>
      * </ul>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/fsx/latest/LustreGuide/older-deployment-types.html#legacy-auto-import-from-s3">
      * Automatically import updates from your S3 bucket</a>.
      * </p>
      * <note>
      * <p>
      * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
-     * <code>CreateDataRepositoryAssociation"</code> to create a data repository association to link your Lustre file
+     * <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file
      * system to a data repository.
      * </p>
      * </note>
@@ -1085,13 +1086,14 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </li>
      * </ul>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/fsx/latest/LustreGuide/older-deployment-types.html#legacy-auto-import-from-s3">
      * Automatically import updates from your S3 bucket</a>.
      * </p>
      * <note>
      * <p>
      * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
-     * <code>CreateDataRepositoryAssociation"</code> to create a data repository association to link your Lustre file
+     * <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file
      * system to a data repository.
      * </p>
      * </note>
@@ -1131,14 +1133,14 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html"> Automatically import
-     *        updates from your S3 bucket</a>.
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/fsx/latest/LustreGuide/older-deployment-types.html#legacy-auto-import-from-s3"
+     *        > Automatically import updates from your S3 bucket</a>.
      *        </p>
      *        <note>
      *        <p>
      *        This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type.
-     *        Instead, use <code>CreateDataRepositoryAssociation"</code> to create a data repository association to link
+     *        Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link
      *        your Lustre file system to a data repository.
      *        </p>
      * @see AutoImportPolicyType
@@ -1185,13 +1187,14 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </li>
      * </ul>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/fsx/latest/LustreGuide/older-deployment-types.html#legacy-auto-import-from-s3">
      * Automatically import updates from your S3 bucket</a>.
      * </p>
      * <note>
      * <p>
      * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
-     * <code>CreateDataRepositoryAssociation"</code> to create a data repository association to link your Lustre file
+     * <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file
      * system to a data repository.
      * </p>
      * </note>
@@ -1230,15 +1233,15 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *         </li>
      *         </ul>
      *         <p>
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html"> Automatically import
-     *         updates from your S3 bucket</a>.
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/fsx/latest/LustreGuide/older-deployment-types.html#legacy-auto-import-from-s3"
+     *         > Automatically import updates from your S3 bucket</a>.
      *         </p>
      *         <note>
      *         <p>
      *         This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type.
-     *         Instead, use <code>CreateDataRepositoryAssociation"</code> to create a data repository association to
-     *         link your Lustre file system to a data repository.
+     *         Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link
+     *         your Lustre file system to a data repository.
      *         </p>
      * @see AutoImportPolicyType
      */
@@ -1284,13 +1287,14 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </li>
      * </ul>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/fsx/latest/LustreGuide/older-deployment-types.html#legacy-auto-import-from-s3">
      * Automatically import updates from your S3 bucket</a>.
      * </p>
      * <note>
      * <p>
      * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
-     * <code>CreateDataRepositoryAssociation"</code> to create a data repository association to link your Lustre file
+     * <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file
      * system to a data repository.
      * </p>
      * </note>
@@ -1330,14 +1334,14 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html"> Automatically import
-     *        updates from your S3 bucket</a>.
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/fsx/latest/LustreGuide/older-deployment-types.html#legacy-auto-import-from-s3"
+     *        > Automatically import updates from your S3 bucket</a>.
      *        </p>
      *        <note>
      *        <p>
      *        This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type.
-     *        Instead, use <code>CreateDataRepositoryAssociation"</code> to create a data repository association to link
+     *        Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link
      *        your Lustre file system to a data repository.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1386,13 +1390,14 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </li>
      * </ul>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/fsx/latest/LustreGuide/older-deployment-types.html#legacy-auto-import-from-s3">
      * Automatically import updates from your S3 bucket</a>.
      * </p>
      * <note>
      * <p>
      * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
-     * <code>CreateDataRepositoryAssociation"</code> to create a data repository association to link your Lustre file
+     * <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file
      * system to a data repository.
      * </p>
      * </note>
@@ -1432,14 +1437,14 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html"> Automatically import
-     *        updates from your S3 bucket</a>.
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/fsx/latest/LustreGuide/older-deployment-types.html#legacy-auto-import-from-s3"
+     *        > Automatically import updates from your S3 bucket</a>.
      *        </p>
      *        <note>
      *        <p>
      *        This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type.
-     *        Instead, use <code>CreateDataRepositoryAssociation"</code> to create a data repository association to link
+     *        Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link
      *        your Lustre file system to a data repository.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.

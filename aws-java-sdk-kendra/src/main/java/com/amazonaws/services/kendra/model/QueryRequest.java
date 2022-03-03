@@ -127,6 +127,12 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      * </p>
      */
     private String visitorId;
+    /**
+     * <p>
+     * Enables suggested spell corrections for queries.
+     * </p>
+     */
+    private SpellCorrectionConfiguration spellCorrectionConfiguration;
 
     /**
      * <p>
@@ -927,6 +933,46 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
     }
 
     /**
+     * <p>
+     * Enables suggested spell corrections for queries.
+     * </p>
+     * 
+     * @param spellCorrectionConfiguration
+     *        Enables suggested spell corrections for queries.
+     */
+
+    public void setSpellCorrectionConfiguration(SpellCorrectionConfiguration spellCorrectionConfiguration) {
+        this.spellCorrectionConfiguration = spellCorrectionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Enables suggested spell corrections for queries.
+     * </p>
+     * 
+     * @return Enables suggested spell corrections for queries.
+     */
+
+    public SpellCorrectionConfiguration getSpellCorrectionConfiguration() {
+        return this.spellCorrectionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Enables suggested spell corrections for queries.
+     * </p>
+     * 
+     * @param spellCorrectionConfiguration
+     *        Enables suggested spell corrections for queries.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public QueryRequest withSpellCorrectionConfiguration(SpellCorrectionConfiguration spellCorrectionConfiguration) {
+        setSpellCorrectionConfiguration(spellCorrectionConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -961,7 +1007,9 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
         if (getUserContext() != null)
             sb.append("UserContext: ").append(getUserContext()).append(",");
         if (getVisitorId() != null)
-            sb.append("VisitorId: ").append(getVisitorId());
+            sb.append("VisitorId: ").append(getVisitorId()).append(",");
+        if (getSpellCorrectionConfiguration() != null)
+            sb.append("SpellCorrectionConfiguration: ").append(getSpellCorrectionConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1025,6 +1073,10 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
             return false;
         if (other.getVisitorId() != null && other.getVisitorId().equals(this.getVisitorId()) == false)
             return false;
+        if (other.getSpellCorrectionConfiguration() == null ^ this.getSpellCorrectionConfiguration() == null)
+            return false;
+        if (other.getSpellCorrectionConfiguration() != null && other.getSpellCorrectionConfiguration().equals(this.getSpellCorrectionConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1045,6 +1097,7 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
         hashCode = prime * hashCode + ((getSortingConfiguration() == null) ? 0 : getSortingConfiguration().hashCode());
         hashCode = prime * hashCode + ((getUserContext() == null) ? 0 : getUserContext().hashCode());
         hashCode = prime * hashCode + ((getVisitorId() == null) ? 0 : getVisitorId().hashCode());
+        hashCode = prime * hashCode + ((getSpellCorrectionConfiguration() == null) ? 0 : getSpellCorrectionConfiguration().hashCode());
         return hashCode;
     }
 

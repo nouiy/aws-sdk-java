@@ -101,7 +101,7 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
     private Boolean crawlAttachments;
     /**
      * <p>
-     * Provides configuration information for processing attachments to Salesforce standard objects.
+     * Configuration information for processing attachments to Salesforce standard objects.
      * </p>
      */
     private SalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration;
@@ -620,11 +620,11 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information for processing attachments to Salesforce standard objects.
+     * Configuration information for processing attachments to Salesforce standard objects.
      * </p>
      * 
      * @param standardObjectAttachmentConfiguration
-     *        Provides configuration information for processing attachments to Salesforce standard objects.
+     *        Configuration information for processing attachments to Salesforce standard objects.
      */
 
     public void setStandardObjectAttachmentConfiguration(SalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration) {
@@ -633,10 +633,10 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information for processing attachments to Salesforce standard objects.
+     * Configuration information for processing attachments to Salesforce standard objects.
      * </p>
      * 
-     * @return Provides configuration information for processing attachments to Salesforce standard objects.
+     * @return Configuration information for processing attachments to Salesforce standard objects.
      */
 
     public SalesforceStandardObjectAttachmentConfiguration getStandardObjectAttachmentConfiguration() {
@@ -645,11 +645,11 @@ public class SalesforceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides configuration information for processing attachments to Salesforce standard objects.
+     * Configuration information for processing attachments to Salesforce standard objects.
      * </p>
      * 
      * @param standardObjectAttachmentConfiguration
-     *        Provides configuration information for processing attachments to Salesforce standard objects.
+     *        Configuration information for processing attachments to Salesforce standard objects.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

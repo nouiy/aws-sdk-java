@@ -51,7 +51,7 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String description;
     /**
      * <p>
-     * The document metadata to update.
+     * The document metadata you want to update.
      * </p>
      */
     private java.util.List<DocumentMetadataConfiguration> documentMetadataConfigurationUpdates;
@@ -250,10 +250,10 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The document metadata to update.
+     * The document metadata you want to update.
      * </p>
      * 
-     * @return The document metadata to update.
+     * @return The document metadata you want to update.
      */
 
     public java.util.List<DocumentMetadataConfiguration> getDocumentMetadataConfigurationUpdates() {
@@ -262,11 +262,11 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The document metadata to update.
+     * The document metadata you want to update.
      * </p>
      * 
      * @param documentMetadataConfigurationUpdates
-     *        The document metadata to update.
+     *        The document metadata you want to update.
      */
 
     public void setDocumentMetadataConfigurationUpdates(java.util.Collection<DocumentMetadataConfiguration> documentMetadataConfigurationUpdates) {
@@ -280,7 +280,7 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The document metadata to update.
+     * The document metadata you want to update.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -290,7 +290,7 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param documentMetadataConfigurationUpdates
-     *        The document metadata to update.
+     *        The document metadata you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -306,11 +306,11 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The document metadata to update.
+     * The document metadata you want to update.
      * </p>
      * 
      * @param documentMetadataConfigurationUpdates
-     *        The document metadata to update.
+     *        The document metadata you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

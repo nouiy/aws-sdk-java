@@ -295,8 +295,7 @@ public interface AWSGreengrassV2 {
      * </p>
      * <p>
      * Every deployment has a revision number that indicates how many deployment revisions you define for a target. Use
-     * this operation to create a new revision of an existing deployment. This operation returns the revision number of
-     * the new deployment when you create it.
+     * this operation to create a new revision of an existing deployment.
      * </p>
      * <p>
      * For more information, see the <a
@@ -497,9 +496,9 @@ public interface AWSGreengrassV2 {
      * <p>
      * Connectivity information includes endpoints and ports where client devices can connect to an MQTT broker on the
      * core device. When a client device calls the <a
-     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-discover-api.html">Greengrass discovery
-     * API</a>, IoT Greengrass returns connectivity information for all of the core devices where the client device can
-     * connect. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-discover-api.html">IoT Greengrass
+     * discovery API</a>, IoT Greengrass returns connectivity information for all of the core devices where the client
+     * device can connect. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/connect-client-devices.html">Connect client
      * devices to core devices</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.
      * </p>
@@ -873,9 +872,9 @@ public interface AWSGreengrassV2 {
      * <p>
      * Connectivity information includes endpoints and ports where client devices can connect to an MQTT broker on the
      * core device. When a client device calls the <a
-     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-discover-api.html">Greengrass discovery
-     * API</a>, IoT Greengrass returns connectivity information for all of the core devices where the client device can
-     * connect. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-discover-api.html">IoT Greengrass
+     * discovery API</a>, IoT Greengrass returns connectivity information for all of the core devices where the client
+     * device can connect. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/connect-client-devices.html">Connect client
      * devices to core devices</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.
      * </p>

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides the information necessary to connect to a database.
+ * Provides the configuration information that's required to connect to a database.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ConnectionConfiguration" target="_top">AWS API

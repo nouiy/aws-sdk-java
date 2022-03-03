@@ -90,6 +90,12 @@ public class DestinationConnectorProperties implements Serializable, Cloneable, 
     private ZendeskDestinationProperties zendesk;
     /**
      * <p>
+     * The properties required to query Marketo.
+     * </p>
+     */
+    private MarketoDestinationProperties marketo;
+    /**
+     * <p>
      * The properties that are required to query the custom Connector.
      * </p>
      */
@@ -503,6 +509,46 @@ public class DestinationConnectorProperties implements Serializable, Cloneable, 
 
     /**
      * <p>
+     * The properties required to query Marketo.
+     * </p>
+     * 
+     * @param marketo
+     *        The properties required to query Marketo.
+     */
+
+    public void setMarketo(MarketoDestinationProperties marketo) {
+        this.marketo = marketo;
+    }
+
+    /**
+     * <p>
+     * The properties required to query Marketo.
+     * </p>
+     * 
+     * @return The properties required to query Marketo.
+     */
+
+    public MarketoDestinationProperties getMarketo() {
+        return this.marketo;
+    }
+
+    /**
+     * <p>
+     * The properties required to query Marketo.
+     * </p>
+     * 
+     * @param marketo
+     *        The properties required to query Marketo.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DestinationConnectorProperties withMarketo(MarketoDestinationProperties marketo) {
+        setMarketo(marketo);
+        return this;
+    }
+
+    /**
+     * <p>
      * The properties that are required to query the custom Connector.
      * </p>
      * 
@@ -613,6 +659,8 @@ public class DestinationConnectorProperties implements Serializable, Cloneable, 
             sb.append("CustomerProfiles: ").append(getCustomerProfiles()).append(",");
         if (getZendesk() != null)
             sb.append("Zendesk: ").append(getZendesk()).append(",");
+        if (getMarketo() != null)
+            sb.append("Marketo: ").append(getMarketo()).append(",");
         if (getCustomConnector() != null)
             sb.append("CustomConnector: ").append(getCustomConnector()).append(",");
         if (getSAPOData() != null)
@@ -671,6 +719,10 @@ public class DestinationConnectorProperties implements Serializable, Cloneable, 
             return false;
         if (other.getZendesk() != null && other.getZendesk().equals(this.getZendesk()) == false)
             return false;
+        if (other.getMarketo() == null ^ this.getMarketo() == null)
+            return false;
+        if (other.getMarketo() != null && other.getMarketo().equals(this.getMarketo()) == false)
+            return false;
         if (other.getCustomConnector() == null ^ this.getCustomConnector() == null)
             return false;
         if (other.getCustomConnector() != null && other.getCustomConnector().equals(this.getCustomConnector()) == false)
@@ -697,6 +749,7 @@ public class DestinationConnectorProperties implements Serializable, Cloneable, 
         hashCode = prime * hashCode + ((getHoneycode() == null) ? 0 : getHoneycode().hashCode());
         hashCode = prime * hashCode + ((getCustomerProfiles() == null) ? 0 : getCustomerProfiles().hashCode());
         hashCode = prime * hashCode + ((getZendesk() == null) ? 0 : getZendesk().hashCode());
+        hashCode = prime * hashCode + ((getMarketo() == null) ? 0 : getMarketo().hashCode());
         hashCode = prime * hashCode + ((getCustomConnector() == null) ? 0 : getCustomConnector().hashCode());
         hashCode = prime * hashCode + ((getSAPOData() == null) ? 0 : getSAPOData().hashCode());
         return hashCode;

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides the configuration information of users or groups in your Amazon Web Services SSO identity source for access
+ * Provides the configuration information for users or groups in your Amazon Web Services SSO identity source for access
  * to your Amazon Kendra experience. Specific permissions are defined for each user or group once they are granted
  * access to your Amazon Kendra experience.
  * </p>
