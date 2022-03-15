@@ -148,6 +148,8 @@ public interface AWSDataExchange {
      *         500 response
      * @throws AccessDeniedException
      *         403 response
+     * @throws ConflictException
+     *         409 response
      * @sample AWSDataExchange.CreateJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/CreateJob" target="_top">AWS API
      *      Documentation</a>
@@ -497,6 +499,32 @@ public interface AWSDataExchange {
      *      target="_top">AWS API Documentation</a>
      */
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * This operation revokes subscribers' access to a revision.
+     * </p>
+     * 
+     * @param revokeRevisionRequest
+     *        The request body for RevokeRevision.
+     * @return Result of the RevokeRevision operation returned by the service.
+     * @throws ValidationException
+     *         400 response
+     * @throws InternalServerException
+     *         500 response
+     * @throws AccessDeniedException
+     *         403 response
+     * @throws ResourceNotFoundException
+     *         404 response
+     * @throws ThrottlingException
+     *         429 response
+     * @throws ConflictException
+     *         409 response
+     * @sample AWSDataExchange.RevokeRevision
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/RevokeRevision" target="_top">AWS
+     *      API Documentation</a>
+     */
+    RevokeRevisionResult revokeRevision(RevokeRevisionRequest revokeRevisionRequest);
 
     /**
      * <p>

@@ -246,9 +246,9 @@ public class UpdateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <note>
      * <p>
-     * In Amazon Web Services Regions where isn't available, User Pools only supports sending events to Amazon Pinpoint
-     * projects in us-east-1. In Regions where Pinpoint is available, User Pools will support sending events to Amazon
-     * Pinpoint projects within that same Region.
+     * In Amazon Web Services Regions where Amazon Pinpoint isn't available, user pools only support sending events to
+     * Amazon Pinpoint projects in us-east-1. In Regions where Amazon Pinpoint is available, user pools support sending
+     * events to Amazon Pinpoint projects within that same Region.
      * </p>
      * </note>
      */
@@ -2195,18 +2195,18 @@ public class UpdateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <note>
      * <p>
-     * In Amazon Web Services Regions where isn't available, User Pools only supports sending events to Amazon Pinpoint
-     * projects in us-east-1. In Regions where Pinpoint is available, User Pools will support sending events to Amazon
-     * Pinpoint projects within that same Region.
+     * In Amazon Web Services Regions where Amazon Pinpoint isn't available, user pools only support sending events to
+     * Amazon Pinpoint projects in us-east-1. In Regions where Amazon Pinpoint is available, user pools support sending
+     * events to Amazon Pinpoint projects within that same Region.
      * </p>
      * </note>
      * 
      * @param analyticsConfiguration
      *        The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.</p> <note>
      *        <p>
-     *        In Amazon Web Services Regions where isn't available, User Pools only supports sending events to Amazon
-     *        Pinpoint projects in us-east-1. In Regions where Pinpoint is available, User Pools will support sending
-     *        events to Amazon Pinpoint projects within that same Region.
+     *        In Amazon Web Services Regions where Amazon Pinpoint isn't available, user pools only support sending
+     *        events to Amazon Pinpoint projects in us-east-1. In Regions where Amazon Pinpoint is available, user pools
+     *        support sending events to Amazon Pinpoint projects within that same Region.
      *        </p>
      */
 
@@ -2220,17 +2220,17 @@ public class UpdateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <note>
      * <p>
-     * In Amazon Web Services Regions where isn't available, User Pools only supports sending events to Amazon Pinpoint
-     * projects in us-east-1. In Regions where Pinpoint is available, User Pools will support sending events to Amazon
-     * Pinpoint projects within that same Region.
+     * In Amazon Web Services Regions where Amazon Pinpoint isn't available, user pools only support sending events to
+     * Amazon Pinpoint projects in us-east-1. In Regions where Amazon Pinpoint is available, user pools support sending
+     * events to Amazon Pinpoint projects within that same Region.
      * </p>
      * </note>
      * 
      * @return The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.</p> <note>
      *         <p>
-     *         In Amazon Web Services Regions where isn't available, User Pools only supports sending events to Amazon
-     *         Pinpoint projects in us-east-1. In Regions where Pinpoint is available, User Pools will support sending
-     *         events to Amazon Pinpoint projects within that same Region.
+     *         In Amazon Web Services Regions where Amazon Pinpoint isn't available, user pools only support sending
+     *         events to Amazon Pinpoint projects in us-east-1. In Regions where Amazon Pinpoint is available, user
+     *         pools support sending events to Amazon Pinpoint projects within that same Region.
      *         </p>
      */
 
@@ -2244,18 +2244,18 @@ public class UpdateUserPoolClientRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <note>
      * <p>
-     * In Amazon Web Services Regions where isn't available, User Pools only supports sending events to Amazon Pinpoint
-     * projects in us-east-1. In Regions where Pinpoint is available, User Pools will support sending events to Amazon
-     * Pinpoint projects within that same Region.
+     * In Amazon Web Services Regions where Amazon Pinpoint isn't available, user pools only support sending events to
+     * Amazon Pinpoint projects in us-east-1. In Regions where Amazon Pinpoint is available, user pools support sending
+     * events to Amazon Pinpoint projects within that same Region.
      * </p>
      * </note>
      * 
      * @param analyticsConfiguration
      *        The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.</p> <note>
      *        <p>
-     *        In Amazon Web Services Regions where isn't available, User Pools only supports sending events to Amazon
-     *        Pinpoint projects in us-east-1. In Regions where Pinpoint is available, User Pools will support sending
-     *        events to Amazon Pinpoint projects within that same Region.
+     *        In Amazon Web Services Regions where Amazon Pinpoint isn't available, user pools only support sending
+     *        events to Amazon Pinpoint projects in us-east-1. In Regions where Amazon Pinpoint is available, user pools
+     *        support sending events to Amazon Pinpoint projects within that same Region.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

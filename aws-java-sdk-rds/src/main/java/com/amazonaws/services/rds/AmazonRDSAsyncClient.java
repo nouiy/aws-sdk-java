@@ -31,8 +31,7 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * notification when an asynchronous operation completes.
  * <p>
  * <fullname>Amazon Relational Database Service</fullname>
- * <p>
- * </p>
+ * <p/>
  * <p>
  * Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a
  * relational database in the cloud. It provides cost-efficient, resizeable capacity for an industry-standard relational

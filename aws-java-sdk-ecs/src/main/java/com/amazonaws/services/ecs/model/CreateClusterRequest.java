@@ -93,7 +93,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     private com.amazonaws.internal.SdkInternalList<ClusterSetting> settings;
     /**
      * <p>
-     * The execute command configuration for the cluster.
+     * The <code>execute</code> command configuration for the cluster.
      * </p>
      */
     private ClusterConfiguration configuration;
@@ -702,11 +702,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The execute command configuration for the cluster.
+     * The <code>execute</code> command configuration for the cluster.
      * </p>
      * 
      * @param configuration
-     *        The execute command configuration for the cluster.
+     *        The <code>execute</code> command configuration for the cluster.
      */
 
     public void setConfiguration(ClusterConfiguration configuration) {
@@ -715,10 +715,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The execute command configuration for the cluster.
+     * The <code>execute</code> command configuration for the cluster.
      * </p>
      * 
-     * @return The execute command configuration for the cluster.
+     * @return The <code>execute</code> command configuration for the cluster.
      */
 
     public ClusterConfiguration getConfiguration() {
@@ -727,11 +727,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The execute command configuration for the cluster.
+     * The <code>execute</code> command configuration for the cluster.
      * </p>
      * 
      * @param configuration
-     *        The execute command configuration for the cluster.
+     *        The <code>execute</code> command configuration for the cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

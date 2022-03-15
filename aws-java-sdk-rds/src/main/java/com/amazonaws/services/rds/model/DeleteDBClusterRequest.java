@@ -338,7 +338,7 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param finalDBSnapshotIdentifier
      *        The DB cluster snapshot identifier of the new DB cluster snapshot created when
-     *        <code>SkipFinalSnapshot</code> is disabled. </p> <note>
+     *        <code>SkipFinalSnapshot</code> is disabled.</p> <note>
      *        <p>
      *        Specifying this parameter and also skipping the creation of a final DB cluster snapshot with the
      *        <code>SkipFinalShapshot</code> parameter results in an error.
@@ -402,7 +402,7 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </ul>
      * 
      * @return The DB cluster snapshot identifier of the new DB cluster snapshot created when
-     *         <code>SkipFinalSnapshot</code> is disabled. </p> <note>
+     *         <code>SkipFinalSnapshot</code> is disabled.</p> <note>
      *         <p>
      *         Specifying this parameter and also skipping the creation of a final DB cluster snapshot with the
      *         <code>SkipFinalShapshot</code> parameter results in an error.
@@ -467,7 +467,7 @@ public class DeleteDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param finalDBSnapshotIdentifier
      *        The DB cluster snapshot identifier of the new DB cluster snapshot created when
-     *        <code>SkipFinalSnapshot</code> is disabled. </p> <note>
+     *        <code>SkipFinalSnapshot</code> is disabled.</p> <note>
      *        <p>
      *        Specifying this parameter and also skipping the creation of a final DB cluster snapshot with the
      *        <code>SkipFinalShapshot</code> parameter results in an error.

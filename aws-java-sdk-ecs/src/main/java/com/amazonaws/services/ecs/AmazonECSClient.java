@@ -2003,8 +2003,30 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
      *         The specified cluster wasn't found. You can view your available clusters with <a>ListClusters</a>. Amazon
      *         ECS clusters are Region specific.
      * @throws TargetNotConnectedException
-     *         The target container isn't properly configured with the execute command agent or the container is no
-     *         longer active or running.
+     *         The execute command cannot run. This error can be caused by any of the following configuration
+     *         issues:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Incorrect IAM permissions
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The SSM agent is not installed or is not running
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         There is an interface Amazon VPC endpoint for Amazon ECS, but there is not one for for Systems Manager
+     *         Session Manager
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For information about how to troubleshoot the issues, see <a
+     *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html">Troubleshooting issues
+     *         with ECS Exec</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @sample AmazonECS.ExecuteCommand
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/ExecuteCommand" target="_top">AWS API
      *      Documentation</a>
@@ -4113,7 +4135,7 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
      * service scheduler can't remove existing tasks until the replacement tasks are considered healthy. Tasks for
      * services that do not use a load balancer are considered healthy if they're in the <code>RUNNING</code> state.
      * Tasks for services that use a load balancer are considered healthy if they're in the <code>RUNNING</code> state
-     * and are reported as healthy by the load balancer..
+     * and are reported as healthy by the load balancer.
      * </p>
      * </li>
      * <li>
@@ -4215,16 +4237,17 @@ public class AmazonECSClient extends AmazonWebServiceClient implements AmazonECS
      * Modifies the parameters of a service.
      * </p>
      * <p>
-     * For services using the rolling update (<code>ECS</code>) you can update the desired count, the deployment
-     * configuration, the network configuration, load balancers, service registries, enable ECS managed tags option,
-     * propagate tags option, task placement constraints and strategies, and the task definition. When you update any of
+     * For services using the rolling update (<code>ECS</code>) you can update the desired count, deployment
+     * configuration, network configuration, load balancers, service registries, enable ECS managed tags option,
+     * propagate tags option, task placement constraints and strategies, and task definition. When you update any of
      * these parameters, Amazon ECS starts new tasks with the new configuration.
      * </p>
      * <p>
      * For services using the blue/green (<code>CODE_DEPLOY</code>) deployment controller, only the desired count,
-     * deployment configuration, task placement constraints and strategies, enable ECS managed tags option, and
-     * propagate tags can be updated using this API. If the network configuration, platform version, task definition, or
-     * load balancer need to be updated, create a new CodeDeploy deployment. For more information, see <a
+     * deployment configuration, health check grace period, task placement constraints and strategies, enable ECS
+     * managed tags option, and propagate tags can be updated using this API. If the network configuration, platform
+     * version, task definition, or load balancer need to be updated, create a new CodeDeploy deployment. For more
+     * information, see <a
      * href="https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateDeployment.html">CreateDeployment</a>
      * in the <i>CodeDeploy API Reference</i>.
      * </p>

@@ -43,6 +43,12 @@ public class RevisionEntryMarshaller {
             .marshallLocationName("SourceId").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdatedAt").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> REVOCATIONCOMMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RevocationComment").build();
+    private static final MarshallingInfo<Boolean> REVOKED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Revoked").build();
+    private static final MarshallingInfo<java.util.Date> REVOKEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RevokedAt").timestampFormat("iso8601").build();
 
     private static final RevisionEntryMarshaller instance = new RevisionEntryMarshaller();
 
@@ -68,6 +74,9 @@ public class RevisionEntryMarshaller {
             protocolMarshaller.marshall(revisionEntry.getId(), ID_BINDING);
             protocolMarshaller.marshall(revisionEntry.getSourceId(), SOURCEID_BINDING);
             protocolMarshaller.marshall(revisionEntry.getUpdatedAt(), UPDATEDAT_BINDING);
+            protocolMarshaller.marshall(revisionEntry.getRevocationComment(), REVOCATIONCOMMENT_BINDING);
+            protocolMarshaller.marshall(revisionEntry.getRevoked(), REVOKED_BINDING);
+            protocolMarshaller.marshall(revisionEntry.getRevokedAt(), REVOKEDAT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

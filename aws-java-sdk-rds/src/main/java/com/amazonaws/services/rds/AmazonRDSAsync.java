@@ -26,8 +26,7 @@ import com.amazonaws.services.rds.model.*;
  * </p>
  * <p>
  * <fullname>Amazon Relational Database Service</fullname>
- * <p>
- * </p>
+ * <p/>
  * <p>
  * Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a
  * relational database in the cloud. It provides cost-efficient, resizeable capacity for an industry-standard relational
@@ -364,7 +363,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on backtracking, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Managing.Backtrack.html">
-     * Backtracking an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide.</i>
+     * Backtracking an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -387,7 +386,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on backtracking, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Managing.Backtrack.html">
-     * Backtracking an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide.</i>
+     * Backtracking an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -567,17 +566,17 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on copying encrypted Amazon Aurora DB cluster snapshots from one Amazon Web Services Region
      * to another, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_CopySnapshot.html">
-     * Copying a Snapshot</a> in the <i>Amazon Aurora User Guide.</i>
+     * Copying a Snapshot</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param copyDBClusterSnapshotRequest
@@ -682,17 +681,17 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on copying encrypted Amazon Aurora DB cluster snapshots from one Amazon Web Services Region
      * to another, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_CopySnapshot.html">
-     * Copying a Snapshot</a> in the <i>Amazon Aurora User Guide.</i>
+     * Copying a Snapshot</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param copyDBClusterSnapshotRequest
@@ -754,7 +753,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information about copying snapshots, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopySnapshot.html#USER_CopyDBSnapshot">Copying
-     * a DB Snapshot</a> in the <i>Amazon RDS User Guide.</i>
+     * a DB Snapshot</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param copyDBSnapshotRequest
@@ -780,7 +779,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information about copying snapshots, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopySnapshot.html#USER_CopyDBSnapshot">Copying
-     * a DB Snapshot</a> in the <i>Amazon RDS User Guide.</i>
+     * a DB Snapshot</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param copyDBSnapshotRequest
@@ -1016,12 +1015,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param createDBClusterRequest
@@ -1045,12 +1044,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param createDBClusterRequest
@@ -1143,12 +1142,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param createDBClusterParameterGroupRequest
@@ -1197,12 +1196,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param createDBClusterParameterGroupRequest
@@ -1227,12 +1226,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param createDBClusterSnapshotRequest
@@ -1250,12 +1249,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param createDBClusterSnapshotRequest
@@ -1935,12 +1934,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param deleteDBClusterRequest
@@ -1960,12 +1959,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param deleteDBClusterRequest
@@ -2030,12 +2029,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param deleteDBClusterParameterGroupRequest
@@ -2056,12 +2055,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param deleteDBClusterParameterGroupRequest
@@ -2091,12 +2090,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param deleteDBClusterSnapshotRequest
@@ -2119,12 +2118,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param deleteDBClusterSnapshotRequest
@@ -2831,7 +2830,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -2855,7 +2854,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -2929,12 +2928,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param describeDBClusterParameterGroupsRequest
@@ -2956,12 +2955,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param describeDBClusterParameterGroupsRequest
@@ -3002,12 +3001,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param describeDBClusterParametersRequest
@@ -3026,12 +3025,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param describeDBClusterParametersRequest
@@ -3114,12 +3113,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param describeDBClusterSnapshotsRequest
@@ -3138,12 +3137,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param describeDBClusterSnapshotsRequest
@@ -3182,12 +3181,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This operation can also return information for Amazon Neptune DB instances and Amazon DocumentDB instances.
@@ -3208,12 +3207,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This operation can also return information for Amazon Neptune DB instances and Amazon DocumentDB instances.
@@ -3871,7 +3870,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
      * @param describeEngineDefaultClusterParametersRequest
@@ -3891,7 +3890,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
      * @param describeEngineDefaultClusterParametersRequest
@@ -4158,7 +4157,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -4181,7 +4180,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -4643,12 +4642,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param failoverDBClusterRequest
@@ -4684,12 +4683,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param failoverDBClusterRequest
@@ -4732,7 +4731,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information about failing over an Amazon Aurora global database, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-disaster-recovery.html#aurora-global-database-disaster-recovery.managed-failover"
-     * >Managed planned failover for Amazon Aurora global databases</a> in the <i>Amazon Aurora User Guide.</i>
+     * >Managed planned failover for Amazon Aurora global databases</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -4763,7 +4762,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information about failing over an Amazon Aurora global database, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-disaster-recovery.html#aurora-global-database-disaster-recovery.managed-failover"
-     * >Managed planned failover for Amazon Aurora global databases</a> in the <i>Amazon Aurora User Guide.</i>
+     * >Managed planned failover for Amazon Aurora global databases</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -4961,33 +4960,33 @@ public interface AmazonRDSAsync extends AmazonRDS {
 
     /**
      * <p>
-     * Set the capacity of an Aurora Serverless DB cluster to a specific value.
+     * Set the capacity of an Aurora Serverless v1 DB cluster to a specific value.
      * </p>
      * <p>
-     * Aurora Serverless scales seamlessly based on the workload on the DB cluster. In some cases, the capacity might
+     * Aurora Serverless v1 scales seamlessly based on the workload on the DB cluster. In some cases, the capacity might
      * not scale fast enough to meet a sudden change in workload, such as a large number of new transactions. Call
      * <code>ModifyCurrentDBClusterCapacity</code> to set the capacity explicitly.
      * </p>
      * <p>
-     * After this call sets the DB cluster capacity, Aurora Serverless can automatically scale the DB cluster based on
-     * the cooldown period for scaling up and the cooldown period for scaling down.
+     * After this call sets the DB cluster capacity, Aurora Serverless v1 can automatically scale the DB cluster based
+     * on the cooldown period for scaling up and the cooldown period for scaling down.
      * </p>
      * <p>
-     * For more information about Aurora Serverless, see <a
+     * For more information about Aurora Serverless v1, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html">Using Amazon Aurora
-     * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <important>
      * <p>
      * If you call <code>ModifyCurrentDBClusterCapacity</code> with the default <code>TimeoutAction</code>, connections
-     * that prevent Aurora Serverless from finding a scaling point might be dropped. For more information about scaling
-     * points, see <a href=
+     * that prevent Aurora Serverless v1 from finding a scaling point might be dropped. For more information about
+     * scaling points, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.auto-scaling"
-     * > Autoscaling for Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * > Autoscaling for Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * </important> <note>
      * <p>
-     * This action only applies to Aurora Serverless DB clusters.
+     * This action only applies to Aurora Serverless v1 DB clusters.
      * </p>
      * </note>
      * 
@@ -5003,33 +5002,33 @@ public interface AmazonRDSAsync extends AmazonRDS {
 
     /**
      * <p>
-     * Set the capacity of an Aurora Serverless DB cluster to a specific value.
+     * Set the capacity of an Aurora Serverless v1 DB cluster to a specific value.
      * </p>
      * <p>
-     * Aurora Serverless scales seamlessly based on the workload on the DB cluster. In some cases, the capacity might
+     * Aurora Serverless v1 scales seamlessly based on the workload on the DB cluster. In some cases, the capacity might
      * not scale fast enough to meet a sudden change in workload, such as a large number of new transactions. Call
      * <code>ModifyCurrentDBClusterCapacity</code> to set the capacity explicitly.
      * </p>
      * <p>
-     * After this call sets the DB cluster capacity, Aurora Serverless can automatically scale the DB cluster based on
-     * the cooldown period for scaling up and the cooldown period for scaling down.
+     * After this call sets the DB cluster capacity, Aurora Serverless v1 can automatically scale the DB cluster based
+     * on the cooldown period for scaling up and the cooldown period for scaling down.
      * </p>
      * <p>
-     * For more information about Aurora Serverless, see <a
+     * For more information about Aurora Serverless v1, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html">Using Amazon Aurora
-     * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <important>
      * <p>
      * If you call <code>ModifyCurrentDBClusterCapacity</code> with the default <code>TimeoutAction</code>, connections
-     * that prevent Aurora Serverless from finding a scaling point might be dropped. For more information about scaling
-     * points, see <a href=
+     * that prevent Aurora Serverless v1 from finding a scaling point might be dropped. For more information about
+     * scaling points, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.auto-scaling"
-     * > Autoscaling for Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * > Autoscaling for Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * </important> <note>
      * <p>
-     * This action only applies to Aurora Serverless DB clusters.
+     * This action only applies to Aurora Serverless v1 DB clusters.
      * </p>
      * </note>
      * 
@@ -5119,12 +5118,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param modifyDBClusterRequest
@@ -5143,12 +5142,12 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
-     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param modifyDBClusterRequest
@@ -5223,7 +5222,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * has been created or modified.
      * </p>
      * <p>
-     * If the modified DB cluster parameter group is used by an Aurora Serverless cluster, Aurora applies the update
+     * If the modified DB cluster parameter group is used by an Aurora Serverless v1 cluster, Aurora applies the update
      * immediately. The cluster restart might interrupt your workload. In that case, your application must reopen any
      * connections and retry any transactions that were active when the parameter changes took effect.
      * </p>
@@ -5231,7 +5230,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -5267,7 +5266,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * has been created or modified.
      * </p>
      * <p>
-     * If the modified DB cluster parameter group is used by an Aurora Serverless cluster, Aurora applies the update
+     * If the modified DB cluster parameter group is used by an Aurora Serverless v1 cluster, Aurora applies the update
      * immediately. The cluster restart might interrupt your workload. In that case, your application must reopen any
      * connections and retry any transactions that were active when the parameter changes took effect.
      * </p>
@@ -5275,7 +5274,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -5763,7 +5762,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * Modify a setting for an Amazon Aurora global cluster. You can change one or more database configuration
      * parameters by specifying these parameters and the new values in the request. For more information on Amazon
      * Aurora, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What
-     * is Amazon Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * is Amazon Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -5784,7 +5783,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * Modify a setting for an Amazon Aurora global cluster. You can change one or more database configuration
      * parameters by specifying these parameters and the new values in the request. For more information on Amazon
      * Aurora, see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What
-     * is Amazon Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * is Amazon Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -6170,7 +6169,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -6193,7 +6192,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -6337,7 +6336,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -6371,7 +6370,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -6454,7 +6453,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -6489,7 +6488,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -6529,7 +6528,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -6565,7 +6564,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -6605,7 +6604,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -6640,7 +6639,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information on Amazon Aurora DB clusters, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
-     * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora?</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * For more information on Multi-AZ DB clusters, see <a
@@ -6925,7 +6924,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-cluster-stop-start.html"> Stopping and
-     * Starting an Aurora Cluster</a> in the <i>Amazon Aurora User Guide.</i>
+     * Starting an Aurora Cluster</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -6949,7 +6948,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-cluster-stop-start.html"> Stopping and
-     * Starting an Aurora Cluster</a> in the <i>Amazon Aurora User Guide.</i>
+     * Starting an Aurora Cluster</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -7165,7 +7164,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-cluster-stop-start.html"> Stopping and
-     * Starting an Aurora Cluster</a> in the <i>Amazon Aurora User Guide.</i>
+     * Starting an Aurora Cluster</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -7190,7 +7189,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-cluster-stop-start.html"> Stopping and
-     * Starting an Aurora Cluster</a> in the <i>Amazon Aurora User Guide.</i>
+     * Starting an Aurora Cluster</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <note>
      * <p>

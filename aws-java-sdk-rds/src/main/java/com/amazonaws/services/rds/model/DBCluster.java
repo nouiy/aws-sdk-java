@@ -324,12 +324,12 @@ public class DBCluster implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<String> enabledCloudwatchLogsExports;
     /**
      * <p>
-     * The current capacity of an Aurora Serverless DB cluster. The capacity is 0 (zero) when the cluster is paused.
+     * The current capacity of an Aurora Serverless v1 DB cluster. The capacity is 0 (zero) when the cluster is paused.
      * </p>
      * <p>
-     * For more information about Aurora Serverless, see <a
+     * For more information about Aurora Serverless v1, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html">Using Amazon Aurora
-     * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      */
     private Integer capacity;
@@ -355,16 +355,16 @@ public class DBCluster implements Serializable, Cloneable {
     private Boolean deletionProtection;
     /**
      * <p>
-     * A value that indicates whether the HTTP endpoint for an Aurora Serverless DB cluster is enabled.
+     * A value that indicates whether the HTTP endpoint for an Aurora Serverless v1 DB cluster is enabled.
      * </p>
      * <p>
      * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora
-     * Serverless DB cluster. You can also query your database from inside the RDS console with the query editor.
+     * Serverless v1 DB cluster. You can also query your database from inside the RDS console with the query editor.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
-     * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      */
     private Boolean httpEndpointEnabled;
@@ -1143,8 +1143,8 @@ public class DBCluster implements Serializable, Cloneable {
      *        The reader endpoint for the DB cluster. The reader endpoint for a DB cluster load-balances connections
      *        across the Aurora Replicas that are available in a DB cluster. As clients request new connections to the
      *        reader endpoint, Aurora distributes the connection requests among the Aurora Replicas in the DB cluster.
-     *        This functionality can help balance your read workload across multiple Aurora Replicas in your DB cluster.
-     *        </p>
+     *        This functionality can help balance your read workload across multiple Aurora Replicas in your DB
+     *        cluster.</p>
      *        <p>
      *        If a failover occurs, and the Aurora Replica that you are connected to is promoted to be the primary
      *        instance, your connection is dropped. To continue sending your read workload to other Aurora Replicas in
@@ -1172,7 +1172,7 @@ public class DBCluster implements Serializable, Cloneable {
      *         across the Aurora Replicas that are available in a DB cluster. As clients request new connections to the
      *         reader endpoint, Aurora distributes the connection requests among the Aurora Replicas in the DB cluster.
      *         This functionality can help balance your read workload across multiple Aurora Replicas in your DB
-     *         cluster. </p>
+     *         cluster.</p>
      *         <p>
      *         If a failover occurs, and the Aurora Replica that you are connected to is promoted to be the primary
      *         instance, your connection is dropped. To continue sending your read workload to other Aurora Replicas in
@@ -1200,8 +1200,8 @@ public class DBCluster implements Serializable, Cloneable {
      *        The reader endpoint for the DB cluster. The reader endpoint for a DB cluster load-balances connections
      *        across the Aurora Replicas that are available in a DB cluster. As clients request new connections to the
      *        reader endpoint, Aurora distributes the connection requests among the Aurora Replicas in the DB cluster.
-     *        This functionality can help balance your read workload across multiple Aurora Replicas in your DB cluster.
-     *        </p>
+     *        This functionality can help balance your read workload across multiple Aurora Replicas in your DB
+     *        cluster.</p>
      *        <p>
      *        If a failover occurs, and the Aurora Replica that you are connected to is promoted to be the primary
      *        instance, your connection is dropped. To continue sending your read workload to other Aurora Replicas in
@@ -2668,21 +2668,21 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The current capacity of an Aurora Serverless DB cluster. The capacity is 0 (zero) when the cluster is paused.
+     * The current capacity of an Aurora Serverless v1 DB cluster. The capacity is 0 (zero) when the cluster is paused.
      * </p>
      * <p>
-     * For more information about Aurora Serverless, see <a
+     * For more information about Aurora Serverless v1, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html">Using Amazon Aurora
-     * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
      * @param capacity
-     *        The current capacity of an Aurora Serverless DB cluster. The capacity is 0 (zero) when the cluster is
+     *        The current capacity of an Aurora Serverless v1 DB cluster. The capacity is 0 (zero) when the cluster is
      *        paused.</p>
      *        <p>
-     *        For more information about Aurora Serverless, see <a
+     *        For more information about Aurora Serverless v1, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html">Using Amazon
-     *        Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     *        Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      */
 
     public void setCapacity(Integer capacity) {
@@ -2691,20 +2691,20 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The current capacity of an Aurora Serverless DB cluster. The capacity is 0 (zero) when the cluster is paused.
+     * The current capacity of an Aurora Serverless v1 DB cluster. The capacity is 0 (zero) when the cluster is paused.
      * </p>
      * <p>
-     * For more information about Aurora Serverless, see <a
+     * For more information about Aurora Serverless v1, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html">Using Amazon Aurora
-     * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
-     * @return The current capacity of an Aurora Serverless DB cluster. The capacity is 0 (zero) when the cluster is
+     * @return The current capacity of an Aurora Serverless v1 DB cluster. The capacity is 0 (zero) when the cluster is
      *         paused.</p>
      *         <p>
-     *         For more information about Aurora Serverless, see <a
+     *         For more information about Aurora Serverless v1, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html">Using Amazon
-     *         Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     *         Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      */
 
     public Integer getCapacity() {
@@ -2713,21 +2713,21 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The current capacity of an Aurora Serverless DB cluster. The capacity is 0 (zero) when the cluster is paused.
+     * The current capacity of an Aurora Serverless v1 DB cluster. The capacity is 0 (zero) when the cluster is paused.
      * </p>
      * <p>
-     * For more information about Aurora Serverless, see <a
+     * For more information about Aurora Serverless v1, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html">Using Amazon Aurora
-     * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
      * @param capacity
-     *        The current capacity of an Aurora Serverless DB cluster. The capacity is 0 (zero) when the cluster is
+     *        The current capacity of an Aurora Serverless v1 DB cluster. The capacity is 0 (zero) when the cluster is
      *        paused.</p>
      *        <p>
-     *        For more information about Aurora Serverless, see <a
+     *        For more information about Aurora Serverless v1, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html">Using Amazon
-     *        Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     *        Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2894,29 +2894,29 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A value that indicates whether the HTTP endpoint for an Aurora Serverless DB cluster is enabled.
+     * A value that indicates whether the HTTP endpoint for an Aurora Serverless v1 DB cluster is enabled.
      * </p>
      * <p>
      * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora
-     * Serverless DB cluster. You can also query your database from inside the RDS console with the query editor.
+     * Serverless v1 DB cluster. You can also query your database from inside the RDS console with the query editor.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
-     * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
      * @param httpEndpointEnabled
-     *        A value that indicates whether the HTTP endpoint for an Aurora Serverless DB cluster is enabled.</p>
+     *        A value that indicates whether the HTTP endpoint for an Aurora Serverless v1 DB cluster is enabled.</p>
      *        <p>
      *        When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the
-     *        Aurora Serverless DB cluster. You can also query your database from inside the RDS console with the query
-     *        editor.
+     *        Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the
+     *        query editor.
      *        </p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for
-     *        Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     *        Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      */
 
     public void setHttpEndpointEnabled(Boolean httpEndpointEnabled) {
@@ -2925,28 +2925,28 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A value that indicates whether the HTTP endpoint for an Aurora Serverless DB cluster is enabled.
+     * A value that indicates whether the HTTP endpoint for an Aurora Serverless v1 DB cluster is enabled.
      * </p>
      * <p>
      * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora
-     * Serverless DB cluster. You can also query your database from inside the RDS console with the query editor.
+     * Serverless v1 DB cluster. You can also query your database from inside the RDS console with the query editor.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
-     * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
-     * @return A value that indicates whether the HTTP endpoint for an Aurora Serverless DB cluster is enabled.</p>
+     * @return A value that indicates whether the HTTP endpoint for an Aurora Serverless v1 DB cluster is enabled.</p>
      *         <p>
      *         When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the
-     *         Aurora Serverless DB cluster. You can also query your database from inside the RDS console with the query
-     *         editor.
+     *         Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the
+     *         query editor.
      *         </p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for
-     *         Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     *         Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      */
 
     public Boolean getHttpEndpointEnabled() {
@@ -2955,29 +2955,29 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A value that indicates whether the HTTP endpoint for an Aurora Serverless DB cluster is enabled.
+     * A value that indicates whether the HTTP endpoint for an Aurora Serverless v1 DB cluster is enabled.
      * </p>
      * <p>
      * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora
-     * Serverless DB cluster. You can also query your database from inside the RDS console with the query editor.
+     * Serverless v1 DB cluster. You can also query your database from inside the RDS console with the query editor.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
-     * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
      * @param httpEndpointEnabled
-     *        A value that indicates whether the HTTP endpoint for an Aurora Serverless DB cluster is enabled.</p>
+     *        A value that indicates whether the HTTP endpoint for an Aurora Serverless v1 DB cluster is enabled.</p>
      *        <p>
      *        When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the
-     *        Aurora Serverless DB cluster. You can also query your database from inside the RDS console with the query
-     *        editor.
+     *        Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the
+     *        query editor.
      *        </p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for
-     *        Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     *        Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2988,28 +2988,28 @@ public class DBCluster implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A value that indicates whether the HTTP endpoint for an Aurora Serverless DB cluster is enabled.
+     * A value that indicates whether the HTTP endpoint for an Aurora Serverless v1 DB cluster is enabled.
      * </p>
      * <p>
      * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora
-     * Serverless DB cluster. You can also query your database from inside the RDS console with the query editor.
+     * Serverless v1 DB cluster. You can also query your database from inside the RDS console with the query editor.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
-     * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
-     * @return A value that indicates whether the HTTP endpoint for an Aurora Serverless DB cluster is enabled.</p>
+     * @return A value that indicates whether the HTTP endpoint for an Aurora Serverless v1 DB cluster is enabled.</p>
      *         <p>
      *         When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the
-     *         Aurora Serverless DB cluster. You can also query your database from inside the RDS console with the query
-     *         editor.
+     *         Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the
+     *         query editor.
      *         </p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for
-     *         Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     *         Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      */
 
     public Boolean isHttpEndpointEnabled() {

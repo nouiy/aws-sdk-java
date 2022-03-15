@@ -72,7 +72,7 @@ public class FailoverGlobalClusterRequest extends com.amazonaws.AmazonWebService
      * @param globalClusterIdentifier
      *        Identifier of the Aurora global database (<a>GlobalCluster</a>) that should be failed over. The identifier
      *        is the unique key assigned by the user when the Aurora global database was created. In other words, it's
-     *        the name of the Aurora global database that you want to fail over. </p>
+     *        the name of the Aurora global database that you want to fail over.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -107,7 +107,7 @@ public class FailoverGlobalClusterRequest extends com.amazonaws.AmazonWebService
      * 
      * @return Identifier of the Aurora global database (<a>GlobalCluster</a>) that should be failed over. The
      *         identifier is the unique key assigned by the user when the Aurora global database was created. In other
-     *         words, it's the name of the Aurora global database that you want to fail over. </p>
+     *         words, it's the name of the Aurora global database that you want to fail over.</p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -143,7 +143,7 @@ public class FailoverGlobalClusterRequest extends com.amazonaws.AmazonWebService
      * @param globalClusterIdentifier
      *        Identifier of the Aurora global database (<a>GlobalCluster</a>) that should be failed over. The identifier
      *        is the unique key assigned by the user when the Aurora global database was created. In other words, it's
-     *        the name of the Aurora global database that you want to fail over. </p>
+     *        the name of the Aurora global database that you want to fail over.</p>
      *        <p>
      *        Constraints:
      *        </p>

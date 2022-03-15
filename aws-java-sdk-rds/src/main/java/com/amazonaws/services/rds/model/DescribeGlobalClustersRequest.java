@@ -89,7 +89,7 @@ public class DescribeGlobalClustersRequest extends com.amazonaws.AmazonWebServic
      * 
      * @param globalClusterIdentifier
      *        The user-supplied DB cluster identifier. If this parameter is specified, information from only the
-     *        specific DB cluster is returned. This parameter isn't case-sensitive. </p>
+     *        specific DB cluster is returned. This parameter isn't case-sensitive.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -122,7 +122,7 @@ public class DescribeGlobalClustersRequest extends com.amazonaws.AmazonWebServic
      * </ul>
      * 
      * @return The user-supplied DB cluster identifier. If this parameter is specified, information from only the
-     *         specific DB cluster is returned. This parameter isn't case-sensitive. </p>
+     *         specific DB cluster is returned. This parameter isn't case-sensitive.</p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -156,7 +156,7 @@ public class DescribeGlobalClustersRequest extends com.amazonaws.AmazonWebServic
      * 
      * @param globalClusterIdentifier
      *        The user-supplied DB cluster identifier. If this parameter is specified, information from only the
-     *        specific DB cluster is returned. This parameter isn't case-sensitive. </p>
+     *        specific DB cluster is returned. This parameter isn't case-sensitive.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -263,7 +263,7 @@ public class DescribeGlobalClustersRequest extends com.amazonaws.AmazonWebServic
      * @param maxRecords
      *        The maximum number of records to include in the response. If more records exist than the specified
      *        <code>MaxRecords</code> value, a pagination token called a marker is included in the response so that you
-     *        can retrieve the remaining results. </p>
+     *        can retrieve the remaining results.</p>
      *        <p>
      *        Default: 100
      *        </p>
@@ -290,7 +290,7 @@ public class DescribeGlobalClustersRequest extends com.amazonaws.AmazonWebServic
      * 
      * @return The maximum number of records to include in the response. If more records exist than the specified
      *         <code>MaxRecords</code> value, a pagination token called a marker is included in the response so that you
-     *         can retrieve the remaining results. </p>
+     *         can retrieve the remaining results.</p>
      *         <p>
      *         Default: 100
      *         </p>
@@ -318,7 +318,7 @@ public class DescribeGlobalClustersRequest extends com.amazonaws.AmazonWebServic
      * @param maxRecords
      *        The maximum number of records to include in the response. If more records exist than the specified
      *        <code>MaxRecords</code> value, a pagination token called a marker is included in the response so that you
-     *        can retrieve the remaining results. </p>
+     *        can retrieve the remaining results.</p>
      *        <p>
      *        Default: 100
      *        </p>

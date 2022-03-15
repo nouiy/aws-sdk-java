@@ -185,7 +185,7 @@ public class RebootDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param forceFailover
-     *        A value that indicates whether the reboot is conducted through a Multi-AZ failover. </p>
+     *        A value that indicates whether the reboot is conducted through a Multi-AZ failover.</p>
      *        <p>
      *        Constraint: You can't enable force failover if the instance isn't configured for Multi-AZ.
      */
@@ -202,7 +202,7 @@ public class RebootDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Constraint: You can't enable force failover if the instance isn't configured for Multi-AZ.
      * </p>
      * 
-     * @return A value that indicates whether the reboot is conducted through a Multi-AZ failover. </p>
+     * @return A value that indicates whether the reboot is conducted through a Multi-AZ failover.</p>
      *         <p>
      *         Constraint: You can't enable force failover if the instance isn't configured for Multi-AZ.
      */
@@ -220,7 +220,7 @@ public class RebootDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param forceFailover
-     *        A value that indicates whether the reboot is conducted through a Multi-AZ failover. </p>
+     *        A value that indicates whether the reboot is conducted through a Multi-AZ failover.</p>
      *        <p>
      *        Constraint: You can't enable force failover if the instance isn't configured for Multi-AZ.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -239,7 +239,7 @@ public class RebootDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Constraint: You can't enable force failover if the instance isn't configured for Multi-AZ.
      * </p>
      * 
-     * @return A value that indicates whether the reboot is conducted through a Multi-AZ failover. </p>
+     * @return A value that indicates whether the reboot is conducted through a Multi-AZ failover.</p>
      *         <p>
      *         Constraint: You can't enable force failover if the instance isn't configured for Multi-AZ.
      */

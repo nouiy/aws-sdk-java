@@ -449,7 +449,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
      * classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      */
     private String dBInstanceClass;
@@ -950,7 +950,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Oracle. The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier
      * is <code>19.my_cev1</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
-     * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>Amazon RDS Custom for SQL Server</b>
@@ -958,7 +958,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * See <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.reqsMS"
-     * >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide.</i>
+     * >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>MariaDB</b>
@@ -966,7 +966,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MariaDB.html#MariaDB.Concepts.VersionMgmt"
-     * >MariaDB on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     * >MariaDB on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>Microsoft SQL Server</b>
@@ -974,7 +974,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.VersionSupport"
-     * >Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide.</i>
+     * >Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>MySQL</b>
@@ -982,7 +982,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">MySQL on
-     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>Oracle</b>
@@ -990,7 +990,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.PatchComposition.html">Oracle
-     * Database Engine Release Notes</a> in the <i>Amazon RDS User Guide.</i>
+     * Database Engine Release Notes</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>PostgreSQL</b>
@@ -998,7 +998,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts">Amazon RDS
-     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide.</i>
+     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      */
     private String engineVersion;
@@ -1336,7 +1336,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      */
     private Boolean enableIAMDatabaseAuthentication;
@@ -1344,7 +1344,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * A value that indicates whether to enable Performance Insights for the DB instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
-     * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Insights</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
@@ -1382,8 +1382,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list depend on
      * the DB engine. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * > Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -1516,7 +1515,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required for RDS Custom.
@@ -1762,9 +1761,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
      *        instance classes, and availability for your engine, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
-     *        Class</a> in the <i>Amazon RDS User Guide.</i>
+     *        Class</a> in the <i>Amazon RDS User Guide</i>.
      * @param engine
-     *        The name of the database engine to be used for this instance. </p>
+     *        The name of the database engine to be used for this instance.</p>
      *        <p>
      *        Not every database engine is available for every Amazon Web Services Region.
      *        </p>
@@ -4460,7 +4459,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
      * classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param dBInstanceClass
@@ -4468,7 +4467,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
      *        instance classes, and availability for your engine, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
-     *        Class</a> in the <i>Amazon RDS User Guide.</i>
+     *        Class</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public void setDBInstanceClass(String dBInstanceClass) {
@@ -4481,14 +4480,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
      * classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @return The compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance classes
      *         are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
      *         instance classes, and availability for your engine, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
-     *         Class</a> in the <i>Amazon RDS User Guide.</i>
+     *         Class</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public String getDBInstanceClass() {
@@ -4501,7 +4500,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
      * classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param dBInstanceClass
@@ -4509,7 +4508,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
      *        instance classes, and availability for your engine, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
-     *        Class</a> in the <i>Amazon RDS User Guide.</i>
+     *        Class</a> in the <i>Amazon RDS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4622,7 +4621,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </ul>
      * 
      * @param engine
-     *        The name of the database engine to be used for this instance. </p>
+     *        The name of the database engine to be used for this instance.</p>
      *        <p>
      *        Not every database engine is available for every Amazon Web Services Region.
      *        </p>
@@ -4829,7 +4828,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * 
-     * @return The name of the database engine to be used for this instance. </p>
+     * @return The name of the database engine to be used for this instance.</p>
      *         <p>
      *         Not every database engine is available for every Amazon Web Services Region.
      *         </p>
@@ -5037,7 +5036,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </ul>
      * 
      * @param engine
-     *        The name of the database engine to be used for this instance. </p>
+     *        The name of the database engine to be used for this instance.</p>
      *        <p>
      *        Not every database engine is available for every Amazon Web Services Region.
      *        </p>
@@ -5914,7 +5913,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        The Availability Zone (AZ) where the database will be created. For information on Amazon Web Services
      *        Regions and Availability Zones, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html"
-     *        >Regions and Availability Zones</a>. </p>
+     *        >Regions and Availability Zones</a>.</p>
      *        <p>
      *        <b>Amazon Aurora</b>
      *        </p>
@@ -5987,7 +5986,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @return The Availability Zone (AZ) where the database will be created. For information on Amazon Web Services
      *         Regions and Availability Zones, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html"
-     *         >Regions and Availability Zones</a>. </p>
+     *         >Regions and Availability Zones</a>.</p>
      *         <p>
      *         <b>Amazon Aurora</b>
      *         </p>
@@ -6061,7 +6060,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        The Availability Zone (AZ) where the database will be created. For information on Amazon Web Services
      *        Regions and Availability Zones, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html"
-     *        >Regions and Availability Zones</a>. </p>
+     *        >Regions and Availability Zones</a>.</p>
      *        <p>
      *        <b>Amazon Aurora</b>
      *        </p>
@@ -6195,7 +6194,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        The time range each week during which system maintenance can occur, in Universal Coordinated Time (UTC).
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#Concepts.DBMaintenance"
-     *        >Amazon RDS Maintenance Window</a>. </p>
+     *        >Amazon RDS Maintenance Window</a>.</p>
      *        <p>
      *        Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      *        </p>
@@ -6238,7 +6237,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @return The time range each week during which system maintenance can occur, in Universal Coordinated Time (UTC).
      *         For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#Concepts.DBMaintenance"
-     *         >Amazon RDS Maintenance Window</a>. </p>
+     *         >Amazon RDS Maintenance Window</a>.</p>
      *         <p>
      *         Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      *         </p>
@@ -6282,7 +6281,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        The time range each week during which system maintenance can occur, in Universal Coordinated Time (UTC).
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#Concepts.DBMaintenance"
-     *        >Amazon RDS Maintenance Window</a>. </p>
+     *        >Amazon RDS Maintenance Window</a>.</p>
      *        <p>
      *        Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      *        </p>
@@ -6746,7 +6745,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        the <code>BackupRetentionPeriod</code> parameter. The default is a 30-minute window selected at random
      *        from an 8-hour block of time for each Amazon Web Services Region. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithAutomatedBackups.html#USER_WorkingWithAutomatedBackups.BackupWindow"
-     *        >Backup window</a> in the <i>Amazon RDS User Guide</i>. </p>
+     *        >Backup window</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        <b>Amazon Aurora</b>
      *        </p>
@@ -6827,7 +6826,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         the <code>BackupRetentionPeriod</code> parameter. The default is a 30-minute window selected at random
      *         from an 8-hour block of time for each Amazon Web Services Region. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithAutomatedBackups.html#USER_WorkingWithAutomatedBackups.BackupWindow"
-     *         >Backup window</a> in the <i>Amazon RDS User Guide</i>. </p>
+     *         >Backup window</a> in the <i>Amazon RDS User Guide</i>.</p>
      *         <p>
      *         <b>Amazon Aurora</b>
      *         </p>
@@ -6909,7 +6908,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        the <code>BackupRetentionPeriod</code> parameter. The default is a 30-minute window selected at random
      *        from an 8-hour block of time for each Amazon Web Services Region. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithAutomatedBackups.html#USER_WorkingWithAutomatedBackups.BackupWindow"
-     *        >Backup window</a> in the <i>Amazon RDS User Guide</i>. </p>
+     *        >Backup window</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        <b>Amazon Aurora</b>
      *        </p>
@@ -7493,7 +7492,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Oracle. The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier
      * is <code>19.my_cev1</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
-     * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>Amazon RDS Custom for SQL Server</b>
@@ -7501,7 +7500,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * See <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.reqsMS"
-     * >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide.</i>
+     * >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>MariaDB</b>
@@ -7509,7 +7508,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MariaDB.html#MariaDB.Concepts.VersionMgmt"
-     * >MariaDB on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     * >MariaDB on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>Microsoft SQL Server</b>
@@ -7517,7 +7516,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.VersionSupport"
-     * >Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide.</i>
+     * >Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>MySQL</b>
@@ -7525,7 +7524,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">MySQL on
-     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>Oracle</b>
@@ -7533,7 +7532,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.PatchComposition.html">Oracle
-     * Database Engine Release Notes</a> in the <i>Amazon RDS User Guide.</i>
+     * Database Engine Release Notes</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>PostgreSQL</b>
@@ -7541,7 +7540,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts">Amazon RDS
-     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide.</i>
+     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param engineVersion
@@ -7569,7 +7568,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        for Oracle. The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example
      *        identifier is <code>19.my_cev1</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
-     *        Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     *        Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        <b>Amazon RDS Custom for SQL Server</b>
@@ -7577,7 +7576,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        See <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.reqsMS"
-     *        >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide.</i>
+     *        >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        <b>MariaDB</b>
@@ -7585,7 +7584,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MariaDB.html#MariaDB.Concepts.VersionMgmt"
-     *        >MariaDB on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     *        >MariaDB on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        <b>Microsoft SQL Server</b>
@@ -7593,7 +7592,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.VersionSupport"
-     *        >Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide.</i>
+     *        >Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        <b>MySQL</b>
@@ -7601,7 +7600,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt"
-     *        >MySQL on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     *        >MySQL on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        <b>Oracle</b>
@@ -7609,7 +7608,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.PatchComposition.html">Oracle
-     *        Database Engine Release Notes</a> in the <i>Amazon RDS User Guide.</i>
+     *        Database Engine Release Notes</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        <b>PostgreSQL</b>
@@ -7617,7 +7616,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts"
-     *        >Amazon RDS for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide.</i>
+     *        >Amazon RDS for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public void setEngineVersion(String engineVersion) {
@@ -7650,7 +7649,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Oracle. The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier
      * is <code>19.my_cev1</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
-     * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>Amazon RDS Custom for SQL Server</b>
@@ -7658,7 +7657,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * See <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.reqsMS"
-     * >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide.</i>
+     * >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>MariaDB</b>
@@ -7666,7 +7665,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MariaDB.html#MariaDB.Concepts.VersionMgmt"
-     * >MariaDB on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     * >MariaDB on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>Microsoft SQL Server</b>
@@ -7674,7 +7673,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.VersionSupport"
-     * >Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide.</i>
+     * >Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>MySQL</b>
@@ -7682,7 +7681,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">MySQL on
-     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>Oracle</b>
@@ -7690,7 +7689,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.PatchComposition.html">Oracle
-     * Database Engine Release Notes</a> in the <i>Amazon RDS User Guide.</i>
+     * Database Engine Release Notes</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>PostgreSQL</b>
@@ -7698,7 +7697,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts">Amazon RDS
-     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide.</i>
+     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @return The version number of the database engine to use.</p>
@@ -7725,7 +7724,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         for Oracle. The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example
      *         identifier is <code>19.my_cev1</code>. For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create"
-     *         > Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     *         > Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         <b>Amazon RDS Custom for SQL Server</b>
@@ -7733,7 +7732,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         See <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.reqsMS"
-     *         >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide.</i>
+     *         >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         <b>MariaDB</b>
@@ -7741,7 +7740,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         For information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MariaDB.html#MariaDB.Concepts.VersionMgmt"
-     *         >MariaDB on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     *         >MariaDB on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         <b>Microsoft SQL Server</b>
@@ -7749,7 +7748,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         For information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.VersionSupport"
-     *         >Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide.</i>
+     *         >Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         <b>MySQL</b>
@@ -7757,7 +7756,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         For information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">MySQL
-     *         on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     *         on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         <b>Oracle</b>
@@ -7765,7 +7764,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         For information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.PatchComposition.html"
-     *         >Oracle Database Engine Release Notes</a> in the <i>Amazon RDS User Guide.</i>
+     *         >Oracle Database Engine Release Notes</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         <b>PostgreSQL</b>
@@ -7773,7 +7772,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         For information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts"
-     *         >Amazon RDS for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide.</i>
+     *         >Amazon RDS for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public String getEngineVersion() {
@@ -7806,7 +7805,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Oracle. The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier
      * is <code>19.my_cev1</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
-     * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>Amazon RDS Custom for SQL Server</b>
@@ -7814,7 +7813,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * See <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.reqsMS"
-     * >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide.</i>
+     * >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>MariaDB</b>
@@ -7822,7 +7821,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MariaDB.html#MariaDB.Concepts.VersionMgmt"
-     * >MariaDB on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     * >MariaDB on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>Microsoft SQL Server</b>
@@ -7830,7 +7829,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.VersionSupport"
-     * >Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide.</i>
+     * >Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>MySQL</b>
@@ -7838,7 +7837,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">MySQL on
-     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>Oracle</b>
@@ -7846,7 +7845,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.PatchComposition.html">Oracle
-     * Database Engine Release Notes</a> in the <i>Amazon RDS User Guide.</i>
+     * Database Engine Release Notes</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>PostgreSQL</b>
@@ -7854,7 +7853,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts">Amazon RDS
-     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide.</i>
+     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param engineVersion
@@ -7882,7 +7881,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        for Oracle. The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example
      *        identifier is <code>19.my_cev1</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
-     *        Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     *        Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        <b>Amazon RDS Custom for SQL Server</b>
@@ -7890,7 +7889,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        See <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.reqsMS"
-     *        >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide.</i>
+     *        >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        <b>MariaDB</b>
@@ -7898,7 +7897,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MariaDB.html#MariaDB.Concepts.VersionMgmt"
-     *        >MariaDB on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     *        >MariaDB on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        <b>Microsoft SQL Server</b>
@@ -7906,7 +7905,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.VersionSupport"
-     *        >Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide.</i>
+     *        >Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        <b>MySQL</b>
@@ -7914,7 +7913,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt"
-     *        >MySQL on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     *        >MySQL on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        <b>Oracle</b>
@@ -7922,7 +7921,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.PatchComposition.html">Oracle
-     *        Database Engine Release Notes</a> in the <i>Amazon RDS User Guide.</i>
+     *        Database Engine Release Notes</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        <b>PostgreSQL</b>
@@ -7930,7 +7929,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts"
-     *        >Amazon RDS for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide.</i>
+     *        >Amazon RDS for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -8119,7 +8118,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for the DB
      *        instance. For information about valid <code>Iops</code> values, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS
-     *        Provisioned IOPS storage to improve performance</a> in the <i>Amazon RDS User Guide</i>. </p>
+     *        Provisioned IOPS storage to improve performance</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL DB instances, must be a multiple between .5 and 50
      *        of the storage amount for the DB instance. For SQL Server DB instances, must be a multiple between 1 and
@@ -8146,7 +8145,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @return The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for the DB
      *         instance. For information about valid <code>Iops</code> values, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS
-     *         Provisioned IOPS storage to improve performance</a> in the <i>Amazon RDS User Guide</i>. </p>
+     *         Provisioned IOPS storage to improve performance</a> in the <i>Amazon RDS User Guide</i>.</p>
      *         <p>
      *         Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL DB instances, must be a multiple between .5 and
      *         50 of the storage amount for the DB instance. For SQL Server DB instances, must be a multiple between 1
@@ -8174,7 +8173,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for the DB
      *        instance. For information about valid <code>Iops</code> values, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon RDS
-     *        Provisioned IOPS storage to improve performance</a> in the <i>Amazon RDS User Guide</i>. </p>
+     *        Provisioned IOPS storage to improve performance</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        Constraints: For MariaDB, MySQL, Oracle, and PostgreSQL DB instances, must be a multiple between .5 and 50
      *        of the storage amount for the DB instance. For SQL Server DB instances, must be a multiple between 1 and
@@ -9989,7 +9988,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        A value that specifies the order in which an Aurora Replica is promoted to the primary instance after a
      *        failure of the existing primary instance. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.FaultTolerance"
-     *        > Fault Tolerance for an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide</i>. </p>
+     *        > Fault Tolerance for an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide</i>.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
      *        </p>
@@ -10024,7 +10023,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @return A value that specifies the order in which an Aurora Replica is promoted to the primary instance after a
      *         failure of the existing primary instance. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.FaultTolerance"
-     *         > Fault Tolerance for an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide</i>. </p>
+     *         > Fault Tolerance for an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide</i>.</p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
      *         </p>
@@ -10060,7 +10059,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        A value that specifies the order in which an Aurora Replica is promoted to the primary instance after a
      *        failure of the existing primary instance. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.FaultTolerance"
-     *        > Fault Tolerance for an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide</i>. </p>
+     *        > Fault Tolerance for an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide</i>.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
      *        </p>
@@ -10141,7 +10140,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param enableIAMDatabaseAuthentication
@@ -10154,7 +10153,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     *        Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     *        Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public void setEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
@@ -10173,7 +10172,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
@@ -10185,7 +10184,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     *         Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     *         Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public Boolean getEnableIAMDatabaseAuthentication() {
@@ -10204,7 +10203,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param enableIAMDatabaseAuthentication
@@ -10217,7 +10216,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     *        Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     *        Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -10238,7 +10237,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
@@ -10250,7 +10249,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     *         Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     *         Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public Boolean isEnableIAMDatabaseAuthentication() {
@@ -10261,7 +10260,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * A value that indicates whether to enable Performance Insights for the DB instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
-     * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Insights</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
@@ -10270,7 +10269,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param enablePerformanceInsights
      *        A value that indicates whether to enable Performance Insights for the DB instance. For more information,
      *        see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
-     *        Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>. </p>
+     *        Performance Insights</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
      */
@@ -10283,7 +10282,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * A value that indicates whether to enable Performance Insights for the DB instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
-     * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Insights</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
@@ -10291,7 +10290,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @return A value that indicates whether to enable Performance Insights for the DB instance. For more information,
      *         see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
-     *         Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>. </p>
+     *         Performance Insights</a> in the <i>Amazon RDS User Guide</i>.</p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
      */
@@ -10304,7 +10303,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * A value that indicates whether to enable Performance Insights for the DB instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
-     * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Insights</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
@@ -10313,7 +10312,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param enablePerformanceInsights
      *        A value that indicates whether to enable Performance Insights for the DB instance. For more information,
      *        see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
-     *        Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>. </p>
+     *        Performance Insights</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -10328,7 +10327,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * A value that indicates whether to enable Performance Insights for the DB instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
-     * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Insights</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
@@ -10336,7 +10335,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @return A value that indicates whether to enable Performance Insights for the DB instance. For more information,
      *         see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
-     *         Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>. </p>
+     *         Performance Insights</a> in the <i>Amazon RDS User Guide</i>.</p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
      */
@@ -10512,8 +10511,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list depend on
      * the DB engine. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * > Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -10562,8 +10560,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @return The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list
      *         depend on the DB engine. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *         >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     *         Guide</i>.</p>
+     *         > Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.</p>
      *         <p>
      *         <b>Amazon Aurora</b>
      *         </p>
@@ -10622,8 +10619,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list depend on
      * the DB engine. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * > Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -10673,8 +10669,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list
      *        depend on the DB engine. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     *        Guide</i>.</p>
+     *        > Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        <b>Amazon Aurora</b>
      *        </p>
@@ -10735,8 +10730,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list depend on
      * the DB engine. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * > Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -10791,8 +10785,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list
      *        depend on the DB engine. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     *        Guide</i>.</p>
+     *        > Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        <b>Amazon Aurora</b>
      *        </p>
@@ -10855,8 +10848,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list depend on
      * the DB engine. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * > Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -10906,8 +10898,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list
      *        depend on the DB engine. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     *        Guide</i>.</p>
+     *        > Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        <b>Amazon Aurora</b>
      *        </p>
@@ -11078,7 +11069,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        deleted when deletion protection is enabled. By default, deletion protection isn't enabled. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
-     *        Instance</a>. </p>
+     *        Instance</a>.</p>
      *        <p>
      *        <b>Amazon Aurora</b>
      *        </p>
@@ -11112,7 +11103,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         deleted when deletion protection is enabled. By default, deletion protection isn't enabled. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
-     *         Instance</a>. </p>
+     *         Instance</a>.</p>
      *         <p>
      *         <b>Amazon Aurora</b>
      *         </p>
@@ -11147,7 +11138,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        deleted when deletion protection is enabled. By default, deletion protection isn't enabled. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
-     *        Instance</a>. </p>
+     *        Instance</a>.</p>
      *        <p>
      *        <b>Amazon Aurora</b>
      *        </p>
@@ -11183,7 +11174,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         deleted when deletion protection is enabled. By default, deletion protection isn't enabled. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
-     *         Instance</a>. </p>
+     *         Instance</a>.</p>
      *         <p>
      *         <b>Amazon Aurora</b>
      *         </p>
@@ -11485,7 +11476,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required for RDS Custom.
@@ -11515,7 +11506,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For the list of permissions required for the IAM role, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     *        Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        This setting is required for RDS Custom.
@@ -11550,7 +11541,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required for RDS Custom.
@@ -11579,7 +11570,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         For the list of permissions required for the IAM role, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc"
-     *         > Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *         > Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         This setting is required for RDS Custom.
@@ -11614,7 +11605,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required for RDS Custom.
@@ -11644,7 +11635,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For the list of permissions required for the IAM role, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     *        Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        This setting is required for RDS Custom.

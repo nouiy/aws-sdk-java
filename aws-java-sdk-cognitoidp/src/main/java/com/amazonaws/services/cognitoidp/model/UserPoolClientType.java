@@ -265,8 +265,8 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
      * </p>
      * <note>
      * <p>
-     * Amazon Cognito User Pools only supports sending events to Amazon Pinpoint projects in the US East (N. Virginia)
-     * us-east-1 Region, regardless of the Region in which the user pool resides.
+     * Amazon Cognito user pools only support sending events to Amazon Pinpoint projects in the US East (N. Virginia)
+     * us-east-1 Region, regardless of the Region where the user pool resides.
      * </p>
      * </note>
      */
@@ -2337,16 +2337,16 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
      * </p>
      * <note>
      * <p>
-     * Amazon Cognito User Pools only supports sending events to Amazon Pinpoint projects in the US East (N. Virginia)
-     * us-east-1 Region, regardless of the Region in which the user pool resides.
+     * Amazon Cognito user pools only support sending events to Amazon Pinpoint projects in the US East (N. Virginia)
+     * us-east-1 Region, regardless of the Region where the user pool resides.
      * </p>
      * </note>
      * 
      * @param analyticsConfiguration
      *        The Amazon Pinpoint analytics configuration for the user pool client.</p> <note>
      *        <p>
-     *        Amazon Cognito User Pools only supports sending events to Amazon Pinpoint projects in the US East (N.
-     *        Virginia) us-east-1 Region, regardless of the Region in which the user pool resides.
+     *        Amazon Cognito user pools only support sending events to Amazon Pinpoint projects in the US East (N.
+     *        Virginia) us-east-1 Region, regardless of the Region where the user pool resides.
      *        </p>
      */
 
@@ -2360,15 +2360,15 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
      * </p>
      * <note>
      * <p>
-     * Amazon Cognito User Pools only supports sending events to Amazon Pinpoint projects in the US East (N. Virginia)
-     * us-east-1 Region, regardless of the Region in which the user pool resides.
+     * Amazon Cognito user pools only support sending events to Amazon Pinpoint projects in the US East (N. Virginia)
+     * us-east-1 Region, regardless of the Region where the user pool resides.
      * </p>
      * </note>
      * 
      * @return The Amazon Pinpoint analytics configuration for the user pool client.</p> <note>
      *         <p>
-     *         Amazon Cognito User Pools only supports sending events to Amazon Pinpoint projects in the US East (N.
-     *         Virginia) us-east-1 Region, regardless of the Region in which the user pool resides.
+     *         Amazon Cognito user pools only support sending events to Amazon Pinpoint projects in the US East (N.
+     *         Virginia) us-east-1 Region, regardless of the Region where the user pool resides.
      *         </p>
      */
 
@@ -2382,16 +2382,16 @@ public class UserPoolClientType implements Serializable, Cloneable, StructuredPo
      * </p>
      * <note>
      * <p>
-     * Amazon Cognito User Pools only supports sending events to Amazon Pinpoint projects in the US East (N. Virginia)
-     * us-east-1 Region, regardless of the Region in which the user pool resides.
+     * Amazon Cognito user pools only support sending events to Amazon Pinpoint projects in the US East (N. Virginia)
+     * us-east-1 Region, regardless of the Region where the user pool resides.
      * </p>
      * </note>
      * 
      * @param analyticsConfiguration
      *        The Amazon Pinpoint analytics configuration for the user pool client.</p> <note>
      *        <p>
-     *        Amazon Cognito User Pools only supports sending events to Amazon Pinpoint projects in the US East (N.
-     *        Virginia) us-east-1 Region, regardless of the Region in which the user pool resides.
+     *        Amazon Cognito user pools only support sending events to Amazon Pinpoint projects in the US East (N.
+     *        Virginia) us-east-1 Region, regardless of the Region where the user pool resides.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

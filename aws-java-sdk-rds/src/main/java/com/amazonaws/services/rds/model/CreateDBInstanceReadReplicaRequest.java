@@ -101,7 +101,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
      * classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Default: Inherits from the source DB instance.
@@ -460,7 +460,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <p>
      * For more information about IAM database authentication, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
@@ -632,7 +632,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required for RDS Custom.
@@ -1151,7 +1151,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
      * classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Default: Inherits from the source DB instance.
@@ -1162,7 +1162,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
      *        instance classes, and availability for your engine, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
-     *        Class</a> in the <i>Amazon RDS User Guide.</i> </p>
+     *        Class</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        Default: Inherits from the source DB instance.
      */
@@ -1177,7 +1177,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
      * classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Default: Inherits from the source DB instance.
@@ -1187,7 +1187,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *         are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
      *         instance classes, and availability for your engine, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
-     *         Class</a> in the <i>Amazon RDS User Guide.</i> </p>
+     *         Class</a> in the <i>Amazon RDS User Guide</i>.</p>
      *         <p>
      *         Default: Inherits from the source DB instance.
      */
@@ -1202,7 +1202,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
      * classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Default: Inherits from the source DB instance.
@@ -1213,7 +1213,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
      *        instance classes, and availability for your engine, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
-     *        Class</a> in the <i>Amazon RDS User Guide.</i> </p>
+     *        Class</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        Default: Inherits from the source DB instance.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1384,7 +1384,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param multiAZ
-     *        A value that indicates whether the read replica is in a Multi-AZ deployment. </p>
+     *        A value that indicates whether the read replica is in a Multi-AZ deployment.</p>
      *        <p>
      *        You can create a read replica as a Multi-AZ DB instance. RDS creates a standby of your replica in another
      *        Availability Zone for failover support for the replica. Creating your read replica as a Multi-AZ DB
@@ -1411,7 +1411,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * This setting doesn't apply to RDS Custom.
      * </p>
      * 
-     * @return A value that indicates whether the read replica is in a Multi-AZ deployment. </p>
+     * @return A value that indicates whether the read replica is in a Multi-AZ deployment.</p>
      *         <p>
      *         You can create a read replica as a Multi-AZ DB instance. RDS creates a standby of your replica in another
      *         Availability Zone for failover support for the replica. Creating your read replica as a Multi-AZ DB
@@ -1439,7 +1439,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param multiAZ
-     *        A value that indicates whether the read replica is in a Multi-AZ deployment. </p>
+     *        A value that indicates whether the read replica is in a Multi-AZ deployment.</p>
      *        <p>
      *        You can create a read replica as a Multi-AZ DB instance. RDS creates a standby of your replica in another
      *        Availability Zone for failover support for the replica. Creating your read replica as a Multi-AZ DB
@@ -1468,7 +1468,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * This setting doesn't apply to RDS Custom.
      * </p>
      * 
-     * @return A value that indicates whether the read replica is in a Multi-AZ deployment. </p>
+     * @return A value that indicates whether the read replica is in a Multi-AZ deployment.</p>
      *         <p>
      *         You can create a read replica as a Multi-AZ DB instance. RDS creates a standby of your replica in another
      *         Availability Zone for failover support for the replica. Creating your read replica as a Multi-AZ DB
@@ -2454,7 +2454,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * Default: The default EC2 VPC security group for the DB subnet group's VPC.
      * </p>
      * 
-     * @return A list of Amazon EC2 VPC security groups to associate with the read replica. </p>
+     * @return A list of Amazon EC2 VPC security groups to associate with the read replica.</p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
      *         </p>
@@ -2481,7 +2481,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of Amazon EC2 VPC security groups to associate with the read replica. </p>
+     *        A list of Amazon EC2 VPC security groups to associate with the read replica.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
      *        </p>
@@ -2515,7 +2515,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of Amazon EC2 VPC security groups to associate with the read replica. </p>
+     *        A list of Amazon EC2 VPC security groups to associate with the read replica.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
      *        </p>
@@ -2546,7 +2546,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of Amazon EC2 VPC security groups to associate with the read replica. </p>
+     *        A list of Amazon EC2 VPC security groups to associate with the read replica.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
      *        </p>
@@ -3151,7 +3151,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * @param preSignedUrl
      *        The URL that contains a Signature Version 4 signed request for the
      *        <code>CreateDBInstanceReadReplica</code> API action in the source Amazon Web Services Region that contains
-     *        the source DB instance. </p>
+     *        the source DB instance.</p>
      *        <p>
      *        You must specify this parameter when you create an encrypted read replica from another Amazon Web Services
      *        Region by using the Amazon RDS API. Don't specify <code>PreSignedUrl</code> when you are creating an
@@ -3296,7 +3296,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * 
      * @return The URL that contains a Signature Version 4 signed request for the
      *         <code>CreateDBInstanceReadReplica</code> API action in the source Amazon Web Services Region that
-     *         contains the source DB instance. </p>
+     *         contains the source DB instance.</p>
      *         <p>
      *         You must specify this parameter when you create an encrypted read replica from another Amazon Web
      *         Services Region by using the Amazon RDS API. Don't specify <code>PreSignedUrl</code> when you are
@@ -3442,7 +3442,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * @param preSignedUrl
      *        The URL that contains a Signature Version 4 signed request for the
      *        <code>CreateDBInstanceReadReplica</code> API action in the source Amazon Web Services Region that contains
-     *        the source DB instance. </p>
+     *        the source DB instance.</p>
      *        <p>
      *        You must specify this parameter when you create an encrypted read replica from another Amazon Web Services
      *        Region by using the Amazon RDS API. Don't specify <code>PreSignedUrl</code> when you are creating an
@@ -3524,7 +3524,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <p>
      * For more information about IAM database authentication, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
@@ -3536,7 +3536,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        <p>
      *        For more information about IAM database authentication, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     *        Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     *        Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
@@ -3554,7 +3554,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <p>
      * For more information about IAM database authentication, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
@@ -3565,7 +3565,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *         <p>
      *         For more information about IAM database authentication, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     *         Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     *         Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
@@ -3583,7 +3583,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <p>
      * For more information about IAM database authentication, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
@@ -3595,7 +3595,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        <p>
      *        For more information about IAM database authentication, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     *        Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     *        Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
@@ -3615,7 +3615,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <p>
      * For more information about IAM database authentication, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
@@ -3626,7 +3626,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *         <p>
      *         For more information about IAM database authentication, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     *         Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     *         Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
@@ -3863,8 +3863,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param performanceInsightsRetentionPeriod
-     *        The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
-     *        </p>
+     *        The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
      */
@@ -3881,8 +3880,8 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * This setting doesn't apply to RDS Custom.
      * </p>
      * 
-     * @return The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
-     *         </p>
+     * @return The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2
+     *         years).</p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
      */
@@ -3900,8 +3899,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param performanceInsightsRetentionPeriod
-     *        The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
-     *        </p>
+     *        The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -4741,7 +4739,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required for RDS Custom.
@@ -4771,7 +4769,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        <p>
      *        For the list of permissions required for the IAM role, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     *        Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        This setting is required for RDS Custom.
@@ -4806,7 +4804,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required for RDS Custom.
@@ -4835,7 +4833,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *         <p>
      *         For the list of permissions required for the IAM role, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc"
-     *         > Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *         > Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         This setting is required for RDS Custom.
@@ -4870,7 +4868,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required for RDS Custom.
@@ -4900,7 +4898,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        <p>
      *        For the list of permissions required for the IAM role, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     *        Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        This setting is required for RDS Custom.

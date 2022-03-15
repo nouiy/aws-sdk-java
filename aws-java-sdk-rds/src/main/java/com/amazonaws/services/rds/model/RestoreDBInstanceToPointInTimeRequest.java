@@ -111,7 +111,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * classes are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
      * instance classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Default: The same DBInstanceClass as the original DB instance.
@@ -578,7 +578,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required for RDS Custom.
@@ -1078,7 +1078,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * 
      * @param useLatestRestorableTime
      *        A value that indicates whether the DB instance is restored from the latest backup time. By default, the DB
-     *        instance isn't restored from the latest backup time. </p>
+     *        instance isn't restored from the latest backup time.</p>
      *        <p>
      *        Constraints: Can't be specified if the <code>RestoreTime</code> parameter is provided.
      */
@@ -1097,7 +1097,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @return A value that indicates whether the DB instance is restored from the latest backup time. By default, the
-     *         DB instance isn't restored from the latest backup time. </p>
+     *         DB instance isn't restored from the latest backup time.</p>
      *         <p>
      *         Constraints: Can't be specified if the <code>RestoreTime</code> parameter is provided.
      */
@@ -1117,7 +1117,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * 
      * @param useLatestRestorableTime
      *        A value that indicates whether the DB instance is restored from the latest backup time. By default, the DB
-     *        instance isn't restored from the latest backup time. </p>
+     *        instance isn't restored from the latest backup time.</p>
      *        <p>
      *        Constraints: Can't be specified if the <code>RestoreTime</code> parameter is provided.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1138,7 +1138,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @return A value that indicates whether the DB instance is restored from the latest backup time. By default, the
-     *         DB instance isn't restored from the latest backup time. </p>
+     *         DB instance isn't restored from the latest backup time.</p>
      *         <p>
      *         Constraints: Can't be specified if the <code>RestoreTime</code> parameter is provided.
      */
@@ -1153,7 +1153,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * classes are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
      * instance classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Default: The same DBInstanceClass as the original DB instance.
@@ -1164,7 +1164,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *        instance classes are available in all Amazon Web Services Regions, or for all database engines. For the
      *        full list of DB instance classes, and availability for your engine, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
-     *        Class</a> in the <i>Amazon RDS User Guide.</i> </p>
+     *        Class</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        Default: The same DBInstanceClass as the original DB instance.
      */
@@ -1179,7 +1179,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * classes are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
      * instance classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Default: The same DBInstanceClass as the original DB instance.
@@ -1189,7 +1189,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *         instance classes are available in all Amazon Web Services Regions, or for all database engines. For the
      *         full list of DB instance classes, and availability for your engine, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
-     *         Class</a> in the <i>Amazon RDS User Guide.</i> </p>
+     *         Class</a> in the <i>Amazon RDS User Guide</i>.</p>
      *         <p>
      *         Default: The same DBInstanceClass as the original DB instance.
      */
@@ -1204,7 +1204,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * classes are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
      * instance classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Default: The same DBInstanceClass as the original DB instance.
@@ -1215,7 +1215,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *        instance classes are available in all Amazon Web Services Regions, or for all database engines. For the
      *        full list of DB instance classes, and availability for your engine, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
-     *        Class</a> in the <i>Amazon RDS User Guide.</i> </p>
+     *        Class</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        Default: The same DBInstanceClass as the original DB instance.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2924,7 +2924,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * Default: The default EC2 VPC security group for the DB subnet group's VPC.
      * </p>
      * 
-     * @return A list of EC2 VPC security groups to associate with this DB instance. </p>
+     * @return A list of EC2 VPC security groups to associate with this DB instance.</p>
      *         <p>
      *         Default: The default EC2 VPC security group for the DB subnet group's VPC.
      */
@@ -2945,7 +2945,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of EC2 VPC security groups to associate with this DB instance. </p>
+     *        A list of EC2 VPC security groups to associate with this DB instance.</p>
      *        <p>
      *        Default: The default EC2 VPC security group for the DB subnet group's VPC.
      */
@@ -2973,7 +2973,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of EC2 VPC security groups to associate with this DB instance. </p>
+     *        A list of EC2 VPC security groups to associate with this DB instance.</p>
      *        <p>
      *        Default: The default EC2 VPC security group for the DB subnet group's VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2998,7 +2998,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of EC2 VPC security groups to associate with this DB instance. </p>
+     *        A list of EC2 VPC security groups to associate with this DB instance.</p>
      *        <p>
      *        Default: The default EC2 VPC security group for the DB subnet group's VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -4293,7 +4293,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required for RDS Custom.
@@ -4323,7 +4323,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *        <p>
      *        For the list of permissions required for the IAM role, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     *        Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        This setting is required for RDS Custom.
@@ -4358,7 +4358,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required for RDS Custom.
@@ -4387,7 +4387,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *         <p>
      *         For the list of permissions required for the IAM role, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc"
-     *         > Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *         > Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         This setting is required for RDS Custom.
@@ -4422,7 +4422,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required for RDS Custom.
@@ -4452,7 +4452,7 @@ public class RestoreDBInstanceToPointInTimeRequest extends com.amazonaws.AmazonW
      *        <p>
      *        For the list of permissions required for the IAM role, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     *        Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        This setting is required for RDS Custom.

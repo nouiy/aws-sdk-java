@@ -85,6 +85,24 @@ public class GetRevisionResult extends com.amazonaws.AmazonWebServiceResult<com.
      * </p>
      */
     private java.util.Date updatedAt;
+    /**
+     * <p>
+     * A required comment to inform subscribers of the reason their access to the revision was revoked.
+     * </p>
+     */
+    private String revocationComment;
+    /**
+     * <p>
+     * A status indicating that subscribers' access to the revision was revoked.
+     * </p>
+     */
+    private Boolean revoked;
+    /**
+     * <p>
+     * The date and time that the revision was revoked, in ISO 8601 format.
+     * </p>
+     */
+    private java.util.Date revokedAt;
 
     /**
      * <p>
@@ -545,6 +563,138 @@ public class GetRevisionResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
+     * <p>
+     * A required comment to inform subscribers of the reason their access to the revision was revoked.
+     * </p>
+     * 
+     * @param revocationComment
+     *        A required comment to inform subscribers of the reason their access to the revision was revoked.
+     */
+
+    public void setRevocationComment(String revocationComment) {
+        this.revocationComment = revocationComment;
+    }
+
+    /**
+     * <p>
+     * A required comment to inform subscribers of the reason their access to the revision was revoked.
+     * </p>
+     * 
+     * @return A required comment to inform subscribers of the reason their access to the revision was revoked.
+     */
+
+    public String getRevocationComment() {
+        return this.revocationComment;
+    }
+
+    /**
+     * <p>
+     * A required comment to inform subscribers of the reason their access to the revision was revoked.
+     * </p>
+     * 
+     * @param revocationComment
+     *        A required comment to inform subscribers of the reason their access to the revision was revoked.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetRevisionResult withRevocationComment(String revocationComment) {
+        setRevocationComment(revocationComment);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A status indicating that subscribers' access to the revision was revoked.
+     * </p>
+     * 
+     * @param revoked
+     *        A status indicating that subscribers' access to the revision was revoked.
+     */
+
+    public void setRevoked(Boolean revoked) {
+        this.revoked = revoked;
+    }
+
+    /**
+     * <p>
+     * A status indicating that subscribers' access to the revision was revoked.
+     * </p>
+     * 
+     * @return A status indicating that subscribers' access to the revision was revoked.
+     */
+
+    public Boolean getRevoked() {
+        return this.revoked;
+    }
+
+    /**
+     * <p>
+     * A status indicating that subscribers' access to the revision was revoked.
+     * </p>
+     * 
+     * @param revoked
+     *        A status indicating that subscribers' access to the revision was revoked.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetRevisionResult withRevoked(Boolean revoked) {
+        setRevoked(revoked);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A status indicating that subscribers' access to the revision was revoked.
+     * </p>
+     * 
+     * @return A status indicating that subscribers' access to the revision was revoked.
+     */
+
+    public Boolean isRevoked() {
+        return this.revoked;
+    }
+
+    /**
+     * <p>
+     * The date and time that the revision was revoked, in ISO 8601 format.
+     * </p>
+     * 
+     * @param revokedAt
+     *        The date and time that the revision was revoked, in ISO 8601 format.
+     */
+
+    public void setRevokedAt(java.util.Date revokedAt) {
+        this.revokedAt = revokedAt;
+    }
+
+    /**
+     * <p>
+     * The date and time that the revision was revoked, in ISO 8601 format.
+     * </p>
+     * 
+     * @return The date and time that the revision was revoked, in ISO 8601 format.
+     */
+
+    public java.util.Date getRevokedAt() {
+        return this.revokedAt;
+    }
+
+    /**
+     * <p>
+     * The date and time that the revision was revoked, in ISO 8601 format.
+     * </p>
+     * 
+     * @param revokedAt
+     *        The date and time that the revision was revoked, in ISO 8601 format.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetRevisionResult withRevokedAt(java.util.Date revokedAt) {
+        setRevokedAt(revokedAt);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -573,7 +723,13 @@ public class GetRevisionResult extends com.amazonaws.AmazonWebServiceResult<com.
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getUpdatedAt() != null)
-            sb.append("UpdatedAt: ").append(getUpdatedAt());
+            sb.append("UpdatedAt: ").append(getUpdatedAt()).append(",");
+        if (getRevocationComment() != null)
+            sb.append("RevocationComment: ").append(getRevocationComment()).append(",");
+        if (getRevoked() != null)
+            sb.append("Revoked: ").append(getRevoked()).append(",");
+        if (getRevokedAt() != null)
+            sb.append("RevokedAt: ").append(getRevokedAt());
         sb.append("}");
         return sb.toString();
     }
@@ -624,6 +780,18 @@ public class GetRevisionResult extends com.amazonaws.AmazonWebServiceResult<com.
             return false;
         if (other.getUpdatedAt() != null && other.getUpdatedAt().equals(this.getUpdatedAt()) == false)
             return false;
+        if (other.getRevocationComment() == null ^ this.getRevocationComment() == null)
+            return false;
+        if (other.getRevocationComment() != null && other.getRevocationComment().equals(this.getRevocationComment()) == false)
+            return false;
+        if (other.getRevoked() == null ^ this.getRevoked() == null)
+            return false;
+        if (other.getRevoked() != null && other.getRevoked().equals(this.getRevoked()) == false)
+            return false;
+        if (other.getRevokedAt() == null ^ this.getRevokedAt() == null)
+            return false;
+        if (other.getRevokedAt() != null && other.getRevokedAt().equals(this.getRevokedAt()) == false)
+            return false;
         return true;
     }
 
@@ -641,6 +809,9 @@ public class GetRevisionResult extends com.amazonaws.AmazonWebServiceResult<com.
         hashCode = prime * hashCode + ((getSourceId() == null) ? 0 : getSourceId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
+        hashCode = prime * hashCode + ((getRevocationComment() == null) ? 0 : getRevocationComment().hashCode());
+        hashCode = prime * hashCode + ((getRevoked() == null) ? 0 : getRevoked().hashCode());
+        hashCode = prime * hashCode + ((getRevokedAt() == null) ? 0 : getRevokedAt().hashCode());
         return hashCode;
     }
 

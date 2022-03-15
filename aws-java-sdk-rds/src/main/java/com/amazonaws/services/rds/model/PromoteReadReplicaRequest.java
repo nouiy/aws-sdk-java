@@ -414,7 +414,7 @@ public class PromoteReadReplicaRequest extends com.amazonaws.AmazonWebServiceReq
      * 
      * @param preferredBackupWindow
      *        The daily time range during which automated backups are created if automated backups are enabled, using
-     *        the <code>BackupRetentionPeriod</code> parameter. </p>
+     *        the <code>BackupRetentionPeriod</code> parameter.</p>
      *        <p>
      *        The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
      *        Services Region. To see the time blocks available, see <a
@@ -489,7 +489,7 @@ public class PromoteReadReplicaRequest extends com.amazonaws.AmazonWebServiceReq
      * </ul>
      * 
      * @return The daily time range during which automated backups are created if automated backups are enabled, using
-     *         the <code>BackupRetentionPeriod</code> parameter. </p>
+     *         the <code>BackupRetentionPeriod</code> parameter.</p>
      *         <p>
      *         The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
      *         Services Region. To see the time blocks available, see <a
@@ -565,7 +565,7 @@ public class PromoteReadReplicaRequest extends com.amazonaws.AmazonWebServiceReq
      * 
      * @param preferredBackupWindow
      *        The daily time range during which automated backups are created if automated backups are enabled, using
-     *        the <code>BackupRetentionPeriod</code> parameter. </p>
+     *        the <code>BackupRetentionPeriod</code> parameter.</p>
      *        <p>
      *        The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
      *        Services Region. To see the time blocks available, see <a

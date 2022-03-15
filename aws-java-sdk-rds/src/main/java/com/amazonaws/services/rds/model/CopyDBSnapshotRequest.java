@@ -209,7 +209,7 @@ public class CopyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest
      * or Microsoft SQL Server, you must specify this option when copying across Amazon Web Services Regions. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopySnapshot.html#USER_CopySnapshot.Options"
-     * >Option group considerations</a> in the <i>Amazon RDS User Guide.</i>
+     * >Option group considerations</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      */
     private String optionGroupName;
@@ -500,7 +500,7 @@ public class CopyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param targetDBSnapshotIdentifier
-     *        The identifier for the copy of the snapshot. </p>
+     *        The identifier for the copy of the snapshot.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -567,7 +567,7 @@ public class CopyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest
      * Example: <code>my-db-snapshot</code>
      * </p>
      * 
-     * @return The identifier for the copy of the snapshot. </p>
+     * @return The identifier for the copy of the snapshot.</p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -635,7 +635,7 @@ public class CopyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param targetDBSnapshotIdentifier
-     *        The identifier for the copy of the snapshot. </p>
+     *        The identifier for the copy of the snapshot.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -697,7 +697,7 @@ public class CopyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest
      * 
      * @param kmsKeyId
      *        The Amazon Web Services KMS key identifier for an encrypted DB snapshot. The Amazon Web Services KMS key
-     *        identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. </p>
+     *        identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.</p>
      *        <p>
      *        If you copy an encrypted DB snapshot from your Amazon Web Services account, you can specify a value for
      *        this parameter to encrypt the copy with a new KMS key. If you don't specify a value for this parameter,
@@ -747,7 +747,7 @@ public class CopyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @return The Amazon Web Services KMS key identifier for an encrypted DB snapshot. The Amazon Web Services KMS key
-     *         identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. </p>
+     *         identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.</p>
      *         <p>
      *         If you copy an encrypted DB snapshot from your Amazon Web Services account, you can specify a value for
      *         this parameter to encrypt the copy with a new KMS key. If you don't specify a value for this parameter,
@@ -798,7 +798,7 @@ public class CopyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest
      * 
      * @param kmsKeyId
      *        The Amazon Web Services KMS key identifier for an encrypted DB snapshot. The Amazon Web Services KMS key
-     *        identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. </p>
+     *        identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.</p>
      *        <p>
      *        If you copy an encrypted DB snapshot from your Amazon Web Services account, you can specify a value for
      *        this parameter to encrypt the copy with a new KMS key. If you don't specify a value for this parameter,
@@ -1006,7 +1006,7 @@ public class CopyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest
      * 
      * @param preSignedUrl
      *        The URL that contains a Signature Version 4 signed request for the <code>CopyDBSnapshot</code> API action
-     *        in the source Amazon Web Services Region that contains the source DB snapshot to copy. </p>
+     *        in the source Amazon Web Services Region that contains the source DB snapshot to copy.</p>
      *        <p>
      *        You must specify this parameter when you copy an encrypted DB snapshot from another Amazon Web Services
      *        Region by using the Amazon RDS API. Don't specify <code>PreSignedUrl</code> when you are copying an
@@ -1136,7 +1136,7 @@ public class CopyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest
      * </note>
      * 
      * @return The URL that contains a Signature Version 4 signed request for the <code>CopyDBSnapshot</code> API action
-     *         in the source Amazon Web Services Region that contains the source DB snapshot to copy. </p>
+     *         in the source Amazon Web Services Region that contains the source DB snapshot to copy.</p>
      *         <p>
      *         You must specify this parameter when you copy an encrypted DB snapshot from another Amazon Web Services
      *         Region by using the Amazon RDS API. Don't specify <code>PreSignedUrl</code> when you are copying an
@@ -1267,7 +1267,7 @@ public class CopyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest
      * 
      * @param preSignedUrl
      *        The URL that contains a Signature Version 4 signed request for the <code>CopyDBSnapshot</code> API action
-     *        in the source Amazon Web Services Region that contains the source DB snapshot to copy. </p>
+     *        in the source Amazon Web Services Region that contains the source DB snapshot to copy.</p>
      *        <p>
      *        You must specify this parameter when you copy an encrypted DB snapshot from another Amazon Web Services
      *        Region by using the Amazon RDS API. Don't specify <code>PreSignedUrl</code> when you are copying an
@@ -1344,7 +1344,7 @@ public class CopyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest
      * or Microsoft SQL Server, you must specify this option when copying across Amazon Web Services Regions. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopySnapshot.html#USER_CopySnapshot.Options"
-     * >Option group considerations</a> in the <i>Amazon RDS User Guide.</i>
+     * >Option group considerations</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param optionGroupName
@@ -1355,7 +1355,7 @@ public class CopyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest
      *        for Oracle or Microsoft SQL Server, you must specify this option when copying across Amazon Web Services
      *        Regions. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopySnapshot.html#USER_CopySnapshot.Options"
-     *        >Option group considerations</a> in the <i>Amazon RDS User Guide.</i>
+     *        >Option group considerations</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public void setOptionGroupName(String optionGroupName) {
@@ -1372,7 +1372,7 @@ public class CopyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest
      * or Microsoft SQL Server, you must specify this option when copying across Amazon Web Services Regions. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopySnapshot.html#USER_CopySnapshot.Options"
-     * >Option group considerations</a> in the <i>Amazon RDS User Guide.</i>
+     * >Option group considerations</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @return The name of an option group to associate with the copy of the snapshot.</p>
@@ -1382,7 +1382,7 @@ public class CopyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest
      *         Encryption for Oracle or Microsoft SQL Server, you must specify this option when copying across Amazon
      *         Web Services Regions. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopySnapshot.html#USER_CopySnapshot.Options"
-     *         >Option group considerations</a> in the <i>Amazon RDS User Guide.</i>
+     *         >Option group considerations</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public String getOptionGroupName() {
@@ -1399,7 +1399,7 @@ public class CopyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest
      * or Microsoft SQL Server, you must specify this option when copying across Amazon Web Services Regions. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopySnapshot.html#USER_CopySnapshot.Options"
-     * >Option group considerations</a> in the <i>Amazon RDS User Guide.</i>
+     * >Option group considerations</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param optionGroupName
@@ -1410,7 +1410,7 @@ public class CopyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceRequest
      *        for Oracle or Microsoft SQL Server, you must specify this option when copying across Amazon Web Services
      *        Regions. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopySnapshot.html#USER_CopySnapshot.Options"
-     *        >Option group considerations</a> in the <i>Amazon RDS User Guide.</i>
+     *        >Option group considerations</a> in the <i>Amazon RDS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

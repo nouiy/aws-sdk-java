@@ -1,3 +1,36 @@
+# __1.12.179__ __2022-03-15__
+## __AWS Data Exchange__
+  - ### Features
+    - This feature enables data providers to use the RevokeRevision operation to revoke subscriber access to a given revision. Subscribers are unable to interact with assets within a revoked revision.
+
+## __AWS RoboMaker__
+  - ### Features
+    - This release deprecates ROS, Ubuntu and Gazbeo from RoboMaker Simulation Service Software Suites in favor of user-supplied containers and Relaxed Software Suites.
+
+## __Amazon Cognito Identity Provider__
+  - ### Features
+    - Updated EmailConfigurationType and SmsConfigurationType to reflect that you can now choose Amazon SES and Amazon SNS resources in the same Region.
+
+## __Amazon EC2 Container Service__
+  - ### Features
+    - Documentation only update to address tickets
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Adds the Cascade parameter to the DeleteIpam API. Customers can use this parameter to automatically delete their IPAM, including non-default scopes, pools, cidrs, and allocations. There mustn't be any pools provisioned in the default public scope to use this parameter.
+
+## __Amazon Keyspaces__
+  - ### Features
+    - Fixing formatting issues in CLI and SDK documentation
+
+## __Amazon Location Service__
+  - ### Features
+    - New HERE style "VectorHereExplore" and "VectorHereExploreTruck".
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - Various documentation improvements
+
 # __1.12.178__ __2022-03-14__
 ## __AWS Config__
   - ### Features

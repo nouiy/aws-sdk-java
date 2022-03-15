@@ -56,6 +56,10 @@ public class SmsConfigurationTypeJsonUnmarshaller implements Unmarshaller<SmsCon
                     context.nextToken();
                     smsConfigurationType.setExternalId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("SnsRegion", targetDepth)) {
+                    context.nextToken();
+                    smsConfigurationType.setSnsRegion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

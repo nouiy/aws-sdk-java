@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The result for one <code>SnappedDeparturePosition</code> <code>SnappedDestinationPosition</code> pair.
+ * The result for the calculated route of one <code>DeparturePosition</code> <code>DestinationPosition</code> pair.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/RouteMatrixEntry" target="_top">AWS API

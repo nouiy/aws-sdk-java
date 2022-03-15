@@ -257,7 +257,7 @@ public class DescribeDBClusterParameterGroupsRequest extends com.amazonaws.Amazo
      * @param maxRecords
      *        The maximum number of records to include in the response. If more records exist than the specified
      *        <code>MaxRecords</code> value, a pagination token called a marker is included in the response so you can
-     *        retrieve the remaining results. </p>
+     *        retrieve the remaining results.</p>
      *        <p>
      *        Default: 100
      *        </p>
@@ -284,7 +284,7 @@ public class DescribeDBClusterParameterGroupsRequest extends com.amazonaws.Amazo
      * 
      * @return The maximum number of records to include in the response. If more records exist than the specified
      *         <code>MaxRecords</code> value, a pagination token called a marker is included in the response so you can
-     *         retrieve the remaining results. </p>
+     *         retrieve the remaining results.</p>
      *         <p>
      *         Default: 100
      *         </p>
@@ -312,7 +312,7 @@ public class DescribeDBClusterParameterGroupsRequest extends com.amazonaws.Amazo
      * @param maxRecords
      *        The maximum number of records to include in the response. If more records exist than the specified
      *        <code>MaxRecords</code> value, a pagination token called a marker is included in the response so you can
-     *        retrieve the remaining results. </p>
+     *        retrieve the remaining results.</p>
      *        <p>
      *        Default: 100
      *        </p>

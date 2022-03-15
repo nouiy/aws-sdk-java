@@ -136,7 +136,7 @@ public class ModifyGlobalClusterRequest extends com.amazonaws.AmazonWebServiceRe
      * </ul>
      * 
      * @param globalClusterIdentifier
-     *        The DB cluster identifier for the global cluster being modified. This parameter isn't case-sensitive. </p>
+     *        The DB cluster identifier for the global cluster being modified. This parameter isn't case-sensitive.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -167,8 +167,7 @@ public class ModifyGlobalClusterRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * 
-     * @return The DB cluster identifier for the global cluster being modified. This parameter isn't case-sensitive.
-     *         </p>
+     * @return The DB cluster identifier for the global cluster being modified. This parameter isn't case-sensitive.</p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -200,7 +199,7 @@ public class ModifyGlobalClusterRequest extends com.amazonaws.AmazonWebServiceRe
      * </ul>
      * 
      * @param globalClusterIdentifier
-     *        The DB cluster identifier for the global cluster being modified. This parameter isn't case-sensitive. </p>
+     *        The DB cluster identifier for the global cluster being modified. This parameter isn't case-sensitive.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -249,7 +248,7 @@ public class ModifyGlobalClusterRequest extends com.amazonaws.AmazonWebServiceRe
      * 
      * @param newGlobalClusterIdentifier
      *        The new cluster identifier for the global database cluster when modifying a global database cluster. This
-     *        value is stored as a lowercase string. </p>
+     *        value is stored as a lowercase string.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -308,7 +307,7 @@ public class ModifyGlobalClusterRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @return The new cluster identifier for the global database cluster when modifying a global database cluster. This
-     *         value is stored as a lowercase string. </p>
+     *         value is stored as a lowercase string.</p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -368,7 +367,7 @@ public class ModifyGlobalClusterRequest extends com.amazonaws.AmazonWebServiceRe
      * 
      * @param newGlobalClusterIdentifier
      *        The new cluster identifier for the global database cluster when modifying a global database cluster. This
-     *        value is stored as a lowercase string. </p>
+     *        value is stored as a lowercase string.</p>
      *        <p>
      *        Constraints:
      *        </p>

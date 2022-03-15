@@ -253,7 +253,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -314,8 +314,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -419,9 +418,9 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The engine mode of the new cluster. Specify <code>provisioned</code> or <code>serverless</code>, depending on the
-     * type of the cluster you are creating. You can create an Aurora Serverless clone from a provisioned cluster, or a
-     * provisioned clone from an Aurora Serverless cluster. To create a clone that is an Aurora Serverless cluster, the
-     * original cluster must be an Aurora Serverless cluster or an encrypted provisioned cluster.
+     * type of the cluster you are creating. You can create an Aurora Serverless v1 clone from a provisioned cluster, or
+     * a provisioned clone from an Aurora Serverless v1 cluster. To create a clone that is an Aurora Serverless v1
+     * cluster, the original cluster must be an Aurora Serverless v1 cluster or an encrypted provisioned cluster.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -1255,7 +1254,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * 
      * @param useLatestRestorableTime
      *        A value that indicates whether to restore the DB cluster to the latest restorable backup time. By default,
-     *        the DB cluster isn't restored to the latest restorable backup time. </p>
+     *        the DB cluster isn't restored to the latest restorable backup time.</p>
      *        <p>
      *        Constraints: Can't be specified if <code>RestoreToTime</code> parameter is provided.
      *        </p>
@@ -1280,7 +1279,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @return A value that indicates whether to restore the DB cluster to the latest restorable backup time. By
-     *         default, the DB cluster isn't restored to the latest restorable backup time. </p>
+     *         default, the DB cluster isn't restored to the latest restorable backup time.</p>
      *         <p>
      *         Constraints: Can't be specified if <code>RestoreToTime</code> parameter is provided.
      *         </p>
@@ -1306,7 +1305,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * 
      * @param useLatestRestorableTime
      *        A value that indicates whether to restore the DB cluster to the latest restorable backup time. By default,
-     *        the DB cluster isn't restored to the latest restorable backup time. </p>
+     *        the DB cluster isn't restored to the latest restorable backup time.</p>
      *        <p>
      *        Constraints: Can't be specified if <code>RestoreToTime</code> parameter is provided.
      *        </p>
@@ -1333,7 +1332,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @return A value that indicates whether to restore the DB cluster to the latest restorable backup time. By
-     *         default, the DB cluster isn't restored to the latest restorable backup time. </p>
+     *         default, the DB cluster isn't restored to the latest restorable backup time.</p>
      *         <p>
      *         Constraints: Can't be specified if <code>RestoreToTime</code> parameter is provided.
      *         </p>
@@ -1973,7 +1972,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -1985,7 +1984,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
-     *        Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     *        Database Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters only
@@ -2003,7 +2002,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -2014,7 +2013,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
-     *         Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     *         Database Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         <p>
      *         Valid for: Aurora DB clusters only
@@ -2032,7 +2031,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -2044,7 +2043,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
-     *        Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     *        Database Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters only
@@ -2064,7 +2063,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -2075,7 +2074,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
-     *         Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     *         Database Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         <p>
      *         Valid for: Aurora DB clusters only
@@ -2250,8 +2249,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -2292,8 +2290,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *         <p>
      *         For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *         >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     *         Guide</i>.
+     *         >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      *         </p>
      *         <p>
      *         For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -2343,8 +2340,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -2386,8 +2382,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     *        Guide</i>.
+     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      *        </p>
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -2439,8 +2434,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -2487,8 +2481,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     *        Guide</i>.
+     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      *        </p>
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -2542,8 +2535,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -2585,8 +2577,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     *        Guide</i>.
+     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      *        </p>
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -2991,7 +2982,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * 
      * @param domain
      *        Specify the Active Directory directory ID to restore the DB cluster in. The domain must be created prior
-     *        to this operation. </p>
+     *        to this operation.</p>
      *        <p>
      *        For Amazon Aurora DB clusters, Amazon RDS can use Kerberos Authentication to authenticate users that
      *        connect to the DB cluster. For more information, see <a
@@ -3022,7 +3013,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      * 
      * @return Specify the Active Directory directory ID to restore the DB cluster in. The domain must be created prior
-     *         to this operation. </p>
+     *         to this operation.</p>
      *         <p>
      *         For Amazon Aurora DB clusters, Amazon RDS can use Kerberos Authentication to authenticate users that
      *         connect to the DB cluster. For more information, see <a
@@ -3054,7 +3045,7 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * 
      * @param domain
      *        Specify the Active Directory directory ID to restore the DB cluster in. The domain must be created prior
-     *        to this operation. </p>
+     *        to this operation.</p>
      *        <p>
      *        For Amazon Aurora DB clusters, Amazon RDS can use Kerberos Authentication to authenticate users that
      *        connect to the DB cluster. For more information, see <a
@@ -3184,9 +3175,9 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The engine mode of the new cluster. Specify <code>provisioned</code> or <code>serverless</code>, depending on the
-     * type of the cluster you are creating. You can create an Aurora Serverless clone from a provisioned cluster, or a
-     * provisioned clone from an Aurora Serverless cluster. To create a clone that is an Aurora Serverless cluster, the
-     * original cluster must be an Aurora Serverless cluster or an encrypted provisioned cluster.
+     * type of the cluster you are creating. You can create an Aurora Serverless v1 clone from a provisioned cluster, or
+     * a provisioned clone from an Aurora Serverless v1 cluster. To create a clone that is an Aurora Serverless v1
+     * cluster, the original cluster must be an Aurora Serverless v1 cluster or an encrypted provisioned cluster.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -3194,10 +3185,10 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * 
      * @param engineMode
      *        The engine mode of the new cluster. Specify <code>provisioned</code> or <code>serverless</code>, depending
-     *        on the type of the cluster you are creating. You can create an Aurora Serverless clone from a provisioned
-     *        cluster, or a provisioned clone from an Aurora Serverless cluster. To create a clone that is an Aurora
-     *        Serverless cluster, the original cluster must be an Aurora Serverless cluster or an encrypted provisioned
-     *        cluster.</p>
+     *        on the type of the cluster you are creating. You can create an Aurora Serverless v1 clone from a
+     *        provisioned cluster, or a provisioned clone from an Aurora Serverless v1 cluster. To create a clone that
+     *        is an Aurora Serverless v1 cluster, the original cluster must be an Aurora Serverless v1 cluster or an
+     *        encrypted provisioned cluster.</p>
      *        <p>
      *        Valid for: Aurora DB clusters only
      */
@@ -3209,19 +3200,19 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The engine mode of the new cluster. Specify <code>provisioned</code> or <code>serverless</code>, depending on the
-     * type of the cluster you are creating. You can create an Aurora Serverless clone from a provisioned cluster, or a
-     * provisioned clone from an Aurora Serverless cluster. To create a clone that is an Aurora Serverless cluster, the
-     * original cluster must be an Aurora Serverless cluster or an encrypted provisioned cluster.
+     * type of the cluster you are creating. You can create an Aurora Serverless v1 clone from a provisioned cluster, or
+     * a provisioned clone from an Aurora Serverless v1 cluster. To create a clone that is an Aurora Serverless v1
+     * cluster, the original cluster must be an Aurora Serverless v1 cluster or an encrypted provisioned cluster.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
      * </p>
      * 
      * @return The engine mode of the new cluster. Specify <code>provisioned</code> or <code>serverless</code>,
-     *         depending on the type of the cluster you are creating. You can create an Aurora Serverless clone from a
-     *         provisioned cluster, or a provisioned clone from an Aurora Serverless cluster. To create a clone that is
-     *         an Aurora Serverless cluster, the original cluster must be an Aurora Serverless cluster or an encrypted
-     *         provisioned cluster.</p>
+     *         depending on the type of the cluster you are creating. You can create an Aurora Serverless v1 clone from
+     *         a provisioned cluster, or a provisioned clone from an Aurora Serverless v1 cluster. To create a clone
+     *         that is an Aurora Serverless v1 cluster, the original cluster must be an Aurora Serverless v1 cluster or
+     *         an encrypted provisioned cluster.</p>
      *         <p>
      *         Valid for: Aurora DB clusters only
      */
@@ -3233,9 +3224,9 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The engine mode of the new cluster. Specify <code>provisioned</code> or <code>serverless</code>, depending on the
-     * type of the cluster you are creating. You can create an Aurora Serverless clone from a provisioned cluster, or a
-     * provisioned clone from an Aurora Serverless cluster. To create a clone that is an Aurora Serverless cluster, the
-     * original cluster must be an Aurora Serverless cluster or an encrypted provisioned cluster.
+     * type of the cluster you are creating. You can create an Aurora Serverless v1 clone from a provisioned cluster, or
+     * a provisioned clone from an Aurora Serverless v1 cluster. To create a clone that is an Aurora Serverless v1
+     * cluster, the original cluster must be an Aurora Serverless v1 cluster or an encrypted provisioned cluster.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -3243,10 +3234,10 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * 
      * @param engineMode
      *        The engine mode of the new cluster. Specify <code>provisioned</code> or <code>serverless</code>, depending
-     *        on the type of the cluster you are creating. You can create an Aurora Serverless clone from a provisioned
-     *        cluster, or a provisioned clone from an Aurora Serverless cluster. To create a clone that is an Aurora
-     *        Serverless cluster, the original cluster must be an Aurora Serverless cluster or an encrypted provisioned
-     *        cluster.</p>
+     *        on the type of the cluster you are creating. You can create an Aurora Serverless v1 clone from a
+     *        provisioned cluster, or a provisioned clone from an Aurora Serverless v1 cluster. To create a clone that
+     *        is an Aurora Serverless v1 cluster, the original cluster must be an Aurora Serverless v1 cluster or an
+     *        encrypted provisioned cluster.</p>
      *        <p>
      *        Valid for: Aurora DB clusters only
      * @return Returns a reference to this object so that method calls can be chained together.

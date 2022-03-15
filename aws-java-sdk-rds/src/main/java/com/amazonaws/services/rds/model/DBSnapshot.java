@@ -1148,7 +1148,7 @@ public class DBSnapshot implements Serializable, Cloneable {
      * 
      * @param kmsKeyId
      *        If <code>Encrypted</code> is true, the Amazon Web Services KMS key identifier for the encrypted DB
-     *        snapshot. </p>
+     *        snapshot.</p>
      *        <p>
      *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
      *        key.
@@ -1167,7 +1167,7 @@ public class DBSnapshot implements Serializable, Cloneable {
      * </p>
      * 
      * @return If <code>Encrypted</code> is true, the Amazon Web Services KMS key identifier for the encrypted DB
-     *         snapshot. </p>
+     *         snapshot.</p>
      *         <p>
      *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
      *         key.
@@ -1187,7 +1187,7 @@ public class DBSnapshot implements Serializable, Cloneable {
      * 
      * @param kmsKeyId
      *        If <code>Encrypted</code> is true, the Amazon Web Services KMS key identifier for the encrypted DB
-     *        snapshot. </p>
+     *        snapshot.</p>
      *        <p>
      *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
      *        key.

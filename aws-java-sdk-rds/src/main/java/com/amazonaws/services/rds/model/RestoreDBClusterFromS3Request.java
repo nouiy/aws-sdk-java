@@ -241,7 +241,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
      * Region. To view the time blocks available, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.Backups.BackupWindow"
-     * > Backup window</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Backup window</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Constraints:
@@ -281,7 +281,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
      * Region, occurring on a random day of the week. To see the time blocks available, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora"
-     * > Adjusting the Preferred Maintenance Window</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Adjusting the Preferred Maintenance Window</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -322,7 +322,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      */
     private Boolean enableIAMDatabaseAuthentication;
@@ -923,7 +923,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * 
      * @param dBClusterParameterGroupName
      *        The name of the DB cluster parameter group to associate with the restored DB cluster. If this argument is
-     *        omitted, <code>default.aurora5.6</code> is used. </p>
+     *        omitted, <code>default.aurora5.6</code> is used.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -956,7 +956,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * </ul>
      * 
      * @return The name of the DB cluster parameter group to associate with the restored DB cluster. If this argument is
-     *         omitted, <code>default.aurora5.6</code> is used. </p>
+     *         omitted, <code>default.aurora5.6</code> is used.</p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -990,7 +990,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * 
      * @param dBClusterParameterGroupName
      *        The name of the DB cluster parameter group to associate with the restored DB cluster. If this argument is
-     *        omitted, <code>default.aurora5.6</code> is used. </p>
+     *        omitted, <code>default.aurora5.6</code> is used.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -1799,7 +1799,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
      * Region. To view the time blocks available, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.Backups.BackupWindow"
-     * > Backup window</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Backup window</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Constraints:
@@ -1829,12 +1829,12 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * 
      * @param preferredBackupWindow
      *        The daily time range during which automated backups are created if automated backups are enabled using the
-     *        <code>BackupRetentionPeriod</code> parameter. </p>
+     *        <code>BackupRetentionPeriod</code> parameter.</p>
      *        <p>
      *        The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
      *        Services Region. To view the time blocks available, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.Backups.BackupWindow"
-     *        > Backup window</a> in the <i>Amazon Aurora User Guide.</i>
+     *        > Backup window</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        Constraints:
@@ -1875,7 +1875,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
      * Region. To view the time blocks available, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.Backups.BackupWindow"
-     * > Backup window</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Backup window</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Constraints:
@@ -1904,12 +1904,12 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * </ul>
      * 
      * @return The daily time range during which automated backups are created if automated backups are enabled using
-     *         the <code>BackupRetentionPeriod</code> parameter. </p>
+     *         the <code>BackupRetentionPeriod</code> parameter.</p>
      *         <p>
      *         The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
      *         Services Region. To view the time blocks available, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.Backups.BackupWindow"
-     *         > Backup window</a> in the <i>Amazon Aurora User Guide.</i>
+     *         > Backup window</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         <p>
      *         Constraints:
@@ -1950,7 +1950,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
      * Region. To view the time blocks available, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.Backups.BackupWindow"
-     * > Backup window</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Backup window</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Constraints:
@@ -1980,12 +1980,12 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * 
      * @param preferredBackupWindow
      *        The daily time range during which automated backups are created if automated backups are enabled using the
-     *        <code>BackupRetentionPeriod</code> parameter. </p>
+     *        <code>BackupRetentionPeriod</code> parameter.</p>
      *        <p>
      *        The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
      *        Services Region. To view the time blocks available, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.Backups.BackupWindow"
-     *        > Backup window</a> in the <i>Amazon Aurora User Guide.</i>
+     *        > Backup window</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        Constraints:
@@ -2030,7 +2030,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
      * Region, occurring on a random day of the week. To see the time blocks available, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora"
-     * > Adjusting the Preferred Maintenance Window</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Adjusting the Preferred Maintenance Window</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -2048,7 +2048,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *        The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
      *        Services Region, occurring on a random day of the week. To see the time blocks available, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora"
-     *        > Adjusting the Preferred Maintenance Window</a> in the <i>Amazon Aurora User Guide.</i>
+     *        > Adjusting the Preferred Maintenance Window</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -2072,7 +2072,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
      * Region, occurring on a random day of the week. To see the time blocks available, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora"
-     * > Adjusting the Preferred Maintenance Window</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Adjusting the Preferred Maintenance Window</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -2089,7 +2089,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *         The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
      *         Services Region, occurring on a random day of the week. To see the time blocks available, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora"
-     *         > Adjusting the Preferred Maintenance Window</a> in the <i>Amazon Aurora User Guide.</i>
+     *         > Adjusting the Preferred Maintenance Window</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         <p>
      *         Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -2113,7 +2113,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
      * Region, occurring on a random day of the week. To see the time blocks available, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora"
-     * > Adjusting the Preferred Maintenance Window</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Adjusting the Preferred Maintenance Window</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -2131,7 +2131,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *        The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
      *        Services Region, occurring on a random day of the week. To see the time blocks available, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora"
-     *        > Adjusting the Preferred Maintenance Window</a> in the <i>Amazon Aurora User Guide.</i>
+     *        > Adjusting the Preferred Maintenance Window</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -2355,7 +2355,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
      * @param enableIAMDatabaseAuthentication
@@ -2364,7 +2364,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
-     *        Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     *        Database Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      */
 
     public void setEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
@@ -2379,7 +2379,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
      * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
@@ -2387,7 +2387,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
-     *         Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     *         Database Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      */
 
     public Boolean getEnableIAMDatabaseAuthentication() {
@@ -2402,7 +2402,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
      * @param enableIAMDatabaseAuthentication
@@ -2411,7 +2411,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
-     *        Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     *        Database Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2428,7 +2428,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
      * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
@@ -2436,7 +2436,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
-     *         Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     *         Database Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      */
 
     public Boolean isEnableIAMDatabaseAuthentication() {
@@ -2453,7 +2453,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * 
      * @param sourceEngine
      *        The identifier for the database engine that was backed up to create the files stored in the Amazon S3
-     *        bucket. </p>
+     *        bucket.</p>
      *        <p>
      *        Valid values: <code>mysql</code>
      */
@@ -2471,7 +2471,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @return The identifier for the database engine that was backed up to create the files stored in the Amazon S3
-     *         bucket. </p>
+     *         bucket.</p>
      *         <p>
      *         Valid values: <code>mysql</code>
      */
@@ -2490,7 +2490,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * 
      * @param sourceEngine
      *        The identifier for the database engine that was backed up to create the files stored in the Amazon S3
-     *        bucket. </p>
+     *        bucket.</p>
      *        <p>
      *        Valid values: <code>mysql</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -3205,7 +3205,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * 
      * @param domain
      *        Specify the Active Directory directory ID to restore the DB cluster in. The domain must be created prior
-     *        to this operation. </p>
+     *        to this operation.</p>
      *        <p>
      *        For Amazon Aurora DB clusters, Amazon RDS can use Kerberos Authentication to authenticate users that
      *        connect to the DB cluster. For more information, see <a
@@ -3230,7 +3230,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @return Specify the Active Directory directory ID to restore the DB cluster in. The domain must be created prior
-     *         to this operation. </p>
+     *         to this operation.</p>
      *         <p>
      *         For Amazon Aurora DB clusters, Amazon RDS can use Kerberos Authentication to authenticate users that
      *         connect to the DB cluster. For more information, see <a
@@ -3256,7 +3256,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * 
      * @param domain
      *        Specify the Active Directory directory ID to restore the DB cluster in. The domain must be created prior
-     *        to this operation. </p>
+     *        to this operation.</p>
      *        <p>
      *        For Amazon Aurora DB clusters, Amazon RDS can use Kerberos Authentication to authenticate users that
      *        connect to the DB cluster. For more information, see <a

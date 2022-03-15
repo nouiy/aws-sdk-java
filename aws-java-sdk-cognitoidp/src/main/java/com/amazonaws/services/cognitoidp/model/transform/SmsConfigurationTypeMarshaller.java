@@ -31,6 +31,8 @@ public class SmsConfigurationTypeMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SnsCallerArn").build();
     private static final MarshallingInfo<String> EXTERNALID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExternalId").build();
+    private static final MarshallingInfo<String> SNSREGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("SnsRegion").build();
 
     private static final SmsConfigurationTypeMarshaller instance = new SmsConfigurationTypeMarshaller();
 
@@ -50,6 +52,7 @@ public class SmsConfigurationTypeMarshaller {
         try {
             protocolMarshaller.marshall(smsConfigurationType.getSnsCallerArn(), SNSCALLERARN_BINDING);
             protocolMarshaller.marshall(smsConfigurationType.getExternalId(), EXTERNALID_BINDING);
+            protocolMarshaller.marshall(smsConfigurationType.getSnsRegion(), SNSREGION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

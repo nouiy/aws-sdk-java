@@ -31,10 +31,26 @@ import com.amazonaws.services.keyspaces.model.*;
  * Services Cloud. With just a few clicks on the Amazon Web Services Management Console or a few lines of code, you can
  * create keyspaces and tables in Amazon Keyspaces, without deploying any infrastructure or installing software.
  * </p>
- * 
- * <pre>
- * <code> &lt;p&gt;In addition to supporting Cassandra Query Language (CQL) requests via open-source Cassandra drivers, Amazon Keyspaces supports data definition language (DDL) operations to manage keyspaces and tables using the Amazon Web Services SDK and CLI. This API reference describes the supported DDL operations in detail. &lt;/p&gt; &lt;p&gt;For the list of all supported CQL APIs, see &lt;a href=&quot;https://docs.aws.amazon.com/keyspaces/latest/devguide/cassandra-apis.html&quot;&gt;Supported Cassandra APIs, operations, and data types in Amazon Keyspaces&lt;/a&gt; in the &lt;i&gt;Amazon Keyspaces Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;To learn how Amazon Keyspaces API actions are tracked in CloudTrail, see &lt;a href=&quot;https://docs.aws.amazon.com/keyspaces/latest/devguide/logging-using-cloudtrail.html#service-name-info-in-cloudtrail&quot;&gt;Amazon Keyspaces information in CloudTrail&lt;/a&gt; in the &lt;i&gt;Amazon Keyspaces Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;For more information about Amazon Web Services APIs, for example how to implement retry logic or how to sign Amazon Web Services API requests, see &lt;a href=&quot;https://docs.aws.amazon.com/general/latest/gr/aws-apis.html&quot;&gt;Amazon Web Services APIs&lt;/a&gt; in the &lt;i&gt;General Reference&lt;/i&gt;. &lt;/p&gt; </code>
- * </pre>
+ * <p>
+ * In addition to supporting Cassandra Query Language (CQL) requests via open-source Cassandra drivers, Amazon Keyspaces
+ * supports data definition language (DDL) operations to manage keyspaces and tables using the Amazon Web Services SDK
+ * and CLI. This API reference describes the supported DDL operations in detail.
+ * </p>
+ * <p>
+ * For the list of all supported CQL APIs, see <a
+ * href="https://docs.aws.amazon.com/keyspaces/latest/devguide/cassandra-apis.html">Supported Cassandra APIs,
+ * operations, and data types in Amazon Keyspaces</a> in the <i>Amazon Keyspaces Developer Guide</i>.
+ * </p>
+ * <p>
+ * To learn how Amazon Keyspaces API actions are recorded with CloudTrail, see <a href=
+ * "https://docs.aws.amazon.com/keyspaces/latest/devguide/logging-using-cloudtrail.html#service-name-info-in-cloudtrail"
+ * >Amazon Keyspaces information in CloudTrail</a> in the <i>Amazon Keyspaces Developer Guide</i>.
+ * </p>
+ * <p>
+ * For more information about Amazon Web Services APIs, for example how to implement retry logic or how to sign Amazon
+ * Web Services API requests, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-apis.html">Amazon Web
+ * Services APIs</a> in the <i>General Reference</i>.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AmazonKeyspacesAsync extends AmazonKeyspaces {
@@ -408,53 +424,35 @@ public interface AmazonKeyspacesAsync extends AmazonKeyspaces {
      * <p>
      * You can also overwrite these settings during restore:
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * Read/write capacity mode
+     * • Read/write capacity mode
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * Provisioned throughput capacity settings
+     * • Provisioned throughput capacity settings
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * Point-in-time (PITR) settings
+     * • Point-in-time (PITR) settings
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * Tags
+     * • Tags
      * </p>
-     * </li>
-     * </ul>
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/keyspaces/latest/devguide/PointInTimeRecovery_HowItWorks.html#howitworks_backup_settings"
      * >PITR restore settings</a> in the <i>Amazon Keyspaces Developer Guide</i>.
      * </p>
      * <p>
-     * The following settings are not restored, and you must configure them manually for the new table.
+     * Note that the following settings are not restored, and you must configure them manually for the new table:
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * Automatic scaling policies (for tables that use provisioned capacity mode)
+     * • Automatic scaling policies (for tables that use provisioned capacity mode)
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * Identity and Access Management (IAM) policies
+     * • Identity and Access Management (IAM) policies
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * Amazon CloudWatch metrics and alarms
+     * • Amazon CloudWatch metrics and alarms
      * </p>
-     * </li>
-     * </ul>
      * 
      * @param restoreTableRequest
      * @return A Java Future containing the result of the RestoreTable operation returned by the service.
@@ -488,53 +486,35 @@ public interface AmazonKeyspacesAsync extends AmazonKeyspaces {
      * <p>
      * You can also overwrite these settings during restore:
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * Read/write capacity mode
+     * • Read/write capacity mode
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * Provisioned throughput capacity settings
+     * • Provisioned throughput capacity settings
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * Point-in-time (PITR) settings
+     * • Point-in-time (PITR) settings
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * Tags
+     * • Tags
      * </p>
-     * </li>
-     * </ul>
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/keyspaces/latest/devguide/PointInTimeRecovery_HowItWorks.html#howitworks_backup_settings"
      * >PITR restore settings</a> in the <i>Amazon Keyspaces Developer Guide</i>.
      * </p>
      * <p>
-     * The following settings are not restored, and you must configure them manually for the new table.
+     * Note that the following settings are not restored, and you must configure them manually for the new table:
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * Automatic scaling policies (for tables that use provisioned capacity mode)
+     * • Automatic scaling policies (for tables that use provisioned capacity mode)
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * Identity and Access Management (IAM) policies
+     * • Identity and Access Management (IAM) policies
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * Amazon CloudWatch metrics and alarms
+     * • Amazon CloudWatch metrics and alarms
      * </p>
-     * </li>
-     * </ul>
      * 
      * @param restoreTableRequest
      * @param asyncHandler

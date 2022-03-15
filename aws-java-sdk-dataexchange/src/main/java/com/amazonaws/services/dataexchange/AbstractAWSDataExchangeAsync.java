@@ -288,6 +288,19 @@ public class AbstractAWSDataExchangeAsync extends AbstractAWSDataExchange implem
     }
 
     @Override
+    public java.util.concurrent.Future<RevokeRevisionResult> revokeRevisionAsync(RevokeRevisionRequest request) {
+
+        return revokeRevisionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RevokeRevisionResult> revokeRevisionAsync(RevokeRevisionRequest request,
+            com.amazonaws.handlers.AsyncHandler<RevokeRevisionRequest, RevokeRevisionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<StartJobResult> startJobAsync(StartJobRequest request) {
 
         return startJobAsync(request, null);

@@ -85,6 +85,18 @@ public class CreateRevisionResultJsonUnmarshaller implements Unmarshaller<Create
                     context.nextToken();
                     createRevisionResult.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
+                if (context.testExpression("RevocationComment", targetDepth)) {
+                    context.nextToken();
+                    createRevisionResult.setRevocationComment(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Revoked", targetDepth)) {
+                    context.nextToken();
+                    createRevisionResult.setRevoked(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("RevokedAt", targetDepth)) {
+                    context.nextToken();
+                    createRevisionResult.setRevokedAt(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

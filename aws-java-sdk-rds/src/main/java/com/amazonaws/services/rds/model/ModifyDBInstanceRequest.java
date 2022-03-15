@@ -812,7 +812,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
-     * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Insights</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
@@ -929,7 +929,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For more information about rotating your SSL/TLS certificate for Aurora DB engines, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL-certificate-rotation.html">
-     * Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide.</i>
+     * Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1144,7 +1144,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param allocatedStorage
-     *        The new amount of storage in gibibytes (GiB) to allocate for the DB instance. </p>
+     *        The new amount of storage in gibibytes (GiB) to allocate for the DB instance.</p>
      *        <p>
      *        For MariaDB, MySQL, Oracle, and PostgreSQL, the value supplied must be at least 10% greater than the
      *        current value. Values that are not at least 10% greater than the existing value are rounded up so that
@@ -1171,7 +1171,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * For the valid values for allocated storage for each engine, see <code>CreateDBInstance</code>.
      * </p>
      * 
-     * @return The new amount of storage in gibibytes (GiB) to allocate for the DB instance. </p>
+     * @return The new amount of storage in gibibytes (GiB) to allocate for the DB instance.</p>
      *         <p>
      *         For MariaDB, MySQL, Oracle, and PostgreSQL, the value supplied must be at least 10% greater than the
      *         current value. Values that are not at least 10% greater than the existing value are rounded up so that
@@ -1199,7 +1199,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param allocatedStorage
-     *        The new amount of storage in gibibytes (GiB) to allocate for the DB instance. </p>
+     *        The new amount of storage in gibibytes (GiB) to allocate for the DB instance.</p>
      *        <p>
      *        For MariaDB, MySQL, Oracle, and PostgreSQL, the value supplied must be at least 10% greater than the
      *        current value. Values that are not at least 10% greater than the existing value are rounded up so that
@@ -1239,7 +1239,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        classes are available in all Amazon Web Services Regions, or for all database engines. For the full list
      *        of DB instance classes, and availability for your engine, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
-     *        Class</a> in the <i>Amazon RDS User Guide</i>. </p>
+     *        Class</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        If you modify the DB instance class, an outage occurs during the change. The change is applied during the
      *        next maintenance window, unless <code>ApplyImmediately</code> is enabled for this request.
@@ -1278,7 +1278,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         classes are available in all Amazon Web Services Regions, or for all database engines. For the full list
      *         of DB instance classes, and availability for your engine, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
-     *         Class</a> in the <i>Amazon RDS User Guide</i>. </p>
+     *         Class</a> in the <i>Amazon RDS User Guide</i>.</p>
      *         <p>
      *         If you modify the DB instance class, an outage occurs during the change. The change is applied during the
      *         next maintenance window, unless <code>ApplyImmediately</code> is enabled for this request.
@@ -1318,7 +1318,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        classes are available in all Amazon Web Services Regions, or for all database engines. For the full list
      *        of DB instance classes, and availability for your engine, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
-     *        Class</a> in the <i>Amazon RDS User Guide</i>. </p>
+     *        Class</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        If you modify the DB instance class, an outage occurs during the change. The change is applied during the
      *        next maintenance window, unless <code>ApplyImmediately</code> is enabled for this request.
@@ -1363,7 +1363,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        different VPC. If your DB instance isn't in a VPC, you can also use this parameter to move your DB
      *        instance into a VPC. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html#USER_VPC.Non-VPC2VPC"
-     *        >Working with a DB instance in a VPC</a> in the <i>Amazon RDS User Guide</i>. </p>
+     *        >Working with a DB instance in a VPC</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        Changing the subnet group causes an outage during the change. The change is applied during the next
      *        maintenance window, unless you enable <code>ApplyImmediately</code>.
@@ -1408,7 +1408,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         different VPC. If your DB instance isn't in a VPC, you can also use this parameter to move your DB
      *         instance into a VPC. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html#USER_VPC.Non-VPC2VPC"
-     *         >Working with a DB instance in a VPC</a> in the <i>Amazon RDS User Guide</i>. </p>
+     *         >Working with a DB instance in a VPC</a> in the <i>Amazon RDS User Guide</i>.</p>
      *         <p>
      *         Changing the subnet group causes an outage during the change. The change is applied during the next
      *         maintenance window, unless you enable <code>ApplyImmediately</code>.
@@ -1454,7 +1454,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        different VPC. If your DB instance isn't in a VPC, you can also use this parameter to move your DB
      *        instance into a VPC. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html#USER_VPC.Non-VPC2VPC"
-     *        >Working with a DB instance in a VPC</a> in the <i>Amazon RDS User Guide</i>. </p>
+     *        >Working with a DB instance in a VPC</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        Changing the subnet group causes an outage during the change. The change is applied during the next
      *        maintenance window, unless you enable <code>ApplyImmediately</code>.
@@ -3268,7 +3268,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param multiAZ
      *        A value that indicates whether the DB instance is a Multi-AZ deployment. Changing this parameter doesn't
      *        result in an outage. The change is applied during the next maintenance window unless the
-     *        <code>ApplyImmediately</code> parameter is enabled for this request. </p>
+     *        <code>ApplyImmediately</code> parameter is enabled for this request.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
      */
@@ -3289,7 +3289,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @return A value that indicates whether the DB instance is a Multi-AZ deployment. Changing this parameter doesn't
      *         result in an outage. The change is applied during the next maintenance window unless the
-     *         <code>ApplyImmediately</code> parameter is enabled for this request. </p>
+     *         <code>ApplyImmediately</code> parameter is enabled for this request.</p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
      */
@@ -3311,7 +3311,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param multiAZ
      *        A value that indicates whether the DB instance is a Multi-AZ deployment. Changing this parameter doesn't
      *        result in an outage. The change is applied during the next maintenance window unless the
-     *        <code>ApplyImmediately</code> parameter is enabled for this request. </p>
+     *        <code>ApplyImmediately</code> parameter is enabled for this request.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -3334,7 +3334,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @return A value that indicates whether the DB instance is a Multi-AZ deployment. Changing this parameter doesn't
      *         result in an outage. The change is applied during the next maintenance window unless the
-     *         <code>ApplyImmediately</code> parameter is enabled for this request. </p>
+     *         <code>ApplyImmediately</code> parameter is enabled for this request.</p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
      */
@@ -3367,7 +3367,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param engineVersion
      *        The version number of the database engine to upgrade to. Changing this parameter results in an outage and
      *        the change is applied during the next maintenance window unless the <code>ApplyImmediately</code>
-     *        parameter is enabled for this request. </p>
+     *        parameter is enabled for this request.</p>
      *        <p>
      *        For major version upgrades, if a nondefault DB parameter group is currently in use, a new DB parameter
      *        group in the DB parameter group family for the new engine version must be specified. The new DB parameter
@@ -3410,7 +3410,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @return The version number of the database engine to upgrade to. Changing this parameter results in an outage and
      *         the change is applied during the next maintenance window unless the <code>ApplyImmediately</code>
-     *         parameter is enabled for this request. </p>
+     *         parameter is enabled for this request.</p>
      *         <p>
      *         For major version upgrades, if a nondefault DB parameter group is currently in use, a new DB parameter
      *         group in the DB parameter group family for the new engine version must be specified. The new DB parameter
@@ -3454,7 +3454,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param engineVersion
      *        The version number of the database engine to upgrade to. Changing this parameter results in an outage and
      *        the change is applied during the next maintenance window unless the <code>ApplyImmediately</code>
-     *        parameter is enabled for this request. </p>
+     *        parameter is enabled for this request.</p>
      *        <p>
      *        For major version upgrades, if a nondefault DB parameter group is currently in use, a new DB parameter
      *        group in the DB parameter group family for the new engine version must be specified. The new DB parameter
@@ -3954,7 +3954,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param iops
-     *        The new Provisioned IOPS (I/O operations per second) value for the RDS instance. </p>
+     *        The new Provisioned IOPS (I/O operations per second) value for the RDS instance.</p>
      *        <p>
      *        Changing this setting doesn't result in an outage and the change is applied during the next maintenance
      *        window unless the <code>ApplyImmediately</code> parameter is enabled for this request. If you are
@@ -4015,7 +4015,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Default: Uses existing setting
      * </p>
      * 
-     * @return The new Provisioned IOPS (I/O operations per second) value for the RDS instance. </p>
+     * @return The new Provisioned IOPS (I/O operations per second) value for the RDS instance.</p>
      *         <p>
      *         Changing this setting doesn't result in an outage and the change is applied during the next maintenance
      *         window unless the <code>ApplyImmediately</code> parameter is enabled for this request. If you are
@@ -4078,7 +4078,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param iops
-     *        The new Provisioned IOPS (I/O operations per second) value for the RDS instance. </p>
+     *        The new Provisioned IOPS (I/O operations per second) value for the RDS instance.</p>
      *        <p>
      *        Changing this setting doesn't result in an outage and the change is applied during the next maintenance
      *        window unless the <code>ApplyImmediately</code> parameter is enabled for this request. If you are
@@ -4284,7 +4284,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        The new DB instance identifier for the DB instance when renaming a DB instance. When you change the DB
      *        instance identifier, an instance reboot occurs immediately if you enable <code>ApplyImmediately</code>, or
      *        will occur during the next maintenance window if you disable Apply Immediately. This value is stored as a
-     *        lowercase string. </p>
+     *        lowercase string.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
      *        </p>
@@ -4352,7 +4352,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @return The new DB instance identifier for the DB instance when renaming a DB instance. When you change the DB
      *         instance identifier, an instance reboot occurs immediately if you enable <code>ApplyImmediately</code>,
      *         or will occur during the next maintenance window if you disable Apply Immediately. This value is stored
-     *         as a lowercase string. </p>
+     *         as a lowercase string.</p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
      *         </p>
@@ -4421,7 +4421,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        The new DB instance identifier for the DB instance when renaming a DB instance. When you change the DB
      *        instance identifier, an instance reboot occurs immediately if you enable <code>ApplyImmediately</code>, or
      *        will occur during the next maintenance window if you disable Apply Immediately. This value is stored as a
-     *        lowercase string. </p>
+     *        lowercase string.</p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
      *        </p>
@@ -4482,7 +4482,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param storageType
-     *        Specifies the storage type to be associated with the DB instance. </p>
+     *        Specifies the storage type to be associated with the DB instance.</p>
      *        <p>
      *        If you specify Provisioned IOPS (<code>io1</code>), you must also include a value for the
      *        <code>Iops</code> parameter.
@@ -4535,7 +4535,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
      * </p>
      * 
-     * @return Specifies the storage type to be associated with the DB instance. </p>
+     * @return Specifies the storage type to be associated with the DB instance.</p>
      *         <p>
      *         If you specify Provisioned IOPS (<code>io1</code>), you must also include a value for the
      *         <code>Iops</code> parameter.
@@ -4590,7 +4590,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param storageType
-     *        Specifies the storage type to be associated with the DB instance. </p>
+     *        Specifies the storage type to be associated with the DB instance.</p>
      *        <p>
      *        If you specify Provisioned IOPS (<code>io1</code>), you must also include a value for the
      *        <code>Iops</code> parameter.
@@ -5575,7 +5575,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param publiclyAccessible
-     *        A value that indicates whether the DB instance is publicly accessible. </p>
+     *        A value that indicates whether the DB instance is publicly accessible.</p>
      *        <p>
      *        When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
      *        IP address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address
@@ -5623,7 +5623,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <code>ApplyImmediately</code> parameter.
      * </p>
      * 
-     * @return A value that indicates whether the DB instance is publicly accessible. </p>
+     * @return A value that indicates whether the DB instance is publicly accessible.</p>
      *         <p>
      *         When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
      *         IP address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address
@@ -5672,7 +5672,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param publiclyAccessible
-     *        A value that indicates whether the DB instance is publicly accessible. </p>
+     *        A value that indicates whether the DB instance is publicly accessible.</p>
      *        <p>
      *        When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
      *        IP address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address
@@ -5722,7 +5722,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <code>ApplyImmediately</code> parameter.
      * </p>
      * 
-     * @return A value that indicates whether the DB instance is publicly accessible. </p>
+     * @return A value that indicates whether the DB instance is publicly accessible.</p>
      *         <p>
      *         When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
      *         IP address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address
@@ -6167,7 +6167,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
-     * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Insights</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
@@ -6178,7 +6178,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
-     *        Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        Performance Insights</a> in the <i>Amazon RDS User Guide.</i>.
      *        </p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
@@ -6195,7 +6195,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
-     * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Insights</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
@@ -6205,7 +6205,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
-     *         Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *         Performance Insights</a> in the <i>Amazon RDS User Guide.</i>.
      *         </p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
@@ -6222,7 +6222,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
-     * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Insights</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
@@ -6233,7 +6233,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
-     *        Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        Performance Insights</a> in the <i>Amazon RDS User Guide.</i>.
      *        </p>
      *        <p>
      *        This setting doesn't apply to RDS Custom.
@@ -6252,7 +6252,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
-     * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Insights</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * <p>
      * This setting doesn't apply to RDS Custom.
@@ -6262,7 +6262,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
-     *         Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *         Performance Insights</a> in the <i>Amazon RDS User Guide.</i>.
      *         </p>
      *         <p>
      *         This setting doesn't apply to RDS Custom.
@@ -6892,7 +6892,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For more information about rotating your SSL/TLS certificate for Aurora DB engines, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL-certificate-rotation.html">
-     * Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide.</i>
+     * Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -6927,7 +6927,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For more information about rotating your SSL/TLS certificate for Aurora DB engines, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL-certificate-rotation.html">
-     *        Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide.</i>
+     *        Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        </li>
      *        </ul>
@@ -6968,7 +6968,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For more information about rotating your SSL/TLS certificate for Aurora DB engines, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL-certificate-rotation.html">
-     * Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide.</i>
+     * Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -7002,7 +7002,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         For more information about rotating your SSL/TLS certificate for Aurora DB engines, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL-certificate-rotation.html"
-     *         > Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide.</i>
+     *         > Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         </li>
      *         </ul>
@@ -7043,7 +7043,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For more information about rotating your SSL/TLS certificate for Aurora DB engines, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL-certificate-rotation.html">
-     * Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide.</i>
+     * Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -7078,7 +7078,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        For more information about rotating your SSL/TLS certificate for Aurora DB engines, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL-certificate-rotation.html">
-     *        Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide.</i>
+     *        Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        </li>
      *        </ul>
@@ -7121,7 +7121,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * For more information about rotating your SSL/TLS certificate for Aurora DB engines, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL-certificate-rotation.html">
-     * Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide.</i>
+     * Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -7155,7 +7155,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         For more information about rotating your SSL/TLS certificate for Aurora DB engines, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL-certificate-rotation.html"
-     *         > Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide.</i>
+     *         > Rotating Your SSL/TLS Certificate</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         </li>
      *         </ul>

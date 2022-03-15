@@ -43,7 +43,7 @@ public class CalculateRouteTruckModeOptions implements Serializable, Cloneable, 
     private Boolean avoidFerries;
     /**
      * <p>
-     * Avoids ferries when calculating routes.
+     * Avoids tolls when calculating routes.
      * </p>
      * <p>
      * Default Value: <code>false</code>
@@ -166,7 +166,7 @@ public class CalculateRouteTruckModeOptions implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Avoids ferries when calculating routes.
+     * Avoids tolls when calculating routes.
      * </p>
      * <p>
      * Default Value: <code>false</code>
@@ -176,7 +176,7 @@ public class CalculateRouteTruckModeOptions implements Serializable, Cloneable, 
      * </p>
      * 
      * @param avoidTolls
-     *        Avoids ferries when calculating routes.</p>
+     *        Avoids tolls when calculating routes.</p>
      *        <p>
      *        Default Value: <code>false</code>
      *        </p>
@@ -190,7 +190,7 @@ public class CalculateRouteTruckModeOptions implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Avoids ferries when calculating routes.
+     * Avoids tolls when calculating routes.
      * </p>
      * <p>
      * Default Value: <code>false</code>
@@ -199,7 +199,7 @@ public class CalculateRouteTruckModeOptions implements Serializable, Cloneable, 
      * Valid Values: <code>false</code> | <code>true</code>
      * </p>
      * 
-     * @return Avoids ferries when calculating routes.</p>
+     * @return Avoids tolls when calculating routes.</p>
      *         <p>
      *         Default Value: <code>false</code>
      *         </p>
@@ -213,7 +213,7 @@ public class CalculateRouteTruckModeOptions implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Avoids ferries when calculating routes.
+     * Avoids tolls when calculating routes.
      * </p>
      * <p>
      * Default Value: <code>false</code>
@@ -223,7 +223,7 @@ public class CalculateRouteTruckModeOptions implements Serializable, Cloneable, 
      * </p>
      * 
      * @param avoidTolls
-     *        Avoids ferries when calculating routes.</p>
+     *        Avoids tolls when calculating routes.</p>
      *        <p>
      *        Default Value: <code>false</code>
      *        </p>
@@ -239,7 +239,7 @@ public class CalculateRouteTruckModeOptions implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Avoids ferries when calculating routes.
+     * Avoids tolls when calculating routes.
      * </p>
      * <p>
      * Default Value: <code>false</code>
@@ -248,7 +248,7 @@ public class CalculateRouteTruckModeOptions implements Serializable, Cloneable, 
      * Valid Values: <code>false</code> | <code>true</code>
      * </p>
      * 
-     * @return Avoids ferries when calculating routes.</p>
+     * @return Avoids tolls when calculating routes.</p>
      *         <p>
      *         Default Value: <code>false</code>
      *         </p>

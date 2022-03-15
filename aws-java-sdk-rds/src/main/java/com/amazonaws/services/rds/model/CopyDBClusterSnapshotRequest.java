@@ -53,7 +53,7 @@ public class CopyDBClusterSnapshotRequest extends com.amazonaws.AmazonWebService
      * If the source snapshot is in a different Amazon Web Services Region than the copy, specify a valid DB cluster
      * snapshot ARN. For more information, go to <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_CopySnapshot.html#USER_CopySnapshot.AcrossRegions"
-     * > Copying Snapshots Across Amazon Web Services Regions</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Copying Snapshots Across Amazon Web Services Regions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -214,7 +214,7 @@ public class CopyDBClusterSnapshotRequest extends com.amazonaws.AmazonWebService
      * If the source snapshot is in a different Amazon Web Services Region than the copy, specify a valid DB cluster
      * snapshot ARN. For more information, go to <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_CopySnapshot.html#USER_CopySnapshot.AcrossRegions"
-     * > Copying Snapshots Across Amazon Web Services Regions</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Copying Snapshots Across Amazon Web Services Regions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -247,7 +247,7 @@ public class CopyDBClusterSnapshotRequest extends com.amazonaws.AmazonWebService
      *        If the source snapshot is in a different Amazon Web Services Region than the copy, specify a valid DB
      *        cluster snapshot ARN. For more information, go to <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_CopySnapshot.html#USER_CopySnapshot.AcrossRegions"
-     *        > Copying Snapshots Across Amazon Web Services Regions</a> in the <i>Amazon Aurora User Guide.</i>
+     *        > Copying Snapshots Across Amazon Web Services Regions</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        </li>
      *        </ul>
@@ -286,7 +286,7 @@ public class CopyDBClusterSnapshotRequest extends com.amazonaws.AmazonWebService
      * If the source snapshot is in a different Amazon Web Services Region than the copy, specify a valid DB cluster
      * snapshot ARN. For more information, go to <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_CopySnapshot.html#USER_CopySnapshot.AcrossRegions"
-     * > Copying Snapshots Across Amazon Web Services Regions</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Copying Snapshots Across Amazon Web Services Regions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -318,7 +318,7 @@ public class CopyDBClusterSnapshotRequest extends com.amazonaws.AmazonWebService
      *         If the source snapshot is in a different Amazon Web Services Region than the copy, specify a valid DB
      *         cluster snapshot ARN. For more information, go to <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_CopySnapshot.html#USER_CopySnapshot.AcrossRegions"
-     *         > Copying Snapshots Across Amazon Web Services Regions</a> in the <i>Amazon Aurora User Guide.</i>
+     *         > Copying Snapshots Across Amazon Web Services Regions</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         </li>
      *         </ul>
@@ -357,7 +357,7 @@ public class CopyDBClusterSnapshotRequest extends com.amazonaws.AmazonWebService
      * If the source snapshot is in a different Amazon Web Services Region than the copy, specify a valid DB cluster
      * snapshot ARN. For more information, go to <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_CopySnapshot.html#USER_CopySnapshot.AcrossRegions"
-     * > Copying Snapshots Across Amazon Web Services Regions</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Copying Snapshots Across Amazon Web Services Regions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -390,7 +390,7 @@ public class CopyDBClusterSnapshotRequest extends com.amazonaws.AmazonWebService
      *        If the source snapshot is in a different Amazon Web Services Region than the copy, specify a valid DB
      *        cluster snapshot ARN. For more information, go to <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_CopySnapshot.html#USER_CopySnapshot.AcrossRegions"
-     *        > Copying Snapshots Across Amazon Web Services Regions</a> in the <i>Amazon Aurora User Guide.</i>
+     *        > Copying Snapshots Across Amazon Web Services Regions</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        </li>
      *        </ul>

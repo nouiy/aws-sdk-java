@@ -36,7 +36,7 @@ public class AccountTakeoverActionType implements Serializable, Cloneable, Struc
     private Boolean notify;
     /**
      * <p>
-     * The event action.
+     * The action to take in response to the account takeover action. Valid values are:
      * </p>
      * <ul>
      * <li>
@@ -117,7 +117,7 @@ public class AccountTakeoverActionType implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The event action.
+     * The action to take in response to the account takeover action. Valid values are:
      * </p>
      * <ul>
      * <li>
@@ -143,7 +143,7 @@ public class AccountTakeoverActionType implements Serializable, Cloneable, Struc
      * </ul>
      * 
      * @param eventAction
-     *        The event action.</p>
+     *        The action to take in response to the account takeover action. Valid values are:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -174,7 +174,7 @@ public class AccountTakeoverActionType implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The event action.
+     * The action to take in response to the account takeover action. Valid values are:
      * </p>
      * <ul>
      * <li>
@@ -199,7 +199,7 @@ public class AccountTakeoverActionType implements Serializable, Cloneable, Struc
      * </li>
      * </ul>
      * 
-     * @return The event action.</p>
+     * @return The action to take in response to the account takeover action. Valid values are:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -231,7 +231,7 @@ public class AccountTakeoverActionType implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The event action.
+     * The action to take in response to the account takeover action. Valid values are:
      * </p>
      * <ul>
      * <li>
@@ -257,7 +257,7 @@ public class AccountTakeoverActionType implements Serializable, Cloneable, Struc
      * </ul>
      * 
      * @param eventAction
-     *        The event action.</p>
+     *        The action to take in response to the account takeover action. Valid values are:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -290,7 +290,7 @@ public class AccountTakeoverActionType implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The event action.
+     * The action to take in response to the account takeover action. Valid values are:
      * </p>
      * <ul>
      * <li>
@@ -316,7 +316,7 @@ public class AccountTakeoverActionType implements Serializable, Cloneable, Struc
      * </ul>
      * 
      * @param eventAction
-     *        The event action.</p>
+     *        The action to take in response to the account takeover action. Valid values are:</p>
      *        <ul>
      *        <li>
      *        <p>

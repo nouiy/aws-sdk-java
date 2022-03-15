@@ -637,7 +637,7 @@ public class DescribeReservedDBInstancesRequest extends com.amazonaws.AmazonWebS
      * @param maxRecords
      *        The maximum number of records to include in the response. If more than the <code>MaxRecords</code> value
      *        is available, a pagination token called a marker is included in the response so you can retrieve the
-     *        remaining results. </p>
+     *        remaining results.</p>
      *        <p>
      *        Default: 100
      *        </p>
@@ -664,7 +664,7 @@ public class DescribeReservedDBInstancesRequest extends com.amazonaws.AmazonWebS
      * 
      * @return The maximum number of records to include in the response. If more than the <code>MaxRecords</code> value
      *         is available, a pagination token called a marker is included in the response so you can retrieve the
-     *         remaining results. </p>
+     *         remaining results.</p>
      *         <p>
      *         Default: 100
      *         </p>
@@ -692,7 +692,7 @@ public class DescribeReservedDBInstancesRequest extends com.amazonaws.AmazonWebS
      * @param maxRecords
      *        The maximum number of records to include in the response. If more than the <code>MaxRecords</code> value
      *        is available, a pagination token called a marker is included in the response so you can retrieve the
-     *        remaining results. </p>
+     *        remaining results.</p>
      *        <p>
      *        Default: 100
      *        </p>

@@ -488,7 +488,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
-     * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Insights</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      */
     private Boolean enablePerformanceInsights;
@@ -629,7 +629,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param dBInstanceIdentifier
-     *        The DB instance identifier. This parameter is stored as a lowercase string. </p>
+     *        The DB instance identifier. This parameter is stored as a lowercase string.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -686,7 +686,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Example: <code>mydbinstance</code>
      * </p>
      * 
-     * @return The DB instance identifier. This parameter is stored as a lowercase string. </p>
+     * @return The DB instance identifier. This parameter is stored as a lowercase string.</p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -744,7 +744,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param dBInstanceIdentifier
-     *        The DB instance identifier. This parameter is stored as a lowercase string. </p>
+     *        The DB instance identifier. This parameter is stored as a lowercase string.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -789,7 +789,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * 
      * @param allocatedStorage
      *        The amount of storage (in gigabytes) to allocate initially for the DB instance. Follow the allocation
-     *        rules specified in <code>CreateDBInstance</code>. </p> <note>
+     *        rules specified in <code>CreateDBInstance</code>.</p> <note>
      *        <p>
      *        Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You
      *        can also allocate additional memory for future growth.
@@ -813,7 +813,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </note>
      * 
      * @return The amount of storage (in gigabytes) to allocate initially for the DB instance. Follow the allocation
-     *         rules specified in <code>CreateDBInstance</code>. </p> <note>
+     *         rules specified in <code>CreateDBInstance</code>.</p> <note>
      *         <p>
      *         Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You
      *         can also allocate additional memory for future growth.
@@ -838,7 +838,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * 
      * @param allocatedStorage
      *        The amount of storage (in gigabytes) to allocate initially for the DB instance. Follow the allocation
-     *        rules specified in <code>CreateDBInstance</code>. </p> <note>
+     *        rules specified in <code>CreateDBInstance</code>.</p> <note>
      *        <p>
      *        Be sure to allocate enough memory for your new DB instance so that the restore operation can succeed. You
      *        can also allocate additional memory for future growth.
@@ -939,7 +939,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param engine
-     *        The name of the database engine to be used for this instance. </p>
+     *        The name of the database engine to be used for this instance.</p>
      *        <p>
      *        Valid Values: <code>mysql</code>
      */
@@ -956,7 +956,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Valid Values: <code>mysql</code>
      * </p>
      * 
-     * @return The name of the database engine to be used for this instance. </p>
+     * @return The name of the database engine to be used for this instance.</p>
      *         <p>
      *         Valid Values: <code>mysql</code>
      */
@@ -974,7 +974,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param engine
-     *        The name of the database engine to be used for this instance. </p>
+     *        The name of the database engine to be used for this instance.</p>
      *        <p>
      *        Valid Values: <code>mysql</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1011,7 +1011,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </ul>
      * 
      * @param masterUsername
-     *        The name for the master user. </p>
+     *        The name for the master user.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -1062,7 +1062,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </li>
      * </ul>
      * 
-     * @return The name for the master user. </p>
+     * @return The name for the master user.</p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -1114,7 +1114,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </ul>
      * 
      * @param masterUsername
-     *        The name for the master user. </p>
+     *        The name for the master user.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -1152,7 +1152,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * 
      * @param masterUserPassword
      *        The password for the master user. The password can include any printable ASCII character except "/",
-     *        """, or "@". </p>
+     *        """, or "@".</p>
      *        <p>
      *        Constraints: Must contain from 8 to 41 characters.
      */
@@ -1170,7 +1170,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @return The password for the master user. The password can include any printable ASCII character except "/",
-     *         """, or "@". </p>
+     *         """, or "@".</p>
      *         <p>
      *         Constraints: Must contain from 8 to 41 characters.
      */
@@ -1189,7 +1189,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * 
      * @param masterUserPassword
      *        The password for the master user. The password can include any printable ASCII character except "/",
-     *        """, or "@". </p>
+     *        """, or "@".</p>
      *        <p>
      *        Constraints: Must contain from 8 to 41 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2122,7 +2122,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param port
-     *        The port number on which the database accepts connections. </p>
+     *        The port number on which the database accepts connections.</p>
      *        <p>
      *        Type: Integer
      *        </p>
@@ -2151,7 +2151,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Default: <code>3306</code>
      * </p>
      * 
-     * @return The port number on which the database accepts connections. </p>
+     * @return The port number on which the database accepts connections.</p>
      *         <p>
      *         Type: Integer
      *         </p>
@@ -2181,7 +2181,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param port
-     *        The port number on which the database accepts connections. </p>
+     *        The port number on which the database accepts connections.</p>
      *        <p>
      *        Type: Integer
      *        </p>
@@ -2774,7 +2774,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param storageType
-     *        Specifies the storage type to be associated with the DB instance. </p>
+     *        Specifies the storage type to be associated with the DB instance.</p>
      *        <p>
      *        Valid values: <code>standard</code> | <code>gp2</code> | <code>io1</code>
      *        </p>
@@ -2803,7 +2803,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Default: <code>io1</code> if the <code>Iops</code> parameter is specified; otherwise <code>gp2</code>
      * </p>
      * 
-     * @return Specifies the storage type to be associated with the DB instance. </p>
+     * @return Specifies the storage type to be associated with the DB instance.</p>
      *         <p>
      *         Valid values: <code>standard</code> | <code>gp2</code> | <code>io1</code>
      *         </p>
@@ -2833,7 +2833,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param storageType
-     *        Specifies the storage type to be associated with the DB instance. </p>
+     *        Specifies the storage type to be associated with the DB instance.</p>
      *        <p>
      *        Valid values: <code>standard</code> | <code>gp2</code> | <code>io1</code>
      *        </p>
@@ -2918,7 +2918,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Web Services KMS key identifier for an encrypted DB instance. </p>
+     *        The Amazon Web Services KMS key identifier for an encrypted DB instance.</p>
      *        <p>
      *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
      *        key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
@@ -2949,7 +2949,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Amazon Web Services Region.
      * </p>
      * 
-     * @return The Amazon Web Services KMS key identifier for an encrypted DB instance. </p>
+     * @return The Amazon Web Services KMS key identifier for an encrypted DB instance.</p>
      *         <p>
      *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
      *         key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
@@ -2981,7 +2981,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Web Services KMS key identifier for an encrypted DB instance. </p>
+     *        The Amazon Web Services KMS key identifier for an encrypted DB instance.</p>
      *        <p>
      *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
      *        key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
@@ -3077,7 +3077,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * 
      * @param monitoringInterval
      *        The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB
-     *        instance. To disable collecting Enhanced Monitoring metrics, specify 0. </p>
+     *        instance. To disable collecting Enhanced Monitoring metrics, specify 0.</p>
      *        <p>
      *        If <code>MonitoringRoleArn</code> is specified, then you must also set <code>MonitoringInterval</code> to
      *        a value other than 0.
@@ -3110,7 +3110,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @return The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB
-     *         instance. To disable collecting Enhanced Monitoring metrics, specify 0. </p>
+     *         instance. To disable collecting Enhanced Monitoring metrics, specify 0.</p>
      *         <p>
      *         If <code>MonitoringRoleArn</code> is specified, then you must also set <code>MonitoringInterval</code> to
      *         a value other than 0.
@@ -3144,7 +3144,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * 
      * @param monitoringInterval
      *        The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB
-     *        instance. To disable collecting Enhanced Monitoring metrics, specify 0. </p>
+     *        instance. To disable collecting Enhanced Monitoring metrics, specify 0.</p>
      *        <p>
      *        If <code>MonitoringRoleArn</code> is specified, then you must also set <code>MonitoringInterval</code> to
      *        a value other than 0.
@@ -3352,7 +3352,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param sourceEngine
-     *        The name of the engine of your source database. </p>
+     *        The name of the engine of your source database.</p>
      *        <p>
      *        Valid Values: <code>mysql</code>
      */
@@ -3369,7 +3369,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Valid Values: <code>mysql</code>
      * </p>
      * 
-     * @return The name of the engine of your source database. </p>
+     * @return The name of the engine of your source database.</p>
      *         <p>
      *         Valid Values: <code>mysql</code>
      */
@@ -3387,7 +3387,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param sourceEngine
-     *        The name of the engine of your source database. </p>
+     *        The name of the engine of your source database.</p>
      *        <p>
      *        Valid Values: <code>mysql</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -3604,15 +3604,15 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
-     * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Insights</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * 
      * @param enablePerformanceInsights
-     *        A value that indicates whether to enable Performance Insights for the DB instance. </p>
+     *        A value that indicates whether to enable Performance Insights for the DB instance.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
-     *        Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        Performance Insights</a> in the <i>Amazon RDS User Guide.</i>.
      */
 
     public void setEnablePerformanceInsights(Boolean enablePerformanceInsights) {
@@ -3626,14 +3626,14 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
-     * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Insights</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * 
-     * @return A value that indicates whether to enable Performance Insights for the DB instance. </p>
+     * @return A value that indicates whether to enable Performance Insights for the DB instance.</p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
-     *         Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *         Performance Insights</a> in the <i>Amazon RDS User Guide.</i>.
      */
 
     public Boolean getEnablePerformanceInsights() {
@@ -3647,15 +3647,15 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
-     * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Insights</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * 
      * @param enablePerformanceInsights
-     *        A value that indicates whether to enable Performance Insights for the DB instance. </p>
+     *        A value that indicates whether to enable Performance Insights for the DB instance.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
-     *        Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        Performance Insights</a> in the <i>Amazon RDS User Guide.</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3671,14 +3671,14 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
-     * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Insights</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * 
-     * @return A value that indicates whether to enable Performance Insights for the DB instance. </p>
+     * @return A value that indicates whether to enable Performance Insights for the DB instance.</p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
-     *         Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *         Performance Insights</a> in the <i>Amazon RDS User Guide.</i>.
      */
 
     public Boolean isEnablePerformanceInsights() {

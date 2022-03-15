@@ -146,7 +146,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * </p>
      * <p>
      * See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on
-     * Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide.</i>
+     * Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>Aurora PostgreSQL</b>
@@ -154,7 +154,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <p>
      * See <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.20180305.html">Amazon
-     * Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>MySQL</b>
@@ -282,7 +282,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -348,8 +348,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -1137,7 +1136,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * </p>
      * <p>
      * See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on
-     * Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide.</i>
+     * Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>Aurora PostgreSQL</b>
@@ -1145,7 +1144,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <p>
      * See <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.20180305.html">Amazon
-     * Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>MySQL</b>
@@ -1205,7 +1204,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *        </p>
      *        <p>
      *        See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL
-     *        on Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide.</i>
+     *        on Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        <b>Aurora PostgreSQL</b>
@@ -1213,7 +1212,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *        <p>
      *        See <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.20180305.html"
-     *        >Amazon Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide.</i>
+     *        >Amazon Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        <b>MySQL</b>
@@ -1279,7 +1278,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * </p>
      * <p>
      * See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on
-     * Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide.</i>
+     * Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>Aurora PostgreSQL</b>
@@ -1287,7 +1286,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <p>
      * See <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.20180305.html">Amazon
-     * Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>MySQL</b>
@@ -1346,7 +1345,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *         </p>
      *         <p>
      *         See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL
-     *         on Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide.</i>
+     *         on Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         <p>
      *         <b>Aurora PostgreSQL</b>
@@ -1354,7 +1353,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *         <p>
      *         See <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.20180305.html"
-     *         >Amazon Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide.</i>
+     *         >Amazon Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         <p>
      *         <b>MySQL</b>
@@ -1420,7 +1419,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * </p>
      * <p>
      * See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on
-     * Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide.</i>
+     * Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>Aurora PostgreSQL</b>
@@ -1428,7 +1427,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <p>
      * See <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.20180305.html">Amazon
-     * Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>MySQL</b>
@@ -1488,7 +1487,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *        </p>
      *        <p>
      *        See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL
-     *        on Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide.</i>
+     *        on Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        <b>Aurora PostgreSQL</b>
@@ -1496,7 +1495,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *        <p>
      *        See <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.20180305.html"
-     *        >Amazon Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide.</i>
+     *        >Amazon Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        <b>MySQL</b>
@@ -2200,7 +2199,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -2212,7 +2211,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
-     *        Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     *        Database Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters only
@@ -2230,7 +2229,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -2241,7 +2240,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
-     *         Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     *         Database Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         <p>
      *         Valid for: Aurora DB clusters only
@@ -2259,7 +2258,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -2271,7 +2270,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
-     *        Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     *        Database Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters only
@@ -2291,7 +2290,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -2302,7 +2301,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
-     *         Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     *         Database Authentication</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         <p>
      *         Valid for: Aurora DB clusters only
@@ -2504,8 +2503,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -2546,8 +2544,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *         <p>
      *         For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *         >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     *         Guide</i>.
+     *         >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      *         </p>
      *         <p>
      *         For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -2597,8 +2594,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -2640,8 +2636,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     *        Guide</i>.
+     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      *        </p>
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -2693,8 +2688,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -2741,8 +2735,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     *        Guide</i>.
+     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      *        </p>
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -2796,8 +2789,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -2839,8 +2831,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     *        Guide</i>.
+     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide.</i>.
      *        </p>
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=

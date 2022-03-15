@@ -682,6 +682,39 @@ public interface AWSDataExchangeAsync extends AWSDataExchange {
 
     /**
      * <p>
+     * This operation revokes subscribers' access to a revision.
+     * </p>
+     * 
+     * @param revokeRevisionRequest
+     *        The request body for RevokeRevision.
+     * @return A Java Future containing the result of the RevokeRevision operation returned by the service.
+     * @sample AWSDataExchangeAsync.RevokeRevision
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/RevokeRevision" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<RevokeRevisionResult> revokeRevisionAsync(RevokeRevisionRequest revokeRevisionRequest);
+
+    /**
+     * <p>
+     * This operation revokes subscribers' access to a revision.
+     * </p>
+     * 
+     * @param revokeRevisionRequest
+     *        The request body for RevokeRevision.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RevokeRevision operation returned by the service.
+     * @sample AWSDataExchangeAsyncHandler.RevokeRevision
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/RevokeRevision" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<RevokeRevisionResult> revokeRevisionAsync(RevokeRevisionRequest revokeRevisionRequest,
+            com.amazonaws.handlers.AsyncHandler<RevokeRevisionRequest, RevokeRevisionResult> asyncHandler);
+
+    /**
+     * <p>
      * This operation starts a job.
      * </p>
      * 

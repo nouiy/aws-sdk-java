@@ -32,18 +32,32 @@ public class LoggingConfig implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A boolean indicating whether to record all ROS topics.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      */
+    @Deprecated
     private Boolean recordAllRosTopics;
 
     /**
      * <p>
      * A boolean indicating whether to record all ROS topics.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param recordAllRosTopics
-     *        A boolean indicating whether to record all ROS topics.
+     *        A boolean indicating whether to record all ROS topics.</p> <important>
+     *        <p>
+     *        This API is no longer supported and will throw an error if used.
+     *        </p>
      */
-
+    @Deprecated
     public void setRecordAllRosTopics(Boolean recordAllRosTopics) {
         this.recordAllRosTopics = recordAllRosTopics;
     }
@@ -52,10 +66,18 @@ public class LoggingConfig implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A boolean indicating whether to record all ROS topics.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
-     * @return A boolean indicating whether to record all ROS topics.
+     * @return A boolean indicating whether to record all ROS topics.</p> <important>
+     *         <p>
+     *         This API is no longer supported and will throw an error if used.
+     *         </p>
      */
-
+    @Deprecated
     public Boolean getRecordAllRosTopics() {
         return this.recordAllRosTopics;
     }
@@ -64,12 +86,20 @@ public class LoggingConfig implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A boolean indicating whether to record all ROS topics.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param recordAllRosTopics
-     *        A boolean indicating whether to record all ROS topics.
+     *        A boolean indicating whether to record all ROS topics.</p> <important>
+     *        <p>
+     *        This API is no longer supported and will throw an error if used.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public LoggingConfig withRecordAllRosTopics(Boolean recordAllRosTopics) {
         setRecordAllRosTopics(recordAllRosTopics);
         return this;
@@ -79,10 +109,18 @@ public class LoggingConfig implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A boolean indicating whether to record all ROS topics.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
-     * @return A boolean indicating whether to record all ROS topics.
+     * @return A boolean indicating whether to record all ROS topics.</p> <important>
+     *         <p>
+     *         This API is no longer supported and will throw an error if used.
+     *         </p>
      */
-
+    @Deprecated
     public Boolean isRecordAllRosTopics() {
         return this.recordAllRosTopics;
     }

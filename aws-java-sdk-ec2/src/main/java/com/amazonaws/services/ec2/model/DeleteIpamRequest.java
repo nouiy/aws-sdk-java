@@ -31,6 +31,46 @@ public class DeleteIpamRequest extends AmazonWebServiceRequest implements Serial
      * </p>
      */
     private String ipamId;
+    /**
+     * <p>
+     * Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the pools
+     * in private scopes. You cannot delete the IPAM with this option if there is a pool in your public scope. If you
+     * use this option, IPAM does the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Deallocates any CIDRs allocated to VPC resources (such as VPCs) in pools in private scopes.
+     * </p>
+     * <note>
+     * <p>
+     * No VPC resources are deleted as a result of enabling this option. The CIDR associated with the resource will no
+     * longer be allocated from an IPAM pool, but the CIDR itself will remain unchanged.
+     * </p>
+     * </note></li>
+     * <li>
+     * <p>
+     * Deprovisions all IPv4 CIDRs provisioned to IPAM pools in private scopes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Deletes all IPAM pools in private scopes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Deletes all non-default private scopes in the IPAM.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Deletes the default public and private scopes and the IPAM.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private Boolean cascade;
 
     /**
      * <p>
@@ -73,6 +113,326 @@ public class DeleteIpamRequest extends AmazonWebServiceRequest implements Serial
     }
 
     /**
+     * <p>
+     * Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the pools
+     * in private scopes. You cannot delete the IPAM with this option if there is a pool in your public scope. If you
+     * use this option, IPAM does the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Deallocates any CIDRs allocated to VPC resources (such as VPCs) in pools in private scopes.
+     * </p>
+     * <note>
+     * <p>
+     * No VPC resources are deleted as a result of enabling this option. The CIDR associated with the resource will no
+     * longer be allocated from an IPAM pool, but the CIDR itself will remain unchanged.
+     * </p>
+     * </note></li>
+     * <li>
+     * <p>
+     * Deprovisions all IPv4 CIDRs provisioned to IPAM pools in private scopes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Deletes all IPAM pools in private scopes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Deletes all non-default private scopes in the IPAM.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Deletes the default public and private scopes and the IPAM.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param cascade
+     *        Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the
+     *        pools in private scopes. You cannot delete the IPAM with this option if there is a pool in your public
+     *        scope. If you use this option, IPAM does the following:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Deallocates any CIDRs allocated to VPC resources (such as VPCs) in pools in private scopes.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        No VPC resources are deleted as a result of enabling this option. The CIDR associated with the resource
+     *        will no longer be allocated from an IPAM pool, but the CIDR itself will remain unchanged.
+     *        </p>
+     *        </note></li>
+     *        <li>
+     *        <p>
+     *        Deprovisions all IPv4 CIDRs provisioned to IPAM pools in private scopes.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Deletes all IPAM pools in private scopes.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Deletes all non-default private scopes in the IPAM.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Deletes the default public and private scopes and the IPAM.
+     *        </p>
+     *        </li>
+     */
+
+    public void setCascade(Boolean cascade) {
+        this.cascade = cascade;
+    }
+
+    /**
+     * <p>
+     * Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the pools
+     * in private scopes. You cannot delete the IPAM with this option if there is a pool in your public scope. If you
+     * use this option, IPAM does the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Deallocates any CIDRs allocated to VPC resources (such as VPCs) in pools in private scopes.
+     * </p>
+     * <note>
+     * <p>
+     * No VPC resources are deleted as a result of enabling this option. The CIDR associated with the resource will no
+     * longer be allocated from an IPAM pool, but the CIDR itself will remain unchanged.
+     * </p>
+     * </note></li>
+     * <li>
+     * <p>
+     * Deprovisions all IPv4 CIDRs provisioned to IPAM pools in private scopes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Deletes all IPAM pools in private scopes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Deletes all non-default private scopes in the IPAM.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Deletes the default public and private scopes and the IPAM.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in
+     *         the pools in private scopes. You cannot delete the IPAM with this option if there is a pool in your
+     *         public scope. If you use this option, IPAM does the following:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Deallocates any CIDRs allocated to VPC resources (such as VPCs) in pools in private scopes.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         No VPC resources are deleted as a result of enabling this option. The CIDR associated with the resource
+     *         will no longer be allocated from an IPAM pool, but the CIDR itself will remain unchanged.
+     *         </p>
+     *         </note></li>
+     *         <li>
+     *         <p>
+     *         Deprovisions all IPv4 CIDRs provisioned to IPAM pools in private scopes.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Deletes all IPAM pools in private scopes.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Deletes all non-default private scopes in the IPAM.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Deletes the default public and private scopes and the IPAM.
+     *         </p>
+     *         </li>
+     */
+
+    public Boolean getCascade() {
+        return this.cascade;
+    }
+
+    /**
+     * <p>
+     * Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the pools
+     * in private scopes. You cannot delete the IPAM with this option if there is a pool in your public scope. If you
+     * use this option, IPAM does the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Deallocates any CIDRs allocated to VPC resources (such as VPCs) in pools in private scopes.
+     * </p>
+     * <note>
+     * <p>
+     * No VPC resources are deleted as a result of enabling this option. The CIDR associated with the resource will no
+     * longer be allocated from an IPAM pool, but the CIDR itself will remain unchanged.
+     * </p>
+     * </note></li>
+     * <li>
+     * <p>
+     * Deprovisions all IPv4 CIDRs provisioned to IPAM pools in private scopes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Deletes all IPAM pools in private scopes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Deletes all non-default private scopes in the IPAM.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Deletes the default public and private scopes and the IPAM.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param cascade
+     *        Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the
+     *        pools in private scopes. You cannot delete the IPAM with this option if there is a pool in your public
+     *        scope. If you use this option, IPAM does the following:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Deallocates any CIDRs allocated to VPC resources (such as VPCs) in pools in private scopes.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        No VPC resources are deleted as a result of enabling this option. The CIDR associated with the resource
+     *        will no longer be allocated from an IPAM pool, but the CIDR itself will remain unchanged.
+     *        </p>
+     *        </note></li>
+     *        <li>
+     *        <p>
+     *        Deprovisions all IPv4 CIDRs provisioned to IPAM pools in private scopes.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Deletes all IPAM pools in private scopes.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Deletes all non-default private scopes in the IPAM.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Deletes the default public and private scopes and the IPAM.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteIpamRequest withCascade(Boolean cascade) {
+        setCascade(cascade);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in the pools
+     * in private scopes. You cannot delete the IPAM with this option if there is a pool in your public scope. If you
+     * use this option, IPAM does the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Deallocates any CIDRs allocated to VPC resources (such as VPCs) in pools in private scopes.
+     * </p>
+     * <note>
+     * <p>
+     * No VPC resources are deleted as a result of enabling this option. The CIDR associated with the resource will no
+     * longer be allocated from an IPAM pool, but the CIDR itself will remain unchanged.
+     * </p>
+     * </note></li>
+     * <li>
+     * <p>
+     * Deprovisions all IPv4 CIDRs provisioned to IPAM pools in private scopes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Deletes all IPAM pools in private scopes.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Deletes all non-default private scopes in the IPAM.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Deletes the default public and private scopes and the IPAM.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Enables you to quickly delete an IPAM, private scopes, pools in private scopes, and any allocations in
+     *         the pools in private scopes. You cannot delete the IPAM with this option if there is a pool in your
+     *         public scope. If you use this option, IPAM does the following:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Deallocates any CIDRs allocated to VPC resources (such as VPCs) in pools in private scopes.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         No VPC resources are deleted as a result of enabling this option. The CIDR associated with the resource
+     *         will no longer be allocated from an IPAM pool, but the CIDR itself will remain unchanged.
+     *         </p>
+     *         </note></li>
+     *         <li>
+     *         <p>
+     *         Deprovisions all IPv4 CIDRs provisioned to IPAM pools in private scopes.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Deletes all IPAM pools in private scopes.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Deletes all non-default private scopes in the IPAM.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Deletes the default public and private scopes and the IPAM.
+     *         </p>
+     *         </li>
+     */
+
+    public Boolean isCascade() {
+        return this.cascade;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -96,7 +456,9 @@ public class DeleteIpamRequest extends AmazonWebServiceRequest implements Serial
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getIpamId() != null)
-            sb.append("IpamId: ").append(getIpamId());
+            sb.append("IpamId: ").append(getIpamId()).append(",");
+        if (getCascade() != null)
+            sb.append("Cascade: ").append(getCascade());
         sb.append("}");
         return sb.toString();
     }
@@ -115,6 +477,10 @@ public class DeleteIpamRequest extends AmazonWebServiceRequest implements Serial
             return false;
         if (other.getIpamId() != null && other.getIpamId().equals(this.getIpamId()) == false)
             return false;
+        if (other.getCascade() == null ^ this.getCascade() == null)
+            return false;
+        if (other.getCascade() != null && other.getCascade().equals(this.getCascade()) == false)
+            return false;
         return true;
     }
 
@@ -124,6 +490,7 @@ public class DeleteIpamRequest extends AmazonWebServiceRequest implements Serial
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getIpamId() == null) ? 0 : getIpamId().hashCode());
+        hashCode = prime * hashCode + ((getCascade() == null) ? 0 : getCascade().hashCode());
         return hashCode;
     }
 

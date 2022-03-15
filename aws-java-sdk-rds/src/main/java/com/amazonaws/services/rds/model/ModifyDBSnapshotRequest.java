@@ -178,7 +178,7 @@ public class ModifyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param engineVersion
-     *        The engine version to upgrade the DB snapshot to. </p>
+     *        The engine version to upgrade the DB snapshot to.</p>
      *        <p>
      *        The following are the database engines and engine versions that are available when you upgrade a DB
      *        snapshot.
@@ -272,7 +272,7 @@ public class ModifyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceReque
      * > Upgrading the PostgreSQL DB Engine for Amazon RDS</a>.
      * </p>
      * 
-     * @return The engine version to upgrade the DB snapshot to. </p>
+     * @return The engine version to upgrade the DB snapshot to.</p>
      *         <p>
      *         The following are the database engines and engine versions that are available when you upgrade a DB
      *         snapshot.
@@ -367,7 +367,7 @@ public class ModifyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param engineVersion
-     *        The engine version to upgrade the DB snapshot to. </p>
+     *        The engine version to upgrade the DB snapshot to.</p>
      *        <p>
      *        The following are the database engines and engine versions that are available when you upgrade a DB
      *        snapshot.
@@ -429,7 +429,7 @@ public class ModifyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param optionGroupName
-     *        The option group to identify with the upgraded DB snapshot. </p>
+     *        The option group to identify with the upgraded DB snapshot.</p>
      *        <p>
      *        You can specify this parameter when you upgrade an Oracle DB snapshot. The same option group
      *        considerations apply when upgrading a DB snapshot as when upgrading a DB instance. For more information,
@@ -453,7 +453,7 @@ public class ModifyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceReque
      * >Option group considerations</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * 
-     * @return The option group to identify with the upgraded DB snapshot. </p>
+     * @return The option group to identify with the upgraded DB snapshot.</p>
      *         <p>
      *         You can specify this parameter when you upgrade an Oracle DB snapshot. The same option group
      *         considerations apply when upgrading a DB snapshot as when upgrading a DB instance. For more information,
@@ -478,7 +478,7 @@ public class ModifyDBSnapshotRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param optionGroupName
-     *        The option group to identify with the upgraded DB snapshot. </p>
+     *        The option group to identify with the upgraded DB snapshot.</p>
      *        <p>
      *        You can specify this parameter when you upgrade an Oracle DB snapshot. The same option group
      *        considerations apply when upgrading a DB snapshot as when upgrading a DB instance. For more information,

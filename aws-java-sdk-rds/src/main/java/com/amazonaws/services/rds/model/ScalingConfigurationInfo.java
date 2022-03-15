@@ -22,7 +22,7 @@ import javax.annotation.Generated;
  * <p>
  * For more information, see <a
  * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html">Using Amazon Aurora
- * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+ * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ScalingConfigurationInfo" target="_top">AWS API
@@ -49,7 +49,7 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
      * engine mode.
      * </p>
      * <p>
-     * When the value is set to false for an Aurora Serverless DB cluster, the DB cluster automatically resumes.
+     * When the value is set to false for an Aurora Serverless v1 DB cluster, the DB cluster automatically resumes.
      * </p>
      */
     private Boolean autoPause;
@@ -62,7 +62,7 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
     private Integer secondsUntilAutoPause;
     /**
      * <p>
-     * The action that occurs when Aurora times out while attempting to change the capacity of an Aurora Serverless
+     * The action that occurs when Aurora times out while attempting to change the capacity of an Aurora Serverless v1
      * cluster. The value is either <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.
      * </p>
      * <p>
@@ -168,14 +168,15 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
      * engine mode.
      * </p>
      * <p>
-     * When the value is set to false for an Aurora Serverless DB cluster, the DB cluster automatically resumes.
+     * When the value is set to false for an Aurora Serverless v1 DB cluster, the DB cluster automatically resumes.
      * </p>
      * 
      * @param autoPause
      *        A value that indicates whether automatic pause is allowed for the Aurora DB cluster in
      *        <code>serverless</code> DB engine mode.</p>
      *        <p>
-     *        When the value is set to false for an Aurora Serverless DB cluster, the DB cluster automatically resumes.
+     *        When the value is set to false for an Aurora Serverless v1 DB cluster, the DB cluster automatically
+     *        resumes.
      */
 
     public void setAutoPause(Boolean autoPause) {
@@ -188,13 +189,14 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
      * engine mode.
      * </p>
      * <p>
-     * When the value is set to false for an Aurora Serverless DB cluster, the DB cluster automatically resumes.
+     * When the value is set to false for an Aurora Serverless v1 DB cluster, the DB cluster automatically resumes.
      * </p>
      * 
      * @return A value that indicates whether automatic pause is allowed for the Aurora DB cluster in
      *         <code>serverless</code> DB engine mode.</p>
      *         <p>
-     *         When the value is set to false for an Aurora Serverless DB cluster, the DB cluster automatically resumes.
+     *         When the value is set to false for an Aurora Serverless v1 DB cluster, the DB cluster automatically
+     *         resumes.
      */
 
     public Boolean getAutoPause() {
@@ -207,14 +209,15 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
      * engine mode.
      * </p>
      * <p>
-     * When the value is set to false for an Aurora Serverless DB cluster, the DB cluster automatically resumes.
+     * When the value is set to false for an Aurora Serverless v1 DB cluster, the DB cluster automatically resumes.
      * </p>
      * 
      * @param autoPause
      *        A value that indicates whether automatic pause is allowed for the Aurora DB cluster in
      *        <code>serverless</code> DB engine mode.</p>
      *        <p>
-     *        When the value is set to false for an Aurora Serverless DB cluster, the DB cluster automatically resumes.
+     *        When the value is set to false for an Aurora Serverless v1 DB cluster, the DB cluster automatically
+     *        resumes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -229,13 +232,14 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
      * engine mode.
      * </p>
      * <p>
-     * When the value is set to false for an Aurora Serverless DB cluster, the DB cluster automatically resumes.
+     * When the value is set to false for an Aurora Serverless v1 DB cluster, the DB cluster automatically resumes.
      * </p>
      * 
      * @return A value that indicates whether automatic pause is allowed for the Aurora DB cluster in
      *         <code>serverless</code> DB engine mode.</p>
      *         <p>
-     *         When the value is set to false for an Aurora Serverless DB cluster, the DB cluster automatically resumes.
+     *         When the value is set to false for an Aurora Serverless v1 DB cluster, the DB cluster automatically
+     *         resumes.
      */
 
     public Boolean isAutoPause() {
@@ -290,7 +294,7 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The action that occurs when Aurora times out while attempting to change the capacity of an Aurora Serverless
+     * The action that occurs when Aurora times out while attempting to change the capacity of an Aurora Serverless v1
      * cluster. The value is either <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.
      * </p>
      * <p>
@@ -303,7 +307,7 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
      * 
      * @param timeoutAction
      *        The action that occurs when Aurora times out while attempting to change the capacity of an Aurora
-     *        Serverless cluster. The value is either <code>ForceApplyCapacityChange</code> or
+     *        Serverless v1 cluster. The value is either <code>ForceApplyCapacityChange</code> or
      *        <code>RollbackCapacityChange</code>.</p>
      *        <p>
      *        <code>ForceApplyCapacityChange</code>, the default, sets the capacity to the specified value as soon as
@@ -320,7 +324,7 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The action that occurs when Aurora times out while attempting to change the capacity of an Aurora Serverless
+     * The action that occurs when Aurora times out while attempting to change the capacity of an Aurora Serverless v1
      * cluster. The value is either <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.
      * </p>
      * <p>
@@ -332,7 +336,7 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
      * </p>
      * 
      * @return The action that occurs when Aurora times out while attempting to change the capacity of an Aurora
-     *         Serverless cluster. The value is either <code>ForceApplyCapacityChange</code> or
+     *         Serverless v1 cluster. The value is either <code>ForceApplyCapacityChange</code> or
      *         <code>RollbackCapacityChange</code>.</p>
      *         <p>
      *         <code>ForceApplyCapacityChange</code>, the default, sets the capacity to the specified value as soon as
@@ -349,7 +353,7 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The action that occurs when Aurora times out while attempting to change the capacity of an Aurora Serverless
+     * The action that occurs when Aurora times out while attempting to change the capacity of an Aurora Serverless v1
      * cluster. The value is either <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.
      * </p>
      * <p>
@@ -362,7 +366,7 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
      * 
      * @param timeoutAction
      *        The action that occurs when Aurora times out while attempting to change the capacity of an Aurora
-     *        Serverless cluster. The value is either <code>ForceApplyCapacityChange</code> or
+     *        Serverless v1 cluster. The value is either <code>ForceApplyCapacityChange</code> or
      *        <code>RollbackCapacityChange</code>.</p>
      *        <p>
      *        <code>ForceApplyCapacityChange</code>, the default, sets the capacity to the specified value as soon as

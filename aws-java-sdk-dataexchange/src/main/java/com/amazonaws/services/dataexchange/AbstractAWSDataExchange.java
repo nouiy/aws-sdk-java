@@ -128,6 +128,11 @@ public class AbstractAWSDataExchange implements AWSDataExchange {
     }
 
     @Override
+    public RevokeRevisionResult revokeRevision(RevokeRevisionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StartJobResult startJob(StartJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

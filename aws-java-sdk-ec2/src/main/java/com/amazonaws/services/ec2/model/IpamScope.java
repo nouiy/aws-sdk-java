@@ -24,7 +24,7 @@ import javax.annotation.Generated;
  * </p>
  * <p>
  * For more information, see <a href="/vpc/latest/ipam/how-it-works-ipam.html">How IPAM works</a> in the <i>Amazon VPC
- * IPAM User Guide</i>
+ * IPAM User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/IpamScope" target="_top">AWS API

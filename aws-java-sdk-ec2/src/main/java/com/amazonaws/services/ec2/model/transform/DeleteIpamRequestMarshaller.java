@@ -44,6 +44,10 @@ public class DeleteIpamRequestMarshaller implements Marshaller<Request<DeleteIpa
             request.addParameter("IpamId", StringUtils.fromString(deleteIpamRequest.getIpamId()));
         }
 
+        if (deleteIpamRequest.getCascade() != null) {
+            request.addParameter("Cascade", StringUtils.fromBoolean(deleteIpamRequest.getCascade()));
+        }
+
         return request;
     }
 

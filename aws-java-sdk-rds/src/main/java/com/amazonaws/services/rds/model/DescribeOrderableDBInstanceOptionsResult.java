@@ -38,7 +38,7 @@ public class DescribeOrderableDBInstanceOptionsResult extends com.amazonaws.Amaz
      * <p>
      * An optional pagination token provided by a previous OrderableDBInstanceOptions request. If this parameter is
      * specified, the response includes only records beyond the marker, up to the value specified by
-     * <code>MaxRecords</code> .
+     * <code>MaxRecords</code>.
      * </p>
      */
     private String marker;
@@ -128,13 +128,13 @@ public class DescribeOrderableDBInstanceOptionsResult extends com.amazonaws.Amaz
      * <p>
      * An optional pagination token provided by a previous OrderableDBInstanceOptions request. If this parameter is
      * specified, the response includes only records beyond the marker, up to the value specified by
-     * <code>MaxRecords</code> .
+     * <code>MaxRecords</code>.
      * </p>
      * 
      * @param marker
      *        An optional pagination token provided by a previous OrderableDBInstanceOptions request. If this parameter
      *        is specified, the response includes only records beyond the marker, up to the value specified by
-     *        <code>MaxRecords</code> .
+     *        <code>MaxRecords</code>.
      */
 
     public void setMarker(String marker) {
@@ -145,12 +145,12 @@ public class DescribeOrderableDBInstanceOptionsResult extends com.amazonaws.Amaz
      * <p>
      * An optional pagination token provided by a previous OrderableDBInstanceOptions request. If this parameter is
      * specified, the response includes only records beyond the marker, up to the value specified by
-     * <code>MaxRecords</code> .
+     * <code>MaxRecords</code>.
      * </p>
      * 
      * @return An optional pagination token provided by a previous OrderableDBInstanceOptions request. If this parameter
      *         is specified, the response includes only records beyond the marker, up to the value specified by
-     *         <code>MaxRecords</code> .
+     *         <code>MaxRecords</code>.
      */
 
     public String getMarker() {
@@ -161,13 +161,13 @@ public class DescribeOrderableDBInstanceOptionsResult extends com.amazonaws.Amaz
      * <p>
      * An optional pagination token provided by a previous OrderableDBInstanceOptions request. If this parameter is
      * specified, the response includes only records beyond the marker, up to the value specified by
-     * <code>MaxRecords</code> .
+     * <code>MaxRecords</code>.
      * </p>
      * 
      * @param marker
      *        An optional pagination token provided by a previous OrderableDBInstanceOptions request. If this parameter
      *        is specified, the response includes only records beyond the marker, up to the value specified by
-     *        <code>MaxRecords</code> .
+     *        <code>MaxRecords</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

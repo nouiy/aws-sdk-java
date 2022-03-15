@@ -125,19 +125,61 @@ public class AdminRespondToAuthChallengeRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <p>
      * You create custom workflows by assigning Lambda functions to user pool triggers. When you use the
-     * AdminRespondToAuthChallenge API action, Amazon Cognito invokes any functions that are assigned to the following
-     * triggers: <i>pre sign-up</i>, <i>custom message</i>, <i>post authentication</i>, <i>user migration</i>, <i>pre
-     * token generation</i>, <i>define auth challenge</i>, <i>create auth challenge</i>, and <i>verify auth challenge
-     * response</i>. When Amazon Cognito invokes any of these functions, it passes a JSON payload, which the function
-     * receives as input. This payload contains a <code>clientMetadata</code> attribute, which provides the data that
-     * you assigned to the ClientMetadata parameter in your AdminRespondToAuthChallenge request. In your function code
-     * in Lambda, you can process the <code>clientMetadata</code> value to enhance your workflow for your specific
-     * needs.
+     * AdminRespondToAuthChallenge API action, Amazon Cognito invokes any functions that you have assigned to the
+     * following triggers:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * pre sign-up
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * custom message
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * post authentication
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * user migration
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * pre token generation
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * define auth challenge
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * create auth challenge
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * verify auth challenge response
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When Amazon Cognito invokes any of these functions, it passes a JSON payload, which the function receives as
+     * input. This payload contains a <code>clientMetadata</code> attribute that provides the data that you assigned to
+     * the ClientMetadata parameter in your AdminRespondToAuthChallenge request. In your function code in Lambda, you
+     * can process the <code>clientMetadata</code> value to enhance your workflow for your specific needs.
      * </p>
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html"
-     * >Customizing User Pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
+     * > Customizing user pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -818,19 +860,61 @@ public class AdminRespondToAuthChallengeRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <p>
      * You create custom workflows by assigning Lambda functions to user pool triggers. When you use the
-     * AdminRespondToAuthChallenge API action, Amazon Cognito invokes any functions that are assigned to the following
-     * triggers: <i>pre sign-up</i>, <i>custom message</i>, <i>post authentication</i>, <i>user migration</i>, <i>pre
-     * token generation</i>, <i>define auth challenge</i>, <i>create auth challenge</i>, and <i>verify auth challenge
-     * response</i>. When Amazon Cognito invokes any of these functions, it passes a JSON payload, which the function
-     * receives as input. This payload contains a <code>clientMetadata</code> attribute, which provides the data that
-     * you assigned to the ClientMetadata parameter in your AdminRespondToAuthChallenge request. In your function code
-     * in Lambda, you can process the <code>clientMetadata</code> value to enhance your workflow for your specific
-     * needs.
+     * AdminRespondToAuthChallenge API action, Amazon Cognito invokes any functions that you have assigned to the
+     * following triggers:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * pre sign-up
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * custom message
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * post authentication
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * user migration
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * pre token generation
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * define auth challenge
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * create auth challenge
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * verify auth challenge response
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When Amazon Cognito invokes any of these functions, it passes a JSON payload, which the function receives as
+     * input. This payload contains a <code>clientMetadata</code> attribute that provides the data that you assigned to
+     * the ClientMetadata parameter in your AdminRespondToAuthChallenge request. In your function code in Lambda, you
+     * can process the <code>clientMetadata</code> value to enhance your workflow for your specific needs.
      * </p>
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html"
-     * >Customizing User Pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
+     * > Customizing user pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -861,19 +945,62 @@ public class AdminRespondToAuthChallengeRequest extends com.amazonaws.AmazonWebS
      *         triggers.</p>
      *         <p>
      *         You create custom workflows by assigning Lambda functions to user pool triggers. When you use the
-     *         AdminRespondToAuthChallenge API action, Amazon Cognito invokes any functions that are assigned to the
-     *         following triggers: <i>pre sign-up</i>, <i>custom message</i>, <i>post authentication</i>, <i>user
-     *         migration</i>, <i>pre token generation</i>, <i>define auth challenge</i>, <i>create auth challenge</i>,
-     *         and <i>verify auth challenge response</i>. When Amazon Cognito invokes any of these functions, it passes
-     *         a JSON payload, which the function receives as input. This payload contains a <code>clientMetadata</code>
-     *         attribute, which provides the data that you assigned to the ClientMetadata parameter in your
-     *         AdminRespondToAuthChallenge request. In your function code in Lambda, you can process the
-     *         <code>clientMetadata</code> value to enhance your workflow for your specific needs.
+     *         AdminRespondToAuthChallenge API action, Amazon Cognito invokes any functions that you have assigned to
+     *         the following triggers:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         pre sign-up
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         custom message
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         post authentication
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         user migration
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         pre token generation
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         define auth challenge
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         create auth challenge
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         verify auth challenge response
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When Amazon Cognito invokes any of these functions, it passes a JSON payload, which the function receives
+     *         as input. This payload contains a <code>clientMetadata</code> attribute that provides the data that you
+     *         assigned to the ClientMetadata parameter in your AdminRespondToAuthChallenge request. In your function
+     *         code in Lambda, you can process the <code>clientMetadata</code> value to enhance your workflow for your
+     *         specific needs.
      *         </p>
      *         <p>
      *         For more information, see <a href=
      *         "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html"
-     *         >Customizing User Pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
+     *         > Customizing user pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
      *         </p>
      *         <note>
      *         <p>
@@ -910,19 +1037,61 @@ public class AdminRespondToAuthChallengeRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <p>
      * You create custom workflows by assigning Lambda functions to user pool triggers. When you use the
-     * AdminRespondToAuthChallenge API action, Amazon Cognito invokes any functions that are assigned to the following
-     * triggers: <i>pre sign-up</i>, <i>custom message</i>, <i>post authentication</i>, <i>user migration</i>, <i>pre
-     * token generation</i>, <i>define auth challenge</i>, <i>create auth challenge</i>, and <i>verify auth challenge
-     * response</i>. When Amazon Cognito invokes any of these functions, it passes a JSON payload, which the function
-     * receives as input. This payload contains a <code>clientMetadata</code> attribute, which provides the data that
-     * you assigned to the ClientMetadata parameter in your AdminRespondToAuthChallenge request. In your function code
-     * in Lambda, you can process the <code>clientMetadata</code> value to enhance your workflow for your specific
-     * needs.
+     * AdminRespondToAuthChallenge API action, Amazon Cognito invokes any functions that you have assigned to the
+     * following triggers:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * pre sign-up
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * custom message
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * post authentication
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * user migration
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * pre token generation
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * define auth challenge
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * create auth challenge
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * verify auth challenge response
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When Amazon Cognito invokes any of these functions, it passes a JSON payload, which the function receives as
+     * input. This payload contains a <code>clientMetadata</code> attribute that provides the data that you assigned to
+     * the ClientMetadata parameter in your AdminRespondToAuthChallenge request. In your function code in Lambda, you
+     * can process the <code>clientMetadata</code> value to enhance your workflow for your specific needs.
      * </p>
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html"
-     * >Customizing User Pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
+     * > Customizing user pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -954,19 +1123,62 @@ public class AdminRespondToAuthChallengeRequest extends com.amazonaws.AmazonWebS
      *        triggers.</p>
      *        <p>
      *        You create custom workflows by assigning Lambda functions to user pool triggers. When you use the
-     *        AdminRespondToAuthChallenge API action, Amazon Cognito invokes any functions that are assigned to the
-     *        following triggers: <i>pre sign-up</i>, <i>custom message</i>, <i>post authentication</i>, <i>user
-     *        migration</i>, <i>pre token generation</i>, <i>define auth challenge</i>, <i>create auth challenge</i>,
-     *        and <i>verify auth challenge response</i>. When Amazon Cognito invokes any of these functions, it passes a
-     *        JSON payload, which the function receives as input. This payload contains a <code>clientMetadata</code>
-     *        attribute, which provides the data that you assigned to the ClientMetadata parameter in your
-     *        AdminRespondToAuthChallenge request. In your function code in Lambda, you can process the
-     *        <code>clientMetadata</code> value to enhance your workflow for your specific needs.
+     *        AdminRespondToAuthChallenge API action, Amazon Cognito invokes any functions that you have assigned to the
+     *        following triggers:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        pre sign-up
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        custom message
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        post authentication
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        user migration
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        pre token generation
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        define auth challenge
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        create auth challenge
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        verify auth challenge response
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When Amazon Cognito invokes any of these functions, it passes a JSON payload, which the function receives
+     *        as input. This payload contains a <code>clientMetadata</code> attribute that provides the data that you
+     *        assigned to the ClientMetadata parameter in your AdminRespondToAuthChallenge request. In your function
+     *        code in Lambda, you can process the <code>clientMetadata</code> value to enhance your workflow for your
+     *        specific needs.
      *        </p>
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html"
-     *        >Customizing User Pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
+     *        > Customizing user pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
      *        </p>
      *        <note>
      *        <p>
@@ -1003,19 +1215,61 @@ public class AdminRespondToAuthChallengeRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <p>
      * You create custom workflows by assigning Lambda functions to user pool triggers. When you use the
-     * AdminRespondToAuthChallenge API action, Amazon Cognito invokes any functions that are assigned to the following
-     * triggers: <i>pre sign-up</i>, <i>custom message</i>, <i>post authentication</i>, <i>user migration</i>, <i>pre
-     * token generation</i>, <i>define auth challenge</i>, <i>create auth challenge</i>, and <i>verify auth challenge
-     * response</i>. When Amazon Cognito invokes any of these functions, it passes a JSON payload, which the function
-     * receives as input. This payload contains a <code>clientMetadata</code> attribute, which provides the data that
-     * you assigned to the ClientMetadata parameter in your AdminRespondToAuthChallenge request. In your function code
-     * in Lambda, you can process the <code>clientMetadata</code> value to enhance your workflow for your specific
-     * needs.
+     * AdminRespondToAuthChallenge API action, Amazon Cognito invokes any functions that you have assigned to the
+     * following triggers:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * pre sign-up
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * custom message
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * post authentication
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * user migration
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * pre token generation
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * define auth challenge
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * create auth challenge
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * verify auth challenge response
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When Amazon Cognito invokes any of these functions, it passes a JSON payload, which the function receives as
+     * input. This payload contains a <code>clientMetadata</code> attribute that provides the data that you assigned to
+     * the ClientMetadata parameter in your AdminRespondToAuthChallenge request. In your function code in Lambda, you
+     * can process the <code>clientMetadata</code> value to enhance your workflow for your specific needs.
      * </p>
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html"
-     * >Customizing User Pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
+     * > Customizing user pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -1047,19 +1301,62 @@ public class AdminRespondToAuthChallengeRequest extends com.amazonaws.AmazonWebS
      *        triggers.</p>
      *        <p>
      *        You create custom workflows by assigning Lambda functions to user pool triggers. When you use the
-     *        AdminRespondToAuthChallenge API action, Amazon Cognito invokes any functions that are assigned to the
-     *        following triggers: <i>pre sign-up</i>, <i>custom message</i>, <i>post authentication</i>, <i>user
-     *        migration</i>, <i>pre token generation</i>, <i>define auth challenge</i>, <i>create auth challenge</i>,
-     *        and <i>verify auth challenge response</i>. When Amazon Cognito invokes any of these functions, it passes a
-     *        JSON payload, which the function receives as input. This payload contains a <code>clientMetadata</code>
-     *        attribute, which provides the data that you assigned to the ClientMetadata parameter in your
-     *        AdminRespondToAuthChallenge request. In your function code in Lambda, you can process the
-     *        <code>clientMetadata</code> value to enhance your workflow for your specific needs.
+     *        AdminRespondToAuthChallenge API action, Amazon Cognito invokes any functions that you have assigned to the
+     *        following triggers:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        pre sign-up
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        custom message
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        post authentication
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        user migration
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        pre token generation
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        define auth challenge
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        create auth challenge
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        verify auth challenge response
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When Amazon Cognito invokes any of these functions, it passes a JSON payload, which the function receives
+     *        as input. This payload contains a <code>clientMetadata</code> attribute that provides the data that you
+     *        assigned to the ClientMetadata parameter in your AdminRespondToAuthChallenge request. In your function
+     *        code in Lambda, you can process the <code>clientMetadata</code> value to enhance your workflow for your
+     *        specific needs.
      *        </p>
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html"
-     *        >Customizing User Pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
+     *        > Customizing user pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
      *        </p>
      *        <note>
      *        <p>

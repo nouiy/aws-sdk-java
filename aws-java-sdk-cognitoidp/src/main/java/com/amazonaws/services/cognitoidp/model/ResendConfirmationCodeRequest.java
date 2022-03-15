@@ -75,7 +75,7 @@ public class ResendConfirmationCodeRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html"
-     * >Customizing User Pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
+     * > Customizing user pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -334,7 +334,7 @@ public class ResendConfirmationCodeRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html"
-     * >Customizing User Pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
+     * > Customizing user pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -375,7 +375,7 @@ public class ResendConfirmationCodeRequest extends com.amazonaws.AmazonWebServic
      *         <p>
      *         For more information, see <a href=
      *         "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html"
-     *         >Customizing User Pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
+     *         > Customizing user pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
      *         </p>
      *         <note>
      *         <p>
@@ -421,7 +421,7 @@ public class ResendConfirmationCodeRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html"
-     * >Customizing User Pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
+     * > Customizing user pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -463,7 +463,7 @@ public class ResendConfirmationCodeRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html"
-     *        >Customizing User Pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
+     *        > Customizing user pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
      *        </p>
      *        <note>
      *        <p>
@@ -509,7 +509,7 @@ public class ResendConfirmationCodeRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html"
-     * >Customizing User Pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
+     * > Customizing user pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -551,7 +551,7 @@ public class ResendConfirmationCodeRequest extends com.amazonaws.AmazonWebServic
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html"
-     *        >Customizing User Pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
+     *        > Customizing user pool Workflows with Lambda Triggers</a> in the <i>Amazon Cognito Developer Guide</i>.
      *        </p>
      *        <note>
      *        <p>

@@ -619,7 +619,7 @@ public class DBInstance implements Serializable, Cloneable {
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      */
     private String customIamInstanceProfile;
@@ -2950,7 +2950,7 @@ public class DBInstance implements Serializable, Cloneable {
      * 
      * @param kmsKeyId
      *        If <code>StorageEncrypted</code> is true, the Amazon Web Services KMS key identifier for the encrypted DB
-     *        instance. </p>
+     *        instance.</p>
      *        <p>
      *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
      *        key.
@@ -2970,7 +2970,7 @@ public class DBInstance implements Serializable, Cloneable {
      * </p>
      * 
      * @return If <code>StorageEncrypted</code> is true, the Amazon Web Services KMS key identifier for the encrypted DB
-     *         instance. </p>
+     *         instance.</p>
      *         <p>
      *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
      *         key.
@@ -2991,7 +2991,7 @@ public class DBInstance implements Serializable, Cloneable {
      * 
      * @param kmsKeyId
      *        If <code>StorageEncrypted</code> is true, the Amazon Web Services KMS key identifier for the encrypted DB
-     *        instance. </p>
+     *        instance.</p>
      *        <p>
      *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
      *        key.
@@ -5085,7 +5085,7 @@ public class DBInstance implements Serializable, Cloneable {
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param customIamInstanceProfile
@@ -5112,7 +5112,7 @@ public class DBInstance implements Serializable, Cloneable {
      *        <p>
      *        For the list of permissions required for the IAM role, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     *        Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public void setCustomIamInstanceProfile(String customIamInstanceProfile) {
@@ -5144,7 +5144,7 @@ public class DBInstance implements Serializable, Cloneable {
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @return The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
@@ -5170,7 +5170,7 @@ public class DBInstance implements Serializable, Cloneable {
      *         <p>
      *         For the list of permissions required for the IAM role, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc"
-     *         > Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *         > Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public String getCustomIamInstanceProfile() {
@@ -5202,7 +5202,7 @@ public class DBInstance implements Serializable, Cloneable {
      * <p>
      * For the list of permissions required for the IAM role, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param customIamInstanceProfile
@@ -5229,7 +5229,7 @@ public class DBInstance implements Serializable, Cloneable {
      *        <p>
      *        For the list of permissions required for the IAM role, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
-     *        Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        Configure IAM and your VPC</a> in the <i>Amazon RDS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

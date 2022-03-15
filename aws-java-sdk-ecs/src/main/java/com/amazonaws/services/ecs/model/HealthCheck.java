@@ -23,6 +23,14 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * override any Docker health checks that exist in the container image (such as those specified in a parent image or
  * from the image's Dockerfile).
  * </p>
+ * <note>
+ * <p>
+ * The Amazon ECS container agent only monitors and reports on the health checks specified in the task definition.
+ * Amazon ECS does not monitor Docker health checks that are embedded in a container image and not specified in the
+ * container definition. Health check parameters that are specified in a container definition override any Docker health
+ * checks that exist in the container image.
+ * </p>
+ * </note>
  * <p>
  * You can view the health status of both individual containers and a task with the DescribeTasks API operation or when
  * viewing the task details in the console.

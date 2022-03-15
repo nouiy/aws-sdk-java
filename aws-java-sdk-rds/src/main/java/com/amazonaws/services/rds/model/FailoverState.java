@@ -101,8 +101,8 @@ public class FailoverState implements Serializable, Cloneable {
      * </ul>
      * 
      * @param status
-     *        The current status of the Aurora global database (<a>GlobalCluster</a>). Possible values are as follows:
-     *        </p>
+     *        The current status of the Aurora global database (<a>GlobalCluster</a>). Possible values are as
+     *        follows:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -160,8 +160,8 @@ public class FailoverState implements Serializable, Cloneable {
      * </li>
      * </ul>
      * 
-     * @return The current status of the Aurora global database (<a>GlobalCluster</a>). Possible values are as follows:
-     *         </p>
+     * @return The current status of the Aurora global database (<a>GlobalCluster</a>). Possible values are as
+     *         follows:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -220,8 +220,8 @@ public class FailoverState implements Serializable, Cloneable {
      * </ul>
      * 
      * @param status
-     *        The current status of the Aurora global database (<a>GlobalCluster</a>). Possible values are as follows:
-     *        </p>
+     *        The current status of the Aurora global database (<a>GlobalCluster</a>). Possible values are as
+     *        follows:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -282,8 +282,8 @@ public class FailoverState implements Serializable, Cloneable {
      * </ul>
      * 
      * @param status
-     *        The current status of the Aurora global database (<a>GlobalCluster</a>). Possible values are as follows:
-     *        </p>
+     *        The current status of the Aurora global database (<a>GlobalCluster</a>). Possible values are as
+     *        follows:</p>
      *        <ul>
      *        <li>
      *        <p>

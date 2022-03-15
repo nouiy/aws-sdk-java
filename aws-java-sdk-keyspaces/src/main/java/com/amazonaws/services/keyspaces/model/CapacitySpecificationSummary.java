@@ -21,18 +21,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * The read/write throughput capacity mode for a table. The options are:
  * </p>
- * <ul>
- * <li>
  * <p>
- * <code>throughputMode:PAY_PER_REQUEST</code> and
+ * • <code>throughputMode:PAY_PER_REQUEST</code> and
  * </p>
- * </li>
- * <li>
  * <p>
- * <code>throughputMode:PROVISIONED</code>.
+ * • <code>throughputMode:PROVISIONED</code>.
  * </p>
- * </li>
- * </ul>
  * <p>
  * For more information, see <a
  * href="https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html">Read/write capacity modes</a>
@@ -49,19 +43,13 @@ public class CapacitySpecificationSummary implements Serializable, Cloneable, St
      * <p>
      * The read/write throughput capacity mode for a table. The options are:
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * <code>throughputMode:PAY_PER_REQUEST</code> and
+     * • <code>throughputMode:PAY_PER_REQUEST</code> and
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * <code>throughputMode:PROVISIONED</code>. The provisioned capacity mode requires <code>readCapacityUnits</code>
-     * and <code>writeCapacityUnits</code> as inputs.
+     * • <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires <code>readCapacityUnits</code> and
+     * <code>writeCapacityUnits</code> as input.
      * </p>
-     * </li>
-     * </ul>
      * <p>
      * The default is <code>throughput_mode:PAY_PER_REQUEST</code>.
      * </p>
@@ -97,19 +85,13 @@ public class CapacitySpecificationSummary implements Serializable, Cloneable, St
      * <p>
      * The read/write throughput capacity mode for a table. The options are:
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * <code>throughputMode:PAY_PER_REQUEST</code> and
+     * • <code>throughputMode:PAY_PER_REQUEST</code> and
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * <code>throughputMode:PROVISIONED</code>. The provisioned capacity mode requires <code>readCapacityUnits</code>
-     * and <code>writeCapacityUnits</code> as inputs.
+     * • <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires <code>readCapacityUnits</code> and
+     * <code>writeCapacityUnits</code> as input.
      * </p>
-     * </li>
-     * </ul>
      * <p>
      * The default is <code>throughput_mode:PAY_PER_REQUEST</code>.
      * </p>
@@ -121,19 +103,13 @@ public class CapacitySpecificationSummary implements Serializable, Cloneable, St
      * 
      * @param throughputMode
      *        The read/write throughput capacity mode for a table. The options are:</p>
-     *        <ul>
-     *        <li>
      *        <p>
-     *        <code>throughputMode:PAY_PER_REQUEST</code> and
+     *        • <code>throughputMode:PAY_PER_REQUEST</code> and
      *        </p>
-     *        </li>
-     *        <li>
      *        <p>
-     *        <code>throughputMode:PROVISIONED</code>. The provisioned capacity mode requires
-     *        <code>readCapacityUnits</code> and <code>writeCapacityUnits</code> as inputs.
+     *        • <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires
+     *        <code>readCapacityUnits</code> and <code>writeCapacityUnits</code> as input.
      *        </p>
-     *        </li>
-     *        </ul>
      *        <p>
      *        The default is <code>throughput_mode:PAY_PER_REQUEST</code>.
      *        </p>
@@ -152,19 +128,13 @@ public class CapacitySpecificationSummary implements Serializable, Cloneable, St
      * <p>
      * The read/write throughput capacity mode for a table. The options are:
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * <code>throughputMode:PAY_PER_REQUEST</code> and
+     * • <code>throughputMode:PAY_PER_REQUEST</code> and
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * <code>throughputMode:PROVISIONED</code>. The provisioned capacity mode requires <code>readCapacityUnits</code>
-     * and <code>writeCapacityUnits</code> as inputs.
+     * • <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires <code>readCapacityUnits</code> and
+     * <code>writeCapacityUnits</code> as input.
      * </p>
-     * </li>
-     * </ul>
      * <p>
      * The default is <code>throughput_mode:PAY_PER_REQUEST</code>.
      * </p>
@@ -175,19 +145,13 @@ public class CapacitySpecificationSummary implements Serializable, Cloneable, St
      * </p>
      * 
      * @return The read/write throughput capacity mode for a table. The options are:</p>
-     *         <ul>
-     *         <li>
      *         <p>
-     *         <code>throughputMode:PAY_PER_REQUEST</code> and
+     *         • <code>throughputMode:PAY_PER_REQUEST</code> and
      *         </p>
-     *         </li>
-     *         <li>
      *         <p>
-     *         <code>throughputMode:PROVISIONED</code>. The provisioned capacity mode requires
-     *         <code>readCapacityUnits</code> and <code>writeCapacityUnits</code> as inputs.
+     *         • <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires
+     *         <code>readCapacityUnits</code> and <code>writeCapacityUnits</code> as input.
      *         </p>
-     *         </li>
-     *         </ul>
      *         <p>
      *         The default is <code>throughput_mode:PAY_PER_REQUEST</code>.
      *         </p>
@@ -206,19 +170,13 @@ public class CapacitySpecificationSummary implements Serializable, Cloneable, St
      * <p>
      * The read/write throughput capacity mode for a table. The options are:
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * <code>throughputMode:PAY_PER_REQUEST</code> and
+     * • <code>throughputMode:PAY_PER_REQUEST</code> and
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * <code>throughputMode:PROVISIONED</code>. The provisioned capacity mode requires <code>readCapacityUnits</code>
-     * and <code>writeCapacityUnits</code> as inputs.
+     * • <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires <code>readCapacityUnits</code> and
+     * <code>writeCapacityUnits</code> as input.
      * </p>
-     * </li>
-     * </ul>
      * <p>
      * The default is <code>throughput_mode:PAY_PER_REQUEST</code>.
      * </p>
@@ -230,19 +188,13 @@ public class CapacitySpecificationSummary implements Serializable, Cloneable, St
      * 
      * @param throughputMode
      *        The read/write throughput capacity mode for a table. The options are:</p>
-     *        <ul>
-     *        <li>
      *        <p>
-     *        <code>throughputMode:PAY_PER_REQUEST</code> and
+     *        • <code>throughputMode:PAY_PER_REQUEST</code> and
      *        </p>
-     *        </li>
-     *        <li>
      *        <p>
-     *        <code>throughputMode:PROVISIONED</code>. The provisioned capacity mode requires
-     *        <code>readCapacityUnits</code> and <code>writeCapacityUnits</code> as inputs.
+     *        • <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires
+     *        <code>readCapacityUnits</code> and <code>writeCapacityUnits</code> as input.
      *        </p>
-     *        </li>
-     *        </ul>
      *        <p>
      *        The default is <code>throughput_mode:PAY_PER_REQUEST</code>.
      *        </p>
@@ -263,19 +215,13 @@ public class CapacitySpecificationSummary implements Serializable, Cloneable, St
      * <p>
      * The read/write throughput capacity mode for a table. The options are:
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * <code>throughputMode:PAY_PER_REQUEST</code> and
+     * • <code>throughputMode:PAY_PER_REQUEST</code> and
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * <code>throughputMode:PROVISIONED</code>. The provisioned capacity mode requires <code>readCapacityUnits</code>
-     * and <code>writeCapacityUnits</code> as inputs.
+     * • <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires <code>readCapacityUnits</code> and
+     * <code>writeCapacityUnits</code> as input.
      * </p>
-     * </li>
-     * </ul>
      * <p>
      * The default is <code>throughput_mode:PAY_PER_REQUEST</code>.
      * </p>
@@ -287,19 +233,13 @@ public class CapacitySpecificationSummary implements Serializable, Cloneable, St
      * 
      * @param throughputMode
      *        The read/write throughput capacity mode for a table. The options are:</p>
-     *        <ul>
-     *        <li>
      *        <p>
-     *        <code>throughputMode:PAY_PER_REQUEST</code> and
+     *        • <code>throughputMode:PAY_PER_REQUEST</code> and
      *        </p>
-     *        </li>
-     *        <li>
      *        <p>
-     *        <code>throughputMode:PROVISIONED</code>. The provisioned capacity mode requires
-     *        <code>readCapacityUnits</code> and <code>writeCapacityUnits</code> as inputs.
+     *        • <code>throughputMode:PROVISIONED</code> - Provisioned capacity mode requires
+     *        <code>readCapacityUnits</code> and <code>writeCapacityUnits</code> as input.
      *        </p>
-     *        </li>
-     *        </ul>
      *        <p>
      *        The default is <code>throughput_mode:PAY_PER_REQUEST</code>.
      *        </p>

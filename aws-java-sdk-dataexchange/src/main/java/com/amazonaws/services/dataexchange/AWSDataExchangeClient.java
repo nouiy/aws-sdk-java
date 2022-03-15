@@ -379,6 +379,8 @@ public class AWSDataExchangeClient extends AmazonWebServiceClient implements AWS
      *         500 response
      * @throws AccessDeniedException
      *         403 response
+     * @throws ConflictException
+     *         409 response
      * @sample AWSDataExchange.CreateJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/CreateJob" target="_top">AWS API
      *      Documentation</a>
@@ -1433,6 +1435,74 @@ public class AWSDataExchangeClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This operation revokes subscribers' access to a revision.
+     * </p>
+     * 
+     * @param revokeRevisionRequest
+     *        The request body for RevokeRevision.
+     * @return Result of the RevokeRevision operation returned by the service.
+     * @throws ValidationException
+     *         400 response
+     * @throws InternalServerException
+     *         500 response
+     * @throws AccessDeniedException
+     *         403 response
+     * @throws ResourceNotFoundException
+     *         404 response
+     * @throws ThrottlingException
+     *         429 response
+     * @throws ConflictException
+     *         409 response
+     * @sample AWSDataExchange.RevokeRevision
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/RevokeRevision" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public RevokeRevisionResult revokeRevision(RevokeRevisionRequest request) {
+        request = beforeClientExecution(request);
+        return executeRevokeRevision(request);
+    }
+
+    @SdkInternalApi
+    final RevokeRevisionResult executeRevokeRevision(RevokeRevisionRequest revokeRevisionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(revokeRevisionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<RevokeRevisionRequest> request = null;
+        Response<RevokeRevisionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new RevokeRevisionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(revokeRevisionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataExchange");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "RevokeRevision");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<RevokeRevisionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new RevokeRevisionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

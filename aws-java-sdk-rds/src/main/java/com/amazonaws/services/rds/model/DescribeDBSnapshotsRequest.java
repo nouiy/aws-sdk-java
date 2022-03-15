@@ -230,7 +230,7 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * 
      * @param dBInstanceIdentifier
      *        The ID of the DB instance to retrieve the list of DB snapshots for. This parameter can't be used in
-     *        conjunction with <code>DBSnapshotIdentifier</code>. This parameter isn't case-sensitive. </p>
+     *        conjunction with <code>DBSnapshotIdentifier</code>. This parameter isn't case-sensitive.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -263,7 +263,7 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * </ul>
      * 
      * @return The ID of the DB instance to retrieve the list of DB snapshots for. This parameter can't be used in
-     *         conjunction with <code>DBSnapshotIdentifier</code>. This parameter isn't case-sensitive. </p>
+     *         conjunction with <code>DBSnapshotIdentifier</code>. This parameter isn't case-sensitive.</p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -297,7 +297,7 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * 
      * @param dBInstanceIdentifier
      *        The ID of the DB instance to retrieve the list of DB snapshots for. This parameter can't be used in
-     *        conjunction with <code>DBSnapshotIdentifier</code>. This parameter isn't case-sensitive. </p>
+     *        conjunction with <code>DBSnapshotIdentifier</code>. This parameter isn't case-sensitive.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -338,7 +338,7 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * 
      * @param dBSnapshotIdentifier
      *        A specific DB snapshot identifier to describe. This parameter can't be used in conjunction with
-     *        <code>DBInstanceIdentifier</code>. This value is stored as a lowercase string. </p>
+     *        <code>DBInstanceIdentifier</code>. This value is stored as a lowercase string.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -382,7 +382,7 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * </ul>
      * 
      * @return A specific DB snapshot identifier to describe. This parameter can't be used in conjunction with
-     *         <code>DBInstanceIdentifier</code>. This value is stored as a lowercase string. </p>
+     *         <code>DBInstanceIdentifier</code>. This value is stored as a lowercase string.</p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -427,7 +427,7 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * 
      * @param dBSnapshotIdentifier
      *        A specific DB snapshot identifier to describe. This parameter can't be used in conjunction with
-     *        <code>DBInstanceIdentifier</code>. This value is stored as a lowercase string. </p>
+     *        <code>DBInstanceIdentifier</code>. This value is stored as a lowercase string.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -1111,7 +1111,7 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * @param maxRecords
      *        The maximum number of records to include in the response. If more records exist than the specified
      *        <code>MaxRecords</code> value, a pagination token called a marker is included in the response so that you
-     *        can retrieve the remaining results. </p>
+     *        can retrieve the remaining results.</p>
      *        <p>
      *        Default: 100
      *        </p>
@@ -1138,7 +1138,7 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * 
      * @return The maximum number of records to include in the response. If more records exist than the specified
      *         <code>MaxRecords</code> value, a pagination token called a marker is included in the response so that you
-     *         can retrieve the remaining results. </p>
+     *         can retrieve the remaining results.</p>
      *         <p>
      *         Default: 100
      *         </p>
@@ -1166,7 +1166,7 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * @param maxRecords
      *        The maximum number of records to include in the response. If more records exist than the specified
      *        <code>MaxRecords</code> value, a pagination token called a marker is included in the response so that you
-     *        can retrieve the remaining results. </p>
+     *        can retrieve the remaining results.</p>
      *        <p>
      *        Default: 100
      *        </p>

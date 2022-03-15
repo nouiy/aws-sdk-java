@@ -368,7 +368,7 @@ public class DescribeDBParametersRequest extends com.amazonaws.AmazonWebServiceR
      * @param maxRecords
      *        The maximum number of records to include in the response. If more records exist than the specified
      *        <code>MaxRecords</code> value, a pagination token called a marker is included in the response so that you
-     *        can retrieve the remaining results. </p>
+     *        can retrieve the remaining results.</p>
      *        <p>
      *        Default: 100
      *        </p>
@@ -395,7 +395,7 @@ public class DescribeDBParametersRequest extends com.amazonaws.AmazonWebServiceR
      * 
      * @return The maximum number of records to include in the response. If more records exist than the specified
      *         <code>MaxRecords</code> value, a pagination token called a marker is included in the response so that you
-     *         can retrieve the remaining results. </p>
+     *         can retrieve the remaining results.</p>
      *         <p>
      *         Default: 100
      *         </p>
@@ -423,7 +423,7 @@ public class DescribeDBParametersRequest extends com.amazonaws.AmazonWebServiceR
      * @param maxRecords
      *        The maximum number of records to include in the response. If more records exist than the specified
      *        <code>MaxRecords</code> value, a pagination token called a marker is included in the response so that you
-     *        can retrieve the remaining results. </p>
+     *        can retrieve the remaining results.</p>
      *        <p>
      *        Default: 100
      *        </p>

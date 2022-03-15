@@ -2218,7 +2218,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        Specifies the amount of provisioned IOPS for the DB instance, expressed in I/O operations per second. If
      *        this parameter isn't specified, the IOPS value is taken from the backup. If this parameter is set to 0,
      *        the new instance is converted to a non-PIOPS instance. The conversion takes additional time, though your
-     *        DB instance is available for connections before the conversion starts. </p>
+     *        DB instance is available for connections before the conversion starts.</p>
      *        <p>
      *        The provisioned IOPS value must follow the requirements for your database engine. For more information,
      *        see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon
@@ -2251,7 +2251,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * @return Specifies the amount of provisioned IOPS for the DB instance, expressed in I/O operations per second. If
      *         this parameter isn't specified, the IOPS value is taken from the backup. If this parameter is set to 0,
      *         the new instance is converted to a non-PIOPS instance. The conversion takes additional time, though your
-     *         DB instance is available for connections before the conversion starts. </p>
+     *         DB instance is available for connections before the conversion starts.</p>
      *         <p>
      *         The provisioned IOPS value must follow the requirements for your database engine. For more information,
      *         see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon
@@ -2285,7 +2285,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        Specifies the amount of provisioned IOPS for the DB instance, expressed in I/O operations per second. If
      *        this parameter isn't specified, the IOPS value is taken from the backup. If this parameter is set to 0,
      *        the new instance is converted to a non-PIOPS instance. The conversion takes additional time, though your
-     *        DB instance is available for connections before the conversion starts. </p>
+     *        DB instance is available for connections before the conversion starts.</p>
      *        <p>
      *        The provisioned IOPS value must follow the requirements for your database engine. For more information,
      *        see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS">Amazon
@@ -2647,7 +2647,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * Default: The default EC2 VPC security group for the DB subnet group's VPC.
      * </p>
      * 
-     * @return A list of EC2 VPC security groups to associate with this DB instance. </p>
+     * @return A list of EC2 VPC security groups to associate with this DB instance.</p>
      *         <p>
      *         Default: The default EC2 VPC security group for the DB subnet group's VPC.
      */
@@ -2668,7 +2668,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of EC2 VPC security groups to associate with this DB instance. </p>
+     *        A list of EC2 VPC security groups to associate with this DB instance.</p>
      *        <p>
      *        Default: The default EC2 VPC security group for the DB subnet group's VPC.
      */
@@ -2696,7 +2696,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of EC2 VPC security groups to associate with this DB instance. </p>
+     *        A list of EC2 VPC security groups to associate with this DB instance.</p>
      *        <p>
      *        Default: The default EC2 VPC security group for the DB subnet group's VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2721,7 +2721,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param vpcSecurityGroupIds
-     *        A list of EC2 VPC security groups to associate with this DB instance. </p>
+     *        A list of EC2 VPC security groups to associate with this DB instance.</p>
      *        <p>
      *        Default: The default EC2 VPC security group for the DB subnet group's VPC.
      * @return Returns a reference to this object so that method calls can be chained together.

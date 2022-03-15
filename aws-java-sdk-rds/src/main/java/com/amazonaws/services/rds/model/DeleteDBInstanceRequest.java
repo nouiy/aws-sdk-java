@@ -474,7 +474,7 @@ public class DeleteDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param finalDBSnapshotIdentifier
      *        The <code>DBSnapshotIdentifier</code> of the new <code>DBSnapshot</code> created when the
-     *        <code>SkipFinalSnapshot</code> parameter is disabled. </p> <note>
+     *        <code>SkipFinalSnapshot</code> parameter is disabled.</p> <note>
      *        <p>
      *        If you enable this parameter and also enable SkipFinalShapshot, the command results in an error.
      *        </p>
@@ -552,7 +552,7 @@ public class DeleteDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </ul>
      * 
      * @return The <code>DBSnapshotIdentifier</code> of the new <code>DBSnapshot</code> created when the
-     *         <code>SkipFinalSnapshot</code> parameter is disabled. </p> <note>
+     *         <code>SkipFinalSnapshot</code> parameter is disabled.</p> <note>
      *         <p>
      *         If you enable this parameter and also enable SkipFinalShapshot, the command results in an error.
      *         </p>
@@ -631,7 +631,7 @@ public class DeleteDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param finalDBSnapshotIdentifier
      *        The <code>DBSnapshotIdentifier</code> of the new <code>DBSnapshot</code> created when the
-     *        <code>SkipFinalSnapshot</code> parameter is disabled. </p> <note>
+     *        <code>SkipFinalSnapshot</code> parameter is disabled.</p> <note>
      *        <p>
      *        If you enable this parameter and also enable SkipFinalShapshot, the command results in an error.
      *        </p>

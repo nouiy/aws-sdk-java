@@ -240,7 +240,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on Amazon RDS
-     * Versions</a> in the <i>Amazon Aurora User Guide.</i>
+     * Versions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>Aurora PostgreSQL</b>
@@ -248,7 +248,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.20180305.html">Amazon
-     * Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>MySQL</b>
@@ -256,7 +256,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">MySQL on
-     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>PostgreSQL</b>
@@ -264,7 +264,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts">Amazon RDS
-     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide.</i>
+     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -358,7 +358,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
      * Region. To view the time blocks available, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.Backups.BackupWindow"
-     * > Backup window</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Backup window</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Constraints:
@@ -401,7 +401,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
      * Region, occurring on a random day of the week. To see the time blocks available, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora"
-     * > Adjusting the Preferred DB Cluster Maintenance Window</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Adjusting the Preferred DB Cluster Maintenance Window</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -547,7 +547,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -608,8 +608,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -650,7 +649,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations"
-     * > Limitations of Aurora Serverless</a>
+     * > Limitations of Aurora Serverless v1</a>
      * </p>
      * </li>
      * <li>
@@ -710,17 +709,17 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     private String globalClusterIdentifier;
     /**
      * <p>
-     * A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB cluster. By default, the
-     * HTTP endpoint is disabled.
+     * A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By default,
+     * the HTTP endpoint is disabled.
      * </p>
      * <p>
      * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora
-     * Serverless DB cluster. You can also query your database from inside the RDS console with the query editor.
+     * Serverless v1 DB cluster. You can also query your database from inside the RDS console with the query editor.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
-     * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -790,7 +789,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For the full list of DB instance classes and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required to create a Multi-AZ DB cluster.
@@ -1007,7 +1006,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Valid for: Aurora DB clusters only
      * </p>
      * 
-     * @return A list of Availability Zones (AZs) where DB instances in the DB cluster can be created. </p>
+     * @return A list of Availability Zones (AZs) where DB instances in the DB cluster can be created.</p>
      *         <p>
      *         For information on Amazon Web Services Regions and Availability Zones, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.RegionsAndAvailabilityZones.html"
@@ -1038,7 +1037,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param availabilityZones
-     *        A list of Availability Zones (AZs) where DB instances in the DB cluster can be created. </p>
+     *        A list of Availability Zones (AZs) where DB instances in the DB cluster can be created.</p>
      *        <p>
      *        For information on Amazon Web Services Regions and Availability Zones, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.RegionsAndAvailabilityZones.html"
@@ -1076,7 +1075,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param availabilityZones
-     *        A list of Availability Zones (AZs) where DB instances in the DB cluster can be created. </p>
+     *        A list of Availability Zones (AZs) where DB instances in the DB cluster can be created.</p>
      *        <p>
      *        For information on Amazon Web Services Regions and Availability Zones, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.RegionsAndAvailabilityZones.html"
@@ -1111,7 +1110,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param availabilityZones
-     *        A list of Availability Zones (AZs) where DB instances in the DB cluster can be created. </p>
+     *        A list of Availability Zones (AZs) where DB instances in the DB cluster can be created.</p>
      *        <p>
      *        For information on Amazon Web Services Regions and Availability Zones, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.RegionsAndAvailabilityZones.html"
@@ -1590,7 +1589,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param dBClusterParameterGroupName
      *        The name of the DB cluster parameter group to associate with this DB cluster. If you do not specify a
-     *        value, then the default DB cluster parameter group for the specified DB engine and version is used. </p>
+     *        value, then the default DB cluster parameter group for the specified DB engine and version is used.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -1629,7 +1628,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @return The name of the DB cluster parameter group to associate with this DB cluster. If you do not specify a
-     *         value, then the default DB cluster parameter group for the specified DB engine and version is used. </p>
+     *         value, then the default DB cluster parameter group for the specified DB engine and version is used.</p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -1669,7 +1668,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param dBClusterParameterGroupName
      *        The name of the DB cluster parameter group to associate with this DB cluster. If you do not specify a
-     *        value, then the default DB cluster parameter group for the specified DB engine and version is used. </p>
+     *        value, then the default DB cluster parameter group for the specified DB engine and version is used.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -2168,7 +2167,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on Amazon RDS
-     * Versions</a> in the <i>Amazon Aurora User Guide.</i>
+     * Versions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>Aurora PostgreSQL</b>
@@ -2176,7 +2175,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.20180305.html">Amazon
-     * Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>MySQL</b>
@@ -2184,7 +2183,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">MySQL on
-     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>PostgreSQL</b>
@@ -2192,7 +2191,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts">Amazon RDS
-     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide.</i>
+     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -2237,7 +2236,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on
-     *        Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide.</i>
+     *        Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        <b>Aurora PostgreSQL</b>
@@ -2245,7 +2244,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.20180305.html"
-     *        >Amazon Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide.</i>
+     *        >Amazon Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        <b>MySQL</b>
@@ -2253,7 +2252,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt"
-     *        >MySQL on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     *        >MySQL on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        <b>PostgreSQL</b>
@@ -2261,7 +2260,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts"
-     *        >Amazon RDS for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide.</i>
+     *        >Amazon RDS for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -2312,7 +2311,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on Amazon RDS
-     * Versions</a> in the <i>Amazon Aurora User Guide.</i>
+     * Versions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>Aurora PostgreSQL</b>
@@ -2320,7 +2319,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.20180305.html">Amazon
-     * Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>MySQL</b>
@@ -2328,7 +2327,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">MySQL on
-     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>PostgreSQL</b>
@@ -2336,7 +2335,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts">Amazon RDS
-     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide.</i>
+     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -2380,7 +2379,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         For information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on
-     *         Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide.</i>
+     *         Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         <p>
      *         <b>Aurora PostgreSQL</b>
@@ -2388,7 +2387,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         For information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.20180305.html"
-     *         >Amazon Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide.</i>
+     *         >Amazon Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         <p>
      *         <b>MySQL</b>
@@ -2396,7 +2395,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         For information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">MySQL
-     *         on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     *         on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         <b>PostgreSQL</b>
@@ -2404,7 +2403,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         For information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts"
-     *         >Amazon RDS for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide.</i>
+     *         >Amazon RDS for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -2455,7 +2454,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on Amazon RDS
-     * Versions</a> in the <i>Amazon Aurora User Guide.</i>
+     * Versions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>Aurora PostgreSQL</b>
@@ -2463,7 +2462,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.20180305.html">Amazon
-     * Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide.</i>
+     * Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * <b>MySQL</b>
@@ -2471,7 +2470,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt">MySQL on
-     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     * Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * <b>PostgreSQL</b>
@@ -2479,7 +2478,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts">Amazon RDS
-     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide.</i>
+     * for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -2524,7 +2523,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html">MySQL on
-     *        Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide.</i>
+     *        Amazon RDS Versions</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        <b>Aurora PostgreSQL</b>
@@ -2532,7 +2531,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.20180305.html"
-     *        >Amazon Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide.</i>
+     *        >Amazon Aurora PostgreSQL releases and engine versions</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        <b>MySQL</b>
@@ -2540,7 +2539,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_MySQL.html#MySQL.Concepts.VersionMgmt"
-     *        >MySQL on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide.</i>
+     *        >MySQL on Amazon RDS Versions</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        <b>PostgreSQL</b>
@@ -2548,7 +2547,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html#PostgreSQL.Concepts"
-     *        >Amazon RDS for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide.</i>
+     *        >Amazon RDS for PostgreSQL versions and extensions</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters and Multi-AZ DB clusters
@@ -3041,7 +3040,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
      * Region. To view the time blocks available, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.Backups.BackupWindow"
-     * > Backup window</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Backup window</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Constraints:
@@ -3074,12 +3073,12 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param preferredBackupWindow
      *        The daily time range during which automated backups are created if automated backups are enabled using the
-     *        <code>BackupRetentionPeriod</code> parameter. </p>
+     *        <code>BackupRetentionPeriod</code> parameter.</p>
      *        <p>
      *        The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
      *        Services Region. To view the time blocks available, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.Backups.BackupWindow"
-     *        > Backup window</a> in the <i>Amazon Aurora User Guide.</i>
+     *        > Backup window</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        Constraints:
@@ -3123,7 +3122,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
      * Region. To view the time blocks available, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.Backups.BackupWindow"
-     * > Backup window</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Backup window</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Constraints:
@@ -3155,12 +3154,12 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @return The daily time range during which automated backups are created if automated backups are enabled using
-     *         the <code>BackupRetentionPeriod</code> parameter. </p>
+     *         the <code>BackupRetentionPeriod</code> parameter.</p>
      *         <p>
      *         The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
      *         Services Region. To view the time blocks available, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.Backups.BackupWindow"
-     *         > Backup window</a> in the <i>Amazon Aurora User Guide.</i>
+     *         > Backup window</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         <p>
      *         Constraints:
@@ -3204,7 +3203,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
      * Region. To view the time blocks available, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.Backups.BackupWindow"
-     * > Backup window</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Backup window</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Constraints:
@@ -3237,12 +3236,12 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param preferredBackupWindow
      *        The daily time range during which automated backups are created if automated backups are enabled using the
-     *        <code>BackupRetentionPeriod</code> parameter. </p>
+     *        <code>BackupRetentionPeriod</code> parameter.</p>
      *        <p>
      *        The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
      *        Services Region. To view the time blocks available, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.Backups.BackupWindow"
-     *        > Backup window</a> in the <i>Amazon Aurora User Guide.</i>
+     *        > Backup window</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        Constraints:
@@ -3290,7 +3289,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
      * Region, occurring on a random day of the week. To see the time blocks available, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora"
-     * > Adjusting the Preferred DB Cluster Maintenance Window</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Adjusting the Preferred DB Cluster Maintenance Window</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -3311,7 +3310,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
      *        Services Region, occurring on a random day of the week. To see the time blocks available, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora"
-     *        > Adjusting the Preferred DB Cluster Maintenance Window</a> in the <i>Amazon Aurora User Guide.</i>
+     *        > Adjusting the Preferred DB Cluster Maintenance Window</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -3338,7 +3337,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
      * Region, occurring on a random day of the week. To see the time blocks available, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora"
-     * > Adjusting the Preferred DB Cluster Maintenance Window</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Adjusting the Preferred DB Cluster Maintenance Window</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -3358,7 +3357,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
      *         Services Region, occurring on a random day of the week. To see the time blocks available, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora"
-     *         > Adjusting the Preferred DB Cluster Maintenance Window</a> in the <i>Amazon Aurora User Guide.</i>
+     *         > Adjusting the Preferred DB Cluster Maintenance Window</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         <p>
      *         Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -3385,7 +3384,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
      * Region, occurring on a random day of the week. To see the time blocks available, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora"
-     * > Adjusting the Preferred DB Cluster Maintenance Window</a> in the <i>Amazon Aurora User Guide.</i>
+     * > Adjusting the Preferred DB Cluster Maintenance Window</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -3406,7 +3405,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
      *        Services Region, occurring on a random day of the week. To see the time blocks available, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora"
-     *        > Adjusting the Preferred DB Cluster Maintenance Window</a> in the <i>Amazon Aurora User Guide.</i>
+     *        > Adjusting the Preferred DB Cluster Maintenance Window</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun.
@@ -4245,7 +4244,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -4257,7 +4256,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
-     *        Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     *        Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>.
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters only
@@ -4275,7 +4274,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -4286,7 +4285,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
-     *         Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     *         Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>.
      *         </p>
      *         <p>
      *         Valid for: Aurora DB clusters only
@@ -4304,7 +4303,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -4316,7 +4315,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
-     *        Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     *        Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>.
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters only
@@ -4336,7 +4335,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
-     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     * Authentication</a> in the <i>Amazon Aurora User Guide.</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
@@ -4347,7 +4346,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
-     *         Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>
+     *         Database Authentication</a> in the <i>Amazon Aurora User Guide.</i>.
      *         </p>
      *         <p>
      *         Valid for: Aurora DB clusters only
@@ -4379,7 +4378,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param backtrackWindow
-     *        The target backtrack window, in seconds. To disable backtracking, set this value to 0. </p>
+     *        The target backtrack window, in seconds. To disable backtracking, set this value to 0.</p>
      *        <p>
      *        Default: 0
      *        </p>
@@ -4422,7 +4421,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Valid for: Aurora MySQL DB clusters only
      * </p>
      * 
-     * @return The target backtrack window, in seconds. To disable backtracking, set this value to 0. </p>
+     * @return The target backtrack window, in seconds. To disable backtracking, set this value to 0.</p>
      *         <p>
      *         Default: 0
      *         </p>
@@ -4466,7 +4465,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param backtrackWindow
-     *        The target backtrack window, in seconds. To disable backtracking, set this value to 0. </p>
+     *        The target backtrack window, in seconds. To disable backtracking, set this value to 0.</p>
      *        <p>
      *        Default: 0
      *        </p>
@@ -4522,8 +4521,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -4564,8 +4562,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *         >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     *         Guide</i>.
+     *         >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -4615,8 +4612,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -4658,8 +4654,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     *        Guide</i>.
+     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -4711,8 +4706,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -4759,8 +4753,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     *        Guide</i>.
+     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -4814,8 +4807,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     * Guide</i>.
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -4857,8 +4849,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon RDS, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
-     *        Guide</i>.
+     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        For more information about exporting CloudWatch Logs for Amazon Aurora, see <a href=
@@ -4904,7 +4895,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations"
-     * > Limitations of Aurora Serverless</a>
+     * > Limitations of Aurora Serverless v1</a>
      * </p>
      * </li>
      * <li>
@@ -4961,7 +4952,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations"
-     *        > Limitations of Aurora Serverless</a>
+     *        > Limitations of Aurora Serverless v1</a>
      *        </p>
      *        </li>
      *        <li>
@@ -5023,7 +5014,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations"
-     * > Limitations of Aurora Serverless</a>
+     * > Limitations of Aurora Serverless v1</a>
      * </p>
      * </li>
      * <li>
@@ -5079,7 +5070,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations"
-     *         > Limitations of Aurora Serverless</a>
+     *         > Limitations of Aurora Serverless v1</a>
      *         </p>
      *         </li>
      *         <li>
@@ -5141,7 +5132,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations"
-     * > Limitations of Aurora Serverless</a>
+     * > Limitations of Aurora Serverless v1</a>
      * </p>
      * </li>
      * <li>
@@ -5198,7 +5189,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations"
-     *        > Limitations of Aurora Serverless</a>
+     *        > Limitations of Aurora Serverless v1</a>
      *        </p>
      *        </li>
      *        <li>
@@ -5378,7 +5369,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param globalClusterIdentifier
      *        The global cluster ID of an Aurora cluster that becomes the primary cluster in the new global database
-     *        cluster. </p>
+     *        cluster.</p>
      *        <p>
      *        Valid for: Aurora DB clusters only
      */
@@ -5396,7 +5387,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @return The global cluster ID of an Aurora cluster that becomes the primary cluster in the new global database
-     *         cluster. </p>
+     *         cluster.</p>
      *         <p>
      *         Valid for: Aurora DB clusters only
      */
@@ -5415,7 +5406,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param globalClusterIdentifier
      *        The global cluster ID of an Aurora cluster that becomes the primary cluster in the new global database
-     *        cluster. </p>
+     *        cluster.</p>
      *        <p>
      *        Valid for: Aurora DB clusters only
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -5428,34 +5419,34 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB cluster. By default, the
-     * HTTP endpoint is disabled.
+     * A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By default,
+     * the HTTP endpoint is disabled.
      * </p>
      * <p>
      * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora
-     * Serverless DB cluster. You can also query your database from inside the RDS console with the query editor.
+     * Serverless v1 DB cluster. You can also query your database from inside the RDS console with the query editor.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
-     * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
      * </p>
      * 
      * @param enableHttpEndpoint
-     *        A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB cluster. By
+     *        A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By
      *        default, the HTTP endpoint is disabled.</p>
      *        <p>
      *        When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the
-     *        Aurora Serverless DB cluster. You can also query your database from inside the RDS console with the query
-     *        editor.
+     *        Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the
+     *        query editor.
      *        </p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for
-     *        Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     *        Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters only
@@ -5467,33 +5458,33 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB cluster. By default, the
-     * HTTP endpoint is disabled.
+     * A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By default,
+     * the HTTP endpoint is disabled.
      * </p>
      * <p>
      * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora
-     * Serverless DB cluster. You can also query your database from inside the RDS console with the query editor.
+     * Serverless v1 DB cluster. You can also query your database from inside the RDS console with the query editor.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
-     * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
      * </p>
      * 
-     * @return A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB cluster. By
+     * @return A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By
      *         default, the HTTP endpoint is disabled.</p>
      *         <p>
      *         When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the
-     *         Aurora Serverless DB cluster. You can also query your database from inside the RDS console with the query
-     *         editor.
+     *         Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the
+     *         query editor.
      *         </p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for
-     *         Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     *         Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         <p>
      *         Valid for: Aurora DB clusters only
@@ -5505,34 +5496,34 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB cluster. By default, the
-     * HTTP endpoint is disabled.
+     * A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By default,
+     * the HTTP endpoint is disabled.
      * </p>
      * <p>
      * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora
-     * Serverless DB cluster. You can also query your database from inside the RDS console with the query editor.
+     * Serverless v1 DB cluster. You can also query your database from inside the RDS console with the query editor.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
-     * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
      * </p>
      * 
      * @param enableHttpEndpoint
-     *        A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB cluster. By
+     *        A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By
      *        default, the HTTP endpoint is disabled.</p>
      *        <p>
      *        When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the
-     *        Aurora Serverless DB cluster. You can also query your database from inside the RDS console with the query
-     *        editor.
+     *        Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the
+     *        query editor.
      *        </p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for
-     *        Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     *        Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        <p>
      *        Valid for: Aurora DB clusters only
@@ -5546,33 +5537,33 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB cluster. By default, the
-     * HTTP endpoint is disabled.
+     * A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By default,
+     * the HTTP endpoint is disabled.
      * </p>
      * <p>
      * When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the Aurora
-     * Serverless DB cluster. You can also query your database from inside the RDS console with the query editor.
+     * Serverless v1 DB cluster. You can also query your database from inside the RDS console with the query editor.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for Aurora
-     * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
      * Valid for: Aurora DB clusters only
      * </p>
      * 
-     * @return A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB cluster. By
+     * @return A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless v1 DB cluster. By
      *         default, the HTTP endpoint is disabled.</p>
      *         <p>
      *         When enabled, the HTTP endpoint provides a connectionless web service API for running SQL queries on the
-     *         Aurora Serverless DB cluster. You can also query your database from inside the RDS console with the query
-     *         editor.
+     *         Aurora Serverless v1 DB cluster. You can also query your database from inside the RDS console with the
+     *         query editor.
      *         </p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html">Using the Data API for
-     *         Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     *         Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         <p>
      *         Valid for: Aurora DB clusters only
@@ -5978,7 +5969,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For the full list of DB instance classes and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required to create a Multi-AZ DB cluster.
@@ -5994,7 +5985,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For the full list of DB instance classes and availability for your engine, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance
-     *        class</a> in the <i>Amazon RDS User Guide.</i>
+     *        class</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        This setting is required to create a Multi-AZ DB cluster.
@@ -6015,7 +6006,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For the full list of DB instance classes and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required to create a Multi-AZ DB cluster.
@@ -6030,7 +6021,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         For the full list of DB instance classes and availability for your engine, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance
-     *         class</a> in the <i>Amazon RDS User Guide.</i>
+     *         class</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
      *         This setting is required to create a Multi-AZ DB cluster.
@@ -6051,7 +6042,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For the full list of DB instance classes and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance class</a>
-     * in the <i>Amazon RDS User Guide.</i>
+     * in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
      * This setting is required to create a Multi-AZ DB cluster.
@@ -6067,7 +6058,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For the full list of DB instance classes and availability for your engine, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB instance
-     *        class</a> in the <i>Amazon RDS User Guide.</i>
+     *        class</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
      *        This setting is required to create a Multi-AZ DB cluster.
@@ -7151,7 +7142,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param enablePerformanceInsights
-     *        A value that indicates whether to turn on Performance Insights for the DB cluster. </p>
+     *        A value that indicates whether to turn on Performance Insights for the DB cluster.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html"> Using Amazon
@@ -7178,7 +7169,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Valid for: Multi-AZ DB clusters only
      * </p>
      * 
-     * @return A value that indicates whether to turn on Performance Insights for the DB cluster. </p>
+     * @return A value that indicates whether to turn on Performance Insights for the DB cluster.</p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html"> Using Amazon
@@ -7206,7 +7197,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param enablePerformanceInsights
-     *        A value that indicates whether to turn on Performance Insights for the DB cluster. </p>
+     *        A value that indicates whether to turn on Performance Insights for the DB cluster.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html"> Using Amazon
@@ -7235,7 +7226,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Valid for: Multi-AZ DB clusters only
      * </p>
      * 
-     * @return A value that indicates whether to turn on Performance Insights for the DB cluster. </p>
+     * @return A value that indicates whether to turn on Performance Insights for the DB cluster.</p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html"> Using Amazon

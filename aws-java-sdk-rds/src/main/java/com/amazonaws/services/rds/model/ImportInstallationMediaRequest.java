@@ -82,7 +82,7 @@ public class ImportInstallationMediaRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * See <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.VersionSupport"
-     * > Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide.</i>
+     * > Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      */
     private String engineVersion;
@@ -179,7 +179,7 @@ public class ImportInstallationMediaRequest extends com.amazonaws.AmazonWebServi
      * </ul>
      * 
      * @param engine
-     *        The name of the database engine to be used for this instance. </p>
+     *        The name of the database engine to be used for this instance.</p>
      *        <p>
      *        The list only includes supported DB engines that require an on-premises customer provided license.
      *        </p>
@@ -246,7 +246,7 @@ public class ImportInstallationMediaRequest extends com.amazonaws.AmazonWebServi
      * </li>
      * </ul>
      * 
-     * @return The name of the database engine to be used for this instance. </p>
+     * @return The name of the database engine to be used for this instance.</p>
      *         <p>
      *         The list only includes supported DB engines that require an on-premises customer provided license.
      *         </p>
@@ -314,7 +314,7 @@ public class ImportInstallationMediaRequest extends com.amazonaws.AmazonWebServi
      * </ul>
      * 
      * @param engine
-     *        The name of the database engine to be used for this instance. </p>
+     *        The name of the database engine to be used for this instance.</p>
      *        <p>
      *        The list only includes supported DB engines that require an on-premises customer provided license.
      *        </p>
@@ -367,7 +367,7 @@ public class ImportInstallationMediaRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * See <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.VersionSupport"
-     * > Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide.</i>
+     * > Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param engineVersion
@@ -385,7 +385,7 @@ public class ImportInstallationMediaRequest extends com.amazonaws.AmazonWebServi
      *        <p>
      *        See <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.VersionSupport"
-     *        > Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide.</i>
+     *        > Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public void setEngineVersion(String engineVersion) {
@@ -409,7 +409,7 @@ public class ImportInstallationMediaRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * See <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.VersionSupport"
-     * > Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide.</i>
+     * > Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @return The version number of the database engine to use.</p>
@@ -426,7 +426,7 @@ public class ImportInstallationMediaRequest extends com.amazonaws.AmazonWebServi
      *         <p>
      *         See <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.VersionSupport"
-     *         > Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide.</i>
+     *         > Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public String getEngineVersion() {
@@ -450,7 +450,7 @@ public class ImportInstallationMediaRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * See <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.VersionSupport"
-     * > Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide.</i>
+     * > Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
      * @param engineVersion
@@ -468,7 +468,7 @@ public class ImportInstallationMediaRequest extends com.amazonaws.AmazonWebServi
      *        <p>
      *        See <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.VersionSupport"
-     *        > Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide.</i>
+     *        > Microsoft SQL Server Versions on Amazon RDS</a> in the <i>Amazon RDS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

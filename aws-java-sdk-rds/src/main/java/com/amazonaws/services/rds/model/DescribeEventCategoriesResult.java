@@ -28,17 +28,17 @@ public class DescribeEventCategoriesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of EventCategoriesMap data types.
+     * A list of <code>EventCategoriesMap</code> data types.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<EventCategoriesMap> eventCategoriesMapList;
 
     /**
      * <p>
-     * A list of EventCategoriesMap data types.
+     * A list of <code>EventCategoriesMap</code> data types.
      * </p>
      * 
-     * @return A list of EventCategoriesMap data types.
+     * @return A list of <code>EventCategoriesMap</code> data types.
      */
 
     public java.util.List<EventCategoriesMap> getEventCategoriesMapList() {
@@ -50,11 +50,11 @@ public class DescribeEventCategoriesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of EventCategoriesMap data types.
+     * A list of <code>EventCategoriesMap</code> data types.
      * </p>
      * 
      * @param eventCategoriesMapList
-     *        A list of EventCategoriesMap data types.
+     *        A list of <code>EventCategoriesMap</code> data types.
      */
 
     public void setEventCategoriesMapList(java.util.Collection<EventCategoriesMap> eventCategoriesMapList) {
@@ -68,7 +68,7 @@ public class DescribeEventCategoriesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of EventCategoriesMap data types.
+     * A list of <code>EventCategoriesMap</code> data types.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class DescribeEventCategoriesResult extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param eventCategoriesMapList
-     *        A list of EventCategoriesMap data types.
+     *        A list of <code>EventCategoriesMap</code> data types.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class DescribeEventCategoriesResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of EventCategoriesMap data types.
+     * A list of <code>EventCategoriesMap</code> data types.
      * </p>
      * 
      * @param eventCategoriesMapList
-     *        A list of EventCategoriesMap data types.
+     *        A list of <code>EventCategoriesMap</code> data types.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

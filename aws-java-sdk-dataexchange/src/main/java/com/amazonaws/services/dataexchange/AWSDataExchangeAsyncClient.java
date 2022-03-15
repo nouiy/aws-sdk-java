@@ -754,6 +754,39 @@ public class AWSDataExchangeAsyncClient extends AWSDataExchangeClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<RevokeRevisionResult> revokeRevisionAsync(RevokeRevisionRequest request) {
+
+        return revokeRevisionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RevokeRevisionResult> revokeRevisionAsync(final RevokeRevisionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RevokeRevisionRequest, RevokeRevisionResult> asyncHandler) {
+        final RevokeRevisionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RevokeRevisionResult>() {
+            @Override
+            public RevokeRevisionResult call() throws Exception {
+                RevokeRevisionResult result = null;
+
+                try {
+                    result = executeRevokeRevision(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<StartJobResult> startJobAsync(StartJobRequest request) {
 
         return startJobAsync(request, null);

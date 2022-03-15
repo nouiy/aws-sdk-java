@@ -91,6 +91,8 @@ public class WorldExportJobSummary implements Serializable, Cloneable, Structure
      */
     private java.util.List<String> worlds;
 
+    private OutputLocation outputLocation;
+
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the world export job.
@@ -601,6 +603,32 @@ public class WorldExportJobSummary implements Serializable, Cloneable, Structure
     }
 
     /**
+     * @param outputLocation
+     */
+
+    public void setOutputLocation(OutputLocation outputLocation) {
+        this.outputLocation = outputLocation;
+    }
+
+    /**
+     * @return
+     */
+
+    public OutputLocation getOutputLocation() {
+        return this.outputLocation;
+    }
+
+    /**
+     * @param outputLocation
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorldExportJobSummary withOutputLocation(OutputLocation outputLocation) {
+        setOutputLocation(outputLocation);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -619,7 +647,9 @@ public class WorldExportJobSummary implements Serializable, Cloneable, Structure
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getWorlds() != null)
-            sb.append("Worlds: ").append(getWorlds());
+            sb.append("Worlds: ").append(getWorlds()).append(",");
+        if (getOutputLocation() != null)
+            sb.append("OutputLocation: ").append(getOutputLocation());
         sb.append("}");
         return sb.toString();
     }
@@ -650,6 +680,10 @@ public class WorldExportJobSummary implements Serializable, Cloneable, Structure
             return false;
         if (other.getWorlds() != null && other.getWorlds().equals(this.getWorlds()) == false)
             return false;
+        if (other.getOutputLocation() == null ^ this.getOutputLocation() == null)
+            return false;
+        if (other.getOutputLocation() != null && other.getOutputLocation().equals(this.getOutputLocation()) == false)
+            return false;
         return true;
     }
 
@@ -662,6 +696,7 @@ public class WorldExportJobSummary implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getWorlds() == null) ? 0 : getWorlds().hashCode());
+        hashCode = prime * hashCode + ((getOutputLocation() == null) ? 0 : getOutputLocation().hashCode());
         return hashCode;
     }
 

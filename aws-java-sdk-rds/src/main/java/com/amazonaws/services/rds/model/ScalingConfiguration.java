@@ -17,12 +17,12 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Contains the scaling configuration of an Aurora Serverless DB cluster.
+ * Contains the scaling configuration of an Aurora Serverless v1 DB cluster.
  * </p>
  * <p>
  * For more information, see <a
  * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html">Using Amazon Aurora
- * Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+ * Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ScalingConfiguration" target="_top">AWS API
@@ -101,21 +101,21 @@ public class ScalingConfiguration implements Serializable, Cloneable {
      * </p>
      * <important>
      * <p>
-     * If you specify <code>ForceApplyCapacityChange</code>, connections that prevent Aurora Serverless from finding a
-     * scaling point might be dropped.
+     * If you specify <code>ForceApplyCapacityChange</code>, connections that prevent Aurora Serverless v1 from finding
+     * a scaling point might be dropped.
      * </p>
      * </important>
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.auto-scaling"
-     * > Autoscaling for Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * > Autoscaling for Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      */
     private String timeoutAction;
     /**
      * <p>
-     * The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless scaling
-     * before enforcing the timeout action. The default is 300.
+     * The amount of time, in seconds, that Aurora Serverless v1 tries to find a scaling point to perform seamless
+     * scaling before enforcing the timeout action. The default is 300.
      * </p>
      * <p>
      * Specify a value between 60 and 600 seconds.
@@ -500,14 +500,14 @@ public class ScalingConfiguration implements Serializable, Cloneable {
      * </p>
      * <important>
      * <p>
-     * If you specify <code>ForceApplyCapacityChange</code>, connections that prevent Aurora Serverless from finding a
-     * scaling point might be dropped.
+     * If you specify <code>ForceApplyCapacityChange</code>, connections that prevent Aurora Serverless v1 from finding
+     * a scaling point might be dropped.
      * </p>
      * </important>
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.auto-scaling"
-     * > Autoscaling for Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * > Autoscaling for Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
      * @param timeoutAction
@@ -522,14 +522,14 @@ public class ScalingConfiguration implements Serializable, Cloneable {
      *        </p>
      *        <important>
      *        <p>
-     *        If you specify <code>ForceApplyCapacityChange</code>, connections that prevent Aurora Serverless from
+     *        If you specify <code>ForceApplyCapacityChange</code>, connections that prevent Aurora Serverless v1 from
      *        finding a scaling point might be dropped.
      *        </p>
      *        </important>
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.auto-scaling"
-     *        > Autoscaling for Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     *        > Autoscaling for Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      */
 
     public void setTimeoutAction(String timeoutAction) {
@@ -550,14 +550,14 @@ public class ScalingConfiguration implements Serializable, Cloneable {
      * </p>
      * <important>
      * <p>
-     * If you specify <code>ForceApplyCapacityChange</code>, connections that prevent Aurora Serverless from finding a
-     * scaling point might be dropped.
+     * If you specify <code>ForceApplyCapacityChange</code>, connections that prevent Aurora Serverless v1 from finding
+     * a scaling point might be dropped.
      * </p>
      * </important>
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.auto-scaling"
-     * > Autoscaling for Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * > Autoscaling for Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
      * @return The action to take when the timeout is reached, either <code>ForceApplyCapacityChange</code> or
@@ -571,14 +571,14 @@ public class ScalingConfiguration implements Serializable, Cloneable {
      *         </p>
      *         <important>
      *         <p>
-     *         If you specify <code>ForceApplyCapacityChange</code>, connections that prevent Aurora Serverless from
+     *         If you specify <code>ForceApplyCapacityChange</code>, connections that prevent Aurora Serverless v1 from
      *         finding a scaling point might be dropped.
      *         </p>
      *         </important>
      *         <p>
      *         For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.auto-scaling"
-     *         > Autoscaling for Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     *         > Autoscaling for Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      */
 
     public String getTimeoutAction() {
@@ -599,14 +599,14 @@ public class ScalingConfiguration implements Serializable, Cloneable {
      * </p>
      * <important>
      * <p>
-     * If you specify <code>ForceApplyCapacityChange</code>, connections that prevent Aurora Serverless from finding a
-     * scaling point might be dropped.
+     * If you specify <code>ForceApplyCapacityChange</code>, connections that prevent Aurora Serverless v1 from finding
+     * a scaling point might be dropped.
      * </p>
      * </important>
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.auto-scaling"
-     * > Autoscaling for Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     * > Autoscaling for Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * 
      * @param timeoutAction
@@ -621,14 +621,14 @@ public class ScalingConfiguration implements Serializable, Cloneable {
      *        </p>
      *        <important>
      *        <p>
-     *        If you specify <code>ForceApplyCapacityChange</code>, connections that prevent Aurora Serverless from
+     *        If you specify <code>ForceApplyCapacityChange</code>, connections that prevent Aurora Serverless v1 from
      *        finding a scaling point might be dropped.
      *        </p>
      *        </important>
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.auto-scaling"
-     *        > Autoscaling for Aurora Serverless</a> in the <i>Amazon Aurora User Guide</i>.
+     *        > Autoscaling for Aurora Serverless v1</a> in the <i>Amazon Aurora User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -639,16 +639,16 @@ public class ScalingConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless scaling
-     * before enforcing the timeout action. The default is 300.
+     * The amount of time, in seconds, that Aurora Serverless v1 tries to find a scaling point to perform seamless
+     * scaling before enforcing the timeout action. The default is 300.
      * </p>
      * <p>
      * Specify a value between 60 and 600 seconds.
      * </p>
      * 
      * @param secondsBeforeTimeout
-     *        The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless
-     *        scaling before enforcing the timeout action. The default is 300.</p>
+     *        The amount of time, in seconds, that Aurora Serverless v1 tries to find a scaling point to perform
+     *        seamless scaling before enforcing the timeout action. The default is 300.</p>
      *        <p>
      *        Specify a value between 60 and 600 seconds.
      */
@@ -659,15 +659,15 @@ public class ScalingConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless scaling
-     * before enforcing the timeout action. The default is 300.
+     * The amount of time, in seconds, that Aurora Serverless v1 tries to find a scaling point to perform seamless
+     * scaling before enforcing the timeout action. The default is 300.
      * </p>
      * <p>
      * Specify a value between 60 and 600 seconds.
      * </p>
      * 
-     * @return The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless
-     *         scaling before enforcing the timeout action. The default is 300.</p>
+     * @return The amount of time, in seconds, that Aurora Serverless v1 tries to find a scaling point to perform
+     *         seamless scaling before enforcing the timeout action. The default is 300.</p>
      *         <p>
      *         Specify a value between 60 and 600 seconds.
      */
@@ -678,16 +678,16 @@ public class ScalingConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless scaling
-     * before enforcing the timeout action. The default is 300.
+     * The amount of time, in seconds, that Aurora Serverless v1 tries to find a scaling point to perform seamless
+     * scaling before enforcing the timeout action. The default is 300.
      * </p>
      * <p>
      * Specify a value between 60 and 600 seconds.
      * </p>
      * 
      * @param secondsBeforeTimeout
-     *        The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless
-     *        scaling before enforcing the timeout action. The default is 300.</p>
+     *        The amount of time, in seconds, that Aurora Serverless v1 tries to find a scaling point to perform
+     *        seamless scaling before enforcing the timeout action. The default is 300.</p>
      *        <p>
      *        Specify a value between 60 and 600 seconds.
      * @return Returns a reference to this object so that method calls can be chained together.

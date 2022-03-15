@@ -36,23 +36,24 @@ public class UsernameConfigurationType implements Serializable, Cloneable, Struc
      * <p>
      * Valid values include:
      * </p>
-     * <ul>
-     * <li>
+     * <dl>
+     * <dt>True</dt>
+     * <dd>
      * <p>
-     * <b> <code>True</code> </b>: Enables case sensitivity for all username input. When this option is set to
-     * <code>True</code>, users must sign in using the exact capitalization of their given username, such as “UserName”.
-     * This is the default value.
+     * Enables case sensitivity for all username input. When this option is set to <code>True</code>, users must sign in
+     * using the exact capitalization of their given username, such as “UserName”. This is the default value.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>False</dt>
+     * <dd>
      * <p>
-     * <b> <code>False</code> </b>: Enables case insensitivity for all username input. For example, when this option is
-     * set to <code>False</code>, users can sign in using either "username" or "Username". This option also enables both
+     * Enables case insensitivity for all username input. For example, when this option is set to <code>False</code>,
+     * users can sign in using either "username" or "Username". This option also enables both
      * <code>preferred_username</code> and <code>email</code> alias to be case insensitive, in addition to the
      * <code>username</code> attribute.
      * </p>
-     * </li>
-     * </ul>
+     * </dd>
+     * </dl>
      */
     private Boolean caseSensitive;
 
@@ -64,23 +65,24 @@ public class UsernameConfigurationType implements Serializable, Cloneable, Struc
      * <p>
      * Valid values include:
      * </p>
-     * <ul>
-     * <li>
+     * <dl>
+     * <dt>True</dt>
+     * <dd>
      * <p>
-     * <b> <code>True</code> </b>: Enables case sensitivity for all username input. When this option is set to
-     * <code>True</code>, users must sign in using the exact capitalization of their given username, such as “UserName”.
-     * This is the default value.
+     * Enables case sensitivity for all username input. When this option is set to <code>True</code>, users must sign in
+     * using the exact capitalization of their given username, such as “UserName”. This is the default value.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>False</dt>
+     * <dd>
      * <p>
-     * <b> <code>False</code> </b>: Enables case insensitivity for all username input. For example, when this option is
-     * set to <code>False</code>, users can sign in using either "username" or "Username". This option also enables both
+     * Enables case insensitivity for all username input. For example, when this option is set to <code>False</code>,
+     * users can sign in using either "username" or "Username". This option also enables both
      * <code>preferred_username</code> and <code>email</code> alias to be case insensitive, in addition to the
      * <code>username</code> attribute.
      * </p>
-     * </li>
-     * </ul>
+     * </dd>
+     * </dl>
      * 
      * @param caseSensitive
      *        Specifies whether username case sensitivity will be applied for all users in the user pool through Amazon
@@ -88,22 +90,24 @@ public class UsernameConfigurationType implements Serializable, Cloneable, Struc
      *        <p>
      *        Valid values include:
      *        </p>
-     *        <ul>
-     *        <li>
+     *        <dl>
+     *        <dt>True</dt>
+     *        <dd>
      *        <p>
-     *        <b> <code>True</code> </b>: Enables case sensitivity for all username input. When this option is set to
-     *        <code>True</code>, users must sign in using the exact capitalization of their given username, such as
-     *        “UserName”. This is the default value.
+     *        Enables case sensitivity for all username input. When this option is set to <code>True</code>, users must
+     *        sign in using the exact capitalization of their given username, such as “UserName”. This is the default
+     *        value.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>False</dt>
+     *        <dd>
      *        <p>
-     *        <b> <code>False</code> </b>: Enables case insensitivity for all username input. For example, when this
-     *        option is set to <code>False</code>, users can sign in using either "username" or "Username". This option
-     *        also enables both <code>preferred_username</code> and <code>email</code> alias to be case insensitive, in
-     *        addition to the <code>username</code> attribute.
+     *        Enables case insensitivity for all username input. For example, when this option is set to
+     *        <code>False</code>, users can sign in using either "username" or "Username". This option also enables both
+     *        <code>preferred_username</code> and <code>email</code> alias to be case insensitive, in addition to the
+     *        <code>username</code> attribute.
      *        </p>
-     *        </li>
+     *        </dd>
      */
 
     public void setCaseSensitive(Boolean caseSensitive) {
@@ -118,45 +122,48 @@ public class UsernameConfigurationType implements Serializable, Cloneable, Struc
      * <p>
      * Valid values include:
      * </p>
-     * <ul>
-     * <li>
+     * <dl>
+     * <dt>True</dt>
+     * <dd>
      * <p>
-     * <b> <code>True</code> </b>: Enables case sensitivity for all username input. When this option is set to
-     * <code>True</code>, users must sign in using the exact capitalization of their given username, such as “UserName”.
-     * This is the default value.
+     * Enables case sensitivity for all username input. When this option is set to <code>True</code>, users must sign in
+     * using the exact capitalization of their given username, such as “UserName”. This is the default value.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>False</dt>
+     * <dd>
      * <p>
-     * <b> <code>False</code> </b>: Enables case insensitivity for all username input. For example, when this option is
-     * set to <code>False</code>, users can sign in using either "username" or "Username". This option also enables both
+     * Enables case insensitivity for all username input. For example, when this option is set to <code>False</code>,
+     * users can sign in using either "username" or "Username". This option also enables both
      * <code>preferred_username</code> and <code>email</code> alias to be case insensitive, in addition to the
      * <code>username</code> attribute.
      * </p>
-     * </li>
-     * </ul>
+     * </dd>
+     * </dl>
      * 
      * @return Specifies whether username case sensitivity will be applied for all users in the user pool through Amazon
      *         Cognito APIs.</p>
      *         <p>
      *         Valid values include:
      *         </p>
-     *         <ul>
-     *         <li>
+     *         <dl>
+     *         <dt>True</dt>
+     *         <dd>
      *         <p>
-     *         <b> <code>True</code> </b>: Enables case sensitivity for all username input. When this option is set to
-     *         <code>True</code>, users must sign in using the exact capitalization of their given username, such as
-     *         “UserName”. This is the default value.
+     *         Enables case sensitivity for all username input. When this option is set to <code>True</code>, users must
+     *         sign in using the exact capitalization of their given username, such as “UserName”. This is the default
+     *         value.
      *         </p>
-     *         </li>
-     *         <li>
+     *         </dd>
+     *         <dt>False</dt>
+     *         <dd>
      *         <p>
-     *         <b> <code>False</code> </b>: Enables case insensitivity for all username input. For example, when this
-     *         option is set to <code>False</code>, users can sign in using either "username" or "Username". This option
-     *         also enables both <code>preferred_username</code> and <code>email</code> alias to be case insensitive, in
-     *         addition to the <code>username</code> attribute.
+     *         Enables case insensitivity for all username input. For example, when this option is set to
+     *         <code>False</code>, users can sign in using either "username" or "Username". This option also enables
+     *         both <code>preferred_username</code> and <code>email</code> alias to be case insensitive, in addition to
+     *         the <code>username</code> attribute.
      *         </p>
-     *         </li>
+     *         </dd>
      */
 
     public Boolean getCaseSensitive() {
@@ -171,23 +178,24 @@ public class UsernameConfigurationType implements Serializable, Cloneable, Struc
      * <p>
      * Valid values include:
      * </p>
-     * <ul>
-     * <li>
+     * <dl>
+     * <dt>True</dt>
+     * <dd>
      * <p>
-     * <b> <code>True</code> </b>: Enables case sensitivity for all username input. When this option is set to
-     * <code>True</code>, users must sign in using the exact capitalization of their given username, such as “UserName”.
-     * This is the default value.
+     * Enables case sensitivity for all username input. When this option is set to <code>True</code>, users must sign in
+     * using the exact capitalization of their given username, such as “UserName”. This is the default value.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>False</dt>
+     * <dd>
      * <p>
-     * <b> <code>False</code> </b>: Enables case insensitivity for all username input. For example, when this option is
-     * set to <code>False</code>, users can sign in using either "username" or "Username". This option also enables both
+     * Enables case insensitivity for all username input. For example, when this option is set to <code>False</code>,
+     * users can sign in using either "username" or "Username". This option also enables both
      * <code>preferred_username</code> and <code>email</code> alias to be case insensitive, in addition to the
      * <code>username</code> attribute.
      * </p>
-     * </li>
-     * </ul>
+     * </dd>
+     * </dl>
      * 
      * @param caseSensitive
      *        Specifies whether username case sensitivity will be applied for all users in the user pool through Amazon
@@ -195,22 +203,24 @@ public class UsernameConfigurationType implements Serializable, Cloneable, Struc
      *        <p>
      *        Valid values include:
      *        </p>
-     *        <ul>
-     *        <li>
+     *        <dl>
+     *        <dt>True</dt>
+     *        <dd>
      *        <p>
-     *        <b> <code>True</code> </b>: Enables case sensitivity for all username input. When this option is set to
-     *        <code>True</code>, users must sign in using the exact capitalization of their given username, such as
-     *        “UserName”. This is the default value.
+     *        Enables case sensitivity for all username input. When this option is set to <code>True</code>, users must
+     *        sign in using the exact capitalization of their given username, such as “UserName”. This is the default
+     *        value.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>False</dt>
+     *        <dd>
      *        <p>
-     *        <b> <code>False</code> </b>: Enables case insensitivity for all username input. For example, when this
-     *        option is set to <code>False</code>, users can sign in using either "username" or "Username". This option
-     *        also enables both <code>preferred_username</code> and <code>email</code> alias to be case insensitive, in
-     *        addition to the <code>username</code> attribute.
+     *        Enables case insensitivity for all username input. For example, when this option is set to
+     *        <code>False</code>, users can sign in using either "username" or "Username". This option also enables both
+     *        <code>preferred_username</code> and <code>email</code> alias to be case insensitive, in addition to the
+     *        <code>username</code> attribute.
      *        </p>
-     *        </li>
+     *        </dd>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -227,45 +237,48 @@ public class UsernameConfigurationType implements Serializable, Cloneable, Struc
      * <p>
      * Valid values include:
      * </p>
-     * <ul>
-     * <li>
+     * <dl>
+     * <dt>True</dt>
+     * <dd>
      * <p>
-     * <b> <code>True</code> </b>: Enables case sensitivity for all username input. When this option is set to
-     * <code>True</code>, users must sign in using the exact capitalization of their given username, such as “UserName”.
-     * This is the default value.
+     * Enables case sensitivity for all username input. When this option is set to <code>True</code>, users must sign in
+     * using the exact capitalization of their given username, such as “UserName”. This is the default value.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>False</dt>
+     * <dd>
      * <p>
-     * <b> <code>False</code> </b>: Enables case insensitivity for all username input. For example, when this option is
-     * set to <code>False</code>, users can sign in using either "username" or "Username". This option also enables both
+     * Enables case insensitivity for all username input. For example, when this option is set to <code>False</code>,
+     * users can sign in using either "username" or "Username". This option also enables both
      * <code>preferred_username</code> and <code>email</code> alias to be case insensitive, in addition to the
      * <code>username</code> attribute.
      * </p>
-     * </li>
-     * </ul>
+     * </dd>
+     * </dl>
      * 
      * @return Specifies whether username case sensitivity will be applied for all users in the user pool through Amazon
      *         Cognito APIs.</p>
      *         <p>
      *         Valid values include:
      *         </p>
-     *         <ul>
-     *         <li>
+     *         <dl>
+     *         <dt>True</dt>
+     *         <dd>
      *         <p>
-     *         <b> <code>True</code> </b>: Enables case sensitivity for all username input. When this option is set to
-     *         <code>True</code>, users must sign in using the exact capitalization of their given username, such as
-     *         “UserName”. This is the default value.
+     *         Enables case sensitivity for all username input. When this option is set to <code>True</code>, users must
+     *         sign in using the exact capitalization of their given username, such as “UserName”. This is the default
+     *         value.
      *         </p>
-     *         </li>
-     *         <li>
+     *         </dd>
+     *         <dt>False</dt>
+     *         <dd>
      *         <p>
-     *         <b> <code>False</code> </b>: Enables case insensitivity for all username input. For example, when this
-     *         option is set to <code>False</code>, users can sign in using either "username" or "Username". This option
-     *         also enables both <code>preferred_username</code> and <code>email</code> alias to be case insensitive, in
-     *         addition to the <code>username</code> attribute.
+     *         Enables case insensitivity for all username input. For example, when this option is set to
+     *         <code>False</code>, users can sign in using either "username" or "Username". This option also enables
+     *         both <code>preferred_username</code> and <code>email</code> alias to be case insensitive, in addition to
+     *         the <code>username</code> attribute.
      *         </p>
-     *         </li>
+     *         </dd>
      */
 
     public Boolean isCaseSensitive() {

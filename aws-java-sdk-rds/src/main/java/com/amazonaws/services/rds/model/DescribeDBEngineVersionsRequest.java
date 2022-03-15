@@ -1591,7 +1591,7 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * @param maxRecords
      *        The maximum number of records to include in the response. If more than the <code>MaxRecords</code> value
      *        is available, a pagination token called a marker is included in the response so you can retrieve the
-     *        remaining results. </p>
+     *        remaining results.</p>
      *        <p>
      *        Default: 100
      *        </p>
@@ -1618,7 +1618,7 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * 
      * @return The maximum number of records to include in the response. If more than the <code>MaxRecords</code> value
      *         is available, a pagination token called a marker is included in the response so you can retrieve the
-     *         remaining results. </p>
+     *         remaining results.</p>
      *         <p>
      *         Default: 100
      *         </p>
@@ -1646,7 +1646,7 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * @param maxRecords
      *        The maximum number of records to include in the response. If more than the <code>MaxRecords</code> value
      *        is available, a pagination token called a marker is included in the response so you can retrieve the
-     *        remaining results. </p>
+     *        remaining results.</p>
      *        <p>
      *        Default: 100
      *        </p>

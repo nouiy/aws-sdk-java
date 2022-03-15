@@ -63,18 +63,12 @@ public class GetTableResult extends com.amazonaws.AmazonWebServiceResult<com.ama
      * <p>
      * The read/write throughput capacity mode for a table. The options are:
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * <code>throughputMode:PAY_PER_REQUEST</code> and
+     * • <code>throughputMode:PAY_PER_REQUEST</code>
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * <code>throughputMode:PROVISIONED</code>.
+     * • <code>throughputMode:PROVISIONED</code>
      * </p>
-     * </li>
-     * </ul>
      */
     private CapacitySpecificationSummary capacitySpecification;
     /**
@@ -371,32 +365,20 @@ public class GetTableResult extends com.amazonaws.AmazonWebServiceResult<com.ama
      * <p>
      * The read/write throughput capacity mode for a table. The options are:
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * <code>throughputMode:PAY_PER_REQUEST</code> and
+     * • <code>throughputMode:PAY_PER_REQUEST</code>
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * <code>throughputMode:PROVISIONED</code>.
+     * • <code>throughputMode:PROVISIONED</code>
      * </p>
-     * </li>
-     * </ul>
      * 
      * @param capacitySpecification
      *        The read/write throughput capacity mode for a table. The options are:</p>
-     *        <ul>
-     *        <li>
      *        <p>
-     *        <code>throughputMode:PAY_PER_REQUEST</code> and
+     *        • <code>throughputMode:PAY_PER_REQUEST</code>
      *        </p>
-     *        </li>
-     *        <li>
      *        <p>
-     *        <code>throughputMode:PROVISIONED</code>.
-     *        </p>
-     *        </li>
+     *        • <code>throughputMode:PROVISIONED</code>
      */
 
     public void setCapacitySpecification(CapacitySpecificationSummary capacitySpecification) {
@@ -407,31 +389,19 @@ public class GetTableResult extends com.amazonaws.AmazonWebServiceResult<com.ama
      * <p>
      * The read/write throughput capacity mode for a table. The options are:
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * <code>throughputMode:PAY_PER_REQUEST</code> and
+     * • <code>throughputMode:PAY_PER_REQUEST</code>
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * <code>throughputMode:PROVISIONED</code>.
+     * • <code>throughputMode:PROVISIONED</code>
      * </p>
-     * </li>
-     * </ul>
      * 
      * @return The read/write throughput capacity mode for a table. The options are:</p>
-     *         <ul>
-     *         <li>
      *         <p>
-     *         <code>throughputMode:PAY_PER_REQUEST</code> and
+     *         • <code>throughputMode:PAY_PER_REQUEST</code>
      *         </p>
-     *         </li>
-     *         <li>
      *         <p>
-     *         <code>throughputMode:PROVISIONED</code>.
-     *         </p>
-     *         </li>
+     *         • <code>throughputMode:PROVISIONED</code>
      */
 
     public CapacitySpecificationSummary getCapacitySpecification() {
@@ -442,32 +412,20 @@ public class GetTableResult extends com.amazonaws.AmazonWebServiceResult<com.ama
      * <p>
      * The read/write throughput capacity mode for a table. The options are:
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * <code>throughputMode:PAY_PER_REQUEST</code> and
+     * • <code>throughputMode:PAY_PER_REQUEST</code>
      * </p>
-     * </li>
-     * <li>
      * <p>
-     * <code>throughputMode:PROVISIONED</code>.
+     * • <code>throughputMode:PROVISIONED</code>
      * </p>
-     * </li>
-     * </ul>
      * 
      * @param capacitySpecification
      *        The read/write throughput capacity mode for a table. The options are:</p>
-     *        <ul>
-     *        <li>
      *        <p>
-     *        <code>throughputMode:PAY_PER_REQUEST</code> and
+     *        • <code>throughputMode:PAY_PER_REQUEST</code>
      *        </p>
-     *        </li>
-     *        <li>
      *        <p>
-     *        <code>throughputMode:PROVISIONED</code>.
-     *        </p>
-     *        </li>
+     *        • <code>throughputMode:PROVISIONED</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

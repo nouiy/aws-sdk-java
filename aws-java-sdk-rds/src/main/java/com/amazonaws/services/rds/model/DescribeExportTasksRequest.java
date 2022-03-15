@@ -805,7 +805,7 @@ public class DescribeExportTasksRequest extends com.amazonaws.AmazonWebServiceRe
      * @param maxRecords
      *        The maximum number of records to include in the response. If more records exist than the specified value,
      *        a pagination token called a marker is included in the response. You can use the marker in a later
-     *        <code>DescribeExportTasks</code> request to retrieve the remaining results. </p>
+     *        <code>DescribeExportTasks</code> request to retrieve the remaining results.</p>
      *        <p>
      *        Default: 100
      *        </p>
@@ -832,7 +832,7 @@ public class DescribeExportTasksRequest extends com.amazonaws.AmazonWebServiceRe
      * 
      * @return The maximum number of records to include in the response. If more records exist than the specified value,
      *         a pagination token called a marker is included in the response. You can use the marker in a later
-     *         <code>DescribeExportTasks</code> request to retrieve the remaining results. </p>
+     *         <code>DescribeExportTasks</code> request to retrieve the remaining results.</p>
      *         <p>
      *         Default: 100
      *         </p>
@@ -860,7 +860,7 @@ public class DescribeExportTasksRequest extends com.amazonaws.AmazonWebServiceRe
      * @param maxRecords
      *        The maximum number of records to include in the response. If more records exist than the specified value,
      *        a pagination token called a marker is included in the response. You can use the marker in a later
-     *        <code>DescribeExportTasks</code> request to retrieve the remaining results. </p>
+     *        <code>DescribeExportTasks</code> request to retrieve the remaining results.</p>
      *        <p>
      *        Default: 100
      *        </p>

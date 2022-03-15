@@ -36,6 +36,8 @@ public class WorldExportJobSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<List> WORLDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("worlds").build();
+    private static final MarshallingInfo<StructuredPojo> OUTPUTLOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("outputLocation").build();
 
     private static final WorldExportJobSummaryMarshaller instance = new WorldExportJobSummaryMarshaller();
 
@@ -57,6 +59,7 @@ public class WorldExportJobSummaryMarshaller {
             protocolMarshaller.marshall(worldExportJobSummary.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(worldExportJobSummary.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(worldExportJobSummary.getWorlds(), WORLDS_BINDING);
+            protocolMarshaller.marshall(worldExportJobSummary.getOutputLocation(), OUTPUTLOCATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

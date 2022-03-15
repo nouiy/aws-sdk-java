@@ -652,7 +652,7 @@ public class DescribeOptionGroupOptionsRequest extends com.amazonaws.AmazonWebSe
      * @param maxRecords
      *        The maximum number of records to include in the response. If more records exist than the specified
      *        <code>MaxRecords</code> value, a pagination token called a marker is included in the response so that you
-     *        can retrieve the remaining results. </p>
+     *        can retrieve the remaining results.</p>
      *        <p>
      *        Default: 100
      *        </p>
@@ -679,7 +679,7 @@ public class DescribeOptionGroupOptionsRequest extends com.amazonaws.AmazonWebSe
      * 
      * @return The maximum number of records to include in the response. If more records exist than the specified
      *         <code>MaxRecords</code> value, a pagination token called a marker is included in the response so that you
-     *         can retrieve the remaining results. </p>
+     *         can retrieve the remaining results.</p>
      *         <p>
      *         Default: 100
      *         </p>
@@ -707,7 +707,7 @@ public class DescribeOptionGroupOptionsRequest extends com.amazonaws.AmazonWebSe
      * @param maxRecords
      *        The maximum number of records to include in the response. If more records exist than the specified
      *        <code>MaxRecords</code> value, a pagination token called a marker is included in the response so that you
-     *        can retrieve the remaining results. </p>
+     *        can retrieve the remaining results.</p>
      *        <p>
      *        Default: 100
      *        </p>

@@ -19,11 +19,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The email configuration type.
+ * The email configuration of your user pool. The email configuration type sets your preferred sending method, Amazon
+ * Web Services Region, and sender for messages from your user pool.
  * </p>
  * <note>
  * <p>
- * Amazon Cognito has specific Regions for use with Amazon Simple Email Service. For more information on the supported
+ * Amazon Cognito can send email messages with Amazon Simple Email Service resources in the Amazon Web Services Region
+ * where you created your user pool, and in alternate Regions in some cases. For more information on the supported
  * Regions, see <a href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-email.html">Email settings
  * for Amazon Cognito user pools</a>.
  * </p>
@@ -54,6 +56,15 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The Region value of the <code>SourceArn</code> parameter must indicate a supported Amazon Web Services Region of
+     * your user pool. Typically, the Region in the <code>SourceArn</code> and the user pool Region are the same. For
+     * more information, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-email.html#user-pool-email-developer-region-mapping"
+     * >Amazon SES email configuration regions</a> in the <a
+     * href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html">Amazon Cognito
+     * Developer Guide</a>.
+     * </p>
      */
     private String sourceArn;
     /**
@@ -64,8 +75,8 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
     private String replyToEmailAddress;
     /**
      * <p>
-     * Specifies whether Amazon Cognito emails your users by using its built-in email functionality or your Amazon
-     * Simple Email Service email configuration. Specify one of the following values:
+     * Specifies whether Amazon Cognito uses its built-in functionality to send your users email messages, or uses your
+     * Amazon Simple Email Service email configuration. Specify one of the following values:
      * </p>
      * <dl>
      * <dt>COGNITO_DEFAULT</dt>
@@ -174,22 +185,23 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
      * email. Once applied, all of the rules in that configuration set are applied to the email. Configuration sets can
      * be used to apply the following types of rules to emails:
      * </p>
-     * <ul>
-     * <li>
+     * <dl>
+     * <dt>Event publishing</dt>
+     * <dd>
      * <p>
-     * Event publishing – Amazon Simple Email Service can track the number of send, delivery, open, click, bounce, and
-     * complaint events for each email sent. Use event publishing to send information about these events to other Amazon
-     * Web Services services such as and Amazon CloudWatch.
+     * Amazon Simple Email Service can track the number of send, delivery, open, click, bounce, and complaint events for
+     * each email sent. Use event publishing to send information about these events to other Amazon Web Services
+     * services such as and Amazon CloudWatch
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>IP pool management</dt>
+     * <dd>
      * <p>
-     * IP pool management – When leasing dedicated IP addresses with Amazon Simple Email Service, you can create groups
-     * of IP addresses, called dedicated IP pools. You can then associate the dedicated IP pools with configuration
-     * sets.
+     * When leasing dedicated IP addresses with Amazon Simple Email Service, you can create groups of IP addresses,
+     * called dedicated IP pools. You can then associate the dedicated IP pools with configuration sets.
      * </p>
-     * </li>
-     * </ul>
+     * </dd>
+     * </dl>
      */
     private String configurationSet;
 
@@ -212,6 +224,15 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The Region value of the <code>SourceArn</code> parameter must indicate a supported Amazon Web Services Region of
+     * your user pool. Typically, the Region in the <code>SourceArn</code> and the user pool Region are the same. For
+     * more information, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-email.html#user-pool-email-developer-region-mapping"
+     * >Amazon SES email configuration regions</a> in the <a
+     * href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html">Amazon Cognito
+     * Developer Guide</a>.
+     * </p>
      * 
      * @param sourceArn
      *        The ARN of a verified email address in Amazon SES. Amazon Cognito uses this email address in one of the
@@ -230,6 +251,15 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
      *        Amazon SES on your behalf.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        The Region value of the <code>SourceArn</code> parameter must indicate a supported Amazon Web Services
+     *        Region of your user pool. Typically, the Region in the <code>SourceArn</code> and the user pool Region are
+     *        the same. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-email.html#user-pool-email-developer-region-mapping"
+     *        >Amazon SES email configuration regions</a> in the <a
+     *        href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html">Amazon
+     *        Cognito Developer Guide</a>.
      */
 
     public void setSourceArn(String sourceArn) {
@@ -255,6 +285,15 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The Region value of the <code>SourceArn</code> parameter must indicate a supported Amazon Web Services Region of
+     * your user pool. Typically, the Region in the <code>SourceArn</code> and the user pool Region are the same. For
+     * more information, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-email.html#user-pool-email-developer-region-mapping"
+     * >Amazon SES email configuration regions</a> in the <a
+     * href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html">Amazon Cognito
+     * Developer Guide</a>.
+     * </p>
      * 
      * @return The ARN of a verified email address in Amazon SES. Amazon Cognito uses this email address in one of the
      *         following ways, depending on the value that you specify for the <code>EmailSendingAccount</code>
@@ -272,6 +311,15 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
      *         Amazon SES on your behalf.
      *         </p>
      *         </li>
+     *         </ul>
+     *         <p>
+     *         The Region value of the <code>SourceArn</code> parameter must indicate a supported Amazon Web Services
+     *         Region of your user pool. Typically, the Region in the <code>SourceArn</code> and the user pool Region
+     *         are the same. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-email.html#user-pool-email-developer-region-mapping"
+     *         >Amazon SES email configuration regions</a> in the <a
+     *         href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html">Amazon
+     *         Cognito Developer Guide</a>.
      */
 
     public String getSourceArn() {
@@ -297,6 +345,15 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * The Region value of the <code>SourceArn</code> parameter must indicate a supported Amazon Web Services Region of
+     * your user pool. Typically, the Region in the <code>SourceArn</code> and the user pool Region are the same. For
+     * more information, see <a href=
+     * "https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-email.html#user-pool-email-developer-region-mapping"
+     * >Amazon SES email configuration regions</a> in the <a
+     * href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html">Amazon Cognito
+     * Developer Guide</a>.
+     * </p>
      * 
      * @param sourceArn
      *        The ARN of a verified email address in Amazon SES. Amazon Cognito uses this email address in one of the
@@ -315,6 +372,15 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
      *        Amazon SES on your behalf.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        The Region value of the <code>SourceArn</code> parameter must indicate a supported Amazon Web Services
+     *        Region of your user pool. Typically, the Region in the <code>SourceArn</code> and the user pool Region are
+     *        the same. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-email.html#user-pool-email-developer-region-mapping"
+     *        >Amazon SES email configuration regions</a> in the <a
+     *        href="https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html">Amazon
+     *        Cognito Developer Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -365,8 +431,8 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Specifies whether Amazon Cognito emails your users by using its built-in email functionality or your Amazon
-     * Simple Email Service email configuration. Specify one of the following values:
+     * Specifies whether Amazon Cognito uses its built-in functionality to send your users email messages, or uses your
+     * Amazon Simple Email Service email configuration. Specify one of the following values:
      * </p>
      * <dl>
      * <dt>COGNITO_DEFAULT</dt>
@@ -460,8 +526,8 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
      * </dl>
      * 
      * @param emailSendingAccount
-     *        Specifies whether Amazon Cognito emails your users by using its built-in email functionality or your
-     *        Amazon Simple Email Service email configuration. Specify one of the following values:</p>
+     *        Specifies whether Amazon Cognito uses its built-in functionality to send your users email messages, or
+     *        uses your Amazon Simple Email Service email configuration. Specify one of the following values:</p>
      *        <dl>
      *        <dt>COGNITO_DEFAULT</dt>
      *        <dd>
@@ -562,8 +628,8 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Specifies whether Amazon Cognito emails your users by using its built-in email functionality or your Amazon
-     * Simple Email Service email configuration. Specify one of the following values:
+     * Specifies whether Amazon Cognito uses its built-in functionality to send your users email messages, or uses your
+     * Amazon Simple Email Service email configuration. Specify one of the following values:
      * </p>
      * <dl>
      * <dt>COGNITO_DEFAULT</dt>
@@ -656,8 +722,8 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
      * </dd>
      * </dl>
      * 
-     * @return Specifies whether Amazon Cognito emails your users by using its built-in email functionality or your
-     *         Amazon Simple Email Service email configuration. Specify one of the following values:</p>
+     * @return Specifies whether Amazon Cognito uses its built-in functionality to send your users email messages, or
+     *         uses your Amazon Simple Email Service email configuration. Specify one of the following values:</p>
      *         <dl>
      *         <dt>COGNITO_DEFAULT</dt>
      *         <dd>
@@ -758,8 +824,8 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Specifies whether Amazon Cognito emails your users by using its built-in email functionality or your Amazon
-     * Simple Email Service email configuration. Specify one of the following values:
+     * Specifies whether Amazon Cognito uses its built-in functionality to send your users email messages, or uses your
+     * Amazon Simple Email Service email configuration. Specify one of the following values:
      * </p>
      * <dl>
      * <dt>COGNITO_DEFAULT</dt>
@@ -853,8 +919,8 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
      * </dl>
      * 
      * @param emailSendingAccount
-     *        Specifies whether Amazon Cognito emails your users by using its built-in email functionality or your
-     *        Amazon Simple Email Service email configuration. Specify one of the following values:</p>
+     *        Specifies whether Amazon Cognito uses its built-in functionality to send your users email messages, or
+     *        uses your Amazon Simple Email Service email configuration. Specify one of the following values:</p>
      *        <dl>
      *        <dt>COGNITO_DEFAULT</dt>
      *        <dd>
@@ -957,8 +1023,8 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Specifies whether Amazon Cognito emails your users by using its built-in email functionality or your Amazon
-     * Simple Email Service email configuration. Specify one of the following values:
+     * Specifies whether Amazon Cognito uses its built-in functionality to send your users email messages, or uses your
+     * Amazon Simple Email Service email configuration. Specify one of the following values:
      * </p>
      * <dl>
      * <dt>COGNITO_DEFAULT</dt>
@@ -1052,8 +1118,8 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
      * </dl>
      * 
      * @param emailSendingAccount
-     *        Specifies whether Amazon Cognito emails your users by using its built-in email functionality or your
-     *        Amazon Simple Email Service email configuration. Specify one of the following values:</p>
+     *        Specifies whether Amazon Cognito uses its built-in functionality to send your users email messages, or
+     *        uses your Amazon Simple Email Service email configuration. Specify one of the following values:</p>
      *        <dl>
      *        <dt>COGNITO_DEFAULT</dt>
      *        <dd>
@@ -1213,43 +1279,46 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
      * email. Once applied, all of the rules in that configuration set are applied to the email. Configuration sets can
      * be used to apply the following types of rules to emails:
      * </p>
-     * <ul>
-     * <li>
+     * <dl>
+     * <dt>Event publishing</dt>
+     * <dd>
      * <p>
-     * Event publishing – Amazon Simple Email Service can track the number of send, delivery, open, click, bounce, and
-     * complaint events for each email sent. Use event publishing to send information about these events to other Amazon
-     * Web Services services such as and Amazon CloudWatch.
+     * Amazon Simple Email Service can track the number of send, delivery, open, click, bounce, and complaint events for
+     * each email sent. Use event publishing to send information about these events to other Amazon Web Services
+     * services such as and Amazon CloudWatch
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>IP pool management</dt>
+     * <dd>
      * <p>
-     * IP pool management – When leasing dedicated IP addresses with Amazon Simple Email Service, you can create groups
-     * of IP addresses, called dedicated IP pools. You can then associate the dedicated IP pools with configuration
-     * sets.
+     * When leasing dedicated IP addresses with Amazon Simple Email Service, you can create groups of IP addresses,
+     * called dedicated IP pools. You can then associate the dedicated IP pools with configuration sets.
      * </p>
-     * </li>
-     * </ul>
+     * </dd>
+     * </dl>
      * 
      * @param configurationSet
      *        The set of configuration rules that can be applied to emails sent using Amazon Simple Email Service. A
      *        configuration set is applied to an email by including a reference to the configuration set in the headers
      *        of the email. Once applied, all of the rules in that configuration set are applied to the email.
      *        Configuration sets can be used to apply the following types of rules to emails: </p>
-     *        <ul>
-     *        <li>
+     *        <dl>
+     *        <dt>Event publishing</dt>
+     *        <dd>
      *        <p>
-     *        Event publishing – Amazon Simple Email Service can track the number of send, delivery, open, click,
-     *        bounce, and complaint events for each email sent. Use event publishing to send information about these
-     *        events to other Amazon Web Services services such as and Amazon CloudWatch.
+     *        Amazon Simple Email Service can track the number of send, delivery, open, click, bounce, and complaint
+     *        events for each email sent. Use event publishing to send information about these events to other Amazon
+     *        Web Services services such as and Amazon CloudWatch
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>IP pool management</dt>
+     *        <dd>
      *        <p>
-     *        IP pool management – When leasing dedicated IP addresses with Amazon Simple Email Service, you can create
-     *        groups of IP addresses, called dedicated IP pools. You can then associate the dedicated IP pools with
-     *        configuration sets.
+     *        When leasing dedicated IP addresses with Amazon Simple Email Service, you can create groups of IP
+     *        addresses, called dedicated IP pools. You can then associate the dedicated IP pools with configuration
+     *        sets.
      *        </p>
-     *        </li>
+     *        </dd>
      */
 
     public void setConfigurationSet(String configurationSet) {
@@ -1263,42 +1332,45 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
      * email. Once applied, all of the rules in that configuration set are applied to the email. Configuration sets can
      * be used to apply the following types of rules to emails:
      * </p>
-     * <ul>
-     * <li>
+     * <dl>
+     * <dt>Event publishing</dt>
+     * <dd>
      * <p>
-     * Event publishing – Amazon Simple Email Service can track the number of send, delivery, open, click, bounce, and
-     * complaint events for each email sent. Use event publishing to send information about these events to other Amazon
-     * Web Services services such as and Amazon CloudWatch.
+     * Amazon Simple Email Service can track the number of send, delivery, open, click, bounce, and complaint events for
+     * each email sent. Use event publishing to send information about these events to other Amazon Web Services
+     * services such as and Amazon CloudWatch
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>IP pool management</dt>
+     * <dd>
      * <p>
-     * IP pool management – When leasing dedicated IP addresses with Amazon Simple Email Service, you can create groups
-     * of IP addresses, called dedicated IP pools. You can then associate the dedicated IP pools with configuration
-     * sets.
+     * When leasing dedicated IP addresses with Amazon Simple Email Service, you can create groups of IP addresses,
+     * called dedicated IP pools. You can then associate the dedicated IP pools with configuration sets.
      * </p>
-     * </li>
-     * </ul>
+     * </dd>
+     * </dl>
      * 
      * @return The set of configuration rules that can be applied to emails sent using Amazon Simple Email Service. A
      *         configuration set is applied to an email by including a reference to the configuration set in the headers
      *         of the email. Once applied, all of the rules in that configuration set are applied to the email.
      *         Configuration sets can be used to apply the following types of rules to emails: </p>
-     *         <ul>
-     *         <li>
+     *         <dl>
+     *         <dt>Event publishing</dt>
+     *         <dd>
      *         <p>
-     *         Event publishing – Amazon Simple Email Service can track the number of send, delivery, open, click,
-     *         bounce, and complaint events for each email sent. Use event publishing to send information about these
-     *         events to other Amazon Web Services services such as and Amazon CloudWatch.
+     *         Amazon Simple Email Service can track the number of send, delivery, open, click, bounce, and complaint
+     *         events for each email sent. Use event publishing to send information about these events to other Amazon
+     *         Web Services services such as and Amazon CloudWatch
      *         </p>
-     *         </li>
-     *         <li>
+     *         </dd>
+     *         <dt>IP pool management</dt>
+     *         <dd>
      *         <p>
-     *         IP pool management – When leasing dedicated IP addresses with Amazon Simple Email Service, you can create
-     *         groups of IP addresses, called dedicated IP pools. You can then associate the dedicated IP pools with
-     *         configuration sets.
+     *         When leasing dedicated IP addresses with Amazon Simple Email Service, you can create groups of IP
+     *         addresses, called dedicated IP pools. You can then associate the dedicated IP pools with configuration
+     *         sets.
      *         </p>
-     *         </li>
+     *         </dd>
      */
 
     public String getConfigurationSet() {
@@ -1312,43 +1384,46 @@ public class EmailConfigurationType implements Serializable, Cloneable, Structur
      * email. Once applied, all of the rules in that configuration set are applied to the email. Configuration sets can
      * be used to apply the following types of rules to emails:
      * </p>
-     * <ul>
-     * <li>
+     * <dl>
+     * <dt>Event publishing</dt>
+     * <dd>
      * <p>
-     * Event publishing – Amazon Simple Email Service can track the number of send, delivery, open, click, bounce, and
-     * complaint events for each email sent. Use event publishing to send information about these events to other Amazon
-     * Web Services services such as and Amazon CloudWatch.
+     * Amazon Simple Email Service can track the number of send, delivery, open, click, bounce, and complaint events for
+     * each email sent. Use event publishing to send information about these events to other Amazon Web Services
+     * services such as and Amazon CloudWatch
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>IP pool management</dt>
+     * <dd>
      * <p>
-     * IP pool management – When leasing dedicated IP addresses with Amazon Simple Email Service, you can create groups
-     * of IP addresses, called dedicated IP pools. You can then associate the dedicated IP pools with configuration
-     * sets.
+     * When leasing dedicated IP addresses with Amazon Simple Email Service, you can create groups of IP addresses,
+     * called dedicated IP pools. You can then associate the dedicated IP pools with configuration sets.
      * </p>
-     * </li>
-     * </ul>
+     * </dd>
+     * </dl>
      * 
      * @param configurationSet
      *        The set of configuration rules that can be applied to emails sent using Amazon Simple Email Service. A
      *        configuration set is applied to an email by including a reference to the configuration set in the headers
      *        of the email. Once applied, all of the rules in that configuration set are applied to the email.
      *        Configuration sets can be used to apply the following types of rules to emails: </p>
-     *        <ul>
-     *        <li>
+     *        <dl>
+     *        <dt>Event publishing</dt>
+     *        <dd>
      *        <p>
-     *        Event publishing – Amazon Simple Email Service can track the number of send, delivery, open, click,
-     *        bounce, and complaint events for each email sent. Use event publishing to send information about these
-     *        events to other Amazon Web Services services such as and Amazon CloudWatch.
+     *        Amazon Simple Email Service can track the number of send, delivery, open, click, bounce, and complaint
+     *        events for each email sent. Use event publishing to send information about these events to other Amazon
+     *        Web Services services such as and Amazon CloudWatch
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>IP pool management</dt>
+     *        <dd>
      *        <p>
-     *        IP pool management – When leasing dedicated IP addresses with Amazon Simple Email Service, you can create
-     *        groups of IP addresses, called dedicated IP pools. You can then associate the dedicated IP pools with
-     *        configuration sets.
+     *        When leasing dedicated IP addresses with Amazon Simple Email Service, you can create groups of IP
+     *        addresses, called dedicated IP pools. You can then associate the dedicated IP pools with configuration
+     *        sets.
      *        </p>
-     *        </li>
+     *        </dd>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

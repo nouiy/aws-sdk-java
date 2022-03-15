@@ -1051,7 +1051,7 @@ public class ModifyCustomDBEngineVersionResult extends com.amazonaws.AmazonWebSe
      * The supported features are listed under <code>SupportedFeatureNames</code> in the output.
      * </p>
      * 
-     * @return A list of features supported by the DB engine. </p>
+     * @return A list of features supported by the DB engine.</p>
      *         <p>
      *         The supported features vary by DB engine and DB engine version.
      *         </p>
@@ -1106,7 +1106,7 @@ public class ModifyCustomDBEngineVersionResult extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param supportedFeatureNames
-     *        A list of features supported by the DB engine. </p>
+     *        A list of features supported by the DB engine.</p>
      *        <p>
      *        The supported features vary by DB engine and DB engine version.
      *        </p>
@@ -1168,7 +1168,7 @@ public class ModifyCustomDBEngineVersionResult extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param supportedFeatureNames
-     *        A list of features supported by the DB engine. </p>
+     *        A list of features supported by the DB engine.</p>
      *        <p>
      *        The supported features vary by DB engine and DB engine version.
      *        </p>
@@ -1227,7 +1227,7 @@ public class ModifyCustomDBEngineVersionResult extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param supportedFeatureNames
-     *        A list of features supported by the DB engine. </p>
+     *        A list of features supported by the DB engine.</p>
      *        <p>
      *        The supported features vary by DB engine and DB engine version.
      *        </p>

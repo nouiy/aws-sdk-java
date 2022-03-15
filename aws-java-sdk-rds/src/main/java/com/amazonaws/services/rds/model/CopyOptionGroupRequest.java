@@ -101,7 +101,7 @@ public class CopyOptionGroupRequest extends com.amazonaws.AmazonWebServiceReques
      * </ul>
      * 
      * @param sourceOptionGroupIdentifier
-     *        The identifier for the source option group. </p>
+     *        The identifier for the source option group.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -132,7 +132,7 @@ public class CopyOptionGroupRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * </ul>
      * 
-     * @return The identifier for the source option group. </p>
+     * @return The identifier for the source option group.</p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -164,7 +164,7 @@ public class CopyOptionGroupRequest extends com.amazonaws.AmazonWebServiceReques
      * </ul>
      * 
      * @param sourceOptionGroupIdentifier
-     *        The identifier for the source option group. </p>
+     *        The identifier for the source option group.</p>
      *        <p>
      *        Constraints:
      *        </p>

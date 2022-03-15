@@ -34,7 +34,7 @@ public class DownloadDBLogFilePortionResult extends com.amazonaws.AmazonWebServi
     private String logFileData;
     /**
      * <p>
-     * A pagination token that can be used in a later DownloadDBLogFilePortion request.
+     * A pagination token that can be used in a later <code>DownloadDBLogFilePortion</code> request.
      * </p>
      */
     private String marker;
@@ -87,11 +87,11 @@ public class DownloadDBLogFilePortionResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A pagination token that can be used in a later DownloadDBLogFilePortion request.
+     * A pagination token that can be used in a later <code>DownloadDBLogFilePortion</code> request.
      * </p>
      * 
      * @param marker
-     *        A pagination token that can be used in a later DownloadDBLogFilePortion request.
+     *        A pagination token that can be used in a later <code>DownloadDBLogFilePortion</code> request.
      */
 
     public void setMarker(String marker) {
@@ -100,10 +100,10 @@ public class DownloadDBLogFilePortionResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A pagination token that can be used in a later DownloadDBLogFilePortion request.
+     * A pagination token that can be used in a later <code>DownloadDBLogFilePortion</code> request.
      * </p>
      * 
-     * @return A pagination token that can be used in a later DownloadDBLogFilePortion request.
+     * @return A pagination token that can be used in a later <code>DownloadDBLogFilePortion</code> request.
      */
 
     public String getMarker() {
@@ -112,11 +112,11 @@ public class DownloadDBLogFilePortionResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * A pagination token that can be used in a later DownloadDBLogFilePortion request.
+     * A pagination token that can be used in a later <code>DownloadDBLogFilePortion</code> request.
      * </p>
      * 
      * @param marker
-     *        A pagination token that can be used in a later DownloadDBLogFilePortion request.
+     *        A pagination token that can be used in a later <code>DownloadDBLogFilePortion</code> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

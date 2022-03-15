@@ -66,7 +66,13 @@ public class SimulationApplicationConfig implements Serializable, Cloneable, Str
      * <p>
      * If you set this value, you must specify an <code>outputLocation</code>.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      */
+    @Deprecated
     private Boolean useDefaultUploadConfigurations;
     /**
      * <p>
@@ -79,7 +85,13 @@ public class SimulationApplicationConfig implements Serializable, Cloneable, Str
      * A Boolean indicating whether to use default simulation application tools. The default tools are rviz, rqt,
      * terminal and rosbag record. The default is <code>False</code>.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      */
+    @Deprecated
     private Boolean useDefaultTools;
 
     /**
@@ -350,6 +362,11 @@ public class SimulationApplicationConfig implements Serializable, Cloneable, Str
      * <p>
      * If you set this value, you must specify an <code>outputLocation</code>.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param useDefaultUploadConfigurations
      *        A Boolean indicating whether to use default upload configurations. By default, <code>.ros</code> and
@@ -357,8 +374,13 @@ public class SimulationApplicationConfig implements Serializable, Cloneable, Str
      *        recorded.</p>
      *        <p>
      *        If you set this value, you must specify an <code>outputLocation</code>.
+     *        </p>
+     *        <important>
+     *        <p>
+     *        This API is no longer supported and will throw an error if used.
+     *        </p>
      */
-
+    @Deprecated
     public void setUseDefaultUploadConfigurations(Boolean useDefaultUploadConfigurations) {
         this.useDefaultUploadConfigurations = useDefaultUploadConfigurations;
     }
@@ -371,14 +393,24 @@ public class SimulationApplicationConfig implements Serializable, Cloneable, Str
      * <p>
      * If you set this value, you must specify an <code>outputLocation</code>.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @return A Boolean indicating whether to use default upload configurations. By default, <code>.ros</code> and
      *         <code>.gazebo</code> files are uploaded when the application terminates and all ROS topics will be
      *         recorded.</p>
      *         <p>
      *         If you set this value, you must specify an <code>outputLocation</code>.
+     *         </p>
+     *         <important>
+     *         <p>
+     *         This API is no longer supported and will throw an error if used.
+     *         </p>
      */
-
+    @Deprecated
     public Boolean getUseDefaultUploadConfigurations() {
         return this.useDefaultUploadConfigurations;
     }
@@ -391,6 +423,11 @@ public class SimulationApplicationConfig implements Serializable, Cloneable, Str
      * <p>
      * If you set this value, you must specify an <code>outputLocation</code>.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param useDefaultUploadConfigurations
      *        A Boolean indicating whether to use default upload configurations. By default, <code>.ros</code> and
@@ -398,9 +435,14 @@ public class SimulationApplicationConfig implements Serializable, Cloneable, Str
      *        recorded.</p>
      *        <p>
      *        If you set this value, you must specify an <code>outputLocation</code>.
+     *        </p>
+     *        <important>
+     *        <p>
+     *        This API is no longer supported and will throw an error if used.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public SimulationApplicationConfig withUseDefaultUploadConfigurations(Boolean useDefaultUploadConfigurations) {
         setUseDefaultUploadConfigurations(useDefaultUploadConfigurations);
         return this;
@@ -414,14 +456,24 @@ public class SimulationApplicationConfig implements Serializable, Cloneable, Str
      * <p>
      * If you set this value, you must specify an <code>outputLocation</code>.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @return A Boolean indicating whether to use default upload configurations. By default, <code>.ros</code> and
      *         <code>.gazebo</code> files are uploaded when the application terminates and all ROS topics will be
      *         recorded.</p>
      *         <p>
      *         If you set this value, you must specify an <code>outputLocation</code>.
+     *         </p>
+     *         <important>
+     *         <p>
+     *         This API is no longer supported and will throw an error if used.
+     *         </p>
      */
-
+    @Deprecated
     public Boolean isUseDefaultUploadConfigurations() {
         return this.useDefaultUploadConfigurations;
     }
@@ -501,12 +553,20 @@ public class SimulationApplicationConfig implements Serializable, Cloneable, Str
      * A Boolean indicating whether to use default simulation application tools. The default tools are rviz, rqt,
      * terminal and rosbag record. The default is <code>False</code>.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param useDefaultTools
      *        A Boolean indicating whether to use default simulation application tools. The default tools are rviz, rqt,
-     *        terminal and rosbag record. The default is <code>False</code>.
+     *        terminal and rosbag record. The default is <code>False</code>.</p> <important>
+     *        <p>
+     *        This API is no longer supported and will throw an error if used.
+     *        </p>
      */
-
+    @Deprecated
     public void setUseDefaultTools(Boolean useDefaultTools) {
         this.useDefaultTools = useDefaultTools;
     }
@@ -516,11 +576,19 @@ public class SimulationApplicationConfig implements Serializable, Cloneable, Str
      * A Boolean indicating whether to use default simulation application tools. The default tools are rviz, rqt,
      * terminal and rosbag record. The default is <code>False</code>.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @return A Boolean indicating whether to use default simulation application tools. The default tools are rviz,
-     *         rqt, terminal and rosbag record. The default is <code>False</code>.
+     *         rqt, terminal and rosbag record. The default is <code>False</code>.</p> <important>
+     *         <p>
+     *         This API is no longer supported and will throw an error if used.
+     *         </p>
      */
-
+    @Deprecated
     public Boolean getUseDefaultTools() {
         return this.useDefaultTools;
     }
@@ -530,13 +598,21 @@ public class SimulationApplicationConfig implements Serializable, Cloneable, Str
      * A Boolean indicating whether to use default simulation application tools. The default tools are rviz, rqt,
      * terminal and rosbag record. The default is <code>False</code>.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param useDefaultTools
      *        A Boolean indicating whether to use default simulation application tools. The default tools are rviz, rqt,
-     *        terminal and rosbag record. The default is <code>False</code>.
+     *        terminal and rosbag record. The default is <code>False</code>.</p> <important>
+     *        <p>
+     *        This API is no longer supported and will throw an error if used.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public SimulationApplicationConfig withUseDefaultTools(Boolean useDefaultTools) {
         setUseDefaultTools(useDefaultTools);
         return this;
@@ -547,11 +623,19 @@ public class SimulationApplicationConfig implements Serializable, Cloneable, Str
      * A Boolean indicating whether to use default simulation application tools. The default tools are rviz, rqt,
      * terminal and rosbag record. The default is <code>False</code>.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @return A Boolean indicating whether to use default simulation application tools. The default tools are rviz,
-     *         rqt, terminal and rosbag record. The default is <code>False</code>.
+     *         rqt, terminal and rosbag record. The default is <code>False</code>.</p> <important>
+     *         <p>
+     *         This API is no longer supported and will throw an error if used.
+     *         </p>
      */
-
+    @Deprecated
     public Boolean isUseDefaultTools() {
         return this.useDefaultTools;
     }

@@ -32,9 +32,14 @@ public class InitiateAuthResult extends com.amazonaws.AmazonWebServiceResult<com
      * <code>AdminInitiateAuth</code> response if you must pass another challenge.
      * </p>
      * <p>
-     * Valid values include the following. Note that all of these challenges require <code>USERNAME</code> and
-     * <code>SECRET_HASH</code> (if applicable) in the parameters.
+     * Valid values include the following:
      * </p>
+     * <note>
+     * <p>
+     * All of the following challenges require <code>USERNAME</code> and <code>SECRET_HASH</code> (if applicable) in the
+     * parameters.
+     * </p>
+     * </note>
      * <ul>
      * <li>
      * <p>
@@ -120,9 +125,14 @@ public class InitiateAuthResult extends com.amazonaws.AmazonWebServiceResult<com
      * <code>AdminInitiateAuth</code> response if you must pass another challenge.
      * </p>
      * <p>
-     * Valid values include the following. Note that all of these challenges require <code>USERNAME</code> and
-     * <code>SECRET_HASH</code> (if applicable) in the parameters.
+     * Valid values include the following:
      * </p>
+     * <note>
+     * <p>
+     * All of the following challenges require <code>USERNAME</code> and <code>SECRET_HASH</code> (if applicable) in the
+     * parameters.
+     * </p>
+     * </note>
      * <ul>
      * <li>
      * <p>
@@ -177,9 +187,14 @@ public class InitiateAuthResult extends com.amazonaws.AmazonWebServiceResult<com
      *        The name of the challenge that you're responding to with this call. This name is returned in the
      *        <code>AdminInitiateAuth</code> response if you must pass another challenge.</p>
      *        <p>
-     *        Valid values include the following. Note that all of these challenges require <code>USERNAME</code> and
-     *        <code>SECRET_HASH</code> (if applicable) in the parameters.
+     *        Valid values include the following:
      *        </p>
+     *        <note>
+     *        <p>
+     *        All of the following challenges require <code>USERNAME</code> and <code>SECRET_HASH</code> (if applicable)
+     *        in the parameters.
+     *        </p>
+     *        </note>
      *        <ul>
      *        <li>
      *        <p>
@@ -244,9 +259,14 @@ public class InitiateAuthResult extends com.amazonaws.AmazonWebServiceResult<com
      * <code>AdminInitiateAuth</code> response if you must pass another challenge.
      * </p>
      * <p>
-     * Valid values include the following. Note that all of these challenges require <code>USERNAME</code> and
-     * <code>SECRET_HASH</code> (if applicable) in the parameters.
+     * Valid values include the following:
      * </p>
+     * <note>
+     * <p>
+     * All of the following challenges require <code>USERNAME</code> and <code>SECRET_HASH</code> (if applicable) in the
+     * parameters.
+     * </p>
+     * </note>
      * <ul>
      * <li>
      * <p>
@@ -300,9 +320,14 @@ public class InitiateAuthResult extends com.amazonaws.AmazonWebServiceResult<com
      * @return The name of the challenge that you're responding to with this call. This name is returned in the
      *         <code>AdminInitiateAuth</code> response if you must pass another challenge.</p>
      *         <p>
-     *         Valid values include the following. Note that all of these challenges require <code>USERNAME</code> and
-     *         <code>SECRET_HASH</code> (if applicable) in the parameters.
+     *         Valid values include the following:
      *         </p>
+     *         <note>
+     *         <p>
+     *         All of the following challenges require <code>USERNAME</code> and <code>SECRET_HASH</code> (if
+     *         applicable) in the parameters.
+     *         </p>
+     *         </note>
      *         <ul>
      *         <li>
      *         <p>
@@ -367,9 +392,14 @@ public class InitiateAuthResult extends com.amazonaws.AmazonWebServiceResult<com
      * <code>AdminInitiateAuth</code> response if you must pass another challenge.
      * </p>
      * <p>
-     * Valid values include the following. Note that all of these challenges require <code>USERNAME</code> and
-     * <code>SECRET_HASH</code> (if applicable) in the parameters.
+     * Valid values include the following:
      * </p>
+     * <note>
+     * <p>
+     * All of the following challenges require <code>USERNAME</code> and <code>SECRET_HASH</code> (if applicable) in the
+     * parameters.
+     * </p>
+     * </note>
      * <ul>
      * <li>
      * <p>
@@ -424,9 +454,14 @@ public class InitiateAuthResult extends com.amazonaws.AmazonWebServiceResult<com
      *        The name of the challenge that you're responding to with this call. This name is returned in the
      *        <code>AdminInitiateAuth</code> response if you must pass another challenge.</p>
      *        <p>
-     *        Valid values include the following. Note that all of these challenges require <code>USERNAME</code> and
-     *        <code>SECRET_HASH</code> (if applicable) in the parameters.
+     *        Valid values include the following:
      *        </p>
+     *        <note>
+     *        <p>
+     *        All of the following challenges require <code>USERNAME</code> and <code>SECRET_HASH</code> (if applicable)
+     *        in the parameters.
+     *        </p>
+     *        </note>
      *        <ul>
      *        <li>
      *        <p>
@@ -493,9 +528,14 @@ public class InitiateAuthResult extends com.amazonaws.AmazonWebServiceResult<com
      * <code>AdminInitiateAuth</code> response if you must pass another challenge.
      * </p>
      * <p>
-     * Valid values include the following. Note that all of these challenges require <code>USERNAME</code> and
-     * <code>SECRET_HASH</code> (if applicable) in the parameters.
+     * Valid values include the following:
      * </p>
+     * <note>
+     * <p>
+     * All of the following challenges require <code>USERNAME</code> and <code>SECRET_HASH</code> (if applicable) in the
+     * parameters.
+     * </p>
+     * </note>
      * <ul>
      * <li>
      * <p>
@@ -550,9 +590,14 @@ public class InitiateAuthResult extends com.amazonaws.AmazonWebServiceResult<com
      *        The name of the challenge that you're responding to with this call. This name is returned in the
      *        <code>AdminInitiateAuth</code> response if you must pass another challenge.</p>
      *        <p>
-     *        Valid values include the following. Note that all of these challenges require <code>USERNAME</code> and
-     *        <code>SECRET_HASH</code> (if applicable) in the parameters.
+     *        Valid values include the following:
      *        </p>
+     *        <note>
+     *        <p>
+     *        All of the following challenges require <code>USERNAME</code> and <code>SECRET_HASH</code> (if applicable)
+     *        in the parameters.
+     *        </p>
+     *        </note>
      *        <ul>
      *        <li>
      *        <p>
@@ -617,9 +662,14 @@ public class InitiateAuthResult extends com.amazonaws.AmazonWebServiceResult<com
      * <code>AdminInitiateAuth</code> response if you must pass another challenge.
      * </p>
      * <p>
-     * Valid values include the following. Note that all of these challenges require <code>USERNAME</code> and
-     * <code>SECRET_HASH</code> (if applicable) in the parameters.
+     * Valid values include the following:
      * </p>
+     * <note>
+     * <p>
+     * All of the following challenges require <code>USERNAME</code> and <code>SECRET_HASH</code> (if applicable) in the
+     * parameters.
+     * </p>
+     * </note>
      * <ul>
      * <li>
      * <p>
@@ -674,9 +724,14 @@ public class InitiateAuthResult extends com.amazonaws.AmazonWebServiceResult<com
      *        The name of the challenge that you're responding to with this call. This name is returned in the
      *        <code>AdminInitiateAuth</code> response if you must pass another challenge.</p>
      *        <p>
-     *        Valid values include the following. Note that all of these challenges require <code>USERNAME</code> and
-     *        <code>SECRET_HASH</code> (if applicable) in the parameters.
+     *        Valid values include the following:
      *        </p>
+     *        <note>
+     *        <p>
+     *        All of the following challenges require <code>USERNAME</code> and <code>SECRET_HASH</code> (if applicable)
+     *        in the parameters.
+     *        </p>
+     *        </note>
      *        <ul>
      *        <li>
      *        <p>
