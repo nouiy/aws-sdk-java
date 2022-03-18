@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.glue.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -29,6 +30,10 @@ public class AuditContextMarshaller {
 
     private static final MarshallingInfo<String> ADDITIONALAUDITCONTEXT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AdditionalAuditContext").build();
+    private static final MarshallingInfo<List> REQUESTEDCOLUMNS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RequestedColumns").build();
+    private static final MarshallingInfo<Boolean> ALLCOLUMNSREQUESTED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AllColumnsRequested").build();
 
     private static final AuditContextMarshaller instance = new AuditContextMarshaller();
 
@@ -47,6 +52,8 @@ public class AuditContextMarshaller {
 
         try {
             protocolMarshaller.marshall(auditContext.getAdditionalAuditContext(), ADDITIONALAUDITCONTEXT_BINDING);
+            protocolMarshaller.marshall(auditContext.getRequestedColumns(), REQUESTEDCOLUMNS_BINDING);
+            protocolMarshaller.marshall(auditContext.getAllColumnsRequested(), ALLCOLUMNSREQUESTED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

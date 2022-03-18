@@ -1,3 +1,8 @@
+# __1.12.181__ __2022-03-18__
+## __AWS Glue__
+  - ### Features
+    - Added 9 new APIs for AWS Glue Interactive Sessions: ListSessions, StopSession, CreateSession, GetSession, DeleteSession, RunStatement, GetStatement, ListStatements, CancelStatement
+
 # __1.12.180__ __2022-03-16__
 ## __AWS Certificate Manager Private Certificate Authority__
   - ### Features

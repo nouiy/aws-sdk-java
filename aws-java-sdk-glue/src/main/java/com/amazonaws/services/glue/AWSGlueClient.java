@@ -90,6 +90,9 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
                             new JsonErrorShapeMetadata().withErrorCode("SchedulerTransitioningException").withExceptionUnmarshaller(
                                     com.amazonaws.services.glue.model.transform.SchedulerTransitioningExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("IllegalSessionStateException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.glue.model.transform.IllegalSessionStateExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("MLTransformNotReadyException").withExceptionUnmarshaller(
                                     com.amazonaws.services.glue.model.transform.MLTransformNotReadyExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -1182,6 +1185,73 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
 
     /**
      * <p>
+     * Cancels the statement..
+     * </p>
+     * 
+     * @param cancelStatementRequest
+     * @return Result of the CancelStatement operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws IllegalSessionStateException
+     *         The session is in an invalid state to perform a requested operation.
+     * @sample AWSGlue.CancelStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CancelStatement" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CancelStatementResult cancelStatement(CancelStatementRequest request) {
+        request = beforeClientExecution(request);
+        return executeCancelStatement(request);
+    }
+
+    @SdkInternalApi
+    final CancelStatementResult executeCancelStatement(CancelStatementRequest cancelStatementRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(cancelStatementRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CancelStatementRequest> request = null;
+        Response<CancelStatementResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CancelStatementRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(cancelStatementRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Glue");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CancelStatement");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CancelStatementResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CancelStatementResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Validates the supplied schema. This call has no side effects, it simply validates using the supplied schema using
      * <code>DataFormat</code> as the format. Since it does not take a schema set name, no compatibility checks are
      * performed.
@@ -2200,6 +2270,78 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
             HttpResponseHandler<AmazonWebServiceResponse<CreateSecurityConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new CreateSecurityConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a new session.
+     * </p>
+     * 
+     * @param createSessionRequest
+     *        Request to create a new session.
+     * @return Result of the CreateSession operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws IdempotentParameterMismatchException
+     *         The same unique identifier was associated with two different records.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws ValidationException
+     *         A value could not be validated.
+     * @throws AlreadyExistsException
+     *         A resource to be created or added already exists.
+     * @throws ResourceNumberLimitExceededException
+     *         A resource numerical limit was exceeded.
+     * @sample AWSGlue.CreateSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateSession" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateSessionResult createSession(CreateSessionRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateSession(request);
+    }
+
+    @SdkInternalApi
+    final CreateSessionResult executeCreateSession(CreateSessionRequest createSessionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createSessionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateSessionRequest> request = null;
+        Response<CreateSessionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateSessionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createSessionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Glue");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateSession");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateSessionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateSessionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3606,6 +3748,73 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
             HttpResponseHandler<AmazonWebServiceResponse<DeleteSecurityConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DeleteSecurityConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes the session.
+     * </p>
+     * 
+     * @param deleteSessionRequest
+     * @return Result of the DeleteSession operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws IllegalSessionStateException
+     *         The session is in an invalid state to perform a requested operation.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
+     * @sample AWSGlue.DeleteSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteSession" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteSessionResult deleteSession(DeleteSessionRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteSession(request);
+    }
+
+    @SdkInternalApi
+    final DeleteSessionResult executeDeleteSession(DeleteSessionRequest deleteSessionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteSessionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteSessionRequest> request = null;
+        Response<DeleteSessionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteSessionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteSessionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Glue");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteSession");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteSessionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteSessionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -6640,6 +6849,138 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
 
     /**
      * <p>
+     * Retrieves the session.
+     * </p>
+     * 
+     * @param getSessionRequest
+     * @return Result of the GetSession operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @sample AWSGlue.GetSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetSession" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetSessionResult getSession(GetSessionRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetSession(request);
+    }
+
+    @SdkInternalApi
+    final GetSessionResult executeGetSession(GetSessionRequest getSessionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getSessionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetSessionRequest> request = null;
+        Response<GetSessionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetSessionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getSessionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Glue");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetSession");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetSessionResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetSessionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves the statement.
+     * </p>
+     * 
+     * @param getStatementRequest
+     * @return Result of the GetStatement operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws IllegalSessionStateException
+     *         The session is in an invalid state to perform a requested operation.
+     * @sample AWSGlue.GetStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetStatement" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetStatementResult getStatement(GetStatementRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetStatement(request);
+    }
+
+    @SdkInternalApi
+    final GetStatementResult executeGetStatement(GetStatementRequest getStatementRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getStatementRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetStatementRequest> request = null;
+        Response<GetStatementResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetStatementRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getStatementRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Glue");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetStatement");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetStatementResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetStatementResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves the <code>Table</code> definition in a Data Catalog for a specified table.
      * </p>
      * 
@@ -8255,6 +8596,136 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
 
     /**
      * <p>
+     * Retrieve a session..
+     * </p>
+     * 
+     * @param listSessionsRequest
+     * @return Result of the ListSessions operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @sample AWSGlue.ListSessions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListSessions" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListSessionsResult listSessions(ListSessionsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListSessions(request);
+    }
+
+    @SdkInternalApi
+    final ListSessionsResult executeListSessions(ListSessionsRequest listSessionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listSessionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListSessionsRequest> request = null;
+        Response<ListSessionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListSessionsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listSessionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Glue");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListSessions");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListSessionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListSessionsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists statements for the session.
+     * </p>
+     * 
+     * @param listStatementsRequest
+     * @return Result of the ListStatements operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws IllegalSessionStateException
+     *         The session is in an invalid state to perform a requested operation.
+     * @sample AWSGlue.ListStatements
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListStatements" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListStatementsResult listStatements(ListStatementsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListStatements(request);
+    }
+
+    @SdkInternalApi
+    final ListStatementsResult executeListStatements(ListStatementsRequest listStatementsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listStatementsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListStatementsRequest> request = null;
+        Response<ListStatementsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListStatementsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listStatementsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Glue");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListStatements");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListStatementsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListStatementsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves the names of all trigger resources in this Amazon Web Services account, or the resources with the
      * specified tag. This operation allows you to see which resources are available in your account, and their names.
      * </p>
@@ -8980,6 +9451,77 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
 
             HttpResponseHandler<AmazonWebServiceResponse<ResumeWorkflowRunResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ResumeWorkflowRunResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Executes the statement.
+     * </p>
+     * 
+     * @param runStatementRequest
+     * @return Result of the RunStatement operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws ValidationException
+     *         A value could not be validated.
+     * @throws ResourceNumberLimitExceededException
+     *         A resource numerical limit was exceeded.
+     * @throws IllegalSessionStateException
+     *         The session is in an invalid state to perform a requested operation.
+     * @sample AWSGlue.RunStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/RunStatement" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public RunStatementResult runStatement(RunStatementRequest request) {
+        request = beforeClientExecution(request);
+        return executeRunStatement(request);
+    }
+
+    @SdkInternalApi
+    final RunStatementResult executeRunStatement(RunStatementRequest runStatementRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(runStatementRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<RunStatementRequest> request = null;
+        Response<RunStatementResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new RunStatementRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(runStatementRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Glue");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "RunStatement");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<RunStatementResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new RunStatementResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -9893,6 +10435,73 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
 
             HttpResponseHandler<AmazonWebServiceResponse<StopCrawlerScheduleResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StopCrawlerScheduleResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Stops the session.
+     * </p>
+     * 
+     * @param stopSessionRequest
+     * @return Result of the StopSession operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws IllegalSessionStateException
+     *         The session is in an invalid state to perform a requested operation.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
+     * @sample AWSGlue.StopSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StopSession" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public StopSessionResult stopSession(StopSessionRequest request) {
+        request = beforeClientExecution(request);
+        return executeStopSession(request);
+    }
+
+    @SdkInternalApi
+    final StopSessionResult executeStopSession(StopSessionRequest stopSessionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(stopSessionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StopSessionRequest> request = null;
+        Response<StopSessionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StopSessionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(stopSessionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Glue");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StopSession");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StopSessionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StopSessionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

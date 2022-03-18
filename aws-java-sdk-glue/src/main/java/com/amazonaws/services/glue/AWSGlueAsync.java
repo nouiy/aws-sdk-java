@@ -550,6 +550,37 @@ public interface AWSGlueAsync extends AWSGlue {
 
     /**
      * <p>
+     * Cancels the statement..
+     * </p>
+     * 
+     * @param cancelStatementRequest
+     * @return A Java Future containing the result of the CancelStatement operation returned by the service.
+     * @sample AWSGlueAsync.CancelStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CancelStatement" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CancelStatementResult> cancelStatementAsync(CancelStatementRequest cancelStatementRequest);
+
+    /**
+     * <p>
+     * Cancels the statement..
+     * </p>
+     * 
+     * @param cancelStatementRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CancelStatement operation returned by the service.
+     * @sample AWSGlueAsyncHandler.CancelStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CancelStatement" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CancelStatementResult> cancelStatementAsync(CancelStatementRequest cancelStatementRequest,
+            com.amazonaws.handlers.AsyncHandler<CancelStatementRequest, CancelStatementResult> asyncHandler);
+
+    /**
+     * <p>
      * Validates the supplied schema. This call has no side effects, it simply validates using the supplied schema using
      * <code>DataFormat</code> as the format. Since it does not take a schema set name, no compatibility checks are
      * performed.
@@ -1082,6 +1113,39 @@ public interface AWSGlueAsync extends AWSGlue {
     java.util.concurrent.Future<CreateSecurityConfigurationResult> createSecurityConfigurationAsync(
             CreateSecurityConfigurationRequest createSecurityConfigurationRequest,
             com.amazonaws.handlers.AsyncHandler<CreateSecurityConfigurationRequest, CreateSecurityConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a new session.
+     * </p>
+     * 
+     * @param createSessionRequest
+     *        Request to create a new session.
+     * @return A Java Future containing the result of the CreateSession operation returned by the service.
+     * @sample AWSGlueAsync.CreateSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateSession" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateSessionResult> createSessionAsync(CreateSessionRequest createSessionRequest);
+
+    /**
+     * <p>
+     * Creates a new session.
+     * </p>
+     * 
+     * @param createSessionRequest
+     *        Request to create a new session.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateSession operation returned by the service.
+     * @sample AWSGlueAsyncHandler.CreateSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateSession" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateSessionResult> createSessionAsync(CreateSessionRequest createSessionRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateSessionRequest, CreateSessionResult> asyncHandler);
 
     /**
      * <p>
@@ -1837,6 +1901,37 @@ public interface AWSGlueAsync extends AWSGlue {
     java.util.concurrent.Future<DeleteSecurityConfigurationResult> deleteSecurityConfigurationAsync(
             DeleteSecurityConfigurationRequest deleteSecurityConfigurationRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteSecurityConfigurationRequest, DeleteSecurityConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the session.
+     * </p>
+     * 
+     * @param deleteSessionRequest
+     * @return A Java Future containing the result of the DeleteSession operation returned by the service.
+     * @sample AWSGlueAsync.DeleteSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteSession" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteSessionResult> deleteSessionAsync(DeleteSessionRequest deleteSessionRequest);
+
+    /**
+     * <p>
+     * Deletes the session.
+     * </p>
+     * 
+     * @param deleteSessionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteSession operation returned by the service.
+     * @sample AWSGlueAsyncHandler.DeleteSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteSession" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteSessionResult> deleteSessionAsync(DeleteSessionRequest deleteSessionRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteSessionRequest, DeleteSessionResult> asyncHandler);
 
     /**
      * <p>
@@ -3431,6 +3526,68 @@ public interface AWSGlueAsync extends AWSGlue {
 
     /**
      * <p>
+     * Retrieves the session.
+     * </p>
+     * 
+     * @param getSessionRequest
+     * @return A Java Future containing the result of the GetSession operation returned by the service.
+     * @sample AWSGlueAsync.GetSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetSession" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetSessionResult> getSessionAsync(GetSessionRequest getSessionRequest);
+
+    /**
+     * <p>
+     * Retrieves the session.
+     * </p>
+     * 
+     * @param getSessionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetSession operation returned by the service.
+     * @sample AWSGlueAsyncHandler.GetSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetSession" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetSessionResult> getSessionAsync(GetSessionRequest getSessionRequest,
+            com.amazonaws.handlers.AsyncHandler<GetSessionRequest, GetSessionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the statement.
+     * </p>
+     * 
+     * @param getStatementRequest
+     * @return A Java Future containing the result of the GetStatement operation returned by the service.
+     * @sample AWSGlueAsync.GetStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetStatement" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetStatementResult> getStatementAsync(GetStatementRequest getStatementRequest);
+
+    /**
+     * <p>
+     * Retrieves the statement.
+     * </p>
+     * 
+     * @param getStatementRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetStatement operation returned by the service.
+     * @sample AWSGlueAsyncHandler.GetStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetStatement" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetStatementResult> getStatementAsync(GetStatementRequest getStatementRequest,
+            com.amazonaws.handlers.AsyncHandler<GetStatementRequest, GetStatementResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves the <code>Table</code> definition in a Data Catalog for a specified table.
      * </p>
      * 
@@ -4254,6 +4411,68 @@ public interface AWSGlueAsync extends AWSGlue {
 
     /**
      * <p>
+     * Retrieve a session..
+     * </p>
+     * 
+     * @param listSessionsRequest
+     * @return A Java Future containing the result of the ListSessions operation returned by the service.
+     * @sample AWSGlueAsync.ListSessions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListSessions" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListSessionsResult> listSessionsAsync(ListSessionsRequest listSessionsRequest);
+
+    /**
+     * <p>
+     * Retrieve a session..
+     * </p>
+     * 
+     * @param listSessionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListSessions operation returned by the service.
+     * @sample AWSGlueAsyncHandler.ListSessions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListSessions" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListSessionsResult> listSessionsAsync(ListSessionsRequest listSessionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListSessionsRequest, ListSessionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists statements for the session.
+     * </p>
+     * 
+     * @param listStatementsRequest
+     * @return A Java Future containing the result of the ListStatements operation returned by the service.
+     * @sample AWSGlueAsync.ListStatements
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListStatements" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListStatementsResult> listStatementsAsync(ListStatementsRequest listStatementsRequest);
+
+    /**
+     * <p>
+     * Lists statements for the session.
+     * </p>
+     * 
+     * @param listStatementsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListStatements operation returned by the service.
+     * @sample AWSGlueAsyncHandler.ListStatements
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListStatements" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListStatementsResult> listStatementsAsync(ListStatementsRequest listStatementsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListStatementsRequest, ListStatementsResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves the names of all trigger resources in this Amazon Web Services account, or the resources with the
      * specified tag. This operation allows you to see which resources are available in your account, and their names.
      * </p>
@@ -4644,6 +4863,37 @@ public interface AWSGlueAsync extends AWSGlue {
      */
     java.util.concurrent.Future<ResumeWorkflowRunResult> resumeWorkflowRunAsync(ResumeWorkflowRunRequest resumeWorkflowRunRequest,
             com.amazonaws.handlers.AsyncHandler<ResumeWorkflowRunRequest, ResumeWorkflowRunResult> asyncHandler);
+
+    /**
+     * <p>
+     * Executes the statement.
+     * </p>
+     * 
+     * @param runStatementRequest
+     * @return A Java Future containing the result of the RunStatement operation returned by the service.
+     * @sample AWSGlueAsync.RunStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/RunStatement" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<RunStatementResult> runStatementAsync(RunStatementRequest runStatementRequest);
+
+    /**
+     * <p>
+     * Executes the statement.
+     * </p>
+     * 
+     * @param runStatementRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RunStatement operation returned by the service.
+     * @sample AWSGlueAsyncHandler.RunStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/RunStatement" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<RunStatementResult> runStatementAsync(RunStatementRequest runStatementRequest,
+            com.amazonaws.handlers.AsyncHandler<RunStatementRequest, RunStatementResult> asyncHandler);
 
     /**
      * <p>
@@ -5179,6 +5429,37 @@ public interface AWSGlueAsync extends AWSGlue {
      */
     java.util.concurrent.Future<StopCrawlerScheduleResult> stopCrawlerScheduleAsync(StopCrawlerScheduleRequest stopCrawlerScheduleRequest,
             com.amazonaws.handlers.AsyncHandler<StopCrawlerScheduleRequest, StopCrawlerScheduleResult> asyncHandler);
+
+    /**
+     * <p>
+     * Stops the session.
+     * </p>
+     * 
+     * @param stopSessionRequest
+     * @return A Java Future containing the result of the StopSession operation returned by the service.
+     * @sample AWSGlueAsync.StopSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StopSession" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StopSessionResult> stopSessionAsync(StopSessionRequest stopSessionRequest);
+
+    /**
+     * <p>
+     * Stops the session.
+     * </p>
+     * 
+     * @param stopSessionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopSession operation returned by the service.
+     * @sample AWSGlueAsyncHandler.StopSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StopSession" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StopSessionResult> stopSessionAsync(StopSessionRequest stopSessionRequest,
+            com.amazonaws.handlers.AsyncHandler<StopSessionRequest, StopSessionResult> asyncHandler);
 
     /**
      * <p>

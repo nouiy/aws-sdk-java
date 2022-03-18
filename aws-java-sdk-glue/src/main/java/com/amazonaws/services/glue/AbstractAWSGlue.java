@@ -103,6 +103,11 @@ public class AbstractAWSGlue implements AWSGlue {
     }
 
     @Override
+    public CancelStatementResult cancelStatement(CancelStatementRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CheckSchemaVersionValidityResult checkSchemaVersionValidity(CheckSchemaVersionValidityRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -174,6 +179,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public CreateSecurityConfigurationResult createSecurityConfiguration(CreateSecurityConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateSessionResult createSession(CreateSessionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -279,6 +289,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public DeleteSecurityConfigurationResult deleteSecurityConfiguration(DeleteSecurityConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteSessionResult deleteSession(DeleteSessionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -518,6 +533,16 @@ public class AbstractAWSGlue implements AWSGlue {
     }
 
     @Override
+    public GetSessionResult getSession(GetSessionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetStatementResult getStatement(GetStatementRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetTableResult getTable(GetTableRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -643,6 +668,16 @@ public class AbstractAWSGlue implements AWSGlue {
     }
 
     @Override
+    public ListSessionsResult listSessions(ListSessionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListStatementsResult listStatements(ListStatementsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListTriggersResult listTriggers(ListTriggersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -694,6 +729,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public ResumeWorkflowRunResult resumeWorkflowRun(ResumeWorkflowRunRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RunStatementResult runStatement(RunStatementRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -759,6 +799,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public StopCrawlerScheduleResult stopCrawlerSchedule(StopCrawlerScheduleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StopSessionResult stopSession(StopSessionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

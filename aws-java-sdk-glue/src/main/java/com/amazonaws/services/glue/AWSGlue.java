@@ -382,6 +382,31 @@ public interface AWSGlue {
 
     /**
      * <p>
+     * Cancels the statement..
+     * </p>
+     * 
+     * @param cancelStatementRequest
+     * @return Result of the CancelStatement operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws IllegalSessionStateException
+     *         The session is in an invalid state to perform a requested operation.
+     * @sample AWSGlue.CancelStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CancelStatement" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CancelStatementResult cancelStatement(CancelStatementRequest cancelStatementRequest);
+
+    /**
+     * <p>
      * Validates the supplied schema. This call has no side effects, it simply validates using the supplied schema using
      * <code>DataFormat</code> as the format. Since it does not take a schema set name, no compatibility checks are
      * performed.
@@ -775,6 +800,36 @@ public interface AWSGlue {
      *      target="_top">AWS API Documentation</a>
      */
     CreateSecurityConfigurationResult createSecurityConfiguration(CreateSecurityConfigurationRequest createSecurityConfigurationRequest);
+
+    /**
+     * <p>
+     * Creates a new session.
+     * </p>
+     * 
+     * @param createSessionRequest
+     *        Request to create a new session.
+     * @return Result of the CreateSession operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws IdempotentParameterMismatchException
+     *         The same unique identifier was associated with two different records.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws ValidationException
+     *         A value could not be validated.
+     * @throws AlreadyExistsException
+     *         A resource to be created or added already exists.
+     * @throws ResourceNumberLimitExceededException
+     *         A resource numerical limit was exceeded.
+     * @sample AWSGlue.CreateSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateSession" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateSessionResult createSession(CreateSessionRequest createSessionRequest);
 
     /**
      * <p>
@@ -1291,6 +1346,31 @@ public interface AWSGlue {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteSecurityConfigurationResult deleteSecurityConfiguration(DeleteSecurityConfigurationRequest deleteSecurityConfigurationRequest);
+
+    /**
+     * <p>
+     * Deletes the session.
+     * </p>
+     * 
+     * @param deleteSessionRequest
+     * @return Result of the DeleteSession operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws IllegalSessionStateException
+     *         The session is in an invalid state to perform a requested operation.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
+     * @sample AWSGlue.DeleteSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteSession" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteSessionResult deleteSession(DeleteSessionRequest deleteSessionRequest);
 
     /**
      * <p>
@@ -2325,6 +2405,54 @@ public interface AWSGlue {
 
     /**
      * <p>
+     * Retrieves the session.
+     * </p>
+     * 
+     * @param getSessionRequest
+     * @return Result of the GetSession operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @sample AWSGlue.GetSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetSession" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetSessionResult getSession(GetSessionRequest getSessionRequest);
+
+    /**
+     * <p>
+     * Retrieves the statement.
+     * </p>
+     * 
+     * @param getStatementRequest
+     * @return Result of the GetStatement operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws IllegalSessionStateException
+     *         The session is in an invalid state to perform a requested operation.
+     * @sample AWSGlue.GetStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetStatement" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetStatementResult getStatement(GetStatementRequest getStatementRequest);
+
+    /**
+     * <p>
      * Retrieves the <code>Table</code> definition in a Data Catalog for a specified table.
      * </p>
      * 
@@ -2878,6 +3006,52 @@ public interface AWSGlue {
 
     /**
      * <p>
+     * Retrieve a session..
+     * </p>
+     * 
+     * @param listSessionsRequest
+     * @return Result of the ListSessions operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @sample AWSGlue.ListSessions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListSessions" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListSessionsResult listSessions(ListSessionsRequest listSessionsRequest);
+
+    /**
+     * <p>
+     * Lists statements for the session.
+     * </p>
+     * 
+     * @param listStatementsRequest
+     * @return Result of the ListStatements operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws IllegalSessionStateException
+     *         The session is in an invalid state to perform a requested operation.
+     * @sample AWSGlue.ListStatements
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListStatements" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListStatementsResult listStatements(ListStatementsRequest listStatementsRequest);
+
+    /**
+     * <p>
      * Retrieves the names of all trigger resources in this Amazon Web Services account, or the resources with the
      * specified tag. This operation allows you to see which resources are available in your account, and their names.
      * </p>
@@ -3138,6 +3312,35 @@ public interface AWSGlue {
      *      Documentation</a>
      */
     ResumeWorkflowRunResult resumeWorkflowRun(ResumeWorkflowRunRequest resumeWorkflowRunRequest);
+
+    /**
+     * <p>
+     * Executes the statement.
+     * </p>
+     * 
+     * @param runStatementRequest
+     * @return Result of the RunStatement operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws ValidationException
+     *         A value could not be validated.
+     * @throws ResourceNumberLimitExceededException
+     *         A resource numerical limit was exceeded.
+     * @throws IllegalSessionStateException
+     *         The session is in an invalid state to perform a requested operation.
+     * @sample AWSGlue.RunStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/RunStatement" target="_top">AWS API
+     *      Documentation</a>
+     */
+    RunStatementResult runStatement(RunStatementRequest runStatementRequest);
 
     /**
      * <p>
@@ -3497,6 +3700,31 @@ public interface AWSGlue {
      *      Documentation</a>
      */
     StopCrawlerScheduleResult stopCrawlerSchedule(StopCrawlerScheduleRequest stopCrawlerScheduleRequest);
+
+    /**
+     * <p>
+     * Stops the session.
+     * </p>
+     * 
+     * @param stopSessionRequest
+     * @return Result of the StopSession operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws IllegalSessionStateException
+     *         The session is in an invalid state to perform a requested operation.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
+     * @sample AWSGlue.StopSession
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StopSession" target="_top">AWS API
+     *      Documentation</a>
+     */
+    StopSessionResult stopSession(StopSessionRequest stopSessionRequest);
 
     /**
      * <p>

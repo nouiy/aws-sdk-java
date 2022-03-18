@@ -222,6 +222,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     }
 
     @Override
+    public java.util.concurrent.Future<CancelStatementResult> cancelStatementAsync(CancelStatementRequest request) {
+
+        return cancelStatementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CancelStatementResult> cancelStatementAsync(CancelStatementRequest request,
+            com.amazonaws.handlers.AsyncHandler<CancelStatementRequest, CancelStatementResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CheckSchemaVersionValidityResult> checkSchemaVersionValidityAsync(CheckSchemaVersionValidityRequest request) {
 
         return checkSchemaVersionValidityAsync(request, null);
@@ -412,6 +425,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     @Override
     public java.util.concurrent.Future<CreateSecurityConfigurationResult> createSecurityConfigurationAsync(CreateSecurityConfigurationRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateSecurityConfigurationRequest, CreateSecurityConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSessionResult> createSessionAsync(CreateSessionRequest request) {
+
+        return createSessionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSessionResult> createSessionAsync(CreateSessionRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateSessionRequest, CreateSessionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -687,6 +713,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     @Override
     public java.util.concurrent.Future<DeleteSecurityConfigurationResult> deleteSecurityConfigurationAsync(DeleteSecurityConfigurationRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteSecurityConfigurationRequest, DeleteSecurityConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteSessionResult> deleteSessionAsync(DeleteSessionRequest request) {
+
+        return deleteSessionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteSessionResult> deleteSessionAsync(DeleteSessionRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteSessionRequest, DeleteSessionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1307,6 +1346,32 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     }
 
     @Override
+    public java.util.concurrent.Future<GetSessionResult> getSessionAsync(GetSessionRequest request) {
+
+        return getSessionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSessionResult> getSessionAsync(GetSessionRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetSessionRequest, GetSessionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetStatementResult> getStatementAsync(GetStatementRequest request) {
+
+        return getStatementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetStatementResult> getStatementAsync(GetStatementRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetStatementRequest, GetStatementResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetTableResult> getTableAsync(GetTableRequest request) {
 
         return getTableAsync(request, null);
@@ -1634,6 +1699,32 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     }
 
     @Override
+    public java.util.concurrent.Future<ListSessionsResult> listSessionsAsync(ListSessionsRequest request) {
+
+        return listSessionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSessionsResult> listSessionsAsync(ListSessionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListSessionsRequest, ListSessionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStatementsResult> listStatementsAsync(ListStatementsRequest request) {
+
+        return listStatementsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStatementsResult> listStatementsAsync(ListStatementsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListStatementsRequest, ListStatementsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListTriggersResult> listTriggersAsync(ListTriggersRequest request) {
 
         return listTriggersAsync(request, null);
@@ -1774,6 +1865,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     @Override
     public java.util.concurrent.Future<ResumeWorkflowRunResult> resumeWorkflowRunAsync(ResumeWorkflowRunRequest request,
             com.amazonaws.handlers.AsyncHandler<ResumeWorkflowRunRequest, ResumeWorkflowRunResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<RunStatementResult> runStatementAsync(RunStatementRequest request) {
+
+        return runStatementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RunStatementResult> runStatementAsync(RunStatementRequest request,
+            com.amazonaws.handlers.AsyncHandler<RunStatementRequest, RunStatementResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1945,6 +2049,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     @Override
     public java.util.concurrent.Future<StopCrawlerScheduleResult> stopCrawlerScheduleAsync(StopCrawlerScheduleRequest request,
             com.amazonaws.handlers.AsyncHandler<StopCrawlerScheduleRequest, StopCrawlerScheduleResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopSessionResult> stopSessionAsync(StopSessionRequest request) {
+
+        return stopSessionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopSessionResult> stopSessionAsync(StopSessionRequest request,
+            com.amazonaws.handlers.AsyncHandler<StopSessionRequest, StopSessionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

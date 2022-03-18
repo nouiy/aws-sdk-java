@@ -570,6 +570,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<CancelStatementResult> cancelStatementAsync(CancelStatementRequest request) {
+
+        return cancelStatementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CancelStatementResult> cancelStatementAsync(final CancelStatementRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CancelStatementRequest, CancelStatementResult> asyncHandler) {
+        final CancelStatementRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CancelStatementResult>() {
+            @Override
+            public CancelStatementResult call() throws Exception {
+                CancelStatementResult result = null;
+
+                try {
+                    result = executeCancelStatement(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CheckSchemaVersionValidityResult> checkSchemaVersionValidityAsync(CheckSchemaVersionValidityRequest request) {
 
         return checkSchemaVersionValidityAsync(request, null);
@@ -1049,6 +1082,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
 
                 try {
                     result = executeCreateSecurityConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSessionResult> createSessionAsync(CreateSessionRequest request) {
+
+        return createSessionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSessionResult> createSessionAsync(final CreateSessionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateSessionRequest, CreateSessionResult> asyncHandler) {
+        final CreateSessionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateSessionResult>() {
+            @Override
+            public CreateSessionResult call() throws Exception {
+                CreateSessionResult result = null;
+
+                try {
+                    result = executeCreateSession(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1745,6 +1811,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
 
                 try {
                     result = executeDeleteSecurityConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteSessionResult> deleteSessionAsync(DeleteSessionRequest request) {
+
+        return deleteSessionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteSessionResult> deleteSessionAsync(final DeleteSessionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteSessionRequest, DeleteSessionResult> asyncHandler) {
+        final DeleteSessionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteSessionResult>() {
+            @Override
+            public DeleteSessionResult call() throws Exception {
+                DeleteSessionResult result = null;
+
+                try {
+                    result = executeDeleteSession(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -3316,6 +3415,72 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<GetSessionResult> getSessionAsync(GetSessionRequest request) {
+
+        return getSessionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSessionResult> getSessionAsync(final GetSessionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetSessionRequest, GetSessionResult> asyncHandler) {
+        final GetSessionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetSessionResult>() {
+            @Override
+            public GetSessionResult call() throws Exception {
+                GetSessionResult result = null;
+
+                try {
+                    result = executeGetSession(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetStatementResult> getStatementAsync(GetStatementRequest request) {
+
+        return getStatementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetStatementResult> getStatementAsync(final GetStatementRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetStatementRequest, GetStatementResult> asyncHandler) {
+        final GetStatementRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetStatementResult>() {
+            @Override
+            public GetStatementResult call() throws Exception {
+                GetStatementResult result = null;
+
+                try {
+                    result = executeGetStatement(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetTableResult> getTableAsync(GetTableRequest request) {
 
         return getTableAsync(request, null);
@@ -4144,6 +4309,72 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<ListSessionsResult> listSessionsAsync(ListSessionsRequest request) {
+
+        return listSessionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSessionsResult> listSessionsAsync(final ListSessionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListSessionsRequest, ListSessionsResult> asyncHandler) {
+        final ListSessionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListSessionsResult>() {
+            @Override
+            public ListSessionsResult call() throws Exception {
+                ListSessionsResult result = null;
+
+                try {
+                    result = executeListSessions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStatementsResult> listStatementsAsync(ListStatementsRequest request) {
+
+        return listStatementsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStatementsResult> listStatementsAsync(final ListStatementsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListStatementsRequest, ListStatementsResult> asyncHandler) {
+        final ListStatementsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListStatementsResult>() {
+            @Override
+            public ListStatementsResult call() throws Exception {
+                ListStatementsResult result = null;
+
+                try {
+                    result = executeListStatements(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListTriggersResult> listTriggersAsync(ListTriggersRequest request) {
 
         return listTriggersAsync(request, null);
@@ -4493,6 +4724,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
 
                 try {
                     result = executeResumeWorkflowRun(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<RunStatementResult> runStatementAsync(RunStatementRequest request) {
+
+        return runStatementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RunStatementResult> runStatementAsync(final RunStatementRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RunStatementRequest, RunStatementResult> asyncHandler) {
+        final RunStatementRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RunStatementResult>() {
+            @Override
+            public RunStatementResult call() throws Exception {
+                RunStatementResult result = null;
+
+                try {
+                    result = executeRunStatement(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -4924,6 +5188,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
 
                 try {
                     result = executeStopCrawlerSchedule(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopSessionResult> stopSessionAsync(StopSessionRequest request) {
+
+        return stopSessionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopSessionResult> stopSessionAsync(final StopSessionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StopSessionRequest, StopSessionResult> asyncHandler) {
+        final StopSessionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StopSessionResult>() {
+            @Override
+            public StopSessionResult call() throws Exception {
+                StopSessionResult result = null;
+
+                try {
+                    result = executeStopSession(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

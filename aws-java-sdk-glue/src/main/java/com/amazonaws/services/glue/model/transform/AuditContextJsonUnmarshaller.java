@@ -52,6 +52,16 @@ public class AuditContextJsonUnmarshaller implements Unmarshaller<AuditContext, 
                     context.nextToken();
                     auditContext.setAdditionalAuditContext(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("RequestedColumns", targetDepth)) {
+                    context.nextToken();
+                    auditContext.setRequestedColumns(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("AllColumnsRequested", targetDepth)) {
+                    context.nextToken();
+                    auditContext.setAllColumnsRequested(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
