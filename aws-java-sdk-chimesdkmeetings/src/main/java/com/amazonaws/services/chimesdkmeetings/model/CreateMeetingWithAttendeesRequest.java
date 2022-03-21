@@ -77,6 +77,12 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private java.util.List<CreateAttendeeRequestItem> attendees;
+    /**
+     * <p>
+     * When specified, replicates the media from the primary meeting to the new meeting.
+     * </p>
+     */
+    private String primaryMeetingId;
 
     /**
      * <p>
@@ -446,6 +452,46 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * When specified, replicates the media from the primary meeting to the new meeting.
+     * </p>
+     * 
+     * @param primaryMeetingId
+     *        When specified, replicates the media from the primary meeting to the new meeting.
+     */
+
+    public void setPrimaryMeetingId(String primaryMeetingId) {
+        this.primaryMeetingId = primaryMeetingId;
+    }
+
+    /**
+     * <p>
+     * When specified, replicates the media from the primary meeting to the new meeting.
+     * </p>
+     * 
+     * @return When specified, replicates the media from the primary meeting to the new meeting.
+     */
+
+    public String getPrimaryMeetingId() {
+        return this.primaryMeetingId;
+    }
+
+    /**
+     * <p>
+     * When specified, replicates the media from the primary meeting to the new meeting.
+     * </p>
+     * 
+     * @param primaryMeetingId
+     *        When specified, replicates the media from the primary meeting to the new meeting.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateMeetingWithAttendeesRequest withPrimaryMeetingId(String primaryMeetingId) {
+        setPrimaryMeetingId(primaryMeetingId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -470,7 +516,9 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
         if (getNotificationsConfiguration() != null)
             sb.append("NotificationsConfiguration: ").append(getNotificationsConfiguration()).append(",");
         if (getAttendees() != null)
-            sb.append("Attendees: ").append(getAttendees());
+            sb.append("Attendees: ").append(getAttendees()).append(",");
+        if (getPrimaryMeetingId() != null)
+            sb.append("PrimaryMeetingId: ").append(getPrimaryMeetingId());
         sb.append("}");
         return sb.toString();
     }
@@ -513,6 +561,10 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getAttendees() != null && other.getAttendees().equals(this.getAttendees()) == false)
             return false;
+        if (other.getPrimaryMeetingId() == null ^ this.getPrimaryMeetingId() == null)
+            return false;
+        if (other.getPrimaryMeetingId() != null && other.getPrimaryMeetingId().equals(this.getPrimaryMeetingId()) == false)
+            return false;
         return true;
     }
 
@@ -528,6 +580,7 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
         hashCode = prime * hashCode + ((getMeetingFeatures() == null) ? 0 : getMeetingFeatures().hashCode());
         hashCode = prime * hashCode + ((getNotificationsConfiguration() == null) ? 0 : getNotificationsConfiguration().hashCode());
         hashCode = prime * hashCode + ((getAttendees() == null) ? 0 : getAttendees().hashCode());
+        hashCode = prime * hashCode + ((getPrimaryMeetingId() == null) ? 0 : getPrimaryMeetingId().hashCode());
         return hashCode;
     }
 

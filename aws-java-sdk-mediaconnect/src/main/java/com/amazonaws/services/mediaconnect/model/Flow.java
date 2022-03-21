@@ -62,6 +62,8 @@ public class Flow implements Serializable, Cloneable, StructuredPojo {
     /** The VPC Interfaces for this flow. */
     private java.util.List<VpcInterface> vpcInterfaces;
 
+    private Maintenance maintenance;
+
     /**
      * The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones
      * within the current AWS.
@@ -656,6 +658,32 @@ public class Flow implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * @param maintenance
+     */
+
+    public void setMaintenance(Maintenance maintenance) {
+        this.maintenance = maintenance;
+    }
+
+    /**
+     * @return
+     */
+
+    public Maintenance getMaintenance() {
+        return this.maintenance;
+    }
+
+    /**
+     * @param maintenance
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Flow withMaintenance(Maintenance maintenance) {
+        setMaintenance(maintenance);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -692,7 +720,9 @@ public class Flow implements Serializable, Cloneable, StructuredPojo {
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getVpcInterfaces() != null)
-            sb.append("VpcInterfaces: ").append(getVpcInterfaces());
+            sb.append("VpcInterfaces: ").append(getVpcInterfaces()).append(",");
+        if (getMaintenance() != null)
+            sb.append("Maintenance: ").append(getMaintenance());
         sb.append("}");
         return sb.toString();
     }
@@ -759,6 +789,10 @@ public class Flow implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getVpcInterfaces() != null && other.getVpcInterfaces().equals(this.getVpcInterfaces()) == false)
             return false;
+        if (other.getMaintenance() == null ^ this.getMaintenance() == null)
+            return false;
+        if (other.getMaintenance() != null && other.getMaintenance().equals(this.getMaintenance()) == false)
+            return false;
         return true;
     }
 
@@ -780,6 +814,7 @@ public class Flow implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getSources() == null) ? 0 : getSources().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getVpcInterfaces() == null) ? 0 : getVpcInterfaces().hashCode());
+        hashCode = prime * hashCode + ((getMaintenance() == null) ? 0 : getMaintenance().hashCode());
         return hashCode;
     }
 

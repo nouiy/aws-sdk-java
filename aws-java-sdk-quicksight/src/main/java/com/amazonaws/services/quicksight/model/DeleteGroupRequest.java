@@ -40,7 +40,7 @@ public class DeleteGroupRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String awsAccountId;
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want to delete.
      * </p>
      */
     private String namespace;
@@ -133,11 +133,11 @@ public class DeleteGroupRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want to delete.
      * </p>
      * 
      * @param namespace
-     *        The namespace. Currently, you should set this to <code>default</code>.
+     *        The namespace of the group that you want to delete.
      */
 
     public void setNamespace(String namespace) {
@@ -146,10 +146,10 @@ public class DeleteGroupRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want to delete.
      * </p>
      * 
-     * @return The namespace. Currently, you should set this to <code>default</code>.
+     * @return The namespace of the group that you want to delete.
      */
 
     public String getNamespace() {
@@ -158,11 +158,11 @@ public class DeleteGroupRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want to delete.
      * </p>
      * 
      * @param namespace
-     *        The namespace. Currently, you should set this to <code>default</code>.
+     *        The namespace of the group that you want to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

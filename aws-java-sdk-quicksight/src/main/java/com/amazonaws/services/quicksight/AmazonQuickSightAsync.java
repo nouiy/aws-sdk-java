@@ -349,7 +349,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      * </p>
      * <p>
      * The permissions resource is
-     * <code>arn:aws:quicksight:us-east-1:<i>&lt;relevant-aws-account-id&gt;</i>:group/default/<i>&lt;group-name&gt;</i> </code>
+     * <code>arn:aws:quicksight:&lt;your-region&gt;:<i>&lt;relevant-aws-account-id&gt;</i>:group/default/<i>&lt;group-name&gt;</i> </code>
      * .
      * </p>
      * <p>
@@ -371,7 +371,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      * </p>
      * <p>
      * The permissions resource is
-     * <code>arn:aws:quicksight:us-east-1:<i>&lt;relevant-aws-account-id&gt;</i>:group/default/<i>&lt;group-name&gt;</i> </code>
+     * <code>arn:aws:quicksight:&lt;your-region&gt;:<i>&lt;relevant-aws-account-id&gt;</i>:group/default/<i>&lt;group-name&gt;</i> </code>
      * .
      * </p>
      * <p>
@@ -1874,6 +1874,41 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      */
     java.util.concurrent.Future<DescribeGroupResult> describeGroupAsync(DescribeGroupRequest describeGroupRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeGroupRequest, DescribeGroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Use the <code>DescribeGroupMembership</code> operation to determine if a user is a member of the specified group.
+     * If the user exists and is a member of the specified group, an associated <code>GroupMember</code> object is
+     * returned.
+     * </p>
+     * 
+     * @param describeGroupMembershipRequest
+     * @return A Java Future containing the result of the DescribeGroupMembership operation returned by the service.
+     * @sample AmazonQuickSightAsync.DescribeGroupMembership
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeGroupMembership"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeGroupMembershipResult> describeGroupMembershipAsync(DescribeGroupMembershipRequest describeGroupMembershipRequest);
+
+    /**
+     * <p>
+     * Use the <code>DescribeGroupMembership</code> operation to determine if a user is a member of the specified group.
+     * If the user exists and is a member of the specified group, an associated <code>GroupMember</code> object is
+     * returned.
+     * </p>
+     * 
+     * @param describeGroupMembershipRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeGroupMembership operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.DescribeGroupMembership
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeGroupMembership"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeGroupMembershipResult> describeGroupMembershipAsync(DescribeGroupMembershipRequest describeGroupMembershipRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeGroupMembershipRequest, DescribeGroupMembershipResult> asyncHandler);
 
     /**
      * <p>
@@ -3506,6 +3541,39 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      */
     java.util.concurrent.Future<SearchFoldersResult> searchFoldersAsync(SearchFoldersRequest searchFoldersRequest,
             com.amazonaws.handlers.AsyncHandler<SearchFoldersRequest, SearchFoldersResult> asyncHandler);
+
+    /**
+     * <p>
+     * Use the <code>SearchGroups</code> operation to search groups in a specified Amazon QuickSight namespace using the
+     * supplied filters.
+     * </p>
+     * 
+     * @param searchGroupsRequest
+     * @return A Java Future containing the result of the SearchGroups operation returned by the service.
+     * @sample AmazonQuickSightAsync.SearchGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/SearchGroups" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchGroupsResult> searchGroupsAsync(SearchGroupsRequest searchGroupsRequest);
+
+    /**
+     * <p>
+     * Use the <code>SearchGroups</code> operation to search groups in a specified Amazon QuickSight namespace using the
+     * supplied filters.
+     * </p>
+     * 
+     * @param searchGroupsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchGroups operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.SearchGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/SearchGroups" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<SearchGroupsResult> searchGroupsAsync(SearchGroupsRequest searchGroupsRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchGroupsRequest, SearchGroupsResult> asyncHandler);
 
     /**
      * <p>

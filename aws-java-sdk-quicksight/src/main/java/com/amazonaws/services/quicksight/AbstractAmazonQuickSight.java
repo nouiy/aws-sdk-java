@@ -268,6 +268,11 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
     }
 
     @Override
+    public DescribeGroupMembershipResult describeGroupMembership(DescribeGroupMembershipRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeIAMPolicyAssignmentResult describeIAMPolicyAssignment(DescribeIAMPolicyAssignmentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -474,6 +479,11 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
 
     @Override
     public SearchFoldersResult searchFolders(SearchFoldersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SearchGroupsResult searchGroups(SearchGroupsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

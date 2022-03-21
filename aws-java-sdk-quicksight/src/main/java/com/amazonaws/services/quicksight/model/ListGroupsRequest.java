@@ -46,7 +46,7 @@ public class ListGroupsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private Integer maxResults;
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace that you want a list of groups from.
      * </p>
      */
     private String namespace;
@@ -179,11 +179,11 @@ public class ListGroupsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace that you want a list of groups from.
      * </p>
      * 
      * @param namespace
-     *        The namespace. Currently, you should set this to <code>default</code>.
+     *        The namespace that you want a list of groups from.
      */
 
     public void setNamespace(String namespace) {
@@ -192,10 +192,10 @@ public class ListGroupsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace that you want a list of groups from.
      * </p>
      * 
-     * @return The namespace. Currently, you should set this to <code>default</code>.
+     * @return The namespace that you want a list of groups from.
      */
 
     public String getNamespace() {
@@ -204,11 +204,11 @@ public class ListGroupsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace that you want a list of groups from.
      * </p>
      * 
      * @param namespace
-     *        The namespace. Currently, you should set this to <code>default</code>.
+     *        The namespace that you want a list of groups from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

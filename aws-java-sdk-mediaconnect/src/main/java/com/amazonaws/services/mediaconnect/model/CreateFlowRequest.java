@@ -52,6 +52,8 @@ public class CreateFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /** The VPC interfaces you want on the flow. */
     private java.util.List<VpcInterfaceRequest> vpcInterfaces;
 
+    private AddMaintenance maintenance;
+
     /**
      * The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones
      * within the current AWS Region.
@@ -487,6 +489,32 @@ public class CreateFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
+     * @param maintenance
+     */
+
+    public void setMaintenance(AddMaintenance maintenance) {
+        this.maintenance = maintenance;
+    }
+
+    /**
+     * @return
+     */
+
+    public AddMaintenance getMaintenance() {
+        return this.maintenance;
+    }
+
+    /**
+     * @param maintenance
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFlowRequest withMaintenance(AddMaintenance maintenance) {
+        setMaintenance(maintenance);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -515,7 +543,9 @@ public class CreateFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
         if (getSources() != null)
             sb.append("Sources: ").append(getSources()).append(",");
         if (getVpcInterfaces() != null)
-            sb.append("VpcInterfaces: ").append(getVpcInterfaces());
+            sb.append("VpcInterfaces: ").append(getVpcInterfaces()).append(",");
+        if (getMaintenance() != null)
+            sb.append("Maintenance: ").append(getMaintenance());
         sb.append("}");
         return sb.toString();
     }
@@ -566,6 +596,10 @@ public class CreateFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
             return false;
         if (other.getVpcInterfaces() != null && other.getVpcInterfaces().equals(this.getVpcInterfaces()) == false)
             return false;
+        if (other.getMaintenance() == null ^ this.getMaintenance() == null)
+            return false;
+        if (other.getMaintenance() != null && other.getMaintenance().equals(this.getMaintenance()) == false)
+            return false;
         return true;
     }
 
@@ -583,6 +617,7 @@ public class CreateFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
         hashCode = prime * hashCode + ((getSourceFailoverConfig() == null) ? 0 : getSourceFailoverConfig().hashCode());
         hashCode = prime * hashCode + ((getSources() == null) ? 0 : getSources().hashCode());
         hashCode = prime * hashCode + ((getVpcInterfaces() == null) ? 0 : getVpcInterfaces().hashCode());
+        hashCode = prime * hashCode + ((getMaintenance() == null) ? 0 : getMaintenance().hashCode());
         return hashCode;
     }
 

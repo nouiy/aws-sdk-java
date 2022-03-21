@@ -32,12 +32,12 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * <b> <code>SELF</code> </b> – resources that you are sharing
+     * <b> <code>SELF</code> </b> – resources that your account shares with other accounts
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     * <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with your account
      * </p>
      * </li>
      * </ul>
@@ -128,12 +128,12 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * <b> <code>SELF</code> </b> – resources that you are sharing
+     * <b> <code>SELF</code> </b> – resources that your account shares with other accounts
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     * <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with your account
      * </p>
      * </li>
      * </ul>
@@ -143,12 +143,12 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <ul>
      *        <li>
      *        <p>
-     *        <b> <code>SELF</code> </b> – resources that you are sharing
+     *        <b> <code>SELF</code> </b> – resources that your account shares with other accounts
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     *        <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with your account
      *        </p>
      *        </li>
      * @see ResourceOwner
@@ -165,12 +165,12 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * <b> <code>SELF</code> </b> – resources that you are sharing
+     * <b> <code>SELF</code> </b> – resources that your account shares with other accounts
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     * <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with your account
      * </p>
      * </li>
      * </ul>
@@ -179,12 +179,12 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <ul>
      *         <li>
      *         <p>
-     *         <b> <code>SELF</code> </b> – resources that you are sharing
+     *         <b> <code>SELF</code> </b> – resources that your account shares with other accounts
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     *         <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with your account
      *         </p>
      *         </li>
      * @see ResourceOwner
@@ -201,12 +201,12 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * <b> <code>SELF</code> </b> – resources that you are sharing
+     * <b> <code>SELF</code> </b> – resources that your account shares with other accounts
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     * <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with your account
      * </p>
      * </li>
      * </ul>
@@ -216,12 +216,12 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <ul>
      *        <li>
      *        <p>
-     *        <b> <code>SELF</code> </b> – resources that you are sharing
+     *        <b> <code>SELF</code> </b> – resources that your account shares with other accounts
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     *        <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with your account
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -240,12 +240,12 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * <b> <code>SELF</code> </b> – resources that you are sharing
+     * <b> <code>SELF</code> </b> – resources that your account shares with other accounts
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     * <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with your account
      * </p>
      * </li>
      * </ul>
@@ -255,12 +255,12 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <ul>
      *        <li>
      *        <p>
-     *        <b> <code>SELF</code> </b> – resources that you are sharing
+     *        <b> <code>SELF</code> </b> – resources that your account shares with other accounts
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     *        <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with your account
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

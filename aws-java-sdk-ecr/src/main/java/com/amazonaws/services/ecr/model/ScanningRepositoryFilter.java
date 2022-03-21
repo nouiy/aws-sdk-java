@@ -19,7 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The details of a scanning repository filter.
+ * The details of a scanning repository filter. For more information on how to use filters, see <a
+ * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html#image-scanning-filters">Using
+ * filters</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/ScanningRepositoryFilter" target="_top">AWS API

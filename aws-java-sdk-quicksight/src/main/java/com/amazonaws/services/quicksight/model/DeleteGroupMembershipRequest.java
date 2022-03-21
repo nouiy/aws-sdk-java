@@ -46,7 +46,7 @@ public class DeleteGroupMembershipRequest extends com.amazonaws.AmazonWebService
     private String awsAccountId;
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want to remove a user from.
      * </p>
      */
     private String namespace;
@@ -179,11 +179,11 @@ public class DeleteGroupMembershipRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want to remove a user from.
      * </p>
      * 
      * @param namespace
-     *        The namespace. Currently, you should set this to <code>default</code>.
+     *        The namespace of the group that you want to remove a user from.
      */
 
     public void setNamespace(String namespace) {
@@ -192,10 +192,10 @@ public class DeleteGroupMembershipRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want to remove a user from.
      * </p>
      * 
-     * @return The namespace. Currently, you should set this to <code>default</code>.
+     * @return The namespace of the group that you want to remove a user from.
      */
 
     public String getNamespace() {
@@ -204,11 +204,11 @@ public class DeleteGroupMembershipRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want to remove a user from.
      * </p>
      * 
      * @param namespace
-     *        The namespace. Currently, you should set this to <code>default</code>.
+     *        The namespace of the group that you want to remove a user from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -46,7 +46,7 @@ public class CreateGroupMembershipRequest extends com.amazonaws.AmazonWebService
     private String awsAccountId;
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace that you want the user to be a part of.
      * </p>
      */
     private String namespace;
@@ -179,11 +179,11 @@ public class CreateGroupMembershipRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace that you want the user to be a part of.
      * </p>
      * 
      * @param namespace
-     *        The namespace. Currently, you should set this to <code>default</code>.
+     *        The namespace that you want the user to be a part of.
      */
 
     public void setNamespace(String namespace) {
@@ -192,10 +192,10 @@ public class CreateGroupMembershipRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace that you want the user to be a part of.
      * </p>
      * 
-     * @return The namespace. Currently, you should set this to <code>default</code>.
+     * @return The namespace that you want the user to be a part of.
      */
 
     public String getNamespace() {
@@ -204,11 +204,11 @@ public class CreateGroupMembershipRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace that you want the user to be a part of.
      * </p>
      * 
      * @param namespace
-     *        The namespace. Currently, you should set this to <code>default</code>.
+     *        The namespace that you want the user to be a part of.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

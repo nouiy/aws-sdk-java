@@ -32,12 +32,12 @@ public class ListPrincipalsRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <b> <code>SELF</code> </b> – resources that you are sharing
+     * <b> <code>SELF</code> </b> – principals that your account is sharing resources with
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     * <b> <code>OTHER-ACCOUNTS</code> </b> – principals that are sharing resources with your account
      * </p>
      * </li>
      * </ul>
@@ -142,12 +142,12 @@ public class ListPrincipalsRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <b> <code>SELF</code> </b> – resources that you are sharing
+     * <b> <code>SELF</code> </b> – principals that your account is sharing resources with
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     * <b> <code>OTHER-ACCOUNTS</code> </b> – principals that are sharing resources with your account
      * </p>
      * </li>
      * </ul>
@@ -157,12 +157,12 @@ public class ListPrincipalsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <ul>
      *        <li>
      *        <p>
-     *        <b> <code>SELF</code> </b> – resources that you are sharing
+     *        <b> <code>SELF</code> </b> – principals that your account is sharing resources with
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     *        <b> <code>OTHER-ACCOUNTS</code> </b> – principals that are sharing resources with your account
      *        </p>
      *        </li>
      * @see ResourceOwner
@@ -179,12 +179,12 @@ public class ListPrincipalsRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <b> <code>SELF</code> </b> – resources that you are sharing
+     * <b> <code>SELF</code> </b> – principals that your account is sharing resources with
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     * <b> <code>OTHER-ACCOUNTS</code> </b> – principals that are sharing resources with your account
      * </p>
      * </li>
      * </ul>
@@ -193,12 +193,12 @@ public class ListPrincipalsRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <ul>
      *         <li>
      *         <p>
-     *         <b> <code>SELF</code> </b> – resources that you are sharing
+     *         <b> <code>SELF</code> </b> – principals that your account is sharing resources with
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     *         <b> <code>OTHER-ACCOUNTS</code> </b> – principals that are sharing resources with your account
      *         </p>
      *         </li>
      * @see ResourceOwner
@@ -215,12 +215,12 @@ public class ListPrincipalsRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <b> <code>SELF</code> </b> – resources that you are sharing
+     * <b> <code>SELF</code> </b> – principals that your account is sharing resources with
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     * <b> <code>OTHER-ACCOUNTS</code> </b> – principals that are sharing resources with your account
      * </p>
      * </li>
      * </ul>
@@ -230,12 +230,12 @@ public class ListPrincipalsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <ul>
      *        <li>
      *        <p>
-     *        <b> <code>SELF</code> </b> – resources that you are sharing
+     *        <b> <code>SELF</code> </b> – principals that your account is sharing resources with
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     *        <b> <code>OTHER-ACCOUNTS</code> </b> – principals that are sharing resources with your account
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -254,12 +254,12 @@ public class ListPrincipalsRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <b> <code>SELF</code> </b> – resources that you are sharing
+     * <b> <code>SELF</code> </b> – principals that your account is sharing resources with
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     * <b> <code>OTHER-ACCOUNTS</code> </b> – principals that are sharing resources with your account
      * </p>
      * </li>
      * </ul>
@@ -269,12 +269,12 @@ public class ListPrincipalsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <ul>
      *        <li>
      *        <p>
-     *        <b> <code>SELF</code> </b> – resources that you are sharing
+     *        <b> <code>SELF</code> </b> – principals that your account is sharing resources with
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>OTHER-ACCOUNTS</code> </b> – resources that other accounts share with you
+     *        <b> <code>OTHER-ACCOUNTS</code> </b> – principals that are sharing resources with your account
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -335,7 +335,7 @@ public interface AmazonQuickSight {
      * </p>
      * <p>
      * The permissions resource is
-     * <code>arn:aws:quicksight:us-east-1:<i>&lt;relevant-aws-account-id&gt;</i>:group/default/<i>&lt;group-name&gt;</i> </code>
+     * <code>arn:aws:quicksight:&lt;your-region&gt;:<i>&lt;relevant-aws-account-id&gt;</i>:group/default/<i>&lt;group-name&gt;</i> </code>
      * .
      * </p>
      * <p>
@@ -1637,6 +1637,38 @@ public interface AmazonQuickSight {
      *      Documentation</a>
      */
     DescribeGroupResult describeGroup(DescribeGroupRequest describeGroupRequest);
+
+    /**
+     * <p>
+     * Use the <code>DescribeGroupMembership</code> operation to determine if a user is a member of the specified group.
+     * If the user exists and is a member of the specified group, an associated <code>GroupMember</code> object is
+     * returned.
+     * </p>
+     * 
+     * @param describeGroupMembershipRequest
+     * @return Result of the DescribeGroupMembership operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         access keys.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws PreconditionNotMetException
+     *         One or more preconditions aren't met.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @throws ResourceUnavailableException
+     *         This resource is currently unavailable.
+     * @sample AmazonQuickSight.DescribeGroupMembership
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeGroupMembership"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeGroupMembershipResult describeGroupMembership(DescribeGroupMembershipRequest describeGroupMembershipRequest);
 
     /**
      * <p>
@@ -3069,6 +3101,39 @@ public interface AmazonQuickSight {
      *      Documentation</a>
      */
     SearchFoldersResult searchFolders(SearchFoldersRequest searchFoldersRequest);
+
+    /**
+     * <p>
+     * Use the <code>SearchGroups</code> operation to search groups in a specified Amazon QuickSight namespace using the
+     * supplied filters.
+     * </p>
+     * 
+     * @param searchGroupsRequest
+     * @return Result of the SearchGroups operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         access keys.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> value isn't valid.
+     * @throws PreconditionNotMetException
+     *         One or more preconditions aren't met.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @throws ResourceUnavailableException
+     *         This resource is currently unavailable.
+     * @sample AmazonQuickSight.SearchGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/SearchGroups" target="_top">AWS API
+     *      Documentation</a>
+     */
+    SearchGroupsResult searchGroups(SearchGroupsRequest searchGroupsRequest);
 
     /**
      * <p>

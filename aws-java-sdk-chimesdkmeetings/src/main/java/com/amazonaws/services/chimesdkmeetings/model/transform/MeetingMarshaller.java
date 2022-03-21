@@ -39,6 +39,8 @@ public class MeetingMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MediaPlacement").build();
     private static final MarshallingInfo<StructuredPojo> MEETINGFEATURES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MeetingFeatures").build();
+    private static final MarshallingInfo<String> PRIMARYMEETINGID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrimaryMeetingId").build();
 
     private static final MeetingMarshaller instance = new MeetingMarshaller();
 
@@ -62,6 +64,7 @@ public class MeetingMarshaller {
             protocolMarshaller.marshall(meeting.getMediaRegion(), MEDIAREGION_BINDING);
             protocolMarshaller.marshall(meeting.getMediaPlacement(), MEDIAPLACEMENT_BINDING);
             protocolMarshaller.marshall(meeting.getMeetingFeatures(), MEETINGFEATURES_BINDING);
+            protocolMarshaller.marshall(meeting.getPrimaryMeetingId(), PRIMARYMEETINGID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

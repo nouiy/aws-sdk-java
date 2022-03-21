@@ -1666,6 +1666,39 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeGroupMembershipResult> describeGroupMembershipAsync(DescribeGroupMembershipRequest request) {
+
+        return describeGroupMembershipAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeGroupMembershipResult> describeGroupMembershipAsync(final DescribeGroupMembershipRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeGroupMembershipRequest, DescribeGroupMembershipResult> asyncHandler) {
+        final DescribeGroupMembershipRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeGroupMembershipResult>() {
+            @Override
+            public DescribeGroupMembershipResult call() throws Exception {
+                DescribeGroupMembershipResult result = null;
+
+                try {
+                    result = executeDescribeGroupMembership(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeIAMPolicyAssignmentResult> describeIAMPolicyAssignmentAsync(DescribeIAMPolicyAssignmentRequest request) {
 
         return describeIAMPolicyAssignmentAsync(request, null);
@@ -3042,6 +3075,39 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
 
                 try {
                     result = executeSearchFolders(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchGroupsResult> searchGroupsAsync(SearchGroupsRequest request) {
+
+        return searchGroupsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchGroupsResult> searchGroupsAsync(final SearchGroupsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchGroupsRequest, SearchGroupsResult> asyncHandler) {
+        final SearchGroupsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchGroupsResult>() {
+            @Override
+            public SearchGroupsResult call() throws Exception {
+                SearchGroupsResult result = null;
+
+                try {
+                    result = executeSearchGroups(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

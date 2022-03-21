@@ -654,6 +654,19 @@ public class AbstractAmazonQuickSightAsync extends AbstractAmazonQuickSight impl
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeGroupMembershipResult> describeGroupMembershipAsync(DescribeGroupMembershipRequest request) {
+
+        return describeGroupMembershipAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeGroupMembershipResult> describeGroupMembershipAsync(DescribeGroupMembershipRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeGroupMembershipRequest, DescribeGroupMembershipResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeIAMPolicyAssignmentResult> describeIAMPolicyAssignmentAsync(DescribeIAMPolicyAssignmentRequest request) {
 
         return describeIAMPolicyAssignmentAsync(request, null);
@@ -1201,6 +1214,19 @@ public class AbstractAmazonQuickSightAsync extends AbstractAmazonQuickSight impl
     @Override
     public java.util.concurrent.Future<SearchFoldersResult> searchFoldersAsync(SearchFoldersRequest request,
             com.amazonaws.handlers.AsyncHandler<SearchFoldersRequest, SearchFoldersResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchGroupsResult> searchGroupsAsync(SearchGroupsRequest request) {
+
+        return searchGroupsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchGroupsResult> searchGroupsAsync(SearchGroupsRequest request,
+            com.amazonaws.handlers.AsyncHandler<SearchGroupsRequest, SearchGroupsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

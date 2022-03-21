@@ -110,6 +110,10 @@ public class FlowJsonUnmarshaller implements Unmarshaller<Flow, JsonUnmarshaller
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("maintenance", targetDepth)) {
+                    context.nextToken();
+                    flow.setMaintenance(MaintenanceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

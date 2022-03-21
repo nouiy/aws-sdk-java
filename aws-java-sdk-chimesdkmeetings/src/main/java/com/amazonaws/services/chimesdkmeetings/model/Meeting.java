@@ -72,6 +72,12 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private MeetingFeaturesConfiguration meetingFeatures;
+    /**
+     * <p>
+     * When specified, replicates the media from the primary meeting to this meeting.
+     * </p>
+     */
+    private String primaryMeetingId;
 
     /**
      * <p>
@@ -359,6 +365,46 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * When specified, replicates the media from the primary meeting to this meeting.
+     * </p>
+     * 
+     * @param primaryMeetingId
+     *        When specified, replicates the media from the primary meeting to this meeting.
+     */
+
+    public void setPrimaryMeetingId(String primaryMeetingId) {
+        this.primaryMeetingId = primaryMeetingId;
+    }
+
+    /**
+     * <p>
+     * When specified, replicates the media from the primary meeting to this meeting.
+     * </p>
+     * 
+     * @return When specified, replicates the media from the primary meeting to this meeting.
+     */
+
+    public String getPrimaryMeetingId() {
+        return this.primaryMeetingId;
+    }
+
+    /**
+     * <p>
+     * When specified, replicates the media from the primary meeting to this meeting.
+     * </p>
+     * 
+     * @param primaryMeetingId
+     *        When specified, replicates the media from the primary meeting to this meeting.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Meeting withPrimaryMeetingId(String primaryMeetingId) {
+        setPrimaryMeetingId(primaryMeetingId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -381,7 +427,9 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
         if (getMediaPlacement() != null)
             sb.append("MediaPlacement: ").append(getMediaPlacement()).append(",");
         if (getMeetingFeatures() != null)
-            sb.append("MeetingFeatures: ").append(getMeetingFeatures());
+            sb.append("MeetingFeatures: ").append(getMeetingFeatures()).append(",");
+        if (getPrimaryMeetingId() != null)
+            sb.append("PrimaryMeetingId: ").append(getPrimaryMeetingId());
         sb.append("}");
         return sb.toString();
     }
@@ -420,6 +468,10 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getMeetingFeatures() != null && other.getMeetingFeatures().equals(this.getMeetingFeatures()) == false)
             return false;
+        if (other.getPrimaryMeetingId() == null ^ this.getPrimaryMeetingId() == null)
+            return false;
+        if (other.getPrimaryMeetingId() != null && other.getPrimaryMeetingId().equals(this.getPrimaryMeetingId()) == false)
+            return false;
         return true;
     }
 
@@ -434,6 +486,7 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getMediaRegion() == null) ? 0 : getMediaRegion().hashCode());
         hashCode = prime * hashCode + ((getMediaPlacement() == null) ? 0 : getMediaPlacement().hashCode());
         hashCode = prime * hashCode + ((getMeetingFeatures() == null) ? 0 : getMeetingFeatures().hashCode());
+        hashCode = prime * hashCode + ((getPrimaryMeetingId() == null) ? 0 : getPrimaryMeetingId().hashCode());
         return hashCode;
     }
 

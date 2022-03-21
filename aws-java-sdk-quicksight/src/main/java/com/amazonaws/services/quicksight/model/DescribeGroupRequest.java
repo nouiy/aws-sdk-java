@@ -40,7 +40,7 @@ public class DescribeGroupRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String awsAccountId;
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want described.
      * </p>
      */
     private String namespace;
@@ -133,11 +133,11 @@ public class DescribeGroupRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want described.
      * </p>
      * 
      * @param namespace
-     *        The namespace. Currently, you should set this to <code>default</code>.
+     *        The namespace of the group that you want described.
      */
 
     public void setNamespace(String namespace) {
@@ -146,10 +146,10 @@ public class DescribeGroupRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want described.
      * </p>
      * 
-     * @return The namespace. Currently, you should set this to <code>default</code>.
+     * @return The namespace of the group that you want described.
      */
 
     public String getNamespace() {
@@ -158,11 +158,11 @@ public class DescribeGroupRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want described.
      * </p>
      * 
      * @param namespace
-     *        The namespace. Currently, you should set this to <code>default</code>.
+     *        The namespace of the group that you want described.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

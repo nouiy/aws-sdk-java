@@ -153,7 +153,7 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * A set of custom permissions includes any combination of these restrictions. Currently, you need to create the
      * profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
-     * <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     * <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight user.
      * </p>
      * <p>
      * Amazon QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
@@ -940,7 +940,7 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * A set of custom permissions includes any combination of these restrictions. Currently, you need to create the
      * profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
-     * <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     * <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight user.
      * </p>
      * <p>
      * Amazon QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
@@ -985,7 +985,8 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        A set of custom permissions includes any combination of these restrictions. Currently, you need to create
      *        the profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
-     *        <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     *        <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight
+     *        user.
      *        </p>
      *        <p>
      *        Amazon QuickSight custom permissions are applied through IAM policies. Therefore, they override the
@@ -1035,7 +1036,7 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * A set of custom permissions includes any combination of these restrictions. Currently, you need to create the
      * profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
-     * <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     * <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight user.
      * </p>
      * <p>
      * Amazon QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
@@ -1079,7 +1080,8 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <p>
      *         A set of custom permissions includes any combination of these restrictions. Currently, you need to create
      *         the profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
-     *         <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     *         <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight
+     *         user.
      *         </p>
      *         <p>
      *         Amazon QuickSight custom permissions are applied through IAM policies. Therefore, they override the
@@ -1129,7 +1131,7 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * A set of custom permissions includes any combination of these restrictions. Currently, you need to create the
      * profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
-     * <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     * <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight user.
      * </p>
      * <p>
      * Amazon QuickSight custom permissions are applied through IAM policies. Therefore, they override the permissions
@@ -1174,7 +1176,8 @@ public class RegisterUserRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        A set of custom permissions includes any combination of these restrictions. Currently, you need to create
      *        the profile names for custom permission sets by using the Amazon QuickSight console. Then, you use the
-     *        <code>RegisterUser</code> API operation to assign the named set of permissions to a QuickSight user.
+     *        <code>RegisterUser</code> API operation to assign the named set of permissions to a Amazon QuickSight
+     *        user.
      *        </p>
      *        <p>
      *        Amazon QuickSight custom permissions are applied through IAM policies. Therefore, they override the

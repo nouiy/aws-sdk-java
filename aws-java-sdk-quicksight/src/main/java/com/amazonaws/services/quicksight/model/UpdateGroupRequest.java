@@ -46,7 +46,7 @@ public class UpdateGroupRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String awsAccountId;
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want to update.
      * </p>
      */
     private String namespace;
@@ -179,11 +179,11 @@ public class UpdateGroupRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want to update.
      * </p>
      * 
      * @param namespace
-     *        The namespace. Currently, you should set this to <code>default</code>.
+     *        The namespace of the group that you want to update.
      */
 
     public void setNamespace(String namespace) {
@@ -192,10 +192,10 @@ public class UpdateGroupRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want to update.
      * </p>
      * 
-     * @return The namespace. Currently, you should set this to <code>default</code>.
+     * @return The namespace of the group that you want to update.
      */
 
     public String getNamespace() {
@@ -204,11 +204,11 @@ public class UpdateGroupRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want to update.
      * </p>
      * 
      * @param namespace
-     *        The namespace. Currently, you should set this to <code>default</code>.
+     *        The namespace of the group that you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

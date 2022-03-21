@@ -52,7 +52,7 @@ public class ListGroupMembershipsRequest extends com.amazonaws.AmazonWebServiceR
     private String awsAccountId;
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want a list of users from.
      * </p>
      */
     private String namespace;
@@ -225,11 +225,11 @@ public class ListGroupMembershipsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want a list of users from.
      * </p>
      * 
      * @param namespace
-     *        The namespace. Currently, you should set this to <code>default</code>.
+     *        The namespace of the group that you want a list of users from.
      */
 
     public void setNamespace(String namespace) {
@@ -238,10 +238,10 @@ public class ListGroupMembershipsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want a list of users from.
      * </p>
      * 
-     * @return The namespace. Currently, you should set this to <code>default</code>.
+     * @return The namespace of the group that you want a list of users from.
      */
 
     public String getNamespace() {
@@ -250,11 +250,11 @@ public class ListGroupMembershipsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The namespace. Currently, you should set this to <code>default</code>.
+     * The namespace of the group that you want a list of users from.
      * </p>
      * 
      * @param namespace
-     *        The namespace. Currently, you should set this to <code>default</code>.
+     *        The namespace of the group that you want a list of users from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

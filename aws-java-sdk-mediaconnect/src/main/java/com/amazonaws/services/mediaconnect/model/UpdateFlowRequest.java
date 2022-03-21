@@ -31,6 +31,8 @@ public class UpdateFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     private UpdateFailoverConfig sourceFailoverConfig;
 
+    private UpdateMaintenance maintenance;
+
     /**
      * The flow that you want to update.
      * 
@@ -92,6 +94,32 @@ public class UpdateFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
+     * @param maintenance
+     */
+
+    public void setMaintenance(UpdateMaintenance maintenance) {
+        this.maintenance = maintenance;
+    }
+
+    /**
+     * @return
+     */
+
+    public UpdateMaintenance getMaintenance() {
+        return this.maintenance;
+    }
+
+    /**
+     * @param maintenance
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateFlowRequest withMaintenance(UpdateMaintenance maintenance) {
+        setMaintenance(maintenance);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -106,7 +134,9 @@ public class UpdateFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
         if (getFlowArn() != null)
             sb.append("FlowArn: ").append(getFlowArn()).append(",");
         if (getSourceFailoverConfig() != null)
-            sb.append("SourceFailoverConfig: ").append(getSourceFailoverConfig());
+            sb.append("SourceFailoverConfig: ").append(getSourceFailoverConfig()).append(",");
+        if (getMaintenance() != null)
+            sb.append("Maintenance: ").append(getMaintenance());
         sb.append("}");
         return sb.toString();
     }
@@ -129,6 +159,10 @@ public class UpdateFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
             return false;
         if (other.getSourceFailoverConfig() != null && other.getSourceFailoverConfig().equals(this.getSourceFailoverConfig()) == false)
             return false;
+        if (other.getMaintenance() == null ^ this.getMaintenance() == null)
+            return false;
+        if (other.getMaintenance() != null && other.getMaintenance().equals(this.getMaintenance()) == false)
+            return false;
         return true;
     }
 
@@ -139,6 +173,7 @@ public class UpdateFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
         hashCode = prime * hashCode + ((getFlowArn() == null) ? 0 : getFlowArn().hashCode());
         hashCode = prime * hashCode + ((getSourceFailoverConfig() == null) ? 0 : getSourceFailoverConfig().hashCode());
+        hashCode = prime * hashCode + ((getMaintenance() == null) ? 0 : getMaintenance().hashCode());
         return hashCode;
     }
 

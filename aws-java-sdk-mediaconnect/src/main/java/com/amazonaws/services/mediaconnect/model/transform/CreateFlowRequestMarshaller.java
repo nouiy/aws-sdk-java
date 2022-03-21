@@ -46,6 +46,8 @@ public class CreateFlowRequestMarshaller {
             .marshallLocationName("sources").build();
     private static final MarshallingInfo<List> VPCINTERFACES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("vpcInterfaces").build();
+    private static final MarshallingInfo<StructuredPojo> MAINTENANCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maintenance").build();
 
     private static final CreateFlowRequestMarshaller instance = new CreateFlowRequestMarshaller();
 
@@ -72,6 +74,7 @@ public class CreateFlowRequestMarshaller {
             protocolMarshaller.marshall(createFlowRequest.getSourceFailoverConfig(), SOURCEFAILOVERCONFIG_BINDING);
             protocolMarshaller.marshall(createFlowRequest.getSources(), SOURCES_BINDING);
             protocolMarshaller.marshall(createFlowRequest.getVpcInterfaces(), VPCINTERFACES_BINDING);
+            protocolMarshaller.marshall(createFlowRequest.getMaintenance(), MAINTENANCE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

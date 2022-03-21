@@ -39,6 +39,8 @@ public class ListedFlowMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sourceType").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
+    private static final MarshallingInfo<StructuredPojo> MAINTENANCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maintenance").build();
 
     private static final ListedFlowMarshaller instance = new ListedFlowMarshaller();
 
@@ -62,6 +64,7 @@ public class ListedFlowMarshaller {
             protocolMarshaller.marshall(listedFlow.getName(), NAME_BINDING);
             protocolMarshaller.marshall(listedFlow.getSourceType(), SOURCETYPE_BINDING);
             protocolMarshaller.marshall(listedFlow.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(listedFlow.getMaintenance(), MAINTENANCE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -72,6 +72,10 @@ public class ListedFlowJsonUnmarshaller implements Unmarshaller<ListedFlow, Json
                     context.nextToken();
                     listedFlow.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("maintenance", targetDepth)) {
+                    context.nextToken();
+                    listedFlow.setMaintenance(MaintenanceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
