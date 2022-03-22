@@ -1,3 +1,24 @@
+# __1.12.183__ __2022-03-22__
+## __AWS Cost Explorer Service__
+  - ### Features
+    - Added three new APIs to support tagging and resource-level authorization on Cost Explorer resources: TagResource, UntagResource, ListTagsForResource.  Added optional parameters to CreateCostCategoryDefinition, CreateAnomalySubscription and CreateAnomalyMonitor APIs to support Tag On Create.
+
+## __AWS Lake Formation__
+  - ### Features
+    - The release fixes the incorrect permissions called out in the documentation - DESCRIBE_TAG, ASSOCIATE_TAG, DELETE_TAG, ALTER_TAG. This trebuchet release fixes the corresponding SDK and documentation.
+
+## __Amazon EC2 Container Service__
+  - ### Features
+    - Documentation only update to address tickets
+
+## __Amazon Location Service__
+  - ### Features
+    - Amazon Location Service now includes a MaxResults parameter for GetDevicePositionHistory requests.
+
+## __Amazon Polly__
+  - ### Features
+    - Amazon Polly adds new Catalan voice - Arlet. Arlet is available as Neural voice only.
+
 # __1.12.182__ __2022-03-21__
 ## __AWS MediaConnect__
   - ### Features

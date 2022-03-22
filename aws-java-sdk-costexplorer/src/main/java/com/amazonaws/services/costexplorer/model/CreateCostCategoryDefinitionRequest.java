@@ -44,6 +44,57 @@ public class CreateCostCategoryDefinitionRequest extends com.amazonaws.AmazonWeb
      * </p>
      */
     private java.util.List<CostCategorySplitChargeRule> splitChargeRules;
+    /**
+     * <p>
+     * An optional list of tags to associate with the specified <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CostCategory.html">
+     * <code>CostCategory</code> </a>. You can use resource tags to control access to your <code>cost category</code>
+     * using IAM policies.
+     * </p>
+     * <p>
+     * Each tag consists of a key and a value, and each key must be unique for the resource. The following restrictions
+     * apply to resource tags:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Although the maximum number of array members is 200, you can assign a maximum of 50 user-tags to one resource.
+     * The remaining are reserved for Amazon Web Services use
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The maximum length of a key is 128 characters
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The maximum length of a value is 256 characters
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Valid characters for keys and values are: <code>A-Z</code>, <code>a-z</code>, spaces, <code>_.:/=+-</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Keys and values are case sensitive
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Keys and values are trimmed for any leading or trailing whitespaces
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Don’t use <code>aws:</code> as a prefix for your keys. This prefix is reserved for Amazon Web Services use
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private java.util.List<ResourceTag> resourceTags;
 
     /**
      * @param name
@@ -294,6 +345,434 @@ public class CreateCostCategoryDefinitionRequest extends com.amazonaws.AmazonWeb
     }
 
     /**
+     * <p>
+     * An optional list of tags to associate with the specified <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CostCategory.html">
+     * <code>CostCategory</code> </a>. You can use resource tags to control access to your <code>cost category</code>
+     * using IAM policies.
+     * </p>
+     * <p>
+     * Each tag consists of a key and a value, and each key must be unique for the resource. The following restrictions
+     * apply to resource tags:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Although the maximum number of array members is 200, you can assign a maximum of 50 user-tags to one resource.
+     * The remaining are reserved for Amazon Web Services use
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The maximum length of a key is 128 characters
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The maximum length of a value is 256 characters
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Valid characters for keys and values are: <code>A-Z</code>, <code>a-z</code>, spaces, <code>_.:/=+-</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Keys and values are case sensitive
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Keys and values are trimmed for any leading or trailing whitespaces
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Don’t use <code>aws:</code> as a prefix for your keys. This prefix is reserved for Amazon Web Services use
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return An optional list of tags to associate with the specified <a
+     *         href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CostCategory.html">
+     *         <code>CostCategory</code> </a>. You can use resource tags to control access to your
+     *         <code>cost category</code> using IAM policies.</p>
+     *         <p>
+     *         Each tag consists of a key and a value, and each key must be unique for the resource. The following
+     *         restrictions apply to resource tags:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Although the maximum number of array members is 200, you can assign a maximum of 50 user-tags to one
+     *         resource. The remaining are reserved for Amazon Web Services use
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The maximum length of a key is 128 characters
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The maximum length of a value is 256 characters
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Valid characters for keys and values are: <code>A-Z</code>, <code>a-z</code>, spaces,
+     *         <code>_.:/=+-</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Keys and values are case sensitive
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Keys and values are trimmed for any leading or trailing whitespaces
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Don’t use <code>aws:</code> as a prefix for your keys. This prefix is reserved for Amazon Web Services
+     *         use
+     *         </p>
+     *         </li>
+     */
+
+    public java.util.List<ResourceTag> getResourceTags() {
+        return resourceTags;
+    }
+
+    /**
+     * <p>
+     * An optional list of tags to associate with the specified <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CostCategory.html">
+     * <code>CostCategory</code> </a>. You can use resource tags to control access to your <code>cost category</code>
+     * using IAM policies.
+     * </p>
+     * <p>
+     * Each tag consists of a key and a value, and each key must be unique for the resource. The following restrictions
+     * apply to resource tags:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Although the maximum number of array members is 200, you can assign a maximum of 50 user-tags to one resource.
+     * The remaining are reserved for Amazon Web Services use
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The maximum length of a key is 128 characters
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The maximum length of a value is 256 characters
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Valid characters for keys and values are: <code>A-Z</code>, <code>a-z</code>, spaces, <code>_.:/=+-</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Keys and values are case sensitive
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Keys and values are trimmed for any leading or trailing whitespaces
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Don’t use <code>aws:</code> as a prefix for your keys. This prefix is reserved for Amazon Web Services use
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param resourceTags
+     *        An optional list of tags to associate with the specified <a
+     *        href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CostCategory.html">
+     *        <code>CostCategory</code> </a>. You can use resource tags to control access to your
+     *        <code>cost category</code> using IAM policies.</p>
+     *        <p>
+     *        Each tag consists of a key and a value, and each key must be unique for the resource. The following
+     *        restrictions apply to resource tags:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Although the maximum number of array members is 200, you can assign a maximum of 50 user-tags to one
+     *        resource. The remaining are reserved for Amazon Web Services use
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The maximum length of a key is 128 characters
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The maximum length of a value is 256 characters
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Valid characters for keys and values are: <code>A-Z</code>, <code>a-z</code>, spaces, <code>_.:/=+-</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Keys and values are case sensitive
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Keys and values are trimmed for any leading or trailing whitespaces
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Don’t use <code>aws:</code> as a prefix for your keys. This prefix is reserved for Amazon Web Services use
+     *        </p>
+     *        </li>
+     */
+
+    public void setResourceTags(java.util.Collection<ResourceTag> resourceTags) {
+        if (resourceTags == null) {
+            this.resourceTags = null;
+            return;
+        }
+
+        this.resourceTags = new java.util.ArrayList<ResourceTag>(resourceTags);
+    }
+
+    /**
+     * <p>
+     * An optional list of tags to associate with the specified <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CostCategory.html">
+     * <code>CostCategory</code> </a>. You can use resource tags to control access to your <code>cost category</code>
+     * using IAM policies.
+     * </p>
+     * <p>
+     * Each tag consists of a key and a value, and each key must be unique for the resource. The following restrictions
+     * apply to resource tags:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Although the maximum number of array members is 200, you can assign a maximum of 50 user-tags to one resource.
+     * The remaining are reserved for Amazon Web Services use
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The maximum length of a key is 128 characters
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The maximum length of a value is 256 characters
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Valid characters for keys and values are: <code>A-Z</code>, <code>a-z</code>, spaces, <code>_.:/=+-</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Keys and values are case sensitive
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Keys and values are trimmed for any leading or trailing whitespaces
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Don’t use <code>aws:</code> as a prefix for your keys. This prefix is reserved for Amazon Web Services use
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setResourceTags(java.util.Collection)} or {@link #withResourceTags(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param resourceTags
+     *        An optional list of tags to associate with the specified <a
+     *        href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CostCategory.html">
+     *        <code>CostCategory</code> </a>. You can use resource tags to control access to your
+     *        <code>cost category</code> using IAM policies.</p>
+     *        <p>
+     *        Each tag consists of a key and a value, and each key must be unique for the resource. The following
+     *        restrictions apply to resource tags:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Although the maximum number of array members is 200, you can assign a maximum of 50 user-tags to one
+     *        resource. The remaining are reserved for Amazon Web Services use
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The maximum length of a key is 128 characters
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The maximum length of a value is 256 characters
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Valid characters for keys and values are: <code>A-Z</code>, <code>a-z</code>, spaces, <code>_.:/=+-</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Keys and values are case sensitive
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Keys and values are trimmed for any leading or trailing whitespaces
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Don’t use <code>aws:</code> as a prefix for your keys. This prefix is reserved for Amazon Web Services use
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateCostCategoryDefinitionRequest withResourceTags(ResourceTag... resourceTags) {
+        if (this.resourceTags == null) {
+            setResourceTags(new java.util.ArrayList<ResourceTag>(resourceTags.length));
+        }
+        for (ResourceTag ele : resourceTags) {
+            this.resourceTags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An optional list of tags to associate with the specified <a
+     * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CostCategory.html">
+     * <code>CostCategory</code> </a>. You can use resource tags to control access to your <code>cost category</code>
+     * using IAM policies.
+     * </p>
+     * <p>
+     * Each tag consists of a key and a value, and each key must be unique for the resource. The following restrictions
+     * apply to resource tags:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Although the maximum number of array members is 200, you can assign a maximum of 50 user-tags to one resource.
+     * The remaining are reserved for Amazon Web Services use
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The maximum length of a key is 128 characters
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The maximum length of a value is 256 characters
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Valid characters for keys and values are: <code>A-Z</code>, <code>a-z</code>, spaces, <code>_.:/=+-</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Keys and values are case sensitive
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Keys and values are trimmed for any leading or trailing whitespaces
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Don’t use <code>aws:</code> as a prefix for your keys. This prefix is reserved for Amazon Web Services use
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param resourceTags
+     *        An optional list of tags to associate with the specified <a
+     *        href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CostCategory.html">
+     *        <code>CostCategory</code> </a>. You can use resource tags to control access to your
+     *        <code>cost category</code> using IAM policies.</p>
+     *        <p>
+     *        Each tag consists of a key and a value, and each key must be unique for the resource. The following
+     *        restrictions apply to resource tags:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Although the maximum number of array members is 200, you can assign a maximum of 50 user-tags to one
+     *        resource. The remaining are reserved for Amazon Web Services use
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The maximum length of a key is 128 characters
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The maximum length of a value is 256 characters
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Valid characters for keys and values are: <code>A-Z</code>, <code>a-z</code>, spaces, <code>_.:/=+-</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Keys and values are case sensitive
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Keys and values are trimmed for any leading or trailing whitespaces
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Don’t use <code>aws:</code> as a prefix for your keys. This prefix is reserved for Amazon Web Services use
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateCostCategoryDefinitionRequest withResourceTags(java.util.Collection<ResourceTag> resourceTags) {
+        setResourceTags(resourceTags);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -314,7 +793,9 @@ public class CreateCostCategoryDefinitionRequest extends com.amazonaws.AmazonWeb
         if (getDefaultValue() != null)
             sb.append("DefaultValue: ").append(getDefaultValue()).append(",");
         if (getSplitChargeRules() != null)
-            sb.append("SplitChargeRules: ").append(getSplitChargeRules());
+            sb.append("SplitChargeRules: ").append(getSplitChargeRules()).append(",");
+        if (getResourceTags() != null)
+            sb.append("ResourceTags: ").append(getResourceTags());
         sb.append("}");
         return sb.toString();
     }
@@ -349,6 +830,10 @@ public class CreateCostCategoryDefinitionRequest extends com.amazonaws.AmazonWeb
             return false;
         if (other.getSplitChargeRules() != null && other.getSplitChargeRules().equals(this.getSplitChargeRules()) == false)
             return false;
+        if (other.getResourceTags() == null ^ this.getResourceTags() == null)
+            return false;
+        if (other.getResourceTags() != null && other.getResourceTags().equals(this.getResourceTags()) == false)
+            return false;
         return true;
     }
 
@@ -362,6 +847,7 @@ public class CreateCostCategoryDefinitionRequest extends com.amazonaws.AmazonWeb
         hashCode = prime * hashCode + ((getRules() == null) ? 0 : getRules().hashCode());
         hashCode = prime * hashCode + ((getDefaultValue() == null) ? 0 : getDefaultValue().hashCode());
         hashCode = prime * hashCode + ((getSplitChargeRules() == null) ? 0 : getSplitChargeRules().hashCode());
+        hashCode = prime * hashCode + ((getResourceTags() == null) ? 0 : getResourceTags().hashCode());
         return hashCode;
     }
 

@@ -23,6 +23,8 @@ import javax.annotation.Generated;
 public class ResourceNotFoundException extends com.amazonaws.services.costexplorer.model.AWSCostExplorerException {
     private static final long serialVersionUID = 1L;
 
+    private String resourceName;
+
     /**
      * Constructs a new ResourceNotFoundException with the specified error message.
      *
@@ -31,6 +33,34 @@ public class ResourceNotFoundException extends com.amazonaws.services.costexplor
      */
     public ResourceNotFoundException(String message) {
         super(message);
+    }
+
+    /**
+     * @param resourceName
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("ResourceName")
+    public void setResourceName(String resourceName) {
+        this.resourceName = resourceName;
+    }
+
+    /**
+     * @return
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("ResourceName")
+    public String getResourceName() {
+        return this.resourceName;
+    }
+
+    /**
+     * @param resourceName
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceNotFoundException withResourceName(String resourceName) {
+        setResourceName(resourceName);
+        return this;
     }
 
 }

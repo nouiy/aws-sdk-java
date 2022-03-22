@@ -50,7 +50,8 @@ public enum LanguageCode {
     SvSE("sv-SE"),
     TrTR("tr-TR"),
     EnNZ("en-NZ"),
-    EnZA("en-ZA");
+    EnZA("en-ZA"),
+    CaES("ca-ES");
 
     private String value;
 

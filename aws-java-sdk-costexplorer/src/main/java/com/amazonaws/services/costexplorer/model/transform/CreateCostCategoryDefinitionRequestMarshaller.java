@@ -38,6 +38,8 @@ public class CreateCostCategoryDefinitionRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultValue").build();
     private static final MarshallingInfo<List> SPLITCHARGERULES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SplitChargeRules").build();
+    private static final MarshallingInfo<List> RESOURCETAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ResourceTags").build();
 
     private static final CreateCostCategoryDefinitionRequestMarshaller instance = new CreateCostCategoryDefinitionRequestMarshaller();
 
@@ -60,6 +62,7 @@ public class CreateCostCategoryDefinitionRequestMarshaller {
             protocolMarshaller.marshall(createCostCategoryDefinitionRequest.getRules(), RULES_BINDING);
             protocolMarshaller.marshall(createCostCategoryDefinitionRequest.getDefaultValue(), DEFAULTVALUE_BINDING);
             protocolMarshaller.marshall(createCostCategoryDefinitionRequest.getSplitChargeRules(), SPLITCHARGERULES_BINDING);
+            protocolMarshaller.marshall(createCostCategoryDefinitionRequest.getResourceTags(), RESOURCETAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

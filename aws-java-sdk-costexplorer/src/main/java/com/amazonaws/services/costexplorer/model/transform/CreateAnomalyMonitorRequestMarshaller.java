@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.costexplorer.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -29,6 +30,8 @@ public class CreateAnomalyMonitorRequestMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> ANOMALYMONITOR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AnomalyMonitor").build();
+    private static final MarshallingInfo<List> RESOURCETAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ResourceTags").build();
 
     private static final CreateAnomalyMonitorRequestMarshaller instance = new CreateAnomalyMonitorRequestMarshaller();
 
@@ -47,6 +50,7 @@ public class CreateAnomalyMonitorRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(createAnomalyMonitorRequest.getAnomalyMonitor(), ANOMALYMONITOR_BINDING);
+            protocolMarshaller.marshall(createAnomalyMonitorRequest.getResourceTags(), RESOURCETAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -31,6 +31,8 @@ public class GetDevicePositionHistoryRequestMarshaller {
             .marshallLocationName("DeviceId").build();
     private static final MarshallingInfo<java.util.Date> ENDTIMEEXCLUSIVE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndTimeExclusive").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("NextToken").build();
     private static final MarshallingInfo<java.util.Date> STARTTIMEINCLUSIVE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -56,6 +58,7 @@ public class GetDevicePositionHistoryRequestMarshaller {
         try {
             protocolMarshaller.marshall(getDevicePositionHistoryRequest.getDeviceId(), DEVICEID_BINDING);
             protocolMarshaller.marshall(getDevicePositionHistoryRequest.getEndTimeExclusive(), ENDTIMEEXCLUSIVE_BINDING);
+            protocolMarshaller.marshall(getDevicePositionHistoryRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(getDevicePositionHistoryRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(getDevicePositionHistoryRequest.getStartTimeInclusive(), STARTTIMEINCLUSIVE_BINDING);
             protocolMarshaller.marshall(getDevicePositionHistoryRequest.getTrackerName(), TRACKERNAME_BINDING);

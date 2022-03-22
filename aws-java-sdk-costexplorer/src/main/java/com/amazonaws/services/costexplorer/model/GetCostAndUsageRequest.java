@@ -51,12 +51,13 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>.
      * </p>
      * <p>
-     * Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
-     * <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>.
+     * Valid values for <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and
+     * <code>CASE_SENSITIVE</code>.
      * </p>
      * <p>
-     * The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
-     * <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>.
+     * Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
+     * <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>. Default values are <code>EQUALS</code>
+     * and <code>CASE_SENSITIVE</code>.
      * </p>
      */
     private Expression filter;
@@ -255,12 +256,13 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>.
      * </p>
      * <p>
-     * Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
-     * <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>.
+     * Valid values for <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and
+     * <code>CASE_SENSITIVE</code>.
      * </p>
      * <p>
-     * The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
-     * <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>.
+     * Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
+     * <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>. Default values are <code>EQUALS</code>
+     * and <code>CASE_SENSITIVE</code>.
      * </p>
      * 
      * @param filter
@@ -271,13 +273,13 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      *        href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html"
      *        >Expression</a>. </p>
      *        <p>
-     *        Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
-     *        <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>.
+     *        Valid values for <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and
+     *        <code>CASE_SENSITIVE</code>.
      *        </p>
      *        <p>
-     *        The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
-     *        <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and
-     *        <code>CASE_SENSITIVE</code>.
+     *        Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
+     *        <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>. Default values are
+     *        <code>EQUALS</code> and <code>CASE_SENSITIVE</code>.
      */
 
     public void setFilter(Expression filter) {
@@ -293,12 +295,13 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>.
      * </p>
      * <p>
-     * Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
-     * <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>.
+     * Valid values for <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and
+     * <code>CASE_SENSITIVE</code>.
      * </p>
      * <p>
-     * The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
-     * <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>.
+     * Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
+     * <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>. Default values are <code>EQUALS</code>
+     * and <code>CASE_SENSITIVE</code>.
      * </p>
      * 
      * @return Filters Amazon Web Services costs by different dimensions. For example, you can specify
@@ -308,13 +311,13 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      *         href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html"
      *         >Expression</a>. </p>
      *         <p>
-     *         Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
-     *         <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>.
+     *         Valid values for <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and
+     *         <code>CASE_SENSITIVE</code>.
      *         </p>
      *         <p>
-     *         The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
-     *         <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and
-     *         <code>CASE_SENSITIVE</code>.
+     *         Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
+     *         <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>. Default values are
+     *         <code>EQUALS</code> and <code>CASE_SENSITIVE</code>.
      */
 
     public Expression getFilter() {
@@ -330,12 +333,13 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>.
      * </p>
      * <p>
-     * Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
-     * <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>.
+     * Valid values for <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and
+     * <code>CASE_SENSITIVE</code>.
      * </p>
      * <p>
-     * The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
-     * <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>.
+     * Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
+     * <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>. Default values are <code>EQUALS</code>
+     * and <code>CASE_SENSITIVE</code>.
      * </p>
      * 
      * @param filter
@@ -346,13 +350,13 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      *        href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html"
      *        >Expression</a>. </p>
      *        <p>
-     *        Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
-     *        <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>.
+     *        Valid values for <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and
+     *        <code>CASE_SENSITIVE</code>.
      *        </p>
      *        <p>
-     *        The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
-     *        <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and
-     *        <code>CASE_SENSITIVE</code>.
+     *        Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
+     *        <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>. Default values are
+     *        <code>EQUALS</code> and <code>CASE_SENSITIVE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

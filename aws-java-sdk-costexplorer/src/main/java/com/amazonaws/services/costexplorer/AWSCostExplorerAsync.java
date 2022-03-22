@@ -1277,6 +1277,37 @@ public interface AWSCostExplorerAsync extends AWSCostExplorer {
 
     /**
      * <p>
+     * Returns a list of resource tags associated with the resource specified by the Amazon Resource Name (ARN).
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
+     * @sample AWSCostExplorerAsync.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/ListTagsForResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Returns a list of resource tags associated with the resource specified by the Amazon Resource Name (ARN).
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
+     * @sample AWSCostExplorerAsyncHandler.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/ListTagsForResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
      * Modifies the feedback property of a given cost anomaly.
      * </p>
      * 
@@ -1308,7 +1339,89 @@ public interface AWSCostExplorerAsync extends AWSCostExplorer {
 
     /**
      * <p>
-     * Updates an existing cost anomaly monitor. The changes made are applied going forward, and doesn'tt change
+     * An API operation for adding one or more tags (key-value pairs) to a resource.
+     * </p>
+     * <p>
+     * You can use the <code>TagResource</code> operation with a resource that already has tags. If you specify a new
+     * tag key for the resource, this tag is appended to the list of tags associated with the resource. If you specify a
+     * tag key that is already associated with the resource, the new tag value you specify replaces the previous value
+     * for that tag.
+     * </p>
+     * <p>
+     * Although the maximum number of array members is 200, user-tag maximum is 50. The remaining are reserved for
+     * Amazon Web Services use.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return A Java Future containing the result of the TagResource operation returned by the service.
+     * @sample AWSCostExplorerAsync.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/TagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * An API operation for adding one or more tags (key-value pairs) to a resource.
+     * </p>
+     * <p>
+     * You can use the <code>TagResource</code> operation with a resource that already has tags. If you specify a new
+     * tag key for the resource, this tag is appended to the list of tags associated with the resource. If you specify a
+     * tag key that is already associated with the resource, the new tag value you specify replaces the previous value
+     * for that tag.
+     * </p>
+     * <p>
+     * Although the maximum number of array members is 200, user-tag maximum is 50. The remaining are reserved for
+     * Amazon Web Services use.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the TagResource operation returned by the service.
+     * @sample AWSCostExplorerAsyncHandler.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/TagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Removes one or more tags from a resource. Specify only tag key(s) in your request. Do not specify the value.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return A Java Future containing the result of the UntagResource operation returned by the service.
+     * @sample AWSCostExplorerAsync.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/UntagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * Removes one or more tags from a resource. Specify only tag key(s) in your request. Do not specify the value.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UntagResource operation returned by the service.
+     * @sample AWSCostExplorerAsyncHandler.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ce-2017-10-25/UntagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates an existing cost anomaly monitor. The changes made are applied going forward, and doesn't change
      * anomalies detected in the past.
      * </p>
      * 
@@ -1322,7 +1435,7 @@ public interface AWSCostExplorerAsync extends AWSCostExplorer {
 
     /**
      * <p>
-     * Updates an existing cost anomaly monitor. The changes made are applied going forward, and doesn'tt change
+     * Updates an existing cost anomaly monitor. The changes made are applied going forward, and doesn't change
      * anomalies detected in the past.
      * </p>
      * 

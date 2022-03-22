@@ -51,6 +51,15 @@ public class GetDevicePositionHistoryRequest extends com.amazonaws.AmazonWebServ
     private java.util.Date endTimeExclusive;
     /**
      * <p>
+     * An optional limit for the number of device positions returned in a single call.
+     * </p>
+     * <p>
+     * Default value: <code>100</code>
+     * </p>
+     */
+    private Integer maxResults;
+    /**
+     * <p>
      * The pagination token specifying which page of results to return in the response. If no token is provided, the
      * default page is the first page.
      * </p>
@@ -237,6 +246,61 @@ public class GetDevicePositionHistoryRequest extends com.amazonaws.AmazonWebServ
 
     public GetDevicePositionHistoryRequest withEndTimeExclusive(java.util.Date endTimeExclusive) {
         setEndTimeExclusive(endTimeExclusive);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An optional limit for the number of device positions returned in a single call.
+     * </p>
+     * <p>
+     * Default value: <code>100</code>
+     * </p>
+     * 
+     * @param maxResults
+     *        An optional limit for the number of device positions returned in a single call.</p>
+     *        <p>
+     *        Default value: <code>100</code>
+     */
+
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+    }
+
+    /**
+     * <p>
+     * An optional limit for the number of device positions returned in a single call.
+     * </p>
+     * <p>
+     * Default value: <code>100</code>
+     * </p>
+     * 
+     * @return An optional limit for the number of device positions returned in a single call.</p>
+     *         <p>
+     *         Default value: <code>100</code>
+     */
+
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * <p>
+     * An optional limit for the number of device positions returned in a single call.
+     * </p>
+     * <p>
+     * Default value: <code>100</code>
+     * </p>
+     * 
+     * @param maxResults
+     *        An optional limit for the number of device positions returned in a single call.</p>
+     *        <p>
+     *        Default value: <code>100</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetDevicePositionHistoryRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
         return this;
     }
 
@@ -472,6 +536,8 @@ public class GetDevicePositionHistoryRequest extends com.amazonaws.AmazonWebServ
             sb.append("DeviceId: ").append(getDeviceId()).append(",");
         if (getEndTimeExclusive() != null)
             sb.append("EndTimeExclusive: ").append(getEndTimeExclusive()).append(",");
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getStartTimeInclusive() != null)
@@ -500,6 +566,10 @@ public class GetDevicePositionHistoryRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getEndTimeExclusive() != null && other.getEndTimeExclusive().equals(this.getEndTimeExclusive()) == false)
             return false;
+        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+            return false;
+        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
+            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
@@ -522,6 +592,7 @@ public class GetDevicePositionHistoryRequest extends com.amazonaws.AmazonWebServ
 
         hashCode = prime * hashCode + ((getDeviceId() == null) ? 0 : getDeviceId().hashCode());
         hashCode = prime * hashCode + ((getEndTimeExclusive() == null) ? 0 : getEndTimeExclusive().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getStartTimeInclusive() == null) ? 0 : getStartTimeInclusive().hashCode());
         hashCode = prime * hashCode + ((getTrackerName() == null) ? 0 : getTrackerName().hashCode());

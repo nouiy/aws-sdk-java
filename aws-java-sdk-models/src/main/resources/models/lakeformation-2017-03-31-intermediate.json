@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientConstructors", "ClientMutationMethods", "EnumSetterOverload" ],
+    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientConstructors", "ClientMutationMethods" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -44703,17 +44703,8 @@
         "name" : "CREATE_TAG",
         "value" : "CREATE_TAG"
       }, {
-        "name" : "ALTER_TAG",
-        "value" : "ALTER_TAG"
-      }, {
-        "name" : "DELETE_TAG",
-        "value" : "DELETE_TAG"
-      }, {
-        "name" : "DESCRIBE_TAG",
-        "value" : "DESCRIBE_TAG"
-      }, {
-        "name" : "ASSOCIATE_TAG",
-        "value" : "ASSOCIATE_TAG"
+        "name" : "ASSOCIATE",
+        "value" : "ASSOCIATE"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.lakeformation.enum.Permission",
