@@ -85,8 +85,8 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * A list of tags that you want to attach to the newly created policy. For each tag in the list, you must specify
      * both a tag key and a value. You can set the value to an empty string, but you can't set it to <code>null</code>.
      * For more information about tagging, see <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS Organizations
-     * resources</a> in the AWS Organizations User Guide.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     * resources</a> in the Organizations User Guide.
      * </p>
      * <note>
      * <p>
@@ -583,8 +583,8 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * A list of tags that you want to attach to the newly created policy. For each tag in the list, you must specify
      * both a tag key and a value. You can set the value to an empty string, but you can't set it to <code>null</code>.
      * For more information about tagging, see <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS Organizations
-     * resources</a> in the AWS Organizations User Guide.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     * resources</a> in the Organizations User Guide.
      * </p>
      * <note>
      * <p>
@@ -596,8 +596,8 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * @return A list of tags that you want to attach to the newly created policy. For each tag in the list, you must
      *         specify both a tag key and a value. You can set the value to an empty string, but you can't set it to
      *         <code>null</code>. For more information about tagging, see <a
-     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS
-     *         Organizations resources</a> in the AWS Organizations User Guide.</p> <note>
+     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     *         resources</a> in the Organizations User Guide.</p> <note>
      *         <p>
      *         If any one of the tags is invalid or if you exceed the allowed number of tags for a policy, then the
      *         entire request fails and the policy is not created.
@@ -613,8 +613,8 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * A list of tags that you want to attach to the newly created policy. For each tag in the list, you must specify
      * both a tag key and a value. You can set the value to an empty string, but you can't set it to <code>null</code>.
      * For more information about tagging, see <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS Organizations
-     * resources</a> in the AWS Organizations User Guide.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     * resources</a> in the Organizations User Guide.
      * </p>
      * <note>
      * <p>
@@ -627,8 +627,8 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        A list of tags that you want to attach to the newly created policy. For each tag in the list, you must
      *        specify both a tag key and a value. You can set the value to an empty string, but you can't set it to
      *        <code>null</code>. For more information about tagging, see <a
-     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS
-     *        Organizations resources</a> in the AWS Organizations User Guide.</p> <note>
+     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     *        resources</a> in the Organizations User Guide.</p> <note>
      *        <p>
      *        If any one of the tags is invalid or if you exceed the allowed number of tags for a policy, then the
      *        entire request fails and the policy is not created.
@@ -649,8 +649,8 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * A list of tags that you want to attach to the newly created policy. For each tag in the list, you must specify
      * both a tag key and a value. You can set the value to an empty string, but you can't set it to <code>null</code>.
      * For more information about tagging, see <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS Organizations
-     * resources</a> in the AWS Organizations User Guide.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     * resources</a> in the Organizations User Guide.
      * </p>
      * <note>
      * <p>
@@ -668,8 +668,8 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        A list of tags that you want to attach to the newly created policy. For each tag in the list, you must
      *        specify both a tag key and a value. You can set the value to an empty string, but you can't set it to
      *        <code>null</code>. For more information about tagging, see <a
-     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS
-     *        Organizations resources</a> in the AWS Organizations User Guide.</p> <note>
+     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     *        resources</a> in the Organizations User Guide.</p> <note>
      *        <p>
      *        If any one of the tags is invalid or if you exceed the allowed number of tags for a policy, then the
      *        entire request fails and the policy is not created.
@@ -692,8 +692,8 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * A list of tags that you want to attach to the newly created policy. For each tag in the list, you must specify
      * both a tag key and a value. You can set the value to an empty string, but you can't set it to <code>null</code>.
      * For more information about tagging, see <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS Organizations
-     * resources</a> in the AWS Organizations User Guide.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     * resources</a> in the Organizations User Guide.
      * </p>
      * <note>
      * <p>
@@ -706,8 +706,8 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        A list of tags that you want to attach to the newly created policy. For each tag in the list, you must
      *        specify both a tag key and a value. You can set the value to an empty string, but you can't set it to
      *        <code>null</code>. For more information about tagging, see <a
-     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS
-     *        Organizations resources</a> in the AWS Organizations User Guide.</p> <note>
+     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     *        resources</a> in the Organizations User Guide.</p> <note>
      *        <p>
      *        If any one of the tags is invalid or if you exceed the allowed number of tags for a policy, then the
      *        entire request fails and the policy is not created.

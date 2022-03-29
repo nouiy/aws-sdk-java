@@ -34,12 +34,12 @@ public class DeregisterDelegatedAdministratorRequest extends com.amazonaws.Amazo
     private String accountId;
     /**
      * <p>
-     * The service principal name of an AWS service for which the account is a delegated administrator.
+     * The service principal name of an Amazon Web Services service for which the account is a delegated administrator.
      * </p>
      * <p>
-     * Delegated administrator privileges are revoked for only the specified AWS service from the member account. If the
-     * specified service is the only service for which the member account is a delegated administrator, the operation
-     * also revokes Organizations read action permissions.
+     * Delegated administrator privileges are revoked for only the specified Amazon Web Services service from the member
+     * account. If the specified service is the only service for which the member account is a delegated administrator,
+     * the operation also revokes Organizations read action permissions.
      * </p>
      */
     private String servicePrincipal;
@@ -92,20 +92,21 @@ public class DeregisterDelegatedAdministratorRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The service principal name of an AWS service for which the account is a delegated administrator.
+     * The service principal name of an Amazon Web Services service for which the account is a delegated administrator.
      * </p>
      * <p>
-     * Delegated administrator privileges are revoked for only the specified AWS service from the member account. If the
-     * specified service is the only service for which the member account is a delegated administrator, the operation
-     * also revokes Organizations read action permissions.
+     * Delegated administrator privileges are revoked for only the specified Amazon Web Services service from the member
+     * account. If the specified service is the only service for which the member account is a delegated administrator,
+     * the operation also revokes Organizations read action permissions.
      * </p>
      * 
      * @param servicePrincipal
-     *        The service principal name of an AWS service for which the account is a delegated administrator.</p>
+     *        The service principal name of an Amazon Web Services service for which the account is a delegated
+     *        administrator.</p>
      *        <p>
-     *        Delegated administrator privileges are revoked for only the specified AWS service from the member account.
-     *        If the specified service is the only service for which the member account is a delegated administrator,
-     *        the operation also revokes Organizations read action permissions.
+     *        Delegated administrator privileges are revoked for only the specified Amazon Web Services service from the
+     *        member account. If the specified service is the only service for which the member account is a delegated
+     *        administrator, the operation also revokes Organizations read action permissions.
      */
 
     public void setServicePrincipal(String servicePrincipal) {
@@ -114,19 +115,20 @@ public class DeregisterDelegatedAdministratorRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The service principal name of an AWS service for which the account is a delegated administrator.
+     * The service principal name of an Amazon Web Services service for which the account is a delegated administrator.
      * </p>
      * <p>
-     * Delegated administrator privileges are revoked for only the specified AWS service from the member account. If the
-     * specified service is the only service for which the member account is a delegated administrator, the operation
-     * also revokes Organizations read action permissions.
+     * Delegated administrator privileges are revoked for only the specified Amazon Web Services service from the member
+     * account. If the specified service is the only service for which the member account is a delegated administrator,
+     * the operation also revokes Organizations read action permissions.
      * </p>
      * 
-     * @return The service principal name of an AWS service for which the account is a delegated administrator.</p>
+     * @return The service principal name of an Amazon Web Services service for which the account is a delegated
+     *         administrator.</p>
      *         <p>
-     *         Delegated administrator privileges are revoked for only the specified AWS service from the member
-     *         account. If the specified service is the only service for which the member account is a delegated
-     *         administrator, the operation also revokes Organizations read action permissions.
+     *         Delegated administrator privileges are revoked for only the specified Amazon Web Services service from
+     *         the member account. If the specified service is the only service for which the member account is a
+     *         delegated administrator, the operation also revokes Organizations read action permissions.
      */
 
     public String getServicePrincipal() {
@@ -135,20 +137,21 @@ public class DeregisterDelegatedAdministratorRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The service principal name of an AWS service for which the account is a delegated administrator.
+     * The service principal name of an Amazon Web Services service for which the account is a delegated administrator.
      * </p>
      * <p>
-     * Delegated administrator privileges are revoked for only the specified AWS service from the member account. If the
-     * specified service is the only service for which the member account is a delegated administrator, the operation
-     * also revokes Organizations read action permissions.
+     * Delegated administrator privileges are revoked for only the specified Amazon Web Services service from the member
+     * account. If the specified service is the only service for which the member account is a delegated administrator,
+     * the operation also revokes Organizations read action permissions.
      * </p>
      * 
      * @param servicePrincipal
-     *        The service principal name of an AWS service for which the account is a delegated administrator.</p>
+     *        The service principal name of an Amazon Web Services service for which the account is a delegated
+     *        administrator.</p>
      *        <p>
-     *        Delegated administrator privileges are revoked for only the specified AWS service from the member account.
-     *        If the specified service is the only service for which the member account is a delegated administrator,
-     *        the operation also revokes Organizations read action permissions.
+     *        Delegated administrator privileges are revoked for only the specified Amazon Web Services service from the
+     *        member account. If the specified service is the only service for which the member account is a delegated
+     *        administrator, the operation also revokes Organizations read action permissions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

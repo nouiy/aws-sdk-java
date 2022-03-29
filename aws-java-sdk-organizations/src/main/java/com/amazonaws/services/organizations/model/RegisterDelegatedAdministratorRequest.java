@@ -33,7 +33,8 @@ public class RegisterDelegatedAdministratorRequest extends com.amazonaws.AmazonW
     private String accountId;
     /**
      * <p>
-     * The service principal of the AWS service for which you want to make the member account a delegated administrator.
+     * The service principal of the Amazon Web Services service for which you want to make the member account a
+     * delegated administrator.
      * </p>
      */
     private String servicePrincipal;
@@ -80,12 +81,13 @@ public class RegisterDelegatedAdministratorRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The service principal of the AWS service for which you want to make the member account a delegated administrator.
+     * The service principal of the Amazon Web Services service for which you want to make the member account a
+     * delegated administrator.
      * </p>
      * 
      * @param servicePrincipal
-     *        The service principal of the AWS service for which you want to make the member account a delegated
-     *        administrator.
+     *        The service principal of the Amazon Web Services service for which you want to make the member account a
+     *        delegated administrator.
      */
 
     public void setServicePrincipal(String servicePrincipal) {
@@ -94,11 +96,12 @@ public class RegisterDelegatedAdministratorRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The service principal of the AWS service for which you want to make the member account a delegated administrator.
+     * The service principal of the Amazon Web Services service for which you want to make the member account a
+     * delegated administrator.
      * </p>
      * 
-     * @return The service principal of the AWS service for which you want to make the member account a delegated
-     *         administrator.
+     * @return The service principal of the Amazon Web Services service for which you want to make the member account a
+     *         delegated administrator.
      */
 
     public String getServicePrincipal() {
@@ -107,12 +110,13 @@ public class RegisterDelegatedAdministratorRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The service principal of the AWS service for which you want to make the member account a delegated administrator.
+     * The service principal of the Amazon Web Services service for which you want to make the member account a
+     * delegated administrator.
      * </p>
      * 
      * @param servicePrincipal
-     *        The service principal of the AWS service for which you want to make the member account a delegated
-     *        administrator.
+     *        The service principal of the Amazon Web Services service for which you want to make the member account a
+     *        delegated administrator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

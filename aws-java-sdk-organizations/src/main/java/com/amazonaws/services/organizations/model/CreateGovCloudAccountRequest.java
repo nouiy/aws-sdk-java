@@ -27,12 +27,63 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The email address of the owner to assign to the new member account in the commercial Region. This email address
-     * must not already be associated with another AWS account. You must use a valid email address to complete account
-     * creation. You can't access the root user of the account or remove an account that was created with an invalid
-     * email address. Like all request parameters for <code>CreateGovCloudAccount</code>, the request for the email
-     * address for the AWS GovCloud (US) account originates from the commercial Region, not from the AWS GovCloud (US)
-     * Region.
+     * Specifies the email address of the owner to assign to the new member account in the commercial Region. This email
+     * address must not already be associated with another Amazon Web Services account. You must use a valid email
+     * address to complete account creation.
+     * </p>
+     * <p>
+     * The rules for a valid email address:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The address must be a minimum of 6 and a maximum of 64 characters long.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * All characters must be 7-bit ASCII characters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * There must be one and only one @ symbol, which separates the local name from the domain name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The local name can't contain any of the following characters:
+     * </p>
+     * <p>
+     * whitespace, " ' ( ) &lt; &gt; [ ] : ; , \ | % &amp;
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The local name can't begin with a dot (.)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The domain name can consist of only the characters [a-z],[A-Z],[0-9], hyphen (-), or dot (.)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The domain name can't begin or end with a hyphen (-) or dot (.)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The domain name must contain at least one dot
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can't access the root user of the account or remove an account that was created with an invalid email
+     * address. Like all request parameters for <code>CreateGovCloudAccount</code>, the request for the email address
+     * for the Amazon Web Services GovCloud (US) account originates from the commercial Region, not from the Amazon Web
+     * Services GovCloud (US) Region.
      * </p>
      */
     private String email;
@@ -47,10 +98,10 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * (Optional)
      * </p>
      * <p>
-     * The name of an IAM role that AWS Organizations automatically preconfigures in the new member accounts in both the
-     * AWS GovCloud (US) Region and in the commercial Region. This role trusts the management account, allowing users in
-     * the management account to assume the role, as permitted by the management account administrator. The role has
-     * administrator permissions in the new member account.
+     * The name of an IAM role that Organizations automatically preconfigures in the new member accounts in both the
+     * Amazon Web Services GovCloud (US) Region and in the commercial Region. This role trusts the management account,
+     * allowing users in the management account to assume the role, as permitted by the management account
+     * administrator. The role has administrator permissions in the new member account.
      * </p>
      * <p>
      * If you don't specify this parameter, the role name defaults to <code>OrganizationAccountAccessRole</code>.
@@ -58,10 +109,10 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * <p>
      * For more information about how to use this role to access the member account, see <a href=
      * "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_access.html#orgs_manage_accounts_create-cross-account-role"
-     * >Accessing and Administering the Member Accounts in Your Organization</a> in the <i>AWS Organizations User
-     * Guide</i> and steps 2 and 3 in <a
+     * >Accessing and Administering the Member Accounts in Your Organization</a> in the <i>Organizations User Guide</i>
+     * and steps 2 and 3 in <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html">Tutorial: Delegate
-     * Access Across AWS Accounts Using IAM Roles</a> in the <i>IAM User Guide.</i>
+     * Access Across Amazon Web Services accounts Using IAM Roles</a> in the <i>IAM User Guide.</i>
      * </p>
      * <p>
      * The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> that is used to validate this parameter. The
@@ -76,8 +127,8 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * billing information <i>if</i> they have the required permissions. If set to <code>DENY</code>, only the root user
      * of the new account can access account billing information. For more information, see <a href=
      * "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate"
-     * >Activating Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User
-     * Guide.</i>
+     * >Activating Access to the Billing and Cost Management Console</a> in the <i>Amazon Web Services Billing and Cost
+     * Management User Guide.</i>
      * </p>
      * <p>
      * If you don't specify this parameter, the value defaults to <code>ALLOW</code>, and IAM users and roles with the
@@ -95,13 +146,13 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * <p>
      * For each tag in the list, you must specify both a tag key and a value. You can set the value to an empty string,
      * but you can't set it to <code>null</code>. For more information about tagging, see <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS Organizations
-     * resources</a> in the AWS Organizations User Guide.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     * resources</a> in the Organizations User Guide.
      * </p>
      * <note>
      * <p>
-     * If any one of the tags is invalid or if you exceed the allowed number of tags for an account, then the entire
-     * request fails and the account is not created.
+     * If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account, then the
+     * entire request fails and the account is not created.
      * </p>
      * </note>
      */
@@ -109,21 +160,122 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The email address of the owner to assign to the new member account in the commercial Region. This email address
-     * must not already be associated with another AWS account. You must use a valid email address to complete account
-     * creation. You can't access the root user of the account or remove an account that was created with an invalid
-     * email address. Like all request parameters for <code>CreateGovCloudAccount</code>, the request for the email
-     * address for the AWS GovCloud (US) account originates from the commercial Region, not from the AWS GovCloud (US)
-     * Region.
+     * Specifies the email address of the owner to assign to the new member account in the commercial Region. This email
+     * address must not already be associated with another Amazon Web Services account. You must use a valid email
+     * address to complete account creation.
+     * </p>
+     * <p>
+     * The rules for a valid email address:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The address must be a minimum of 6 and a maximum of 64 characters long.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * All characters must be 7-bit ASCII characters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * There must be one and only one @ symbol, which separates the local name from the domain name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The local name can't contain any of the following characters:
+     * </p>
+     * <p>
+     * whitespace, " ' ( ) &lt; &gt; [ ] : ; , \ | % &amp;
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The local name can't begin with a dot (.)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The domain name can consist of only the characters [a-z],[A-Z],[0-9], hyphen (-), or dot (.)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The domain name can't begin or end with a hyphen (-) or dot (.)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The domain name must contain at least one dot
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can't access the root user of the account or remove an account that was created with an invalid email
+     * address. Like all request parameters for <code>CreateGovCloudAccount</code>, the request for the email address
+     * for the Amazon Web Services GovCloud (US) account originates from the commercial Region, not from the Amazon Web
+     * Services GovCloud (US) Region.
      * </p>
      * 
      * @param email
-     *        The email address of the owner to assign to the new member account in the commercial Region. This email
-     *        address must not already be associated with another AWS account. You must use a valid email address to
-     *        complete account creation. You can't access the root user of the account or remove an account that was
-     *        created with an invalid email address. Like all request parameters for <code>CreateGovCloudAccount</code>,
-     *        the request for the email address for the AWS GovCloud (US) account originates from the commercial Region,
-     *        not from the AWS GovCloud (US) Region.
+     *        Specifies the email address of the owner to assign to the new member account in the commercial Region.
+     *        This email address must not already be associated with another Amazon Web Services account. You must use a
+     *        valid email address to complete account creation.</p>
+     *        <p>
+     *        The rules for a valid email address:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The address must be a minimum of 6 and a maximum of 64 characters long.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        All characters must be 7-bit ASCII characters.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        There must be one and only one @ symbol, which separates the local name from the domain name.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The local name can't contain any of the following characters:
+     *        </p>
+     *        <p>
+     *        whitespace, " ' ( ) &lt; &gt; [ ] : ; , \ | % &amp;
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The local name can't begin with a dot (.)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The domain name can consist of only the characters [a-z],[A-Z],[0-9], hyphen (-), or dot (.)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The domain name can't begin or end with a hyphen (-) or dot (.)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The domain name must contain at least one dot
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        You can't access the root user of the account or remove an account that was created with an invalid email
+     *        address. Like all request parameters for <code>CreateGovCloudAccount</code>, the request for the email
+     *        address for the Amazon Web Services GovCloud (US) account originates from the commercial Region, not from
+     *        the Amazon Web Services GovCloud (US) Region.
      */
 
     public void setEmail(String email) {
@@ -132,20 +284,121 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The email address of the owner to assign to the new member account in the commercial Region. This email address
-     * must not already be associated with another AWS account. You must use a valid email address to complete account
-     * creation. You can't access the root user of the account or remove an account that was created with an invalid
-     * email address. Like all request parameters for <code>CreateGovCloudAccount</code>, the request for the email
-     * address for the AWS GovCloud (US) account originates from the commercial Region, not from the AWS GovCloud (US)
-     * Region.
+     * Specifies the email address of the owner to assign to the new member account in the commercial Region. This email
+     * address must not already be associated with another Amazon Web Services account. You must use a valid email
+     * address to complete account creation.
+     * </p>
+     * <p>
+     * The rules for a valid email address:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The address must be a minimum of 6 and a maximum of 64 characters long.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * All characters must be 7-bit ASCII characters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * There must be one and only one @ symbol, which separates the local name from the domain name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The local name can't contain any of the following characters:
+     * </p>
+     * <p>
+     * whitespace, " ' ( ) &lt; &gt; [ ] : ; , \ | % &amp;
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The local name can't begin with a dot (.)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The domain name can consist of only the characters [a-z],[A-Z],[0-9], hyphen (-), or dot (.)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The domain name can't begin or end with a hyphen (-) or dot (.)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The domain name must contain at least one dot
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can't access the root user of the account or remove an account that was created with an invalid email
+     * address. Like all request parameters for <code>CreateGovCloudAccount</code>, the request for the email address
+     * for the Amazon Web Services GovCloud (US) account originates from the commercial Region, not from the Amazon Web
+     * Services GovCloud (US) Region.
      * </p>
      * 
-     * @return The email address of the owner to assign to the new member account in the commercial Region. This email
-     *         address must not already be associated with another AWS account. You must use a valid email address to
-     *         complete account creation. You can't access the root user of the account or remove an account that was
-     *         created with an invalid email address. Like all request parameters for <code>CreateGovCloudAccount</code>
-     *         , the request for the email address for the AWS GovCloud (US) account originates from the commercial
-     *         Region, not from the AWS GovCloud (US) Region.
+     * @return Specifies the email address of the owner to assign to the new member account in the commercial Region.
+     *         This email address must not already be associated with another Amazon Web Services account. You must use
+     *         a valid email address to complete account creation.</p>
+     *         <p>
+     *         The rules for a valid email address:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The address must be a minimum of 6 and a maximum of 64 characters long.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         All characters must be 7-bit ASCII characters.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         There must be one and only one @ symbol, which separates the local name from the domain name.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The local name can't contain any of the following characters:
+     *         </p>
+     *         <p>
+     *         whitespace, " ' ( ) &lt; &gt; [ ] : ; , \ | % &amp;
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The local name can't begin with a dot (.)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The domain name can consist of only the characters [a-z],[A-Z],[0-9], hyphen (-), or dot (.)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The domain name can't begin or end with a hyphen (-) or dot (.)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The domain name must contain at least one dot
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         You can't access the root user of the account or remove an account that was created with an invalid email
+     *         address. Like all request parameters for <code>CreateGovCloudAccount</code>, the request for the email
+     *         address for the Amazon Web Services GovCloud (US) account originates from the commercial Region, not from
+     *         the Amazon Web Services GovCloud (US) Region.
      */
 
     public String getEmail() {
@@ -154,21 +407,122 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The email address of the owner to assign to the new member account in the commercial Region. This email address
-     * must not already be associated with another AWS account. You must use a valid email address to complete account
-     * creation. You can't access the root user of the account or remove an account that was created with an invalid
-     * email address. Like all request parameters for <code>CreateGovCloudAccount</code>, the request for the email
-     * address for the AWS GovCloud (US) account originates from the commercial Region, not from the AWS GovCloud (US)
-     * Region.
+     * Specifies the email address of the owner to assign to the new member account in the commercial Region. This email
+     * address must not already be associated with another Amazon Web Services account. You must use a valid email
+     * address to complete account creation.
+     * </p>
+     * <p>
+     * The rules for a valid email address:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The address must be a minimum of 6 and a maximum of 64 characters long.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * All characters must be 7-bit ASCII characters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * There must be one and only one @ symbol, which separates the local name from the domain name.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The local name can't contain any of the following characters:
+     * </p>
+     * <p>
+     * whitespace, " ' ( ) &lt; &gt; [ ] : ; , \ | % &amp;
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The local name can't begin with a dot (.)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The domain name can consist of only the characters [a-z],[A-Z],[0-9], hyphen (-), or dot (.)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The domain name can't begin or end with a hyphen (-) or dot (.)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The domain name must contain at least one dot
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * You can't access the root user of the account or remove an account that was created with an invalid email
+     * address. Like all request parameters for <code>CreateGovCloudAccount</code>, the request for the email address
+     * for the Amazon Web Services GovCloud (US) account originates from the commercial Region, not from the Amazon Web
+     * Services GovCloud (US) Region.
      * </p>
      * 
      * @param email
-     *        The email address of the owner to assign to the new member account in the commercial Region. This email
-     *        address must not already be associated with another AWS account. You must use a valid email address to
-     *        complete account creation. You can't access the root user of the account or remove an account that was
-     *        created with an invalid email address. Like all request parameters for <code>CreateGovCloudAccount</code>,
-     *        the request for the email address for the AWS GovCloud (US) account originates from the commercial Region,
-     *        not from the AWS GovCloud (US) Region.
+     *        Specifies the email address of the owner to assign to the new member account in the commercial Region.
+     *        This email address must not already be associated with another Amazon Web Services account. You must use a
+     *        valid email address to complete account creation.</p>
+     *        <p>
+     *        The rules for a valid email address:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The address must be a minimum of 6 and a maximum of 64 characters long.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        All characters must be 7-bit ASCII characters.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        There must be one and only one @ symbol, which separates the local name from the domain name.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The local name can't contain any of the following characters:
+     *        </p>
+     *        <p>
+     *        whitespace, " ' ( ) &lt; &gt; [ ] : ; , \ | % &amp;
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The local name can't begin with a dot (.)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The domain name can consist of only the characters [a-z],[A-Z],[0-9], hyphen (-), or dot (.)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The domain name can't begin or end with a hyphen (-) or dot (.)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The domain name must contain at least one dot
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        You can't access the root user of the account or remove an account that was created with an invalid email
+     *        address. Like all request parameters for <code>CreateGovCloudAccount</code>, the request for the email
+     *        address for the Amazon Web Services GovCloud (US) account originates from the commercial Region, not from
+     *        the Amazon Web Services GovCloud (US) Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -222,10 +576,10 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * (Optional)
      * </p>
      * <p>
-     * The name of an IAM role that AWS Organizations automatically preconfigures in the new member accounts in both the
-     * AWS GovCloud (US) Region and in the commercial Region. This role trusts the management account, allowing users in
-     * the management account to assume the role, as permitted by the management account administrator. The role has
-     * administrator permissions in the new member account.
+     * The name of an IAM role that Organizations automatically preconfigures in the new member accounts in both the
+     * Amazon Web Services GovCloud (US) Region and in the commercial Region. This role trusts the management account,
+     * allowing users in the management account to assume the role, as permitted by the management account
+     * administrator. The role has administrator permissions in the new member account.
      * </p>
      * <p>
      * If you don't specify this parameter, the role name defaults to <code>OrganizationAccountAccessRole</code>.
@@ -233,10 +587,10 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * <p>
      * For more information about how to use this role to access the member account, see <a href=
      * "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_access.html#orgs_manage_accounts_create-cross-account-role"
-     * >Accessing and Administering the Member Accounts in Your Organization</a> in the <i>AWS Organizations User
-     * Guide</i> and steps 2 and 3 in <a
+     * >Accessing and Administering the Member Accounts in Your Organization</a> in the <i>Organizations User Guide</i>
+     * and steps 2 and 3 in <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html">Tutorial: Delegate
-     * Access Across AWS Accounts Using IAM Roles</a> in the <i>IAM User Guide.</i>
+     * Access Across Amazon Web Services accounts Using IAM Roles</a> in the <i>IAM User Guide.</i>
      * </p>
      * <p>
      * The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> that is used to validate this parameter. The
@@ -247,10 +601,10 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * @param roleName
      *        (Optional)</p>
      *        <p>
-     *        The name of an IAM role that AWS Organizations automatically preconfigures in the new member accounts in
-     *        both the AWS GovCloud (US) Region and in the commercial Region. This role trusts the management account,
-     *        allowing users in the management account to assume the role, as permitted by the management account
-     *        administrator. The role has administrator permissions in the new member account.
+     *        The name of an IAM role that Organizations automatically preconfigures in the new member accounts in both
+     *        the Amazon Web Services GovCloud (US) Region and in the commercial Region. This role trusts the management
+     *        account, allowing users in the management account to assume the role, as permitted by the management
+     *        account administrator. The role has administrator permissions in the new member account.
      *        </p>
      *        <p>
      *        If you don't specify this parameter, the role name defaults to <code>OrganizationAccountAccessRole</code>.
@@ -258,10 +612,10 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      *        <p>
      *        For more information about how to use this role to access the member account, see <a href=
      *        "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_access.html#orgs_manage_accounts_create-cross-account-role"
-     *        >Accessing and Administering the Member Accounts in Your Organization</a> in the <i>AWS Organizations User
+     *        >Accessing and Administering the Member Accounts in Your Organization</a> in the <i>Organizations User
      *        Guide</i> and steps 2 and 3 in <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html">Tutorial:
-     *        Delegate Access Across AWS Accounts Using IAM Roles</a> in the <i>IAM User Guide.</i>
+     *        Delegate Access Across Amazon Web Services accounts Using IAM Roles</a> in the <i>IAM User Guide.</i>
      *        </p>
      *        <p>
      *        The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> that is used to validate this parameter.
@@ -278,10 +632,10 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * (Optional)
      * </p>
      * <p>
-     * The name of an IAM role that AWS Organizations automatically preconfigures in the new member accounts in both the
-     * AWS GovCloud (US) Region and in the commercial Region. This role trusts the management account, allowing users in
-     * the management account to assume the role, as permitted by the management account administrator. The role has
-     * administrator permissions in the new member account.
+     * The name of an IAM role that Organizations automatically preconfigures in the new member accounts in both the
+     * Amazon Web Services GovCloud (US) Region and in the commercial Region. This role trusts the management account,
+     * allowing users in the management account to assume the role, as permitted by the management account
+     * administrator. The role has administrator permissions in the new member account.
      * </p>
      * <p>
      * If you don't specify this parameter, the role name defaults to <code>OrganizationAccountAccessRole</code>.
@@ -289,10 +643,10 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * <p>
      * For more information about how to use this role to access the member account, see <a href=
      * "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_access.html#orgs_manage_accounts_create-cross-account-role"
-     * >Accessing and Administering the Member Accounts in Your Organization</a> in the <i>AWS Organizations User
-     * Guide</i> and steps 2 and 3 in <a
+     * >Accessing and Administering the Member Accounts in Your Organization</a> in the <i>Organizations User Guide</i>
+     * and steps 2 and 3 in <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html">Tutorial: Delegate
-     * Access Across AWS Accounts Using IAM Roles</a> in the <i>IAM User Guide.</i>
+     * Access Across Amazon Web Services accounts Using IAM Roles</a> in the <i>IAM User Guide.</i>
      * </p>
      * <p>
      * The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> that is used to validate this parameter. The
@@ -302,10 +656,10 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * 
      * @return (Optional)</p>
      *         <p>
-     *         The name of an IAM role that AWS Organizations automatically preconfigures in the new member accounts in
-     *         both the AWS GovCloud (US) Region and in the commercial Region. This role trusts the management account,
-     *         allowing users in the management account to assume the role, as permitted by the management account
-     *         administrator. The role has administrator permissions in the new member account.
+     *         The name of an IAM role that Organizations automatically preconfigures in the new member accounts in both
+     *         the Amazon Web Services GovCloud (US) Region and in the commercial Region. This role trusts the
+     *         management account, allowing users in the management account to assume the role, as permitted by the
+     *         management account administrator. The role has administrator permissions in the new member account.
      *         </p>
      *         <p>
      *         If you don't specify this parameter, the role name defaults to <code>OrganizationAccountAccessRole</code>
@@ -314,10 +668,10 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      *         <p>
      *         For more information about how to use this role to access the member account, see <a href=
      *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_access.html#orgs_manage_accounts_create-cross-account-role"
-     *         >Accessing and Administering the Member Accounts in Your Organization</a> in the <i>AWS Organizations
-     *         User Guide</i> and steps 2 and 3 in <a
+     *         >Accessing and Administering the Member Accounts in Your Organization</a> in the <i>Organizations User
+     *         Guide</i> and steps 2 and 3 in <a
      *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html">Tutorial:
-     *         Delegate Access Across AWS Accounts Using IAM Roles</a> in the <i>IAM User Guide.</i>
+     *         Delegate Access Across Amazon Web Services accounts Using IAM Roles</a> in the <i>IAM User Guide.</i>
      *         </p>
      *         <p>
      *         The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> that is used to validate this parameter.
@@ -334,10 +688,10 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * (Optional)
      * </p>
      * <p>
-     * The name of an IAM role that AWS Organizations automatically preconfigures in the new member accounts in both the
-     * AWS GovCloud (US) Region and in the commercial Region. This role trusts the management account, allowing users in
-     * the management account to assume the role, as permitted by the management account administrator. The role has
-     * administrator permissions in the new member account.
+     * The name of an IAM role that Organizations automatically preconfigures in the new member accounts in both the
+     * Amazon Web Services GovCloud (US) Region and in the commercial Region. This role trusts the management account,
+     * allowing users in the management account to assume the role, as permitted by the management account
+     * administrator. The role has administrator permissions in the new member account.
      * </p>
      * <p>
      * If you don't specify this parameter, the role name defaults to <code>OrganizationAccountAccessRole</code>.
@@ -345,10 +699,10 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * <p>
      * For more information about how to use this role to access the member account, see <a href=
      * "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_access.html#orgs_manage_accounts_create-cross-account-role"
-     * >Accessing and Administering the Member Accounts in Your Organization</a> in the <i>AWS Organizations User
-     * Guide</i> and steps 2 and 3 in <a
+     * >Accessing and Administering the Member Accounts in Your Organization</a> in the <i>Organizations User Guide</i>
+     * and steps 2 and 3 in <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html">Tutorial: Delegate
-     * Access Across AWS Accounts Using IAM Roles</a> in the <i>IAM User Guide.</i>
+     * Access Across Amazon Web Services accounts Using IAM Roles</a> in the <i>IAM User Guide.</i>
      * </p>
      * <p>
      * The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> that is used to validate this parameter. The
@@ -359,10 +713,10 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * @param roleName
      *        (Optional)</p>
      *        <p>
-     *        The name of an IAM role that AWS Organizations automatically preconfigures in the new member accounts in
-     *        both the AWS GovCloud (US) Region and in the commercial Region. This role trusts the management account,
-     *        allowing users in the management account to assume the role, as permitted by the management account
-     *        administrator. The role has administrator permissions in the new member account.
+     *        The name of an IAM role that Organizations automatically preconfigures in the new member accounts in both
+     *        the Amazon Web Services GovCloud (US) Region and in the commercial Region. This role trusts the management
+     *        account, allowing users in the management account to assume the role, as permitted by the management
+     *        account administrator. The role has administrator permissions in the new member account.
      *        </p>
      *        <p>
      *        If you don't specify this parameter, the role name defaults to <code>OrganizationAccountAccessRole</code>.
@@ -370,10 +724,10 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      *        <p>
      *        For more information about how to use this role to access the member account, see <a href=
      *        "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_access.html#orgs_manage_accounts_create-cross-account-role"
-     *        >Accessing and Administering the Member Accounts in Your Organization</a> in the <i>AWS Organizations User
+     *        >Accessing and Administering the Member Accounts in Your Organization</a> in the <i>Organizations User
      *        Guide</i> and steps 2 and 3 in <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html">Tutorial:
-     *        Delegate Access Across AWS Accounts Using IAM Roles</a> in the <i>IAM User Guide.</i>
+     *        Delegate Access Across Amazon Web Services accounts Using IAM Roles</a> in the <i>IAM User Guide.</i>
      *        </p>
      *        <p>
      *        The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> that is used to validate this parameter.
@@ -393,8 +747,8 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * billing information <i>if</i> they have the required permissions. If set to <code>DENY</code>, only the root user
      * of the new account can access account billing information. For more information, see <a href=
      * "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate"
-     * >Activating Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User
-     * Guide.</i>
+     * >Activating Access to the Billing and Cost Management Console</a> in the <i>Amazon Web Services Billing and Cost
+     * Management User Guide.</i>
      * </p>
      * <p>
      * If you don't specify this parameter, the value defaults to <code>ALLOW</code>, and IAM users and roles with the
@@ -407,8 +761,8 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      *        only the root user of the new account can access account billing information. For more information, see <a
      *        href=
      *        "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate"
-     *        >Activating Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost
-     *        Management User Guide.</i> </p>
+     *        >Activating Access to the Billing and Cost Management Console</a> in the <i>Amazon Web Services Billing
+     *        and Cost Management User Guide.</i> </p>
      *        <p>
      *        If you don't specify this parameter, the value defaults to <code>ALLOW</code>, and IAM users and roles
      *        with the required permissions can access billing information for the new account.
@@ -425,8 +779,8 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * billing information <i>if</i> they have the required permissions. If set to <code>DENY</code>, only the root user
      * of the new account can access account billing information. For more information, see <a href=
      * "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate"
-     * >Activating Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User
-     * Guide.</i>
+     * >Activating Access to the Billing and Cost Management Console</a> in the <i>Amazon Web Services Billing and Cost
+     * Management User Guide.</i>
      * </p>
      * <p>
      * If you don't specify this parameter, the value defaults to <code>ALLOW</code>, and IAM users and roles with the
@@ -438,8 +792,8 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      *         only the root user of the new account can access account billing information. For more information, see
      *         <a href=
      *         "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate"
-     *         >Activating Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost
-     *         Management User Guide.</i> </p>
+     *         >Activating Access to the Billing and Cost Management Console</a> in the <i>Amazon Web Services Billing
+     *         and Cost Management User Guide.</i> </p>
      *         <p>
      *         If you don't specify this parameter, the value defaults to <code>ALLOW</code>, and IAM users and roles
      *         with the required permissions can access billing information for the new account.
@@ -456,8 +810,8 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * billing information <i>if</i> they have the required permissions. If set to <code>DENY</code>, only the root user
      * of the new account can access account billing information. For more information, see <a href=
      * "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate"
-     * >Activating Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User
-     * Guide.</i>
+     * >Activating Access to the Billing and Cost Management Console</a> in the <i>Amazon Web Services Billing and Cost
+     * Management User Guide.</i>
      * </p>
      * <p>
      * If you don't specify this parameter, the value defaults to <code>ALLOW</code>, and IAM users and roles with the
@@ -470,8 +824,8 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      *        only the root user of the new account can access account billing information. For more information, see <a
      *        href=
      *        "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate"
-     *        >Activating Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost
-     *        Management User Guide.</i> </p>
+     *        >Activating Access to the Billing and Cost Management Console</a> in the <i>Amazon Web Services Billing
+     *        and Cost Management User Guide.</i> </p>
      *        <p>
      *        If you don't specify this parameter, the value defaults to <code>ALLOW</code>, and IAM users and roles
      *        with the required permissions can access billing information for the new account.
@@ -490,8 +844,8 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * billing information <i>if</i> they have the required permissions. If set to <code>DENY</code>, only the root user
      * of the new account can access account billing information. For more information, see <a href=
      * "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate"
-     * >Activating Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User
-     * Guide.</i>
+     * >Activating Access to the Billing and Cost Management Console</a> in the <i>Amazon Web Services Billing and Cost
+     * Management User Guide.</i>
      * </p>
      * <p>
      * If you don't specify this parameter, the value defaults to <code>ALLOW</code>, and IAM users and roles with the
@@ -504,8 +858,8 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      *        only the root user of the new account can access account billing information. For more information, see <a
      *        href=
      *        "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate"
-     *        >Activating Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost
-     *        Management User Guide.</i> </p>
+     *        >Activating Access to the Billing and Cost Management Console</a> in the <i>Amazon Web Services Billing
+     *        and Cost Management User Guide.</i> </p>
      *        <p>
      *        If you don't specify this parameter, the value defaults to <code>ALLOW</code>, and IAM users and roles
      *        with the required permissions can access billing information for the new account.
@@ -528,13 +882,13 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * <p>
      * For each tag in the list, you must specify both a tag key and a value. You can set the value to an empty string,
      * but you can't set it to <code>null</code>. For more information about tagging, see <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS Organizations
-     * resources</a> in the AWS Organizations User Guide.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     * resources</a> in the Organizations User Guide.
      * </p>
      * <note>
      * <p>
-     * If any one of the tags is invalid or if you exceed the allowed number of tags for an account, then the entire
-     * request fails and the account is not created.
+     * If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account, then the
+     * entire request fails and the account is not created.
      * </p>
      * </note>
      * 
@@ -545,13 +899,13 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      *         <p>
      *         For each tag in the list, you must specify both a tag key and a value. You can set the value to an empty
      *         string, but you can't set it to <code>null</code>. For more information about tagging, see <a
-     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS
-     *         Organizations resources</a> in the AWS Organizations User Guide.
+     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     *         resources</a> in the Organizations User Guide.
      *         </p>
      *         <note>
      *         <p>
-     *         If any one of the tags is invalid or if you exceed the allowed number of tags for an account, then the
-     *         entire request fails and the account is not created.
+     *         If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account,
+     *         then the entire request fails and the account is not created.
      *         </p>
      */
 
@@ -569,13 +923,13 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * <p>
      * For each tag in the list, you must specify both a tag key and a value. You can set the value to an empty string,
      * but you can't set it to <code>null</code>. For more information about tagging, see <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS Organizations
-     * resources</a> in the AWS Organizations User Guide.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     * resources</a> in the Organizations User Guide.
      * </p>
      * <note>
      * <p>
-     * If any one of the tags is invalid or if you exceed the allowed number of tags for an account, then the entire
-     * request fails and the account is not created.
+     * If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account, then the
+     * entire request fails and the account is not created.
      * </p>
      * </note>
      * 
@@ -587,13 +941,13 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      *        <p>
      *        For each tag in the list, you must specify both a tag key and a value. You can set the value to an empty
      *        string, but you can't set it to <code>null</code>. For more information about tagging, see <a
-     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS
-     *        Organizations resources</a> in the AWS Organizations User Guide.
+     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     *        resources</a> in the Organizations User Guide.
      *        </p>
      *        <note>
      *        <p>
-     *        If any one of the tags is invalid or if you exceed the allowed number of tags for an account, then the
-     *        entire request fails and the account is not created.
+     *        If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account, then
+     *        the entire request fails and the account is not created.
      *        </p>
      */
 
@@ -616,13 +970,13 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * <p>
      * For each tag in the list, you must specify both a tag key and a value. You can set the value to an empty string,
      * but you can't set it to <code>null</code>. For more information about tagging, see <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS Organizations
-     * resources</a> in the AWS Organizations User Guide.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     * resources</a> in the Organizations User Guide.
      * </p>
      * <note>
      * <p>
-     * If any one of the tags is invalid or if you exceed the allowed number of tags for an account, then the entire
-     * request fails and the account is not created.
+     * If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account, then the
+     * entire request fails and the account is not created.
      * </p>
      * </note>
      * <p>
@@ -639,13 +993,13 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      *        <p>
      *        For each tag in the list, you must specify both a tag key and a value. You can set the value to an empty
      *        string, but you can't set it to <code>null</code>. For more information about tagging, see <a
-     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS
-     *        Organizations resources</a> in the AWS Organizations User Guide.
+     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     *        resources</a> in the Organizations User Guide.
      *        </p>
      *        <note>
      *        <p>
-     *        If any one of the tags is invalid or if you exceed the allowed number of tags for an account, then the
-     *        entire request fails and the account is not created.
+     *        If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account, then
+     *        the entire request fails and the account is not created.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -670,13 +1024,13 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * <p>
      * For each tag in the list, you must specify both a tag key and a value. You can set the value to an empty string,
      * but you can't set it to <code>null</code>. For more information about tagging, see <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS Organizations
-     * resources</a> in the AWS Organizations User Guide.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     * resources</a> in the Organizations User Guide.
      * </p>
      * <note>
      * <p>
-     * If any one of the tags is invalid or if you exceed the allowed number of tags for an account, then the entire
-     * request fails and the account is not created.
+     * If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account, then the
+     * entire request fails and the account is not created.
      * </p>
      * </note>
      * 
@@ -688,13 +1042,13 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      *        <p>
      *        For each tag in the list, you must specify both a tag key and a value. You can set the value to an empty
      *        string, but you can't set it to <code>null</code>. For more information about tagging, see <a
-     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS
-     *        Organizations resources</a> in the AWS Organizations User Guide.
+     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     *        resources</a> in the Organizations User Guide.
      *        </p>
      *        <note>
      *        <p>
-     *        If any one of the tags is invalid or if you exceed the allowed number of tags for an account, then the
-     *        entire request fails and the account is not created.
+     *        If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account, then
+     *        the entire request fails and the account is not created.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

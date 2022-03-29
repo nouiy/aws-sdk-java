@@ -47,7 +47,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      */
     private String arn;
@@ -57,7 +57,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      * are enabled and policies can be applied to accounts in the organization. If set to "CONSOLIDATED_BILLING", then
      * only consolidated billing functionality is available. For more information, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html"
-     * >Enabling All Features in Your Organization</a> in the <i>AWS Organizations User Guide</i>.
+     * >Enabling All Features in Your Organization</a> in the <i>Organizations User Guide</i>.
      * </p>
      */
     private String featureSet;
@@ -68,7 +68,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      */
     private String masterAccountArn;
@@ -84,8 +84,8 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
     private String masterAccountId;
     /**
      * <p>
-     * The email address that is associated with the AWS account that is designated as the management account for the
-     * organization.
+     * The email address that is associated with the Amazon Web Services account that is designated as the management
+     * account for the organization.
      * </p>
      */
     private String masterAccountEmail;
@@ -171,7 +171,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      * 
      * @param arn
@@ -179,7 +179,8 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information about ARNs in Organizations, see <a href=
      *        "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     *        >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     *        >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization
+     *        Reference</i>.
      */
 
     public void setArn(String arn) {
@@ -193,14 +194,15 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of an organization.</p>
      *         <p>
      *         For more information about ARNs in Organizations, see <a href=
      *         "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     *         >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     *         >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization
+     *         Reference</i>.
      */
 
     public String getArn() {
@@ -214,7 +216,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      * 
      * @param arn
@@ -222,7 +224,8 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information about ARNs in Organizations, see <a href=
      *        "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     *        >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     *        >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization
+     *        Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -237,7 +240,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      * are enabled and policies can be applied to accounts in the organization. If set to "CONSOLIDATED_BILLING", then
      * only consolidated billing functionality is available. For more information, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html"
-     * >Enabling All Features in Your Organization</a> in the <i>AWS Organizations User Guide</i>.
+     * >Enabling All Features in Your Organization</a> in the <i>Organizations User Guide</i>.
      * </p>
      * 
      * @param featureSet
@@ -246,7 +249,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      *        "CONSOLIDATED_BILLING", then only consolidated billing functionality is available. For more information,
      *        see <a href=
      *        "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html"
-     *        >Enabling All Features in Your Organization</a> in the <i>AWS Organizations User Guide</i>.
+     *        >Enabling All Features in Your Organization</a> in the <i>Organizations User Guide</i>.
      * @see OrganizationFeatureSet
      */
 
@@ -260,7 +263,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      * are enabled and policies can be applied to accounts in the organization. If set to "CONSOLIDATED_BILLING", then
      * only consolidated billing functionality is available. For more information, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html"
-     * >Enabling All Features in Your Organization</a> in the <i>AWS Organizations User Guide</i>.
+     * >Enabling All Features in Your Organization</a> in the <i>Organizations User Guide</i>.
      * </p>
      * 
      * @return Specifies the functionality that currently is available to the organization. If set to "ALL", then all
@@ -268,7 +271,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      *         "CONSOLIDATED_BILLING", then only consolidated billing functionality is available. For more information,
      *         see <a href=
      *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html"
-     *         >Enabling All Features in Your Organization</a> in the <i>AWS Organizations User Guide</i>.
+     *         >Enabling All Features in Your Organization</a> in the <i>Organizations User Guide</i>.
      * @see OrganizationFeatureSet
      */
 
@@ -282,7 +285,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      * are enabled and policies can be applied to accounts in the organization. If set to "CONSOLIDATED_BILLING", then
      * only consolidated billing functionality is available. For more information, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html"
-     * >Enabling All Features in Your Organization</a> in the <i>AWS Organizations User Guide</i>.
+     * >Enabling All Features in Your Organization</a> in the <i>Organizations User Guide</i>.
      * </p>
      * 
      * @param featureSet
@@ -291,7 +294,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      *        "CONSOLIDATED_BILLING", then only consolidated billing functionality is available. For more information,
      *        see <a href=
      *        "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html"
-     *        >Enabling All Features in Your Organization</a> in the <i>AWS Organizations User Guide</i>.
+     *        >Enabling All Features in Your Organization</a> in the <i>Organizations User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OrganizationFeatureSet
      */
@@ -307,7 +310,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      * are enabled and policies can be applied to accounts in the organization. If set to "CONSOLIDATED_BILLING", then
      * only consolidated billing functionality is available. For more information, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html"
-     * >Enabling All Features in Your Organization</a> in the <i>AWS Organizations User Guide</i>.
+     * >Enabling All Features in Your Organization</a> in the <i>Organizations User Guide</i>.
      * </p>
      * 
      * @param featureSet
@@ -316,7 +319,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      *        "CONSOLIDATED_BILLING", then only consolidated billing functionality is available. For more information,
      *        see <a href=
      *        "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html"
-     *        >Enabling All Features in Your Organization</a> in the <i>AWS Organizations User Guide</i>.
+     *        >Enabling All Features in Your Organization</a> in the <i>Organizations User Guide</i>.
      * @see OrganizationFeatureSet
      */
 
@@ -330,7 +333,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      * are enabled and policies can be applied to accounts in the organization. If set to "CONSOLIDATED_BILLING", then
      * only consolidated billing functionality is available. For more information, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html"
-     * >Enabling All Features in Your Organization</a> in the <i>AWS Organizations User Guide</i>.
+     * >Enabling All Features in Your Organization</a> in the <i>Organizations User Guide</i>.
      * </p>
      * 
      * @param featureSet
@@ -339,7 +342,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      *        "CONSOLIDATED_BILLING", then only consolidated billing functionality is available. For more information,
      *        see <a href=
      *        "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html"
-     *        >Enabling All Features in Your Organization</a> in the <i>AWS Organizations User Guide</i>.
+     *        >Enabling All Features in Your Organization</a> in the <i>Organizations User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OrganizationFeatureSet
      */
@@ -356,7 +359,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      * 
      * @param masterAccountArn
@@ -365,7 +368,8 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information about ARNs in Organizations, see <a href=
      *        "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     *        >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     *        >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization
+     *        Reference</i>.
      */
 
     public void setMasterAccountArn(String masterAccountArn) {
@@ -379,7 +383,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the account that is designated as the management account for the
@@ -387,7 +391,8 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         For more information about ARNs in Organizations, see <a href=
      *         "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     *         >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     *         >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization
+     *         Reference</i>.
      */
 
     public String getMasterAccountArn() {
@@ -401,7 +406,7 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      * 
      * @param masterAccountArn
@@ -410,7 +415,8 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information about ARNs in Organizations, see <a href=
      *        "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     *        >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     *        >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization
+     *        Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -482,13 +488,13 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The email address that is associated with the AWS account that is designated as the management account for the
-     * organization.
+     * The email address that is associated with the Amazon Web Services account that is designated as the management
+     * account for the organization.
      * </p>
      * 
      * @param masterAccountEmail
-     *        The email address that is associated with the AWS account that is designated as the management account for
-     *        the organization.
+     *        The email address that is associated with the Amazon Web Services account that is designated as the
+     *        management account for the organization.
      */
 
     public void setMasterAccountEmail(String masterAccountEmail) {
@@ -497,12 +503,12 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The email address that is associated with the AWS account that is designated as the management account for the
-     * organization.
+     * The email address that is associated with the Amazon Web Services account that is designated as the management
+     * account for the organization.
      * </p>
      * 
-     * @return The email address that is associated with the AWS account that is designated as the management account
-     *         for the organization.
+     * @return The email address that is associated with the Amazon Web Services account that is designated as the
+     *         management account for the organization.
      */
 
     public String getMasterAccountEmail() {
@@ -511,13 +517,13 @@ public class Organization implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The email address that is associated with the AWS account that is designated as the management account for the
-     * organization.
+     * The email address that is associated with the Amazon Web Services account that is designated as the management
+     * account for the organization.
      * </p>
      * 
      * @param masterAccountEmail
-     *        The email address that is associated with the AWS account that is designated as the management account for
-     *        the organization.
+     *        The email address that is associated with the Amazon Web Services account that is designated as the
+     *        management account for the organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -31,6 +31,8 @@ public enum OrganizationsActions implements Action {
     AttachPolicy("organizations:AttachPolicy"),
     /** Action for the CancelHandshake operation. */
     CancelHandshake("organizations:CancelHandshake"),
+    /** Action for the CloseAccount operation. */
+    CloseAccount("organizations:CloseAccount"),
     /** Action for the CreateAccount operation. */
     CreateAccount("organizations:CreateAccount"),
     /** Action for the CreateGovCloudAccount operation. */

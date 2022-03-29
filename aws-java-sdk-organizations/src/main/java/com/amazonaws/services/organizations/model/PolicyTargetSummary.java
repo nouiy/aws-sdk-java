@@ -64,7 +64,7 @@ public class PolicyTargetSummary implements Serializable, Cloneable, StructuredP
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      */
     private String arn;
@@ -267,7 +267,7 @@ public class PolicyTargetSummary implements Serializable, Cloneable, StructuredP
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      * 
      * @param arn
@@ -275,7 +275,8 @@ public class PolicyTargetSummary implements Serializable, Cloneable, StructuredP
      *        <p>
      *        For more information about ARNs in Organizations, see <a href=
      *        "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     *        >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     *        >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization
+     *        Reference</i>.
      */
 
     public void setArn(String arn) {
@@ -289,14 +290,15 @@ public class PolicyTargetSummary implements Serializable, Cloneable, StructuredP
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the policy target.</p>
      *         <p>
      *         For more information about ARNs in Organizations, see <a href=
      *         "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     *         >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     *         >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization
+     *         Reference</i>.
      */
 
     public String getArn() {
@@ -310,7 +312,7 @@ public class PolicyTargetSummary implements Serializable, Cloneable, StructuredP
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      * 
      * @param arn
@@ -318,7 +320,8 @@ public class PolicyTargetSummary implements Serializable, Cloneable, StructuredP
      *        <p>
      *        For more information about ARNs in Organizations, see <a href=
      *        "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     *        >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     *        >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization
+     *        Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

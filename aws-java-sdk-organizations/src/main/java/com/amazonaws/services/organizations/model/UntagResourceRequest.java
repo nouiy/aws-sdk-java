@@ -35,7 +35,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * AWS account – specify the account ID number.
+     * Amazon Web Services account – specify the account ID number.
      * </p>
      * </li>
      * <li>
@@ -75,7 +75,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * AWS account – specify the account ID number.
+     * Amazon Web Services account – specify the account ID number.
      * </p>
      * </li>
      * <li>
@@ -105,7 +105,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <ul>
      *        <li>
      *        <p>
-     *        AWS account – specify the account ID number.
+     *        Amazon Web Services account – specify the account ID number.
      *        </p>
      *        </li>
      *        <li>
@@ -142,7 +142,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * AWS account – specify the account ID number.
+     * Amazon Web Services account – specify the account ID number.
      * </p>
      * </li>
      * <li>
@@ -171,7 +171,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <ul>
      *         <li>
      *         <p>
-     *         AWS account – specify the account ID number.
+     *         Amazon Web Services account – specify the account ID number.
      *         </p>
      *         </li>
      *         <li>
@@ -208,7 +208,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * AWS account – specify the account ID number.
+     * Amazon Web Services account – specify the account ID number.
      * </p>
      * </li>
      * <li>
@@ -238,7 +238,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <ul>
      *        <li>
      *        <p>
-     *        AWS account – specify the account ID number.
+     *        Amazon Web Services account – specify the account ID number.
      *        </p>
      *        </li>
      *        <li>

@@ -27,7 +27,7 @@ public class ListAWSServiceAccessForOrganizationResult extends com.amazonaws.Ama
     /**
      * <p>
      * A list of the service principals for the services that are enabled to integrate with your organization. Each
-     * principal is a structure that includes the name and the date that it was enabled for integration with AWS
+     * principal is a structure that includes the name and the date that it was enabled for integration with
      * Organizations.
      * </p>
      */
@@ -44,13 +44,13 @@ public class ListAWSServiceAccessForOrganizationResult extends com.amazonaws.Ama
     /**
      * <p>
      * A list of the service principals for the services that are enabled to integrate with your organization. Each
-     * principal is a structure that includes the name and the date that it was enabled for integration with AWS
+     * principal is a structure that includes the name and the date that it was enabled for integration with
      * Organizations.
      * </p>
      * 
      * @return A list of the service principals for the services that are enabled to integrate with your organization.
      *         Each principal is a structure that includes the name and the date that it was enabled for integration
-     *         with AWS Organizations.
+     *         with Organizations.
      */
 
     public java.util.List<EnabledServicePrincipal> getEnabledServicePrincipals() {
@@ -60,14 +60,14 @@ public class ListAWSServiceAccessForOrganizationResult extends com.amazonaws.Ama
     /**
      * <p>
      * A list of the service principals for the services that are enabled to integrate with your organization. Each
-     * principal is a structure that includes the name and the date that it was enabled for integration with AWS
+     * principal is a structure that includes the name and the date that it was enabled for integration with
      * Organizations.
      * </p>
      * 
      * @param enabledServicePrincipals
      *        A list of the service principals for the services that are enabled to integrate with your organization.
      *        Each principal is a structure that includes the name and the date that it was enabled for integration with
-     *        AWS Organizations.
+     *        Organizations.
      */
 
     public void setEnabledServicePrincipals(java.util.Collection<EnabledServicePrincipal> enabledServicePrincipals) {
@@ -82,7 +82,7 @@ public class ListAWSServiceAccessForOrganizationResult extends com.amazonaws.Ama
     /**
      * <p>
      * A list of the service principals for the services that are enabled to integrate with your organization. Each
-     * principal is a structure that includes the name and the date that it was enabled for integration with AWS
+     * principal is a structure that includes the name and the date that it was enabled for integration with
      * Organizations.
      * </p>
      * <p>
@@ -94,7 +94,7 @@ public class ListAWSServiceAccessForOrganizationResult extends com.amazonaws.Ama
      * @param enabledServicePrincipals
      *        A list of the service principals for the services that are enabled to integrate with your organization.
      *        Each principal is a structure that includes the name and the date that it was enabled for integration with
-     *        AWS Organizations.
+     *        Organizations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -111,14 +111,14 @@ public class ListAWSServiceAccessForOrganizationResult extends com.amazonaws.Ama
     /**
      * <p>
      * A list of the service principals for the services that are enabled to integrate with your organization. Each
-     * principal is a structure that includes the name and the date that it was enabled for integration with AWS
+     * principal is a structure that includes the name and the date that it was enabled for integration with
      * Organizations.
      * </p>
      * 
      * @param enabledServicePrincipals
      *        A list of the service principals for the services that are enabled to integrate with your organization.
      *        Each principal is a structure that includes the name and the date that it was enabled for integration with
-     *        AWS Organizations.
+     *        Organizations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

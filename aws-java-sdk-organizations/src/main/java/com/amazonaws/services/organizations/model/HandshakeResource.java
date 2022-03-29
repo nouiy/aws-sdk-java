@@ -42,7 +42,7 @@ public class HandshakeResource implements Serializable, Cloneable, StructuredPoj
      * <ul>
      * <li>
      * <p>
-     * <code>ACCOUNT</code> - Specifies an AWS account ID number.
+     * <code>ACCOUNT</code> - Specifies an Amazon Web Services account ID number.
      * </p>
      * </li>
      * <li>
@@ -135,7 +135,7 @@ public class HandshakeResource implements Serializable, Cloneable, StructuredPoj
      * <ul>
      * <li>
      * <p>
-     * <code>ACCOUNT</code> - Specifies an AWS account ID number.
+     * <code>ACCOUNT</code> - Specifies an Amazon Web Services account ID number.
      * </p>
      * </li>
      * <li>
@@ -173,7 +173,7 @@ public class HandshakeResource implements Serializable, Cloneable, StructuredPoj
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ACCOUNT</code> - Specifies an AWS account ID number.
+     *        <code>ACCOUNT</code> - Specifies an Amazon Web Services account ID number.
      *        </p>
      *        </li>
      *        <li>
@@ -219,7 +219,7 @@ public class HandshakeResource implements Serializable, Cloneable, StructuredPoj
      * <ul>
      * <li>
      * <p>
-     * <code>ACCOUNT</code> - Specifies an AWS account ID number.
+     * <code>ACCOUNT</code> - Specifies an Amazon Web Services account ID number.
      * </p>
      * </li>
      * <li>
@@ -256,7 +256,7 @@ public class HandshakeResource implements Serializable, Cloneable, StructuredPoj
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>ACCOUNT</code> - Specifies an AWS account ID number.
+     *         <code>ACCOUNT</code> - Specifies an Amazon Web Services account ID number.
      *         </p>
      *         </li>
      *         <li>
@@ -302,7 +302,7 @@ public class HandshakeResource implements Serializable, Cloneable, StructuredPoj
      * <ul>
      * <li>
      * <p>
-     * <code>ACCOUNT</code> - Specifies an AWS account ID number.
+     * <code>ACCOUNT</code> - Specifies an Amazon Web Services account ID number.
      * </p>
      * </li>
      * <li>
@@ -340,7 +340,7 @@ public class HandshakeResource implements Serializable, Cloneable, StructuredPoj
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ACCOUNT</code> - Specifies an AWS account ID number.
+     *        <code>ACCOUNT</code> - Specifies an Amazon Web Services account ID number.
      *        </p>
      *        </li>
      *        <li>
@@ -388,7 +388,7 @@ public class HandshakeResource implements Serializable, Cloneable, StructuredPoj
      * <ul>
      * <li>
      * <p>
-     * <code>ACCOUNT</code> - Specifies an AWS account ID number.
+     * <code>ACCOUNT</code> - Specifies an Amazon Web Services account ID number.
      * </p>
      * </li>
      * <li>
@@ -426,7 +426,7 @@ public class HandshakeResource implements Serializable, Cloneable, StructuredPoj
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ACCOUNT</code> - Specifies an AWS account ID number.
+     *        <code>ACCOUNT</code> - Specifies an Amazon Web Services account ID number.
      *        </p>
      *        </li>
      *        <li>
@@ -472,7 +472,7 @@ public class HandshakeResource implements Serializable, Cloneable, StructuredPoj
      * <ul>
      * <li>
      * <p>
-     * <code>ACCOUNT</code> - Specifies an AWS account ID number.
+     * <code>ACCOUNT</code> - Specifies an Amazon Web Services account ID number.
      * </p>
      * </li>
      * <li>
@@ -510,7 +510,7 @@ public class HandshakeResource implements Serializable, Cloneable, StructuredPoj
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ACCOUNT</code> - Specifies an AWS account ID number.
+     *        <code>ACCOUNT</code> - Specifies an Amazon Web Services account ID number.
      *        </p>
      *        </li>
      *        <li>

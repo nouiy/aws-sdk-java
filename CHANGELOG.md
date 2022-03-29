@@ -1,3 +1,8 @@
+# __1.12.188__ __2022-03-29__
+## __AWS Organizations__
+  - ### Features
+    - This release provides the new CloseAccount API that enables principals in the management account to close any member account within an organization.
+
 # __1.12.187__ __2022-03-28__
 ## __AWS Certificate Manager Private Certificate Authority__
   - ### Features
@@ -10,6 +15,7 @@
 ## __AWS SDK for Java__
   - ### Features
     - Bump Jackson version to 2.12.6.1
+    - Improve resilience of instance profile credentials provider to short-term outages. Credentials that are close to expiration or expired can still be used to sign calls when the instance metadata service appears to be having issues. Services are now responsible for determining whether the credentials have actually expired.
 
 # __1.12.186__ __2022-03-25__
 ## __AWS Batch__

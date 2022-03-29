@@ -53,6 +53,11 @@ public class AbstractAWSOrganizations implements AWSOrganizations {
     }
 
     @Override
+    public CloseAccountResult closeAccount(CloseAccountRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateAccountResult createAccount(CreateAccountRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -27,21 +27,23 @@ public class EnableAWSServiceAccessRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The service principal name of the AWS service for which you want to enable integration with your organization.
-     * This is typically in the form of a URL, such as <code> <i>service-abbreviation</i>.amazonaws.com</code>.
+     * The service principal name of the Amazon Web Services service for which you want to enable integration with your
+     * organization. This is typically in the form of a URL, such as
+     * <code> <i>service-abbreviation</i>.amazonaws.com</code>.
      * </p>
      */
     private String servicePrincipal;
 
     /**
      * <p>
-     * The service principal name of the AWS service for which you want to enable integration with your organization.
-     * This is typically in the form of a URL, such as <code> <i>service-abbreviation</i>.amazonaws.com</code>.
+     * The service principal name of the Amazon Web Services service for which you want to enable integration with your
+     * organization. This is typically in the form of a URL, such as
+     * <code> <i>service-abbreviation</i>.amazonaws.com</code>.
      * </p>
      * 
      * @param servicePrincipal
-     *        The service principal name of the AWS service for which you want to enable integration with your
-     *        organization. This is typically in the form of a URL, such as
+     *        The service principal name of the Amazon Web Services service for which you want to enable integration
+     *        with your organization. This is typically in the form of a URL, such as
      *        <code> <i>service-abbreviation</i>.amazonaws.com</code>.
      */
 
@@ -51,12 +53,13 @@ public class EnableAWSServiceAccessRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The service principal name of the AWS service for which you want to enable integration with your organization.
-     * This is typically in the form of a URL, such as <code> <i>service-abbreviation</i>.amazonaws.com</code>.
+     * The service principal name of the Amazon Web Services service for which you want to enable integration with your
+     * organization. This is typically in the form of a URL, such as
+     * <code> <i>service-abbreviation</i>.amazonaws.com</code>.
      * </p>
      * 
-     * @return The service principal name of the AWS service for which you want to enable integration with your
-     *         organization. This is typically in the form of a URL, such as
+     * @return The service principal name of the Amazon Web Services service for which you want to enable integration
+     *         with your organization. This is typically in the form of a URL, such as
      *         <code> <i>service-abbreviation</i>.amazonaws.com</code>.
      */
 
@@ -66,13 +69,14 @@ public class EnableAWSServiceAccessRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The service principal name of the AWS service for which you want to enable integration with your organization.
-     * This is typically in the form of a URL, such as <code> <i>service-abbreviation</i>.amazonaws.com</code>.
+     * The service principal name of the Amazon Web Services service for which you want to enable integration with your
+     * organization. This is typically in the form of a URL, such as
+     * <code> <i>service-abbreviation</i>.amazonaws.com</code>.
      * </p>
      * 
      * @param servicePrincipal
-     *        The service principal name of the AWS service for which you want to enable integration with your
-     *        organization. This is typically in the form of a URL, such as
+     *        The service principal name of the Amazon Web Services service for which you want to enable integration
+     *        with your organization. This is typically in the form of a URL, such as
      *        <code> <i>service-abbreviation</i>.amazonaws.com</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

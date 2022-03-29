@@ -27,31 +27,32 @@ import com.amazonaws.services.organizations.model.*;
  * </p>
  * <p>
  * <p>
- * AWS Organizations is a web service that enables you to consolidate your multiple AWS accounts into an
+ * Organizations is a web service that enables you to consolidate your multiple Amazon Web Services accounts into an
  * <i>organization</i> and centrally manage your accounts and their resources.
  * </p>
  * <p>
  * This guide provides descriptions of the Organizations operations. For more information about using this service, see
- * the <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html">AWS Organizations User
+ * the <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html">Organizations User
  * Guide</a>.
  * </p>
  * <p>
- * <b>Support and feedback for AWS Organizations</b>
+ * <b>Support and feedback for Organizations</b>
  * </p>
  * <p>
  * We welcome your feedback. Send your comments to <a
  * href="mailto:feedback-awsorganizations@amazon.com">feedback-awsorganizations@amazon.com</a> or post your feedback and
- * questions in the <a href="http://forums.aws.amazon.com/forum.jspa?forumID=219">AWS Organizations support forum</a>.
- * For more information about the AWS support forums, see <a href="http://forums.aws.amazon.com/help.jspa">Forums
- * Help</a>.
+ * questions in the <a href="http://forums.aws.amazon.com/forum.jspa?forumID=219">Organizations support forum</a>. For
+ * more information about the Amazon Web Services support forums, see <a
+ * href="http://forums.aws.amazon.com/help.jspa">Forums Help</a>.
  * </p>
  * <p>
- * <b>Endpoint to call When using the AWS CLI or the AWS SDK</b>
+ * <b>Endpoint to call When using the CLI or the Amazon Web Services SDK</b>
  * </p>
  * <p>
- * For the current release of Organizations, specify the <code>us-east-1</code> region for all AWS API and AWS CLI calls
- * made from the commercial AWS Regions outside of China. If calling from one of the AWS Regions in China, then specify
- * <code>cn-northwest-1</code>. You can do this in the AWS CLI by using these parameters and commands:
+ * For the current release of Organizations, specify the <code>us-east-1</code> region for all Amazon Web Services API
+ * and CLI calls made from the commercial Amazon Web Services Regions outside of China. If calling from one of the
+ * Amazon Web Services Regions in China, then specify <code>cn-northwest-1</code>. You can do this in the CLI by using
+ * these parameters and commands:
  * </p>
  * <ul>
  * <li>
@@ -59,14 +60,15 @@ import com.amazonaws.services.organizations.model.*;
  * Use the following parameter with each command to specify both the endpoint and its region:
  * </p>
  * <p>
- * <code>--endpoint-url https://organizations.us-east-1.amazonaws.com</code> <i>(from commercial AWS Regions outside of
- * China)</i>
+ * <code>--endpoint-url https://organizations.us-east-1.amazonaws.com</code> <i>(from commercial Amazon Web Services
+ * Regions outside of China)</i>
  * </p>
  * <p>
  * or
  * </p>
  * <p>
- * <code>--endpoint-url https://organizations.cn-northwest-1.amazonaws.com.cn</code> <i>(from AWS Regions in China)</i>
+ * <code>--endpoint-url https://organizations.cn-northwest-1.amazonaws.com.cn</code> <i>(from Amazon Web Services
+ * Regions in China)</i>
  * </p>
  * </li>
  * <li>
@@ -74,13 +76,14 @@ import com.amazonaws.services.organizations.model.*;
  * Use the default endpoint, but configure your default region with this command:
  * </p>
  * <p>
- * <code>aws configure set default.region us-east-1</code> <i>(from commercial AWS Regions outside of China)</i>
+ * <code>aws configure set default.region us-east-1</code> <i>(from commercial Amazon Web Services Regions outside of
+ * China)</i>
  * </p>
  * <p>
  * or
  * </p>
  * <p>
- * <code>aws configure set default.region cn-northwest-1</code> <i>(from AWS Regions in China)</i>
+ * <code>aws configure set default.region cn-northwest-1</code> <i>(from Amazon Web Services Regions in China)</i>
  * </p>
  * </li>
  * <li>
@@ -88,13 +91,13 @@ import com.amazonaws.services.organizations.model.*;
  * Use the following parameter with each command to specify the endpoint:
  * </p>
  * <p>
- * <code>--region us-east-1</code> <i>(from commercial AWS Regions outside of China)</i>
+ * <code>--region us-east-1</code> <i>(from commercial Amazon Web Services Regions outside of China)</i>
  * </p>
  * <p>
  * or
  * </p>
  * <p>
- * <code>--region cn-northwest-1</code> <i>(from AWS Regions in China)</i>
+ * <code>--region cn-northwest-1</code> <i>(from Amazon Web Services Regions in China)</i>
  * </p>
  * </li>
  * </ul>
@@ -102,15 +105,15 @@ import com.amazonaws.services.organizations.model.*;
  * <b>Recording API Requests</b>
  * </p>
  * <p>
- * AWS Organizations supports AWS CloudTrail, a service that records AWS API calls for your AWS account and delivers log
- * files to an Amazon S3 bucket. By using information collected by AWS CloudTrail, you can determine which requests the
- * Organizations service received, who made the request and when, and so on. For more about AWS Organizations and its
- * support for AWS CloudTrail, see <a href=
+ * Organizations supports CloudTrail, a service that records Amazon Web Services API calls for your Amazon Web Services
+ * account and delivers log files to an Amazon S3 bucket. By using information collected by CloudTrail, you can
+ * determine which requests the Organizations service received, who made the request and when, and so on. For more about
+ * Organizations and its support for CloudTrail, see <a href=
  * "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_incident-response.html#orgs_cloudtrail-integration"
- * >Logging AWS Organizations Events with AWS CloudTrail</a> in the <i>AWS Organizations User Guide</i>. To learn more
- * about AWS CloudTrail, including how to turn it on and find your log files, see the <a
- * href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">AWS CloudTrail
- * User Guide</a>.
+ * >Logging Organizations Events with CloudTrail</a> in the <i>Organizations User Guide</i>. To learn more about
+ * CloudTrail, including how to turn it on and find your log files, see the <a
+ * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/what_is_cloud_trail_top_level.html">CloudTrail User
+ * Guide</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -192,10 +195,10 @@ public interface AWSOrganizations {
      * <p>
      * The user who calls the API for an invitation to join must have the <code>organizations:AcceptHandshake</code>
      * permission. If you enabled all features in the organization, the user must also have the
-     * <code>iam:CreateServiceLinkedRole</code> permission so that AWS Organizations can create the required
-     * service-linked role named <code>AWSServiceRoleForOrganizations</code>. For more information, see <a href=
-     * "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_integration_services.html#orgs_integration_service-linked-roles"
-     * >AWS Organizations and Service-Linked Roles</a> in the <i>AWS Organizations User Guide</i>.
+     * <code>iam:CreateServiceLinkedRole</code> permission so that Organizations can create the required service-linked
+     * role named <code>AWSServiceRoleForOrganizations</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integration_services.html#orgs_integration_service-linked-roles"
+     * >Organizations and Service-Linked Roles</a> in the <i>Organizations User Guide</i>.
      * </p>
      * </li>
      * <li>
@@ -205,10 +208,10 @@ public interface AWSOrganizations {
      * <p>
      * For more information about invitations, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_invites.html">Inviting an
-     * AWS Account to Join Your Organization</a> in the <i>AWS Organizations User Guide.</i> For more information about
-     * requests to enable all features in the organization, see <a
+     * Amazon Web Services account to join your organization</a> in the <i>Organizations User Guide.</i> For more
+     * information about requests to enable all features in the organization, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html"
-     * >Enabling All Features in Your Organization</a> in the <i>AWS Organizations User Guide.</i>
+     * >Enabling all features in your organization</a> in the <i>Organizations User Guide.</i>
      * </p>
      * </li>
      * </ul>
@@ -243,7 +246,7 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception immediately after creating the organization, wait one hour and try again. If
      *         after an hour it continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
@@ -320,7 +323,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -395,8 +398,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -442,17 +445,17 @@ public interface AWSOrganizations {
      * @throws ConcurrentModificationException
      *         The target of the operation is currently being modified by a different request. Try again later.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws AccessDeniedForDependencyException
      *         The operation that you attempted requires you to have the <code>iam:CreateServiceLinkedRole</code> for
-     *         <code>organizations.amazonaws.com</code> permission so that AWS Organizations can create the required
+     *         <code>organizations.amazonaws.com</code> permission so that Organizations can create the required
      *         service-linked role. You don't have that permission.
      * @sample AWSOrganizations.AcceptHandshake
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/AcceptHandshake" target="_top">AWS
@@ -463,8 +466,8 @@ public interface AWSOrganizations {
     /**
      * <p>
      * Attaches a policy to a root, an organizational unit (OU), or an individual account. How the policy affects
-     * accounts depends on the type of policy. Refer to the <i>AWS Organizations User Guide</i> for information about
-     * each policy type:
+     * accounts depends on the type of policy. Refer to the <i>Organizations User Guide</i> for information about each
+     * policy type:
      * </p>
      * <ul>
      * <li>
@@ -527,20 +530,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -553,13 +547,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -569,14 +563,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -594,9 +588,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -621,9 +616,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -635,9 +630,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -645,9 +641,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -672,9 +668,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -713,8 +709,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws DuplicatePolicyAttachmentException
@@ -735,7 +744,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -810,8 +819,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -861,20 +870,20 @@ public interface AWSOrganizations {
      *         specified type to entities in a root until you enable that type in the root. For more information, see <a
      *         href
      *         ="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html"
-     *         >Enabling All Features in Your Organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         >Enabling All Features in Your Organization</a> in the <i>Organizations User Guide.</i>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TargetNotFoundException
      *         We can't find a root, OU, account, or policy with the <code>TargetId</code> that you specified.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @throws PolicyChangesInProgressException
      *         Changes to the effective policy are in progress, and its contents can't be returned. Try the operation
      *         again later.
@@ -931,7 +940,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -1006,8 +1015,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -1051,14 +1060,14 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.CancelHandshake
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/CancelHandshake" target="_top">AWS
      *      API Documentation</a>
@@ -1067,11 +1076,403 @@ public interface AWSOrganizations {
 
     /**
      * <p>
-     * Creates an AWS account that is automatically a member of the organization whose credentials made the request.
-     * This is an asynchronous request that AWS performs in the background. Because <code>CreateAccount</code> operates
-     * asynchronously, it can return a successful completion message even though account initialization might still be
-     * in progress. You might need to wait a few minutes before you can successfully access the account. To check the
-     * status of the request, do one of the following:
+     * Closes an Amazon Web Services account that is now a part of an Organizations, either created within the
+     * organization, or invited to join the organization.
+     * </p>
+     * 
+     * @param closeAccountRequest
+     * @return Result of the CloseAccount operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have permissions to perform the requested operation. The user or role that is making the
+     *         request must have at least one IAM permissions policy attached that grants the required permissions. For
+     *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
+     *         Management</a> in the <i>IAM User Guide.</i>
+     * @throws AccountAlreadyClosedException
+     *         You attempted to close an account that is already closed.
+     * @throws AccountNotFoundException
+     *         We can't find an Amazon Web Services account with the <code>AccountId</code> that you specified, or the
+     *         account whose credentials you used to make this request isn't a member of an organization.
+     * @throws AWSOrganizationsNotInUseException
+     *         Your account isn't a member of an organization. To make this request, you must use the credentials of an
+     *         account that belongs to an organization.
+     * @throws ConcurrentModificationException
+     *         The target of the operation is currently being modified by a different request. Try again later.
+     * @throws ConflictException
+     *         The request failed because it conflicts with the current state of the specified resource.
+     * @throws ConstraintViolationException
+     *         Performing this operation violates a minimum or maximum value limit. For example, attempting to remove
+     *         the last service control policy (SCP) from an OU or root, inviting or creating too many accounts to the
+     *         organization, or attaching too many policies to an account, OU, or root. This exception includes a reason
+     *         that contains additional information about the violated limit:</p> <note>
+     *         <p>
+     *         Some of the reasons in the following list might not be applicable to this specific API or operation.
+     *         </p>
+     *         </note>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         ACCOUNT_CANNOT_LEAVE_ORGANIZATION: You attempted to remove the management account from the organization.
+     *         You can't remove the management account. Instead, after you remove all member accounts, delete the
+     *         organization itself.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
+     *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
+     *         first complete phone verification. Follow the steps at <a href=
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         ACCOUNT_CREATION_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can create
+     *         in one day.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
+     *         organization. If you need more accounts, contact <a
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
+     *         </p>
+     *         <p>
+     *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         Deleted and closed accounts still count toward your limit.
+     *         </p>
+     *         </note> <important>
+     *         <p>
+     *         If you get this exception when running a command immediately after creating the organization, wait one
+     *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
+     *         </p>
+     *         </important></li>
+     *         <li>
+     *         <p>
+     *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         CANNOT_REMOVE_DELEGATED_ADMINISTRATOR_FROM_ORG: You attempted to remove an account that is registered as
+     *         a delegated administrator for a service integrated with your organization. To complete this operation,
+     *         you must first deregister this account as a delegated administrator.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         CREATE_ORGANIZATION_IN_BILLING_MODE_UNSUPPORTED_REGION: To create an organization in the specified
+     *         region, you must enable all features mode.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         EMAIL_VERIFICATION_CODE_EXPIRED: The email verification code is only valid for a limited period of time.
+     *         You must resubmit the request and generate a new verfication code.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes that you can send in one
+     *         day.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first
+     *         must migrate the organization's management account to the marketplace that corresponds to the management
+     *         account's address. For example, accounts with India addresses must be associated with the AISPL
+     *         marketplace. All accounts in an organization must be associated with the same marketplace.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide a valid contact
+     *         address and phone number for the management account. Then try the operation again.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
+     *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
+     *         steps at <a href=
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         >To leave an organization when all required account information has not yet been provided</a> in the
+     *         <i>Organizations User Guide.</i>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         MAX_DELEGATED_ADMINISTRATORS_FOR_SERVICE_LIMIT_EXCEEDED: You attempted to register more delegated
+     *         administrators than allowed for the service principal.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         MAX_POLICY_TYPE_ATTACHMENT_LIMIT_EXCEEDED: You attempted to exceed the number of policies of a certain
+     *         type that can be attached to an entity at one time.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         MAX_TAG_LIMIT_EXCEEDED: You have exceeded the number of tags allowed on this resource.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
+     *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
+     *         steps at <a href=
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         >To leave an organization when all required account information has not yet been provided</a> in the
+     *         <i>Organizations User Guide.</i>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         MIN_POLICY_TYPE_ATTACHMENT_LIMIT_EXCEEDED: You attempted to detach a policy from an entity that would
+     *         cause the entity to have fewer than the minimum number of policies of a certain type required.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         ORGANIZATION_NOT_IN_ALL_FEATURES_MODE: You attempted to perform an operation that requires the
+     *         organization to be configured to support all features. An organization that supports only consolidated
+     *         billing features can't perform this operation.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         OU_DEPTH_LIMIT_EXCEEDED: You attempted to create an OU tree that is too many levels deep.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         OU_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the number of OUs that you can have in an organization.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         POLICY_CONTENT_LIMIT_EXCEEDED: You attempted to create a policy that is larger than the maximum size.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         POLICY_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the number of policies that you can have in an
+     *         organization.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
+     *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
+     *         </p>
+     *         </li>
+     * @throws InvalidInputException
+     *         The requested operation failed because you provided invalid values for one or more of the request
+     *         parameters. This exception includes a reason that contains additional information about the violated
+     *         limit:</p> <note>
+     *         <p>
+     *         Some of the reasons in the following list might not be applicable to this specific API or operation.
+     *         </p>
+     *         </note>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DUPLICATE_TAG_KEY: Tag keys must be unique among the tags attached to the same entity.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         INPUT_REQUIRED: You must include a value for all required parameters.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         INVALID_EMAIL_ADDRESS_TARGET: You specified an invalid email address for the invited account owner.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         INVALID_ENUM: You specified an invalid value.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         INVALID_ENUM_POLICY_TYPE: You specified an invalid policy type string.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         INVALID_FULL_NAME_TARGET: You specified a full name that contains invalid characters.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         INVALID_LIST_MEMBER: You provided a list to a parameter that contains at least one invalid value.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         INVALID_PAGINATION_TOKEN: Get the value for the <code>NextToken</code> parameter from the response to a
+     *         previous call of the operation.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         INVALID_PARTY_TYPE_TARGET: You specified the wrong type of entity (account, organization, or email) as a
+     *         party.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         INVALID_PATTERN: You provided a value that doesn't match the required pattern.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         INVALID_PATTERN_TARGET_ID: You specified a policy target ID that doesn't match the required pattern.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         INVALID_ROLE_NAME: You provided a role name that isn't valid. A role name can't begin with the reserved
+     *         prefix <code>AWSServiceRoleFor</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         INVALID_SYNTAX_ORGANIZATION_ARN: You specified an invalid Amazon Resource Name (ARN) for the
+     *         organization.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         INVALID_SYNTAX_POLICY_ID: You specified an invalid policy ID.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         MAX_FILTER_LIMIT_EXCEEDED: You can specify only one filter parameter for the operation.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         MAX_LENGTH_EXCEEDED: You provided a string parameter that is longer than allowed.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         MAX_VALUE_EXCEEDED: You provided a numeric parameter that has a larger value than allowed.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         MIN_LENGTH_EXCEEDED: You provided a string parameter that is shorter than allowed.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         MIN_VALUE_EXCEEDED: You provided a numeric parameter that has a smaller value than allowed.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         MOVING_ACCOUNT_BETWEEN_DIFFERENT_ROOTS: You can move an account only between entities in the same root.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         TARGET_NOT_SUPPORTED: You can't perform the specified operation on that target entity.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         UNRECOGNIZED_SERVICE_PRINCIPAL: You specified a service principal that isn't recognized.
+     *         </p>
+     *         </li>
+     * @throws ServiceException
+     *         Organizations can't complete your request because of an internal service error. Try again later.
+     * @throws TooManyRequestsException
+     *         You have sent too many requests in too short a period of time. The quota helps protect against
+     *         denial-of-service attacks. Try again later.</p>
+     *         <p>
+     *         For information about quotas that affect Organizations, see <a
+     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
+     * @throws UnsupportedAPIEndpointException
+     *         This action isn't available in the current Amazon Web Services Region.
+     * @sample AWSOrganizations.CloseAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/CloseAccount" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CloseAccountResult closeAccount(CloseAccountRequest closeAccountRequest);
+
+    /**
+     * <p>
+     * Creates an Amazon Web Services account that is automatically a member of the organization whose credentials made
+     * the request. This is an asynchronous request that Amazon Web Services performs in the background. Because
+     * <code>CreateAccount</code> operates asynchronously, it can return a successful completion message even though
+     * account initialization might still be in progress. You might need to wait a few minutes before you can
+     * successfully access the account. To check the status of the request, do one of the following:
      * </p>
      * <ul>
      * <li>
@@ -1082,29 +1483,28 @@ public interface AWSOrganizations {
      * </li>
      * <li>
      * <p>
-     * Check the AWS CloudTrail log for the <code>CreateAccountResult</code> event. For information on using AWS
-     * CloudTrail with AWS Organizations, see <a href=
-     * "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_security_incident-response.html#orgs_cloudtrail-integration"
-     * >Logging and monitoring in AWS Organizations</a> in the <i>AWS Organizations User Guide.</i>
+     * Check the CloudTrail log for the <code>CreateAccountResult</code> event. For information on using CloudTrail with
+     * Organizations, see <a href=
+     * "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_security_incident-response.html#orgs_cloudtrail-integration"
+     * >Logging and monitoring in Organizations</a> in the <i>Organizations User Guide.</i>
      * </p>
      * </li>
      * </ul>
      * <p>
      * The user who calls the API to create an account must have the <code>organizations:CreateAccount</code>
-     * permission. If you enabled all features in the organization, AWS Organizations creates the required
-     * service-linked role named <code>AWSServiceRoleForOrganizations</code>. For more information, see <a href=
-     * "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_integrate_services-using_slrs"
-     * >AWS Organizations and Service-Linked Roles</a> in the <i>AWS Organizations User Guide</i>.
+     * permission. If you enabled all features in the organization, Organizations creates the required service-linked
+     * role named <code>AWSServiceRoleForOrganizations</code>. For more information, see <a href=
+     * "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_integrate_services-using_slrs"
+     * >Organizations and Service-Linked Roles</a> in the <i>Organizations User Guide</i>.
      * </p>
      * <p>
      * If the request includes tags, then the requester must have the <code>organizations:TagResource</code> permission.
      * </p>
      * <p>
-     * AWS Organizations preconfigures the new member account with a role (named
-     * <code>OrganizationAccountAccessRole</code> by default) that grants users in the management account administrator
-     * permissions in the new member account. Principals in the management account can assume the role. AWS
-     * Organizations clones the company name and address information for the new account from the organization's
-     * management account.
+     * Organizations preconfigures the new member account with a role (named <code>OrganizationAccountAccessRole</code>
+     * by default) that grants users in the management account administrator permissions in the new member account.
+     * Principals in the management account can assume the role. Organizations clones the company name and address
+     * information for the new account from the organization's management account.
      * </p>
      * <p>
      * This operation can be called only from the organization's management account.
@@ -1112,40 +1512,40 @@ public interface AWSOrganizations {
      * <p>
      * For more information about creating accounts, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_create.html">Creating an
-     * AWS Account in Your Organization</a> in the <i>AWS Organizations User Guide.</i>
+     * Amazon Web Services account in Your Organization</a> in the <i>Organizations User Guide.</i>
      * </p>
      * <important>
      * <ul>
      * <li>
      * <p>
-     * When you create an account in an organization using the AWS Organizations console, API, or CLI commands, the
+     * When you create an account in an organization using the Organizations console, API, or CLI commands, the
      * information required for the account to operate as a standalone account, such as a payment method and signing the
      * end user license agreement (EULA) is <i>not</i> automatically collected. If you must remove an account from your
      * organization later, you can do so only after you provide the missing information. Follow the steps at <a href=
-     * "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
-     * > To leave an organization as a member account</a> in the <i>AWS Organizations User Guide</i>.
+     * "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     * > To leave an organization as a member account</a> in the <i>Organizations User Guide</i>.
      * </p>
      * </li>
      * <li>
      * <p>
      * If you get an exception that indicates that you exceeded your account limits for the organization, contact <a
-     * href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     * href="https://console.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      * </p>
      * </li>
      * <li>
      * <p>
      * If you get an exception that indicates that the operation failed because your organization is still initializing,
      * wait one hour and then try again. If the error persists, contact <a
-     * href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     * href="https://console.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      * </p>
      * </li>
      * <li>
      * <p>
      * Using <code>CreateAccount</code> to create multiple temporary accounts isn't recommended. You can only close an
-     * account from the Billing and Cost Management Console, and you must be signed in as the root user. For information
+     * account from the Billing and Cost Management console, and you must be signed in as the root user. For information
      * on the requirements and process for closing an account, see <a
-     * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_close.html">Closing an AWS
-     * Account</a> in the <i>AWS Organizations User Guide</i>.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_close.html">Closing an
+     * Amazon Web Services account</a> in the <i>Organizations User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1191,20 +1591,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -1217,13 +1608,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -1233,14 +1624,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -1258,9 +1649,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -1285,9 +1677,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -1299,9 +1691,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -1309,9 +1702,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -1336,9 +1729,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -1377,8 +1770,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -1397,7 +1803,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -1472,8 +1878,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -1517,20 +1923,20 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws FinalizingOrganizationException
-     *         AWS Organizations couldn't perform the operation because your organization hasn't finished initializing.
-     *         This can take up to an hour. Try again later. If after one hour you continue to receive this error,
-     *         contact <a href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         Organizations couldn't perform the operation because your organization hasn't finished initializing. This
+     *         can take up to an hour. Try again later. If after one hour you continue to receive this error, contact <a
+     *         href="https://console.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.CreateAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/CreateAccount" target="_top">AWS
      *      API Documentation</a>
@@ -1544,15 +1950,16 @@ public interface AWSOrganizations {
      * <ul>
      * <li>
      * <p>
-     * You're authorized to create accounts in the AWS GovCloud (US) Region. For more information on the AWS GovCloud
-     * (US) Region, see the <a href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/welcome.html"> <i>AWS
-     * GovCloud User Guide</i>.</a>
+     * You're authorized to create accounts in the Amazon Web Services GovCloud (US) Region. For more information on the
+     * Amazon Web Services GovCloud (US) Region, see the <a
+     * href="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/welcome.html"> <i>Amazon Web Services GovCloud
+     * User Guide</i>.</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * You already have an account in the AWS GovCloud (US) Region that is paired with a management account of an
-     * organization in the commercial Region.
+     * You already have an account in the Amazon Web Services GovCloud (US) Region that is paired with a management
+     * account of an organization in the commercial Region.
      * </p>
      * </li>
      * <li>
@@ -1567,28 +1974,29 @@ public interface AWSOrganizations {
      * </li>
      * </ul>
      * <p>
-     * AWS Organizations automatically creates the required service-linked role named
+     * Organizations automatically creates the required service-linked role named
      * <code>AWSServiceRoleForOrganizations</code>. For more information, see <a href=
-     * "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_integrate_services-using_slrs"
-     * >AWS Organizations and Service-Linked Roles</a> in the <i>AWS Organizations User Guide.</i>
+     * "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html#orgs_integrate_services-using_slrs"
+     * >Organizations and Service-Linked Roles</a> in the <i>Organizations User Guide.</i>
      * </p>
      * <p>
-     * AWS automatically enables AWS CloudTrail for AWS GovCloud (US) accounts, but you should also do the following:
+     * Amazon Web Services automatically enables CloudTrail for Amazon Web Services GovCloud (US) accounts, but you
+     * should also do the following:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Verify that AWS CloudTrail is enabled to store logs.
+     * Verify that CloudTrail is enabled to store logs.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Create an S3 bucket for AWS CloudTrail log storage.
+     * Create an Amazon S3 bucket for CloudTrail log storage.
      * </p>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/verifying-cloudtrail.html">Verifying AWS CloudTrail
-     * Is Enabled</a> in the <i>AWS GovCloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/verifying-cloudtrail.html">Verifying CloudTrail Is
+     * Enabled</a> in the <i>Amazon Web Services GovCloud User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1600,17 +2008,19 @@ public interface AWSOrganizations {
      * </p>
      * <p>
      * You call this action from the management account of your organization in the commercial Region to create a
-     * standalone AWS account in the AWS GovCloud (US) Region. After the account is created, the management account of
-     * an organization in the AWS GovCloud (US) Region can invite it to that organization. For more information on
-     * inviting standalone accounts in the AWS GovCloud (US) to join an organization, see <a
-     * href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS Organizations</a>
-     * in the <i>AWS GovCloud User Guide.</i>
+     * standalone Amazon Web Services account in the Amazon Web Services GovCloud (US) Region. After the account is
+     * created, the management account of an organization in the Amazon Web Services GovCloud (US) Region can invite it
+     * to that organization. For more information on inviting standalone accounts in the Amazon Web Services GovCloud
+     * (US) to join an organization, see <a
+     * href="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a> in
+     * the <i>Amazon Web Services GovCloud User Guide.</i>
      * </p>
      * <p>
-     * Calling <code>CreateGovCloudAccount</code> is an asynchronous request that AWS performs in the background.
-     * Because <code>CreateGovCloudAccount</code> operates asynchronously, it can return a successful completion message
-     * even though account initialization might still be in progress. You might need to wait a few minutes before you
-     * can successfully access the account. To check the status of the request, do one of the following:
+     * Calling <code>CreateGovCloudAccount</code> is an asynchronous request that Amazon Web Services performs in the
+     * background. Because <code>CreateGovCloudAccount</code> operates asynchronously, it can return a successful
+     * completion message even though account initialization might still be in progress. You might need to wait a few
+     * minutes before you can successfully access the account. To check the status of the request, do one of the
+     * following:
      * </p>
      * <ul>
      * <li>
@@ -1621,67 +2031,68 @@ public interface AWSOrganizations {
      * </li>
      * <li>
      * <p>
-     * Check the AWS CloudTrail log for the <code>CreateAccountResult</code> event. For information on using AWS
-     * CloudTrail with Organizations, see <a
-     * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_monitoring.html">Monitoring the Activity in
-     * Your Organization</a> in the <i>AWS Organizations User Guide.</i>
+     * Check the CloudTrail log for the <code>CreateAccountResult</code> event. For information on using CloudTrail with
+     * Organizations, see <a
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_monitoring.html">Monitoring the Activity in
+     * Your Organization</a> in the <i>Organizations User Guide.</i>
      * </p>
      * </li>
      * </ul>
      * <p/>
      * <p>
      * When you call the <code>CreateGovCloudAccount</code> action, you create two accounts: a standalone account in the
-     * AWS GovCloud (US) Region and an associated account in the commercial Region for billing and support purposes. The
-     * account in the commercial Region is automatically a member of the organization whose credentials made the
-     * request. Both accounts are associated with the same email address.
+     * Amazon Web Services GovCloud (US) Region and an associated account in the commercial Region for billing and
+     * support purposes. The account in the commercial Region is automatically a member of the organization whose
+     * credentials made the request. Both accounts are associated with the same email address.
      * </p>
      * <p>
      * A role is created in the new account in the commercial Region that allows the management account in the
-     * organization in the commercial Region to assume it. An AWS GovCloud (US) account is then created and associated
-     * with the commercial account that you just created. A role is also created in the new AWS GovCloud (US) account
-     * that can be assumed by the AWS GovCloud (US) account that is associated with the management account of the
-     * commercial organization. For more information and to view a diagram that explains how account access works, see
-     * <a href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     * Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     * organization in the commercial Region to assume it. An Amazon Web Services GovCloud (US) account is then created
+     * and associated with the commercial account that you just created. A role is also created in the new Amazon Web
+     * Services GovCloud (US) account that can be assumed by the Amazon Web Services GovCloud (US) account that is
+     * associated with the management account of the commercial organization. For more information and to view a diagram
+     * that explains how account access works, see <a
+     * href="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a> in
+     * the <i>Amazon Web Services GovCloud User Guide.</i>
      * </p>
      * <p>
      * For more information about creating accounts, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_create.html">Creating an
-     * AWS Account in Your Organization</a> in the <i>AWS Organizations User Guide.</i>
+     * Amazon Web Services account in Your Organization</a> in the <i>Organizations User Guide.</i>
      * </p>
      * <important>
      * <ul>
      * <li>
      * <p>
-     * When you create an account in an organization using the AWS Organizations console, API, or CLI commands, the
+     * When you create an account in an organization using the Organizations console, API, or CLI commands, the
      * information required for the account to operate as a standalone account is <i>not</i> automatically collected.
      * This includes a payment method and signing the end user license agreement (EULA). If you must remove an account
      * from your organization later, you can do so only after you provide the missing information. Follow the steps at
      * <a href=
-     * "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
-     * > To leave an organization as a member account</a> in the <i>AWS Organizations User Guide.</i>
+     * "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     * > To leave an organization as a member account</a> in the <i>Organizations User Guide.</i>
      * </p>
      * </li>
      * <li>
      * <p>
      * If you get an exception that indicates that you exceeded your account limits for the organization, contact <a
-     * href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     * href="https://console.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      * </p>
      * </li>
      * <li>
      * <p>
      * If you get an exception that indicates that the operation failed because your organization is still initializing,
      * wait one hour and then try again. If the error persists, contact <a
-     * href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     * href="https://console.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      * </p>
      * </li>
      * <li>
      * <p>
      * Using <code>CreateGovCloudAccount</code> to create multiple temporary accounts isn't recommended. You can only
-     * close an account from the AWS Billing and Cost Management console, and you must be signed in as the root user.
-     * For information on the requirements and process for closing an account, see <a
-     * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_close.html">Closing an AWS
-     * Account</a> in the <i>AWS Organizations User Guide</i>.
+     * close an account from the Amazon Web Services Billing and Cost Management console, and you must be signed in as
+     * the root user. For information on the requirements and process for closing an account, see <a
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_close.html">Closing an
+     * Amazon Web Services account</a> in the <i>Organizations User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1727,20 +2138,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -1753,13 +2155,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -1769,14 +2171,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -1794,9 +2196,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -1821,9 +2224,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -1835,9 +2238,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -1845,9 +2249,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -1872,9 +2276,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -1913,8 +2317,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -1933,7 +2350,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -2008,8 +2425,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -2053,20 +2470,20 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws FinalizingOrganizationException
-     *         AWS Organizations couldn't perform the operation because your organization hasn't finished initializing.
-     *         This can take up to an hour. Try again later. If after one hour you continue to receive this error,
-     *         contact <a href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         Organizations couldn't perform the operation because your organization hasn't finished initializing. This
+     *         can take up to an hour. Try again later. If after one hour you continue to receive this error, contact <a
+     *         href="https://console.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.CreateGovCloudAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/CreateGovCloudAccount"
      *      target="_top">AWS API Documentation</a>
@@ -2075,8 +2492,8 @@ public interface AWSOrganizations {
 
     /**
      * <p>
-     * Creates an AWS organization. The account whose user is calling the <code>CreateOrganization</code> operation
-     * automatically becomes the <a
+     * Creates an Amazon Web Services organization. The account whose user is calling the
+     * <code>CreateOrganization</code> operation automatically becomes the <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#account"
      * >management account</a> of the new organization.
      * </p>
@@ -2123,20 +2540,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -2149,13 +2557,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -2165,14 +2573,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -2190,9 +2598,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -2217,9 +2626,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -2231,9 +2640,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -2241,9 +2651,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -2268,9 +2678,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -2309,8 +2719,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -2329,7 +2752,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -2404,8 +2827,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -2449,17 +2872,17 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws AccessDeniedForDependencyException
      *         The operation that you attempted requires you to have the <code>iam:CreateServiceLinkedRole</code> for
-     *         <code>organizations.amazonaws.com</code> permission so that AWS Organizations can create the required
+     *         <code>organizations.amazonaws.com</code> permission so that Organizations can create the required
      *         service-linked role. You don't have that permission.
      * @sample AWSOrganizations.CreateOrganization
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/CreateOrganization"
@@ -2477,7 +2900,7 @@ public interface AWSOrganizations {
      * <p>
      * For more information about OUs, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_ous.html">Managing Organizational
-     * Units</a> in the <i>AWS Organizations User Guide.</i>
+     * Units</a> in the <i>Organizations User Guide.</i>
      * </p>
      * <p>
      * If the request includes tags, then the requester must have the <code>organizations:TagResource</code> permission.
@@ -2517,20 +2940,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -2543,13 +2957,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -2559,14 +2973,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -2584,9 +2998,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -2611,9 +3026,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -2625,9 +3040,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -2635,9 +3051,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -2662,9 +3078,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -2703,8 +3119,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws DuplicateOrganizationalUnitException
@@ -2725,7 +3154,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -2800,8 +3229,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -2847,14 +3276,14 @@ public interface AWSOrganizations {
      * @throws ParentNotFoundException
      *         We can't find a root or OU with the <code>ParentId</code> that you specified.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.CreateOrganizationalUnit
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/CreateOrganizationalUnit"
      *      target="_top">AWS API Documentation</a>
@@ -2864,7 +3293,7 @@ public interface AWSOrganizations {
     /**
      * <p>
      * Creates a policy of a specified type that you can attach to a root, an organizational unit (OU), or an individual
-     * AWS account.
+     * Amazon Web Services account.
      * </p>
      * <p>
      * For more information about policies and their use, see <a
@@ -2909,20 +3338,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -2935,13 +3355,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -2951,14 +3371,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -2976,9 +3396,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -3003,9 +3424,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -3017,9 +3438,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -3027,9 +3449,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -3054,9 +3476,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -3095,8 +3517,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws DuplicatePolicyException
@@ -3117,7 +3552,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -3192,8 +3627,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -3240,24 +3675,24 @@ public interface AWSOrganizations {
      *         The provided policy document doesn't meet the requirements of the specified policy type. For example, the
      *         syntax might be incorrect. For details about service control policy syntax, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_scp-syntax.html">Service
-     *         Control Policy Syntax</a> in the <i>AWS Organizations User Guide.</i>
+     *         Control Policy Syntax</a> in the <i>Organizations User Guide.</i>
      * @throws PolicyTypeNotAvailableForOrganizationException
      *         You can't use the specified policy type with the feature set currently enabled for this organization. For
      *         example, you can enable SCPs only after you enable all features in the organization. For more
      *         information, see <a href=
      *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies.html#enable_policies_on_root"
-     *         >Managing AWS Organizations Policies</a>in the <i>AWS Organizations User Guide.</i>
+     *         >Managing Organizations Policies</a>in the <i>Organizations User Guide.</i>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.CreatePolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/CreatePolicy" target="_top">AWS API
      *      Documentation</a>
@@ -3312,7 +3747,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -3387,8 +3822,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -3432,14 +3867,14 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.DeclineHandshake
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DeclineHandshake" target="_top">AWS
      *      API Documentation</a>
@@ -3480,7 +3915,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -3555,8 +3990,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -3603,14 +4038,14 @@ public interface AWSOrganizations {
      *         The organization isn't empty. To delete an organization, you must first remove all accounts except the
      *         management account, delete all OUs, and delete all policies.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.DeleteOrganization
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DeleteOrganization"
      *      target="_top">AWS API Documentation</a>
@@ -3654,7 +4089,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -3729,8 +4164,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -3779,14 +4214,14 @@ public interface AWSOrganizations {
      * @throws OrganizationalUnitNotFoundException
      *         We can't find an OU with the <code>OrganizationalUnitId</code> that you specified.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.DeleteOrganizationalUnit
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DeleteOrganizationalUnit"
      *      target="_top">AWS API Documentation</a>
@@ -3830,7 +4265,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -3905,8 +4340,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -3955,16 +4390,16 @@ public interface AWSOrganizations {
      * @throws PolicyNotFoundException
      *         We can't find a policy with the <code>PolicyId</code> that you specified.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.DeletePolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DeletePolicy" target="_top">AWS API
      *      Documentation</a>
@@ -3973,20 +4408,21 @@ public interface AWSOrganizations {
 
     /**
      * <p>
-     * Removes the specified member AWS account as a delegated administrator for the specified AWS service.
+     * Removes the specified member Amazon Web Services account as a delegated administrator for the specified Amazon
+     * Web Services service.
      * </p>
      * <important>
      * <p>
-     * Deregistering a delegated administrator can have unintended impacts on the functionality of the enabled AWS
-     * service. See the documentation for the enabled service before you deregister a delegated administrator so that
-     * you understand any potential impacts.
+     * Deregistering a delegated administrator can have unintended impacts on the functionality of the enabled Amazon
+     * Web Services service. See the documentation for the enabled service before you deregister a delegated
+     * administrator so that you understand any potential impacts.
      * </p>
      * </important>
      * <p>
-     * You can run this action only for AWS services that support this feature. For a current list of services that
-     * support it, see the column <i>Supports Delegated Administrator</i> in the table at <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services_list.html">AWS Services
-     * that you can use with AWS Organizations</a> in the <i>AWS Organizations User Guide.</i>
+     * You can run this action only for Amazon Web Services services that support this feature. For a current list of
+     * services that support it, see the column <i>Supports Delegated Administrator</i> in the table at <a
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services_list.html">Amazon Web
+     * Services Services that you can use with Organizations</a> in the <i>Organizations User Guide.</i>
      * </p>
      * <p>
      * This operation can be called only from the organization's management account.
@@ -4000,10 +4436,10 @@ public interface AWSOrganizations {
      *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
      *         Management</a> in the <i>IAM User Guide.</i>
      * @throws AccountNotFoundException
-     *         We can't find an AWS account with the <code>AccountId</code> that you specified, or the account whose
-     *         credentials you used to make this request isn't a member of an organization.
+     *         We can't find an Amazon Web Services account with the <code>AccountId</code> that you specified, or the
+     *         account whose credentials you used to make this request isn't a member of an organization.
      * @throws AccountNotRegisteredException
-     *         The specified account is not a delegated administrator for this AWS service.
+     *         The specified account is not a delegated administrator for this Amazon Web Services service.
      * @throws AWSOrganizationsNotInUseException
      *         Your account isn't a member of an organization. To make this request, you must use the credentials of an
      *         account that belongs to an organization.
@@ -4028,20 +4464,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -4054,13 +4481,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -4070,14 +4497,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -4095,9 +4522,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -4122,9 +4550,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -4136,9 +4564,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -4146,9 +4575,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -4173,9 +4602,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -4214,8 +4643,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -4234,7 +4676,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -4309,8 +4751,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -4357,13 +4799,13 @@ public interface AWSOrganizations {
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.DeregisterDelegatedAdministrator
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DeregisterDelegatedAdministrator"
      *      target="_top">AWS API Documentation</a>
@@ -4372,11 +4814,11 @@ public interface AWSOrganizations {
 
     /**
      * <p>
-     * Retrieves AWS Organizations-related information about the specified account.
+     * Retrieves Organizations-related information about the specified account.
      * </p>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param describeAccountRequest
@@ -4387,8 +4829,8 @@ public interface AWSOrganizations {
      *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
      *         Management</a> in the <i>IAM User Guide.</i>
      * @throws AccountNotFoundException
-     *         We can't find an AWS account with the <code>AccountId</code> that you specified, or the account whose
-     *         credentials you used to make this request isn't a member of an organization.
+     *         We can't find an Amazon Web Services account with the <code>AccountId</code> that you specified, or the
+     *         account whose credentials you used to make this request isn't a member of an organization.
      * @throws AWSOrganizationsNotInUseException
      *         Your account isn't a member of an organization. To make this request, you must use the credentials of an
      *         account that belongs to an organization.
@@ -4408,7 +4850,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -4483,8 +4925,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -4528,14 +4970,14 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.DescribeAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DescribeAccount" target="_top">AWS
      *      API Documentation</a>
@@ -4548,7 +4990,7 @@ public interface AWSOrganizations {
      * </p>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param describeCreateAccountStatusRequest
@@ -4579,7 +5021,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -4654,8 +5096,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -4699,16 +5141,16 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.DescribeCreateAccountStatus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DescribeCreateAccountStatus"
      *      target="_top">AWS API Documentation</a>
@@ -4726,12 +5168,12 @@ public interface AWSOrganizations {
      * </p>
      * <p>
      * For more information about policy inheritance, see <a
-     * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies-inheritance.html">How Policy
-     * Inheritance Works</a> in the <i>AWS Organizations User Guide</i>.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies-inheritance.html">How
+     * Policy Inheritance Works</a> in the <i>Organizations User Guide</i>.
      * </p>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param describeEffectivePolicyRequest
@@ -4763,20 +5205,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -4789,13 +5222,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -4805,14 +5238,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -4830,9 +5263,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -4857,9 +5291,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -4871,9 +5305,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -4881,9 +5316,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -4908,9 +5343,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -4949,19 +5384,32 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
+     *         </p>
+     *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws TargetNotFoundException
      *         We can't find a root, OU, account, or policy with the <code>TargetId</code> that you specified.
      * @throws EffectivePolicyNotFoundException
@@ -4986,7 +5434,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -5061,8 +5509,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -5106,7 +5554,7 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.DescribeEffectivePolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DescribeEffectivePolicy"
      *      target="_top">AWS API Documentation</a>
@@ -5153,7 +5601,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -5228,8 +5676,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -5273,14 +5721,14 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.DescribeHandshake
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DescribeHandshake"
      *      target="_top">AWS API Documentation</a>
@@ -5314,14 +5762,14 @@ public interface AWSOrganizations {
      * @throws ConcurrentModificationException
      *         The target of the operation is currently being modified by a different request. Try again later.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.DescribeOrganization
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DescribeOrganization"
      *      target="_top">AWS API Documentation</a>
@@ -5334,7 +5782,7 @@ public interface AWSOrganizations {
      * </p>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param describeOrganizationalUnitRequest
@@ -5363,7 +5811,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -5438,8 +5886,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -5485,14 +5933,14 @@ public interface AWSOrganizations {
      * @throws OrganizationalUnitNotFoundException
      *         We can't find an OU with the <code>OrganizationalUnitId</code> that you specified.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.DescribeOrganizationalUnit
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DescribeOrganizationalUnit"
      *      target="_top">AWS API Documentation</a>
@@ -5505,7 +5953,7 @@ public interface AWSOrganizations {
      * </p>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param describePolicyRequest
@@ -5534,7 +5982,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -5609,8 +6057,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -5656,16 +6104,16 @@ public interface AWSOrganizations {
      * @throws PolicyNotFoundException
      *         We can't find a policy with the <code>PolicyId</code> that you specified.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.DescribePolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DescribePolicy" target="_top">AWS
      *      API Documentation</a>
@@ -5678,7 +6126,7 @@ public interface AWSOrganizations {
      * </p>
      * <important>
      * <p>
-     * If the policy being detached is a service control policy (SCP), the changes to permissions for AWS Identity and
+     * If the policy being detached is a service control policy (SCP), the changes to permissions for Identity and
      * Access Management (IAM) users and roles in affected accounts are immediate.
      * </p>
      * </important>
@@ -5729,20 +6177,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -5755,13 +6194,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -5771,14 +6210,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -5796,9 +6235,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -5823,9 +6263,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -5837,9 +6277,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -5847,9 +6288,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -5874,9 +6315,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -5915,8 +6356,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -5935,7 +6389,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -6010,8 +6464,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -6059,18 +6513,18 @@ public interface AWSOrganizations {
      * @throws PolicyNotFoundException
      *         We can't find a policy with the <code>PolicyId</code> that you specified.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TargetNotFoundException
      *         We can't find a root, OU, account, or policy with the <code>TargetId</code> that you specified.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @throws PolicyChangesInProgressException
      *         Changes to the effective policy are in progress, and its contents can't be returned. Try the operation
      *         again later.
@@ -6082,26 +6536,27 @@ public interface AWSOrganizations {
 
     /**
      * <p>
-     * Disables the integration of an AWS service (the service that is specified by <code>ServicePrincipal</code>) with
-     * AWS Organizations. When you disable integration, the specified service no longer can create a <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html">service-linked role</a> in
-     * <i>new</i> accounts in your organization. This means the service can't perform operations on your behalf on any
-     * new accounts in your organization. The service can still perform operations in older accounts until the service
-     * completes its clean-up from AWS Organizations.
+     * Disables the integration of an Amazon Web Services service (the service that is specified by
+     * <code>ServicePrincipal</code>) with Organizations. When you disable integration, the specified service no longer
+     * can create a <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html">service-linked role</a>
+     * in <i>new</i> accounts in your organization. This means the service can't perform operations on your behalf on
+     * any new accounts in your organization. The service can still perform operations in older accounts until the
+     * service completes its clean-up from Organizations.
      * </p>
      * <important>
      * <p>
-     * We <b> <i>strongly recommend</i> </b> that you don't use this command to disable integration between AWS
-     * Organizations and the specified AWS service. Instead, use the console or commands that are provided by the
-     * specified service. This lets the trusted service perform any required initialization when enabling trusted
-     * access, such as creating any required resources and any required clean up of resources when disabling trusted
-     * access.
+     * We <b> <i>strongly recommend</i> </b> that you don't use this command to disable integration between
+     * Organizations and the specified Amazon Web Services service. Instead, use the console or commands that are
+     * provided by the specified service. This lets the trusted service perform any required initialization when
+     * enabling trusted access, such as creating any required resources and any required clean up of resources when
+     * disabling trusted access.
      * </p>
      * <p>
      * For information about how to disable trusted service access to your organization using the trusted service, see
      * the <b>Learn more</b> link under the <b>Supports Trusted Access</b> column at <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services_list.html">AWS services
-     * that you can use with AWS Organizations</a>. on this page.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services_list.html">Amazon Web
+     * Services services that you can use with Organizations</a>. on this page.
      * </p>
      * <p>
      * If you disable access by using this command, it causes the following actions to occur:
@@ -6111,7 +6566,7 @@ public interface AWSOrganizations {
      * <p>
      * The service can no longer create a service-linked role in the accounts in your organization. This means that the
      * service can't perform operations on your behalf on any new accounts in your organization. The service can still
-     * perform operations in older accounts until the service completes its clean-up from AWS Organizations.
+     * perform operations in older accounts until the service completes its clean-up from Organizations.
      * </p>
      * </li>
      * <li>
@@ -6133,7 +6588,7 @@ public interface AWSOrganizations {
      * Using the other service's console or commands to disable the integration ensures that the other service is aware
      * that it can clean up any resources that are required only for the integration. How the service cleans up its
      * resources in the organization's accounts depends on that service. For more information, see the documentation for
-     * the other AWS service.
+     * the other Amazon Web Services service.
      * </p>
      * </important>
      * <p>
@@ -6141,10 +6596,10 @@ public interface AWSOrganizations {
      * operations in your organization's accounts
      * </p>
      * <p>
-     * For more information about integrating other services with AWS Organizations, including the list of services that
+     * For more information about integrating other services with Organizations, including the list of services that
      * work with Organizations, see <a
-     * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Integrating AWS
-     * Organizations with Other AWS Services</a> in the <i>AWS Organizations User Guide.</i>
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Integrating
+     * Organizations with Other Amazon Web Services Services</a> in the <i>Organizations User Guide.</i>
      * </p>
      * <p>
      * This operation can be called only from the organization's management account.
@@ -6181,20 +6636,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -6207,13 +6653,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -6223,14 +6669,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -6248,9 +6694,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -6275,9 +6722,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -6289,9 +6736,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -6299,9 +6747,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -6326,9 +6774,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -6367,8 +6815,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -6387,7 +6848,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -6462,8 +6923,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -6507,16 +6968,16 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.DisableAWSServiceAccess
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DisableAWSServiceAccess"
      *      target="_top">AWS API Documentation</a>
@@ -6531,11 +6992,11 @@ public interface AWSOrganizations {
      * undo this by using the <a>EnablePolicyType</a> operation.
      * </p>
      * <p>
-     * This is an asynchronous request that AWS performs in the background. If you disable a policy type for a root, it
-     * still appears enabled for the organization if <a
+     * This is an asynchronous request that Amazon Web Services performs in the background. If you disable a policy type
+     * for a root, it still appears enabled for the organization if <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html">all
-     * features</a> are enabled for the organization. AWS recommends that you first use <a>ListRoots</a> to see the
-     * status of policy types for a specified root, and then use this operation.
+     * features</a> are enabled for the organization. Amazon Web Services recommends that you first use <a>ListRoots</a>
+     * to see the status of policy types for a specified root, and then use this operation.
      * </p>
      * <p>
      * This operation can be called only from the organization's management account.
@@ -6575,20 +7036,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -6601,13 +7053,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -6617,14 +7069,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -6642,9 +7094,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -6669,9 +7122,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -6683,9 +7136,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -6693,9 +7147,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -6720,9 +7174,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -6761,8 +7215,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -6781,7 +7248,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -6856,8 +7323,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -6905,20 +7372,20 @@ public interface AWSOrganizations {
      *         specified type to entities in a root until you enable that type in the root. For more information, see <a
      *         href
      *         ="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html"
-     *         >Enabling All Features in Your Organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         >Enabling All Features in Your Organization</a> in the <i>Organizations User Guide.</i>
      * @throws RootNotFoundException
      *         We can't find a root with the <code>RootId</code> that you specified.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @throws PolicyChangesInProgressException
      *         Changes to the effective policy are in progress, and its contents can't be returned. Try the operation
      *         again later.
@@ -6930,30 +7397,31 @@ public interface AWSOrganizations {
 
     /**
      * <p>
-     * Enables the integration of an AWS service (the service that is specified by <code>ServicePrincipal</code>) with
-     * AWS Organizations. When you enable integration, you allow the specified service to create a <a
-     * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html">service-linked role</a> in
-     * all the accounts in your organization. This allows the service to perform operations on your behalf in your
+     * Enables the integration of an Amazon Web Services service (the service that is specified by
+     * <code>ServicePrincipal</code>) with Organizations. When you enable integration, you allow the specified service
+     * to create a <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html">service-linked role</a>
+     * in all the accounts in your organization. This allows the service to perform operations on your behalf in your
      * organization and its accounts.
      * </p>
      * <important>
      * <p>
-     * We recommend that you enable integration between AWS Organizations and the specified AWS service by using the
-     * console or commands that are provided by the specified service. Doing so ensures that the service is aware that
-     * it can create the resources that are required for the integration. How the service creates those resources in the
-     * organization's accounts depends on that service. For more information, see the documentation for the other AWS
-     * service.
+     * We recommend that you enable integration between Organizations and the specified Amazon Web Services service by
+     * using the console or commands that are provided by the specified service. Doing so ensures that the service is
+     * aware that it can create the resources that are required for the integration. How the service creates those
+     * resources in the organization's accounts depends on that service. For more information, see the documentation for
+     * the other Amazon Web Services service.
      * </p>
      * </important>
      * <p>
-     * For more information about enabling services to integrate with AWS Organizations, see <a
-     * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Integrating AWS
-     * Organizations with Other AWS Services</a> in the <i>AWS Organizations User Guide.</i>
+     * For more information about enabling services to integrate with Organizations, see <a
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Integrating
+     * Organizations with Other Amazon Web Services Services</a> in the <i>Organizations User Guide.</i>
      * </p>
      * <p>
      * This operation can be called only from the organization's management account and only if the organization has <a
      * href
-     * ="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html">enabled
+     * ="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html">enabled
      * all features</a>.
      * </p>
      * 
@@ -6988,20 +7456,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -7014,13 +7473,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -7030,14 +7489,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -7055,9 +7514,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -7082,9 +7542,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -7096,9 +7556,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -7106,9 +7567,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -7133,9 +7594,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -7174,8 +7635,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -7194,7 +7668,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -7269,8 +7743,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -7314,16 +7788,16 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.EnableAWSServiceAccess
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/EnableAWSServiceAccess"
      *      target="_top">AWS API Documentation</a>
@@ -7334,10 +7808,10 @@ public interface AWSOrganizations {
      * <p>
      * Enables all features in an organization. This enables the use of organization policies that can restrict the
      * services and actions that can be called in each account. Until you enable all features, you have access only to
-     * consolidated billing, and you can't use any of the advanced account administration features that AWS
-     * Organizations supports. For more information, see <a
+     * consolidated billing, and you can't use any of the advanced account administration features that Organizations
+     * supports. For more information, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html"
-     * >Enabling All Features in Your Organization</a> in the <i>AWS Organizations User Guide.</i>
+     * >Enabling All Features in Your Organization</a> in the <i>Organizations User Guide.</i>
      * </p>
      * <important>
      * <p>
@@ -7394,7 +7868,7 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception immediately after creating the organization, wait one hour and try again. If
      *         after an hour it continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
@@ -7463,7 +7937,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -7538,8 +8012,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -7583,14 +8057,14 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.EnableAllFeatures
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/EnableAllFeatures"
      *      target="_top">AWS API Documentation</a>
@@ -7604,8 +8078,9 @@ public interface AWSOrganizations {
      * <a>DisablePolicyType</a> operation.
      * </p>
      * <p>
-     * This is an asynchronous request that AWS performs in the background. AWS recommends that you first use
-     * <a>ListRoots</a> to see the status of policy types for a specified root, and then use this operation.
+     * This is an asynchronous request that Amazon Web Services performs in the background. Amazon Web Services
+     * recommends that you first use <a>ListRoots</a> to see the status of policy types for a specified root, and then
+     * use this operation.
      * </p>
      * <p>
      * This operation can be called only from the organization's management account.
@@ -7646,20 +8121,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -7672,13 +8138,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -7688,14 +8154,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -7713,9 +8179,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -7740,9 +8207,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -7754,9 +8221,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -7764,9 +8232,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -7791,9 +8259,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -7832,8 +8300,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -7852,7 +8333,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -7927,8 +8408,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -7976,22 +8457,22 @@ public interface AWSOrganizations {
      * @throws RootNotFoundException
      *         We can't find a root with the <code>RootId</code> that you specified.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws PolicyTypeNotAvailableForOrganizationException
      *         You can't use the specified policy type with the feature set currently enabled for this organization. For
      *         example, you can enable SCPs only after you enable all features in the organization. For more
      *         information, see <a href=
      *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies.html#enable_policies_on_root"
-     *         >Managing AWS Organizations Policies</a>in the <i>AWS Organizations User Guide.</i>
+     *         >Managing Organizations Policies</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @throws PolicyChangesInProgressException
      *         Changes to the effective policy are in progress, and its contents can't be returned. Try the operation
      *         again later.
@@ -8003,27 +8484,28 @@ public interface AWSOrganizations {
 
     /**
      * <p>
-     * Sends an invitation to another account to join your organization as a member account. AWS Organizations sends
-     * email on your behalf to the email address that is associated with the other account's owner. The invitation is
+     * Sends an invitation to another account to join your organization as a member account. Organizations sends email
+     * on your behalf to the email address that is associated with the other account's owner. The invitation is
      * implemented as a <a>Handshake</a> whose details are in the response.
      * </p>
      * <important>
      * <ul>
      * <li>
      * <p>
-     * You can invite AWS accounts only from the same seller as the management account. For example, if your
-     * organization's management account was created by Amazon Internet Services Pvt. Ltd (AISPL), an AWS seller in
-     * India, you can invite only other AISPL accounts to your organization. You can't combine accounts from AISPL and
-     * AWS or from any other AWS seller. For more information, see <a
-     * href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/useconsolidatedbilliing-India.html"
-     * >Consolidated Billing in India</a>.
+     * You can invite Amazon Web Services accounts only from the same seller as the management account. For example, if
+     * your organization's management account was created by Amazon Internet Services Pvt. Ltd (AISPL), an Amazon Web
+     * Services seller in India, you can invite only other AISPL accounts to your organization. You can't combine
+     * accounts from AISPL and Amazon Web Services or from any other Amazon Web Services seller. For more information,
+     * see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/useconsolidatedbilliing-India.html">
+     * Consolidated Billing in India</a>.
      * </p>
      * </li>
      * <li>
      * <p>
      * If you receive an exception that indicates that you exceeded your account limits for the organization or that the
      * operation failed because your organization is still initializing, wait one hour and then try again. If the error
-     * persists after an hour, contact <a href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     * persists after an hour, contact <a href="https://console.aws.amazon.com/support/home#/">Amazon Web Services
+     * Support</a>.
      * </p>
      * </li>
      * </ul>
@@ -8048,8 +8530,8 @@ public interface AWSOrganizations {
      * @throws AccountOwnerNotVerifiedException
      *         You can't invite an existing account to your organization until you verify that you own the email address
      *         associated with the management account. For more information, see <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_create.html#about-email-verification"
-     *         >Email Address Verification</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_create.html#about-email-verification"
+     *         >Email Address Verification</a> in the <i>Organizations User Guide.</i>
      * @throws ConcurrentModificationException
      *         The target of the operation is currently being modified by a different request. Try again later.
      * @throws HandshakeConstraintViolationException
@@ -8068,7 +8550,7 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception immediately after creating the organization, wait one hour and try again. If
      *         after an hour it continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
@@ -8145,20 +8627,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -8171,13 +8644,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -8187,14 +8660,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -8212,9 +8685,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -8239,9 +8713,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -8253,9 +8727,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -8263,9 +8738,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -8290,9 +8765,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -8331,8 +8806,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -8351,7 +8839,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -8426,8 +8914,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -8471,18 +8959,18 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws FinalizingOrganizationException
-     *         AWS Organizations couldn't perform the operation because your organization hasn't finished initializing.
-     *         This can take up to an hour. Try again later. If after one hour you continue to receive this error,
-     *         contact <a href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         Organizations couldn't perform the operation because your organization hasn't finished initializing. This
+     *         can take up to an hour. Try again later. If after one hour you continue to receive this error, contact <a
+     *         href="https://console.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.InviteAccountToOrganization
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/InviteAccountToOrganization"
      *      target="_top">AWS API Documentation</a>
@@ -8510,7 +8998,7 @@ public interface AWSOrganizations {
      * <li>
      * <p>
      * You can leave an organization as a member account only if the account is configured with the information required
-     * to operate as a standalone account. When you create an account in an organization using the AWS Organizations
+     * to operate as a standalone account. When you create an account in an organization using the Organizations
      * console, API, or CLI commands, the information required of standalone accounts is <i>not</i> automatically
      * collected. For each account that you want to make standalone, you must perform the following steps. If any of the
      * steps are already completed for this account, that step doesn't appear.
@@ -8533,33 +9021,33 @@ public interface AWSOrganizations {
      * </li>
      * </ul>
      * <p>
-     * AWS uses the payment method to charge for any billable (not free tier) AWS activity that occurs while the account
-     * isn't attached to an organization. Follow the steps at <a href=
-     * "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
-     * > To leave an organization when all required account information has not yet been provided</a> in the <i>AWS
-     * Organizations User Guide.</i>
+     * Amazon Web Services uses the payment method to charge for any billable (not free tier) Amazon Web Services
+     * activity that occurs while the account isn't attached to an organization. Follow the steps at <a href=
+     * "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     * > To leave an organization when all required account information has not yet been provided</a> in the
+     * <i>Organizations User Guide.</i>
      * </p>
      * </li>
      * <li>
      * <p>
-     * The account that you want to leave must not be a delegated administrator account for any AWS service enabled for
-     * your organization. If the account is a delegated administrator, you must first change the delegated administrator
-     * account to another account that is remaining in the organization.
+     * The account that you want to leave must not be a delegated administrator account for any Amazon Web Services
+     * service enabled for your organization. If the account is a delegated administrator, you must first change the
+     * delegated administrator account to another account that is remaining in the organization.
      * </p>
      * </li>
      * <li>
      * <p>
      * You can leave an organization only after you enable IAM user access to billing in your account. For more
      * information, see <a href=
-     * "http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate"
-     * >Activating Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User
-     * Guide.</i>
+     * "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate"
+     * >Activating Access to the Billing and Cost Management Console</a> in the <i>Amazon Web Services Billing and Cost
+     * Management User Guide.</i>
      * </p>
      * </li>
      * <li>
      * <p>
      * After the account leaves the organization, all tags that were attached to the account object in the organization
-     * are deleted. AWS accounts outside of an organization do not support tags.
+     * are deleted. Amazon Web Services accounts outside of an organization do not support tags.
      * </p>
      * </li>
      * <li>
@@ -8579,8 +9067,8 @@ public interface AWSOrganizations {
      *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
      *         Management</a> in the <i>IAM User Guide.</i>
      * @throws AccountNotFoundException
-     *         We can't find an AWS account with the <code>AccountId</code> that you specified, or the account whose
-     *         credentials you used to make this request isn't a member of an organization.
+     *         We can't find an Amazon Web Services account with the <code>AccountId</code> that you specified, or the
+     *         account whose credentials you used to make this request isn't a member of an organization.
      * @throws AWSOrganizationsNotInUseException
      *         Your account isn't a member of an organization. To make this request, you must use the credentials of an
      *         account that belongs to an organization.
@@ -8605,20 +9093,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -8631,13 +9110,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -8647,14 +9126,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -8672,9 +9151,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -8699,9 +9179,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -8713,9 +9193,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -8723,9 +9204,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -8750,9 +9231,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -8791,8 +9272,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -8811,7 +9305,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -8886,8 +9380,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -8935,14 +9429,14 @@ public interface AWSOrganizations {
      *         a member account in another organization, you must first delete the current organization of the
      *         management account.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.LeaveOrganization
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/LeaveOrganization"
      *      target="_top">AWS API Documentation</a>
@@ -8951,19 +9445,19 @@ public interface AWSOrganizations {
 
     /**
      * <p>
-     * Returns a list of the AWS services that you enabled to integrate with your organization. After a service on this
-     * list creates the resources that it requires for the integration, it can perform operations on your organization
-     * and its accounts.
+     * Returns a list of the Amazon Web Services services that you enabled to integrate with your organization. After a
+     * service on this list creates the resources that it requires for the integration, it can perform operations on
+     * your organization and its accounts.
      * </p>
      * <p>
-     * For more information about integrating other services with AWS Organizations, including the list of services that
+     * For more information about integrating other services with Organizations, including the list of services that
      * currently work with Organizations, see <a
-     * href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Integrating AWS
-     * Organizations with Other AWS Services</a> in the <i>AWS Organizations User Guide.</i>
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Integrating
+     * Organizations with Other Amazon Web Services Services</a> in the <i>Organizations User Guide.</i>
      * </p>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param listAWSServiceAccessForOrganizationRequest
@@ -8995,20 +9489,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -9021,13 +9506,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -9037,14 +9522,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -9062,9 +9547,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -9089,9 +9575,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -9103,9 +9589,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -9113,9 +9600,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -9140,9 +9627,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -9181,8 +9668,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -9201,7 +9701,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -9276,8 +9776,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -9321,16 +9821,16 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.ListAWSServiceAccessForOrganization
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListAWSServiceAccessForOrganization"
@@ -9354,7 +9854,7 @@ public interface AWSOrganizations {
      * </note>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param listAccountsRequest
@@ -9383,7 +9883,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -9458,8 +9958,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -9503,14 +10003,14 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.ListAccounts
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListAccounts" target="_top">AWS API
      *      Documentation</a>
@@ -9534,7 +10034,7 @@ public interface AWSOrganizations {
      * </note>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param listAccountsForParentRequest
@@ -9563,7 +10063,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -9638,8 +10138,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -9685,14 +10185,14 @@ public interface AWSOrganizations {
      * @throws ParentNotFoundException
      *         We can't find a root or OU with the <code>ParentId</code> that you specified.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.ListAccountsForParent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListAccountsForParent"
      *      target="_top">AWS API Documentation</a>
@@ -9714,7 +10214,7 @@ public interface AWSOrganizations {
      * </note>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param listChildrenRequest
@@ -9743,7 +10243,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -9818,8 +10318,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -9865,14 +10365,14 @@ public interface AWSOrganizations {
      * @throws ParentNotFoundException
      *         We can't find a root or OU with the <code>ParentId</code> that you specified.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.ListChildren
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListChildren" target="_top">AWS API
      *      Documentation</a>
@@ -9894,7 +10394,7 @@ public interface AWSOrganizations {
      * </note>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param listCreateAccountStatusRequest
@@ -9923,7 +10423,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -9998,8 +10498,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -10043,16 +10543,16 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.ListCreateAccountStatus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListCreateAccountStatus"
      *      target="_top">AWS API Documentation</a>
@@ -10061,11 +10561,11 @@ public interface AWSOrganizations {
 
     /**
      * <p>
-     * Lists the AWS accounts that are designated as delegated administrators in this organization.
+     * Lists the Amazon Web Services accounts that are designated as delegated administrators in this organization.
      * </p>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param listDelegatedAdministratorsRequest
@@ -10097,20 +10597,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -10123,13 +10614,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -10139,14 +10630,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -10164,9 +10655,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -10191,9 +10683,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -10205,9 +10697,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -10215,9 +10708,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -10242,9 +10735,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -10283,8 +10776,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -10303,7 +10809,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -10378,8 +10884,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -10426,13 +10932,13 @@ public interface AWSOrganizations {
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.ListDelegatedAdministrators
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListDelegatedAdministrators"
      *      target="_top">AWS API Documentation</a>
@@ -10441,11 +10947,11 @@ public interface AWSOrganizations {
 
     /**
      * <p>
-     * List the AWS services for which the specified account is a delegated administrator.
+     * List the Amazon Web Services services for which the specified account is a delegated administrator.
      * </p>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param listDelegatedServicesForAccountRequest
@@ -10456,10 +10962,10 @@ public interface AWSOrganizations {
      *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
      *         Management</a> in the <i>IAM User Guide.</i>
      * @throws AccountNotFoundException
-     *         We can't find an AWS account with the <code>AccountId</code> that you specified, or the account whose
-     *         credentials you used to make this request isn't a member of an organization.
+     *         We can't find an Amazon Web Services account with the <code>AccountId</code> that you specified, or the
+     *         account whose credentials you used to make this request isn't a member of an organization.
      * @throws AccountNotRegisteredException
-     *         The specified account is not a delegated administrator for this AWS service.
+     *         The specified account is not a delegated administrator for this Amazon Web Services service.
      * @throws AWSOrganizationsNotInUseException
      *         Your account isn't a member of an organization. To make this request, you must use the credentials of an
      *         account that belongs to an organization.
@@ -10482,20 +10988,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -10508,13 +11005,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -10524,14 +11021,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -10549,9 +11046,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -10576,9 +11074,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -10590,9 +11088,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -10600,9 +11099,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -10627,9 +11126,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -10668,8 +11167,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -10688,7 +11200,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -10763,8 +11275,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -10811,13 +11323,13 @@ public interface AWSOrganizations {
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.ListDelegatedServicesForAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListDelegatedServicesForAccount"
      *      target="_top">AWS API Documentation</a>
@@ -10829,8 +11341,9 @@ public interface AWSOrganizations {
      * Lists the current handshakes that are associated with the account of the requesting user.
      * </p>
      * <p>
-     * Handshakes that are <code>ACCEPTED</code>, <code>DECLINED</code>, or <code>CANCELED</code> appear in the results
-     * of this API for only 30 days after changing to that state. After that, they're deleted and no longer accessible.
+     * Handshakes that are <code>ACCEPTED</code>, <code>DECLINED</code>, <code>CANCELED</code>, or <code>EXPIRED</code>
+     * appear in the results of this API for only 30 days after changing to that state. After that, they're deleted and
+     * no longer accessible.
      * </p>
      * <note>
      * <p>
@@ -10869,7 +11382,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -10944,8 +11457,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -10989,14 +11502,14 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.ListHandshakesForAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListHandshakesForAccount"
      *      target="_top">AWS API Documentation</a>
@@ -11010,8 +11523,9 @@ public interface AWSOrganizations {
      * contains details and status about a handshake.
      * </p>
      * <p>
-     * Handshakes that are <code>ACCEPTED</code>, <code>DECLINED</code>, or <code>CANCELED</code> appear in the results
-     * of this API for only 30 days after changing to that state. After that, they're deleted and no longer accessible.
+     * Handshakes that are <code>ACCEPTED</code>, <code>DECLINED</code>, <code>CANCELED</code>, or <code>EXPIRED</code>
+     * appear in the results of this API for only 30 days after changing to that state. After that, they're deleted and
+     * no longer accessible.
      * </p>
      * <note>
      * <p>
@@ -11023,7 +11537,7 @@ public interface AWSOrganizations {
      * </note>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param listHandshakesForOrganizationRequest
@@ -11054,7 +11568,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -11129,8 +11643,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -11174,14 +11688,14 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.ListHandshakesForOrganization
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListHandshakesForOrganization"
      *      target="_top">AWS API Documentation</a>
@@ -11202,7 +11716,7 @@ public interface AWSOrganizations {
      * </note>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param listOrganizationalUnitsForParentRequest
@@ -11231,7 +11745,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -11306,8 +11820,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -11353,14 +11867,14 @@ public interface AWSOrganizations {
      * @throws ParentNotFoundException
      *         We can't find a root or OU with the <code>ParentId</code> that you specified.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.ListOrganizationalUnitsForParent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListOrganizationalUnitsForParent"
      *      target="_top">AWS API Documentation</a>
@@ -11383,7 +11897,7 @@ public interface AWSOrganizations {
      * </note>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * <note>
      * <p>
@@ -11402,8 +11916,8 @@ public interface AWSOrganizations {
      *         Your account isn't a member of an organization. To make this request, you must use the credentials of an
      *         account that belongs to an organization.
      * @throws ChildNotFoundException
-     *         We can't find an organizational unit (OU) or AWS account with the <code>ChildId</code> that you
-     *         specified.
+     *         We can't find an organizational unit (OU) or Amazon Web Services account with the <code>ChildId</code>
+     *         that you specified.
      * @throws InvalidInputException
      *         The requested operation failed because you provided invalid values for one or more of the request
      *         parameters. This exception includes a reason that contains additional information about the violated
@@ -11420,7 +11934,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -11495,8 +12009,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -11540,14 +12054,14 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.ListParents
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListParents" target="_top">AWS API
      *      Documentation</a>
@@ -11568,7 +12082,7 @@ public interface AWSOrganizations {
      * </note>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param listPoliciesRequest
@@ -11597,7 +12111,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -11672,8 +12186,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -11717,16 +12231,16 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.ListPolicies
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListPolicies" target="_top">AWS API
      *      Documentation</a>
@@ -11748,7 +12262,7 @@ public interface AWSOrganizations {
      * </note>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param listPoliciesForTargetRequest
@@ -11777,7 +12291,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -11852,8 +12366,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -11897,18 +12411,18 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TargetNotFoundException
      *         We can't find a root, OU, account, or policy with the <code>TargetId</code> that you specified.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.ListPoliciesForTarget
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListPoliciesForTarget"
      *      target="_top">AWS API Documentation</a>
@@ -11929,7 +12443,7 @@ public interface AWSOrganizations {
      * </note>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * <note>
      * <p>
@@ -11966,7 +12480,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -12041,8 +12555,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -12086,14 +12600,14 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.ListRoots
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListRoots" target="_top">AWS API
      *      Documentation</a>
@@ -12105,12 +12619,12 @@ public interface AWSOrganizations {
      * Lists tags that are attached to the specified resource.
      * </p>
      * <p>
-     * You can attach tags to the following resources in AWS Organizations.
+     * You can attach tags to the following resources in Organizations.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * AWS account
+     * Amazon Web Services account
      * </p>
      * </li>
      * <li>
@@ -12131,7 +12645,7 @@ public interface AWSOrganizations {
      * </ul>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -12162,7 +12676,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -12237,8 +12751,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -12282,14 +12796,14 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListTagsForResource"
      *      target="_top">AWS API Documentation</a>
@@ -12310,7 +12824,7 @@ public interface AWSOrganizations {
      * </note>
      * <p>
      * This operation can be called only from the organization's management account or by a member account that is a
-     * delegated administrator for an AWS service.
+     * delegated administrator for an Amazon Web Services service.
      * </p>
      * 
      * @param listTargetsForPolicyRequest
@@ -12339,7 +12853,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -12414,8 +12928,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -12461,16 +12975,16 @@ public interface AWSOrganizations {
      * @throws PolicyNotFoundException
      *         We can't find a policy with the <code>PolicyId</code> that you specified.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.ListTargetsForPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/ListTargetsForPolicy"
      *      target="_top">AWS API Documentation</a>
@@ -12509,7 +13023,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -12584,8 +13098,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -12635,22 +13149,22 @@ public interface AWSOrganizations {
      * @throws DuplicateAccountException
      *         That account is already present in the specified destination.
      * @throws AccountNotFoundException
-     *         We can't find an AWS account with the <code>AccountId</code> that you specified, or the account whose
-     *         credentials you used to make this request isn't a member of an organization.
+     *         We can't find an Amazon Web Services account with the <code>AccountId</code> that you specified, or the
+     *         account whose credentials you used to make this request isn't a member of an organization.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws ConcurrentModificationException
      *         The target of the operation is currently being modified by a different request. Try again later.
      * @throws AWSOrganizationsNotInUseException
      *         Your account isn't a member of an organization. To make this request, you must use the credentials of an
      *         account that belongs to an organization.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @sample AWSOrganizations.MoveAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/MoveAccount" target="_top">AWS API
      *      Documentation</a>
@@ -12659,15 +13173,15 @@ public interface AWSOrganizations {
 
     /**
      * <p>
-     * Enables the specified member account to administer the Organizations features of the specified AWS service. It
-     * grants read-only access to AWS Organizations service data. The account still requires IAM permissions to access
-     * and administer the AWS service.
+     * Enables the specified member account to administer the Organizations features of the specified Amazon Web
+     * Services service. It grants read-only access to Organizations service data. The account still requires IAM
+     * permissions to access and administer the Amazon Web Services service.
      * </p>
      * <p>
-     * You can run this action only for AWS services that support this feature. For a current list of services that
-     * support it, see the column <i>Supports Delegated Administrator</i> in the table at <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services_list.html">AWS Services
-     * that you can use with AWS Organizations</a> in the <i>AWS Organizations User Guide.</i>
+     * You can run this action only for Amazon Web Services services that support this feature. For a current list of
+     * services that support it, see the column <i>Supports Delegated Administrator</i> in the table at <a
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services_list.html">Amazon Web
+     * Services Services that you can use with Organizations</a> in the <i>Organizations User Guide.</i>
      * </p>
      * <p>
      * This operation can be called only from the organization's management account.
@@ -12681,10 +13195,10 @@ public interface AWSOrganizations {
      *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
      *         Management</a> in the <i>IAM User Guide.</i>
      * @throws AccountAlreadyRegisteredException
-     *         The specified account is already a delegated administrator for this AWS service.
+     *         The specified account is already a delegated administrator for this Amazon Web Services service.
      * @throws AccountNotFoundException
-     *         We can't find an AWS account with the <code>AccountId</code> that you specified, or the account whose
-     *         credentials you used to make this request isn't a member of an organization.
+     *         We can't find an Amazon Web Services account with the <code>AccountId</code> that you specified, or the
+     *         account whose credentials you used to make this request isn't a member of an organization.
      * @throws AWSOrganizationsNotInUseException
      *         Your account isn't a member of an organization. To make this request, you must use the credentials of an
      *         account that belongs to an organization.
@@ -12709,20 +13223,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -12735,13 +13240,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -12751,14 +13256,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -12776,9 +13281,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -12803,9 +13309,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -12817,9 +13323,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -12827,9 +13334,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -12854,9 +13361,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -12895,8 +13402,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -12915,7 +13435,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -12990,8 +13510,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -13038,13 +13558,13 @@ public interface AWSOrganizations {
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @sample AWSOrganizations.RegisterDelegatedAdministrator
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/RegisterDelegatedAdministrator"
      *      target="_top">AWS API Documentation</a>
@@ -13069,29 +13589,29 @@ public interface AWSOrganizations {
      * <li>
      * <p>
      * You can remove an account from your organization only if the account is configured with the information required
-     * to operate as a standalone account. When you create an account in an organization using the AWS Organizations
+     * to operate as a standalone account. When you create an account in an organization using the Organizations
      * console, API, or CLI commands, the information required of standalone accounts is <i>not</i> automatically
      * collected. For an account that you want to make standalone, you must choose a support plan, provide and verify
-     * the required contact information, and provide a current payment method. AWS uses the payment method to charge for
-     * any billable (not free tier) AWS activity that occurs while the account isn't attached to an organization. To
-     * remove an account that doesn't yet have this information, you must sign in as the member account and follow the
-     * steps at <a href=
-     * "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
-     * > To leave an organization when all required account information has not yet been provided</a> in the <i>AWS
-     * Organizations User Guide.</i>
+     * the required contact information, and provide a current payment method. Amazon Web Services uses the payment
+     * method to charge for any billable (not free tier) Amazon Web Services activity that occurs while the account
+     * isn't attached to an organization. To remove an account that doesn't yet have this information, you must sign in
+     * as the member account and follow the steps at <a href=
+     * "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     * > To leave an organization when all required account information has not yet been provided</a> in the
+     * <i>Organizations User Guide.</i>
      * </p>
      * </li>
      * <li>
      * <p>
-     * The account that you want to leave must not be a delegated administrator account for any AWS service enabled for
-     * your organization. If the account is a delegated administrator, you must first change the delegated administrator
-     * account to another account that is remaining in the organization.
+     * The account that you want to leave must not be a delegated administrator account for any Amazon Web Services
+     * service enabled for your organization. If the account is a delegated administrator, you must first change the
+     * delegated administrator account to another account that is remaining in the organization.
      * </p>
      * </li>
      * <li>
      * <p>
      * After the account leaves the organization, all tags that were attached to the account object in the organization
-     * are deleted. AWS accounts outside of an organization do not support tags.
+     * are deleted. Amazon Web Services accounts outside of an organization do not support tags.
      * </p>
      * </li>
      * </ul>
@@ -13105,8 +13625,8 @@ public interface AWSOrganizations {
      *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
      *         Management</a> in the <i>IAM User Guide.</i>
      * @throws AccountNotFoundException
-     *         We can't find an AWS account with the <code>AccountId</code> that you specified, or the account whose
-     *         credentials you used to make this request isn't a member of an organization.
+     *         We can't find an Amazon Web Services account with the <code>AccountId</code> that you specified, or the
+     *         account whose credentials you used to make this request isn't a member of an organization.
      * @throws AWSOrganizationsNotInUseException
      *         Your account isn't a member of an organization. To make this request, you must use the credentials of an
      *         account that belongs to an organization.
@@ -13131,20 +13651,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -13157,13 +13668,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -13173,14 +13684,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -13198,9 +13709,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -13225,9 +13737,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -13239,9 +13751,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -13249,9 +13762,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -13276,9 +13789,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -13317,8 +13830,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -13337,7 +13863,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -13412,8 +13938,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -13461,14 +13987,14 @@ public interface AWSOrganizations {
      *         a member account in another organization, you must first delete the current organization of the
      *         management account.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.RemoveAccountFromOrganization
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/RemoveAccountFromOrganization"
      *      target="_top">AWS API Documentation</a>
@@ -13480,12 +14006,12 @@ public interface AWSOrganizations {
      * Adds one or more tags to the specified resource.
      * </p>
      * <p>
-     * Currently, you can attach tags to the following resources in AWS Organizations.
+     * Currently, you can attach tags to the following resources in Organizations.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * AWS account
+     * Amazon Web Services account
      * </p>
      * </li>
      * <li>
@@ -13541,20 +14067,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -13567,13 +14084,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -13583,14 +14100,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -13608,9 +14125,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -13635,9 +14153,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -13649,9 +14167,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -13659,9 +14178,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -13686,9 +14205,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -13727,8 +14246,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -13747,7 +14279,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -13822,8 +14354,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -13867,14 +14399,14 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/TagResource" target="_top">AWS API
      *      Documentation</a>
@@ -13886,12 +14418,12 @@ public interface AWSOrganizations {
      * Removes any tags with the specified keys from the specified resource.
      * </p>
      * <p>
-     * You can attach tags to the following resources in AWS Organizations.
+     * You can attach tags to the following resources in Organizations.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * AWS account
+     * Amazon Web Services account
      * </p>
      * </li>
      * <li>
@@ -13947,20 +14479,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -13973,13 +14496,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -13989,14 +14512,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -14014,9 +14537,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -14041,9 +14565,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -14055,9 +14579,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -14065,9 +14590,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -14092,9 +14617,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -14133,8 +14658,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws InvalidInputException
@@ -14153,7 +14691,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -14228,8 +14766,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -14273,14 +14811,14 @@ public interface AWSOrganizations {
      *         </p>
      *         </li>
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/UntagResource" target="_top">AWS
      *      API Documentation</a>
@@ -14326,7 +14864,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -14401,8 +14939,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -14448,14 +14986,14 @@ public interface AWSOrganizations {
      * @throws OrganizationalUnitNotFoundException
      *         We can't find an OU with the <code>OrganizationalUnitId</code> that you specified.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @sample AWSOrganizations.UpdateOrganizationalUnit
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/UpdateOrganizationalUnit"
      *      target="_top">AWS API Documentation</a>
@@ -14502,20 +15040,11 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that doesn't
-     *         yet have enough information to exist as a standalone account. This account requires you to first agree to
-     *         the AWS Customer Agreement. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a>in the <i>AWS Organizations User Guide.</i>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization
      *         that doesn't yet have enough information to exist as a standalone account. This account requires you to
      *         first complete phone verification. Follow the steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
-     *         >Removing a member account from your organization</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_remove-from-master"
+     *         >Removing a member account from your organization</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -14528,13 +15057,13 @@ public interface AWSOrganizations {
      *         <p>
      *         ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an
      *         organization. If you need more accounts, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a> to request an increase in your
-     *         limit.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a> to request an increase
+     *         in your limit.
      *         </p>
      *         <p>
      *         Or the number of invitations that you tried to send would cause you to exceed the limit of accounts in
-     *         your organization. Send fewer invitations or contact AWS Support to request an increase in the number of
-     *         accounts.
+     *         your organization. Send fewer invitations or contact Amazon Web Services Support to request an increase
+     *         in the number of accounts.
      *         </p>
      *         <note>
      *         <p>
@@ -14544,14 +15073,14 @@ public interface AWSOrganizations {
      *         <p>
      *         If you get this exception when running a command immediately after creating the organization, wait one
      *         hour and try again. After an hour, if the command continues to fail with this error, contact <a
-     *         href="https://console.aws.amazon.com/support/home#/">AWS Support</a>.
+     *         href="https://docs.aws.amazon.com/support/home#/">Amazon Web Services Support</a>.
      *         </p>
      *         </important></li>
      *         <li>
      *         <p>
      *         CANNOT_REGISTER_MASTER_AS_DELEGATED_ADMINISTRATOR: You attempted to register the management account of
-     *         the organization as a delegated administrator for an AWS service integrated with Organizations. You can
-     *         designate only a member account as a delegated administrator.
+     *         the organization as a delegated administrator for an Amazon Web Services service integrated with
+     *         Organizations. You can designate only a member account as a delegated administrator.
      *         </p>
      *         </li>
      *         <li>
@@ -14569,9 +15098,10 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an AWS account as a delegated
-     *         administrator for an AWS service that already has a delegated administrator. To complete this operation,
-     *         you must first deregister any existing delegated administrators for this service.
+     *         DELEGATED_ADMINISTRATOR_EXISTS_FOR_THIS_SERVICE: You attempted to register an Amazon Web Services account
+     *         as a delegated administrator for an Amazon Web Services service that already has a delegated
+     *         administrator. To complete this operation, you must first deregister any existing delegated
+     *         administrators for this service.
      *         </p>
      *         </li>
      *         <li>
@@ -14596,9 +15126,9 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the AWS Regions in China. To create an
-     *         organization, the master must have a valid business license. For more information, contact customer
-     *         support.
+     *         MASTER_ACCOUNT_MISSING_BUSINESS_LICENSE: Applies only to the Amazon Web Services /&gt; Regions in China.
+     *         To create an organization, the master must have a valid business license. For more information, contact
+     *         customer support.
      *         </p>
      *         </li>
      *         <li>
@@ -14610,9 +15140,10 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         MASTER_ACCOUNT_NOT_GOVCLOUD_ENABLED: To complete this operation, the management account must have an
-     *         associated account in the AWS GovCloud (US-West) Region. For more information, see <a
-     *         href="http://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">AWS
-     *         Organizations</a> in the <i>AWS GovCloud User Guide.</i>
+     *         associated account in the Amazon Web Services GovCloud (US-West) Region. For more information, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-organizations.html">Organizations</a>
+     *         in the <i>Amazon Web Services GovCloud User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -14620,9 +15151,9 @@ public interface AWSOrganizations {
      *         MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this management account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -14647,9 +15178,9 @@ public interface AWSOrganizations {
      *         MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you
      *         first must associate a valid payment instrument, such as a credit card, with the account. Follow the
      *         steps at <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"
      *         >To leave an organization when all required account information has not yet been provided</a> in the
-     *         <i>AWS Organizations User Guide.</i>
+     *         <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
@@ -14688,8 +15219,21 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
+     *         SERVICE_ACCESS_NOT_ENABLED: You attempted to register a delegated administrator before you enabled
+     *         service access. Call the <code>EnableAWSServiceAccess</code> API first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         TAG_POLICY_VIOLATION: You attempted to create or update a resource with tags that are not compliant with
      *         the tag policy requirements for this account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         WAIT_PERIOD_ACTIVE: After you create an Amazon Web Services account, there is a waiting period before you
+     *         can remove it from the organization. If you get an error that indicates that a wait period is required,
+     *         try again in a few days.
      *         </p>
      *         </li>
      * @throws DuplicatePolicyException
@@ -14710,7 +15254,7 @@ public interface AWSOrganizations {
      *         </li>
      *         <li>
      *         <p>
-     *         IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+     *         IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
      *         </p>
      *         </li>
      *         <li>
@@ -14785,8 +15329,8 @@ public interface AWSOrganizations {
      *         <li>
      *         <p>
      *         INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or
-     *         delete system tag keys because they're reserved for AWS use. System tags don’t count against your tags
-     *         per resource limit.
+     *         delete system tag keys because they're reserved for Amazon Web Services use. System tags don’t count
+     *         against your tags per resource limit.
      *         </p>
      *         </li>
      *         <li>
@@ -14833,20 +15377,20 @@ public interface AWSOrganizations {
      *         The provided policy document doesn't meet the requirements of the specified policy type. For example, the
      *         syntax might be incorrect. For details about service control policy syntax, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_scp-syntax.html">Service
-     *         Control Policy Syntax</a> in the <i>AWS Organizations User Guide.</i>
+     *         Control Policy Syntax</a> in the <i>Organizations User Guide.</i>
      * @throws PolicyNotFoundException
      *         We can't find a policy with the <code>PolicyId</code> that you specified.
      * @throws ServiceException
-     *         AWS Organizations can't complete your request because of an internal service error. Try again later.
+     *         Organizations can't complete your request because of an internal service error. Try again later.
      * @throws TooManyRequestsException
      *         You have sent too many requests in too short a period of time. The quota helps protect against
      *         denial-of-service attacks. Try again later.</p>
      *         <p>
-     *         For information about quotas that affect AWS Organizations, see <a
+     *         For information about quotas that affect Organizations, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html">Quotas for
-     *         AWS Organizations</a>in the <i>AWS Organizations User Guide.</i>
+     *         Organizations</a>in the <i>Organizations User Guide.</i>
      * @throws UnsupportedAPIEndpointException
-     *         This action isn't available in the current AWS Region.
+     *         This action isn't available in the current Amazon Web Services Region.
      * @throws PolicyChangesInProgressException
      *         Changes to the effective policy are in progress, and its contents can't be returned. Try the operation
      *         again later.

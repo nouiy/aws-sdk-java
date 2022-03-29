@@ -27,22 +27,22 @@ public class InviteAccountToOrganizationRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The identifier (ID) of the AWS account that you want to invite to join your organization. This is a JSON object
-     * that contains the following elements:
+     * The identifier (ID) of the Amazon Web Services account that you want to invite to join your organization. This is
+     * a JSON object that contains the following elements:
      * </p>
      * <p>
      * <code>{ "Type": "ACCOUNT", "Id": "&lt;<i> <b>account id number</b> </i>&gt;" }</code>
      * </p>
      * <p>
-     * If you use the AWS CLI, you can submit this as a single string, similar to the following example:
+     * If you use the CLI, you can submit this as a single string, similar to the following example:
      * </p>
      * <p>
      * <code>--target Id=123456789012,Type=ACCOUNT</code>
      * </p>
      * <p>
-     * If you specify <code>"Type": "ACCOUNT"</code>, you must provide the AWS account ID number as the <code>Id</code>.
-     * If you specify <code>"Type": "EMAIL"</code>, you must specify the email address that is associated with the
-     * account.
+     * If you specify <code>"Type": "ACCOUNT"</code>, you must provide the Amazon Web Services account ID number as the
+     * <code>Id</code>. If you specify <code>"Type": "EMAIL"</code>, you must specify the email address that is
+     * associated with the account.
      * </p>
      * <p>
      * <code>--target Id=diego@example.com,Type=EMAIL</code>
@@ -60,8 +60,8 @@ public class InviteAccountToOrganizationRequest extends com.amazonaws.AmazonWebS
      * A list of tags that you want to attach to the account when it becomes a member of the organization. For each tag
      * in the list, you must specify both a tag key and a value. You can set the value to an empty string, but you can't
      * set it to <code>null</code>. For more information about tagging, see <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS Organizations
-     * resources</a> in the AWS Organizations User Guide.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     * resources</a> in the Organizations User Guide.
      * </p>
      * <important>
      * <p>
@@ -82,43 +82,43 @@ public class InviteAccountToOrganizationRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The identifier (ID) of the AWS account that you want to invite to join your organization. This is a JSON object
-     * that contains the following elements:
+     * The identifier (ID) of the Amazon Web Services account that you want to invite to join your organization. This is
+     * a JSON object that contains the following elements:
      * </p>
      * <p>
      * <code>{ "Type": "ACCOUNT", "Id": "&lt;<i> <b>account id number</b> </i>&gt;" }</code>
      * </p>
      * <p>
-     * If you use the AWS CLI, you can submit this as a single string, similar to the following example:
+     * If you use the CLI, you can submit this as a single string, similar to the following example:
      * </p>
      * <p>
      * <code>--target Id=123456789012,Type=ACCOUNT</code>
      * </p>
      * <p>
-     * If you specify <code>"Type": "ACCOUNT"</code>, you must provide the AWS account ID number as the <code>Id</code>.
-     * If you specify <code>"Type": "EMAIL"</code>, you must specify the email address that is associated with the
-     * account.
+     * If you specify <code>"Type": "ACCOUNT"</code>, you must provide the Amazon Web Services account ID number as the
+     * <code>Id</code>. If you specify <code>"Type": "EMAIL"</code>, you must specify the email address that is
+     * associated with the account.
      * </p>
      * <p>
      * <code>--target Id=diego@example.com,Type=EMAIL</code>
      * </p>
      * 
      * @param target
-     *        The identifier (ID) of the AWS account that you want to invite to join your organization. This is a JSON
-     *        object that contains the following elements:</p>
+     *        The identifier (ID) of the Amazon Web Services account that you want to invite to join your organization.
+     *        This is a JSON object that contains the following elements:</p>
      *        <p>
      *        <code>{ "Type": "ACCOUNT", "Id": "&lt;<i> <b>account id number</b> </i>&gt;" }</code>
      *        </p>
      *        <p>
-     *        If you use the AWS CLI, you can submit this as a single string, similar to the following example:
+     *        If you use the CLI, you can submit this as a single string, similar to the following example:
      *        </p>
      *        <p>
      *        <code>--target Id=123456789012,Type=ACCOUNT</code>
      *        </p>
      *        <p>
-     *        If you specify <code>"Type": "ACCOUNT"</code>, you must provide the AWS account ID number as the
-     *        <code>Id</code>. If you specify <code>"Type": "EMAIL"</code>, you must specify the email address that is
-     *        associated with the account.
+     *        If you specify <code>"Type": "ACCOUNT"</code>, you must provide the Amazon Web Services account ID number
+     *        as the <code>Id</code>. If you specify <code>"Type": "EMAIL"</code>, you must specify the email address
+     *        that is associated with the account.
      *        </p>
      *        <p>
      *        <code>--target Id=diego@example.com,Type=EMAIL</code>
@@ -130,42 +130,42 @@ public class InviteAccountToOrganizationRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The identifier (ID) of the AWS account that you want to invite to join your organization. This is a JSON object
-     * that contains the following elements:
+     * The identifier (ID) of the Amazon Web Services account that you want to invite to join your organization. This is
+     * a JSON object that contains the following elements:
      * </p>
      * <p>
      * <code>{ "Type": "ACCOUNT", "Id": "&lt;<i> <b>account id number</b> </i>&gt;" }</code>
      * </p>
      * <p>
-     * If you use the AWS CLI, you can submit this as a single string, similar to the following example:
+     * If you use the CLI, you can submit this as a single string, similar to the following example:
      * </p>
      * <p>
      * <code>--target Id=123456789012,Type=ACCOUNT</code>
      * </p>
      * <p>
-     * If you specify <code>"Type": "ACCOUNT"</code>, you must provide the AWS account ID number as the <code>Id</code>.
-     * If you specify <code>"Type": "EMAIL"</code>, you must specify the email address that is associated with the
-     * account.
+     * If you specify <code>"Type": "ACCOUNT"</code>, you must provide the Amazon Web Services account ID number as the
+     * <code>Id</code>. If you specify <code>"Type": "EMAIL"</code>, you must specify the email address that is
+     * associated with the account.
      * </p>
      * <p>
      * <code>--target Id=diego@example.com,Type=EMAIL</code>
      * </p>
      * 
-     * @return The identifier (ID) of the AWS account that you want to invite to join your organization. This is a JSON
-     *         object that contains the following elements:</p>
+     * @return The identifier (ID) of the Amazon Web Services account that you want to invite to join your organization.
+     *         This is a JSON object that contains the following elements:</p>
      *         <p>
      *         <code>{ "Type": "ACCOUNT", "Id": "&lt;<i> <b>account id number</b> </i>&gt;" }</code>
      *         </p>
      *         <p>
-     *         If you use the AWS CLI, you can submit this as a single string, similar to the following example:
+     *         If you use the CLI, you can submit this as a single string, similar to the following example:
      *         </p>
      *         <p>
      *         <code>--target Id=123456789012,Type=ACCOUNT</code>
      *         </p>
      *         <p>
-     *         If you specify <code>"Type": "ACCOUNT"</code>, you must provide the AWS account ID number as the
-     *         <code>Id</code>. If you specify <code>"Type": "EMAIL"</code>, you must specify the email address that is
-     *         associated with the account.
+     *         If you specify <code>"Type": "ACCOUNT"</code>, you must provide the Amazon Web Services account ID number
+     *         as the <code>Id</code>. If you specify <code>"Type": "EMAIL"</code>, you must specify the email address
+     *         that is associated with the account.
      *         </p>
      *         <p>
      *         <code>--target Id=diego@example.com,Type=EMAIL</code>
@@ -177,43 +177,43 @@ public class InviteAccountToOrganizationRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The identifier (ID) of the AWS account that you want to invite to join your organization. This is a JSON object
-     * that contains the following elements:
+     * The identifier (ID) of the Amazon Web Services account that you want to invite to join your organization. This is
+     * a JSON object that contains the following elements:
      * </p>
      * <p>
      * <code>{ "Type": "ACCOUNT", "Id": "&lt;<i> <b>account id number</b> </i>&gt;" }</code>
      * </p>
      * <p>
-     * If you use the AWS CLI, you can submit this as a single string, similar to the following example:
+     * If you use the CLI, you can submit this as a single string, similar to the following example:
      * </p>
      * <p>
      * <code>--target Id=123456789012,Type=ACCOUNT</code>
      * </p>
      * <p>
-     * If you specify <code>"Type": "ACCOUNT"</code>, you must provide the AWS account ID number as the <code>Id</code>.
-     * If you specify <code>"Type": "EMAIL"</code>, you must specify the email address that is associated with the
-     * account.
+     * If you specify <code>"Type": "ACCOUNT"</code>, you must provide the Amazon Web Services account ID number as the
+     * <code>Id</code>. If you specify <code>"Type": "EMAIL"</code>, you must specify the email address that is
+     * associated with the account.
      * </p>
      * <p>
      * <code>--target Id=diego@example.com,Type=EMAIL</code>
      * </p>
      * 
      * @param target
-     *        The identifier (ID) of the AWS account that you want to invite to join your organization. This is a JSON
-     *        object that contains the following elements:</p>
+     *        The identifier (ID) of the Amazon Web Services account that you want to invite to join your organization.
+     *        This is a JSON object that contains the following elements:</p>
      *        <p>
      *        <code>{ "Type": "ACCOUNT", "Id": "&lt;<i> <b>account id number</b> </i>&gt;" }</code>
      *        </p>
      *        <p>
-     *        If you use the AWS CLI, you can submit this as a single string, similar to the following example:
+     *        If you use the CLI, you can submit this as a single string, similar to the following example:
      *        </p>
      *        <p>
      *        <code>--target Id=123456789012,Type=ACCOUNT</code>
      *        </p>
      *        <p>
-     *        If you specify <code>"Type": "ACCOUNT"</code>, you must provide the AWS account ID number as the
-     *        <code>Id</code>. If you specify <code>"Type": "EMAIL"</code>, you must specify the email address that is
-     *        associated with the account.
+     *        If you specify <code>"Type": "ACCOUNT"</code>, you must provide the Amazon Web Services account ID number
+     *        as the <code>Id</code>. If you specify <code>"Type": "EMAIL"</code>, you must specify the email address
+     *        that is associated with the account.
      *        </p>
      *        <p>
      *        <code>--target Id=diego@example.com,Type=EMAIL</code>
@@ -270,8 +270,8 @@ public class InviteAccountToOrganizationRequest extends com.amazonaws.AmazonWebS
      * A list of tags that you want to attach to the account when it becomes a member of the organization. For each tag
      * in the list, you must specify both a tag key and a value. You can set the value to an empty string, but you can't
      * set it to <code>null</code>. For more information about tagging, see <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS Organizations
-     * resources</a> in the AWS Organizations User Guide.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     * resources</a> in the Organizations User Guide.
      * </p>
      * <important>
      * <p>
@@ -291,8 +291,8 @@ public class InviteAccountToOrganizationRequest extends com.amazonaws.AmazonWebS
      * @return A list of tags that you want to attach to the account when it becomes a member of the organization. For
      *         each tag in the list, you must specify both a tag key and a value. You can set the value to an empty
      *         string, but you can't set it to <code>null</code>. For more information about tagging, see <a
-     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS
-     *         Organizations resources</a> in the AWS Organizations User Guide.</p> <important>
+     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     *         resources</a> in the Organizations User Guide.</p> <important>
      *         <p>
      *         Any tags in the request are checked for compliance with any applicable tag policies when the request is
      *         made. The request is rejected if the tags in the request don't match the requirements of the policy at
@@ -316,8 +316,8 @@ public class InviteAccountToOrganizationRequest extends com.amazonaws.AmazonWebS
      * A list of tags that you want to attach to the account when it becomes a member of the organization. For each tag
      * in the list, you must specify both a tag key and a value. You can set the value to an empty string, but you can't
      * set it to <code>null</code>. For more information about tagging, see <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS Organizations
-     * resources</a> in the AWS Organizations User Guide.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     * resources</a> in the Organizations User Guide.
      * </p>
      * <important>
      * <p>
@@ -338,8 +338,8 @@ public class InviteAccountToOrganizationRequest extends com.amazonaws.AmazonWebS
      *        A list of tags that you want to attach to the account when it becomes a member of the organization. For
      *        each tag in the list, you must specify both a tag key and a value. You can set the value to an empty
      *        string, but you can't set it to <code>null</code>. For more information about tagging, see <a
-     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS
-     *        Organizations resources</a> in the AWS Organizations User Guide.</p> <important>
+     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     *        resources</a> in the Organizations User Guide.</p> <important>
      *        <p>
      *        Any tags in the request are checked for compliance with any applicable tag policies when the request is
      *        made. The request is rejected if the tags in the request don't match the requirements of the policy at
@@ -368,8 +368,8 @@ public class InviteAccountToOrganizationRequest extends com.amazonaws.AmazonWebS
      * A list of tags that you want to attach to the account when it becomes a member of the organization. For each tag
      * in the list, you must specify both a tag key and a value. You can set the value to an empty string, but you can't
      * set it to <code>null</code>. For more information about tagging, see <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS Organizations
-     * resources</a> in the AWS Organizations User Guide.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     * resources</a> in the Organizations User Guide.
      * </p>
      * <important>
      * <p>
@@ -395,8 +395,8 @@ public class InviteAccountToOrganizationRequest extends com.amazonaws.AmazonWebS
      *        A list of tags that you want to attach to the account when it becomes a member of the organization. For
      *        each tag in the list, you must specify both a tag key and a value. You can set the value to an empty
      *        string, but you can't set it to <code>null</code>. For more information about tagging, see <a
-     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS
-     *        Organizations resources</a> in the AWS Organizations User Guide.</p> <important>
+     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     *        resources</a> in the Organizations User Guide.</p> <important>
      *        <p>
      *        Any tags in the request are checked for compliance with any applicable tag policies when the request is
      *        made. The request is rejected if the tags in the request don't match the requirements of the policy at
@@ -427,8 +427,8 @@ public class InviteAccountToOrganizationRequest extends com.amazonaws.AmazonWebS
      * A list of tags that you want to attach to the account when it becomes a member of the organization. For each tag
      * in the list, you must specify both a tag key and a value. You can set the value to an empty string, but you can't
      * set it to <code>null</code>. For more information about tagging, see <a
-     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS Organizations
-     * resources</a> in the AWS Organizations User Guide.
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     * resources</a> in the Organizations User Guide.
      * </p>
      * <important>
      * <p>
@@ -449,8 +449,8 @@ public class InviteAccountToOrganizationRequest extends com.amazonaws.AmazonWebS
      *        A list of tags that you want to attach to the account when it becomes a member of the organization. For
      *        each tag in the list, you must specify both a tag key and a value. You can set the value to an empty
      *        string, but you can't set it to <code>null</code>. For more information about tagging, see <a
-     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging AWS
-     *        Organizations resources</a> in the AWS Organizations User Guide.</p> <important>
+     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
+     *        resources</a> in the Organizations User Guide.</p> <important>
      *        <p>
      *        Any tags in the request are checked for compliance with any applicable tag policies when the request is
      *        made. The request is rejected if the tags in the request don't match the requirements of the policy at

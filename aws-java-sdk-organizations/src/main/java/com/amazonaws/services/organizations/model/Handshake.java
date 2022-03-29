@@ -25,8 +25,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * requests and responses.
  * </p>
  * <p>
- * <b>Note:</b> Handshakes that are <code>CANCELED</code>, <code>ACCEPTED</code>, or <code>DECLINED</code> show up in
- * lists for only 30 days after entering that state After that they are deleted.
+ * <b>Note:</b> Handshakes that are <code>CANCELED</code>, <code>ACCEPTED</code>, <code>DECLINED</code>, or
+ * <code>EXPIRED</code> show up in lists for only 30 days after entering that state After that they are deleted.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/Handshake" target="_top">AWS API
@@ -53,7 +53,7 @@ public class Handshake implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      */
     private String arn;
@@ -229,7 +229,7 @@ public class Handshake implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      * 
      * @param arn
@@ -237,7 +237,8 @@ public class Handshake implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information about ARNs in Organizations, see <a href=
      *        "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     *        >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     *        >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization
+     *        Reference</i>.
      */
 
     public void setArn(String arn) {
@@ -251,14 +252,15 @@ public class Handshake implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of a handshake.</p>
      *         <p>
      *         For more information about ARNs in Organizations, see <a href=
      *         "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     *         >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     *         >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization
+     *         Reference</i>.
      */
 
     public String getArn() {
@@ -272,7 +274,7 @@ public class Handshake implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      * 
      * @param arn
@@ -280,7 +282,8 @@ public class Handshake implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information about ARNs in Organizations, see <a href=
      *        "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     *        >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     *        >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization
+     *        Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

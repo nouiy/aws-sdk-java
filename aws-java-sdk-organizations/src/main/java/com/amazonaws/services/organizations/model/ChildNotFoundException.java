@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * We can't find an organizational unit (OU) or AWS account with the <code>ChildId</code> that you specified.
+ * We can't find an organizational unit (OU) or Amazon Web Services account with the <code>ChildId</code> that you
+ * specified.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A structure that contains details of a service principal that represents an AWS service that is enabled to integrate
- * with AWS Organizations.
+ * A structure that contains details of a service principal that represents an Amazon Web Services service that is
+ * enabled to integrate with Organizations.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/EnabledServicePrincipal"
@@ -38,7 +38,7 @@ public class EnabledServicePrincipal implements Serializable, Cloneable, Structu
     private String servicePrincipal;
     /**
      * <p>
-     * The date that the service principal was enabled for integration with AWS Organizations.
+     * The date that the service principal was enabled for integration with Organizations.
      * </p>
      */
     private java.util.Date dateEnabled;
@@ -91,11 +91,11 @@ public class EnabledServicePrincipal implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The date that the service principal was enabled for integration with AWS Organizations.
+     * The date that the service principal was enabled for integration with Organizations.
      * </p>
      * 
      * @param dateEnabled
-     *        The date that the service principal was enabled for integration with AWS Organizations.
+     *        The date that the service principal was enabled for integration with Organizations.
      */
 
     public void setDateEnabled(java.util.Date dateEnabled) {
@@ -104,10 +104,10 @@ public class EnabledServicePrincipal implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The date that the service principal was enabled for integration with AWS Organizations.
+     * The date that the service principal was enabled for integration with Organizations.
      * </p>
      * 
-     * @return The date that the service principal was enabled for integration with AWS Organizations.
+     * @return The date that the service principal was enabled for integration with Organizations.
      */
 
     public java.util.Date getDateEnabled() {
@@ -116,11 +116,11 @@ public class EnabledServicePrincipal implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The date that the service principal was enabled for integration with AWS Organizations.
+     * The date that the service principal was enabled for integration with Organizations.
      * </p>
      * 
      * @param dateEnabled
-     *        The date that the service principal was enabled for integration with AWS Organizations.
+     *        The date that the service principal was enabled for integration with Organizations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

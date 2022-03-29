@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about the AWS service for which the account is a delegated administrator.
+ * Contains information about the Amazon Web Services service for which the account is a delegated administrator.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/DelegatedService" target="_top">AWS API
@@ -30,8 +30,8 @@ public class DelegatedService implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of an AWS service that can request an operation for the specified service. This is typically in the form
-     * of a URL, such as: <code> <i>servicename</i>.amazonaws.com</code>.
+     * The name of an Amazon Web Services service that can request an operation for the specified service. This is
+     * typically in the form of a URL, such as: <code> <i>servicename</i>.amazonaws.com</code>.
      * </p>
      */
     private String servicePrincipal;
@@ -44,13 +44,13 @@ public class DelegatedService implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of an AWS service that can request an operation for the specified service. This is typically in the form
-     * of a URL, such as: <code> <i>servicename</i>.amazonaws.com</code>.
+     * The name of an Amazon Web Services service that can request an operation for the specified service. This is
+     * typically in the form of a URL, such as: <code> <i>servicename</i>.amazonaws.com</code>.
      * </p>
      * 
      * @param servicePrincipal
-     *        The name of an AWS service that can request an operation for the specified service. This is typically in
-     *        the form of a URL, such as: <code> <i>servicename</i>.amazonaws.com</code>.
+     *        The name of an Amazon Web Services service that can request an operation for the specified service. This
+     *        is typically in the form of a URL, such as: <code> <i>servicename</i>.amazonaws.com</code>.
      */
 
     public void setServicePrincipal(String servicePrincipal) {
@@ -59,12 +59,12 @@ public class DelegatedService implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of an AWS service that can request an operation for the specified service. This is typically in the form
-     * of a URL, such as: <code> <i>servicename</i>.amazonaws.com</code>.
+     * The name of an Amazon Web Services service that can request an operation for the specified service. This is
+     * typically in the form of a URL, such as: <code> <i>servicename</i>.amazonaws.com</code>.
      * </p>
      * 
-     * @return The name of an AWS service that can request an operation for the specified service. This is typically in
-     *         the form of a URL, such as: <code> <i>servicename</i>.amazonaws.com</code>.
+     * @return The name of an Amazon Web Services service that can request an operation for the specified service. This
+     *         is typically in the form of a URL, such as: <code> <i>servicename</i>.amazonaws.com</code>.
      */
 
     public String getServicePrincipal() {
@@ -73,13 +73,13 @@ public class DelegatedService implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of an AWS service that can request an operation for the specified service. This is typically in the form
-     * of a URL, such as: <code> <i>servicename</i>.amazonaws.com</code>.
+     * The name of an Amazon Web Services service that can request an operation for the specified service. This is
+     * typically in the form of a URL, such as: <code> <i>servicename</i>.amazonaws.com</code>.
      * </p>
      * 
      * @param servicePrincipal
-     *        The name of an AWS service that can request an operation for the specified service. This is typically in
-     *        the form of a URL, such as: <code> <i>servicename</i>.amazonaws.com</code>.
+     *        The name of an Amazon Web Services service that can request an operation for the specified service. This
+     *        is typically in the form of a URL, such as: <code> <i>servicename</i>.amazonaws.com</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

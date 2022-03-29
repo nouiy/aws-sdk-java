@@ -42,7 +42,7 @@ public class DelegatedAdministrator implements Serializable, Cloneable, Structur
     private String arn;
     /**
      * <p>
-     * The email address that is associated with the delegated administrator's AWS account.
+     * The email address that is associated with the delegated administrator's Amazon Web Services account.
      * </p>
      */
     private String email;
@@ -159,11 +159,11 @@ public class DelegatedAdministrator implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The email address that is associated with the delegated administrator's AWS account.
+     * The email address that is associated with the delegated administrator's Amazon Web Services account.
      * </p>
      * 
      * @param email
-     *        The email address that is associated with the delegated administrator's AWS account.
+     *        The email address that is associated with the delegated administrator's Amazon Web Services account.
      */
 
     public void setEmail(String email) {
@@ -172,10 +172,10 @@ public class DelegatedAdministrator implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The email address that is associated with the delegated administrator's AWS account.
+     * The email address that is associated with the delegated administrator's Amazon Web Services account.
      * </p>
      * 
-     * @return The email address that is associated with the delegated administrator's AWS account.
+     * @return The email address that is associated with the delegated administrator's Amazon Web Services account.
      */
 
     public String getEmail() {
@@ -184,11 +184,11 @@ public class DelegatedAdministrator implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The email address that is associated with the delegated administrator's AWS account.
+     * The email address that is associated with the delegated administrator's Amazon Web Services account.
      * </p>
      * 
      * @param email
-     *        The email address that is associated with the delegated administrator's AWS account.
+     *        The email address that is associated with the delegated administrator's Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

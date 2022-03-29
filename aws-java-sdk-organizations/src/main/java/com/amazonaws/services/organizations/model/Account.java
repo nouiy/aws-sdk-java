@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about an AWS account that is a member of an organization.
+ * Contains information about an Amazon Web Services account that is a member of an organization.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/Account" target="_top">AWS API
@@ -45,13 +45,13 @@ public class Account implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      */
     private String arn;
     /**
      * <p>
-     * The email address associated with the AWS account.
+     * The email address associated with the Amazon Web Services account.
      * </p>
      * <p>
      * The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for this parameter is a string of characters that
@@ -156,7 +156,7 @@ public class Account implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      * 
      * @param arn
@@ -164,7 +164,8 @@ public class Account implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information about ARNs in Organizations, see <a href=
      *        "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     *        >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     *        >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization
+     *        Reference</i>.
      */
 
     public void setArn(String arn) {
@@ -178,14 +179,15 @@ public class Account implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the account.</p>
      *         <p>
      *         For more information about ARNs in Organizations, see <a href=
      *         "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     *         >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     *         >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization
+     *         Reference</i>.
      */
 
     public String getArn() {
@@ -199,7 +201,7 @@ public class Account implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information about ARNs in Organizations, see <a href=
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     * >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     * >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization Reference</i>.
      * </p>
      * 
      * @param arn
@@ -207,7 +209,8 @@ public class Account implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information about ARNs in Organizations, see <a href=
      *        "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html#awsorganizations-resources-for-iam-policies"
-     *        >ARN Formats Supported by Organizations</a> in the <i>AWS Service Authorization Reference</i>.
+     *        >ARN Formats Supported by Organizations</a> in the <i>Amazon Web Services Service Authorization
+     *        Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -218,7 +221,7 @@ public class Account implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The email address associated with the AWS account.
+     * The email address associated with the Amazon Web Services account.
      * </p>
      * <p>
      * The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for this parameter is a string of characters that
@@ -226,7 +229,7 @@ public class Account implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param email
-     *        The email address associated with the AWS account.</p>
+     *        The email address associated with the Amazon Web Services account.</p>
      *        <p>
      *        The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for this parameter is a string of
      *        characters that represents a standard internet email address.
@@ -238,14 +241,14 @@ public class Account implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The email address associated with the AWS account.
+     * The email address associated with the Amazon Web Services account.
      * </p>
      * <p>
      * The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for this parameter is a string of characters that
      * represents a standard internet email address.
      * </p>
      * 
-     * @return The email address associated with the AWS account.</p>
+     * @return The email address associated with the Amazon Web Services account.</p>
      *         <p>
      *         The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for this parameter is a string of
      *         characters that represents a standard internet email address.
@@ -257,7 +260,7 @@ public class Account implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The email address associated with the AWS account.
+     * The email address associated with the Amazon Web Services account.
      * </p>
      * <p>
      * The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for this parameter is a string of characters that
@@ -265,7 +268,7 @@ public class Account implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param email
-     *        The email address associated with the AWS account.</p>
+     *        The email address associated with the Amazon Web Services account.</p>
      *        <p>
      *        The <a href="http://wikipedia.org/wiki/regex">regex pattern</a> for this parameter is a string of
      *        characters that represents a standard internet email address.

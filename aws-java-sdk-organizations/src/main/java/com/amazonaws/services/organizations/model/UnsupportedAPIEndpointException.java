@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This action isn't available in the current AWS Region.
+ * This action isn't available in the current Amazon Web Services Region.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

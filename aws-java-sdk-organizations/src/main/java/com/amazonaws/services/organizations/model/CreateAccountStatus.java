@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains the status about a <a>CreateAccount</a> or <a>CreateGovCloudAccount</a> request to create an AWS account or
- * an AWS GovCloud (US) account in an organization.
+ * Contains the status about a <a>CreateAccount</a> or <a>CreateGovCloudAccount</a> request to create an Amazon Web
+ * Services account or an Amazon Web Services GovCloud (US) account in an organization.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/organizations-2016-11-28/CreateAccountStatus" target="_top">AWS
@@ -48,7 +48,7 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
     private String accountName;
     /**
      * <p>
-     * The status of the asynchronous request to create an AWS account.
+     * The status of the asynchronous request to create an Amazon Web Services account.
      * </p>
      */
     private String state;
@@ -76,8 +76,8 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
     private String accountId;
     /**
      * <p>
-     * If the account was created successfully, the unique identifier (ID) of the new account in the AWS GovCloud (US)
-     * Region.
+     * If the account was created successfully, the unique identifier (ID) of the new account in the Amazon Web Services
+     * GovCloud (US) Region.
      * </p>
      */
     private String govCloudAccountId;
@@ -99,26 +99,26 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * EMAIL_ALREADY_EXISTS: The account could not be created because another AWS account with that email address
-     * already exists.
+     * EMAIL_ALREADY_EXISTS: The account could not be created because another Amazon Web Services account with that
+     * email address already exists.
      * </p>
      * </li>
      * <li>
      * <p>
-     * FAILED_BUSINESS_VALIDATION: The AWS account that owns your organization failed to receive business license
-     * validation.
+     * FAILED_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization failed to receive
+     * business license validation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the AWS GovCloud (US) Region could not be created because this
-     * Region already includes an account with that email address.
+     * GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the Amazon Web Services GovCloud (US) Region could not be created
+     * because this Region already includes an account with that email address.
      * </p>
      * </li>
      * <li>
      * <p>
-     * IDENTITY_INVALID_BUSINESS_VALIDATION: The AWS account that owns your organization can't complete business license
-     * validation because it doesn't have valid identity data.
+     * IDENTITY_INVALID_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization can't complete
+     * business license validation because it doesn't have valid identity data.
      * </p>
      * </li>
      * <li>
@@ -134,12 +134,13 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * <li>
      * <p>
      * INTERNAL_FAILURE: The account could not be created because of an internal failure. Try again later. If the
-     * problem persists, contact AWS Customer Support.
+     * problem persists, contact Amazon Web Services Customer Support.
      * </p>
      * </li>
      * <li>
      * <p>
-     * MISSING_BUSINESS_VALIDATION: The AWS account that owns your organization has not received Business Validation.
+     * MISSING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has not received
+     * Business Validation.
      * </p>
      * </li>
      * <li>
@@ -150,14 +151,14 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * PENDING_BUSINESS_VALIDATION: The AWS account that owns your organization is still in the process of completing
-     * business license validation.
+     * PENDING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization is still in the process
+     * of completing business license validation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * UNKNOWN_BUSINESS_VALIDATION: The AWS account that owns your organization has an unknown issue with business
-     * license validation.
+     * UNKNOWN_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has an unknown issue
+     * with business license validation.
      * </p>
      * </li>
      * </ul>
@@ -273,11 +274,11 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The status of the asynchronous request to create an AWS account.
+     * The status of the asynchronous request to create an Amazon Web Services account.
      * </p>
      * 
      * @param state
-     *        The status of the asynchronous request to create an AWS account.
+     *        The status of the asynchronous request to create an Amazon Web Services account.
      * @see CreateAccountState
      */
 
@@ -287,10 +288,10 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The status of the asynchronous request to create an AWS account.
+     * The status of the asynchronous request to create an Amazon Web Services account.
      * </p>
      * 
-     * @return The status of the asynchronous request to create an AWS account.
+     * @return The status of the asynchronous request to create an Amazon Web Services account.
      * @see CreateAccountState
      */
 
@@ -300,11 +301,11 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The status of the asynchronous request to create an AWS account.
+     * The status of the asynchronous request to create an Amazon Web Services account.
      * </p>
      * 
      * @param state
-     *        The status of the asynchronous request to create an AWS account.
+     *        The status of the asynchronous request to create an Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CreateAccountState
      */
@@ -316,11 +317,11 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The status of the asynchronous request to create an AWS account.
+     * The status of the asynchronous request to create an Amazon Web Services account.
      * </p>
      * 
      * @param state
-     *        The status of the asynchronous request to create an AWS account.
+     *        The status of the asynchronous request to create an Amazon Web Services account.
      * @see CreateAccountState
      */
 
@@ -330,11 +331,11 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The status of the asynchronous request to create an AWS account.
+     * The status of the asynchronous request to create an Amazon Web Services account.
      * </p>
      * 
      * @param state
-     *        The status of the asynchronous request to create an AWS account.
+     *        The status of the asynchronous request to create an Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CreateAccountState
      */
@@ -487,13 +488,13 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * If the account was created successfully, the unique identifier (ID) of the new account in the AWS GovCloud (US)
-     * Region.
+     * If the account was created successfully, the unique identifier (ID) of the new account in the Amazon Web Services
+     * GovCloud (US) Region.
      * </p>
      * 
      * @param govCloudAccountId
-     *        If the account was created successfully, the unique identifier (ID) of the new account in the AWS GovCloud
-     *        (US) Region.
+     *        If the account was created successfully, the unique identifier (ID) of the new account in the Amazon Web
+     *        Services GovCloud (US) Region.
      */
 
     public void setGovCloudAccountId(String govCloudAccountId) {
@@ -502,12 +503,12 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * If the account was created successfully, the unique identifier (ID) of the new account in the AWS GovCloud (US)
-     * Region.
+     * If the account was created successfully, the unique identifier (ID) of the new account in the Amazon Web Services
+     * GovCloud (US) Region.
      * </p>
      * 
-     * @return If the account was created successfully, the unique identifier (ID) of the new account in the AWS
-     *         GovCloud (US) Region.
+     * @return If the account was created successfully, the unique identifier (ID) of the new account in the Amazon Web
+     *         Services GovCloud (US) Region.
      */
 
     public String getGovCloudAccountId() {
@@ -516,13 +517,13 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * If the account was created successfully, the unique identifier (ID) of the new account in the AWS GovCloud (US)
-     * Region.
+     * If the account was created successfully, the unique identifier (ID) of the new account in the Amazon Web Services
+     * GovCloud (US) Region.
      * </p>
      * 
      * @param govCloudAccountId
-     *        If the account was created successfully, the unique identifier (ID) of the new account in the AWS GovCloud
-     *        (US) Region.
+     *        If the account was created successfully, the unique identifier (ID) of the new account in the Amazon Web
+     *        Services GovCloud (US) Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -549,26 +550,26 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * EMAIL_ALREADY_EXISTS: The account could not be created because another AWS account with that email address
-     * already exists.
+     * EMAIL_ALREADY_EXISTS: The account could not be created because another Amazon Web Services account with that
+     * email address already exists.
      * </p>
      * </li>
      * <li>
      * <p>
-     * FAILED_BUSINESS_VALIDATION: The AWS account that owns your organization failed to receive business license
-     * validation.
+     * FAILED_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization failed to receive
+     * business license validation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the AWS GovCloud (US) Region could not be created because this
-     * Region already includes an account with that email address.
+     * GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the Amazon Web Services GovCloud (US) Region could not be created
+     * because this Region already includes an account with that email address.
      * </p>
      * </li>
      * <li>
      * <p>
-     * IDENTITY_INVALID_BUSINESS_VALIDATION: The AWS account that owns your organization can't complete business license
-     * validation because it doesn't have valid identity data.
+     * IDENTITY_INVALID_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization can't complete
+     * business license validation because it doesn't have valid identity data.
      * </p>
      * </li>
      * <li>
@@ -584,12 +585,13 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * <li>
      * <p>
      * INTERNAL_FAILURE: The account could not be created because of an internal failure. Try again later. If the
-     * problem persists, contact AWS Customer Support.
+     * problem persists, contact Amazon Web Services Customer Support.
      * </p>
      * </li>
      * <li>
      * <p>
-     * MISSING_BUSINESS_VALIDATION: The AWS account that owns your organization has not received Business Validation.
+     * MISSING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has not received
+     * Business Validation.
      * </p>
      * </li>
      * <li>
@@ -600,14 +602,14 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * PENDING_BUSINESS_VALIDATION: The AWS account that owns your organization is still in the process of completing
-     * business license validation.
+     * PENDING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization is still in the process
+     * of completing business license validation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * UNKNOWN_BUSINESS_VALIDATION: The AWS account that owns your organization has an unknown issue with business
-     * license validation.
+     * UNKNOWN_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has an unknown issue
+     * with business license validation.
      * </p>
      * </li>
      * </ul>
@@ -628,26 +630,26 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      *        </li>
      *        <li>
      *        <p>
-     *        EMAIL_ALREADY_EXISTS: The account could not be created because another AWS account with that email address
-     *        already exists.
+     *        EMAIL_ALREADY_EXISTS: The account could not be created because another Amazon Web Services account with
+     *        that email address already exists.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        FAILED_BUSINESS_VALIDATION: The AWS account that owns your organization failed to receive business license
-     *        validation.
+     *        FAILED_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization failed to receive
+     *        business license validation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the AWS GovCloud (US) Region could not be created because
-     *        this Region already includes an account with that email address.
+     *        GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the Amazon Web Services GovCloud (US) Region could not be
+     *        created because this Region already includes an account with that email address.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        IDENTITY_INVALID_BUSINESS_VALIDATION: The AWS account that owns your organization can't complete business
-     *        license validation because it doesn't have valid identity data.
+     *        IDENTITY_INVALID_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization can't
+     *        complete business license validation because it doesn't have valid identity data.
      *        </p>
      *        </li>
      *        <li>
@@ -663,13 +665,13 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      *        <li>
      *        <p>
      *        INTERNAL_FAILURE: The account could not be created because of an internal failure. Try again later. If the
-     *        problem persists, contact AWS Customer Support.
+     *        problem persists, contact Amazon Web Services Customer Support.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        MISSING_BUSINESS_VALIDATION: The AWS account that owns your organization has not received Business
-     *        Validation.
+     *        MISSING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has not received
+     *        Business Validation.
      *        </p>
      *        </li>
      *        <li>
@@ -680,14 +682,14 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      *        </li>
      *        <li>
      *        <p>
-     *        PENDING_BUSINESS_VALIDATION: The AWS account that owns your organization is still in the process of
-     *        completing business license validation.
+     *        PENDING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization is still in the
+     *        process of completing business license validation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        UNKNOWN_BUSINESS_VALIDATION: The AWS account that owns your organization has an unknown issue with
-     *        business license validation.
+     *        UNKNOWN_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has an unknown
+     *        issue with business license validation.
      *        </p>
      *        </li>
      * @see CreateAccountFailureReason
@@ -715,26 +717,26 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * EMAIL_ALREADY_EXISTS: The account could not be created because another AWS account with that email address
-     * already exists.
+     * EMAIL_ALREADY_EXISTS: The account could not be created because another Amazon Web Services account with that
+     * email address already exists.
      * </p>
      * </li>
      * <li>
      * <p>
-     * FAILED_BUSINESS_VALIDATION: The AWS account that owns your organization failed to receive business license
-     * validation.
+     * FAILED_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization failed to receive
+     * business license validation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the AWS GovCloud (US) Region could not be created because this
-     * Region already includes an account with that email address.
+     * GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the Amazon Web Services GovCloud (US) Region could not be created
+     * because this Region already includes an account with that email address.
      * </p>
      * </li>
      * <li>
      * <p>
-     * IDENTITY_INVALID_BUSINESS_VALIDATION: The AWS account that owns your organization can't complete business license
-     * validation because it doesn't have valid identity data.
+     * IDENTITY_INVALID_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization can't complete
+     * business license validation because it doesn't have valid identity data.
      * </p>
      * </li>
      * <li>
@@ -750,12 +752,13 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * <li>
      * <p>
      * INTERNAL_FAILURE: The account could not be created because of an internal failure. Try again later. If the
-     * problem persists, contact AWS Customer Support.
+     * problem persists, contact Amazon Web Services Customer Support.
      * </p>
      * </li>
      * <li>
      * <p>
-     * MISSING_BUSINESS_VALIDATION: The AWS account that owns your organization has not received Business Validation.
+     * MISSING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has not received
+     * Business Validation.
      * </p>
      * </li>
      * <li>
@@ -766,14 +769,14 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * PENDING_BUSINESS_VALIDATION: The AWS account that owns your organization is still in the process of completing
-     * business license validation.
+     * PENDING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization is still in the process
+     * of completing business license validation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * UNKNOWN_BUSINESS_VALIDATION: The AWS account that owns your organization has an unknown issue with business
-     * license validation.
+     * UNKNOWN_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has an unknown issue
+     * with business license validation.
      * </p>
      * </li>
      * </ul>
@@ -793,26 +796,26 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      *         </li>
      *         <li>
      *         <p>
-     *         EMAIL_ALREADY_EXISTS: The account could not be created because another AWS account with that email
-     *         address already exists.
+     *         EMAIL_ALREADY_EXISTS: The account could not be created because another Amazon Web Services account with
+     *         that email address already exists.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         FAILED_BUSINESS_VALIDATION: The AWS account that owns your organization failed to receive business
-     *         license validation.
+     *         FAILED_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization failed to receive
+     *         business license validation.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the AWS GovCloud (US) Region could not be created because
-     *         this Region already includes an account with that email address.
+     *         GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the Amazon Web Services GovCloud (US) Region could not be
+     *         created because this Region already includes an account with that email address.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         IDENTITY_INVALID_BUSINESS_VALIDATION: The AWS account that owns your organization can't complete business
-     *         license validation because it doesn't have valid identity data.
+     *         IDENTITY_INVALID_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization can't
+     *         complete business license validation because it doesn't have valid identity data.
      *         </p>
      *         </li>
      *         <li>
@@ -828,13 +831,13 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      *         <li>
      *         <p>
      *         INTERNAL_FAILURE: The account could not be created because of an internal failure. Try again later. If
-     *         the problem persists, contact AWS Customer Support.
+     *         the problem persists, contact Amazon Web Services Customer Support.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         MISSING_BUSINESS_VALIDATION: The AWS account that owns your organization has not received Business
-     *         Validation.
+     *         MISSING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has not received
+     *         Business Validation.
      *         </p>
      *         </li>
      *         <li>
@@ -845,14 +848,14 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      *         </li>
      *         <li>
      *         <p>
-     *         PENDING_BUSINESS_VALIDATION: The AWS account that owns your organization is still in the process of
-     *         completing business license validation.
+     *         PENDING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization is still in the
+     *         process of completing business license validation.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         UNKNOWN_BUSINESS_VALIDATION: The AWS account that owns your organization has an unknown issue with
-     *         business license validation.
+     *         UNKNOWN_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has an unknown
+     *         issue with business license validation.
      *         </p>
      *         </li>
      * @see CreateAccountFailureReason
@@ -880,26 +883,26 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * EMAIL_ALREADY_EXISTS: The account could not be created because another AWS account with that email address
-     * already exists.
+     * EMAIL_ALREADY_EXISTS: The account could not be created because another Amazon Web Services account with that
+     * email address already exists.
      * </p>
      * </li>
      * <li>
      * <p>
-     * FAILED_BUSINESS_VALIDATION: The AWS account that owns your organization failed to receive business license
-     * validation.
+     * FAILED_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization failed to receive
+     * business license validation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the AWS GovCloud (US) Region could not be created because this
-     * Region already includes an account with that email address.
+     * GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the Amazon Web Services GovCloud (US) Region could not be created
+     * because this Region already includes an account with that email address.
      * </p>
      * </li>
      * <li>
      * <p>
-     * IDENTITY_INVALID_BUSINESS_VALIDATION: The AWS account that owns your organization can't complete business license
-     * validation because it doesn't have valid identity data.
+     * IDENTITY_INVALID_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization can't complete
+     * business license validation because it doesn't have valid identity data.
      * </p>
      * </li>
      * <li>
@@ -915,12 +918,13 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * <li>
      * <p>
      * INTERNAL_FAILURE: The account could not be created because of an internal failure. Try again later. If the
-     * problem persists, contact AWS Customer Support.
+     * problem persists, contact Amazon Web Services Customer Support.
      * </p>
      * </li>
      * <li>
      * <p>
-     * MISSING_BUSINESS_VALIDATION: The AWS account that owns your organization has not received Business Validation.
+     * MISSING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has not received
+     * Business Validation.
      * </p>
      * </li>
      * <li>
@@ -931,14 +935,14 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * PENDING_BUSINESS_VALIDATION: The AWS account that owns your organization is still in the process of completing
-     * business license validation.
+     * PENDING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization is still in the process
+     * of completing business license validation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * UNKNOWN_BUSINESS_VALIDATION: The AWS account that owns your organization has an unknown issue with business
-     * license validation.
+     * UNKNOWN_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has an unknown issue
+     * with business license validation.
      * </p>
      * </li>
      * </ul>
@@ -959,26 +963,26 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      *        </li>
      *        <li>
      *        <p>
-     *        EMAIL_ALREADY_EXISTS: The account could not be created because another AWS account with that email address
-     *        already exists.
+     *        EMAIL_ALREADY_EXISTS: The account could not be created because another Amazon Web Services account with
+     *        that email address already exists.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        FAILED_BUSINESS_VALIDATION: The AWS account that owns your organization failed to receive business license
-     *        validation.
+     *        FAILED_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization failed to receive
+     *        business license validation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the AWS GovCloud (US) Region could not be created because
-     *        this Region already includes an account with that email address.
+     *        GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the Amazon Web Services GovCloud (US) Region could not be
+     *        created because this Region already includes an account with that email address.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        IDENTITY_INVALID_BUSINESS_VALIDATION: The AWS account that owns your organization can't complete business
-     *        license validation because it doesn't have valid identity data.
+     *        IDENTITY_INVALID_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization can't
+     *        complete business license validation because it doesn't have valid identity data.
      *        </p>
      *        </li>
      *        <li>
@@ -994,13 +998,13 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      *        <li>
      *        <p>
      *        INTERNAL_FAILURE: The account could not be created because of an internal failure. Try again later. If the
-     *        problem persists, contact AWS Customer Support.
+     *        problem persists, contact Amazon Web Services Customer Support.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        MISSING_BUSINESS_VALIDATION: The AWS account that owns your organization has not received Business
-     *        Validation.
+     *        MISSING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has not received
+     *        Business Validation.
      *        </p>
      *        </li>
      *        <li>
@@ -1011,14 +1015,14 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      *        </li>
      *        <li>
      *        <p>
-     *        PENDING_BUSINESS_VALIDATION: The AWS account that owns your organization is still in the process of
-     *        completing business license validation.
+     *        PENDING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization is still in the
+     *        process of completing business license validation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        UNKNOWN_BUSINESS_VALIDATION: The AWS account that owns your organization has an unknown issue with
-     *        business license validation.
+     *        UNKNOWN_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has an unknown
+     *        issue with business license validation.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1048,26 +1052,26 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * EMAIL_ALREADY_EXISTS: The account could not be created because another AWS account with that email address
-     * already exists.
+     * EMAIL_ALREADY_EXISTS: The account could not be created because another Amazon Web Services account with that
+     * email address already exists.
      * </p>
      * </li>
      * <li>
      * <p>
-     * FAILED_BUSINESS_VALIDATION: The AWS account that owns your organization failed to receive business license
-     * validation.
+     * FAILED_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization failed to receive
+     * business license validation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the AWS GovCloud (US) Region could not be created because this
-     * Region already includes an account with that email address.
+     * GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the Amazon Web Services GovCloud (US) Region could not be created
+     * because this Region already includes an account with that email address.
      * </p>
      * </li>
      * <li>
      * <p>
-     * IDENTITY_INVALID_BUSINESS_VALIDATION: The AWS account that owns your organization can't complete business license
-     * validation because it doesn't have valid identity data.
+     * IDENTITY_INVALID_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization can't complete
+     * business license validation because it doesn't have valid identity data.
      * </p>
      * </li>
      * <li>
@@ -1083,12 +1087,13 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * <li>
      * <p>
      * INTERNAL_FAILURE: The account could not be created because of an internal failure. Try again later. If the
-     * problem persists, contact AWS Customer Support.
+     * problem persists, contact Amazon Web Services Customer Support.
      * </p>
      * </li>
      * <li>
      * <p>
-     * MISSING_BUSINESS_VALIDATION: The AWS account that owns your organization has not received Business Validation.
+     * MISSING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has not received
+     * Business Validation.
      * </p>
      * </li>
      * <li>
@@ -1099,14 +1104,14 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * PENDING_BUSINESS_VALIDATION: The AWS account that owns your organization is still in the process of completing
-     * business license validation.
+     * PENDING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization is still in the process
+     * of completing business license validation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * UNKNOWN_BUSINESS_VALIDATION: The AWS account that owns your organization has an unknown issue with business
-     * license validation.
+     * UNKNOWN_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has an unknown issue
+     * with business license validation.
      * </p>
      * </li>
      * </ul>
@@ -1127,26 +1132,26 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      *        </li>
      *        <li>
      *        <p>
-     *        EMAIL_ALREADY_EXISTS: The account could not be created because another AWS account with that email address
-     *        already exists.
+     *        EMAIL_ALREADY_EXISTS: The account could not be created because another Amazon Web Services account with
+     *        that email address already exists.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        FAILED_BUSINESS_VALIDATION: The AWS account that owns your organization failed to receive business license
-     *        validation.
+     *        FAILED_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization failed to receive
+     *        business license validation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the AWS GovCloud (US) Region could not be created because
-     *        this Region already includes an account with that email address.
+     *        GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the Amazon Web Services GovCloud (US) Region could not be
+     *        created because this Region already includes an account with that email address.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        IDENTITY_INVALID_BUSINESS_VALIDATION: The AWS account that owns your organization can't complete business
-     *        license validation because it doesn't have valid identity data.
+     *        IDENTITY_INVALID_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization can't
+     *        complete business license validation because it doesn't have valid identity data.
      *        </p>
      *        </li>
      *        <li>
@@ -1162,13 +1167,13 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      *        <li>
      *        <p>
      *        INTERNAL_FAILURE: The account could not be created because of an internal failure. Try again later. If the
-     *        problem persists, contact AWS Customer Support.
+     *        problem persists, contact Amazon Web Services Customer Support.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        MISSING_BUSINESS_VALIDATION: The AWS account that owns your organization has not received Business
-     *        Validation.
+     *        MISSING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has not received
+     *        Business Validation.
      *        </p>
      *        </li>
      *        <li>
@@ -1179,14 +1184,14 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      *        </li>
      *        <li>
      *        <p>
-     *        PENDING_BUSINESS_VALIDATION: The AWS account that owns your organization is still in the process of
-     *        completing business license validation.
+     *        PENDING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization is still in the
+     *        process of completing business license validation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        UNKNOWN_BUSINESS_VALIDATION: The AWS account that owns your organization has an unknown issue with
-     *        business license validation.
+     *        UNKNOWN_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has an unknown
+     *        issue with business license validation.
      *        </p>
      *        </li>
      * @see CreateAccountFailureReason
@@ -1214,26 +1219,26 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * EMAIL_ALREADY_EXISTS: The account could not be created because another AWS account with that email address
-     * already exists.
+     * EMAIL_ALREADY_EXISTS: The account could not be created because another Amazon Web Services account with that
+     * email address already exists.
      * </p>
      * </li>
      * <li>
      * <p>
-     * FAILED_BUSINESS_VALIDATION: The AWS account that owns your organization failed to receive business license
-     * validation.
+     * FAILED_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization failed to receive
+     * business license validation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the AWS GovCloud (US) Region could not be created because this
-     * Region already includes an account with that email address.
+     * GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the Amazon Web Services GovCloud (US) Region could not be created
+     * because this Region already includes an account with that email address.
      * </p>
      * </li>
      * <li>
      * <p>
-     * IDENTITY_INVALID_BUSINESS_VALIDATION: The AWS account that owns your organization can't complete business license
-     * validation because it doesn't have valid identity data.
+     * IDENTITY_INVALID_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization can't complete
+     * business license validation because it doesn't have valid identity data.
      * </p>
      * </li>
      * <li>
@@ -1249,12 +1254,13 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * <li>
      * <p>
      * INTERNAL_FAILURE: The account could not be created because of an internal failure. Try again later. If the
-     * problem persists, contact AWS Customer Support.
+     * problem persists, contact Amazon Web Services Customer Support.
      * </p>
      * </li>
      * <li>
      * <p>
-     * MISSING_BUSINESS_VALIDATION: The AWS account that owns your organization has not received Business Validation.
+     * MISSING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has not received
+     * Business Validation.
      * </p>
      * </li>
      * <li>
@@ -1265,14 +1271,14 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      * </li>
      * <li>
      * <p>
-     * PENDING_BUSINESS_VALIDATION: The AWS account that owns your organization is still in the process of completing
-     * business license validation.
+     * PENDING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization is still in the process
+     * of completing business license validation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * UNKNOWN_BUSINESS_VALIDATION: The AWS account that owns your organization has an unknown issue with business
-     * license validation.
+     * UNKNOWN_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has an unknown issue
+     * with business license validation.
      * </p>
      * </li>
      * </ul>
@@ -1293,26 +1299,26 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      *        </li>
      *        <li>
      *        <p>
-     *        EMAIL_ALREADY_EXISTS: The account could not be created because another AWS account with that email address
-     *        already exists.
+     *        EMAIL_ALREADY_EXISTS: The account could not be created because another Amazon Web Services account with
+     *        that email address already exists.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        FAILED_BUSINESS_VALIDATION: The AWS account that owns your organization failed to receive business license
-     *        validation.
+     *        FAILED_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization failed to receive
+     *        business license validation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the AWS GovCloud (US) Region could not be created because
-     *        this Region already includes an account with that email address.
+     *        GOVCLOUD_ACCOUNT_ALREADY_EXISTS: The account in the Amazon Web Services GovCloud (US) Region could not be
+     *        created because this Region already includes an account with that email address.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        IDENTITY_INVALID_BUSINESS_VALIDATION: The AWS account that owns your organization can't complete business
-     *        license validation because it doesn't have valid identity data.
+     *        IDENTITY_INVALID_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization can't
+     *        complete business license validation because it doesn't have valid identity data.
      *        </p>
      *        </li>
      *        <li>
@@ -1328,13 +1334,13 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      *        <li>
      *        <p>
      *        INTERNAL_FAILURE: The account could not be created because of an internal failure. Try again later. If the
-     *        problem persists, contact AWS Customer Support.
+     *        problem persists, contact Amazon Web Services Customer Support.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        MISSING_BUSINESS_VALIDATION: The AWS account that owns your organization has not received Business
-     *        Validation.
+     *        MISSING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has not received
+     *        Business Validation.
      *        </p>
      *        </li>
      *        <li>
@@ -1345,14 +1351,14 @@ public class CreateAccountStatus implements Serializable, Cloneable, StructuredP
      *        </li>
      *        <li>
      *        <p>
-     *        PENDING_BUSINESS_VALIDATION: The AWS account that owns your organization is still in the process of
-     *        completing business license validation.
+     *        PENDING_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization is still in the
+     *        process of completing business license validation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        UNKNOWN_BUSINESS_VALIDATION: The AWS account that owns your organization has an unknown issue with
-     *        business license validation.
+     *        UNKNOWN_BUSINESS_VALIDATION: The Amazon Web Services account that owns your organization has an unknown
+     *        issue with business license validation.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

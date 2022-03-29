@@ -28,6 +28,7 @@ import static org.junit.Assert.assertSame;
 import static org.junit.Assert.fail;
 
 import com.amazonaws.AmazonClientException;
+import com.amazonaws.SdkClientException;
 import com.amazonaws.util.LogCaptor;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -168,12 +169,10 @@ public class InstanceProfileCredentialsProviderIntegrationTest extends LogCaptor
         mockServer.setAvailableSecurityCredentials("test-credentials");
 
         InstanceProfileCredentialsProvider credentialsProvider = new InstanceProfileCredentialsProvider();
-        try {
-            credentialsProvider.getCredentials();
-            fail("Expected an AmazonClientException, but wasn't thrown");
-        } catch (AmazonClientException ace) {
-            assertNotNull(ace.getMessage());
-        }
+        AWSCredentials credentials = credentialsProvider.getCredentials();
+
+        assertEquals("ACCESS_KEY_ID", credentials.getAWSAccessKeyId());
+        assertEquals("SECRET_ACCESS_KEY", credentials.getAWSSecretKey());
     }
 
     /**
@@ -203,7 +202,7 @@ public class InstanceProfileCredentialsProviderIntegrationTest extends LogCaptor
         assertNotSame(credentials, newCredentials);
     }
 
-    @Test(expected = AmazonClientException.class)
+    @Test
     public void canBeConfiguredToOnlyRefreshCredentialsAfterFirstCallToGetCredentials() throws InterruptedException {
         mockServer.setResponseContent(expiredResponse());
         mockServer.setAvailableSecurityCredentials("test-credentials");
@@ -215,7 +214,9 @@ public class InstanceProfileCredentialsProviderIntegrationTest extends LogCaptor
         //then there's no exception, which means that getCredentials didn't get called on the fetcher
         assertThat(loggedEvents(), is(empty()));
 
-        credentialsProvider.getCredentials();
+        AWSCredentials credentials = credentialsProvider.getCredentials();
+        assertEquals("ACCESS_KEY_ID", credentials.getAWSAccessKeyId());
+        assertEquals("SECRET_ACCESS_KEY", credentials.getAWSSecretKey());
     }
 
     @Test
@@ -246,6 +247,35 @@ public class InstanceProfileCredentialsProviderIntegrationTest extends LogCaptor
         AWSCredentials secondCredentials = credentialsProvider.getCredentials();
 
         assertSame(firstCredentials, secondCredentials);
+    }
+
+    @Test
+    public void getCredentials_onlyCallsImdsOnceEvenWithExpiredCredentials() {
+        mockServer.setResponseContent(responseWithExpiration(DateTime.now().minusHours(1)));
+        mockServer.setAvailableSecurityCredentials("test-credentials");
+
+        InstanceProfileCredentialsProvider credentialsProvider = InstanceProfileCredentialsProvider.getInstance();
+
+        credentialsProvider.getCredentials();
+
+        int requestCountAfterOneRefresh = mockServer.getRequestCount();
+
+        credentialsProvider.getCredentials();
+        credentialsProvider.getCredentials();
+
+        int requestCountAfterThreeRefreshes = mockServer.getRequestCount();
+
+        assertEquals(requestCountAfterOneRefresh, requestCountAfterThreeRefreshes);
+    }
+
+    @Test
+    public void getCredentials_failsIfImdsFailsOnFirstCall() {
+        mockServer.stop();
+        try {
+            new InstanceProfileCredentialsProvider().getCredentials();
+        } catch (SdkClientException e) {
+            // Expected
+        }
     }
 
     private class RefreshThread extends Thread{

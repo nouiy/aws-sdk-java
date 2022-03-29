@@ -32,7 +32,7 @@ import javax.annotation.Generated;
  * </li>
  * <li>
  * <p>
- * IMMUTABLE_POLICY: You specified a policy that is managed by AWS and can't be modified.
+ * IMMUTABLE_POLICY: You specified a policy that is managed by Amazon Web Services and can't be modified.
  * </p>
  * </li>
  * <li>
@@ -105,7 +105,8 @@ import javax.annotation.Generated;
  * <li>
  * <p>
  * INVALID_SYSTEM_TAGS_PARAMETER: You specified a tag key that is a system tag. You can’t add, edit, or delete system
- * tag keys because they're reserved for AWS use. System tags don’t count against your tags per resource limit.
+ * tag keys because they're reserved for Amazon Web Services use. System tags don’t count against your tags per resource
+ * limit.
  * </p>
  * </li>
  * <li>

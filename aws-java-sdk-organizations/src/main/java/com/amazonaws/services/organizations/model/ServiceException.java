@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * AWS Organizations can't complete your request because of an internal service error. Try again later.
+ * Organizations can't complete your request because of an internal service error. Try again later.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

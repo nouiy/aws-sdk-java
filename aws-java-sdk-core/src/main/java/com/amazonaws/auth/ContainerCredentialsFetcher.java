@@ -28,6 +28,7 @@ class ContainerCredentialsFetcher extends BaseCredentialsFetcher {
     private final CredentialsEndpointProvider credentialsEndpointProvider;
 
     ContainerCredentialsFetcher(CredentialsEndpointProvider credentialsEndpointProvider) {
+        super(false);
         this.credentialsEndpointProvider = credentialsEndpointProvider;
     }
 

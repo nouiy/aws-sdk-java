@@ -22,6 +22,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import java.util.Date;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.joda.time.DateTime;
 
 /**
  * Helper class that contains the common behavior of the
@@ -39,11 +40,13 @@ abstract class BaseCredentialsFetcher {
      */
     private static final int REFRESH_THRESHOLD = 1000 * 60 * 60;
 
+    private static final int FIFTEEN_MINUTES_IN_MILLIS = 1000 * 60 * 15;
+
     /**
      * The threshold before credentials expire (in milliseconds) at which
      * this class will attempt to load new credentials.
      */
-    private static final int EXPIRATION_THRESHOLD = 1000 * 60 * 15;
+    private static final int EXPIRATION_THRESHOLD = FIFTEEN_MINUTES_IN_MILLIS;
 
     /** The name of the Json Object that contains the access key.*/
     private static final String ACCESS_KEY_ID = "AccessKeyId";
@@ -54,6 +57,11 @@ abstract class BaseCredentialsFetcher {
     /** The name of the Json Object that contains the token.*/
     private static final String TOKEN = "Token";
 
+    /**
+     * Whether expired credentials can be returned if the credential service is down or returns expired credentials
+     */
+    private final boolean allowExpiredCredentials;
+
     /** The current instance profile credentials */
     private volatile AWSCredentials credentials;
 
@@ -62,6 +70,10 @@ abstract class BaseCredentialsFetcher {
 
     /** The time of the last attempt to check for new credentials */
     protected volatile Date lastInstanceProfileCheck;
+
+    protected BaseCredentialsFetcher(boolean allowExpiredCredentials) {
+        this.allowExpiredCredentials = allowExpiredCredentials;
+    }
 
     public AWSCredentials getCredentials() {
         if (needsToLoadCredentials())
@@ -146,6 +158,12 @@ abstract class BaseCredentialsFetcher {
             }
         } catch (Exception e) {
             handleError("Unable to load credentials from service endpoint", e);
+        } finally {
+            if (allowExpiredCredentials && credentials != null && needsToLoadCredentials()) {
+                LOG.warn("Credential expiration has been extended due to a credential service availability issue. A "
+                         + "refresh of these credentials will be attempted again in 15 minutes.");
+                this.credentialsExpiration = DateTime.now().plusMillis(FIFTEEN_MINUTES_IN_MILLIS + EXPIRATION_THRESHOLD).toDate();
+            }
         }
     }
 
@@ -196,13 +214,19 @@ abstract class BaseCredentialsFetcher {
     }
 
     private boolean expired() {
-        if (credentialsExpiration != null) {
-            if (credentialsExpiration.getTime() < System.currentTimeMillis()) {
-                return true;
-            }
+        if (allowExpiredCredentials) {
+            return false;
         }
 
-        return false;
+        if (credentialsExpiration == null) {
+            return false;
+        }
+
+        if (credentialsExpiration.getTime() > System.currentTimeMillis()) {
+            return false;
+        }
+
+        return true;
     }
 
     Date getCredentialsExpiration() {

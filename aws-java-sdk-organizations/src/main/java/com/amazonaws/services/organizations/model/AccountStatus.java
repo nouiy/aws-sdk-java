@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum AccountStatus {
 
     ACTIVE("ACTIVE"),
-    SUSPENDED("SUSPENDED");
+    SUSPENDED("SUSPENDED"),
+    PENDING_CLOSURE("PENDING_CLOSURE");
 
     private String value;
 

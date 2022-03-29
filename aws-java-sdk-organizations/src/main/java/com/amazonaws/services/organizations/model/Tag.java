@@ -27,7 +27,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <ul>
  * <li>
  * <p>
- * AWS account
+ * Amazon Web Services account
  * </p>
  * </li>
  * <li>

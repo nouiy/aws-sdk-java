@@ -67,6 +67,19 @@ public class AbstractAWSOrganizationsAsync extends AbstractAWSOrganizations impl
     }
 
     @Override
+    public java.util.concurrent.Future<CloseAccountResult> closeAccountAsync(CloseAccountRequest request) {
+
+        return closeAccountAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CloseAccountResult> closeAccountAsync(CloseAccountRequest request,
+            com.amazonaws.handlers.AsyncHandler<CloseAccountRequest, CloseAccountResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateAccountResult> createAccountAsync(CreateAccountRequest request) {
 
         return createAccountAsync(request, null);
