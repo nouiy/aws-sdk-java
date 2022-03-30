@@ -402,6 +402,12 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      */
     private PrivateDnsNameOptionsRequest privateDnsNameOptions;
+    /**
+     * <p>
+     * The maintenance and recovery options for the instance.
+     * </p>
+     */
+    private InstanceMaintenanceOptionsRequest maintenanceOptions;
 
     /**
      * Default constructor for RunInstancesRequest object. Callers should use the setter or fluent setter (with...)
@@ -3321,6 +3327,46 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     }
 
     /**
+     * <p>
+     * The maintenance and recovery options for the instance.
+     * </p>
+     * 
+     * @param maintenanceOptions
+     *        The maintenance and recovery options for the instance.
+     */
+
+    public void setMaintenanceOptions(InstanceMaintenanceOptionsRequest maintenanceOptions) {
+        this.maintenanceOptions = maintenanceOptions;
+    }
+
+    /**
+     * <p>
+     * The maintenance and recovery options for the instance.
+     * </p>
+     * 
+     * @return The maintenance and recovery options for the instance.
+     */
+
+    public InstanceMaintenanceOptionsRequest getMaintenanceOptions() {
+        return this.maintenanceOptions;
+    }
+
+    /**
+     * <p>
+     * The maintenance and recovery options for the instance.
+     * </p>
+     * 
+     * @param maintenanceOptions
+     *        The maintenance and recovery options for the instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RunInstancesRequest withMaintenanceOptions(InstanceMaintenanceOptionsRequest maintenanceOptions) {
+        setMaintenanceOptions(maintenanceOptions);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -3416,7 +3462,9 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
         if (getEnclaveOptions() != null)
             sb.append("EnclaveOptions: ").append(getEnclaveOptions()).append(",");
         if (getPrivateDnsNameOptions() != null)
-            sb.append("PrivateDnsNameOptions: ").append(getPrivateDnsNameOptions());
+            sb.append("PrivateDnsNameOptions: ").append(getPrivateDnsNameOptions()).append(",");
+        if (getMaintenanceOptions() != null)
+            sb.append("MaintenanceOptions: ").append(getMaintenanceOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -3581,6 +3629,10 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
             return false;
         if (other.getPrivateDnsNameOptions() != null && other.getPrivateDnsNameOptions().equals(this.getPrivateDnsNameOptions()) == false)
             return false;
+        if (other.getMaintenanceOptions() == null ^ this.getMaintenanceOptions() == null)
+            return false;
+        if (other.getMaintenanceOptions() != null && other.getMaintenanceOptions().equals(this.getMaintenanceOptions()) == false)
+            return false;
         return true;
     }
 
@@ -3626,6 +3678,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
         hashCode = prime * hashCode + ((getMetadataOptions() == null) ? 0 : getMetadataOptions().hashCode());
         hashCode = prime * hashCode + ((getEnclaveOptions() == null) ? 0 : getEnclaveOptions().hashCode());
         hashCode = prime * hashCode + ((getPrivateDnsNameOptions() == null) ? 0 : getPrivateDnsNameOptions().hashCode());
+        hashCode = prime * hashCode + ((getMaintenanceOptions() == null) ? 0 : getMaintenanceOptions().hashCode());
         return hashCode;
     }
 

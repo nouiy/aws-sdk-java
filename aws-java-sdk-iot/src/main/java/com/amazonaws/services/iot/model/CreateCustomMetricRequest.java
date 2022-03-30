@@ -22,23 +22,28 @@ public class CreateCustomMetricRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn't
-     * begin with <code>aws:</code>. Cannot be updated once defined.
+     * The name of the custom metric. This will be used in the metric report submitted from the device/thing. The name
+     * can't begin with <code>aws:</code>. You can't change the name after you define it.
      * </p>
      */
     private String metricName;
     /**
      * <p>
-     * Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use
-     * this name as the metric identifier in the device metric report. Can be updated once defined.
+     * The friendly name in the console for the custom metric. This name doesn't have to be unique. Don't use this name
+     * as the metric identifier in the device metric report. You can update the friendly name after you define it.
      * </p>
      */
     private String displayName;
     /**
      * <p>
-     * The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     * <code>number-list</code>, and <code>number</code>.
+     * The type of the custom metric.
      * </p>
+     * <important>
+     * <p>
+     * The type <code>number</code> only takes a single metric value as an input, but when you submit the metrics value
+     * in the DeviceMetrics report, you must pass it as an array with a single value.
+     * </p>
+     * </important>
      */
     private String metricType;
     /**
@@ -58,13 +63,13 @@ public class CreateCustomMetricRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn't
-     * begin with <code>aws:</code>. Cannot be updated once defined.
+     * The name of the custom metric. This will be used in the metric report submitted from the device/thing. The name
+     * can't begin with <code>aws:</code>. You can't change the name after you define it.
      * </p>
      * 
      * @param metricName
-     *        The name of the custom metric. This will be used in the metric report submitted from the device/thing.
-     *        Shouldn't begin with <code>aws:</code>. Cannot be updated once defined.
+     *        The name of the custom metric. This will be used in the metric report submitted from the device/thing. The
+     *        name can't begin with <code>aws:</code>. You can't change the name after you define it.
      */
 
     public void setMetricName(String metricName) {
@@ -73,12 +78,12 @@ public class CreateCustomMetricRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn't
-     * begin with <code>aws:</code>. Cannot be updated once defined.
+     * The name of the custom metric. This will be used in the metric report submitted from the device/thing. The name
+     * can't begin with <code>aws:</code>. You can't change the name after you define it.
      * </p>
      * 
      * @return The name of the custom metric. This will be used in the metric report submitted from the device/thing.
-     *         Shouldn't begin with <code>aws:</code>. Cannot be updated once defined.
+     *         The name can't begin with <code>aws:</code>. You can't change the name after you define it.
      */
 
     public String getMetricName() {
@@ -87,13 +92,13 @@ public class CreateCustomMetricRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn't
-     * begin with <code>aws:</code>. Cannot be updated once defined.
+     * The name of the custom metric. This will be used in the metric report submitted from the device/thing. The name
+     * can't begin with <code>aws:</code>. You can't change the name after you define it.
      * </p>
      * 
      * @param metricName
-     *        The name of the custom metric. This will be used in the metric report submitted from the device/thing.
-     *        Shouldn't begin with <code>aws:</code>. Cannot be updated once defined.
+     *        The name of the custom metric. This will be used in the metric report submitted from the device/thing. The
+     *        name can't begin with <code>aws:</code>. You can't change the name after you define it.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,13 +109,14 @@ public class CreateCustomMetricRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use
-     * this name as the metric identifier in the device metric report. Can be updated once defined.
+     * The friendly name in the console for the custom metric. This name doesn't have to be unique. Don't use this name
+     * as the metric identifier in the device metric report. You can update the friendly name after you define it.
      * </p>
      * 
      * @param displayName
-     *        Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't
-     *        use this name as the metric identifier in the device metric report. Can be updated once defined.
+     *        The friendly name in the console for the custom metric. This name doesn't have to be unique. Don't use
+     *        this name as the metric identifier in the device metric report. You can update the friendly name after you
+     *        define it.
      */
 
     public void setDisplayName(String displayName) {
@@ -119,12 +125,13 @@ public class CreateCustomMetricRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use
-     * this name as the metric identifier in the device metric report. Can be updated once defined.
+     * The friendly name in the console for the custom metric. This name doesn't have to be unique. Don't use this name
+     * as the metric identifier in the device metric report. You can update the friendly name after you define it.
      * </p>
      * 
-     * @return Field represents a friendly name in the console for the custom metric; it doesn't have to be unique.
-     *         Don't use this name as the metric identifier in the device metric report. Can be updated once defined.
+     * @return The friendly name in the console for the custom metric. This name doesn't have to be unique. Don't use
+     *         this name as the metric identifier in the device metric report. You can update the friendly name after
+     *         you define it.
      */
 
     public String getDisplayName() {
@@ -133,13 +140,14 @@ public class CreateCustomMetricRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't use
-     * this name as the metric identifier in the device metric report. Can be updated once defined.
+     * The friendly name in the console for the custom metric. This name doesn't have to be unique. Don't use this name
+     * as the metric identifier in the device metric report. You can update the friendly name after you define it.
      * </p>
      * 
      * @param displayName
-     *        Field represents a friendly name in the console for the custom metric; it doesn't have to be unique. Don't
-     *        use this name as the metric identifier in the device metric report. Can be updated once defined.
+     *        The friendly name in the console for the custom metric. This name doesn't have to be unique. Don't use
+     *        this name as the metric identifier in the device metric report. You can update the friendly name after you
+     *        define it.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -150,13 +158,21 @@ public class CreateCustomMetricRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     * <code>number-list</code>, and <code>number</code>.
+     * The type of the custom metric.
      * </p>
+     * <important>
+     * <p>
+     * The type <code>number</code> only takes a single metric value as an input, but when you submit the metrics value
+     * in the DeviceMetrics report, you must pass it as an array with a single value.
+     * </p>
+     * </important>
      * 
      * @param metricType
-     *        The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     *        <code>number-list</code>, and <code>number</code>.
+     *        The type of the custom metric. </p> <important>
+     *        <p>
+     *        The type <code>number</code> only takes a single metric value as an input, but when you submit the metrics
+     *        value in the DeviceMetrics report, you must pass it as an array with a single value.
+     *        </p>
      * @see CustomMetricType
      */
 
@@ -166,12 +182,20 @@ public class CreateCustomMetricRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     * <code>number-list</code>, and <code>number</code>.
+     * The type of the custom metric.
      * </p>
+     * <important>
+     * <p>
+     * The type <code>number</code> only takes a single metric value as an input, but when you submit the metrics value
+     * in the DeviceMetrics report, you must pass it as an array with a single value.
+     * </p>
+     * </important>
      * 
-     * @return The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     *         <code>number-list</code>, and <code>number</code>.
+     * @return The type of the custom metric. </p> <important>
+     *         <p>
+     *         The type <code>number</code> only takes a single metric value as an input, but when you submit the
+     *         metrics value in the DeviceMetrics report, you must pass it as an array with a single value.
+     *         </p>
      * @see CustomMetricType
      */
 
@@ -181,13 +205,21 @@ public class CreateCustomMetricRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     * <code>number-list</code>, and <code>number</code>.
+     * The type of the custom metric.
      * </p>
+     * <important>
+     * <p>
+     * The type <code>number</code> only takes a single metric value as an input, but when you submit the metrics value
+     * in the DeviceMetrics report, you must pass it as an array with a single value.
+     * </p>
+     * </important>
      * 
      * @param metricType
-     *        The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     *        <code>number-list</code>, and <code>number</code>.
+     *        The type of the custom metric. </p> <important>
+     *        <p>
+     *        The type <code>number</code> only takes a single metric value as an input, but when you submit the metrics
+     *        value in the DeviceMetrics report, you must pass it as an array with a single value.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CustomMetricType
      */
@@ -199,13 +231,21 @@ public class CreateCustomMetricRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     * <code>number-list</code>, and <code>number</code>.
+     * The type of the custom metric.
      * </p>
+     * <important>
+     * <p>
+     * The type <code>number</code> only takes a single metric value as an input, but when you submit the metrics value
+     * in the DeviceMetrics report, you must pass it as an array with a single value.
+     * </p>
+     * </important>
      * 
      * @param metricType
-     *        The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     *        <code>number-list</code>, and <code>number</code>.
+     *        The type of the custom metric. </p> <important>
+     *        <p>
+     *        The type <code>number</code> only takes a single metric value as an input, but when you submit the metrics
+     *        value in the DeviceMetrics report, you must pass it as an array with a single value.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CustomMetricType
      */

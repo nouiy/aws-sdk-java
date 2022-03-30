@@ -34,6 +34,12 @@ public class PolicyOption implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private NetworkFirewallPolicy networkFirewallPolicy;
+    /**
+     * <p>
+     * Defines the policy options for a third-party firewall policy.
+     * </p>
+     */
+    private ThirdPartyFirewallPolicy thirdPartyFirewallPolicy;
 
     /**
      * <p>
@@ -76,6 +82,46 @@ public class PolicyOption implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Defines the policy options for a third-party firewall policy.
+     * </p>
+     * 
+     * @param thirdPartyFirewallPolicy
+     *        Defines the policy options for a third-party firewall policy.
+     */
+
+    public void setThirdPartyFirewallPolicy(ThirdPartyFirewallPolicy thirdPartyFirewallPolicy) {
+        this.thirdPartyFirewallPolicy = thirdPartyFirewallPolicy;
+    }
+
+    /**
+     * <p>
+     * Defines the policy options for a third-party firewall policy.
+     * </p>
+     * 
+     * @return Defines the policy options for a third-party firewall policy.
+     */
+
+    public ThirdPartyFirewallPolicy getThirdPartyFirewallPolicy() {
+        return this.thirdPartyFirewallPolicy;
+    }
+
+    /**
+     * <p>
+     * Defines the policy options for a third-party firewall policy.
+     * </p>
+     * 
+     * @param thirdPartyFirewallPolicy
+     *        Defines the policy options for a third-party firewall policy.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PolicyOption withThirdPartyFirewallPolicy(ThirdPartyFirewallPolicy thirdPartyFirewallPolicy) {
+        setThirdPartyFirewallPolicy(thirdPartyFirewallPolicy);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -88,7 +134,9 @@ public class PolicyOption implements Serializable, Cloneable, StructuredPojo {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getNetworkFirewallPolicy() != null)
-            sb.append("NetworkFirewallPolicy: ").append(getNetworkFirewallPolicy());
+            sb.append("NetworkFirewallPolicy: ").append(getNetworkFirewallPolicy()).append(",");
+        if (getThirdPartyFirewallPolicy() != null)
+            sb.append("ThirdPartyFirewallPolicy: ").append(getThirdPartyFirewallPolicy());
         sb.append("}");
         return sb.toString();
     }
@@ -107,6 +155,10 @@ public class PolicyOption implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getNetworkFirewallPolicy() != null && other.getNetworkFirewallPolicy().equals(this.getNetworkFirewallPolicy()) == false)
             return false;
+        if (other.getThirdPartyFirewallPolicy() == null ^ this.getThirdPartyFirewallPolicy() == null)
+            return false;
+        if (other.getThirdPartyFirewallPolicy() != null && other.getThirdPartyFirewallPolicy().equals(this.getThirdPartyFirewallPolicy()) == false)
+            return false;
         return true;
     }
 
@@ -116,6 +168,7 @@ public class PolicyOption implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getNetworkFirewallPolicy() == null) ? 0 : getNetworkFirewallPolicy().hashCode());
+        hashCode = prime * hashCode + ((getThirdPartyFirewallPolicy() == null) ? 0 : getThirdPartyFirewallPolicy().hashCode());
         return hashCode;
     }
 

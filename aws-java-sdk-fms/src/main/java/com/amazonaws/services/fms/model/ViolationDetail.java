@@ -62,10 +62,6 @@ public class ViolationDetail implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The <code>ResourceTag</code> objects associated with the resource.
      * </p>
-     * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
      */
     private java.util.List<Tag> resourceTags;
     /**
@@ -309,15 +305,8 @@ public class ViolationDetail implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The <code>ResourceTag</code> objects associated with the resource.
      * </p>
-     * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
      * 
-     * @return The <code>ResourceTag</code> objects associated with the resource.</p>
-     *         <p>
-     *         This option isn't available for the centralized deployment model when creating policies to configure
-     *         Network Firewall.
+     * @return The <code>ResourceTag</code> objects associated with the resource.
      */
 
     public java.util.List<Tag> getResourceTags() {
@@ -328,16 +317,9 @@ public class ViolationDetail implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The <code>ResourceTag</code> objects associated with the resource.
      * </p>
-     * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
      * 
      * @param resourceTags
-     *        The <code>ResourceTag</code> objects associated with the resource.</p>
-     *        <p>
-     *        This option isn't available for the centralized deployment model when creating policies to configure
-     *        Network Firewall.
+     *        The <code>ResourceTag</code> objects associated with the resource.
      */
 
     public void setResourceTags(java.util.Collection<Tag> resourceTags) {
@@ -354,20 +336,13 @@ public class ViolationDetail implements Serializable, Cloneable, StructuredPojo 
      * The <code>ResourceTag</code> objects associated with the resource.
      * </p>
      * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
-     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResourceTags(java.util.Collection)} or {@link #withResourceTags(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param resourceTags
-     *        The <code>ResourceTag</code> objects associated with the resource.</p>
-     *        <p>
-     *        This option isn't available for the centralized deployment model when creating policies to configure
-     *        Network Firewall.
+     *        The <code>ResourceTag</code> objects associated with the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -385,16 +360,9 @@ public class ViolationDetail implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The <code>ResourceTag</code> objects associated with the resource.
      * </p>
-     * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
      * 
      * @param resourceTags
-     *        The <code>ResourceTag</code> objects associated with the resource.</p>
-     *        <p>
-     *        This option isn't available for the centralized deployment model when creating policies to configure
-     *        Network Firewall.
+     *        The <code>ResourceTag</code> objects associated with the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

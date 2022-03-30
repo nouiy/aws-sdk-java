@@ -40,6 +40,19 @@ public class AbstractAWSFMSAsync extends AbstractAWSFMS implements AWSFMSAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateThirdPartyFirewallResult> associateThirdPartyFirewallAsync(AssociateThirdPartyFirewallRequest request) {
+
+        return associateThirdPartyFirewallAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateThirdPartyFirewallResult> associateThirdPartyFirewallAsync(AssociateThirdPartyFirewallRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssociateThirdPartyFirewallRequest, AssociateThirdPartyFirewallResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteAppsListResult> deleteAppsListAsync(DeleteAppsListRequest request) {
 
         return deleteAppsListAsync(request, null);
@@ -100,6 +113,19 @@ public class AbstractAWSFMSAsync extends AbstractAWSFMS implements AWSFMSAsync {
     @Override
     public java.util.concurrent.Future<DisassociateAdminAccountResult> disassociateAdminAccountAsync(DisassociateAdminAccountRequest request,
             com.amazonaws.handlers.AsyncHandler<DisassociateAdminAccountRequest, DisassociateAdminAccountResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateThirdPartyFirewallResult> disassociateThirdPartyFirewallAsync(DisassociateThirdPartyFirewallRequest request) {
+
+        return disassociateThirdPartyFirewallAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateThirdPartyFirewallResult> disassociateThirdPartyFirewallAsync(DisassociateThirdPartyFirewallRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisassociateThirdPartyFirewallRequest, DisassociateThirdPartyFirewallResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -196,6 +222,21 @@ public class AbstractAWSFMSAsync extends AbstractAWSFMS implements AWSFMSAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<GetThirdPartyFirewallAssociationStatusResult> getThirdPartyFirewallAssociationStatusAsync(
+            GetThirdPartyFirewallAssociationStatusRequest request) {
+
+        return getThirdPartyFirewallAssociationStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetThirdPartyFirewallAssociationStatusResult> getThirdPartyFirewallAssociationStatusAsync(
+            GetThirdPartyFirewallAssociationStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetThirdPartyFirewallAssociationStatusRequest, GetThirdPartyFirewallAssociationStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetViolationDetailsResult> getViolationDetailsAsync(GetViolationDetailsRequest request) {
 
         return getViolationDetailsAsync(request, null);
@@ -282,6 +323,21 @@ public class AbstractAWSFMSAsync extends AbstractAWSFMS implements AWSFMSAsync {
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListThirdPartyFirewallFirewallPoliciesResult> listThirdPartyFirewallFirewallPoliciesAsync(
+            ListThirdPartyFirewallFirewallPoliciesRequest request) {
+
+        return listThirdPartyFirewallFirewallPoliciesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListThirdPartyFirewallFirewallPoliciesResult> listThirdPartyFirewallFirewallPoliciesAsync(
+            ListThirdPartyFirewallFirewallPoliciesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListThirdPartyFirewallFirewallPoliciesRequest, ListThirdPartyFirewallFirewallPoliciesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

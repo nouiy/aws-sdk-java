@@ -83,6 +83,43 @@ public interface AWSFMSAsync extends AWSFMS {
 
     /**
      * <p>
+     * Sets the Firewall Manager policy administrator as a tenant administrator of a third-party firewall service. A
+     * tenant is an instance of the third-party firewall service that's associated with your Amazon Web Services
+     * customer account.
+     * </p>
+     * 
+     * @param associateThirdPartyFirewallRequest
+     * @return A Java Future containing the result of the AssociateThirdPartyFirewall operation returned by the service.
+     * @sample AWSFMSAsync.AssociateThirdPartyFirewall
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/AssociateThirdPartyFirewall"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateThirdPartyFirewallResult> associateThirdPartyFirewallAsync(
+            AssociateThirdPartyFirewallRequest associateThirdPartyFirewallRequest);
+
+    /**
+     * <p>
+     * Sets the Firewall Manager policy administrator as a tenant administrator of a third-party firewall service. A
+     * tenant is an instance of the third-party firewall service that's associated with your Amazon Web Services
+     * customer account.
+     * </p>
+     * 
+     * @param associateThirdPartyFirewallRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateThirdPartyFirewall operation returned by the service.
+     * @sample AWSFMSAsyncHandler.AssociateThirdPartyFirewall
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/AssociateThirdPartyFirewall"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateThirdPartyFirewallResult> associateThirdPartyFirewallAsync(
+            AssociateThirdPartyFirewallRequest associateThirdPartyFirewallRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateThirdPartyFirewallRequest, AssociateThirdPartyFirewallResult> asyncHandler);
+
+    /**
+     * <p>
      * Permanently deletes an Firewall Manager applications list.
      * </p>
      * 
@@ -241,6 +278,45 @@ public interface AWSFMSAsync extends AWSFMS {
      */
     java.util.concurrent.Future<DisassociateAdminAccountResult> disassociateAdminAccountAsync(DisassociateAdminAccountRequest disassociateAdminAccountRequest,
             com.amazonaws.handlers.AsyncHandler<DisassociateAdminAccountRequest, DisassociateAdminAccountResult> asyncHandler);
+
+    /**
+     * <p>
+     * Disassociates a Firewall Manager policy administrator from a third-party firewall tenant. When you call
+     * <code>DisassociateThirdPartyFirewall</code>, the third-party firewall vendor deletes all of the firewalls that
+     * are associated with the account.
+     * </p>
+     * 
+     * @param disassociateThirdPartyFirewallRequest
+     * @return A Java Future containing the result of the DisassociateThirdPartyFirewall operation returned by the
+     *         service.
+     * @sample AWSFMSAsync.DisassociateThirdPartyFirewall
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/DisassociateThirdPartyFirewall"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateThirdPartyFirewallResult> disassociateThirdPartyFirewallAsync(
+            DisassociateThirdPartyFirewallRequest disassociateThirdPartyFirewallRequest);
+
+    /**
+     * <p>
+     * Disassociates a Firewall Manager policy administrator from a third-party firewall tenant. When you call
+     * <code>DisassociateThirdPartyFirewall</code>, the third-party firewall vendor deletes all of the firewalls that
+     * are associated with the account.
+     * </p>
+     * 
+     * @param disassociateThirdPartyFirewallRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociateThirdPartyFirewall operation returned by the
+     *         service.
+     * @sample AWSFMSAsyncHandler.DisassociateThirdPartyFirewall
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/DisassociateThirdPartyFirewall"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateThirdPartyFirewallResult> disassociateThirdPartyFirewallAsync(
+            DisassociateThirdPartyFirewallRequest disassociateThirdPartyFirewallRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociateThirdPartyFirewallRequest, DisassociateThirdPartyFirewallResult> asyncHandler);
 
     /**
      * <p>
@@ -523,6 +599,41 @@ public interface AWSFMSAsync extends AWSFMS {
 
     /**
      * <p>
+     * The onboarding status of a Firewall Manager admin account to third-party firewall vendor tenant.
+     * </p>
+     * 
+     * @param getThirdPartyFirewallAssociationStatusRequest
+     * @return A Java Future containing the result of the GetThirdPartyFirewallAssociationStatus operation returned by
+     *         the service.
+     * @sample AWSFMSAsync.GetThirdPartyFirewallAssociationStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/GetThirdPartyFirewallAssociationStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetThirdPartyFirewallAssociationStatusResult> getThirdPartyFirewallAssociationStatusAsync(
+            GetThirdPartyFirewallAssociationStatusRequest getThirdPartyFirewallAssociationStatusRequest);
+
+    /**
+     * <p>
+     * The onboarding status of a Firewall Manager admin account to third-party firewall vendor tenant.
+     * </p>
+     * 
+     * @param getThirdPartyFirewallAssociationStatusRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetThirdPartyFirewallAssociationStatus operation returned by
+     *         the service.
+     * @sample AWSFMSAsyncHandler.GetThirdPartyFirewallAssociationStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/GetThirdPartyFirewallAssociationStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetThirdPartyFirewallAssociationStatusResult> getThirdPartyFirewallAssociationStatusAsync(
+            GetThirdPartyFirewallAssociationStatusRequest getThirdPartyFirewallAssociationStatusRequest,
+            com.amazonaws.handlers.AsyncHandler<GetThirdPartyFirewallAssociationStatusRequest, GetThirdPartyFirewallAssociationStatusResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves violations for a resource based on the specified Firewall Manager policy and Amazon Web Services
      * account.
      * </p>
@@ -751,6 +862,43 @@ public interface AWSFMSAsync extends AWSFMS {
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a list of all of the third-party firewall policies that are associated with the third-party firewall
+     * administrator's account.
+     * </p>
+     * 
+     * @param listThirdPartyFirewallFirewallPoliciesRequest
+     * @return A Java Future containing the result of the ListThirdPartyFirewallFirewallPolicies operation returned by
+     *         the service.
+     * @sample AWSFMSAsync.ListThirdPartyFirewallFirewallPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/ListThirdPartyFirewallFirewallPolicies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListThirdPartyFirewallFirewallPoliciesResult> listThirdPartyFirewallFirewallPoliciesAsync(
+            ListThirdPartyFirewallFirewallPoliciesRequest listThirdPartyFirewallFirewallPoliciesRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of all of the third-party firewall policies that are associated with the third-party firewall
+     * administrator's account.
+     * </p>
+     * 
+     * @param listThirdPartyFirewallFirewallPoliciesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListThirdPartyFirewallFirewallPolicies operation returned by
+     *         the service.
+     * @sample AWSFMSAsyncHandler.ListThirdPartyFirewallFirewallPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/ListThirdPartyFirewallFirewallPolicies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListThirdPartyFirewallFirewallPoliciesResult> listThirdPartyFirewallFirewallPoliciesAsync(
+            ListThirdPartyFirewallFirewallPoliciesRequest listThirdPartyFirewallFirewallPoliciesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListThirdPartyFirewallFirewallPoliciesRequest, ListThirdPartyFirewallFirewallPoliciesResult> asyncHandler);
 
     /**
      * <p>

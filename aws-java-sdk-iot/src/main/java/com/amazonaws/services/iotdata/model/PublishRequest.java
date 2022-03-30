@@ -21,6 +21,9 @@ import com.amazonaws.AmazonWebServiceRequest;
  * <p>
  * The input for the Publish operation.
  * </p>
+ * 
+ * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/Publish" target="_top">AWS API
+ *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
@@ -58,7 +61,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * <p>
      * Publishing an empty (null) payload with <b>retain</b> = <code>true</code> deletes the retained message identified
-     * by <b>topic</b> from IoT Core.
+     * by <b>topic</b> from Amazon Web Services IoT Core.
      * </p>
      */
     private java.nio.ByteBuffer payload;
@@ -269,7 +272,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * <p>
      * Publishing an empty (null) payload with <b>retain</b> = <code>true</code> deletes the retained message identified
-     * by <b>topic</b> from IoT Core.
+     * by <b>topic</b> from Amazon Web Services IoT Core.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -286,7 +289,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        The message body. MQTT accepts text, binary, and empty (null) message payloads.</p>
      *        <p>
      *        Publishing an empty (null) payload with <b>retain</b> = <code>true</code> deletes the retained message
-     *        identified by <b>topic</b> from IoT Core.
+     *        identified by <b>topic</b> from Amazon Web Services IoT Core.
      */
 
     public void setPayload(java.nio.ByteBuffer payload) {
@@ -299,7 +302,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * <p>
      * Publishing an empty (null) payload with <b>retain</b> = <code>true</code> deletes the retained message identified
-     * by <b>topic</b> from IoT Core.
+     * by <b>topic</b> from Amazon Web Services IoT Core.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -312,7 +315,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * @return The message body. MQTT accepts text, binary, and empty (null) message payloads.</p>
      *         <p>
      *         Publishing an empty (null) payload with <b>retain</b> = <code>true</code> deletes the retained message
-     *         identified by <b>topic</b> from IoT Core.
+     *         identified by <b>topic</b> from Amazon Web Services IoT Core.
      */
 
     public java.nio.ByteBuffer getPayload() {
@@ -325,7 +328,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * <p>
      * Publishing an empty (null) payload with <b>retain</b> = <code>true</code> deletes the retained message identified
-     * by <b>topic</b> from IoT Core.
+     * by <b>topic</b> from Amazon Web Services IoT Core.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -342,7 +345,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      *        The message body. MQTT accepts text, binary, and empty (null) message payloads.</p>
      *        <p>
      *        Publishing an empty (null) payload with <b>retain</b> = <code>true</code> deletes the retained message
-     *        identified by <b>topic</b> from IoT Core.
+     *        identified by <b>topic</b> from Amazon Web Services IoT Core.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

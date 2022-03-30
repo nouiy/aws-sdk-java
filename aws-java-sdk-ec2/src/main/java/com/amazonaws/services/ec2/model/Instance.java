@@ -368,6 +368,12 @@ public class Instance implements Serializable, Cloneable {
      * </p>
      */
     private String ipv6Address;
+    /**
+     * <p>
+     * Provides information on the recovery and maintenance options of your instance.
+     * </p>
+     */
+    private InstanceMaintenanceOptions maintenanceOptions;
 
     /**
      * <p>
@@ -3230,6 +3236,46 @@ public class Instance implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Provides information on the recovery and maintenance options of your instance.
+     * </p>
+     * 
+     * @param maintenanceOptions
+     *        Provides information on the recovery and maintenance options of your instance.
+     */
+
+    public void setMaintenanceOptions(InstanceMaintenanceOptions maintenanceOptions) {
+        this.maintenanceOptions = maintenanceOptions;
+    }
+
+    /**
+     * <p>
+     * Provides information on the recovery and maintenance options of your instance.
+     * </p>
+     * 
+     * @return Provides information on the recovery and maintenance options of your instance.
+     */
+
+    public InstanceMaintenanceOptions getMaintenanceOptions() {
+        return this.maintenanceOptions;
+    }
+
+    /**
+     * <p>
+     * Provides information on the recovery and maintenance options of your instance.
+     * </p>
+     * 
+     * @param maintenanceOptions
+     *        Provides information on the recovery and maintenance options of your instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Instance withMaintenanceOptions(InstanceMaintenanceOptions maintenanceOptions) {
+        setMaintenanceOptions(maintenanceOptions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3348,7 +3394,9 @@ public class Instance implements Serializable, Cloneable {
         if (getPrivateDnsNameOptions() != null)
             sb.append("PrivateDnsNameOptions: ").append(getPrivateDnsNameOptions()).append(",");
         if (getIpv6Address() != null)
-            sb.append("Ipv6Address: ").append(getIpv6Address());
+            sb.append("Ipv6Address: ").append(getIpv6Address()).append(",");
+        if (getMaintenanceOptions() != null)
+            sb.append("MaintenanceOptions: ").append(getMaintenanceOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -3581,6 +3629,10 @@ public class Instance implements Serializable, Cloneable {
             return false;
         if (other.getIpv6Address() != null && other.getIpv6Address().equals(this.getIpv6Address()) == false)
             return false;
+        if (other.getMaintenanceOptions() == null ^ this.getMaintenanceOptions() == null)
+            return false;
+        if (other.getMaintenanceOptions() != null && other.getMaintenanceOptions().equals(this.getMaintenanceOptions()) == false)
+            return false;
         return true;
     }
 
@@ -3643,6 +3695,7 @@ public class Instance implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getUsageOperationUpdateTime() == null) ? 0 : getUsageOperationUpdateTime().hashCode());
         hashCode = prime * hashCode + ((getPrivateDnsNameOptions() == null) ? 0 : getPrivateDnsNameOptions().hashCode());
         hashCode = prime * hashCode + ((getIpv6Address() == null) ? 0 : getIpv6Address().hashCode());
+        hashCode = prime * hashCode + ((getMaintenanceOptions() == null) ? 0 : getMaintenanceOptions().hashCode());
         return hashCode;
     }
 

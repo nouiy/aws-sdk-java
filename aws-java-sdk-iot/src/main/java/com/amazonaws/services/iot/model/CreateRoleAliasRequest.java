@@ -36,6 +36,10 @@ public class CreateRoleAliasRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.
      * </p>
+     * <p>
+     * This value must be less than or equal to the maximum session duration of the IAM role that the role alias
+     * references.
+     * </p>
      */
     private Integer credentialDurationSeconds;
     /**
@@ -143,9 +147,16 @@ public class CreateRoleAliasRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.
      * </p>
+     * <p>
+     * This value must be less than or equal to the maximum session duration of the IAM role that the role alias
+     * references.
+     * </p>
      * 
      * @param credentialDurationSeconds
-     *        How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.
+     *        How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.</p>
+     *        <p>
+     *        This value must be less than or equal to the maximum session duration of the IAM role that the role alias
+     *        references.
      */
 
     public void setCredentialDurationSeconds(Integer credentialDurationSeconds) {
@@ -156,8 +167,15 @@ public class CreateRoleAliasRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.
      * </p>
+     * <p>
+     * This value must be less than or equal to the maximum session duration of the IAM role that the role alias
+     * references.
+     * </p>
      * 
-     * @return How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.
+     * @return How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.</p>
+     *         <p>
+     *         This value must be less than or equal to the maximum session duration of the IAM role that the role alias
+     *         references.
      */
 
     public Integer getCredentialDurationSeconds() {
@@ -168,9 +186,16 @@ public class CreateRoleAliasRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.
      * </p>
+     * <p>
+     * This value must be less than or equal to the maximum session duration of the IAM role that the role alias
+     * references.
+     * </p>
      * 
      * @param credentialDurationSeconds
-     *        How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.
+     *        How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.</p>
+     *        <p>
+     *        This value must be less than or equal to the maximum session duration of the IAM role that the role alias
+     *        references.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

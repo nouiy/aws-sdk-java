@@ -53,7 +53,7 @@ public interface AWSIotData {
      *
      * @see RegionUtils#getRegionsForService(String)
      */
-    String ENDPOINT_PREFIX = "data.iot";
+    String ENDPOINT_PREFIX = "data-ats.iot";
 
     /**
      * Overrides the default endpoint for this client ("https://data.iot.us-east-1.amazonaws.com"). Callers can use this
@@ -142,6 +142,8 @@ public interface AWSIotData {
      * @throws UnsupportedDocumentEncodingException
      *         The document encoding is not supported.
      * @sample AWSIotData.DeleteThingShadow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/DeleteThingShadow" target="_top">AWS API
+     *      Documentation</a>
      */
     DeleteThingShadowResult deleteThingShadow(DeleteThingShadowRequest deleteThingShadowRequest);
 
@@ -160,8 +162,8 @@ public interface AWSIotData {
      * >GetRetainedMessage</a> action.
      * </p>
      * <p>
-     * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">IoT
-     * Core pricing - Messaging</a>.
+     * For more information about messaging costs, see <a
+     * href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon Web Services IoT Core pricing - Messaging</a>.
      * </p>
      * 
      * @param getRetainedMessageRequest
@@ -182,6 +184,8 @@ public interface AWSIotData {
      * @throws MethodNotAllowedException
      *         The specified combination of HTTP verb and URI is not supported.
      * @sample AWSIotData.GetRetainedMessage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/GetRetainedMessage" target="_top">AWS
+     *      API Documentation</a>
      */
     GetRetainedMessageResult getRetainedMessage(GetRetainedMessageRequest getRetainedMessageRequest);
 
@@ -220,6 +224,8 @@ public interface AWSIotData {
      * @throws UnsupportedDocumentEncodingException
      *         The document encoding is not supported.
      * @sample AWSIotData.GetThingShadow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/GetThingShadow" target="_top">AWS API
+     *      Documentation</a>
      */
     GetThingShadowResult getThingShadow(GetThingShadowRequest getThingShadowRequest);
 
@@ -250,6 +256,8 @@ public interface AWSIotData {
      * @throws MethodNotAllowedException
      *         The specified combination of HTTP verb and URI is not supported.
      * @sample AWSIotData.ListNamedShadowsForThing
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/ListNamedShadowsForThing"
+     *      target="_top">AWS API Documentation</a>
      */
     ListNamedShadowsForThingResult listNamedShadowsForThing(ListNamedShadowsForThingRequest listNamedShadowsForThingRequest);
 
@@ -272,8 +280,8 @@ public interface AWSIotData {
      * >ListRetainedMessages</a> action.
      * </p>
      * <p>
-     * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">IoT
-     * Core pricing - Messaging</a>.
+     * For more information about messaging costs, see <a
+     * href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon Web Services IoT Core pricing - Messaging</a>.
      * </p>
      * 
      * @param listRetainedMessagesRequest
@@ -291,6 +299,8 @@ public interface AWSIotData {
      * @throws MethodNotAllowedException
      *         The specified combination of HTTP verb and URI is not supported.
      * @sample AWSIotData.ListRetainedMessages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/ListRetainedMessages" target="_top">AWS
+     *      API Documentation</a>
      */
     ListRetainedMessagesResult listRetainedMessages(ListRetainedMessagesRequest listRetainedMessagesRequest);
 
@@ -309,8 +319,8 @@ public interface AWSIotData {
      * Guide.
      * </p>
      * <p>
-     * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">IoT
-     * Core pricing - Messaging</a>.
+     * For more information about messaging costs, see <a
+     * href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon Web Services IoT Core pricing - Messaging</a>.
      * </p>
      * 
      * @param publishRequest
@@ -325,6 +335,8 @@ public interface AWSIotData {
      * @throws MethodNotAllowedException
      *         The specified combination of HTTP verb and URI is not supported.
      * @sample AWSIotData.Publish
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/Publish" target="_top">AWS API
+     *      Documentation</a>
      */
     PublishResult publish(PublishRequest publishRequest);
 
@@ -365,6 +377,8 @@ public interface AWSIotData {
      * @throws UnsupportedDocumentEncodingException
      *         The document encoding is not supported.
      * @sample AWSIotData.UpdateThingShadow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/UpdateThingShadow" target="_top">AWS API
+     *      Documentation</a>
      */
     UpdateThingShadowResult updateThingShadow(UpdateThingShadowRequest updateThingShadowRequest);
 

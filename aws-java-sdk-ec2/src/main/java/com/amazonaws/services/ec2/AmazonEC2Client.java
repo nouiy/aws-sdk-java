@@ -26983,6 +26983,67 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Modifies the recovery behavior of your instance to disable simplified automatic recovery or set the recovery
+     * behavior to default. The default configuration will not enable simplified automatic recovery for an unsupported
+     * instance type. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-recover.html#instance-configuration-recovery"
+     * >Simplified automatic recovery</a>.
+     * </p>
+     * 
+     * @param modifyInstanceMaintenanceOptionsRequest
+     * @return Result of the ModifyInstanceMaintenanceOptions operation returned by the service.
+     * @sample AmazonEC2.ModifyInstanceMaintenanceOptions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyInstanceMaintenanceOptions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ModifyInstanceMaintenanceOptionsResult modifyInstanceMaintenanceOptions(ModifyInstanceMaintenanceOptionsRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifyInstanceMaintenanceOptions(request);
+    }
+
+    @SdkInternalApi
+    final ModifyInstanceMaintenanceOptionsResult executeModifyInstanceMaintenanceOptions(
+            ModifyInstanceMaintenanceOptionsRequest modifyInstanceMaintenanceOptionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifyInstanceMaintenanceOptionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifyInstanceMaintenanceOptionsRequest> request = null;
+        Response<ModifyInstanceMaintenanceOptionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifyInstanceMaintenanceOptionsRequestMarshaller().marshall(super.beforeMarshalling(modifyInstanceMaintenanceOptionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifyInstanceMaintenanceOptions");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ModifyInstanceMaintenanceOptionsResult> responseHandler = new StaxResponseHandler<ModifyInstanceMaintenanceOptionsResult>(
+                    new ModifyInstanceMaintenanceOptionsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Modify the instance metadata parameters on a running or stopped instance. When you modify the parameters on a
      * stopped instance, they are applied when the instance is started. When you modify the parameters on a running
      * instance, the API responds with a state of “pending”. After the parameter modifications are successfully applied

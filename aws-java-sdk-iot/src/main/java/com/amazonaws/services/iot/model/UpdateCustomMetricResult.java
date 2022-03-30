@@ -32,9 +32,14 @@ public class UpdateCustomMetricResult extends com.amazonaws.AmazonWebServiceResu
     private String metricArn;
     /**
      * <p>
-     * The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     * <code>number-list</code>, and <code>number</code>.
+     * The type of the custom metric.
      * </p>
+     * <important>
+     * <p>
+     * The type <code>number</code> only takes a single metric value as an input, but while submitting the metrics value
+     * in the DeviceMetrics report, it must be passed as an array with a single value.
+     * </p>
+     * </important>
      */
     private String metricType;
     /**
@@ -138,13 +143,21 @@ public class UpdateCustomMetricResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     * <code>number-list</code>, and <code>number</code>.
+     * The type of the custom metric.
      * </p>
+     * <important>
+     * <p>
+     * The type <code>number</code> only takes a single metric value as an input, but while submitting the metrics value
+     * in the DeviceMetrics report, it must be passed as an array with a single value.
+     * </p>
+     * </important>
      * 
      * @param metricType
-     *        The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     *        <code>number-list</code>, and <code>number</code>.
+     *        The type of the custom metric. </p> <important>
+     *        <p>
+     *        The type <code>number</code> only takes a single metric value as an input, but while submitting the
+     *        metrics value in the DeviceMetrics report, it must be passed as an array with a single value.
+     *        </p>
      * @see CustomMetricType
      */
 
@@ -154,12 +167,20 @@ public class UpdateCustomMetricResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     * <code>number-list</code>, and <code>number</code>.
+     * The type of the custom metric.
      * </p>
+     * <important>
+     * <p>
+     * The type <code>number</code> only takes a single metric value as an input, but while submitting the metrics value
+     * in the DeviceMetrics report, it must be passed as an array with a single value.
+     * </p>
+     * </important>
      * 
-     * @return The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     *         <code>number-list</code>, and <code>number</code>.
+     * @return The type of the custom metric. </p> <important>
+     *         <p>
+     *         The type <code>number</code> only takes a single metric value as an input, but while submitting the
+     *         metrics value in the DeviceMetrics report, it must be passed as an array with a single value.
+     *         </p>
      * @see CustomMetricType
      */
 
@@ -169,13 +190,21 @@ public class UpdateCustomMetricResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     * <code>number-list</code>, and <code>number</code>.
+     * The type of the custom metric.
      * </p>
+     * <important>
+     * <p>
+     * The type <code>number</code> only takes a single metric value as an input, but while submitting the metrics value
+     * in the DeviceMetrics report, it must be passed as an array with a single value.
+     * </p>
+     * </important>
      * 
      * @param metricType
-     *        The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     *        <code>number-list</code>, and <code>number</code>.
+     *        The type of the custom metric. </p> <important>
+     *        <p>
+     *        The type <code>number</code> only takes a single metric value as an input, but while submitting the
+     *        metrics value in the DeviceMetrics report, it must be passed as an array with a single value.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CustomMetricType
      */
@@ -187,13 +216,21 @@ public class UpdateCustomMetricResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     * <code>number-list</code>, and <code>number</code>.
+     * The type of the custom metric.
      * </p>
+     * <important>
+     * <p>
+     * The type <code>number</code> only takes a single metric value as an input, but while submitting the metrics value
+     * in the DeviceMetrics report, it must be passed as an array with a single value.
+     * </p>
+     * </important>
      * 
      * @param metricType
-     *        The type of the custom metric. Types include <code>string-list</code>, <code>ip-address-list</code>,
-     *        <code>number-list</code>, and <code>number</code>.
+     *        The type of the custom metric. </p> <important>
+     *        <p>
+     *        The type <code>number</code> only takes a single metric value as an input, but while submitting the
+     *        metrics value in the DeviceMetrics report, it must be passed as an array with a single value.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CustomMetricType
      */

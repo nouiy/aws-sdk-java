@@ -33,6 +33,11 @@ public class AbstractAWSFMS implements AWSFMS {
     }
 
     @Override
+    public AssociateThirdPartyFirewallResult associateThirdPartyFirewall(AssociateThirdPartyFirewallRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteAppsListResult deleteAppsList(DeleteAppsListRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -54,6 +59,11 @@ public class AbstractAWSFMS implements AWSFMS {
 
     @Override
     public DisassociateAdminAccountResult disassociateAdminAccount(DisassociateAdminAccountRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DisassociateThirdPartyFirewallResult disassociateThirdPartyFirewall(DisassociateThirdPartyFirewallRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -93,6 +103,11 @@ public class AbstractAWSFMS implements AWSFMS {
     }
 
     @Override
+    public GetThirdPartyFirewallAssociationStatusResult getThirdPartyFirewallAssociationStatus(GetThirdPartyFirewallAssociationStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetViolationDetailsResult getViolationDetails(GetViolationDetailsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -124,6 +139,11 @@ public class AbstractAWSFMS implements AWSFMS {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListThirdPartyFirewallFirewallPoliciesResult listThirdPartyFirewallFirewallPolicies(ListThirdPartyFirewallFirewallPoliciesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

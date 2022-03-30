@@ -115,6 +115,39 @@ public class AWSFMSAsyncClient extends AWSFMSClient implements AWSFMSAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateThirdPartyFirewallResult> associateThirdPartyFirewallAsync(AssociateThirdPartyFirewallRequest request) {
+
+        return associateThirdPartyFirewallAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateThirdPartyFirewallResult> associateThirdPartyFirewallAsync(final AssociateThirdPartyFirewallRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociateThirdPartyFirewallRequest, AssociateThirdPartyFirewallResult> asyncHandler) {
+        final AssociateThirdPartyFirewallRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociateThirdPartyFirewallResult>() {
+            @Override
+            public AssociateThirdPartyFirewallResult call() throws Exception {
+                AssociateThirdPartyFirewallResult result = null;
+
+                try {
+                    result = executeAssociateThirdPartyFirewall(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteAppsListResult> deleteAppsListAsync(DeleteAppsListRequest request) {
 
         return deleteAppsListAsync(request, null);
@@ -264,6 +297,40 @@ public class AWSFMSAsyncClient extends AWSFMSClient implements AWSFMSAsync {
 
                 try {
                     result = executeDisassociateAdminAccount(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateThirdPartyFirewallResult> disassociateThirdPartyFirewallAsync(DisassociateThirdPartyFirewallRequest request) {
+
+        return disassociateThirdPartyFirewallAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateThirdPartyFirewallResult> disassociateThirdPartyFirewallAsync(
+            final DisassociateThirdPartyFirewallRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisassociateThirdPartyFirewallRequest, DisassociateThirdPartyFirewallResult> asyncHandler) {
+        final DisassociateThirdPartyFirewallRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisassociateThirdPartyFirewallResult>() {
+            @Override
+            public DisassociateThirdPartyFirewallResult call() throws Exception {
+                DisassociateThirdPartyFirewallResult result = null;
+
+                try {
+                    result = executeDisassociateThirdPartyFirewall(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -511,6 +578,41 @@ public class AWSFMSAsyncClient extends AWSFMSClient implements AWSFMSAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<GetThirdPartyFirewallAssociationStatusResult> getThirdPartyFirewallAssociationStatusAsync(
+            GetThirdPartyFirewallAssociationStatusRequest request) {
+
+        return getThirdPartyFirewallAssociationStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetThirdPartyFirewallAssociationStatusResult> getThirdPartyFirewallAssociationStatusAsync(
+            final GetThirdPartyFirewallAssociationStatusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetThirdPartyFirewallAssociationStatusRequest, GetThirdPartyFirewallAssociationStatusResult> asyncHandler) {
+        final GetThirdPartyFirewallAssociationStatusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetThirdPartyFirewallAssociationStatusResult>() {
+            @Override
+            public GetThirdPartyFirewallAssociationStatusResult call() throws Exception {
+                GetThirdPartyFirewallAssociationStatusResult result = null;
+
+                try {
+                    result = executeGetThirdPartyFirewallAssociationStatus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetViolationDetailsResult> getViolationDetailsAsync(GetViolationDetailsRequest request) {
 
         return getViolationDetailsAsync(request, null);
@@ -726,6 +828,41 @@ public class AWSFMSAsyncClient extends AWSFMSClient implements AWSFMSAsync {
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListThirdPartyFirewallFirewallPoliciesResult> listThirdPartyFirewallFirewallPoliciesAsync(
+            ListThirdPartyFirewallFirewallPoliciesRequest request) {
+
+        return listThirdPartyFirewallFirewallPoliciesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListThirdPartyFirewallFirewallPoliciesResult> listThirdPartyFirewallFirewallPoliciesAsync(
+            final ListThirdPartyFirewallFirewallPoliciesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListThirdPartyFirewallFirewallPoliciesRequest, ListThirdPartyFirewallFirewallPoliciesResult> asyncHandler) {
+        final ListThirdPartyFirewallFirewallPoliciesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListThirdPartyFirewallFirewallPoliciesResult>() {
+            @Override
+            public ListThirdPartyFirewallFirewallPoliciesResult call() throws Exception {
+                ListThirdPartyFirewallFirewallPoliciesResult result = null;
+
+                try {
+                    result = executeListThirdPartyFirewallFirewallPolicies(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

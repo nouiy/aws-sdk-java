@@ -150,19 +150,40 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     private String dNSName;
     /**
      * <p>
-     * The ID of the Key Management Service (KMS) key used to encrypt the file system's data for Amazon FSx for Windows
-     * File Server file systems, Amazon FSx for NetApp ONTAP file systems, and <code>PERSISTENT</code> Amazon FSx for
-     * Lustre file systems at rest. If this ID isn't specified, the Amazon FSx-managed key for your account is used. The
-     * scratch Amazon FSx for Lustre file systems are always encrypted at rest using the Amazon FSx-managed key for your
-     * account. For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html">Encrypt</a> in the <i>Key Management
-     * Service API Reference</i>.
+     * The ID of the Key Management Service (KMS) key used to encrypt Amazon FSx file system data. Used as follows with
+     * Amazon FSx file system types:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Amazon FSx for Lustre <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment types only.
+     * </p>
+     * <p>
+     * <code>SCRATCH_1</code> and <code>SCRATCH_2</code> types are encrypted using the Amazon FSx service KMS key for
+     * your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for NetApp ONTAP
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for OpenZFS
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for Windows File Server
+     * </p>
+     * </li>
+     * </ul>
      */
     private String kmsKeyId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the file system resource.
+     * The Amazon Resource Name (ARN) of the file system resource.
      * </p>
      */
     private String resourceARN;
@@ -176,7 +197,7 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<Tag> tags;
     /**
      * <p>
-     * The configuration for this FSx for Windows File Server file system.
+     * The configuration for this Amazon FSx for Windows File Server file system.
      * </p>
      */
     private WindowsFileSystemConfiguration windowsConfiguration;
@@ -192,7 +213,7 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<AdministrativeAction> administrativeActions;
     /**
      * <p>
-     * The configuration for this FSx for ONTAP file system.
+     * The configuration for this Amazon FSx for NetApp ONTAP file system.
      * </p>
      */
     private OntapFileSystemConfiguration ontapConfiguration;
@@ -1202,23 +1223,64 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the Key Management Service (KMS) key used to encrypt the file system's data for Amazon FSx for Windows
-     * File Server file systems, Amazon FSx for NetApp ONTAP file systems, and <code>PERSISTENT</code> Amazon FSx for
-     * Lustre file systems at rest. If this ID isn't specified, the Amazon FSx-managed key for your account is used. The
-     * scratch Amazon FSx for Lustre file systems are always encrypted at rest using the Amazon FSx-managed key for your
-     * account. For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html">Encrypt</a> in the <i>Key Management
-     * Service API Reference</i>.
+     * The ID of the Key Management Service (KMS) key used to encrypt Amazon FSx file system data. Used as follows with
+     * Amazon FSx file system types:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Amazon FSx for Lustre <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment types only.
+     * </p>
+     * <p>
+     * <code>SCRATCH_1</code> and <code>SCRATCH_2</code> types are encrypted using the Amazon FSx service KMS key for
+     * your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for NetApp ONTAP
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for OpenZFS
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for Windows File Server
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param kmsKeyId
-     *        The ID of the Key Management Service (KMS) key used to encrypt the file system's data for Amazon FSx for
-     *        Windows File Server file systems, Amazon FSx for NetApp ONTAP file systems, and <code>PERSISTENT</code>
-     *        Amazon FSx for Lustre file systems at rest. If this ID isn't specified, the Amazon FSx-managed key for
-     *        your account is used. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using
-     *        the Amazon FSx-managed key for your account. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html">Encrypt</a> in the <i>Key
-     *        Management Service API Reference</i>.
+     *        The ID of the Key Management Service (KMS) key used to encrypt Amazon FSx file system data. Used as
+     *        follows with Amazon FSx file system types:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Amazon FSx for Lustre <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment types only.
+     *        </p>
+     *        <p>
+     *        <code>SCRATCH_1</code> and <code>SCRATCH_2</code> types are encrypted using the Amazon FSx service KMS key
+     *        for your account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Amazon FSx for NetApp ONTAP
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Amazon FSx for OpenZFS
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Amazon FSx for Windows File Server
+     *        </p>
+     *        </li>
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -1227,22 +1289,63 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the Key Management Service (KMS) key used to encrypt the file system's data for Amazon FSx for Windows
-     * File Server file systems, Amazon FSx for NetApp ONTAP file systems, and <code>PERSISTENT</code> Amazon FSx for
-     * Lustre file systems at rest. If this ID isn't specified, the Amazon FSx-managed key for your account is used. The
-     * scratch Amazon FSx for Lustre file systems are always encrypted at rest using the Amazon FSx-managed key for your
-     * account. For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html">Encrypt</a> in the <i>Key Management
-     * Service API Reference</i>.
+     * The ID of the Key Management Service (KMS) key used to encrypt Amazon FSx file system data. Used as follows with
+     * Amazon FSx file system types:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Amazon FSx for Lustre <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment types only.
+     * </p>
+     * <p>
+     * <code>SCRATCH_1</code> and <code>SCRATCH_2</code> types are encrypted using the Amazon FSx service KMS key for
+     * your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for NetApp ONTAP
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for OpenZFS
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for Windows File Server
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The ID of the Key Management Service (KMS) key used to encrypt the file system's data for Amazon FSx for
-     *         Windows File Server file systems, Amazon FSx for NetApp ONTAP file systems, and <code>PERSISTENT</code>
-     *         Amazon FSx for Lustre file systems at rest. If this ID isn't specified, the Amazon FSx-managed key for
-     *         your account is used. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using
-     *         the Amazon FSx-managed key for your account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html">Encrypt</a> in the <i>Key
-     *         Management Service API Reference</i>.
+     * @return The ID of the Key Management Service (KMS) key used to encrypt Amazon FSx file system data. Used as
+     *         follows with Amazon FSx file system types:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Amazon FSx for Lustre <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment types only.
+     *         </p>
+     *         <p>
+     *         <code>SCRATCH_1</code> and <code>SCRATCH_2</code> types are encrypted using the Amazon FSx service KMS
+     *         key for your account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Amazon FSx for NetApp ONTAP
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Amazon FSx for OpenZFS
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Amazon FSx for Windows File Server
+     *         </p>
+     *         </li>
      */
 
     public String getKmsKeyId() {
@@ -1251,23 +1354,64 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the Key Management Service (KMS) key used to encrypt the file system's data for Amazon FSx for Windows
-     * File Server file systems, Amazon FSx for NetApp ONTAP file systems, and <code>PERSISTENT</code> Amazon FSx for
-     * Lustre file systems at rest. If this ID isn't specified, the Amazon FSx-managed key for your account is used. The
-     * scratch Amazon FSx for Lustre file systems are always encrypted at rest using the Amazon FSx-managed key for your
-     * account. For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html">Encrypt</a> in the <i>Key Management
-     * Service API Reference</i>.
+     * The ID of the Key Management Service (KMS) key used to encrypt Amazon FSx file system data. Used as follows with
+     * Amazon FSx file system types:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Amazon FSx for Lustre <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment types only.
+     * </p>
+     * <p>
+     * <code>SCRATCH_1</code> and <code>SCRATCH_2</code> types are encrypted using the Amazon FSx service KMS key for
+     * your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for NetApp ONTAP
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for OpenZFS
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for Windows File Server
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param kmsKeyId
-     *        The ID of the Key Management Service (KMS) key used to encrypt the file system's data for Amazon FSx for
-     *        Windows File Server file systems, Amazon FSx for NetApp ONTAP file systems, and <code>PERSISTENT</code>
-     *        Amazon FSx for Lustre file systems at rest. If this ID isn't specified, the Amazon FSx-managed key for
-     *        your account is used. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using
-     *        the Amazon FSx-managed key for your account. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html">Encrypt</a> in the <i>Key
-     *        Management Service API Reference</i>.
+     *        The ID of the Key Management Service (KMS) key used to encrypt Amazon FSx file system data. Used as
+     *        follows with Amazon FSx file system types:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Amazon FSx for Lustre <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment types only.
+     *        </p>
+     *        <p>
+     *        <code>SCRATCH_1</code> and <code>SCRATCH_2</code> types are encrypted using the Amazon FSx service KMS key
+     *        for your account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Amazon FSx for NetApp ONTAP
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Amazon FSx for OpenZFS
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Amazon FSx for Windows File Server
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1278,11 +1422,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the file system resource.
+     * The Amazon Resource Name (ARN) of the file system resource.
      * </p>
      * 
      * @param resourceARN
-     *        The Amazon Resource Name (ARN) for the file system resource.
+     *        The Amazon Resource Name (ARN) of the file system resource.
      */
 
     public void setResourceARN(String resourceARN) {
@@ -1291,10 +1435,10 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the file system resource.
+     * The Amazon Resource Name (ARN) of the file system resource.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) for the file system resource.
+     * @return The Amazon Resource Name (ARN) of the file system resource.
      */
 
     public String getResourceARN() {
@@ -1303,11 +1447,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the file system resource.
+     * The Amazon Resource Name (ARN) of the file system resource.
      * </p>
      * 
      * @param resourceARN
-     *        The Amazon Resource Name (ARN) for the file system resource.
+     *        The Amazon Resource Name (ARN) of the file system resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1404,11 +1548,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration for this FSx for Windows File Server file system.
+     * The configuration for this Amazon FSx for Windows File Server file system.
      * </p>
      * 
      * @param windowsConfiguration
-     *        The configuration for this FSx for Windows File Server file system.
+     *        The configuration for this Amazon FSx for Windows File Server file system.
      */
 
     public void setWindowsConfiguration(WindowsFileSystemConfiguration windowsConfiguration) {
@@ -1417,10 +1561,10 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration for this FSx for Windows File Server file system.
+     * The configuration for this Amazon FSx for Windows File Server file system.
      * </p>
      * 
-     * @return The configuration for this FSx for Windows File Server file system.
+     * @return The configuration for this Amazon FSx for Windows File Server file system.
      */
 
     public WindowsFileSystemConfiguration getWindowsConfiguration() {
@@ -1429,11 +1573,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration for this FSx for Windows File Server file system.
+     * The configuration for this Amazon FSx for Windows File Server file system.
      * </p>
      * 
      * @param windowsConfiguration
-     *        The configuration for this FSx for Windows File Server file system.
+     *        The configuration for this Amazon FSx for Windows File Server file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1556,11 +1700,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration for this FSx for ONTAP file system.
+     * The configuration for this Amazon FSx for NetApp ONTAP file system.
      * </p>
      * 
      * @param ontapConfiguration
-     *        The configuration for this FSx for ONTAP file system.
+     *        The configuration for this Amazon FSx for NetApp ONTAP file system.
      */
 
     public void setOntapConfiguration(OntapFileSystemConfiguration ontapConfiguration) {
@@ -1569,10 +1713,10 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration for this FSx for ONTAP file system.
+     * The configuration for this Amazon FSx for NetApp ONTAP file system.
      * </p>
      * 
-     * @return The configuration for this FSx for ONTAP file system.
+     * @return The configuration for this Amazon FSx for NetApp ONTAP file system.
      */
 
     public OntapFileSystemConfiguration getOntapConfiguration() {
@@ -1581,11 +1725,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration for this FSx for ONTAP file system.
+     * The configuration for this Amazon FSx for NetApp ONTAP file system.
      * </p>
      * 
      * @param ontapConfiguration
-     *        The configuration for this FSx for ONTAP file system.
+     *        The configuration for this Amazon FSx for NetApp ONTAP file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

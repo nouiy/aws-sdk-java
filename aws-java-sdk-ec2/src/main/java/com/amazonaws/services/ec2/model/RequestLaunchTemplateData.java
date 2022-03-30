@@ -276,6 +276,12 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * </p>
      */
     private LaunchTemplatePrivateDnsNameOptionsRequest privateDnsNameOptions;
+    /**
+     * <p>
+     * The maintenance options for the instance.
+     * </p>
+     */
+    private LaunchTemplateInstanceMaintenanceOptionsRequest maintenanceOptions;
 
     /**
      * <p>
@@ -2246,6 +2252,46 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The maintenance options for the instance.
+     * </p>
+     * 
+     * @param maintenanceOptions
+     *        The maintenance options for the instance.
+     */
+
+    public void setMaintenanceOptions(LaunchTemplateInstanceMaintenanceOptionsRequest maintenanceOptions) {
+        this.maintenanceOptions = maintenanceOptions;
+    }
+
+    /**
+     * <p>
+     * The maintenance options for the instance.
+     * </p>
+     * 
+     * @return The maintenance options for the instance.
+     */
+
+    public LaunchTemplateInstanceMaintenanceOptionsRequest getMaintenanceOptions() {
+        return this.maintenanceOptions;
+    }
+
+    /**
+     * <p>
+     * The maintenance options for the instance.
+     * </p>
+     * 
+     * @param maintenanceOptions
+     *        The maintenance options for the instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RequestLaunchTemplateData withMaintenanceOptions(LaunchTemplateInstanceMaintenanceOptionsRequest maintenanceOptions) {
+        setMaintenanceOptions(maintenanceOptions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2314,7 +2360,9 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
         if (getInstanceRequirements() != null)
             sb.append("InstanceRequirements: ").append(getInstanceRequirements()).append(",");
         if (getPrivateDnsNameOptions() != null)
-            sb.append("PrivateDnsNameOptions: ").append(getPrivateDnsNameOptions());
+            sb.append("PrivateDnsNameOptions: ").append(getPrivateDnsNameOptions()).append(",");
+        if (getMaintenanceOptions() != null)
+            sb.append("MaintenanceOptions: ").append(getMaintenanceOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -2447,6 +2495,10 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
             return false;
         if (other.getPrivateDnsNameOptions() != null && other.getPrivateDnsNameOptions().equals(this.getPrivateDnsNameOptions()) == false)
             return false;
+        if (other.getMaintenanceOptions() == null ^ this.getMaintenanceOptions() == null)
+            return false;
+        if (other.getMaintenanceOptions() != null && other.getMaintenanceOptions().equals(this.getMaintenanceOptions()) == false)
+            return false;
         return true;
     }
 
@@ -2484,6 +2536,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getEnclaveOptions() == null) ? 0 : getEnclaveOptions().hashCode());
         hashCode = prime * hashCode + ((getInstanceRequirements() == null) ? 0 : getInstanceRequirements().hashCode());
         hashCode = prime * hashCode + ((getPrivateDnsNameOptions() == null) ? 0 : getPrivateDnsNameOptions().hashCode());
+        hashCode = prime * hashCode + ((getMaintenanceOptions() == null) ? 0 : getMaintenanceOptions().hashCode());
         return hashCode;
     }
 

@@ -20070,6 +20070,49 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Modifies the recovery behavior of your instance to disable simplified automatic recovery or set the recovery
+     * behavior to default. The default configuration will not enable simplified automatic recovery for an unsupported
+     * instance type. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-recover.html#instance-configuration-recovery"
+     * >Simplified automatic recovery</a>.
+     * </p>
+     * 
+     * @param modifyInstanceMaintenanceOptionsRequest
+     * @return A Java Future containing the result of the ModifyInstanceMaintenanceOptions operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.ModifyInstanceMaintenanceOptions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyInstanceMaintenanceOptions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyInstanceMaintenanceOptionsResult> modifyInstanceMaintenanceOptionsAsync(
+            ModifyInstanceMaintenanceOptionsRequest modifyInstanceMaintenanceOptionsRequest);
+
+    /**
+     * <p>
+     * Modifies the recovery behavior of your instance to disable simplified automatic recovery or set the recovery
+     * behavior to default. The default configuration will not enable simplified automatic recovery for an unsupported
+     * instance type. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-recover.html#instance-configuration-recovery"
+     * >Simplified automatic recovery</a>.
+     * </p>
+     * 
+     * @param modifyInstanceMaintenanceOptionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyInstanceMaintenanceOptions operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.ModifyInstanceMaintenanceOptions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyInstanceMaintenanceOptions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyInstanceMaintenanceOptionsResult> modifyInstanceMaintenanceOptionsAsync(
+            ModifyInstanceMaintenanceOptionsRequest modifyInstanceMaintenanceOptionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyInstanceMaintenanceOptionsRequest, ModifyInstanceMaintenanceOptionsResult> asyncHandler);
+
+    /**
+     * <p>
      * Modify the instance metadata parameters on a running or stopped instance. When you modify the parameters on a
      * stopped instance, they are applied when the instance is started. When you modify the parameters on a running
      * instance, the API responds with a state of “pending”. After the parameter modifications are successfully applied

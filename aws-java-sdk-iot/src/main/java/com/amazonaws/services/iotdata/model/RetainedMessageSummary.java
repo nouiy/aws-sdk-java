@@ -21,6 +21,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Information about a single retained message.
  * </p>
+ * 
+ * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/RetainedMessageSummary" target="_top">AWS
+ *      API Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RetainedMessageSummary implements Serializable, Cloneable, StructuredPojo {

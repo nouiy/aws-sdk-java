@@ -27,18 +27,21 @@ public class ModifySpotFleetRequestResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Is <code>true</code> if the request succeeds, and an error otherwise.
+     * If the request succeeds, the response returns <code>true</code>. If the request fails, no response is returned,
+     * and instead an error message is returned.
      * </p>
      */
     private Boolean returnValue;
 
     /**
      * <p>
-     * Is <code>true</code> if the request succeeds, and an error otherwise.
+     * If the request succeeds, the response returns <code>true</code>. If the request fails, no response is returned,
+     * and instead an error message is returned.
      * </p>
      * 
      * @param returnValue
-     *        Is <code>true</code> if the request succeeds, and an error otherwise.
+     *        If the request succeeds, the response returns <code>true</code>. If the request fails, no response is
+     *        returned, and instead an error message is returned.
      */
 
     public void setReturn(Boolean returnValue) {
@@ -47,10 +50,12 @@ public class ModifySpotFleetRequestResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Is <code>true</code> if the request succeeds, and an error otherwise.
+     * If the request succeeds, the response returns <code>true</code>. If the request fails, no response is returned,
+     * and instead an error message is returned.
      * </p>
      * 
-     * @return Is <code>true</code> if the request succeeds, and an error otherwise.
+     * @return If the request succeeds, the response returns <code>true</code>. If the request fails, no response is
+     *         returned, and instead an error message is returned.
      */
 
     public Boolean getReturn() {
@@ -59,11 +64,13 @@ public class ModifySpotFleetRequestResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Is <code>true</code> if the request succeeds, and an error otherwise.
+     * If the request succeeds, the response returns <code>true</code>. If the request fails, no response is returned,
+     * and instead an error message is returned.
      * </p>
      * 
      * @param returnValue
-     *        Is <code>true</code> if the request succeeds, and an error otherwise.
+     *        If the request succeeds, the response returns <code>true</code>. If the request fails, no response is
+     *        returned, and instead an error message is returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -74,10 +81,12 @@ public class ModifySpotFleetRequestResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Is <code>true</code> if the request succeeds, and an error otherwise.
+     * If the request succeeds, the response returns <code>true</code>. If the request fails, no response is returned,
+     * and instead an error message is returned.
      * </p>
      * 
-     * @return Is <code>true</code> if the request succeeds, and an error otherwise.
+     * @return If the request succeeds, the response returns <code>true</code>. If the request fails, no response is
+     *         returned, and instead an error message is returned.
      */
 
     public Boolean isReturn() {

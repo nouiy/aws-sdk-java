@@ -21,6 +21,9 @@ import com.amazonaws.AmazonWebServiceRequest;
  * <p>
  * The input for the UpdateThingShadow operation.
  * </p>
+ * 
+ * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/UpdateThingShadow" target="_top">AWS API
+ *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateThingShadowRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {

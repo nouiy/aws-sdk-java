@@ -139,6 +139,27 @@ public class ResourceViolationJsonUnmarshaller implements Unmarshaller<ResourceV
                     resourceViolation.setRouteHasOutOfScopeEndpointViolation(RouteHasOutOfScopeEndpointViolationJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
+                if (context.testExpression("ThirdPartyFirewallMissingFirewallViolation", targetDepth)) {
+                    context.nextToken();
+                    resourceViolation.setThirdPartyFirewallMissingFirewallViolation(ThirdPartyFirewallMissingFirewallViolationJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
+                if (context.testExpression("ThirdPartyFirewallMissingSubnetViolation", targetDepth)) {
+                    context.nextToken();
+                    resourceViolation.setThirdPartyFirewallMissingSubnetViolation(ThirdPartyFirewallMissingSubnetViolationJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
+                if (context.testExpression("ThirdPartyFirewallMissingExpectedRouteTableViolation", targetDepth)) {
+                    context.nextToken();
+                    resourceViolation
+                            .setThirdPartyFirewallMissingExpectedRouteTableViolation(ThirdPartyFirewallMissingExpectedRouteTableViolationJsonUnmarshaller
+                                    .getInstance().unmarshall(context));
+                }
+                if (context.testExpression("FirewallSubnetMissingVPCEndpointViolation", targetDepth)) {
+                    context.nextToken();
+                    resourceViolation.setFirewallSubnetMissingVPCEndpointViolation(FirewallSubnetMissingVPCEndpointViolationJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

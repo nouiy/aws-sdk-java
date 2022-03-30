@@ -92,10 +92,6 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * not in scope of the policy. If set to <code>False</code>, and the <code>ResourceTag</code> array is not null,
      * only resources with the specified tags are in scope of the policy.
      * </p>
-     * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
      */
     private Boolean excludeResourceTags;
     /**
@@ -154,10 +150,6 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
      */
     private java.util.Map<String, java.util.List<String>> includeMap;
     /**
@@ -195,10 +187,6 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
      */
     private java.util.Map<String, java.util.List<String>> excludeMap;
 
@@ -651,18 +639,11 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * not in scope of the policy. If set to <code>False</code>, and the <code>ResourceTag</code> array is not null,
      * only resources with the specified tags are in scope of the policy.
      * </p>
-     * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
      * 
      * @param excludeResourceTags
      *        If set to <code>True</code>, resources with the tags that are specified in the <code>ResourceTag</code>
      *        array are not in scope of the policy. If set to <code>False</code>, and the <code>ResourceTag</code> array
-     *        is not null, only resources with the specified tags are in scope of the policy.</p>
-     *        <p>
-     *        This option isn't available for the centralized deployment model when creating policies to configure
-     *        Network Firewall.
+     *        is not null, only resources with the specified tags are in scope of the policy.
      */
 
     public void setExcludeResourceTags(Boolean excludeResourceTags) {
@@ -675,17 +656,10 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * not in scope of the policy. If set to <code>False</code>, and the <code>ResourceTag</code> array is not null,
      * only resources with the specified tags are in scope of the policy.
      * </p>
-     * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
      * 
      * @return If set to <code>True</code>, resources with the tags that are specified in the <code>ResourceTag</code>
      *         array are not in scope of the policy. If set to <code>False</code>, and the <code>ResourceTag</code>
-     *         array is not null, only resources with the specified tags are in scope of the policy.</p>
-     *         <p>
-     *         This option isn't available for the centralized deployment model when creating policies to configure
-     *         Network Firewall.
+     *         array is not null, only resources with the specified tags are in scope of the policy.
      */
 
     public Boolean getExcludeResourceTags() {
@@ -698,18 +672,11 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * not in scope of the policy. If set to <code>False</code>, and the <code>ResourceTag</code> array is not null,
      * only resources with the specified tags are in scope of the policy.
      * </p>
-     * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
      * 
      * @param excludeResourceTags
      *        If set to <code>True</code>, resources with the tags that are specified in the <code>ResourceTag</code>
      *        array are not in scope of the policy. If set to <code>False</code>, and the <code>ResourceTag</code> array
-     *        is not null, only resources with the specified tags are in scope of the policy.</p>
-     *        <p>
-     *        This option isn't available for the centralized deployment model when creating policies to configure
-     *        Network Firewall.
+     *        is not null, only resources with the specified tags are in scope of the policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -724,17 +691,10 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * not in scope of the policy. If set to <code>False</code>, and the <code>ResourceTag</code> array is not null,
      * only resources with the specified tags are in scope of the policy.
      * </p>
-     * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
      * 
      * @return If set to <code>True</code>, resources with the tags that are specified in the <code>ResourceTag</code>
      *         array are not in scope of the policy. If set to <code>False</code>, and the <code>ResourceTag</code>
-     *         array is not null, only resources with the specified tags are in scope of the policy.</p>
-     *         <p>
-     *         This option isn't available for the centralized deployment model when creating policies to configure
-     *         Network Firewall.
+     *         array is not null, only resources with the specified tags are in scope of the policy.
      */
 
     public Boolean isExcludeResourceTags() {
@@ -948,10 +908,6 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
      * 
      * @return Specifies the Amazon Web Services account IDs and Organizations organizational units (OUs) to include in
      *         the policy. Specifying an OU is the equivalent of specifying all accounts in the OU and in any of its
@@ -986,10 +942,6 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      *         .
      *         </p>
      *         </li>
-     *         </ul>
-     *         <p>
-     *         This option isn't available for the centralized deployment model when creating policies to configure
-     *         Network Firewall.
      */
 
     public java.util.Map<String, java.util.List<String>> getIncludeMap() {
@@ -1031,10 +983,6 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
      * 
      * @param includeMap
      *        Specifies the Amazon Web Services account IDs and Organizations organizational units (OUs) to include in
@@ -1069,10 +1017,6 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      *        valid map: <code>{“ACCOUNT” : [“accountID1”, “accountID2”], “ORG_UNIT” : [“ouid111”, “ouid112”]}</code>.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <p>
-     *        This option isn't available for the centralized deployment model when creating policies to configure
-     *        Network Firewall.
      */
 
     public void setIncludeMap(java.util.Map<String, java.util.List<String>> includeMap) {
@@ -1114,10 +1058,6 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
      * 
      * @param includeMap
      *        Specifies the Amazon Web Services account IDs and Organizations organizational units (OUs) to include in
@@ -1152,10 +1092,6 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      *        valid map: <code>{“ACCOUNT” : [“accountID1”, “accountID2”], “ORG_UNIT” : [“ouid111”, “ouid112”]}</code>.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <p>
-     *        This option isn't available for the centralized deployment model when creating policies to configure
-     *        Network Firewall.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1227,10 +1163,6 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
      * 
      * @return Specifies the Amazon Web Services account IDs and Organizations organizational units (OUs) to exclude
      *         from the policy. Specifying an OU is the equivalent of specifying all accounts in the OU and in any of
@@ -1265,10 +1197,6 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      *         .
      *         </p>
      *         </li>
-     *         </ul>
-     *         <p>
-     *         This option isn't available for the centralized deployment model when creating policies to configure
-     *         Network Firewall.
      */
 
     public java.util.Map<String, java.util.List<String>> getExcludeMap() {
@@ -1310,10 +1238,6 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
      * 
      * @param excludeMap
      *        Specifies the Amazon Web Services account IDs and Organizations organizational units (OUs) to exclude from
@@ -1348,10 +1272,6 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      *        valid map: <code>{“ACCOUNT” : [“accountID1”, “accountID2”], “ORG_UNIT” : [“ouid111”, “ouid112”]}</code>.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <p>
-     *        This option isn't available for the centralized deployment model when creating policies to configure
-     *        Network Firewall.
      */
 
     public void setExcludeMap(java.util.Map<String, java.util.List<String>> excludeMap) {
@@ -1393,10 +1313,6 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * This option isn't available for the centralized deployment model when creating policies to configure Network
-     * Firewall.
-     * </p>
      * 
      * @param excludeMap
      *        Specifies the Amazon Web Services account IDs and Organizations organizational units (OUs) to exclude from
@@ -1431,10 +1347,6 @@ public class Policy implements Serializable, Cloneable, StructuredPojo {
      *        valid map: <code>{“ACCOUNT” : [“accountID1”, “accountID2”], “ORG_UNIT” : [“ouid111”, “ouid112”]}</code>.
      *        </p>
      *        </li>
-     *        </ul>
-     *        <p>
-     *        This option isn't available for the centralized deployment model when creating policies to configure
-     *        Network Firewall.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

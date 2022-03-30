@@ -876,6 +876,14 @@ public class CreateLaunchTemplateRequestMarshaller implements Marshaller<Request
                             StringUtils.fromBoolean(privateDnsNameOptions.getEnableResourceNameDnsAAAARecord()));
                 }
             }
+
+            LaunchTemplateInstanceMaintenanceOptionsRequest maintenanceOptions = launchTemplateData.getMaintenanceOptions();
+            if (maintenanceOptions != null) {
+
+                if (maintenanceOptions.getAutoRecovery() != null) {
+                    request.addParameter("LaunchTemplateData.MaintenanceOptions.AutoRecovery", StringUtils.fromString(maintenanceOptions.getAutoRecovery()));
+                }
+            }
         }
 
         com.amazonaws.internal.SdkInternalList<TagSpecification> createLaunchTemplateRequestTagSpecificationsList = (com.amazonaws.internal.SdkInternalList<TagSpecification>) createLaunchTemplateRequest

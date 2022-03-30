@@ -65,6 +65,8 @@ public interface AWSIotDataAsync extends AWSIotData {
      *        The input for the DeleteThingShadow operation.
      * @return A Java Future containing the result of the DeleteThingShadow operation returned by the service.
      * @sample AWSIotDataAsync.DeleteThingShadow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/DeleteThingShadow" target="_top">AWS API
+     *      Documentation</a>
      */
     java.util.concurrent.Future<DeleteThingShadowResult> deleteThingShadowAsync(DeleteThingShadowRequest deleteThingShadowRequest);
 
@@ -91,6 +93,8 @@ public interface AWSIotDataAsync extends AWSIotData {
      *        unsuccessful completion of the operation.
      * @return A Java Future containing the result of the DeleteThingShadow operation returned by the service.
      * @sample AWSIotDataAsyncHandler.DeleteThingShadow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/DeleteThingShadow" target="_top">AWS API
+     *      Documentation</a>
      */
     java.util.concurrent.Future<DeleteThingShadowResult> deleteThingShadowAsync(DeleteThingShadowRequest deleteThingShadowRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteThingShadowRequest, DeleteThingShadowResult> asyncHandler);
@@ -110,14 +114,16 @@ public interface AWSIotDataAsync extends AWSIotData {
      * >GetRetainedMessage</a> action.
      * </p>
      * <p>
-     * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">IoT
-     * Core pricing - Messaging</a>.
+     * For more information about messaging costs, see <a
+     * href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon Web Services IoT Core pricing - Messaging</a>.
      * </p>
      * 
      * @param getRetainedMessageRequest
      *        The input for the GetRetainedMessage operation.
      * @return A Java Future containing the result of the GetRetainedMessage operation returned by the service.
      * @sample AWSIotDataAsync.GetRetainedMessage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/GetRetainedMessage" target="_top">AWS
+     *      API Documentation</a>
      */
     java.util.concurrent.Future<GetRetainedMessageResult> getRetainedMessageAsync(GetRetainedMessageRequest getRetainedMessageRequest);
 
@@ -136,8 +142,8 @@ public interface AWSIotDataAsync extends AWSIotData {
      * >GetRetainedMessage</a> action.
      * </p>
      * <p>
-     * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">IoT
-     * Core pricing - Messaging</a>.
+     * For more information about messaging costs, see <a
+     * href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon Web Services IoT Core pricing - Messaging</a>.
      * </p>
      * 
      * @param getRetainedMessageRequest
@@ -148,6 +154,8 @@ public interface AWSIotDataAsync extends AWSIotData {
      *        unsuccessful completion of the operation.
      * @return A Java Future containing the result of the GetRetainedMessage operation returned by the service.
      * @sample AWSIotDataAsyncHandler.GetRetainedMessage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/GetRetainedMessage" target="_top">AWS
+     *      API Documentation</a>
      */
     java.util.concurrent.Future<GetRetainedMessageResult> getRetainedMessageAsync(GetRetainedMessageRequest getRetainedMessageRequest,
             com.amazonaws.handlers.AsyncHandler<GetRetainedMessageRequest, GetRetainedMessageResult> asyncHandler);
@@ -171,6 +179,8 @@ public interface AWSIotDataAsync extends AWSIotData {
      *        The input for the GetThingShadow operation.
      * @return A Java Future containing the result of the GetThingShadow operation returned by the service.
      * @sample AWSIotDataAsync.GetThingShadow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/GetThingShadow" target="_top">AWS API
+     *      Documentation</a>
      */
     java.util.concurrent.Future<GetThingShadowResult> getThingShadowAsync(GetThingShadowRequest getThingShadowRequest);
 
@@ -197,6 +207,8 @@ public interface AWSIotDataAsync extends AWSIotData {
      *        unsuccessful completion of the operation.
      * @return A Java Future containing the result of the GetThingShadow operation returned by the service.
      * @sample AWSIotDataAsyncHandler.GetThingShadow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/GetThingShadow" target="_top">AWS API
+     *      Documentation</a>
      */
     java.util.concurrent.Future<GetThingShadowResult> getThingShadowAsync(GetThingShadowRequest getThingShadowRequest,
             com.amazonaws.handlers.AsyncHandler<GetThingShadowRequest, GetThingShadowResult> asyncHandler);
@@ -214,6 +226,8 @@ public interface AWSIotDataAsync extends AWSIotData {
      * @param listNamedShadowsForThingRequest
      * @return A Java Future containing the result of the ListNamedShadowsForThing operation returned by the service.
      * @sample AWSIotDataAsync.ListNamedShadowsForThing
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/ListNamedShadowsForThing"
+     *      target="_top">AWS API Documentation</a>
      */
     java.util.concurrent.Future<ListNamedShadowsForThingResult> listNamedShadowsForThingAsync(ListNamedShadowsForThingRequest listNamedShadowsForThingRequest);
 
@@ -234,6 +248,8 @@ public interface AWSIotDataAsync extends AWSIotData {
      *        unsuccessful completion of the operation.
      * @return A Java Future containing the result of the ListNamedShadowsForThing operation returned by the service.
      * @sample AWSIotDataAsyncHandler.ListNamedShadowsForThing
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/ListNamedShadowsForThing"
+     *      target="_top">AWS API Documentation</a>
      */
     java.util.concurrent.Future<ListNamedShadowsForThingResult> listNamedShadowsForThingAsync(ListNamedShadowsForThingRequest listNamedShadowsForThingRequest,
             com.amazonaws.handlers.AsyncHandler<ListNamedShadowsForThingRequest, ListNamedShadowsForThingResult> asyncHandler);
@@ -257,13 +273,15 @@ public interface AWSIotDataAsync extends AWSIotData {
      * >ListRetainedMessages</a> action.
      * </p>
      * <p>
-     * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">IoT
-     * Core pricing - Messaging</a>.
+     * For more information about messaging costs, see <a
+     * href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon Web Services IoT Core pricing - Messaging</a>.
      * </p>
      * 
      * @param listRetainedMessagesRequest
      * @return A Java Future containing the result of the ListRetainedMessages operation returned by the service.
      * @sample AWSIotDataAsync.ListRetainedMessages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/ListRetainedMessages" target="_top">AWS
+     *      API Documentation</a>
      */
     java.util.concurrent.Future<ListRetainedMessagesResult> listRetainedMessagesAsync(ListRetainedMessagesRequest listRetainedMessagesRequest);
 
@@ -286,8 +304,8 @@ public interface AWSIotDataAsync extends AWSIotData {
      * >ListRetainedMessages</a> action.
      * </p>
      * <p>
-     * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">IoT
-     * Core pricing - Messaging</a>.
+     * For more information about messaging costs, see <a
+     * href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon Web Services IoT Core pricing - Messaging</a>.
      * </p>
      * 
      * @param listRetainedMessagesRequest
@@ -297,6 +315,8 @@ public interface AWSIotDataAsync extends AWSIotData {
      *        unsuccessful completion of the operation.
      * @return A Java Future containing the result of the ListRetainedMessages operation returned by the service.
      * @sample AWSIotDataAsyncHandler.ListRetainedMessages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/ListRetainedMessages" target="_top">AWS
+     *      API Documentation</a>
      */
     java.util.concurrent.Future<ListRetainedMessagesResult> listRetainedMessagesAsync(ListRetainedMessagesRequest listRetainedMessagesRequest,
             com.amazonaws.handlers.AsyncHandler<ListRetainedMessagesRequest, ListRetainedMessagesResult> asyncHandler);
@@ -316,14 +336,16 @@ public interface AWSIotDataAsync extends AWSIotData {
      * Guide.
      * </p>
      * <p>
-     * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">IoT
-     * Core pricing - Messaging</a>.
+     * For more information about messaging costs, see <a
+     * href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon Web Services IoT Core pricing - Messaging</a>.
      * </p>
      * 
      * @param publishRequest
      *        The input for the Publish operation.
      * @return A Java Future containing the result of the Publish operation returned by the service.
      * @sample AWSIotDataAsync.Publish
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/Publish" target="_top">AWS API
+     *      Documentation</a>
      */
     java.util.concurrent.Future<PublishResult> publishAsync(PublishRequest publishRequest);
 
@@ -342,8 +364,8 @@ public interface AWSIotDataAsync extends AWSIotData {
      * Guide.
      * </p>
      * <p>
-     * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">IoT
-     * Core pricing - Messaging</a>.
+     * For more information about messaging costs, see <a
+     * href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon Web Services IoT Core pricing - Messaging</a>.
      * </p>
      * 
      * @param publishRequest
@@ -354,6 +376,8 @@ public interface AWSIotDataAsync extends AWSIotData {
      *        unsuccessful completion of the operation.
      * @return A Java Future containing the result of the Publish operation returned by the service.
      * @sample AWSIotDataAsyncHandler.Publish
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/Publish" target="_top">AWS API
+     *      Documentation</a>
      */
     java.util.concurrent.Future<PublishResult> publishAsync(PublishRequest publishRequest,
             com.amazonaws.handlers.AsyncHandler<PublishRequest, PublishResult> asyncHandler);
@@ -377,6 +401,8 @@ public interface AWSIotDataAsync extends AWSIotData {
      *        The input for the UpdateThingShadow operation.
      * @return A Java Future containing the result of the UpdateThingShadow operation returned by the service.
      * @sample AWSIotDataAsync.UpdateThingShadow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/UpdateThingShadow" target="_top">AWS API
+     *      Documentation</a>
      */
     java.util.concurrent.Future<UpdateThingShadowResult> updateThingShadowAsync(UpdateThingShadowRequest updateThingShadowRequest);
 
@@ -403,6 +429,8 @@ public interface AWSIotDataAsync extends AWSIotData {
      *        unsuccessful completion of the operation.
      * @return A Java Future containing the result of the UpdateThingShadow operation returned by the service.
      * @sample AWSIotDataAsyncHandler.UpdateThingShadow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/UpdateThingShadow" target="_top">AWS API
+     *      Documentation</a>
      */
     java.util.concurrent.Future<UpdateThingShadowResult> updateThingShadowAsync(UpdateThingShadowRequest updateThingShadowRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateThingShadowRequest, UpdateThingShadowResult> asyncHandler);

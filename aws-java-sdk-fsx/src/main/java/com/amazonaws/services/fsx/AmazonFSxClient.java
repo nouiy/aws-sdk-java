@@ -870,7 +870,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * </li>
      * <li>
      * <p>
-     * Returns the description of the file system.
+     * Returns the description of the file system in JSON format.
      * </p>
      * </li>
      * </ul>
@@ -3090,6 +3090,11 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * <li>
      * <p>
      * <code>StorageCapacity</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ThroughputCapacity</code>
      * </p>
      * </li>
      * <li>

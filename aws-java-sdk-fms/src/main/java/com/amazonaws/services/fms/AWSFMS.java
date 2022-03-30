@@ -86,6 +86,33 @@ public interface AWSFMS {
 
     /**
      * <p>
+     * Sets the Firewall Manager policy administrator as a tenant administrator of a third-party firewall service. A
+     * tenant is an instance of the third-party firewall service that's associated with your Amazon Web Services
+     * customer account.
+     * </p>
+     * 
+     * @param associateThirdPartyFirewallRequest
+     * @return Result of the AssociateThirdPartyFirewall operation returned by the service.
+     * @throws InvalidOperationException
+     *         The operation failed because there was nothing to do or the operation wasn't possible. For example, you
+     *         might have submitted an <code>AssociateAdminAccount</code> request for an account ID that was already set
+     *         as the Firewall Manager administrator. Or you might have tried to access a Region that's disabled by
+     *         default, and that you need to enable for the Firewall Manager administrator account and for Organizations
+     *         before you can access it.
+     * @throws InvalidInputException
+     *         The parameters of the request were invalid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalErrorException
+     *         The operation failed because of a system problem, even though the request was valid. Retry your request.
+     * @sample AWSFMS.AssociateThirdPartyFirewall
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/AssociateThirdPartyFirewall"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AssociateThirdPartyFirewallResult associateThirdPartyFirewall(AssociateThirdPartyFirewallRequest associateThirdPartyFirewallRequest);
+
+    /**
+     * <p>
      * Permanently deletes an Firewall Manager applications list.
      * </p>
      * 
@@ -207,6 +234,33 @@ public interface AWSFMS {
      *      API Documentation</a>
      */
     DisassociateAdminAccountResult disassociateAdminAccount(DisassociateAdminAccountRequest disassociateAdminAccountRequest);
+
+    /**
+     * <p>
+     * Disassociates a Firewall Manager policy administrator from a third-party firewall tenant. When you call
+     * <code>DisassociateThirdPartyFirewall</code>, the third-party firewall vendor deletes all of the firewalls that
+     * are associated with the account.
+     * </p>
+     * 
+     * @param disassociateThirdPartyFirewallRequest
+     * @return Result of the DisassociateThirdPartyFirewall operation returned by the service.
+     * @throws InvalidOperationException
+     *         The operation failed because there was nothing to do or the operation wasn't possible. For example, you
+     *         might have submitted an <code>AssociateAdminAccount</code> request for an account ID that was already set
+     *         as the Firewall Manager administrator. Or you might have tried to access a Region that's disabled by
+     *         default, and that you need to enable for the Firewall Manager administrator account and for Organizations
+     *         before you can access it.
+     * @throws InvalidInputException
+     *         The parameters of the request were invalid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalErrorException
+     *         The operation failed because of a system problem, even though the request was valid. Retry your request.
+     * @sample AWSFMS.DisassociateThirdPartyFirewall
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/DisassociateThirdPartyFirewall"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DisassociateThirdPartyFirewallResult disassociateThirdPartyFirewall(DisassociateThirdPartyFirewallRequest disassociateThirdPartyFirewallRequest);
 
     /**
      * <p>
@@ -402,6 +456,32 @@ public interface AWSFMS {
 
     /**
      * <p>
+     * The onboarding status of a Firewall Manager admin account to third-party firewall vendor tenant.
+     * </p>
+     * 
+     * @param getThirdPartyFirewallAssociationStatusRequest
+     * @return Result of the GetThirdPartyFirewallAssociationStatus operation returned by the service.
+     * @throws InvalidOperationException
+     *         The operation failed because there was nothing to do or the operation wasn't possible. For example, you
+     *         might have submitted an <code>AssociateAdminAccount</code> request for an account ID that was already set
+     *         as the Firewall Manager administrator. Or you might have tried to access a Region that's disabled by
+     *         default, and that you need to enable for the Firewall Manager administrator account and for Organizations
+     *         before you can access it.
+     * @throws InvalidInputException
+     *         The parameters of the request were invalid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalErrorException
+     *         The operation failed because of a system problem, even though the request was valid. Retry your request.
+     * @sample AWSFMS.GetThirdPartyFirewallAssociationStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/GetThirdPartyFirewallAssociationStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetThirdPartyFirewallAssociationStatusResult getThirdPartyFirewallAssociationStatus(
+            GetThirdPartyFirewallAssociationStatusRequest getThirdPartyFirewallAssociationStatusRequest);
+
+    /**
+     * <p>
      * Retrieves violations for a resource based on the specified Firewall Manager policy and Amazon Web Services
      * account.
      * </p>
@@ -563,6 +643,33 @@ public interface AWSFMS {
      *      Documentation</a>
      */
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of all of the third-party firewall policies that are associated with the third-party firewall
+     * administrator's account.
+     * </p>
+     * 
+     * @param listThirdPartyFirewallFirewallPoliciesRequest
+     * @return Result of the ListThirdPartyFirewallFirewallPolicies operation returned by the service.
+     * @throws InvalidOperationException
+     *         The operation failed because there was nothing to do or the operation wasn't possible. For example, you
+     *         might have submitted an <code>AssociateAdminAccount</code> request for an account ID that was already set
+     *         as the Firewall Manager administrator. Or you might have tried to access a Region that's disabled by
+     *         default, and that you need to enable for the Firewall Manager administrator account and for Organizations
+     *         before you can access it.
+     * @throws InvalidInputException
+     *         The parameters of the request were invalid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InternalErrorException
+     *         The operation failed because of a system problem, even though the request was valid. Retry your request.
+     * @sample AWSFMS.ListThirdPartyFirewallFirewallPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fms-2018-01-01/ListThirdPartyFirewallFirewallPolicies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListThirdPartyFirewallFirewallPoliciesResult listThirdPartyFirewallFirewallPolicies(
+            ListThirdPartyFirewallFirewallPoliciesRequest listThirdPartyFirewallFirewallPoliciesRequest);
 
     /**
      * <p>

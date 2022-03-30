@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the Amazon FSx for NetApp ONTAP storage virtual machine (SVM) configuraton.
+ * Describes the Amazon FSx for NetApp ONTAP storage virtual machine (SVM) configuration.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/StorageVirtualMachine" target="_top">AWS API

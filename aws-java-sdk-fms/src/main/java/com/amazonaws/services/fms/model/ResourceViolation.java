@@ -147,6 +147,31 @@ public class ResourceViolation implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private RouteHasOutOfScopeEndpointViolation routeHasOutOfScopeEndpointViolation;
+    /**
+     * <p>
+     * The violation details for a third-party firewall that's been deleted.
+     * </p>
+     */
+    private ThirdPartyFirewallMissingFirewallViolation thirdPartyFirewallMissingFirewallViolation;
+    /**
+     * <p>
+     * The violation details for a third-party firewall's subnet that's been deleted.
+     * </p>
+     */
+    private ThirdPartyFirewallMissingSubnetViolation thirdPartyFirewallMissingSubnetViolation;
+    /**
+     * <p>
+     * The violation details for a third-party firewall that has the Firewall Manager managed route table that was
+     * associated with the third-party firewall has been deleted.
+     * </p>
+     */
+    private ThirdPartyFirewallMissingExpectedRouteTableViolation thirdPartyFirewallMissingExpectedRouteTableViolation;
+    /**
+     * <p>
+     * The violation details for a third-party firewall's VPC endpoint subnet that was deleted.
+     * </p>
+     */
+    private FirewallSubnetMissingVPCEndpointViolation firewallSubnetMissingVPCEndpointViolation;
 
     /**
      * <p>
@@ -962,6 +987,175 @@ public class ResourceViolation implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The violation details for a third-party firewall that's been deleted.
+     * </p>
+     * 
+     * @param thirdPartyFirewallMissingFirewallViolation
+     *        The violation details for a third-party firewall that's been deleted.
+     */
+
+    public void setThirdPartyFirewallMissingFirewallViolation(ThirdPartyFirewallMissingFirewallViolation thirdPartyFirewallMissingFirewallViolation) {
+        this.thirdPartyFirewallMissingFirewallViolation = thirdPartyFirewallMissingFirewallViolation;
+    }
+
+    /**
+     * <p>
+     * The violation details for a third-party firewall that's been deleted.
+     * </p>
+     * 
+     * @return The violation details for a third-party firewall that's been deleted.
+     */
+
+    public ThirdPartyFirewallMissingFirewallViolation getThirdPartyFirewallMissingFirewallViolation() {
+        return this.thirdPartyFirewallMissingFirewallViolation;
+    }
+
+    /**
+     * <p>
+     * The violation details for a third-party firewall that's been deleted.
+     * </p>
+     * 
+     * @param thirdPartyFirewallMissingFirewallViolation
+     *        The violation details for a third-party firewall that's been deleted.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceViolation withThirdPartyFirewallMissingFirewallViolation(
+            ThirdPartyFirewallMissingFirewallViolation thirdPartyFirewallMissingFirewallViolation) {
+        setThirdPartyFirewallMissingFirewallViolation(thirdPartyFirewallMissingFirewallViolation);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The violation details for a third-party firewall's subnet that's been deleted.
+     * </p>
+     * 
+     * @param thirdPartyFirewallMissingSubnetViolation
+     *        The violation details for a third-party firewall's subnet that's been deleted.
+     */
+
+    public void setThirdPartyFirewallMissingSubnetViolation(ThirdPartyFirewallMissingSubnetViolation thirdPartyFirewallMissingSubnetViolation) {
+        this.thirdPartyFirewallMissingSubnetViolation = thirdPartyFirewallMissingSubnetViolation;
+    }
+
+    /**
+     * <p>
+     * The violation details for a third-party firewall's subnet that's been deleted.
+     * </p>
+     * 
+     * @return The violation details for a third-party firewall's subnet that's been deleted.
+     */
+
+    public ThirdPartyFirewallMissingSubnetViolation getThirdPartyFirewallMissingSubnetViolation() {
+        return this.thirdPartyFirewallMissingSubnetViolation;
+    }
+
+    /**
+     * <p>
+     * The violation details for a third-party firewall's subnet that's been deleted.
+     * </p>
+     * 
+     * @param thirdPartyFirewallMissingSubnetViolation
+     *        The violation details for a third-party firewall's subnet that's been deleted.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceViolation withThirdPartyFirewallMissingSubnetViolation(ThirdPartyFirewallMissingSubnetViolation thirdPartyFirewallMissingSubnetViolation) {
+        setThirdPartyFirewallMissingSubnetViolation(thirdPartyFirewallMissingSubnetViolation);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The violation details for a third-party firewall that has the Firewall Manager managed route table that was
+     * associated with the third-party firewall has been deleted.
+     * </p>
+     * 
+     * @param thirdPartyFirewallMissingExpectedRouteTableViolation
+     *        The violation details for a third-party firewall that has the Firewall Manager managed route table that
+     *        was associated with the third-party firewall has been deleted.
+     */
+
+    public void setThirdPartyFirewallMissingExpectedRouteTableViolation(
+            ThirdPartyFirewallMissingExpectedRouteTableViolation thirdPartyFirewallMissingExpectedRouteTableViolation) {
+        this.thirdPartyFirewallMissingExpectedRouteTableViolation = thirdPartyFirewallMissingExpectedRouteTableViolation;
+    }
+
+    /**
+     * <p>
+     * The violation details for a third-party firewall that has the Firewall Manager managed route table that was
+     * associated with the third-party firewall has been deleted.
+     * </p>
+     * 
+     * @return The violation details for a third-party firewall that has the Firewall Manager managed route table that
+     *         was associated with the third-party firewall has been deleted.
+     */
+
+    public ThirdPartyFirewallMissingExpectedRouteTableViolation getThirdPartyFirewallMissingExpectedRouteTableViolation() {
+        return this.thirdPartyFirewallMissingExpectedRouteTableViolation;
+    }
+
+    /**
+     * <p>
+     * The violation details for a third-party firewall that has the Firewall Manager managed route table that was
+     * associated with the third-party firewall has been deleted.
+     * </p>
+     * 
+     * @param thirdPartyFirewallMissingExpectedRouteTableViolation
+     *        The violation details for a third-party firewall that has the Firewall Manager managed route table that
+     *        was associated with the third-party firewall has been deleted.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceViolation withThirdPartyFirewallMissingExpectedRouteTableViolation(
+            ThirdPartyFirewallMissingExpectedRouteTableViolation thirdPartyFirewallMissingExpectedRouteTableViolation) {
+        setThirdPartyFirewallMissingExpectedRouteTableViolation(thirdPartyFirewallMissingExpectedRouteTableViolation);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The violation details for a third-party firewall's VPC endpoint subnet that was deleted.
+     * </p>
+     * 
+     * @param firewallSubnetMissingVPCEndpointViolation
+     *        The violation details for a third-party firewall's VPC endpoint subnet that was deleted.
+     */
+
+    public void setFirewallSubnetMissingVPCEndpointViolation(FirewallSubnetMissingVPCEndpointViolation firewallSubnetMissingVPCEndpointViolation) {
+        this.firewallSubnetMissingVPCEndpointViolation = firewallSubnetMissingVPCEndpointViolation;
+    }
+
+    /**
+     * <p>
+     * The violation details for a third-party firewall's VPC endpoint subnet that was deleted.
+     * </p>
+     * 
+     * @return The violation details for a third-party firewall's VPC endpoint subnet that was deleted.
+     */
+
+    public FirewallSubnetMissingVPCEndpointViolation getFirewallSubnetMissingVPCEndpointViolation() {
+        return this.firewallSubnetMissingVPCEndpointViolation;
+    }
+
+    /**
+     * <p>
+     * The violation details for a third-party firewall's VPC endpoint subnet that was deleted.
+     * </p>
+     * 
+     * @param firewallSubnetMissingVPCEndpointViolation
+     *        The violation details for a third-party firewall's VPC endpoint subnet that was deleted.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceViolation withFirewallSubnetMissingVPCEndpointViolation(FirewallSubnetMissingVPCEndpointViolation firewallSubnetMissingVPCEndpointViolation) {
+        setFirewallSubnetMissingVPCEndpointViolation(firewallSubnetMissingVPCEndpointViolation);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1010,7 +1204,15 @@ public class ResourceViolation implements Serializable, Cloneable, StructuredPoj
         if (getFirewallSubnetIsOutOfScopeViolation() != null)
             sb.append("FirewallSubnetIsOutOfScopeViolation: ").append(getFirewallSubnetIsOutOfScopeViolation()).append(",");
         if (getRouteHasOutOfScopeEndpointViolation() != null)
-            sb.append("RouteHasOutOfScopeEndpointViolation: ").append(getRouteHasOutOfScopeEndpointViolation());
+            sb.append("RouteHasOutOfScopeEndpointViolation: ").append(getRouteHasOutOfScopeEndpointViolation()).append(",");
+        if (getThirdPartyFirewallMissingFirewallViolation() != null)
+            sb.append("ThirdPartyFirewallMissingFirewallViolation: ").append(getThirdPartyFirewallMissingFirewallViolation()).append(",");
+        if (getThirdPartyFirewallMissingSubnetViolation() != null)
+            sb.append("ThirdPartyFirewallMissingSubnetViolation: ").append(getThirdPartyFirewallMissingSubnetViolation()).append(",");
+        if (getThirdPartyFirewallMissingExpectedRouteTableViolation() != null)
+            sb.append("ThirdPartyFirewallMissingExpectedRouteTableViolation: ").append(getThirdPartyFirewallMissingExpectedRouteTableViolation()).append(",");
+        if (getFirewallSubnetMissingVPCEndpointViolation() != null)
+            sb.append("FirewallSubnetMissingVPCEndpointViolation: ").append(getFirewallSubnetMissingVPCEndpointViolation());
         sb.append("}");
         return sb.toString();
     }
@@ -1117,6 +1319,26 @@ public class ResourceViolation implements Serializable, Cloneable, StructuredPoj
         if (other.getRouteHasOutOfScopeEndpointViolation() != null
                 && other.getRouteHasOutOfScopeEndpointViolation().equals(this.getRouteHasOutOfScopeEndpointViolation()) == false)
             return false;
+        if (other.getThirdPartyFirewallMissingFirewallViolation() == null ^ this.getThirdPartyFirewallMissingFirewallViolation() == null)
+            return false;
+        if (other.getThirdPartyFirewallMissingFirewallViolation() != null
+                && other.getThirdPartyFirewallMissingFirewallViolation().equals(this.getThirdPartyFirewallMissingFirewallViolation()) == false)
+            return false;
+        if (other.getThirdPartyFirewallMissingSubnetViolation() == null ^ this.getThirdPartyFirewallMissingSubnetViolation() == null)
+            return false;
+        if (other.getThirdPartyFirewallMissingSubnetViolation() != null
+                && other.getThirdPartyFirewallMissingSubnetViolation().equals(this.getThirdPartyFirewallMissingSubnetViolation()) == false)
+            return false;
+        if (other.getThirdPartyFirewallMissingExpectedRouteTableViolation() == null ^ this.getThirdPartyFirewallMissingExpectedRouteTableViolation() == null)
+            return false;
+        if (other.getThirdPartyFirewallMissingExpectedRouteTableViolation() != null
+                && other.getThirdPartyFirewallMissingExpectedRouteTableViolation().equals(this.getThirdPartyFirewallMissingExpectedRouteTableViolation()) == false)
+            return false;
+        if (other.getFirewallSubnetMissingVPCEndpointViolation() == null ^ this.getFirewallSubnetMissingVPCEndpointViolation() == null)
+            return false;
+        if (other.getFirewallSubnetMissingVPCEndpointViolation() != null
+                && other.getFirewallSubnetMissingVPCEndpointViolation().equals(this.getFirewallSubnetMissingVPCEndpointViolation()) == false)
+            return false;
         return true;
     }
 
@@ -1152,6 +1374,15 @@ public class ResourceViolation implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getPossibleRemediationActions() == null) ? 0 : getPossibleRemediationActions().hashCode());
         hashCode = prime * hashCode + ((getFirewallSubnetIsOutOfScopeViolation() == null) ? 0 : getFirewallSubnetIsOutOfScopeViolation().hashCode());
         hashCode = prime * hashCode + ((getRouteHasOutOfScopeEndpointViolation() == null) ? 0 : getRouteHasOutOfScopeEndpointViolation().hashCode());
+        hashCode = prime * hashCode
+                + ((getThirdPartyFirewallMissingFirewallViolation() == null) ? 0 : getThirdPartyFirewallMissingFirewallViolation().hashCode());
+        hashCode = prime * hashCode + ((getThirdPartyFirewallMissingSubnetViolation() == null) ? 0 : getThirdPartyFirewallMissingSubnetViolation().hashCode());
+        hashCode = prime
+                * hashCode
+                + ((getThirdPartyFirewallMissingExpectedRouteTableViolation() == null) ? 0 : getThirdPartyFirewallMissingExpectedRouteTableViolation()
+                        .hashCode());
+        hashCode = prime * hashCode
+                + ((getFirewallSubnetMissingVPCEndpointViolation() == null) ? 0 : getFirewallSubnetMissingVPCEndpointViolation().hashCode());
         return hashCode;
     }
 

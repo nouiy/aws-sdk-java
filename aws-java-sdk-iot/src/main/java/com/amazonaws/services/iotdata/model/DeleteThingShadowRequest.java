@@ -21,6 +21,9 @@ import com.amazonaws.AmazonWebServiceRequest;
  * <p>
  * The input for the DeleteThingShadow operation.
  * </p>
+ * 
+ * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/DeleteThingShadow" target="_top">AWS API
+ *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeleteThingShadowRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {

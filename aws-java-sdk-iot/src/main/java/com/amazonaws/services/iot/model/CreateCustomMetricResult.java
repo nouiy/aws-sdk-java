@@ -26,7 +26,7 @@ public class CreateCustomMetricResult extends com.amazonaws.AmazonWebServiceResu
     private String metricName;
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the custom metric, e.g.
+     * The Amazon Resource Number (ARN) of the custom metric. For example,
      * <code>arn:<i>aws-partition</i>:iot:<i>region</i>:<i>accountId</i>:custommetric/<i>metricName</i> </code>
      * </p>
      */
@@ -74,12 +74,12 @@ public class CreateCustomMetricResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the custom metric, e.g.
+     * The Amazon Resource Number (ARN) of the custom metric. For example,
      * <code>arn:<i>aws-partition</i>:iot:<i>region</i>:<i>accountId</i>:custommetric/<i>metricName</i> </code>
      * </p>
      * 
      * @param metricArn
-     *        The Amazon Resource Number (ARN) of the custom metric, e.g.
+     *        The Amazon Resource Number (ARN) of the custom metric. For example,
      *        <code>arn:<i>aws-partition</i>:iot:<i>region</i>:<i>accountId</i>:custommetric/<i>metricName</i> </code>
      */
 
@@ -89,11 +89,11 @@ public class CreateCustomMetricResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the custom metric, e.g.
+     * The Amazon Resource Number (ARN) of the custom metric. For example,
      * <code>arn:<i>aws-partition</i>:iot:<i>region</i>:<i>accountId</i>:custommetric/<i>metricName</i> </code>
      * </p>
      * 
-     * @return The Amazon Resource Number (ARN) of the custom metric, e.g.
+     * @return The Amazon Resource Number (ARN) of the custom metric. For example,
      *         <code>arn:<i>aws-partition</i>:iot:<i>region</i>:<i>accountId</i>:custommetric/<i>metricName</i> </code>
      */
 
@@ -103,12 +103,12 @@ public class CreateCustomMetricResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the custom metric, e.g.
+     * The Amazon Resource Number (ARN) of the custom metric. For example,
      * <code>arn:<i>aws-partition</i>:iot:<i>region</i>:<i>accountId</i>:custommetric/<i>metricName</i> </code>
      * </p>
      * 
      * @param metricArn
-     *        The Amazon Resource Number (ARN) of the custom metric, e.g.
+     *        The Amazon Resource Number (ARN) of the custom metric. For example,
      *        <code>arn:<i>aws-partition</i>:iot:<i>region</i>:<i>accountId</i>:custommetric/<i>metricName</i> </code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

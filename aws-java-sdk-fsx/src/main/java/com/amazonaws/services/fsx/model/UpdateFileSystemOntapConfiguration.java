@@ -48,6 +48,13 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
      * </p>
      */
     private DiskIopsConfiguration diskIopsConfiguration;
+    /**
+     * <p>
+     * Specifies the throughput of an FSx for NetApp ONTAP file system, measured in megabytes per second (MBps). Valid
+     * values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     * </p>
+     */
+    private Integer throughputCapacity;
 
     /**
      * @param automaticBackupRetentionDays
@@ -229,6 +236,52 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
     }
 
     /**
+     * <p>
+     * Specifies the throughput of an FSx for NetApp ONTAP file system, measured in megabytes per second (MBps). Valid
+     * values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     * </p>
+     * 
+     * @param throughputCapacity
+     *        Specifies the throughput of an FSx for NetApp ONTAP file system, measured in megabytes per second (MBps).
+     *        Valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     */
+
+    public void setThroughputCapacity(Integer throughputCapacity) {
+        this.throughputCapacity = throughputCapacity;
+    }
+
+    /**
+     * <p>
+     * Specifies the throughput of an FSx for NetApp ONTAP file system, measured in megabytes per second (MBps). Valid
+     * values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     * </p>
+     * 
+     * @return Specifies the throughput of an FSx for NetApp ONTAP file system, measured in megabytes per second (MBps).
+     *         Valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     */
+
+    public Integer getThroughputCapacity() {
+        return this.throughputCapacity;
+    }
+
+    /**
+     * <p>
+     * Specifies the throughput of an FSx for NetApp ONTAP file system, measured in megabytes per second (MBps). Valid
+     * values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     * </p>
+     * 
+     * @param throughputCapacity
+     *        Specifies the throughput of an FSx for NetApp ONTAP file system, measured in megabytes per second (MBps).
+     *        Valid values are 64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateFileSystemOntapConfiguration withThroughputCapacity(Integer throughputCapacity) {
+        setThroughputCapacity(throughputCapacity);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -249,7 +302,9 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
         if (getWeeklyMaintenanceStartTime() != null)
             sb.append("WeeklyMaintenanceStartTime: ").append(getWeeklyMaintenanceStartTime()).append(",");
         if (getDiskIopsConfiguration() != null)
-            sb.append("DiskIopsConfiguration: ").append(getDiskIopsConfiguration());
+            sb.append("DiskIopsConfiguration: ").append(getDiskIopsConfiguration()).append(",");
+        if (getThroughputCapacity() != null)
+            sb.append("ThroughputCapacity: ").append(getThroughputCapacity());
         sb.append("}");
         return sb.toString();
     }
@@ -285,6 +340,10 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
             return false;
         if (other.getDiskIopsConfiguration() != null && other.getDiskIopsConfiguration().equals(this.getDiskIopsConfiguration()) == false)
             return false;
+        if (other.getThroughputCapacity() == null ^ this.getThroughputCapacity() == null)
+            return false;
+        if (other.getThroughputCapacity() != null && other.getThroughputCapacity().equals(this.getThroughputCapacity()) == false)
+            return false;
         return true;
     }
 
@@ -298,6 +357,7 @@ public class UpdateFileSystemOntapConfiguration implements Serializable, Cloneab
         hashCode = prime * hashCode + ((getFsxAdminPassword() == null) ? 0 : getFsxAdminPassword().hashCode());
         hashCode = prime * hashCode + ((getWeeklyMaintenanceStartTime() == null) ? 0 : getWeeklyMaintenanceStartTime().hashCode());
         hashCode = prime * hashCode + ((getDiskIopsConfiguration() == null) ? 0 : getDiskIopsConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getThroughputCapacity() == null) ? 0 : getThroughputCapacity().hashCode());
         return hashCode;
     }
 

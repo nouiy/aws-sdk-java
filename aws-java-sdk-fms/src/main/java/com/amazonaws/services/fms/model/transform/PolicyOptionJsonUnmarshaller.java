@@ -52,6 +52,10 @@ public class PolicyOptionJsonUnmarshaller implements Unmarshaller<PolicyOption, 
                     context.nextToken();
                     policyOption.setNetworkFirewallPolicy(NetworkFirewallPolicyJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ThirdPartyFirewallPolicy", targetDepth)) {
+                    context.nextToken();
+                    policyOption.setThirdPartyFirewallPolicy(ThirdPartyFirewallPolicyJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

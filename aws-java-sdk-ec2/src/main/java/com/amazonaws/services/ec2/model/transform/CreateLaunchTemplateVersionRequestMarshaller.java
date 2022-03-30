@@ -886,6 +886,14 @@ public class CreateLaunchTemplateVersionRequestMarshaller implements
                             StringUtils.fromBoolean(privateDnsNameOptions.getEnableResourceNameDnsAAAARecord()));
                 }
             }
+
+            LaunchTemplateInstanceMaintenanceOptionsRequest maintenanceOptions = launchTemplateData.getMaintenanceOptions();
+            if (maintenanceOptions != null) {
+
+                if (maintenanceOptions.getAutoRecovery() != null) {
+                    request.addParameter("LaunchTemplateData.MaintenanceOptions.AutoRecovery", StringUtils.fromString(maintenanceOptions.getAutoRecovery()));
+                }
+            }
         }
 
         return request;

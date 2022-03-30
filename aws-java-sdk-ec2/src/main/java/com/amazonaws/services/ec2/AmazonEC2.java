@@ -8767,6 +8767,23 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Modifies the recovery behavior of your instance to disable simplified automatic recovery or set the recovery
+     * behavior to default. The default configuration will not enable simplified automatic recovery for an unsupported
+     * instance type. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-recover.html#instance-configuration-recovery"
+     * >Simplified automatic recovery</a>.
+     * </p>
+     * 
+     * @param modifyInstanceMaintenanceOptionsRequest
+     * @return Result of the ModifyInstanceMaintenanceOptions operation returned by the service.
+     * @sample AmazonEC2.ModifyInstanceMaintenanceOptions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyInstanceMaintenanceOptions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ModifyInstanceMaintenanceOptionsResult modifyInstanceMaintenanceOptions(ModifyInstanceMaintenanceOptionsRequest modifyInstanceMaintenanceOptionsRequest);
+
+    /**
+     * <p>
      * Modify the instance metadata parameters on a running or stopped instance. When you modify the parameters on a
      * stopped instance, they are applied when the instance is started. When you modify the parameters on a running
      * instance, the API responds with a state of “pending”. After the parameter modifications are successfully applied

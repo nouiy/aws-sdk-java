@@ -41,6 +41,9 @@ public class RegisterCACertificateRequest extends com.amazonaws.AmazonWebService
      * <p>
      * A boolean value that specifies if the CA certificate is set to active.
      * </p>
+     * <p>
+     * Valid values: <code>ACTIVE | INACTIVE</code>
+     * </p>
      */
     private Boolean setAsActive;
     /**
@@ -157,9 +160,14 @@ public class RegisterCACertificateRequest extends com.amazonaws.AmazonWebService
      * <p>
      * A boolean value that specifies if the CA certificate is set to active.
      * </p>
+     * <p>
+     * Valid values: <code>ACTIVE | INACTIVE</code>
+     * </p>
      * 
      * @param setAsActive
-     *        A boolean value that specifies if the CA certificate is set to active.
+     *        A boolean value that specifies if the CA certificate is set to active.</p>
+     *        <p>
+     *        Valid values: <code>ACTIVE | INACTIVE</code>
      */
 
     public void setSetAsActive(Boolean setAsActive) {
@@ -170,8 +178,13 @@ public class RegisterCACertificateRequest extends com.amazonaws.AmazonWebService
      * <p>
      * A boolean value that specifies if the CA certificate is set to active.
      * </p>
+     * <p>
+     * Valid values: <code>ACTIVE | INACTIVE</code>
+     * </p>
      * 
-     * @return A boolean value that specifies if the CA certificate is set to active.
+     * @return A boolean value that specifies if the CA certificate is set to active.</p>
+     *         <p>
+     *         Valid values: <code>ACTIVE | INACTIVE</code>
      */
 
     public Boolean getSetAsActive() {
@@ -182,9 +195,14 @@ public class RegisterCACertificateRequest extends com.amazonaws.AmazonWebService
      * <p>
      * A boolean value that specifies if the CA certificate is set to active.
      * </p>
+     * <p>
+     * Valid values: <code>ACTIVE | INACTIVE</code>
+     * </p>
      * 
      * @param setAsActive
-     *        A boolean value that specifies if the CA certificate is set to active.
+     *        A boolean value that specifies if the CA certificate is set to active.</p>
+     *        <p>
+     *        Valid values: <code>ACTIVE | INACTIVE</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -197,8 +215,13 @@ public class RegisterCACertificateRequest extends com.amazonaws.AmazonWebService
      * <p>
      * A boolean value that specifies if the CA certificate is set to active.
      * </p>
+     * <p>
+     * Valid values: <code>ACTIVE | INACTIVE</code>
+     * </p>
      * 
-     * @return A boolean value that specifies if the CA certificate is set to active.
+     * @return A boolean value that specifies if the CA certificate is set to active.</p>
+     *         <p>
+     *         Valid values: <code>ACTIVE | INACTIVE</code>
      */
 
     public Boolean isSetAsActive() {

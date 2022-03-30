@@ -603,7 +603,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * </li>
      * <li>
      * <p>
-     * Returns the description of the file system.
+     * Returns the description of the file system in JSON format.
      * </p>
      * </li>
      * </ul>
@@ -686,7 +686,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * </li>
      * <li>
      * <p>
-     * Returns the description of the file system.
+     * Returns the description of the file system in JSON format.
      * </p>
      * </li>
      * </ul>
@@ -2245,6 +2245,11 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * </li>
      * <li>
      * <p>
+     * <code>ThroughputCapacity</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>WeeklyMaintenanceStartTime</code>
      * </p>
      * </li>
@@ -2401,6 +2406,11 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * <li>
      * <p>
      * <code>StorageCapacity</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ThroughputCapacity</code>
      * </p>
      * </li>
      * <li>

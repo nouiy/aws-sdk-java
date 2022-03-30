@@ -669,6 +669,14 @@ public class RunInstancesRequestMarshaller implements Marshaller<Request<RunInst
             }
         }
 
+        InstanceMaintenanceOptionsRequest maintenanceOptions = runInstancesRequest.getMaintenanceOptions();
+        if (maintenanceOptions != null) {
+
+            if (maintenanceOptions.getAutoRecovery() != null) {
+                request.addParameter("MaintenanceOptions.AutoRecovery", StringUtils.fromString(maintenanceOptions.getAutoRecovery()));
+            }
+        }
+
         return request;
     }
 

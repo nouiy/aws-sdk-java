@@ -72,6 +72,17 @@ public class ResourceViolationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FirewallSubnetIsOutOfScopeViolation").build();
     private static final MarshallingInfo<StructuredPojo> ROUTEHASOUTOFSCOPEENDPOINTVIOLATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RouteHasOutOfScopeEndpointViolation").build();
+    private static final MarshallingInfo<StructuredPojo> THIRDPARTYFIREWALLMISSINGFIREWALLVIOLATION_BINDING = MarshallingInfo
+            .builder(MarshallingType.STRUCTURED).marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ThirdPartyFirewallMissingFirewallViolation")
+            .build();
+    private static final MarshallingInfo<StructuredPojo> THIRDPARTYFIREWALLMISSINGSUBNETVIOLATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ThirdPartyFirewallMissingSubnetViolation").build();
+    private static final MarshallingInfo<StructuredPojo> THIRDPARTYFIREWALLMISSINGEXPECTEDROUTETABLEVIOLATION_BINDING = MarshallingInfo
+            .builder(MarshallingType.STRUCTURED).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ThirdPartyFirewallMissingExpectedRouteTableViolation").build();
+    private static final MarshallingInfo<StructuredPojo> FIREWALLSUBNETMISSINGVPCENDPOINTVIOLATION_BINDING = MarshallingInfo
+            .builder(MarshallingType.STRUCTURED).marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FirewallSubnetMissingVPCEndpointViolation")
+            .build();
 
     private static final ResourceViolationMarshaller instance = new ResourceViolationMarshaller();
 
@@ -114,6 +125,11 @@ public class ResourceViolationMarshaller {
             protocolMarshaller.marshall(resourceViolation.getPossibleRemediationActions(), POSSIBLEREMEDIATIONACTIONS_BINDING);
             protocolMarshaller.marshall(resourceViolation.getFirewallSubnetIsOutOfScopeViolation(), FIREWALLSUBNETISOUTOFSCOPEVIOLATION_BINDING);
             protocolMarshaller.marshall(resourceViolation.getRouteHasOutOfScopeEndpointViolation(), ROUTEHASOUTOFSCOPEENDPOINTVIOLATION_BINDING);
+            protocolMarshaller.marshall(resourceViolation.getThirdPartyFirewallMissingFirewallViolation(), THIRDPARTYFIREWALLMISSINGFIREWALLVIOLATION_BINDING);
+            protocolMarshaller.marshall(resourceViolation.getThirdPartyFirewallMissingSubnetViolation(), THIRDPARTYFIREWALLMISSINGSUBNETVIOLATION_BINDING);
+            protocolMarshaller.marshall(resourceViolation.getThirdPartyFirewallMissingExpectedRouteTableViolation(),
+                    THIRDPARTYFIREWALLMISSINGEXPECTEDROUTETABLEVIOLATION_BINDING);
+            protocolMarshaller.marshall(resourceViolation.getFirewallSubnetMissingVPCEndpointViolation(), FIREWALLSUBNETMISSINGVPCENDPOINTVIOLATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

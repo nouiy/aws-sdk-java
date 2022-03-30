@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum FirewallDeploymentModel {
 
-    CENTRALIZED("CENTRALIZED");
+    CENTRALIZED("CENTRALIZED"),
+    DISTRIBUTED("DISTRIBUTED");
 
     private String value;
 

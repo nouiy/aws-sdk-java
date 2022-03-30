@@ -238,6 +238,12 @@ public class RequestLaunchTemplateDataStaxUnmarshaller implements Unmarshaller<R
                             context));
                     continue;
                 }
+
+                if (context.testExpression("MaintenanceOptions", targetDepth)) {
+                    requestLaunchTemplateData.setMaintenanceOptions(LaunchTemplateInstanceMaintenanceOptionsRequestStaxUnmarshaller.getInstance().unmarshall(
+                            context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return requestLaunchTemplateData;

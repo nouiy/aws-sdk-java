@@ -358,6 +358,8 @@ public class AWSIotDataClient extends AmazonWebServiceClient implements AWSIotDa
      * @throws UnsupportedDocumentEncodingException
      *         The document encoding is not supported.
      * @sample AWSIotData.DeleteThingShadow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/DeleteThingShadow" target="_top">AWS API
+     *      Documentation</a>
      */
     @Override
     public DeleteThingShadowResult deleteThingShadow(DeleteThingShadowRequest request) {
@@ -418,8 +420,8 @@ public class AWSIotDataClient extends AmazonWebServiceClient implements AWSIotDa
      * >GetRetainedMessage</a> action.
      * </p>
      * <p>
-     * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">IoT
-     * Core pricing - Messaging</a>.
+     * For more information about messaging costs, see <a
+     * href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon Web Services IoT Core pricing - Messaging</a>.
      * </p>
      * 
      * @param getRetainedMessageRequest
@@ -440,6 +442,8 @@ public class AWSIotDataClient extends AmazonWebServiceClient implements AWSIotDa
      * @throws MethodNotAllowedException
      *         The specified combination of HTTP verb and URI is not supported.
      * @sample AWSIotData.GetRetainedMessage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/GetRetainedMessage" target="_top">AWS
+     *      API Documentation</a>
      */
     @Override
     public GetRetainedMessageResult getRetainedMessage(GetRetainedMessageRequest request) {
@@ -520,6 +524,8 @@ public class AWSIotDataClient extends AmazonWebServiceClient implements AWSIotDa
      * @throws UnsupportedDocumentEncodingException
      *         The document encoding is not supported.
      * @sample AWSIotData.GetThingShadow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/GetThingShadow" target="_top">AWS API
+     *      Documentation</a>
      */
     @Override
     public GetThingShadowResult getThingShadow(GetThingShadowRequest request) {
@@ -592,6 +598,8 @@ public class AWSIotDataClient extends AmazonWebServiceClient implements AWSIotDa
      * @throws MethodNotAllowedException
      *         The specified combination of HTTP verb and URI is not supported.
      * @sample AWSIotData.ListNamedShadowsForThing
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/ListNamedShadowsForThing"
+     *      target="_top">AWS API Documentation</a>
      */
     @Override
     public ListNamedShadowsForThingResult listNamedShadowsForThing(ListNamedShadowsForThingRequest request) {
@@ -658,8 +666,8 @@ public class AWSIotDataClient extends AmazonWebServiceClient implements AWSIotDa
      * >ListRetainedMessages</a> action.
      * </p>
      * <p>
-     * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">IoT
-     * Core pricing - Messaging</a>.
+     * For more information about messaging costs, see <a
+     * href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon Web Services IoT Core pricing - Messaging</a>.
      * </p>
      * 
      * @param listRetainedMessagesRequest
@@ -677,6 +685,8 @@ public class AWSIotDataClient extends AmazonWebServiceClient implements AWSIotDa
      * @throws MethodNotAllowedException
      *         The specified combination of HTTP verb and URI is not supported.
      * @sample AWSIotData.ListRetainedMessages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/ListRetainedMessages" target="_top">AWS
+     *      API Documentation</a>
      */
     @Override
     public ListRetainedMessagesResult listRetainedMessages(ListRetainedMessagesRequest request) {
@@ -737,8 +747,8 @@ public class AWSIotDataClient extends AmazonWebServiceClient implements AWSIotDa
      * Guide.
      * </p>
      * <p>
-     * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">IoT
-     * Core pricing - Messaging</a>.
+     * For more information about messaging costs, see <a
+     * href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon Web Services IoT Core pricing - Messaging</a>.
      * </p>
      * 
      * @param publishRequest
@@ -753,6 +763,8 @@ public class AWSIotDataClient extends AmazonWebServiceClient implements AWSIotDa
      * @throws MethodNotAllowedException
      *         The specified combination of HTTP verb and URI is not supported.
      * @sample AWSIotData.Publish
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/Publish" target="_top">AWS API
+     *      Documentation</a>
      */
     @Override
     public PublishResult publish(PublishRequest request) {
@@ -835,6 +847,8 @@ public class AWSIotDataClient extends AmazonWebServiceClient implements AWSIotDa
      * @throws UnsupportedDocumentEncodingException
      *         The document encoding is not supported.
      * @sample AWSIotData.UpdateThingShadow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/UpdateThingShadow" target="_top">AWS API
+     *      Documentation</a>
      */
     @Override
     public UpdateThingShadowResult updateThingShadow(UpdateThingShadowRequest request) {
