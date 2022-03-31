@@ -172,6 +172,12 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
     private String status;
     /**
      * <p>
+     * The list of tags associated with the workspace.
+     * </p>
+     */
+    private java.util.Map<String, String> tags;
+    /**
+     * <p>
      * The IAM role that grants permissions to the Amazon Web Services resources that the workspace will view data from.
      * This role must already exist.
      * </p>
@@ -1385,6 +1391,74 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
 
     /**
      * <p>
+     * The list of tags associated with the workspace.
+     * </p>
+     * 
+     * @return The list of tags associated with the workspace.
+     */
+
+    public java.util.Map<String, String> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * The list of tags associated with the workspace.
+     * </p>
+     * 
+     * @param tags
+     *        The list of tags associated with the workspace.
+     */
+
+    public void setTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * <p>
+     * The list of tags associated with the workspace.
+     * </p>
+     * 
+     * @param tags
+     *        The list of tags associated with the workspace.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceDescription withTags(java.util.Map<String, String> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
+     * Add a single Tags entry
+     *
+     * @see WorkspaceDescription#withTags
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceDescription addTagsEntry(String key, String value) {
+        if (null == this.tags) {
+            this.tags = new java.util.HashMap<String, String>();
+        }
+        if (this.tags.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.tags.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Tags.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceDescription clearTagsEntries() {
+        this.tags = null;
+        return this;
+    }
+
+    /**
+     * <p>
      * The IAM role that grants permissions to the Amazon Web Services resources that the workspace will view data from.
      * This role must already exist.
      * </p>
@@ -1481,6 +1555,8 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
             sb.append("StackSetName: ").append(getStackSetName()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags()).append(",");
         if (getWorkspaceRoleArn() != null)
             sb.append("WorkspaceRoleArn: ").append("***Sensitive Data Redacted***");
         sb.append("}");
@@ -1577,6 +1653,10 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         if (other.getWorkspaceRoleArn() == null ^ this.getWorkspaceRoleArn() == null)
             return false;
         if (other.getWorkspaceRoleArn() != null && other.getWorkspaceRoleArn().equals(this.getWorkspaceRoleArn()) == false)
@@ -1609,6 +1689,7 @@ public class WorkspaceDescription implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getPermissionType() == null) ? 0 : getPermissionType().hashCode());
         hashCode = prime * hashCode + ((getStackSetName() == null) ? 0 : getStackSetName().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getWorkspaceRoleArn() == null) ? 0 : getWorkspaceRoleArn().hashCode());
         return hashCode;
     }

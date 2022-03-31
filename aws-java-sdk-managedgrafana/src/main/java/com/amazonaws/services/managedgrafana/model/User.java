@@ -31,6 +31,10 @@ public class User implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The ID of the user or group.
      * </p>
+     * <p>
+     * Pattern:
+     * <code>^([0-9a-fA-F]{10}-|)[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}$</code>
+     * </p>
      */
     private String id;
     /**
@@ -44,9 +48,16 @@ public class User implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The ID of the user or group.
      * </p>
+     * <p>
+     * Pattern:
+     * <code>^([0-9a-fA-F]{10}-|)[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}$</code>
+     * </p>
      * 
      * @param id
-     *        The ID of the user or group.
+     *        The ID of the user or group.</p>
+     *        <p>
+     *        Pattern:
+     *        <code>^([0-9a-fA-F]{10}-|)[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}$</code>
      */
 
     public void setId(String id) {
@@ -57,8 +68,15 @@ public class User implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The ID of the user or group.
      * </p>
+     * <p>
+     * Pattern:
+     * <code>^([0-9a-fA-F]{10}-|)[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}$</code>
+     * </p>
      * 
-     * @return The ID of the user or group.
+     * @return The ID of the user or group.</p>
+     *         <p>
+     *         Pattern:
+     *         <code>^([0-9a-fA-F]{10}-|)[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}$</code>
      */
 
     public String getId() {
@@ -69,9 +87,16 @@ public class User implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The ID of the user or group.
      * </p>
+     * <p>
+     * Pattern:
+     * <code>^([0-9a-fA-F]{10}-|)[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}$</code>
+     * </p>
      * 
      * @param id
-     *        The ID of the user or group.
+     *        The ID of the user or group.</p>
+     *        <p>
+     *        Pattern:
+     *        <code>^([0-9a-fA-F]{10}-|)[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}$</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

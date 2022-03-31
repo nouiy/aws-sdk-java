@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * One or more properties included in this resource operation are defined as create-only, and therefore cannot be
+ * One or more properties included in this resource operation are defined as create-only, and therefore can't be
  * updated.
  * </p>
  */

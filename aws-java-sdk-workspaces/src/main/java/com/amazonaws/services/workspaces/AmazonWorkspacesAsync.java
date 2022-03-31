@@ -27,8 +27,27 @@ import com.amazonaws.services.workspaces.model.*;
  * <p>
  * <fullname>Amazon WorkSpaces Service</fullname>
  * <p>
- * Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows and Amazon Linux desktops for your
- * users.
+ * Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows or Amazon Linux desktops for your
+ * users, known as <i>WorkSpaces</i>. WorkSpaces eliminates the need to procure and deploy hardware or install complex
+ * software. You can quickly add or remove users as your needs change. Users can access their virtual desktops from
+ * multiple devices or web browsers.
+ * </p>
+ * <p>
+ * This API Reference provides detailed information about the actions, data types, parameters, and errors of the
+ * WorkSpaces service. For more information about the supported Amazon Web Services Regions, endpoints, and service
+ * quotas of the Amazon WorkSpaces service, see <a
+ * href="https://docs.aws.amazon.com/general/latest/gr/wsp.html">WorkSpaces endpoints and quotas</a> in the <i>Amazon
+ * Web Services General Reference</i>.
+ * </p>
+ * <p>
+ * You can also manage your WorkSpaces resources using the WorkSpaces console, Command Line Interface (CLI), and SDKs.
+ * For more information about administering WorkSpaces, see the <a
+ * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/">Amazon WorkSpaces Administration Guide</a>. For more
+ * information about using the Amazon WorkSpaces client application or web browser to access provisioned WorkSpaces, see
+ * the <a href="https://docs.aws.amazon.com/workspaces/latest/userguide/">Amazon WorkSpaces User Guide</a>. For more
+ * information about using the CLI to manage your WorkSpaces resources, see the <a
+ * href="https://docs.aws.amazon.com/cli/latest/reference/workspaces/index.html">WorkSpaces section of the CLI
+ * Reference</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -547,6 +566,47 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
 
     /**
      * <p>
+     * Deletes customized client branding. Client branding allows you to customize your WorkSpace's client login portal.
+     * You can tailor your login portal company logo, the support email address, support link, link to reset password,
+     * and a custom message for users trying to sign in.
+     * </p>
+     * <p>
+     * After you delete your customized client branding, your login portal reverts to the default client branding.
+     * </p>
+     * 
+     * @param deleteClientBrandingRequest
+     * @return A Java Future containing the result of the DeleteClientBranding operation returned by the service.
+     * @sample AmazonWorkspacesAsync.DeleteClientBranding
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeleteClientBranding"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteClientBrandingResult> deleteClientBrandingAsync(DeleteClientBrandingRequest deleteClientBrandingRequest);
+
+    /**
+     * <p>
+     * Deletes customized client branding. Client branding allows you to customize your WorkSpace's client login portal.
+     * You can tailor your login portal company logo, the support email address, support link, link to reset password,
+     * and a custom message for users trying to sign in.
+     * </p>
+     * <p>
+     * After you delete your customized client branding, your login portal reverts to the default client branding.
+     * </p>
+     * 
+     * @param deleteClientBrandingRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteClientBranding operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.DeleteClientBranding
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeleteClientBranding"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteClientBrandingResult> deleteClientBrandingAsync(DeleteClientBrandingRequest deleteClientBrandingRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteClientBrandingRequest, DeleteClientBrandingResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a client-add-in for Amazon Connect that is configured within a directory.
      * </p>
      * 
@@ -913,6 +973,51 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
     java.util.concurrent.Future<DescribeAccountModificationsResult> describeAccountModificationsAsync(
             DescribeAccountModificationsRequest describeAccountModificationsRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeAccountModificationsRequest, DescribeAccountModificationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes the specified client branding. Client branding allows you to customize the log in page of various
+     * device types for your users. You can add your company logo, the support email address, support link, link to
+     * reset password, and a custom message for users trying to sign in.
+     * </p>
+     * <note>
+     * <p>
+     * Only device types that have branding information configured will be shown in the response.
+     * </p>
+     * </note>
+     * 
+     * @param describeClientBrandingRequest
+     * @return A Java Future containing the result of the DescribeClientBranding operation returned by the service.
+     * @sample AmazonWorkspacesAsync.DescribeClientBranding
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeClientBranding"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeClientBrandingResult> describeClientBrandingAsync(DescribeClientBrandingRequest describeClientBrandingRequest);
+
+    /**
+     * <p>
+     * Describes the specified client branding. Client branding allows you to customize the log in page of various
+     * device types for your users. You can add your company logo, the support email address, support link, link to
+     * reset password, and a custom message for users trying to sign in.
+     * </p>
+     * <note>
+     * <p>
+     * Only device types that have branding information configured will be shown in the response.
+     * </p>
+     * </note>
+     * 
+     * @param describeClientBrandingRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeClientBranding operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.DescribeClientBranding
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeClientBranding"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeClientBrandingResult> describeClientBrandingAsync(DescribeClientBrandingRequest describeClientBrandingRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeClientBrandingRequest, DescribeClientBrandingResult> asyncHandler);
 
     /**
      * <p>
@@ -1497,6 +1602,101 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
      */
     java.util.concurrent.Future<DisassociateIpGroupsResult> disassociateIpGroupsAsync(DisassociateIpGroupsRequest disassociateIpGroupsRequest,
             com.amazonaws.handlers.AsyncHandler<DisassociateIpGroupsRequest, DisassociateIpGroupsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Imports client branding. Client branding allows you to customize your WorkSpace's client login portal. You can
+     * tailor your login portal company logo, the support email address, support link, link to reset password, and a
+     * custom message for users trying to sign in.
+     * </p>
+     * <p>
+     * After you import client branding, the default branding experience for the specified platform type is replaced
+     * with the imported experience
+     * </p>
+     * <note>
+     * <ul>
+     * <li>
+     * <p>
+     * You must specify at least one platform type when importing client branding.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can import up to 6 MB of data with each request. If your request exceeds this limit, you can import client
+     * branding for different platform types using separate requests.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * In each platform type, the <code>SupportEmail</code> and <code>SupportLink</code> parameters are mutually
+     * exclusive. You can specify only one parameter for each platform type, but not both.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Imported data can take up to a minute to appear in the WorkSpaces client.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @param importClientBrandingRequest
+     * @return A Java Future containing the result of the ImportClientBranding operation returned by the service.
+     * @sample AmazonWorkspacesAsync.ImportClientBranding
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ImportClientBranding"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ImportClientBrandingResult> importClientBrandingAsync(ImportClientBrandingRequest importClientBrandingRequest);
+
+    /**
+     * <p>
+     * Imports client branding. Client branding allows you to customize your WorkSpace's client login portal. You can
+     * tailor your login portal company logo, the support email address, support link, link to reset password, and a
+     * custom message for users trying to sign in.
+     * </p>
+     * <p>
+     * After you import client branding, the default branding experience for the specified platform type is replaced
+     * with the imported experience
+     * </p>
+     * <note>
+     * <ul>
+     * <li>
+     * <p>
+     * You must specify at least one platform type when importing client branding.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can import up to 6 MB of data with each request. If your request exceeds this limit, you can import client
+     * branding for different platform types using separate requests.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * In each platform type, the <code>SupportEmail</code> and <code>SupportLink</code> parameters are mutually
+     * exclusive. You can specify only one parameter for each platform type, but not both.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Imported data can take up to a minute to appear in the WorkSpaces client.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @param importClientBrandingRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ImportClientBranding operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.ImportClientBranding
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ImportClientBranding"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ImportClientBrandingResult> importClientBrandingAsync(ImportClientBrandingRequest importClientBrandingRequest,
+            com.amazonaws.handlers.AsyncHandler<ImportClientBrandingRequest, ImportClientBrandingResult> asyncHandler);
 
     /**
      * <p>

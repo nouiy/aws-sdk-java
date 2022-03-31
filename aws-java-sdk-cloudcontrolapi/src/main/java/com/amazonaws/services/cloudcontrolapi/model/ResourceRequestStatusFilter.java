@@ -46,22 +46,22 @@ public class ResourceRequestStatusFilter implements Serializable, Cloneable, Str
      * </li>
      * <li>
      * <p>
-     * <code>IN_PROGRESS</code>: The operation is currently in progress.
+     * <code>IN_PROGRESS</code>: The operation is in progress.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SUCCESS</code>: The operation has successfully completed.
+     * <code>SUCCESS</code>: The operation completed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code>: The operation has failed.
+     * <code>FAILED</code>: The operation failed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CANCEL_IN_PROGRESS</code>: The operation is currently in the process of being canceled.
+     * <code>CANCEL_IN_PROGRESS</code>: The operation is in the process of being canceled.
      * </p>
      * </li>
      * <li>
@@ -183,22 +183,22 @@ public class ResourceRequestStatusFilter implements Serializable, Cloneable, Str
      * </li>
      * <li>
      * <p>
-     * <code>IN_PROGRESS</code>: The operation is currently in progress.
+     * <code>IN_PROGRESS</code>: The operation is in progress.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SUCCESS</code>: The operation has successfully completed.
+     * <code>SUCCESS</code>: The operation completed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code>: The operation has failed.
+     * <code>FAILED</code>: The operation failed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CANCEL_IN_PROGRESS</code>: The operation is currently in the process of being canceled.
+     * <code>CANCEL_IN_PROGRESS</code>: The operation is in the process of being canceled.
      * </p>
      * </li>
      * <li>
@@ -217,22 +217,22 @@ public class ResourceRequestStatusFilter implements Serializable, Cloneable, Str
      *         </li>
      *         <li>
      *         <p>
-     *         <code>IN_PROGRESS</code>: The operation is currently in progress.
+     *         <code>IN_PROGRESS</code>: The operation is in progress.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>SUCCESS</code>: The operation has successfully completed.
+     *         <code>SUCCESS</code>: The operation completed.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>FAILED</code>: The operation has failed.
+     *         <code>FAILED</code>: The operation failed.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>CANCEL_IN_PROGRESS</code>: The operation is currently in the process of being canceled.
+     *         <code>CANCEL_IN_PROGRESS</code>: The operation is in the process of being canceled.
      *         </p>
      *         </li>
      *         <li>
@@ -259,22 +259,22 @@ public class ResourceRequestStatusFilter implements Serializable, Cloneable, Str
      * </li>
      * <li>
      * <p>
-     * <code>IN_PROGRESS</code>: The operation is currently in progress.
+     * <code>IN_PROGRESS</code>: The operation is in progress.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SUCCESS</code>: The operation has successfully completed.
+     * <code>SUCCESS</code>: The operation completed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code>: The operation has failed.
+     * <code>FAILED</code>: The operation failed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CANCEL_IN_PROGRESS</code>: The operation is currently in the process of being canceled.
+     * <code>CANCEL_IN_PROGRESS</code>: The operation is in the process of being canceled.
      * </p>
      * </li>
      * <li>
@@ -294,22 +294,22 @@ public class ResourceRequestStatusFilter implements Serializable, Cloneable, Str
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IN_PROGRESS</code>: The operation is currently in progress.
+     *        <code>IN_PROGRESS</code>: The operation is in progress.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SUCCESS</code>: The operation has successfully completed.
+     *        <code>SUCCESS</code>: The operation completed.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FAILED</code>: The operation has failed.
+     *        <code>FAILED</code>: The operation failed.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CANCEL_IN_PROGRESS</code>: The operation is currently in the process of being canceled.
+     *        <code>CANCEL_IN_PROGRESS</code>: The operation is in the process of being canceled.
      *        </p>
      *        </li>
      *        <li>
@@ -341,22 +341,22 @@ public class ResourceRequestStatusFilter implements Serializable, Cloneable, Str
      * </li>
      * <li>
      * <p>
-     * <code>IN_PROGRESS</code>: The operation is currently in progress.
+     * <code>IN_PROGRESS</code>: The operation is in progress.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SUCCESS</code>: The operation has successfully completed.
+     * <code>SUCCESS</code>: The operation completed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code>: The operation has failed.
+     * <code>FAILED</code>: The operation failed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CANCEL_IN_PROGRESS</code>: The operation is currently in the process of being canceled.
+     * <code>CANCEL_IN_PROGRESS</code>: The operation is in the process of being canceled.
      * </p>
      * </li>
      * <li>
@@ -381,22 +381,22 @@ public class ResourceRequestStatusFilter implements Serializable, Cloneable, Str
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IN_PROGRESS</code>: The operation is currently in progress.
+     *        <code>IN_PROGRESS</code>: The operation is in progress.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SUCCESS</code>: The operation has successfully completed.
+     *        <code>SUCCESS</code>: The operation completed.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FAILED</code>: The operation has failed.
+     *        <code>FAILED</code>: The operation failed.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CANCEL_IN_PROGRESS</code>: The operation is currently in the process of being canceled.
+     *        <code>CANCEL_IN_PROGRESS</code>: The operation is in the process of being canceled.
      *        </p>
      *        </li>
      *        <li>
@@ -430,22 +430,22 @@ public class ResourceRequestStatusFilter implements Serializable, Cloneable, Str
      * </li>
      * <li>
      * <p>
-     * <code>IN_PROGRESS</code>: The operation is currently in progress.
+     * <code>IN_PROGRESS</code>: The operation is in progress.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SUCCESS</code>: The operation has successfully completed.
+     * <code>SUCCESS</code>: The operation completed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code>: The operation has failed.
+     * <code>FAILED</code>: The operation failed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CANCEL_IN_PROGRESS</code>: The operation is currently in the process of being canceled.
+     * <code>CANCEL_IN_PROGRESS</code>: The operation is in the process of being canceled.
      * </p>
      * </li>
      * <li>
@@ -465,22 +465,22 @@ public class ResourceRequestStatusFilter implements Serializable, Cloneable, Str
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IN_PROGRESS</code>: The operation is currently in progress.
+     *        <code>IN_PROGRESS</code>: The operation is in progress.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SUCCESS</code>: The operation has successfully completed.
+     *        <code>SUCCESS</code>: The operation completed.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FAILED</code>: The operation has failed.
+     *        <code>FAILED</code>: The operation failed.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CANCEL_IN_PROGRESS</code>: The operation is currently in the process of being canceled.
+     *        <code>CANCEL_IN_PROGRESS</code>: The operation is in the process of being canceled.
      *        </p>
      *        </li>
      *        <li>
@@ -509,22 +509,22 @@ public class ResourceRequestStatusFilter implements Serializable, Cloneable, Str
      * </li>
      * <li>
      * <p>
-     * <code>IN_PROGRESS</code>: The operation is currently in progress.
+     * <code>IN_PROGRESS</code>: The operation is in progress.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SUCCESS</code>: The operation has successfully completed.
+     * <code>SUCCESS</code>: The operation completed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code>: The operation has failed.
+     * <code>FAILED</code>: The operation failed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CANCEL_IN_PROGRESS</code>: The operation is currently in the process of being canceled.
+     * <code>CANCEL_IN_PROGRESS</code>: The operation is in the process of being canceled.
      * </p>
      * </li>
      * <li>
@@ -544,22 +544,22 @@ public class ResourceRequestStatusFilter implements Serializable, Cloneable, Str
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IN_PROGRESS</code>: The operation is currently in progress.
+     *        <code>IN_PROGRESS</code>: The operation is in progress.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SUCCESS</code>: The operation has successfully completed.
+     *        <code>SUCCESS</code>: The operation completed.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FAILED</code>: The operation has failed.
+     *        <code>FAILED</code>: The operation failed.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CANCEL_IN_PROGRESS</code>: The operation is currently in the process of being canceled.
+     *        <code>CANCEL_IN_PROGRESS</code>: The operation is in the process of being canceled.
      *        </p>
      *        </li>
      *        <li>

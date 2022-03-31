@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * A resource operation with the specified request token cannot be found.
+ * A resource operation with the specified request token can't be found.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

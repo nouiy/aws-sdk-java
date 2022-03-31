@@ -287,6 +287,41 @@ public interface AmazonManagedGrafanaAsync extends AmazonManagedGrafana {
 
     /**
      * <p>
+     * The <code>ListTagsForResource</code> operation returns the tags that are associated with the Amazon Managed
+     * Service for Grafana resource specified by the <code>resourceArn</code>. Currently, the only resource that can be
+     * tagged is a workspace.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
+     * @sample AmazonManagedGrafanaAsync.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/grafana-2020-08-18/ListTagsForResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * The <code>ListTagsForResource</code> operation returns the tags that are associated with the Amazon Managed
+     * Service for Grafana resource specified by the <code>resourceArn</code>. Currently, the only resource that can be
+     * tagged is a workspace.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
+     * @sample AmazonManagedGrafanaAsyncHandler.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/grafana-2020-08-18/ListTagsForResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of Amazon Managed Grafana workspaces in the account, with some information about each workspace.
      * For more complete information about one workspace, use <a
      * href="https://docs.aws.amazon.com/AAMG/latest/APIReference/API_DescribeWorkspace.html">DescribeWorkspace</a>.
@@ -319,6 +354,82 @@ public interface AmazonManagedGrafanaAsync extends AmazonManagedGrafana {
      */
     java.util.concurrent.Future<ListWorkspacesResult> listWorkspacesAsync(ListWorkspacesRequest listWorkspacesRequest,
             com.amazonaws.handlers.AsyncHandler<ListWorkspacesRequest, ListWorkspacesResult> asyncHandler);
+
+    /**
+     * <p>
+     * The <code>TagResource</code> operation associates tags with an Amazon Managed Grafana resource. Currently, the
+     * only resource that can be tagged is workspaces.
+     * </p>
+     * <p>
+     * If you specify a new tag key for the resource, this tag is appended to the list of tags associated with the
+     * resource. If you specify a tag key that is already associated with the resource, the new tag value that you
+     * specify replaces the previous value for that tag.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return A Java Future containing the result of the TagResource operation returned by the service.
+     * @sample AmazonManagedGrafanaAsync.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/grafana-2020-08-18/TagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * The <code>TagResource</code> operation associates tags with an Amazon Managed Grafana resource. Currently, the
+     * only resource that can be tagged is workspaces.
+     * </p>
+     * <p>
+     * If you specify a new tag key for the resource, this tag is appended to the list of tags associated with the
+     * resource. If you specify a tag key that is already associated with the resource, the new tag value that you
+     * specify replaces the previous value for that tag.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the TagResource operation returned by the service.
+     * @sample AmazonManagedGrafanaAsyncHandler.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/grafana-2020-08-18/TagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * The <code>UntagResource</code> operation removes the association of the tag with the Amazon Managed Grafana
+     * resource.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return A Java Future containing the result of the UntagResource operation returned by the service.
+     * @sample AmazonManagedGrafanaAsync.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/grafana-2020-08-18/UntagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * The <code>UntagResource</code> operation removes the association of the tag with the Amazon Managed Grafana
+     * resource.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UntagResource operation returned by the service.
+     * @sample AmazonManagedGrafanaAsyncHandler.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/grafana-2020-08-18/UntagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
 
     /**
      * <p>

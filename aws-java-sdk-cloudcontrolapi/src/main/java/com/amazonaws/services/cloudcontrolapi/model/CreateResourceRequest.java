@@ -40,7 +40,7 @@ public class CreateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
     private String typeVersionId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use when
+     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to use when
      * performing this resource operation. The role specified must have the permissions required for this operation. The
      * necessary permissions for each event handler are defined in the
      * <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
@@ -114,7 +114,7 @@ public class CreateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * For more information about the properties of a specific resource, refer to the related topic for the resource in
      * the <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">
-     * Resource and property types reference</a> in the <i>Amazon Web Services CloudFormation Users Guide</i>.
+     * Resource and property types reference</a> in the <i>CloudFormation Users Guide</i>.
      * </p>
      */
     private String desiredState;
@@ -207,7 +207,7 @@ public class CreateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use when
+     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to use when
      * performing this resource operation. The role specified must have the permissions required for this operation. The
      * necessary permissions for each event handler are defined in the
      * <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
@@ -226,9 +226,9 @@ public class CreateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use
-     *        when performing this resource operation. The role specified must have the permissions required for this
-     *        operation. The necessary permissions for each event handler are defined in the
+     *        The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to
+     *        use when performing this resource operation. The role specified must have the permissions required for
+     *        this operation. The necessary permissions for each event handler are defined in the
      *        <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
      *        section of the <a
      *        href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html">resource
@@ -249,7 +249,7 @@ public class CreateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use when
+     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to use when
      * performing this resource operation. The role specified must have the permissions required for this operation. The
      * necessary permissions for each event handler are defined in the
      * <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
@@ -267,9 +267,9 @@ public class CreateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
      * >Specifying credentials</a> in the <i>Amazon Web Services Cloud Control API User Guide</i>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use
-     *         when performing this resource operation. The role specified must have the permissions required for this
-     *         operation. The necessary permissions for each event handler are defined in the
+     * @return The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to
+     *         use when performing this resource operation. The role specified must have the permissions required for
+     *         this operation. The necessary permissions for each event handler are defined in the
      *         <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
      *         section of the <a
      *         href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html">resource
@@ -290,7 +290,7 @@ public class CreateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use when
+     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to use when
      * performing this resource operation. The role specified must have the permissions required for this operation. The
      * necessary permissions for each event handler are defined in the
      * <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
@@ -309,9 +309,9 @@ public class CreateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use
-     *        when performing this resource operation. The role specified must have the permissions required for this
-     *        operation. The necessary permissions for each event handler are defined in the
+     *        The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to
+     *        use when performing this resource operation. The role specified must have the permissions required for
+     *        this operation. The necessary permissions for each event handler are defined in the
      *        <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
      *        section of the <a
      *        href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html">resource
@@ -498,12 +498,12 @@ public class CreateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * For more information about the properties of a specific resource, refer to the related topic for the resource in
      * the <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">
-     * Resource and property types reference</a> in the <i>Amazon Web Services CloudFormation Users Guide</i>.
+     * Resource and property types reference</a> in the <i>CloudFormation Users Guide</i>.
      * </p>
      * 
      * @param desiredState
      *        Structured data format representing the desired state of the resource, consisting of that resource's
-     *        properties and their desired values. </p> <note>
+     *        properties and their desired values.</p> <note>
      *        <p>
      *        Cloud Control API currently supports JSON as a structured data format.
      *        </p>
@@ -533,7 +533,7 @@ public class CreateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
      *        For more information about the properties of a specific resource, refer to the related topic for the
      *        resource in the <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     *        >Resource and property types reference</a> in the <i>Amazon Web Services CloudFormation Users Guide</i>.
+     *        >Resource and property types reference</a> in the <i>CloudFormation Users Guide</i>.
      */
 
     public void setDesiredState(String desiredState) {
@@ -573,11 +573,11 @@ public class CreateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * For more information about the properties of a specific resource, refer to the related topic for the resource in
      * the <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">
-     * Resource and property types reference</a> in the <i>Amazon Web Services CloudFormation Users Guide</i>.
+     * Resource and property types reference</a> in the <i>CloudFormation Users Guide</i>.
      * </p>
      * 
      * @return Structured data format representing the desired state of the resource, consisting of that resource's
-     *         properties and their desired values. </p> <note>
+     *         properties and their desired values.</p> <note>
      *         <p>
      *         Cloud Control API currently supports JSON as a structured data format.
      *         </p>
@@ -607,7 +607,7 @@ public class CreateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
      *         For more information about the properties of a specific resource, refer to the related topic for the
      *         resource in the <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     *         >Resource and property types reference</a> in the <i>Amazon Web Services CloudFormation Users Guide</i>.
+     *         >Resource and property types reference</a> in the <i>CloudFormation Users Guide</i>.
      */
 
     public String getDesiredState() {
@@ -647,12 +647,12 @@ public class CreateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * For more information about the properties of a specific resource, refer to the related topic for the resource in
      * the <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">
-     * Resource and property types reference</a> in the <i>Amazon Web Services CloudFormation Users Guide</i>.
+     * Resource and property types reference</a> in the <i>CloudFormation Users Guide</i>.
      * </p>
      * 
      * @param desiredState
      *        Structured data format representing the desired state of the resource, consisting of that resource's
-     *        properties and their desired values. </p> <note>
+     *        properties and their desired values.</p> <note>
      *        <p>
      *        Cloud Control API currently supports JSON as a structured data format.
      *        </p>
@@ -682,7 +682,7 @@ public class CreateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
      *        For more information about the properties of a specific resource, refer to the related topic for the
      *        resource in the <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     *        >Resource and property types reference</a> in the <i>Amazon Web Services CloudFormation Users Guide</i>.
+     *        >Resource and property types reference</a> in the <i>CloudFormation Users Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

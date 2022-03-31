@@ -72,7 +72,7 @@ public class ProgressEvent implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>PENDING</code>: The resource operation has not yet started.
+     * <code>PENDING</code>: The resource operation hasn't yet started.
      * </p>
      * </li>
      * <li>
@@ -384,7 +384,7 @@ public class ProgressEvent implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>PENDING</code>: The resource operation has not yet started.
+     * <code>PENDING</code>: The resource operation hasn't yet started.
      * </p>
      * </li>
      * <li>
@@ -420,7 +420,7 @@ public class ProgressEvent implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>PENDING</code>: The resource operation has not yet started.
+     *        <code>PENDING</code>: The resource operation hasn't yet started.
      *        </p>
      *        </li>
      *        <li>
@@ -463,7 +463,7 @@ public class ProgressEvent implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>PENDING</code>: The resource operation has not yet started.
+     * <code>PENDING</code>: The resource operation hasn't yet started.
      * </p>
      * </li>
      * <li>
@@ -498,7 +498,7 @@ public class ProgressEvent implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>PENDING</code>: The resource operation has not yet started.
+     *         <code>PENDING</code>: The resource operation hasn't yet started.
      *         </p>
      *         </li>
      *         <li>
@@ -541,7 +541,7 @@ public class ProgressEvent implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>PENDING</code>: The resource operation has not yet started.
+     * <code>PENDING</code>: The resource operation hasn't yet started.
      * </p>
      * </li>
      * <li>
@@ -577,7 +577,7 @@ public class ProgressEvent implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>PENDING</code>: The resource operation has not yet started.
+     *        <code>PENDING</code>: The resource operation hasn't yet started.
      *        </p>
      *        </li>
      *        <li>
@@ -622,7 +622,7 @@ public class ProgressEvent implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>PENDING</code>: The resource operation has not yet started.
+     * <code>PENDING</code>: The resource operation hasn't yet started.
      * </p>
      * </li>
      * <li>
@@ -658,7 +658,7 @@ public class ProgressEvent implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>PENDING</code>: The resource operation has not yet started.
+     *        <code>PENDING</code>: The resource operation hasn't yet started.
      *        </p>
      *        </li>
      *        <li>

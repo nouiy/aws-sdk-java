@@ -228,6 +228,31 @@ public interface AmazonManagedGrafana {
 
     /**
      * <p>
+     * The <code>ListTagsForResource</code> operation returns the tags that are associated with the Amazon Managed
+     * Service for Grafana resource specified by the <code>resourceArn</code>. Currently, the only resource that can be
+     * tagged is a workspace.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The request references a resource that does not exist.
+     * @throws ThrottlingException
+     *         The request was denied because of request throttling. Retry the request.
+     * @throws ValidationException
+     *         The value of a parameter in the request caused an error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InternalServerException
+     *         Unexpected error while processing the request. Retry the request.
+     * @sample AmazonManagedGrafana.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/grafana-2020-08-18/ListTagsForResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
      * Returns a list of Amazon Managed Grafana workspaces in the account, with some information about each workspace.
      * For more complete information about one workspace, use <a
      * href="https://docs.aws.amazon.com/AAMG/latest/APIReference/API_DescribeWorkspace.html">DescribeWorkspace</a>.
@@ -246,6 +271,59 @@ public interface AmazonManagedGrafana {
      *      Documentation</a>
      */
     ListWorkspacesResult listWorkspaces(ListWorkspacesRequest listWorkspacesRequest);
+
+    /**
+     * <p>
+     * The <code>TagResource</code> operation associates tags with an Amazon Managed Grafana resource. Currently, the
+     * only resource that can be tagged is workspaces.
+     * </p>
+     * <p>
+     * If you specify a new tag key for the resource, this tag is appended to the list of tags associated with the
+     * resource. If you specify a tag key that is already associated with the resource, the new tag value that you
+     * specify replaces the previous value for that tag.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The request references a resource that does not exist.
+     * @throws ThrottlingException
+     *         The request was denied because of request throttling. Retry the request.
+     * @throws ValidationException
+     *         The value of a parameter in the request caused an error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InternalServerException
+     *         Unexpected error while processing the request. Retry the request.
+     * @sample AmazonManagedGrafana.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/grafana-2020-08-18/TagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    TagResourceResult tagResource(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * The <code>UntagResource</code> operation removes the association of the tag with the Amazon Managed Grafana
+     * resource.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The request references a resource that does not exist.
+     * @throws ThrottlingException
+     *         The request was denied because of request throttling. Retry the request.
+     * @throws ValidationException
+     *         The value of a parameter in the request caused an error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InternalServerException
+     *         Unexpected error while processing the request. Retry the request.
+     * @sample AmazonManagedGrafana.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/grafana-2020-08-18/UntagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
 
     /**
      * <p>

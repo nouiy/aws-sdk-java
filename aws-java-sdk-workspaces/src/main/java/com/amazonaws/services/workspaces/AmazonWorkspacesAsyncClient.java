@@ -32,8 +32,27 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * <p>
  * <fullname>Amazon WorkSpaces Service</fullname>
  * <p>
- * Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows and Amazon Linux desktops for your
- * users.
+ * Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows or Amazon Linux desktops for your
+ * users, known as <i>WorkSpaces</i>. WorkSpaces eliminates the need to procure and deploy hardware or install complex
+ * software. You can quickly add or remove users as your needs change. Users can access their virtual desktops from
+ * multiple devices or web browsers.
+ * </p>
+ * <p>
+ * This API Reference provides detailed information about the actions, data types, parameters, and errors of the
+ * WorkSpaces service. For more information about the supported Amazon Web Services Regions, endpoints, and service
+ * quotas of the Amazon WorkSpaces service, see <a
+ * href="https://docs.aws.amazon.com/general/latest/gr/wsp.html">WorkSpaces endpoints and quotas</a> in the <i>Amazon
+ * Web Services General Reference</i>.
+ * </p>
+ * <p>
+ * You can also manage your WorkSpaces resources using the WorkSpaces console, Command Line Interface (CLI), and SDKs.
+ * For more information about administering WorkSpaces, see the <a
+ * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/">Amazon WorkSpaces Administration Guide</a>. For more
+ * information about using the Amazon WorkSpaces client application or web browser to access provisioned WorkSpaces, see
+ * the <a href="https://docs.aws.amazon.com/workspaces/latest/userguide/">Amazon WorkSpaces User Guide</a>. For more
+ * information about using the CLI to manage your WorkSpaces resources, see the <a
+ * href="https://docs.aws.amazon.com/cli/latest/reference/workspaces/index.html">WorkSpaces section of the CLI
+ * Reference</a>.
  * </p>
  */
 @ThreadSafe
@@ -623,6 +642,39 @@ public class AmazonWorkspacesAsyncClient extends AmazonWorkspacesClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteClientBrandingResult> deleteClientBrandingAsync(DeleteClientBrandingRequest request) {
+
+        return deleteClientBrandingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteClientBrandingResult> deleteClientBrandingAsync(final DeleteClientBrandingRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteClientBrandingRequest, DeleteClientBrandingResult> asyncHandler) {
+        final DeleteClientBrandingRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteClientBrandingResult>() {
+            @Override
+            public DeleteClientBrandingResult call() throws Exception {
+                DeleteClientBrandingResult result = null;
+
+                try {
+                    result = executeDeleteClientBranding(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteConnectClientAddInResult> deleteConnectClientAddInAsync(DeleteConnectClientAddInRequest request) {
 
         return deleteConnectClientAddInAsync(request, null);
@@ -904,6 +956,39 @@ public class AmazonWorkspacesAsyncClient extends AmazonWorkspacesClient implemen
 
                 try {
                     result = executeDescribeAccountModifications(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeClientBrandingResult> describeClientBrandingAsync(DescribeClientBrandingRequest request) {
+
+        return describeClientBrandingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeClientBrandingResult> describeClientBrandingAsync(final DescribeClientBrandingRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeClientBrandingRequest, DescribeClientBrandingResult> asyncHandler) {
+        final DescribeClientBrandingRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeClientBrandingResult>() {
+            @Override
+            public DescribeClientBrandingResult call() throws Exception {
+                DescribeClientBrandingResult result = null;
+
+                try {
+                    result = executeDescribeClientBranding(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1474,6 +1559,39 @@ public class AmazonWorkspacesAsyncClient extends AmazonWorkspacesClient implemen
 
                 try {
                     result = executeDisassociateIpGroups(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ImportClientBrandingResult> importClientBrandingAsync(ImportClientBrandingRequest request) {
+
+        return importClientBrandingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ImportClientBrandingResult> importClientBrandingAsync(final ImportClientBrandingRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ImportClientBrandingRequest, ImportClientBrandingResult> asyncHandler) {
+        final ImportClientBrandingRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ImportClientBrandingResult>() {
+            @Override
+            public ImportClientBrandingResult call() throws Exception {
+                ImportClientBrandingResult result = null;
+
+                try {
+                    result = executeImportClientBranding(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

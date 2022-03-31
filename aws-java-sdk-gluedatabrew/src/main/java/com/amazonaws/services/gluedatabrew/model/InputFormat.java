@@ -23,7 +23,8 @@ public enum InputFormat {
     CSV("CSV"),
     JSON("JSON"),
     PARQUET("PARQUET"),
-    EXCEL("EXCEL");
+    EXCEL("EXCEL"),
+    ORC("ORC");
 
     private String value;
 

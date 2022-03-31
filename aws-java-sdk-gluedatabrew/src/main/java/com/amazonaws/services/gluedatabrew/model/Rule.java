@@ -49,8 +49,8 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      * . Column and value references are substitution variables that should start with the ':' symbol. Depending on the
      * context, substitution variables' values can be either an actual value or a column name. These values are defined
      * in the SubstitutionMap. If a CheckExpression starts with a column reference, then ColumnSelectors in the rule
-     * should be null. If ColumnSelectors has been defined, then there should be no columnn reference in the left side
-     * of a condition, for example, <code>is_between :val1 and :val2</code>.
+     * should be null. If ColumnSelectors has been defined, then there should be no column reference in the left side of
+     * a condition, for example, <code>is_between :val1 and :val2</code>.
      * </p>
      * <p>
      * For more information, see <a
@@ -190,8 +190,8 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      * . Column and value references are substitution variables that should start with the ':' symbol. Depending on the
      * context, substitution variables' values can be either an actual value or a column name. These values are defined
      * in the SubstitutionMap. If a CheckExpression starts with a column reference, then ColumnSelectors in the rule
-     * should be null. If ColumnSelectors has been defined, then there should be no columnn reference in the left side
-     * of a condition, for example, <code>is_between :val1 and :val2</code>.
+     * should be null. If ColumnSelectors has been defined, then there should be no column reference in the left side of
+     * a condition, for example, <code>is_between :val1 and :val2</code>.
      * </p>
      * <p>
      * For more information, see <a
@@ -207,7 +207,7 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      *        on the context, substitution variables' values can be either an actual value or a column name. These
      *        values are defined in the SubstitutionMap. If a CheckExpression starts with a column reference, then
      *        ColumnSelectors in the rule should be null. If ColumnSelectors has been defined, then there should be no
-     *        columnn reference in the left side of a condition, for example, <code>is_between :val1 and :val2</code>
+     *        column reference in the left side of a condition, for example, <code>is_between :val1 and :val2</code>
      *        .</p>
      *        <p>
      *        For more information, see <a
@@ -227,8 +227,8 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      * . Column and value references are substitution variables that should start with the ':' symbol. Depending on the
      * context, substitution variables' values can be either an actual value or a column name. These values are defined
      * in the SubstitutionMap. If a CheckExpression starts with a column reference, then ColumnSelectors in the rule
-     * should be null. If ColumnSelectors has been defined, then there should be no columnn reference in the left side
-     * of a condition, for example, <code>is_between :val1 and :val2</code>.
+     * should be null. If ColumnSelectors has been defined, then there should be no column reference in the left side of
+     * a condition, for example, <code>is_between :val1 and :val2</code>.
      * </p>
      * <p>
      * For more information, see <a
@@ -243,7 +243,7 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      *         on the context, substitution variables' values can be either an actual value or a column name. These
      *         values are defined in the SubstitutionMap. If a CheckExpression starts with a column reference, then
      *         ColumnSelectors in the rule should be null. If ColumnSelectors has been defined, then there should be no
-     *         columnn reference in the left side of a condition, for example, <code>is_between :val1 and :val2</code>
+     *         column reference in the left side of a condition, for example, <code>is_between :val1 and :val2</code>
      *         .</p>
      *         <p>
      *         For more information, see <a
@@ -263,8 +263,8 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      * . Column and value references are substitution variables that should start with the ':' symbol. Depending on the
      * context, substitution variables' values can be either an actual value or a column name. These values are defined
      * in the SubstitutionMap. If a CheckExpression starts with a column reference, then ColumnSelectors in the rule
-     * should be null. If ColumnSelectors has been defined, then there should be no columnn reference in the left side
-     * of a condition, for example, <code>is_between :val1 and :val2</code>.
+     * should be null. If ColumnSelectors has been defined, then there should be no column reference in the left side of
+     * a condition, for example, <code>is_between :val1 and :val2</code>.
      * </p>
      * <p>
      * For more information, see <a
@@ -280,7 +280,7 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      *        on the context, substitution variables' values can be either an actual value or a column name. These
      *        values are defined in the SubstitutionMap. If a CheckExpression starts with a column reference, then
      *        ColumnSelectors in the rule should be null. If ColumnSelectors has been defined, then there should be no
-     *        columnn reference in the left side of a condition, for example, <code>is_between :val1 and :val2</code>
+     *        column reference in the left side of a condition, for example, <code>is_between :val1 and :val2</code>
      *        .</p>
      *        <p>
      *        For more information, see <a

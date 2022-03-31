@@ -25,7 +25,7 @@ public class GetRoutingControlStateResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the response.
+     * The Amazon Resource Name (ARN) of the response.
      * </p>
      */
     private String routingControlArn;
@@ -35,14 +35,20 @@ public class GetRoutingControlStateResult extends com.amazonaws.AmazonWebService
      * </p>
      */
     private String routingControlState;
+    /**
+     * <p>
+     * The routing control name.
+     * </p>
+     */
+    private String routingControlName;
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the response.
+     * The Amazon Resource Name (ARN) of the response.
      * </p>
      * 
      * @param routingControlArn
-     *        The Amazon Resource Number (ARN) of the response.
+     *        The Amazon Resource Name (ARN) of the response.
      */
 
     public void setRoutingControlArn(String routingControlArn) {
@@ -51,10 +57,10 @@ public class GetRoutingControlStateResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the response.
+     * The Amazon Resource Name (ARN) of the response.
      * </p>
      * 
-     * @return The Amazon Resource Number (ARN) of the response.
+     * @return The Amazon Resource Name (ARN) of the response.
      */
 
     public String getRoutingControlArn() {
@@ -63,11 +69,11 @@ public class GetRoutingControlStateResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) of the response.
+     * The Amazon Resource Name (ARN) of the response.
      * </p>
      * 
      * @param routingControlArn
-     *        The Amazon Resource Number (ARN) of the response.
+     *        The Amazon Resource Name (ARN) of the response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -136,6 +142,46 @@ public class GetRoutingControlStateResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * The routing control name.
+     * </p>
+     * 
+     * @param routingControlName
+     *        The routing control name.
+     */
+
+    public void setRoutingControlName(String routingControlName) {
+        this.routingControlName = routingControlName;
+    }
+
+    /**
+     * <p>
+     * The routing control name.
+     * </p>
+     * 
+     * @return The routing control name.
+     */
+
+    public String getRoutingControlName() {
+        return this.routingControlName;
+    }
+
+    /**
+     * <p>
+     * The routing control name.
+     * </p>
+     * 
+     * @param routingControlName
+     *        The routing control name.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetRoutingControlStateResult withRoutingControlName(String routingControlName) {
+        setRoutingControlName(routingControlName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -150,7 +196,9 @@ public class GetRoutingControlStateResult extends com.amazonaws.AmazonWebService
         if (getRoutingControlArn() != null)
             sb.append("RoutingControlArn: ").append(getRoutingControlArn()).append(",");
         if (getRoutingControlState() != null)
-            sb.append("RoutingControlState: ").append(getRoutingControlState());
+            sb.append("RoutingControlState: ").append(getRoutingControlState()).append(",");
+        if (getRoutingControlName() != null)
+            sb.append("RoutingControlName: ").append(getRoutingControlName());
         sb.append("}");
         return sb.toString();
     }
@@ -173,6 +221,10 @@ public class GetRoutingControlStateResult extends com.amazonaws.AmazonWebService
             return false;
         if (other.getRoutingControlState() != null && other.getRoutingControlState().equals(this.getRoutingControlState()) == false)
             return false;
+        if (other.getRoutingControlName() == null ^ this.getRoutingControlName() == null)
+            return false;
+        if (other.getRoutingControlName() != null && other.getRoutingControlName().equals(this.getRoutingControlName()) == false)
+            return false;
         return true;
     }
 
@@ -183,6 +235,7 @@ public class GetRoutingControlStateResult extends com.amazonaws.AmazonWebService
 
         hashCode = prime * hashCode + ((getRoutingControlArn() == null) ? 0 : getRoutingControlArn().hashCode());
         hashCode = prime * hashCode + ((getRoutingControlState() == null) ? 0 : getRoutingControlState().hashCode());
+        hashCode = prime * hashCode + ((getRoutingControlName() == null) ? 0 : getRoutingControlName().hashCode());
         return hashCode;
     }
 

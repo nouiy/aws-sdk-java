@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.managedgrafana.model.transform;
 
+import java.util.Map;
 import java.util.List;
 import javax.annotation.Generated;
 
@@ -43,6 +44,8 @@ public class CreateWorkspaceRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("permissionType").build();
     private static final MarshallingInfo<String> STACKSETNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("stackSetName").build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
     private static final MarshallingInfo<List> WORKSPACEDATASOURCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("workspaceDataSources").build();
     private static final MarshallingInfo<String> WORKSPACEDESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -78,6 +81,7 @@ public class CreateWorkspaceRequestMarshaller {
             protocolMarshaller.marshall(createWorkspaceRequest.getOrganizationRoleName(), ORGANIZATIONROLENAME_BINDING);
             protocolMarshaller.marshall(createWorkspaceRequest.getPermissionType(), PERMISSIONTYPE_BINDING);
             protocolMarshaller.marshall(createWorkspaceRequest.getStackSetName(), STACKSETNAME_BINDING);
+            protocolMarshaller.marshall(createWorkspaceRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createWorkspaceRequest.getWorkspaceDataSources(), WORKSPACEDATASOURCES_BINDING);
             protocolMarshaller.marshall(createWorkspaceRequest.getWorkspaceDescription(), WORKSPACEDESCRIPTION_BINDING);
             protocolMarshaller.marshall(createWorkspaceRequest.getWorkspaceName(), WORKSPACENAME_BINDING);

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Represents a dataset paramater that defines type and conditions for a parameter in the Amazon S3 path of the dataset.
+ * Represents a dataset parameter that defines type and conditions for a parameter in the Amazon S3 path of the dataset.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DatasetParameter" target="_top">AWS API

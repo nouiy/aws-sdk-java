@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.managedgrafana.model.transform;
 
+import java.util.Map;
 import java.util.List;
 import javax.annotation.Generated;
 
@@ -68,6 +69,8 @@ public class WorkspaceDescriptionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("stackSetName").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
     private static final MarshallingInfo<String> WORKSPACEROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("workspaceRoleArn").build();
 
@@ -107,6 +110,7 @@ public class WorkspaceDescriptionMarshaller {
             protocolMarshaller.marshall(workspaceDescription.getPermissionType(), PERMISSIONTYPE_BINDING);
             protocolMarshaller.marshall(workspaceDescription.getStackSetName(), STACKSETNAME_BINDING);
             protocolMarshaller.marshall(workspaceDescription.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(workspaceDescription.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(workspaceDescription.getWorkspaceRoleArn(), WORKSPACEROLEARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

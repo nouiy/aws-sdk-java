@@ -58,9 +58,10 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
     private String organizationRoleName;
     /**
      * <p>
-     * If you specify <code>Service Managed</code>, Amazon Managed Grafana automatically creates the IAM roles and
-     * provisions the permissions that the workspace needs to use Amazon Web Services data sources and notification
-     * channels.
+     * If you specify <code>SERVICE_MANAGED</code> on AWS Grafana console, Amazon Managed Grafana automatically creates
+     * the IAM roles and provisions the permissions that the workspace needs to use Amazon Web Services data sources and
+     * notification channels. In CLI mode, the permissionType <code>SERVICE_MANAGED</code> will not create the IAM role
+     * for you.
      * </p>
      * <p>
      * If you specify <code>CUSTOMER_MANAGED</code>, you will manage those roles and permissions yourself. If you are
@@ -71,7 +72,7 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/grafana/latest/userguide/AMG-manage-permissions.html">Amazon Managed Grafana
-     * permissions and policies for Amazon Web Services data sources and notification channels</a>
+     * permissions and policies for Amazon Web Services data sources and notification channels</a>.
      * </p>
      */
     private String permissionType;
@@ -81,6 +82,12 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private String stackSetName;
+    /**
+     * <p>
+     * The list of tags associated with the workspace.
+     * </p>
+     */
+    private java.util.Map<String, String> tags;
     /**
      * <p>
      * Specify the Amazon Web Services data sources that you want to be queried in this workspace. Specifying these data
@@ -96,6 +103,9 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * A description for the workspace. This is used only to help you identify this workspace.
+     * </p>
+     * <p>
+     * Pattern: <code>^[\\p{L}\\p{Z}\\p{N}\\p{P}]{0,2048}$</code>
      * </p>
      */
     private String workspaceDescription;
@@ -123,10 +133,8 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The workspace needs an IAM role that grants permissions to the Amazon Web Services resources that the workspace
-     * will view data from. If you already have a role that you want to use, specify it here. If you omit this field and
-     * you specify some Amazon Web Services resources in <code>workspaceDataSources</code> or
-     * <code>workspaceNotificationDestinations</code>, a new IAM role with the necessary permissions is automatically
-     * created.
+     * will view data from. If you already have a role that you want to use, specify it here. The permission type should
+     * be set to <code>CUSTOMER_MANAGED</code>.
      * </p>
      */
     private String workspaceRoleArn;
@@ -430,9 +438,10 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * If you specify <code>Service Managed</code>, Amazon Managed Grafana automatically creates the IAM roles and
-     * provisions the permissions that the workspace needs to use Amazon Web Services data sources and notification
-     * channels.
+     * If you specify <code>SERVICE_MANAGED</code> on AWS Grafana console, Amazon Managed Grafana automatically creates
+     * the IAM roles and provisions the permissions that the workspace needs to use Amazon Web Services data sources and
+     * notification channels. In CLI mode, the permissionType <code>SERVICE_MANAGED</code> will not create the IAM role
+     * for you.
      * </p>
      * <p>
      * If you specify <code>CUSTOMER_MANAGED</code>, you will manage those roles and permissions yourself. If you are
@@ -443,13 +452,14 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/grafana/latest/userguide/AMG-manage-permissions.html">Amazon Managed Grafana
-     * permissions and policies for Amazon Web Services data sources and notification channels</a>
+     * permissions and policies for Amazon Web Services data sources and notification channels</a>.
      * </p>
      * 
      * @param permissionType
-     *        If you specify <code>Service Managed</code>, Amazon Managed Grafana automatically creates the IAM roles
-     *        and provisions the permissions that the workspace needs to use Amazon Web Services data sources and
-     *        notification channels.</p>
+     *        If you specify <code>SERVICE_MANAGED</code> on AWS Grafana console, Amazon Managed Grafana automatically
+     *        creates the IAM roles and provisions the permissions that the workspace needs to use Amazon Web Services
+     *        data sources and notification channels. In CLI mode, the permissionType <code>SERVICE_MANAGED</code> will
+     *        not create the IAM role for you.</p>
      *        <p>
      *        If you specify <code>CUSTOMER_MANAGED</code>, you will manage those roles and permissions yourself. If you
      *        are creating this workspace in a member account of an organization that is not a delegated administrator
@@ -459,7 +469,7 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/grafana/latest/userguide/AMG-manage-permissions.html">Amazon Managed
-     *        Grafana permissions and policies for Amazon Web Services data sources and notification channels</a>
+     *        Grafana permissions and policies for Amazon Web Services data sources and notification channels</a>.
      * @see PermissionType
      */
 
@@ -469,9 +479,10 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * If you specify <code>Service Managed</code>, Amazon Managed Grafana automatically creates the IAM roles and
-     * provisions the permissions that the workspace needs to use Amazon Web Services data sources and notification
-     * channels.
+     * If you specify <code>SERVICE_MANAGED</code> on AWS Grafana console, Amazon Managed Grafana automatically creates
+     * the IAM roles and provisions the permissions that the workspace needs to use Amazon Web Services data sources and
+     * notification channels. In CLI mode, the permissionType <code>SERVICE_MANAGED</code> will not create the IAM role
+     * for you.
      * </p>
      * <p>
      * If you specify <code>CUSTOMER_MANAGED</code>, you will manage those roles and permissions yourself. If you are
@@ -482,12 +493,13 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/grafana/latest/userguide/AMG-manage-permissions.html">Amazon Managed Grafana
-     * permissions and policies for Amazon Web Services data sources and notification channels</a>
+     * permissions and policies for Amazon Web Services data sources and notification channels</a>.
      * </p>
      * 
-     * @return If you specify <code>Service Managed</code>, Amazon Managed Grafana automatically creates the IAM roles
-     *         and provisions the permissions that the workspace needs to use Amazon Web Services data sources and
-     *         notification channels.</p>
+     * @return If you specify <code>SERVICE_MANAGED</code> on AWS Grafana console, Amazon Managed Grafana automatically
+     *         creates the IAM roles and provisions the permissions that the workspace needs to use Amazon Web Services
+     *         data sources and notification channels. In CLI mode, the permissionType <code>SERVICE_MANAGED</code> will
+     *         not create the IAM role for you.</p>
      *         <p>
      *         If you specify <code>CUSTOMER_MANAGED</code>, you will manage those roles and permissions yourself. If
      *         you are creating this workspace in a member account of an organization that is not a delegated
@@ -497,7 +509,7 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/grafana/latest/userguide/AMG-manage-permissions.html">Amazon Managed
-     *         Grafana permissions and policies for Amazon Web Services data sources and notification channels</a>
+     *         Grafana permissions and policies for Amazon Web Services data sources and notification channels</a>.
      * @see PermissionType
      */
 
@@ -507,9 +519,10 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * If you specify <code>Service Managed</code>, Amazon Managed Grafana automatically creates the IAM roles and
-     * provisions the permissions that the workspace needs to use Amazon Web Services data sources and notification
-     * channels.
+     * If you specify <code>SERVICE_MANAGED</code> on AWS Grafana console, Amazon Managed Grafana automatically creates
+     * the IAM roles and provisions the permissions that the workspace needs to use Amazon Web Services data sources and
+     * notification channels. In CLI mode, the permissionType <code>SERVICE_MANAGED</code> will not create the IAM role
+     * for you.
      * </p>
      * <p>
      * If you specify <code>CUSTOMER_MANAGED</code>, you will manage those roles and permissions yourself. If you are
@@ -520,13 +533,14 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/grafana/latest/userguide/AMG-manage-permissions.html">Amazon Managed Grafana
-     * permissions and policies for Amazon Web Services data sources and notification channels</a>
+     * permissions and policies for Amazon Web Services data sources and notification channels</a>.
      * </p>
      * 
      * @param permissionType
-     *        If you specify <code>Service Managed</code>, Amazon Managed Grafana automatically creates the IAM roles
-     *        and provisions the permissions that the workspace needs to use Amazon Web Services data sources and
-     *        notification channels.</p>
+     *        If you specify <code>SERVICE_MANAGED</code> on AWS Grafana console, Amazon Managed Grafana automatically
+     *        creates the IAM roles and provisions the permissions that the workspace needs to use Amazon Web Services
+     *        data sources and notification channels. In CLI mode, the permissionType <code>SERVICE_MANAGED</code> will
+     *        not create the IAM role for you.</p>
      *        <p>
      *        If you specify <code>CUSTOMER_MANAGED</code>, you will manage those roles and permissions yourself. If you
      *        are creating this workspace in a member account of an organization that is not a delegated administrator
@@ -536,7 +550,7 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/grafana/latest/userguide/AMG-manage-permissions.html">Amazon Managed
-     *        Grafana permissions and policies for Amazon Web Services data sources and notification channels</a>
+     *        Grafana permissions and policies for Amazon Web Services data sources and notification channels</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PermissionType
      */
@@ -548,9 +562,10 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * If you specify <code>Service Managed</code>, Amazon Managed Grafana automatically creates the IAM roles and
-     * provisions the permissions that the workspace needs to use Amazon Web Services data sources and notification
-     * channels.
+     * If you specify <code>SERVICE_MANAGED</code> on AWS Grafana console, Amazon Managed Grafana automatically creates
+     * the IAM roles and provisions the permissions that the workspace needs to use Amazon Web Services data sources and
+     * notification channels. In CLI mode, the permissionType <code>SERVICE_MANAGED</code> will not create the IAM role
+     * for you.
      * </p>
      * <p>
      * If you specify <code>CUSTOMER_MANAGED</code>, you will manage those roles and permissions yourself. If you are
@@ -561,13 +576,14 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/grafana/latest/userguide/AMG-manage-permissions.html">Amazon Managed Grafana
-     * permissions and policies for Amazon Web Services data sources and notification channels</a>
+     * permissions and policies for Amazon Web Services data sources and notification channels</a>.
      * </p>
      * 
      * @param permissionType
-     *        If you specify <code>Service Managed</code>, Amazon Managed Grafana automatically creates the IAM roles
-     *        and provisions the permissions that the workspace needs to use Amazon Web Services data sources and
-     *        notification channels.</p>
+     *        If you specify <code>SERVICE_MANAGED</code> on AWS Grafana console, Amazon Managed Grafana automatically
+     *        creates the IAM roles and provisions the permissions that the workspace needs to use Amazon Web Services
+     *        data sources and notification channels. In CLI mode, the permissionType <code>SERVICE_MANAGED</code> will
+     *        not create the IAM role for you.</p>
      *        <p>
      *        If you specify <code>CUSTOMER_MANAGED</code>, you will manage those roles and permissions yourself. If you
      *        are creating this workspace in a member account of an organization that is not a delegated administrator
@@ -577,7 +593,7 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/grafana/latest/userguide/AMG-manage-permissions.html">Amazon Managed
-     *        Grafana permissions and policies for Amazon Web Services data sources and notification channels</a>
+     *        Grafana permissions and policies for Amazon Web Services data sources and notification channels</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PermissionType
      */
@@ -624,6 +640,74 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     public CreateWorkspaceRequest withStackSetName(String stackSetName) {
         setStackSetName(stackSetName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The list of tags associated with the workspace.
+     * </p>
+     * 
+     * @return The list of tags associated with the workspace.
+     */
+
+    public java.util.Map<String, String> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * The list of tags associated with the workspace.
+     * </p>
+     * 
+     * @param tags
+     *        The list of tags associated with the workspace.
+     */
+
+    public void setTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * <p>
+     * The list of tags associated with the workspace.
+     * </p>
+     * 
+     * @param tags
+     *        The list of tags associated with the workspace.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateWorkspaceRequest withTags(java.util.Map<String, String> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
+     * Add a single Tags entry
+     *
+     * @see CreateWorkspaceRequest#withTags
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateWorkspaceRequest addTagsEntry(String key, String value) {
+        if (null == this.tags) {
+            this.tags = new java.util.HashMap<String, String>();
+        }
+        if (this.tags.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.tags.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Tags.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateWorkspaceRequest clearTagsEntries() {
+        this.tags = null;
         return this;
     }
 
@@ -789,9 +873,14 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * A description for the workspace. This is used only to help you identify this workspace.
      * </p>
+     * <p>
+     * Pattern: <code>^[\\p{L}\\p{Z}\\p{N}\\p{P}]{0,2048}$</code>
+     * </p>
      * 
      * @param workspaceDescription
-     *        A description for the workspace. This is used only to help you identify this workspace.
+     *        A description for the workspace. This is used only to help you identify this workspace.</p>
+     *        <p>
+     *        Pattern: <code>^[\\p{L}\\p{Z}\\p{N}\\p{P}]{0,2048}$</code>
      */
 
     public void setWorkspaceDescription(String workspaceDescription) {
@@ -802,8 +891,13 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * A description for the workspace. This is used only to help you identify this workspace.
      * </p>
+     * <p>
+     * Pattern: <code>^[\\p{L}\\p{Z}\\p{N}\\p{P}]{0,2048}$</code>
+     * </p>
      * 
-     * @return A description for the workspace. This is used only to help you identify this workspace.
+     * @return A description for the workspace. This is used only to help you identify this workspace.</p>
+     *         <p>
+     *         Pattern: <code>^[\\p{L}\\p{Z}\\p{N}\\p{P}]{0,2048}$</code>
      */
 
     public String getWorkspaceDescription() {
@@ -814,9 +908,14 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * A description for the workspace. This is used only to help you identify this workspace.
      * </p>
+     * <p>
+     * Pattern: <code>^[\\p{L}\\p{Z}\\p{N}\\p{P}]{0,2048}$</code>
+     * </p>
      * 
      * @param workspaceDescription
-     *        A description for the workspace. This is used only to help you identify this workspace.
+     *        A description for the workspace. This is used only to help you identify this workspace.</p>
+     *        <p>
+     *        Pattern: <code>^[\\p{L}\\p{Z}\\p{N}\\p{P}]{0,2048}$</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1064,18 +1163,14 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The workspace needs an IAM role that grants permissions to the Amazon Web Services resources that the workspace
-     * will view data from. If you already have a role that you want to use, specify it here. If you omit this field and
-     * you specify some Amazon Web Services resources in <code>workspaceDataSources</code> or
-     * <code>workspaceNotificationDestinations</code>, a new IAM role with the necessary permissions is automatically
-     * created.
+     * will view data from. If you already have a role that you want to use, specify it here. The permission type should
+     * be set to <code>CUSTOMER_MANAGED</code>.
      * </p>
      * 
      * @param workspaceRoleArn
      *        The workspace needs an IAM role that grants permissions to the Amazon Web Services resources that the
-     *        workspace will view data from. If you already have a role that you want to use, specify it here. If you
-     *        omit this field and you specify some Amazon Web Services resources in <code>workspaceDataSources</code> or
-     *        <code>workspaceNotificationDestinations</code>, a new IAM role with the necessary permissions is
-     *        automatically created.
+     *        workspace will view data from. If you already have a role that you want to use, specify it here. The
+     *        permission type should be set to <code>CUSTOMER_MANAGED</code>.
      */
 
     public void setWorkspaceRoleArn(String workspaceRoleArn) {
@@ -1085,17 +1180,13 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The workspace needs an IAM role that grants permissions to the Amazon Web Services resources that the workspace
-     * will view data from. If you already have a role that you want to use, specify it here. If you omit this field and
-     * you specify some Amazon Web Services resources in <code>workspaceDataSources</code> or
-     * <code>workspaceNotificationDestinations</code>, a new IAM role with the necessary permissions is automatically
-     * created.
+     * will view data from. If you already have a role that you want to use, specify it here. The permission type should
+     * be set to <code>CUSTOMER_MANAGED</code>.
      * </p>
      * 
      * @return The workspace needs an IAM role that grants permissions to the Amazon Web Services resources that the
-     *         workspace will view data from. If you already have a role that you want to use, specify it here. If you
-     *         omit this field and you specify some Amazon Web Services resources in <code>workspaceDataSources</code>
-     *         or <code>workspaceNotificationDestinations</code>, a new IAM role with the necessary permissions is
-     *         automatically created.
+     *         workspace will view data from. If you already have a role that you want to use, specify it here. The
+     *         permission type should be set to <code>CUSTOMER_MANAGED</code>.
      */
 
     public String getWorkspaceRoleArn() {
@@ -1105,18 +1196,14 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The workspace needs an IAM role that grants permissions to the Amazon Web Services resources that the workspace
-     * will view data from. If you already have a role that you want to use, specify it here. If you omit this field and
-     * you specify some Amazon Web Services resources in <code>workspaceDataSources</code> or
-     * <code>workspaceNotificationDestinations</code>, a new IAM role with the necessary permissions is automatically
-     * created.
+     * will view data from. If you already have a role that you want to use, specify it here. The permission type should
+     * be set to <code>CUSTOMER_MANAGED</code>.
      * </p>
      * 
      * @param workspaceRoleArn
      *        The workspace needs an IAM role that grants permissions to the Amazon Web Services resources that the
-     *        workspace will view data from. If you already have a role that you want to use, specify it here. If you
-     *        omit this field and you specify some Amazon Web Services resources in <code>workspaceDataSources</code> or
-     *        <code>workspaceNotificationDestinations</code>, a new IAM role with the necessary permissions is
-     *        automatically created.
+     *        workspace will view data from. If you already have a role that you want to use, specify it here. The
+     *        permission type should be set to <code>CUSTOMER_MANAGED</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1149,6 +1236,8 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
             sb.append("PermissionType: ").append(getPermissionType()).append(",");
         if (getStackSetName() != null)
             sb.append("StackSetName: ").append(getStackSetName()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags()).append(",");
         if (getWorkspaceDataSources() != null)
             sb.append("WorkspaceDataSources: ").append(getWorkspaceDataSources()).append(",");
         if (getWorkspaceDescription() != null)
@@ -1199,6 +1288,10 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getStackSetName() != null && other.getStackSetName().equals(this.getStackSetName()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         if (other.getWorkspaceDataSources() == null ^ this.getWorkspaceDataSources() == null)
             return false;
         if (other.getWorkspaceDataSources() != null && other.getWorkspaceDataSources().equals(this.getWorkspaceDataSources()) == false)
@@ -1238,6 +1331,7 @@ public class CreateWorkspaceRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getOrganizationRoleName() == null) ? 0 : getOrganizationRoleName().hashCode());
         hashCode = prime * hashCode + ((getPermissionType() == null) ? 0 : getPermissionType().hashCode());
         hashCode = prime * hashCode + ((getStackSetName() == null) ? 0 : getStackSetName().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getWorkspaceDataSources() == null) ? 0 : getWorkspaceDataSources().hashCode());
         hashCode = prime * hashCode + ((getWorkspaceDescription() == null) ? 0 : getWorkspaceDescription().hashCode());
         hashCode = prime * hashCode + ((getWorkspaceName() == null) ? 0 : getWorkspaceName().hashCode());

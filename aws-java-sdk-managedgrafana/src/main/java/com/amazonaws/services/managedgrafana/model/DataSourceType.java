@@ -25,7 +25,9 @@ public enum DataSourceType {
     PROMETHEUS("PROMETHEUS"),
     XRAY("XRAY"),
     TIMESTREAM("TIMESTREAM"),
-    SITEWISE("SITEWISE");
+    SITEWISE("SITEWISE"),
+    ATHENA("ATHENA"),
+    REDSHIFT("REDSHIFT");
 
     private String value;
 

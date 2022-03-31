@@ -52,8 +52,27 @@ import com.amazonaws.services.workspaces.model.transform.*;
  * <p>
  * <fullname>Amazon WorkSpaces Service</fullname>
  * <p>
- * Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows and Amazon Linux desktops for your
- * users.
+ * Amazon WorkSpaces enables you to provision virtual, cloud-based Microsoft Windows or Amazon Linux desktops for your
+ * users, known as <i>WorkSpaces</i>. WorkSpaces eliminates the need to procure and deploy hardware or install complex
+ * software. You can quickly add or remove users as your needs change. Users can access their virtual desktops from
+ * multiple devices or web browsers.
+ * </p>
+ * <p>
+ * This API Reference provides detailed information about the actions, data types, parameters, and errors of the
+ * WorkSpaces service. For more information about the supported Amazon Web Services Regions, endpoints, and service
+ * quotas of the Amazon WorkSpaces service, see <a
+ * href="https://docs.aws.amazon.com/general/latest/gr/wsp.html">WorkSpaces endpoints and quotas</a> in the <i>Amazon
+ * Web Services General Reference</i>.
+ * </p>
+ * <p>
+ * You can also manage your WorkSpaces resources using the WorkSpaces console, Command Line Interface (CLI), and SDKs.
+ * For more information about administering WorkSpaces, see the <a
+ * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/">Amazon WorkSpaces Administration Guide</a>. For more
+ * information about using the Amazon WorkSpaces client application or web browser to access provisioned WorkSpaces, see
+ * the <a href="https://docs.aws.amazon.com/workspaces/latest/userguide/">Amazon WorkSpaces User Guide</a>. For more
+ * information about using the CLI to manage your WorkSpaces resources, see the <a
+ * href="https://docs.aws.amazon.com/cli/latest/reference/workspaces/index.html">WorkSpaces section of the CLI
+ * Reference</a>.
  * </p>
  */
 @ThreadSafe
@@ -79,26 +98,11 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("UnsupportedWorkspaceConfigurationException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.workspaces.model.transform.UnsupportedWorkspaceConfigurationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("UnsupportedNetworkConfigurationException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.workspaces.model.transform.UnsupportedNetworkConfigurationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("WorkspacesDefaultRoleNotFoundException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.workspaces.model.transform.WorkspacesDefaultRoleNotFoundExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("OperationNotSupportedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workspaces.model.transform.OperationNotSupportedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.workspaces.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceAssociatedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workspaces.model.transform.ResourceAssociatedExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidResourceStateException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.workspaces.model.transform.InvalidResourceStateExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workspaces.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
@@ -120,6 +124,21 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceLimitExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workspaces.model.transform.ResourceLimitExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("UnsupportedWorkspaceConfigurationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.workspaces.model.transform.UnsupportedWorkspaceConfigurationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("UnsupportedNetworkConfigurationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.workspaces.model.transform.UnsupportedNetworkConfigurationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("WorkspacesDefaultRoleNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.workspaces.model.transform.WorkspacesDefaultRoleNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.workspaces.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidResourceStateException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.workspaces.model.transform.InvalidResourceStateExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.workspaces.model.AmazonWorkspacesException.class));
 
     /**
@@ -1137,6 +1156,72 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Deletes customized client branding. Client branding allows you to customize your WorkSpace's client login portal.
+     * You can tailor your login portal company logo, the support email address, support link, link to reset password,
+     * and a custom message for users trying to sign in.
+     * </p>
+     * <p>
+     * After you delete your customized client branding, your login portal reverts to the default client branding.
+     * </p>
+     * 
+     * @param deleteClientBrandingRequest
+     * @return Result of the DeleteClientBranding operation returned by the service.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @sample AmazonWorkspaces.DeleteClientBranding
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DeleteClientBranding"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteClientBrandingResult deleteClientBranding(DeleteClientBrandingRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteClientBranding(request);
+    }
+
+    @SdkInternalApi
+    final DeleteClientBrandingResult executeDeleteClientBranding(DeleteClientBrandingRequest deleteClientBrandingRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteClientBrandingRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteClientBrandingRequest> request = null;
+        Response<DeleteClientBrandingResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteClientBrandingRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteClientBrandingRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkSpaces");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteClientBranding");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteClientBrandingResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteClientBrandingResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes a client-add-in for Amazon Connect that is configured within a directory.
      * </p>
      * 
@@ -1727,6 +1812,75 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
             HttpResponseHandler<AmazonWebServiceResponse<DescribeAccountModificationsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DescribeAccountModificationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Describes the specified client branding. Client branding allows you to customize the log in page of various
+     * device types for your users. You can add your company logo, the support email address, support link, link to
+     * reset password, and a custom message for users trying to sign in.
+     * </p>
+     * <note>
+     * <p>
+     * Only device types that have branding information configured will be shown in the response.
+     * </p>
+     * </note>
+     * 
+     * @param describeClientBrandingRequest
+     * @return Result of the DescribeClientBranding operation returned by the service.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @sample AmazonWorkspaces.DescribeClientBranding
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/DescribeClientBranding"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeClientBrandingResult describeClientBranding(DescribeClientBrandingRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeClientBranding(request);
+    }
+
+    @SdkInternalApi
+    final DescribeClientBrandingResult executeDescribeClientBranding(DescribeClientBrandingRequest describeClientBrandingRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeClientBrandingRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeClientBrandingRequest> request = null;
+        Response<DescribeClientBrandingResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeClientBrandingRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeClientBrandingRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkSpaces");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeClientBranding");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeClientBrandingResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeClientBrandingResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2691,6 +2845,99 @@ public class AmazonWorkspacesClient extends AmazonWebServiceClient implements Am
 
             HttpResponseHandler<AmazonWebServiceResponse<DisassociateIpGroupsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DisassociateIpGroupsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Imports client branding. Client branding allows you to customize your WorkSpace's client login portal. You can
+     * tailor your login portal company logo, the support email address, support link, link to reset password, and a
+     * custom message for users trying to sign in.
+     * </p>
+     * <p>
+     * After you import client branding, the default branding experience for the specified platform type is replaced
+     * with the imported experience
+     * </p>
+     * <note>
+     * <ul>
+     * <li>
+     * <p>
+     * You must specify at least one platform type when importing client branding.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You can import up to 6 MB of data with each request. If your request exceeds this limit, you can import client
+     * branding for different platform types using separate requests.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * In each platform type, the <code>SupportEmail</code> and <code>SupportLink</code> parameters are mutually
+     * exclusive. You can specify only one parameter for each platform type, but not both.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Imported data can take up to a minute to appear in the WorkSpaces client.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @param importClientBrandingRequest
+     * @return Result of the ImportClientBranding operation returned by the service.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws ResourceLimitExceededException
+     *         Your resource limits have been exceeded.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @sample AmazonWorkspaces.ImportClientBranding
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ImportClientBranding"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ImportClientBrandingResult importClientBranding(ImportClientBrandingRequest request) {
+        request = beforeClientExecution(request);
+        return executeImportClientBranding(request);
+    }
+
+    @SdkInternalApi
+    final ImportClientBrandingResult executeImportClientBranding(ImportClientBrandingRequest importClientBrandingRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(importClientBrandingRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ImportClientBrandingRequest> request = null;
+        Response<ImportClientBrandingResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ImportClientBrandingRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(importClientBrandingRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkSpaces");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ImportClientBranding");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ImportClientBrandingResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ImportClientBrandingResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

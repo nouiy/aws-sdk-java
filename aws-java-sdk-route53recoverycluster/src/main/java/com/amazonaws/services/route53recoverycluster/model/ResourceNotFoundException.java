@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request references a routing control that was not found.
+ * The request references a routing control or control panel that was not found.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

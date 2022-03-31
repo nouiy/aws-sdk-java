@@ -93,6 +93,11 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
     }
 
     @Override
+    public DeleteClientBrandingResult deleteClientBranding(DeleteClientBrandingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteConnectClientAddInResult deleteConnectClientAddIn(DeleteConnectClientAddInRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -134,6 +139,11 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
 
     @Override
     public DescribeAccountModificationsResult describeAccountModifications(DescribeAccountModificationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeClientBrandingResult describeClientBranding(DescribeClientBrandingRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -224,6 +234,11 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
 
     @Override
     public DisassociateIpGroupsResult disassociateIpGroups(DisassociateIpGroupsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ImportClientBrandingResult importClientBranding(ImportClientBrandingRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

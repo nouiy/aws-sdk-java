@@ -171,6 +171,19 @@ public class AbstractAmazonWorkspacesAsync extends AbstractAmazonWorkspaces impl
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteClientBrandingResult> deleteClientBrandingAsync(DeleteClientBrandingRequest request) {
+
+        return deleteClientBrandingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteClientBrandingResult> deleteClientBrandingAsync(DeleteClientBrandingRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteClientBrandingRequest, DeleteClientBrandingResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteConnectClientAddInResult> deleteConnectClientAddInAsync(DeleteConnectClientAddInRequest request) {
 
         return deleteConnectClientAddInAsync(request, null);
@@ -283,6 +296,19 @@ public class AbstractAmazonWorkspacesAsync extends AbstractAmazonWorkspaces impl
     @Override
     public java.util.concurrent.Future<DescribeAccountModificationsResult> describeAccountModificationsAsync(DescribeAccountModificationsRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeAccountModificationsRequest, DescribeAccountModificationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeClientBrandingResult> describeClientBrandingAsync(DescribeClientBrandingRequest request) {
+
+        return describeClientBrandingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeClientBrandingResult> describeClientBrandingAsync(DescribeClientBrandingRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeClientBrandingRequest, DescribeClientBrandingResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -553,6 +579,19 @@ public class AbstractAmazonWorkspacesAsync extends AbstractAmazonWorkspaces impl
     @Override
     public java.util.concurrent.Future<DisassociateIpGroupsResult> disassociateIpGroupsAsync(DisassociateIpGroupsRequest request,
             com.amazonaws.handlers.AsyncHandler<DisassociateIpGroupsRequest, DisassociateIpGroupsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ImportClientBrandingResult> importClientBrandingAsync(ImportClientBrandingRequest request) {
+
+        return importClientBrandingAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ImportClientBrandingResult> importClientBrandingAsync(ImportClientBrandingRequest request,
+            com.amazonaws.handlers.AsyncHandler<ImportClientBrandingRequest, ImportClientBrandingResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

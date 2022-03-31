@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * You don't have sufficient permissions to query the routing control state.
+ * You don't have sufficient permissions to perform this action.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

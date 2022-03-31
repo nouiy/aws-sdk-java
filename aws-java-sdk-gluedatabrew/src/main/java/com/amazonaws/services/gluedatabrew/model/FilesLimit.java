@@ -45,7 +45,7 @@ public class FilesLimit implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A criteria to use for Amazon S3 files sorting before their selection. By default uses DESCENDING order, i.e. most
-     * recent files are selected first. Anotherpossible value is ASCENDING.
+     * recent files are selected first. Another possible value is ASCENDING.
      * </p>
      */
     private String order;
@@ -160,12 +160,12 @@ public class FilesLimit implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A criteria to use for Amazon S3 files sorting before their selection. By default uses DESCENDING order, i.e. most
-     * recent files are selected first. Anotherpossible value is ASCENDING.
+     * recent files are selected first. Another possible value is ASCENDING.
      * </p>
      * 
      * @param order
      *        A criteria to use for Amazon S3 files sorting before their selection. By default uses DESCENDING order,
-     *        i.e. most recent files are selected first. Anotherpossible value is ASCENDING.
+     *        i.e. most recent files are selected first. Another possible value is ASCENDING.
      * @see Order
      */
 
@@ -176,11 +176,11 @@ public class FilesLimit implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A criteria to use for Amazon S3 files sorting before their selection. By default uses DESCENDING order, i.e. most
-     * recent files are selected first. Anotherpossible value is ASCENDING.
+     * recent files are selected first. Another possible value is ASCENDING.
      * </p>
      * 
      * @return A criteria to use for Amazon S3 files sorting before their selection. By default uses DESCENDING order,
-     *         i.e. most recent files are selected first. Anotherpossible value is ASCENDING.
+     *         i.e. most recent files are selected first. Another possible value is ASCENDING.
      * @see Order
      */
 
@@ -191,12 +191,12 @@ public class FilesLimit implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A criteria to use for Amazon S3 files sorting before their selection. By default uses DESCENDING order, i.e. most
-     * recent files are selected first. Anotherpossible value is ASCENDING.
+     * recent files are selected first. Another possible value is ASCENDING.
      * </p>
      * 
      * @param order
      *        A criteria to use for Amazon S3 files sorting before their selection. By default uses DESCENDING order,
-     *        i.e. most recent files are selected first. Anotherpossible value is ASCENDING.
+     *        i.e. most recent files are selected first. Another possible value is ASCENDING.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Order
      */
@@ -209,12 +209,12 @@ public class FilesLimit implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A criteria to use for Amazon S3 files sorting before their selection. By default uses DESCENDING order, i.e. most
-     * recent files are selected first. Anotherpossible value is ASCENDING.
+     * recent files are selected first. Another possible value is ASCENDING.
      * </p>
      * 
      * @param order
      *        A criteria to use for Amazon S3 files sorting before their selection. By default uses DESCENDING order,
-     *        i.e. most recent files are selected first. Anotherpossible value is ASCENDING.
+     *        i.e. most recent files are selected first. Another possible value is ASCENDING.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Order
      */

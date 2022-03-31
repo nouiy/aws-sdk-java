@@ -27,7 +27,7 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) for the routing control that you want to update the state for.
+     * The Amazon Resource Name (ARN) for the routing control that you want to update the state for.
      * </p>
      */
     private String routingControlArn;
@@ -39,8 +39,8 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
     private String routingControlState;
     /**
      * <p>
-     * The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating the state
-     * of a routing control. You can override one safety rule or multiple safety rules by including one or more ARNs,
+     * The Amazon Resource Names (ARNs) for the safety rules that you want to override when you're updating the state of
+     * a routing control. You can override one safety rule or multiple safety rules by including one or more ARNs,
      * separated by commas.
      * </p>
      * <p>
@@ -53,11 +53,11 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) for the routing control that you want to update the state for.
+     * The Amazon Resource Name (ARN) for the routing control that you want to update the state for.
      * </p>
      * 
      * @param routingControlArn
-     *        The Amazon Resource Number (ARN) for the routing control that you want to update the state for.
+     *        The Amazon Resource Name (ARN) for the routing control that you want to update the state for.
      */
 
     public void setRoutingControlArn(String routingControlArn) {
@@ -66,10 +66,10 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) for the routing control that you want to update the state for.
+     * The Amazon Resource Name (ARN) for the routing control that you want to update the state for.
      * </p>
      * 
-     * @return The Amazon Resource Number (ARN) for the routing control that you want to update the state for.
+     * @return The Amazon Resource Name (ARN) for the routing control that you want to update the state for.
      */
 
     public String getRoutingControlArn() {
@@ -78,11 +78,11 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) for the routing control that you want to update the state for.
+     * The Amazon Resource Name (ARN) for the routing control that you want to update the state for.
      * </p>
      * 
      * @param routingControlArn
-     *        The Amazon Resource Number (ARN) for the routing control that you want to update the state for.
+     *        The Amazon Resource Name (ARN) for the routing control that you want to update the state for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -152,8 +152,8 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating the state
-     * of a routing control. You can override one safety rule or multiple safety rules by including one or more ARNs,
+     * The Amazon Resource Names (ARNs) for the safety rules that you want to override when you're updating the state of
+     * a routing control. You can override one safety rule or multiple safety rules by including one or more ARNs,
      * separated by commas.
      * </p>
      * <p>
@@ -162,9 +162,9 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
      * safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
      * </p>
      * 
-     * @return The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating
-     *         the state of a routing control. You can override one safety rule or multiple safety rules by including
-     *         one or more ARNs, separated by commas.</p>
+     * @return The Amazon Resource Names (ARNs) for the safety rules that you want to override when you're updating the
+     *         state of a routing control. You can override one safety rule or multiple safety rules by including one or
+     *         more ARNs, separated by commas.</p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html">
@@ -178,8 +178,8 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating the state
-     * of a routing control. You can override one safety rule or multiple safety rules by including one or more ARNs,
+     * The Amazon Resource Names (ARNs) for the safety rules that you want to override when you're updating the state of
+     * a routing control. You can override one safety rule or multiple safety rules by including one or more ARNs,
      * separated by commas.
      * </p>
      * <p>
@@ -189,7 +189,7 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param safetyRulesToOverride
-     *        The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating the
+     *        The Amazon Resource Names (ARNs) for the safety rules that you want to override when you're updating the
      *        state of a routing control. You can override one safety rule or multiple safety rules by including one or
      *        more ARNs, separated by commas.</p>
      *        <p>
@@ -210,8 +210,8 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating the state
-     * of a routing control. You can override one safety rule or multiple safety rules by including one or more ARNs,
+     * The Amazon Resource Names (ARNs) for the safety rules that you want to override when you're updating the state of
+     * a routing control. You can override one safety rule or multiple safety rules by including one or more ARNs,
      * separated by commas.
      * </p>
      * <p>
@@ -226,7 +226,7 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param safetyRulesToOverride
-     *        The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating the
+     *        The Amazon Resource Names (ARNs) for the safety rules that you want to override when you're updating the
      *        state of a routing control. You can override one safety rule or multiple safety rules by including one or
      *        more ARNs, separated by commas.</p>
      *        <p>
@@ -249,8 +249,8 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating the state
-     * of a routing control. You can override one safety rule or multiple safety rules by including one or more ARNs,
+     * The Amazon Resource Names (ARNs) for the safety rules that you want to override when you're updating the state of
+     * a routing control. You can override one safety rule or multiple safety rules by including one or more ARNs,
      * separated by commas.
      * </p>
      * <p>
@@ -260,7 +260,7 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param safetyRulesToOverride
-     *        The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating the
+     *        The Amazon Resource Names (ARNs) for the safety rules that you want to override when you're updating the
      *        state of a routing control. You can override one safety rule or multiple safety rules by including one or
      *        more ARNs, separated by commas.</p>
      *        <p>

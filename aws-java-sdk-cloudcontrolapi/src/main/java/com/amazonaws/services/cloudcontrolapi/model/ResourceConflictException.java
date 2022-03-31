@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 /**
  * <p>
  * The resource is temporarily unavailable to be acted upon. For example, if the resource is currently undergoing an
- * operation and cannot be acted upon until that operation is finished.
+ * operation and can't be acted upon until that operation is finished.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

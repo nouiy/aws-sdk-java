@@ -33,6 +33,11 @@ public class AbstractAWSRoute53RecoveryCluster implements AWSRoute53RecoveryClus
     }
 
     @Override
+    public ListRoutingControlsResult listRoutingControls(ListRoutingControlsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateRoutingControlStateResult updateRoutingControlState(UpdateRoutingControlStateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

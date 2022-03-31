@@ -27,18 +27,18 @@ public class GetRoutingControlStateRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) for the routing control that you want to get the state for.
+     * The Amazon Resource Name (ARN) for the routing control that you want to get the state for.
      * </p>
      */
     private String routingControlArn;
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) for the routing control that you want to get the state for.
+     * The Amazon Resource Name (ARN) for the routing control that you want to get the state for.
      * </p>
      * 
      * @param routingControlArn
-     *        The Amazon Resource Number (ARN) for the routing control that you want to get the state for.
+     *        The Amazon Resource Name (ARN) for the routing control that you want to get the state for.
      */
 
     public void setRoutingControlArn(String routingControlArn) {
@@ -47,10 +47,10 @@ public class GetRoutingControlStateRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) for the routing control that you want to get the state for.
+     * The Amazon Resource Name (ARN) for the routing control that you want to get the state for.
      * </p>
      * 
-     * @return The Amazon Resource Number (ARN) for the routing control that you want to get the state for.
+     * @return The Amazon Resource Name (ARN) for the routing control that you want to get the state for.
      */
 
     public String getRoutingControlArn() {
@@ -59,11 +59,11 @@ public class GetRoutingControlStateRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) for the routing control that you want to get the state for.
+     * The Amazon Resource Name (ARN) for the routing control that you want to get the state for.
      * </p>
      * 
      * @param routingControlArn
-     *        The Amazon Resource Number (ARN) for the routing control that you want to get the state for.
+     *        The Amazon Resource Name (ARN) for the routing control that you want to get the state for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

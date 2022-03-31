@@ -40,7 +40,7 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String typeVersionId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use when
+     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to use when
      * performing this resource operation. The role specified must have the permissions required for this operation. The
      * necessary permissions for each event handler are defined in the
      * <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
@@ -70,12 +70,7 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String nextToken;
     /**
      * <p>
-     * The maximum number of results to be returned with a single call. If the number of available results exceeds this
-     * maximum, the response includes a <code>NextToken</code> value that you can assign to the <code>NextToken</code>
-     * request parameter to get the next set of results.
-     * </p>
-     * <p>
-     * The default is <code>20</code>.
+     * Reserved.
      * </p>
      */
     private Integer maxResults;
@@ -174,7 +169,7 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use when
+     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to use when
      * performing this resource operation. The role specified must have the permissions required for this operation. The
      * necessary permissions for each event handler are defined in the
      * <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
@@ -193,9 +188,9 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use
-     *        when performing this resource operation. The role specified must have the permissions required for this
-     *        operation. The necessary permissions for each event handler are defined in the
+     *        The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to
+     *        use when performing this resource operation. The role specified must have the permissions required for
+     *        this operation. The necessary permissions for each event handler are defined in the
      *        <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
      *        section of the <a
      *        href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html">resource
@@ -216,7 +211,7 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use when
+     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to use when
      * performing this resource operation. The role specified must have the permissions required for this operation. The
      * necessary permissions for each event handler are defined in the
      * <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
@@ -234,9 +229,9 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
      * >Specifying credentials</a> in the <i>Amazon Web Services Cloud Control API User Guide</i>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use
-     *         when performing this resource operation. The role specified must have the permissions required for this
-     *         operation. The necessary permissions for each event handler are defined in the
+     * @return The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to
+     *         use when performing this resource operation. The role specified must have the permissions required for
+     *         this operation. The necessary permissions for each event handler are defined in the
      *         <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
      *         section of the <a
      *         href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html">resource
@@ -257,7 +252,7 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use when
+     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to use when
      * performing this resource operation. The role specified must have the permissions required for this operation. The
      * necessary permissions for each event handler are defined in the
      * <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
@@ -276,9 +271,9 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use
-     *        when performing this resource operation. The role specified must have the permissions required for this
-     *        operation. The necessary permissions for each event handler are defined in the
+     *        The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to
+     *        use when performing this resource operation. The role specified must have the permissions required for
+     *        this operation. The necessary permissions for each event handler are defined in the
      *        <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
      *        section of the <a
      *        href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html">resource
@@ -362,20 +357,11 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The maximum number of results to be returned with a single call. If the number of available results exceeds this
-     * maximum, the response includes a <code>NextToken</code> value that you can assign to the <code>NextToken</code>
-     * request parameter to get the next set of results.
-     * </p>
-     * <p>
-     * The default is <code>20</code>.
+     * Reserved.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to be returned with a single call. If the number of available results
-     *        exceeds this maximum, the response includes a <code>NextToken</code> value that you can assign to the
-     *        <code>NextToken</code> request parameter to get the next set of results.</p>
-     *        <p>
-     *        The default is <code>20</code>.
+     *        Reserved.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -384,19 +370,10 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The maximum number of results to be returned with a single call. If the number of available results exceeds this
-     * maximum, the response includes a <code>NextToken</code> value that you can assign to the <code>NextToken</code>
-     * request parameter to get the next set of results.
-     * </p>
-     * <p>
-     * The default is <code>20</code>.
+     * Reserved.
      * </p>
      * 
-     * @return The maximum number of results to be returned with a single call. If the number of available results
-     *         exceeds this maximum, the response includes a <code>NextToken</code> value that you can assign to the
-     *         <code>NextToken</code> request parameter to get the next set of results.</p>
-     *         <p>
-     *         The default is <code>20</code>.
+     * @return Reserved.
      */
 
     public Integer getMaxResults() {
@@ -405,20 +382,11 @@ public class ListResourcesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The maximum number of results to be returned with a single call. If the number of available results exceeds this
-     * maximum, the response includes a <code>NextToken</code> value that you can assign to the <code>NextToken</code>
-     * request parameter to get the next set of results.
-     * </p>
-     * <p>
-     * The default is <code>20</code>.
+     * Reserved.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to be returned with a single call. If the number of available results
-     *        exceeds this maximum, the response includes a <code>NextToken</code> value that you can assign to the
-     *        <code>NextToken</code> request parameter to get the next set of results.</p>
-     *        <p>
-     *        The default is <code>20</code>.
+     *        Reserved.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

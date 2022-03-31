@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The specified resource does not support this resource operation.
+ * The specified resource doesn't support this resource operation.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -19,7 +19,7 @@ import javax.annotation.Generated;
  * The specified client token has already been used in another resource request.
  * </p>
  * <p>
- * It is best practice for client tokens to be unique for each resource operation request. However, client token expire
+ * It's best practice for client tokens to be unique for each resource operation request. However, client token expire
  * after 36 hours.
  * </p>
  */

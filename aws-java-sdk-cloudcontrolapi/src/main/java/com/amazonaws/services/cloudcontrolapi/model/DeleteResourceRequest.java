@@ -40,7 +40,7 @@ public class DeleteResourceRequest extends com.amazonaws.AmazonWebServiceRequest
     private String typeVersionId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use when
+     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to use when
      * performing this resource operation. The role specified must have the permissions required for this operation. The
      * necessary permissions for each event handler are defined in the
      * <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
@@ -191,7 +191,7 @@ public class DeleteResourceRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use when
+     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to use when
      * performing this resource operation. The role specified must have the permissions required for this operation. The
      * necessary permissions for each event handler are defined in the
      * <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
@@ -210,9 +210,9 @@ public class DeleteResourceRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use
-     *        when performing this resource operation. The role specified must have the permissions required for this
-     *        operation. The necessary permissions for each event handler are defined in the
+     *        The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to
+     *        use when performing this resource operation. The role specified must have the permissions required for
+     *        this operation. The necessary permissions for each event handler are defined in the
      *        <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
      *        section of the <a
      *        href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html">resource
@@ -233,7 +233,7 @@ public class DeleteResourceRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use when
+     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to use when
      * performing this resource operation. The role specified must have the permissions required for this operation. The
      * necessary permissions for each event handler are defined in the
      * <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
@@ -251,9 +251,9 @@ public class DeleteResourceRequest extends com.amazonaws.AmazonWebServiceRequest
      * >Specifying credentials</a> in the <i>Amazon Web Services Cloud Control API User Guide</i>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use
-     *         when performing this resource operation. The role specified must have the permissions required for this
-     *         operation. The necessary permissions for each event handler are defined in the
+     * @return The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to
+     *         use when performing this resource operation. The role specified must have the permissions required for
+     *         this operation. The necessary permissions for each event handler are defined in the
      *         <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
      *         section of the <a
      *         href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html">resource
@@ -274,7 +274,7 @@ public class DeleteResourceRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use when
+     * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to use when
      * performing this resource operation. The role specified must have the permissions required for this operation. The
      * necessary permissions for each event handler are defined in the
      * <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
@@ -293,9 +293,9 @@ public class DeleteResourceRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) for Cloud Control API to use
-     *        when performing this resource operation. The role specified must have the permissions required for this
-     *        operation. The necessary permissions for each event handler are defined in the
+     *        The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role for Cloud Control API to
+     *        use when performing this resource operation. The role specified must have the permissions required for
+     *        this operation. The necessary permissions for each event handler are defined in the
      *        <code> <a href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-handlers">handlers</a> </code>
      *        section of the <a
      *        href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html">resource

@@ -63,7 +63,22 @@ public class AbstractAmazonManagedGrafana implements AmazonManagedGrafana {
     }
 
     @Override
+    public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListWorkspacesResult listWorkspaces(ListWorkspacesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public TagResourceResult tagResource(TagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UntagResourceResult untagResource(UntagResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

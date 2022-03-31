@@ -134,6 +134,11 @@ public class WorkspaceDescriptionJsonUnmarshaller implements Unmarshaller<Worksp
                     context.nextToken();
                     workspaceDescription.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("tags", targetDepth)) {
+                    context.nextToken();
+                    workspaceDescription.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
+                }
                 if (context.testExpression("workspaceRoleArn", targetDepth)) {
                     context.nextToken();
                     workspaceDescription.setWorkspaceRoleArn(context.getUnmarshaller(String.class).unmarshall(context));

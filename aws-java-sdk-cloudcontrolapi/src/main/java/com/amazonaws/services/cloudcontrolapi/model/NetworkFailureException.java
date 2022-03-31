@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The resource handler has returned that the request could not be completed due to networking issues, such as a failure
+ * The resource handler has returned that the request couldn't be completed due to networking issues, such as a failure
  * to receive a response from the server.
  * </p>
  */

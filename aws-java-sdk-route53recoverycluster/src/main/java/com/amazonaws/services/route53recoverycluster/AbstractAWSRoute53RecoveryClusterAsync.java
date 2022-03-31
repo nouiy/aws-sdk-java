@@ -41,6 +41,19 @@ public class AbstractAWSRoute53RecoveryClusterAsync extends AbstractAWSRoute53Re
     }
 
     @Override
+    public java.util.concurrent.Future<ListRoutingControlsResult> listRoutingControlsAsync(ListRoutingControlsRequest request) {
+
+        return listRoutingControlsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRoutingControlsResult> listRoutingControlsAsync(ListRoutingControlsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListRoutingControlsRequest, ListRoutingControlsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateRoutingControlStateResult> updateRoutingControlStateAsync(UpdateRoutingControlStateRequest request) {
 
         return updateRoutingControlStateAsync(request, null);
