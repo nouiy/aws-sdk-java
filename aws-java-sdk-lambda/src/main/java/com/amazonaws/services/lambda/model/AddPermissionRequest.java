@@ -119,6 +119,16 @@ public class AddPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private String principalOrgID;
+    /**
+     * <p>
+     * The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to restrict
+     * access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to bypass IAM
+     * authentication to create a public endpoint. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda function
+     * URLs</a>.
+     * </p>
+     */
+    private String functionUrlAuthType;
 
     /**
      * <p>
@@ -722,6 +732,97 @@ public class AddPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to restrict
+     * access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to bypass IAM
+     * authentication to create a public endpoint. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda function
+     * URLs</a>.
+     * </p>
+     * 
+     * @param functionUrlAuthType
+     *        The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to
+     *        restrict access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to
+     *        bypass IAM authentication to create a public endpoint. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda
+     *        function URLs</a>.
+     * @see FunctionUrlAuthType
+     */
+
+    public void setFunctionUrlAuthType(String functionUrlAuthType) {
+        this.functionUrlAuthType = functionUrlAuthType;
+    }
+
+    /**
+     * <p>
+     * The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to restrict
+     * access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to bypass IAM
+     * authentication to create a public endpoint. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda function
+     * URLs</a>.
+     * </p>
+     * 
+     * @return The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to
+     *         restrict access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to
+     *         bypass IAM authentication to create a public endpoint. For more information, see <a
+     *         href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda
+     *         function URLs</a>.
+     * @see FunctionUrlAuthType
+     */
+
+    public String getFunctionUrlAuthType() {
+        return this.functionUrlAuthType;
+    }
+
+    /**
+     * <p>
+     * The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to restrict
+     * access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to bypass IAM
+     * authentication to create a public endpoint. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda function
+     * URLs</a>.
+     * </p>
+     * 
+     * @param functionUrlAuthType
+     *        The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to
+     *        restrict access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to
+     *        bypass IAM authentication to create a public endpoint. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda
+     *        function URLs</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see FunctionUrlAuthType
+     */
+
+    public AddPermissionRequest withFunctionUrlAuthType(String functionUrlAuthType) {
+        setFunctionUrlAuthType(functionUrlAuthType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to restrict
+     * access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to bypass IAM
+     * authentication to create a public endpoint. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda function
+     * URLs</a>.
+     * </p>
+     * 
+     * @param functionUrlAuthType
+     *        The type of authentication that your function URL uses. Set to <code>AWS_IAM</code> if you want to
+     *        restrict access to authenticated <code>IAM</code> users only. Set to <code>NONE</code> if you want to
+     *        bypass IAM authentication to create a public endpoint. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/urls-auth.html"> Security and auth model for Lambda
+     *        function URLs</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see FunctionUrlAuthType
+     */
+
+    public AddPermissionRequest withFunctionUrlAuthType(FunctionUrlAuthType functionUrlAuthType) {
+        this.functionUrlAuthType = functionUrlAuthType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -752,7 +853,9 @@ public class AddPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getRevisionId() != null)
             sb.append("RevisionId: ").append(getRevisionId()).append(",");
         if (getPrincipalOrgID() != null)
-            sb.append("PrincipalOrgID: ").append(getPrincipalOrgID());
+            sb.append("PrincipalOrgID: ").append(getPrincipalOrgID()).append(",");
+        if (getFunctionUrlAuthType() != null)
+            sb.append("FunctionUrlAuthType: ").append(getFunctionUrlAuthType());
         sb.append("}");
         return sb.toString();
     }
@@ -807,6 +910,10 @@ public class AddPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getPrincipalOrgID() != null && other.getPrincipalOrgID().equals(this.getPrincipalOrgID()) == false)
             return false;
+        if (other.getFunctionUrlAuthType() == null ^ this.getFunctionUrlAuthType() == null)
+            return false;
+        if (other.getFunctionUrlAuthType() != null && other.getFunctionUrlAuthType().equals(this.getFunctionUrlAuthType()) == false)
+            return false;
         return true;
     }
 
@@ -825,6 +932,7 @@ public class AddPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getQualifier() == null) ? 0 : getQualifier().hashCode());
         hashCode = prime * hashCode + ((getRevisionId() == null) ? 0 : getRevisionId().hashCode());
         hashCode = prime * hashCode + ((getPrincipalOrgID() == null) ? 0 : getPrincipalOrgID().hashCode());
+        hashCode = prime * hashCode + ((getFunctionUrlAuthType() == null) ? 0 : getFunctionUrlAuthType().hashCode());
         return hashCode;
     }
 

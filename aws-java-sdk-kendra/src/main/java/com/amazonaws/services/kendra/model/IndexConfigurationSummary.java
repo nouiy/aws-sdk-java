@@ -30,7 +30,7 @@ public class IndexConfigurationSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The name of the index.
+     * The identifier of the index.
      * </p>
      */
     private String name;
@@ -68,11 +68,11 @@ public class IndexConfigurationSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The name of the index.
+     * The identifier of the index.
      * </p>
      * 
      * @param name
-     *        The name of the index.
+     *        The identifier of the index.
      */
 
     public void setName(String name) {
@@ -81,10 +81,10 @@ public class IndexConfigurationSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The name of the index.
+     * The identifier of the index.
      * </p>
      * 
-     * @return The name of the index.
+     * @return The identifier of the index.
      */
 
     public String getName() {
@@ -93,11 +93,11 @@ public class IndexConfigurationSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The name of the index.
+     * The identifier of the index.
      * </p>
      * 
      * @param name
-     *        The name of the index.
+     *        The identifier of the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

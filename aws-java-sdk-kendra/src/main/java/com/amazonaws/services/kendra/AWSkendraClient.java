@@ -1638,7 +1638,7 @@ public class AWSkendraClient extends AmazonWebServiceClient implements AWSkendra
 
     /**
      * <p>
-     * Describes an existing Amazon Kendra index
+     * Describes an existing Amazon Kendra index.
      * </p>
      * 
      * @param describeIndexRequest
@@ -2663,7 +2663,7 @@ public class AWSkendraClient extends AmazonWebServiceClient implements AWSkendra
 
     /**
      * <p>
-     * Lists the Amazon Kendra indexes that you have created.
+     * Lists the Amazon Kendra indexes that you created.
      * </p>
      * 
      * @param listIndicesRequest

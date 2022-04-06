@@ -51,6 +51,8 @@ public class DataSourceConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FsxConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> SLACKCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SlackConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> BOXCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BoxConfiguration").build();
 
     private static final DataSourceConfigurationMarshaller instance = new DataSourceConfigurationMarshaller();
 
@@ -80,6 +82,7 @@ public class DataSourceConfigurationMarshaller {
             protocolMarshaller.marshall(dataSourceConfiguration.getWorkDocsConfiguration(), WORKDOCSCONFIGURATION_BINDING);
             protocolMarshaller.marshall(dataSourceConfiguration.getFsxConfiguration(), FSXCONFIGURATION_BINDING);
             protocolMarshaller.marshall(dataSourceConfiguration.getSlackConfiguration(), SLACKCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(dataSourceConfiguration.getBoxConfiguration(), BOXCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

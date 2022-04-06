@@ -48,6 +48,10 @@ public class DeviceJsonUnmarshaller implements Unmarshaller<Device, JsonUnmarsha
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("Brand", targetDepth)) {
+                    context.nextToken();
+                    device.setBrand(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("CreatedTime", targetDepth)) {
                     context.nextToken();
                     device.setCreatedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

@@ -37,6 +37,12 @@ public class DescribeDeviceResult extends com.amazonaws.AmazonWebServiceResult<c
     private String arn;
     /**
      * <p>
+     * The device's maker.
+     * </p>
+     */
+    private String brand;
+    /**
+     * <p>
      * When the device was created.
      * </p>
      */
@@ -233,6 +239,65 @@ public class DescribeDeviceResult extends com.amazonaws.AmazonWebServiceResult<c
 
     public DescribeDeviceResult withArn(String arn) {
         setArn(arn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The device's maker.
+     * </p>
+     * 
+     * @param brand
+     *        The device's maker.
+     * @see DeviceBrand
+     */
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    /**
+     * <p>
+     * The device's maker.
+     * </p>
+     * 
+     * @return The device's maker.
+     * @see DeviceBrand
+     */
+
+    public String getBrand() {
+        return this.brand;
+    }
+
+    /**
+     * <p>
+     * The device's maker.
+     * </p>
+     * 
+     * @param brand
+     *        The device's maker.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DeviceBrand
+     */
+
+    public DescribeDeviceResult withBrand(String brand) {
+        setBrand(brand);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The device's maker.
+     * </p>
+     * 
+     * @param brand
+     *        The device's maker.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DeviceBrand
+     */
+
+    public DescribeDeviceResult withBrand(DeviceBrand brand) {
+        this.brand = brand.toString();
         return this;
     }
 
@@ -937,6 +1002,8 @@ public class DescribeDeviceResult extends com.amazonaws.AmazonWebServiceResult<c
             sb.append("AlternateSoftwares: ").append(getAlternateSoftwares()).append(",");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
+        if (getBrand() != null)
+            sb.append("Brand: ").append(getBrand()).append(",");
         if (getCreatedTime() != null)
             sb.append("CreatedTime: ").append(getCreatedTime()).append(",");
         if (getCurrentNetworkingStatus() != null)
@@ -988,6 +1055,10 @@ public class DescribeDeviceResult extends com.amazonaws.AmazonWebServiceResult<c
         if (other.getArn() == null ^ this.getArn() == null)
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
+            return false;
+        if (other.getBrand() == null ^ this.getBrand() == null)
+            return false;
+        if (other.getBrand() != null && other.getBrand().equals(this.getBrand()) == false)
             return false;
         if (other.getCreatedTime() == null ^ this.getCreatedTime() == null)
             return false;
@@ -1059,6 +1130,7 @@ public class DescribeDeviceResult extends com.amazonaws.AmazonWebServiceResult<c
 
         hashCode = prime * hashCode + ((getAlternateSoftwares() == null) ? 0 : getAlternateSoftwares().hashCode());
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
+        hashCode = prime * hashCode + ((getBrand() == null) ? 0 : getBrand().hashCode());
         hashCode = prime * hashCode + ((getCreatedTime() == null) ? 0 : getCreatedTime().hashCode());
         hashCode = prime * hashCode + ((getCurrentNetworkingStatus() == null) ? 0 : getCurrentNetworkingStatus().hashCode());
         hashCode = prime * hashCode + ((getCurrentSoftware() == null) ? 0 : getCurrentSoftware().hashCode());

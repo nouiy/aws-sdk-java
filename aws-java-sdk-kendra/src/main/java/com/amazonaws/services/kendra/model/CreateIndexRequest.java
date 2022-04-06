@@ -49,15 +49,15 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String edition;
     /**
      * <p>
-     * An Identity and Access Management(IAM) role that gives Amazon Kendra permissions to access your Amazon CloudWatch
-     * logs and metrics. This is also the role used when you use the <code>BatchPutDocument</code> API to index
-     * documents from an Amazon S3 bucket.
+     * An Identity and Access Management (IAM) role that gives Amazon Kendra permissions to access your Amazon
+     * CloudWatch logs and metrics. This is also the role you use when you call the <code>BatchPutDocument</code> API to
+     * index documents from an Amazon S3 bucket.
      * </p>
      */
     private String roleArn;
     /**
      * <p>
-     * The identifier of the KMScustomer managed key (CMK) to use to encrypt data indexed by Amazon Kendra. Amazon
+     * The identifier of the KMS customer managed key (CMK) that's used to encrypt data indexed by Amazon Kendra. Amazon
      * Kendra doesn't support asymmetric CMKs.
      * </p>
      */
@@ -298,15 +298,15 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An Identity and Access Management(IAM) role that gives Amazon Kendra permissions to access your Amazon CloudWatch
-     * logs and metrics. This is also the role used when you use the <code>BatchPutDocument</code> API to index
-     * documents from an Amazon S3 bucket.
+     * An Identity and Access Management (IAM) role that gives Amazon Kendra permissions to access your Amazon
+     * CloudWatch logs and metrics. This is also the role you use when you call the <code>BatchPutDocument</code> API to
+     * index documents from an Amazon S3 bucket.
      * </p>
      * 
      * @param roleArn
-     *        An Identity and Access Management(IAM) role that gives Amazon Kendra permissions to access your Amazon
-     *        CloudWatch logs and metrics. This is also the role used when you use the <code>BatchPutDocument</code> API
-     *        to index documents from an Amazon S3 bucket.
+     *        An Identity and Access Management (IAM) role that gives Amazon Kendra permissions to access your Amazon
+     *        CloudWatch logs and metrics. This is also the role you use when you call the <code>BatchPutDocument</code>
+     *        API to index documents from an Amazon S3 bucket.
      */
 
     public void setRoleArn(String roleArn) {
@@ -315,14 +315,14 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An Identity and Access Management(IAM) role that gives Amazon Kendra permissions to access your Amazon CloudWatch
-     * logs and metrics. This is also the role used when you use the <code>BatchPutDocument</code> API to index
-     * documents from an Amazon S3 bucket.
+     * An Identity and Access Management (IAM) role that gives Amazon Kendra permissions to access your Amazon
+     * CloudWatch logs and metrics. This is also the role you use when you call the <code>BatchPutDocument</code> API to
+     * index documents from an Amazon S3 bucket.
      * </p>
      * 
-     * @return An Identity and Access Management(IAM) role that gives Amazon Kendra permissions to access your Amazon
-     *         CloudWatch logs and metrics. This is also the role used when you use the <code>BatchPutDocument</code>
-     *         API to index documents from an Amazon S3 bucket.
+     * @return An Identity and Access Management (IAM) role that gives Amazon Kendra permissions to access your Amazon
+     *         CloudWatch logs and metrics. This is also the role you use when you call the
+     *         <code>BatchPutDocument</code> API to index documents from an Amazon S3 bucket.
      */
 
     public String getRoleArn() {
@@ -331,15 +331,15 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An Identity and Access Management(IAM) role that gives Amazon Kendra permissions to access your Amazon CloudWatch
-     * logs and metrics. This is also the role used when you use the <code>BatchPutDocument</code> API to index
-     * documents from an Amazon S3 bucket.
+     * An Identity and Access Management (IAM) role that gives Amazon Kendra permissions to access your Amazon
+     * CloudWatch logs and metrics. This is also the role you use when you call the <code>BatchPutDocument</code> API to
+     * index documents from an Amazon S3 bucket.
      * </p>
      * 
      * @param roleArn
-     *        An Identity and Access Management(IAM) role that gives Amazon Kendra permissions to access your Amazon
-     *        CloudWatch logs and metrics. This is also the role used when you use the <code>BatchPutDocument</code> API
-     *        to index documents from an Amazon S3 bucket.
+     *        An Identity and Access Management (IAM) role that gives Amazon Kendra permissions to access your Amazon
+     *        CloudWatch logs and metrics. This is also the role you use when you call the <code>BatchPutDocument</code>
+     *        API to index documents from an Amazon S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -350,12 +350,12 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the KMScustomer managed key (CMK) to use to encrypt data indexed by Amazon Kendra. Amazon
+     * The identifier of the KMS customer managed key (CMK) that's used to encrypt data indexed by Amazon Kendra. Amazon
      * Kendra doesn't support asymmetric CMKs.
      * </p>
      * 
      * @param serverSideEncryptionConfiguration
-     *        The identifier of the KMScustomer managed key (CMK) to use to encrypt data indexed by Amazon Kendra.
+     *        The identifier of the KMS customer managed key (CMK) that's used to encrypt data indexed by Amazon Kendra.
      *        Amazon Kendra doesn't support asymmetric CMKs.
      */
 
@@ -365,12 +365,12 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the KMScustomer managed key (CMK) to use to encrypt data indexed by Amazon Kendra. Amazon
+     * The identifier of the KMS customer managed key (CMK) that's used to encrypt data indexed by Amazon Kendra. Amazon
      * Kendra doesn't support asymmetric CMKs.
      * </p>
      * 
-     * @return The identifier of the KMScustomer managed key (CMK) to use to encrypt data indexed by Amazon Kendra.
-     *         Amazon Kendra doesn't support asymmetric CMKs.
+     * @return The identifier of the KMS customer managed key (CMK) that's used to encrypt data indexed by Amazon
+     *         Kendra. Amazon Kendra doesn't support asymmetric CMKs.
      */
 
     public ServerSideEncryptionConfiguration getServerSideEncryptionConfiguration() {
@@ -379,12 +379,12 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier of the KMScustomer managed key (CMK) to use to encrypt data indexed by Amazon Kendra. Amazon
+     * The identifier of the KMS customer managed key (CMK) that's used to encrypt data indexed by Amazon Kendra. Amazon
      * Kendra doesn't support asymmetric CMKs.
      * </p>
      * 
      * @param serverSideEncryptionConfiguration
-     *        The identifier of the KMScustomer managed key (CMK) to use to encrypt data indexed by Amazon Kendra.
+     *        The identifier of the KMS customer managed key (CMK) that's used to encrypt data indexed by Amazon Kendra.
      *        Amazon Kendra doesn't support asymmetric CMKs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

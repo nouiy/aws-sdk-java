@@ -59,6 +59,10 @@ public class DescribeDeviceResultJsonUnmarshaller implements Unmarshaller<Descri
                     context.nextToken();
                     describeDeviceResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Brand", targetDepth)) {
+                    context.nextToken();
+                    describeDeviceResult.setBrand(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("CreatedTime", targetDepth)) {
                     context.nextToken();
                     describeDeviceResult.setCreatedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

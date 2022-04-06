@@ -32,7 +32,8 @@ public enum DataSourceType {
     WEBCRAWLER("WEBCRAWLER"),
     WORKDOCS("WORKDOCS"),
     FSX("FSX"),
-    SLACK("SLACK");
+    SLACK("SLACK"),
+    BOX("BOX");
 
     private String value;
 

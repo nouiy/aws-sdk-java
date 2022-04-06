@@ -585,7 +585,7 @@ public interface AWSkendra {
 
     /**
      * <p>
-     * Describes an existing Amazon Kendra index
+     * Describes an existing Amazon Kendra index.
      * </p>
      * 
      * @param describeIndexRequest
@@ -922,7 +922,7 @@ public interface AWSkendra {
 
     /**
      * <p>
-     * Lists the Amazon Kendra indexes that you have created.
+     * Lists the Amazon Kendra indexes that you created.
      * </p>
      * 
      * @param listIndicesRequest

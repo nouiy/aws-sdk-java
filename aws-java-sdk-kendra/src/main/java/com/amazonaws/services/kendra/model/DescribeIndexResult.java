@@ -31,7 +31,7 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
     private String name;
     /**
      * <p>
-     * The name of the index.
+     * The identifier of the index.
      * </p>
      */
     private String id;
@@ -50,8 +50,8 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
     private String roleArn;
     /**
      * <p>
-     * The identifier of the KMScustomer master key (CMK) used to encrypt your data. Amazon Kendra doesn't support
-     * asymmetric CMKs.
+     * The identifier of the KMScustomer master key (CMK) that is used to encrypt your data. Amazon Kendra doesn't
+     * support asymmetric CMKs.
      * </p>
      */
     private ServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
@@ -65,7 +65,7 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
     private String status;
     /**
      * <p>
-     * The description of the index.
+     * The description for the index.
      * </p>
      */
     private String description;
@@ -95,16 +95,17 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
     private IndexStatistics indexStatistics;
     /**
      * <p>
-     * When th e<code>Status</code> field value is <code>FAILED</code>, the <code>ErrorMessage</code> field contains a
+     * When the <code>Status</code> field value is <code>FAILED</code>, the <code>ErrorMessage</code> field contains a
      * message that explains why.
      * </p>
      */
     private String errorMessage;
     /**
      * <p>
-     * For Enterprise edition indexes, you can choose to use additional capacity to meet the needs of your application.
-     * This contains the capacity units used for the index. A 0 for the query capacity or the storage capacity indicates
-     * that the index is using the default capacity for the index.
+     * For Enterprise Edition indexes, you can choose to use additional capacity to meet the needs of your application.
+     * This contains the capacity units used for the index. A query or document storage capacity of zero indicates that
+     * the index is using the default capacity. For more information on the default capacity for an index and adjusting
+     * this, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/adjusting-capacity.html">Adjusting capacity</a>.
      * </p>
      */
     private CapacityUnitsConfiguration capacityUnits;
@@ -170,11 +171,11 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The name of the index.
+     * The identifier of the index.
      * </p>
      * 
      * @param id
-     *        The name of the index.
+     *        The identifier of the index.
      */
 
     public void setId(String id) {
@@ -183,10 +184,10 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The name of the index.
+     * The identifier of the index.
      * </p>
      * 
-     * @return The name of the index.
+     * @return The identifier of the index.
      */
 
     public String getId() {
@@ -195,11 +196,11 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The name of the index.
+     * The identifier of the index.
      * </p>
      * 
      * @param id
-     *        The name of the index.
+     *        The identifier of the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -315,13 +316,13 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The identifier of the KMScustomer master key (CMK) used to encrypt your data. Amazon Kendra doesn't support
-     * asymmetric CMKs.
+     * The identifier of the KMScustomer master key (CMK) that is used to encrypt your data. Amazon Kendra doesn't
+     * support asymmetric CMKs.
      * </p>
      * 
      * @param serverSideEncryptionConfiguration
-     *        The identifier of the KMScustomer master key (CMK) used to encrypt your data. Amazon Kendra doesn't
-     *        support asymmetric CMKs.
+     *        The identifier of the KMScustomer master key (CMK) that is used to encrypt your data. Amazon Kendra
+     *        doesn't support asymmetric CMKs.
      */
 
     public void setServerSideEncryptionConfiguration(ServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
@@ -330,12 +331,12 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The identifier of the KMScustomer master key (CMK) used to encrypt your data. Amazon Kendra doesn't support
-     * asymmetric CMKs.
+     * The identifier of the KMScustomer master key (CMK) that is used to encrypt your data. Amazon Kendra doesn't
+     * support asymmetric CMKs.
      * </p>
      * 
-     * @return The identifier of the KMScustomer master key (CMK) used to encrypt your data. Amazon Kendra doesn't
-     *         support asymmetric CMKs.
+     * @return The identifier of the KMScustomer master key (CMK) that is used to encrypt your data. Amazon Kendra
+     *         doesn't support asymmetric CMKs.
      */
 
     public ServerSideEncryptionConfiguration getServerSideEncryptionConfiguration() {
@@ -344,13 +345,13 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The identifier of the KMScustomer master key (CMK) used to encrypt your data. Amazon Kendra doesn't support
-     * asymmetric CMKs.
+     * The identifier of the KMScustomer master key (CMK) that is used to encrypt your data. Amazon Kendra doesn't
+     * support asymmetric CMKs.
      * </p>
      * 
      * @param serverSideEncryptionConfiguration
-     *        The identifier of the KMScustomer master key (CMK) used to encrypt your data. Amazon Kendra doesn't
-     *        support asymmetric CMKs.
+     *        The identifier of the KMScustomer master key (CMK) that is used to encrypt your data. Amazon Kendra
+     *        doesn't support asymmetric CMKs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -436,11 +437,11 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The description of the index.
+     * The description for the index.
      * </p>
      * 
      * @param description
-     *        The description of the index.
+     *        The description for the index.
      */
 
     public void setDescription(String description) {
@@ -449,10 +450,10 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The description of the index.
+     * The description for the index.
      * </p>
      * 
-     * @return The description of the index.
+     * @return The description for the index.
      */
 
     public String getDescription() {
@@ -461,11 +462,11 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The description of the index.
+     * The description for the index.
      * </p>
      * 
      * @param description
-     *        The description of the index.
+     *        The description for the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -669,12 +670,12 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * When th e<code>Status</code> field value is <code>FAILED</code>, the <code>ErrorMessage</code> field contains a
+     * When the <code>Status</code> field value is <code>FAILED</code>, the <code>ErrorMessage</code> field contains a
      * message that explains why.
      * </p>
      * 
      * @param errorMessage
-     *        When th e<code>Status</code> field value is <code>FAILED</code>, the <code>ErrorMessage</code> field
+     *        When the <code>Status</code> field value is <code>FAILED</code>, the <code>ErrorMessage</code> field
      *        contains a message that explains why.
      */
 
@@ -684,11 +685,11 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * When th e<code>Status</code> field value is <code>FAILED</code>, the <code>ErrorMessage</code> field contains a
+     * When the <code>Status</code> field value is <code>FAILED</code>, the <code>ErrorMessage</code> field contains a
      * message that explains why.
      * </p>
      * 
-     * @return When th e<code>Status</code> field value is <code>FAILED</code>, the <code>ErrorMessage</code> field
+     * @return When the <code>Status</code> field value is <code>FAILED</code>, the <code>ErrorMessage</code> field
      *         contains a message that explains why.
      */
 
@@ -698,12 +699,12 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * When th e<code>Status</code> field value is <code>FAILED</code>, the <code>ErrorMessage</code> field contains a
+     * When the <code>Status</code> field value is <code>FAILED</code>, the <code>ErrorMessage</code> field contains a
      * message that explains why.
      * </p>
      * 
      * @param errorMessage
-     *        When th e<code>Status</code> field value is <code>FAILED</code>, the <code>ErrorMessage</code> field
+     *        When the <code>Status</code> field value is <code>FAILED</code>, the <code>ErrorMessage</code> field
      *        contains a message that explains why.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -715,15 +716,18 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * For Enterprise edition indexes, you can choose to use additional capacity to meet the needs of your application.
-     * This contains the capacity units used for the index. A 0 for the query capacity or the storage capacity indicates
-     * that the index is using the default capacity for the index.
+     * For Enterprise Edition indexes, you can choose to use additional capacity to meet the needs of your application.
+     * This contains the capacity units used for the index. A query or document storage capacity of zero indicates that
+     * the index is using the default capacity. For more information on the default capacity for an index and adjusting
+     * this, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/adjusting-capacity.html">Adjusting capacity</a>.
      * </p>
      * 
      * @param capacityUnits
-     *        For Enterprise edition indexes, you can choose to use additional capacity to meet the needs of your
-     *        application. This contains the capacity units used for the index. A 0 for the query capacity or the
-     *        storage capacity indicates that the index is using the default capacity for the index.
+     *        For Enterprise Edition indexes, you can choose to use additional capacity to meet the needs of your
+     *        application. This contains the capacity units used for the index. A query or document storage capacity of
+     *        zero indicates that the index is using the default capacity. For more information on the default capacity
+     *        for an index and adjusting this, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/adjusting-capacity.html">Adjusting capacity</a>.
      */
 
     public void setCapacityUnits(CapacityUnitsConfiguration capacityUnits) {
@@ -732,14 +736,17 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * For Enterprise edition indexes, you can choose to use additional capacity to meet the needs of your application.
-     * This contains the capacity units used for the index. A 0 for the query capacity or the storage capacity indicates
-     * that the index is using the default capacity for the index.
+     * For Enterprise Edition indexes, you can choose to use additional capacity to meet the needs of your application.
+     * This contains the capacity units used for the index. A query or document storage capacity of zero indicates that
+     * the index is using the default capacity. For more information on the default capacity for an index and adjusting
+     * this, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/adjusting-capacity.html">Adjusting capacity</a>.
      * </p>
      * 
-     * @return For Enterprise edition indexes, you can choose to use additional capacity to meet the needs of your
-     *         application. This contains the capacity units used for the index. A 0 for the query capacity or the
-     *         storage capacity indicates that the index is using the default capacity for the index.
+     * @return For Enterprise Edition indexes, you can choose to use additional capacity to meet the needs of your
+     *         application. This contains the capacity units used for the index. A query or document storage capacity of
+     *         zero indicates that the index is using the default capacity. For more information on the default capacity
+     *         for an index and adjusting this, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/adjusting-capacity.html">Adjusting capacity</a>.
      */
 
     public CapacityUnitsConfiguration getCapacityUnits() {
@@ -748,15 +755,18 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * For Enterprise edition indexes, you can choose to use additional capacity to meet the needs of your application.
-     * This contains the capacity units used for the index. A 0 for the query capacity or the storage capacity indicates
-     * that the index is using the default capacity for the index.
+     * For Enterprise Edition indexes, you can choose to use additional capacity to meet the needs of your application.
+     * This contains the capacity units used for the index. A query or document storage capacity of zero indicates that
+     * the index is using the default capacity. For more information on the default capacity for an index and adjusting
+     * this, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/adjusting-capacity.html">Adjusting capacity</a>.
      * </p>
      * 
      * @param capacityUnits
-     *        For Enterprise edition indexes, you can choose to use additional capacity to meet the needs of your
-     *        application. This contains the capacity units used for the index. A 0 for the query capacity or the
-     *        storage capacity indicates that the index is using the default capacity for the index.
+     *        For Enterprise Edition indexes, you can choose to use additional capacity to meet the needs of your
+     *        application. This contains the capacity units used for the index. A query or document storage capacity of
+     *        zero indicates that the index is using the default capacity. For more information on the default capacity
+     *        for an index and adjusting this, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/adjusting-capacity.html">Adjusting capacity</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

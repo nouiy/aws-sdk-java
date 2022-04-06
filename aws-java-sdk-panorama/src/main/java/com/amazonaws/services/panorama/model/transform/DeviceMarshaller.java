@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DeviceMarshaller {
 
+    private static final MarshallingInfo<String> BRAND_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Brand").build();
     private static final MarshallingInfo<java.util.Date> CREATEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreatedTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> DEVICEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -56,6 +58,7 @@ public class DeviceMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(device.getBrand(), BRAND_BINDING);
             protocolMarshaller.marshall(device.getCreatedTime(), CREATEDTIME_BINDING);
             protocolMarshaller.marshall(device.getDeviceId(), DEVICEID_BINDING);
             protocolMarshaller.marshall(device.getLastUpdatedTime(), LASTUPDATEDTIME_BINDING);

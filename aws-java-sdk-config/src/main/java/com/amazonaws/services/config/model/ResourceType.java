@@ -137,7 +137,9 @@ public enum ResourceType {
     AWSCodeDeployDeploymentGroup("AWS::CodeDeploy::DeploymentGroup"),
     AWSEC2LaunchTemplate("AWS::EC2::LaunchTemplate"),
     AWSECRPublicRepository("AWS::ECR::PublicRepository"),
-    AWSGuardDutyDetector("AWS::GuardDuty::Detector");
+    AWSGuardDutyDetector("AWS::GuardDuty::Detector"),
+    AWSEMRSecurityConfiguration("AWS::EMR::SecurityConfiguration"),
+    AWSSageMakerCodeRepository("AWS::SageMaker::CodeRepository");
 
     private String value;
 

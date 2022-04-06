@@ -546,6 +546,30 @@ public interface AWSLambda {
 
     /**
      * <p>
+     * Creates a Lambda function URL with the specified configuration parameters. A function URL is a dedicated HTTP(S)
+     * endpoint that you can use to invoke your function.
+     * </p>
+     * 
+     * @param createFunctionUrlConfigRequest
+     * @return Result of the CreateFunctionUrlConfig operation returned by the service.
+     * @throws ResourceConflictException
+     *         The resource already exists, or another operation is in progress.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request does not exist.
+     * @throws InvalidParameterValueException
+     *         One of the parameters in the request is invalid.
+     * @throws ServiceException
+     *         The Lambda service encountered an internal error.
+     * @throws TooManyRequestsException
+     *         The request throughput limit was exceeded.
+     * @sample AWSLambda.CreateFunctionUrlConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/CreateFunctionUrlConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateFunctionUrlConfigResult createFunctionUrlConfig(CreateFunctionUrlConfigRequest createFunctionUrlConfigRequest);
+
+    /**
+     * <p>
      * Deletes a Lambda function <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">alias</a>.
      * </p>
@@ -720,6 +744,28 @@ public interface AWSLambda {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteFunctionEventInvokeConfigResult deleteFunctionEventInvokeConfig(DeleteFunctionEventInvokeConfigRequest deleteFunctionEventInvokeConfigRequest);
+
+    /**
+     * <p>
+     * Deletes a Lambda function URL. When you delete a function URL, you can't recover it. Creating a new function URL
+     * results in a different URL address.
+     * </p>
+     * 
+     * @param deleteFunctionUrlConfigRequest
+     * @return Result of the DeleteFunctionUrlConfig operation returned by the service.
+     * @throws ResourceConflictException
+     *         The resource already exists, or another operation is in progress.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request does not exist.
+     * @throws ServiceException
+     *         The Lambda service encountered an internal error.
+     * @throws TooManyRequestsException
+     *         The request throughput limit was exceeded.
+     * @sample AWSLambda.DeleteFunctionUrlConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/DeleteFunctionUrlConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteFunctionUrlConfigResult deleteFunctionUrlConfig(DeleteFunctionUrlConfigRequest deleteFunctionUrlConfigRequest);
 
     /**
      * <p>
@@ -960,6 +1006,27 @@ public interface AWSLambda {
      *      target="_top">AWS API Documentation</a>
      */
     GetFunctionEventInvokeConfigResult getFunctionEventInvokeConfig(GetFunctionEventInvokeConfigRequest getFunctionEventInvokeConfigRequest);
+
+    /**
+     * <p>
+     * Returns details about a Lambda function URL.
+     * </p>
+     * 
+     * @param getFunctionUrlConfigRequest
+     * @return Result of the GetFunctionUrlConfig operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         One of the parameters in the request is invalid.
+     * @throws ServiceException
+     *         The Lambda service encountered an internal error.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request does not exist.
+     * @throws TooManyRequestsException
+     *         The request throughput limit was exceeded.
+     * @sample AWSLambda.GetFunctionUrlConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetFunctionUrlConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetFunctionUrlConfigResult getFunctionUrlConfig(GetFunctionUrlConfigRequest getFunctionUrlConfigRequest);
 
     /**
      * <p>
@@ -1312,6 +1379,27 @@ public interface AWSLambda {
      *      target="_top">AWS API Documentation</a>
      */
     ListFunctionEventInvokeConfigsResult listFunctionEventInvokeConfigs(ListFunctionEventInvokeConfigsRequest listFunctionEventInvokeConfigsRequest);
+
+    /**
+     * <p>
+     * Returns a list of Lambda function URLs for the specified function.
+     * </p>
+     * 
+     * @param listFunctionUrlConfigsRequest
+     * @return Result of the ListFunctionUrlConfigs operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         One of the parameters in the request is invalid.
+     * @throws ServiceException
+     *         The Lambda service encountered an internal error.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request does not exist.
+     * @throws TooManyRequestsException
+     *         The request throughput limit was exceeded.
+     * @sample AWSLambda.ListFunctionUrlConfigs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/ListFunctionUrlConfigs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListFunctionUrlConfigsResult listFunctionUrlConfigs(ListFunctionUrlConfigsRequest listFunctionUrlConfigsRequest);
 
     /**
      * <p>
@@ -2102,6 +2190,29 @@ public interface AWSLambda {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateFunctionEventInvokeConfigResult updateFunctionEventInvokeConfig(UpdateFunctionEventInvokeConfigRequest updateFunctionEventInvokeConfigRequest);
+
+    /**
+     * <p>
+     * Updates the configuration for a Lambda function URL.
+     * </p>
+     * 
+     * @param updateFunctionUrlConfigRequest
+     * @return Result of the UpdateFunctionUrlConfig operation returned by the service.
+     * @throws ResourceConflictException
+     *         The resource already exists, or another operation is in progress.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request does not exist.
+     * @throws InvalidParameterValueException
+     *         One of the parameters in the request is invalid.
+     * @throws ServiceException
+     *         The Lambda service encountered an internal error.
+     * @throws TooManyRequestsException
+     *         The request throughput limit was exceeded.
+     * @sample AWSLambda.UpdateFunctionUrlConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/UpdateFunctionUrlConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateFunctionUrlConfigResult updateFunctionUrlConfig(UpdateFunctionUrlConfigRequest updateFunctionUrlConfigRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

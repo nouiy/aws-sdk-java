@@ -30,6 +30,12 @@ public class Device implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The device's maker.
+     * </p>
+     */
+    private String brand;
+    /**
+     * <p>
      * When the device was created.
      * </p>
      */
@@ -64,6 +70,65 @@ public class Device implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String provisioningStatus;
+
+    /**
+     * <p>
+     * The device's maker.
+     * </p>
+     * 
+     * @param brand
+     *        The device's maker.
+     * @see DeviceBrand
+     */
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    /**
+     * <p>
+     * The device's maker.
+     * </p>
+     * 
+     * @return The device's maker.
+     * @see DeviceBrand
+     */
+
+    public String getBrand() {
+        return this.brand;
+    }
+
+    /**
+     * <p>
+     * The device's maker.
+     * </p>
+     * 
+     * @param brand
+     *        The device's maker.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DeviceBrand
+     */
+
+    public Device withBrand(String brand) {
+        setBrand(brand);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The device's maker.
+     * </p>
+     * 
+     * @param brand
+     *        The device's maker.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DeviceBrand
+     */
+
+    public Device withBrand(DeviceBrand brand) {
+        this.brand = brand.toString();
+        return this;
+    }
 
     /**
      * <p>
@@ -336,6 +401,8 @@ public class Device implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getBrand() != null)
+            sb.append("Brand: ").append(getBrand()).append(",");
         if (getCreatedTime() != null)
             sb.append("CreatedTime: ").append(getCreatedTime()).append(",");
         if (getDeviceId() != null)
@@ -362,6 +429,10 @@ public class Device implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof Device == false)
             return false;
         Device other = (Device) obj;
+        if (other.getBrand() == null ^ this.getBrand() == null)
+            return false;
+        if (other.getBrand() != null && other.getBrand().equals(this.getBrand()) == false)
+            return false;
         if (other.getCreatedTime() == null ^ this.getCreatedTime() == null)
             return false;
         if (other.getCreatedTime() != null && other.getCreatedTime().equals(this.getCreatedTime()) == false)
@@ -394,6 +465,7 @@ public class Device implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getBrand() == null) ? 0 : getBrand().hashCode());
         hashCode = prime * hashCode + ((getCreatedTime() == null) ? 0 : getCreatedTime().hashCode());
         hashCode = prime * hashCode + ((getDeviceId() == null) ? 0 : getDeviceId().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedTime() == null) ? 0 : getLastUpdatedTime().hashCode());

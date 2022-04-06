@@ -96,6 +96,12 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * </p>
      */
     private SlackConfiguration slackConfiguration;
+    /**
+     * <p>
+     * Provides the configuration information to connect to Box as your data source.
+     * </p>
+     */
+    private BoxConfiguration boxConfiguration;
 
     /**
      * <p>
@@ -564,6 +570,46 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Provides the configuration information to connect to Box as your data source.
+     * </p>
+     * 
+     * @param boxConfiguration
+     *        Provides the configuration information to connect to Box as your data source.
+     */
+
+    public void setBoxConfiguration(BoxConfiguration boxConfiguration) {
+        this.boxConfiguration = boxConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides the configuration information to connect to Box as your data source.
+     * </p>
+     * 
+     * @return Provides the configuration information to connect to Box as your data source.
+     */
+
+    public BoxConfiguration getBoxConfiguration() {
+        return this.boxConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides the configuration information to connect to Box as your data source.
+     * </p>
+     * 
+     * @param boxConfiguration
+     *        Provides the configuration information to connect to Box as your data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataSourceConfiguration withBoxConfiguration(BoxConfiguration boxConfiguration) {
+        setBoxConfiguration(boxConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -598,7 +644,9 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
         if (getFsxConfiguration() != null)
             sb.append("FsxConfiguration: ").append(getFsxConfiguration()).append(",");
         if (getSlackConfiguration() != null)
-            sb.append("SlackConfiguration: ").append(getSlackConfiguration());
+            sb.append("SlackConfiguration: ").append(getSlackConfiguration()).append(",");
+        if (getBoxConfiguration() != null)
+            sb.append("BoxConfiguration: ").append(getBoxConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -661,6 +709,10 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
             return false;
         if (other.getSlackConfiguration() != null && other.getSlackConfiguration().equals(this.getSlackConfiguration()) == false)
             return false;
+        if (other.getBoxConfiguration() == null ^ this.getBoxConfiguration() == null)
+            return false;
+        if (other.getBoxConfiguration() != null && other.getBoxConfiguration().equals(this.getBoxConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -681,6 +733,7 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getWorkDocsConfiguration() == null) ? 0 : getWorkDocsConfiguration().hashCode());
         hashCode = prime * hashCode + ((getFsxConfiguration() == null) ? 0 : getFsxConfiguration().hashCode());
         hashCode = prime * hashCode + ((getSlackConfiguration() == null) ? 0 : getSlackConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getBoxConfiguration() == null) ? 0 : getBoxConfiguration().hashCode());
         return hashCode;
     }
 

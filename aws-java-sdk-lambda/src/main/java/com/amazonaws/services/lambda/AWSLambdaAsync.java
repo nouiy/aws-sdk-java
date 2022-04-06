@@ -717,6 +717,39 @@ public interface AWSLambdaAsync extends AWSLambda {
 
     /**
      * <p>
+     * Creates a Lambda function URL with the specified configuration parameters. A function URL is a dedicated HTTP(S)
+     * endpoint that you can use to invoke your function.
+     * </p>
+     * 
+     * @param createFunctionUrlConfigRequest
+     * @return A Java Future containing the result of the CreateFunctionUrlConfig operation returned by the service.
+     * @sample AWSLambdaAsync.CreateFunctionUrlConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/CreateFunctionUrlConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateFunctionUrlConfigResult> createFunctionUrlConfigAsync(CreateFunctionUrlConfigRequest createFunctionUrlConfigRequest);
+
+    /**
+     * <p>
+     * Creates a Lambda function URL with the specified configuration parameters. A function URL is a dedicated HTTP(S)
+     * endpoint that you can use to invoke your function.
+     * </p>
+     * 
+     * @param createFunctionUrlConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateFunctionUrlConfig operation returned by the service.
+     * @sample AWSLambdaAsyncHandler.CreateFunctionUrlConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/CreateFunctionUrlConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateFunctionUrlConfigResult> createFunctionUrlConfigAsync(CreateFunctionUrlConfigRequest createFunctionUrlConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateFunctionUrlConfigRequest, CreateFunctionUrlConfigResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a Lambda function <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">alias</a>.
      * </p>
@@ -973,6 +1006,39 @@ public interface AWSLambdaAsync extends AWSLambda {
     java.util.concurrent.Future<DeleteFunctionEventInvokeConfigResult> deleteFunctionEventInvokeConfigAsync(
             DeleteFunctionEventInvokeConfigRequest deleteFunctionEventInvokeConfigRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteFunctionEventInvokeConfigRequest, DeleteFunctionEventInvokeConfigResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a Lambda function URL. When you delete a function URL, you can't recover it. Creating a new function URL
+     * results in a different URL address.
+     * </p>
+     * 
+     * @param deleteFunctionUrlConfigRequest
+     * @return A Java Future containing the result of the DeleteFunctionUrlConfig operation returned by the service.
+     * @sample AWSLambdaAsync.DeleteFunctionUrlConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/DeleteFunctionUrlConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteFunctionUrlConfigResult> deleteFunctionUrlConfigAsync(DeleteFunctionUrlConfigRequest deleteFunctionUrlConfigRequest);
+
+    /**
+     * <p>
+     * Deletes a Lambda function URL. When you delete a function URL, you can't recover it. Creating a new function URL
+     * results in a different URL address.
+     * </p>
+     * 
+     * @param deleteFunctionUrlConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteFunctionUrlConfig operation returned by the service.
+     * @sample AWSLambdaAsyncHandler.DeleteFunctionUrlConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/DeleteFunctionUrlConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteFunctionUrlConfigResult> deleteFunctionUrlConfigAsync(DeleteFunctionUrlConfigRequest deleteFunctionUrlConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteFunctionUrlConfigRequest, DeleteFunctionUrlConfigResult> asyncHandler);
 
     /**
      * <p>
@@ -1358,6 +1424,37 @@ public interface AWSLambdaAsync extends AWSLambda {
     java.util.concurrent.Future<GetFunctionEventInvokeConfigResult> getFunctionEventInvokeConfigAsync(
             GetFunctionEventInvokeConfigRequest getFunctionEventInvokeConfigRequest,
             com.amazonaws.handlers.AsyncHandler<GetFunctionEventInvokeConfigRequest, GetFunctionEventInvokeConfigResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns details about a Lambda function URL.
+     * </p>
+     * 
+     * @param getFunctionUrlConfigRequest
+     * @return A Java Future containing the result of the GetFunctionUrlConfig operation returned by the service.
+     * @sample AWSLambdaAsync.GetFunctionUrlConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetFunctionUrlConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetFunctionUrlConfigResult> getFunctionUrlConfigAsync(GetFunctionUrlConfigRequest getFunctionUrlConfigRequest);
+
+    /**
+     * <p>
+     * Returns details about a Lambda function URL.
+     * </p>
+     * 
+     * @param getFunctionUrlConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetFunctionUrlConfig operation returned by the service.
+     * @sample AWSLambdaAsyncHandler.GetFunctionUrlConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetFunctionUrlConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetFunctionUrlConfigResult> getFunctionUrlConfigAsync(GetFunctionUrlConfigRequest getFunctionUrlConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<GetFunctionUrlConfigRequest, GetFunctionUrlConfigResult> asyncHandler);
 
     /**
      * <p>
@@ -1842,6 +1939,37 @@ public interface AWSLambdaAsync extends AWSLambda {
     java.util.concurrent.Future<ListFunctionEventInvokeConfigsResult> listFunctionEventInvokeConfigsAsync(
             ListFunctionEventInvokeConfigsRequest listFunctionEventInvokeConfigsRequest,
             com.amazonaws.handlers.AsyncHandler<ListFunctionEventInvokeConfigsRequest, ListFunctionEventInvokeConfigsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of Lambda function URLs for the specified function.
+     * </p>
+     * 
+     * @param listFunctionUrlConfigsRequest
+     * @return A Java Future containing the result of the ListFunctionUrlConfigs operation returned by the service.
+     * @sample AWSLambdaAsync.ListFunctionUrlConfigs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/ListFunctionUrlConfigs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListFunctionUrlConfigsResult> listFunctionUrlConfigsAsync(ListFunctionUrlConfigsRequest listFunctionUrlConfigsRequest);
+
+    /**
+     * <p>
+     * Returns a list of Lambda function URLs for the specified function.
+     * </p>
+     * 
+     * @param listFunctionUrlConfigsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListFunctionUrlConfigs operation returned by the service.
+     * @sample AWSLambdaAsyncHandler.ListFunctionUrlConfigs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/ListFunctionUrlConfigs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListFunctionUrlConfigsResult> listFunctionUrlConfigsAsync(ListFunctionUrlConfigsRequest listFunctionUrlConfigsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListFunctionUrlConfigsRequest, ListFunctionUrlConfigsResult> asyncHandler);
 
     /**
      * <p>
@@ -3058,5 +3186,36 @@ public interface AWSLambdaAsync extends AWSLambda {
     java.util.concurrent.Future<UpdateFunctionEventInvokeConfigResult> updateFunctionEventInvokeConfigAsync(
             UpdateFunctionEventInvokeConfigRequest updateFunctionEventInvokeConfigRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateFunctionEventInvokeConfigRequest, UpdateFunctionEventInvokeConfigResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the configuration for a Lambda function URL.
+     * </p>
+     * 
+     * @param updateFunctionUrlConfigRequest
+     * @return A Java Future containing the result of the UpdateFunctionUrlConfig operation returned by the service.
+     * @sample AWSLambdaAsync.UpdateFunctionUrlConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/UpdateFunctionUrlConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFunctionUrlConfigResult> updateFunctionUrlConfigAsync(UpdateFunctionUrlConfigRequest updateFunctionUrlConfigRequest);
+
+    /**
+     * <p>
+     * Updates the configuration for a Lambda function URL.
+     * </p>
+     * 
+     * @param updateFunctionUrlConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateFunctionUrlConfig operation returned by the service.
+     * @sample AWSLambdaAsyncHandler.UpdateFunctionUrlConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/UpdateFunctionUrlConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFunctionUrlConfigResult> updateFunctionUrlConfigAsync(UpdateFunctionUrlConfigRequest updateFunctionUrlConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateFunctionUrlConfigRequest, UpdateFunctionUrlConfigResult> asyncHandler);
 
 }

@@ -968,7 +968,7 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
-     * Describes an existing Amazon Kendra index
+     * Describes an existing Amazon Kendra index.
      * </p>
      * 
      * @param describeIndexRequest
@@ -981,7 +981,7 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
-     * Describes an existing Amazon Kendra index
+     * Describes an existing Amazon Kendra index.
      * </p>
      * 
      * @param describeIndexRequest
@@ -1572,7 +1572,7 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
-     * Lists the Amazon Kendra indexes that you have created.
+     * Lists the Amazon Kendra indexes that you created.
      * </p>
      * 
      * @param listIndicesRequest
@@ -1585,7 +1585,7 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
-     * Lists the Amazon Kendra indexes that you have created.
+     * Lists the Amazon Kendra indexes that you created.
      * </p>
      * 
      * @param listIndicesRequest

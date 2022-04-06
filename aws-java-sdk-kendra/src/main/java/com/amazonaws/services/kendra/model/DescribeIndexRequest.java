@@ -27,18 +27,18 @@ public class DescribeIndexRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the index to describe.
+     * The identifier of the index to describe.
      * </p>
      */
     private String id;
 
     /**
      * <p>
-     * The name of the index to describe.
+     * The identifier of the index to describe.
      * </p>
      * 
      * @param id
-     *        The name of the index to describe.
+     *        The identifier of the index to describe.
      */
 
     public void setId(String id) {
@@ -47,10 +47,10 @@ public class DescribeIndexRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the index to describe.
+     * The identifier of the index to describe.
      * </p>
      * 
-     * @return The name of the index to describe.
+     * @return The identifier of the index to describe.
      */
 
     public String getId() {
@@ -59,11 +59,11 @@ public class DescribeIndexRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the index to describe.
+     * The identifier of the index to describe.
      * </p>
      * 
      * @param id
-     *        The name of the index to describe.
+     *        The identifier of the index to describe.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
