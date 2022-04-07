@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides a summary of the properties of a dataset. For a complete listing, call the <a>DescribeDataset</a> API.
+ * Provides a summary of the properties of a dataset. For a complete listing, call the <a
+ * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeDataset.html">DescribeDataset</a> API.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DatasetSummary" target="_top">AWS API

@@ -159,8 +159,8 @@ public class DBInstance implements Serializable, Cloneable {
     private String kmsKeyId;
     /**
      * <p>
-     * The Region-unique, immutable identifier for the instance. This identifier is found in CloudTrail log entries
-     * whenever the KMS key for the instance is accessed.
+     * The Amazon Web Services Region-unique, immutable identifier for the instance. This identifier is found in
+     * CloudTrail log entries whenever the KMS key for the instance is accessed.
      * </p>
      */
     private String dbiResourceId;
@@ -1171,13 +1171,13 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Region-unique, immutable identifier for the instance. This identifier is found in CloudTrail log entries
-     * whenever the KMS key for the instance is accessed.
+     * The Amazon Web Services Region-unique, immutable identifier for the instance. This identifier is found in
+     * CloudTrail log entries whenever the KMS key for the instance is accessed.
      * </p>
      * 
      * @param dbiResourceId
-     *        The Region-unique, immutable identifier for the instance. This identifier is found in CloudTrail log
-     *        entries whenever the KMS key for the instance is accessed.
+     *        The Amazon Web Services Region-unique, immutable identifier for the instance. This identifier is found in
+     *        CloudTrail log entries whenever the KMS key for the instance is accessed.
      */
 
     public void setDbiResourceId(String dbiResourceId) {
@@ -1186,12 +1186,12 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Region-unique, immutable identifier for the instance. This identifier is found in CloudTrail log entries
-     * whenever the KMS key for the instance is accessed.
+     * The Amazon Web Services Region-unique, immutable identifier for the instance. This identifier is found in
+     * CloudTrail log entries whenever the KMS key for the instance is accessed.
      * </p>
      * 
-     * @return The Region-unique, immutable identifier for the instance. This identifier is found in CloudTrail log
-     *         entries whenever the KMS key for the instance is accessed.
+     * @return The Amazon Web Services Region-unique, immutable identifier for the instance. This identifier is found in
+     *         CloudTrail log entries whenever the KMS key for the instance is accessed.
      */
 
     public String getDbiResourceId() {
@@ -1200,13 +1200,13 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Region-unique, immutable identifier for the instance. This identifier is found in CloudTrail log entries
-     * whenever the KMS key for the instance is accessed.
+     * The Amazon Web Services Region-unique, immutable identifier for the instance. This identifier is found in
+     * CloudTrail log entries whenever the KMS key for the instance is accessed.
      * </p>
      * 
      * @param dbiResourceId
-     *        The Region-unique, immutable identifier for the instance. This identifier is found in CloudTrail log
-     *        entries whenever the KMS key for the instance is accessed.
+     *        The Amazon Web Services Region-unique, immutable identifier for the instance. This identifier is found in
+     *        CloudTrail log entries whenever the KMS key for the instance is accessed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

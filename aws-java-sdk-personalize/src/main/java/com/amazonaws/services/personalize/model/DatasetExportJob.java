@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes a job that exports a dataset to an Amazon S3 bucket. For more information, see
- * <a>CreateDatasetExportJob</a>.
+ * Describes a job that exports a dataset to an Amazon S3 bucket. For more information, see <a
+ * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetExportJob.html">CreateDatasetExportJob</a>.
  * </p>
  * <p>
  * A dataset export job can be in one of the following states:

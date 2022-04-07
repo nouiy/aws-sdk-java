@@ -47,7 +47,7 @@ public class ListRecipesRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Filters returned recipes by domain for a Domain dataset group. Only recipes (Domain dataset group use cases) for
-     * this domain are included in the response. If you don't specify a domain, only non-domain recipes are returned.
+     * this domain are included in the response. If you don't specify a domain, all recipes are returned.
      * </p>
      */
     private String domain;
@@ -200,13 +200,13 @@ public class ListRecipesRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Filters returned recipes by domain for a Domain dataset group. Only recipes (Domain dataset group use cases) for
-     * this domain are included in the response. If you don't specify a domain, only non-domain recipes are returned.
+     * this domain are included in the response. If you don't specify a domain, all recipes are returned.
      * </p>
      * 
      * @param domain
      *        Filters returned recipes by domain for a Domain dataset group. Only recipes (Domain dataset group use
-     *        cases) for this domain are included in the response. If you don't specify a domain, only non-domain
-     *        recipes are returned.
+     *        cases) for this domain are included in the response. If you don't specify a domain, all recipes are
+     *        returned.
      * @see Domain
      */
 
@@ -217,12 +217,12 @@ public class ListRecipesRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Filters returned recipes by domain for a Domain dataset group. Only recipes (Domain dataset group use cases) for
-     * this domain are included in the response. If you don't specify a domain, only non-domain recipes are returned.
+     * this domain are included in the response. If you don't specify a domain, all recipes are returned.
      * </p>
      * 
      * @return Filters returned recipes by domain for a Domain dataset group. Only recipes (Domain dataset group use
-     *         cases) for this domain are included in the response. If you don't specify a domain, only non-domain
-     *         recipes are returned.
+     *         cases) for this domain are included in the response. If you don't specify a domain, all recipes are
+     *         returned.
      * @see Domain
      */
 
@@ -233,13 +233,13 @@ public class ListRecipesRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Filters returned recipes by domain for a Domain dataset group. Only recipes (Domain dataset group use cases) for
-     * this domain are included in the response. If you don't specify a domain, only non-domain recipes are returned.
+     * this domain are included in the response. If you don't specify a domain, all recipes are returned.
      * </p>
      * 
      * @param domain
      *        Filters returned recipes by domain for a Domain dataset group. Only recipes (Domain dataset group use
-     *        cases) for this domain are included in the response. If you don't specify a domain, only non-domain
-     *        recipes are returned.
+     *        cases) for this domain are included in the response. If you don't specify a domain, all recipes are
+     *        returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Domain
      */
@@ -252,13 +252,13 @@ public class ListRecipesRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Filters returned recipes by domain for a Domain dataset group. Only recipes (Domain dataset group use cases) for
-     * this domain are included in the response. If you don't specify a domain, only non-domain recipes are returned.
+     * this domain are included in the response. If you don't specify a domain, all recipes are returned.
      * </p>
      * 
      * @param domain
      *        Filters returned recipes by domain for a Domain dataset group. Only recipes (Domain dataset group use
-     *        cases) for this domain are included in the response. If you don't specify a domain, only non-domain
-     *        recipes are returned.
+     *        cases) for this domain are included in the response. If you don't specify a domain, all recipes are
+     *        returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Domain
      */

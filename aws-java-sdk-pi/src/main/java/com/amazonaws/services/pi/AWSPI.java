@@ -46,15 +46,22 @@ import com.amazonaws.services.pi.model.*;
  * <ul>
  * <li>
  * <p>
- * To learn more about Performance Insights and Amazon Aurora DB instances, go to the <a
+ * To learn more about Performance Insights and Amazon Aurora DB instances, go to the <i> <a
  * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html"> Amazon Aurora User
- * Guide</a>.
+ * Guide</a> </i>.
  * </p>
  * </li>
  * <li>
  * <p>
- * To learn more about Performance Insights and Amazon RDS DB instances, go to the <a
- * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html"> Amazon RDS User Guide</a>.
+ * To learn more about Performance Insights and Amazon RDS DB instances, go to the <i> <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html"> Amazon RDS User Guide</a> </i>.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * To learn more about Performance Insights and Amazon DocumentDB clusters, go to the <i> <a
+ * href="https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html"> Amazon DocumentDB
+ * Developer Guide</a> </i>.
  * </p>
  * </li>
  * </ul>
@@ -99,7 +106,7 @@ public interface AWSPI {
      * <p>
      * Get the attributes of the specified dimension group for a DB instance or data source. For example, if you specify
      * a SQL ID, <code>GetDimensionKeyDetails</code> retrieves the full text of the dimension
-     * <code>db.sql.statement</code>cassociated with this ID. This operation is useful because
+     * <code>db.sql.statement</code> associated with this ID. This operation is useful because
      * <code>GetResourceMetrics</code> and <code>DescribeDimensionKeys</code> don't support retrieval of large SQL
      * statement text.
      * </p>
@@ -140,7 +147,7 @@ public interface AWSPI {
 
     /**
      * <p>
-     * Retrieve Performance Insights metrics for a set of data sources, over a time period. You can provide specific
+     * Retrieve Performance Insights metrics for a set of data sources over a time period. You can provide specific
      * dimension groups and dimensions, and provide aggregation and filtering criteria for each group.
      * </p>
      * <note>

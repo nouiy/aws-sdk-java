@@ -50,6 +50,13 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private CampaignConfig campaignConfig;
+    /**
+     * <p>
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
+     * to the campaign.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
@@ -218,6 +225,84 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
+     * to the campaign.
+     * </p>
+     * 
+     * @return A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to
+     *         apply to the campaign.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
+     * to the campaign.
+     * </p>
+     * 
+     * @param tags
+     *        A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to
+     *        apply to the campaign.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
+     * to the campaign.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to
+     *        apply to the campaign.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateCampaignRequest withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
+     * to the campaign.
+     * </p>
+     * 
+     * @param tags
+     *        A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to
+     *        apply to the campaign.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateCampaignRequest withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -236,7 +321,9 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getMinProvisionedTPS() != null)
             sb.append("MinProvisionedTPS: ").append(getMinProvisionedTPS()).append(",");
         if (getCampaignConfig() != null)
-            sb.append("CampaignConfig: ").append(getCampaignConfig());
+            sb.append("CampaignConfig: ").append(getCampaignConfig()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -267,6 +354,10 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getCampaignConfig() != null && other.getCampaignConfig().equals(this.getCampaignConfig()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -279,6 +370,7 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getSolutionVersionArn() == null) ? 0 : getSolutionVersionArn().hashCode());
         hashCode = prime * hashCode + ((getMinProvisionedTPS() == null) ? 0 : getMinProvisionedTPS().hashCode());
         hashCode = prime * hashCode + ((getCampaignConfig() == null) ? 0 : getCampaignConfig().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

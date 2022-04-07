@@ -27,19 +27,31 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
-     * <i>ServiceType</i> is <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights returns metrics. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RDS</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DOCDB</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private String serviceType;
     /**
      * <p>
-     * An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
-     * metrics from this data source.
+     * An immutable identifier for a data source that is unique for an Amazon Web Services Region. Performance Insights
+     * gathers metrics from this data source. In the console, the identifier is shown as <i>ResourceID</i>. When you
+     * call <code>DescribeDBInstances</code>, the identifier is returned as <code>DbiResourceId</code>.
      * </p>
      * <p>
      * To use a DB instance as a data source, specify its <code>DbiResourceId</code> value. For example, specify
-     * <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>.
+     * <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
      * </p>
      */
     private String identifier;
@@ -52,9 +64,10 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
     private java.util.List<MetricQuery> metricQueries;
     /**
      * <p>
-     * The date and time specifying the beginning of the requested time series data. You can't specify a
-     * <code>StartTime</code> that's earlier than 7 days ago. The value specified is <i>inclusive</i> - data points
-     * equal to or greater than <code>StartTime</code> will be returned.
+     * The date and time specifying the beginning of the requested time series query range. You can't specify a
+     * <code>StartTime</code> that is earlier than 7 days ago. By default, Performance Insights has 7 days of retention,
+     * but you can extend this range up to 2 years. The value specified is <i>inclusive</i>. Thus, the command returns
+     * data points equal to or greater than <code>StartTime</code>.
      * </p>
      * <p>
      * The value for <code>StartTime</code> must be earlier than the value for <code>EndTime</code>.
@@ -63,8 +76,8 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
     private java.util.Date startTime;
     /**
      * <p>
-     * The date and time specifying the end of the requested time series data. The value specified is <i>exclusive</i> -
-     * data points less than (but not equal to) <code>EndTime</code> will be returned.
+     * The date and time specifying the end of the requested time series query range. The value specified is
+     * <i>exclusive</i>. Thus, the command returns data points less than (but not equal to) <code>EndTime</code>.
      * </p>
      * <p>
      * The value for <code>EndTime</code> must be later than the value for <code>StartTime</code>.
@@ -127,13 +140,35 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
-     * <i>ServiceType</i> is <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights returns metrics. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RDS</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DOCDB</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param serviceType
-     *        The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
-     *        <i>ServiceType</i> is <code>RDS</code>.
+     *        The Amazon Web Services service for which Performance Insights returns metrics. Valid values are as
+     *        follows:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>RDS</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DOCDB</code>
+     *        </p>
+     *        </li>
      * @see ServiceType
      */
 
@@ -143,12 +178,34 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
-     * <i>ServiceType</i> is <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights returns metrics. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RDS</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DOCDB</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
-     *         <i>ServiceType</i> is <code>RDS</code>.
+     * @return The Amazon Web Services service for which Performance Insights returns metrics. Valid values are as
+     *         follows:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>RDS</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>DOCDB</code>
+     *         </p>
+     *         </li>
      * @see ServiceType
      */
 
@@ -158,13 +215,35 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
-     * <i>ServiceType</i> is <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights returns metrics. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RDS</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DOCDB</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param serviceType
-     *        The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
-     *        <i>ServiceType</i> is <code>RDS</code>.
+     *        The Amazon Web Services service for which Performance Insights returns metrics. Valid values are as
+     *        follows:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>RDS</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DOCDB</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceType
      */
@@ -176,13 +255,35 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
-     * <i>ServiceType</i> is <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights returns metrics. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RDS</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DOCDB</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param serviceType
-     *        The Amazon Web Services service for which Performance Insights returns metrics. The only valid value for
-     *        <i>ServiceType</i> is <code>RDS</code>.
+     *        The Amazon Web Services service for which Performance Insights returns metrics. Valid values are as
+     *        follows:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>RDS</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DOCDB</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceType
      */
@@ -194,20 +295,23 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
-     * metrics from this data source.
+     * An immutable identifier for a data source that is unique for an Amazon Web Services Region. Performance Insights
+     * gathers metrics from this data source. In the console, the identifier is shown as <i>ResourceID</i>. When you
+     * call <code>DescribeDBInstances</code>, the identifier is returned as <code>DbiResourceId</code>.
      * </p>
      * <p>
      * To use a DB instance as a data source, specify its <code>DbiResourceId</code> value. For example, specify
-     * <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>.
+     * <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
      * </p>
      * 
      * @param identifier
-     *        An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
-     *        metrics from this data source.</p>
+     *        An immutable identifier for a data source that is unique for an Amazon Web Services Region. Performance
+     *        Insights gathers metrics from this data source. In the console, the identifier is shown as
+     *        <i>ResourceID</i>. When you call <code>DescribeDBInstances</code>, the identifier is returned as
+     *        <code>DbiResourceId</code>.</p>
      *        <p>
      *        To use a DB instance as a data source, specify its <code>DbiResourceId</code> value. For example, specify
-     *        <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>.
+     *        <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
      */
 
     public void setIdentifier(String identifier) {
@@ -216,19 +320,22 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
-     * metrics from this data source.
+     * An immutable identifier for a data source that is unique for an Amazon Web Services Region. Performance Insights
+     * gathers metrics from this data source. In the console, the identifier is shown as <i>ResourceID</i>. When you
+     * call <code>DescribeDBInstances</code>, the identifier is returned as <code>DbiResourceId</code>.
      * </p>
      * <p>
      * To use a DB instance as a data source, specify its <code>DbiResourceId</code> value. For example, specify
-     * <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>.
+     * <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
      * </p>
      * 
-     * @return An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights
-     *         gathers metrics from this data source.</p>
+     * @return An immutable identifier for a data source that is unique for an Amazon Web Services Region. Performance
+     *         Insights gathers metrics from this data source. In the console, the identifier is shown as
+     *         <i>ResourceID</i>. When you call <code>DescribeDBInstances</code>, the identifier is returned as
+     *         <code>DbiResourceId</code>.</p>
      *         <p>
      *         To use a DB instance as a data source, specify its <code>DbiResourceId</code> value. For example, specify
-     *         <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>.
+     *         <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
      */
 
     public String getIdentifier() {
@@ -237,20 +344,23 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
-     * metrics from this data source.
+     * An immutable identifier for a data source that is unique for an Amazon Web Services Region. Performance Insights
+     * gathers metrics from this data source. In the console, the identifier is shown as <i>ResourceID</i>. When you
+     * call <code>DescribeDBInstances</code>, the identifier is returned as <code>DbiResourceId</code>.
      * </p>
      * <p>
      * To use a DB instance as a data source, specify its <code>DbiResourceId</code> value. For example, specify
-     * <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>.
+     * <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
      * </p>
      * 
      * @param identifier
-     *        An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
-     *        metrics from this data source.</p>
+     *        An immutable identifier for a data source that is unique for an Amazon Web Services Region. Performance
+     *        Insights gathers metrics from this data source. In the console, the identifier is shown as
+     *        <i>ResourceID</i>. When you call <code>DescribeDBInstances</code>, the identifier is returned as
+     *        <code>DbiResourceId</code>.</p>
      *        <p>
      *        To use a DB instance as a data source, specify its <code>DbiResourceId</code> value. For example, specify
-     *        <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>.
+     *        <code>db-ABCDEFGHIJKLMNOPQRSTU1VW2X</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -339,18 +449,20 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The date and time specifying the beginning of the requested time series data. You can't specify a
-     * <code>StartTime</code> that's earlier than 7 days ago. The value specified is <i>inclusive</i> - data points
-     * equal to or greater than <code>StartTime</code> will be returned.
+     * The date and time specifying the beginning of the requested time series query range. You can't specify a
+     * <code>StartTime</code> that is earlier than 7 days ago. By default, Performance Insights has 7 days of retention,
+     * but you can extend this range up to 2 years. The value specified is <i>inclusive</i>. Thus, the command returns
+     * data points equal to or greater than <code>StartTime</code>.
      * </p>
      * <p>
      * The value for <code>StartTime</code> must be earlier than the value for <code>EndTime</code>.
      * </p>
      * 
      * @param startTime
-     *        The date and time specifying the beginning of the requested time series data. You can't specify a
-     *        <code>StartTime</code> that's earlier than 7 days ago. The value specified is <i>inclusive</i> - data
-     *        points equal to or greater than <code>StartTime</code> will be returned.</p>
+     *        The date and time specifying the beginning of the requested time series query range. You can't specify a
+     *        <code>StartTime</code> that is earlier than 7 days ago. By default, Performance Insights has 7 days of
+     *        retention, but you can extend this range up to 2 years. The value specified is <i>inclusive</i>. Thus, the
+     *        command returns data points equal to or greater than <code>StartTime</code>.</p>
      *        <p>
      *        The value for <code>StartTime</code> must be earlier than the value for <code>EndTime</code>.
      */
@@ -361,17 +473,19 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The date and time specifying the beginning of the requested time series data. You can't specify a
-     * <code>StartTime</code> that's earlier than 7 days ago. The value specified is <i>inclusive</i> - data points
-     * equal to or greater than <code>StartTime</code> will be returned.
+     * The date and time specifying the beginning of the requested time series query range. You can't specify a
+     * <code>StartTime</code> that is earlier than 7 days ago. By default, Performance Insights has 7 days of retention,
+     * but you can extend this range up to 2 years. The value specified is <i>inclusive</i>. Thus, the command returns
+     * data points equal to or greater than <code>StartTime</code>.
      * </p>
      * <p>
      * The value for <code>StartTime</code> must be earlier than the value for <code>EndTime</code>.
      * </p>
      * 
-     * @return The date and time specifying the beginning of the requested time series data. You can't specify a
-     *         <code>StartTime</code> that's earlier than 7 days ago. The value specified is <i>inclusive</i> - data
-     *         points equal to or greater than <code>StartTime</code> will be returned.</p>
+     * @return The date and time specifying the beginning of the requested time series query range. You can't specify a
+     *         <code>StartTime</code> that is earlier than 7 days ago. By default, Performance Insights has 7 days of
+     *         retention, but you can extend this range up to 2 years. The value specified is <i>inclusive</i>. Thus,
+     *         the command returns data points equal to or greater than <code>StartTime</code>.</p>
      *         <p>
      *         The value for <code>StartTime</code> must be earlier than the value for <code>EndTime</code>.
      */
@@ -382,18 +496,20 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The date and time specifying the beginning of the requested time series data. You can't specify a
-     * <code>StartTime</code> that's earlier than 7 days ago. The value specified is <i>inclusive</i> - data points
-     * equal to or greater than <code>StartTime</code> will be returned.
+     * The date and time specifying the beginning of the requested time series query range. You can't specify a
+     * <code>StartTime</code> that is earlier than 7 days ago. By default, Performance Insights has 7 days of retention,
+     * but you can extend this range up to 2 years. The value specified is <i>inclusive</i>. Thus, the command returns
+     * data points equal to or greater than <code>StartTime</code>.
      * </p>
      * <p>
      * The value for <code>StartTime</code> must be earlier than the value for <code>EndTime</code>.
      * </p>
      * 
      * @param startTime
-     *        The date and time specifying the beginning of the requested time series data. You can't specify a
-     *        <code>StartTime</code> that's earlier than 7 days ago. The value specified is <i>inclusive</i> - data
-     *        points equal to or greater than <code>StartTime</code> will be returned.</p>
+     *        The date and time specifying the beginning of the requested time series query range. You can't specify a
+     *        <code>StartTime</code> that is earlier than 7 days ago. By default, Performance Insights has 7 days of
+     *        retention, but you can extend this range up to 2 years. The value specified is <i>inclusive</i>. Thus, the
+     *        command returns data points equal to or greater than <code>StartTime</code>.</p>
      *        <p>
      *        The value for <code>StartTime</code> must be earlier than the value for <code>EndTime</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -406,16 +522,17 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The date and time specifying the end of the requested time series data. The value specified is <i>exclusive</i> -
-     * data points less than (but not equal to) <code>EndTime</code> will be returned.
+     * The date and time specifying the end of the requested time series query range. The value specified is
+     * <i>exclusive</i>. Thus, the command returns data points less than (but not equal to) <code>EndTime</code>.
      * </p>
      * <p>
      * The value for <code>EndTime</code> must be later than the value for <code>StartTime</code>.
      * </p>
      * 
      * @param endTime
-     *        The date and time specifying the end of the requested time series data. The value specified is
-     *        <i>exclusive</i> - data points less than (but not equal to) <code>EndTime</code> will be returned.</p>
+     *        The date and time specifying the end of the requested time series query range. The value specified is
+     *        <i>exclusive</i>. Thus, the command returns data points less than (but not equal to) <code>EndTime</code>
+     *        .</p>
      *        <p>
      *        The value for <code>EndTime</code> must be later than the value for <code>StartTime</code>.
      */
@@ -426,15 +543,16 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The date and time specifying the end of the requested time series data. The value specified is <i>exclusive</i> -
-     * data points less than (but not equal to) <code>EndTime</code> will be returned.
+     * The date and time specifying the end of the requested time series query range. The value specified is
+     * <i>exclusive</i>. Thus, the command returns data points less than (but not equal to) <code>EndTime</code>.
      * </p>
      * <p>
      * The value for <code>EndTime</code> must be later than the value for <code>StartTime</code>.
      * </p>
      * 
-     * @return The date and time specifying the end of the requested time series data. The value specified is
-     *         <i>exclusive</i> - data points less than (but not equal to) <code>EndTime</code> will be returned.</p>
+     * @return The date and time specifying the end of the requested time series query range. The value specified is
+     *         <i>exclusive</i>. Thus, the command returns data points less than (but not equal to) <code>EndTime</code>
+     *         .</p>
      *         <p>
      *         The value for <code>EndTime</code> must be later than the value for <code>StartTime</code>.
      */
@@ -445,16 +563,17 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The date and time specifying the end of the requested time series data. The value specified is <i>exclusive</i> -
-     * data points less than (but not equal to) <code>EndTime</code> will be returned.
+     * The date and time specifying the end of the requested time series query range. The value specified is
+     * <i>exclusive</i>. Thus, the command returns data points less than (but not equal to) <code>EndTime</code>.
      * </p>
      * <p>
      * The value for <code>EndTime</code> must be later than the value for <code>StartTime</code>.
      * </p>
      * 
      * @param endTime
-     *        The date and time specifying the end of the requested time series data. The value specified is
-     *        <i>exclusive</i> - data points less than (but not equal to) <code>EndTime</code> will be returned.</p>
+     *        The date and time specifying the end of the requested time series query range. The value specified is
+     *        <i>exclusive</i>. Thus, the command returns data points less than (but not equal to) <code>EndTime</code>
+     *        .</p>
      *        <p>
      *        The value for <code>EndTime</code> must be later than the value for <code>StartTime</code>.
      * @return Returns a reference to this object so that method calls can be chained together.

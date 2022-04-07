@@ -20,7 +20,8 @@ import javax.annotation.Generated;
  * Contains the name and values of a manual cluster snapshot attribute.
  * </p>
  * <p>
- * Manual cluster snapshot attributes are used to authorize other accounts to restore a manual cluster snapshot.
+ * Manual cluster snapshot attributes are used to authorize other Amazon Web Services accounts to restore a manual
+ * cluster snapshot.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/docdb-2014-10-31/DBClusterSnapshotAttribute" target="_top">AWS
@@ -34,8 +35,8 @@ public class DBClusterSnapshotAttribute implements Serializable, Cloneable {
      * The name of the manual cluster snapshot attribute.
      * </p>
      * <p>
-     * The attribute named <code>restore</code> refers to the list of accounts that have permission to copy or restore
-     * the manual cluster snapshot.
+     * The attribute named <code>restore</code> refers to the list of Amazon Web Services accounts that have permission
+     * to copy or restore the manual cluster snapshot.
      * </p>
      */
     private String attributeName;
@@ -45,9 +46,9 @@ public class DBClusterSnapshotAttribute implements Serializable, Cloneable {
      * </p>
      * <p>
      * If the <code>AttributeName</code> field is set to <code>restore</code>, then this element returns a list of IDs
-     * of the accounts that are authorized to copy or restore the manual cluster snapshot. If a value of
-     * <code>all</code> is in the list, then the manual cluster snapshot is public and available for any account to copy
-     * or restore.
+     * of the Amazon Web Services accounts that are authorized to copy or restore the manual cluster snapshot. If a
+     * value of <code>all</code> is in the list, then the manual cluster snapshot is public and available for any Amazon
+     * Web Services account to copy or restore.
      * </p>
      */
     private java.util.List<String> attributeValues;
@@ -57,15 +58,15 @@ public class DBClusterSnapshotAttribute implements Serializable, Cloneable {
      * The name of the manual cluster snapshot attribute.
      * </p>
      * <p>
-     * The attribute named <code>restore</code> refers to the list of accounts that have permission to copy or restore
-     * the manual cluster snapshot.
+     * The attribute named <code>restore</code> refers to the list of Amazon Web Services accounts that have permission
+     * to copy or restore the manual cluster snapshot.
      * </p>
      * 
      * @param attributeName
      *        The name of the manual cluster snapshot attribute.</p>
      *        <p>
-     *        The attribute named <code>restore</code> refers to the list of accounts that have permission to copy or
-     *        restore the manual cluster snapshot.
+     *        The attribute named <code>restore</code> refers to the list of Amazon Web Services accounts that have
+     *        permission to copy or restore the manual cluster snapshot.
      */
 
     public void setAttributeName(String attributeName) {
@@ -77,14 +78,14 @@ public class DBClusterSnapshotAttribute implements Serializable, Cloneable {
      * The name of the manual cluster snapshot attribute.
      * </p>
      * <p>
-     * The attribute named <code>restore</code> refers to the list of accounts that have permission to copy or restore
-     * the manual cluster snapshot.
+     * The attribute named <code>restore</code> refers to the list of Amazon Web Services accounts that have permission
+     * to copy or restore the manual cluster snapshot.
      * </p>
      * 
      * @return The name of the manual cluster snapshot attribute.</p>
      *         <p>
-     *         The attribute named <code>restore</code> refers to the list of accounts that have permission to copy or
-     *         restore the manual cluster snapshot.
+     *         The attribute named <code>restore</code> refers to the list of Amazon Web Services accounts that have
+     *         permission to copy or restore the manual cluster snapshot.
      */
 
     public String getAttributeName() {
@@ -96,15 +97,15 @@ public class DBClusterSnapshotAttribute implements Serializable, Cloneable {
      * The name of the manual cluster snapshot attribute.
      * </p>
      * <p>
-     * The attribute named <code>restore</code> refers to the list of accounts that have permission to copy or restore
-     * the manual cluster snapshot.
+     * The attribute named <code>restore</code> refers to the list of Amazon Web Services accounts that have permission
+     * to copy or restore the manual cluster snapshot.
      * </p>
      * 
      * @param attributeName
      *        The name of the manual cluster snapshot attribute.</p>
      *        <p>
-     *        The attribute named <code>restore</code> refers to the list of accounts that have permission to copy or
-     *        restore the manual cluster snapshot.
+     *        The attribute named <code>restore</code> refers to the list of Amazon Web Services accounts that have
+     *        permission to copy or restore the manual cluster snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -119,17 +120,17 @@ public class DBClusterSnapshotAttribute implements Serializable, Cloneable {
      * </p>
      * <p>
      * If the <code>AttributeName</code> field is set to <code>restore</code>, then this element returns a list of IDs
-     * of the accounts that are authorized to copy or restore the manual cluster snapshot. If a value of
-     * <code>all</code> is in the list, then the manual cluster snapshot is public and available for any account to copy
-     * or restore.
+     * of the Amazon Web Services accounts that are authorized to copy or restore the manual cluster snapshot. If a
+     * value of <code>all</code> is in the list, then the manual cluster snapshot is public and available for any Amazon
+     * Web Services account to copy or restore.
      * </p>
      * 
      * @return The values for the manual cluster snapshot attribute.</p>
      *         <p>
      *         If the <code>AttributeName</code> field is set to <code>restore</code>, then this element returns a list
-     *         of IDs of the accounts that are authorized to copy or restore the manual cluster snapshot. If a value of
-     *         <code>all</code> is in the list, then the manual cluster snapshot is public and available for any account
-     *         to copy or restore.
+     *         of IDs of the Amazon Web Services accounts that are authorized to copy or restore the manual cluster
+     *         snapshot. If a value of <code>all</code> is in the list, then the manual cluster snapshot is public and
+     *         available for any Amazon Web Services account to copy or restore.
      */
 
     public java.util.List<String> getAttributeValues() {
@@ -142,18 +143,18 @@ public class DBClusterSnapshotAttribute implements Serializable, Cloneable {
      * </p>
      * <p>
      * If the <code>AttributeName</code> field is set to <code>restore</code>, then this element returns a list of IDs
-     * of the accounts that are authorized to copy or restore the manual cluster snapshot. If a value of
-     * <code>all</code> is in the list, then the manual cluster snapshot is public and available for any account to copy
-     * or restore.
+     * of the Amazon Web Services accounts that are authorized to copy or restore the manual cluster snapshot. If a
+     * value of <code>all</code> is in the list, then the manual cluster snapshot is public and available for any Amazon
+     * Web Services account to copy or restore.
      * </p>
      * 
      * @param attributeValues
      *        The values for the manual cluster snapshot attribute.</p>
      *        <p>
      *        If the <code>AttributeName</code> field is set to <code>restore</code>, then this element returns a list
-     *        of IDs of the accounts that are authorized to copy or restore the manual cluster snapshot. If a value of
-     *        <code>all</code> is in the list, then the manual cluster snapshot is public and available for any account
-     *        to copy or restore.
+     *        of IDs of the Amazon Web Services accounts that are authorized to copy or restore the manual cluster
+     *        snapshot. If a value of <code>all</code> is in the list, then the manual cluster snapshot is public and
+     *        available for any Amazon Web Services account to copy or restore.
      */
 
     public void setAttributeValues(java.util.Collection<String> attributeValues) {
@@ -171,9 +172,9 @@ public class DBClusterSnapshotAttribute implements Serializable, Cloneable {
      * </p>
      * <p>
      * If the <code>AttributeName</code> field is set to <code>restore</code>, then this element returns a list of IDs
-     * of the accounts that are authorized to copy or restore the manual cluster snapshot. If a value of
-     * <code>all</code> is in the list, then the manual cluster snapshot is public and available for any account to copy
-     * or restore.
+     * of the Amazon Web Services accounts that are authorized to copy or restore the manual cluster snapshot. If a
+     * value of <code>all</code> is in the list, then the manual cluster snapshot is public and available for any Amazon
+     * Web Services account to copy or restore.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -185,9 +186,9 @@ public class DBClusterSnapshotAttribute implements Serializable, Cloneable {
      *        The values for the manual cluster snapshot attribute.</p>
      *        <p>
      *        If the <code>AttributeName</code> field is set to <code>restore</code>, then this element returns a list
-     *        of IDs of the accounts that are authorized to copy or restore the manual cluster snapshot. If a value of
-     *        <code>all</code> is in the list, then the manual cluster snapshot is public and available for any account
-     *        to copy or restore.
+     *        of IDs of the Amazon Web Services accounts that are authorized to copy or restore the manual cluster
+     *        snapshot. If a value of <code>all</code> is in the list, then the manual cluster snapshot is public and
+     *        available for any Amazon Web Services account to copy or restore.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -207,18 +208,18 @@ public class DBClusterSnapshotAttribute implements Serializable, Cloneable {
      * </p>
      * <p>
      * If the <code>AttributeName</code> field is set to <code>restore</code>, then this element returns a list of IDs
-     * of the accounts that are authorized to copy or restore the manual cluster snapshot. If a value of
-     * <code>all</code> is in the list, then the manual cluster snapshot is public and available for any account to copy
-     * or restore.
+     * of the Amazon Web Services accounts that are authorized to copy or restore the manual cluster snapshot. If a
+     * value of <code>all</code> is in the list, then the manual cluster snapshot is public and available for any Amazon
+     * Web Services account to copy or restore.
      * </p>
      * 
      * @param attributeValues
      *        The values for the manual cluster snapshot attribute.</p>
      *        <p>
      *        If the <code>AttributeName</code> field is set to <code>restore</code>, then this element returns a list
-     *        of IDs of the accounts that are authorized to copy or restore the manual cluster snapshot. If a value of
-     *        <code>all</code> is in the list, then the manual cluster snapshot is public and available for any account
-     *        to copy or restore.
+     *        of IDs of the Amazon Web Services accounts that are authorized to copy or restore the manual cluster
+     *        snapshot. If a value of <code>all</code> is in the list, then the manual cluster snapshot is public and
+     *        available for any Amazon Web Services account to copy or restore.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -171,7 +171,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>BackupRetentionPeriod</code> parameter.
      * </p>
      * <p>
-     * The default is a 30-minute window selected at random from an 8-hour block of time for each Region.
+     * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
+     * Region.
      * </p>
      * <p>
      * Constraints:
@@ -208,8 +209,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      * </p>
      * <p>
-     * The default is a 30-minute window selected at random from an 8-hour block of time for each Region, occurring on a
-     * random day of the week.
+     * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
+     * Region, occurring on a random day of the week.
      * </p>
      * <p>
      * Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -237,8 +238,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
-     * cluster using the same account that owns the KMS encryption key that is used to encrypt the new cluster, you can
-     * use the KMS key alias instead of the ARN for the KMS encryption key.
+     * cluster using the same Amazon Web Services account that owns the KMS encryption key that is used to encrypt the
+     * new cluster, you can use the KMS key alias instead of the ARN for the KMS encryption key.
      * </p>
      * <p>
      * If an encryption key is not specified in <code>KmsKeyId</code>:
@@ -252,8 +253,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * </ul>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Regions.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Regions.
      * </p>
      */
     private String kmsKeyId;
@@ -1204,7 +1205,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>BackupRetentionPeriod</code> parameter.
      * </p>
      * <p>
-     * The default is a 30-minute window selected at random from an 8-hour block of time for each Region.
+     * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
+     * Region.
      * </p>
      * <p>
      * Constraints:
@@ -1236,7 +1238,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        The daily time range during which automated backups are created if automated backups are enabled using the
      *        <code>BackupRetentionPeriod</code> parameter. </p>
      *        <p>
-     *        The default is a 30-minute window selected at random from an 8-hour block of time for each Region.
+     *        The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
+     *        Services Region.
      *        </p>
      *        <p>
      *        Constraints:
@@ -1274,7 +1277,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>BackupRetentionPeriod</code> parameter.
      * </p>
      * <p>
-     * The default is a 30-minute window selected at random from an 8-hour block of time for each Region.
+     * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
+     * Region.
      * </p>
      * <p>
      * Constraints:
@@ -1305,7 +1309,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * @return The daily time range during which automated backups are created if automated backups are enabled using
      *         the <code>BackupRetentionPeriod</code> parameter. </p>
      *         <p>
-     *         The default is a 30-minute window selected at random from an 8-hour block of time for each Region.
+     *         The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
+     *         Services Region.
      *         </p>
      *         <p>
      *         Constraints:
@@ -1343,7 +1348,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>BackupRetentionPeriod</code> parameter.
      * </p>
      * <p>
-     * The default is a 30-minute window selected at random from an 8-hour block of time for each Region.
+     * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
+     * Region.
      * </p>
      * <p>
      * Constraints:
@@ -1375,7 +1381,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        The daily time range during which automated backups are created if automated backups are enabled using the
      *        <code>BackupRetentionPeriod</code> parameter. </p>
      *        <p>
-     *        The default is a 30-minute window selected at random from an 8-hour block of time for each Region.
+     *        The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
+     *        Services Region.
      *        </p>
      *        <p>
      *        Constraints:
@@ -1417,8 +1424,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      * </p>
      * <p>
-     * The default is a 30-minute window selected at random from an 8-hour block of time for each Region, occurring on a
-     * random day of the week.
+     * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
+     * Region, occurring on a random day of the week.
      * </p>
      * <p>
      * Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -1433,8 +1440,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      *        </p>
      *        <p>
-     *        The default is a 30-minute window selected at random from an 8-hour block of time for each Region,
-     *        occurring on a random day of the week.
+     *        The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
+     *        Services Region, occurring on a random day of the week.
      *        </p>
      *        <p>
      *        Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -1455,8 +1462,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      * </p>
      * <p>
-     * The default is a 30-minute window selected at random from an 8-hour block of time for each Region, occurring on a
-     * random day of the week.
+     * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
+     * Region, occurring on a random day of the week.
      * </p>
      * <p>
      * Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -1470,8 +1477,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      *         </p>
      *         <p>
-     *         The default is a 30-minute window selected at random from an 8-hour block of time for each Region,
-     *         occurring on a random day of the week.
+     *         The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
+     *         Services Region, occurring on a random day of the week.
      *         </p>
      *         <p>
      *         Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -1492,8 +1499,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      * </p>
      * <p>
-     * The default is a 30-minute window selected at random from an 8-hour block of time for each Region, occurring on a
-     * random day of the week.
+     * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
+     * Region, occurring on a random day of the week.
      * </p>
      * <p>
      * Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -1508,8 +1515,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      *        </p>
      *        <p>
-     *        The default is a 30-minute window selected at random from an 8-hour block of time for each Region,
-     *        occurring on a random day of the week.
+     *        The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
+     *        Services Region, occurring on a random day of the week.
      *        </p>
      *        <p>
      *        Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -1652,8 +1659,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
-     * cluster using the same account that owns the KMS encryption key that is used to encrypt the new cluster, you can
-     * use the KMS key alias instead of the ARN for the KMS encryption key.
+     * cluster using the same Amazon Web Services account that owns the KMS encryption key that is used to encrypt the
+     * new cluster, you can use the KMS key alias instead of the ARN for the KMS encryption key.
      * </p>
      * <p>
      * If an encryption key is not specified in <code>KmsKeyId</code>:
@@ -1667,16 +1674,16 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * </ul>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Regions.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Regions.
      * </p>
      * 
      * @param kmsKeyId
      *        The KMS key identifier for an encrypted cluster.</p>
      *        <p>
      *        The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
-     *        cluster using the same account that owns the KMS encryption key that is used to encrypt the new cluster,
-     *        you can use the KMS key alias instead of the ARN for the KMS encryption key.
+     *        cluster using the same Amazon Web Services account that owns the KMS encryption key that is used to
+     *        encrypt the new cluster, you can use the KMS key alias instead of the ARN for the KMS encryption key.
      *        </p>
      *        <p>
      *        If an encryption key is not specified in <code>KmsKeyId</code>:
@@ -1690,8 +1697,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        </ul>
      *        <p>
-     *        KMS creates the default encryption key for your account. Your account has a different default encryption
-     *        key for each Regions.
+     *        KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services
+     *        account has a different default encryption key for each Amazon Web Services Regions.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -1704,8 +1711,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
-     * cluster using the same account that owns the KMS encryption key that is used to encrypt the new cluster, you can
-     * use the KMS key alias instead of the ARN for the KMS encryption key.
+     * cluster using the same Amazon Web Services account that owns the KMS encryption key that is used to encrypt the
+     * new cluster, you can use the KMS key alias instead of the ARN for the KMS encryption key.
      * </p>
      * <p>
      * If an encryption key is not specified in <code>KmsKeyId</code>:
@@ -1719,15 +1726,15 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * </ul>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Regions.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Regions.
      * </p>
      * 
      * @return The KMS key identifier for an encrypted cluster.</p>
      *         <p>
      *         The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating
-     *         a cluster using the same account that owns the KMS encryption key that is used to encrypt the new
-     *         cluster, you can use the KMS key alias instead of the ARN for the KMS encryption key.
+     *         a cluster using the same Amazon Web Services account that owns the KMS encryption key that is used to
+     *         encrypt the new cluster, you can use the KMS key alias instead of the ARN for the KMS encryption key.
      *         </p>
      *         <p>
      *         If an encryption key is not specified in <code>KmsKeyId</code>:
@@ -1741,8 +1748,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         </li>
      *         </ul>
      *         <p>
-     *         KMS creates the default encryption key for your account. Your account has a different default encryption
-     *         key for each Regions.
+     *         KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services
+     *         account has a different default encryption key for each Amazon Web Services Regions.
      */
 
     public String getKmsKeyId() {
@@ -1755,8 +1762,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
-     * cluster using the same account that owns the KMS encryption key that is used to encrypt the new cluster, you can
-     * use the KMS key alias instead of the ARN for the KMS encryption key.
+     * cluster using the same Amazon Web Services account that owns the KMS encryption key that is used to encrypt the
+     * new cluster, you can use the KMS key alias instead of the ARN for the KMS encryption key.
      * </p>
      * <p>
      * If an encryption key is not specified in <code>KmsKeyId</code>:
@@ -1770,16 +1777,16 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * </ul>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Regions.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Regions.
      * </p>
      * 
      * @param kmsKeyId
      *        The KMS key identifier for an encrypted cluster.</p>
      *        <p>
      *        The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are creating a
-     *        cluster using the same account that owns the KMS encryption key that is used to encrypt the new cluster,
-     *        you can use the KMS key alias instead of the ARN for the KMS encryption key.
+     *        cluster using the same Amazon Web Services account that owns the KMS encryption key that is used to
+     *        encrypt the new cluster, you can use the KMS key alias instead of the ARN for the KMS encryption key.
      *        </p>
      *        <p>
      *        If an encryption key is not specified in <code>KmsKeyId</code>:
@@ -1793,8 +1800,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        </ul>
      *        <p>
-     *        KMS creates the default encryption key for your account. Your account has a different default encryption
-     *        key for each Regions.
+     *        KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services
+     *        account has a different default encryption key for each Amazon Web Services Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

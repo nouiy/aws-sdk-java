@@ -27,9 +27,20 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Web Services service for which Performance Insights will return metrics. The only valid value for
-     * <i>ServiceType</i> is <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights will return metrics. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RDS</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DOCDB</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private String serviceType;
     /**
@@ -74,12 +85,12 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      * <ul>
      * <li>
      * <p>
-     * <code>db.load.avg</code> - a scaled representation of the number of active sessions for the database engine.
+     * <code>db.load.avg</code> - A scaled representation of the number of active sessions for the database engine.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sampledload.avg</code> - the raw number of active sessions for the database engine.
+     * <code>db.sampledload.avg</code> - The raw number of active sessions for the database engine.
      * </p>
      * </li>
      * </ul>
@@ -144,10 +155,9 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      * <p>
      * Additional metrics for the top <code>N</code> dimension keys. If the specified dimension group in the
      * <code>GroupBy</code> parameter is <code>db.sql_tokenized</code>, you can specify per-SQL metrics to get the
-     * values for the top <code>N</code> SQL digests. The response syntax is
+     * values for the top <code>N</code> SQL digests. The response syntax is as follows:
      * <code>"AdditionalMetrics" : { "<i>string</i>" : "<i>string</i>" }</code>.
      * </p>
-     * <p/>
      */
     private java.util.List<String> additionalMetrics;
     /**
@@ -194,13 +204,35 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Web Services service for which Performance Insights will return metrics. The only valid value for
-     * <i>ServiceType</i> is <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights will return metrics. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RDS</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DOCDB</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param serviceType
-     *        The Amazon Web Services service for which Performance Insights will return metrics. The only valid value
-     *        for <i>ServiceType</i> is <code>RDS</code>.
+     *        The Amazon Web Services service for which Performance Insights will return metrics. Valid values are as
+     *        follows:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>RDS</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DOCDB</code>
+     *        </p>
+     *        </li>
      * @see ServiceType
      */
 
@@ -210,12 +242,34 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Web Services service for which Performance Insights will return metrics. The only valid value for
-     * <i>ServiceType</i> is <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights will return metrics. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RDS</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DOCDB</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The Amazon Web Services service for which Performance Insights will return metrics. The only valid value
-     *         for <i>ServiceType</i> is <code>RDS</code>.
+     * @return The Amazon Web Services service for which Performance Insights will return metrics. Valid values are as
+     *         follows:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>RDS</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>DOCDB</code>
+     *         </p>
+     *         </li>
      * @see ServiceType
      */
 
@@ -225,13 +279,35 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Web Services service for which Performance Insights will return metrics. The only valid value for
-     * <i>ServiceType</i> is <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights will return metrics. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RDS</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DOCDB</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param serviceType
-     *        The Amazon Web Services service for which Performance Insights will return metrics. The only valid value
-     *        for <i>ServiceType</i> is <code>RDS</code>.
+     *        The Amazon Web Services service for which Performance Insights will return metrics. Valid values are as
+     *        follows:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>RDS</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DOCDB</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceType
      */
@@ -243,13 +319,35 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Web Services service for which Performance Insights will return metrics. The only valid value for
-     * <i>ServiceType</i> is <code>RDS</code>.
+     * The Amazon Web Services service for which Performance Insights will return metrics. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>RDS</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DOCDB</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param serviceType
-     *        The Amazon Web Services service for which Performance Insights will return metrics. The only valid value
-     *        for <i>ServiceType</i> is <code>RDS</code>.
+     *        The Amazon Web Services service for which Performance Insights will return metrics. Valid values are as
+     *        follows:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>RDS</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DOCDB</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceType
      */
@@ -467,12 +565,12 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      * <ul>
      * <li>
      * <p>
-     * <code>db.load.avg</code> - a scaled representation of the number of active sessions for the database engine.
+     * <code>db.load.avg</code> - A scaled representation of the number of active sessions for the database engine.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sampledload.avg</code> - the raw number of active sessions for the database engine.
+     * <code>db.sampledload.avg</code> - The raw number of active sessions for the database engine.
      * </p>
      * </li>
      * </ul>
@@ -493,13 +591,13 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>db.load.avg</code> - a scaled representation of the number of active sessions for the database
+     *        <code>db.load.avg</code> - A scaled representation of the number of active sessions for the database
      *        engine.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>db.sampledload.avg</code> - the raw number of active sessions for the database engine.
+     *        <code>db.sampledload.avg</code> - The raw number of active sessions for the database engine.
      *        </p>
      *        </li>
      *        </ul>
@@ -526,12 +624,12 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      * <ul>
      * <li>
      * <p>
-     * <code>db.load.avg</code> - a scaled representation of the number of active sessions for the database engine.
+     * <code>db.load.avg</code> - A scaled representation of the number of active sessions for the database engine.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sampledload.avg</code> - the raw number of active sessions for the database engine.
+     * <code>db.sampledload.avg</code> - The raw number of active sessions for the database engine.
      * </p>
      * </li>
      * </ul>
@@ -551,13 +649,13 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>db.load.avg</code> - a scaled representation of the number of active sessions for the database
+     *         <code>db.load.avg</code> - A scaled representation of the number of active sessions for the database
      *         engine.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>db.sampledload.avg</code> - the raw number of active sessions for the database engine.
+     *         <code>db.sampledload.avg</code> - The raw number of active sessions for the database engine.
      *         </p>
      *         </li>
      *         </ul>
@@ -584,12 +682,12 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      * <ul>
      * <li>
      * <p>
-     * <code>db.load.avg</code> - a scaled representation of the number of active sessions for the database engine.
+     * <code>db.load.avg</code> - A scaled representation of the number of active sessions for the database engine.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sampledload.avg</code> - the raw number of active sessions for the database engine.
+     * <code>db.sampledload.avg</code> - The raw number of active sessions for the database engine.
      * </p>
      * </li>
      * </ul>
@@ -610,13 +708,13 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>db.load.avg</code> - a scaled representation of the number of active sessions for the database
+     *        <code>db.load.avg</code> - A scaled representation of the number of active sessions for the database
      *        engine.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>db.sampledload.avg</code> - the raw number of active sessions for the database engine.
+     *        <code>db.sampledload.avg</code> - The raw number of active sessions for the database engine.
      *        </p>
      *        </li>
      *        </ul>
@@ -926,16 +1024,14 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      * <p>
      * Additional metrics for the top <code>N</code> dimension keys. If the specified dimension group in the
      * <code>GroupBy</code> parameter is <code>db.sql_tokenized</code>, you can specify per-SQL metrics to get the
-     * values for the top <code>N</code> SQL digests. The response syntax is
+     * values for the top <code>N</code> SQL digests. The response syntax is as follows:
      * <code>"AdditionalMetrics" : { "<i>string</i>" : "<i>string</i>" }</code>.
      * </p>
-     * <p/>
      * 
      * @return Additional metrics for the top <code>N</code> dimension keys. If the specified dimension group in the
      *         <code>GroupBy</code> parameter is <code>db.sql_tokenized</code>, you can specify per-SQL metrics to get
-     *         the values for the top <code>N</code> SQL digests. The response syntax is
+     *         the values for the top <code>N</code> SQL digests. The response syntax is as follows:
      *         <code>"AdditionalMetrics" : { "<i>string</i>" : "<i>string</i>" }</code>.
-     *         </p>
      */
 
     public java.util.List<String> getAdditionalMetrics() {
@@ -946,17 +1042,15 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      * <p>
      * Additional metrics for the top <code>N</code> dimension keys. If the specified dimension group in the
      * <code>GroupBy</code> parameter is <code>db.sql_tokenized</code>, you can specify per-SQL metrics to get the
-     * values for the top <code>N</code> SQL digests. The response syntax is
+     * values for the top <code>N</code> SQL digests. The response syntax is as follows:
      * <code>"AdditionalMetrics" : { "<i>string</i>" : "<i>string</i>" }</code>.
      * </p>
-     * <p/>
      * 
      * @param additionalMetrics
      *        Additional metrics for the top <code>N</code> dimension keys. If the specified dimension group in the
      *        <code>GroupBy</code> parameter is <code>db.sql_tokenized</code>, you can specify per-SQL metrics to get
-     *        the values for the top <code>N</code> SQL digests. The response syntax is
+     *        the values for the top <code>N</code> SQL digests. The response syntax is as follows:
      *        <code>"AdditionalMetrics" : { "<i>string</i>" : "<i>string</i>" }</code>.
-     *        </p>
      */
 
     public void setAdditionalMetrics(java.util.Collection<String> additionalMetrics) {
@@ -972,10 +1066,9 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      * <p>
      * Additional metrics for the top <code>N</code> dimension keys. If the specified dimension group in the
      * <code>GroupBy</code> parameter is <code>db.sql_tokenized</code>, you can specify per-SQL metrics to get the
-     * values for the top <code>N</code> SQL digests. The response syntax is
+     * values for the top <code>N</code> SQL digests. The response syntax is as follows:
      * <code>"AdditionalMetrics" : { "<i>string</i>" : "<i>string</i>" }</code>.
      * </p>
-     * <p/>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setAdditionalMetrics(java.util.Collection)} or {@link #withAdditionalMetrics(java.util.Collection)} if
@@ -985,8 +1078,8 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      * @param additionalMetrics
      *        Additional metrics for the top <code>N</code> dimension keys. If the specified dimension group in the
      *        <code>GroupBy</code> parameter is <code>db.sql_tokenized</code>, you can specify per-SQL metrics to get
-     *        the values for the top <code>N</code> SQL digests. The response syntax is
-     *        <code>"AdditionalMetrics" : { "<i>string</i>" : "<i>string</i>" }</code>. </p>
+     *        the values for the top <code>N</code> SQL digests. The response syntax is as follows:
+     *        <code>"AdditionalMetrics" : { "<i>string</i>" : "<i>string</i>" }</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1004,17 +1097,15 @@ public class DescribeDimensionKeysRequest extends com.amazonaws.AmazonWebService
      * <p>
      * Additional metrics for the top <code>N</code> dimension keys. If the specified dimension group in the
      * <code>GroupBy</code> parameter is <code>db.sql_tokenized</code>, you can specify per-SQL metrics to get the
-     * values for the top <code>N</code> SQL digests. The response syntax is
+     * values for the top <code>N</code> SQL digests. The response syntax is as follows:
      * <code>"AdditionalMetrics" : { "<i>string</i>" : "<i>string</i>" }</code>.
      * </p>
-     * <p/>
      * 
      * @param additionalMetrics
      *        Additional metrics for the top <code>N</code> dimension keys. If the specified dimension group in the
      *        <code>GroupBy</code> parameter is <code>db.sql_tokenized</code>, you can specify per-SQL metrics to get
-     *        the values for the top <code>N</code> SQL digests. The response syntax is
+     *        the values for the top <code>N</code> SQL digests. The response syntax is as follows:
      *        <code>"AdditionalMetrics" : { "<i>string</i>" : "<i>string</i>" }</code>.
-     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -46,22 +46,22 @@ public class ListAvailableResourceMetricsRequest extends com.amazonaws.AmazonWeb
      * <ul>
      * <li>
      * <p>
-     * <code>os</code> (OS counter metrics)
+     * <code>os</code> (OS counter metrics) - All engines
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db</code> (DB load metrics)
+     * <code>db</code> (DB load metrics) - All engines except for Amazon DocumentDB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sql.stats</code> (per-SQL metrics)
+     * <code>db.sql.stats</code> (per-SQL metrics) - All engines except for Amazon DocumentDB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sql_tokenized.stats</code> (per-SQL digest metrics)
+     * <code>db.sql_tokenized.stats</code> (per-SQL digest metrics) - All engines except for Amazon DocumentDB
      * </p>
      * </li>
      * </ul>
@@ -201,22 +201,22 @@ public class ListAvailableResourceMetricsRequest extends com.amazonaws.AmazonWeb
      * <ul>
      * <li>
      * <p>
-     * <code>os</code> (OS counter metrics)
+     * <code>os</code> (OS counter metrics) - All engines
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db</code> (DB load metrics)
+     * <code>db</code> (DB load metrics) - All engines except for Amazon DocumentDB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sql.stats</code> (per-SQL metrics)
+     * <code>db.sql.stats</code> (per-SQL metrics) - All engines except for Amazon DocumentDB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sql_tokenized.stats</code> (per-SQL digest metrics)
+     * <code>db.sql_tokenized.stats</code> (per-SQL digest metrics) - All engines except for Amazon DocumentDB
      * </p>
      * </li>
      * </ul>
@@ -225,22 +225,22 @@ public class ListAvailableResourceMetricsRequest extends com.amazonaws.AmazonWeb
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>os</code> (OS counter metrics)
+     *         <code>os</code> (OS counter metrics) - All engines
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>db</code> (DB load metrics)
+     *         <code>db</code> (DB load metrics) - All engines except for Amazon DocumentDB
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>db.sql.stats</code> (per-SQL metrics)
+     *         <code>db.sql.stats</code> (per-SQL metrics) - All engines except for Amazon DocumentDB
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>db.sql_tokenized.stats</code> (per-SQL digest metrics)
+     *         <code>db.sql_tokenized.stats</code> (per-SQL digest metrics) - All engines except for Amazon DocumentDB
      *         </p>
      *         </li>
      */
@@ -256,22 +256,22 @@ public class ListAvailableResourceMetricsRequest extends com.amazonaws.AmazonWeb
      * <ul>
      * <li>
      * <p>
-     * <code>os</code> (OS counter metrics)
+     * <code>os</code> (OS counter metrics) - All engines
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db</code> (DB load metrics)
+     * <code>db</code> (DB load metrics) - All engines except for Amazon DocumentDB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sql.stats</code> (per-SQL metrics)
+     * <code>db.sql.stats</code> (per-SQL metrics) - All engines except for Amazon DocumentDB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sql_tokenized.stats</code> (per-SQL digest metrics)
+     * <code>db.sql_tokenized.stats</code> (per-SQL digest metrics) - All engines except for Amazon DocumentDB
      * </p>
      * </li>
      * </ul>
@@ -281,22 +281,22 @@ public class ListAvailableResourceMetricsRequest extends com.amazonaws.AmazonWeb
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>os</code> (OS counter metrics)
+     *        <code>os</code> (OS counter metrics) - All engines
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>db</code> (DB load metrics)
+     *        <code>db</code> (DB load metrics) - All engines except for Amazon DocumentDB
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>db.sql.stats</code> (per-SQL metrics)
+     *        <code>db.sql.stats</code> (per-SQL metrics) - All engines except for Amazon DocumentDB
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>db.sql_tokenized.stats</code> (per-SQL digest metrics)
+     *        <code>db.sql_tokenized.stats</code> (per-SQL digest metrics) - All engines except for Amazon DocumentDB
      *        </p>
      *        </li>
      */
@@ -317,22 +317,22 @@ public class ListAvailableResourceMetricsRequest extends com.amazonaws.AmazonWeb
      * <ul>
      * <li>
      * <p>
-     * <code>os</code> (OS counter metrics)
+     * <code>os</code> (OS counter metrics) - All engines
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db</code> (DB load metrics)
+     * <code>db</code> (DB load metrics) - All engines except for Amazon DocumentDB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sql.stats</code> (per-SQL metrics)
+     * <code>db.sql.stats</code> (per-SQL metrics) - All engines except for Amazon DocumentDB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sql_tokenized.stats</code> (per-SQL digest metrics)
+     * <code>db.sql_tokenized.stats</code> (per-SQL digest metrics) - All engines except for Amazon DocumentDB
      * </p>
      * </li>
      * </ul>
@@ -347,22 +347,22 @@ public class ListAvailableResourceMetricsRequest extends com.amazonaws.AmazonWeb
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>os</code> (OS counter metrics)
+     *        <code>os</code> (OS counter metrics) - All engines
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>db</code> (DB load metrics)
+     *        <code>db</code> (DB load metrics) - All engines except for Amazon DocumentDB
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>db.sql.stats</code> (per-SQL metrics)
+     *        <code>db.sql.stats</code> (per-SQL metrics) - All engines except for Amazon DocumentDB
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>db.sql_tokenized.stats</code> (per-SQL digest metrics)
+     *        <code>db.sql_tokenized.stats</code> (per-SQL digest metrics) - All engines except for Amazon DocumentDB
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -385,22 +385,22 @@ public class ListAvailableResourceMetricsRequest extends com.amazonaws.AmazonWeb
      * <ul>
      * <li>
      * <p>
-     * <code>os</code> (OS counter metrics)
+     * <code>os</code> (OS counter metrics) - All engines
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db</code> (DB load metrics)
+     * <code>db</code> (DB load metrics) - All engines except for Amazon DocumentDB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sql.stats</code> (per-SQL metrics)
+     * <code>db.sql.stats</code> (per-SQL metrics) - All engines except for Amazon DocumentDB
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sql_tokenized.stats</code> (per-SQL digest metrics)
+     * <code>db.sql_tokenized.stats</code> (per-SQL digest metrics) - All engines except for Amazon DocumentDB
      * </p>
      * </li>
      * </ul>
@@ -410,22 +410,22 @@ public class ListAvailableResourceMetricsRequest extends com.amazonaws.AmazonWeb
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>os</code> (OS counter metrics)
+     *        <code>os</code> (OS counter metrics) - All engines
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>db</code> (DB load metrics)
+     *        <code>db</code> (DB load metrics) - All engines except for Amazon DocumentDB
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>db.sql.stats</code> (per-SQL metrics)
+     *        <code>db.sql.stats</code> (per-SQL metrics) - All engines except for Amazon DocumentDB
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>db.sql_tokenized.stats</code> (per-SQL digest metrics)
+     *        <code>db.sql_tokenized.stats</code> (per-SQL digest metrics) - All engines except for Amazon DocumentDB
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

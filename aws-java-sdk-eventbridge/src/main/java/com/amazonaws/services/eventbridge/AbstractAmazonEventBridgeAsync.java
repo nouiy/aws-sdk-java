@@ -93,6 +93,19 @@ public class AbstractAmazonEventBridgeAsync extends AbstractAmazonEventBridge im
     }
 
     @Override
+    public java.util.concurrent.Future<CreateEndpointResult> createEndpointAsync(CreateEndpointRequest request) {
+
+        return createEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEndpointResult> createEndpointAsync(CreateEndpointRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateEndpointRequest, CreateEndpointResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateEventBusResult> createEventBusAsync(CreateEventBusRequest request) {
 
         return createEventBusAsync(request, null);
@@ -184,6 +197,19 @@ public class AbstractAmazonEventBridgeAsync extends AbstractAmazonEventBridge im
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteEndpointResult> deleteEndpointAsync(DeleteEndpointRequest request) {
+
+        return deleteEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEndpointResult> deleteEndpointAsync(DeleteEndpointRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteEndpointRequest, DeleteEndpointResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteEventBusResult> deleteEventBusAsync(DeleteEventBusRequest request) {
 
         return deleteEventBusAsync(request, null);
@@ -257,6 +283,19 @@ public class AbstractAmazonEventBridgeAsync extends AbstractAmazonEventBridge im
     @Override
     public java.util.concurrent.Future<DescribeConnectionResult> describeConnectionAsync(DescribeConnectionRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeConnectionRequest, DescribeConnectionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEndpointResult> describeEndpointAsync(DescribeEndpointRequest request) {
+
+        return describeEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEndpointResult> describeEndpointAsync(DescribeEndpointRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeEndpointRequest, DescribeEndpointResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -387,6 +426,19 @@ public class AbstractAmazonEventBridgeAsync extends AbstractAmazonEventBridge im
     @Override
     public java.util.concurrent.Future<ListConnectionsResult> listConnectionsAsync(ListConnectionsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListConnectionsRequest, ListConnectionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEndpointsResult> listEndpointsAsync(ListEndpointsRequest request) {
+
+        return listEndpointsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEndpointsResult> listEndpointsAsync(ListEndpointsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListEndpointsRequest, ListEndpointsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -686,6 +738,19 @@ public class AbstractAmazonEventBridgeAsync extends AbstractAmazonEventBridge im
     @Override
     public java.util.concurrent.Future<UpdateConnectionResult> updateConnectionAsync(UpdateConnectionRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateConnectionRequest, UpdateConnectionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEndpointResult> updateEndpointAsync(UpdateEndpointRequest request) {
+
+        return updateEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEndpointResult> updateEndpointAsync(UpdateEndpointRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateEndpointRequest, UpdateEndpointResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -32,15 +32,22 @@
  * <ul>
  * <li>
  * <p>
- * To learn more about Performance Insights and Amazon Aurora DB instances, go to the <a
+ * To learn more about Performance Insights and Amazon Aurora DB instances, go to the <i> <a
  * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.html"> Amazon Aurora User
- * Guide</a>.
+ * Guide</a> </i>.
  * </p>
  * </li>
  * <li>
  * <p>
- * To learn more about Performance Insights and Amazon RDS DB instances, go to the <a
- * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html"> Amazon RDS User Guide</a>.
+ * To learn more about Performance Insights and Amazon RDS DB instances, go to the <i> <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html"> Amazon RDS User Guide</a> </i>.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * To learn more about Performance Insights and Amazon DocumentDB clusters, go to the <i> <a
+ * href="https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html"> Amazon DocumentDB
+ * Developer Guide</a> </i>.
  * </p>
  * </li>
  * </ul>

@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.personalize.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -35,6 +36,8 @@ public class CreateCampaignRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("minProvisionedTPS").build();
     private static final MarshallingInfo<StructuredPojo> CAMPAIGNCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("campaignConfig").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final CreateCampaignRequestMarshaller instance = new CreateCampaignRequestMarshaller();
 
@@ -56,6 +59,7 @@ public class CreateCampaignRequestMarshaller {
             protocolMarshaller.marshall(createCampaignRequest.getSolutionVersionArn(), SOLUTIONVERSIONARN_BINDING);
             protocolMarshaller.marshall(createCampaignRequest.getMinProvisionedTPS(), MINPROVISIONEDTPS_BINDING);
             protocolMarshaller.marshall(createCampaignRequest.getCampaignConfig(), CAMPAIGNCONFIG_BINDING);
+            protocolMarshaller.marshall(createCampaignRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -53,6 +53,11 @@ public class AbstractAmazonEventBridge implements AmazonEventBridge {
     }
 
     @Override
+    public CreateEndpointResult createEndpoint(CreateEndpointRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateEventBusResult createEventBus(CreateEventBusRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -88,6 +93,11 @@ public class AbstractAmazonEventBridge implements AmazonEventBridge {
     }
 
     @Override
+    public DeleteEndpointResult deleteEndpoint(DeleteEndpointRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteEventBusResult deleteEventBus(DeleteEventBusRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -114,6 +124,11 @@ public class AbstractAmazonEventBridge implements AmazonEventBridge {
 
     @Override
     public DescribeConnectionResult describeConnection(DescribeConnectionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeEndpointResult describeEndpoint(DescribeEndpointRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -164,6 +179,11 @@ public class AbstractAmazonEventBridge implements AmazonEventBridge {
 
     @Override
     public ListConnectionsResult listConnections(ListConnectionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListEndpointsResult listEndpoints(ListEndpointsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -279,6 +299,11 @@ public class AbstractAmazonEventBridge implements AmazonEventBridge {
 
     @Override
     public UpdateConnectionResult updateConnection(UpdateConnectionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateEndpointResult updateEndpoint(UpdateEndpointRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

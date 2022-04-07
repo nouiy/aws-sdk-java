@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.personalize.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +32,8 @@ public class CreateSolutionVersionRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("solutionArn").build();
     private static final MarshallingInfo<String> TRAININGMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("trainingMode").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final CreateSolutionVersionRequestMarshaller instance = new CreateSolutionVersionRequestMarshaller();
 
@@ -50,6 +53,7 @@ public class CreateSolutionVersionRequestMarshaller {
         try {
             protocolMarshaller.marshall(createSolutionVersionRequest.getSolutionArn(), SOLUTIONARN_BINDING);
             protocolMarshaller.marshall(createSolutionVersionRequest.getTrainingMode(), TRAININGMODE_BINDING);
+            protocolMarshaller.marshall(createSolutionVersionRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.personalize.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -41,6 +42,8 @@ public class CreateBatchSegmentJobRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("jobOutput").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("roleArn").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final CreateBatchSegmentJobRequestMarshaller instance = new CreateBatchSegmentJobRequestMarshaller();
 
@@ -65,6 +68,7 @@ public class CreateBatchSegmentJobRequestMarshaller {
             protocolMarshaller.marshall(createBatchSegmentJobRequest.getJobInput(), JOBINPUT_BINDING);
             protocolMarshaller.marshall(createBatchSegmentJobRequest.getJobOutput(), JOBOUTPUT_BINDING);
             protocolMarshaller.marshall(createBatchSegmentJobRequest.getRoleArn(), ROLEARN_BINDING);
+            protocolMarshaller.marshall(createBatchSegmentJobRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

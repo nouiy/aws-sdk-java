@@ -36,33 +36,34 @@ public class FeatureMetadata implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>ENABLED</code>: the feature is enabled on the instance.
+     * <code>ENABLED</code> - The feature is enabled on the instance.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DISABLED</code>: the feature is disabled on the instance.
+     * <code>DISABLED</code> - The feature is disabled on the instance.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNSUPPORTED</code>: the feature isn't supported on the instance.
+     * <code>UNSUPPORTED</code> - The feature isn't supported on the instance.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ENABLED_PENDING_REBOOT</code>: the feature is enabled on the instance but requires a reboot to take effect.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>DISABLED_PENDING_REBOOT</code>: the feature is disabled on the instance but requires a reboot to take
+     * <code>ENABLED_PENDING_REBOOT</code> - The feature is enabled on the instance but requires a reboot to take
      * effect.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNKNOWN</code>: the feature status couldn't be determined.
+     * <code>DISABLED_PENDING_REBOOT</code> - The feature is disabled on the instance but requires a reboot to take
+     * effect.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>UNKNOWN</code> - The feature status couldn't be determined.
      * </p>
      * </li>
      * </ul>
@@ -76,70 +77,71 @@ public class FeatureMetadata implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>ENABLED</code>: the feature is enabled on the instance.
+     * <code>ENABLED</code> - The feature is enabled on the instance.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DISABLED</code>: the feature is disabled on the instance.
+     * <code>DISABLED</code> - The feature is disabled on the instance.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNSUPPORTED</code>: the feature isn't supported on the instance.
+     * <code>UNSUPPORTED</code> - The feature isn't supported on the instance.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ENABLED_PENDING_REBOOT</code>: the feature is enabled on the instance but requires a reboot to take effect.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>DISABLED_PENDING_REBOOT</code>: the feature is disabled on the instance but requires a reboot to take
+     * <code>ENABLED_PENDING_REBOOT</code> - The feature is enabled on the instance but requires a reboot to take
      * effect.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNKNOWN</code>: the feature status couldn't be determined.
+     * <code>DISABLED_PENDING_REBOOT</code> - The feature is disabled on the instance but requires a reboot to take
+     * effect.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>UNKNOWN</code> - The feature status couldn't be determined.
      * </p>
      * </li>
      * </ul>
      * 
      * @param status
-     *        The status of the feature on the DB instance. Possible values include the following: </p>
+     *        The status of the feature on the DB instance. Possible values include the following:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ENABLED</code>: the feature is enabled on the instance.
+     *        <code>ENABLED</code> - The feature is enabled on the instance.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DISABLED</code>: the feature is disabled on the instance.
+     *        <code>DISABLED</code> - The feature is disabled on the instance.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNSUPPORTED</code>: the feature isn't supported on the instance.
+     *        <code>UNSUPPORTED</code> - The feature isn't supported on the instance.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ENABLED_PENDING_REBOOT</code>: the feature is enabled on the instance but requires a reboot to take
+     *        <code>ENABLED_PENDING_REBOOT</code> - The feature is enabled on the instance but requires a reboot to take
      *        effect.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DISABLED_PENDING_REBOOT</code>: the feature is disabled on the instance but requires a reboot to
+     *        <code>DISABLED_PENDING_REBOOT</code> - The feature is disabled on the instance but requires a reboot to
      *        take effect.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNKNOWN</code>: the feature status couldn't be determined.
+     *        <code>UNKNOWN</code> - The feature status couldn't be determined.
      *        </p>
      *        </li>
      * @see FeatureStatus
@@ -156,69 +158,70 @@ public class FeatureMetadata implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>ENABLED</code>: the feature is enabled on the instance.
+     * <code>ENABLED</code> - The feature is enabled on the instance.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DISABLED</code>: the feature is disabled on the instance.
+     * <code>DISABLED</code> - The feature is disabled on the instance.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNSUPPORTED</code>: the feature isn't supported on the instance.
+     * <code>UNSUPPORTED</code> - The feature isn't supported on the instance.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ENABLED_PENDING_REBOOT</code>: the feature is enabled on the instance but requires a reboot to take effect.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>DISABLED_PENDING_REBOOT</code>: the feature is disabled on the instance but requires a reboot to take
+     * <code>ENABLED_PENDING_REBOOT</code> - The feature is enabled on the instance but requires a reboot to take
      * effect.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNKNOWN</code>: the feature status couldn't be determined.
+     * <code>DISABLED_PENDING_REBOOT</code> - The feature is disabled on the instance but requires a reboot to take
+     * effect.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>UNKNOWN</code> - The feature status couldn't be determined.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The status of the feature on the DB instance. Possible values include the following: </p>
+     * @return The status of the feature on the DB instance. Possible values include the following:</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>ENABLED</code>: the feature is enabled on the instance.
+     *         <code>ENABLED</code> - The feature is enabled on the instance.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>DISABLED</code>: the feature is disabled on the instance.
+     *         <code>DISABLED</code> - The feature is disabled on the instance.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>UNSUPPORTED</code>: the feature isn't supported on the instance.
+     *         <code>UNSUPPORTED</code> - The feature isn't supported on the instance.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>ENABLED_PENDING_REBOOT</code>: the feature is enabled on the instance but requires a reboot to take
-     *         effect.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>DISABLED_PENDING_REBOOT</code>: the feature is disabled on the instance but requires a reboot to
+     *         <code>ENABLED_PENDING_REBOOT</code> - The feature is enabled on the instance but requires a reboot to
      *         take effect.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>UNKNOWN</code>: the feature status couldn't be determined.
+     *         <code>DISABLED_PENDING_REBOOT</code> - The feature is disabled on the instance but requires a reboot to
+     *         take effect.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>UNKNOWN</code> - The feature status couldn't be determined.
      *         </p>
      *         </li>
      * @see FeatureStatus
@@ -235,70 +238,71 @@ public class FeatureMetadata implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>ENABLED</code>: the feature is enabled on the instance.
+     * <code>ENABLED</code> - The feature is enabled on the instance.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DISABLED</code>: the feature is disabled on the instance.
+     * <code>DISABLED</code> - The feature is disabled on the instance.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNSUPPORTED</code>: the feature isn't supported on the instance.
+     * <code>UNSUPPORTED</code> - The feature isn't supported on the instance.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ENABLED_PENDING_REBOOT</code>: the feature is enabled on the instance but requires a reboot to take effect.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>DISABLED_PENDING_REBOOT</code>: the feature is disabled on the instance but requires a reboot to take
+     * <code>ENABLED_PENDING_REBOOT</code> - The feature is enabled on the instance but requires a reboot to take
      * effect.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNKNOWN</code>: the feature status couldn't be determined.
+     * <code>DISABLED_PENDING_REBOOT</code> - The feature is disabled on the instance but requires a reboot to take
+     * effect.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>UNKNOWN</code> - The feature status couldn't be determined.
      * </p>
      * </li>
      * </ul>
      * 
      * @param status
-     *        The status of the feature on the DB instance. Possible values include the following: </p>
+     *        The status of the feature on the DB instance. Possible values include the following:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ENABLED</code>: the feature is enabled on the instance.
+     *        <code>ENABLED</code> - The feature is enabled on the instance.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DISABLED</code>: the feature is disabled on the instance.
+     *        <code>DISABLED</code> - The feature is disabled on the instance.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNSUPPORTED</code>: the feature isn't supported on the instance.
+     *        <code>UNSUPPORTED</code> - The feature isn't supported on the instance.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ENABLED_PENDING_REBOOT</code>: the feature is enabled on the instance but requires a reboot to take
+     *        <code>ENABLED_PENDING_REBOOT</code> - The feature is enabled on the instance but requires a reboot to take
      *        effect.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DISABLED_PENDING_REBOOT</code>: the feature is disabled on the instance but requires a reboot to
+     *        <code>DISABLED_PENDING_REBOOT</code> - The feature is disabled on the instance but requires a reboot to
      *        take effect.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNKNOWN</code>: the feature status couldn't be determined.
+     *        <code>UNKNOWN</code> - The feature status couldn't be determined.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -317,70 +321,71 @@ public class FeatureMetadata implements Serializable, Cloneable, StructuredPojo 
      * <ul>
      * <li>
      * <p>
-     * <code>ENABLED</code>: the feature is enabled on the instance.
+     * <code>ENABLED</code> - The feature is enabled on the instance.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DISABLED</code>: the feature is disabled on the instance.
+     * <code>DISABLED</code> - The feature is disabled on the instance.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNSUPPORTED</code>: the feature isn't supported on the instance.
+     * <code>UNSUPPORTED</code> - The feature isn't supported on the instance.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ENABLED_PENDING_REBOOT</code>: the feature is enabled on the instance but requires a reboot to take effect.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>DISABLED_PENDING_REBOOT</code>: the feature is disabled on the instance but requires a reboot to take
+     * <code>ENABLED_PENDING_REBOOT</code> - The feature is enabled on the instance but requires a reboot to take
      * effect.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNKNOWN</code>: the feature status couldn't be determined.
+     * <code>DISABLED_PENDING_REBOOT</code> - The feature is disabled on the instance but requires a reboot to take
+     * effect.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>UNKNOWN</code> - The feature status couldn't be determined.
      * </p>
      * </li>
      * </ul>
      * 
      * @param status
-     *        The status of the feature on the DB instance. Possible values include the following: </p>
+     *        The status of the feature on the DB instance. Possible values include the following:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ENABLED</code>: the feature is enabled on the instance.
+     *        <code>ENABLED</code> - The feature is enabled on the instance.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DISABLED</code>: the feature is disabled on the instance.
+     *        <code>DISABLED</code> - The feature is disabled on the instance.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNSUPPORTED</code>: the feature isn't supported on the instance.
+     *        <code>UNSUPPORTED</code> - The feature isn't supported on the instance.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ENABLED_PENDING_REBOOT</code>: the feature is enabled on the instance but requires a reboot to take
+     *        <code>ENABLED_PENDING_REBOOT</code> - The feature is enabled on the instance but requires a reboot to take
      *        effect.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DISABLED_PENDING_REBOOT</code>: the feature is disabled on the instance but requires a reboot to
+     *        <code>DISABLED_PENDING_REBOOT</code> - The feature is disabled on the instance but requires a reboot to
      *        take effect.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNKNOWN</code>: the feature status couldn't be determined.
+     *        <code>UNKNOWN</code> - The feature status couldn't be determined.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

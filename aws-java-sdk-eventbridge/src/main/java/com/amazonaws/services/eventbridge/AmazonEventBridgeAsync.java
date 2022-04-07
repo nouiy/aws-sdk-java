@@ -225,6 +225,45 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
 
     /**
      * <p>
+     * Creates a global endpoint. Global endpoints improve your application's availability by making it regional-fault
+     * tolerant. To do this, you define a primary and secondary Region with event buses in each Region. You also create
+     * a Amazon Route 53 health check that will tell EventBridge to route events to the secondary Region when an
+     * "unhealthy" state is encountered and events will be routed back to the primary Region when the health check
+     * reports a "healthy" state.
+     * </p>
+     * 
+     * @param createEndpointRequest
+     * @return A Java Future containing the result of the CreateEndpoint operation returned by the service.
+     * @sample AmazonEventBridgeAsync.CreateEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/CreateEndpoint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEndpointResult> createEndpointAsync(CreateEndpointRequest createEndpointRequest);
+
+    /**
+     * <p>
+     * Creates a global endpoint. Global endpoints improve your application's availability by making it regional-fault
+     * tolerant. To do this, you define a primary and secondary Region with event buses in each Region. You also create
+     * a Amazon Route 53 health check that will tell EventBridge to route events to the secondary Region when an
+     * "unhealthy" state is encountered and events will be routed back to the primary Region when the health check
+     * reports a "healthy" state.
+     * </p>
+     * 
+     * @param createEndpointRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateEndpoint operation returned by the service.
+     * @sample AmazonEventBridgeAsyncHandler.CreateEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/CreateEndpoint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEndpointResult> createEndpointAsync(CreateEndpointRequest createEndpointRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateEndpointRequest, CreateEndpointResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a new event bus within your account. This can be a custom event bus which you can use to receive events
      * from your custom applications and services, or it can be a partner event bus which can be matched to a partner
      * event source.
@@ -522,6 +561,41 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
 
     /**
      * <p>
+     * Delete an existing global endpoint. For more information about global endpoints, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-global-endpoints.html">Making applications
+     * Regional-fault tolerant with global endpoints and event replication</a> in the Amazon EventBridge User Guide.
+     * </p>
+     * 
+     * @param deleteEndpointRequest
+     * @return A Java Future containing the result of the DeleteEndpoint operation returned by the service.
+     * @sample AmazonEventBridgeAsync.DeleteEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/DeleteEndpoint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEndpointResult> deleteEndpointAsync(DeleteEndpointRequest deleteEndpointRequest);
+
+    /**
+     * <p>
+     * Delete an existing global endpoint. For more information about global endpoints, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-global-endpoints.html">Making applications
+     * Regional-fault tolerant with global endpoints and event replication</a> in the Amazon EventBridge User Guide.
+     * </p>
+     * 
+     * @param deleteEndpointRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteEndpoint operation returned by the service.
+     * @sample AmazonEventBridgeAsyncHandler.DeleteEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/DeleteEndpoint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEndpointResult> deleteEndpointAsync(DeleteEndpointRequest deleteEndpointRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteEndpointRequest, DeleteEndpointResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the specified custom event bus or partner event bus. All rules associated with this event bus need to be
      * deleted. You can't delete your account's default event bus.
      * </p>
@@ -755,6 +829,41 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      */
     java.util.concurrent.Future<DescribeConnectionResult> describeConnectionAsync(DescribeConnectionRequest describeConnectionRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeConnectionRequest, DescribeConnectionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get the information about an existing global endpoint. For more information about global endpoints, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-global-endpoints.html">Making applications
+     * Regional-fault tolerant with global endpoints and event replication</a> in the Amazon EventBridge User Guide..
+     * </p>
+     * 
+     * @param describeEndpointRequest
+     * @return A Java Future containing the result of the DescribeEndpoint operation returned by the service.
+     * @sample AmazonEventBridgeAsync.DescribeEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/DescribeEndpoint" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeEndpointResult> describeEndpointAsync(DescribeEndpointRequest describeEndpointRequest);
+
+    /**
+     * <p>
+     * Get the information about an existing global endpoint. For more information about global endpoints, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-global-endpoints.html">Making applications
+     * Regional-fault tolerant with global endpoints and event replication</a> in the Amazon EventBridge User Guide..
+     * </p>
+     * 
+     * @param describeEndpointRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeEndpoint operation returned by the service.
+     * @sample AmazonEventBridgeAsyncHandler.DescribeEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/DescribeEndpoint" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeEndpointResult> describeEndpointAsync(DescribeEndpointRequest describeEndpointRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeEndpointRequest, DescribeEndpointResult> asyncHandler);
 
     /**
      * <p>
@@ -1138,6 +1247,41 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
 
     /**
      * <p>
+     * List the global endpoints associated with this account. For more information about global endpoints, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-global-endpoints.html">Making applications
+     * Regional-fault tolerant with global endpoints and event replication</a> in the Amazon EventBridge User Guide..
+     * </p>
+     * 
+     * @param listEndpointsRequest
+     * @return A Java Future containing the result of the ListEndpoints operation returned by the service.
+     * @sample AmazonEventBridgeAsync.ListEndpoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/ListEndpoints" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListEndpointsResult> listEndpointsAsync(ListEndpointsRequest listEndpointsRequest);
+
+    /**
+     * <p>
+     * List the global endpoints associated with this account. For more information about global endpoints, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-global-endpoints.html">Making applications
+     * Regional-fault tolerant with global endpoints and event replication</a> in the Amazon EventBridge User Guide..
+     * </p>
+     * 
+     * @param listEndpointsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListEndpoints operation returned by the service.
+     * @sample AmazonEventBridgeAsyncHandler.ListEndpoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/ListEndpoints" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListEndpointsResult> listEndpointsAsync(ListEndpointsRequest listEndpointsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListEndpointsRequest, ListEndpointsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists all the event buses in your account, including the default event bus, custom event buses, and partner event
      * buses.
      * </p>
@@ -1449,6 +1593,11 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * <p>
      * Sends custom events to Amazon EventBridge so that they can be matched to rules.
      * </p>
+     * <note>
+     * <p>
+     * PutEvents will only process nested JSON up to 1100 levels deep.
+     * </p>
+     * </note>
      * 
      * @param putEventsRequest
      * @return A Java Future containing the result of the PutEvents operation returned by the service.
@@ -1462,6 +1611,11 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * <p>
      * Sends custom events to Amazon EventBridge so that they can be matched to rules.
      * </p>
+     * <note>
+     * <p>
+     * PutEvents will only process nested JSON up to 1100 levels deep.
+     * </p>
+     * </note>
      * 
      * @param putEventsRequest
      * @param asyncHandler
@@ -1757,12 +1911,7 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * </li>
      * <li>
      * <p>
-     * Amazon API Gateway REST API endpoints
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * API Gateway
+     * <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-api-gateway-target.html">API Gateway</a>
      * </p>
      * </li>
      * <li>
@@ -1772,7 +1921,7 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * </li>
      * <li>
      * <p>
-     * CloudWatch Logs group
+     * CloudWatch group
      * </p>
      * </li>
      * <li>
@@ -1787,7 +1936,7 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * </li>
      * <li>
      * <p>
-     * Amazon EC2 <code>CreateSnapshot</code> API call
+     * EC2 <code>CreateSnapshot</code> API call
      * </p>
      * </li>
      * <li>
@@ -1797,46 +1946,61 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * </li>
      * <li>
      * <p>
-     * Amazon EC2 <code>RebootInstances</code> API call
+     * EC2 <code>RebootInstances</code> API call
      * </p>
      * </li>
      * <li>
      * <p>
-     * Amazon EC2 <code>StopInstances</code> API call
+     * EC2 <code>StopInstances</code> API call
      * </p>
      * </li>
      * <li>
      * <p>
-     * Amazon EC2 <code>TerminateInstances</code> API call
+     * EC2 <code>TerminateInstances</code> API call
      * </p>
      * </li>
      * <li>
      * <p>
-     * Amazon ECS tasks
+     * ECS task
      * </p>
      * </li>
      * <li>
      * <p>
-     * Event bus in a different Amazon Web Services account or Region.
-     * </p>
-     * <p>
-     * You can use an event bus in the US East (N. Virginia) us-east-1, US West (Oregon) us-west-2, or Europe (Ireland)
-     * eu-west-1 Regions as a target for a rule.
+     * <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cross-account.html">Event bus in a different
+     * account or Region</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * Firehose delivery stream (Kinesis Data Firehose)
+     * <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-bus-to-bus.html">Event bus in the same
+     * account and Region</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * Inspector assessment template (Amazon Inspector)
+     * Firehose delivery stream
      * </p>
      * </li>
      * <li>
      * <p>
-     * Kinesis stream (Kinesis Data Stream)
+     * Glue workflow
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href=
+     * "https://docs.aws.amazon.com/incident-manager/latest/userguide/incident-creation.html#incident-tracking-auto-eventbridge"
+     * >Incident Manager response plan</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Inspector assessment template
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Kinesis stream
      * </p>
      * </li>
      * <li>
@@ -1846,37 +2010,42 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * </li>
      * <li>
      * <p>
-     * Redshift clusters (Data API statement execution)
+     * Redshift cluster
      * </p>
      * </li>
      * <li>
      * <p>
-     * Amazon SNS topic
+     * SageMaker Pipeline
      * </p>
      * </li>
      * <li>
      * <p>
-     * Amazon SQS queues (includes FIFO queues)
+     * SNS topic
      * </p>
      * </li>
      * <li>
      * <p>
-     * SSM Automation
+     * SQS queue
      * </p>
      * </li>
      * <li>
      * <p>
-     * SSM OpsItem
+     * Step Functions state machine
      * </p>
      * </li>
      * <li>
      * <p>
-     * SSM Run Command
+     * Systems Manager Automation
      * </p>
      * </li>
      * <li>
      * <p>
-     * Step Functions state machines
+     * Systems Manager OpsItem
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Systems Manager Run Command
      * </p>
      * </li>
      * </ul>
@@ -2003,12 +2172,7 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * </li>
      * <li>
      * <p>
-     * Amazon API Gateway REST API endpoints
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * API Gateway
+     * <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-api-gateway-target.html">API Gateway</a>
      * </p>
      * </li>
      * <li>
@@ -2018,7 +2182,7 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * </li>
      * <li>
      * <p>
-     * CloudWatch Logs group
+     * CloudWatch group
      * </p>
      * </li>
      * <li>
@@ -2033,7 +2197,7 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * </li>
      * <li>
      * <p>
-     * Amazon EC2 <code>CreateSnapshot</code> API call
+     * EC2 <code>CreateSnapshot</code> API call
      * </p>
      * </li>
      * <li>
@@ -2043,46 +2207,61 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * </li>
      * <li>
      * <p>
-     * Amazon EC2 <code>RebootInstances</code> API call
+     * EC2 <code>RebootInstances</code> API call
      * </p>
      * </li>
      * <li>
      * <p>
-     * Amazon EC2 <code>StopInstances</code> API call
+     * EC2 <code>StopInstances</code> API call
      * </p>
      * </li>
      * <li>
      * <p>
-     * Amazon EC2 <code>TerminateInstances</code> API call
+     * EC2 <code>TerminateInstances</code> API call
      * </p>
      * </li>
      * <li>
      * <p>
-     * Amazon ECS tasks
+     * ECS task
      * </p>
      * </li>
      * <li>
      * <p>
-     * Event bus in a different Amazon Web Services account or Region.
-     * </p>
-     * <p>
-     * You can use an event bus in the US East (N. Virginia) us-east-1, US West (Oregon) us-west-2, or Europe (Ireland)
-     * eu-west-1 Regions as a target for a rule.
+     * <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cross-account.html">Event bus in a different
+     * account or Region</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * Firehose delivery stream (Kinesis Data Firehose)
+     * <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-bus-to-bus.html">Event bus in the same
+     * account and Region</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * Inspector assessment template (Amazon Inspector)
+     * Firehose delivery stream
      * </p>
      * </li>
      * <li>
      * <p>
-     * Kinesis stream (Kinesis Data Stream)
+     * Glue workflow
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href=
+     * "https://docs.aws.amazon.com/incident-manager/latest/userguide/incident-creation.html#incident-tracking-auto-eventbridge"
+     * >Incident Manager response plan</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Inspector assessment template
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Kinesis stream
      * </p>
      * </li>
      * <li>
@@ -2092,37 +2271,42 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * </li>
      * <li>
      * <p>
-     * Redshift clusters (Data API statement execution)
+     * Redshift cluster
      * </p>
      * </li>
      * <li>
      * <p>
-     * Amazon SNS topic
+     * SageMaker Pipeline
      * </p>
      * </li>
      * <li>
      * <p>
-     * Amazon SQS queues (includes FIFO queues)
+     * SNS topic
      * </p>
      * </li>
      * <li>
      * <p>
-     * SSM Automation
+     * SQS queue
      * </p>
      * </li>
      * <li>
      * <p>
-     * SSM OpsItem
+     * Step Functions state machine
      * </p>
      * </li>
      * <li>
      * <p>
-     * SSM Run Command
+     * Systems Manager Automation
      * </p>
      * </li>
      * <li>
      * <p>
-     * Step Functions state machines
+     * Systems Manager OpsItem
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Systems Manager Run Command
      * </p>
      * </li>
      * </ul>
@@ -2604,5 +2788,40 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      */
     java.util.concurrent.Future<UpdateConnectionResult> updateConnectionAsync(UpdateConnectionRequest updateConnectionRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateConnectionRequest, UpdateConnectionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Update an existing endpoint. For more information about global endpoints, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-global-endpoints.html">Making applications
+     * Regional-fault tolerant with global endpoints and event replication</a> in the Amazon EventBridge User Guide..
+     * </p>
+     * 
+     * @param updateEndpointRequest
+     * @return A Java Future containing the result of the UpdateEndpoint operation returned by the service.
+     * @sample AmazonEventBridgeAsync.UpdateEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/UpdateEndpoint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEndpointResult> updateEndpointAsync(UpdateEndpointRequest updateEndpointRequest);
+
+    /**
+     * <p>
+     * Update an existing endpoint. For more information about global endpoints, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-global-endpoints.html">Making applications
+     * Regional-fault tolerant with global endpoints and event replication</a> in the Amazon EventBridge User Guide..
+     * </p>
+     * 
+     * @param updateEndpointRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateEndpoint operation returned by the service.
+     * @sample AmazonEventBridgeAsyncHandler.UpdateEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/UpdateEndpoint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEndpointResult> updateEndpointAsync(UpdateEndpointRequest updateEndpointRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateEndpointRequest, UpdateEndpointResult> asyncHandler);
 
 }

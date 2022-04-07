@@ -42,25 +42,62 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
     private String identifier;
     /**
      * <p>
-     * The name of the dimension group. The only valid value is <code>db.sql</code>. Performance Insights searches the
-     * specified group for the dimension group ID.
+     * The name of the dimension group. Performance Insights searches the specified group for the dimension group ID.
+     * The following group name values are valid:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.query</code> (Amazon DocumentDB only)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.sql</code> (Amazon RDS and Aurora only)
+     * </p>
+     * </li>
+     * </ul>
      */
     private String group;
     /**
      * <p>
      * The ID of the dimension group from which to retrieve dimension details. For dimension group <code>db.sql</code>,
-     * the group ID is <code>db.sql.id</code>.
+     * the group ID is <code>db.sql.id</code>. The following group ID values are valid:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.sql.id</code> for dimension group <code>db.sql</code> (Aurora and RDS only)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.query.id</code> for dimension group <code>db.query</code> (DocumentDB only)
+     * </p>
+     * </li>
+     * </ul>
      */
     private String groupIdentifier;
     /**
      * <p>
-     * A list of dimensions to retrieve the detail data for within the given dimension group. For the dimension group
-     * <code>db.sql</code>, specify either the full dimension name <code>db.sql.statement</code> or the short dimension
-     * name <code>statement</code>. If you don't specify this parameter, Performance Insights returns all dimension data
-     * within the specified dimension group.
+     * A list of dimensions to retrieve the detail data for within the given dimension group. If you don't specify this
+     * parameter, Performance Insights returns all dimension data within the specified dimension group. Specify
+     * dimension names for the following dimension groups:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.sql</code> - Specify either the full dimension name <code>db.sql.statement</code> or the short dimension
+     * name <code>statement</code> (Aurora and RDS only).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.query</code> - Specify either the full dimension name <code>db.query.statement</code> or the short
+     * dimension name <code>statement</code> (DocumentDB only).
+     * </p>
+     * </li>
+     * </ul>
      */
     private java.util.List<String> requestedDimensions;
 
@@ -185,13 +222,36 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the dimension group. The only valid value is <code>db.sql</code>. Performance Insights searches the
-     * specified group for the dimension group ID.
+     * The name of the dimension group. Performance Insights searches the specified group for the dimension group ID.
+     * The following group name values are valid:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.query</code> (Amazon DocumentDB only)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.sql</code> (Amazon RDS and Aurora only)
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param group
-     *        The name of the dimension group. The only valid value is <code>db.sql</code>. Performance Insights
-     *        searches the specified group for the dimension group ID.
+     *        The name of the dimension group. Performance Insights searches the specified group for the dimension group
+     *        ID. The following group name values are valid:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db.query</code> (Amazon DocumentDB only)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db.sql</code> (Amazon RDS and Aurora only)
+     *        </p>
+     *        </li>
      */
 
     public void setGroup(String group) {
@@ -200,12 +260,35 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the dimension group. The only valid value is <code>db.sql</code>. Performance Insights searches the
-     * specified group for the dimension group ID.
+     * The name of the dimension group. Performance Insights searches the specified group for the dimension group ID.
+     * The following group name values are valid:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.query</code> (Amazon DocumentDB only)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.sql</code> (Amazon RDS and Aurora only)
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The name of the dimension group. The only valid value is <code>db.sql</code>. Performance Insights
-     *         searches the specified group for the dimension group ID.
+     * @return The name of the dimension group. Performance Insights searches the specified group for the dimension
+     *         group ID. The following group name values are valid:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>db.query</code> (Amazon DocumentDB only)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>db.sql</code> (Amazon RDS and Aurora only)
+     *         </p>
+     *         </li>
      */
 
     public String getGroup() {
@@ -214,13 +297,36 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the dimension group. The only valid value is <code>db.sql</code>. Performance Insights searches the
-     * specified group for the dimension group ID.
+     * The name of the dimension group. Performance Insights searches the specified group for the dimension group ID.
+     * The following group name values are valid:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.query</code> (Amazon DocumentDB only)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.sql</code> (Amazon RDS and Aurora only)
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param group
-     *        The name of the dimension group. The only valid value is <code>db.sql</code>. Performance Insights
-     *        searches the specified group for the dimension group ID.
+     *        The name of the dimension group. Performance Insights searches the specified group for the dimension group
+     *        ID. The following group name values are valid:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db.query</code> (Amazon DocumentDB only)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db.sql</code> (Amazon RDS and Aurora only)
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -232,12 +338,35 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The ID of the dimension group from which to retrieve dimension details. For dimension group <code>db.sql</code>,
-     * the group ID is <code>db.sql.id</code>.
+     * the group ID is <code>db.sql.id</code>. The following group ID values are valid:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.sql.id</code> for dimension group <code>db.sql</code> (Aurora and RDS only)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.query.id</code> for dimension group <code>db.query</code> (DocumentDB only)
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param groupIdentifier
      *        The ID of the dimension group from which to retrieve dimension details. For dimension group
-     *        <code>db.sql</code>, the group ID is <code>db.sql.id</code>.
+     *        <code>db.sql</code>, the group ID is <code>db.sql.id</code>. The following group ID values are valid:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db.sql.id</code> for dimension group <code>db.sql</code> (Aurora and RDS only)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db.query.id</code> for dimension group <code>db.query</code> (DocumentDB only)
+     *        </p>
+     *        </li>
      */
 
     public void setGroupIdentifier(String groupIdentifier) {
@@ -247,11 +376,34 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The ID of the dimension group from which to retrieve dimension details. For dimension group <code>db.sql</code>,
-     * the group ID is <code>db.sql.id</code>.
+     * the group ID is <code>db.sql.id</code>. The following group ID values are valid:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.sql.id</code> for dimension group <code>db.sql</code> (Aurora and RDS only)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.query.id</code> for dimension group <code>db.query</code> (DocumentDB only)
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @return The ID of the dimension group from which to retrieve dimension details. For dimension group
-     *         <code>db.sql</code>, the group ID is <code>db.sql.id</code>.
+     *         <code>db.sql</code>, the group ID is <code>db.sql.id</code>. The following group ID values are valid:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>db.sql.id</code> for dimension group <code>db.sql</code> (Aurora and RDS only)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>db.query.id</code> for dimension group <code>db.query</code> (DocumentDB only)
+     *         </p>
+     *         </li>
      */
 
     public String getGroupIdentifier() {
@@ -261,12 +413,35 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The ID of the dimension group from which to retrieve dimension details. For dimension group <code>db.sql</code>,
-     * the group ID is <code>db.sql.id</code>.
+     * the group ID is <code>db.sql.id</code>. The following group ID values are valid:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.sql.id</code> for dimension group <code>db.sql</code> (Aurora and RDS only)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.query.id</code> for dimension group <code>db.query</code> (DocumentDB only)
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param groupIdentifier
      *        The ID of the dimension group from which to retrieve dimension details. For dimension group
-     *        <code>db.sql</code>, the group ID is <code>db.sql.id</code>.
+     *        <code>db.sql</code>, the group ID is <code>db.sql.id</code>. The following group ID values are valid:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db.sql.id</code> for dimension group <code>db.sql</code> (Aurora and RDS only)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db.query.id</code> for dimension group <code>db.query</code> (DocumentDB only)
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -277,16 +452,41 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of dimensions to retrieve the detail data for within the given dimension group. For the dimension group
-     * <code>db.sql</code>, specify either the full dimension name <code>db.sql.statement</code> or the short dimension
-     * name <code>statement</code>. If you don't specify this parameter, Performance Insights returns all dimension data
-     * within the specified dimension group.
+     * A list of dimensions to retrieve the detail data for within the given dimension group. If you don't specify this
+     * parameter, Performance Insights returns all dimension data within the specified dimension group. Specify
+     * dimension names for the following dimension groups:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.sql</code> - Specify either the full dimension name <code>db.sql.statement</code> or the short dimension
+     * name <code>statement</code> (Aurora and RDS only).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.query</code> - Specify either the full dimension name <code>db.query.statement</code> or the short
+     * dimension name <code>statement</code> (DocumentDB only).
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return A list of dimensions to retrieve the detail data for within the given dimension group. For the dimension
-     *         group <code>db.sql</code>, specify either the full dimension name <code>db.sql.statement</code> or the
-     *         short dimension name <code>statement</code>. If you don't specify this parameter, Performance Insights
-     *         returns all dimension data within the specified dimension group.
+     * @return A list of dimensions to retrieve the detail data for within the given dimension group. If you don't
+     *         specify this parameter, Performance Insights returns all dimension data within the specified dimension
+     *         group. Specify dimension names for the following dimension groups:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>db.sql</code> - Specify either the full dimension name <code>db.sql.statement</code> or the short
+     *         dimension name <code>statement</code> (Aurora and RDS only).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>db.query</code> - Specify either the full dimension name <code>db.query.statement</code> or the
+     *         short dimension name <code>statement</code> (DocumentDB only).
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<String> getRequestedDimensions() {
@@ -295,17 +495,42 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of dimensions to retrieve the detail data for within the given dimension group. For the dimension group
-     * <code>db.sql</code>, specify either the full dimension name <code>db.sql.statement</code> or the short dimension
-     * name <code>statement</code>. If you don't specify this parameter, Performance Insights returns all dimension data
-     * within the specified dimension group.
+     * A list of dimensions to retrieve the detail data for within the given dimension group. If you don't specify this
+     * parameter, Performance Insights returns all dimension data within the specified dimension group. Specify
+     * dimension names for the following dimension groups:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.sql</code> - Specify either the full dimension name <code>db.sql.statement</code> or the short dimension
+     * name <code>statement</code> (Aurora and RDS only).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.query</code> - Specify either the full dimension name <code>db.query.statement</code> or the short
+     * dimension name <code>statement</code> (DocumentDB only).
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param requestedDimensions
-     *        A list of dimensions to retrieve the detail data for within the given dimension group. For the dimension
-     *        group <code>db.sql</code>, specify either the full dimension name <code>db.sql.statement</code> or the
-     *        short dimension name <code>statement</code>. If you don't specify this parameter, Performance Insights
-     *        returns all dimension data within the specified dimension group.
+     *        A list of dimensions to retrieve the detail data for within the given dimension group. If you don't
+     *        specify this parameter, Performance Insights returns all dimension data within the specified dimension
+     *        group. Specify dimension names for the following dimension groups:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db.sql</code> - Specify either the full dimension name <code>db.sql.statement</code> or the short
+     *        dimension name <code>statement</code> (Aurora and RDS only).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db.query</code> - Specify either the full dimension name <code>db.query.statement</code> or the
+     *        short dimension name <code>statement</code> (DocumentDB only).
+     *        </p>
+     *        </li>
      */
 
     public void setRequestedDimensions(java.util.Collection<String> requestedDimensions) {
@@ -319,11 +544,24 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of dimensions to retrieve the detail data for within the given dimension group. For the dimension group
-     * <code>db.sql</code>, specify either the full dimension name <code>db.sql.statement</code> or the short dimension
-     * name <code>statement</code>. If you don't specify this parameter, Performance Insights returns all dimension data
-     * within the specified dimension group.
+     * A list of dimensions to retrieve the detail data for within the given dimension group. If you don't specify this
+     * parameter, Performance Insights returns all dimension data within the specified dimension group. Specify
+     * dimension names for the following dimension groups:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.sql</code> - Specify either the full dimension name <code>db.sql.statement</code> or the short dimension
+     * name <code>statement</code> (Aurora and RDS only).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.query</code> - Specify either the full dimension name <code>db.query.statement</code> or the short
+     * dimension name <code>statement</code> (DocumentDB only).
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRequestedDimensions(java.util.Collection)} or {@link #withRequestedDimensions(java.util.Collection)}
@@ -331,10 +569,22 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param requestedDimensions
-     *        A list of dimensions to retrieve the detail data for within the given dimension group. For the dimension
-     *        group <code>db.sql</code>, specify either the full dimension name <code>db.sql.statement</code> or the
-     *        short dimension name <code>statement</code>. If you don't specify this parameter, Performance Insights
-     *        returns all dimension data within the specified dimension group.
+     *        A list of dimensions to retrieve the detail data for within the given dimension group. If you don't
+     *        specify this parameter, Performance Insights returns all dimension data within the specified dimension
+     *        group. Specify dimension names for the following dimension groups:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db.sql</code> - Specify either the full dimension name <code>db.sql.statement</code> or the short
+     *        dimension name <code>statement</code> (Aurora and RDS only).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db.query</code> - Specify either the full dimension name <code>db.query.statement</code> or the
+     *        short dimension name <code>statement</code> (DocumentDB only).
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -350,17 +600,42 @@ public class GetDimensionKeyDetailsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of dimensions to retrieve the detail data for within the given dimension group. For the dimension group
-     * <code>db.sql</code>, specify either the full dimension name <code>db.sql.statement</code> or the short dimension
-     * name <code>statement</code>. If you don't specify this parameter, Performance Insights returns all dimension data
-     * within the specified dimension group.
+     * A list of dimensions to retrieve the detail data for within the given dimension group. If you don't specify this
+     * parameter, Performance Insights returns all dimension data within the specified dimension group. Specify
+     * dimension names for the following dimension groups:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.sql</code> - Specify either the full dimension name <code>db.sql.statement</code> or the short dimension
+     * name <code>statement</code> (Aurora and RDS only).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.query</code> - Specify either the full dimension name <code>db.query.statement</code> or the short
+     * dimension name <code>statement</code> (DocumentDB only).
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param requestedDimensions
-     *        A list of dimensions to retrieve the detail data for within the given dimension group. For the dimension
-     *        group <code>db.sql</code>, specify either the full dimension name <code>db.sql.statement</code> or the
-     *        short dimension name <code>statement</code>. If you don't specify this parameter, Performance Insights
-     *        returns all dimension data within the specified dimension group.
+     *        A list of dimensions to retrieve the detail data for within the given dimension group. If you don't
+     *        specify this parameter, Performance Insights returns all dimension data within the specified dimension
+     *        group. Specify dimension names for the following dimension groups:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db.sql</code> - Specify either the full dimension name <code>db.sql.statement</code> or the short
+     *        dimension name <code>statement</code> (Aurora and RDS only).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db.query</code> - Specify either the full dimension name <code>db.query.statement</code> or the
+     *        short dimension name <code>statement</code> (DocumentDB only).
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

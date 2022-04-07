@@ -54,7 +54,8 @@ public class SolutionConfig implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, String> featureTransformationParameters;
     /**
      * <p>
-     * The <a>AutoMLConfig</a> object containing a list of recipes to search when AutoML is performed.
+     * The <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_AutoMLConfig.html">AutoMLConfig</a> object
+     * containing a list of recipes to search when AutoML is performed.
      * </p>
      */
     private AutoMLConfig autoMLConfig;
@@ -286,11 +287,13 @@ public class SolutionConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The <a>AutoMLConfig</a> object containing a list of recipes to search when AutoML is performed.
+     * The <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_AutoMLConfig.html">AutoMLConfig</a> object
+     * containing a list of recipes to search when AutoML is performed.
      * </p>
      * 
      * @param autoMLConfig
-     *        The <a>AutoMLConfig</a> object containing a list of recipes to search when AutoML is performed.
+     *        The <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_AutoMLConfig.html">AutoMLConfig</a>
+     *        object containing a list of recipes to search when AutoML is performed.
      */
 
     public void setAutoMLConfig(AutoMLConfig autoMLConfig) {
@@ -299,10 +302,12 @@ public class SolutionConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The <a>AutoMLConfig</a> object containing a list of recipes to search when AutoML is performed.
+     * The <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_AutoMLConfig.html">AutoMLConfig</a> object
+     * containing a list of recipes to search when AutoML is performed.
      * </p>
      * 
-     * @return The <a>AutoMLConfig</a> object containing a list of recipes to search when AutoML is performed.
+     * @return The <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_AutoMLConfig.html">AutoMLConfig</a>
+     *         object containing a list of recipes to search when AutoML is performed.
      */
 
     public AutoMLConfig getAutoMLConfig() {
@@ -311,11 +316,13 @@ public class SolutionConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The <a>AutoMLConfig</a> object containing a list of recipes to search when AutoML is performed.
+     * The <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_AutoMLConfig.html">AutoMLConfig</a> object
+     * containing a list of recipes to search when AutoML is performed.
      * </p>
      * 
      * @param autoMLConfig
-     *        The <a>AutoMLConfig</a> object containing a list of recipes to search when AutoML is performed.
+     *        The <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_AutoMLConfig.html">AutoMLConfig</a>
+     *        object containing a list of recipes to search when AutoML is performed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

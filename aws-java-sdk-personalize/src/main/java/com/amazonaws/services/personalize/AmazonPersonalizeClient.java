@@ -81,11 +81,17 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
                             new JsonErrorShapeMetadata().withErrorCode("ResourceInUseException").withExceptionUnmarshaller(
                                     com.amazonaws.services.personalize.model.transform.ResourceInUseExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("TooManyTagKeysException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.personalize.model.transform.TooManyTagKeysExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidNextTokenException").withExceptionUnmarshaller(
                                     com.amazonaws.services.personalize.model.transform.InvalidNextTokenExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("LimitExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.personalize.model.transform.LimitExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("TooManyTagsException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.personalize.model.transform.TooManyTagsExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.personalize.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
@@ -146,7 +152,9 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
     /**
      * <p>
      * Creates a batch inference job. The operation can handle up to 50 million records and the input file must be in
-     * JSON format. For more information, see <a>recommendations-batch</a>.
+     * JSON format. For more information, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/creating-batch-inference-job.html">Creating a batch
+     * inference job</a>.
      * </p>
      * 
      * @param createBatchInferenceJobRequest
@@ -161,6 +169,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      *         Could not find the specified resource.
      * @throws ResourceInUseException
      *         The specified resource is in use.
+     * @throws TooManyTagsException
+     *         You have exceeded the maximum number of tags you can apply to this resource.
      * @sample AmazonPersonalize.CreateBatchInferenceJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateBatchInferenceJob"
      *      target="_top">AWS API Documentation</a>
@@ -214,7 +224,9 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
     /**
      * <p>
      * Creates a batch segment job. The operation can handle up to 50 million records and the input file must be in JSON
-     * format. For more information, see <a>recommendations-batch</a>.
+     * format. For more information, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/recommendations-batch.html">Getting batch recommendations
+     * and user segments</a>.
      * </p>
      * 
      * @param createBatchSegmentJobRequest
@@ -229,6 +241,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      *         Could not find the specified resource.
      * @throws ResourceInUseException
      *         The specified resource is in use.
+     * @throws TooManyTagsException
+     *         You have exceeded the maximum number of tags you can apply to this resource.
      * @sample AmazonPersonalize.CreateBatchSegmentJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateBatchSegmentJob"
      *      target="_top">AWS API Documentation</a>
@@ -324,7 +338,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * </li>
      * </ul>
      * <p>
-     * To get the campaign status, call <a>DescribeCampaign</a>.
+     * To get the campaign status, call <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeCampaign.html">DescribeCampaign</a>.
      * </p>
      * <note>
      * <p>
@@ -338,22 +353,22 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <ul>
      * <li>
      * <p>
-     * <a>ListCampaigns</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListCampaigns.html">ListCampaigns</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DescribeCampaign</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeCampaign.html">DescribeCampaign</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>UpdateCampaign</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_UpdateCampaign.html">UpdateCampaign</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DeleteCampaign</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DeleteCampaign.html">DeleteCampaign</a>
      * </p>
      * </li>
      * </ul>
@@ -370,6 +385,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      *         The limit on the number of requests per second has been exceeded.
      * @throws ResourceInUseException
      *         The specified resource is in use.
+     * @throws TooManyTagsException
+     *         You have exceeded the maximum number of tags you can apply to this resource.
      * @sample AmazonPersonalize.CreateCampaign
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateCampaign" target="_top">AWS API
      *      Documentation</a>
@@ -420,8 +437,9 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Creates an empty dataset and adds it to the specified dataset group. Use <a>CreateDatasetImportJob</a> to import
-     * your training data to a dataset.
+     * Creates an empty dataset and adds it to the specified dataset group. Use <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetImportJob.html"
+     * >CreateDatasetImportJob</a> to import your training data to a dataset.
      * </p>
      * <p>
      * There are three types of datasets:
@@ -463,7 +481,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * </li>
      * </ul>
      * <p>
-     * To get the status of the dataset, call <a>DescribeDataset</a>.
+     * To get the status of the dataset, call <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeDataset.html">DescribeDataset</a>.
      * </p>
      * <p class="title">
      * <b>Related APIs</b>
@@ -471,22 +490,22 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <ul>
      * <li>
      * <p>
-     * <a>CreateDatasetGroup</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetGroup.html">CreateDatasetGroup</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>ListDatasets</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListDatasets.html">ListDatasets</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DescribeDataset</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeDataset.html">DescribeDataset</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DeleteDataset</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DeleteDataset.html">DeleteDataset</a>
      * </p>
      * </li>
      * </ul>
@@ -503,6 +522,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      *         The limit on the number of requests per second has been exceeded.
      * @throws ResourceInUseException
      *         The specified resource is in use.
+     * @throws TooManyTagsException
+     *         You have exceeded the maximum number of tags you can apply to this resource.
      * @sample AmazonPersonalize.CreateDataset
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateDataset" target="_top">AWS API
      *      Documentation</a>
@@ -573,10 +594,11 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * </li>
      * </ul>
      * <p>
-     * To get the status of the export job, call <a>DescribeDatasetExportJob</a>, and specify the Amazon Resource Name
-     * (ARN) of the dataset export job. The dataset export is complete when the status shows as ACTIVE. If the status
-     * shows as CREATE FAILED, the response includes a <code>failureReason</code> key, which describes why the job
-     * failed.
+     * To get the status of the export job, call <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeDatasetExportJob.html"
+     * >DescribeDatasetExportJob</a>, and specify the Amazon Resource Name (ARN) of the dataset export job. The dataset
+     * export is complete when the status shows as ACTIVE. If the status shows as CREATE FAILED, the response includes a
+     * <code>failureReason</code> key, which describes why the job failed.
      * </p>
      * 
      * @param createDatasetExportJobRequest
@@ -591,6 +613,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      *         The limit on the number of requests per second has been exceeded.
      * @throws ResourceInUseException
      *         The specified resource is in use.
+     * @throws TooManyTagsException
+     *         You have exceeded the maximum number of tags you can apply to this resource.
      * @sample AmazonPersonalize.CreateDatasetExportJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateDatasetExportJob"
      *      target="_top">AWS API Documentation</a>
@@ -685,8 +709,10 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * </li>
      * </ul>
      * <p>
-     * To get the status of the dataset group, call <a>DescribeDatasetGroup</a>. If the status shows as CREATE FAILED,
-     * the response includes a <code>failureReason</code> key, which describes why the creation failed.
+     * To get the status of the dataset group, call <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeDatasetGroup.html">DescribeDatasetGroup</a>.
+     * If the status shows as CREATE FAILED, the response includes a <code>failureReason</code> key, which describes why
+     * the creation failed.
      * </p>
      * <note>
      * <p>
@@ -704,17 +730,17 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <ul>
      * <li>
      * <p>
-     * <a>CreateDataset</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDataset.html">CreateDataset</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>CreateEventTracker</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateEventTracker.html">CreateEventTracker</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>CreateSolution</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSolution.html">CreateSolution</a>
      * </p>
      * </li>
      * </ul>
@@ -724,17 +750,18 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <ul>
      * <li>
      * <p>
-     * <a>ListDatasetGroups</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListDatasetGroups.html">ListDatasetGroups</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DescribeDatasetGroup</a>
+     * <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeDatasetGroup.html">DescribeDatasetGroup</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DeleteDatasetGroup</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DeleteDatasetGroup.html">DeleteDatasetGroup</a>
      * </p>
      * </li>
      * </ul>
@@ -747,6 +774,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      *         The specified resource already exists.
      * @throws LimitExceededException
      *         The limit on the number of requests per second has been exceeded.
+     * @throws TooManyTagsException
+     *         You have exceeded the maximum number of tags you can apply to this resource.
      * @sample AmazonPersonalize.CreateDatasetGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateDatasetGroup" target="_top">AWS
      *      API Documentation</a>
@@ -802,10 +831,11 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * </p>
      * </li> </ul>
      * <p>
-     * To get the status of the import job, call <a>DescribeDatasetImportJob</a>, providing the Amazon Resource Name
-     * (ARN) of the dataset import job. The dataset import is complete when the status shows as ACTIVE. If the status
-     * shows as CREATE FAILED, the response includes a <code>failureReason</code> key, which describes why the job
-     * failed.
+     * To get the status of the import job, call <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeDatasetImportJob.html"
+     * >DescribeDatasetImportJob</a>, providing the Amazon Resource Name (ARN) of the dataset import job. The dataset
+     * import is complete when the status shows as ACTIVE. If the status shows as CREATE FAILED, the response includes a
+     * <code>failureReason</code> key, which describes why the job failed.
      * </p>
      * <note>
      * <p>
@@ -818,12 +848,14 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <ul>
      * <li>
      * <p>
-     * <a>ListDatasetImportJobs</a>
+     * <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListDatasetImportJobs.html">ListDatasetImportJobs</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DescribeDatasetImportJob</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeDatasetImportJob.html">
+     * DescribeDatasetImportJob</a>
      * </p>
      * </li>
      * </ul>
@@ -840,6 +872,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      *         The limit on the number of requests per second has been exceeded.
      * @throws ResourceInUseException
      *         The specified resource is in use.
+     * @throws TooManyTagsException
+     *         You have exceeded the maximum number of tags you can apply to this resource.
      * @sample AmazonPersonalize.CreateDatasetImportJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateDatasetImportJob"
      *      target="_top">AWS API Documentation</a>
@@ -922,7 +956,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * </li>
      * </ul>
      * <p>
-     * To get the status of the event tracker, call <a>DescribeEventTracker</a>.
+     * To get the status of the event tracker, call <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeEventTracker.html">DescribeEventTracker</a>.
      * </p>
      * <note>
      * <p>
@@ -935,17 +970,18 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <ul>
      * <li>
      * <p>
-     * <a>ListEventTrackers</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListEventTrackers.html">ListEventTrackers</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DescribeEventTracker</a>
+     * <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeEventTracker.html">DescribeEventTracker</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DeleteEventTracker</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DeleteEventTracker.html">DeleteEventTracker</a>
      * </p>
      * </li>
      * </ul>
@@ -962,6 +998,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      *         The limit on the number of requests per second has been exceeded.
      * @throws ResourceInUseException
      *         The specified resource is in use.
+     * @throws TooManyTagsException
+     *         You have exceeded the maximum number of tags you can apply to this resource.
      * @sample AmazonPersonalize.CreateEventTracker
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateEventTracker" target="_top">AWS
      *      API Documentation</a>
@@ -1012,7 +1050,9 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Creates a recommendation filter. For more information, see <a>filter</a>.
+     * Creates a recommendation filter. For more information, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/filter.html">Filtering recommendations and user
+     * segments</a>.
      * </p>
      * 
      * @param createFilterRequest
@@ -1025,6 +1065,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      *         Could not find the specified resource.
      * @throws LimitExceededException
      *         The limit on the number of requests per second has been exceeded.
+     * @throws TooManyTagsException
+     *         You have exceeded the maximum number of tags you can apply to this resource.
      * @sample AmazonPersonalize.CreateFilter
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateFilter" target="_top">AWS API
      *      Documentation</a>
@@ -1123,7 +1165,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * </li>
      * </ul>
      * <p>
-     * To get the recommender status, call <a>DescribeRecommender</a>.
+     * To get the recommender status, call <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeRecommender.html">DescribeRecommender</a>.
      * </p>
      * <note>
      * <p>
@@ -1137,22 +1180,22 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <ul>
      * <li>
      * <p>
-     * <a>ListRecommenders</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListRecommenders.html">ListRecommenders</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DescribeRecommender</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeRecommender.html">DescribeRecommender</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>UpdateRecommender</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_UpdateRecommender.html">UpdateRecommender</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DeleteRecommender</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DeleteRecommender.html">DeleteRecommender</a>
      * </p>
      * </li>
      * </ul>
@@ -1167,6 +1210,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      *         Could not find the specified resource.
      * @throws LimitExceededException
      *         The limit on the number of requests per second has been exceeded.
+     * @throws TooManyTagsException
+     *         You have exceeded the maximum number of tags you can apply to this resource.
      * @sample AmazonPersonalize.CreateRecommender
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateRecommender" target="_top">AWS
      *      API Documentation</a>
@@ -1223,7 +1268,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <p>
      * Amazon Personalize recognizes three schema variants. Each schema is associated with a dataset type and has a set
      * of required field and keywords. If you are creating a schema for a dataset in a Domain dataset group, you provide
-     * the domain of the Domain dataset group. You specify a schema when you call <a>CreateDataset</a>.
+     * the domain of the Domain dataset group. You specify a schema when you call <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDataset.html">CreateDataset</a>.
      * </p>
      * <p class="title">
      * <b>Related APIs</b>
@@ -1231,17 +1277,17 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <ul>
      * <li>
      * <p>
-     * <a>ListSchemas</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListSchemas.html">ListSchemas</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DescribeSchema</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSchema.html">DescribeSchema</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DeleteSchema</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DeleteSchema.html">DeleteSchema</a>
      * </p>
      * </li>
      * </ul>
@@ -1305,13 +1351,16 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
     /**
      * <p>
      * Creates the configuration for training a model. A trained model is known as a solution. After the configuration
-     * is created, you train the model (create a solution) by calling the <a>CreateSolutionVersion</a> operation. Every
-     * time you call <code>CreateSolutionVersion</code>, a new version of the solution is created.
+     * is created, you train the model (create a solution) by calling the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSolutionVersion.html">CreateSolutionVersion</a>
+     * operation. Every time you call <code>CreateSolutionVersion</code>, a new version of the solution is created.
      * </p>
      * <p>
-     * After creating a solution version, you check its accuracy by calling <a>GetSolutionMetrics</a>. When you are
-     * satisfied with the version, you deploy it using <a>CreateCampaign</a>. The campaign provides recommendations to a
-     * client through the <a
+     * After creating a solution version, you check its accuracy by calling <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_GetSolutionMetrics.html">GetSolutionMetrics</a>. When
+     * you are satisfied with the version, you deploy it using <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateCampaign.html">CreateCampaign</a>. The campaign
+     * provides recommendations to a client through the <a
      * href="https://docs.aws.amazon.com/personalize/latest/dg/API_RS_GetRecommendations.html">GetRecommendations</a>
      * API.
      * </p>
@@ -1347,8 +1396,9 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * </li>
      * </ul>
      * <p>
-     * To get the status of the solution, call <a>DescribeSolution</a>. Wait until the status shows as ACTIVE before
-     * calling <code>CreateSolutionVersion</code>.
+     * To get the status of the solution, call <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolution.html">DescribeSolution</a>. Wait
+     * until the status shows as ACTIVE before calling <code>CreateSolutionVersion</code>.
      * </p>
      * <p class="title">
      * <b>Related APIs</b>
@@ -1356,34 +1406,37 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <ul>
      * <li>
      * <p>
-     * <a>ListSolutions</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListSolutions.html">ListSolutions</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>CreateSolutionVersion</a>
+     * <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSolutionVersion.html">CreateSolutionVersion</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DescribeSolution</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolution.html">DescribeSolution</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DeleteSolution</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DeleteSolution.html">DeleteSolution</a>
      * </p>
      * </li>
      * </ul>
      * <ul>
      * <li>
      * <p>
-     * <a>ListSolutionVersions</a>
+     * <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListSolutionVersions.html">ListSolutionVersions</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DescribeSolutionVersion</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolutionVersion.html">
+     * DescribeSolutionVersion</a>
      * </p>
      * </li>
      * </ul>
@@ -1400,6 +1453,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      *         The limit on the number of requests per second has been exceeded.
      * @throws ResourceInUseException
      *         The specified resource is in use.
+     * @throws TooManyTagsException
+     *         You have exceeded the maximum number of tags you can apply to this resource.
      * @sample AmazonPersonalize.CreateSolution
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateSolution" target="_top">AWS API
      *      Documentation</a>
@@ -1450,9 +1505,10 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Trains or retrains an active solution in a Custom dataset group. A solution is created using the
-     * <a>CreateSolution</a> operation and must be in the ACTIVE state before calling <code>CreateSolutionVersion</code>
-     * . A new version of the solution is created every time you call this operation.
+     * Trains or retrains an active solution in a Custom dataset group. A solution is created using the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSolution.html">CreateSolution</a> operation and
+     * must be in the ACTIVE state before calling <code>CreateSolutionVersion</code>. A new version of the solution is
+     * created every time you call this operation.
      * </p>
      * <p>
      * <b>Status</b>
@@ -1493,8 +1549,9 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * </li>
      * </ul>
      * <p>
-     * To get the status of the version, call <a>DescribeSolutionVersion</a>. Wait until the status shows as ACTIVE
-     * before calling <code>CreateCampaign</code>.
+     * To get the status of the version, call <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolutionVersion.html"
+     * >DescribeSolutionVersion</a>. Wait until the status shows as ACTIVE before calling <code>CreateCampaign</code>.
      * </p>
      * <p>
      * If the status shows as CREATE FAILED, the response includes a <code>failureReason</code> key, which describes why
@@ -1506,34 +1563,34 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <ul>
      * <li>
      * <p>
-     * <a>ListSolutionVersions</a>
+     * <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListSolutionVersions.html">ListSolutionVersions</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DescribeSolutionVersion</a>
-     * </p>
-     * </li>
-     * </ul>
-     * <ul>
-     * <li>
-     * <p>
-     * <a>ListSolutions</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolutionVersion.html">
+     * DescribeSolutionVersion</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>CreateSolution</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListSolutions.html">ListSolutions</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DescribeSolution</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSolution.html">CreateSolution</a>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <a>DeleteSolution</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolution.html">DescribeSolution</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_DeleteSolution.html">DeleteSolution</a>
      * </p>
      * </li>
      * </ul>
@@ -1548,6 +1605,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      *         The limit on the number of requests per second has been exceeded.
      * @throws ResourceInUseException
      *         The specified resource is in use.
+     * @throws TooManyTagsException
+     *         You have exceeded the maximum number of tags you can apply to this resource.
      * @sample AmazonPersonalize.CreateSolutionVersion
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateSolutionVersion"
      *      target="_top">AWS API Documentation</a>
@@ -1602,7 +1661,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * Removes a campaign by deleting the solution deployment. The solution that the campaign is based on is not deleted
      * and can be redeployed when needed. A deleted campaign can no longer be specified in a <a
      * href="https://docs.aws.amazon.com/personalize/latest/dg/API_RS_GetRecommendations.html">GetRecommendations</a>
-     * request. For more information on campaigns, see <a>CreateCampaign</a>.
+     * request. For information on creating campaigns, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateCampaign.html">CreateCampaign</a>.
      * </p>
      * 
      * @param deleteCampaignRequest
@@ -1665,7 +1725,7 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <p>
      * Deletes a dataset. You can't delete a dataset if an associated <code>DatasetImportJob</code> or
      * <code>SolutionVersion</code> is in the CREATE PENDING or IN PROGRESS state. For more information on datasets, see
-     * <a>CreateDataset</a>.
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDataset.html">CreateDataset</a>.
      * </p>
      * 
      * @param deleteDatasetRequest
@@ -1805,7 +1865,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
     /**
      * <p>
      * Deletes the event tracker. Does not delete the event-interactions dataset from the associated dataset group. For
-     * more information on event trackers, see <a>CreateEventTracker</a>.
+     * more information on event trackers, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateEventTracker.html">CreateEventTracker</a>.
      * </p>
      * 
      * @param deleteEventTrackerRequest
@@ -1991,7 +2052,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
     /**
      * <p>
      * Deletes a schema. Before deleting a schema, you must delete all datasets referencing the schema. For more
-     * information on schemas, see <a>CreateSchema</a>.
+     * information on schemas, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSchema.html">CreateSchema</a>.
      * </p>
      * 
      * @param deleteSchemaRequest
@@ -2053,10 +2115,11 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
     /**
      * <p>
      * Deletes all versions of a solution and the <code>Solution</code> object itself. Before deleting a solution, you
-     * must delete all campaigns based on the solution. To determine what campaigns are using the solution, call
-     * <a>ListCampaigns</a> and supply the Amazon Resource Name (ARN) of the solution. You can't delete a solution if an
-     * associated <code>SolutionVersion</code> is in the CREATE PENDING or IN PROGRESS state. For more information on
-     * solutions, see <a>CreateSolution</a>.
+     * must delete all campaigns based on the solution. To determine what campaigns are using the solution, call <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_ListCampaigns.html">ListCampaigns</a> and supply the
+     * Amazon Resource Name (ARN) of the solution. You can't delete a solution if an associated
+     * <code>SolutionVersion</code> is in the CREATE PENDING or IN PROGRESS state. For more information on solutions,
+     * see <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSolution.html">CreateSolution</a>.
      * </p>
      * 
      * @param deleteSolutionRequest
@@ -2322,7 +2385,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * key, which describes why.
      * </p>
      * <p>
-     * For more information on campaigns, see <a>CreateCampaign</a>.
+     * For more information on campaigns, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateCampaign.html">CreateCampaign</a>.
      * </p>
      * 
      * @param describeCampaignRequest
@@ -2381,7 +2445,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Describes the given dataset. For more information on datasets, see <a>CreateDataset</a>.
+     * Describes the given dataset. For more information on datasets, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDataset.html">CreateDataset</a>.
      * </p>
      * 
      * @param describeDatasetRequest
@@ -2440,7 +2505,9 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Describes the dataset export job created by <a>CreateDatasetExportJob</a>, including the export job status.
+     * Describes the dataset export job created by <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetExportJob.html"
+     * >CreateDatasetExportJob</a>, including the export job status.
      * </p>
      * 
      * @param describeDatasetExportJobRequest
@@ -2501,7 +2568,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Describes the given dataset group. For more information on dataset groups, see <a>CreateDatasetGroup</a>.
+     * Describes the given dataset group. For more information on dataset groups, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetGroup.html">CreateDatasetGroup</a>.
      * </p>
      * 
      * @param describeDatasetGroupRequest
@@ -2560,7 +2628,9 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Describes the dataset import job created by <a>CreateDatasetImportJob</a>, including the import job status.
+     * Describes the dataset import job created by <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetImportJob.html"
+     * >CreateDatasetImportJob</a>, including the import job status.
      * </p>
      * 
      * @param describeDatasetImportJobRequest
@@ -2622,7 +2692,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
     /**
      * <p>
      * Describes an event tracker. The response includes the <code>trackingId</code> and <code>status</code> of the
-     * event tracker. For more information on event trackers, see <a>CreateEventTracker</a>.
+     * event tracker. For more information on event trackers, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateEventTracker.html">CreateEventTracker</a>.
      * </p>
      * 
      * @param describeEventTrackerRequest
@@ -2825,9 +2896,10 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * </ul>
      * <p>
      * Amazon Personalize provides a set of predefined recipes. You specify a recipe when you create a solution with the
-     * <a>CreateSolution</a> API. <code>CreateSolution</code> trains a model by using the algorithm in the specified
-     * recipe and a training dataset. The solution, when deployed as a campaign, can provide recommendations using the
-     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_RS_GetRecommendations.html">GetRecommendations</a>
+     * <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSolution.html">CreateSolution</a> API.
+     * <code>CreateSolution</code> trains a model by using the algorithm in the specified recipe and a training dataset.
+     * The solution, when deployed as a campaign, can provide recommendations using the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_RS_GetRecommendations.html">GetRecommendations</a>
      * API.
      * </p>
      * 
@@ -2969,7 +3041,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Describes a schema. For more information on schemas, see <a>CreateSchema</a>.
+     * Describes a schema. For more information on schemas, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSchema.html">CreateSchema</a>.
      * </p>
      * 
      * @param describeSchemaRequest
@@ -3028,7 +3101,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Describes a solution. For more information on solutions, see <a>CreateSolution</a>.
+     * Describes a solution. For more information on solutions, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSolution.html">CreateSolution</a>.
      * </p>
      * 
      * @param describeSolutionRequest
@@ -3087,7 +3161,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Describes a specific version of a solution. For more information on solutions, see <a>CreateSolution</a>.
+     * Describes a specific version of a solution. For more information on solutions, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSolution.html">CreateSolution</a>
      * </p>
      * 
      * @param describeSolutionVersionRequest
@@ -3330,7 +3405,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <p>
      * Returns a list of campaigns that use the given solution. When a solution is not specified, all the campaigns
      * associated with the account are listed. The response provides the properties for each campaign, including the
-     * Amazon Resource Name (ARN). For more information on campaigns, see <a>CreateCampaign</a>.
+     * Amazon Resource Name (ARN). For more information on campaigns, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateCampaign.html">CreateCampaign</a>.
      * </p>
      * 
      * @param listCampaignsRequest
@@ -3391,8 +3467,10 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <p>
      * Returns a list of dataset export jobs that use the given dataset. When a dataset is not specified, all the
      * dataset export jobs associated with the account are listed. The response provides the properties for each dataset
-     * export job, including the Amazon Resource Name (ARN). For more information on dataset export jobs, see
-     * <a>CreateDatasetExportJob</a>. For more information on datasets, see <a>CreateDataset</a>.
+     * export job, including the Amazon Resource Name (ARN). For more information on dataset export jobs, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetExportJob.html"
+     * >CreateDatasetExportJob</a>. For more information on datasets, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDataset.html">CreateDataset</a>.
      * </p>
      * 
      * @param listDatasetExportJobsRequest
@@ -3453,7 +3531,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
     /**
      * <p>
      * Returns a list of dataset groups. The response provides the properties for each dataset group, including the
-     * Amazon Resource Name (ARN). For more information on dataset groups, see <a>CreateDatasetGroup</a>.
+     * Amazon Resource Name (ARN). For more information on dataset groups, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetGroup.html">CreateDatasetGroup</a>.
      * </p>
      * 
      * @param listDatasetGroupsRequest
@@ -3512,8 +3591,10 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <p>
      * Returns a list of dataset import jobs that use the given dataset. When a dataset is not specified, all the
      * dataset import jobs associated with the account are listed. The response provides the properties for each dataset
-     * import job, including the Amazon Resource Name (ARN). For more information on dataset import jobs, see
-     * <a>CreateDatasetImportJob</a>. For more information on datasets, see <a>CreateDataset</a>.
+     * import job, including the Amazon Resource Name (ARN). For more information on dataset import jobs, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetImportJob.html"
+     * >CreateDatasetImportJob</a>. For more information on datasets, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDataset.html">CreateDataset</a>.
      * </p>
      * 
      * @param listDatasetImportJobsRequest
@@ -3574,7 +3655,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
     /**
      * <p>
      * Returns the list of datasets contained in the given dataset group. The response provides the properties for each
-     * dataset, including the Amazon Resource Name (ARN). For more information on datasets, see <a>CreateDataset</a>.
+     * dataset, including the Amazon Resource Name (ARN). For more information on datasets, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDataset.html">CreateDataset</a>.
      * </p>
      * 
      * @param listDatasetsRequest
@@ -3635,7 +3717,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <p>
      * Returns the list of event trackers associated with the account. The response provides the properties for each
      * event tracker, including the Amazon Resource Name (ARN) and tracking ID. For more information on event trackers,
-     * see <a>CreateEventTracker</a>.
+     * see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateEventTracker.html">CreateEventTracker</a>.
      * </p>
      * 
      * @param listEventTrackersRequest
@@ -3876,7 +3959,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
     /**
      * <p>
      * Returns the list of schemas associated with the account. The response provides the properties for each schema,
-     * including the Amazon Resource Name (ARN). For more information on schemas, see <a>CreateSchema</a>.
+     * including the Amazon Resource Name (ARN). For more information on schemas, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSchema.html">CreateSchema</a>.
      * </p>
      * 
      * @param listSchemasRequest
@@ -3935,7 +4019,7 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <p>
      * Returns a list of solution versions for the given solution. When a solution is not specified, all the solution
      * versions associated with the account are listed. The response provides the properties for each solution version,
-     * including the Amazon Resource Name (ARN). For more information on solutions, see <a>CreateSolution</a>.
+     * including the Amazon Resource Name (ARN).
      * </p>
      * 
      * @param listSolutionVersionsRequest
@@ -3998,7 +4082,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * <p>
      * Returns a list of solutions that use the given dataset group. When a dataset group is not specified, all the
      * solutions associated with the account are listed. The response provides the properties for each solution,
-     * including the Amazon Resource Name (ARN). For more information on solutions, see <a>CreateSolution</a>.
+     * including the Amazon Resource Name (ARN). For more information on solutions, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSolution.html">CreateSolution</a>.
      * </p>
      * 
      * @param listSolutionsRequest
@@ -4045,6 +4130,68 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
             HttpResponseHandler<AmazonWebServiceResponse<ListSolutionsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListSolutionsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Get a list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a>
+     * attached to a resource.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws ResourceNotFoundException
+     *         Could not find the specified resource.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @sample AmazonPersonalize.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeListTagsForResource(request);
+    }
+
+    @SdkInternalApi
+    final ListTagsForResourceResult executeListTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listTagsForResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListTagsForResourceRequest> request = null;
+        Response<ListTagsForResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListTagsForResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listTagsForResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Personalize");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListTagsForResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -4142,12 +4289,142 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Add a list of tags to a resource.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws ResourceNotFoundException
+     *         Could not find the specified resource.
+     * @throws TooManyTagsException
+     *         You have exceeded the maximum number of tags you can apply to this resource.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @throws LimitExceededException
+     *         The limit on the number of requests per second has been exceeded.
+     * @sample AmazonPersonalize.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/TagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public TagResourceResult tagResource(TagResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeTagResource(request);
+    }
+
+    @SdkInternalApi
+    final TagResourceResult executeTagResource(TagResourceRequest tagResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(tagResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<TagResourceRequest> request = null;
+        Response<TagResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new TagResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(tagResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Personalize");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "TagResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<TagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new TagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Remove <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> that are
+     * attached to a resource.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws ResourceNotFoundException
+     *         Could not find the specified resource.
+     * @throws TooManyTagKeysException
+     *         The request contains more tag keys than can be associated with a resource (50 tag keys per resource).
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @sample AmazonPersonalize.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/UntagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UntagResourceResult untagResource(UntagResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeUntagResource(request);
+    }
+
+    @SdkInternalApi
+    final UntagResourceResult executeUntagResource(UntagResourceRequest untagResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(untagResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UntagResourceRequest> request = null;
+        Response<UntagResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UntagResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(untagResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Personalize");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UntagResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UntagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UntagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Updates a campaign by either deploying a new solution or changing the value of the campaign's
      * <code>minProvisionedTPS</code> parameter.
      * </p>
      * <p>
-     * To update a campaign, the campaign status must be ACTIVE or CREATE FAILED. Check the campaign status using the
-     * <a>DescribeCampaign</a> API.
+     * To update a campaign, the campaign status must be ACTIVE or CREATE FAILED. Check the campaign status using the <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeCampaign.html">DescribeCampaign</a>
+     * operation.
      * </p>
      * <note>
      * <p>
@@ -4156,7 +4433,8 @@ public class AmazonPersonalizeClient extends AmazonWebServiceClient implements A
      * </p>
      * </note>
      * <p>
-     * For more information on campaigns, see <a>CreateCampaign</a>.
+     * For more information on campaigns, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateCampaign.html">CreateCampaign</a>.
      * </p>
      * 
      * @param updateCampaignRequest

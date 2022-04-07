@@ -19,8 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides a summary of the properties of a solution version. For a complete listing, call the
- * <a>DescribeSolutionVersion</a> API.
+ * Provides a summary of the properties of a solution version. For a complete listing, call the <a
+ * href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeSolutionVersion.html">DescribeSolutionVersion</a>
+ * API.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/SolutionVersionSummary" target="_top">AWS

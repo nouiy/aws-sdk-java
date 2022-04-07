@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.personalize.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -37,6 +38,8 @@ public class CreateDatasetExportJobRequestMarshaller {
             .marshallLocationName("roleArn").build();
     private static final MarshallingInfo<StructuredPojo> JOBOUTPUT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("jobOutput").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final CreateDatasetExportJobRequestMarshaller instance = new CreateDatasetExportJobRequestMarshaller();
 
@@ -59,6 +62,7 @@ public class CreateDatasetExportJobRequestMarshaller {
             protocolMarshaller.marshall(createDatasetExportJobRequest.getIngestionMode(), INGESTIONMODE_BINDING);
             protocolMarshaller.marshall(createDatasetExportJobRequest.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(createDatasetExportJobRequest.getJobOutput(), JOBOUTPUT_BINDING);
+            protocolMarshaller.marshall(createDatasetExportJobRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

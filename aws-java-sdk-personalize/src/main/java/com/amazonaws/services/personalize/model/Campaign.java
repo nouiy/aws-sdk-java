@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object that describes the deployment of a solution version. For more information on campaigns, see
- * <a>CreateCampaign</a>.
+ * An object that describes the deployment of a solution version. For more information on campaigns, see <a
+ * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateCampaign.html">CreateCampaign</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/Campaign" target="_top">AWS API

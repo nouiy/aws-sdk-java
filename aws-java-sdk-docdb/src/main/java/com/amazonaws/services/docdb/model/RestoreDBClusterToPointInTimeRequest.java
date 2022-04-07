@@ -162,8 +162,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      * <p>
      * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are restoring a
-     * cluster with the same account that owns the KMS encryption key used to encrypt the new cluster, then you can use
-     * the KMS key alias instead of the ARN for the KMS encryption key.
+     * cluster with the same Amazon Web Services account that owns the KMS encryption key used to encrypt the new
+     * cluster, then you can use the KMS key alias instead of the ARN for the KMS encryption key.
      * </p>
      * <p>
      * You can restore to a new cluster and encrypt the new cluster with an KMS key that is different from the KMS key
@@ -1080,8 +1080,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      * <p>
      * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are restoring a
-     * cluster with the same account that owns the KMS encryption key used to encrypt the new cluster, then you can use
-     * the KMS key alias instead of the ARN for the KMS encryption key.
+     * cluster with the same Amazon Web Services account that owns the KMS encryption key used to encrypt the new
+     * cluster, then you can use the KMS key alias instead of the ARN for the KMS encryption key.
      * </p>
      * <p>
      * You can restore to a new cluster and encrypt the new cluster with an KMS key that is different from the KMS key
@@ -1113,8 +1113,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *        The KMS key identifier to use when restoring an encrypted cluster from an encrypted cluster.</p>
      *        <p>
      *        The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are restoring
-     *        a cluster with the same account that owns the KMS encryption key used to encrypt the new cluster, then you
-     *        can use the KMS key alias instead of the ARN for the KMS encryption key.
+     *        a cluster with the same Amazon Web Services account that owns the KMS encryption key used to encrypt the
+     *        new cluster, then you can use the KMS key alias instead of the ARN for the KMS encryption key.
      *        </p>
      *        <p>
      *        You can restore to a new cluster and encrypt the new cluster with an KMS key that is different from the
@@ -1152,8 +1152,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      * <p>
      * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are restoring a
-     * cluster with the same account that owns the KMS encryption key used to encrypt the new cluster, then you can use
-     * the KMS key alias instead of the ARN for the KMS encryption key.
+     * cluster with the same Amazon Web Services account that owns the KMS encryption key used to encrypt the new
+     * cluster, then you can use the KMS key alias instead of the ARN for the KMS encryption key.
      * </p>
      * <p>
      * You can restore to a new cluster and encrypt the new cluster with an KMS key that is different from the KMS key
@@ -1184,8 +1184,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * @return The KMS key identifier to use when restoring an encrypted cluster from an encrypted cluster.</p>
      *         <p>
      *         The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are restoring
-     *         a cluster with the same account that owns the KMS encryption key used to encrypt the new cluster, then
-     *         you can use the KMS key alias instead of the ARN for the KMS encryption key.
+     *         a cluster with the same Amazon Web Services account that owns the KMS encryption key used to encrypt the
+     *         new cluster, then you can use the KMS key alias instead of the ARN for the KMS encryption key.
      *         </p>
      *         <p>
      *         You can restore to a new cluster and encrypt the new cluster with an KMS key that is different from the
@@ -1223,8 +1223,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </p>
      * <p>
      * The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are restoring a
-     * cluster with the same account that owns the KMS encryption key used to encrypt the new cluster, then you can use
-     * the KMS key alias instead of the ARN for the KMS encryption key.
+     * cluster with the same Amazon Web Services account that owns the KMS encryption key used to encrypt the new
+     * cluster, then you can use the KMS key alias instead of the ARN for the KMS encryption key.
      * </p>
      * <p>
      * You can restore to a new cluster and encrypt the new cluster with an KMS key that is different from the KMS key
@@ -1256,8 +1256,8 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *        The KMS key identifier to use when restoring an encrypted cluster from an encrypted cluster.</p>
      *        <p>
      *        The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key. If you are restoring
-     *        a cluster with the same account that owns the KMS encryption key used to encrypt the new cluster, then you
-     *        can use the KMS key alias instead of the ARN for the KMS encryption key.
+     *        a cluster with the same Amazon Web Services account that owns the KMS encryption key used to encrypt the
+     *        new cluster, then you can use the KMS key alias instead of the ARN for the KMS encryption key.
      *        </p>
      *        <p>
      *        You can restore to a new cluster and encrypt the new cluster with an KMS key that is different from the

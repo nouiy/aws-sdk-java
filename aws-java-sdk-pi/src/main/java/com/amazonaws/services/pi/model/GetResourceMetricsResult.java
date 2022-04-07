@@ -41,18 +41,15 @@ public class GetResourceMetricsResult extends com.amazonaws.AmazonWebServiceResu
     private java.util.Date alignedEndTime;
     /**
      * <p>
-     * An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
-     * metrics from this data source.
-     * </p>
-     * <p>
-     * To use a DB instance as a data source, you specify its <code>DbiResourceId</code> value - for example:
-     * <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>
+     * An immutable identifier for a data source that is unique for an Amazon Web Services Region. Performance Insights
+     * gathers metrics from this data source. In the console, the identifier is shown as <i>ResourceID</i>. When you
+     * call <code>DescribeDBInstances</code>, the identifier is returned as <code>DbiResourceId</code>.
      * </p>
      */
     private String identifier;
     /**
      * <p>
-     * An array of metric results,, where each array element contains all of the data points for a particular dimension.
+     * An array of metric results, where each array element contains all of the data points for a particular dimension.
      * </p>
      */
     private java.util.List<MetricKeyDataPoints> metricList;
@@ -170,20 +167,16 @@ public class GetResourceMetricsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
-     * metrics from this data source.
-     * </p>
-     * <p>
-     * To use a DB instance as a data source, you specify its <code>DbiResourceId</code> value - for example:
-     * <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>
+     * An immutable identifier for a data source that is unique for an Amazon Web Services Region. Performance Insights
+     * gathers metrics from this data source. In the console, the identifier is shown as <i>ResourceID</i>. When you
+     * call <code>DescribeDBInstances</code>, the identifier is returned as <code>DbiResourceId</code>.
      * </p>
      * 
      * @param identifier
-     *        An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
-     *        metrics from this data source. </p>
-     *        <p>
-     *        To use a DB instance as a data source, you specify its <code>DbiResourceId</code> value - for example:
-     *        <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>
+     *        An immutable identifier for a data source that is unique for an Amazon Web Services Region. Performance
+     *        Insights gathers metrics from this data source. In the console, the identifier is shown as
+     *        <i>ResourceID</i>. When you call <code>DescribeDBInstances</code>, the identifier is returned as
+     *        <code>DbiResourceId</code>.
      */
 
     public void setIdentifier(String identifier) {
@@ -192,19 +185,15 @@ public class GetResourceMetricsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
-     * metrics from this data source.
-     * </p>
-     * <p>
-     * To use a DB instance as a data source, you specify its <code>DbiResourceId</code> value - for example:
-     * <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>
+     * An immutable identifier for a data source that is unique for an Amazon Web Services Region. Performance Insights
+     * gathers metrics from this data source. In the console, the identifier is shown as <i>ResourceID</i>. When you
+     * call <code>DescribeDBInstances</code>, the identifier is returned as <code>DbiResourceId</code>.
      * </p>
      * 
-     * @return An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights
-     *         gathers metrics from this data source. </p>
-     *         <p>
-     *         To use a DB instance as a data source, you specify its <code>DbiResourceId</code> value - for example:
-     *         <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>
+     * @return An immutable identifier for a data source that is unique for an Amazon Web Services Region. Performance
+     *         Insights gathers metrics from this data source. In the console, the identifier is shown as
+     *         <i>ResourceID</i>. When you call <code>DescribeDBInstances</code>, the identifier is returned as
+     *         <code>DbiResourceId</code>.
      */
 
     public String getIdentifier() {
@@ -213,20 +202,16 @@ public class GetResourceMetricsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
-     * metrics from this data source.
-     * </p>
-     * <p>
-     * To use a DB instance as a data source, you specify its <code>DbiResourceId</code> value - for example:
-     * <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>
+     * An immutable identifier for a data source that is unique for an Amazon Web Services Region. Performance Insights
+     * gathers metrics from this data source. In the console, the identifier is shown as <i>ResourceID</i>. When you
+     * call <code>DescribeDBInstances</code>, the identifier is returned as <code>DbiResourceId</code>.
      * </p>
      * 
      * @param identifier
-     *        An immutable, Amazon Web Services Region-unique identifier for a data source. Performance Insights gathers
-     *        metrics from this data source. </p>
-     *        <p>
-     *        To use a DB instance as a data source, you specify its <code>DbiResourceId</code> value - for example:
-     *        <code>db-FAIHNTYBKTGAUSUZQYPDS2GW4A</code>
+     *        An immutable identifier for a data source that is unique for an Amazon Web Services Region. Performance
+     *        Insights gathers metrics from this data source. In the console, the identifier is shown as
+     *        <i>ResourceID</i>. When you call <code>DescribeDBInstances</code>, the identifier is returned as
+     *        <code>DbiResourceId</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -237,10 +222,10 @@ public class GetResourceMetricsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An array of metric results,, where each array element contains all of the data points for a particular dimension.
+     * An array of metric results, where each array element contains all of the data points for a particular dimension.
      * </p>
      * 
-     * @return An array of metric results,, where each array element contains all of the data points for a particular
+     * @return An array of metric results, where each array element contains all of the data points for a particular
      *         dimension.
      */
 
@@ -250,11 +235,11 @@ public class GetResourceMetricsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An array of metric results,, where each array element contains all of the data points for a particular dimension.
+     * An array of metric results, where each array element contains all of the data points for a particular dimension.
      * </p>
      * 
      * @param metricList
-     *        An array of metric results,, where each array element contains all of the data points for a particular
+     *        An array of metric results, where each array element contains all of the data points for a particular
      *        dimension.
      */
 
@@ -269,7 +254,7 @@ public class GetResourceMetricsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An array of metric results,, where each array element contains all of the data points for a particular dimension.
+     * An array of metric results, where each array element contains all of the data points for a particular dimension.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -278,7 +263,7 @@ public class GetResourceMetricsResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      * 
      * @param metricList
-     *        An array of metric results,, where each array element contains all of the data points for a particular
+     *        An array of metric results, where each array element contains all of the data points for a particular
      *        dimension.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -295,11 +280,11 @@ public class GetResourceMetricsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * An array of metric results,, where each array element contains all of the data points for a particular dimension.
+     * An array of metric results, where each array element contains all of the data points for a particular dimension.
      * </p>
      * 
      * @param metricList
-     *        An array of metric results,, where each array element contains all of the data points for a particular
+     *        An array of metric results, where each array element contains all of the data points for a particular
      *        dimension.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

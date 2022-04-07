@@ -57,7 +57,7 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
     private String detailType;
     /**
      * <p>
-     * A valid JSON string. There is no other schema imposed. The JSON string may contain fields and nested subobjects.
+     * A valid JSON object. There is no other schema imposed. The JSON object may contain fields and nested subobjects.
      * </p>
      */
     private String detail;
@@ -66,6 +66,13 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
      * The name or ARN of the event bus to receive the event. Only the rules that are associated with this event bus are
      * used to match the event. If you omit this, the default event bus is used.
      * </p>
+     * <note>
+     * <p>
+     * If you're using a global endpoint with a custom bus, you must enter the name, not the ARN, of the event bus in
+     * either the primary or secondary Region here and the corresponding event bus in the other Region will be
+     * determined based on the endpoint referenced by the <code>EndpointId</code>.
+     * </p>
+     * </note>
      */
     private String eventBusName;
     /**
@@ -296,11 +303,11 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A valid JSON string. There is no other schema imposed. The JSON string may contain fields and nested subobjects.
+     * A valid JSON object. There is no other schema imposed. The JSON object may contain fields and nested subobjects.
      * </p>
      * 
      * @param detail
-     *        A valid JSON string. There is no other schema imposed. The JSON string may contain fields and nested
+     *        A valid JSON object. There is no other schema imposed. The JSON object may contain fields and nested
      *        subobjects.
      */
 
@@ -310,10 +317,10 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A valid JSON string. There is no other schema imposed. The JSON string may contain fields and nested subobjects.
+     * A valid JSON object. There is no other schema imposed. The JSON object may contain fields and nested subobjects.
      * </p>
      * 
-     * @return A valid JSON string. There is no other schema imposed. The JSON string may contain fields and nested
+     * @return A valid JSON object. There is no other schema imposed. The JSON object may contain fields and nested
      *         subobjects.
      */
 
@@ -323,11 +330,11 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A valid JSON string. There is no other schema imposed. The JSON string may contain fields and nested subobjects.
+     * A valid JSON object. There is no other schema imposed. The JSON object may contain fields and nested subobjects.
      * </p>
      * 
      * @param detail
-     *        A valid JSON string. There is no other schema imposed. The JSON string may contain fields and nested
+     *        A valid JSON object. There is no other schema imposed. The JSON object may contain fields and nested
      *        subobjects.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -342,10 +349,22 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
      * The name or ARN of the event bus to receive the event. Only the rules that are associated with this event bus are
      * used to match the event. If you omit this, the default event bus is used.
      * </p>
+     * <note>
+     * <p>
+     * If you're using a global endpoint with a custom bus, you must enter the name, not the ARN, of the event bus in
+     * either the primary or secondary Region here and the corresponding event bus in the other Region will be
+     * determined based on the endpoint referenced by the <code>EndpointId</code>.
+     * </p>
+     * </note>
      * 
      * @param eventBusName
      *        The name or ARN of the event bus to receive the event. Only the rules that are associated with this event
-     *        bus are used to match the event. If you omit this, the default event bus is used.
+     *        bus are used to match the event. If you omit this, the default event bus is used.</p> <note>
+     *        <p>
+     *        If you're using a global endpoint with a custom bus, you must enter the name, not the ARN, of the event
+     *        bus in either the primary or secondary Region here and the corresponding event bus in the other Region
+     *        will be determined based on the endpoint referenced by the <code>EndpointId</code>.
+     *        </p>
      */
 
     public void setEventBusName(String eventBusName) {
@@ -357,9 +376,21 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
      * The name or ARN of the event bus to receive the event. Only the rules that are associated with this event bus are
      * used to match the event. If you omit this, the default event bus is used.
      * </p>
+     * <note>
+     * <p>
+     * If you're using a global endpoint with a custom bus, you must enter the name, not the ARN, of the event bus in
+     * either the primary or secondary Region here and the corresponding event bus in the other Region will be
+     * determined based on the endpoint referenced by the <code>EndpointId</code>.
+     * </p>
+     * </note>
      * 
      * @return The name or ARN of the event bus to receive the event. Only the rules that are associated with this event
-     *         bus are used to match the event. If you omit this, the default event bus is used.
+     *         bus are used to match the event. If you omit this, the default event bus is used.</p> <note>
+     *         <p>
+     *         If you're using a global endpoint with a custom bus, you must enter the name, not the ARN, of the event
+     *         bus in either the primary or secondary Region here and the corresponding event bus in the other Region
+     *         will be determined based on the endpoint referenced by the <code>EndpointId</code>.
+     *         </p>
      */
 
     public String getEventBusName() {
@@ -371,10 +402,22 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
      * The name or ARN of the event bus to receive the event. Only the rules that are associated with this event bus are
      * used to match the event. If you omit this, the default event bus is used.
      * </p>
+     * <note>
+     * <p>
+     * If you're using a global endpoint with a custom bus, you must enter the name, not the ARN, of the event bus in
+     * either the primary or secondary Region here and the corresponding event bus in the other Region will be
+     * determined based on the endpoint referenced by the <code>EndpointId</code>.
+     * </p>
+     * </note>
      * 
      * @param eventBusName
      *        The name or ARN of the event bus to receive the event. Only the rules that are associated with this event
-     *        bus are used to match the event. If you omit this, the default event bus is used.
+     *        bus are used to match the event. If you omit this, the default event bus is used.</p> <note>
+     *        <p>
+     *        If you're using a global endpoint with a custom bus, you must enter the name, not the ARN, of the event
+     *        bus in either the primary or secondary Region here and the corresponding event bus in the other Region
+     *        will be determined based on the endpoint referenced by the <code>EndpointId</code>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

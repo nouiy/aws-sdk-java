@@ -30,16 +30,40 @@ public class DimensionKeyDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The value of the dimension detail data. For the <code>db.sql.statement</code> dimension, this value is either the
-     * full or truncated SQL query, depending on the return status.
+     * The value of the dimension detail data. Depending on the return status, this value is either the full or
+     * truncated SQL query for the following dimensions:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.query.statement</code> (Amazon DocumentDB)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.sql.statement</code> (Amazon RDS and Aurora)
+     * </p>
+     * </li>
+     * </ul>
      */
     private String value;
     /**
      * <p>
-     * The full name of the dimension. The full name includes the group name and key name. The only valid value is
-     * <code>db.sql.statement</code>.
+     * The full name of the dimension. The full name includes the group name and key name. The following values are
+     * valid:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.query.statement</code> (Amazon DocumentDB)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.sql.statement</code> (Amazon RDS and Aurora)
+     * </p>
+     * </li>
+     * </ul>
      */
     private String dimension;
     /**
@@ -55,8 +79,8 @@ public class DimensionKeyDetail implements Serializable, Cloneable, StructuredPo
      * <li>
      * <p>
      * <code>PROCESSING</code> - The dimension detail data isn't ready to be retrieved because more processing time is
-     * required. If the requested detail data for <code>db.sql.statement</code> has the status <code>PROCESSING</code>,
-     * Performance Insights returns the truncated query.
+     * required. If the requested detail data has the status <code>PROCESSING</code>, Performance Insights returns the
+     * truncated query.
      * </p>
      * </li>
      * <li>
@@ -70,13 +94,36 @@ public class DimensionKeyDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The value of the dimension detail data. For the <code>db.sql.statement</code> dimension, this value is either the
-     * full or truncated SQL query, depending on the return status.
+     * The value of the dimension detail data. Depending on the return status, this value is either the full or
+     * truncated SQL query for the following dimensions:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.query.statement</code> (Amazon DocumentDB)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.sql.statement</code> (Amazon RDS and Aurora)
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param value
-     *        The value of the dimension detail data. For the <code>db.sql.statement</code> dimension, this value is
-     *        either the full or truncated SQL query, depending on the return status.
+     *        The value of the dimension detail data. Depending on the return status, this value is either the full or
+     *        truncated SQL query for the following dimensions:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db.query.statement</code> (Amazon DocumentDB)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db.sql.statement</code> (Amazon RDS and Aurora)
+     *        </p>
+     *        </li>
      */
 
     public void setValue(String value) {
@@ -85,12 +132,35 @@ public class DimensionKeyDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The value of the dimension detail data. For the <code>db.sql.statement</code> dimension, this value is either the
-     * full or truncated SQL query, depending on the return status.
+     * The value of the dimension detail data. Depending on the return status, this value is either the full or
+     * truncated SQL query for the following dimensions:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.query.statement</code> (Amazon DocumentDB)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.sql.statement</code> (Amazon RDS and Aurora)
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The value of the dimension detail data. For the <code>db.sql.statement</code> dimension, this value is
-     *         either the full or truncated SQL query, depending on the return status.
+     * @return The value of the dimension detail data. Depending on the return status, this value is either the full or
+     *         truncated SQL query for the following dimensions:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>db.query.statement</code> (Amazon DocumentDB)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>db.sql.statement</code> (Amazon RDS and Aurora)
+     *         </p>
+     *         </li>
      */
 
     public String getValue() {
@@ -99,13 +169,36 @@ public class DimensionKeyDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The value of the dimension detail data. For the <code>db.sql.statement</code> dimension, this value is either the
-     * full or truncated SQL query, depending on the return status.
+     * The value of the dimension detail data. Depending on the return status, this value is either the full or
+     * truncated SQL query for the following dimensions:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.query.statement</code> (Amazon DocumentDB)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.sql.statement</code> (Amazon RDS and Aurora)
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param value
-     *        The value of the dimension detail data. For the <code>db.sql.statement</code> dimension, this value is
-     *        either the full or truncated SQL query, depending on the return status.
+     *        The value of the dimension detail data. Depending on the return status, this value is either the full or
+     *        truncated SQL query for the following dimensions:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db.query.statement</code> (Amazon DocumentDB)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db.sql.statement</code> (Amazon RDS and Aurora)
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -116,13 +209,36 @@ public class DimensionKeyDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The full name of the dimension. The full name includes the group name and key name. The only valid value is
-     * <code>db.sql.statement</code>.
+     * The full name of the dimension. The full name includes the group name and key name. The following values are
+     * valid:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.query.statement</code> (Amazon DocumentDB)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.sql.statement</code> (Amazon RDS and Aurora)
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param dimension
-     *        The full name of the dimension. The full name includes the group name and key name. The only valid value
-     *        is <code>db.sql.statement</code>.
+     *        The full name of the dimension. The full name includes the group name and key name. The following values
+     *        are valid:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db.query.statement</code> (Amazon DocumentDB)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db.sql.statement</code> (Amazon RDS and Aurora)
+     *        </p>
+     *        </li>
      */
 
     public void setDimension(String dimension) {
@@ -131,12 +247,35 @@ public class DimensionKeyDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The full name of the dimension. The full name includes the group name and key name. The only valid value is
-     * <code>db.sql.statement</code>.
+     * The full name of the dimension. The full name includes the group name and key name. The following values are
+     * valid:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.query.statement</code> (Amazon DocumentDB)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.sql.statement</code> (Amazon RDS and Aurora)
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The full name of the dimension. The full name includes the group name and key name. The only valid value
-     *         is <code>db.sql.statement</code>.
+     * @return The full name of the dimension. The full name includes the group name and key name. The following values
+     *         are valid:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>db.query.statement</code> (Amazon DocumentDB)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>db.sql.statement</code> (Amazon RDS and Aurora)
+     *         </p>
+     *         </li>
      */
 
     public String getDimension() {
@@ -145,13 +284,36 @@ public class DimensionKeyDetail implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The full name of the dimension. The full name includes the group name and key name. The only valid value is
-     * <code>db.sql.statement</code>.
+     * The full name of the dimension. The full name includes the group name and key name. The following values are
+     * valid:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>db.query.statement</code> (Amazon DocumentDB)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>db.sql.statement</code> (Amazon RDS and Aurora)
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param dimension
-     *        The full name of the dimension. The full name includes the group name and key name. The only valid value
-     *        is <code>db.sql.statement</code>.
+     *        The full name of the dimension. The full name includes the group name and key name. The following values
+     *        are valid:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>db.query.statement</code> (Amazon DocumentDB)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>db.sql.statement</code> (Amazon RDS and Aurora)
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -173,8 +335,8 @@ public class DimensionKeyDetail implements Serializable, Cloneable, StructuredPo
      * <li>
      * <p>
      * <code>PROCESSING</code> - The dimension detail data isn't ready to be retrieved because more processing time is
-     * required. If the requested detail data for <code>db.sql.statement</code> has the status <code>PROCESSING</code>,
-     * Performance Insights returns the truncated query.
+     * required. If the requested detail data has the status <code>PROCESSING</code>, Performance Insights returns the
+     * truncated query.
      * </p>
      * </li>
      * <li>
@@ -195,8 +357,8 @@ public class DimensionKeyDetail implements Serializable, Cloneable, StructuredPo
      *        <li>
      *        <p>
      *        <code>PROCESSING</code> - The dimension detail data isn't ready to be retrieved because more processing
-     *        time is required. If the requested detail data for <code>db.sql.statement</code> has the status
-     *        <code>PROCESSING</code>, Performance Insights returns the truncated query.
+     *        time is required. If the requested detail data has the status <code>PROCESSING</code>, Performance
+     *        Insights returns the truncated query.
      *        </p>
      *        </li>
      *        <li>
@@ -224,8 +386,8 @@ public class DimensionKeyDetail implements Serializable, Cloneable, StructuredPo
      * <li>
      * <p>
      * <code>PROCESSING</code> - The dimension detail data isn't ready to be retrieved because more processing time is
-     * required. If the requested detail data for <code>db.sql.statement</code> has the status <code>PROCESSING</code>,
-     * Performance Insights returns the truncated query.
+     * required. If the requested detail data has the status <code>PROCESSING</code>, Performance Insights returns the
+     * truncated query.
      * </p>
      * </li>
      * <li>
@@ -245,8 +407,8 @@ public class DimensionKeyDetail implements Serializable, Cloneable, StructuredPo
      *         <li>
      *         <p>
      *         <code>PROCESSING</code> - The dimension detail data isn't ready to be retrieved because more processing
-     *         time is required. If the requested detail data for <code>db.sql.statement</code> has the status
-     *         <code>PROCESSING</code>, Performance Insights returns the truncated query.
+     *         time is required. If the requested detail data has the status <code>PROCESSING</code>, Performance
+     *         Insights returns the truncated query.
      *         </p>
      *         </li>
      *         <li>
@@ -274,8 +436,8 @@ public class DimensionKeyDetail implements Serializable, Cloneable, StructuredPo
      * <li>
      * <p>
      * <code>PROCESSING</code> - The dimension detail data isn't ready to be retrieved because more processing time is
-     * required. If the requested detail data for <code>db.sql.statement</code> has the status <code>PROCESSING</code>,
-     * Performance Insights returns the truncated query.
+     * required. If the requested detail data has the status <code>PROCESSING</code>, Performance Insights returns the
+     * truncated query.
      * </p>
      * </li>
      * <li>
@@ -296,8 +458,8 @@ public class DimensionKeyDetail implements Serializable, Cloneable, StructuredPo
      *        <li>
      *        <p>
      *        <code>PROCESSING</code> - The dimension detail data isn't ready to be retrieved because more processing
-     *        time is required. If the requested detail data for <code>db.sql.statement</code> has the status
-     *        <code>PROCESSING</code>, Performance Insights returns the truncated query.
+     *        time is required. If the requested detail data has the status <code>PROCESSING</code>, Performance
+     *        Insights returns the truncated query.
      *        </p>
      *        </li>
      *        <li>
@@ -327,8 +489,8 @@ public class DimensionKeyDetail implements Serializable, Cloneable, StructuredPo
      * <li>
      * <p>
      * <code>PROCESSING</code> - The dimension detail data isn't ready to be retrieved because more processing time is
-     * required. If the requested detail data for <code>db.sql.statement</code> has the status <code>PROCESSING</code>,
-     * Performance Insights returns the truncated query.
+     * required. If the requested detail data has the status <code>PROCESSING</code>, Performance Insights returns the
+     * truncated query.
      * </p>
      * </li>
      * <li>
@@ -349,8 +511,8 @@ public class DimensionKeyDetail implements Serializable, Cloneable, StructuredPo
      *        <li>
      *        <p>
      *        <code>PROCESSING</code> - The dimension detail data isn't ready to be retrieved because more processing
-     *        time is required. If the requested detail data for <code>db.sql.statement</code> has the status
-     *        <code>PROCESSING</code>, Performance Insights returns the truncated query.
+     *        time is required. If the requested detail data has the status <code>PROCESSING</code>, Performance
+     *        Insights returns the truncated query.
      *        </p>
      *        </li>
      *        <li>

@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.personalize.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +34,8 @@ public class CreateFilterRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("datasetGroupArn").build();
     private static final MarshallingInfo<String> FILTEREXPRESSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("filterExpression").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final CreateFilterRequestMarshaller instance = new CreateFilterRequestMarshaller();
 
@@ -53,6 +56,7 @@ public class CreateFilterRequestMarshaller {
             protocolMarshaller.marshall(createFilterRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createFilterRequest.getDatasetGroupArn(), DATASETGROUPARN_BINDING);
             protocolMarshaller.marshall(createFilterRequest.getFilterExpression(), FILTEREXPRESSION_BINDING);
+            protocolMarshaller.marshall(createFilterRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

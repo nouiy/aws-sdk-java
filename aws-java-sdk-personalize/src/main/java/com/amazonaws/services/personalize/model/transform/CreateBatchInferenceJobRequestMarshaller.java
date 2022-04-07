@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.personalize.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -43,6 +44,8 @@ public class CreateBatchInferenceJobRequestMarshaller {
             .marshallLocationName("roleArn").build();
     private static final MarshallingInfo<StructuredPojo> BATCHINFERENCEJOBCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("batchInferenceJobConfig").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final CreateBatchInferenceJobRequestMarshaller instance = new CreateBatchInferenceJobRequestMarshaller();
 
@@ -68,6 +71,7 @@ public class CreateBatchInferenceJobRequestMarshaller {
             protocolMarshaller.marshall(createBatchInferenceJobRequest.getJobOutput(), JOBOUTPUT_BINDING);
             protocolMarshaller.marshall(createBatchInferenceJobRequest.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(createBatchInferenceJobRequest.getBatchInferenceJobConfig(), BATCHINFERENCEJOBCONFIG_BINDING);
+            protocolMarshaller.marshall(createBatchInferenceJobRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

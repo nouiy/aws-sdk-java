@@ -40,11 +40,18 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The filter expression defines which items are included or excluded from recommendations. Filter expression must
-     * follow specific format rules. For information about filter expression structure and syntax, see
-     * <a>filter-expressions</a>.
+     * follow specific format rules. For information about filter expression structure and syntax, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/filter-expressions.html">Filter expressions</a>.
      * </p>
      */
     private String filterExpression;
+    /**
+     * <p>
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
+     * to the filter.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
@@ -129,14 +136,14 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The filter expression defines which items are included or excluded from recommendations. Filter expression must
-     * follow specific format rules. For information about filter expression structure and syntax, see
-     * <a>filter-expressions</a>.
+     * follow specific format rules. For information about filter expression structure and syntax, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/filter-expressions.html">Filter expressions</a>.
      * </p>
      * 
      * @param filterExpression
      *        The filter expression defines which items are included or excluded from recommendations. Filter expression
-     *        must follow specific format rules. For information about filter expression structure and syntax, see
-     *        <a>filter-expressions</a>.
+     *        must follow specific format rules. For information about filter expression structure and syntax, see <a
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/filter-expressions.html">Filter expressions</a>.
      */
 
     public void setFilterExpression(String filterExpression) {
@@ -146,13 +153,14 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The filter expression defines which items are included or excluded from recommendations. Filter expression must
-     * follow specific format rules. For information about filter expression structure and syntax, see
-     * <a>filter-expressions</a>.
+     * follow specific format rules. For information about filter expression structure and syntax, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/filter-expressions.html">Filter expressions</a>.
      * </p>
      * 
      * @return The filter expression defines which items are included or excluded from recommendations. Filter
      *         expression must follow specific format rules. For information about filter expression structure and
-     *         syntax, see <a>filter-expressions</a>.
+     *         syntax, see <a href="https://docs.aws.amazon.com/personalize/latest/dg/filter-expressions.html">Filter
+     *         expressions</a>.
      */
 
     public String getFilterExpression() {
@@ -162,19 +170,97 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The filter expression defines which items are included or excluded from recommendations. Filter expression must
-     * follow specific format rules. For information about filter expression structure and syntax, see
-     * <a>filter-expressions</a>.
+     * follow specific format rules. For information about filter expression structure and syntax, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/filter-expressions.html">Filter expressions</a>.
      * </p>
      * 
      * @param filterExpression
      *        The filter expression defines which items are included or excluded from recommendations. Filter expression
-     *        must follow specific format rules. For information about filter expression structure and syntax, see
-     *        <a>filter-expressions</a>.
+     *        must follow specific format rules. For information about filter expression structure and syntax, see <a
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/filter-expressions.html">Filter expressions</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public CreateFilterRequest withFilterExpression(String filterExpression) {
         setFilterExpression(filterExpression);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
+     * to the filter.
+     * </p>
+     * 
+     * @return A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to
+     *         apply to the filter.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
+     * to the filter.
+     * </p>
+     * 
+     * @param tags
+     *        A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to
+     *        apply to the filter.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
+     * to the filter.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to
+     *        apply to the filter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFilterRequest withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
+     * to the filter.
+     * </p>
+     * 
+     * @param tags
+     *        A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to
+     *        apply to the filter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFilterRequest withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
         return this;
     }
 
@@ -195,7 +281,9 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getDatasetGroupArn() != null)
             sb.append("DatasetGroupArn: ").append(getDatasetGroupArn()).append(",");
         if (getFilterExpression() != null)
-            sb.append("FilterExpression: ").append("***Sensitive Data Redacted***");
+            sb.append("FilterExpression: ").append("***Sensitive Data Redacted***").append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -222,6 +310,10 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getFilterExpression() != null && other.getFilterExpression().equals(this.getFilterExpression()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -233,6 +325,7 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getDatasetGroupArn() == null) ? 0 : getDatasetGroupArn().hashCode());
         hashCode = prime * hashCode + ((getFilterExpression() == null) ? 0 : getFilterExpression().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

@@ -30,6 +30,8 @@ public class PutEventsRequestMarshaller {
 
     private static final MarshallingInfo<List> ENTRIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Entries").build();
+    private static final MarshallingInfo<String> ENDPOINTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndpointId").build();
 
     private static final PutEventsRequestMarshaller instance = new PutEventsRequestMarshaller();
 
@@ -48,6 +50,7 @@ public class PutEventsRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(putEventsRequest.getEntries(), ENTRIES_BINDING);
+            protocolMarshaller.marshall(putEventsRequest.getEndpointId(), ENDPOINTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

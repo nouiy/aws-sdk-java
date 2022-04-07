@@ -77,7 +77,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The Amazon EC2 Availability Zone that the instance is created in.
      * </p>
      * <p>
-     * Default: A random, system-chosen Availability Zone in the endpoint's Region.
+     * Default: A random, system-chosen Availability Zone in the endpoint's Amazon Web Services Region.
      * </p>
      * <p>
      * Example: <code>us-east-1d</code>
@@ -92,8 +92,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      * </p>
      * <p>
-     * The default is a 30-minute window selected at random from an 8-hour block of time for each Region, occurring on a
-     * random day of the week.
+     * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
+     * Region, occurring on a random day of the week.
      * </p>
      * <p>
      * Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -138,6 +138,28 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private Integer promotionTier;
+    /**
+     * <p>
+     * A value that indicates whether to enable Performance Insights for the DB Instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html">Using Amazon
+     * Performance Insights</a>.
+     * </p>
+     */
+    private Boolean enablePerformanceInsights;
+    /**
+     * <p>
+     * The KMS key identifier for encryption of Performance Insights data.
+     * </p>
+     * <p>
+     * The KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
+     * </p>
+     * <p>
+     * If you do not specify a value for PerformanceInsightsKMSKeyId, then Amazon DocumentDB uses your default KMS key.
+     * There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a different
+     * default KMS key for each Amazon Web Services region.
+     * </p>
+     */
+    private String performanceInsightsKMSKeyId;
 
     /**
      * <p>
@@ -414,7 +436,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The Amazon EC2 Availability Zone that the instance is created in.
      * </p>
      * <p>
-     * Default: A random, system-chosen Availability Zone in the endpoint's Region.
+     * Default: A random, system-chosen Availability Zone in the endpoint's Amazon Web Services Region.
      * </p>
      * <p>
      * Example: <code>us-east-1d</code>
@@ -423,7 +445,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param availabilityZone
      *        The Amazon EC2 Availability Zone that the instance is created in. </p>
      *        <p>
-     *        Default: A random, system-chosen Availability Zone in the endpoint's Region.
+     *        Default: A random, system-chosen Availability Zone in the endpoint's Amazon Web Services Region.
      *        </p>
      *        <p>
      *        Example: <code>us-east-1d</code>
@@ -438,7 +460,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The Amazon EC2 Availability Zone that the instance is created in.
      * </p>
      * <p>
-     * Default: A random, system-chosen Availability Zone in the endpoint's Region.
+     * Default: A random, system-chosen Availability Zone in the endpoint's Amazon Web Services Region.
      * </p>
      * <p>
      * Example: <code>us-east-1d</code>
@@ -446,7 +468,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @return The Amazon EC2 Availability Zone that the instance is created in. </p>
      *         <p>
-     *         Default: A random, system-chosen Availability Zone in the endpoint's Region.
+     *         Default: A random, system-chosen Availability Zone in the endpoint's Amazon Web Services Region.
      *         </p>
      *         <p>
      *         Example: <code>us-east-1d</code>
@@ -461,7 +483,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The Amazon EC2 Availability Zone that the instance is created in.
      * </p>
      * <p>
-     * Default: A random, system-chosen Availability Zone in the endpoint's Region.
+     * Default: A random, system-chosen Availability Zone in the endpoint's Amazon Web Services Region.
      * </p>
      * <p>
      * Example: <code>us-east-1d</code>
@@ -470,7 +492,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param availabilityZone
      *        The Amazon EC2 Availability Zone that the instance is created in. </p>
      *        <p>
-     *        Default: A random, system-chosen Availability Zone in the endpoint's Region.
+     *        Default: A random, system-chosen Availability Zone in the endpoint's Amazon Web Services Region.
      *        </p>
      *        <p>
      *        Example: <code>us-east-1d</code>
@@ -490,8 +512,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      * </p>
      * <p>
-     * The default is a 30-minute window selected at random from an 8-hour block of time for each Region, occurring on a
-     * random day of the week.
+     * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
+     * Region, occurring on a random day of the week.
      * </p>
      * <p>
      * Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -507,8 +529,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      *        </p>
      *        <p>
-     *        The default is a 30-minute window selected at random from an 8-hour block of time for each Region,
-     *        occurring on a random day of the week.
+     *        The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
+     *        Services Region, occurring on a random day of the week.
      *        </p>
      *        <p>
      *        Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -529,8 +551,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      * </p>
      * <p>
-     * The default is a 30-minute window selected at random from an 8-hour block of time for each Region, occurring on a
-     * random day of the week.
+     * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
+     * Region, occurring on a random day of the week.
      * </p>
      * <p>
      * Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -545,8 +567,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      *         </p>
      *         <p>
-     *         The default is a 30-minute window selected at random from an 8-hour block of time for each Region,
-     *         occurring on a random day of the week.
+     *         The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
+     *         Services Region, occurring on a random day of the week.
      *         </p>
      *         <p>
      *         Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -567,8 +589,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      * </p>
      * <p>
-     * The default is a 30-minute window selected at random from an 8-hour block of time for each Region, occurring on a
-     * random day of the week.
+     * The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web Services
+     * Region, occurring on a random day of the week.
      * </p>
      * <p>
      * Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -584,8 +606,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      *        </p>
      *        <p>
-     *        The default is a 30-minute window selected at random from an 8-hour block of time for each Region,
-     *        occurring on a random day of the week.
+     *        The default is a 30-minute window selected at random from an 8-hour block of time for each Amazon Web
+     *        Services Region, occurring on a random day of the week.
      *        </p>
      *        <p>
      *        Valid days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -870,6 +892,161 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * A value that indicates whether to enable Performance Insights for the DB Instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html">Using Amazon
+     * Performance Insights</a>.
+     * </p>
+     * 
+     * @param enablePerformanceInsights
+     *        A value that indicates whether to enable Performance Insights for the DB Instance. For more information,
+     *        see <a href="https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html">Using
+     *        Amazon Performance Insights</a>.
+     */
+
+    public void setEnablePerformanceInsights(Boolean enablePerformanceInsights) {
+        this.enablePerformanceInsights = enablePerformanceInsights;
+    }
+
+    /**
+     * <p>
+     * A value that indicates whether to enable Performance Insights for the DB Instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html">Using Amazon
+     * Performance Insights</a>.
+     * </p>
+     * 
+     * @return A value that indicates whether to enable Performance Insights for the DB Instance. For more information,
+     *         see <a
+     *         href="https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html">Using
+     *         Amazon Performance Insights</a>.
+     */
+
+    public Boolean getEnablePerformanceInsights() {
+        return this.enablePerformanceInsights;
+    }
+
+    /**
+     * <p>
+     * A value that indicates whether to enable Performance Insights for the DB Instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html">Using Amazon
+     * Performance Insights</a>.
+     * </p>
+     * 
+     * @param enablePerformanceInsights
+     *        A value that indicates whether to enable Performance Insights for the DB Instance. For more information,
+     *        see <a href="https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html">Using
+     *        Amazon Performance Insights</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDBInstanceRequest withEnablePerformanceInsights(Boolean enablePerformanceInsights) {
+        setEnablePerformanceInsights(enablePerformanceInsights);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A value that indicates whether to enable Performance Insights for the DB Instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html">Using Amazon
+     * Performance Insights</a>.
+     * </p>
+     * 
+     * @return A value that indicates whether to enable Performance Insights for the DB Instance. For more information,
+     *         see <a
+     *         href="https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html">Using
+     *         Amazon Performance Insights</a>.
+     */
+
+    public Boolean isEnablePerformanceInsights() {
+        return this.enablePerformanceInsights;
+    }
+
+    /**
+     * <p>
+     * The KMS key identifier for encryption of Performance Insights data.
+     * </p>
+     * <p>
+     * The KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
+     * </p>
+     * <p>
+     * If you do not specify a value for PerformanceInsightsKMSKeyId, then Amazon DocumentDB uses your default KMS key.
+     * There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a different
+     * default KMS key for each Amazon Web Services region.
+     * </p>
+     * 
+     * @param performanceInsightsKMSKeyId
+     *        The KMS key identifier for encryption of Performance Insights data.</p>
+     *        <p>
+     *        The KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
+     *        </p>
+     *        <p>
+     *        If you do not specify a value for PerformanceInsightsKMSKeyId, then Amazon DocumentDB uses your default
+     *        KMS key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account
+     *        has a different default KMS key for each Amazon Web Services region.
+     */
+
+    public void setPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
+        this.performanceInsightsKMSKeyId = performanceInsightsKMSKeyId;
+    }
+
+    /**
+     * <p>
+     * The KMS key identifier for encryption of Performance Insights data.
+     * </p>
+     * <p>
+     * The KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
+     * </p>
+     * <p>
+     * If you do not specify a value for PerformanceInsightsKMSKeyId, then Amazon DocumentDB uses your default KMS key.
+     * There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a different
+     * default KMS key for each Amazon Web Services region.
+     * </p>
+     * 
+     * @return The KMS key identifier for encryption of Performance Insights data.</p>
+     *         <p>
+     *         The KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
+     *         </p>
+     *         <p>
+     *         If you do not specify a value for PerformanceInsightsKMSKeyId, then Amazon DocumentDB uses your default
+     *         KMS key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services
+     *         account has a different default KMS key for each Amazon Web Services region.
+     */
+
+    public String getPerformanceInsightsKMSKeyId() {
+        return this.performanceInsightsKMSKeyId;
+    }
+
+    /**
+     * <p>
+     * The KMS key identifier for encryption of Performance Insights data.
+     * </p>
+     * <p>
+     * The KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
+     * </p>
+     * <p>
+     * If you do not specify a value for PerformanceInsightsKMSKeyId, then Amazon DocumentDB uses your default KMS key.
+     * There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a different
+     * default KMS key for each Amazon Web Services region.
+     * </p>
+     * 
+     * @param performanceInsightsKMSKeyId
+     *        The KMS key identifier for encryption of Performance Insights data.</p>
+     *        <p>
+     *        The KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
+     *        </p>
+     *        <p>
+     *        If you do not specify a value for PerformanceInsightsKMSKeyId, then Amazon DocumentDB uses your default
+     *        KMS key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account
+     *        has a different default KMS key for each Amazon Web Services region.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDBInstanceRequest withPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
+        setPerformanceInsightsKMSKeyId(performanceInsightsKMSKeyId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -898,7 +1075,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
         if (getDBClusterIdentifier() != null)
             sb.append("DBClusterIdentifier: ").append(getDBClusterIdentifier()).append(",");
         if (getPromotionTier() != null)
-            sb.append("PromotionTier: ").append(getPromotionTier());
+            sb.append("PromotionTier: ").append(getPromotionTier()).append(",");
+        if (getEnablePerformanceInsights() != null)
+            sb.append("EnablePerformanceInsights: ").append(getEnablePerformanceInsights()).append(",");
+        if (getPerformanceInsightsKMSKeyId() != null)
+            sb.append("PerformanceInsightsKMSKeyId: ").append(getPerformanceInsightsKMSKeyId());
         sb.append("}");
         return sb.toString();
     }
@@ -949,6 +1130,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getPromotionTier() != null && other.getPromotionTier().equals(this.getPromotionTier()) == false)
             return false;
+        if (other.getEnablePerformanceInsights() == null ^ this.getEnablePerformanceInsights() == null)
+            return false;
+        if (other.getEnablePerformanceInsights() != null && other.getEnablePerformanceInsights().equals(this.getEnablePerformanceInsights()) == false)
+            return false;
+        if (other.getPerformanceInsightsKMSKeyId() == null ^ this.getPerformanceInsightsKMSKeyId() == null)
+            return false;
+        if (other.getPerformanceInsightsKMSKeyId() != null && other.getPerformanceInsightsKMSKeyId().equals(this.getPerformanceInsightsKMSKeyId()) == false)
+            return false;
         return true;
     }
 
@@ -966,6 +1155,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getDBClusterIdentifier() == null) ? 0 : getDBClusterIdentifier().hashCode());
         hashCode = prime * hashCode + ((getPromotionTier() == null) ? 0 : getPromotionTier().hashCode());
+        hashCode = prime * hashCode + ((getEnablePerformanceInsights() == null) ? 0 : getEnablePerformanceInsights().hashCode());
+        hashCode = prime * hashCode + ((getPerformanceInsightsKMSKeyId() == null) ? 0 : getPerformanceInsightsKMSKeyId().hashCode());
         return hashCode;
     }
 

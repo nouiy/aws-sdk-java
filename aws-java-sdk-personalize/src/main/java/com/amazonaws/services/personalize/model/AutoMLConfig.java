@@ -19,9 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * When the solution performs AutoML (<code>performAutoML</code> is true in <a>CreateSolution</a>), Amazon Personalize
- * determines which recipe, from the specified list, optimizes the given metric. Amazon Personalize then uses that
- * recipe for the solution.
+ * When the solution performs AutoML (<code>performAutoML</code> is true in <a
+ * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateSolution.html">CreateSolution</a>), Amazon
+ * Personalize determines which recipe, from the specified list, optimizes the given metric. Amazon Personalize then
+ * uses that recipe for the solution.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/AutoMLConfig" target="_top">AWS API

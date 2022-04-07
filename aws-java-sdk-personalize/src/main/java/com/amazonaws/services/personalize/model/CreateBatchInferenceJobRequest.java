@@ -41,13 +41,13 @@ public class CreateBatchInferenceJobRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The ARN of the filter to apply to the batch inference job. For more information on using filters, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/filter-batch.html">Filtering Batch Recommendations</a>..
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/filter-batch.html">Filtering batch recommendations</a>.
      * </p>
      */
     private String filterArn;
     /**
      * <p>
-     * The number of recommendations to retreive.
+     * The number of recommendations to retrieve.
      * </p>
      */
     private Integer numResults;
@@ -77,6 +77,13 @@ public class CreateBatchInferenceJobRequest extends com.amazonaws.AmazonWebServi
      * </p>
      */
     private BatchInferenceJobConfig batchInferenceJobConfig;
+    /**
+     * <p>
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
+     * to the batch inference job.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
@@ -167,13 +174,13 @@ public class CreateBatchInferenceJobRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The ARN of the filter to apply to the batch inference job. For more information on using filters, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/filter-batch.html">Filtering Batch Recommendations</a>..
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/filter-batch.html">Filtering batch recommendations</a>.
      * </p>
      * 
      * @param filterArn
      *        The ARN of the filter to apply to the batch inference job. For more information on using filters, see <a
-     *        href="https://docs.aws.amazon.com/personalize/latest/dg/filter-batch.html">Filtering Batch
-     *        Recommendations</a>..
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/filter-batch.html">Filtering batch
+     *        recommendations</a>.
      */
 
     public void setFilterArn(String filterArn) {
@@ -183,12 +190,12 @@ public class CreateBatchInferenceJobRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The ARN of the filter to apply to the batch inference job. For more information on using filters, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/filter-batch.html">Filtering Batch Recommendations</a>..
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/filter-batch.html">Filtering batch recommendations</a>.
      * </p>
      * 
      * @return The ARN of the filter to apply to the batch inference job. For more information on using filters, see <a
-     *         href="https://docs.aws.amazon.com/personalize/latest/dg/filter-batch.html">Filtering Batch
-     *         Recommendations</a>..
+     *         href="https://docs.aws.amazon.com/personalize/latest/dg/filter-batch.html">Filtering batch
+     *         recommendations</a>.
      */
 
     public String getFilterArn() {
@@ -198,13 +205,13 @@ public class CreateBatchInferenceJobRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The ARN of the filter to apply to the batch inference job. For more information on using filters, see <a
-     * href="https://docs.aws.amazon.com/personalize/latest/dg/filter-batch.html">Filtering Batch Recommendations</a>..
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/filter-batch.html">Filtering batch recommendations</a>.
      * </p>
      * 
      * @param filterArn
      *        The ARN of the filter to apply to the batch inference job. For more information on using filters, see <a
-     *        href="https://docs.aws.amazon.com/personalize/latest/dg/filter-batch.html">Filtering Batch
-     *        Recommendations</a>..
+     *        href="https://docs.aws.amazon.com/personalize/latest/dg/filter-batch.html">Filtering batch
+     *        recommendations</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -215,11 +222,11 @@ public class CreateBatchInferenceJobRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The number of recommendations to retreive.
+     * The number of recommendations to retrieve.
      * </p>
      * 
      * @param numResults
-     *        The number of recommendations to retreive.
+     *        The number of recommendations to retrieve.
      */
 
     public void setNumResults(Integer numResults) {
@@ -228,10 +235,10 @@ public class CreateBatchInferenceJobRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The number of recommendations to retreive.
+     * The number of recommendations to retrieve.
      * </p>
      * 
-     * @return The number of recommendations to retreive.
+     * @return The number of recommendations to retrieve.
      */
 
     public Integer getNumResults() {
@@ -240,11 +247,11 @@ public class CreateBatchInferenceJobRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The number of recommendations to retreive.
+     * The number of recommendations to retrieve.
      * </p>
      * 
      * @param numResults
-     *        The number of recommendations to retreive.
+     *        The number of recommendations to retrieve.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -426,6 +433,84 @@ public class CreateBatchInferenceJobRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
+     * to the batch inference job.
+     * </p>
+     * 
+     * @return A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to
+     *         apply to the batch inference job.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
+     * to the batch inference job.
+     * </p>
+     * 
+     * @param tags
+     *        A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to
+     *        apply to the batch inference job.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
+     * to the batch inference job.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to
+     *        apply to the batch inference job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateBatchInferenceJobRequest withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to apply
+     * to the batch inference job.
+     * </p>
+     * 
+     * @param tags
+     *        A list of <a href="https://docs.aws.amazon.com/personalize/latest/dev/tagging-resources.html">tags</a> to
+     *        apply to the batch inference job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateBatchInferenceJobRequest withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -452,7 +537,9 @@ public class CreateBatchInferenceJobRequest extends com.amazonaws.AmazonWebServi
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getBatchInferenceJobConfig() != null)
-            sb.append("BatchInferenceJobConfig: ").append(getBatchInferenceJobConfig());
+            sb.append("BatchInferenceJobConfig: ").append(getBatchInferenceJobConfig()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -499,6 +586,10 @@ public class CreateBatchInferenceJobRequest extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getBatchInferenceJobConfig() != null && other.getBatchInferenceJobConfig().equals(this.getBatchInferenceJobConfig()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -515,6 +606,7 @@ public class CreateBatchInferenceJobRequest extends com.amazonaws.AmazonWebServi
         hashCode = prime * hashCode + ((getJobOutput() == null) ? 0 : getJobOutput().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getBatchInferenceJobConfig() == null) ? 0 : getBatchInferenceJobConfig().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

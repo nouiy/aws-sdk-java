@@ -41,12 +41,19 @@ public class MetricQuery implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>db.load.avg</code> - a scaled representation of the number of active sessions for the database engine.
+     * <code>db.load.avg</code> - A scaled representation of the number of active sessions for the database engine.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sampledload.avg</code> - the raw number of active sessions for the database engine.
+     * <code>db.sampledload.avg</code> - The raw number of active sessions for the database engine.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The counter metrics listed in <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights_Counters.html#USER_PerfInsights_Counters.OS"
+     * >Performance Insights operating system counters</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -98,12 +105,19 @@ public class MetricQuery implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>db.load.avg</code> - a scaled representation of the number of active sessions for the database engine.
+     * <code>db.load.avg</code> - A scaled representation of the number of active sessions for the database engine.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sampledload.avg</code> - the raw number of active sessions for the database engine.
+     * <code>db.sampledload.avg</code> - The raw number of active sessions for the database engine.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The counter metrics listed in <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights_Counters.html#USER_PerfInsights_Counters.OS"
+     * >Performance Insights operating system counters</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -124,13 +138,20 @@ public class MetricQuery implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>db.load.avg</code> - a scaled representation of the number of active sessions for the database
+     *        <code>db.load.avg</code> - A scaled representation of the number of active sessions for the database
      *        engine.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>db.sampledload.avg</code> - the raw number of active sessions for the database engine.
+     *        <code>db.sampledload.avg</code> - The raw number of active sessions for the database engine.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The counter metrics listed in <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights_Counters.html#USER_PerfInsights_Counters.OS"
+     *        >Performance Insights operating system counters</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        </li>
      *        </ul>
@@ -157,12 +178,19 @@ public class MetricQuery implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>db.load.avg</code> - a scaled representation of the number of active sessions for the database engine.
+     * <code>db.load.avg</code> - A scaled representation of the number of active sessions for the database engine.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sampledload.avg</code> - the raw number of active sessions for the database engine.
+     * <code>db.sampledload.avg</code> - The raw number of active sessions for the database engine.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The counter metrics listed in <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights_Counters.html#USER_PerfInsights_Counters.OS"
+     * >Performance Insights operating system counters</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -182,13 +210,20 @@ public class MetricQuery implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>db.load.avg</code> - a scaled representation of the number of active sessions for the database
+     *         <code>db.load.avg</code> - A scaled representation of the number of active sessions for the database
      *         engine.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>db.sampledload.avg</code> - the raw number of active sessions for the database engine.
+     *         <code>db.sampledload.avg</code> - The raw number of active sessions for the database engine.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The counter metrics listed in <a href=
+     *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights_Counters.html#USER_PerfInsights_Counters.OS"
+     *         >Performance Insights operating system counters</a> in the <i>Amazon Aurora User Guide</i>.
      *         </p>
      *         </li>
      *         </ul>
@@ -215,12 +250,19 @@ public class MetricQuery implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>db.load.avg</code> - a scaled representation of the number of active sessions for the database engine.
+     * <code>db.load.avg</code> - A scaled representation of the number of active sessions for the database engine.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>db.sampledload.avg</code> - the raw number of active sessions for the database engine.
+     * <code>db.sampledload.avg</code> - The raw number of active sessions for the database engine.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The counter metrics listed in <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights_Counters.html#USER_PerfInsights_Counters.OS"
+     * >Performance Insights operating system counters</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -241,13 +283,20 @@ public class MetricQuery implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>db.load.avg</code> - a scaled representation of the number of active sessions for the database
+     *        <code>db.load.avg</code> - A scaled representation of the number of active sessions for the database
      *        engine.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>db.sampledload.avg</code> - the raw number of active sessions for the database engine.
+     *        <code>db.sampledload.avg</code> - The raw number of active sessions for the database engine.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The counter metrics listed in <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights_Counters.html#USER_PerfInsights_Counters.OS"
+     *        >Performance Insights operating system counters</a> in the <i>Amazon Aurora User Guide</i>.
      *        </p>
      *        </li>
      *        </ul>

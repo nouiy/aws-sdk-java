@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.personalize.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -35,6 +36,8 @@ public class CreateRecommenderRequestMarshaller {
             .marshallLocationName("recipeArn").build();
     private static final MarshallingInfo<StructuredPojo> RECOMMENDERCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommenderConfig").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final CreateRecommenderRequestMarshaller instance = new CreateRecommenderRequestMarshaller();
 
@@ -56,6 +59,7 @@ public class CreateRecommenderRequestMarshaller {
             protocolMarshaller.marshall(createRecommenderRequest.getDatasetGroupArn(), DATASETGROUPARN_BINDING);
             protocolMarshaller.marshall(createRecommenderRequest.getRecipeArn(), RECIPEARN_BINDING);
             protocolMarshaller.marshall(createRecommenderRequest.getRecommenderConfig(), RECOMMENDERCONFIG_BINDING);
+            protocolMarshaller.marshall(createRecommenderRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
