@@ -58,6 +58,10 @@ public class GetBucketsResultJsonUnmarshaller implements Unmarshaller<GetBuckets
                     context.nextToken();
                     getBucketsResult.setNextPageToken(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("accountLevelBpaSync", targetDepth)) {
+                    context.nextToken();
+                    getBucketsResult.setAccountLevelBpaSync(AccountLevelBpaSyncJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

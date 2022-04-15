@@ -196,19 +196,6 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
     }
 
     @Override
-    public java.util.concurrent.Future<CustomAvailabilityZone> createCustomAvailabilityZoneAsync(CreateCustomAvailabilityZoneRequest request) {
-
-        return createCustomAvailabilityZoneAsync(request, null);
-    }
-
-    @Override
-    public java.util.concurrent.Future<CustomAvailabilityZone> createCustomAvailabilityZoneAsync(CreateCustomAvailabilityZoneRequest request,
-            com.amazonaws.handlers.AsyncHandler<CreateCustomAvailabilityZoneRequest, CustomAvailabilityZone> asyncHandler) {
-
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
     public java.util.concurrent.Future<CreateCustomDBEngineVersionResult> createCustomDBEngineVersionAsync(CreateCustomDBEngineVersionRequest request) {
 
         return createCustomDBEngineVersionAsync(request, null);
@@ -417,19 +404,6 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
     }
 
     @Override
-    public java.util.concurrent.Future<CustomAvailabilityZone> deleteCustomAvailabilityZoneAsync(DeleteCustomAvailabilityZoneRequest request) {
-
-        return deleteCustomAvailabilityZoneAsync(request, null);
-    }
-
-    @Override
-    public java.util.concurrent.Future<CustomAvailabilityZone> deleteCustomAvailabilityZoneAsync(DeleteCustomAvailabilityZoneRequest request,
-            com.amazonaws.handlers.AsyncHandler<DeleteCustomAvailabilityZoneRequest, CustomAvailabilityZone> asyncHandler) {
-
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
     public java.util.concurrent.Future<DeleteCustomDBEngineVersionResult> deleteCustomDBEngineVersionAsync(DeleteCustomDBEngineVersionRequest request) {
 
         return deleteCustomDBEngineVersionAsync(request, null);
@@ -625,19 +599,6 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
     }
 
     @Override
-    public java.util.concurrent.Future<DeleteInstallationMediaResult> deleteInstallationMediaAsync(DeleteInstallationMediaRequest request) {
-
-        return deleteInstallationMediaAsync(request, null);
-    }
-
-    @Override
-    public java.util.concurrent.Future<DeleteInstallationMediaResult> deleteInstallationMediaAsync(DeleteInstallationMediaRequest request,
-            com.amazonaws.handlers.AsyncHandler<DeleteInstallationMediaRequest, DeleteInstallationMediaResult> asyncHandler) {
-
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
     public java.util.concurrent.Future<DeleteOptionGroupResult> deleteOptionGroupAsync(DeleteOptionGroupRequest request) {
 
         return deleteOptionGroupAsync(request, null);
@@ -733,21 +694,6 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
             com.amazonaws.handlers.AsyncHandler<DescribeCertificatesRequest, DescribeCertificatesResult> asyncHandler) {
 
         return describeCertificatesAsync(new DescribeCertificatesRequest(), asyncHandler);
-    }
-
-    @Override
-    public java.util.concurrent.Future<DescribeCustomAvailabilityZonesResult> describeCustomAvailabilityZonesAsync(
-            DescribeCustomAvailabilityZonesRequest request) {
-
-        return describeCustomAvailabilityZonesAsync(request, null);
-    }
-
-    @Override
-    public java.util.concurrent.Future<DescribeCustomAvailabilityZonesResult> describeCustomAvailabilityZonesAsync(
-            DescribeCustomAvailabilityZonesRequest request,
-            com.amazonaws.handlers.AsyncHandler<DescribeCustomAvailabilityZonesRequest, DescribeCustomAvailabilityZonesResult> asyncHandler) {
-
-        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
@@ -1421,19 +1367,6 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
     }
 
     @Override
-    public java.util.concurrent.Future<DescribeInstallationMediaResult> describeInstallationMediaAsync(DescribeInstallationMediaRequest request) {
-
-        return describeInstallationMediaAsync(request, null);
-    }
-
-    @Override
-    public java.util.concurrent.Future<DescribeInstallationMediaResult> describeInstallationMediaAsync(DescribeInstallationMediaRequest request,
-            com.amazonaws.handlers.AsyncHandler<DescribeInstallationMediaRequest, DescribeInstallationMediaResult> asyncHandler) {
-
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
     public java.util.concurrent.Future<DescribeOptionGroupOptionsResult> describeOptionGroupOptionsAsync(DescribeOptionGroupOptionsRequest request) {
 
         return describeOptionGroupOptionsAsync(request, null);
@@ -1696,19 +1629,6 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
     @Override
     public java.util.concurrent.Future<GlobalCluster> failoverGlobalClusterAsync(FailoverGlobalClusterRequest request,
             com.amazonaws.handlers.AsyncHandler<FailoverGlobalClusterRequest, GlobalCluster> asyncHandler) {
-
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
-    public java.util.concurrent.Future<ImportInstallationMediaResult> importInstallationMediaAsync(ImportInstallationMediaRequest request) {
-
-        return importInstallationMediaAsync(request, null);
-    }
-
-    @Override
-    public java.util.concurrent.Future<ImportInstallationMediaResult> importInstallationMediaAsync(ImportInstallationMediaRequest request,
-            com.amazonaws.handlers.AsyncHandler<ImportInstallationMediaRequest, ImportInstallationMediaResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

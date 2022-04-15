@@ -42,6 +42,18 @@ public class GetBucketsResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      */
     private String nextPageToken;
+    /**
+     * <p>
+     * An object that describes the synchronization status of the Amazon S3 account-level block public access feature
+     * for your Lightsail buckets.
+     * </p>
+     * <p>
+     * For more information about this feature and how it affects Lightsail buckets, see <a
+     * href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-block-public-access-for-buckets"
+     * >Block public access for buckets in Amazon Lightsail</a>.
+     * </p>
+     */
+    private AccountLevelBpaSync accountLevelBpaSync;
 
     /**
      * <p>
@@ -193,6 +205,79 @@ public class GetBucketsResult extends com.amazonaws.AmazonWebServiceResult<com.a
     }
 
     /**
+     * <p>
+     * An object that describes the synchronization status of the Amazon S3 account-level block public access feature
+     * for your Lightsail buckets.
+     * </p>
+     * <p>
+     * For more information about this feature and how it affects Lightsail buckets, see <a
+     * href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-block-public-access-for-buckets"
+     * >Block public access for buckets in Amazon Lightsail</a>.
+     * </p>
+     * 
+     * @param accountLevelBpaSync
+     *        An object that describes the synchronization status of the Amazon S3 account-level block public access
+     *        feature for your Lightsail buckets.</p>
+     *        <p>
+     *        For more information about this feature and how it affects Lightsail buckets, see <a href=
+     *        "https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-block-public-access-for-buckets"
+     *        >Block public access for buckets in Amazon Lightsail</a>.
+     */
+
+    public void setAccountLevelBpaSync(AccountLevelBpaSync accountLevelBpaSync) {
+        this.accountLevelBpaSync = accountLevelBpaSync;
+    }
+
+    /**
+     * <p>
+     * An object that describes the synchronization status of the Amazon S3 account-level block public access feature
+     * for your Lightsail buckets.
+     * </p>
+     * <p>
+     * For more information about this feature and how it affects Lightsail buckets, see <a
+     * href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-block-public-access-for-buckets"
+     * >Block public access for buckets in Amazon Lightsail</a>.
+     * </p>
+     * 
+     * @return An object that describes the synchronization status of the Amazon S3 account-level block public access
+     *         feature for your Lightsail buckets.</p>
+     *         <p>
+     *         For more information about this feature and how it affects Lightsail buckets, see <a href=
+     *         "https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-block-public-access-for-buckets"
+     *         >Block public access for buckets in Amazon Lightsail</a>.
+     */
+
+    public AccountLevelBpaSync getAccountLevelBpaSync() {
+        return this.accountLevelBpaSync;
+    }
+
+    /**
+     * <p>
+     * An object that describes the synchronization status of the Amazon S3 account-level block public access feature
+     * for your Lightsail buckets.
+     * </p>
+     * <p>
+     * For more information about this feature and how it affects Lightsail buckets, see <a
+     * href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-block-public-access-for-buckets"
+     * >Block public access for buckets in Amazon Lightsail</a>.
+     * </p>
+     * 
+     * @param accountLevelBpaSync
+     *        An object that describes the synchronization status of the Amazon S3 account-level block public access
+     *        feature for your Lightsail buckets.</p>
+     *        <p>
+     *        For more information about this feature and how it affects Lightsail buckets, see <a href=
+     *        "https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-block-public-access-for-buckets"
+     *        >Block public access for buckets in Amazon Lightsail</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetBucketsResult withAccountLevelBpaSync(AccountLevelBpaSync accountLevelBpaSync) {
+        setAccountLevelBpaSync(accountLevelBpaSync);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -207,7 +292,9 @@ public class GetBucketsResult extends com.amazonaws.AmazonWebServiceResult<com.a
         if (getBuckets() != null)
             sb.append("Buckets: ").append(getBuckets()).append(",");
         if (getNextPageToken() != null)
-            sb.append("NextPageToken: ").append(getNextPageToken());
+            sb.append("NextPageToken: ").append(getNextPageToken()).append(",");
+        if (getAccountLevelBpaSync() != null)
+            sb.append("AccountLevelBpaSync: ").append(getAccountLevelBpaSync());
         sb.append("}");
         return sb.toString();
     }
@@ -230,6 +317,10 @@ public class GetBucketsResult extends com.amazonaws.AmazonWebServiceResult<com.a
             return false;
         if (other.getNextPageToken() != null && other.getNextPageToken().equals(this.getNextPageToken()) == false)
             return false;
+        if (other.getAccountLevelBpaSync() == null ^ this.getAccountLevelBpaSync() == null)
+            return false;
+        if (other.getAccountLevelBpaSync() != null && other.getAccountLevelBpaSync().equals(this.getAccountLevelBpaSync()) == false)
+            return false;
         return true;
     }
 
@@ -240,6 +331,7 @@ public class GetBucketsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
         hashCode = prime * hashCode + ((getBuckets() == null) ? 0 : getBuckets().hashCode());
         hashCode = prime * hashCode + ((getNextPageToken() == null) ? 0 : getNextPageToken().hashCode());
+        hashCode = prime * hashCode + ((getAccountLevelBpaSync() == null) ? 0 : getAccountLevelBpaSync().hashCode());
         return hashCode;
     }
 

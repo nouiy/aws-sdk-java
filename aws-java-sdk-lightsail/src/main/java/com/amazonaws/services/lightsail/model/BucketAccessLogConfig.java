@@ -41,8 +41,8 @@ public class BucketAccessLogConfig implements Serializable, Cloneable, Structure
     private Boolean enabled;
     /**
      * <p>
-     * The name of the bucket where the access is saved. The destination can be a Lightsail bucket in the same account,
-     * and in the same AWS Region as the source bucket.
+     * The name of the bucket where the access logs are saved. The destination can be a Lightsail bucket in the same
+     * account, and in the same AWS Region as the source bucket.
      * </p>
      * <note>
      * <p>
@@ -124,8 +124,8 @@ public class BucketAccessLogConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The name of the bucket where the access is saved. The destination can be a Lightsail bucket in the same account,
-     * and in the same AWS Region as the source bucket.
+     * The name of the bucket where the access logs are saved. The destination can be a Lightsail bucket in the same
+     * account, and in the same AWS Region as the source bucket.
      * </p>
      * <note>
      * <p>
@@ -135,8 +135,8 @@ public class BucketAccessLogConfig implements Serializable, Cloneable, Structure
      * </note>
      * 
      * @param destination
-     *        The name of the bucket where the access is saved. The destination can be a Lightsail bucket in the same
-     *        account, and in the same AWS Region as the source bucket.</p> <note>
+     *        The name of the bucket where the access logs are saved. The destination can be a Lightsail bucket in the
+     *        same account, and in the same AWS Region as the source bucket.</p> <note>
      *        <p>
      *        This parameter is required when enabling the access log for a bucket, and should be omitted when disabling
      *        the access log.
@@ -149,8 +149,8 @@ public class BucketAccessLogConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The name of the bucket where the access is saved. The destination can be a Lightsail bucket in the same account,
-     * and in the same AWS Region as the source bucket.
+     * The name of the bucket where the access logs are saved. The destination can be a Lightsail bucket in the same
+     * account, and in the same AWS Region as the source bucket.
      * </p>
      * <note>
      * <p>
@@ -159,8 +159,8 @@ public class BucketAccessLogConfig implements Serializable, Cloneable, Structure
      * </p>
      * </note>
      * 
-     * @return The name of the bucket where the access is saved. The destination can be a Lightsail bucket in the same
-     *         account, and in the same AWS Region as the source bucket.</p> <note>
+     * @return The name of the bucket where the access logs are saved. The destination can be a Lightsail bucket in the
+     *         same account, and in the same AWS Region as the source bucket.</p> <note>
      *         <p>
      *         This parameter is required when enabling the access log for a bucket, and should be omitted when
      *         disabling the access log.
@@ -173,8 +173,8 @@ public class BucketAccessLogConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The name of the bucket where the access is saved. The destination can be a Lightsail bucket in the same account,
-     * and in the same AWS Region as the source bucket.
+     * The name of the bucket where the access logs are saved. The destination can be a Lightsail bucket in the same
+     * account, and in the same AWS Region as the source bucket.
      * </p>
      * <note>
      * <p>
@@ -184,8 +184,8 @@ public class BucketAccessLogConfig implements Serializable, Cloneable, Structure
      * </note>
      * 
      * @param destination
-     *        The name of the bucket where the access is saved. The destination can be a Lightsail bucket in the same
-     *        account, and in the same AWS Region as the source bucket.</p> <note>
+     *        The name of the bucket where the access logs are saved. The destination can be a Lightsail bucket in the
+     *        same account, and in the same AWS Region as the source bucket.</p> <note>
      *        <p>
      *        This parameter is required when enabling the access log for a bucket, and should be omitted when disabling
      *        the access log.

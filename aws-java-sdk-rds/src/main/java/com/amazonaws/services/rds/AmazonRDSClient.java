@@ -352,10 +352,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("DBClusterRoleNotFound", new DBClusterRoleNotFoundExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new DBClusterRoleNotFoundExceptionUnmarshaller());
-        if (exceptionUnmarshallersMap.get("InstallationMediaAlreadyExists") == null) {
-            exceptionUnmarshallersMap.put("InstallationMediaAlreadyExists", new InstallationMediaAlreadyExistsExceptionUnmarshaller());
-        }
-        exceptionUnmarshallers.add(new InstallationMediaAlreadyExistsExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("ExportTaskNotFound") == null) {
             exceptionUnmarshallersMap.put("ExportTaskNotFound", new ExportTaskNotFoundExceptionUnmarshaller());
         }
@@ -448,10 +444,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("PointInTimeRestoreNotEnabled", new PointInTimeRestoreNotEnabledExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new PointInTimeRestoreNotEnabledExceptionUnmarshaller());
-        if (exceptionUnmarshallersMap.get("InstallationMediaNotFound") == null) {
-            exceptionUnmarshallersMap.put("InstallationMediaNotFound", new InstallationMediaNotFoundExceptionUnmarshaller());
-        }
-        exceptionUnmarshallers.add(new InstallationMediaNotFoundExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("DBParameterGroupNotFound") == null) {
             exceptionUnmarshallersMap.put("DBParameterGroupNotFound", new DBParameterGroupNotFoundExceptionUnmarshaller());
         }
@@ -552,10 +544,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("InvalidDBSubnetGroupFault", new InvalidDBSubnetGroupExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new InvalidDBSubnetGroupExceptionUnmarshaller());
-        if (exceptionUnmarshallersMap.get("CustomAvailabilityZoneQuotaExceeded") == null) {
-            exceptionUnmarshallersMap.put("CustomAvailabilityZoneQuotaExceeded", new CustomAvailabilityZoneQuotaExceededExceptionUnmarshaller());
-        }
-        exceptionUnmarshallers.add(new CustomAvailabilityZoneQuotaExceededExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("OptionGroupNotFoundFault") == null) {
             exceptionUnmarshallersMap.put("OptionGroupNotFoundFault", new OptionGroupNotFoundExceptionUnmarshaller());
         }
@@ -620,10 +608,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("InvalidDBProxyEndpointStateFault", new InvalidDBProxyEndpointStateExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new InvalidDBProxyEndpointStateExceptionUnmarshaller());
-        if (exceptionUnmarshallersMap.get("CustomAvailabilityZoneAlreadyExists") == null) {
-            exceptionUnmarshallersMap.put("CustomAvailabilityZoneAlreadyExists", new CustomAvailabilityZoneAlreadyExistsExceptionUnmarshaller());
-        }
-        exceptionUnmarshallers.add(new CustomAvailabilityZoneAlreadyExistsExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("DBClusterRoleQuotaExceeded") == null) {
             exceptionUnmarshallersMap.put("DBClusterRoleQuotaExceeded", new DBClusterRoleQuotaExceededExceptionUnmarshaller());
         }
@@ -1806,76 +1790,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             }
 
             StaxResponseHandler<OptionGroup> responseHandler = new StaxResponseHandler<OptionGroup>(new OptionGroupStaxUnmarshaller());
-
-            response = invoke(request, responseHandler, executionContext);
-
-            return response.getAwsResponse();
-
-        } finally {
-
-            endClientExecution(awsRequestMetrics, request, response);
-        }
-    }
-
-    /**
-     * <p>
-     * Creates a custom Availability Zone (AZ).
-     * </p>
-     * <p>
-     * A custom AZ is an on-premises AZ that is integrated with a VMware vSphere cluster.
-     * </p>
-     * <p>
-     * For more information about RDS on VMware, see the <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html"> RDS on VMware User
-     * Guide.</a>
-     * </p>
-     * 
-     * @param createCustomAvailabilityZoneRequest
-     * @return Result of the CreateCustomAvailabilityZone operation returned by the service.
-     * @throws CustomAvailabilityZoneAlreadyExistsException
-     *         <code>CustomAvailabilityZoneName</code> is already used by an existing custom Availability Zone.
-     * @throws CustomAvailabilityZoneQuotaExceededException
-     *         You have exceeded the maximum number of custom Availability Zones.
-     * @throws KMSKeyNotAccessibleException
-     *         An error occurred accessing an Amazon Web Services KMS key.
-     * @sample AmazonRDS.CreateCustomAvailabilityZone
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateCustomAvailabilityZone"
-     *      target="_top">AWS API Documentation</a>
-     */
-    @Override
-    public CustomAvailabilityZone createCustomAvailabilityZone(CreateCustomAvailabilityZoneRequest request) {
-        request = beforeClientExecution(request);
-        return executeCreateCustomAvailabilityZone(request);
-    }
-
-    @SdkInternalApi
-    final CustomAvailabilityZone executeCreateCustomAvailabilityZone(CreateCustomAvailabilityZoneRequest createCustomAvailabilityZoneRequest) {
-
-        ExecutionContext executionContext = createExecutionContext(createCustomAvailabilityZoneRequest);
-        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
-        Request<CreateCustomAvailabilityZoneRequest> request = null;
-        Response<CustomAvailabilityZone> response = null;
-
-        try {
-            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
-            try {
-                request = new CreateCustomAvailabilityZoneRequestMarshaller().marshall(super.beforeMarshalling(createCustomAvailabilityZoneRequest));
-                // Binds the request metrics to the current request.
-                request.setAWSRequestMetrics(awsRequestMetrics);
-                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
-                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
-                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
-                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateCustomAvailabilityZone");
-                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
-
-            } finally {
-                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
-            }
-
-            StaxResponseHandler<CustomAvailabilityZone> responseHandler = new StaxResponseHandler<CustomAvailabilityZone>(
-                    new CustomAvailabilityZoneStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -3206,74 +3120,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
-     * Deletes a custom Availability Zone (AZ).
-     * </p>
-     * <p>
-     * A custom AZ is an on-premises AZ that is integrated with a VMware vSphere cluster.
-     * </p>
-     * <p>
-     * For more information about RDS on VMware, see the <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html"> RDS on VMware User
-     * Guide.</a>
-     * </p>
-     * 
-     * @param deleteCustomAvailabilityZoneRequest
-     * @return Result of the DeleteCustomAvailabilityZone operation returned by the service.
-     * @throws CustomAvailabilityZoneNotFoundException
-     *         <code>CustomAvailabilityZoneId</code> doesn't refer to an existing custom Availability Zone identifier.
-     * @throws KMSKeyNotAccessibleException
-     *         An error occurred accessing an Amazon Web Services KMS key.
-     * @sample AmazonRDS.DeleteCustomAvailabilityZone
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteCustomAvailabilityZone"
-     *      target="_top">AWS API Documentation</a>
-     */
-    @Override
-    public CustomAvailabilityZone deleteCustomAvailabilityZone(DeleteCustomAvailabilityZoneRequest request) {
-        request = beforeClientExecution(request);
-        return executeDeleteCustomAvailabilityZone(request);
-    }
-
-    @SdkInternalApi
-    final CustomAvailabilityZone executeDeleteCustomAvailabilityZone(DeleteCustomAvailabilityZoneRequest deleteCustomAvailabilityZoneRequest) {
-
-        ExecutionContext executionContext = createExecutionContext(deleteCustomAvailabilityZoneRequest);
-        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
-        Request<DeleteCustomAvailabilityZoneRequest> request = null;
-        Response<CustomAvailabilityZone> response = null;
-
-        try {
-            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
-            try {
-                request = new DeleteCustomAvailabilityZoneRequestMarshaller().marshall(super.beforeMarshalling(deleteCustomAvailabilityZoneRequest));
-                // Binds the request metrics to the current request.
-                request.setAWSRequestMetrics(awsRequestMetrics);
-                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
-                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
-                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
-                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteCustomAvailabilityZone");
-                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
-
-            } finally {
-                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
-            }
-
-            StaxResponseHandler<CustomAvailabilityZone> responseHandler = new StaxResponseHandler<CustomAvailabilityZone>(
-                    new CustomAvailabilityZoneStaxUnmarshaller());
-
-            response = invoke(request, responseHandler, executionContext);
-
-            return response.getAwsResponse();
-
-        } finally {
-
-            endClientExecution(awsRequestMetrics, request, response);
-        }
-    }
-
-    /**
-     * <p>
      * Deletes a custom engine version. To run this command, make sure you meet the following prerequisites:
      * </p>
      * <ul>
@@ -4322,65 +4168,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
-     * Deletes the installation medium for a DB engine that requires an on-premises customer provided license, such as
-     * Microsoft SQL Server.
-     * </p>
-     * 
-     * @param deleteInstallationMediaRequest
-     * @return Result of the DeleteInstallationMedia operation returned by the service.
-     * @throws InstallationMediaNotFoundException
-     *         <code>InstallationMediaID</code> doesn't refer to an existing installation medium.
-     * @sample AmazonRDS.DeleteInstallationMedia
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteInstallationMedia" target="_top">AWS
-     *      API Documentation</a>
-     */
-    @Override
-    public DeleteInstallationMediaResult deleteInstallationMedia(DeleteInstallationMediaRequest request) {
-        request = beforeClientExecution(request);
-        return executeDeleteInstallationMedia(request);
-    }
-
-    @SdkInternalApi
-    final DeleteInstallationMediaResult executeDeleteInstallationMedia(DeleteInstallationMediaRequest deleteInstallationMediaRequest) {
-
-        ExecutionContext executionContext = createExecutionContext(deleteInstallationMediaRequest);
-        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
-        Request<DeleteInstallationMediaRequest> request = null;
-        Response<DeleteInstallationMediaResult> response = null;
-
-        try {
-            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
-            try {
-                request = new DeleteInstallationMediaRequestMarshaller().marshall(super.beforeMarshalling(deleteInstallationMediaRequest));
-                // Binds the request metrics to the current request.
-                request.setAWSRequestMetrics(awsRequestMetrics);
-                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
-                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
-                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
-                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteInstallationMedia");
-                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
-
-            } finally {
-                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
-            }
-
-            StaxResponseHandler<DeleteInstallationMediaResult> responseHandler = new StaxResponseHandler<DeleteInstallationMediaResult>(
-                    new DeleteInstallationMediaResultStaxUnmarshaller());
-
-            response = invoke(request, responseHandler, executionContext);
-
-            return response.getAwsResponse();
-
-        } finally {
-
-            endClientExecution(awsRequestMetrics, request, response);
-        }
-    }
-
-    /**
-     * <p>
      * Deletes an existing option group.
      * </p>
      * 
@@ -4634,73 +4421,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
     @Override
     public DescribeCertificatesResult describeCertificates() {
         return describeCertificates(new DescribeCertificatesRequest());
-    }
-
-    /**
-     * <p>
-     * Returns information about custom Availability Zones (AZs).
-     * </p>
-     * <p>
-     * A custom AZ is an on-premises AZ that is integrated with a VMware vSphere cluster.
-     * </p>
-     * <p>
-     * For more information about RDS on VMware, see the <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html"> RDS on VMware User
-     * Guide.</a>
-     * </p>
-     * 
-     * @param describeCustomAvailabilityZonesRequest
-     * @return Result of the DescribeCustomAvailabilityZones operation returned by the service.
-     * @throws CustomAvailabilityZoneNotFoundException
-     *         <code>CustomAvailabilityZoneId</code> doesn't refer to an existing custom Availability Zone identifier.
-     * @sample AmazonRDS.DescribeCustomAvailabilityZones
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeCustomAvailabilityZones"
-     *      target="_top">AWS API Documentation</a>
-     */
-    @Override
-    public DescribeCustomAvailabilityZonesResult describeCustomAvailabilityZones(DescribeCustomAvailabilityZonesRequest request) {
-        request = beforeClientExecution(request);
-        return executeDescribeCustomAvailabilityZones(request);
-    }
-
-    @SdkInternalApi
-    final DescribeCustomAvailabilityZonesResult executeDescribeCustomAvailabilityZones(
-            DescribeCustomAvailabilityZonesRequest describeCustomAvailabilityZonesRequest) {
-
-        ExecutionContext executionContext = createExecutionContext(describeCustomAvailabilityZonesRequest);
-        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
-        Request<DescribeCustomAvailabilityZonesRequest> request = null;
-        Response<DescribeCustomAvailabilityZonesResult> response = null;
-
-        try {
-            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
-            try {
-                request = new DescribeCustomAvailabilityZonesRequestMarshaller().marshall(super.beforeMarshalling(describeCustomAvailabilityZonesRequest));
-                // Binds the request metrics to the current request.
-                request.setAWSRequestMetrics(awsRequestMetrics);
-                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
-                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
-                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
-                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeCustomAvailabilityZones");
-                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
-
-            } finally {
-                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
-            }
-
-            StaxResponseHandler<DescribeCustomAvailabilityZonesResult> responseHandler = new StaxResponseHandler<DescribeCustomAvailabilityZonesResult>(
-                    new DescribeCustomAvailabilityZonesResultStaxUnmarshaller());
-
-            response = invoke(request, responseHandler, executionContext);
-
-            return response.getAwsResponse();
-
-        } finally {
-
-            endClientExecution(awsRequestMetrics, request, response);
-        }
     }
 
     /**
@@ -6548,65 +6268,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
-     * Describes the available installation media for a DB engine that requires an on-premises customer provided
-     * license, such as Microsoft SQL Server.
-     * </p>
-     * 
-     * @param describeInstallationMediaRequest
-     * @return Result of the DescribeInstallationMedia operation returned by the service.
-     * @throws InstallationMediaNotFoundException
-     *         <code>InstallationMediaID</code> doesn't refer to an existing installation medium.
-     * @sample AmazonRDS.DescribeInstallationMedia
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeInstallationMedia" target="_top">AWS
-     *      API Documentation</a>
-     */
-    @Override
-    public DescribeInstallationMediaResult describeInstallationMedia(DescribeInstallationMediaRequest request) {
-        request = beforeClientExecution(request);
-        return executeDescribeInstallationMedia(request);
-    }
-
-    @SdkInternalApi
-    final DescribeInstallationMediaResult executeDescribeInstallationMedia(DescribeInstallationMediaRequest describeInstallationMediaRequest) {
-
-        ExecutionContext executionContext = createExecutionContext(describeInstallationMediaRequest);
-        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
-        Request<DescribeInstallationMediaRequest> request = null;
-        Response<DescribeInstallationMediaResult> response = null;
-
-        try {
-            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
-            try {
-                request = new DescribeInstallationMediaRequestMarshaller().marshall(super.beforeMarshalling(describeInstallationMediaRequest));
-                // Binds the request metrics to the current request.
-                request.setAWSRequestMetrics(awsRequestMetrics);
-                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
-                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
-                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
-                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeInstallationMedia");
-                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
-
-            } finally {
-                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
-            }
-
-            StaxResponseHandler<DescribeInstallationMediaResult> responseHandler = new StaxResponseHandler<DescribeInstallationMediaResult>(
-                    new DescribeInstallationMediaResultStaxUnmarshaller());
-
-            response = invoke(request, responseHandler, executionContext);
-
-            return response.getAwsResponse();
-
-        } finally {
-
-            endClientExecution(awsRequestMetrics, request, response);
-        }
-    }
-
-    /**
-     * <p>
      * Describes all available options.
      * </p>
      * 
@@ -7339,67 +7000,6 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
     /**
      * <p>
-     * Imports the installation media for a DB engine that requires an on-premises customer provided license, such as
-     * SQL Server.
-     * </p>
-     * 
-     * @param importInstallationMediaRequest
-     * @return Result of the ImportInstallationMedia operation returned by the service.
-     * @throws CustomAvailabilityZoneNotFoundException
-     *         <code>CustomAvailabilityZoneId</code> doesn't refer to an existing custom Availability Zone identifier.
-     * @throws InstallationMediaAlreadyExistsException
-     *         The specified installation medium has already been imported.
-     * @sample AmazonRDS.ImportInstallationMedia
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ImportInstallationMedia" target="_top">AWS
-     *      API Documentation</a>
-     */
-    @Override
-    public ImportInstallationMediaResult importInstallationMedia(ImportInstallationMediaRequest request) {
-        request = beforeClientExecution(request);
-        return executeImportInstallationMedia(request);
-    }
-
-    @SdkInternalApi
-    final ImportInstallationMediaResult executeImportInstallationMedia(ImportInstallationMediaRequest importInstallationMediaRequest) {
-
-        ExecutionContext executionContext = createExecutionContext(importInstallationMediaRequest);
-        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
-        Request<ImportInstallationMediaRequest> request = null;
-        Response<ImportInstallationMediaResult> response = null;
-
-        try {
-            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
-            try {
-                request = new ImportInstallationMediaRequestMarshaller().marshall(super.beforeMarshalling(importInstallationMediaRequest));
-                // Binds the request metrics to the current request.
-                request.setAWSRequestMetrics(awsRequestMetrics);
-                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
-                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
-                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
-                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ImportInstallationMedia");
-                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
-
-            } finally {
-                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
-            }
-
-            StaxResponseHandler<ImportInstallationMediaResult> responseHandler = new StaxResponseHandler<ImportInstallationMediaResult>(
-                    new ImportInstallationMediaResultStaxUnmarshaller());
-
-            response = invoke(request, responseHandler, executionContext);
-
-            return response.getAwsResponse();
-
-        } finally {
-
-            endClientExecution(awsRequestMetrics, request, response);
-        }
-    }
-
-    /**
-     * <p>
      * Lists all tags on an Amazon RDS resource.
      * </p>
      * <p>
@@ -7474,7 +7074,7 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
     /**
      * <p>
      * Override the system-default Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificate for Amazon RDS
-     * for new DB instances temporarily, or remove the override.
+     * for new DB instances, or remove the override.
      * </p>
      * <p>
      * By using this operation, you can specify an RDS-approved SSL/TLS certificate for new DB instances that is

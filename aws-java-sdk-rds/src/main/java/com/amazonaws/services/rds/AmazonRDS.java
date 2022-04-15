@@ -586,33 +586,6 @@ public interface AmazonRDS {
 
     /**
      * <p>
-     * Creates a custom Availability Zone (AZ).
-     * </p>
-     * <p>
-     * A custom AZ is an on-premises AZ that is integrated with a VMware vSphere cluster.
-     * </p>
-     * <p>
-     * For more information about RDS on VMware, see the <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html"> RDS on VMware User
-     * Guide.</a>
-     * </p>
-     * 
-     * @param createCustomAvailabilityZoneRequest
-     * @return Result of the CreateCustomAvailabilityZone operation returned by the service.
-     * @throws CustomAvailabilityZoneAlreadyExistsException
-     *         <code>CustomAvailabilityZoneName</code> is already used by an existing custom Availability Zone.
-     * @throws CustomAvailabilityZoneQuotaExceededException
-     *         You have exceeded the maximum number of custom Availability Zones.
-     * @throws KMSKeyNotAccessibleException
-     *         An error occurred accessing an Amazon Web Services KMS key.
-     * @sample AmazonRDS.CreateCustomAvailabilityZone
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateCustomAvailabilityZone"
-     *      target="_top">AWS API Documentation</a>
-     */
-    CustomAvailabilityZone createCustomAvailabilityZone(CreateCustomAvailabilityZoneRequest createCustomAvailabilityZoneRequest);
-
-    /**
-     * <p>
      * Creates a custom DB engine version (CEV). A CEV is a binary volume snapshot of a database engine and specific
      * AMI. The supported engines are the following:
      * </p>
@@ -1254,31 +1227,6 @@ public interface AmazonRDS {
 
     /**
      * <p>
-     * Deletes a custom Availability Zone (AZ).
-     * </p>
-     * <p>
-     * A custom AZ is an on-premises AZ that is integrated with a VMware vSphere cluster.
-     * </p>
-     * <p>
-     * For more information about RDS on VMware, see the <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html"> RDS on VMware User
-     * Guide.</a>
-     * </p>
-     * 
-     * @param deleteCustomAvailabilityZoneRequest
-     * @return Result of the DeleteCustomAvailabilityZone operation returned by the service.
-     * @throws CustomAvailabilityZoneNotFoundException
-     *         <code>CustomAvailabilityZoneId</code> doesn't refer to an existing custom Availability Zone identifier.
-     * @throws KMSKeyNotAccessibleException
-     *         An error occurred accessing an Amazon Web Services KMS key.
-     * @sample AmazonRDS.DeleteCustomAvailabilityZone
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteCustomAvailabilityZone"
-     *      target="_top">AWS API Documentation</a>
-     */
-    CustomAvailabilityZone deleteCustomAvailabilityZone(DeleteCustomAvailabilityZoneRequest deleteCustomAvailabilityZoneRequest);
-
-    /**
-     * <p>
      * Deletes a custom engine version. To run this command, make sure you meet the following prerequisites:
      * </p>
      * <ul>
@@ -1689,22 +1637,6 @@ public interface AmazonRDS {
 
     /**
      * <p>
-     * Deletes the installation medium for a DB engine that requires an on-premises customer provided license, such as
-     * Microsoft SQL Server.
-     * </p>
-     * 
-     * @param deleteInstallationMediaRequest
-     * @return Result of the DeleteInstallationMedia operation returned by the service.
-     * @throws InstallationMediaNotFoundException
-     *         <code>InstallationMediaID</code> doesn't refer to an existing installation medium.
-     * @sample AmazonRDS.DeleteInstallationMedia
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteInstallationMedia" target="_top">AWS
-     *      API Documentation</a>
-     */
-    DeleteInstallationMediaResult deleteInstallationMedia(DeleteInstallationMediaRequest deleteInstallationMediaRequest);
-
-    /**
-     * <p>
      * Deletes an existing option group.
      * </p>
      * 
@@ -1791,29 +1723,6 @@ public interface AmazonRDS {
      * @see #describeCertificates(DescribeCertificatesRequest)
      */
     DescribeCertificatesResult describeCertificates();
-
-    /**
-     * <p>
-     * Returns information about custom Availability Zones (AZs).
-     * </p>
-     * <p>
-     * A custom AZ is an on-premises AZ that is integrated with a VMware vSphere cluster.
-     * </p>
-     * <p>
-     * For more information about RDS on VMware, see the <a
-     * href="https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html"> RDS on VMware User
-     * Guide.</a>
-     * </p>
-     * 
-     * @param describeCustomAvailabilityZonesRequest
-     * @return Result of the DescribeCustomAvailabilityZones operation returned by the service.
-     * @throws CustomAvailabilityZoneNotFoundException
-     *         <code>CustomAvailabilityZoneId</code> doesn't refer to an existing custom Availability Zone identifier.
-     * @sample AmazonRDS.DescribeCustomAvailabilityZones
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeCustomAvailabilityZones"
-     *      target="_top">AWS API Documentation</a>
-     */
-    DescribeCustomAvailabilityZonesResult describeCustomAvailabilityZones(DescribeCustomAvailabilityZonesRequest describeCustomAvailabilityZonesRequest);
 
     /**
      * <p>
@@ -2478,22 +2387,6 @@ public interface AmazonRDS {
 
     /**
      * <p>
-     * Describes the available installation media for a DB engine that requires an on-premises customer provided
-     * license, such as Microsoft SQL Server.
-     * </p>
-     * 
-     * @param describeInstallationMediaRequest
-     * @return Result of the DescribeInstallationMedia operation returned by the service.
-     * @throws InstallationMediaNotFoundException
-     *         <code>InstallationMediaID</code> doesn't refer to an existing installation medium.
-     * @sample AmazonRDS.DescribeInstallationMedia
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DescribeInstallationMedia" target="_top">AWS
-     *      API Documentation</a>
-     */
-    DescribeInstallationMediaResult describeInstallationMedia(DescribeInstallationMediaRequest describeInstallationMediaRequest);
-
-    /**
-     * <p>
      * Describes all available options.
      * </p>
      * 
@@ -2761,24 +2654,6 @@ public interface AmazonRDS {
 
     /**
      * <p>
-     * Imports the installation media for a DB engine that requires an on-premises customer provided license, such as
-     * SQL Server.
-     * </p>
-     * 
-     * @param importInstallationMediaRequest
-     * @return Result of the ImportInstallationMedia operation returned by the service.
-     * @throws CustomAvailabilityZoneNotFoundException
-     *         <code>CustomAvailabilityZoneId</code> doesn't refer to an existing custom Availability Zone identifier.
-     * @throws InstallationMediaAlreadyExistsException
-     *         The specified installation medium has already been imported.
-     * @sample AmazonRDS.ImportInstallationMedia
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ImportInstallationMedia" target="_top">AWS
-     *      API Documentation</a>
-     */
-    ImportInstallationMediaResult importInstallationMedia(ImportInstallationMediaRequest importInstallationMediaRequest);
-
-    /**
-     * <p>
      * Lists all tags on an Amazon RDS resource.
      * </p>
      * <p>
@@ -2810,7 +2685,7 @@ public interface AmazonRDS {
     /**
      * <p>
      * Override the system-default Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificate for Amazon RDS
-     * for new DB instances temporarily, or remove the override.
+     * for new DB instances, or remove the override.
      * </p>
      * <p>
      * By using this operation, you can specify an RDS-approved SSL/TLS certificate for new DB instances that is

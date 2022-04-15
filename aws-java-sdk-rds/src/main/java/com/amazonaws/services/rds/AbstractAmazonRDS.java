@@ -104,11 +104,6 @@ public class AbstractAmazonRDS implements AmazonRDS {
     }
 
     @Override
-    public CustomAvailabilityZone createCustomAvailabilityZone(CreateCustomAvailabilityZoneRequest request) {
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
     public CreateCustomDBEngineVersionResult createCustomDBEngineVersion(CreateCustomDBEngineVersionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -189,11 +184,6 @@ public class AbstractAmazonRDS implements AmazonRDS {
     }
 
     @Override
-    public CustomAvailabilityZone deleteCustomAvailabilityZone(DeleteCustomAvailabilityZoneRequest request) {
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
     public DeleteCustomDBEngineVersionResult deleteCustomDBEngineVersion(DeleteCustomDBEngineVersionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -269,11 +259,6 @@ public class AbstractAmazonRDS implements AmazonRDS {
     }
 
     @Override
-    public DeleteInstallationMediaResult deleteInstallationMedia(DeleteInstallationMediaRequest request) {
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
     public DeleteOptionGroupResult deleteOptionGroup(DeleteOptionGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -301,11 +286,6 @@ public class AbstractAmazonRDS implements AmazonRDS {
     @Override
     public DescribeCertificatesResult describeCertificates() {
         return describeCertificates(new DescribeCertificatesRequest());
-    }
-
-    @Override
-    public DescribeCustomAvailabilityZonesResult describeCustomAvailabilityZones(DescribeCustomAvailabilityZonesRequest request) {
-        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
@@ -514,11 +494,6 @@ public class AbstractAmazonRDS implements AmazonRDS {
     }
 
     @Override
-    public DescribeInstallationMediaResult describeInstallationMedia(DescribeInstallationMediaRequest request) {
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
     public DescribeOptionGroupOptionsResult describeOptionGroupOptions(DescribeOptionGroupOptionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -595,11 +570,6 @@ public class AbstractAmazonRDS implements AmazonRDS {
 
     @Override
     public GlobalCluster failoverGlobalCluster(FailoverGlobalClusterRequest request) {
-        throw new java.lang.UnsupportedOperationException();
-    }
-
-    @Override
-    public ImportInstallationMediaResult importInstallationMedia(ImportInstallationMediaRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

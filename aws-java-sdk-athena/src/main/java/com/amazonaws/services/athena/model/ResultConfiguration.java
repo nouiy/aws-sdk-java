@@ -45,7 +45,7 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * If query results are encrypted in Amazon S3, indicates the encryption option used (for example,
-     * <code>SSE-KMS</code> or <code>CSE-KMS</code>) and key information. This is a client-side setting. If workgroup
+     * <code>SSE_KMS</code> or <code>CSE_KMS</code>) and key information. This is a client-side setting. If workgroup
      * settings override client-side settings, then the query uses the encryption configuration that is specified for
      * the workgroup, and also uses the location for storing query results specified in the workgroup. See
      * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
@@ -166,7 +166,7 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * If query results are encrypted in Amazon S3, indicates the encryption option used (for example,
-     * <code>SSE-KMS</code> or <code>CSE-KMS</code>) and key information. This is a client-side setting. If workgroup
+     * <code>SSE_KMS</code> or <code>CSE_KMS</code>) and key information. This is a client-side setting. If workgroup
      * settings override client-side settings, then the query uses the encryption configuration that is specified for
      * the workgroup, and also uses the location for storing query results specified in the workgroup. See
      * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
@@ -176,7 +176,7 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
      * 
      * @param encryptionConfiguration
      *        If query results are encrypted in Amazon S3, indicates the encryption option used (for example,
-     *        <code>SSE-KMS</code> or <code>CSE-KMS</code>) and key information. This is a client-side setting. If
+     *        <code>SSE_KMS</code> or <code>CSE_KMS</code>) and key information. This is a client-side setting. If
      *        workgroup settings override client-side settings, then the query uses the encryption configuration that is
      *        specified for the workgroup, and also uses the location for storing query results specified in the
      *        workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
@@ -191,7 +191,7 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * If query results are encrypted in Amazon S3, indicates the encryption option used (for example,
-     * <code>SSE-KMS</code> or <code>CSE-KMS</code>) and key information. This is a client-side setting. If workgroup
+     * <code>SSE_KMS</code> or <code>CSE_KMS</code>) and key information. This is a client-side setting. If workgroup
      * settings override client-side settings, then the query uses the encryption configuration that is specified for
      * the workgroup, and also uses the location for storing query results specified in the workgroup. See
      * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
@@ -200,7 +200,7 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @return If query results are encrypted in Amazon S3, indicates the encryption option used (for example,
-     *         <code>SSE-KMS</code> or <code>CSE-KMS</code>) and key information. This is a client-side setting. If
+     *         <code>SSE_KMS</code> or <code>CSE_KMS</code>) and key information. This is a client-side setting. If
      *         workgroup settings override client-side settings, then the query uses the encryption configuration that
      *         is specified for the workgroup, and also uses the location for storing query results specified in the
      *         workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
@@ -215,7 +215,7 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * If query results are encrypted in Amazon S3, indicates the encryption option used (for example,
-     * <code>SSE-KMS</code> or <code>CSE-KMS</code>) and key information. This is a client-side setting. If workgroup
+     * <code>SSE_KMS</code> or <code>CSE_KMS</code>) and key information. This is a client-side setting. If workgroup
      * settings override client-side settings, then the query uses the encryption configuration that is specified for
      * the workgroup, and also uses the location for storing query results specified in the workgroup. See
      * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a
@@ -225,7 +225,7 @@ public class ResultConfiguration implements Serializable, Cloneable, StructuredP
      * 
      * @param encryptionConfiguration
      *        If query results are encrypted in Amazon S3, indicates the encryption option used (for example,
-     *        <code>SSE-KMS</code> or <code>CSE-KMS</code>) and key information. This is a client-side setting. If
+     *        <code>SSE_KMS</code> or <code>CSE_KMS</code>) and key information. This is a client-side setting. If
      *        workgroup settings override client-side settings, then the query uses the encryption configuration that is
      *        specified for the workgroup, and also uses the location for storing query results specified in the
      *        workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a

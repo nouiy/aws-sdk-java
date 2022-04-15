@@ -56,6 +56,18 @@ public class AthenaError implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Integer errorType;
+    /**
+     * <p>
+     * True if the query might succeed if resubmitted.
+     * </p>
+     */
+    private Boolean retryable;
+    /**
+     * <p>
+     * Contains a short description of the error that occurred.
+     * </p>
+     */
+    private String errorMessage;
 
     /**
      * <p>
@@ -213,6 +225,98 @@ public class AthenaError implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * True if the query might succeed if resubmitted.
+     * </p>
+     * 
+     * @param retryable
+     *        True if the query might succeed if resubmitted.
+     */
+
+    public void setRetryable(Boolean retryable) {
+        this.retryable = retryable;
+    }
+
+    /**
+     * <p>
+     * True if the query might succeed if resubmitted.
+     * </p>
+     * 
+     * @return True if the query might succeed if resubmitted.
+     */
+
+    public Boolean getRetryable() {
+        return this.retryable;
+    }
+
+    /**
+     * <p>
+     * True if the query might succeed if resubmitted.
+     * </p>
+     * 
+     * @param retryable
+     *        True if the query might succeed if resubmitted.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AthenaError withRetryable(Boolean retryable) {
+        setRetryable(retryable);
+        return this;
+    }
+
+    /**
+     * <p>
+     * True if the query might succeed if resubmitted.
+     * </p>
+     * 
+     * @return True if the query might succeed if resubmitted.
+     */
+
+    public Boolean isRetryable() {
+        return this.retryable;
+    }
+
+    /**
+     * <p>
+     * Contains a short description of the error that occurred.
+     * </p>
+     * 
+     * @param errorMessage
+     *        Contains a short description of the error that occurred.
+     */
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
+
+    /**
+     * <p>
+     * Contains a short description of the error that occurred.
+     * </p>
+     * 
+     * @return Contains a short description of the error that occurred.
+     */
+
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    /**
+     * <p>
+     * Contains a short description of the error that occurred.
+     * </p>
+     * 
+     * @param errorMessage
+     *        Contains a short description of the error that occurred.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AthenaError withErrorMessage(String errorMessage) {
+        setErrorMessage(errorMessage);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -227,7 +331,11 @@ public class AthenaError implements Serializable, Cloneable, StructuredPojo {
         if (getErrorCategory() != null)
             sb.append("ErrorCategory: ").append(getErrorCategory()).append(",");
         if (getErrorType() != null)
-            sb.append("ErrorType: ").append(getErrorType());
+            sb.append("ErrorType: ").append(getErrorType()).append(",");
+        if (getRetryable() != null)
+            sb.append("Retryable: ").append(getRetryable()).append(",");
+        if (getErrorMessage() != null)
+            sb.append("ErrorMessage: ").append(getErrorMessage());
         sb.append("}");
         return sb.toString();
     }
@@ -250,6 +358,14 @@ public class AthenaError implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getErrorType() != null && other.getErrorType().equals(this.getErrorType()) == false)
             return false;
+        if (other.getRetryable() == null ^ this.getRetryable() == null)
+            return false;
+        if (other.getRetryable() != null && other.getRetryable().equals(this.getRetryable()) == false)
+            return false;
+        if (other.getErrorMessage() == null ^ this.getErrorMessage() == null)
+            return false;
+        if (other.getErrorMessage() != null && other.getErrorMessage().equals(this.getErrorMessage()) == false)
+            return false;
         return true;
     }
 
@@ -260,6 +376,8 @@ public class AthenaError implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getErrorCategory() == null) ? 0 : getErrorCategory().hashCode());
         hashCode = prime * hashCode + ((getErrorType() == null) ? 0 : getErrorType().hashCode());
+        hashCode = prime * hashCode + ((getRetryable() == null) ? 0 : getRetryable().hashCode());
+        hashCode = prime * hashCode + ((getErrorMessage() == null) ? 0 : getErrorMessage().hashCode());
         return hashCode;
     }
 
