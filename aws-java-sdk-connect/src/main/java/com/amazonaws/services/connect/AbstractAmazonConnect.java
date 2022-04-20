@@ -58,6 +58,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public AssociatePhoneNumberContactFlowResult associatePhoneNumberContactFlow(AssociatePhoneNumberContactFlowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public AssociateQueueQuickConnectsResult associateQueueQuickConnects(AssociateQueueQuickConnectsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -69,6 +74,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public AssociateSecurityKeyResult associateSecurityKey(AssociateSecurityKeyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ClaimPhoneNumberResult claimPhoneNumber(ClaimPhoneNumberRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -238,6 +248,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public DescribePhoneNumberResult describePhoneNumber(DescribePhoneNumberRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeQueueResult describeQueue(DescribeQueueRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -299,6 +314,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public DisassociateLexBotResult disassociateLexBot(DisassociateLexBotRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DisassociatePhoneNumberContactFlowResult disassociatePhoneNumberContactFlow(DisassociatePhoneNumberContactFlowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -413,6 +433,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public ListPhoneNumbersV2Result listPhoneNumbersV2(ListPhoneNumbersV2Request request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListPromptsResult listPrompts(ListPromptsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -478,7 +503,17 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public ReleasePhoneNumberResult releasePhoneNumber(ReleasePhoneNumberRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ResumeContactRecordingResult resumeContactRecording(ResumeContactRecordingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public SearchAvailablePhoneNumbersResult searchAvailablePhoneNumbers(SearchAvailablePhoneNumbersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -599,6 +634,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
 
     @Override
     public UpdateInstanceStorageConfigResult updateInstanceStorageConfig(UpdateInstanceStorageConfigRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdatePhoneNumberResult updatePhoneNumber(UpdatePhoneNumberRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -292,6 +292,41 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Associates a contact flow with a phone number claimed to your Amazon Connect instance.
+     * </p>
+     * 
+     * @param associatePhoneNumberContactFlowRequest
+     * @return A Java Future containing the result of the AssociatePhoneNumberContactFlow operation returned by the
+     *         service.
+     * @sample AmazonConnectAsync.AssociatePhoneNumberContactFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociatePhoneNumberContactFlow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociatePhoneNumberContactFlowResult> associatePhoneNumberContactFlowAsync(
+            AssociatePhoneNumberContactFlowRequest associatePhoneNumberContactFlowRequest);
+
+    /**
+     * <p>
+     * Associates a contact flow with a phone number claimed to your Amazon Connect instance.
+     * </p>
+     * 
+     * @param associatePhoneNumberContactFlowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociatePhoneNumberContactFlow operation returned by the
+     *         service.
+     * @sample AmazonConnectAsyncHandler.AssociatePhoneNumberContactFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociatePhoneNumberContactFlow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociatePhoneNumberContactFlowResult> associatePhoneNumberContactFlowAsync(
+            AssociatePhoneNumberContactFlowRequest associatePhoneNumberContactFlowRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociatePhoneNumberContactFlowRequest, AssociatePhoneNumberContactFlowResult> asyncHandler);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -400,6 +435,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<AssociateSecurityKeyResult> associateSecurityKeyAsync(AssociateSecurityKeyRequest associateSecurityKeyRequest,
             com.amazonaws.handlers.AsyncHandler<AssociateSecurityKeyRequest, AssociateSecurityKeyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Claims an available phone number to your Amazon Connect instance.
+     * </p>
+     * 
+     * @param claimPhoneNumberRequest
+     * @return A Java Future containing the result of the ClaimPhoneNumber operation returned by the service.
+     * @sample AmazonConnectAsync.ClaimPhoneNumber
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ClaimPhoneNumber" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ClaimPhoneNumberResult> claimPhoneNumberAsync(ClaimPhoneNumberRequest claimPhoneNumberRequest);
+
+    /**
+     * <p>
+     * Claims an available phone number to your Amazon Connect instance.
+     * </p>
+     * 
+     * @param claimPhoneNumberRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ClaimPhoneNumber operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.ClaimPhoneNumber
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ClaimPhoneNumber" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ClaimPhoneNumberResult> claimPhoneNumberAsync(ClaimPhoneNumberRequest claimPhoneNumberRequest,
+            com.amazonaws.handlers.AsyncHandler<ClaimPhoneNumberRequest, ClaimPhoneNumberResult> asyncHandler);
 
     /**
      * <p>
@@ -1618,6 +1684,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Gets details and status of a phone number that’s claimed to your Amazon Connect instance
+     * </p>
+     * 
+     * @param describePhoneNumberRequest
+     * @return A Java Future containing the result of the DescribePhoneNumber operation returned by the service.
+     * @sample AmazonConnectAsync.DescribePhoneNumber
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribePhoneNumber" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribePhoneNumberResult> describePhoneNumberAsync(DescribePhoneNumberRequest describePhoneNumberRequest);
+
+    /**
+     * <p>
+     * Gets details and status of a phone number that’s claimed to your Amazon Connect instance
+     * </p>
+     * 
+     * @param describePhoneNumberRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribePhoneNumber operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DescribePhoneNumber
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribePhoneNumber" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribePhoneNumberResult> describePhoneNumberAsync(DescribePhoneNumberRequest describePhoneNumberRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribePhoneNumberRequest, DescribePhoneNumberResult> asyncHandler);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -2076,6 +2173,43 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<DisassociateLexBotResult> disassociateLexBotAsync(DisassociateLexBotRequest disassociateLexBotRequest,
             com.amazonaws.handlers.AsyncHandler<DisassociateLexBotRequest, DisassociateLexBotResult> asyncHandler);
+
+    /**
+     * <p>
+     * Removes the contact flow association from a phone number claimed to your Amazon Connect instance, if a contact
+     * flow association exists.
+     * </p>
+     * 
+     * @param disassociatePhoneNumberContactFlowRequest
+     * @return A Java Future containing the result of the DisassociatePhoneNumberContactFlow operation returned by the
+     *         service.
+     * @sample AmazonConnectAsync.DisassociatePhoneNumberContactFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociatePhoneNumberContactFlow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociatePhoneNumberContactFlowResult> disassociatePhoneNumberContactFlowAsync(
+            DisassociatePhoneNumberContactFlowRequest disassociatePhoneNumberContactFlowRequest);
+
+    /**
+     * <p>
+     * Removes the contact flow association from a phone number claimed to your Amazon Connect instance, if a contact
+     * flow association exists.
+     * </p>
+     * 
+     * @param disassociatePhoneNumberContactFlowRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociatePhoneNumberContactFlow operation returned by the
+     *         service.
+     * @sample AmazonConnectAsyncHandler.DisassociatePhoneNumberContactFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociatePhoneNumberContactFlow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociatePhoneNumberContactFlowResult> disassociatePhoneNumberContactFlowAsync(
+            DisassociatePhoneNumberContactFlowRequest disassociatePhoneNumberContactFlowRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociatePhoneNumberContactFlowRequest, DisassociatePhoneNumberContactFlowResult> asyncHandler);
 
     /**
      * <p>
@@ -2925,6 +3059,47 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Lists phone numbers claimed to your Amazon Connect instance.
+     * </p>
+     * <p>
+     * For more information about phone numbers, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/contact-center-phone-number.html">Set Up Phone
+     * Numbers for Your Contact Center</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param listPhoneNumbersV2Request
+     * @return A Java Future containing the result of the ListPhoneNumbersV2 operation returned by the service.
+     * @sample AmazonConnectAsync.ListPhoneNumbersV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListPhoneNumbersV2" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListPhoneNumbersV2Result> listPhoneNumbersV2Async(ListPhoneNumbersV2Request listPhoneNumbersV2Request);
+
+    /**
+     * <p>
+     * Lists phone numbers claimed to your Amazon Connect instance.
+     * </p>
+     * <p>
+     * For more information about phone numbers, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/contact-center-phone-number.html">Set Up Phone
+     * Numbers for Your Contact Center</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param listPhoneNumbersV2Request
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListPhoneNumbersV2 operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.ListPhoneNumbersV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListPhoneNumbersV2" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListPhoneNumbersV2Result> listPhoneNumbersV2Async(ListPhoneNumbersV2Request listPhoneNumbersV2Request,
+            com.amazonaws.handlers.AsyncHandler<ListPhoneNumbersV2Request, ListPhoneNumbersV2Result> asyncHandler);
+
+    /**
+     * <p>
      * Provides information about the prompts for the specified Amazon Connect instance.
      * </p>
      * 
@@ -3414,6 +3589,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Releases a phone number previously claimed to an Amazon Connect instance.
+     * </p>
+     * 
+     * @param releasePhoneNumberRequest
+     * @return A Java Future containing the result of the ReleasePhoneNumber operation returned by the service.
+     * @sample AmazonConnectAsync.ReleasePhoneNumber
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ReleasePhoneNumber" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ReleasePhoneNumberResult> releasePhoneNumberAsync(ReleasePhoneNumberRequest releasePhoneNumberRequest);
+
+    /**
+     * <p>
+     * Releases a phone number previously claimed to an Amazon Connect instance.
+     * </p>
+     * 
+     * @param releasePhoneNumberRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ReleasePhoneNumber operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.ReleasePhoneNumber
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ReleasePhoneNumber" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ReleasePhoneNumberResult> releasePhoneNumberAsync(ReleasePhoneNumberRequest releasePhoneNumberRequest,
+            com.amazonaws.handlers.AsyncHandler<ReleasePhoneNumberRequest, ReleasePhoneNumberResult> asyncHandler);
+
+    /**
+     * <p>
      * When a contact is being recorded, and the recording has been suspended using SuspendContactRecording, this API
      * resumes recording the call.
      * </p>
@@ -3450,6 +3656,39 @@ public interface AmazonConnectAsync extends AmazonConnect {
      */
     java.util.concurrent.Future<ResumeContactRecordingResult> resumeContactRecordingAsync(ResumeContactRecordingRequest resumeContactRecordingRequest,
             com.amazonaws.handlers.AsyncHandler<ResumeContactRecordingRequest, ResumeContactRecordingResult> asyncHandler);
+
+    /**
+     * <p>
+     * Searches for available phone numbers that you can claim to your Amazon Connect instance.
+     * </p>
+     * 
+     * @param searchAvailablePhoneNumbersRequest
+     * @return A Java Future containing the result of the SearchAvailablePhoneNumbers operation returned by the service.
+     * @sample AmazonConnectAsync.SearchAvailablePhoneNumbers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchAvailablePhoneNumbers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchAvailablePhoneNumbersResult> searchAvailablePhoneNumbersAsync(
+            SearchAvailablePhoneNumbersRequest searchAvailablePhoneNumbersRequest);
+
+    /**
+     * <p>
+     * Searches for available phone numbers that you can claim to your Amazon Connect instance.
+     * </p>
+     * 
+     * @param searchAvailablePhoneNumbersRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchAvailablePhoneNumbers operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.SearchAvailablePhoneNumbers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchAvailablePhoneNumbers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchAvailablePhoneNumbersResult> searchAvailablePhoneNumbersAsync(
+            SearchAvailablePhoneNumbersRequest searchAvailablePhoneNumbersRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchAvailablePhoneNumbersRequest, SearchAvailablePhoneNumbersResult> asyncHandler);
 
     /**
      * <p>
@@ -4015,7 +4254,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * <p>
      * The supported resource types are users, routing profiles, queues, quick connects, contact flows, agent status,
-     * and hours of operation.
+     * hours of operation, and phone number.
      * </p>
      * <p>
      * For sample policies that use tags, see <a
@@ -4037,7 +4276,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * </p>
      * <p>
      * The supported resource types are users, routing profiles, queues, quick connects, contact flows, agent status,
-     * and hours of operation.
+     * hours of operation, and phone number.
      * </p>
      * <p>
      * For sample policies that use tags, see <a
@@ -4570,6 +4809,39 @@ public interface AmazonConnectAsync extends AmazonConnect {
     java.util.concurrent.Future<UpdateInstanceStorageConfigResult> updateInstanceStorageConfigAsync(
             UpdateInstanceStorageConfigRequest updateInstanceStorageConfigRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateInstanceStorageConfigRequest, UpdateInstanceStorageConfigResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates your claimed phone number from its current Amazon Connect instance to another Amazon Connect instance in
+     * the same Region.
+     * </p>
+     * 
+     * @param updatePhoneNumberRequest
+     * @return A Java Future containing the result of the UpdatePhoneNumber operation returned by the service.
+     * @sample AmazonConnectAsync.UpdatePhoneNumber
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdatePhoneNumber" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePhoneNumberResult> updatePhoneNumberAsync(UpdatePhoneNumberRequest updatePhoneNumberRequest);
+
+    /**
+     * <p>
+     * Updates your claimed phone number from its current Amazon Connect instance to another Amazon Connect instance in
+     * the same Region.
+     * </p>
+     * 
+     * @param updatePhoneNumberRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdatePhoneNumber operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.UpdatePhoneNumber
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdatePhoneNumber" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePhoneNumberResult> updatePhoneNumberAsync(UpdatePhoneNumberRequest updatePhoneNumberRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdatePhoneNumberRequest, UpdatePhoneNumberResult> asyncHandler);
 
     /**
      * <p>

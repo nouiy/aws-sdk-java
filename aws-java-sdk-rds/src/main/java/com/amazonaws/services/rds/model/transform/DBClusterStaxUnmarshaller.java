@@ -429,6 +429,11 @@ public class DBClusterStaxUnmarshaller implements Unmarshaller<DBCluster, StaxUn
                     dBCluster.setPerformanceInsightsRetentionPeriod(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("ServerlessV2ScalingConfiguration", targetDepth)) {
+                    dBCluster.setServerlessV2ScalingConfiguration(ServerlessV2ScalingConfigurationInfoStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return dBCluster;

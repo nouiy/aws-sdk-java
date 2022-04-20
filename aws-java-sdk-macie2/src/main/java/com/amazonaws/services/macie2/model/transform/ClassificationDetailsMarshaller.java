@@ -33,6 +33,8 @@ public class ClassificationDetailsMarshaller {
             .marshallLocationName("jobArn").build();
     private static final MarshallingInfo<String> JOBID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("jobId").build();
+    private static final MarshallingInfo<String> ORIGINTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("originType").build();
     private static final MarshallingInfo<StructuredPojo> RESULT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("result").build();
 
@@ -55,6 +57,7 @@ public class ClassificationDetailsMarshaller {
             protocolMarshaller.marshall(classificationDetails.getDetailedResultsLocation(), DETAILEDRESULTSLOCATION_BINDING);
             protocolMarshaller.marshall(classificationDetails.getJobArn(), JOBARN_BINDING);
             protocolMarshaller.marshall(classificationDetails.getJobId(), JOBID_BINDING);
+            protocolMarshaller.marshall(classificationDetails.getOriginType(), ORIGINTYPE_BINDING);
             protocolMarshaller.marshall(classificationDetails.getResult(), RESULT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

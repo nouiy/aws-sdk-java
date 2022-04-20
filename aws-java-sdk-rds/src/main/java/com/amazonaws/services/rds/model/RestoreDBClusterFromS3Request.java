@@ -450,6 +450,8 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      */
     private String domainIAMRoleName;
 
+    private ServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration;
+
     /**
      * <p>
      * A list of Availability Zones (AZs) where instances in the restored DB cluster can be created.
@@ -3311,6 +3313,32 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * @param serverlessV2ScalingConfiguration
+     */
+
+    public void setServerlessV2ScalingConfiguration(ServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration) {
+        this.serverlessV2ScalingConfiguration = serverlessV2ScalingConfiguration;
+    }
+
+    /**
+     * @return
+     */
+
+    public ServerlessV2ScalingConfiguration getServerlessV2ScalingConfiguration() {
+        return this.serverlessV2ScalingConfiguration;
+    }
+
+    /**
+     * @param serverlessV2ScalingConfiguration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RestoreDBClusterFromS3Request withServerlessV2ScalingConfiguration(ServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration) {
+        setServerlessV2ScalingConfiguration(serverlessV2ScalingConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3383,7 +3411,9 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
         if (getDomain() != null)
             sb.append("Domain: ").append(getDomain()).append(",");
         if (getDomainIAMRoleName() != null)
-            sb.append("DomainIAMRoleName: ").append(getDomainIAMRoleName());
+            sb.append("DomainIAMRoleName: ").append(getDomainIAMRoleName()).append(",");
+        if (getServerlessV2ScalingConfiguration() != null)
+            sb.append("ServerlessV2ScalingConfiguration: ").append(getServerlessV2ScalingConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -3523,6 +3553,11 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getDomainIAMRoleName() != null && other.getDomainIAMRoleName().equals(this.getDomainIAMRoleName()) == false)
             return false;
+        if (other.getServerlessV2ScalingConfiguration() == null ^ this.getServerlessV2ScalingConfiguration() == null)
+            return false;
+        if (other.getServerlessV2ScalingConfiguration() != null
+                && other.getServerlessV2ScalingConfiguration().equals(this.getServerlessV2ScalingConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -3562,6 +3597,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getCopyTagsToSnapshot() == null) ? 0 : getCopyTagsToSnapshot().hashCode());
         hashCode = prime * hashCode + ((getDomain() == null) ? 0 : getDomain().hashCode());
         hashCode = prime * hashCode + ((getDomainIAMRoleName() == null) ? 0 : getDomainIAMRoleName().hashCode());
+        hashCode = prime * hashCode + ((getServerlessV2ScalingConfiguration() == null) ? 0 : getServerlessV2ScalingConfiguration().hashCode());
         return hashCode;
     }
 

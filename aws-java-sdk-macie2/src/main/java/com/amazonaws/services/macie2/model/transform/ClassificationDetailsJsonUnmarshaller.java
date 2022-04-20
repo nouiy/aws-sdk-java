@@ -60,6 +60,10 @@ public class ClassificationDetailsJsonUnmarshaller implements Unmarshaller<Class
                     context.nextToken();
                     classificationDetails.setJobId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("originType", targetDepth)) {
+                    context.nextToken();
+                    classificationDetails.setOriginType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("result", targetDepth)) {
                     context.nextToken();
                     classificationDetails.setResult(ClassificationResultJsonUnmarshaller.getInstance().unmarshall(context));

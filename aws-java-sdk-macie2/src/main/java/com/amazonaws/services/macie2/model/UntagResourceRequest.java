@@ -34,8 +34,8 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String resourceArn;
     /**
      * <p>
-     * The key of the tag to remove from the resource. To remove multiple tags, append the tagKeys parameter and
-     * argument for each additional tag to remove, separated by an ampersand (&amp;).
+     * One or more tags (keys) to remove from the resource. In an HTTP request to remove multiple tags, append the
+     * tagKeys parameter and argument for each tag to remove, and separate them with an ampersand (&amp;).
      * </p>
      */
     private java.util.List<String> tagKeys;
@@ -88,12 +88,12 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The key of the tag to remove from the resource. To remove multiple tags, append the tagKeys parameter and
-     * argument for each additional tag to remove, separated by an ampersand (&amp;).
+     * One or more tags (keys) to remove from the resource. In an HTTP request to remove multiple tags, append the
+     * tagKeys parameter and argument for each tag to remove, and separate them with an ampersand (&amp;).
      * </p>
      * 
-     * @return The key of the tag to remove from the resource. To remove multiple tags, append the tagKeys parameter and
-     *         argument for each additional tag to remove, separated by an ampersand (&amp;).
+     * @return One or more tags (keys) to remove from the resource. In an HTTP request to remove multiple tags, append
+     *         the tagKeys parameter and argument for each tag to remove, and separate them with an ampersand (&amp;).
      */
 
     public java.util.List<String> getTagKeys() {
@@ -102,13 +102,13 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The key of the tag to remove from the resource. To remove multiple tags, append the tagKeys parameter and
-     * argument for each additional tag to remove, separated by an ampersand (&amp;).
+     * One or more tags (keys) to remove from the resource. In an HTTP request to remove multiple tags, append the
+     * tagKeys parameter and argument for each tag to remove, and separate them with an ampersand (&amp;).
      * </p>
      * 
      * @param tagKeys
-     *        The key of the tag to remove from the resource. To remove multiple tags, append the tagKeys parameter and
-     *        argument for each additional tag to remove, separated by an ampersand (&amp;).
+     *        One or more tags (keys) to remove from the resource. In an HTTP request to remove multiple tags, append
+     *        the tagKeys parameter and argument for each tag to remove, and separate them with an ampersand (&amp;).
      */
 
     public void setTagKeys(java.util.Collection<String> tagKeys) {
@@ -122,8 +122,8 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The key of the tag to remove from the resource. To remove multiple tags, append the tagKeys parameter and
-     * argument for each additional tag to remove, separated by an ampersand (&amp;).
+     * One or more tags (keys) to remove from the resource. In an HTTP request to remove multiple tags, append the
+     * tagKeys parameter and argument for each tag to remove, and separate them with an ampersand (&amp;).
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -132,8 +132,8 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param tagKeys
-     *        The key of the tag to remove from the resource. To remove multiple tags, append the tagKeys parameter and
-     *        argument for each additional tag to remove, separated by an ampersand (&amp;).
+     *        One or more tags (keys) to remove from the resource. In an HTTP request to remove multiple tags, append
+     *        the tagKeys parameter and argument for each tag to remove, and separate them with an ampersand (&amp;).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -149,13 +149,13 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The key of the tag to remove from the resource. To remove multiple tags, append the tagKeys parameter and
-     * argument for each additional tag to remove, separated by an ampersand (&amp;).
+     * One or more tags (keys) to remove from the resource. In an HTTP request to remove multiple tags, append the
+     * tagKeys parameter and argument for each tag to remove, and separate them with an ampersand (&amp;).
      * </p>
      * 
      * @param tagKeys
-     *        The key of the tag to remove from the resource. To remove multiple tags, append the tagKeys parameter and
-     *        argument for each additional tag to remove, separated by an ampersand (&amp;).
+     *        One or more tags (keys) to remove from the resource. In an HTTP request to remove multiple tags, append
+     *        the tagKeys parameter and argument for each tag to remove, and separate them with an ampersand (&amp;).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

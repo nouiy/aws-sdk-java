@@ -106,6 +106,21 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<AssociatePhoneNumberContactFlowResult> associatePhoneNumberContactFlowAsync(
+            AssociatePhoneNumberContactFlowRequest request) {
+
+        return associatePhoneNumberContactFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociatePhoneNumberContactFlowResult> associatePhoneNumberContactFlowAsync(
+            AssociatePhoneNumberContactFlowRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssociatePhoneNumberContactFlowRequest, AssociatePhoneNumberContactFlowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<AssociateQueueQuickConnectsResult> associateQueueQuickConnectsAsync(AssociateQueueQuickConnectsRequest request) {
 
         return associateQueueQuickConnectsAsync(request, null);
@@ -140,6 +155,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<AssociateSecurityKeyResult> associateSecurityKeyAsync(AssociateSecurityKeyRequest request,
             com.amazonaws.handlers.AsyncHandler<AssociateSecurityKeyRequest, AssociateSecurityKeyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ClaimPhoneNumberResult> claimPhoneNumberAsync(ClaimPhoneNumberRequest request) {
+
+        return claimPhoneNumberAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ClaimPhoneNumberResult> claimPhoneNumberAsync(ClaimPhoneNumberRequest request,
+            com.amazonaws.handlers.AsyncHandler<ClaimPhoneNumberRequest, ClaimPhoneNumberResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -574,6 +602,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<DescribePhoneNumberResult> describePhoneNumberAsync(DescribePhoneNumberRequest request) {
+
+        return describePhoneNumberAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribePhoneNumberResult> describePhoneNumberAsync(DescribePhoneNumberRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribePhoneNumberRequest, DescribePhoneNumberResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeQueueResult> describeQueueAsync(DescribeQueueRequest request) {
 
         return describeQueueAsync(request, null);
@@ -740,6 +781,21 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<DisassociateLexBotResult> disassociateLexBotAsync(DisassociateLexBotRequest request,
             com.amazonaws.handlers.AsyncHandler<DisassociateLexBotRequest, DisassociateLexBotResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociatePhoneNumberContactFlowResult> disassociatePhoneNumberContactFlowAsync(
+            DisassociatePhoneNumberContactFlowRequest request) {
+
+        return disassociatePhoneNumberContactFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociatePhoneNumberContactFlowResult> disassociatePhoneNumberContactFlowAsync(
+            DisassociatePhoneNumberContactFlowRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisassociatePhoneNumberContactFlowRequest, DisassociatePhoneNumberContactFlowResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1033,6 +1089,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListPhoneNumbersV2Result> listPhoneNumbersV2Async(ListPhoneNumbersV2Request request) {
+
+        return listPhoneNumbersV2Async(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPhoneNumbersV2Result> listPhoneNumbersV2Async(ListPhoneNumbersV2Request request,
+            com.amazonaws.handlers.AsyncHandler<ListPhoneNumbersV2Request, ListPhoneNumbersV2Result> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListPromptsResult> listPromptsAsync(ListPromptsRequest request) {
 
         return listPromptsAsync(request, null);
@@ -1202,6 +1271,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<ReleasePhoneNumberResult> releasePhoneNumberAsync(ReleasePhoneNumberRequest request) {
+
+        return releasePhoneNumberAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ReleasePhoneNumberResult> releasePhoneNumberAsync(ReleasePhoneNumberRequest request,
+            com.amazonaws.handlers.AsyncHandler<ReleasePhoneNumberRequest, ReleasePhoneNumberResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ResumeContactRecordingResult> resumeContactRecordingAsync(ResumeContactRecordingRequest request) {
 
         return resumeContactRecordingAsync(request, null);
@@ -1210,6 +1292,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<ResumeContactRecordingResult> resumeContactRecordingAsync(ResumeContactRecordingRequest request,
             com.amazonaws.handlers.AsyncHandler<ResumeContactRecordingRequest, ResumeContactRecordingResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchAvailablePhoneNumbersResult> searchAvailablePhoneNumbersAsync(SearchAvailablePhoneNumbersRequest request) {
+
+        return searchAvailablePhoneNumbersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchAvailablePhoneNumbersResult> searchAvailablePhoneNumbersAsync(SearchAvailablePhoneNumbersRequest request,
+            com.amazonaws.handlers.AsyncHandler<SearchAvailablePhoneNumbersRequest, SearchAvailablePhoneNumbersResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1524,6 +1619,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     @Override
     public java.util.concurrent.Future<UpdateInstanceStorageConfigResult> updateInstanceStorageConfigAsync(UpdateInstanceStorageConfigRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateInstanceStorageConfigRequest, UpdateInstanceStorageConfigResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePhoneNumberResult> updatePhoneNumberAsync(UpdatePhoneNumberRequest request) {
+
+        return updatePhoneNumberAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePhoneNumberResult> updatePhoneNumberAsync(UpdatePhoneNumberRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdatePhoneNumberRequest, UpdatePhoneNumberResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -32,6 +32,12 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.mgn.mo
     private String quotaCode;
     /**
      * <p>
+     * Exceeded the service quota value.
+     * </p>
+     */
+    private Integer quotaValue;
+    /**
+     * <p>
      * Exceeded the service quota resource ID.
      * </p>
      */
@@ -126,6 +132,48 @@ public class ServiceQuotaExceededException extends com.amazonaws.services.mgn.mo
 
     public ServiceQuotaExceededException withQuotaCode(String quotaCode) {
         setQuotaCode(quotaCode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Exceeded the service quota value.
+     * </p>
+     * 
+     * @param quotaValue
+     *        Exceeded the service quota value.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("quotaValue")
+    public void setQuotaValue(Integer quotaValue) {
+        this.quotaValue = quotaValue;
+    }
+
+    /**
+     * <p>
+     * Exceeded the service quota value.
+     * </p>
+     * 
+     * @return Exceeded the service quota value.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("quotaValue")
+    public Integer getQuotaValue() {
+        return this.quotaValue;
+    }
+
+    /**
+     * <p>
+     * Exceeded the service quota value.
+     * </p>
+     * 
+     * @param quotaValue
+     *        Exceeded the service quota value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ServiceQuotaExceededException withQuotaValue(Integer quotaValue) {
+        setQuotaValue(quotaValue);
         return this;
     }
 

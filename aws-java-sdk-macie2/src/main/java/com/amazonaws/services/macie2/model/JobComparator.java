@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The operator to use in a condition. Valid values are:
+ * The operator to use in a condition. Depending on the type of condition, possible values are:
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

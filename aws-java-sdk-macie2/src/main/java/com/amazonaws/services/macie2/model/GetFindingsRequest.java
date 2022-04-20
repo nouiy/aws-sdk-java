@@ -27,7 +27,8 @@ public class GetFindingsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An array of strings that lists the unique identifiers for the findings to retrieve.
+     * An array of strings that lists the unique identifiers for the findings to retrieve. You can specify as many as 50
+     * unique identifiers in this array.
      * </p>
      */
     private java.util.List<String> findingIds;
@@ -40,10 +41,12 @@ public class GetFindingsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An array of strings that lists the unique identifiers for the findings to retrieve.
+     * An array of strings that lists the unique identifiers for the findings to retrieve. You can specify as many as 50
+     * unique identifiers in this array.
      * </p>
      * 
-     * @return An array of strings that lists the unique identifiers for the findings to retrieve.
+     * @return An array of strings that lists the unique identifiers for the findings to retrieve. You can specify as
+     *         many as 50 unique identifiers in this array.
      */
 
     public java.util.List<String> getFindingIds() {
@@ -52,11 +55,13 @@ public class GetFindingsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An array of strings that lists the unique identifiers for the findings to retrieve.
+     * An array of strings that lists the unique identifiers for the findings to retrieve. You can specify as many as 50
+     * unique identifiers in this array.
      * </p>
      * 
      * @param findingIds
-     *        An array of strings that lists the unique identifiers for the findings to retrieve.
+     *        An array of strings that lists the unique identifiers for the findings to retrieve. You can specify as
+     *        many as 50 unique identifiers in this array.
      */
 
     public void setFindingIds(java.util.Collection<String> findingIds) {
@@ -70,7 +75,8 @@ public class GetFindingsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An array of strings that lists the unique identifiers for the findings to retrieve.
+     * An array of strings that lists the unique identifiers for the findings to retrieve. You can specify as many as 50
+     * unique identifiers in this array.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -79,7 +85,8 @@ public class GetFindingsRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param findingIds
-     *        An array of strings that lists the unique identifiers for the findings to retrieve.
+     *        An array of strings that lists the unique identifiers for the findings to retrieve. You can specify as
+     *        many as 50 unique identifiers in this array.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,11 +102,13 @@ public class GetFindingsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An array of strings that lists the unique identifiers for the findings to retrieve.
+     * An array of strings that lists the unique identifiers for the findings to retrieve. You can specify as many as 50
+     * unique identifiers in this array.
      * </p>
      * 
      * @param findingIds
-     *        An array of strings that lists the unique identifiers for the findings to retrieve.
+     *        An array of strings that lists the unique identifiers for the findings to retrieve. You can specify as
+     *        many as 50 unique identifiers in this array.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -295,6 +295,41 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<AssociatePhoneNumberContactFlowResult> associatePhoneNumberContactFlowAsync(
+            AssociatePhoneNumberContactFlowRequest request) {
+
+        return associatePhoneNumberContactFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociatePhoneNumberContactFlowResult> associatePhoneNumberContactFlowAsync(
+            final AssociatePhoneNumberContactFlowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociatePhoneNumberContactFlowRequest, AssociatePhoneNumberContactFlowResult> asyncHandler) {
+        final AssociatePhoneNumberContactFlowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociatePhoneNumberContactFlowResult>() {
+            @Override
+            public AssociatePhoneNumberContactFlowResult call() throws Exception {
+                AssociatePhoneNumberContactFlowResult result = null;
+
+                try {
+                    result = executeAssociatePhoneNumberContactFlow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<AssociateQueueQuickConnectsResult> associateQueueQuickConnectsAsync(AssociateQueueQuickConnectsRequest request) {
 
         return associateQueueQuickConnectsAsync(request, null);
@@ -379,6 +414,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeAssociateSecurityKey(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ClaimPhoneNumberResult> claimPhoneNumberAsync(ClaimPhoneNumberRequest request) {
+
+        return claimPhoneNumberAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ClaimPhoneNumberResult> claimPhoneNumberAsync(final ClaimPhoneNumberRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ClaimPhoneNumberRequest, ClaimPhoneNumberResult> asyncHandler) {
+        final ClaimPhoneNumberRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ClaimPhoneNumberResult>() {
+            @Override
+            public ClaimPhoneNumberResult call() throws Exception {
+                ClaimPhoneNumberResult result = null;
+
+                try {
+                    result = executeClaimPhoneNumber(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1485,6 +1553,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<DescribePhoneNumberResult> describePhoneNumberAsync(DescribePhoneNumberRequest request) {
+
+        return describePhoneNumberAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribePhoneNumberResult> describePhoneNumberAsync(final DescribePhoneNumberRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribePhoneNumberRequest, DescribePhoneNumberResult> asyncHandler) {
+        final DescribePhoneNumberRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribePhoneNumberResult>() {
+            @Override
+            public DescribePhoneNumberResult call() throws Exception {
+                DescribePhoneNumberResult result = null;
+
+                try {
+                    result = executeDescribePhoneNumber(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeQueueResult> describeQueueAsync(DescribeQueueRequest request) {
 
         return describeQueueAsync(request, null);
@@ -1901,6 +2002,41 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeDisassociateLexBot(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociatePhoneNumberContactFlowResult> disassociatePhoneNumberContactFlowAsync(
+            DisassociatePhoneNumberContactFlowRequest request) {
+
+        return disassociatePhoneNumberContactFlowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociatePhoneNumberContactFlowResult> disassociatePhoneNumberContactFlowAsync(
+            final DisassociatePhoneNumberContactFlowRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisassociatePhoneNumberContactFlowRequest, DisassociatePhoneNumberContactFlowResult> asyncHandler) {
+        final DisassociatePhoneNumberContactFlowRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisassociatePhoneNumberContactFlowResult>() {
+            @Override
+            public DisassociatePhoneNumberContactFlowResult call() throws Exception {
+                DisassociatePhoneNumberContactFlowResult result = null;
+
+                try {
+                    result = executeDisassociatePhoneNumberContactFlow(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2646,6 +2782,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<ListPhoneNumbersV2Result> listPhoneNumbersV2Async(ListPhoneNumbersV2Request request) {
+
+        return listPhoneNumbersV2Async(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPhoneNumbersV2Result> listPhoneNumbersV2Async(final ListPhoneNumbersV2Request request,
+            final com.amazonaws.handlers.AsyncHandler<ListPhoneNumbersV2Request, ListPhoneNumbersV2Result> asyncHandler) {
+        final ListPhoneNumbersV2Request finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListPhoneNumbersV2Result>() {
+            @Override
+            public ListPhoneNumbersV2Result call() throws Exception {
+                ListPhoneNumbersV2Result result = null;
+
+                try {
+                    result = executeListPhoneNumbersV2(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListPromptsResult> listPromptsAsync(ListPromptsRequest request) {
 
         return listPromptsAsync(request, null);
@@ -3076,6 +3245,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<ReleasePhoneNumberResult> releasePhoneNumberAsync(ReleasePhoneNumberRequest request) {
+
+        return releasePhoneNumberAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ReleasePhoneNumberResult> releasePhoneNumberAsync(final ReleasePhoneNumberRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ReleasePhoneNumberRequest, ReleasePhoneNumberResult> asyncHandler) {
+        final ReleasePhoneNumberRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ReleasePhoneNumberResult>() {
+            @Override
+            public ReleasePhoneNumberResult call() throws Exception {
+                ReleasePhoneNumberResult result = null;
+
+                try {
+                    result = executeReleasePhoneNumber(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ResumeContactRecordingResult> resumeContactRecordingAsync(ResumeContactRecordingRequest request) {
 
         return resumeContactRecordingAsync(request, null);
@@ -3093,6 +3295,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeResumeContactRecording(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchAvailablePhoneNumbersResult> searchAvailablePhoneNumbersAsync(SearchAvailablePhoneNumbersRequest request) {
+
+        return searchAvailablePhoneNumbersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchAvailablePhoneNumbersResult> searchAvailablePhoneNumbersAsync(final SearchAvailablePhoneNumbersRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchAvailablePhoneNumbersRequest, SearchAvailablePhoneNumbersResult> asyncHandler) {
+        final SearchAvailablePhoneNumbersRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchAvailablePhoneNumbersResult>() {
+            @Override
+            public SearchAvailablePhoneNumbersResult call() throws Exception {
+                SearchAvailablePhoneNumbersResult result = null;
+
+                try {
+                    result = executeSearchAvailablePhoneNumbers(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -3888,6 +4123,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
 
                 try {
                     result = executeUpdateInstanceStorageConfig(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePhoneNumberResult> updatePhoneNumberAsync(UpdatePhoneNumberRequest request) {
+
+        return updatePhoneNumberAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePhoneNumberResult> updatePhoneNumberAsync(final UpdatePhoneNumberRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdatePhoneNumberRequest, UpdatePhoneNumberResult> asyncHandler) {
+        final UpdatePhoneNumberRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdatePhoneNumberResult>() {
+            @Override
+            public UpdatePhoneNumberResult call() throws Exception {
+                UpdatePhoneNumberResult result = null;
+
+                try {
+                    result = executeUpdatePhoneNumber(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

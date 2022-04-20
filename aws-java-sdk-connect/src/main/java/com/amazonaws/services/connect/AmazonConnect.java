@@ -243,6 +243,29 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Associates a contact flow with a phone number claimed to your Amazon Connect instance.
+     * </p>
+     * 
+     * @param associatePhoneNumberContactFlowRequest
+     * @return Result of the AssociatePhoneNumberContactFlow operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.AssociatePhoneNumberContactFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/AssociatePhoneNumberContactFlow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AssociatePhoneNumberContactFlowResult associatePhoneNumberContactFlow(AssociatePhoneNumberContactFlowRequest associatePhoneNumberContactFlowRequest);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -321,6 +344,31 @@ public interface AmazonConnect {
      *      API Documentation</a>
      */
     AssociateSecurityKeyResult associateSecurityKey(AssociateSecurityKeyRequest associateSecurityKeyRequest);
+
+    /**
+     * <p>
+     * Claims an available phone number to your Amazon Connect instance.
+     * </p>
+     * 
+     * @param claimPhoneNumberRequest
+     * @return Result of the ClaimPhoneNumber operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws IdempotencyException
+     *         An entity with the same name already exists.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.ClaimPhoneNumber
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ClaimPhoneNumber" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ClaimPhoneNumberResult claimPhoneNumber(ClaimPhoneNumberRequest claimPhoneNumberRequest);
 
     /**
      * <p>
@@ -1227,6 +1275,29 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Gets details and status of a phone number that’s claimed to your Amazon Connect instance
+     * </p>
+     * 
+     * @param describePhoneNumberRequest
+     * @return Result of the DescribePhoneNumber operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.DescribePhoneNumber
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DescribePhoneNumber" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribePhoneNumberResult describePhoneNumber(DescribePhoneNumberRequest describePhoneNumberRequest);
+
+    /**
+     * <p>
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
@@ -1543,6 +1614,31 @@ public interface AmazonConnect {
      *      Documentation</a>
      */
     DisassociateLexBotResult disassociateLexBot(DisassociateLexBotRequest disassociateLexBotRequest);
+
+    /**
+     * <p>
+     * Removes the contact flow association from a phone number claimed to your Amazon Connect instance, if a contact
+     * flow association exists.
+     * </p>
+     * 
+     * @param disassociatePhoneNumberContactFlowRequest
+     * @return Result of the DisassociatePhoneNumberContactFlow operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.DisassociatePhoneNumberContactFlow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DisassociatePhoneNumberContactFlow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DisassociatePhoneNumberContactFlowResult disassociatePhoneNumberContactFlow(
+            DisassociatePhoneNumberContactFlowRequest disassociatePhoneNumberContactFlowRequest);
 
     /**
      * <p>
@@ -2116,6 +2212,34 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Lists phone numbers claimed to your Amazon Connect instance.
+     * </p>
+     * <p>
+     * For more information about phone numbers, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/contact-center-phone-number.html">Set Up Phone
+     * Numbers for Your Contact Center</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param listPhoneNumbersV2Request
+     * @return Result of the ListPhoneNumbersV2 operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.ListPhoneNumbersV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListPhoneNumbersV2" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListPhoneNumbersV2Result listPhoneNumbersV2(ListPhoneNumbersV2Request listPhoneNumbersV2Request);
+
+    /**
+     * <p>
      * Provides information about the prompts for the specified Amazon Connect instance.
      * </p>
      * 
@@ -2454,6 +2578,33 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Releases a phone number previously claimed to an Amazon Connect instance.
+     * </p>
+     * 
+     * @param releasePhoneNumberRequest
+     * @return Result of the ReleasePhoneNumber operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ResourceInUseException
+     *         That resource is already in use. Please try another.
+     * @throws IdempotencyException
+     *         An entity with the same name already exists.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.ReleasePhoneNumber
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ReleasePhoneNumber" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ReleasePhoneNumberResult releasePhoneNumber(ReleasePhoneNumberRequest releasePhoneNumberRequest);
+
+    /**
+     * <p>
      * When a contact is being recorded, and the recording has been suspended using SuspendContactRecording, this API
      * resumes recording the call.
      * </p>
@@ -2474,6 +2625,27 @@ public interface AmazonConnect {
      *      API Documentation</a>
      */
     ResumeContactRecordingResult resumeContactRecording(ResumeContactRecordingRequest resumeContactRecordingRequest);
+
+    /**
+     * <p>
+     * Searches for available phone numbers that you can claim to your Amazon Connect instance.
+     * </p>
+     * 
+     * @param searchAvailablePhoneNumbersRequest
+     * @return Result of the SearchAvailablePhoneNumbers operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.SearchAvailablePhoneNumbers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/SearchAvailablePhoneNumbers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    SearchAvailablePhoneNumbersResult searchAvailablePhoneNumbers(SearchAvailablePhoneNumbersRequest searchAvailablePhoneNumbersRequest);
 
     /**
      * <p>
@@ -2826,7 +2998,7 @@ public interface AmazonConnect {
      * </p>
      * <p>
      * The supported resource types are users, routing profiles, queues, quick connects, contact flows, agent status,
-     * and hours of operation.
+     * hours of operation, and phone number.
      * </p>
      * <p>
      * For sample policies that use tags, see <a
@@ -3217,6 +3389,34 @@ public interface AmazonConnect {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateInstanceStorageConfigResult updateInstanceStorageConfig(UpdateInstanceStorageConfigRequest updateInstanceStorageConfigRequest);
+
+    /**
+     * <p>
+     * Updates your claimed phone number from its current Amazon Connect instance to another Amazon Connect instance in
+     * the same Region.
+     * </p>
+     * 
+     * @param updatePhoneNumberRequest
+     * @return Result of the UpdatePhoneNumber operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ResourceInUseException
+     *         That resource is already in use. Please try another.
+     * @throws IdempotencyException
+     *         An entity with the same name already exists.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @sample AmazonConnect.UpdatePhoneNumber
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/UpdatePhoneNumber" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdatePhoneNumberResult updatePhoneNumber(UpdatePhoneNumberRequest updatePhoneNumberRequest);
 
     /**
      * <p>

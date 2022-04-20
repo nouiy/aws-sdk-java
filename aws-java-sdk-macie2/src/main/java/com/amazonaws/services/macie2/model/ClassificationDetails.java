@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides information about a sensitive data finding, including the classification job that produced the finding.
+ * Provides information about a sensitive data finding and the details of the finding.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ClassificationDetails" target="_top">AWS API
@@ -48,6 +48,13 @@ public class ClassificationDetails implements Serializable, Cloneable, Structure
      * </p>
      */
     private String jobId;
+    /**
+     * <p>
+     * Specifies how Amazon Macie found the sensitive data that produced the finding: SENSITIVE_DATA_DISCOVERY_JOB, for
+     * a classification job.
+     * </p>
+     */
+    private String originType;
     /**
      * <p>
      * The status and other details of the finding.
@@ -189,6 +196,73 @@ public class ClassificationDetails implements Serializable, Cloneable, Structure
 
     /**
      * <p>
+     * Specifies how Amazon Macie found the sensitive data that produced the finding: SENSITIVE_DATA_DISCOVERY_JOB, for
+     * a classification job.
+     * </p>
+     * 
+     * @param originType
+     *        Specifies how Amazon Macie found the sensitive data that produced the finding:
+     *        SENSITIVE_DATA_DISCOVERY_JOB, for a classification job.
+     * @see OriginType
+     */
+
+    public void setOriginType(String originType) {
+        this.originType = originType;
+    }
+
+    /**
+     * <p>
+     * Specifies how Amazon Macie found the sensitive data that produced the finding: SENSITIVE_DATA_DISCOVERY_JOB, for
+     * a classification job.
+     * </p>
+     * 
+     * @return Specifies how Amazon Macie found the sensitive data that produced the finding:
+     *         SENSITIVE_DATA_DISCOVERY_JOB, for a classification job.
+     * @see OriginType
+     */
+
+    public String getOriginType() {
+        return this.originType;
+    }
+
+    /**
+     * <p>
+     * Specifies how Amazon Macie found the sensitive data that produced the finding: SENSITIVE_DATA_DISCOVERY_JOB, for
+     * a classification job.
+     * </p>
+     * 
+     * @param originType
+     *        Specifies how Amazon Macie found the sensitive data that produced the finding:
+     *        SENSITIVE_DATA_DISCOVERY_JOB, for a classification job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see OriginType
+     */
+
+    public ClassificationDetails withOriginType(String originType) {
+        setOriginType(originType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies how Amazon Macie found the sensitive data that produced the finding: SENSITIVE_DATA_DISCOVERY_JOB, for
+     * a classification job.
+     * </p>
+     * 
+     * @param originType
+     *        Specifies how Amazon Macie found the sensitive data that produced the finding:
+     *        SENSITIVE_DATA_DISCOVERY_JOB, for a classification job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see OriginType
+     */
+
+    public ClassificationDetails withOriginType(OriginType originType) {
+        this.originType = originType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * The status and other details of the finding.
      * </p>
      * 
@@ -245,6 +319,8 @@ public class ClassificationDetails implements Serializable, Cloneable, Structure
             sb.append("JobArn: ").append(getJobArn()).append(",");
         if (getJobId() != null)
             sb.append("JobId: ").append(getJobId()).append(",");
+        if (getOriginType() != null)
+            sb.append("OriginType: ").append(getOriginType()).append(",");
         if (getResult() != null)
             sb.append("Result: ").append(getResult());
         sb.append("}");
@@ -273,6 +349,10 @@ public class ClassificationDetails implements Serializable, Cloneable, Structure
             return false;
         if (other.getJobId() != null && other.getJobId().equals(this.getJobId()) == false)
             return false;
+        if (other.getOriginType() == null ^ this.getOriginType() == null)
+            return false;
+        if (other.getOriginType() != null && other.getOriginType().equals(this.getOriginType()) == false)
+            return false;
         if (other.getResult() == null ^ this.getResult() == null)
             return false;
         if (other.getResult() != null && other.getResult().equals(this.getResult()) == false)
@@ -288,6 +368,7 @@ public class ClassificationDetails implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getDetailedResultsLocation() == null) ? 0 : getDetailedResultsLocation().hashCode());
         hashCode = prime * hashCode + ((getJobArn() == null) ? 0 : getJobArn().hashCode());
         hashCode = prime * hashCode + ((getJobId() == null) ? 0 : getJobId().hashCode());
+        hashCode = prime * hashCode + ((getOriginType() == null) ? 0 : getOriginType().hashCode());
         hashCode = prime * hashCode + ((getResult() == null) ? 0 : getResult().hashCode());
         return hashCode;
     }

@@ -61,6 +61,10 @@ public class ServiceQuotaExceededExceptionUnmarshaller extends EnhancedJsonError
                     context.nextToken();
                     serviceQuotaExceededException.setQuotaCode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("quotaValue", targetDepth)) {
+                    context.nextToken();
+                    serviceQuotaExceededException.setQuotaValue(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("resourceId", targetDepth)) {
                     context.nextToken();
                     serviceQuotaExceededException.setResourceId(context.getUnmarshaller(String.class).unmarshall(context));
