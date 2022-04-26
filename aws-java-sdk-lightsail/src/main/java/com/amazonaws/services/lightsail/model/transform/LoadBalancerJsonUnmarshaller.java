@@ -126,6 +126,14 @@ public class LoadBalancerJsonUnmarshaller implements Unmarshaller<LoadBalancer, 
                     context.nextToken();
                     loadBalancer.setIpAddressType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("httpsRedirectionEnabled", targetDepth)) {
+                    context.nextToken();
+                    loadBalancer.setHttpsRedirectionEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("tlsPolicyName", targetDepth)) {
+                    context.nextToken();
+                    loadBalancer.setTlsPolicyName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

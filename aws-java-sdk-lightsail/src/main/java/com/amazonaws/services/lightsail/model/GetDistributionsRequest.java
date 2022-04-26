@@ -30,7 +30,8 @@ public class GetDistributionsRequest extends com.amazonaws.AmazonWebServiceReque
      * The name of the distribution for which to return information.
      * </p>
      * <p>
-     * When omitted, the response includes all of your distributions in the AWS Region where the request is made.
+     * When omitted, the response includes all of your distributions in the Amazon Web Services Region where the request
+     * is made.
      * </p>
      */
     private String distributionName;
@@ -50,13 +51,15 @@ public class GetDistributionsRequest extends com.amazonaws.AmazonWebServiceReque
      * The name of the distribution for which to return information.
      * </p>
      * <p>
-     * When omitted, the response includes all of your distributions in the AWS Region where the request is made.
+     * When omitted, the response includes all of your distributions in the Amazon Web Services Region where the request
+     * is made.
      * </p>
      * 
      * @param distributionName
      *        The name of the distribution for which to return information.</p>
      *        <p>
-     *        When omitted, the response includes all of your distributions in the AWS Region where the request is made.
+     *        When omitted, the response includes all of your distributions in the Amazon Web Services Region where the
+     *        request is made.
      */
 
     public void setDistributionName(String distributionName) {
@@ -68,13 +71,14 @@ public class GetDistributionsRequest extends com.amazonaws.AmazonWebServiceReque
      * The name of the distribution for which to return information.
      * </p>
      * <p>
-     * When omitted, the response includes all of your distributions in the AWS Region where the request is made.
+     * When omitted, the response includes all of your distributions in the Amazon Web Services Region where the request
+     * is made.
      * </p>
      * 
      * @return The name of the distribution for which to return information.</p>
      *         <p>
-     *         When omitted, the response includes all of your distributions in the AWS Region where the request is
-     *         made.
+     *         When omitted, the response includes all of your distributions in the Amazon Web Services Region where the
+     *         request is made.
      */
 
     public String getDistributionName() {
@@ -86,13 +90,15 @@ public class GetDistributionsRequest extends com.amazonaws.AmazonWebServiceReque
      * The name of the distribution for which to return information.
      * </p>
      * <p>
-     * When omitted, the response includes all of your distributions in the AWS Region where the request is made.
+     * When omitted, the response includes all of your distributions in the Amazon Web Services Region where the request
+     * is made.
      * </p>
      * 
      * @param distributionName
      *        The name of the distribution for which to return information.</p>
      *        <p>
-     *        When omitted, the response includes all of your distributions in the AWS Region where the request is made.
+     *        When omitted, the response includes all of your distributions in the Amazon Web Services Region where the
+     *        request is made.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -71,7 +71,12 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String url;
-
+    /**
+     * <p>
+     * An object that describes the location of the bucket, such as the Amazon Web Services Region and Availability
+     * Zone.
+     * </p>
+     */
     private ResourceLocation location;
     /**
      * <p>
@@ -126,7 +131,7 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle.
      * </p>
      * <p>
-     * You can update a bucket's bundle only one time within a monthly AWS billing cycle.
+     * You can update a bucket's bundle only one time within a monthly Amazon Web Services billing cycle.
      * </p>
      * <p>
      * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
@@ -136,7 +141,7 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
     private Boolean ableToUpdateBundle;
     /**
      * <p>
-     * An array of strings that specify the AWS account IDs that have read-only access to the bucket.
+     * An array of strings that specify the Amazon Web Services account IDs that have read-only access to the bucket.
      * </p>
      */
     private java.util.List<String> readonlyAccessAccounts;
@@ -447,7 +452,14 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * An object that describes the location of the bucket, such as the Amazon Web Services Region and Availability
+     * Zone.
+     * </p>
+     * 
      * @param location
+     *        An object that describes the location of the bucket, such as the Amazon Web Services Region and
+     *        Availability Zone.
      */
 
     public void setLocation(ResourceLocation location) {
@@ -455,7 +467,13 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * An object that describes the location of the bucket, such as the Amazon Web Services Region and Availability
+     * Zone.
+     * </p>
+     * 
+     * @return An object that describes the location of the bucket, such as the Amazon Web Services Region and
+     *         Availability Zone.
      */
 
     public ResourceLocation getLocation() {
@@ -463,7 +481,14 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * An object that describes the location of the bucket, such as the Amazon Web Services Region and Availability
+     * Zone.
+     * </p>
+     * 
      * @param location
+     *        An object that describes the location of the bucket, such as the Amazon Web Services Region and
+     *        Availability Zone.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -812,7 +837,7 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle.
      * </p>
      * <p>
-     * You can update a bucket's bundle only one time within a monthly AWS billing cycle.
+     * You can update a bucket's bundle only one time within a monthly Amazon Web Services billing cycle.
      * </p>
      * <p>
      * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
@@ -822,7 +847,7 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * @param ableToUpdateBundle
      *        Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle.</p>
      *        <p>
-     *        You can update a bucket's bundle only one time within a monthly AWS billing cycle.
+     *        You can update a bucket's bundle only one time within a monthly Amazon Web Services billing cycle.
      *        </p>
      *        <p>
      *        Use the <a
@@ -839,7 +864,7 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle.
      * </p>
      * <p>
-     * You can update a bucket's bundle only one time within a monthly AWS billing cycle.
+     * You can update a bucket's bundle only one time within a monthly Amazon Web Services billing cycle.
      * </p>
      * <p>
      * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
@@ -848,7 +873,7 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * 
      * @return Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle.</p>
      *         <p>
-     *         You can update a bucket's bundle only one time within a monthly AWS billing cycle.
+     *         You can update a bucket's bundle only one time within a monthly Amazon Web Services billing cycle.
      *         </p>
      *         <p>
      *         Use the <a
@@ -865,7 +890,7 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle.
      * </p>
      * <p>
-     * You can update a bucket's bundle only one time within a monthly AWS billing cycle.
+     * You can update a bucket's bundle only one time within a monthly Amazon Web Services billing cycle.
      * </p>
      * <p>
      * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
@@ -875,7 +900,7 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * @param ableToUpdateBundle
      *        Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle.</p>
      *        <p>
-     *        You can update a bucket's bundle only one time within a monthly AWS billing cycle.
+     *        You can update a bucket's bundle only one time within a monthly Amazon Web Services billing cycle.
      *        </p>
      *        <p>
      *        Use the <a
@@ -894,7 +919,7 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle.
      * </p>
      * <p>
-     * You can update a bucket's bundle only one time within a monthly AWS billing cycle.
+     * You can update a bucket's bundle only one time within a monthly Amazon Web Services billing cycle.
      * </p>
      * <p>
      * Use the <a href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_UpdateBucketBundle.html">
@@ -903,7 +928,7 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * 
      * @return Indicates whether the bundle that is currently applied to a bucket can be changed to another bundle.</p>
      *         <p>
-     *         You can update a bucket's bundle only one time within a monthly AWS billing cycle.
+     *         You can update a bucket's bundle only one time within a monthly Amazon Web Services billing cycle.
      *         </p>
      *         <p>
      *         Use the <a
@@ -917,10 +942,11 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of strings that specify the AWS account IDs that have read-only access to the bucket.
+     * An array of strings that specify the Amazon Web Services account IDs that have read-only access to the bucket.
      * </p>
      * 
-     * @return An array of strings that specify the AWS account IDs that have read-only access to the bucket.
+     * @return An array of strings that specify the Amazon Web Services account IDs that have read-only access to the
+     *         bucket.
      */
 
     public java.util.List<String> getReadonlyAccessAccounts() {
@@ -929,11 +955,12 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of strings that specify the AWS account IDs that have read-only access to the bucket.
+     * An array of strings that specify the Amazon Web Services account IDs that have read-only access to the bucket.
      * </p>
      * 
      * @param readonlyAccessAccounts
-     *        An array of strings that specify the AWS account IDs that have read-only access to the bucket.
+     *        An array of strings that specify the Amazon Web Services account IDs that have read-only access to the
+     *        bucket.
      */
 
     public void setReadonlyAccessAccounts(java.util.Collection<String> readonlyAccessAccounts) {
@@ -947,7 +974,7 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of strings that specify the AWS account IDs that have read-only access to the bucket.
+     * An array of strings that specify the Amazon Web Services account IDs that have read-only access to the bucket.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -956,7 +983,8 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param readonlyAccessAccounts
-     *        An array of strings that specify the AWS account IDs that have read-only access to the bucket.
+     *        An array of strings that specify the Amazon Web Services account IDs that have read-only access to the
+     *        bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -972,11 +1000,12 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An array of strings that specify the AWS account IDs that have read-only access to the bucket.
+     * An array of strings that specify the Amazon Web Services account IDs that have read-only access to the bucket.
      * </p>
      * 
      * @param readonlyAccessAccounts
-     *        An array of strings that specify the AWS account IDs that have read-only access to the bucket.
+     *        An array of strings that specify the Amazon Web Services account IDs that have read-only access to the
+     *        bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

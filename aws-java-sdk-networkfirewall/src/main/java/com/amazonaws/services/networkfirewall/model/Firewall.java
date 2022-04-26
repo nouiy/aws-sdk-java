@@ -19,9 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The firewall defines the configuration settings for an AWS Network Firewall firewall. These settings include the
- * firewall policy, the subnets in your VPC to use for the firewall endpoints, and any tags that are attached to the
- * firewall AWS resource.
+ * The firewall defines the configuration settings for an Network Firewall firewall. These settings include the firewall
+ * policy, the subnets in your VPC to use for the firewall endpoints, and any tags that are attached to the firewall
+ * Amazon Web Services resource.
  * </p>
  * <p>
  * The status of the firewall, for example whether it's ready to filter network traffic, is provided in the
@@ -107,6 +107,12 @@ public class Firewall implements Serializable, Cloneable, StructuredPojo {
     private String firewallId;
     /** <p/> */
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * A complex type that contains the Amazon Web Services KMS encryption configuration settings for your firewall.
+     * </p>
+     */
+    private EncryptionConfiguration encryptionConfiguration;
 
     /**
      * <p>
@@ -717,6 +723,49 @@ public class Firewall implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A complex type that contains the Amazon Web Services KMS encryption configuration settings for your firewall.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        A complex type that contains the Amazon Web Services KMS encryption configuration settings for your
+     *        firewall.
+     */
+
+    public void setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        this.encryptionConfiguration = encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains the Amazon Web Services KMS encryption configuration settings for your firewall.
+     * </p>
+     * 
+     * @return A complex type that contains the Amazon Web Services KMS encryption configuration settings for your
+     *         firewall.
+     */
+
+    public EncryptionConfiguration getEncryptionConfiguration() {
+        return this.encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains the Amazon Web Services KMS encryption configuration settings for your firewall.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        A complex type that contains the Amazon Web Services KMS encryption configuration settings for your
+     *        firewall.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Firewall withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        setEncryptionConfiguration(encryptionConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -749,7 +798,9 @@ public class Firewall implements Serializable, Cloneable, StructuredPojo {
         if (getFirewallId() != null)
             sb.append("FirewallId: ").append(getFirewallId()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getEncryptionConfiguration() != null)
+            sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -809,6 +860,10 @@ public class Firewall implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getEncryptionConfiguration() == null ^ this.getEncryptionConfiguration() == null)
+            return false;
+        if (other.getEncryptionConfiguration() != null && other.getEncryptionConfiguration().equals(this.getEncryptionConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -828,6 +883,7 @@ public class Firewall implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getFirewallId() == null) ? 0 : getFirewallId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
         return hashCode;
     }
 

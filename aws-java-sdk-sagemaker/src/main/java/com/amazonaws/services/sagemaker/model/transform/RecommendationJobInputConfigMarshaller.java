@@ -38,6 +38,8 @@ public class RecommendationJobInputConfigMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceLimit").build();
     private static final MarshallingInfo<List> ENDPOINTCONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndpointConfigurations").build();
+    private static final MarshallingInfo<String> VOLUMEKMSKEYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VolumeKmsKeyId").build();
 
     private static final RecommendationJobInputConfigMarshaller instance = new RecommendationJobInputConfigMarshaller();
 
@@ -60,6 +62,7 @@ public class RecommendationJobInputConfigMarshaller {
             protocolMarshaller.marshall(recommendationJobInputConfig.getTrafficPattern(), TRAFFICPATTERN_BINDING);
             protocolMarshaller.marshall(recommendationJobInputConfig.getResourceLimit(), RESOURCELIMIT_BINDING);
             protocolMarshaller.marshall(recommendationJobInputConfig.getEndpointConfigurations(), ENDPOINTCONFIGURATIONS_BINDING);
+            protocolMarshaller.marshall(recommendationJobInputConfig.getVolumeKmsKeyId(), VOLUMEKMSKEYID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -169,11 +169,11 @@ public class PutAlarmRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * </p>
      * <p>
      * A notification is not sent if a contact protocol is not specified, if the specified contact protocol is not
-     * configured in the AWS Region, or if notifications are not enabled for the alarm using the
+     * configured in the Amazon Web Services Region, or if notifications are not enabled for the alarm using the
      * <code>notificationEnabled</code> paramater.
      * </p>
      * <p>
-     * Use the <code>CreateContactMethod</code> action to configure a contact protocol in an AWS Region.
+     * Use the <code>CreateContactMethod</code> action to configure a contact protocol in an Amazon Web Services Region.
      * </p>
      */
     private java.util.List<String> contactProtocols;
@@ -1262,11 +1262,11 @@ public class PutAlarmRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * </p>
      * <p>
      * A notification is not sent if a contact protocol is not specified, if the specified contact protocol is not
-     * configured in the AWS Region, or if notifications are not enabled for the alarm using the
+     * configured in the Amazon Web Services Region, or if notifications are not enabled for the alarm using the
      * <code>notificationEnabled</code> paramater.
      * </p>
      * <p>
-     * Use the <code>CreateContactMethod</code> action to configure a contact protocol in an AWS Region.
+     * Use the <code>CreateContactMethod</code> action to configure a contact protocol in an Amazon Web Services Region.
      * </p>
      * 
      * @return The contact protocols to use for the alarm, such as <code>Email</code>, <code>SMS</code> (text
@@ -1277,11 +1277,12 @@ public class PutAlarmRequest extends com.amazonaws.AmazonWebServiceRequest imple
      *         </p>
      *         <p>
      *         A notification is not sent if a contact protocol is not specified, if the specified contact protocol is
-     *         not configured in the AWS Region, or if notifications are not enabled for the alarm using the
-     *         <code>notificationEnabled</code> paramater.
+     *         not configured in the Amazon Web Services Region, or if notifications are not enabled for the alarm using
+     *         the <code>notificationEnabled</code> paramater.
      *         </p>
      *         <p>
-     *         Use the <code>CreateContactMethod</code> action to configure a contact protocol in an AWS Region.
+     *         Use the <code>CreateContactMethod</code> action to configure a contact protocol in an Amazon Web Services
+     *         Region.
      * @see ContactProtocol
      */
 
@@ -1300,11 +1301,11 @@ public class PutAlarmRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * </p>
      * <p>
      * A notification is not sent if a contact protocol is not specified, if the specified contact protocol is not
-     * configured in the AWS Region, or if notifications are not enabled for the alarm using the
+     * configured in the Amazon Web Services Region, or if notifications are not enabled for the alarm using the
      * <code>notificationEnabled</code> paramater.
      * </p>
      * <p>
-     * Use the <code>CreateContactMethod</code> action to configure a contact protocol in an AWS Region.
+     * Use the <code>CreateContactMethod</code> action to configure a contact protocol in an Amazon Web Services Region.
      * </p>
      * 
      * @param contactProtocols
@@ -1316,11 +1317,12 @@ public class PutAlarmRequest extends com.amazonaws.AmazonWebServiceRequest imple
      *        </p>
      *        <p>
      *        A notification is not sent if a contact protocol is not specified, if the specified contact protocol is
-     *        not configured in the AWS Region, or if notifications are not enabled for the alarm using the
-     *        <code>notificationEnabled</code> paramater.
+     *        not configured in the Amazon Web Services Region, or if notifications are not enabled for the alarm using
+     *        the <code>notificationEnabled</code> paramater.
      *        </p>
      *        <p>
-     *        Use the <code>CreateContactMethod</code> action to configure a contact protocol in an AWS Region.
+     *        Use the <code>CreateContactMethod</code> action to configure a contact protocol in an Amazon Web Services
+     *        Region.
      * @see ContactProtocol
      */
 
@@ -1344,11 +1346,11 @@ public class PutAlarmRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * </p>
      * <p>
      * A notification is not sent if a contact protocol is not specified, if the specified contact protocol is not
-     * configured in the AWS Region, or if notifications are not enabled for the alarm using the
+     * configured in the Amazon Web Services Region, or if notifications are not enabled for the alarm using the
      * <code>notificationEnabled</code> paramater.
      * </p>
      * <p>
-     * Use the <code>CreateContactMethod</code> action to configure a contact protocol in an AWS Region.
+     * Use the <code>CreateContactMethod</code> action to configure a contact protocol in an Amazon Web Services Region.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1365,11 +1367,12 @@ public class PutAlarmRequest extends com.amazonaws.AmazonWebServiceRequest imple
      *        </p>
      *        <p>
      *        A notification is not sent if a contact protocol is not specified, if the specified contact protocol is
-     *        not configured in the AWS Region, or if notifications are not enabled for the alarm using the
-     *        <code>notificationEnabled</code> paramater.
+     *        not configured in the Amazon Web Services Region, or if notifications are not enabled for the alarm using
+     *        the <code>notificationEnabled</code> paramater.
      *        </p>
      *        <p>
-     *        Use the <code>CreateContactMethod</code> action to configure a contact protocol in an AWS Region.
+     *        Use the <code>CreateContactMethod</code> action to configure a contact protocol in an Amazon Web Services
+     *        Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ContactProtocol
      */
@@ -1395,11 +1398,11 @@ public class PutAlarmRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * </p>
      * <p>
      * A notification is not sent if a contact protocol is not specified, if the specified contact protocol is not
-     * configured in the AWS Region, or if notifications are not enabled for the alarm using the
+     * configured in the Amazon Web Services Region, or if notifications are not enabled for the alarm using the
      * <code>notificationEnabled</code> paramater.
      * </p>
      * <p>
-     * Use the <code>CreateContactMethod</code> action to configure a contact protocol in an AWS Region.
+     * Use the <code>CreateContactMethod</code> action to configure a contact protocol in an Amazon Web Services Region.
      * </p>
      * 
      * @param contactProtocols
@@ -1411,11 +1414,12 @@ public class PutAlarmRequest extends com.amazonaws.AmazonWebServiceRequest imple
      *        </p>
      *        <p>
      *        A notification is not sent if a contact protocol is not specified, if the specified contact protocol is
-     *        not configured in the AWS Region, or if notifications are not enabled for the alarm using the
-     *        <code>notificationEnabled</code> paramater.
+     *        not configured in the Amazon Web Services Region, or if notifications are not enabled for the alarm using
+     *        the <code>notificationEnabled</code> paramater.
      *        </p>
      *        <p>
-     *        Use the <code>CreateContactMethod</code> action to configure a contact protocol in an AWS Region.
+     *        Use the <code>CreateContactMethod</code> action to configure a contact protocol in an Amazon Web Services
+     *        Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ContactProtocol
      */
@@ -1436,11 +1440,11 @@ public class PutAlarmRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * </p>
      * <p>
      * A notification is not sent if a contact protocol is not specified, if the specified contact protocol is not
-     * configured in the AWS Region, or if notifications are not enabled for the alarm using the
+     * configured in the Amazon Web Services Region, or if notifications are not enabled for the alarm using the
      * <code>notificationEnabled</code> paramater.
      * </p>
      * <p>
-     * Use the <code>CreateContactMethod</code> action to configure a contact protocol in an AWS Region.
+     * Use the <code>CreateContactMethod</code> action to configure a contact protocol in an Amazon Web Services Region.
      * </p>
      * 
      * @param contactProtocols
@@ -1452,11 +1456,12 @@ public class PutAlarmRequest extends com.amazonaws.AmazonWebServiceRequest imple
      *        </p>
      *        <p>
      *        A notification is not sent if a contact protocol is not specified, if the specified contact protocol is
-     *        not configured in the AWS Region, or if notifications are not enabled for the alarm using the
-     *        <code>notificationEnabled</code> paramater.
+     *        not configured in the Amazon Web Services Region, or if notifications are not enabled for the alarm using
+     *        the <code>notificationEnabled</code> paramater.
      *        </p>
      *        <p>
-     *        Use the <code>CreateContactMethod</code> action to configure a contact protocol in an AWS Region.
+     *        Use the <code>CreateContactMethod</code> action to configure a contact protocol in an Amazon Web Services
+     *        Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ContactProtocol
      */

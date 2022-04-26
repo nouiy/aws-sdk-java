@@ -30,7 +30,8 @@ public class GetBucketsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The name of the bucket for which to return information.
      * </p>
      * <p>
-     * When omitted, the response includes all of your buckets in the AWS Region where the request is made.
+     * When omitted, the response includes all of your buckets in the Amazon Web Services Region where the request is
+     * made.
      * </p>
      */
     private String bucketName;
@@ -58,13 +59,15 @@ public class GetBucketsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The name of the bucket for which to return information.
      * </p>
      * <p>
-     * When omitted, the response includes all of your buckets in the AWS Region where the request is made.
+     * When omitted, the response includes all of your buckets in the Amazon Web Services Region where the request is
+     * made.
      * </p>
      * 
      * @param bucketName
      *        The name of the bucket for which to return information.</p>
      *        <p>
-     *        When omitted, the response includes all of your buckets in the AWS Region where the request is made.
+     *        When omitted, the response includes all of your buckets in the Amazon Web Services Region where the
+     *        request is made.
      */
 
     public void setBucketName(String bucketName) {
@@ -76,12 +79,14 @@ public class GetBucketsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The name of the bucket for which to return information.
      * </p>
      * <p>
-     * When omitted, the response includes all of your buckets in the AWS Region where the request is made.
+     * When omitted, the response includes all of your buckets in the Amazon Web Services Region where the request is
+     * made.
      * </p>
      * 
      * @return The name of the bucket for which to return information.</p>
      *         <p>
-     *         When omitted, the response includes all of your buckets in the AWS Region where the request is made.
+     *         When omitted, the response includes all of your buckets in the Amazon Web Services Region where the
+     *         request is made.
      */
 
     public String getBucketName() {
@@ -93,13 +98,15 @@ public class GetBucketsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The name of the bucket for which to return information.
      * </p>
      * <p>
-     * When omitted, the response includes all of your buckets in the AWS Region where the request is made.
+     * When omitted, the response includes all of your buckets in the Amazon Web Services Region where the request is
+     * made.
      * </p>
      * 
      * @param bucketName
      *        The name of the bucket for which to return information.</p>
      *        <p>
-     *        When omitted, the response includes all of your buckets in the AWS Region where the request is made.
+     *        When omitted, the response includes all of your buckets in the Amazon Web Services Region where the
+     *        request is made.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,10 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeleteCustomEntityTypeRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The name of the custom pattern that you want to delete.
+     * </p>
+     */
     private String name;
 
     /**
+     * <p>
+     * The name of the custom pattern that you want to delete.
+     * </p>
+     * 
      * @param name
+     *        The name of the custom pattern that you want to delete.
      */
 
     public void setName(String name) {
@@ -36,7 +46,11 @@ public class DeleteCustomEntityTypeRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the custom pattern that you want to delete.
+     * </p>
+     * 
+     * @return The name of the custom pattern that you want to delete.
      */
 
     public String getName() {
@@ -44,7 +58,12 @@ public class DeleteCustomEntityTypeRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The name of the custom pattern that you want to delete.
+     * </p>
+     * 
      * @param name
+     *        The name of the custom pattern that you want to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

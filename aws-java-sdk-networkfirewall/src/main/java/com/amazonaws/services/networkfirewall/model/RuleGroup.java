@@ -23,7 +23,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * You can retrieve all objects for a rule group by calling <a>DescribeRuleGroup</a>.
  * </p>
  * <p>
- * AWS Network Firewall uses a rule group to inspect and control network traffic. You define stateless rule groups to
+ * Network Firewall uses a rule group to inspect and control network traffic. You define stateless rule groups to
  * inspect individual packets and you define stateful rule groups to inspect packets in the context of their traffic
  * flow.
  * </p>

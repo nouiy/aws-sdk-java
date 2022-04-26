@@ -68,6 +68,12 @@ public class CreateInferenceRecommendationsJobRequest extends com.amazonaws.Amaz
     private RecommendationJobStoppingConditions stoppingConditions;
     /**
      * <p>
+     * Provides information about the output artifacts and the KMS key to use for Amazon S3 server-side encryption.
+     * </p>
+     */
+    private RecommendationJobOutputConfig outputConfig;
+    /**
+     * <p>
      * The metadata that you apply to Amazon Web Services resources to help you categorize and organize them. Each tag
      * consists of a key and a value, both of which you define. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>
@@ -374,6 +380,49 @@ public class CreateInferenceRecommendationsJobRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
+     * Provides information about the output artifacts and the KMS key to use for Amazon S3 server-side encryption.
+     * </p>
+     * 
+     * @param outputConfig
+     *        Provides information about the output artifacts and the KMS key to use for Amazon S3 server-side
+     *        encryption.
+     */
+
+    public void setOutputConfig(RecommendationJobOutputConfig outputConfig) {
+        this.outputConfig = outputConfig;
+    }
+
+    /**
+     * <p>
+     * Provides information about the output artifacts and the KMS key to use for Amazon S3 server-side encryption.
+     * </p>
+     * 
+     * @return Provides information about the output artifacts and the KMS key to use for Amazon S3 server-side
+     *         encryption.
+     */
+
+    public RecommendationJobOutputConfig getOutputConfig() {
+        return this.outputConfig;
+    }
+
+    /**
+     * <p>
+     * Provides information about the output artifacts and the KMS key to use for Amazon S3 server-side encryption.
+     * </p>
+     * 
+     * @param outputConfig
+     *        Provides information about the output artifacts and the KMS key to use for Amazon S3 server-side
+     *        encryption.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateInferenceRecommendationsJobRequest withOutputConfig(RecommendationJobOutputConfig outputConfig) {
+        setOutputConfig(outputConfig);
+        return this;
+    }
+
+    /**
+     * <p>
      * The metadata that you apply to Amazon Web Services resources to help you categorize and organize them. Each tag
      * consists of a key and a value, both of which you define. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>
@@ -490,6 +539,8 @@ public class CreateInferenceRecommendationsJobRequest extends com.amazonaws.Amaz
             sb.append("JobDescription: ").append(getJobDescription()).append(",");
         if (getStoppingConditions() != null)
             sb.append("StoppingConditions: ").append(getStoppingConditions()).append(",");
+        if (getOutputConfig() != null)
+            sb.append("OutputConfig: ").append(getOutputConfig()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -530,6 +581,10 @@ public class CreateInferenceRecommendationsJobRequest extends com.amazonaws.Amaz
             return false;
         if (other.getStoppingConditions() != null && other.getStoppingConditions().equals(this.getStoppingConditions()) == false)
             return false;
+        if (other.getOutputConfig() == null ^ this.getOutputConfig() == null)
+            return false;
+        if (other.getOutputConfig() != null && other.getOutputConfig().equals(this.getOutputConfig()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -548,6 +603,7 @@ public class CreateInferenceRecommendationsJobRequest extends com.amazonaws.Amaz
         hashCode = prime * hashCode + ((getInputConfig() == null) ? 0 : getInputConfig().hashCode());
         hashCode = prime * hashCode + ((getJobDescription() == null) ? 0 : getJobDescription().hashCode());
         hashCode = prime * hashCode + ((getStoppingConditions() == null) ? 0 : getStoppingConditions().hashCode());
+        hashCode = prime * hashCode + ((getOutputConfig() == null) ? 0 : getOutputConfig().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

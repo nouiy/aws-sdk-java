@@ -23,10 +23,23 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateDistributionBundleResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * An object that describes the result of the action, such as the status of the request, the timestamp of the
+     * request, and the resources affected by the request.
+     * </p>
+     */
     private Operation operation;
 
     /**
+     * <p>
+     * An object that describes the result of the action, such as the status of the request, the timestamp of the
+     * request, and the resources affected by the request.
+     * </p>
+     * 
      * @param operation
+     *        An object that describes the result of the action, such as the status of the request, the timestamp of the
+     *        request, and the resources affected by the request.
      */
 
     public void setOperation(Operation operation) {
@@ -34,7 +47,13 @@ public class UpdateDistributionBundleResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * @return
+     * <p>
+     * An object that describes the result of the action, such as the status of the request, the timestamp of the
+     * request, and the resources affected by the request.
+     * </p>
+     * 
+     * @return An object that describes the result of the action, such as the status of the request, the timestamp of
+     *         the request, and the resources affected by the request.
      */
 
     public Operation getOperation() {
@@ -42,7 +61,14 @@ public class UpdateDistributionBundleResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * An object that describes the result of the action, such as the status of the request, the timestamp of the
+     * request, and the resources affected by the request.
+     * </p>
+     * 
      * @param operation
+     *        An object that describes the result of the action, such as the status of the request, the timestamp of the
+     *        request, and the resources affected by the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

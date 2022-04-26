@@ -25,12 +25,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListCustomEntityTypesRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * A paginated token to offset the results.
+     * </p>
+     */
     private String nextToken;
-
+    /**
+     * <p>
+     * The maximum number of results to return.
+     * </p>
+     */
     private Integer maxResults;
 
     /**
+     * <p>
+     * A paginated token to offset the results.
+     * </p>
+     * 
      * @param nextToken
+     *        A paginated token to offset the results.
      */
 
     public void setNextToken(String nextToken) {
@@ -38,7 +52,11 @@ public class ListCustomEntityTypesRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * @return
+     * <p>
+     * A paginated token to offset the results.
+     * </p>
+     * 
+     * @return A paginated token to offset the results.
      */
 
     public String getNextToken() {
@@ -46,7 +64,12 @@ public class ListCustomEntityTypesRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * A paginated token to offset the results.
+     * </p>
+     * 
      * @param nextToken
+     *        A paginated token to offset the results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +79,12 @@ public class ListCustomEntityTypesRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * The maximum number of results to return.
+     * </p>
+     * 
      * @param maxResults
+     *        The maximum number of results to return.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -64,7 +92,11 @@ public class ListCustomEntityTypesRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * @return
+     * <p>
+     * The maximum number of results to return.
+     * </p>
+     * 
+     * @return The maximum number of results to return.
      */
 
     public Integer getMaxResults() {
@@ -72,7 +104,12 @@ public class ListCustomEntityTypesRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * The maximum number of results to return.
+     * </p>
+     * 
      * @param maxResults
+     *        The maximum number of results to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

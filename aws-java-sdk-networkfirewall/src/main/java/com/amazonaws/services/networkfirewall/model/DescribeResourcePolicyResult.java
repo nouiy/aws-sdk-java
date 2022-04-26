@@ -25,18 +25,18 @@ public class DescribeResourcePolicyResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The AWS Identity and Access Management policy for the resource.
+     * The IAM policy for the resource.
      * </p>
      */
     private String policy;
 
     /**
      * <p>
-     * The AWS Identity and Access Management policy for the resource.
+     * The IAM policy for the resource.
      * </p>
      * 
      * @param policy
-     *        The AWS Identity and Access Management policy for the resource.
+     *        The IAM policy for the resource.
      */
 
     public void setPolicy(String policy) {
@@ -45,10 +45,10 @@ public class DescribeResourcePolicyResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The AWS Identity and Access Management policy for the resource.
+     * The IAM policy for the resource.
      * </p>
      * 
-     * @return The AWS Identity and Access Management policy for the resource.
+     * @return The IAM policy for the resource.
      */
 
     public String getPolicy() {
@@ -57,11 +57,11 @@ public class DescribeResourcePolicyResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The AWS Identity and Access Management policy for the resource.
+     * The IAM policy for the resource.
      * </p>
      * 
      * @param policy
-     *        The AWS Identity and Access Management policy for the resource.
+     *        The IAM policy for the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

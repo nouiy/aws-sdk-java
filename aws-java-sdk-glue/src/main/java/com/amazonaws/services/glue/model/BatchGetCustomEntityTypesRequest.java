@@ -25,10 +25,19 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class BatchGetCustomEntityTypesRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * A list of names of the custom patterns that you want to retrieve.
+     * </p>
+     */
     private java.util.List<String> names;
 
     /**
-     * @return
+     * <p>
+     * A list of names of the custom patterns that you want to retrieve.
+     * </p>
+     * 
+     * @return A list of names of the custom patterns that you want to retrieve.
      */
 
     public java.util.List<String> getNames() {
@@ -36,7 +45,12 @@ public class BatchGetCustomEntityTypesRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * A list of names of the custom patterns that you want to retrieve.
+     * </p>
+     * 
      * @param names
+     *        A list of names of the custom patterns that you want to retrieve.
      */
 
     public void setNames(java.util.Collection<String> names) {
@@ -50,12 +64,16 @@ public class BatchGetCustomEntityTypesRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
+     * A list of names of the custom patterns that you want to retrieve.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setNames(java.util.Collection)} or {@link #withNames(java.util.Collection)} if you want to override the
      * existing values.
      * </p>
      * 
      * @param names
+     *        A list of names of the custom patterns that you want to retrieve.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +88,12 @@ public class BatchGetCustomEntityTypesRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * A list of names of the custom patterns that you want to retrieve.
+     * </p>
+     * 
      * @param names
+     *        A list of names of the custom patterns that you want to retrieve.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

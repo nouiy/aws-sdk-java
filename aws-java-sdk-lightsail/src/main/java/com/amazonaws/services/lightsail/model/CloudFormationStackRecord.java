@@ -53,7 +53,8 @@ public class CloudFormationStackRecord implements Serializable, Cloneable, Struc
     private java.util.Date createdAt;
     /**
      * <p>
-     * A list of objects describing the Availability Zone and AWS Region of the CloudFormation stack record.
+     * A list of objects describing the Availability Zone and Amazon Web Services Region of the CloudFormation stack
+     * record.
      * </p>
      */
     private ResourceLocation location;
@@ -211,11 +212,13 @@ public class CloudFormationStackRecord implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A list of objects describing the Availability Zone and AWS Region of the CloudFormation stack record.
+     * A list of objects describing the Availability Zone and Amazon Web Services Region of the CloudFormation stack
+     * record.
      * </p>
      * 
      * @param location
-     *        A list of objects describing the Availability Zone and AWS Region of the CloudFormation stack record.
+     *        A list of objects describing the Availability Zone and Amazon Web Services Region of the CloudFormation
+     *        stack record.
      */
 
     public void setLocation(ResourceLocation location) {
@@ -224,10 +227,12 @@ public class CloudFormationStackRecord implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A list of objects describing the Availability Zone and AWS Region of the CloudFormation stack record.
+     * A list of objects describing the Availability Zone and Amazon Web Services Region of the CloudFormation stack
+     * record.
      * </p>
      * 
-     * @return A list of objects describing the Availability Zone and AWS Region of the CloudFormation stack record.
+     * @return A list of objects describing the Availability Zone and Amazon Web Services Region of the CloudFormation
+     *         stack record.
      */
 
     public ResourceLocation getLocation() {
@@ -236,11 +241,13 @@ public class CloudFormationStackRecord implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A list of objects describing the Availability Zone and AWS Region of the CloudFormation stack record.
+     * A list of objects describing the Availability Zone and Amazon Web Services Region of the CloudFormation stack
+     * record.
      * </p>
      * 
      * @param location
-     *        A list of objects describing the Availability Zone and AWS Region of the CloudFormation stack record.
+     *        A list of objects describing the Availability Zone and Amazon Web Services Region of the CloudFormation
+     *        stack record.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

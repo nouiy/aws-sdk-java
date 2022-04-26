@@ -143,6 +143,33 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String ipAddressType;
+    /**
+     * <p>
+     * A Boolean value that indicates whether HTTPS redirection is enabled for the load balancer.
+     * </p>
+     */
+    private Boolean httpsRedirectionEnabled;
+    /**
+     * <p>
+     * The name of the TLS security policy for the load balancer.
+     * </p>
+     * <p>
+     * The following TLS security policy names are possible:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>TLS-2016-08</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TLS-FS-Res-1-2-2019-08</code>
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String tlsPolicyName;
 
     /**
      * <p>
@@ -1139,6 +1166,185 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A Boolean value that indicates whether HTTPS redirection is enabled for the load balancer.
+     * </p>
+     * 
+     * @param httpsRedirectionEnabled
+     *        A Boolean value that indicates whether HTTPS redirection is enabled for the load balancer.
+     */
+
+    public void setHttpsRedirectionEnabled(Boolean httpsRedirectionEnabled) {
+        this.httpsRedirectionEnabled = httpsRedirectionEnabled;
+    }
+
+    /**
+     * <p>
+     * A Boolean value that indicates whether HTTPS redirection is enabled for the load balancer.
+     * </p>
+     * 
+     * @return A Boolean value that indicates whether HTTPS redirection is enabled for the load balancer.
+     */
+
+    public Boolean getHttpsRedirectionEnabled() {
+        return this.httpsRedirectionEnabled;
+    }
+
+    /**
+     * <p>
+     * A Boolean value that indicates whether HTTPS redirection is enabled for the load balancer.
+     * </p>
+     * 
+     * @param httpsRedirectionEnabled
+     *        A Boolean value that indicates whether HTTPS redirection is enabled for the load balancer.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LoadBalancer withHttpsRedirectionEnabled(Boolean httpsRedirectionEnabled) {
+        setHttpsRedirectionEnabled(httpsRedirectionEnabled);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A Boolean value that indicates whether HTTPS redirection is enabled for the load balancer.
+     * </p>
+     * 
+     * @return A Boolean value that indicates whether HTTPS redirection is enabled for the load balancer.
+     */
+
+    public Boolean isHttpsRedirectionEnabled() {
+        return this.httpsRedirectionEnabled;
+    }
+
+    /**
+     * <p>
+     * The name of the TLS security policy for the load balancer.
+     * </p>
+     * <p>
+     * The following TLS security policy names are possible:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>TLS-2016-08</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TLS-FS-Res-1-2-2019-08</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param tlsPolicyName
+     *        The name of the TLS security policy for the load balancer.</p>
+     *        <p>
+     *        The following TLS security policy names are possible:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>TLS-2016-08</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>TLS-FS-Res-1-2-2019-08</code>
+     *        </p>
+     *        </li>
+     */
+
+    public void setTlsPolicyName(String tlsPolicyName) {
+        this.tlsPolicyName = tlsPolicyName;
+    }
+
+    /**
+     * <p>
+     * The name of the TLS security policy for the load balancer.
+     * </p>
+     * <p>
+     * The following TLS security policy names are possible:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>TLS-2016-08</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TLS-FS-Res-1-2-2019-08</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The name of the TLS security policy for the load balancer.</p>
+     *         <p>
+     *         The following TLS security policy names are possible:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>TLS-2016-08</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>TLS-FS-Res-1-2-2019-08</code>
+     *         </p>
+     *         </li>
+     */
+
+    public String getTlsPolicyName() {
+        return this.tlsPolicyName;
+    }
+
+    /**
+     * <p>
+     * The name of the TLS security policy for the load balancer.
+     * </p>
+     * <p>
+     * The following TLS security policy names are possible:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>TLS-2016-08</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TLS-FS-Res-1-2-2019-08</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param tlsPolicyName
+     *        The name of the TLS security policy for the load balancer.</p>
+     *        <p>
+     *        The following TLS security policy names are possible:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>TLS-2016-08</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>TLS-FS-Res-1-2-2019-08</code>
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LoadBalancer withTlsPolicyName(String tlsPolicyName) {
+        setTlsPolicyName(tlsPolicyName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1183,7 +1389,11 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
         if (getConfigurationOptions() != null)
             sb.append("ConfigurationOptions: ").append(getConfigurationOptions()).append(",");
         if (getIpAddressType() != null)
-            sb.append("IpAddressType: ").append(getIpAddressType());
+            sb.append("IpAddressType: ").append(getIpAddressType()).append(",");
+        if (getHttpsRedirectionEnabled() != null)
+            sb.append("HttpsRedirectionEnabled: ").append(getHttpsRedirectionEnabled()).append(",");
+        if (getTlsPolicyName() != null)
+            sb.append("TlsPolicyName: ").append(getTlsPolicyName());
         sb.append("}");
         return sb.toString();
     }
@@ -1266,6 +1476,14 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getIpAddressType() != null && other.getIpAddressType().equals(this.getIpAddressType()) == false)
             return false;
+        if (other.getHttpsRedirectionEnabled() == null ^ this.getHttpsRedirectionEnabled() == null)
+            return false;
+        if (other.getHttpsRedirectionEnabled() != null && other.getHttpsRedirectionEnabled().equals(this.getHttpsRedirectionEnabled()) == false)
+            return false;
+        if (other.getTlsPolicyName() == null ^ this.getTlsPolicyName() == null)
+            return false;
+        if (other.getTlsPolicyName() != null && other.getTlsPolicyName().equals(this.getTlsPolicyName()) == false)
+            return false;
         return true;
     }
 
@@ -1291,6 +1509,8 @@ public class LoadBalancer implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTlsCertificateSummaries() == null) ? 0 : getTlsCertificateSummaries().hashCode());
         hashCode = prime * hashCode + ((getConfigurationOptions() == null) ? 0 : getConfigurationOptions().hashCode());
         hashCode = prime * hashCode + ((getIpAddressType() == null) ? 0 : getIpAddressType().hashCode());
+        hashCode = prime * hashCode + ((getHttpsRedirectionEnabled() == null) ? 0 : getHttpsRedirectionEnabled().hashCode());
+        hashCode = prime * hashCode + ((getTlsPolicyName() == null) ? 0 : getTlsPolicyName().hashCode());
         return hashCode;
     }
 

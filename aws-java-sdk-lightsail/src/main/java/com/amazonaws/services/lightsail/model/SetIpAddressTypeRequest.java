@@ -34,8 +34,9 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <note>
      * <p>
-     * Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) AWS Region. Set your AWS
-     * Region configuration to <code>us-east-1</code> to create, view, or edit distributions.
+     * Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) Amazon Web Services
+     * Region. Set your Amazon Web Services Region configuration to <code>us-east-1</code> to create, view, or edit
+     * distributions.
      * </p>
      * </note>
      */
@@ -65,8 +66,9 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <note>
      * <p>
-     * Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) AWS Region. Set your AWS
-     * Region configuration to <code>us-east-1</code> to create, view, or edit distributions.
+     * Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) Amazon Web Services
+     * Region. Set your Amazon Web Services Region configuration to <code>us-east-1</code> to create, view, or edit
+     * distributions.
      * </p>
      * </note>
      * 
@@ -77,8 +79,9 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <note>
      *        <p>
-     *        Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) AWS Region. Set
-     *        your AWS Region configuration to <code>us-east-1</code> to create, view, or edit distributions.
+     *        Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) Amazon Web
+     *        Services Region. Set your Amazon Web Services Region configuration to <code>us-east-1</code> to create,
+     *        view, or edit distributions.
      *        </p>
      * @see ResourceType
      */
@@ -96,8 +99,9 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <note>
      * <p>
-     * Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) AWS Region. Set your AWS
-     * Region configuration to <code>us-east-1</code> to create, view, or edit distributions.
+     * Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) Amazon Web Services
+     * Region. Set your Amazon Web Services Region configuration to <code>us-east-1</code> to create, view, or edit
+     * distributions.
      * </p>
      * </note>
      * 
@@ -107,8 +111,9 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         <note>
      *         <p>
-     *         Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) AWS Region. Set
-     *         your AWS Region configuration to <code>us-east-1</code> to create, view, or edit distributions.
+     *         Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) Amazon Web
+     *         Services Region. Set your Amazon Web Services Region configuration to <code>us-east-1</code> to create,
+     *         view, or edit distributions.
      *         </p>
      * @see ResourceType
      */
@@ -126,8 +131,9 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <note>
      * <p>
-     * Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) AWS Region. Set your AWS
-     * Region configuration to <code>us-east-1</code> to create, view, or edit distributions.
+     * Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) Amazon Web Services
+     * Region. Set your Amazon Web Services Region configuration to <code>us-east-1</code> to create, view, or edit
+     * distributions.
      * </p>
      * </note>
      * 
@@ -138,8 +144,9 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <note>
      *        <p>
-     *        Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) AWS Region. Set
-     *        your AWS Region configuration to <code>us-east-1</code> to create, view, or edit distributions.
+     *        Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) Amazon Web
+     *        Services Region. Set your Amazon Web Services Region configuration to <code>us-east-1</code> to create,
+     *        view, or edit distributions.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
@@ -159,8 +166,9 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <note>
      * <p>
-     * Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) AWS Region. Set your AWS
-     * Region configuration to <code>us-east-1</code> to create, view, or edit distributions.
+     * Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) Amazon Web Services
+     * Region. Set your Amazon Web Services Region configuration to <code>us-east-1</code> to create, view, or edit
+     * distributions.
      * </p>
      * </note>
      * 
@@ -171,8 +179,9 @@ public class SetIpAddressTypeRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <note>
      *        <p>
-     *        Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) AWS Region. Set
-     *        your AWS Region configuration to <code>us-east-1</code> to create, view, or edit distributions.
+     *        Distribution-related APIs are available only in the N. Virginia (<code>us-east-1</code>) Amazon Web
+     *        Services Region. Set your Amazon Web Services Region configuration to <code>us-east-1</code> to create,
+     *        view, or edit distributions.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType

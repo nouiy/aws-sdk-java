@@ -24,7 +24,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * metric.
  * </p>
  * <p>
- * AWS Network Firewall sets the dimension name to <code>CustomAction</code> and you provide the dimension value.
+ * Network Firewall sets the dimension name to <code>CustomAction</code> and you provide the dimension value.
  * </p>
  * <p>
  * For more information about CloudWatch custom metric dimensions, see <a

@@ -58,6 +58,62 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
      * </p>
      */
     private java.util.List<EndpointInputConfiguration> endpointConfigurations;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of a Amazon Web Services Key Management Service (Amazon Web Services KMS) key that
+     * Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the
+     * endpoint. This key will be passed to SageMaker Hosting for endpoint creation.
+     * </p>
+     * <p>
+     * The SageMaker execution role must have <code>kms:CreateGrant</code> permission in order to encrypt data on the
+     * storage volume of the endpoints created for inference recommendation. The inference recommendation job will fail
+     * asynchronously during endpoint configuration creation if the role passed does not have
+     * <code>kms:CreateGrant</code> permission.
+     * </p>
+     * <p>
+     * The <code>KmsKeyId</code> can be any of the following formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * // KMS Key ID
+     * </p>
+     * <p>
+     * <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * // Amazon Resource Name (ARN) of a KMS Key
+     * </p>
+     * <p>
+     * <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:key/&lt;key-id-12ab-34cd-56ef-1234567890ab&gt;"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * // KMS Key Alias
+     * </p>
+     * <p>
+     * <code>"alias/ExampleAlias"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * // Amazon Resource Name (ARN) of a KMS Key Alias
+     * </p>
+     * <p>
+     * <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:alias/&lt;ExampleAlias&gt;"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about key identifiers, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id">Key identifiers
+     * (KeyID)</a> in the Amazon Web Services Key Management Service (Amazon Web Services KMS) documentation.
+     * </p>
+     */
+    private String volumeKmsKeyId;
 
     /**
      * <p>
@@ -290,6 +346,343 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of a Amazon Web Services Key Management Service (Amazon Web Services KMS) key that
+     * Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the
+     * endpoint. This key will be passed to SageMaker Hosting for endpoint creation.
+     * </p>
+     * <p>
+     * The SageMaker execution role must have <code>kms:CreateGrant</code> permission in order to encrypt data on the
+     * storage volume of the endpoints created for inference recommendation. The inference recommendation job will fail
+     * asynchronously during endpoint configuration creation if the role passed does not have
+     * <code>kms:CreateGrant</code> permission.
+     * </p>
+     * <p>
+     * The <code>KmsKeyId</code> can be any of the following formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * // KMS Key ID
+     * </p>
+     * <p>
+     * <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * // Amazon Resource Name (ARN) of a KMS Key
+     * </p>
+     * <p>
+     * <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:key/&lt;key-id-12ab-34cd-56ef-1234567890ab&gt;"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * // KMS Key Alias
+     * </p>
+     * <p>
+     * <code>"alias/ExampleAlias"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * // Amazon Resource Name (ARN) of a KMS Key Alias
+     * </p>
+     * <p>
+     * <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:alias/&lt;ExampleAlias&gt;"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about key identifiers, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id">Key identifiers
+     * (KeyID)</a> in the Amazon Web Services Key Management Service (Amazon Web Services KMS) documentation.
+     * </p>
+     * 
+     * @param volumeKmsKeyId
+     *        The Amazon Resource Name (ARN) of a Amazon Web Services Key Management Service (Amazon Web Services KMS)
+     *        key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance
+     *        that hosts the endpoint. This key will be passed to SageMaker Hosting for endpoint creation. </p>
+     *        <p>
+     *        The SageMaker execution role must have <code>kms:CreateGrant</code> permission in order to encrypt data on
+     *        the storage volume of the endpoints created for inference recommendation. The inference recommendation job
+     *        will fail asynchronously during endpoint configuration creation if the role passed does not have
+     *        <code>kms:CreateGrant</code> permission.
+     *        </p>
+     *        <p>
+     *        The <code>KmsKeyId</code> can be any of the following formats:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        // KMS Key ID
+     *        </p>
+     *        <p>
+     *        <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        // Amazon Resource Name (ARN) of a KMS Key
+     *        </p>
+     *        <p>
+     *        <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:key/&lt;key-id-12ab-34cd-56ef-1234567890ab&gt;"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        // KMS Key Alias
+     *        </p>
+     *        <p>
+     *        <code>"alias/ExampleAlias"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        // Amazon Resource Name (ARN) of a KMS Key Alias
+     *        </p>
+     *        <p>
+     *        <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:alias/&lt;ExampleAlias&gt;"</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information about key identifiers, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id">Key identifiers
+     *        (KeyID)</a> in the Amazon Web Services Key Management Service (Amazon Web Services KMS) documentation.
+     */
+
+    public void setVolumeKmsKeyId(String volumeKmsKeyId) {
+        this.volumeKmsKeyId = volumeKmsKeyId;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of a Amazon Web Services Key Management Service (Amazon Web Services KMS) key that
+     * Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the
+     * endpoint. This key will be passed to SageMaker Hosting for endpoint creation.
+     * </p>
+     * <p>
+     * The SageMaker execution role must have <code>kms:CreateGrant</code> permission in order to encrypt data on the
+     * storage volume of the endpoints created for inference recommendation. The inference recommendation job will fail
+     * asynchronously during endpoint configuration creation if the role passed does not have
+     * <code>kms:CreateGrant</code> permission.
+     * </p>
+     * <p>
+     * The <code>KmsKeyId</code> can be any of the following formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * // KMS Key ID
+     * </p>
+     * <p>
+     * <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * // Amazon Resource Name (ARN) of a KMS Key
+     * </p>
+     * <p>
+     * <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:key/&lt;key-id-12ab-34cd-56ef-1234567890ab&gt;"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * // KMS Key Alias
+     * </p>
+     * <p>
+     * <code>"alias/ExampleAlias"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * // Amazon Resource Name (ARN) of a KMS Key Alias
+     * </p>
+     * <p>
+     * <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:alias/&lt;ExampleAlias&gt;"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about key identifiers, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id">Key identifiers
+     * (KeyID)</a> in the Amazon Web Services Key Management Service (Amazon Web Services KMS) documentation.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of a Amazon Web Services Key Management Service (Amazon Web Services KMS)
+     *         key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance
+     *         that hosts the endpoint. This key will be passed to SageMaker Hosting for endpoint creation. </p>
+     *         <p>
+     *         The SageMaker execution role must have <code>kms:CreateGrant</code> permission in order to encrypt data
+     *         on the storage volume of the endpoints created for inference recommendation. The inference recommendation
+     *         job will fail asynchronously during endpoint configuration creation if the role passed does not have
+     *         <code>kms:CreateGrant</code> permission.
+     *         </p>
+     *         <p>
+     *         The <code>KmsKeyId</code> can be any of the following formats:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         // KMS Key ID
+     *         </p>
+     *         <p>
+     *         <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         // Amazon Resource Name (ARN) of a KMS Key
+     *         </p>
+     *         <p>
+     *         <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:key/&lt;key-id-12ab-34cd-56ef-1234567890ab&gt;"</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         // KMS Key Alias
+     *         </p>
+     *         <p>
+     *         <code>"alias/ExampleAlias"</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         // Amazon Resource Name (ARN) of a KMS Key Alias
+     *         </p>
+     *         <p>
+     *         <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:alias/&lt;ExampleAlias&gt;"</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For more information about key identifiers, see <a
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id">Key identifiers
+     *         (KeyID)</a> in the Amazon Web Services Key Management Service (Amazon Web Services KMS) documentation.
+     */
+
+    public String getVolumeKmsKeyId() {
+        return this.volumeKmsKeyId;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of a Amazon Web Services Key Management Service (Amazon Web Services KMS) key that
+     * Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the
+     * endpoint. This key will be passed to SageMaker Hosting for endpoint creation.
+     * </p>
+     * <p>
+     * The SageMaker execution role must have <code>kms:CreateGrant</code> permission in order to encrypt data on the
+     * storage volume of the endpoints created for inference recommendation. The inference recommendation job will fail
+     * asynchronously during endpoint configuration creation if the role passed does not have
+     * <code>kms:CreateGrant</code> permission.
+     * </p>
+     * <p>
+     * The <code>KmsKeyId</code> can be any of the following formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * // KMS Key ID
+     * </p>
+     * <p>
+     * <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * // Amazon Resource Name (ARN) of a KMS Key
+     * </p>
+     * <p>
+     * <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:key/&lt;key-id-12ab-34cd-56ef-1234567890ab&gt;"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * // KMS Key Alias
+     * </p>
+     * <p>
+     * <code>"alias/ExampleAlias"</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * // Amazon Resource Name (ARN) of a KMS Key Alias
+     * </p>
+     * <p>
+     * <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:alias/&lt;ExampleAlias&gt;"</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about key identifiers, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id">Key identifiers
+     * (KeyID)</a> in the Amazon Web Services Key Management Service (Amazon Web Services KMS) documentation.
+     * </p>
+     * 
+     * @param volumeKmsKeyId
+     *        The Amazon Resource Name (ARN) of a Amazon Web Services Key Management Service (Amazon Web Services KMS)
+     *        key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance
+     *        that hosts the endpoint. This key will be passed to SageMaker Hosting for endpoint creation. </p>
+     *        <p>
+     *        The SageMaker execution role must have <code>kms:CreateGrant</code> permission in order to encrypt data on
+     *        the storage volume of the endpoints created for inference recommendation. The inference recommendation job
+     *        will fail asynchronously during endpoint configuration creation if the role passed does not have
+     *        <code>kms:CreateGrant</code> permission.
+     *        </p>
+     *        <p>
+     *        The <code>KmsKeyId</code> can be any of the following formats:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        // KMS Key ID
+     *        </p>
+     *        <p>
+     *        <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        // Amazon Resource Name (ARN) of a KMS Key
+     *        </p>
+     *        <p>
+     *        <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:key/&lt;key-id-12ab-34cd-56ef-1234567890ab&gt;"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        // KMS Key Alias
+     *        </p>
+     *        <p>
+     *        <code>"alias/ExampleAlias"</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        // Amazon Resource Name (ARN) of a KMS Key Alias
+     *        </p>
+     *        <p>
+     *        <code>"arn:aws:kms:&lt;region&gt;:&lt;account&gt;:alias/&lt;ExampleAlias&gt;"</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information about key identifiers, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-id">Key identifiers
+     *        (KeyID)</a> in the Amazon Web Services Key Management Service (Amazon Web Services KMS) documentation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommendationJobInputConfig withVolumeKmsKeyId(String volumeKmsKeyId) {
+        setVolumeKmsKeyId(volumeKmsKeyId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -310,7 +703,9 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
         if (getResourceLimit() != null)
             sb.append("ResourceLimit: ").append(getResourceLimit()).append(",");
         if (getEndpointConfigurations() != null)
-            sb.append("EndpointConfigurations: ").append(getEndpointConfigurations());
+            sb.append("EndpointConfigurations: ").append(getEndpointConfigurations()).append(",");
+        if (getVolumeKmsKeyId() != null)
+            sb.append("VolumeKmsKeyId: ").append(getVolumeKmsKeyId());
         sb.append("}");
         return sb.toString();
     }
@@ -345,6 +740,10 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
             return false;
         if (other.getEndpointConfigurations() != null && other.getEndpointConfigurations().equals(this.getEndpointConfigurations()) == false)
             return false;
+        if (other.getVolumeKmsKeyId() == null ^ this.getVolumeKmsKeyId() == null)
+            return false;
+        if (other.getVolumeKmsKeyId() != null && other.getVolumeKmsKeyId().equals(this.getVolumeKmsKeyId()) == false)
+            return false;
         return true;
     }
 
@@ -358,6 +757,7 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
         hashCode = prime * hashCode + ((getTrafficPattern() == null) ? 0 : getTrafficPattern().hashCode());
         hashCode = prime * hashCode + ((getResourceLimit() == null) ? 0 : getResourceLimit().hashCode());
         hashCode = prime * hashCode + ((getEndpointConfigurations() == null) ? 0 : getEndpointConfigurations().hashCode());
+        hashCode = prime * hashCode + ((getVolumeKmsKeyId() == null) ? 0 : getVolumeKmsKeyId().hashCode());
         return hashCode;
     }
 

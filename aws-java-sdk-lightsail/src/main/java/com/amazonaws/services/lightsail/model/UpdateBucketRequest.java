@@ -61,10 +61,10 @@ public class UpdateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String versioning;
     /**
      * <p>
-     * An array of strings to specify the AWS account IDs that can access the bucket.
+     * An array of strings to specify the Amazon Web Services account IDs that can access the bucket.
      * </p>
      * <p>
-     * You can give a maximum of 10 AWS accounts access to a bucket.
+     * You can give a maximum of 10 Amazon Web Services accounts access to a bucket.
      * </p>
      */
     private java.util.List<String> readonlyAccessAccounts;
@@ -290,15 +290,15 @@ public class UpdateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * An array of strings to specify the AWS account IDs that can access the bucket.
+     * An array of strings to specify the Amazon Web Services account IDs that can access the bucket.
      * </p>
      * <p>
-     * You can give a maximum of 10 AWS accounts access to a bucket.
+     * You can give a maximum of 10 Amazon Web Services accounts access to a bucket.
      * </p>
      * 
-     * @return An array of strings to specify the AWS account IDs that can access the bucket.</p>
+     * @return An array of strings to specify the Amazon Web Services account IDs that can access the bucket.</p>
      *         <p>
-     *         You can give a maximum of 10 AWS accounts access to a bucket.
+     *         You can give a maximum of 10 Amazon Web Services accounts access to a bucket.
      */
 
     public java.util.List<String> getReadonlyAccessAccounts() {
@@ -307,16 +307,16 @@ public class UpdateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * An array of strings to specify the AWS account IDs that can access the bucket.
+     * An array of strings to specify the Amazon Web Services account IDs that can access the bucket.
      * </p>
      * <p>
-     * You can give a maximum of 10 AWS accounts access to a bucket.
+     * You can give a maximum of 10 Amazon Web Services accounts access to a bucket.
      * </p>
      * 
      * @param readonlyAccessAccounts
-     *        An array of strings to specify the AWS account IDs that can access the bucket.</p>
+     *        An array of strings to specify the Amazon Web Services account IDs that can access the bucket.</p>
      *        <p>
-     *        You can give a maximum of 10 AWS accounts access to a bucket.
+     *        You can give a maximum of 10 Amazon Web Services accounts access to a bucket.
      */
 
     public void setReadonlyAccessAccounts(java.util.Collection<String> readonlyAccessAccounts) {
@@ -330,10 +330,10 @@ public class UpdateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * An array of strings to specify the AWS account IDs that can access the bucket.
+     * An array of strings to specify the Amazon Web Services account IDs that can access the bucket.
      * </p>
      * <p>
-     * You can give a maximum of 10 AWS accounts access to a bucket.
+     * You can give a maximum of 10 Amazon Web Services accounts access to a bucket.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -342,9 +342,9 @@ public class UpdateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param readonlyAccessAccounts
-     *        An array of strings to specify the AWS account IDs that can access the bucket.</p>
+     *        An array of strings to specify the Amazon Web Services account IDs that can access the bucket.</p>
      *        <p>
-     *        You can give a maximum of 10 AWS accounts access to a bucket.
+     *        You can give a maximum of 10 Amazon Web Services accounts access to a bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -360,16 +360,16 @@ public class UpdateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * An array of strings to specify the AWS account IDs that can access the bucket.
+     * An array of strings to specify the Amazon Web Services account IDs that can access the bucket.
      * </p>
      * <p>
-     * You can give a maximum of 10 AWS accounts access to a bucket.
+     * You can give a maximum of 10 Amazon Web Services accounts access to a bucket.
      * </p>
      * 
      * @param readonlyAccessAccounts
-     *        An array of strings to specify the AWS account IDs that can access the bucket.</p>
+     *        An array of strings to specify the Amazon Web Services account IDs that can access the bucket.</p>
      *        <p>
-     *        You can give a maximum of 10 AWS accounts access to a bucket.
+     *        You can give a maximum of 10 Amazon Web Services accounts access to a bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The basic rule criteria for AWS Network Firewall to use to inspect packet headers in stateful traffic flow
- * inspection. Traffic flows that match the criteria are a match for the corresponding <a>StatefulRule</a>.
+ * The basic rule criteria for Network Firewall to use to inspect packet headers in stateful traffic flow inspection.
+ * Traffic flows that match the criteria are a match for the corresponding <a>StatefulRule</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/Header" target="_top">AWS API
@@ -31,8 +31,8 @@ public class Header implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on AWS and on the
-     * internet is IP.
+     * The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on Amazon Web
+     * Services and on the internet is IP.
      * </p>
      */
     private String protocol;
@@ -123,13 +123,13 @@ public class Header implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on AWS and on the
-     * internet is IP.
+     * The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on Amazon Web
+     * Services and on the internet is IP.
      * </p>
      * 
      * @param protocol
-     *        The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on AWS and
-     *        on the internet is IP.
+     *        The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on Amazon
+     *        Web Services and on the internet is IP.
      * @see StatefulRuleProtocol
      */
 
@@ -139,12 +139,12 @@ public class Header implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on AWS and on the
-     * internet is IP.
+     * The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on Amazon Web
+     * Services and on the internet is IP.
      * </p>
      * 
-     * @return The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on AWS and
-     *         on the internet is IP.
+     * @return The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on Amazon
+     *         Web Services and on the internet is IP.
      * @see StatefulRuleProtocol
      */
 
@@ -154,13 +154,13 @@ public class Header implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on AWS and on the
-     * internet is IP.
+     * The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on Amazon Web
+     * Services and on the internet is IP.
      * </p>
      * 
      * @param protocol
-     *        The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on AWS and
-     *        on the internet is IP.
+     *        The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on Amazon
+     *        Web Services and on the internet is IP.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StatefulRuleProtocol
      */
@@ -172,13 +172,13 @@ public class Header implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on AWS and on the
-     * internet is IP.
+     * The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on Amazon Web
+     * Services and on the internet is IP.
      * </p>
      * 
      * @param protocol
-     *        The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on AWS and
-     *        on the internet is IP.
+     *        The protocol to inspect for. To specify all, you can use <code>IP</code>, because all traffic on Amazon
+     *        Web Services and on the internet is IP.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StatefulRuleProtocol
      */

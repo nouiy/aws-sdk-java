@@ -23,14 +23,33 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetCustomEntityTypeResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The name of the custom pattern that you retrieved.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * A regular expression string that is used for detecting sensitive data in a custom pattern.
+     * </p>
+     */
     private String regexString;
-
+    /**
+     * <p>
+     * A list of context words if specified when you created the custom pattern. If none of these context words are
+     * found within the vicinity of the regular expression the data will not be detected as sensitive data.
+     * </p>
+     */
     private java.util.List<String> contextWords;
 
     /**
+     * <p>
+     * The name of the custom pattern that you retrieved.
+     * </p>
+     * 
      * @param name
+     *        The name of the custom pattern that you retrieved.
      */
 
     public void setName(String name) {
@@ -38,7 +57,11 @@ public class GetCustomEntityTypeResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the custom pattern that you retrieved.
+     * </p>
+     * 
+     * @return The name of the custom pattern that you retrieved.
      */
 
     public String getName() {
@@ -46,7 +69,12 @@ public class GetCustomEntityTypeResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * The name of the custom pattern that you retrieved.
+     * </p>
+     * 
      * @param name
+     *        The name of the custom pattern that you retrieved.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +84,12 @@ public class GetCustomEntityTypeResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * A regular expression string that is used for detecting sensitive data in a custom pattern.
+     * </p>
+     * 
      * @param regexString
+     *        A regular expression string that is used for detecting sensitive data in a custom pattern.
      */
 
     public void setRegexString(String regexString) {
@@ -64,7 +97,11 @@ public class GetCustomEntityTypeResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * @return
+     * <p>
+     * A regular expression string that is used for detecting sensitive data in a custom pattern.
+     * </p>
+     * 
+     * @return A regular expression string that is used for detecting sensitive data in a custom pattern.
      */
 
     public String getRegexString() {
@@ -72,7 +109,12 @@ public class GetCustomEntityTypeResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * A regular expression string that is used for detecting sensitive data in a custom pattern.
+     * </p>
+     * 
      * @param regexString
+     *        A regular expression string that is used for detecting sensitive data in a custom pattern.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -82,7 +124,13 @@ public class GetCustomEntityTypeResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * @return
+     * <p>
+     * A list of context words if specified when you created the custom pattern. If none of these context words are
+     * found within the vicinity of the regular expression the data will not be detected as sensitive data.
+     * </p>
+     * 
+     * @return A list of context words if specified when you created the custom pattern. If none of these context words
+     *         are found within the vicinity of the regular expression the data will not be detected as sensitive data.
      */
 
     public java.util.List<String> getContextWords() {
@@ -90,7 +138,14 @@ public class GetCustomEntityTypeResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * A list of context words if specified when you created the custom pattern. If none of these context words are
+     * found within the vicinity of the regular expression the data will not be detected as sensitive data.
+     * </p>
+     * 
      * @param contextWords
+     *        A list of context words if specified when you created the custom pattern. If none of these context words
+     *        are found within the vicinity of the regular expression the data will not be detected as sensitive data.
      */
 
     public void setContextWords(java.util.Collection<String> contextWords) {
@@ -104,12 +159,18 @@ public class GetCustomEntityTypeResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
+     * A list of context words if specified when you created the custom pattern. If none of these context words are
+     * found within the vicinity of the regular expression the data will not be detected as sensitive data.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setContextWords(java.util.Collection)} or {@link #withContextWords(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param contextWords
+     *        A list of context words if specified when you created the custom pattern. If none of these context words
+     *        are found within the vicinity of the regular expression the data will not be detected as sensitive data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -124,7 +185,14 @@ public class GetCustomEntityTypeResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * A list of context words if specified when you created the custom pattern. If none of these context words are
+     * found within the vicinity of the regular expression the data will not be detected as sensitive data.
+     * </p>
+     * 
      * @param contextWords
+     *        A list of context words if specified when you created the custom pattern. If none of these context words
+     *        are found within the vicinity of the regular expression the data will not be detected as sensitive data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

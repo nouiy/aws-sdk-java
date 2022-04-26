@@ -33,7 +33,7 @@ public class UpdateLoadBalancerAttributeRequest extends com.amazonaws.AmazonWebS
     private String loadBalancerName;
     /**
      * <p>
-     * The name of the attribute you want to update. Valid values are below.
+     * The name of the attribute you want to update.
      * </p>
      */
     private String attributeName;
@@ -41,6 +41,45 @@ public class UpdateLoadBalancerAttributeRequest extends com.amazonaws.AmazonWebS
      * <p>
      * The value that you want to specify for the attribute name.
      * </p>
+     * <p>
+     * The following values are supported depending on what you specify for the <code>attributeName</code> request
+     * parameter:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you specify <code>HealthCheckPath</code> for the <code>attributeName</code> request parameter, then the
+     * <code>attributeValue</code> request parameter must be the path to ping on the target (for example,
+     * <code>/weather/us/wa/seattle</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>SessionStickinessEnabled</code> for the <code>attributeName</code> request parameter, then
+     * the <code>attributeValue</code> request parameter must be <code>true</code> or <code>false</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>SessionStickiness_LB_CookieDurationSeconds</code> for the <code>attributeName</code> request
+     * parameter, then the <code>attributeValue</code> request parameter must be an interger that represents the cookie
+     * duration in seconds.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>HttpsRedirectionEnabled</code> for the <code>attributeName</code> request parameter, then
+     * the <code>attributeValue</code> request parameter must be <code>true</code> or <code>false</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>TlsPolicyName</code> for the <code>attributeName</code> request parameter, then the
+     * <code>attributeValue</code> request parameter must be <code>TLS version 1.0, 1.1, and 1.2</code> or
+     * <code>TLS version 1.2</code>.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String attributeValue;
 
@@ -86,11 +125,11 @@ public class UpdateLoadBalancerAttributeRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the attribute you want to update. Valid values are below.
+     * The name of the attribute you want to update.
      * </p>
      * 
      * @param attributeName
-     *        The name of the attribute you want to update. Valid values are below.
+     *        The name of the attribute you want to update.
      * @see LoadBalancerAttributeName
      */
 
@@ -100,10 +139,10 @@ public class UpdateLoadBalancerAttributeRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the attribute you want to update. Valid values are below.
+     * The name of the attribute you want to update.
      * </p>
      * 
-     * @return The name of the attribute you want to update. Valid values are below.
+     * @return The name of the attribute you want to update.
      * @see LoadBalancerAttributeName
      */
 
@@ -113,11 +152,11 @@ public class UpdateLoadBalancerAttributeRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the attribute you want to update. Valid values are below.
+     * The name of the attribute you want to update.
      * </p>
      * 
      * @param attributeName
-     *        The name of the attribute you want to update. Valid values are below.
+     *        The name of the attribute you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LoadBalancerAttributeName
      */
@@ -129,11 +168,11 @@ public class UpdateLoadBalancerAttributeRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the attribute you want to update. Valid values are below.
+     * The name of the attribute you want to update.
      * </p>
      * 
      * @param attributeName
-     *        The name of the attribute you want to update. Valid values are below.
+     *        The name of the attribute you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LoadBalancerAttributeName
      */
@@ -147,9 +186,86 @@ public class UpdateLoadBalancerAttributeRequest extends com.amazonaws.AmazonWebS
      * <p>
      * The value that you want to specify for the attribute name.
      * </p>
+     * <p>
+     * The following values are supported depending on what you specify for the <code>attributeName</code> request
+     * parameter:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you specify <code>HealthCheckPath</code> for the <code>attributeName</code> request parameter, then the
+     * <code>attributeValue</code> request parameter must be the path to ping on the target (for example,
+     * <code>/weather/us/wa/seattle</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>SessionStickinessEnabled</code> for the <code>attributeName</code> request parameter, then
+     * the <code>attributeValue</code> request parameter must be <code>true</code> or <code>false</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>SessionStickiness_LB_CookieDurationSeconds</code> for the <code>attributeName</code> request
+     * parameter, then the <code>attributeValue</code> request parameter must be an interger that represents the cookie
+     * duration in seconds.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>HttpsRedirectionEnabled</code> for the <code>attributeName</code> request parameter, then
+     * the <code>attributeValue</code> request parameter must be <code>true</code> or <code>false</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>TlsPolicyName</code> for the <code>attributeName</code> request parameter, then the
+     * <code>attributeValue</code> request parameter must be <code>TLS version 1.0, 1.1, and 1.2</code> or
+     * <code>TLS version 1.2</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param attributeValue
-     *        The value that you want to specify for the attribute name.
+     *        The value that you want to specify for the attribute name.</p>
+     *        <p>
+     *        The following values are supported depending on what you specify for the <code>attributeName</code>
+     *        request parameter:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you specify <code>HealthCheckPath</code> for the <code>attributeName</code> request parameter, then the
+     *        <code>attributeValue</code> request parameter must be the path to ping on the target (for example,
+     *        <code>/weather/us/wa/seattle</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify <code>SessionStickinessEnabled</code> for the <code>attributeName</code> request parameter,
+     *        then the <code>attributeValue</code> request parameter must be <code>true</code> or <code>false</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify <code>SessionStickiness_LB_CookieDurationSeconds</code> for the <code>attributeName</code>
+     *        request parameter, then the <code>attributeValue</code> request parameter must be an interger that
+     *        represents the cookie duration in seconds.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify <code>HttpsRedirectionEnabled</code> for the <code>attributeName</code> request parameter,
+     *        then the <code>attributeValue</code> request parameter must be <code>true</code> or <code>false</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify <code>TlsPolicyName</code> for the <code>attributeName</code> request parameter, then the
+     *        <code>attributeValue</code> request parameter must be <code>TLS version 1.0, 1.1, and 1.2</code> or
+     *        <code>TLS version 1.2</code>.
+     *        </p>
+     *        </li>
      */
 
     public void setAttributeValue(String attributeValue) {
@@ -160,8 +276,86 @@ public class UpdateLoadBalancerAttributeRequest extends com.amazonaws.AmazonWebS
      * <p>
      * The value that you want to specify for the attribute name.
      * </p>
+     * <p>
+     * The following values are supported depending on what you specify for the <code>attributeName</code> request
+     * parameter:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you specify <code>HealthCheckPath</code> for the <code>attributeName</code> request parameter, then the
+     * <code>attributeValue</code> request parameter must be the path to ping on the target (for example,
+     * <code>/weather/us/wa/seattle</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>SessionStickinessEnabled</code> for the <code>attributeName</code> request parameter, then
+     * the <code>attributeValue</code> request parameter must be <code>true</code> or <code>false</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>SessionStickiness_LB_CookieDurationSeconds</code> for the <code>attributeName</code> request
+     * parameter, then the <code>attributeValue</code> request parameter must be an interger that represents the cookie
+     * duration in seconds.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>HttpsRedirectionEnabled</code> for the <code>attributeName</code> request parameter, then
+     * the <code>attributeValue</code> request parameter must be <code>true</code> or <code>false</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>TlsPolicyName</code> for the <code>attributeName</code> request parameter, then the
+     * <code>attributeValue</code> request parameter must be <code>TLS version 1.0, 1.1, and 1.2</code> or
+     * <code>TLS version 1.2</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The value that you want to specify for the attribute name.
+     * @return The value that you want to specify for the attribute name.</p>
+     *         <p>
+     *         The following values are supported depending on what you specify for the <code>attributeName</code>
+     *         request parameter:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         If you specify <code>HealthCheckPath</code> for the <code>attributeName</code> request parameter, then
+     *         the <code>attributeValue</code> request parameter must be the path to ping on the target (for example,
+     *         <code>/weather/us/wa/seattle</code>).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you specify <code>SessionStickinessEnabled</code> for the <code>attributeName</code> request
+     *         parameter, then the <code>attributeValue</code> request parameter must be <code>true</code> or
+     *         <code>false</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you specify <code>SessionStickiness_LB_CookieDurationSeconds</code> for the <code>attributeName</code>
+     *         request parameter, then the <code>attributeValue</code> request parameter must be an interger that
+     *         represents the cookie duration in seconds.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you specify <code>HttpsRedirectionEnabled</code> for the <code>attributeName</code> request parameter,
+     *         then the <code>attributeValue</code> request parameter must be <code>true</code> or <code>false</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you specify <code>TlsPolicyName</code> for the <code>attributeName</code> request parameter, then the
+     *         <code>attributeValue</code> request parameter must be <code>TLS version 1.0, 1.1, and 1.2</code> or
+     *         <code>TLS version 1.2</code>.
+     *         </p>
+     *         </li>
      */
 
     public String getAttributeValue() {
@@ -172,9 +366,86 @@ public class UpdateLoadBalancerAttributeRequest extends com.amazonaws.AmazonWebS
      * <p>
      * The value that you want to specify for the attribute name.
      * </p>
+     * <p>
+     * The following values are supported depending on what you specify for the <code>attributeName</code> request
+     * parameter:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you specify <code>HealthCheckPath</code> for the <code>attributeName</code> request parameter, then the
+     * <code>attributeValue</code> request parameter must be the path to ping on the target (for example,
+     * <code>/weather/us/wa/seattle</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>SessionStickinessEnabled</code> for the <code>attributeName</code> request parameter, then
+     * the <code>attributeValue</code> request parameter must be <code>true</code> or <code>false</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>SessionStickiness_LB_CookieDurationSeconds</code> for the <code>attributeName</code> request
+     * parameter, then the <code>attributeValue</code> request parameter must be an interger that represents the cookie
+     * duration in seconds.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>HttpsRedirectionEnabled</code> for the <code>attributeName</code> request parameter, then
+     * the <code>attributeValue</code> request parameter must be <code>true</code> or <code>false</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify <code>TlsPolicyName</code> for the <code>attributeName</code> request parameter, then the
+     * <code>attributeValue</code> request parameter must be <code>TLS version 1.0, 1.1, and 1.2</code> or
+     * <code>TLS version 1.2</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param attributeValue
-     *        The value that you want to specify for the attribute name.
+     *        The value that you want to specify for the attribute name.</p>
+     *        <p>
+     *        The following values are supported depending on what you specify for the <code>attributeName</code>
+     *        request parameter:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you specify <code>HealthCheckPath</code> for the <code>attributeName</code> request parameter, then the
+     *        <code>attributeValue</code> request parameter must be the path to ping on the target (for example,
+     *        <code>/weather/us/wa/seattle</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify <code>SessionStickinessEnabled</code> for the <code>attributeName</code> request parameter,
+     *        then the <code>attributeValue</code> request parameter must be <code>true</code> or <code>false</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify <code>SessionStickiness_LB_CookieDurationSeconds</code> for the <code>attributeName</code>
+     *        request parameter, then the <code>attributeValue</code> request parameter must be an interger that
+     *        represents the cookie duration in seconds.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify <code>HttpsRedirectionEnabled</code> for the <code>attributeName</code> request parameter,
+     *        then the <code>attributeValue</code> request parameter must be <code>true</code> or <code>false</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify <code>TlsPolicyName</code> for the <code>attributeName</code> request parameter, then the
+     *        <code>attributeValue</code> request parameter must be <code>TLS version 1.0, 1.1, and 1.2</code> or
+     *        <code>TLS version 1.2</code>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

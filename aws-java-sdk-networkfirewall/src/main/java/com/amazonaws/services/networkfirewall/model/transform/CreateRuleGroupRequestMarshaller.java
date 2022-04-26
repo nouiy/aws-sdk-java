@@ -44,6 +44,8 @@ public class CreateRuleGroupRequestMarshaller {
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<Boolean> DRYRUN_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("DryRun").build();
+    private static final MarshallingInfo<StructuredPojo> ENCRYPTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionConfiguration").build();
 
     private static final CreateRuleGroupRequestMarshaller instance = new CreateRuleGroupRequestMarshaller();
 
@@ -69,6 +71,7 @@ public class CreateRuleGroupRequestMarshaller {
             protocolMarshaller.marshall(createRuleGroupRequest.getCapacity(), CAPACITY_BINDING);
             protocolMarshaller.marshall(createRuleGroupRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createRuleGroupRequest.getDryRun(), DRYRUN_BINDING);
+            protocolMarshaller.marshall(createRuleGroupRequest.getEncryptionConfiguration(), ENCRYPTIONCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

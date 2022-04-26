@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * Specifies AWS Lake Formation configuration settings for the crawler.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/LakeFormationConfiguration" target="_top">AWS
  *      API Documentation</a>
@@ -25,12 +28,27 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class LakeFormationConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Specifies whether to use AWS Lake Formation credentials for the crawler instead of the IAM role credentials.
+     * </p>
+     */
     private Boolean useLakeFormationCredentials;
-
+    /**
+     * <p>
+     * Required for cross account crawls. For same account crawls as the target data, this can be left as null.
+     * </p>
+     */
     private String accountId;
 
     /**
+     * <p>
+     * Specifies whether to use AWS Lake Formation credentials for the crawler instead of the IAM role credentials.
+     * </p>
+     * 
      * @param useLakeFormationCredentials
+     *        Specifies whether to use AWS Lake Formation credentials for the crawler instead of the IAM role
+     *        credentials.
      */
 
     public void setUseLakeFormationCredentials(Boolean useLakeFormationCredentials) {
@@ -38,7 +56,12 @@ public class LakeFormationConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies whether to use AWS Lake Formation credentials for the crawler instead of the IAM role credentials.
+     * </p>
+     * 
+     * @return Specifies whether to use AWS Lake Formation credentials for the crawler instead of the IAM role
+     *         credentials.
      */
 
     public Boolean getUseLakeFormationCredentials() {
@@ -46,7 +69,13 @@ public class LakeFormationConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * Specifies whether to use AWS Lake Formation credentials for the crawler instead of the IAM role credentials.
+     * </p>
+     * 
      * @param useLakeFormationCredentials
+     *        Specifies whether to use AWS Lake Formation credentials for the crawler instead of the IAM role
+     *        credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +85,12 @@ public class LakeFormationConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies whether to use AWS Lake Formation credentials for the crawler instead of the IAM role credentials.
+     * </p>
+     * 
+     * @return Specifies whether to use AWS Lake Formation credentials for the crawler instead of the IAM role
+     *         credentials.
      */
 
     public Boolean isUseLakeFormationCredentials() {
@@ -64,7 +98,12 @@ public class LakeFormationConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * Required for cross account crawls. For same account crawls as the target data, this can be left as null.
+     * </p>
+     * 
      * @param accountId
+     *        Required for cross account crawls. For same account crawls as the target data, this can be left as null.
      */
 
     public void setAccountId(String accountId) {
@@ -72,7 +111,11 @@ public class LakeFormationConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
-     * @return
+     * <p>
+     * Required for cross account crawls. For same account crawls as the target data, this can be left as null.
+     * </p>
+     * 
+     * @return Required for cross account crawls. For same account crawls as the target data, this can be left as null.
      */
 
     public String getAccountId() {
@@ -80,7 +123,12 @@ public class LakeFormationConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * Required for cross account crawls. For same account crawls as the target data, this can be left as null.
+     * </p>
+     * 
      * @param accountId
+     *        Required for cross account crawls. For same account crawls as the target data, this can be left as null.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

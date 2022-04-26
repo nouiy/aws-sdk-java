@@ -30,7 +30,7 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      * The protocol of the contact method, such as <code>Email</code> or <code>SMS</code> (text messaging).
      * </p>
      * <p>
-     * The <code>SMS</code> protocol is supported only in the following AWS Regions.
+     * The <code>SMS</code> protocol is supported only in the following Amazon Web Services Regions.
      * </p>
      * <ul>
      * <li>
@@ -65,8 +65,8 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * For a list of countries/regions where SMS text messages can be sent, and the latest AWS Regions where SMS text
-     * messaging is supported, see <a
+     * For a list of countries/regions where SMS text messages can be sent, and the latest Amazon Web Services Regions
+     * where SMS text messaging is supported, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-supported-regions-countries.html">Supported Regions and
      * Countries</a> in the <i>Amazon SNS Developer Guide</i>.
      * </p>
@@ -96,7 +96,7 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      * The protocol of the contact method, such as <code>Email</code> or <code>SMS</code> (text messaging).
      * </p>
      * <p>
-     * The <code>SMS</code> protocol is supported only in the following AWS Regions.
+     * The <code>SMS</code> protocol is supported only in the following Amazon Web Services Regions.
      * </p>
      * <ul>
      * <li>
@@ -131,8 +131,8 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * For a list of countries/regions where SMS text messages can be sent, and the latest AWS Regions where SMS text
-     * messaging is supported, see <a
+     * For a list of countries/regions where SMS text messages can be sent, and the latest Amazon Web Services Regions
+     * where SMS text messaging is supported, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-supported-regions-countries.html">Supported Regions and
      * Countries</a> in the <i>Amazon SNS Developer Guide</i>.
      * </p>
@@ -145,7 +145,7 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      * @param protocol
      *        The protocol of the contact method, such as <code>Email</code> or <code>SMS</code> (text messaging).</p>
      *        <p>
-     *        The <code>SMS</code> protocol is supported only in the following AWS Regions.
+     *        The <code>SMS</code> protocol is supported only in the following Amazon Web Services Regions.
      *        </p>
      *        <ul>
      *        <li>
@@ -180,8 +180,8 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        </ul>
      *        <p>
-     *        For a list of countries/regions where SMS text messages can be sent, and the latest AWS Regions where SMS
-     *        text messaging is supported, see <a
+     *        For a list of countries/regions where SMS text messages can be sent, and the latest Amazon Web Services
+     *        Regions where SMS text messaging is supported, see <a
      *        href="https://docs.aws.amazon.com/sns/latest/dg/sns-supported-regions-countries.html">Supported Regions
      *        and Countries</a> in the <i>Amazon SNS Developer Guide</i>.
      *        </p>
@@ -201,7 +201,7 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      * The protocol of the contact method, such as <code>Email</code> or <code>SMS</code> (text messaging).
      * </p>
      * <p>
-     * The <code>SMS</code> protocol is supported only in the following AWS Regions.
+     * The <code>SMS</code> protocol is supported only in the following Amazon Web Services Regions.
      * </p>
      * <ul>
      * <li>
@@ -236,8 +236,8 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * For a list of countries/regions where SMS text messages can be sent, and the latest AWS Regions where SMS text
-     * messaging is supported, see <a
+     * For a list of countries/regions where SMS text messages can be sent, and the latest Amazon Web Services Regions
+     * where SMS text messaging is supported, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-supported-regions-countries.html">Supported Regions and
      * Countries</a> in the <i>Amazon SNS Developer Guide</i>.
      * </p>
@@ -249,7 +249,7 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      * 
      * @return The protocol of the contact method, such as <code>Email</code> or <code>SMS</code> (text messaging).</p>
      *         <p>
-     *         The <code>SMS</code> protocol is supported only in the following AWS Regions.
+     *         The <code>SMS</code> protocol is supported only in the following Amazon Web Services Regions.
      *         </p>
      *         <ul>
      *         <li>
@@ -284,8 +284,8 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      *         </li>
      *         </ul>
      *         <p>
-     *         For a list of countries/regions where SMS text messages can be sent, and the latest AWS Regions where SMS
-     *         text messaging is supported, see <a
+     *         For a list of countries/regions where SMS text messages can be sent, and the latest Amazon Web Services
+     *         Regions where SMS text messaging is supported, see <a
      *         href="https://docs.aws.amazon.com/sns/latest/dg/sns-supported-regions-countries.html">Supported Regions
      *         and Countries</a> in the <i>Amazon SNS Developer Guide</i>.
      *         </p>
@@ -305,7 +305,7 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      * The protocol of the contact method, such as <code>Email</code> or <code>SMS</code> (text messaging).
      * </p>
      * <p>
-     * The <code>SMS</code> protocol is supported only in the following AWS Regions.
+     * The <code>SMS</code> protocol is supported only in the following Amazon Web Services Regions.
      * </p>
      * <ul>
      * <li>
@@ -340,8 +340,8 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * For a list of countries/regions where SMS text messages can be sent, and the latest AWS Regions where SMS text
-     * messaging is supported, see <a
+     * For a list of countries/regions where SMS text messages can be sent, and the latest Amazon Web Services Regions
+     * where SMS text messaging is supported, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-supported-regions-countries.html">Supported Regions and
      * Countries</a> in the <i>Amazon SNS Developer Guide</i>.
      * </p>
@@ -354,7 +354,7 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      * @param protocol
      *        The protocol of the contact method, such as <code>Email</code> or <code>SMS</code> (text messaging).</p>
      *        <p>
-     *        The <code>SMS</code> protocol is supported only in the following AWS Regions.
+     *        The <code>SMS</code> protocol is supported only in the following Amazon Web Services Regions.
      *        </p>
      *        <ul>
      *        <li>
@@ -389,8 +389,8 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        </ul>
      *        <p>
-     *        For a list of countries/regions where SMS text messages can be sent, and the latest AWS Regions where SMS
-     *        text messaging is supported, see <a
+     *        For a list of countries/regions where SMS text messages can be sent, and the latest Amazon Web Services
+     *        Regions where SMS text messaging is supported, see <a
      *        href="https://docs.aws.amazon.com/sns/latest/dg/sns-supported-regions-countries.html">Supported Regions
      *        and Countries</a> in the <i>Amazon SNS Developer Guide</i>.
      *        </p>
@@ -412,7 +412,7 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      * The protocol of the contact method, such as <code>Email</code> or <code>SMS</code> (text messaging).
      * </p>
      * <p>
-     * The <code>SMS</code> protocol is supported only in the following AWS Regions.
+     * The <code>SMS</code> protocol is supported only in the following Amazon Web Services Regions.
      * </p>
      * <ul>
      * <li>
@@ -447,8 +447,8 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * For a list of countries/regions where SMS text messages can be sent, and the latest AWS Regions where SMS text
-     * messaging is supported, see <a
+     * For a list of countries/regions where SMS text messages can be sent, and the latest Amazon Web Services Regions
+     * where SMS text messaging is supported, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-supported-regions-countries.html">Supported Regions and
      * Countries</a> in the <i>Amazon SNS Developer Guide</i>.
      * </p>
@@ -461,7 +461,7 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      * @param protocol
      *        The protocol of the contact method, such as <code>Email</code> or <code>SMS</code> (text messaging).</p>
      *        <p>
-     *        The <code>SMS</code> protocol is supported only in the following AWS Regions.
+     *        The <code>SMS</code> protocol is supported only in the following Amazon Web Services Regions.
      *        </p>
      *        <ul>
      *        <li>
@@ -496,8 +496,8 @@ public class CreateContactMethodRequest extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        </ul>
      *        <p>
-     *        For a list of countries/regions where SMS text messages can be sent, and the latest AWS Regions where SMS
-     *        text messaging is supported, see <a
+     *        For a list of countries/regions where SMS text messages can be sent, and the latest Amazon Web Services
+     *        Regions where SMS text messaging is supported, see <a
      *        href="https://docs.aws.amazon.com/sns/latest/dg/sns-supported-regions-countries.html">Supported Regions
      *        and Countries</a> in the <i>Amazon SNS Developer Guide</i>.
      *        </p>

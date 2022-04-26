@@ -63,6 +63,10 @@ public class LoadBalancerMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configurationOptions").build();
     private static final MarshallingInfo<String> IPADDRESSTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ipAddressType").build();
+    private static final MarshallingInfo<Boolean> HTTPSREDIRECTIONENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("httpsRedirectionEnabled").build();
+    private static final MarshallingInfo<String> TLSPOLICYNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("tlsPolicyName").build();
 
     private static final LoadBalancerMarshaller instance = new LoadBalancerMarshaller();
 
@@ -97,6 +101,8 @@ public class LoadBalancerMarshaller {
             protocolMarshaller.marshall(loadBalancer.getTlsCertificateSummaries(), TLSCERTIFICATESUMMARIES_BINDING);
             protocolMarshaller.marshall(loadBalancer.getConfigurationOptions(), CONFIGURATIONOPTIONS_BINDING);
             protocolMarshaller.marshall(loadBalancer.getIpAddressType(), IPADDRESSTYPE_BINDING);
+            protocolMarshaller.marshall(loadBalancer.getHttpsRedirectionEnabled(), HTTPSREDIRECTIONENABLED_BINDING);
+            protocolMarshaller.marshall(loadBalancer.getTlsPolicyName(), TLSPOLICYNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

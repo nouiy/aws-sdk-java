@@ -553,6 +553,11 @@ public class AbstractAmazonLightsail implements AmazonLightsail {
     }
 
     @Override
+    public GetLoadBalancerTlsPoliciesResult getLoadBalancerTlsPolicies(GetLoadBalancerTlsPoliciesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetLoadBalancersResult getLoadBalancers(GetLoadBalancersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

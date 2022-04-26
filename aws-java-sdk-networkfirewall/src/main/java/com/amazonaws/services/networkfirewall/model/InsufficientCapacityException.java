@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * AWS doesn't currently have enough available capacity to fulfill your request. Try your request later.
+ * Amazon Web Services doesn't currently have enough available capacity to fulfill your request. Try your request later.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

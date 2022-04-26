@@ -48,7 +48,8 @@ public class ContainerService implements Serializable, Cloneable, StructuredPojo
     private java.util.Date createdAt;
     /**
      * <p>
-     * An object that describes the location of the container service, such as the AWS Region and Availability Zone.
+     * An object that describes the location of the container service, such as the Amazon Web Services Region and
+     * Availability Zone.
      * </p>
      */
     private ResourceLocation location;
@@ -175,9 +176,9 @@ public class ContainerService implements Serializable, Cloneable, StructuredPojo
      * The principal ARN of the container service.
      * </p>
      * <p>
-     * The principal ARN can be used to create a trust relationship between your standard AWS account and your Lightsail
-     * container service. This allows you to give your service permission to access resources in your standard AWS
-     * account.
+     * The principal ARN can be used to create a trust relationship between your standard Amazon Web Services account
+     * and your Lightsail container service. This allows you to give your service permission to access resources in your
+     * standard Amazon Web Services account.
      * </p>
      */
     private String principalArn;
@@ -348,12 +349,13 @@ public class ContainerService implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An object that describes the location of the container service, such as the AWS Region and Availability Zone.
+     * An object that describes the location of the container service, such as the Amazon Web Services Region and
+     * Availability Zone.
      * </p>
      * 
      * @param location
-     *        An object that describes the location of the container service, such as the AWS Region and Availability
-     *        Zone.
+     *        An object that describes the location of the container service, such as the Amazon Web Services Region and
+     *        Availability Zone.
      */
 
     public void setLocation(ResourceLocation location) {
@@ -362,11 +364,12 @@ public class ContainerService implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An object that describes the location of the container service, such as the AWS Region and Availability Zone.
+     * An object that describes the location of the container service, such as the Amazon Web Services Region and
+     * Availability Zone.
      * </p>
      * 
-     * @return An object that describes the location of the container service, such as the AWS Region and Availability
-     *         Zone.
+     * @return An object that describes the location of the container service, such as the Amazon Web Services Region
+     *         and Availability Zone.
      */
 
     public ResourceLocation getLocation() {
@@ -375,12 +378,13 @@ public class ContainerService implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An object that describes the location of the container service, such as the AWS Region and Availability Zone.
+     * An object that describes the location of the container service, such as the Amazon Web Services Region and
+     * Availability Zone.
      * </p>
      * 
      * @param location
-     *        An object that describes the location of the container service, such as the AWS Region and Availability
-     *        Zone.
+     *        An object that describes the location of the container service, such as the Amazon Web Services Region and
+     *        Availability Zone.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1314,17 +1318,17 @@ public class ContainerService implements Serializable, Cloneable, StructuredPojo
      * The principal ARN of the container service.
      * </p>
      * <p>
-     * The principal ARN can be used to create a trust relationship between your standard AWS account and your Lightsail
-     * container service. This allows you to give your service permission to access resources in your standard AWS
-     * account.
+     * The principal ARN can be used to create a trust relationship between your standard Amazon Web Services account
+     * and your Lightsail container service. This allows you to give your service permission to access resources in your
+     * standard Amazon Web Services account.
      * </p>
      * 
      * @param principalArn
      *        The principal ARN of the container service.</p>
      *        <p>
-     *        The principal ARN can be used to create a trust relationship between your standard AWS account and your
-     *        Lightsail container service. This allows you to give your service permission to access resources in your
-     *        standard AWS account.
+     *        The principal ARN can be used to create a trust relationship between your standard Amazon Web Services
+     *        account and your Lightsail container service. This allows you to give your service permission to access
+     *        resources in your standard Amazon Web Services account.
      */
 
     public void setPrincipalArn(String principalArn) {
@@ -1336,16 +1340,16 @@ public class ContainerService implements Serializable, Cloneable, StructuredPojo
      * The principal ARN of the container service.
      * </p>
      * <p>
-     * The principal ARN can be used to create a trust relationship between your standard AWS account and your Lightsail
-     * container service. This allows you to give your service permission to access resources in your standard AWS
-     * account.
+     * The principal ARN can be used to create a trust relationship between your standard Amazon Web Services account
+     * and your Lightsail container service. This allows you to give your service permission to access resources in your
+     * standard Amazon Web Services account.
      * </p>
      * 
      * @return The principal ARN of the container service.</p>
      *         <p>
-     *         The principal ARN can be used to create a trust relationship between your standard AWS account and your
-     *         Lightsail container service. This allows you to give your service permission to access resources in your
-     *         standard AWS account.
+     *         The principal ARN can be used to create a trust relationship between your standard Amazon Web Services
+     *         account and your Lightsail container service. This allows you to give your service permission to access
+     *         resources in your standard Amazon Web Services account.
      */
 
     public String getPrincipalArn() {
@@ -1357,17 +1361,17 @@ public class ContainerService implements Serializable, Cloneable, StructuredPojo
      * The principal ARN of the container service.
      * </p>
      * <p>
-     * The principal ARN can be used to create a trust relationship between your standard AWS account and your Lightsail
-     * container service. This allows you to give your service permission to access resources in your standard AWS
-     * account.
+     * The principal ARN can be used to create a trust relationship between your standard Amazon Web Services account
+     * and your Lightsail container service. This allows you to give your service permission to access resources in your
+     * standard Amazon Web Services account.
      * </p>
      * 
      * @param principalArn
      *        The principal ARN of the container service.</p>
      *        <p>
-     *        The principal ARN can be used to create a trust relationship between your standard AWS account and your
-     *        Lightsail container service. This allows you to give your service permission to access resources in your
-     *        standard AWS account.
+     *        The principal ARN can be used to create a trust relationship between your standard Amazon Web Services
+     *        account and your Lightsail container service. This allows you to give your service permission to access
+     *        resources in your standard Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

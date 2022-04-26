@@ -102,6 +102,12 @@ public class RuleGroupResponse implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private Integer numberOfAssociations;
+    /**
+     * <p>
+     * A complex type that contains the Amazon Web Services KMS encryption configuration settings for your rule group.
+     * </p>
+     */
+    private EncryptionConfiguration encryptionConfiguration;
 
     /**
      * <p>
@@ -643,6 +649,49 @@ public class RuleGroupResponse implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * A complex type that contains the Amazon Web Services KMS encryption configuration settings for your rule group.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        A complex type that contains the Amazon Web Services KMS encryption configuration settings for your rule
+     *        group.
+     */
+
+    public void setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        this.encryptionConfiguration = encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains the Amazon Web Services KMS encryption configuration settings for your rule group.
+     * </p>
+     * 
+     * @return A complex type that contains the Amazon Web Services KMS encryption configuration settings for your rule
+     *         group.
+     */
+
+    public EncryptionConfiguration getEncryptionConfiguration() {
+        return this.encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains the Amazon Web Services KMS encryption configuration settings for your rule group.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        A complex type that contains the Amazon Web Services KMS encryption configuration settings for your rule
+     *        group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RuleGroupResponse withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        setEncryptionConfiguration(encryptionConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -673,7 +722,9 @@ public class RuleGroupResponse implements Serializable, Cloneable, StructuredPoj
         if (getConsumedCapacity() != null)
             sb.append("ConsumedCapacity: ").append(getConsumedCapacity()).append(",");
         if (getNumberOfAssociations() != null)
-            sb.append("NumberOfAssociations: ").append(getNumberOfAssociations());
+            sb.append("NumberOfAssociations: ").append(getNumberOfAssociations()).append(",");
+        if (getEncryptionConfiguration() != null)
+            sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -728,6 +779,10 @@ public class RuleGroupResponse implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getNumberOfAssociations() != null && other.getNumberOfAssociations().equals(this.getNumberOfAssociations()) == false)
             return false;
+        if (other.getEncryptionConfiguration() == null ^ this.getEncryptionConfiguration() == null)
+            return false;
+        if (other.getEncryptionConfiguration() != null && other.getEncryptionConfiguration().equals(this.getEncryptionConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -746,6 +801,7 @@ public class RuleGroupResponse implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getConsumedCapacity() == null) ? 0 : getConsumedCapacity().hashCode());
         hashCode = prime * hashCode + ((getNumberOfAssociations() == null) ? 0 : getNumberOfAssociations().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
         return hashCode;
     }
 

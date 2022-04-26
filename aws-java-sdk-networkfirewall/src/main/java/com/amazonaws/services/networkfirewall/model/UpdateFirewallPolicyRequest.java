@@ -85,6 +85,12 @@ public class UpdateFirewallPolicyRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private Boolean dryRun;
+    /**
+     * <p>
+     * A complex type that contains settings for encryption of your firewall policy resources.
+     * </p>
+     */
+    private EncryptionConfiguration encryptionConfiguration;
 
     /**
      * <p>
@@ -498,6 +504,46 @@ public class UpdateFirewallPolicyRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * A complex type that contains settings for encryption of your firewall policy resources.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        A complex type that contains settings for encryption of your firewall policy resources.
+     */
+
+    public void setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        this.encryptionConfiguration = encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains settings for encryption of your firewall policy resources.
+     * </p>
+     * 
+     * @return A complex type that contains settings for encryption of your firewall policy resources.
+     */
+
+    public EncryptionConfiguration getEncryptionConfiguration() {
+        return this.encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains settings for encryption of your firewall policy resources.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        A complex type that contains settings for encryption of your firewall policy resources.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateFirewallPolicyRequest withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        setEncryptionConfiguration(encryptionConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -520,7 +566,9 @@ public class UpdateFirewallPolicyRequest extends com.amazonaws.AmazonWebServiceR
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getDryRun() != null)
-            sb.append("DryRun: ").append(getDryRun());
+            sb.append("DryRun: ").append(getDryRun()).append(",");
+        if (getEncryptionConfiguration() != null)
+            sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -559,6 +607,10 @@ public class UpdateFirewallPolicyRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getDryRun() != null && other.getDryRun().equals(this.getDryRun()) == false)
             return false;
+        if (other.getEncryptionConfiguration() == null ^ this.getEncryptionConfiguration() == null)
+            return false;
+        if (other.getEncryptionConfiguration() != null && other.getEncryptionConfiguration().equals(this.getEncryptionConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -573,6 +625,7 @@ public class UpdateFirewallPolicyRequest extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getFirewallPolicy() == null) ? 0 : getFirewallPolicy().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getDryRun() == null) ? 0 : getDryRun().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
         return hashCode;
     }
 

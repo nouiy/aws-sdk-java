@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RegisterContainerImageResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * An object that describes a container image that is registered to a Lightsail container service
+     * </p>
+     */
     private ContainerImage containerImage;
 
     /**
+     * <p>
+     * An object that describes a container image that is registered to a Lightsail container service
+     * </p>
+     * 
      * @param containerImage
+     *        An object that describes a container image that is registered to a Lightsail container service
      */
 
     public void setContainerImage(ContainerImage containerImage) {
@@ -34,7 +44,11 @@ public class RegisterContainerImageResult extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * @return
+     * <p>
+     * An object that describes a container image that is registered to a Lightsail container service
+     * </p>
+     * 
+     * @return An object that describes a container image that is registered to a Lightsail container service
      */
 
     public ContainerImage getContainerImage() {
@@ -42,7 +56,12 @@ public class RegisterContainerImageResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * An object that describes a container image that is registered to a Lightsail container service
+     * </p>
+     * 
      * @param containerImage
+     *        An object that describes a container image that is registered to a Lightsail container service
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

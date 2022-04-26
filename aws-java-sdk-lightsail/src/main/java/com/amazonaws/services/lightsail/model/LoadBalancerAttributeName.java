@@ -22,7 +22,9 @@ public enum LoadBalancerAttributeName {
 
     HealthCheckPath("HealthCheckPath"),
     SessionStickinessEnabled("SessionStickinessEnabled"),
-    SessionStickiness_LB_CookieDurationSeconds("SessionStickiness_LB_CookieDurationSeconds");
+    SessionStickiness_LB_CookieDurationSeconds("SessionStickiness_LB_CookieDurationSeconds"),
+    HttpsRedirectionEnabled("HttpsRedirectionEnabled"),
+    TlsPolicyName("TlsPolicyName");
 
     private String value;
 

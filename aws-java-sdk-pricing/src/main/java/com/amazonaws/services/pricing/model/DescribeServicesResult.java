@@ -37,7 +37,7 @@ public class DescribeServicesResult extends com.amazonaws.AmazonWebServiceResult
     private String formatVersion;
     /**
      * <p>
-     * The pagination token for the next set of retreivable results.
+     * The pagination token for the next set of retrievable results.
      * </p>
      */
     private String nextToken;
@@ -154,11 +154,11 @@ public class DescribeServicesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The pagination token for the next set of retreivable results.
+     * The pagination token for the next set of retrievable results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token for the next set of retreivable results.
+     *        The pagination token for the next set of retrievable results.
      */
 
     public void setNextToken(String nextToken) {
@@ -167,10 +167,10 @@ public class DescribeServicesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The pagination token for the next set of retreivable results.
+     * The pagination token for the next set of retrievable results.
      * </p>
      * 
-     * @return The pagination token for the next set of retreivable results.
+     * @return The pagination token for the next set of retrievable results.
      */
 
     public String getNextToken() {
@@ -179,11 +179,11 @@ public class DescribeServicesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The pagination token for the next set of retreivable results.
+     * The pagination token for the next set of retrievable results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token for the next set of retreivable results.
+     *        The pagination token for the next set of retrievable results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

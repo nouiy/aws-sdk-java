@@ -90,7 +90,12 @@ public class ContactMethod implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date createdAt;
-
+    /**
+     * <p>
+     * An object that describes the location of the contact method, such as the Amazon Web Services Region and
+     * Availability Zone.
+     * </p>
+     */
     private ResourceLocation location;
     /**
      * <p>
@@ -550,7 +555,14 @@ public class ContactMethod implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * An object that describes the location of the contact method, such as the Amazon Web Services Region and
+     * Availability Zone.
+     * </p>
+     * 
      * @param location
+     *        An object that describes the location of the contact method, such as the Amazon Web Services Region and
+     *        Availability Zone.
      */
 
     public void setLocation(ResourceLocation location) {
@@ -558,7 +570,13 @@ public class ContactMethod implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * An object that describes the location of the contact method, such as the Amazon Web Services Region and
+     * Availability Zone.
+     * </p>
+     * 
+     * @return An object that describes the location of the contact method, such as the Amazon Web Services Region and
+     *         Availability Zone.
      */
 
     public ResourceLocation getLocation() {
@@ -566,7 +584,14 @@ public class ContactMethod implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * An object that describes the location of the contact method, such as the Amazon Web Services Region and
+     * Availability Zone.
+     * </p>
+     * 
      * @param location
+     *        An object that describes the location of the contact method, such as the Amazon Web Services Region and
+     *        Availability Zone.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

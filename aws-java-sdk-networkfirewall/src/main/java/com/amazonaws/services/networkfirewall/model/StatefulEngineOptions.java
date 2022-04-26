@@ -34,7 +34,7 @@ public class StatefulEngineOptions implements Serializable, Cloneable, Structure
      * is the default behavior. Stateful rules are provided to the rule engine as Suricata compatible strings, and
      * Suricata evaluates them based on certain settings. For more information, see <a
      * href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html"
-     * >Evaluation order for stateful rules</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     * >Evaluation order for stateful rules</a> in the <i>Network Firewall Developer Guide</i>.
      * </p>
      */
     private String ruleOrder;
@@ -45,7 +45,7 @@ public class StatefulEngineOptions implements Serializable, Cloneable, Structure
      * is the default behavior. Stateful rules are provided to the rule engine as Suricata compatible strings, and
      * Suricata evaluates them based on certain settings. For more information, see <a
      * href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html"
-     * >Evaluation order for stateful rules</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     * >Evaluation order for stateful rules</a> in the <i>Network Firewall Developer Guide</i>.
      * </p>
      * 
      * @param ruleOrder
@@ -54,7 +54,7 @@ public class StatefulEngineOptions implements Serializable, Cloneable, Structure
      *        as Suricata compatible strings, and Suricata evaluates them based on certain settings. For more
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html"
-     *        >Evaluation order for stateful rules</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     *        >Evaluation order for stateful rules</a> in the <i>Network Firewall Developer Guide</i>.
      * @see RuleOrder
      */
 
@@ -68,7 +68,7 @@ public class StatefulEngineOptions implements Serializable, Cloneable, Structure
      * is the default behavior. Stateful rules are provided to the rule engine as Suricata compatible strings, and
      * Suricata evaluates them based on certain settings. For more information, see <a
      * href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html"
-     * >Evaluation order for stateful rules</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     * >Evaluation order for stateful rules</a> in the <i>Network Firewall Developer Guide</i>.
      * </p>
      * 
      * @return Indicates how to manage the order of stateful rule evaluation for the policy.
@@ -76,7 +76,7 @@ public class StatefulEngineOptions implements Serializable, Cloneable, Structure
      *         as Suricata compatible strings, and Suricata evaluates them based on certain settings. For more
      *         information, see <a href=
      *         "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html"
-     *         >Evaluation order for stateful rules</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     *         >Evaluation order for stateful rules</a> in the <i>Network Firewall Developer Guide</i>.
      * @see RuleOrder
      */
 
@@ -90,7 +90,7 @@ public class StatefulEngineOptions implements Serializable, Cloneable, Structure
      * is the default behavior. Stateful rules are provided to the rule engine as Suricata compatible strings, and
      * Suricata evaluates them based on certain settings. For more information, see <a
      * href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html"
-     * >Evaluation order for stateful rules</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     * >Evaluation order for stateful rules</a> in the <i>Network Firewall Developer Guide</i>.
      * </p>
      * 
      * @param ruleOrder
@@ -99,7 +99,7 @@ public class StatefulEngineOptions implements Serializable, Cloneable, Structure
      *        as Suricata compatible strings, and Suricata evaluates them based on certain settings. For more
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html"
-     *        >Evaluation order for stateful rules</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     *        >Evaluation order for stateful rules</a> in the <i>Network Firewall Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RuleOrder
      */
@@ -115,7 +115,7 @@ public class StatefulEngineOptions implements Serializable, Cloneable, Structure
      * is the default behavior. Stateful rules are provided to the rule engine as Suricata compatible strings, and
      * Suricata evaluates them based on certain settings. For more information, see <a
      * href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html"
-     * >Evaluation order for stateful rules</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     * >Evaluation order for stateful rules</a> in the <i>Network Firewall Developer Guide</i>.
      * </p>
      * 
      * @param ruleOrder
@@ -124,7 +124,7 @@ public class StatefulEngineOptions implements Serializable, Cloneable, Structure
      *        as Suricata compatible strings, and Suricata evaluates them based on certain settings. For more
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html"
-     *        >Evaluation order for stateful rules</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     *        >Evaluation order for stateful rules</a> in the <i>Network Firewall Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RuleOrder
      */

@@ -96,6 +96,10 @@ public class FirewallJsonUnmarshaller implements Unmarshaller<Firewall, JsonUnma
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("EncryptionConfiguration", targetDepth)) {
+                    context.nextToken();
+                    firewall.setEncryptionConfiguration(EncryptionConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

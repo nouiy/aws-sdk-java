@@ -90,6 +90,13 @@ public class FirewallPolicyResponse implements Serializable, Cloneable, Structur
      * </p>
      */
     private Integer numberOfAssociations;
+    /**
+     * <p>
+     * A complex type that contains the Amazon Web Services KMS encryption configuration settings for your firewall
+     * policy.
+     * </p>
+     */
+    private EncryptionConfiguration encryptionConfiguration;
 
     /**
      * <p>
@@ -542,6 +549,52 @@ public class FirewallPolicyResponse implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * A complex type that contains the Amazon Web Services KMS encryption configuration settings for your firewall
+     * policy.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        A complex type that contains the Amazon Web Services KMS encryption configuration settings for your
+     *        firewall policy.
+     */
+
+    public void setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        this.encryptionConfiguration = encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains the Amazon Web Services KMS encryption configuration settings for your firewall
+     * policy.
+     * </p>
+     * 
+     * @return A complex type that contains the Amazon Web Services KMS encryption configuration settings for your
+     *         firewall policy.
+     */
+
+    public EncryptionConfiguration getEncryptionConfiguration() {
+        return this.encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains the Amazon Web Services KMS encryption configuration settings for your firewall
+     * policy.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        A complex type that contains the Amazon Web Services KMS encryption configuration settings for your
+     *        firewall policy.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FirewallPolicyResponse withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        setEncryptionConfiguration(encryptionConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -570,7 +623,9 @@ public class FirewallPolicyResponse implements Serializable, Cloneable, Structur
         if (getConsumedStatefulRuleCapacity() != null)
             sb.append("ConsumedStatefulRuleCapacity: ").append(getConsumedStatefulRuleCapacity()).append(",");
         if (getNumberOfAssociations() != null)
-            sb.append("NumberOfAssociations: ").append(getNumberOfAssociations());
+            sb.append("NumberOfAssociations: ").append(getNumberOfAssociations()).append(",");
+        if (getEncryptionConfiguration() != null)
+            sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -622,6 +677,10 @@ public class FirewallPolicyResponse implements Serializable, Cloneable, Structur
             return false;
         if (other.getNumberOfAssociations() != null && other.getNumberOfAssociations().equals(this.getNumberOfAssociations()) == false)
             return false;
+        if (other.getEncryptionConfiguration() == null ^ this.getEncryptionConfiguration() == null)
+            return false;
+        if (other.getEncryptionConfiguration() != null && other.getEncryptionConfiguration().equals(this.getEncryptionConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -639,6 +698,7 @@ public class FirewallPolicyResponse implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getConsumedStatelessRuleCapacity() == null) ? 0 : getConsumedStatelessRuleCapacity().hashCode());
         hashCode = prime * hashCode + ((getConsumedStatefulRuleCapacity() == null) ? 0 : getConsumedStatefulRuleCapacity().hashCode());
         hashCode = prime * hashCode + ((getNumberOfAssociations() == null) ? 0 : getNumberOfAssociations().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
         return hashCode;
     }
 

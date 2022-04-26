@@ -55,12 +55,13 @@ public class LightsailDistribution implements Serializable, Cloneable, Structure
     private java.util.Date createdAt;
     /**
      * <p>
-     * An object that describes the location of the distribution, such as the AWS Region and Availability Zone.
+     * An object that describes the location of the distribution, such as the Amazon Web Services Region and
+     * Availability Zone.
      * </p>
      * <note>
      * <p>
-     * Lightsail distributions are global resources that can reference an origin in any AWS Region, and distribute its
-     * content globally. However, all distributions are located in the <code>us-east-1</code> Region.
+     * Lightsail distributions are global resources that can reference an origin in any Amazon Web Services Region, and
+     * distribute its content globally. However, all distributions are located in the <code>us-east-1</code> Region.
      * </p>
      * </note>
      */
@@ -337,22 +338,23 @@ public class LightsailDistribution implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An object that describes the location of the distribution, such as the AWS Region and Availability Zone.
+     * An object that describes the location of the distribution, such as the Amazon Web Services Region and
+     * Availability Zone.
      * </p>
      * <note>
      * <p>
-     * Lightsail distributions are global resources that can reference an origin in any AWS Region, and distribute its
-     * content globally. However, all distributions are located in the <code>us-east-1</code> Region.
+     * Lightsail distributions are global resources that can reference an origin in any Amazon Web Services Region, and
+     * distribute its content globally. However, all distributions are located in the <code>us-east-1</code> Region.
      * </p>
      * </note>
      * 
      * @param location
-     *        An object that describes the location of the distribution, such as the AWS Region and Availability
-     *        Zone.</p> <note>
+     *        An object that describes the location of the distribution, such as the Amazon Web Services Region and
+     *        Availability Zone.</p> <note>
      *        <p>
-     *        Lightsail distributions are global resources that can reference an origin in any AWS Region, and
-     *        distribute its content globally. However, all distributions are located in the <code>us-east-1</code>
-     *        Region.
+     *        Lightsail distributions are global resources that can reference an origin in any Amazon Web Services
+     *        Region, and distribute its content globally. However, all distributions are located in the
+     *        <code>us-east-1</code> Region.
      *        </p>
      */
 
@@ -362,21 +364,22 @@ public class LightsailDistribution implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An object that describes the location of the distribution, such as the AWS Region and Availability Zone.
+     * An object that describes the location of the distribution, such as the Amazon Web Services Region and
+     * Availability Zone.
      * </p>
      * <note>
      * <p>
-     * Lightsail distributions are global resources that can reference an origin in any AWS Region, and distribute its
-     * content globally. However, all distributions are located in the <code>us-east-1</code> Region.
+     * Lightsail distributions are global resources that can reference an origin in any Amazon Web Services Region, and
+     * distribute its content globally. However, all distributions are located in the <code>us-east-1</code> Region.
      * </p>
      * </note>
      * 
-     * @return An object that describes the location of the distribution, such as the AWS Region and Availability
-     *         Zone.</p> <note>
+     * @return An object that describes the location of the distribution, such as the Amazon Web Services Region and
+     *         Availability Zone.</p> <note>
      *         <p>
-     *         Lightsail distributions are global resources that can reference an origin in any AWS Region, and
-     *         distribute its content globally. However, all distributions are located in the <code>us-east-1</code>
-     *         Region.
+     *         Lightsail distributions are global resources that can reference an origin in any Amazon Web Services
+     *         Region, and distribute its content globally. However, all distributions are located in the
+     *         <code>us-east-1</code> Region.
      *         </p>
      */
 
@@ -386,22 +389,23 @@ public class LightsailDistribution implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An object that describes the location of the distribution, such as the AWS Region and Availability Zone.
+     * An object that describes the location of the distribution, such as the Amazon Web Services Region and
+     * Availability Zone.
      * </p>
      * <note>
      * <p>
-     * Lightsail distributions are global resources that can reference an origin in any AWS Region, and distribute its
-     * content globally. However, all distributions are located in the <code>us-east-1</code> Region.
+     * Lightsail distributions are global resources that can reference an origin in any Amazon Web Services Region, and
+     * distribute its content globally. However, all distributions are located in the <code>us-east-1</code> Region.
      * </p>
      * </note>
      * 
      * @param location
-     *        An object that describes the location of the distribution, such as the AWS Region and Availability
-     *        Zone.</p> <note>
+     *        An object that describes the location of the distribution, such as the Amazon Web Services Region and
+     *        Availability Zone.</p> <note>
      *        <p>
-     *        Lightsail distributions are global resources that can reference an origin in any AWS Region, and
-     *        distribute its content globally. However, all distributions are located in the <code>us-east-1</code>
-     *        Region.
+     *        Lightsail distributions are global resources that can reference an origin in any Amazon Web Services
+     *        Region, and distribute its content globally. However, all distributions are located in the
+     *        <code>us-east-1</code> Region.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

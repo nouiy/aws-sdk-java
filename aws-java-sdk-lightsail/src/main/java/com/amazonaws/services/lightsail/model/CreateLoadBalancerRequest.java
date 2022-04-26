@@ -97,6 +97,22 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private String ipAddressType;
+    /**
+     * <p>
+     * The name of the TLS policy to apply to the load balancer.
+     * </p>
+     * <p>
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetLoadBalancerTlsPolicies.html"
+     * >GetLoadBalancerTlsPolicies</a> action to get a list of TLS policy names that you can specify.
+     * </p>
+     * <p>
+     * For more information about load balancer TLS policies, see <a href=
+     * "https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-configure-load-balancer-tls-security-policy"
+     * >Load balancer TLS security policies</a> in the <i>Amazon Lightsail Developer Guide</i>.
+     * </p>
+     */
+    private String tlsPolicyName;
 
     /**
      * <p>
@@ -647,6 +663,103 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * The name of the TLS policy to apply to the load balancer.
+     * </p>
+     * <p>
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetLoadBalancerTlsPolicies.html"
+     * >GetLoadBalancerTlsPolicies</a> action to get a list of TLS policy names that you can specify.
+     * </p>
+     * <p>
+     * For more information about load balancer TLS policies, see <a href=
+     * "https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-configure-load-balancer-tls-security-policy"
+     * >Load balancer TLS security policies</a> in the <i>Amazon Lightsail Developer Guide</i>.
+     * </p>
+     * 
+     * @param tlsPolicyName
+     *        The name of the TLS policy to apply to the load balancer.</p>
+     *        <p>
+     *        Use the <a href=
+     *        "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetLoadBalancerTlsPolicies.html"
+     *        >GetLoadBalancerTlsPolicies</a> action to get a list of TLS policy names that you can specify.
+     *        </p>
+     *        <p>
+     *        For more information about load balancer TLS policies, see <a href=
+     *        "https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-configure-load-balancer-tls-security-policy"
+     *        >Load balancer TLS security policies</a> in the <i>Amazon Lightsail Developer Guide</i>.
+     */
+
+    public void setTlsPolicyName(String tlsPolicyName) {
+        this.tlsPolicyName = tlsPolicyName;
+    }
+
+    /**
+     * <p>
+     * The name of the TLS policy to apply to the load balancer.
+     * </p>
+     * <p>
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetLoadBalancerTlsPolicies.html"
+     * >GetLoadBalancerTlsPolicies</a> action to get a list of TLS policy names that you can specify.
+     * </p>
+     * <p>
+     * For more information about load balancer TLS policies, see <a href=
+     * "https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-configure-load-balancer-tls-security-policy"
+     * >Load balancer TLS security policies</a> in the <i>Amazon Lightsail Developer Guide</i>.
+     * </p>
+     * 
+     * @return The name of the TLS policy to apply to the load balancer.</p>
+     *         <p>
+     *         Use the <a href=
+     *         "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetLoadBalancerTlsPolicies.html"
+     *         >GetLoadBalancerTlsPolicies</a> action to get a list of TLS policy names that you can specify.
+     *         </p>
+     *         <p>
+     *         For more information about load balancer TLS policies, see <a href=
+     *         "https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-configure-load-balancer-tls-security-policy"
+     *         >Load balancer TLS security policies</a> in the <i>Amazon Lightsail Developer Guide</i>.
+     */
+
+    public String getTlsPolicyName() {
+        return this.tlsPolicyName;
+    }
+
+    /**
+     * <p>
+     * The name of the TLS policy to apply to the load balancer.
+     * </p>
+     * <p>
+     * Use the <a
+     * href="https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetLoadBalancerTlsPolicies.html"
+     * >GetLoadBalancerTlsPolicies</a> action to get a list of TLS policy names that you can specify.
+     * </p>
+     * <p>
+     * For more information about load balancer TLS policies, see <a href=
+     * "https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-configure-load-balancer-tls-security-policy"
+     * >Load balancer TLS security policies</a> in the <i>Amazon Lightsail Developer Guide</i>.
+     * </p>
+     * 
+     * @param tlsPolicyName
+     *        The name of the TLS policy to apply to the load balancer.</p>
+     *        <p>
+     *        Use the <a href=
+     *        "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_GetLoadBalancerTlsPolicies.html"
+     *        >GetLoadBalancerTlsPolicies</a> action to get a list of TLS policy names that you can specify.
+     *        </p>
+     *        <p>
+     *        For more information about load balancer TLS policies, see <a href=
+     *        "https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-configure-load-balancer-tls-security-policy"
+     *        >Load balancer TLS security policies</a> in the <i>Amazon Lightsail Developer Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateLoadBalancerRequest withTlsPolicyName(String tlsPolicyName) {
+        setTlsPolicyName(tlsPolicyName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -673,7 +786,9 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getIpAddressType() != null)
-            sb.append("IpAddressType: ").append(getIpAddressType());
+            sb.append("IpAddressType: ").append(getIpAddressType()).append(",");
+        if (getTlsPolicyName() != null)
+            sb.append("TlsPolicyName: ").append(getTlsPolicyName());
         sb.append("}");
         return sb.toString();
     }
@@ -720,6 +835,10 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getIpAddressType() != null && other.getIpAddressType().equals(this.getIpAddressType()) == false)
             return false;
+        if (other.getTlsPolicyName() == null ^ this.getTlsPolicyName() == null)
+            return false;
+        if (other.getTlsPolicyName() != null && other.getTlsPolicyName().equals(this.getTlsPolicyName()) == false)
+            return false;
         return true;
     }
 
@@ -736,6 +855,7 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getCertificateAlternativeNames() == null) ? 0 : getCertificateAlternativeNames().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getIpAddressType() == null) ? 0 : getIpAddressType().hashCode());
+        hashCode = prime * hashCode + ((getTlsPolicyName() == null) ? 0 : getTlsPolicyName().hashCode());
         return hashCode;
     }
 

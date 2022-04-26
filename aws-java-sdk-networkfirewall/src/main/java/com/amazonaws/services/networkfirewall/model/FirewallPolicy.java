@@ -123,8 +123,8 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * <p>
      * For more information, see <a href=
-     * "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-strict-rule-evaluation-order.html"
-     * >Strict evaluation order</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     * "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html#suricata-strict-rule-evaluation-order.html"
+     * >Strict evaluation order</a> in the <i>Network Firewall Developer Guide</i>.
      * </p>
      */
     private java.util.List<String> statefulDefaultActions;
@@ -738,8 +738,8 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * <p>
      * For more information, see <a href=
-     * "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-strict-rule-evaluation-order.html"
-     * >Strict evaluation order</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     * "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html#suricata-strict-rule-evaluation-order.html"
+     * >Strict evaluation order</a> in the <i>Network Firewall Developer Guide</i>.
      * </p>
      * 
      * @return The default actions to take on a packet that doesn't match any stateful rules. The stateful default
@@ -771,8 +771,8 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
      *         </ul>
      *         <p>
      *         For more information, see <a href=
-     *         "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-strict-rule-evaluation-order.html"
-     *         >Strict evaluation order</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     *         "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html#suricata-strict-rule-evaluation-order.html"
+     *         >Strict evaluation order</a> in the <i>Network Firewall Developer Guide</i>.
      */
 
     public java.util.List<String> getStatefulDefaultActions() {
@@ -811,8 +811,8 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * <p>
      * For more information, see <a href=
-     * "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-strict-rule-evaluation-order.html"
-     * >Strict evaluation order</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     * "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html#suricata-strict-rule-evaluation-order.html"
+     * >Strict evaluation order</a> in the <i>Network Firewall Developer Guide</i>.
      * </p>
      * 
      * @param statefulDefaultActions
@@ -845,8 +845,8 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
      *        </ul>
      *        <p>
      *        For more information, see <a href=
-     *        "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-strict-rule-evaluation-order.html"
-     *        >Strict evaluation order</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     *        "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html#suricata-strict-rule-evaluation-order.html"
+     *        >Strict evaluation order</a> in the <i>Network Firewall Developer Guide</i>.
      */
 
     public void setStatefulDefaultActions(java.util.Collection<String> statefulDefaultActions) {
@@ -890,8 +890,8 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * <p>
      * For more information, see <a href=
-     * "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-strict-rule-evaluation-order.html"
-     * >Strict evaluation order</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     * "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html#suricata-strict-rule-evaluation-order.html"
+     * >Strict evaluation order</a> in the <i>Network Firewall Developer Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -929,8 +929,8 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
      *        </ul>
      *        <p>
      *        For more information, see <a href=
-     *        "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-strict-rule-evaluation-order.html"
-     *        >Strict evaluation order</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     *        "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html#suricata-strict-rule-evaluation-order.html"
+     *        >Strict evaluation order</a> in the <i>Network Firewall Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -976,8 +976,8 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * <p>
      * For more information, see <a href=
-     * "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-strict-rule-evaluation-order.html"
-     * >Strict evaluation order</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     * "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html#suricata-strict-rule-evaluation-order.html"
+     * >Strict evaluation order</a> in the <i>Network Firewall Developer Guide</i>.
      * </p>
      * 
      * @param statefulDefaultActions
@@ -1010,8 +1010,8 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
      *        </ul>
      *        <p>
      *        For more information, see <a href=
-     *        "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-strict-rule-evaluation-order.html"
-     *        >Strict evaluation order</a> in the <i>AWS Network Firewall Developer Guide</i>.
+     *        "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html#suricata-strict-rule-evaluation-order.html"
+     *        >Strict evaluation order</a> in the <i>Network Firewall Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

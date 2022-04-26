@@ -204,6 +204,10 @@ public interface AWSGlue {
     BatchGetCrawlersResult batchGetCrawlers(BatchGetCrawlersRequest batchGetCrawlersRequest);
 
     /**
+     * <p>
+     * Retrieves the details for the custom patterns specified by a list of names.
+     * </p>
+     * 
      * @param batchGetCustomEntityTypesRequest
      * @return Result of the BatchGetCustomEntityTypes operation returned by the service.
      * @throws InvalidInputException
@@ -532,6 +536,15 @@ public interface AWSGlue {
     CreateCrawlerResult createCrawler(CreateCrawlerRequest createCrawlerRequest);
 
     /**
+     * <p>
+     * Creates a custom pattern that is used to detect sensitive data across the columns and rows of your structured
+     * data.
+     * </p>
+     * <p>
+     * Each custom pattern you create specifies a regular expression and an optional list of context words. If no
+     * context words are passed only a regular expression is checked.
+     * </p>
+     * 
      * @param createCustomEntityTypeRequest
      * @return Result of the CreateCustomEntityType operation returned by the service.
      * @throws AccessDeniedException
@@ -1109,6 +1122,10 @@ public interface AWSGlue {
     DeleteCrawlerResult deleteCrawler(DeleteCrawlerRequest deleteCrawlerRequest);
 
     /**
+     * <p>
+     * Deletes a custom pattern by specifying its name.
+     * </p>
+     * 
      * @param deleteCustomEntityTypeRequest
      * @return Result of the DeleteCustomEntityType operation returned by the service.
      * @throws EntityNotFoundException
@@ -1802,6 +1819,10 @@ public interface AWSGlue {
     GetCrawlersResult getCrawlers(GetCrawlersRequest getCrawlersRequest);
 
     /**
+     * <p>
+     * Retrieves the details of a custom pattern by specifying its name.
+     * </p>
+     * 
      * @param getCustomEntityTypeRequest
      * @return Result of the GetCustomEntityType operation returned by the service.
      * @throws EntityNotFoundException
@@ -2932,6 +2953,10 @@ public interface AWSGlue {
     ListCrawlersResult listCrawlers(ListCrawlersRequest listCrawlersRequest);
 
     /**
+     * <p>
+     * Lists all the custom patterns that have been created.
+     * </p>
+     * 
      * @param listCustomEntityTypesRequest
      * @return Result of the ListCustomEntityTypes operation returned by the service.
      * @throws InvalidInputException

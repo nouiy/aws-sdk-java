@@ -48,6 +48,8 @@ public class RuleGroupResponseMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConsumedCapacity").build();
     private static final MarshallingInfo<Integer> NUMBEROFASSOCIATIONS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NumberOfAssociations").build();
+    private static final MarshallingInfo<StructuredPojo> ENCRYPTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionConfiguration").build();
 
     private static final RuleGroupResponseMarshaller instance = new RuleGroupResponseMarshaller();
 
@@ -75,6 +77,7 @@ public class RuleGroupResponseMarshaller {
             protocolMarshaller.marshall(ruleGroupResponse.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(ruleGroupResponse.getConsumedCapacity(), CONSUMEDCAPACITY_BINDING);
             protocolMarshaller.marshall(ruleGroupResponse.getNumberOfAssociations(), NUMBEROFASSOCIATIONS_BINDING);
+            protocolMarshaller.marshall(ruleGroupResponse.getEncryptionConfiguration(), ENCRYPTIONCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -147,7 +147,12 @@ public class Crawler implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String crawlerSecurityConfiguration;
-
+    /**
+     * <p>
+     * Specifies whether the crawler should use AWS Lake Formation credentials for the crawler instead of the IAM role
+     * credentials.
+     * </p>
+     */
     private LakeFormationConfiguration lakeFormationConfiguration;
 
     /**
@@ -990,7 +995,14 @@ public class Crawler implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Specifies whether the crawler should use AWS Lake Formation credentials for the crawler instead of the IAM role
+     * credentials.
+     * </p>
+     * 
      * @param lakeFormationConfiguration
+     *        Specifies whether the crawler should use AWS Lake Formation credentials for the crawler instead of the IAM
+     *        role credentials.
      */
 
     public void setLakeFormationConfiguration(LakeFormationConfiguration lakeFormationConfiguration) {
@@ -998,7 +1010,13 @@ public class Crawler implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies whether the crawler should use AWS Lake Formation credentials for the crawler instead of the IAM role
+     * credentials.
+     * </p>
+     * 
+     * @return Specifies whether the crawler should use AWS Lake Formation credentials for the crawler instead of the
+     *         IAM role credentials.
      */
 
     public LakeFormationConfiguration getLakeFormationConfiguration() {
@@ -1006,7 +1024,14 @@ public class Crawler implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Specifies whether the crawler should use AWS Lake Formation credentials for the crawler instead of the IAM role
+     * credentials.
+     * </p>
+     * 
      * @param lakeFormationConfiguration
+     *        Specifies whether the crawler should use AWS Lake Formation credentials for the crawler instead of the IAM
+     *        role credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

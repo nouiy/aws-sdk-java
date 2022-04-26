@@ -153,6 +153,11 @@ public class AbstractAWSNetworkFirewall implements AWSNetworkFirewall {
     }
 
     @Override
+    public UpdateFirewallEncryptionConfigurationResult updateFirewallEncryptionConfiguration(UpdateFirewallEncryptionConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateFirewallPolicyResult updateFirewallPolicy(UpdateFirewallPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

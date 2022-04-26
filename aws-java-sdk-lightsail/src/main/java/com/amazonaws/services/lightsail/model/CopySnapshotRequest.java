@@ -123,7 +123,7 @@ public class CopySnapshotRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String targetSnapshotName;
     /**
      * <p>
-     * The AWS Region where the source manual or automatic snapshot is located.
+     * The Amazon Web Services Region where the source manual or automatic snapshot is located.
      * </p>
      */
     private String sourceRegion;
@@ -777,11 +777,11 @@ public class CopySnapshotRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The AWS Region where the source manual or automatic snapshot is located.
+     * The Amazon Web Services Region where the source manual or automatic snapshot is located.
      * </p>
      * 
      * @param sourceRegion
-     *        The AWS Region where the source manual or automatic snapshot is located.
+     *        The Amazon Web Services Region where the source manual or automatic snapshot is located.
      * @see RegionName
      */
 
@@ -791,10 +791,10 @@ public class CopySnapshotRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The AWS Region where the source manual or automatic snapshot is located.
+     * The Amazon Web Services Region where the source manual or automatic snapshot is located.
      * </p>
      * 
-     * @return The AWS Region where the source manual or automatic snapshot is located.
+     * @return The Amazon Web Services Region where the source manual or automatic snapshot is located.
      * @see RegionName
      */
 
@@ -804,11 +804,11 @@ public class CopySnapshotRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The AWS Region where the source manual or automatic snapshot is located.
+     * The Amazon Web Services Region where the source manual or automatic snapshot is located.
      * </p>
      * 
      * @param sourceRegion
-     *        The AWS Region where the source manual or automatic snapshot is located.
+     *        The Amazon Web Services Region where the source manual or automatic snapshot is located.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RegionName
      */
@@ -820,11 +820,11 @@ public class CopySnapshotRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The AWS Region where the source manual or automatic snapshot is located.
+     * The Amazon Web Services Region where the source manual or automatic snapshot is located.
      * </p>
      * 
      * @param sourceRegion
-     *        The AWS Region where the source manual or automatic snapshot is located.
+     *        The Amazon Web Services Region where the source manual or automatic snapshot is located.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RegionName
      */

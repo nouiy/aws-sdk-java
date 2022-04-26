@@ -279,6 +279,10 @@ public interface AWSGlueAsync extends AWSGlue {
             com.amazonaws.handlers.AsyncHandler<BatchGetCrawlersRequest, BatchGetCrawlersResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the details for the custom patterns specified by a list of names.
+     * </p>
+     * 
      * @param batchGetCustomEntityTypesRequest
      * @return A Java Future containing the result of the BatchGetCustomEntityTypes operation returned by the service.
      * @sample AWSGlueAsync.BatchGetCustomEntityTypes
@@ -289,6 +293,10 @@ public interface AWSGlueAsync extends AWSGlue {
             BatchGetCustomEntityTypesRequest batchGetCustomEntityTypesRequest);
 
     /**
+     * <p>
+     * Retrieves the details for the custom patterns specified by a list of names.
+     * </p>
+     * 
      * @param batchGetCustomEntityTypesRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -774,6 +782,15 @@ public interface AWSGlueAsync extends AWSGlue {
             com.amazonaws.handlers.AsyncHandler<CreateCrawlerRequest, CreateCrawlerResult> asyncHandler);
 
     /**
+     * <p>
+     * Creates a custom pattern that is used to detect sensitive data across the columns and rows of your structured
+     * data.
+     * </p>
+     * <p>
+     * Each custom pattern you create specifies a regular expression and an optional list of context words. If no
+     * context words are passed only a regular expression is checked.
+     * </p>
+     * 
      * @param createCustomEntityTypeRequest
      * @return A Java Future containing the result of the CreateCustomEntityType operation returned by the service.
      * @sample AWSGlueAsync.CreateCustomEntityType
@@ -783,6 +800,15 @@ public interface AWSGlueAsync extends AWSGlue {
     java.util.concurrent.Future<CreateCustomEntityTypeResult> createCustomEntityTypeAsync(CreateCustomEntityTypeRequest createCustomEntityTypeRequest);
 
     /**
+     * <p>
+     * Creates a custom pattern that is used to detect sensitive data across the columns and rows of your structured
+     * data.
+     * </p>
+     * <p>
+     * Each custom pattern you create specifies a regular expression and an optional list of context words. If no
+     * context words are passed only a regular expression is checked.
+     * </p>
+     * 
      * @param createCustomEntityTypeRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1528,6 +1554,10 @@ public interface AWSGlueAsync extends AWSGlue {
             com.amazonaws.handlers.AsyncHandler<DeleteCrawlerRequest, DeleteCrawlerResult> asyncHandler);
 
     /**
+     * <p>
+     * Deletes a custom pattern by specifying its name.
+     * </p>
+     * 
      * @param deleteCustomEntityTypeRequest
      * @return A Java Future containing the result of the DeleteCustomEntityType operation returned by the service.
      * @sample AWSGlueAsync.DeleteCustomEntityType
@@ -1537,6 +1567,10 @@ public interface AWSGlueAsync extends AWSGlue {
     java.util.concurrent.Future<DeleteCustomEntityTypeResult> deleteCustomEntityTypeAsync(DeleteCustomEntityTypeRequest deleteCustomEntityTypeRequest);
 
     /**
+     * <p>
+     * Deletes a custom pattern by specifying its name.
+     * </p>
+     * 
      * @param deleteCustomEntityTypeRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -2607,6 +2641,10 @@ public interface AWSGlueAsync extends AWSGlue {
             com.amazonaws.handlers.AsyncHandler<GetCrawlersRequest, GetCrawlersResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the details of a custom pattern by specifying its name.
+     * </p>
+     * 
      * @param getCustomEntityTypeRequest
      * @return A Java Future containing the result of the GetCustomEntityType operation returned by the service.
      * @sample AWSGlueAsync.GetCustomEntityType
@@ -2616,6 +2654,10 @@ public interface AWSGlueAsync extends AWSGlue {
     java.util.concurrent.Future<GetCustomEntityTypeResult> getCustomEntityTypeAsync(GetCustomEntityTypeRequest getCustomEntityTypeRequest);
 
     /**
+     * <p>
+     * Retrieves the details of a custom pattern by specifying its name.
+     * </p>
+     * 
      * @param getCustomEntityTypeRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -4268,6 +4310,10 @@ public interface AWSGlueAsync extends AWSGlue {
             com.amazonaws.handlers.AsyncHandler<ListCrawlersRequest, ListCrawlersResult> asyncHandler);
 
     /**
+     * <p>
+     * Lists all the custom patterns that have been created.
+     * </p>
+     * 
      * @param listCustomEntityTypesRequest
      * @return A Java Future containing the result of the ListCustomEntityTypes operation returned by the service.
      * @sample AWSGlueAsync.ListCustomEntityTypes
@@ -4277,6 +4323,10 @@ public interface AWSGlueAsync extends AWSGlue {
     java.util.concurrent.Future<ListCustomEntityTypesResult> listCustomEntityTypesAsync(ListCustomEntityTypesRequest listCustomEntityTypesRequest);
 
     /**
+     * <p>
+     * Lists all the custom patterns that have been created.
+     * </p>
+     * 
      * @param listCustomEntityTypesRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an

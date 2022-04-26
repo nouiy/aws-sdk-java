@@ -43,7 +43,7 @@ public class CreateContainerServiceRequest extends com.amazonaws.AmazonWebServic
      * <ul>
      * <li>
      * <p>
-     * Must be unique within each AWS Region in your Lightsail account.
+     * Must be unique within each Amazon Web Services Region in your Lightsail account.
      * </p>
      * </li>
      * <li>
@@ -161,7 +161,7 @@ public class CreateContainerServiceRequest extends com.amazonaws.AmazonWebServic
      * <ul>
      * <li>
      * <p>
-     * Must be unique within each AWS Region in your Lightsail account.
+     * Must be unique within each Amazon Web Services Region in your Lightsail account.
      * </p>
      * </li>
      * <li>
@@ -197,7 +197,7 @@ public class CreateContainerServiceRequest extends com.amazonaws.AmazonWebServic
      *        <ul>
      *        <li>
      *        <p>
-     *        Must be unique within each AWS Region in your Lightsail account.
+     *        Must be unique within each Amazon Web Services Region in your Lightsail account.
      *        </p>
      *        </li>
      *        <li>
@@ -239,7 +239,7 @@ public class CreateContainerServiceRequest extends com.amazonaws.AmazonWebServic
      * <ul>
      * <li>
      * <p>
-     * Must be unique within each AWS Region in your Lightsail account.
+     * Must be unique within each Amazon Web Services Region in your Lightsail account.
      * </p>
      * </li>
      * <li>
@@ -275,7 +275,7 @@ public class CreateContainerServiceRequest extends com.amazonaws.AmazonWebServic
      *         <ul>
      *         <li>
      *         <p>
-     *         Must be unique within each AWS Region in your Lightsail account.
+     *         Must be unique within each Amazon Web Services Region in your Lightsail account.
      *         </p>
      *         </li>
      *         <li>
@@ -317,7 +317,7 @@ public class CreateContainerServiceRequest extends com.amazonaws.AmazonWebServic
      * <ul>
      * <li>
      * <p>
-     * Must be unique within each AWS Region in your Lightsail account.
+     * Must be unique within each Amazon Web Services Region in your Lightsail account.
      * </p>
      * </li>
      * <li>
@@ -353,7 +353,7 @@ public class CreateContainerServiceRequest extends com.amazonaws.AmazonWebServic
      *        <ul>
      *        <li>
      *        <p>
-     *        Must be unique within each AWS Region in your Lightsail account.
+     *        Must be unique within each Amazon Web Services Region in your Lightsail account.
      *        </p>
      *        </li>
      *        <li>

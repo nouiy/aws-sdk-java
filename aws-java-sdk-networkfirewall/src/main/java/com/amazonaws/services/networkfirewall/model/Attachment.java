@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The configuration and status for a single subnet that you've specified for use by the AWS Network Firewall firewall.
- * This is part of the <a>FirewallStatus</a>.
+ * The configuration and status for a single subnet that you've specified for use by the Network Firewall firewall. This
+ * is part of the <a>FirewallStatus</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/Attachment" target="_top">AWS API

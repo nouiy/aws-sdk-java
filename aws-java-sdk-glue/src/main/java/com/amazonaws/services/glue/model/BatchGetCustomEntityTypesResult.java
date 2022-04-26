@@ -23,12 +23,25 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class BatchGetCustomEntityTypesResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * A list of <code>CustomEntityType</code> objects representing the custom patterns that have been created.
+     * </p>
+     */
     private java.util.List<CustomEntityType> customEntityTypes;
-
+    /**
+     * <p>
+     * A list of the names of custom patterns that were not found.
+     * </p>
+     */
     private java.util.List<String> customEntityTypesNotFound;
 
     /**
-     * @return
+     * <p>
+     * A list of <code>CustomEntityType</code> objects representing the custom patterns that have been created.
+     * </p>
+     * 
+     * @return A list of <code>CustomEntityType</code> objects representing the custom patterns that have been created.
      */
 
     public java.util.List<CustomEntityType> getCustomEntityTypes() {
@@ -36,7 +49,12 @@ public class BatchGetCustomEntityTypesResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * A list of <code>CustomEntityType</code> objects representing the custom patterns that have been created.
+     * </p>
+     * 
      * @param customEntityTypes
+     *        A list of <code>CustomEntityType</code> objects representing the custom patterns that have been created.
      */
 
     public void setCustomEntityTypes(java.util.Collection<CustomEntityType> customEntityTypes) {
@@ -50,12 +68,16 @@ public class BatchGetCustomEntityTypesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
+     * A list of <code>CustomEntityType</code> objects representing the custom patterns that have been created.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCustomEntityTypes(java.util.Collection)} or {@link #withCustomEntityTypes(java.util.Collection)} if
      * you want to override the existing values.
      * </p>
      * 
      * @param customEntityTypes
+     *        A list of <code>CustomEntityType</code> objects representing the custom patterns that have been created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +92,12 @@ public class BatchGetCustomEntityTypesResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * A list of <code>CustomEntityType</code> objects representing the custom patterns that have been created.
+     * </p>
+     * 
      * @param customEntityTypes
+     *        A list of <code>CustomEntityType</code> objects representing the custom patterns that have been created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,7 +107,11 @@ public class BatchGetCustomEntityTypesResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * A list of the names of custom patterns that were not found.
+     * </p>
+     * 
+     * @return A list of the names of custom patterns that were not found.
      */
 
     public java.util.List<String> getCustomEntityTypesNotFound() {
@@ -88,7 +119,12 @@ public class BatchGetCustomEntityTypesResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * A list of the names of custom patterns that were not found.
+     * </p>
+     * 
      * @param customEntityTypesNotFound
+     *        A list of the names of custom patterns that were not found.
      */
 
     public void setCustomEntityTypesNotFound(java.util.Collection<String> customEntityTypesNotFound) {
@@ -102,12 +138,16 @@ public class BatchGetCustomEntityTypesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
+     * A list of the names of custom patterns that were not found.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCustomEntityTypesNotFound(java.util.Collection)} or
      * {@link #withCustomEntityTypesNotFound(java.util.Collection)} if you want to override the existing values.
      * </p>
      * 
      * @param customEntityTypesNotFound
+     *        A list of the names of custom patterns that were not found.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -122,7 +162,12 @@ public class BatchGetCustomEntityTypesResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * A list of the names of custom patterns that were not found.
+     * </p>
+     * 
      * @param customEntityTypesNotFound
+     *        A list of the names of custom patterns that were not found.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

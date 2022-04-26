@@ -23,12 +23,25 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListCustomEntityTypesResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * A list of <code>CustomEntityType</code> objects representing custom patterns.
+     * </p>
+     */
     private java.util.List<CustomEntityType> customEntityTypes;
-
+    /**
+     * <p>
+     * A pagination token, if more results are available.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * @return
+     * <p>
+     * A list of <code>CustomEntityType</code> objects representing custom patterns.
+     * </p>
+     * 
+     * @return A list of <code>CustomEntityType</code> objects representing custom patterns.
      */
 
     public java.util.List<CustomEntityType> getCustomEntityTypes() {
@@ -36,7 +49,12 @@ public class ListCustomEntityTypesResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * A list of <code>CustomEntityType</code> objects representing custom patterns.
+     * </p>
+     * 
      * @param customEntityTypes
+     *        A list of <code>CustomEntityType</code> objects representing custom patterns.
      */
 
     public void setCustomEntityTypes(java.util.Collection<CustomEntityType> customEntityTypes) {
@@ -50,12 +68,16 @@ public class ListCustomEntityTypesResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
+     * A list of <code>CustomEntityType</code> objects representing custom patterns.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCustomEntityTypes(java.util.Collection)} or {@link #withCustomEntityTypes(java.util.Collection)} if
      * you want to override the existing values.
      * </p>
      * 
      * @param customEntityTypes
+     *        A list of <code>CustomEntityType</code> objects representing custom patterns.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +92,12 @@ public class ListCustomEntityTypesResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * A list of <code>CustomEntityType</code> objects representing custom patterns.
+     * </p>
+     * 
      * @param customEntityTypes
+     *        A list of <code>CustomEntityType</code> objects representing custom patterns.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,7 +107,12 @@ public class ListCustomEntityTypesResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * A pagination token, if more results are available.
+     * </p>
+     * 
      * @param nextToken
+     *        A pagination token, if more results are available.
      */
 
     public void setNextToken(String nextToken) {
@@ -88,7 +120,11 @@ public class ListCustomEntityTypesResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * @return
+     * <p>
+     * A pagination token, if more results are available.
+     * </p>
+     * 
+     * @return A pagination token, if more results are available.
      */
 
     public String getNextToken() {
@@ -96,7 +132,12 @@ public class ListCustomEntityTypesResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * A pagination token, if more results are available.
+     * </p>
+     * 
      * @param nextToken
+     *        A pagination token, if more results are available.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

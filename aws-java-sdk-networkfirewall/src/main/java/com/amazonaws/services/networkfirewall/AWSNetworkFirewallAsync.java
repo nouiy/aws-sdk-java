@@ -26,15 +26,15 @@ import com.amazonaws.services.networkfirewall.model.*;
  * </p>
  * <p>
  * <p>
- * This is the API Reference for AWS Network Firewall. This guide is for developers who need detailed information about
- * the Network Firewall API actions, data types, and errors.
+ * This is the API Reference for Network Firewall. This guide is for developers who need detailed information about the
+ * Network Firewall API actions, data types, and errors.
  * </p>
  * <ul>
  * <li>
  * <p>
  * The REST API requires you to handle connection details, such as calculating signatures, handling request retries, and
- * error handling. For general information about using the AWS REST APIs, see <a
- * href="https://docs.aws.amazon.com/general/latest/gr/aws-apis.html">AWS APIs</a>.
+ * error handling. For general information about using the Amazon Web Services REST APIs, see <a
+ * href="https://docs.aws.amazon.com/general/latest/gr/aws-apis.html">Amazon Web Services APIs</a>.
  * </p>
  * <p>
  * To access Network Firewall using the REST API endpoint:
@@ -43,8 +43,9 @@ import com.amazonaws.services.networkfirewall.model.*;
  * </li>
  * <li>
  * <p>
- * Alternatively, you can use one of the AWS SDKs to access an API that's tailored to the programming language or
- * platform that you're using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">AWS SDKs</a>.
+ * Alternatively, you can use one of the Amazon Web Services SDKs to access an API that's tailored to the programming
+ * language or platform that you're using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">Amazon
+ * Web Services SDKs</a>.
  * </p>
  * </li>
  * <li>
@@ -58,9 +59,9 @@ import com.amazonaws.services.networkfirewall.model.*;
  * <p>
  * Network Firewall is a stateful, managed, network firewall and intrusion detection and prevention service for Amazon
  * Virtual Private Cloud (Amazon VPC). With Network Firewall, you can filter traffic at the perimeter of your VPC. This
- * includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or AWS Direct
- * Connect. Network Firewall uses rules that are compatible with Suricata, a free, open source intrusion detection
- * system (IDS) engine. AWS Network Firewall supports Suricata version 5.0.2. For information about Suricata, see the <a
+ * includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or Direct Connect.
+ * Network Firewall uses rules that are compatible with Suricata, a free, open source intrusion detection system (IDS)
+ * engine. Network Firewall supports Suricata version 5.0.2. For information about Suricata, see the <a
  * href="https://suricata-ids.org/">Suricata website</a>.
  * </p>
  * <p>
@@ -70,8 +71,8 @@ import com.amazonaws.services.networkfirewall.model.*;
  * <ul>
  * <li>
  * <p>
- * Allow domains or IP addresses for known AWS service endpoints, such as Amazon S3, and block all other forms of
- * traffic.
+ * Allow domains or IP addresses for known Amazon Web Services service endpoints, such as Amazon S3, and block all other
+ * forms of traffic.
  * </p>
  * </li>
  * <li>
@@ -185,7 +186,7 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      * Availability Zones that the VPC spans.
      * </p>
      * <p>
-     * This request creates an AWS Network Firewall firewall endpoint in each of the subnets. To enable the firewall's
+     * This request creates an Network Firewall firewall endpoint in each of the subnets. To enable the firewall's
      * protections, you must also modify the VPC's route tables for each subnet's Availability Zone, to redirect the
      * traffic that's coming into and going out of the zone through the firewall endpoint.
      * </p>
@@ -204,7 +205,7 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      * Availability Zones that the VPC spans.
      * </p>
      * <p>
-     * This request creates an AWS Network Firewall firewall endpoint in each of the subnets. To enable the firewall's
+     * This request creates an Network Firewall firewall endpoint in each of the subnets. To enable the firewall's
      * protections, you must also modify the VPC's route tables for each subnet's Availability Zone, to redirect the
      * traffic that's coming into and going out of the zone through the firewall endpoint.
      * </p>
@@ -224,12 +225,12 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
 
     /**
      * <p>
-     * Creates an AWS Network Firewall <a>Firewall</a> and accompanying <a>FirewallStatus</a> for a VPC.
+     * Creates an Network Firewall <a>Firewall</a> and accompanying <a>FirewallStatus</a> for a VPC.
      * </p>
      * <p>
-     * The firewall defines the configuration settings for an AWS Network Firewall firewall. The settings that you can
+     * The firewall defines the configuration settings for an Network Firewall firewall. The settings that you can
      * define at creation include the firewall policy, the subnets in your VPC to use for the firewall endpoints, and
-     * any tags that are attached to the firewall AWS resource.
+     * any tags that are attached to the firewall Amazon Web Services resource.
      * </p>
      * <p>
      * After you create a firewall, you can provide additional settings, like the logging configuration.
@@ -239,8 +240,8 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      * <a>UpdateLoggingConfiguration</a>, <a>AssociateSubnets</a>, and <a>UpdateFirewallDeleteProtection</a>.
      * </p>
      * <p>
-     * To manage a firewall's tags, use the standard AWS resource tagging operations, <a>ListTagsForResource</a>,
-     * <a>TagResource</a>, and <a>UntagResource</a>.
+     * To manage a firewall's tags, use the standard Amazon Web Services resource tagging operations,
+     * <a>ListTagsForResource</a>, <a>TagResource</a>, and <a>UntagResource</a>.
      * </p>
      * <p>
      * To retrieve information about firewalls, use <a>ListFirewalls</a> and <a>DescribeFirewall</a>.
@@ -256,12 +257,12 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
 
     /**
      * <p>
-     * Creates an AWS Network Firewall <a>Firewall</a> and accompanying <a>FirewallStatus</a> for a VPC.
+     * Creates an Network Firewall <a>Firewall</a> and accompanying <a>FirewallStatus</a> for a VPC.
      * </p>
      * <p>
-     * The firewall defines the configuration settings for an AWS Network Firewall firewall. The settings that you can
+     * The firewall defines the configuration settings for an Network Firewall firewall. The settings that you can
      * define at creation include the firewall policy, the subnets in your VPC to use for the firewall endpoints, and
-     * any tags that are attached to the firewall AWS resource.
+     * any tags that are attached to the firewall Amazon Web Services resource.
      * </p>
      * <p>
      * After you create a firewall, you can provide additional settings, like the logging configuration.
@@ -271,8 +272,8 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      * <a>UpdateLoggingConfiguration</a>, <a>AssociateSubnets</a>, and <a>UpdateFirewallDeleteProtection</a>.
      * </p>
      * <p>
-     * To manage a firewall's tags, use the standard AWS resource tagging operations, <a>ListTagsForResource</a>,
-     * <a>TagResource</a>, and <a>UntagResource</a>.
+     * To manage a firewall's tags, use the standard Amazon Web Services resource tagging operations,
+     * <a>ListTagsForResource</a>, <a>TagResource</a>, and <a>UntagResource</a>.
      * </p>
      * <p>
      * To retrieve information about firewalls, use <a>ListFirewalls</a> and <a>DescribeFirewall</a>.
@@ -296,8 +297,8 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      * Creates the firewall policy for the firewall according to the specifications.
      * </p>
      * <p>
-     * An AWS Network Firewall firewall policy defines the behavior of a firewall, in a collection of stateless and
-     * stateful rule groups and other settings. You can use one firewall policy for multiple firewalls.
+     * An Network Firewall firewall policy defines the behavior of a firewall, in a collection of stateless and stateful
+     * rule groups and other settings. You can use one firewall policy for multiple firewalls.
      * </p>
      * 
      * @param createFirewallPolicyRequest
@@ -313,8 +314,8 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      * Creates the firewall policy for the firewall according to the specifications.
      * </p>
      * <p>
-     * An AWS Network Firewall firewall policy defines the behavior of a firewall, in a collection of stateless and
-     * stateful rule groups and other settings. You can use one firewall policy for multiple firewalls.
+     * An Network Firewall firewall policy defines the behavior of a firewall, in a collection of stateless and stateful
+     * rule groups and other settings. You can use one firewall policy for multiple firewalls.
      * </p>
      * 
      * @param createFirewallPolicyRequest
@@ -859,12 +860,12 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      * <p>
      * Retrieves the tags associated with the specified resource. Tags are key:value pairs that you can use to
      * categorize and manage your resources, for purposes like billing. For example, you might set the tag key to
-     * "customer" and the value to the customer name or ID. You can specify one or more tags to add to each AWS
-     * resource, up to 50 tags for a resource.
+     * "customer" and the value to the customer name or ID. You can specify one or more tags to add to each Amazon Web
+     * Services resource, up to 50 tags for a resource.
      * </p>
      * <p>
-     * You can tag the AWS resources that you manage through AWS Network Firewall: firewalls, firewall policies, and
-     * rule groups.
+     * You can tag the Amazon Web Services resources that you manage through Network Firewall: firewalls, firewall
+     * policies, and rule groups.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -879,12 +880,12 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      * <p>
      * Retrieves the tags associated with the specified resource. Tags are key:value pairs that you can use to
      * categorize and manage your resources, for purposes like billing. For example, you might set the tag key to
-     * "customer" and the value to the customer name or ID. You can specify one or more tags to add to each AWS
-     * resource, up to 50 tags for a resource.
+     * "customer" and the value to the customer name or ID. You can specify one or more tags to add to each Amazon Web
+     * Services resource, up to 50 tags for a resource.
      * </p>
      * <p>
-     * You can tag the AWS resources that you manage through AWS Network Firewall: firewalls, firewall policies, and
-     * rule groups.
+     * You can tag the Amazon Web Services resources that you manage through Network Firewall: firewalls, firewall
+     * policies, and rule groups.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -902,9 +903,9 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
 
     /**
      * <p>
-     * Creates or updates an AWS Identity and Access Management policy for your rule group or firewall policy. Use this
-     * to share rule groups and firewall policies between accounts. This operation works in conjunction with the AWS
-     * Resource Access Manager (RAM) service to manage resource sharing for Network Firewall.
+     * Creates or updates an IAM policy for your rule group or firewall policy. Use this to share rule groups and
+     * firewall policies between accounts. This operation works in conjunction with the Amazon Web Services Resource
+     * Access Manager (RAM) service to manage resource sharing for Network Firewall.
      * </p>
      * <p>
      * Use this operation to create or update a resource policy for your rule group or firewall policy. In the policy,
@@ -931,7 +932,7 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      * </ul>
      * <p>
      * For additional information about resource sharing using RAM, see <a
-     * href="https://docs.aws.amazon.com/ram/latest/userguide/what-is.html">AWS Resource Access Manager User Guide</a>.
+     * href="https://docs.aws.amazon.com/ram/latest/userguide/what-is.html">Resource Access Manager User Guide</a>.
      * </p>
      * 
      * @param putResourcePolicyRequest
@@ -944,9 +945,9 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
 
     /**
      * <p>
-     * Creates or updates an AWS Identity and Access Management policy for your rule group or firewall policy. Use this
-     * to share rule groups and firewall policies between accounts. This operation works in conjunction with the AWS
-     * Resource Access Manager (RAM) service to manage resource sharing for Network Firewall.
+     * Creates or updates an IAM policy for your rule group or firewall policy. Use this to share rule groups and
+     * firewall policies between accounts. This operation works in conjunction with the Amazon Web Services Resource
+     * Access Manager (RAM) service to manage resource sharing for Network Firewall.
      * </p>
      * <p>
      * Use this operation to create or update a resource policy for your rule group or firewall policy. In the policy,
@@ -973,7 +974,7 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      * </ul>
      * <p>
      * For additional information about resource sharing using RAM, see <a
-     * href="https://docs.aws.amazon.com/ram/latest/userguide/what-is.html">AWS Resource Access Manager User Guide</a>.
+     * href="https://docs.aws.amazon.com/ram/latest/userguide/what-is.html">Resource Access Manager User Guide</a>.
      * </p>
      * 
      * @param putResourcePolicyRequest
@@ -993,12 +994,12 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      * <p>
      * Adds the specified tags to the specified resource. Tags are key:value pairs that you can use to categorize and
      * manage your resources, for purposes like billing. For example, you might set the tag key to "customer" and the
-     * value to the customer name or ID. You can specify one or more tags to add to each AWS resource, up to 50 tags for
-     * a resource.
+     * value to the customer name or ID. You can specify one or more tags to add to each Amazon Web Services resource,
+     * up to 50 tags for a resource.
      * </p>
      * <p>
-     * You can tag the AWS resources that you manage through AWS Network Firewall: firewalls, firewall policies, and
-     * rule groups.
+     * You can tag the Amazon Web Services resources that you manage through Network Firewall: firewalls, firewall
+     * policies, and rule groups.
      * </p>
      * 
      * @param tagResourceRequest
@@ -1013,12 +1014,12 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      * <p>
      * Adds the specified tags to the specified resource. Tags are key:value pairs that you can use to categorize and
      * manage your resources, for purposes like billing. For example, you might set the tag key to "customer" and the
-     * value to the customer name or ID. You can specify one or more tags to add to each AWS resource, up to 50 tags for
-     * a resource.
+     * value to the customer name or ID. You can specify one or more tags to add to each Amazon Web Services resource,
+     * up to 50 tags for a resource.
      * </p>
      * <p>
-     * You can tag the AWS resources that you manage through AWS Network Firewall: firewalls, firewall policies, and
-     * rule groups.
+     * You can tag the Amazon Web Services resources that you manage through Network Firewall: firewalls, firewall
+     * policies, and rule groups.
      * </p>
      * 
      * @param tagResourceRequest
@@ -1038,12 +1039,12 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      * <p>
      * Removes the tags with the specified keys from the specified resource. Tags are key:value pairs that you can use
      * to categorize and manage your resources, for purposes like billing. For example, you might set the tag key to
-     * "customer" and the value to the customer name or ID. You can specify one or more tags to add to each AWS
-     * resource, up to 50 tags for a resource.
+     * "customer" and the value to the customer name or ID. You can specify one or more tags to add to each Amazon Web
+     * Services resource, up to 50 tags for a resource.
      * </p>
      * <p>
-     * You can manage tags for the AWS resources that you manage through AWS Network Firewall: firewalls, firewall
-     * policies, and rule groups.
+     * You can manage tags for the Amazon Web Services resources that you manage through Network Firewall: firewalls,
+     * firewall policies, and rule groups.
      * </p>
      * 
      * @param untagResourceRequest
@@ -1058,12 +1059,12 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
      * <p>
      * Removes the tags with the specified keys from the specified resource. Tags are key:value pairs that you can use
      * to categorize and manage your resources, for purposes like billing. For example, you might set the tag key to
-     * "customer" and the value to the customer name or ID. You can specify one or more tags to add to each AWS
-     * resource, up to 50 tags for a resource.
+     * "customer" and the value to the customer name or ID. You can specify one or more tags to add to each Amazon Web
+     * Services resource, up to 50 tags for a resource.
      * </p>
      * <p>
-     * You can manage tags for the AWS resources that you manage through AWS Network Firewall: firewalls, firewall
-     * policies, and rule groups.
+     * You can manage tags for the Amazon Web Services resources that you manage through Network Firewall: firewalls,
+     * firewall policies, and rule groups.
      * </p>
      * 
      * @param untagResourceRequest
@@ -1152,6 +1153,43 @@ public interface AWSNetworkFirewallAsync extends AWSNetworkFirewall {
     java.util.concurrent.Future<UpdateFirewallDescriptionResult> updateFirewallDescriptionAsync(
             UpdateFirewallDescriptionRequest updateFirewallDescriptionRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateFirewallDescriptionRequest, UpdateFirewallDescriptionResult> asyncHandler);
+
+    /**
+     * <p>
+     * A complex type that contains settings for encryption of your firewall resources.
+     * </p>
+     * 
+     * @param updateFirewallEncryptionConfigurationRequest
+     * @return A Java Future containing the result of the UpdateFirewallEncryptionConfiguration operation returned by
+     *         the service.
+     * @sample AWSNetworkFirewallAsync.UpdateFirewallEncryptionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/UpdateFirewallEncryptionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFirewallEncryptionConfigurationResult> updateFirewallEncryptionConfigurationAsync(
+            UpdateFirewallEncryptionConfigurationRequest updateFirewallEncryptionConfigurationRequest);
+
+    /**
+     * <p>
+     * A complex type that contains settings for encryption of your firewall resources.
+     * </p>
+     * 
+     * @param updateFirewallEncryptionConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateFirewallEncryptionConfiguration operation returned by
+     *         the service.
+     * @sample AWSNetworkFirewallAsyncHandler.UpdateFirewallEncryptionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/UpdateFirewallEncryptionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFirewallEncryptionConfigurationResult> updateFirewallEncryptionConfigurationAsync(
+            UpdateFirewallEncryptionConfigurationRequest updateFirewallEncryptionConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateFirewallEncryptionConfigurationRequest, UpdateFirewallEncryptionConfigurationResult> asyncHandler);
 
     /**
      * <p>

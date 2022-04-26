@@ -25,10 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetCustomEntityTypeRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The name of the custom pattern that you want to retrieve.
+     * </p>
+     */
     private String name;
 
     /**
+     * <p>
+     * The name of the custom pattern that you want to retrieve.
+     * </p>
+     * 
      * @param name
+     *        The name of the custom pattern that you want to retrieve.
      */
 
     public void setName(String name) {
@@ -36,7 +46,11 @@ public class GetCustomEntityTypeRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the custom pattern that you want to retrieve.
+     * </p>
+     * 
+     * @return The name of the custom pattern that you want to retrieve.
      */
 
     public String getName() {
@@ -44,7 +58,12 @@ public class GetCustomEntityTypeRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The name of the custom pattern that you want to retrieve.
+     * </p>
+     * 
      * @param name
+     *        The name of the custom pattern that you want to retrieve.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -38,6 +38,8 @@ public class CreateFirewallPolicyRequestMarshaller {
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<Boolean> DRYRUN_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("DryRun").build();
+    private static final MarshallingInfo<StructuredPojo> ENCRYPTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionConfiguration").build();
 
     private static final CreateFirewallPolicyRequestMarshaller instance = new CreateFirewallPolicyRequestMarshaller();
 
@@ -60,6 +62,7 @@ public class CreateFirewallPolicyRequestMarshaller {
             protocolMarshaller.marshall(createFirewallPolicyRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(createFirewallPolicyRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createFirewallPolicyRequest.getDryRun(), DRYRUN_BINDING);
+            protocolMarshaller.marshall(createFirewallPolicyRequest.getEncryptionConfiguration(), ENCRYPTIONCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

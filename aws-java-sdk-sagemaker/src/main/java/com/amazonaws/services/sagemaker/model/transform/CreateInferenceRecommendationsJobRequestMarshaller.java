@@ -40,6 +40,8 @@ public class CreateInferenceRecommendationsJobRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("JobDescription").build();
     private static final MarshallingInfo<StructuredPojo> STOPPINGCONDITIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StoppingConditions").build();
+    private static final MarshallingInfo<StructuredPojo> OUTPUTCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutputConfig").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
 
@@ -65,6 +67,7 @@ public class CreateInferenceRecommendationsJobRequestMarshaller {
             protocolMarshaller.marshall(createInferenceRecommendationsJobRequest.getInputConfig(), INPUTCONFIG_BINDING);
             protocolMarshaller.marshall(createInferenceRecommendationsJobRequest.getJobDescription(), JOBDESCRIPTION_BINDING);
             protocolMarshaller.marshall(createInferenceRecommendationsJobRequest.getStoppingConditions(), STOPPINGCONDITIONS_BINDING);
+            protocolMarshaller.marshall(createInferenceRecommendationsJobRequest.getOutputConfig(), OUTPUTCONFIG_BINDING);
             protocolMarshaller.marshall(createInferenceRecommendationsJobRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

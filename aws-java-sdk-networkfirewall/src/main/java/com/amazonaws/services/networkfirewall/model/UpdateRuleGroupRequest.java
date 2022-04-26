@@ -119,6 +119,12 @@ public class UpdateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private Boolean dryRun;
+    /**
+     * <p>
+     * A complex type that contains settings for encryption of your rule group resources.
+     * </p>
+     */
+    private EncryptionConfiguration encryptionConfiguration;
 
     /**
      * <p>
@@ -753,6 +759,46 @@ public class UpdateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * A complex type that contains settings for encryption of your rule group resources.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        A complex type that contains settings for encryption of your rule group resources.
+     */
+
+    public void setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        this.encryptionConfiguration = encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains settings for encryption of your rule group resources.
+     * </p>
+     * 
+     * @return A complex type that contains settings for encryption of your rule group resources.
+     */
+
+    public EncryptionConfiguration getEncryptionConfiguration() {
+        return this.encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains settings for encryption of your rule group resources.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        A complex type that contains settings for encryption of your rule group resources.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateRuleGroupRequest withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        setEncryptionConfiguration(encryptionConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -779,7 +825,9 @@ public class UpdateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getDryRun() != null)
-            sb.append("DryRun: ").append(getDryRun());
+            sb.append("DryRun: ").append(getDryRun()).append(",");
+        if (getEncryptionConfiguration() != null)
+            sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -826,6 +874,10 @@ public class UpdateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getDryRun() != null && other.getDryRun().equals(this.getDryRun()) == false)
             return false;
+        if (other.getEncryptionConfiguration() == null ^ this.getEncryptionConfiguration() == null)
+            return false;
+        if (other.getEncryptionConfiguration() != null && other.getEncryptionConfiguration().equals(this.getEncryptionConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -842,6 +894,7 @@ public class UpdateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getDryRun() == null) ? 0 : getDryRun().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
         return hashCode;
     }
 

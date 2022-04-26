@@ -33,8 +33,8 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
     private String resourceArn;
     /**
      * <p>
-     * The AWS Identity and Access Management policy statement that lists the accounts that you want to share your rule
-     * group or firewall policy with and the operations that you want the accounts to be able to perform.
+     * The IAM policy statement that lists the accounts that you want to share your rule group or firewall policy with
+     * and the operations that you want the accounts to be able to perform.
      * </p>
      * <p>
      * For a rule group resource, you can specify the following operations in the Actions section of the statement:
@@ -133,8 +133,8 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The AWS Identity and Access Management policy statement that lists the accounts that you want to share your rule
-     * group or firewall policy with and the operations that you want the accounts to be able to perform.
+     * The IAM policy statement that lists the accounts that you want to share your rule group or firewall policy with
+     * and the operations that you want the accounts to be able to perform.
      * </p>
      * <p>
      * For a rule group resource, you can specify the following operations in the Actions section of the statement:
@@ -187,9 +187,8 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param policy
-     *        The AWS Identity and Access Management policy statement that lists the accounts that you want to share
-     *        your rule group or firewall policy with and the operations that you want the accounts to be able to
-     *        perform. </p>
+     *        The IAM policy statement that lists the accounts that you want to share your rule group or firewall policy
+     *        with and the operations that you want the accounts to be able to perform. </p>
      *        <p>
      *        For a rule group resource, you can specify the following operations in the Actions section of the
      *        statement:
@@ -248,8 +247,8 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The AWS Identity and Access Management policy statement that lists the accounts that you want to share your rule
-     * group or firewall policy with and the operations that you want the accounts to be able to perform.
+     * The IAM policy statement that lists the accounts that you want to share your rule group or firewall policy with
+     * and the operations that you want the accounts to be able to perform.
      * </p>
      * <p>
      * For a rule group resource, you can specify the following operations in the Actions section of the statement:
@@ -301,9 +300,8 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      * want to share with the account that you specified in <code>Arn</code>.
      * </p>
      * 
-     * @return The AWS Identity and Access Management policy statement that lists the accounts that you want to share
-     *         your rule group or firewall policy with and the operations that you want the accounts to be able to
-     *         perform. </p>
+     * @return The IAM policy statement that lists the accounts that you want to share your rule group or firewall
+     *         policy with and the operations that you want the accounts to be able to perform. </p>
      *         <p>
      *         For a rule group resource, you can specify the following operations in the Actions section of the
      *         statement:
@@ -362,8 +360,8 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The AWS Identity and Access Management policy statement that lists the accounts that you want to share your rule
-     * group or firewall policy with and the operations that you want the accounts to be able to perform.
+     * The IAM policy statement that lists the accounts that you want to share your rule group or firewall policy with
+     * and the operations that you want the accounts to be able to perform.
      * </p>
      * <p>
      * For a rule group resource, you can specify the following operations in the Actions section of the statement:
@@ -416,9 +414,8 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param policy
-     *        The AWS Identity and Access Management policy statement that lists the accounts that you want to share
-     *        your rule group or firewall policy with and the operations that you want the accounts to be able to
-     *        perform. </p>
+     *        The IAM policy statement that lists the accounts that you want to share your rule group or firewall policy
+     *        with and the operations that you want the accounts to be able to perform. </p>
      *        <p>
      *        For a rule group resource, you can specify the following operations in the Actions section of the
      *        statement:

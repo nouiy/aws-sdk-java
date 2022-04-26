@@ -33,8 +33,8 @@ public class GetCertificatesRequest extends com.amazonaws.AmazonWebServiceReques
      * For example, specify <code>ISSUED</code> to return only certificates with an <code>ISSUED</code> status.
      * </p>
      * <p>
-     * When omitted, the response includes all of your certificates in the AWS Region where the request is made,
-     * regardless of their current status.
+     * When omitted, the response includes all of your certificates in the Amazon Web Services Region where the request
+     * is made, regardless of their current status.
      * </p>
      */
     private java.util.List<String> certificateStatuses;
@@ -53,7 +53,8 @@ public class GetCertificatesRequest extends com.amazonaws.AmazonWebServiceReques
      * The name for the certificate for which to return information.
      * </p>
      * <p>
-     * When omitted, the response includes all of your certificates in the AWS Region where the request is made.
+     * When omitted, the response includes all of your certificates in the Amazon Web Services Region where the request
+     * is made.
      * </p>
      */
     private String certificateName;
@@ -66,8 +67,8 @@ public class GetCertificatesRequest extends com.amazonaws.AmazonWebServiceReques
      * For example, specify <code>ISSUED</code> to return only certificates with an <code>ISSUED</code> status.
      * </p>
      * <p>
-     * When omitted, the response includes all of your certificates in the AWS Region where the request is made,
-     * regardless of their current status.
+     * When omitted, the response includes all of your certificates in the Amazon Web Services Region where the request
+     * is made, regardless of their current status.
      * </p>
      * 
      * @return The status of the certificates for which to return information.</p>
@@ -75,8 +76,8 @@ public class GetCertificatesRequest extends com.amazonaws.AmazonWebServiceReques
      *         For example, specify <code>ISSUED</code> to return only certificates with an <code>ISSUED</code> status.
      *         </p>
      *         <p>
-     *         When omitted, the response includes all of your certificates in the AWS Region where the request is made,
-     *         regardless of their current status.
+     *         When omitted, the response includes all of your certificates in the Amazon Web Services Region where the
+     *         request is made, regardless of their current status.
      * @see CertificateStatus
      */
 
@@ -92,8 +93,8 @@ public class GetCertificatesRequest extends com.amazonaws.AmazonWebServiceReques
      * For example, specify <code>ISSUED</code> to return only certificates with an <code>ISSUED</code> status.
      * </p>
      * <p>
-     * When omitted, the response includes all of your certificates in the AWS Region where the request is made,
-     * regardless of their current status.
+     * When omitted, the response includes all of your certificates in the Amazon Web Services Region where the request
+     * is made, regardless of their current status.
      * </p>
      * 
      * @param certificateStatuses
@@ -102,8 +103,8 @@ public class GetCertificatesRequest extends com.amazonaws.AmazonWebServiceReques
      *        For example, specify <code>ISSUED</code> to return only certificates with an <code>ISSUED</code> status.
      *        </p>
      *        <p>
-     *        When omitted, the response includes all of your certificates in the AWS Region where the request is made,
-     *        regardless of their current status.
+     *        When omitted, the response includes all of your certificates in the Amazon Web Services Region where the
+     *        request is made, regardless of their current status.
      * @see CertificateStatus
      */
 
@@ -124,8 +125,8 @@ public class GetCertificatesRequest extends com.amazonaws.AmazonWebServiceReques
      * For example, specify <code>ISSUED</code> to return only certificates with an <code>ISSUED</code> status.
      * </p>
      * <p>
-     * When omitted, the response includes all of your certificates in the AWS Region where the request is made,
-     * regardless of their current status.
+     * When omitted, the response includes all of your certificates in the Amazon Web Services Region where the request
+     * is made, regardless of their current status.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -139,8 +140,8 @@ public class GetCertificatesRequest extends com.amazonaws.AmazonWebServiceReques
      *        For example, specify <code>ISSUED</code> to return only certificates with an <code>ISSUED</code> status.
      *        </p>
      *        <p>
-     *        When omitted, the response includes all of your certificates in the AWS Region where the request is made,
-     *        regardless of their current status.
+     *        When omitted, the response includes all of your certificates in the Amazon Web Services Region where the
+     *        request is made, regardless of their current status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CertificateStatus
      */
@@ -163,8 +164,8 @@ public class GetCertificatesRequest extends com.amazonaws.AmazonWebServiceReques
      * For example, specify <code>ISSUED</code> to return only certificates with an <code>ISSUED</code> status.
      * </p>
      * <p>
-     * When omitted, the response includes all of your certificates in the AWS Region where the request is made,
-     * regardless of their current status.
+     * When omitted, the response includes all of your certificates in the Amazon Web Services Region where the request
+     * is made, regardless of their current status.
      * </p>
      * 
      * @param certificateStatuses
@@ -173,8 +174,8 @@ public class GetCertificatesRequest extends com.amazonaws.AmazonWebServiceReques
      *        For example, specify <code>ISSUED</code> to return only certificates with an <code>ISSUED</code> status.
      *        </p>
      *        <p>
-     *        When omitted, the response includes all of your certificates in the AWS Region where the request is made,
-     *        regardless of their current status.
+     *        When omitted, the response includes all of your certificates in the Amazon Web Services Region where the
+     *        request is made, regardless of their current status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CertificateStatus
      */
@@ -192,8 +193,8 @@ public class GetCertificatesRequest extends com.amazonaws.AmazonWebServiceReques
      * For example, specify <code>ISSUED</code> to return only certificates with an <code>ISSUED</code> status.
      * </p>
      * <p>
-     * When omitted, the response includes all of your certificates in the AWS Region where the request is made,
-     * regardless of their current status.
+     * When omitted, the response includes all of your certificates in the Amazon Web Services Region where the request
+     * is made, regardless of their current status.
      * </p>
      * 
      * @param certificateStatuses
@@ -202,8 +203,8 @@ public class GetCertificatesRequest extends com.amazonaws.AmazonWebServiceReques
      *        For example, specify <code>ISSUED</code> to return only certificates with an <code>ISSUED</code> status.
      *        </p>
      *        <p>
-     *        When omitted, the response includes all of your certificates in the AWS Region where the request is made,
-     *        regardless of their current status.
+     *        When omitted, the response includes all of your certificates in the Amazon Web Services Region where the
+     *        request is made, regardless of their current status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CertificateStatus
      */
@@ -306,13 +307,15 @@ public class GetCertificatesRequest extends com.amazonaws.AmazonWebServiceReques
      * The name for the certificate for which to return information.
      * </p>
      * <p>
-     * When omitted, the response includes all of your certificates in the AWS Region where the request is made.
+     * When omitted, the response includes all of your certificates in the Amazon Web Services Region where the request
+     * is made.
      * </p>
      * 
      * @param certificateName
      *        The name for the certificate for which to return information.</p>
      *        <p>
-     *        When omitted, the response includes all of your certificates in the AWS Region where the request is made.
+     *        When omitted, the response includes all of your certificates in the Amazon Web Services Region where the
+     *        request is made.
      */
 
     public void setCertificateName(String certificateName) {
@@ -324,12 +327,14 @@ public class GetCertificatesRequest extends com.amazonaws.AmazonWebServiceReques
      * The name for the certificate for which to return information.
      * </p>
      * <p>
-     * When omitted, the response includes all of your certificates in the AWS Region where the request is made.
+     * When omitted, the response includes all of your certificates in the Amazon Web Services Region where the request
+     * is made.
      * </p>
      * 
      * @return The name for the certificate for which to return information.</p>
      *         <p>
-     *         When omitted, the response includes all of your certificates in the AWS Region where the request is made.
+     *         When omitted, the response includes all of your certificates in the Amazon Web Services Region where the
+     *         request is made.
      */
 
     public String getCertificateName() {
@@ -341,13 +346,15 @@ public class GetCertificatesRequest extends com.amazonaws.AmazonWebServiceReques
      * The name for the certificate for which to return information.
      * </p>
      * <p>
-     * When omitted, the response includes all of your certificates in the AWS Region where the request is made.
+     * When omitted, the response includes all of your certificates in the Amazon Web Services Region where the request
+     * is made.
      * </p>
      * 
      * @param certificateName
      *        The name for the certificate for which to return information.</p>
      *        <p>
-     *        When omitted, the response includes all of your certificates in the AWS Region where the request is made.
+     *        When omitted, the response includes all of your certificates in the Amazon Web Services Region where the
+     *        request is made.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

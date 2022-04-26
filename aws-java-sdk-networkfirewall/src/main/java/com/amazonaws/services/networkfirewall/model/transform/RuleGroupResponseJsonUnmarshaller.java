@@ -90,6 +90,10 @@ public class RuleGroupResponseJsonUnmarshaller implements Unmarshaller<RuleGroup
                     context.nextToken();
                     ruleGroupResponse.setNumberOfAssociations(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("EncryptionConfiguration", targetDepth)) {
+                    context.nextToken();
+                    ruleGroupResponse.setEncryptionConfiguration(EncryptionConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

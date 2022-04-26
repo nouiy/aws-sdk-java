@@ -1391,6 +1391,19 @@ public class AbstractAmazonLightsailAsync extends AbstractAmazonLightsail implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetLoadBalancerTlsPoliciesResult> getLoadBalancerTlsPoliciesAsync(GetLoadBalancerTlsPoliciesRequest request) {
+
+        return getLoadBalancerTlsPoliciesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLoadBalancerTlsPoliciesResult> getLoadBalancerTlsPoliciesAsync(GetLoadBalancerTlsPoliciesRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetLoadBalancerTlsPoliciesRequest, GetLoadBalancerTlsPoliciesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetLoadBalancersResult> getLoadBalancersAsync(GetLoadBalancersRequest request) {
 
         return getLoadBalancersAsync(request, null);

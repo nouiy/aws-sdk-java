@@ -51,15 +51,15 @@ import com.amazonaws.services.networkfirewall.model.transform.*;
  * until the service call completes.
  * <p>
  * <p>
- * This is the API Reference for AWS Network Firewall. This guide is for developers who need detailed information about
- * the Network Firewall API actions, data types, and errors.
+ * This is the API Reference for Network Firewall. This guide is for developers who need detailed information about the
+ * Network Firewall API actions, data types, and errors.
  * </p>
  * <ul>
  * <li>
  * <p>
  * The REST API requires you to handle connection details, such as calculating signatures, handling request retries, and
- * error handling. For general information about using the AWS REST APIs, see <a
- * href="https://docs.aws.amazon.com/general/latest/gr/aws-apis.html">AWS APIs</a>.
+ * error handling. For general information about using the Amazon Web Services REST APIs, see <a
+ * href="https://docs.aws.amazon.com/general/latest/gr/aws-apis.html">Amazon Web Services APIs</a>.
  * </p>
  * <p>
  * To access Network Firewall using the REST API endpoint:
@@ -68,8 +68,9 @@ import com.amazonaws.services.networkfirewall.model.transform.*;
  * </li>
  * <li>
  * <p>
- * Alternatively, you can use one of the AWS SDKs to access an API that's tailored to the programming language or
- * platform that you're using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">AWS SDKs</a>.
+ * Alternatively, you can use one of the Amazon Web Services SDKs to access an API that's tailored to the programming
+ * language or platform that you're using. For more information, see <a href="http://aws.amazon.com/tools/#SDKs">Amazon
+ * Web Services SDKs</a>.
  * </p>
  * </li>
  * <li>
@@ -83,9 +84,9 @@ import com.amazonaws.services.networkfirewall.model.transform.*;
  * <p>
  * Network Firewall is a stateful, managed, network firewall and intrusion detection and prevention service for Amazon
  * Virtual Private Cloud (Amazon VPC). With Network Firewall, you can filter traffic at the perimeter of your VPC. This
- * includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or AWS Direct
- * Connect. Network Firewall uses rules that are compatible with Suricata, a free, open source intrusion detection
- * system (IDS) engine. AWS Network Firewall supports Suricata version 5.0.2. For information about Suricata, see the <a
+ * includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or Direct Connect.
+ * Network Firewall uses rules that are compatible with Suricata, a free, open source intrusion detection system (IDS)
+ * engine. Network Firewall supports Suricata version 5.0.2. For information about Suricata, see the <a
  * href="https://suricata-ids.org/">Suricata website</a>.
  * </p>
  * <p>
@@ -95,8 +96,8 @@ import com.amazonaws.services.networkfirewall.model.transform.*;
  * <ul>
  * <li>
  * <p>
- * Allow domains or IP addresses for known AWS service endpoints, such as Amazon S3, and block all other forms of
- * traffic.
+ * Allow domains or IP addresses for known Amazon Web Services service endpoints, such as Amazon S3, and block all other
+ * forms of traffic.
  * </p>
  * </li>
  * <li>
@@ -365,7 +366,7 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
      * Availability Zones that the VPC spans.
      * </p>
      * <p>
-     * This request creates an AWS Network Firewall firewall endpoint in each of the subnets. To enable the firewall's
+     * This request creates an Network Firewall firewall endpoint in each of the subnets. To enable the firewall's
      * protections, you must also modify the VPC's route tables for each subnet's Availability Zone, to redirect the
      * traffic that's coming into and going out of the zone through the firewall endpoint.
      * </p>
@@ -404,7 +405,8 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
      *         The operation failed because it's not valid. For example, you might have tried to delete a rule group or
      *         firewall policy that's in use.
      * @throws InsufficientCapacityException
-     *         AWS doesn't currently have enough available capacity to fulfill your request. Try your request later.
+     *         Amazon Web Services doesn't currently have enough available capacity to fulfill your request. Try your
+     *         request later.
      * @sample AWSNetworkFirewall.AssociateSubnets
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/AssociateSubnets"
      *      target="_top">AWS API Documentation</a>
@@ -455,12 +457,12 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Creates an AWS Network Firewall <a>Firewall</a> and accompanying <a>FirewallStatus</a> for a VPC.
+     * Creates an Network Firewall <a>Firewall</a> and accompanying <a>FirewallStatus</a> for a VPC.
      * </p>
      * <p>
-     * The firewall defines the configuration settings for an AWS Network Firewall firewall. The settings that you can
+     * The firewall defines the configuration settings for an Network Firewall firewall. The settings that you can
      * define at creation include the firewall policy, the subnets in your VPC to use for the firewall endpoints, and
-     * any tags that are attached to the firewall AWS resource.
+     * any tags that are attached to the firewall Amazon Web Services resource.
      * </p>
      * <p>
      * After you create a firewall, you can provide additional settings, like the logging configuration.
@@ -470,8 +472,8 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
      * <a>UpdateLoggingConfiguration</a>, <a>AssociateSubnets</a>, and <a>UpdateFirewallDeleteProtection</a>.
      * </p>
      * <p>
-     * To manage a firewall's tags, use the standard AWS resource tagging operations, <a>ListTagsForResource</a>,
-     * <a>TagResource</a>, and <a>UntagResource</a>.
+     * To manage a firewall's tags, use the standard Amazon Web Services resource tagging operations,
+     * <a>ListTagsForResource</a>, <a>TagResource</a>, and <a>UntagResource</a>.
      * </p>
      * <p>
      * To retrieve information about firewalls, use <a>ListFirewalls</a> and <a>DescribeFirewall</a>.
@@ -506,7 +508,8 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
      * @throws ThrottlingException
      *         Unable to process the request due to throttling limitations.
      * @throws InsufficientCapacityException
-     *         AWS doesn't currently have enough available capacity to fulfill your request. Try your request later.
+     *         Amazon Web Services doesn't currently have enough available capacity to fulfill your request. Try your
+     *         request later.
      * @throws InvalidOperationException
      *         The operation failed because it's not valid. For example, you might have tried to delete a rule group or
      *         firewall policy that's in use.
@@ -563,8 +566,8 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
      * Creates the firewall policy for the firewall according to the specifications.
      * </p>
      * <p>
-     * An AWS Network Firewall firewall policy defines the behavior of a firewall, in a collection of stateless and
-     * stateful rule groups and other settings. You can use one firewall policy for multiple firewalls.
+     * An Network Firewall firewall policy defines the behavior of a firewall, in a collection of stateless and stateful
+     * rule groups and other settings. You can use one firewall policy for multiple firewalls.
      * </p>
      * 
      * @param createFirewallPolicyRequest
@@ -596,7 +599,8 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
      *         Your request is valid, but Network Firewall couldn’t perform the operation because of a system problem.
      *         Retry your request.
      * @throws InsufficientCapacityException
-     *         AWS doesn't currently have enough available capacity to fulfill your request. Try your request later.
+     *         Amazon Web Services doesn't currently have enough available capacity to fulfill your request. Try your
+     *         request later.
      * @sample AWSNetworkFirewall.CreateFirewallPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/CreateFirewallPolicy"
      *      target="_top">AWS API Documentation</a>
@@ -684,7 +688,8 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
      *         Your request is valid, but Network Firewall couldn’t perform the operation because of a system problem.
      *         Retry your request.
      * @throws InsufficientCapacityException
-     *         AWS doesn't currently have enough available capacity to fulfill your request. Try your request later.
+     *         Amazon Web Services doesn't currently have enough available capacity to fulfill your request. Try your
+     *         request later.
      * @sample AWSNetworkFirewall.CreateRuleGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/CreateRuleGroup"
      *      target="_top">AWS API Documentation</a>
@@ -1915,12 +1920,12 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
      * <p>
      * Retrieves the tags associated with the specified resource. Tags are key:value pairs that you can use to
      * categorize and manage your resources, for purposes like billing. For example, you might set the tag key to
-     * "customer" and the value to the customer name or ID. You can specify one or more tags to add to each AWS
-     * resource, up to 50 tags for a resource.
+     * "customer" and the value to the customer name or ID. You can specify one or more tags to add to each Amazon Web
+     * Services resource, up to 50 tags for a resource.
      * </p>
      * <p>
-     * You can tag the AWS resources that you manage through AWS Network Firewall: firewalls, firewall policies, and
-     * rule groups.
+     * You can tag the Amazon Web Services resources that you manage through Network Firewall: firewalls, firewall
+     * policies, and rule groups.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -2001,9 +2006,9 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Creates or updates an AWS Identity and Access Management policy for your rule group or firewall policy. Use this
-     * to share rule groups and firewall policies between accounts. This operation works in conjunction with the AWS
-     * Resource Access Manager (RAM) service to manage resource sharing for Network Firewall.
+     * Creates or updates an IAM policy for your rule group or firewall policy. Use this to share rule groups and
+     * firewall policies between accounts. This operation works in conjunction with the Amazon Web Services Resource
+     * Access Manager (RAM) service to manage resource sharing for Network Firewall.
      * </p>
      * <p>
      * Use this operation to create or update a resource policy for your rule group or firewall policy. In the policy,
@@ -2030,7 +2035,7 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
      * </ul>
      * <p>
      * For additional information about resource sharing using RAM, see <a
-     * href="https://docs.aws.amazon.com/ram/latest/userguide/what-is.html">AWS Resource Access Manager User Guide</a>.
+     * href="https://docs.aws.amazon.com/ram/latest/userguide/what-is.html">Resource Access Manager User Guide</a>.
      * </p>
      * 
      * @param putResourcePolicyRequest
@@ -2115,12 +2120,12 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
      * <p>
      * Adds the specified tags to the specified resource. Tags are key:value pairs that you can use to categorize and
      * manage your resources, for purposes like billing. For example, you might set the tag key to "customer" and the
-     * value to the customer name or ID. You can specify one or more tags to add to each AWS resource, up to 50 tags for
-     * a resource.
+     * value to the customer name or ID. You can specify one or more tags to add to each Amazon Web Services resource,
+     * up to 50 tags for a resource.
      * </p>
      * <p>
-     * You can tag the AWS resources that you manage through AWS Network Firewall: firewalls, firewall policies, and
-     * rule groups.
+     * You can tag the Amazon Web Services resources that you manage through Network Firewall: firewalls, firewall
+     * policies, and rule groups.
      * </p>
      * 
      * @param tagResourceRequest
@@ -2203,12 +2208,12 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
      * <p>
      * Removes the tags with the specified keys from the specified resource. Tags are key:value pairs that you can use
      * to categorize and manage your resources, for purposes like billing. For example, you might set the tag key to
-     * "customer" and the value to the customer name or ID. You can specify one or more tags to add to each AWS
-     * resource, up to 50 tags for a resource.
+     * "customer" and the value to the customer name or ID. You can specify one or more tags to add to each Amazon Web
+     * Services resource, up to 50 tags for a resource.
      * </p>
      * <p>
-     * You can manage tags for the AWS resources that you manage through AWS Network Firewall: firewalls, firewall
-     * policies, and rule groups.
+     * You can manage tags for the Amazon Web Services resources that you manage through Network Firewall: firewalls,
+     * firewall policies, and rule groups.
      * </p>
      * 
      * @param untagResourceRequest
@@ -2452,6 +2457,95 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateFirewallDescriptionResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateFirewallDescriptionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * A complex type that contains settings for encryption of your firewall resources.
+     * </p>
+     * 
+     * @param updateFirewallEncryptionConfigurationRequest
+     * @return Result of the UpdateFirewallEncryptionConfiguration operation returned by the service.
+     * @throws InvalidRequestException
+     *         The operation failed because of a problem with your request. Examples include: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified an unsupported parameter name or value.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a property with a value that isn't among the available types.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource that isn't valid in the
+     *         context of the request.
+     *         </p>
+     *         </li>
+     * @throws InternalServerErrorException
+     *         Your request is valid, but Network Firewall couldn’t perform the operation because of a system problem.
+     *         Retry your request.
+     * @throws ResourceNotFoundException
+     *         Unable to locate a resource using the parameters that you provided.
+     * @throws ThrottlingException
+     *         Unable to process the request due to throttling limitations.
+     * @throws InvalidTokenException
+     *         The token you provided is stale or isn't valid for the operation.
+     * @throws ResourceOwnerCheckException
+     *         Unable to change the resource because your account doesn't own it.
+     * @sample AWSNetworkFirewall.UpdateFirewallEncryptionConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/UpdateFirewallEncryptionConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateFirewallEncryptionConfigurationResult updateFirewallEncryptionConfiguration(UpdateFirewallEncryptionConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateFirewallEncryptionConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final UpdateFirewallEncryptionConfigurationResult executeUpdateFirewallEncryptionConfiguration(
+            UpdateFirewallEncryptionConfigurationRequest updateFirewallEncryptionConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateFirewallEncryptionConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateFirewallEncryptionConfigurationRequest> request = null;
+        Response<UpdateFirewallEncryptionConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateFirewallEncryptionConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateFirewallEncryptionConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Network Firewall");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateFirewallEncryptionConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateFirewallEncryptionConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateFirewallEncryptionConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

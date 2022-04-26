@@ -31,11 +31,11 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * notification when an asynchronous operation completes.
  * <p>
  * <p>
- * Amazon Lightsail is the easiest way to get started with Amazon Web Services (AWS) for developers who need to build
- * websites or web applications. It includes everything you need to launch your project quickly - instances (virtual
- * private servers), container services, storage buckets, managed databases, SSD-based block storage, static IP
- * addresses, load balancers, content delivery network (CDN) distributions, DNS management of registered domains, and
- * resource snapshots (backups) - for a low, predictable monthly price.
+ * Amazon Lightsail is the easiest way to get started with Amazon Web Services (Amazon Web Services) for developers who
+ * need to build websites or web applications. It includes everything you need to launch your project quickly -
+ * instances (virtual private servers), container services, storage buckets, managed databases, SSD-based block storage,
+ * static IP addresses, load balancers, content delivery network (CDN) distributions, DNS management of registered
+ * domains, and resource snapshots (backups) - for a low, predictable monthly price.
  * </p>
  * <p>
  * You can manage your Lightsail resources using the Lightsail console, Lightsail API, AWS Command Line Interface (AWS
@@ -45,9 +45,9 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * </p>
  * <p>
  * This API Reference provides detailed information about the actions, data types, parameters, and errors of the
- * Lightsail service. For more information about the supported AWS Regions, endpoints, and service quotas of the
- * Lightsail service, see <a href="https://docs.aws.amazon.com/general/latest/gr/lightsail.html">Amazon Lightsail
- * Endpoints and Quotas</a> in the <i>AWS General Reference</i>.
+ * Lightsail service. For more information about the supported Amazon Web Services Regions, endpoints, and service
+ * quotas of the Lightsail service, see <a href="https://docs.aws.amazon.com/general/latest/gr/lightsail.html">Amazon
+ * Lightsail Endpoints and Quotas</a> in the <i>Amazon Web Services General Reference</i>.
  * </p>
  */
 @ThreadSafe
@@ -3686,6 +3686,39 @@ public class AmazonLightsailAsyncClient extends AmazonLightsailClient implements
 
                 try {
                     result = executeGetLoadBalancerTlsCertificates(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLoadBalancerTlsPoliciesResult> getLoadBalancerTlsPoliciesAsync(GetLoadBalancerTlsPoliciesRequest request) {
+
+        return getLoadBalancerTlsPoliciesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLoadBalancerTlsPoliciesResult> getLoadBalancerTlsPoliciesAsync(final GetLoadBalancerTlsPoliciesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetLoadBalancerTlsPoliciesRequest, GetLoadBalancerTlsPoliciesResult> asyncHandler) {
+        final GetLoadBalancerTlsPoliciesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetLoadBalancerTlsPoliciesResult>() {
+            @Override
+            public GetLoadBalancerTlsPoliciesResult call() throws Exception {
+                GetLoadBalancerTlsPoliciesResult result = null;
+
+                try {
+                    result = executeGetLoadBalancerTlsPolicies(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

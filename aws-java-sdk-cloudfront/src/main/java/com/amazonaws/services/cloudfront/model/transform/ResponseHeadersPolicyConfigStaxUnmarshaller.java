@@ -69,6 +69,12 @@ public class ResponseHeadersPolicyConfigStaxUnmarshaller implements Unmarshaller
                             context));
                     continue;
                 }
+
+                if (context.testExpression("ServerTimingHeadersConfig", targetDepth)) {
+                    responseHeadersPolicyConfig.setServerTimingHeadersConfig(ResponseHeadersPolicyServerTimingHeadersConfigStaxUnmarshaller.getInstance()
+                            .unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return responseHeadersPolicyConfig;

@@ -50,6 +50,8 @@ public class FirewallMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FirewallId").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<StructuredPojo> ENCRYPTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionConfiguration").build();
 
     private static final FirewallMarshaller instance = new FirewallMarshaller();
 
@@ -78,6 +80,7 @@ public class FirewallMarshaller {
             protocolMarshaller.marshall(firewall.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(firewall.getFirewallId(), FIREWALLID_BINDING);
             protocolMarshaller.marshall(firewall.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(firewall.getEncryptionConfiguration(), ENCRYPTIONCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

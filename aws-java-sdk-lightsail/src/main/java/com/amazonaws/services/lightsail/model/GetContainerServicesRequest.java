@@ -30,7 +30,8 @@ public class GetContainerServicesRequest extends com.amazonaws.AmazonWebServiceR
      * The name of the container service for which to return information.
      * </p>
      * <p>
-     * When omitted, the response includes all of your container services in the AWS Region where the request is made.
+     * When omitted, the response includes all of your container services in the Amazon Web Services Region where the
+     * request is made.
      * </p>
      */
     private String serviceName;
@@ -40,14 +41,15 @@ public class GetContainerServicesRequest extends com.amazonaws.AmazonWebServiceR
      * The name of the container service for which to return information.
      * </p>
      * <p>
-     * When omitted, the response includes all of your container services in the AWS Region where the request is made.
+     * When omitted, the response includes all of your container services in the Amazon Web Services Region where the
+     * request is made.
      * </p>
      * 
      * @param serviceName
      *        The name of the container service for which to return information.</p>
      *        <p>
-     *        When omitted, the response includes all of your container services in the AWS Region where the request is
-     *        made.
+     *        When omitted, the response includes all of your container services in the Amazon Web Services Region where
+     *        the request is made.
      */
 
     public void setServiceName(String serviceName) {
@@ -59,13 +61,14 @@ public class GetContainerServicesRequest extends com.amazonaws.AmazonWebServiceR
      * The name of the container service for which to return information.
      * </p>
      * <p>
-     * When omitted, the response includes all of your container services in the AWS Region where the request is made.
+     * When omitted, the response includes all of your container services in the Amazon Web Services Region where the
+     * request is made.
      * </p>
      * 
      * @return The name of the container service for which to return information.</p>
      *         <p>
-     *         When omitted, the response includes all of your container services in the AWS Region where the request is
-     *         made.
+     *         When omitted, the response includes all of your container services in the Amazon Web Services Region
+     *         where the request is made.
      */
 
     public String getServiceName() {
@@ -77,14 +80,15 @@ public class GetContainerServicesRequest extends com.amazonaws.AmazonWebServiceR
      * The name of the container service for which to return information.
      * </p>
      * <p>
-     * When omitted, the response includes all of your container services in the AWS Region where the request is made.
+     * When omitted, the response includes all of your container services in the Amazon Web Services Region where the
+     * request is made.
      * </p>
      * 
      * @param serviceName
      *        The name of the container service for which to return information.</p>
      *        <p>
-     *        When omitted, the response includes all of your container services in the AWS Region where the request is
-     *        made.
+     *        When omitted, the response includes all of your container services in the Amazon Web Services Region where
+     *        the request is made.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -353,6 +353,21 @@ public class AbstractAWSNetworkFirewallAsync extends AbstractAWSNetworkFirewall 
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateFirewallEncryptionConfigurationResult> updateFirewallEncryptionConfigurationAsync(
+            UpdateFirewallEncryptionConfigurationRequest request) {
+
+        return updateFirewallEncryptionConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFirewallEncryptionConfigurationResult> updateFirewallEncryptionConfigurationAsync(
+            UpdateFirewallEncryptionConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateFirewallEncryptionConfigurationRequest, UpdateFirewallEncryptionConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateFirewallPolicyResult> updateFirewallPolicyAsync(UpdateFirewallPolicyRequest request) {
 
         return updateFirewallPolicyAsync(request, null);

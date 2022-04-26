@@ -89,6 +89,12 @@ public class CreateFirewallRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * A complex type that contains settings for encryption of your firewall resources.
+     * </p>
+     */
+    private EncryptionConfiguration encryptionConfiguration;
 
     /**
      * <p>
@@ -624,6 +630,46 @@ public class CreateFirewallRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * A complex type that contains settings for encryption of your firewall resources.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        A complex type that contains settings for encryption of your firewall resources.
+     */
+
+    public void setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        this.encryptionConfiguration = encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains settings for encryption of your firewall resources.
+     * </p>
+     * 
+     * @return A complex type that contains settings for encryption of your firewall resources.
+     */
+
+    public EncryptionConfiguration getEncryptionConfiguration() {
+        return this.encryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains settings for encryption of your firewall resources.
+     * </p>
+     * 
+     * @param encryptionConfiguration
+     *        A complex type that contains settings for encryption of your firewall resources.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFirewallRequest withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
+        setEncryptionConfiguration(encryptionConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -652,7 +698,9 @@ public class CreateFirewallRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getEncryptionConfiguration() != null)
+            sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -704,6 +752,10 @@ public class CreateFirewallRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getEncryptionConfiguration() == null ^ this.getEncryptionConfiguration() == null)
+            return false;
+        if (other.getEncryptionConfiguration() != null && other.getEncryptionConfiguration().equals(this.getEncryptionConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -721,6 +773,7 @@ public class CreateFirewallRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getFirewallPolicyChangeProtection() == null) ? 0 : getFirewallPolicyChangeProtection().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
         return hashCode;
     }
 
