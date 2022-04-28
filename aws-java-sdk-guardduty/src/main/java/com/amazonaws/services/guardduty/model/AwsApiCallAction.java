@@ -52,7 +52,11 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private String errorCode;
-
+    /**
+     * <p>
+     * The agent through which the API request was made.
+     * </p>
+     */
     private String userAgent;
     /**
      * <p>
@@ -235,7 +239,12 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The agent through which the API request was made.
+     * </p>
+     * 
      * @param userAgent
+     *        The agent through which the API request was made.
      */
 
     public void setUserAgent(String userAgent) {
@@ -243,7 +252,11 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The agent through which the API request was made.
+     * </p>
+     * 
+     * @return The agent through which the API request was made.
      */
 
     public String getUserAgent() {
@@ -251,7 +264,12 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The agent through which the API request was made.
+     * </p>
+     * 
      * @param userAgent
+     *        The agent through which the API request was made.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

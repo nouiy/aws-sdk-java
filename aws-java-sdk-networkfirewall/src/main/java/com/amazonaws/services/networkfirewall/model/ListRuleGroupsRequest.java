@@ -50,6 +50,19 @@ public class ListRuleGroupsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private String scope;
+    /**
+     * <p>
+     * Indicates the general category of the Amazon Web Services managed rule group.
+     * </p>
+     */
+    private String managedType;
+    /**
+     * <p>
+     * Indicates whether the rule group is stateless or stateful. If the rule group is stateless, it contains stateless
+     * rules. If it is stateful, it contains stateful rules.
+     * </p>
+     */
+    private String type;
 
     /**
      * <p>
@@ -237,6 +250,132 @@ public class ListRuleGroupsRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * Indicates the general category of the Amazon Web Services managed rule group.
+     * </p>
+     * 
+     * @param managedType
+     *        Indicates the general category of the Amazon Web Services managed rule group.
+     * @see ResourceManagedType
+     */
+
+    public void setManagedType(String managedType) {
+        this.managedType = managedType;
+    }
+
+    /**
+     * <p>
+     * Indicates the general category of the Amazon Web Services managed rule group.
+     * </p>
+     * 
+     * @return Indicates the general category of the Amazon Web Services managed rule group.
+     * @see ResourceManagedType
+     */
+
+    public String getManagedType() {
+        return this.managedType;
+    }
+
+    /**
+     * <p>
+     * Indicates the general category of the Amazon Web Services managed rule group.
+     * </p>
+     * 
+     * @param managedType
+     *        Indicates the general category of the Amazon Web Services managed rule group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResourceManagedType
+     */
+
+    public ListRuleGroupsRequest withManagedType(String managedType) {
+        setManagedType(managedType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates the general category of the Amazon Web Services managed rule group.
+     * </p>
+     * 
+     * @param managedType
+     *        Indicates the general category of the Amazon Web Services managed rule group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ResourceManagedType
+     */
+
+    public ListRuleGroupsRequest withManagedType(ResourceManagedType managedType) {
+        this.managedType = managedType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the rule group is stateless or stateful. If the rule group is stateless, it contains stateless
+     * rules. If it is stateful, it contains stateful rules.
+     * </p>
+     * 
+     * @param type
+     *        Indicates whether the rule group is stateless or stateful. If the rule group is stateless, it contains
+     *        stateless rules. If it is stateful, it contains stateful rules.
+     * @see RuleGroupType
+     */
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the rule group is stateless or stateful. If the rule group is stateless, it contains stateless
+     * rules. If it is stateful, it contains stateful rules.
+     * </p>
+     * 
+     * @return Indicates whether the rule group is stateless or stateful. If the rule group is stateless, it contains
+     *         stateless rules. If it is stateful, it contains stateful rules.
+     * @see RuleGroupType
+     */
+
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the rule group is stateless or stateful. If the rule group is stateless, it contains stateless
+     * rules. If it is stateful, it contains stateful rules.
+     * </p>
+     * 
+     * @param type
+     *        Indicates whether the rule group is stateless or stateful. If the rule group is stateless, it contains
+     *        stateless rules. If it is stateful, it contains stateful rules.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RuleGroupType
+     */
+
+    public ListRuleGroupsRequest withType(String type) {
+        setType(type);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the rule group is stateless or stateful. If the rule group is stateless, it contains stateless
+     * rules. If it is stateful, it contains stateful rules.
+     * </p>
+     * 
+     * @param type
+     *        Indicates whether the rule group is stateless or stateful. If the rule group is stateless, it contains
+     *        stateless rules. If it is stateful, it contains stateful rules.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RuleGroupType
+     */
+
+    public ListRuleGroupsRequest withType(RuleGroupType type) {
+        this.type = type.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -253,7 +392,11 @@ public class ListRuleGroupsRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getScope() != null)
-            sb.append("Scope: ").append(getScope());
+            sb.append("Scope: ").append(getScope()).append(",");
+        if (getManagedType() != null)
+            sb.append("ManagedType: ").append(getManagedType()).append(",");
+        if (getType() != null)
+            sb.append("Type: ").append(getType());
         sb.append("}");
         return sb.toString();
     }
@@ -280,6 +423,14 @@ public class ListRuleGroupsRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getScope() != null && other.getScope().equals(this.getScope()) == false)
             return false;
+        if (other.getManagedType() == null ^ this.getManagedType() == null)
+            return false;
+        if (other.getManagedType() != null && other.getManagedType().equals(this.getManagedType()) == false)
+            return false;
+        if (other.getType() == null ^ this.getType() == null)
+            return false;
+        if (other.getType() != null && other.getType().equals(this.getType()) == false)
+            return false;
         return true;
     }
 
@@ -291,6 +442,8 @@ public class ListRuleGroupsRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getScope() == null) ? 0 : getScope().hashCode());
+        hashCode = prime * hashCode + ((getManagedType() == null) ? 0 : getManagedType().hashCode());
+        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         return hashCode;
     }
 

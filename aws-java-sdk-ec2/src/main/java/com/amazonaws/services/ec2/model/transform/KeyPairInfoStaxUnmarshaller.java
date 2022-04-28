@@ -75,6 +75,15 @@ public class KeyPairInfoStaxUnmarshaller implements Unmarshaller<KeyPairInfo, St
                     continue;
                 }
 
+                if (context.testExpression("publicKey", targetDepth)) {
+                    keyPairInfo.setPublicKey(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("createTime", targetDepth)) {
+                    keyPairInfo.setCreateTime(DateStaxUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return keyPairInfo;

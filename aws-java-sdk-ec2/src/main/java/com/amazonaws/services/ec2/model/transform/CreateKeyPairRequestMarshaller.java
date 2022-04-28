@@ -83,6 +83,10 @@ public class CreateKeyPairRequestMarshaller implements Marshaller<Request<Create
             }
         }
 
+        if (createKeyPairRequest.getKeyFormat() != null) {
+            request.addParameter("KeyFormat", StringUtils.fromString(createKeyPairRequest.getKeyFormat()));
+        }
+
         return request;
     }
 

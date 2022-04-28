@@ -4785,9 +4785,10 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Creates an ED25519 or 2048-bit RSA key pair with the specified name. Amazon EC2 stores the public key and
-     * displays the private key for you to save to a file. The private key is returned as an unencrypted PEM encoded
-     * PKCS#1 private key. If a key with the specified name already exists, Amazon EC2 returns an error.
+     * Creates an ED25519 or 2048-bit RSA key pair with the specified name and in the specified PEM or PPK format.
+     * Amazon EC2 stores the public key and displays the private key for you to save to a file. The private key is
+     * returned as an unencrypted PEM encoded PKCS#1 private key or an unencrypted PPK formatted private key for use
+     * with PuTTY. If a key with the specified name already exists, Amazon EC2 returns an error.
      * </p>
      * <p>
      * The key pair returned to you is available only in the Amazon Web Services Region in which you create it. If you

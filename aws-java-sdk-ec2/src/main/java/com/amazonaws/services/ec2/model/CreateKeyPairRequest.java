@@ -49,6 +49,15 @@ public class CreateKeyPairRequest extends AmazonWebServiceRequest implements Ser
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TagSpecification> tagSpecifications;
+    /**
+     * <p>
+     * The format of the key pair.
+     * </p>
+     * <p>
+     * Default: <code>pem</code>
+     * </p>
+     */
+    private String keyFormat;
 
     /**
      * Default constructor for CreateKeyPairRequest object. Callers should use the setter or fluent setter (with...)
@@ -278,6 +287,85 @@ public class CreateKeyPairRequest extends AmazonWebServiceRequest implements Ser
     }
 
     /**
+     * <p>
+     * The format of the key pair.
+     * </p>
+     * <p>
+     * Default: <code>pem</code>
+     * </p>
+     * 
+     * @param keyFormat
+     *        The format of the key pair.</p>
+     *        <p>
+     *        Default: <code>pem</code>
+     * @see KeyFormat
+     */
+
+    public void setKeyFormat(String keyFormat) {
+        this.keyFormat = keyFormat;
+    }
+
+    /**
+     * <p>
+     * The format of the key pair.
+     * </p>
+     * <p>
+     * Default: <code>pem</code>
+     * </p>
+     * 
+     * @return The format of the key pair.</p>
+     *         <p>
+     *         Default: <code>pem</code>
+     * @see KeyFormat
+     */
+
+    public String getKeyFormat() {
+        return this.keyFormat;
+    }
+
+    /**
+     * <p>
+     * The format of the key pair.
+     * </p>
+     * <p>
+     * Default: <code>pem</code>
+     * </p>
+     * 
+     * @param keyFormat
+     *        The format of the key pair.</p>
+     *        <p>
+     *        Default: <code>pem</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyFormat
+     */
+
+    public CreateKeyPairRequest withKeyFormat(String keyFormat) {
+        setKeyFormat(keyFormat);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The format of the key pair.
+     * </p>
+     * <p>
+     * Default: <code>pem</code>
+     * </p>
+     * 
+     * @param keyFormat
+     *        The format of the key pair.</p>
+     *        <p>
+     *        Default: <code>pem</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeyFormat
+     */
+
+    public CreateKeyPairRequest withKeyFormat(KeyFormat keyFormat) {
+        this.keyFormat = keyFormat.toString();
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -305,7 +393,9 @@ public class CreateKeyPairRequest extends AmazonWebServiceRequest implements Ser
         if (getKeyType() != null)
             sb.append("KeyType: ").append(getKeyType()).append(",");
         if (getTagSpecifications() != null)
-            sb.append("TagSpecifications: ").append(getTagSpecifications());
+            sb.append("TagSpecifications: ").append(getTagSpecifications()).append(",");
+        if (getKeyFormat() != null)
+            sb.append("KeyFormat: ").append(getKeyFormat());
         sb.append("}");
         return sb.toString();
     }
@@ -332,6 +422,10 @@ public class CreateKeyPairRequest extends AmazonWebServiceRequest implements Ser
             return false;
         if (other.getTagSpecifications() != null && other.getTagSpecifications().equals(this.getTagSpecifications()) == false)
             return false;
+        if (other.getKeyFormat() == null ^ this.getKeyFormat() == null)
+            return false;
+        if (other.getKeyFormat() != null && other.getKeyFormat().equals(this.getKeyFormat()) == false)
+            return false;
         return true;
     }
 
@@ -343,6 +437,7 @@ public class CreateKeyPairRequest extends AmazonWebServiceRequest implements Ser
         hashCode = prime * hashCode + ((getKeyName() == null) ? 0 : getKeyName().hashCode());
         hashCode = prime * hashCode + ((getKeyType() == null) ? 0 : getKeyType().hashCode());
         hashCode = prime * hashCode + ((getTagSpecifications() == null) ? 0 : getTagSpecifications().hashCode());
+        hashCode = prime * hashCode + ((getKeyFormat() == null) ? 0 : getKeyFormat().hashCode());
         return hashCode;
     }
 

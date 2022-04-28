@@ -72,6 +72,10 @@ public class DescribeRuleGroupMetadataResultJsonUnmarshaller implements Unmarsha
                     context.nextToken();
                     describeRuleGroupMetadataResult.setStatefulRuleOptions(StatefulRuleOptionsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("LastModifiedTime", targetDepth)) {
+                    context.nextToken();
+                    describeRuleGroupMetadataResult.setLastModifiedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

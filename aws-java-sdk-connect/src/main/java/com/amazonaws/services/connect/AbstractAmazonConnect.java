@@ -503,6 +503,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public PutUserStatusResult putUserStatus(PutUserStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ReleasePhoneNumberResult releasePhoneNumber(ReleasePhoneNumberRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

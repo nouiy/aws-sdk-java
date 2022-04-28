@@ -30,6 +30,13 @@ public class InstanceConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Configures the number of resource instances to use while running an Amazon Braket job on Amazon Braket. The
+     * default value is 1.
+     * </p>
+     */
+    private Integer instanceCount;
+    /**
+     * <p>
      * Configures the type resource instances to use while running an Amazon Braket hybrid job.
      * </p>
      */
@@ -40,6 +47,52 @@ public class InstanceConfig implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Integer volumeSizeInGb;
+
+    /**
+     * <p>
+     * Configures the number of resource instances to use while running an Amazon Braket job on Amazon Braket. The
+     * default value is 1.
+     * </p>
+     * 
+     * @param instanceCount
+     *        Configures the number of resource instances to use while running an Amazon Braket job on Amazon Braket.
+     *        The default value is 1.
+     */
+
+    public void setInstanceCount(Integer instanceCount) {
+        this.instanceCount = instanceCount;
+    }
+
+    /**
+     * <p>
+     * Configures the number of resource instances to use while running an Amazon Braket job on Amazon Braket. The
+     * default value is 1.
+     * </p>
+     * 
+     * @return Configures the number of resource instances to use while running an Amazon Braket job on Amazon Braket.
+     *         The default value is 1.
+     */
+
+    public Integer getInstanceCount() {
+        return this.instanceCount;
+    }
+
+    /**
+     * <p>
+     * Configures the number of resource instances to use while running an Amazon Braket job on Amazon Braket. The
+     * default value is 1.
+     * </p>
+     * 
+     * @param instanceCount
+     *        Configures the number of resource instances to use while running an Amazon Braket job on Amazon Braket.
+     *        The default value is 1.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InstanceConfig withInstanceCount(Integer instanceCount) {
+        setInstanceCount(instanceCount);
+        return this;
+    }
 
     /**
      * <p>
@@ -152,6 +205,8 @@ public class InstanceConfig implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getInstanceCount() != null)
+            sb.append("InstanceCount: ").append(getInstanceCount()).append(",");
         if (getInstanceType() != null)
             sb.append("InstanceType: ").append(getInstanceType()).append(",");
         if (getVolumeSizeInGb() != null)
@@ -170,6 +225,10 @@ public class InstanceConfig implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof InstanceConfig == false)
             return false;
         InstanceConfig other = (InstanceConfig) obj;
+        if (other.getInstanceCount() == null ^ this.getInstanceCount() == null)
+            return false;
+        if (other.getInstanceCount() != null && other.getInstanceCount().equals(this.getInstanceCount()) == false)
+            return false;
         if (other.getInstanceType() == null ^ this.getInstanceType() == null)
             return false;
         if (other.getInstanceType() != null && other.getInstanceType().equals(this.getInstanceType()) == false)
@@ -186,6 +245,7 @@ public class InstanceConfig implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getInstanceCount() == null) ? 0 : getInstanceCount().hashCode());
         hashCode = prime * hashCode + ((getInstanceType() == null) ? 0 : getInstanceType().hashCode());
         hashCode = prime * hashCode + ((getVolumeSizeInGb() == null) ? 0 : getVolumeSizeInGb().hashCode());
         return hashCode;

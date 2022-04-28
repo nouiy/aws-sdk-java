@@ -93,6 +93,10 @@ public class DescribeKeyPairsRequestMarshaller implements Marshaller<Request<Des
             }
         }
 
+        if (describeKeyPairsRequest.getIncludePublicKey() != null) {
+            request.addParameter("IncludePublicKey", StringUtils.fromBoolean(describeKeyPairsRequest.getIncludePublicKey()));
+        }
+
         return request;
     }
 

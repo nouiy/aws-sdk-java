@@ -202,6 +202,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.awsApiCallAction.userAgent
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.awsApiCallAction.remoteIpDetails.city.cityName
      * </p>
      * </li>
@@ -745,6 +750,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.awsApiCallAction.userAgent
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.awsApiCallAction.remoteIpDetails.city.cityName
      * </p>
      * </li>
@@ -1037,6 +1047,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        service.action.awsApiCallAction.errorCode
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        service.action.awsApiCallAction.userAgent
      *        </p>
      *        </li>
      *        <li>
@@ -1343,6 +1358,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.awsApiCallAction.userAgent
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.awsApiCallAction.remoteIpDetails.city.cityName
      * </p>
      * </li>
@@ -1634,6 +1654,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <li>
      *         <p>
      *         service.action.awsApiCallAction.errorCode
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         service.action.awsApiCallAction.userAgent
      *         </p>
      *         </li>
      *         <li>
@@ -1940,6 +1965,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * service.action.awsApiCallAction.userAgent
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.action.awsApiCallAction.remoteIpDetails.city.cityName
      * </p>
      * </li>
@@ -2232,6 +2262,11 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        service.action.awsApiCallAction.errorCode
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        service.action.awsApiCallAction.userAgent
      *        </p>
      *        </li>
      *        <li>

@@ -1271,6 +1271,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<PutUserStatusResult> putUserStatusAsync(PutUserStatusRequest request) {
+
+        return putUserStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutUserStatusResult> putUserStatusAsync(PutUserStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutUserStatusRequest, PutUserStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ReleasePhoneNumberResult> releasePhoneNumberAsync(ReleasePhoneNumberRequest request) {
 
         return releasePhoneNumberAsync(request, null);

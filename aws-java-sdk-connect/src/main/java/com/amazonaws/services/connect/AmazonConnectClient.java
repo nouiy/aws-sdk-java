@@ -6788,6 +6788,80 @@ public class AmazonConnectClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
+     * Changes the current status of a user or agent in Amazon Connect. If the agent is currently handling a contact,
+     * this sets the agent's next status.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/metrics-agent-status.html">Agent status</a> and <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/set-next-status.html">Set your next status</a> in the
+     * <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param putUserStatusRequest
+     * @return Result of the PutUserStatus operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.PutUserStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/PutUserStatus" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public PutUserStatusResult putUserStatus(PutUserStatusRequest request) {
+        request = beforeClientExecution(request);
+        return executePutUserStatus(request);
+    }
+
+    @SdkInternalApi
+    final PutUserStatusResult executePutUserStatus(PutUserStatusRequest putUserStatusRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putUserStatusRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutUserStatusRequest> request = null;
+        Response<PutUserStatusResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutUserStatusRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(putUserStatusRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Connect");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutUserStatus");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutUserStatusResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new PutUserStatusResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Releases a phone number previously claimed to an Amazon Connect instance.
      * </p>
      * 

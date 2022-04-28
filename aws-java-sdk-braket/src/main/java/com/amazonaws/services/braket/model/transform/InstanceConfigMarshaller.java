@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class InstanceConfigMarshaller {
 
+    private static final MarshallingInfo<Integer> INSTANCECOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceCount").build();
     private static final MarshallingInfo<String> INSTANCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceType").build();
     private static final MarshallingInfo<Integer> VOLUMESIZEINGB_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -48,6 +50,7 @@ public class InstanceConfigMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(instanceConfig.getInstanceCount(), INSTANCECOUNT_BINDING);
             protocolMarshaller.marshall(instanceConfig.getInstanceType(), INSTANCETYPE_BINDING);
             protocolMarshaller.marshall(instanceConfig.getVolumeSizeInGb(), VOLUMESIZEINGB_BINDING);
         } catch (Exception e) {

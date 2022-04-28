@@ -28,6 +28,17 @@ import com.amazonaws.services.braket.model.*;
  * <p>
  * The Amazon Braket API Reference provides information about the operations and structures supported in Amazon Braket.
  * </p>
+ * <p>
+ * Additional Resources:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/braket/latest/developerguide/what-is-braket.html">Amazon Braket Developer
+ * Guide</a>
+ * </p>
+ * </li>
+ * </ul>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AWSBraketAsync extends AWSBraket {
@@ -160,6 +171,16 @@ public interface AWSBraketAsync extends AWSBraket {
      * <p>
      * Retrieves the devices available in Amazon Braket.
      * </p>
+     * <note>
+     * <p>
+     * For backwards compatibility with older versions of BraketSchemas, OpenQASM information is omitted from GetDevice
+     * API calls. To get this information the user-agent needs to present a recent version of the BraketSchemas (1.8.0
+     * or later). The Braket SDK automatically reports this for you. If you do not see OpenQASM results in the GetDevice
+     * response when using a Braket SDK, you may need to set AWS_EXECUTION_ENV environment variable to configure
+     * user-agent. See the code examples provided below for how to do this for the AWS CLI, Boto3, and the Go, Java, and
+     * JavaScript/TypeScript SDKs.
+     * </p>
+     * </note>
      * 
      * @param getDeviceRequest
      * @return A Java Future containing the result of the GetDevice operation returned by the service.
@@ -173,6 +194,16 @@ public interface AWSBraketAsync extends AWSBraket {
      * <p>
      * Retrieves the devices available in Amazon Braket.
      * </p>
+     * <note>
+     * <p>
+     * For backwards compatibility with older versions of BraketSchemas, OpenQASM information is omitted from GetDevice
+     * API calls. To get this information the user-agent needs to present a recent version of the BraketSchemas (1.8.0
+     * or later). The Braket SDK automatically reports this for you. If you do not see OpenQASM results in the GetDevice
+     * response when using a Braket SDK, you may need to set AWS_EXECUTION_ENV environment variable to configure
+     * user-agent. See the code examples provided below for how to do this for the AWS CLI, Boto3, and the Go, Java, and
+     * JavaScript/TypeScript SDKs.
+     * </p>
+     * </note>
      * 
      * @param getDeviceRequest
      * @param asyncHandler

@@ -33,6 +33,10 @@ public class ListRuleGroupsRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
     private static final MarshallingInfo<String> SCOPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Scope").build();
+    private static final MarshallingInfo<String> MANAGEDTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ManagedType").build();
+    private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Type").build();
 
     private static final ListRuleGroupsRequestMarshaller instance = new ListRuleGroupsRequestMarshaller();
 
@@ -53,6 +57,8 @@ public class ListRuleGroupsRequestMarshaller {
             protocolMarshaller.marshall(listRuleGroupsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listRuleGroupsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listRuleGroupsRequest.getScope(), SCOPE_BINDING);
+            protocolMarshaller.marshall(listRuleGroupsRequest.getManagedType(), MANAGEDTYPE_BINDING);
+            protocolMarshaller.marshall(listRuleGroupsRequest.getType(), TYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

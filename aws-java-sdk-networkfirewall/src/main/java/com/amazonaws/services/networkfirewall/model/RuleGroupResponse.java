@@ -108,6 +108,29 @@ public class RuleGroupResponse implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private EncryptionConfiguration encryptionConfiguration;
+    /**
+     * <p>
+     * A complex type that contains metadata about the rule group that your own rule group is copied from. You can use
+     * the metadata to track the version updates made to the originating rule group.
+     * </p>
+     */
+    private SourceMetadata sourceMetadata;
+    /**
+     * <p>
+     * The Amazon resource name (ARN) of the Amazon Simple Notification Service SNS topic that's used to record changes
+     * to the managed rule group. You can subscribe to the SNS topic to receive notifications when the managed rule
+     * group is modified, such as for new versions and for version expiration. For more information, see the <a
+     * href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">Amazon Simple Notification Service Developer
+     * Guide.</a>.
+     * </p>
+     */
+    private String snsTopic;
+    /**
+     * <p>
+     * The last time that the rule group was changed.
+     * </p>
+     */
+    private java.util.Date lastModifiedTime;
 
     /**
      * <p>
@@ -692,6 +715,156 @@ public class RuleGroupResponse implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * A complex type that contains metadata about the rule group that your own rule group is copied from. You can use
+     * the metadata to track the version updates made to the originating rule group.
+     * </p>
+     * 
+     * @param sourceMetadata
+     *        A complex type that contains metadata about the rule group that your own rule group is copied from. You
+     *        can use the metadata to track the version updates made to the originating rule group.
+     */
+
+    public void setSourceMetadata(SourceMetadata sourceMetadata) {
+        this.sourceMetadata = sourceMetadata;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains metadata about the rule group that your own rule group is copied from. You can use
+     * the metadata to track the version updates made to the originating rule group.
+     * </p>
+     * 
+     * @return A complex type that contains metadata about the rule group that your own rule group is copied from. You
+     *         can use the metadata to track the version updates made to the originating rule group.
+     */
+
+    public SourceMetadata getSourceMetadata() {
+        return this.sourceMetadata;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains metadata about the rule group that your own rule group is copied from. You can use
+     * the metadata to track the version updates made to the originating rule group.
+     * </p>
+     * 
+     * @param sourceMetadata
+     *        A complex type that contains metadata about the rule group that your own rule group is copied from. You
+     *        can use the metadata to track the version updates made to the originating rule group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RuleGroupResponse withSourceMetadata(SourceMetadata sourceMetadata) {
+        setSourceMetadata(sourceMetadata);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon resource name (ARN) of the Amazon Simple Notification Service SNS topic that's used to record changes
+     * to the managed rule group. You can subscribe to the SNS topic to receive notifications when the managed rule
+     * group is modified, such as for new versions and for version expiration. For more information, see the <a
+     * href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">Amazon Simple Notification Service Developer
+     * Guide.</a>.
+     * </p>
+     * 
+     * @param snsTopic
+     *        The Amazon resource name (ARN) of the Amazon Simple Notification Service SNS topic that's used to record
+     *        changes to the managed rule group. You can subscribe to the SNS topic to receive notifications when the
+     *        managed rule group is modified, such as for new versions and for version expiration. For more information,
+     *        see the <a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">Amazon Simple Notification
+     *        Service Developer Guide.</a>.
+     */
+
+    public void setSnsTopic(String snsTopic) {
+        this.snsTopic = snsTopic;
+    }
+
+    /**
+     * <p>
+     * The Amazon resource name (ARN) of the Amazon Simple Notification Service SNS topic that's used to record changes
+     * to the managed rule group. You can subscribe to the SNS topic to receive notifications when the managed rule
+     * group is modified, such as for new versions and for version expiration. For more information, see the <a
+     * href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">Amazon Simple Notification Service Developer
+     * Guide.</a>.
+     * </p>
+     * 
+     * @return The Amazon resource name (ARN) of the Amazon Simple Notification Service SNS topic that's used to record
+     *         changes to the managed rule group. You can subscribe to the SNS topic to receive notifications when the
+     *         managed rule group is modified, such as for new versions and for version expiration. For more
+     *         information, see the <a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">Amazon Simple
+     *         Notification Service Developer Guide.</a>.
+     */
+
+    public String getSnsTopic() {
+        return this.snsTopic;
+    }
+
+    /**
+     * <p>
+     * The Amazon resource name (ARN) of the Amazon Simple Notification Service SNS topic that's used to record changes
+     * to the managed rule group. You can subscribe to the SNS topic to receive notifications when the managed rule
+     * group is modified, such as for new versions and for version expiration. For more information, see the <a
+     * href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">Amazon Simple Notification Service Developer
+     * Guide.</a>.
+     * </p>
+     * 
+     * @param snsTopic
+     *        The Amazon resource name (ARN) of the Amazon Simple Notification Service SNS topic that's used to record
+     *        changes to the managed rule group. You can subscribe to the SNS topic to receive notifications when the
+     *        managed rule group is modified, such as for new versions and for version expiration. For more information,
+     *        see the <a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">Amazon Simple Notification
+     *        Service Developer Guide.</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RuleGroupResponse withSnsTopic(String snsTopic) {
+        setSnsTopic(snsTopic);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The last time that the rule group was changed.
+     * </p>
+     * 
+     * @param lastModifiedTime
+     *        The last time that the rule group was changed.
+     */
+
+    public void setLastModifiedTime(java.util.Date lastModifiedTime) {
+        this.lastModifiedTime = lastModifiedTime;
+    }
+
+    /**
+     * <p>
+     * The last time that the rule group was changed.
+     * </p>
+     * 
+     * @return The last time that the rule group was changed.
+     */
+
+    public java.util.Date getLastModifiedTime() {
+        return this.lastModifiedTime;
+    }
+
+    /**
+     * <p>
+     * The last time that the rule group was changed.
+     * </p>
+     * 
+     * @param lastModifiedTime
+     *        The last time that the rule group was changed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RuleGroupResponse withLastModifiedTime(java.util.Date lastModifiedTime) {
+        setLastModifiedTime(lastModifiedTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -724,7 +897,13 @@ public class RuleGroupResponse implements Serializable, Cloneable, StructuredPoj
         if (getNumberOfAssociations() != null)
             sb.append("NumberOfAssociations: ").append(getNumberOfAssociations()).append(",");
         if (getEncryptionConfiguration() != null)
-            sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration());
+            sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration()).append(",");
+        if (getSourceMetadata() != null)
+            sb.append("SourceMetadata: ").append(getSourceMetadata()).append(",");
+        if (getSnsTopic() != null)
+            sb.append("SnsTopic: ").append(getSnsTopic()).append(",");
+        if (getLastModifiedTime() != null)
+            sb.append("LastModifiedTime: ").append(getLastModifiedTime());
         sb.append("}");
         return sb.toString();
     }
@@ -783,6 +962,18 @@ public class RuleGroupResponse implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getEncryptionConfiguration() != null && other.getEncryptionConfiguration().equals(this.getEncryptionConfiguration()) == false)
             return false;
+        if (other.getSourceMetadata() == null ^ this.getSourceMetadata() == null)
+            return false;
+        if (other.getSourceMetadata() != null && other.getSourceMetadata().equals(this.getSourceMetadata()) == false)
+            return false;
+        if (other.getSnsTopic() == null ^ this.getSnsTopic() == null)
+            return false;
+        if (other.getSnsTopic() != null && other.getSnsTopic().equals(this.getSnsTopic()) == false)
+            return false;
+        if (other.getLastModifiedTime() == null ^ this.getLastModifiedTime() == null)
+            return false;
+        if (other.getLastModifiedTime() != null && other.getLastModifiedTime().equals(this.getLastModifiedTime()) == false)
+            return false;
         return true;
     }
 
@@ -802,6 +993,9 @@ public class RuleGroupResponse implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getConsumedCapacity() == null) ? 0 : getConsumedCapacity().hashCode());
         hashCode = prime * hashCode + ((getNumberOfAssociations() == null) ? 0 : getNumberOfAssociations().hashCode());
         hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getSourceMetadata() == null) ? 0 : getSourceMetadata().hashCode());
+        hashCode = prime * hashCode + ((getSnsTopic() == null) ? 0 : getSnsTopic().hashCode());
+        hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         return hashCode;
     }
 

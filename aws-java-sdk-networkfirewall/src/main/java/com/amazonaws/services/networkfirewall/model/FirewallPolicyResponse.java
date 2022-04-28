@@ -97,6 +97,12 @@ public class FirewallPolicyResponse implements Serializable, Cloneable, Structur
      * </p>
      */
     private EncryptionConfiguration encryptionConfiguration;
+    /**
+     * <p>
+     * The last time that the firewall policy was changed.
+     * </p>
+     */
+    private java.util.Date lastModifiedTime;
 
     /**
      * <p>
@@ -595,6 +601,46 @@ public class FirewallPolicyResponse implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The last time that the firewall policy was changed.
+     * </p>
+     * 
+     * @param lastModifiedTime
+     *        The last time that the firewall policy was changed.
+     */
+
+    public void setLastModifiedTime(java.util.Date lastModifiedTime) {
+        this.lastModifiedTime = lastModifiedTime;
+    }
+
+    /**
+     * <p>
+     * The last time that the firewall policy was changed.
+     * </p>
+     * 
+     * @return The last time that the firewall policy was changed.
+     */
+
+    public java.util.Date getLastModifiedTime() {
+        return this.lastModifiedTime;
+    }
+
+    /**
+     * <p>
+     * The last time that the firewall policy was changed.
+     * </p>
+     * 
+     * @param lastModifiedTime
+     *        The last time that the firewall policy was changed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FirewallPolicyResponse withLastModifiedTime(java.util.Date lastModifiedTime) {
+        setLastModifiedTime(lastModifiedTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -625,7 +671,9 @@ public class FirewallPolicyResponse implements Serializable, Cloneable, Structur
         if (getNumberOfAssociations() != null)
             sb.append("NumberOfAssociations: ").append(getNumberOfAssociations()).append(",");
         if (getEncryptionConfiguration() != null)
-            sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration());
+            sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration()).append(",");
+        if (getLastModifiedTime() != null)
+            sb.append("LastModifiedTime: ").append(getLastModifiedTime());
         sb.append("}");
         return sb.toString();
     }
@@ -681,6 +729,10 @@ public class FirewallPolicyResponse implements Serializable, Cloneable, Structur
             return false;
         if (other.getEncryptionConfiguration() != null && other.getEncryptionConfiguration().equals(this.getEncryptionConfiguration()) == false)
             return false;
+        if (other.getLastModifiedTime() == null ^ this.getLastModifiedTime() == null)
+            return false;
+        if (other.getLastModifiedTime() != null && other.getLastModifiedTime().equals(this.getLastModifiedTime()) == false)
+            return false;
         return true;
     }
 
@@ -699,6 +751,7 @@ public class FirewallPolicyResponse implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getConsumedStatefulRuleCapacity() == null) ? 0 : getConsumedStatefulRuleCapacity().hashCode());
         hashCode = prime * hashCode + ((getNumberOfAssociations() == null) ? 0 : getNumberOfAssociations().hashCode());
         hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         return hashCode;
     }
 

@@ -2578,6 +2578,38 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Changes the current status of a user or agent in Amazon Connect. If the agent is currently handling a contact,
+     * this sets the agent's next status.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/metrics-agent-status.html">Agent status</a> and <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/set-next-status.html">Set your next status</a> in the
+     * <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param putUserStatusRequest
+     * @return Result of the PutUserStatus operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @sample AmazonConnect.PutUserStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/PutUserStatus" target="_top">AWS API
+     *      Documentation</a>
+     */
+    PutUserStatusResult putUserStatus(PutUserStatusRequest putUserStatusRequest);
+
+    /**
+     * <p>
      * Releases a phone number previously claimed to an Amazon Connect instance.
      * </p>
      * 

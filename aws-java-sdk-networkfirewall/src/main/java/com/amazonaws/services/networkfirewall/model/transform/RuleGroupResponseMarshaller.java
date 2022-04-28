@@ -50,6 +50,12 @@ public class RuleGroupResponseMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NumberOfAssociations").build();
     private static final MarshallingInfo<StructuredPojo> ENCRYPTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> SOURCEMETADATA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SourceMetadata").build();
+    private static final MarshallingInfo<String> SNSTOPIC_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("SnsTopic").build();
+    private static final MarshallingInfo<java.util.Date> LASTMODIFIEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModifiedTime").timestampFormat("unixTimestamp").build();
 
     private static final RuleGroupResponseMarshaller instance = new RuleGroupResponseMarshaller();
 
@@ -78,6 +84,9 @@ public class RuleGroupResponseMarshaller {
             protocolMarshaller.marshall(ruleGroupResponse.getConsumedCapacity(), CONSUMEDCAPACITY_BINDING);
             protocolMarshaller.marshall(ruleGroupResponse.getNumberOfAssociations(), NUMBEROFASSOCIATIONS_BINDING);
             protocolMarshaller.marshall(ruleGroupResponse.getEncryptionConfiguration(), ENCRYPTIONCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(ruleGroupResponse.getSourceMetadata(), SOURCEMETADATA_BINDING);
+            protocolMarshaller.marshall(ruleGroupResponse.getSnsTopic(), SNSTOPIC_BINDING);
+            protocolMarshaller.marshall(ruleGroupResponse.getLastModifiedTime(), LASTMODIFIEDTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

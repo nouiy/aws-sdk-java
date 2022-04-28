@@ -3245,6 +3245,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<PutUserStatusResult> putUserStatusAsync(PutUserStatusRequest request) {
+
+        return putUserStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutUserStatusResult> putUserStatusAsync(final PutUserStatusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutUserStatusRequest, PutUserStatusResult> asyncHandler) {
+        final PutUserStatusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutUserStatusResult>() {
+            @Override
+            public PutUserStatusResult call() throws Exception {
+                PutUserStatusResult result = null;
+
+                try {
+                    result = executePutUserStatus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ReleasePhoneNumberResult> releasePhoneNumberAsync(ReleasePhoneNumberRequest request) {
 
         return releasePhoneNumberAsync(request, null);

@@ -85,6 +85,25 @@ public class KeyPairInfo implements Serializable, Cloneable {
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
+    /**
+     * <p>
+     * The public key material.
+     * </p>
+     */
+    private String publicKey;
+    /**
+     * <p>
+     * If you used Amazon EC2 to create the key pair, this is the date and time when the key was created, in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 date-time format</a>, in the UTC time
+     * zone.
+     * </p>
+     * <p>
+     * If you imported an existing key pair to Amazon EC2, this is the date and time the key was imported, in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 date-time format</a>, in the UTC time
+     * zone.
+     * </p>
+     */
+    private java.util.Date createTime;
 
     /**
      * <p>
@@ -513,6 +532,125 @@ public class KeyPairInfo implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The public key material.
+     * </p>
+     * 
+     * @param publicKey
+     *        The public key material.
+     */
+
+    public void setPublicKey(String publicKey) {
+        this.publicKey = publicKey;
+    }
+
+    /**
+     * <p>
+     * The public key material.
+     * </p>
+     * 
+     * @return The public key material.
+     */
+
+    public String getPublicKey() {
+        return this.publicKey;
+    }
+
+    /**
+     * <p>
+     * The public key material.
+     * </p>
+     * 
+     * @param publicKey
+     *        The public key material.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KeyPairInfo withPublicKey(String publicKey) {
+        setPublicKey(publicKey);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If you used Amazon EC2 to create the key pair, this is the date and time when the key was created, in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 date-time format</a>, in the UTC time
+     * zone.
+     * </p>
+     * <p>
+     * If you imported an existing key pair to Amazon EC2, this is the date and time the key was imported, in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 date-time format</a>, in the UTC time
+     * zone.
+     * </p>
+     * 
+     * @param createTime
+     *        If you used Amazon EC2 to create the key pair, this is the date and time when the key was created, in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 date-time format</a>, in the UTC
+     *        time zone.</p>
+     *        <p>
+     *        If you imported an existing key pair to Amazon EC2, this is the date and time the key was imported, in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 date-time format</a>, in the UTC
+     *        time zone.
+     */
+
+    public void setCreateTime(java.util.Date createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * <p>
+     * If you used Amazon EC2 to create the key pair, this is the date and time when the key was created, in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 date-time format</a>, in the UTC time
+     * zone.
+     * </p>
+     * <p>
+     * If you imported an existing key pair to Amazon EC2, this is the date and time the key was imported, in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 date-time format</a>, in the UTC time
+     * zone.
+     * </p>
+     * 
+     * @return If you used Amazon EC2 to create the key pair, this is the date and time when the key was created, in <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 date-time format</a>, in the UTC
+     *         time zone.</p>
+     *         <p>
+     *         If you imported an existing key pair to Amazon EC2, this is the date and time the key was imported, in <a
+     *         href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 date-time format</a>, in the UTC
+     *         time zone.
+     */
+
+    public java.util.Date getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
+     * <p>
+     * If you used Amazon EC2 to create the key pair, this is the date and time when the key was created, in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 date-time format</a>, in the UTC time
+     * zone.
+     * </p>
+     * <p>
+     * If you imported an existing key pair to Amazon EC2, this is the date and time the key was imported, in <a
+     * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 date-time format</a>, in the UTC time
+     * zone.
+     * </p>
+     * 
+     * @param createTime
+     *        If you used Amazon EC2 to create the key pair, this is the date and time when the key was created, in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 date-time format</a>, in the UTC
+     *        time zone.</p>
+     *        <p>
+     *        If you imported an existing key pair to Amazon EC2, this is the date and time the key was imported, in <a
+     *        href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601 date-time format</a>, in the UTC
+     *        time zone.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KeyPairInfo withCreateTime(java.util.Date createTime) {
+        setCreateTime(createTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -533,7 +671,11 @@ public class KeyPairInfo implements Serializable, Cloneable {
         if (getKeyType() != null)
             sb.append("KeyType: ").append(getKeyType()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getPublicKey() != null)
+            sb.append("PublicKey: ").append(getPublicKey()).append(",");
+        if (getCreateTime() != null)
+            sb.append("CreateTime: ").append(getCreateTime());
         sb.append("}");
         return sb.toString();
     }
@@ -568,6 +710,14 @@ public class KeyPairInfo implements Serializable, Cloneable {
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getPublicKey() == null ^ this.getPublicKey() == null)
+            return false;
+        if (other.getPublicKey() != null && other.getPublicKey().equals(this.getPublicKey()) == false)
+            return false;
+        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+            return false;
+        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
+            return false;
         return true;
     }
 
@@ -581,6 +731,8 @@ public class KeyPairInfo implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getKeyName() == null) ? 0 : getKeyName().hashCode());
         hashCode = prime * hashCode + ((getKeyType() == null) ? 0 : getKeyType().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getPublicKey() == null) ? 0 : getPublicKey().hashCode());
+        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         return hashCode;
     }
 

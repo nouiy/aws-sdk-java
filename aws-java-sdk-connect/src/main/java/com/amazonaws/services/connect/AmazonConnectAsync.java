@@ -3589,6 +3589,51 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Changes the current status of a user or agent in Amazon Connect. If the agent is currently handling a contact,
+     * this sets the agent's next status.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/metrics-agent-status.html">Agent status</a> and <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/set-next-status.html">Set your next status</a> in the
+     * <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param putUserStatusRequest
+     * @return A Java Future containing the result of the PutUserStatus operation returned by the service.
+     * @sample AmazonConnectAsync.PutUserStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/PutUserStatus" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutUserStatusResult> putUserStatusAsync(PutUserStatusRequest putUserStatusRequest);
+
+    /**
+     * <p>
+     * Changes the current status of a user or agent in Amazon Connect. If the agent is currently handling a contact,
+     * this sets the agent's next status.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/metrics-agent-status.html">Agent status</a> and <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/set-next-status.html">Set your next status</a> in the
+     * <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * 
+     * @param putUserStatusRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutUserStatus operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.PutUserStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/PutUserStatus" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutUserStatusResult> putUserStatusAsync(PutUserStatusRequest putUserStatusRequest,
+            com.amazonaws.handlers.AsyncHandler<PutUserStatusRequest, PutUserStatusResult> asyncHandler);
+
+    /**
+     * <p>
      * Releases a phone number previously claimed to an Amazon Connect instance.
      * </p>
      * 

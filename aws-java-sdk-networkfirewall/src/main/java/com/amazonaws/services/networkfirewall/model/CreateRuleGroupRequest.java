@@ -161,6 +161,13 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private EncryptionConfiguration encryptionConfiguration;
+    /**
+     * <p>
+     * A complex type that contains metadata about the rule group that your own rule group is copied from. You can use
+     * the metadata to keep track of updates made to the originating rule group.
+     * </p>
+     */
+    private SourceMetadata sourceMetadata;
 
     /**
      * <p>
@@ -1087,6 +1094,52 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * A complex type that contains metadata about the rule group that your own rule group is copied from. You can use
+     * the metadata to keep track of updates made to the originating rule group.
+     * </p>
+     * 
+     * @param sourceMetadata
+     *        A complex type that contains metadata about the rule group that your own rule group is copied from. You
+     *        can use the metadata to keep track of updates made to the originating rule group.
+     */
+
+    public void setSourceMetadata(SourceMetadata sourceMetadata) {
+        this.sourceMetadata = sourceMetadata;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains metadata about the rule group that your own rule group is copied from. You can use
+     * the metadata to keep track of updates made to the originating rule group.
+     * </p>
+     * 
+     * @return A complex type that contains metadata about the rule group that your own rule group is copied from. You
+     *         can use the metadata to keep track of updates made to the originating rule group.
+     */
+
+    public SourceMetadata getSourceMetadata() {
+        return this.sourceMetadata;
+    }
+
+    /**
+     * <p>
+     * A complex type that contains metadata about the rule group that your own rule group is copied from. You can use
+     * the metadata to keep track of updates made to the originating rule group.
+     * </p>
+     * 
+     * @param sourceMetadata
+     *        A complex type that contains metadata about the rule group that your own rule group is copied from. You
+     *        can use the metadata to keep track of updates made to the originating rule group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateRuleGroupRequest withSourceMetadata(SourceMetadata sourceMetadata) {
+        setSourceMetadata(sourceMetadata);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1115,7 +1168,9 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
         if (getDryRun() != null)
             sb.append("DryRun: ").append(getDryRun()).append(",");
         if (getEncryptionConfiguration() != null)
-            sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration());
+            sb.append("EncryptionConfiguration: ").append(getEncryptionConfiguration()).append(",");
+        if (getSourceMetadata() != null)
+            sb.append("SourceMetadata: ").append(getSourceMetadata());
         sb.append("}");
         return sb.toString();
     }
@@ -1166,6 +1221,10 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getEncryptionConfiguration() != null && other.getEncryptionConfiguration().equals(this.getEncryptionConfiguration()) == false)
             return false;
+        if (other.getSourceMetadata() == null ^ this.getSourceMetadata() == null)
+            return false;
+        if (other.getSourceMetadata() != null && other.getSourceMetadata().equals(this.getSourceMetadata()) == false)
+            return false;
         return true;
     }
 
@@ -1183,6 +1242,7 @@ public class CreateRuleGroupRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getDryRun() == null) ? 0 : getDryRun().hashCode());
         hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getSourceMetadata() == null) ? 0 : getSourceMetadata().hashCode());
         return hashCode;
     }
 

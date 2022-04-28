@@ -77,6 +77,15 @@ public class DescribeKeyPairsRequest extends AmazonWebServiceRequest implements 
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> keyPairIds;
+    /**
+     * <p>
+     * If <code>true</code>, the public key material is included in the response.
+     * </p>
+     * <p>
+     * Default: <code>false</code>
+     * </p>
+     */
+    private Boolean includePublicKey;
 
     /**
      * <p>
@@ -562,6 +571,78 @@ public class DescribeKeyPairsRequest extends AmazonWebServiceRequest implements 
     }
 
     /**
+     * <p>
+     * If <code>true</code>, the public key material is included in the response.
+     * </p>
+     * <p>
+     * Default: <code>false</code>
+     * </p>
+     * 
+     * @param includePublicKey
+     *        If <code>true</code>, the public key material is included in the response.</p>
+     *        <p>
+     *        Default: <code>false</code>
+     */
+
+    public void setIncludePublicKey(Boolean includePublicKey) {
+        this.includePublicKey = includePublicKey;
+    }
+
+    /**
+     * <p>
+     * If <code>true</code>, the public key material is included in the response.
+     * </p>
+     * <p>
+     * Default: <code>false</code>
+     * </p>
+     * 
+     * @return If <code>true</code>, the public key material is included in the response.</p>
+     *         <p>
+     *         Default: <code>false</code>
+     */
+
+    public Boolean getIncludePublicKey() {
+        return this.includePublicKey;
+    }
+
+    /**
+     * <p>
+     * If <code>true</code>, the public key material is included in the response.
+     * </p>
+     * <p>
+     * Default: <code>false</code>
+     * </p>
+     * 
+     * @param includePublicKey
+     *        If <code>true</code>, the public key material is included in the response.</p>
+     *        <p>
+     *        Default: <code>false</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeKeyPairsRequest withIncludePublicKey(Boolean includePublicKey) {
+        setIncludePublicKey(includePublicKey);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If <code>true</code>, the public key material is included in the response.
+     * </p>
+     * <p>
+     * Default: <code>false</code>
+     * </p>
+     * 
+     * @return If <code>true</code>, the public key material is included in the response.</p>
+     *         <p>
+     *         Default: <code>false</code>
+     */
+
+    public Boolean isIncludePublicKey() {
+        return this.includePublicKey;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -589,7 +670,9 @@ public class DescribeKeyPairsRequest extends AmazonWebServiceRequest implements 
         if (getKeyNames() != null)
             sb.append("KeyNames: ").append(getKeyNames()).append(",");
         if (getKeyPairIds() != null)
-            sb.append("KeyPairIds: ").append(getKeyPairIds());
+            sb.append("KeyPairIds: ").append(getKeyPairIds()).append(",");
+        if (getIncludePublicKey() != null)
+            sb.append("IncludePublicKey: ").append(getIncludePublicKey());
         sb.append("}");
         return sb.toString();
     }
@@ -616,6 +699,10 @@ public class DescribeKeyPairsRequest extends AmazonWebServiceRequest implements 
             return false;
         if (other.getKeyPairIds() != null && other.getKeyPairIds().equals(this.getKeyPairIds()) == false)
             return false;
+        if (other.getIncludePublicKey() == null ^ this.getIncludePublicKey() == null)
+            return false;
+        if (other.getIncludePublicKey() != null && other.getIncludePublicKey().equals(this.getIncludePublicKey()) == false)
+            return false;
         return true;
     }
 
@@ -627,6 +714,7 @@ public class DescribeKeyPairsRequest extends AmazonWebServiceRequest implements 
         hashCode = prime * hashCode + ((getFilters() == null) ? 0 : getFilters().hashCode());
         hashCode = prime * hashCode + ((getKeyNames() == null) ? 0 : getKeyNames().hashCode());
         hashCode = prime * hashCode + ((getKeyPairIds() == null) ? 0 : getKeyPairIds().hashCode());
+        hashCode = prime * hashCode + ((getIncludePublicKey() == null) ? 0 : getIncludePublicKey().hashCode());
         return hashCode;
     }
 

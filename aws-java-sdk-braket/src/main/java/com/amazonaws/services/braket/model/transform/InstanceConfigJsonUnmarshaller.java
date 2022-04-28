@@ -48,6 +48,10 @@ public class InstanceConfigJsonUnmarshaller implements Unmarshaller<InstanceConf
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("instanceCount", targetDepth)) {
+                    context.nextToken();
+                    instanceConfig.setInstanceCount(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("instanceType", targetDepth)) {
                     context.nextToken();
                     instanceConfig.setInstanceType(context.getUnmarshaller(String.class).unmarshall(context));

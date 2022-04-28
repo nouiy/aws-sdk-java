@@ -73,6 +73,12 @@ public class DescribeRuleGroupMetadataResult extends com.amazonaws.AmazonWebServ
     private Integer capacity;
 
     private StatefulRuleOptions statefulRuleOptions;
+    /**
+     * <p>
+     * The last time that the rule group was changed.
+     * </p>
+     */
+    private java.util.Date lastModifiedTime;
 
     /**
      * <p>
@@ -425,6 +431,46 @@ public class DescribeRuleGroupMetadataResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The last time that the rule group was changed.
+     * </p>
+     * 
+     * @param lastModifiedTime
+     *        The last time that the rule group was changed.
+     */
+
+    public void setLastModifiedTime(java.util.Date lastModifiedTime) {
+        this.lastModifiedTime = lastModifiedTime;
+    }
+
+    /**
+     * <p>
+     * The last time that the rule group was changed.
+     * </p>
+     * 
+     * @return The last time that the rule group was changed.
+     */
+
+    public java.util.Date getLastModifiedTime() {
+        return this.lastModifiedTime;
+    }
+
+    /**
+     * <p>
+     * The last time that the rule group was changed.
+     * </p>
+     * 
+     * @param lastModifiedTime
+     *        The last time that the rule group was changed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeRuleGroupMetadataResult withLastModifiedTime(java.util.Date lastModifiedTime) {
+        setLastModifiedTime(lastModifiedTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -447,7 +493,9 @@ public class DescribeRuleGroupMetadataResult extends com.amazonaws.AmazonWebServ
         if (getCapacity() != null)
             sb.append("Capacity: ").append(getCapacity()).append(",");
         if (getStatefulRuleOptions() != null)
-            sb.append("StatefulRuleOptions: ").append(getStatefulRuleOptions());
+            sb.append("StatefulRuleOptions: ").append(getStatefulRuleOptions()).append(",");
+        if (getLastModifiedTime() != null)
+            sb.append("LastModifiedTime: ").append(getLastModifiedTime());
         sb.append("}");
         return sb.toString();
     }
@@ -486,6 +534,10 @@ public class DescribeRuleGroupMetadataResult extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getStatefulRuleOptions() != null && other.getStatefulRuleOptions().equals(this.getStatefulRuleOptions()) == false)
             return false;
+        if (other.getLastModifiedTime() == null ^ this.getLastModifiedTime() == null)
+            return false;
+        if (other.getLastModifiedTime() != null && other.getLastModifiedTime().equals(this.getLastModifiedTime()) == false)
+            return false;
         return true;
     }
 
@@ -500,6 +552,7 @@ public class DescribeRuleGroupMetadataResult extends com.amazonaws.AmazonWebServ
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getCapacity() == null) ? 0 : getCapacity().hashCode());
         hashCode = prime * hashCode + ((getStatefulRuleOptions() == null) ? 0 : getStatefulRuleOptions().hashCode());
+        hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         return hashCode;
     }
 
