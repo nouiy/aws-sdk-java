@@ -246,6 +246,10 @@ public class RestoreDBInstanceToPointInTimeRequestMarshaller implements
             request.addParameter("BackupTarget", StringUtils.fromString(restoreDBInstanceToPointInTimeRequest.getBackupTarget()));
         }
 
+        if (restoreDBInstanceToPointInTimeRequest.getNetworkType() != null) {
+            request.addParameter("NetworkType", StringUtils.fromString(restoreDBInstanceToPointInTimeRequest.getNetworkType()));
+        }
+
         return request;
     }
 

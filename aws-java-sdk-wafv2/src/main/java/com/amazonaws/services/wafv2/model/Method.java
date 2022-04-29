@@ -19,11 +19,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to
- * perform.
+ * Inspect the HTTP method of the web request. The method indicates the type of operation that the request is asking the
+ * origin to perform.
  * </p>
  * <p>
- * This is used only to indicate the web request component for WAF to inspect, in the <a>FieldToMatch</a> specification.
+ * This is used only in the <a>FieldToMatch</a> specification for some web request component types.
  * </p>
  * <p>
  * JSON specification: <code>"Method": {}</code>

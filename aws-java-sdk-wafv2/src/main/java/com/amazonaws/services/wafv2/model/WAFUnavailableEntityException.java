@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * WAF couldn’t retrieve the resource that you requested. Retry your request.
+ * WAF couldn’t retrieve a resource that you specified for this operation. Verify the resources that you are specifying
+ * in your request parameters and then retry the operation.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

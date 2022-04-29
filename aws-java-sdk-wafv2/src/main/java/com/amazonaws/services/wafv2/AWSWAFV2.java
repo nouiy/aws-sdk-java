@@ -127,6 +127,16 @@ public interface AWSWAFV2 {
      * href="https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_UpdateDistribution.html"
      * >UpdateDistribution</a>.
      * </p>
+     * <p>
+     * When you make changes to web ACLs or web ACL components, like rules and rule groups, WAF propagates the changes
+     * everywhere that the web ACL and its components are stored and used. Your changes are applied within seconds, but
+     * there might be a brief period of inconsistency when the changes have arrived in some places and not in others.
+     * So, for example, if you change a rule action setting, the action might be the old action in one area and the new
+     * action in another area. Or if you add an IP address to an IP set used in a blocking rule, the new address might
+     * briefly be blocked in one area while still allowed in another. This temporary inconsistency can occur when you
+     * first associate a web ACL with an Amazon Web Services resource and when you change a web ACL that is already
+     * associated with a resource. Generally, any inconsistencies of this type last only a few seconds.
+     * </p>
      * 
      * @param associateWebACLRequest
      * @return Result of the AssociateWebACL operation returned by the service.
@@ -161,7 +171,8 @@ public interface AWSWAFV2 {
      * @throws WAFNonexistentItemException
      *         WAF couldn’t perform the operation because your resource doesn’t exist.
      * @throws WAFUnavailableEntityException
-     *         WAF couldn’t retrieve the resource that you requested. Retry your request.
+     *         WAF couldn’t retrieve a resource that you specified for this operation. Verify the resources that you are
+     *         specifying in your request parameters and then retry the operation.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
      * @sample AWSWAFV2.AssociateWebACL
@@ -224,7 +235,8 @@ public interface AWSWAFV2 {
      *         WAF couldn’t perform the operation because the resource that you requested isn’t valid. Check the
      *         resource, and try again.
      * @throws WAFUnavailableEntityException
-     *         WAF couldn’t retrieve the resource that you requested. Retry your request.
+     *         WAF couldn’t retrieve a resource that you specified for this operation. Verify the resources that you are
+     *         specifying in your request parameters and then retry the operation.
      * @throws WAFSubscriptionNotFoundException
      *         You tried to use a managed rule group that's available by subscription, but you aren't subscribed to it
      *         yet.
@@ -290,7 +302,8 @@ public interface AWSWAFV2 {
      * @throws WAFTagOperationException
      *         An error occurred during the tagging operation. Retry your request.
      * @throws WAFTagOperationInternalErrorException
-     *         WAF couldn’t perform your tagging operation because of an internal error. Retry your request.
+     *         WAF couldn’t perform your tagging operation because of an internal error. Retry
+     *         ybjectNoteWebRequestComponentour request.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
      * @sample AWSWAFV2.CreateIPSet
@@ -350,7 +363,8 @@ public interface AWSWAFV2 {
      * @throws WAFTagOperationException
      *         An error occurred during the tagging operation. Retry your request.
      * @throws WAFTagOperationInternalErrorException
-     *         WAF couldn’t perform your tagging operation because of an internal error. Retry your request.
+     *         WAF couldn’t perform your tagging operation because of an internal error. Retry
+     *         ybjectNoteWebRequestComponentour request.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
      * @sample AWSWAFV2.CreateRegexPatternSet
@@ -413,11 +427,13 @@ public interface AWSWAFV2 {
      *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
      *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFUnavailableEntityException
-     *         WAF couldn’t retrieve the resource that you requested. Retry your request.
+     *         WAF couldn’t retrieve a resource that you specified for this operation. Verify the resources that you are
+     *         specifying in your request parameters and then retry the operation.
      * @throws WAFTagOperationException
      *         An error occurred during the tagging operation. Retry your request.
      * @throws WAFTagOperationInternalErrorException
-     *         WAF couldn’t perform your tagging operation because of an internal error. Retry your request.
+     *         WAF couldn’t perform your tagging operation because of an internal error. Retry
+     *         ybjectNoteWebRequestComponentour request.
      * @throws WAFSubscriptionNotFoundException
      *         You tried to use a managed rule group that's available by subscription, but you aren't subscribed to it
      *         yet.
@@ -490,18 +506,33 @@ public interface AWSWAFV2 {
      *         WAF couldn’t perform the operation because the resource that you requested isn’t valid. Check the
      *         resource, and try again.
      * @throws WAFUnavailableEntityException
-     *         WAF couldn’t retrieve the resource that you requested. Retry your request.
+     *         WAF couldn’t retrieve a resource that you specified for this operation. Verify the resources that you are
+     *         specifying in your request parameters and then retry the operation.
      * @throws WAFNonexistentItemException
      *         WAF couldn’t perform the operation because your resource doesn’t exist.
      * @throws WAFTagOperationException
      *         An error occurred during the tagging operation. Retry your request.
      * @throws WAFTagOperationInternalErrorException
-     *         WAF couldn’t perform your tagging operation because of an internal error. Retry your request.
+     *         WAF couldn’t perform your tagging operation because of an internal error. Retry
+     *         ybjectNoteWebRequestComponentour request.
      * @throws WAFSubscriptionNotFoundException
      *         You tried to use a managed rule group that's available by subscription, but you aren't subscribed to it
      *         yet.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
+     * @throws WAFConfigurationWarningException
+     *         The operation failed because you are inspecting the web request body, headers, or cookies without
+     *         specifying how to handle oversize components. Rules that inspect the body must either provide an
+     *         <code>OversizeHandling</code> configuration or they must be preceded by a
+     *         <code>SizeConstraintStatement</code> that blocks the body content from being too large. Rules that
+     *         inspect the headers or cookies must provide an <code>OversizeHandling</code> configuration. </p>
+     *         <p>
+     *         Provide the handling configuration and retry your operation.
+     *         </p>
+     *         <p>
+     *         Alternately, you can suppress this warning by adding the following tag to the resource that you provide
+     *         to this operation: <code>Tag</code> (key:<code>WAF:OversizeFieldsHandlingConstraintOptOut</code>, value:
+     *         <code>true</code>).
      * @sample AWSWAFV2.CreateWebACL
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/CreateWebACL" target="_top">AWS API
      *      Documentation</a>
@@ -603,11 +634,16 @@ public interface AWSWAFV2 {
      *         retry your operation.
      * @throws WAFAssociatedItemException
      *         WAF couldn’t perform the operation because your resource is being used by another resource or it’s
-     *         associated with another resource.
+     *         associated with another resource. </p>
+     *         <p>
+     *         For <code>DeleteWebACL</code>, you will only get this exception if the web ACL is still associated with a
+     *         regional resource. Deleting a web ACL that is still associated with an Amazon CloudFront distribution
+     *         won't get this exception.
      * @throws WAFTagOperationException
      *         An error occurred during the tagging operation. Retry your request.
      * @throws WAFTagOperationInternalErrorException
-     *         WAF couldn’t perform your tagging operation because of an internal error. Retry your request.
+     *         WAF couldn’t perform your tagging operation because of an internal error. Retry
+     *         ybjectNoteWebRequestComponentour request.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
      * @sample AWSWAFV2.DeleteIPSet
@@ -754,11 +790,16 @@ public interface AWSWAFV2 {
      *         retry your operation.
      * @throws WAFAssociatedItemException
      *         WAF couldn’t perform the operation because your resource is being used by another resource or it’s
-     *         associated with another resource.
+     *         associated with another resource. </p>
+     *         <p>
+     *         For <code>DeleteWebACL</code>, you will only get this exception if the web ACL is still associated with a
+     *         regional resource. Deleting a web ACL that is still associated with an Amazon CloudFront distribution
+     *         won't get this exception.
      * @throws WAFTagOperationException
      *         An error occurred during the tagging operation. Retry your request.
      * @throws WAFTagOperationInternalErrorException
-     *         WAF couldn’t perform your tagging operation because of an internal error. Retry your request.
+     *         WAF couldn’t perform your tagging operation because of an internal error. Retry
+     *         ybjectNoteWebRequestComponentour request.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
      * @sample AWSWAFV2.DeleteRegexPatternSet
@@ -810,11 +851,16 @@ public interface AWSWAFV2 {
      *         retry your operation.
      * @throws WAFAssociatedItemException
      *         WAF couldn’t perform the operation because your resource is being used by another resource or it’s
-     *         associated with another resource.
+     *         associated with another resource. </p>
+     *         <p>
+     *         For <code>DeleteWebACL</code>, you will only get this exception if the web ACL is still associated with a
+     *         regional resource. Deleting a web ACL that is still associated with an Amazon CloudFront distribution
+     *         won't get this exception.
      * @throws WAFTagOperationException
      *         An error occurred during the tagging operation. Retry your request.
      * @throws WAFTagOperationInternalErrorException
-     *         WAF couldn’t perform your tagging operation because of an internal error. Retry your request.
+     *         WAF couldn’t perform your tagging operation because of an internal error. Retry
+     *         ybjectNoteWebRequestComponentour request.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
      * @sample AWSWAFV2.DeleteRuleGroup
@@ -830,6 +876,53 @@ public interface AWSWAFV2 {
      * <p>
      * You can only use this if <code>ManagedByFirewallManager</code> is false in the specified <a>WebACL</a>.
      * </p>
+     * <note>
+     * <p>
+     * Before deleting any web ACL, first disassociate it from all resources.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * To retrieve a list of the resources that are associated with a web ACL, use the following calls:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For regional resources, call <a>ListResourcesForWebACL</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For Amazon CloudFront distributions, use the CloudFront call <code>ListDistributionsByWebACLId</code>. For
+     * information, see <a
+     * href="https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ListDistributionsByWebACLId.html"
+     * >ListDistributionsByWebACLId</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * To disassociate a resource from a web ACL, use the following calls:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For regional resources, call <a>DisassociateWebACL</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For Amazon CloudFront distributions, provide an empty web ACL ID in the CloudFront call
+     * <code>UpdateDistribution</code>. For information, see <a
+     * href="https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_UpdateDistribution.html"
+     * >UpdateDistribution</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </note>
      * 
      * @param deleteWebACLRequest
      * @return Result of the DeleteWebACL operation returned by the service.
@@ -869,11 +962,16 @@ public interface AWSWAFV2 {
      *         retry your operation.
      * @throws WAFAssociatedItemException
      *         WAF couldn’t perform the operation because your resource is being used by another resource or it’s
-     *         associated with another resource.
+     *         associated with another resource. </p>
+     *         <p>
+     *         For <code>DeleteWebACL</code>, you will only get this exception if the web ACL is still associated with a
+     *         regional resource. Deleting a web ACL that is still associated with an Amazon CloudFront distribution
+     *         won't get this exception.
      * @throws WAFTagOperationException
      *         An error occurred during the tagging operation. Retry your request.
      * @throws WAFTagOperationInternalErrorException
-     *         WAF couldn’t perform your tagging operation because of an internal error. Retry your request.
+     *         WAF couldn’t perform your tagging operation because of an internal error. Retry
+     *         ybjectNoteWebRequestComponentour request.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
      * @sample AWSWAFV2.DeleteWebACL
@@ -936,8 +1034,9 @@ public interface AWSWAFV2 {
 
     /**
      * <p>
-     * Disassociates a web ACL from a regional application resource. A regional application can be an Application Load
-     * Balancer (ALB), an Amazon API Gateway REST API, or an AppSync GraphQL API.
+     * Disassociates the specified regional application resource from any existing web ACL association. A resource can
+     * have at most one web ACL association. A regional application can be an Application Load Balancer (ALB), an Amazon
+     * API Gateway REST API, or an AppSync GraphQL API.
      * </p>
      * <p>
      * For Amazon CloudFront, don't use this call. Instead, use your CloudFront distribution configuration. To
@@ -1565,7 +1664,8 @@ public interface AWSWAFV2 {
      *         </p>
      *         </li>
      * @throws WAFUnavailableEntityException
-     *         WAF couldn’t retrieve the resource that you requested. Retry your request.
+     *         WAF couldn’t retrieve a resource that you specified for this operation. Verify the resources that you are
+     *         specifying in your request parameters and then retry the operation.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
      * @sample AWSWAFV2.GetWebACLForResource
@@ -2035,7 +2135,8 @@ public interface AWSWAFV2 {
      * @throws WAFTagOperationException
      *         An error occurred during the tagging operation. Retry your request.
      * @throws WAFTagOperationInternalErrorException
-     *         WAF couldn’t perform your tagging operation because of an internal error. Retry your request.
+     *         WAF couldn’t perform your tagging operation because of an internal error. Retry
+     *         ybjectNoteWebRequestComponentour request.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
      * @sample AWSWAFV2.ListTagsForResource
@@ -2424,7 +2525,8 @@ public interface AWSWAFV2 {
      * @throws WAFTagOperationException
      *         An error occurred during the tagging operation. Retry your request.
      * @throws WAFTagOperationInternalErrorException
-     *         WAF couldn’t perform your tagging operation because of an internal error. Retry your request.
+     *         WAF couldn’t perform your tagging operation because of an internal error. Retry
+     *         ybjectNoteWebRequestComponentour request.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
      * @sample AWSWAFV2.TagResource
@@ -2476,7 +2578,8 @@ public interface AWSWAFV2 {
      * @throws WAFTagOperationException
      *         An error occurred during the tagging operation. Retry your request.
      * @throws WAFTagOperationInternalErrorException
-     *         WAF couldn’t perform your tagging operation because of an internal error. Retry your request.
+     *         WAF couldn’t perform your tagging operation because of an internal error. Retry
+     *         ybjectNoteWebRequestComponentour request.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
      * @sample AWSWAFV2.UntagResource
@@ -2496,6 +2599,16 @@ public interface AWSWAFV2 {
      * as needed, and then provide the complete IP set specification to this call.
      * </p>
      * </note>
+     * <p>
+     * When you make changes to web ACLs or web ACL components, like rules and rule groups, WAF propagates the changes
+     * everywhere that the web ACL and its components are stored and used. Your changes are applied within seconds, but
+     * there might be a brief period of inconsistency when the changes have arrived in some places and not in others.
+     * So, for example, if you change a rule action setting, the action might be the old action in one area and the new
+     * action in another area. Or if you add an IP address to an IP set used in a blocking rule, the new address might
+     * briefly be blocked in one area while still allowed in another. This temporary inconsistency can occur when you
+     * first associate a web ACL with an Amazon Web Services resource and when you change a web ACL that is already
+     * associated with a resource. Generally, any inconsistencies of this type last only a few seconds.
+     * </p>
      * 
      * @param updateIPSetRequest
      * @return Result of the UpdateIPSet operation returned by the service.
@@ -2624,6 +2737,16 @@ public interface AWSWAFV2 {
      * specification to this call.
      * </p>
      * </note>
+     * <p>
+     * When you make changes to web ACLs or web ACL components, like rules and rule groups, WAF propagates the changes
+     * everywhere that the web ACL and its components are stored and used. Your changes are applied within seconds, but
+     * there might be a brief period of inconsistency when the changes have arrived in some places and not in others.
+     * So, for example, if you change a rule action setting, the action might be the old action in one area and the new
+     * action in another area. Or if you add an IP address to an IP set used in a blocking rule, the new address might
+     * briefly be blocked in one area while still allowed in another. This temporary inconsistency can occur when you
+     * first associate a web ACL with an Amazon Web Services resource and when you change a web ACL that is already
+     * associated with a resource. Generally, any inconsistencies of this type last only a few seconds.
+     * </p>
      * 
      * @param updateRegexPatternSetRequest
      * @return Result of the UpdateRegexPatternSet operation returned by the service.
@@ -2689,6 +2812,16 @@ public interface AWSWAFV2 {
      * </p>
      * </note>
      * <p>
+     * When you make changes to web ACLs or web ACL components, like rules and rule groups, WAF propagates the changes
+     * everywhere that the web ACL and its components are stored and used. Your changes are applied within seconds, but
+     * there might be a brief period of inconsistency when the changes have arrived in some places and not in others.
+     * So, for example, if you change a rule action setting, the action might be the old action in one area and the new
+     * action in another area. Or if you add an IP address to an IP set used in a blocking rule, the new address might
+     * briefly be blocked in one area while still allowed in another. This temporary inconsistency can occur when you
+     * first associate a web ACL with an Amazon Web Services resource and when you change a web ACL that is already
+     * associated with a resource. Generally, any inconsistencies of this type last only a few seconds.
+     * </p>
+     * <p>
      * A rule group defines a collection of rules to inspect and control web requests that you can use in a
      * <a>WebACL</a>. When you create a rule group, you define an immutable capacity limit. If you update a rule group,
      * you must stay within the capacity. This allows others to reuse the rule group with confidence in its capacity
@@ -2740,12 +2873,26 @@ public interface AWSWAFV2 {
      *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
      *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFUnavailableEntityException
-     *         WAF couldn’t retrieve the resource that you requested. Retry your request.
+     *         WAF couldn’t retrieve a resource that you specified for this operation. Verify the resources that you are
+     *         specifying in your request parameters and then retry the operation.
      * @throws WAFSubscriptionNotFoundException
      *         You tried to use a managed rule group that's available by subscription, but you aren't subscribed to it
      *         yet.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
+     * @throws WAFConfigurationWarningException
+     *         The operation failed because you are inspecting the web request body, headers, or cookies without
+     *         specifying how to handle oversize components. Rules that inspect the body must either provide an
+     *         <code>OversizeHandling</code> configuration or they must be preceded by a
+     *         <code>SizeConstraintStatement</code> that blocks the body content from being too large. Rules that
+     *         inspect the headers or cookies must provide an <code>OversizeHandling</code> configuration. </p>
+     *         <p>
+     *         Provide the handling configuration and retry your operation.
+     *         </p>
+     *         <p>
+     *         Alternately, you can suppress this warning by adding the following tag to the resource that you provide
+     *         to this operation: <code>Tag</code> (key:<code>WAF:OversizeFieldsHandlingConstraintOptOut</code>, value:
+     *         <code>true</code>).
      * @sample AWSWAFV2.UpdateRuleGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/UpdateRuleGroup" target="_top">AWS API
      *      Documentation</a>
@@ -2754,7 +2901,18 @@ public interface AWSWAFV2 {
 
     /**
      * <p>
-     * Updates the specified <a>WebACL</a>.
+     * Updates the specified <a>WebACL</a>. While updating a web ACL, WAF provides continous coverage to the resources
+     * that you have associated with the web ACL.
+     * </p>
+     * <p>
+     * When you make changes to web ACLs or web ACL components, like rules and rule groups, WAF propagates the changes
+     * everywhere that the web ACL and its components are stored and used. Your changes are applied within seconds, but
+     * there might be a brief period of inconsistency when the changes have arrived in some places and not in others.
+     * So, for example, if you change a rule action setting, the action might be the old action in one area and the new
+     * action in another area. Or if you add an IP address to an IP set used in a blocking rule, the new address might
+     * briefly be blocked in one area while still allowed in another. This temporary inconsistency can occur when you
+     * first associate a web ACL with an Amazon Web Services resource and when you change a web ACL that is already
+     * associated with a resource. Generally, any inconsistencies of this type last only a few seconds.
      * </p>
      * <note>
      * <p>
@@ -2820,7 +2978,8 @@ public interface AWSWAFV2 {
      *         WAF couldn’t perform the operation because the resource that you requested isn’t valid. Check the
      *         resource, and try again.
      * @throws WAFUnavailableEntityException
-     *         WAF couldn’t retrieve the resource that you requested. Retry your request.
+     *         WAF couldn’t retrieve a resource that you specified for this operation. Verify the resources that you are
+     *         specifying in your request parameters and then retry the operation.
      * @throws WAFSubscriptionNotFoundException
      *         You tried to use a managed rule group that's available by subscription, but you aren't subscribed to it
      *         yet.
@@ -2830,6 +2989,19 @@ public interface AWSWAFV2 {
      *         The operation failed because the specified version for the managed rule group has expired. You can
      *         retrieve the available versions for the managed rule group by calling
      *         <a>ListAvailableManagedRuleGroupVersions</a>.
+     * @throws WAFConfigurationWarningException
+     *         The operation failed because you are inspecting the web request body, headers, or cookies without
+     *         specifying how to handle oversize components. Rules that inspect the body must either provide an
+     *         <code>OversizeHandling</code> configuration or they must be preceded by a
+     *         <code>SizeConstraintStatement</code> that blocks the body content from being too large. Rules that
+     *         inspect the headers or cookies must provide an <code>OversizeHandling</code> configuration. </p>
+     *         <p>
+     *         Provide the handling configuration and retry your operation.
+     *         </p>
+     *         <p>
+     *         Alternately, you can suppress this warning by adding the following tag to the resource that you provide
+     *         to this operation: <code>Tag</code> (key:<code>WAF:OversizeFieldsHandlingConstraintOptOut</code>, value:
+     *         <code>true</code>).
      * @sample AWSWAFV2.UpdateWebACL
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/UpdateWebACL" target="_top">AWS API
      *      Documentation</a>

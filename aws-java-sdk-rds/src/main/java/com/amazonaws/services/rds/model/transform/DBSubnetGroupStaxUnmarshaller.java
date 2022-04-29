@@ -79,6 +79,17 @@ public class DBSubnetGroupStaxUnmarshaller implements Unmarshaller<DBSubnetGroup
                     dBSubnetGroup.setDBSubnetGroupArn(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("SupportedNetworkTypes", targetDepth)) {
+                    dBSubnetGroup.withSupportedNetworkTypes(new ArrayList<String>());
+                    continue;
+                }
+
+                if (context.testExpression("SupportedNetworkTypes/member", targetDepth)) {
+                    dBSubnetGroup.withSupportedNetworkTypes(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return dBSubnetGroup;

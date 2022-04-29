@@ -476,6 +476,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
             exceptionUnmarshallersMap.put("DBClusterEndpointQuotaExceededFault", new DBClusterEndpointQuotaExceededExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new DBClusterEndpointQuotaExceededExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NetworkTypeNotSupported") == null) {
+            exceptionUnmarshallersMap.put("NetworkTypeNotSupported", new NetworkTypeNotSupportedExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new NetworkTypeNotSupportedExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("AuthorizationQuotaExceeded") == null) {
             exceptionUnmarshallersMap.put("AuthorizationQuotaExceeded", new AuthorizationQuotaExceededExceptionUnmarshaller());
         }
@@ -2316,6 +2320,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * @throws DomainNotFoundException
      *         <code>Domain</code> doesn't refer to an existing Active Directory domain.
      * @throws BackupPolicyNotFoundException
+     * @throws NetworkTypeNotSupportedException
+     *         The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and
+     *         <code>DUAL</code>.
      * @sample AmazonRDS.CreateDBInstance
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBInstance" target="_top">AWS API
      *      Documentation</a>
@@ -2429,6 +2436,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      *         An error occurred accessing an Amazon Web Services KMS key.
      * @throws DomainNotFoundException
      *         <code>Domain</code> doesn't refer to an existing Active Directory domain.
+     * @throws NetworkTypeNotSupportedException
+     *         The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and
+     *         <code>DUAL</code>.
      * @sample AmazonRDS.CreateDBInstanceReadReplica
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateDBInstanceReadReplica"
      *      target="_top">AWS API Documentation</a>
@@ -7716,6 +7726,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      *         An error occurred accessing an Amazon Web Services KMS key.
      * @throws InvalidDBClusterStateException
      *         The requested operation can't be performed while the cluster is in this state.
+     * @throws NetworkTypeNotSupportedException
+     *         The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and
+     *         <code>DUAL</code>.
      * @sample AmazonRDS.ModifyDBInstance
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyDBInstance" target="_top">AWS API
      *      Documentation</a>
@@ -9769,6 +9782,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * @throws DBParameterGroupNotFoundException
      *         <code>DBParameterGroupName</code> doesn't refer to an existing DB parameter group.
      * @throws BackupPolicyNotFoundException
+     * @throws NetworkTypeNotSupportedException
+     *         The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and
+     *         <code>DUAL</code>.
      * @sample AmazonRDS.RestoreDBInstanceFromDBSnapshot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBInstanceFromDBSnapshot"
      *      target="_top">AWS API Documentation</a>
@@ -9871,6 +9887,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * @throws KMSKeyNotAccessibleException
      *         An error occurred accessing an Amazon Web Services KMS key.
      * @throws BackupPolicyNotFoundException
+     * @throws NetworkTypeNotSupportedException
+     *         The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and
+     *         <code>DUAL</code>.
      * @sample AmazonRDS.RestoreDBInstanceFromS3
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBInstanceFromS3" target="_top">AWS
      *      API Documentation</a>
@@ -9990,6 +10009,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      *         <code>DBParameterGroupName</code> doesn't refer to an existing DB parameter group.
      * @throws DBInstanceAutomatedBackupNotFoundException
      *         No automated backup for this DB instance was found.
+     * @throws NetworkTypeNotSupportedException
+     *         The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and
+     *         <code>DUAL</code>.
      * @sample AmazonRDS.RestoreDBInstanceToPointInTime
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBInstanceToPointInTime"
      *      target="_top">AWS API Documentation</a>

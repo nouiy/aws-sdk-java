@@ -300,6 +300,10 @@ public class ModifyDBInstanceRequestMarshaller implements Marshaller<Request<Mod
             request.addParameter("ResumeFullAutomationModeMinutes", StringUtils.fromInteger(modifyDBInstanceRequest.getResumeFullAutomationModeMinutes()));
         }
 
+        if (modifyDBInstanceRequest.getNetworkType() != null) {
+            request.addParameter("NetworkType", StringUtils.fromString(modifyDBInstanceRequest.getNetworkType()));
+        }
+
         return request;
     }
 

@@ -41,19 +41,16 @@ public class GetCommandInvocationRequest extends com.amazonaws.AmazonWebServiceR
     private String instanceId;
     /**
      * <p>
-     * The name of the plugin for which you want detailed results. If the document contains only one plugin, you can
-     * omit the name and details for that plugin. If the document contains more than one plugin, you must specify the
-     * name of the plugin for which you want to view details.
+     * The name of the step for which you want detailed results. If the document contains only one step, you can omit
+     * the name and details for that step. If the document contains more than one step, you must specify the name of the
+     * step for which you want to view details. Be sure to specify the name of the step, not the name of a plugin like
+     * <code>aws:RunShellScript</code>.
      * </p>
      * <p>
-     * Plugin names are also referred to as <i>step names</i> in Systems Manager documents (SSM documents). For example,
-     * <code>aws:RunShellScript</code> is a plugin.
-     * </p>
-     * <p>
-     * To find the <code>PluginName</code>, check the document content and find the name of the plugin. Alternatively,
-     * use <a>ListCommandInvocations</a> with the <code>CommandId</code> and <code>Details</code> parameters. The
-     * <code>PluginName</code> is the <code>Name</code> attribute of the <code>CommandPlugin</code> object in the
-     * <code>CommandPlugins</code> list.
+     * To find the <code>PluginName</code>, check the document content and find the name of the step you want details
+     * for. Alternatively, use <a>ListCommandInvocations</a> with the <code>CommandId</code> and <code>Details</code>
+     * parameters. The <code>PluginName</code> is the <code>Name</code> attribute of the <code>CommandPlugin</code>
+     * object in the <code>CommandPlugins</code> list.
      * </p>
      */
     private String pluginName;
@@ -152,33 +149,27 @@ public class GetCommandInvocationRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The name of the plugin for which you want detailed results. If the document contains only one plugin, you can
-     * omit the name and details for that plugin. If the document contains more than one plugin, you must specify the
-     * name of the plugin for which you want to view details.
+     * The name of the step for which you want detailed results. If the document contains only one step, you can omit
+     * the name and details for that step. If the document contains more than one step, you must specify the name of the
+     * step for which you want to view details. Be sure to specify the name of the step, not the name of a plugin like
+     * <code>aws:RunShellScript</code>.
      * </p>
      * <p>
-     * Plugin names are also referred to as <i>step names</i> in Systems Manager documents (SSM documents). For example,
-     * <code>aws:RunShellScript</code> is a plugin.
-     * </p>
-     * <p>
-     * To find the <code>PluginName</code>, check the document content and find the name of the plugin. Alternatively,
-     * use <a>ListCommandInvocations</a> with the <code>CommandId</code> and <code>Details</code> parameters. The
-     * <code>PluginName</code> is the <code>Name</code> attribute of the <code>CommandPlugin</code> object in the
-     * <code>CommandPlugins</code> list.
+     * To find the <code>PluginName</code>, check the document content and find the name of the step you want details
+     * for. Alternatively, use <a>ListCommandInvocations</a> with the <code>CommandId</code> and <code>Details</code>
+     * parameters. The <code>PluginName</code> is the <code>Name</code> attribute of the <code>CommandPlugin</code>
+     * object in the <code>CommandPlugins</code> list.
      * </p>
      * 
      * @param pluginName
-     *        The name of the plugin for which you want detailed results. If the document contains only one plugin, you
-     *        can omit the name and details for that plugin. If the document contains more than one plugin, you must
-     *        specify the name of the plugin for which you want to view details.</p>
+     *        The name of the step for which you want detailed results. If the document contains only one step, you can
+     *        omit the name and details for that step. If the document contains more than one step, you must specify the
+     *        name of the step for which you want to view details. Be sure to specify the name of the step, not the name
+     *        of a plugin like <code>aws:RunShellScript</code>.</p>
      *        <p>
-     *        Plugin names are also referred to as <i>step names</i> in Systems Manager documents (SSM documents). For
-     *        example, <code>aws:RunShellScript</code> is a plugin.
-     *        </p>
-     *        <p>
-     *        To find the <code>PluginName</code>, check the document content and find the name of the plugin.
-     *        Alternatively, use <a>ListCommandInvocations</a> with the <code>CommandId</code> and <code>Details</code>
-     *        parameters. The <code>PluginName</code> is the <code>Name</code> attribute of the
+     *        To find the <code>PluginName</code>, check the document content and find the name of the step you want
+     *        details for. Alternatively, use <a>ListCommandInvocations</a> with the <code>CommandId</code> and
+     *        <code>Details</code> parameters. The <code>PluginName</code> is the <code>Name</code> attribute of the
      *        <code>CommandPlugin</code> object in the <code>CommandPlugins</code> list.
      */
 
@@ -188,32 +179,26 @@ public class GetCommandInvocationRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The name of the plugin for which you want detailed results. If the document contains only one plugin, you can
-     * omit the name and details for that plugin. If the document contains more than one plugin, you must specify the
-     * name of the plugin for which you want to view details.
+     * The name of the step for which you want detailed results. If the document contains only one step, you can omit
+     * the name and details for that step. If the document contains more than one step, you must specify the name of the
+     * step for which you want to view details. Be sure to specify the name of the step, not the name of a plugin like
+     * <code>aws:RunShellScript</code>.
      * </p>
      * <p>
-     * Plugin names are also referred to as <i>step names</i> in Systems Manager documents (SSM documents). For example,
-     * <code>aws:RunShellScript</code> is a plugin.
-     * </p>
-     * <p>
-     * To find the <code>PluginName</code>, check the document content and find the name of the plugin. Alternatively,
-     * use <a>ListCommandInvocations</a> with the <code>CommandId</code> and <code>Details</code> parameters. The
-     * <code>PluginName</code> is the <code>Name</code> attribute of the <code>CommandPlugin</code> object in the
-     * <code>CommandPlugins</code> list.
+     * To find the <code>PluginName</code>, check the document content and find the name of the step you want details
+     * for. Alternatively, use <a>ListCommandInvocations</a> with the <code>CommandId</code> and <code>Details</code>
+     * parameters. The <code>PluginName</code> is the <code>Name</code> attribute of the <code>CommandPlugin</code>
+     * object in the <code>CommandPlugins</code> list.
      * </p>
      * 
-     * @return The name of the plugin for which you want detailed results. If the document contains only one plugin, you
-     *         can omit the name and details for that plugin. If the document contains more than one plugin, you must
-     *         specify the name of the plugin for which you want to view details.</p>
+     * @return The name of the step for which you want detailed results. If the document contains only one step, you can
+     *         omit the name and details for that step. If the document contains more than one step, you must specify
+     *         the name of the step for which you want to view details. Be sure to specify the name of the step, not the
+     *         name of a plugin like <code>aws:RunShellScript</code>.</p>
      *         <p>
-     *         Plugin names are also referred to as <i>step names</i> in Systems Manager documents (SSM documents). For
-     *         example, <code>aws:RunShellScript</code> is a plugin.
-     *         </p>
-     *         <p>
-     *         To find the <code>PluginName</code>, check the document content and find the name of the plugin.
-     *         Alternatively, use <a>ListCommandInvocations</a> with the <code>CommandId</code> and <code>Details</code>
-     *         parameters. The <code>PluginName</code> is the <code>Name</code> attribute of the
+     *         To find the <code>PluginName</code>, check the document content and find the name of the step you want
+     *         details for. Alternatively, use <a>ListCommandInvocations</a> with the <code>CommandId</code> and
+     *         <code>Details</code> parameters. The <code>PluginName</code> is the <code>Name</code> attribute of the
      *         <code>CommandPlugin</code> object in the <code>CommandPlugins</code> list.
      */
 
@@ -223,33 +208,27 @@ public class GetCommandInvocationRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The name of the plugin for which you want detailed results. If the document contains only one plugin, you can
-     * omit the name and details for that plugin. If the document contains more than one plugin, you must specify the
-     * name of the plugin for which you want to view details.
+     * The name of the step for which you want detailed results. If the document contains only one step, you can omit
+     * the name and details for that step. If the document contains more than one step, you must specify the name of the
+     * step for which you want to view details. Be sure to specify the name of the step, not the name of a plugin like
+     * <code>aws:RunShellScript</code>.
      * </p>
      * <p>
-     * Plugin names are also referred to as <i>step names</i> in Systems Manager documents (SSM documents). For example,
-     * <code>aws:RunShellScript</code> is a plugin.
-     * </p>
-     * <p>
-     * To find the <code>PluginName</code>, check the document content and find the name of the plugin. Alternatively,
-     * use <a>ListCommandInvocations</a> with the <code>CommandId</code> and <code>Details</code> parameters. The
-     * <code>PluginName</code> is the <code>Name</code> attribute of the <code>CommandPlugin</code> object in the
-     * <code>CommandPlugins</code> list.
+     * To find the <code>PluginName</code>, check the document content and find the name of the step you want details
+     * for. Alternatively, use <a>ListCommandInvocations</a> with the <code>CommandId</code> and <code>Details</code>
+     * parameters. The <code>PluginName</code> is the <code>Name</code> attribute of the <code>CommandPlugin</code>
+     * object in the <code>CommandPlugins</code> list.
      * </p>
      * 
      * @param pluginName
-     *        The name of the plugin for which you want detailed results. If the document contains only one plugin, you
-     *        can omit the name and details for that plugin. If the document contains more than one plugin, you must
-     *        specify the name of the plugin for which you want to view details.</p>
+     *        The name of the step for which you want detailed results. If the document contains only one step, you can
+     *        omit the name and details for that step. If the document contains more than one step, you must specify the
+     *        name of the step for which you want to view details. Be sure to specify the name of the step, not the name
+     *        of a plugin like <code>aws:RunShellScript</code>.</p>
      *        <p>
-     *        Plugin names are also referred to as <i>step names</i> in Systems Manager documents (SSM documents). For
-     *        example, <code>aws:RunShellScript</code> is a plugin.
-     *        </p>
-     *        <p>
-     *        To find the <code>PluginName</code>, check the document content and find the name of the plugin.
-     *        Alternatively, use <a>ListCommandInvocations</a> with the <code>CommandId</code> and <code>Details</code>
-     *        parameters. The <code>PluginName</code> is the <code>Name</code> attribute of the
+     *        To find the <code>PluginName</code>, check the document content and find the name of the step you want
+     *        details for. Alternatively, use <a>ListCommandInvocations</a> with the <code>CommandId</code> and
+     *        <code>Details</code> parameters. The <code>PluginName</code> is the <code>Name</code> attribute of the
      *        <code>CommandPlugin</code> object in the <code>CommandPlugins</code> list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

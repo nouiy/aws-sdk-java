@@ -52,6 +52,10 @@ public class MetricsSummaryJsonUnmarshaller implements Unmarshaller<MetricsSumma
                     context.nextToken();
                     metricsSummary.setMeteredLinesOfCodeCount(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("SuppressedLinesOfCodeCount", targetDepth)) {
+                    context.nextToken();
+                    metricsSummary.setSuppressedLinesOfCodeCount(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
                 if (context.testExpression("FindingsCount", targetDepth)) {
                     context.nextToken();
                     metricsSummary.setFindingsCount(context.getUnmarshaller(Long.class).unmarshall(context));

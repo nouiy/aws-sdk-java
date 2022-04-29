@@ -146,11 +146,19 @@ public class CodeReview implements Serializable, Cloneable, StructuredPojo {
     private Metrics metrics;
     /**
      * <p>
-     * They types of analysis performed during a repository analysis or a pull request review. You can specify either
+     * The types of analysis performed during a repository analysis or a pull request review. You can specify either
      * <code>Security</code>, <code>CodeQuality</code>, or both.
      * </p>
      */
     private java.util.List<String> analysisTypes;
+    /**
+     * <p>
+     * The state of the <code>aws-codeguru-reviewer.yml</code> configuration file that allows the configuration of the
+     * CodeGuru Reviewer analysis. The file either exists, doesn't exist, or exists with errors at the root directory of
+     * your repository.
+     * </p>
+     */
+    private String configFileState;
 
     /**
      * <p>
@@ -1003,11 +1011,11 @@ public class CodeReview implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * They types of analysis performed during a repository analysis or a pull request review. You can specify either
+     * The types of analysis performed during a repository analysis or a pull request review. You can specify either
      * <code>Security</code>, <code>CodeQuality</code>, or both.
      * </p>
      * 
-     * @return They types of analysis performed during a repository analysis or a pull request review. You can specify
+     * @return The types of analysis performed during a repository analysis or a pull request review. You can specify
      *         either <code>Security</code>, <code>CodeQuality</code>, or both.
      * @see AnalysisType
      */
@@ -1018,12 +1026,12 @@ public class CodeReview implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * They types of analysis performed during a repository analysis or a pull request review. You can specify either
+     * The types of analysis performed during a repository analysis or a pull request review. You can specify either
      * <code>Security</code>, <code>CodeQuality</code>, or both.
      * </p>
      * 
      * @param analysisTypes
-     *        They types of analysis performed during a repository analysis or a pull request review. You can specify
+     *        The types of analysis performed during a repository analysis or a pull request review. You can specify
      *        either <code>Security</code>, <code>CodeQuality</code>, or both.
      * @see AnalysisType
      */
@@ -1039,7 +1047,7 @@ public class CodeReview implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * They types of analysis performed during a repository analysis or a pull request review. You can specify either
+     * The types of analysis performed during a repository analysis or a pull request review. You can specify either
      * <code>Security</code>, <code>CodeQuality</code>, or both.
      * </p>
      * <p>
@@ -1049,7 +1057,7 @@ public class CodeReview implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param analysisTypes
-     *        They types of analysis performed during a repository analysis or a pull request review. You can specify
+     *        The types of analysis performed during a repository analysis or a pull request review. You can specify
      *        either <code>Security</code>, <code>CodeQuality</code>, or both.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AnalysisType
@@ -1067,12 +1075,12 @@ public class CodeReview implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * They types of analysis performed during a repository analysis or a pull request review. You can specify either
+     * The types of analysis performed during a repository analysis or a pull request review. You can specify either
      * <code>Security</code>, <code>CodeQuality</code>, or both.
      * </p>
      * 
      * @param analysisTypes
-     *        They types of analysis performed during a repository analysis or a pull request review. You can specify
+     *        The types of analysis performed during a repository analysis or a pull request review. You can specify
      *        either <code>Security</code>, <code>CodeQuality</code>, or both.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AnalysisType
@@ -1085,12 +1093,12 @@ public class CodeReview implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * They types of analysis performed during a repository analysis or a pull request review. You can specify either
+     * The types of analysis performed during a repository analysis or a pull request review. You can specify either
      * <code>Security</code>, <code>CodeQuality</code>, or both.
      * </p>
      * 
      * @param analysisTypes
-     *        They types of analysis performed during a repository analysis or a pull request review. You can specify
+     *        The types of analysis performed during a repository analysis or a pull request review. You can specify
      *        either <code>Security</code>, <code>CodeQuality</code>, or both.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AnalysisType
@@ -1106,6 +1114,81 @@ public class CodeReview implements Serializable, Cloneable, StructuredPojo {
         } else {
             getAnalysisTypes().addAll(analysisTypesCopy);
         }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The state of the <code>aws-codeguru-reviewer.yml</code> configuration file that allows the configuration of the
+     * CodeGuru Reviewer analysis. The file either exists, doesn't exist, or exists with errors at the root directory of
+     * your repository.
+     * </p>
+     * 
+     * @param configFileState
+     *        The state of the <code>aws-codeguru-reviewer.yml</code> configuration file that allows the configuration
+     *        of the CodeGuru Reviewer analysis. The file either exists, doesn't exist, or exists with errors at the
+     *        root directory of your repository.
+     * @see ConfigFileState
+     */
+
+    public void setConfigFileState(String configFileState) {
+        this.configFileState = configFileState;
+    }
+
+    /**
+     * <p>
+     * The state of the <code>aws-codeguru-reviewer.yml</code> configuration file that allows the configuration of the
+     * CodeGuru Reviewer analysis. The file either exists, doesn't exist, or exists with errors at the root directory of
+     * your repository.
+     * </p>
+     * 
+     * @return The state of the <code>aws-codeguru-reviewer.yml</code> configuration file that allows the configuration
+     *         of the CodeGuru Reviewer analysis. The file either exists, doesn't exist, or exists with errors at the
+     *         root directory of your repository.
+     * @see ConfigFileState
+     */
+
+    public String getConfigFileState() {
+        return this.configFileState;
+    }
+
+    /**
+     * <p>
+     * The state of the <code>aws-codeguru-reviewer.yml</code> configuration file that allows the configuration of the
+     * CodeGuru Reviewer analysis. The file either exists, doesn't exist, or exists with errors at the root directory of
+     * your repository.
+     * </p>
+     * 
+     * @param configFileState
+     *        The state of the <code>aws-codeguru-reviewer.yml</code> configuration file that allows the configuration
+     *        of the CodeGuru Reviewer analysis. The file either exists, doesn't exist, or exists with errors at the
+     *        root directory of your repository.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConfigFileState
+     */
+
+    public CodeReview withConfigFileState(String configFileState) {
+        setConfigFileState(configFileState);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The state of the <code>aws-codeguru-reviewer.yml</code> configuration file that allows the configuration of the
+     * CodeGuru Reviewer analysis. The file either exists, doesn't exist, or exists with errors at the root directory of
+     * your repository.
+     * </p>
+     * 
+     * @param configFileState
+     *        The state of the <code>aws-codeguru-reviewer.yml</code> configuration file that allows the configuration
+     *        of the CodeGuru Reviewer analysis. The file either exists, doesn't exist, or exists with errors at the
+     *        root directory of your repository.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConfigFileState
+     */
+
+    public CodeReview withConfigFileState(ConfigFileState configFileState) {
+        this.configFileState = configFileState.toString();
         return this;
     }
 
@@ -1150,7 +1233,9 @@ public class CodeReview implements Serializable, Cloneable, StructuredPojo {
         if (getMetrics() != null)
             sb.append("Metrics: ").append(getMetrics()).append(",");
         if (getAnalysisTypes() != null)
-            sb.append("AnalysisTypes: ").append(getAnalysisTypes());
+            sb.append("AnalysisTypes: ").append(getAnalysisTypes()).append(",");
+        if (getConfigFileState() != null)
+            sb.append("ConfigFileState: ").append(getConfigFileState());
         sb.append("}");
         return sb.toString();
     }
@@ -1225,6 +1310,10 @@ public class CodeReview implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getAnalysisTypes() != null && other.getAnalysisTypes().equals(this.getAnalysisTypes()) == false)
             return false;
+        if (other.getConfigFileState() == null ^ this.getConfigFileState() == null)
+            return false;
+        if (other.getConfigFileState() != null && other.getConfigFileState().equals(this.getConfigFileState()) == false)
+            return false;
         return true;
     }
 
@@ -1248,6 +1337,7 @@ public class CodeReview implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAssociationArn() == null) ? 0 : getAssociationArn().hashCode());
         hashCode = prime * hashCode + ((getMetrics() == null) ? 0 : getMetrics().hashCode());
         hashCode = prime * hashCode + ((getAnalysisTypes() == null) ? 0 : getAnalysisTypes().hashCode());
+        hashCode = prime * hashCode + ((getConfigFileState() == null) ? 0 : getConfigFileState().hashCode());
         return hashCode;
     }
 

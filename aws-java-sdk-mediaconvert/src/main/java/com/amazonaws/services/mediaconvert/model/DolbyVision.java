@@ -35,8 +35,19 @@ public class DolbyVision implements Serializable, Cloneable, StructuredPojo {
     /** Use Dolby Vision Mode to choose how the service will handle Dolby Vision MaxCLL and MaxFALL properies. */
     private String l6Mode;
     /**
-     * In the current MediaConvert implementation, the Dolby Vision profile is always 5 (PROFILE_5). Therefore, all of
-     * your inputs must contain Dolby Vision frame interleaved data.
+     * Required when you set Dolby Vision Profile (Profile) to Profile 8.1 (PROFILE_8_1). When you set Content mapping
+     * (Mapping) to None (HDR10_NOMAP), content mapping is not applied to the HDR10-compatible signal. Depending on the
+     * source peak nit level, clipping might occur on HDR devices without Dolby Vision. When you set Content mapping to
+     * Static (HDR10_1000), the transcoder creates a 1,000 nits peak HDR10-compatible signal by applying static content
+     * mapping to the source. This mode is speed-optimized for PQ10 sources with metadata that is created from analysis.
+     * For graded Dolby Vision content, be aware that creative intent might not be guaranteed with extreme 1,000 nits
+     * trims.
+     */
+    private String mapping;
+    /**
+     * Required when you use Dolby Vision (DolbyVision) processing. Set Profile (DolbyVisionProfile) to Profile 5
+     * (Profile_5) to only include frame-interleaved Dolby Vision metadata in your output. Set Profile to Profile 8.1
+     * (Profile_8_1) to include both frame-interleaved Dolby Vision metadata and HDR10 metadata in your output.
      */
     private String profile;
 
@@ -132,12 +143,114 @@ public class DolbyVision implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * In the current MediaConvert implementation, the Dolby Vision profile is always 5 (PROFILE_5). Therefore, all of
-     * your inputs must contain Dolby Vision frame interleaved data.
+     * Required when you set Dolby Vision Profile (Profile) to Profile 8.1 (PROFILE_8_1). When you set Content mapping
+     * (Mapping) to None (HDR10_NOMAP), content mapping is not applied to the HDR10-compatible signal. Depending on the
+     * source peak nit level, clipping might occur on HDR devices without Dolby Vision. When you set Content mapping to
+     * Static (HDR10_1000), the transcoder creates a 1,000 nits peak HDR10-compatible signal by applying static content
+     * mapping to the source. This mode is speed-optimized for PQ10 sources with metadata that is created from analysis.
+     * For graded Dolby Vision content, be aware that creative intent might not be guaranteed with extreme 1,000 nits
+     * trims.
+     * 
+     * @param mapping
+     *        Required when you set Dolby Vision Profile (Profile) to Profile 8.1 (PROFILE_8_1). When you set Content
+     *        mapping (Mapping) to None (HDR10_NOMAP), content mapping is not applied to the HDR10-compatible signal.
+     *        Depending on the source peak nit level, clipping might occur on HDR devices without Dolby Vision. When you
+     *        set Content mapping to Static (HDR10_1000), the transcoder creates a 1,000 nits peak HDR10-compatible
+     *        signal by applying static content mapping to the source. This mode is speed-optimized for PQ10 sources
+     *        with metadata that is created from analysis. For graded Dolby Vision content, be aware that creative
+     *        intent might not be guaranteed with extreme 1,000 nits trims.
+     * @see DolbyVisionMapping
+     */
+
+    public void setMapping(String mapping) {
+        this.mapping = mapping;
+    }
+
+    /**
+     * Required when you set Dolby Vision Profile (Profile) to Profile 8.1 (PROFILE_8_1). When you set Content mapping
+     * (Mapping) to None (HDR10_NOMAP), content mapping is not applied to the HDR10-compatible signal. Depending on the
+     * source peak nit level, clipping might occur on HDR devices without Dolby Vision. When you set Content mapping to
+     * Static (HDR10_1000), the transcoder creates a 1,000 nits peak HDR10-compatible signal by applying static content
+     * mapping to the source. This mode is speed-optimized for PQ10 sources with metadata that is created from analysis.
+     * For graded Dolby Vision content, be aware that creative intent might not be guaranteed with extreme 1,000 nits
+     * trims.
+     * 
+     * @return Required when you set Dolby Vision Profile (Profile) to Profile 8.1 (PROFILE_8_1). When you set Content
+     *         mapping (Mapping) to None (HDR10_NOMAP), content mapping is not applied to the HDR10-compatible signal.
+     *         Depending on the source peak nit level, clipping might occur on HDR devices without Dolby Vision. When
+     *         you set Content mapping to Static (HDR10_1000), the transcoder creates a 1,000 nits peak HDR10-compatible
+     *         signal by applying static content mapping to the source. This mode is speed-optimized for PQ10 sources
+     *         with metadata that is created from analysis. For graded Dolby Vision content, be aware that creative
+     *         intent might not be guaranteed with extreme 1,000 nits trims.
+     * @see DolbyVisionMapping
+     */
+
+    public String getMapping() {
+        return this.mapping;
+    }
+
+    /**
+     * Required when you set Dolby Vision Profile (Profile) to Profile 8.1 (PROFILE_8_1). When you set Content mapping
+     * (Mapping) to None (HDR10_NOMAP), content mapping is not applied to the HDR10-compatible signal. Depending on the
+     * source peak nit level, clipping might occur on HDR devices without Dolby Vision. When you set Content mapping to
+     * Static (HDR10_1000), the transcoder creates a 1,000 nits peak HDR10-compatible signal by applying static content
+     * mapping to the source. This mode is speed-optimized for PQ10 sources with metadata that is created from analysis.
+     * For graded Dolby Vision content, be aware that creative intent might not be guaranteed with extreme 1,000 nits
+     * trims.
+     * 
+     * @param mapping
+     *        Required when you set Dolby Vision Profile (Profile) to Profile 8.1 (PROFILE_8_1). When you set Content
+     *        mapping (Mapping) to None (HDR10_NOMAP), content mapping is not applied to the HDR10-compatible signal.
+     *        Depending on the source peak nit level, clipping might occur on HDR devices without Dolby Vision. When you
+     *        set Content mapping to Static (HDR10_1000), the transcoder creates a 1,000 nits peak HDR10-compatible
+     *        signal by applying static content mapping to the source. This mode is speed-optimized for PQ10 sources
+     *        with metadata that is created from analysis. For graded Dolby Vision content, be aware that creative
+     *        intent might not be guaranteed with extreme 1,000 nits trims.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DolbyVisionMapping
+     */
+
+    public DolbyVision withMapping(String mapping) {
+        setMapping(mapping);
+        return this;
+    }
+
+    /**
+     * Required when you set Dolby Vision Profile (Profile) to Profile 8.1 (PROFILE_8_1). When you set Content mapping
+     * (Mapping) to None (HDR10_NOMAP), content mapping is not applied to the HDR10-compatible signal. Depending on the
+     * source peak nit level, clipping might occur on HDR devices without Dolby Vision. When you set Content mapping to
+     * Static (HDR10_1000), the transcoder creates a 1,000 nits peak HDR10-compatible signal by applying static content
+     * mapping to the source. This mode is speed-optimized for PQ10 sources with metadata that is created from analysis.
+     * For graded Dolby Vision content, be aware that creative intent might not be guaranteed with extreme 1,000 nits
+     * trims.
+     * 
+     * @param mapping
+     *        Required when you set Dolby Vision Profile (Profile) to Profile 8.1 (PROFILE_8_1). When you set Content
+     *        mapping (Mapping) to None (HDR10_NOMAP), content mapping is not applied to the HDR10-compatible signal.
+     *        Depending on the source peak nit level, clipping might occur on HDR devices without Dolby Vision. When you
+     *        set Content mapping to Static (HDR10_1000), the transcoder creates a 1,000 nits peak HDR10-compatible
+     *        signal by applying static content mapping to the source. This mode is speed-optimized for PQ10 sources
+     *        with metadata that is created from analysis. For graded Dolby Vision content, be aware that creative
+     *        intent might not be guaranteed with extreme 1,000 nits trims.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DolbyVisionMapping
+     */
+
+    public DolbyVision withMapping(DolbyVisionMapping mapping) {
+        this.mapping = mapping.toString();
+        return this;
+    }
+
+    /**
+     * Required when you use Dolby Vision (DolbyVision) processing. Set Profile (DolbyVisionProfile) to Profile 5
+     * (Profile_5) to only include frame-interleaved Dolby Vision metadata in your output. Set Profile to Profile 8.1
+     * (Profile_8_1) to include both frame-interleaved Dolby Vision metadata and HDR10 metadata in your output.
      * 
      * @param profile
-     *        In the current MediaConvert implementation, the Dolby Vision profile is always 5 (PROFILE_5). Therefore,
-     *        all of your inputs must contain Dolby Vision frame interleaved data.
+     *        Required when you use Dolby Vision (DolbyVision) processing. Set Profile (DolbyVisionProfile) to Profile 5
+     *        (Profile_5) to only include frame-interleaved Dolby Vision metadata in your output. Set Profile to Profile
+     *        8.1 (Profile_8_1) to include both frame-interleaved Dolby Vision metadata and HDR10 metadata in your
+     *        output.
      * @see DolbyVisionProfile
      */
 
@@ -146,11 +259,14 @@ public class DolbyVision implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * In the current MediaConvert implementation, the Dolby Vision profile is always 5 (PROFILE_5). Therefore, all of
-     * your inputs must contain Dolby Vision frame interleaved data.
+     * Required when you use Dolby Vision (DolbyVision) processing. Set Profile (DolbyVisionProfile) to Profile 5
+     * (Profile_5) to only include frame-interleaved Dolby Vision metadata in your output. Set Profile to Profile 8.1
+     * (Profile_8_1) to include both frame-interleaved Dolby Vision metadata and HDR10 metadata in your output.
      * 
-     * @return In the current MediaConvert implementation, the Dolby Vision profile is always 5 (PROFILE_5). Therefore,
-     *         all of your inputs must contain Dolby Vision frame interleaved data.
+     * @return Required when you use Dolby Vision (DolbyVision) processing. Set Profile (DolbyVisionProfile) to Profile
+     *         5 (Profile_5) to only include frame-interleaved Dolby Vision metadata in your output. Set Profile to
+     *         Profile 8.1 (Profile_8_1) to include both frame-interleaved Dolby Vision metadata and HDR10 metadata in
+     *         your output.
      * @see DolbyVisionProfile
      */
 
@@ -159,12 +275,15 @@ public class DolbyVision implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * In the current MediaConvert implementation, the Dolby Vision profile is always 5 (PROFILE_5). Therefore, all of
-     * your inputs must contain Dolby Vision frame interleaved data.
+     * Required when you use Dolby Vision (DolbyVision) processing. Set Profile (DolbyVisionProfile) to Profile 5
+     * (Profile_5) to only include frame-interleaved Dolby Vision metadata in your output. Set Profile to Profile 8.1
+     * (Profile_8_1) to include both frame-interleaved Dolby Vision metadata and HDR10 metadata in your output.
      * 
      * @param profile
-     *        In the current MediaConvert implementation, the Dolby Vision profile is always 5 (PROFILE_5). Therefore,
-     *        all of your inputs must contain Dolby Vision frame interleaved data.
+     *        Required when you use Dolby Vision (DolbyVision) processing. Set Profile (DolbyVisionProfile) to Profile 5
+     *        (Profile_5) to only include frame-interleaved Dolby Vision metadata in your output. Set Profile to Profile
+     *        8.1 (Profile_8_1) to include both frame-interleaved Dolby Vision metadata and HDR10 metadata in your
+     *        output.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DolbyVisionProfile
      */
@@ -175,12 +294,15 @@ public class DolbyVision implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * In the current MediaConvert implementation, the Dolby Vision profile is always 5 (PROFILE_5). Therefore, all of
-     * your inputs must contain Dolby Vision frame interleaved data.
+     * Required when you use Dolby Vision (DolbyVision) processing. Set Profile (DolbyVisionProfile) to Profile 5
+     * (Profile_5) to only include frame-interleaved Dolby Vision metadata in your output. Set Profile to Profile 8.1
+     * (Profile_8_1) to include both frame-interleaved Dolby Vision metadata and HDR10 metadata in your output.
      * 
      * @param profile
-     *        In the current MediaConvert implementation, the Dolby Vision profile is always 5 (PROFILE_5). Therefore,
-     *        all of your inputs must contain Dolby Vision frame interleaved data.
+     *        Required when you use Dolby Vision (DolbyVision) processing. Set Profile (DolbyVisionProfile) to Profile 5
+     *        (Profile_5) to only include frame-interleaved Dolby Vision metadata in your output. Set Profile to Profile
+     *        8.1 (Profile_8_1) to include both frame-interleaved Dolby Vision metadata and HDR10 metadata in your
+     *        output.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DolbyVisionProfile
      */
@@ -206,6 +328,8 @@ public class DolbyVision implements Serializable, Cloneable, StructuredPojo {
             sb.append("L6Metadata: ").append(getL6Metadata()).append(",");
         if (getL6Mode() != null)
             sb.append("L6Mode: ").append(getL6Mode()).append(",");
+        if (getMapping() != null)
+            sb.append("Mapping: ").append(getMapping()).append(",");
         if (getProfile() != null)
             sb.append("Profile: ").append(getProfile());
         sb.append("}");
@@ -230,6 +354,10 @@ public class DolbyVision implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getL6Mode() != null && other.getL6Mode().equals(this.getL6Mode()) == false)
             return false;
+        if (other.getMapping() == null ^ this.getMapping() == null)
+            return false;
+        if (other.getMapping() != null && other.getMapping().equals(this.getMapping()) == false)
+            return false;
         if (other.getProfile() == null ^ this.getProfile() == null)
             return false;
         if (other.getProfile() != null && other.getProfile().equals(this.getProfile()) == false)
@@ -244,6 +372,7 @@ public class DolbyVision implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getL6Metadata() == null) ? 0 : getL6Metadata().hashCode());
         hashCode = prime * hashCode + ((getL6Mode() == null) ? 0 : getL6Mode().hashCode());
+        hashCode = prime * hashCode + ((getMapping() == null) ? 0 : getMapping().hashCode());
         hashCode = prime * hashCode + ((getProfile() == null) ? 0 : getProfile().hashCode());
         return hashCode;
     }

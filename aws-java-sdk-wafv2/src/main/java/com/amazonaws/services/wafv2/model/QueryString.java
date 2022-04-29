@@ -19,10 +19,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The query string of a web request. This is the part of a URL that appears after a <code>?</code> character, if any.
+ * Inspect the query string of the web request. This is the part of a URL that appears after a <code>?</code> character,
+ * if any.
  * </p>
  * <p>
- * This is used only to indicate the web request component for WAF to inspect, in the <a>FieldToMatch</a> specification.
+ * This is used only in the <a>FieldToMatch</a> specification for some web request component types.
  * </p>
  * <p>
  * JSON specification: <code>"QueryString": {}</code>

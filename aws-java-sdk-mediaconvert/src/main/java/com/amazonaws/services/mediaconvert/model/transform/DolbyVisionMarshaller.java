@@ -31,6 +31,8 @@ public class DolbyVisionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("l6Metadata").build();
     private static final MarshallingInfo<String> L6MODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("l6Mode").build();
+    private static final MarshallingInfo<String> MAPPING_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("mapping").build();
     private static final MarshallingInfo<String> PROFILE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("profile").build();
 
@@ -52,6 +54,7 @@ public class DolbyVisionMarshaller {
         try {
             protocolMarshaller.marshall(dolbyVision.getL6Metadata(), L6METADATA_BINDING);
             protocolMarshaller.marshall(dolbyVision.getL6Mode(), L6MODE_BINDING);
+            protocolMarshaller.marshall(dolbyVision.getMapping(), MAPPING_BINDING);
             protocolMarshaller.marshall(dolbyVision.getProfile(), PROFILE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

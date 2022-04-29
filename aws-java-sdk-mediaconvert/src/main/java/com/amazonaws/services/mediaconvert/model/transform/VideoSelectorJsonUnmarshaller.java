@@ -68,6 +68,10 @@ public class VideoSelectorJsonUnmarshaller implements Unmarshaller<VideoSelector
                     context.nextToken();
                     videoSelector.setHdr10Metadata(Hdr10MetadataJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("padVideo", targetDepth)) {
+                    context.nextToken();
+                    videoSelector.setPadVideo(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("pid", targetDepth)) {
                     context.nextToken();
                     videoSelector.setPid(context.getUnmarshaller(Integer.class).unmarshall(context));

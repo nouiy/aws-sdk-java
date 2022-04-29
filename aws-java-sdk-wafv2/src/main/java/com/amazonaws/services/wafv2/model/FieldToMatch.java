@@ -19,13 +19,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The part of a web request that you want WAF to inspect. Include the single <code>FieldToMatch</code> type that you
+ * The part of the web request that you want WAF to inspect. Include the single <code>FieldToMatch</code> type that you
  * want to inspect, with additional specifications as needed, according to the type. You specify a single request
  * component in <code>FieldToMatch</code> for each rule statement that requires it. To inspect more than one component
- * of a web request, create a separate rule statement for each component.
+ * of the web request, create a separate rule statement for each component.
  * </p>
  * <p>
- * JSON specification for a <code>QueryString</code> field to match:
+ * Example JSON for a <code>QueryString</code> field to match:
  * </p>
  * <p>
  * <code> "FieldToMatch": { "QueryString": {} }</code>
@@ -51,16 +51,16 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Example JSON: <code>"SingleHeader": { "Name": "haystack" }</code>
      * </p>
+     * <p>
+     * Alternately, you can filter and inspect all headers with the <code>Headers</code> <code>FieldToMatch</code>
+     * setting.
+     * </p>
      */
     private SingleHeader singleHeader;
     /**
      * <p>
      * Inspect a single query argument. Provide the name of the query argument to inspect, such as <i>UserName</i> or
      * <i>SalesRegion</i>. The name can be up to 30 characters long and isn't case sensitive.
-     * </p>
-     * <p>
-     * This is used only to indicate the web request component for WAF to inspect, in the <a>FieldToMatch</a>
-     * specification.
      * </p>
      * <p>
      * Example JSON: <code>"SingleQueryArgument": { "Name": "myArgument" }</code>
@@ -75,7 +75,7 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
     private AllQueryArguments allQueryArguments;
     /**
      * <p>
-     * Inspect the request URI path. This is the part of a web request that identifies a resource, for example,
+     * Inspect the request URI path. This is the part of the web request that identifies a resource, for example,
      * <code>/images/daily-ad.jpg</code>.
      * </p>
      */
@@ -93,12 +93,9 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * body, such as data from a form.
      * </p>
      * <p>
-     * Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the
-     * underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't allow
-     * additional bytes in by combining a statement that inspects the body of the web request, such as
-     * <a>ByteMatchStatement</a> or <a>RegexPatternSetReferenceStatement</a>, with a <a>SizeConstraintStatement</a> that
-     * enforces an 8 KB size limit on the body of the request. WAF doesn't support inspecting the entire contents of web
-     * requests whose bodies exceed the 8 KB limit.
+     * Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host
+     * service. For information about how to handle oversized request bodies, see the <code>Body</code> object
+     * configuration.
      * </p>
      */
     private Body body;
@@ -116,15 +113,38 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * as data from a form.
      * </p>
      * <p>
-     * Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the
-     * underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't allow
-     * additional bytes in by combining a statement that inspects the body of the web request, such as
-     * <a>ByteMatchStatement</a> or <a>RegexPatternSetReferenceStatement</a>, with a <a>SizeConstraintStatement</a> that
-     * enforces an 8 KB size limit on the body of the request. WAF doesn't support inspecting the entire contents of web
-     * requests whose bodies exceed the 8 KB limit.
+     * Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host
+     * service. For information about how to handle oversized request bodies, see the <code>JsonBody</code> object
+     * configuration.
      * </p>
      */
     private JsonBody jsonBody;
+    /**
+     * <p>
+     * Inspect the request headers. You must configure scope and pattern matching filters in the <code>Headers</code>
+     * object, to define the set of headers to and the parts of the headers that WAF inspects.
+     * </p>
+     * <p>
+     * Only the first 8 KB (8192 bytes) of a request's headers and only the first 200 headers are forwarded to WAF for
+     * inspection by the underlying host service. You must configure how to handle any oversize header content in the
+     * <code>Headers</code> object. WAF applies the pattern matching filters to the headers that it receives from the
+     * underlying host service.
+     * </p>
+     */
+    private Headers headers;
+    /**
+     * <p>
+     * Inspect the request cookies. You must configure scope and pattern matching filters in the <code>Cookies</code>
+     * object, to define the set of cookies and the parts of the cookies that WAF inspects.
+     * </p>
+     * <p>
+     * Only the first 8 KB (8192 bytes) of a request's cookies and only the first 200 cookies are forwarded to WAF for
+     * inspection by the underlying host service. You must configure how to handle any oversize cookie content in the
+     * <code>Cookies</code> object. WAF applies the pattern matching filters to the cookies that it receives from the
+     * underlying host service.
+     * </p>
+     */
+    private Cookies cookies;
 
     /**
      * <p>
@@ -134,12 +154,20 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Example JSON: <code>"SingleHeader": { "Name": "haystack" }</code>
      * </p>
+     * <p>
+     * Alternately, you can filter and inspect all headers with the <code>Headers</code> <code>FieldToMatch</code>
+     * setting.
+     * </p>
      * 
      * @param singleHeader
      *        Inspect a single header. Provide the name of the header to inspect, for example, <code>User-Agent</code>
      *        or <code>Referer</code>. This setting isn't case sensitive.</p>
      *        <p>
      *        Example JSON: <code>"SingleHeader": { "Name": "haystack" }</code>
+     *        </p>
+     *        <p>
+     *        Alternately, you can filter and inspect all headers with the <code>Headers</code>
+     *        <code>FieldToMatch</code> setting.
      */
 
     public void setSingleHeader(SingleHeader singleHeader) {
@@ -154,11 +182,19 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Example JSON: <code>"SingleHeader": { "Name": "haystack" }</code>
      * </p>
+     * <p>
+     * Alternately, you can filter and inspect all headers with the <code>Headers</code> <code>FieldToMatch</code>
+     * setting.
+     * </p>
      * 
      * @return Inspect a single header. Provide the name of the header to inspect, for example, <code>User-Agent</code>
      *         or <code>Referer</code>. This setting isn't case sensitive.</p>
      *         <p>
      *         Example JSON: <code>"SingleHeader": { "Name": "haystack" }</code>
+     *         </p>
+     *         <p>
+     *         Alternately, you can filter and inspect all headers with the <code>Headers</code>
+     *         <code>FieldToMatch</code> setting.
      */
 
     public SingleHeader getSingleHeader() {
@@ -173,12 +209,20 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Example JSON: <code>"SingleHeader": { "Name": "haystack" }</code>
      * </p>
+     * <p>
+     * Alternately, you can filter and inspect all headers with the <code>Headers</code> <code>FieldToMatch</code>
+     * setting.
+     * </p>
      * 
      * @param singleHeader
      *        Inspect a single header. Provide the name of the header to inspect, for example, <code>User-Agent</code>
      *        or <code>Referer</code>. This setting isn't case sensitive.</p>
      *        <p>
      *        Example JSON: <code>"SingleHeader": { "Name": "haystack" }</code>
+     *        </p>
+     *        <p>
+     *        Alternately, you can filter and inspect all headers with the <code>Headers</code>
+     *        <code>FieldToMatch</code> setting.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -193,20 +237,12 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * <i>SalesRegion</i>. The name can be up to 30 characters long and isn't case sensitive.
      * </p>
      * <p>
-     * This is used only to indicate the web request component for WAF to inspect, in the <a>FieldToMatch</a>
-     * specification.
-     * </p>
-     * <p>
      * Example JSON: <code>"SingleQueryArgument": { "Name": "myArgument" }</code>
      * </p>
      * 
      * @param singleQueryArgument
      *        Inspect a single query argument. Provide the name of the query argument to inspect, such as
      *        <i>UserName</i> or <i>SalesRegion</i>. The name can be up to 30 characters long and isn't case sensitive.
-     *        </p>
-     *        <p>
-     *        This is used only to indicate the web request component for WAF to inspect, in the <a>FieldToMatch</a>
-     *        specification.
      *        </p>
      *        <p>
      *        Example JSON: <code>"SingleQueryArgument": { "Name": "myArgument" }</code>
@@ -222,19 +258,11 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * <i>SalesRegion</i>. The name can be up to 30 characters long and isn't case sensitive.
      * </p>
      * <p>
-     * This is used only to indicate the web request component for WAF to inspect, in the <a>FieldToMatch</a>
-     * specification.
-     * </p>
-     * <p>
      * Example JSON: <code>"SingleQueryArgument": { "Name": "myArgument" }</code>
      * </p>
      * 
      * @return Inspect a single query argument. Provide the name of the query argument to inspect, such as
      *         <i>UserName</i> or <i>SalesRegion</i>. The name can be up to 30 characters long and isn't case sensitive.
-     *         </p>
-     *         <p>
-     *         This is used only to indicate the web request component for WAF to inspect, in the <a>FieldToMatch</a>
-     *         specification.
      *         </p>
      *         <p>
      *         Example JSON: <code>"SingleQueryArgument": { "Name": "myArgument" }</code>
@@ -250,20 +278,12 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * <i>SalesRegion</i>. The name can be up to 30 characters long and isn't case sensitive.
      * </p>
      * <p>
-     * This is used only to indicate the web request component for WAF to inspect, in the <a>FieldToMatch</a>
-     * specification.
-     * </p>
-     * <p>
      * Example JSON: <code>"SingleQueryArgument": { "Name": "myArgument" }</code>
      * </p>
      * 
      * @param singleQueryArgument
      *        Inspect a single query argument. Provide the name of the query argument to inspect, such as
      *        <i>UserName</i> or <i>SalesRegion</i>. The name can be up to 30 characters long and isn't case sensitive.
-     *        </p>
-     *        <p>
-     *        This is used only to indicate the web request component for WAF to inspect, in the <a>FieldToMatch</a>
-     *        specification.
      *        </p>
      *        <p>
      *        Example JSON: <code>"SingleQueryArgument": { "Name": "myArgument" }</code>
@@ -317,12 +337,12 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Inspect the request URI path. This is the part of a web request that identifies a resource, for example,
+     * Inspect the request URI path. This is the part of the web request that identifies a resource, for example,
      * <code>/images/daily-ad.jpg</code>.
      * </p>
      * 
      * @param uriPath
-     *        Inspect the request URI path. This is the part of a web request that identifies a resource, for example,
+     *        Inspect the request URI path. This is the part of the web request that identifies a resource, for example,
      *        <code>/images/daily-ad.jpg</code>.
      */
 
@@ -332,12 +352,12 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Inspect the request URI path. This is the part of a web request that identifies a resource, for example,
+     * Inspect the request URI path. This is the part of the web request that identifies a resource, for example,
      * <code>/images/daily-ad.jpg</code>.
      * </p>
      * 
-     * @return Inspect the request URI path. This is the part of a web request that identifies a resource, for example,
-     *         <code>/images/daily-ad.jpg</code>.
+     * @return Inspect the request URI path. This is the part of the web request that identifies a resource, for
+     *         example, <code>/images/daily-ad.jpg</code>.
      */
 
     public UriPath getUriPath() {
@@ -346,12 +366,12 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Inspect the request URI path. This is the part of a web request that identifies a resource, for example,
+     * Inspect the request URI path. This is the part of the web request that identifies a resource, for example,
      * <code>/images/daily-ad.jpg</code>.
      * </p>
      * 
      * @param uriPath
-     *        Inspect the request URI path. This is the part of a web request that identifies a resource, for example,
+     *        Inspect the request URI path. This is the part of the web request that identifies a resource, for example,
      *        <code>/images/daily-ad.jpg</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -409,12 +429,9 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * body, such as data from a form.
      * </p>
      * <p>
-     * Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the
-     * underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't allow
-     * additional bytes in by combining a statement that inspects the body of the web request, such as
-     * <a>ByteMatchStatement</a> or <a>RegexPatternSetReferenceStatement</a>, with a <a>SizeConstraintStatement</a> that
-     * enforces an 8 KB size limit on the body of the request. WAF doesn't support inspecting the entire contents of web
-     * requests whose bodies exceed the 8 KB limit.
+     * Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host
+     * service. For information about how to handle oversized request bodies, see the <code>Body</code> object
+     * configuration.
      * </p>
      * 
      * @param body
@@ -422,12 +439,9 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      *        the part of a request that contains any additional data that you want to send to your web server as the
      *        HTTP request body, such as data from a form. </p>
      *        <p>
-     *        Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the
-     *        underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't
-     *        allow additional bytes in by combining a statement that inspects the body of the web request, such as
-     *        <a>ByteMatchStatement</a> or <a>RegexPatternSetReferenceStatement</a>, with a
-     *        <a>SizeConstraintStatement</a> that enforces an 8 KB size limit on the body of the request. WAF doesn't
-     *        support inspecting the entire contents of web requests whose bodies exceed the 8 KB limit.
+     *        Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying
+     *        host service. For information about how to handle oversized request bodies, see the <code>Body</code>
+     *        object configuration.
      */
 
     public void setBody(Body body) {
@@ -441,24 +455,18 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * body, such as data from a form.
      * </p>
      * <p>
-     * Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the
-     * underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't allow
-     * additional bytes in by combining a statement that inspects the body of the web request, such as
-     * <a>ByteMatchStatement</a> or <a>RegexPatternSetReferenceStatement</a>, with a <a>SizeConstraintStatement</a> that
-     * enforces an 8 KB size limit on the body of the request. WAF doesn't support inspecting the entire contents of web
-     * requests whose bodies exceed the 8 KB limit.
+     * Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host
+     * service. For information about how to handle oversized request bodies, see the <code>Body</code> object
+     * configuration.
      * </p>
      * 
      * @return Inspect the request body as plain text. The request body immediately follows the request headers. This is
      *         the part of a request that contains any additional data that you want to send to your web server as the
      *         HTTP request body, such as data from a form. </p>
      *         <p>
-     *         Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the
-     *         underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't
-     *         allow additional bytes in by combining a statement that inspects the body of the web request, such as
-     *         <a>ByteMatchStatement</a> or <a>RegexPatternSetReferenceStatement</a>, with a
-     *         <a>SizeConstraintStatement</a> that enforces an 8 KB size limit on the body of the request. WAF doesn't
-     *         support inspecting the entire contents of web requests whose bodies exceed the 8 KB limit.
+     *         Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the
+     *         underlying host service. For information about how to handle oversized request bodies, see the
+     *         <code>Body</code> object configuration.
      */
 
     public Body getBody() {
@@ -472,12 +480,9 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * body, such as data from a form.
      * </p>
      * <p>
-     * Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the
-     * underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't allow
-     * additional bytes in by combining a statement that inspects the body of the web request, such as
-     * <a>ByteMatchStatement</a> or <a>RegexPatternSetReferenceStatement</a>, with a <a>SizeConstraintStatement</a> that
-     * enforces an 8 KB size limit on the body of the request. WAF doesn't support inspecting the entire contents of web
-     * requests whose bodies exceed the 8 KB limit.
+     * Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host
+     * service. For information about how to handle oversized request bodies, see the <code>Body</code> object
+     * configuration.
      * </p>
      * 
      * @param body
@@ -485,12 +490,9 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      *        the part of a request that contains any additional data that you want to send to your web server as the
      *        HTTP request body, such as data from a form. </p>
      *        <p>
-     *        Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the
-     *        underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't
-     *        allow additional bytes in by combining a statement that inspects the body of the web request, such as
-     *        <a>ByteMatchStatement</a> or <a>RegexPatternSetReferenceStatement</a>, with a
-     *        <a>SizeConstraintStatement</a> that enforces an 8 KB size limit on the body of the request. WAF doesn't
-     *        support inspecting the entire contents of web requests whose bodies exceed the 8 KB limit.
+     *        Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying
+     *        host service. For information about how to handle oversized request bodies, see the <code>Body</code>
+     *        object configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -552,12 +554,9 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * as data from a form.
      * </p>
      * <p>
-     * Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the
-     * underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't allow
-     * additional bytes in by combining a statement that inspects the body of the web request, such as
-     * <a>ByteMatchStatement</a> or <a>RegexPatternSetReferenceStatement</a>, with a <a>SizeConstraintStatement</a> that
-     * enforces an 8 KB size limit on the body of the request. WAF doesn't support inspecting the entire contents of web
-     * requests whose bodies exceed the 8 KB limit.
+     * Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host
+     * service. For information about how to handle oversized request bodies, see the <code>JsonBody</code> object
+     * configuration.
      * </p>
      * 
      * @param jsonBody
@@ -565,12 +564,9 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      *        part of a request that contains any additional data that you want to send to your web server as the HTTP
      *        request body, such as data from a form. </p>
      *        <p>
-     *        Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the
-     *        underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't
-     *        allow additional bytes in by combining a statement that inspects the body of the web request, such as
-     *        <a>ByteMatchStatement</a> or <a>RegexPatternSetReferenceStatement</a>, with a
-     *        <a>SizeConstraintStatement</a> that enforces an 8 KB size limit on the body of the request. WAF doesn't
-     *        support inspecting the entire contents of web requests whose bodies exceed the 8 KB limit.
+     *        Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying
+     *        host service. For information about how to handle oversized request bodies, see the <code>JsonBody</code>
+     *        object configuration.
      */
 
     public void setJsonBody(JsonBody jsonBody) {
@@ -584,24 +580,18 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * as data from a form.
      * </p>
      * <p>
-     * Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the
-     * underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't allow
-     * additional bytes in by combining a statement that inspects the body of the web request, such as
-     * <a>ByteMatchStatement</a> or <a>RegexPatternSetReferenceStatement</a>, with a <a>SizeConstraintStatement</a> that
-     * enforces an 8 KB size limit on the body of the request. WAF doesn't support inspecting the entire contents of web
-     * requests whose bodies exceed the 8 KB limit.
+     * Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host
+     * service. For information about how to handle oversized request bodies, see the <code>JsonBody</code> object
+     * configuration.
      * </p>
      * 
      * @return Inspect the request body as JSON. The request body immediately follows the request headers. This is the
      *         part of a request that contains any additional data that you want to send to your web server as the HTTP
      *         request body, such as data from a form. </p>
      *         <p>
-     *         Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the
-     *         underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't
-     *         allow additional bytes in by combining a statement that inspects the body of the web request, such as
-     *         <a>ByteMatchStatement</a> or <a>RegexPatternSetReferenceStatement</a>, with a
-     *         <a>SizeConstraintStatement</a> that enforces an 8 KB size limit on the body of the request. WAF doesn't
-     *         support inspecting the entire contents of web requests whose bodies exceed the 8 KB limit.
+     *         Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the
+     *         underlying host service. For information about how to handle oversized request bodies, see the
+     *         <code>JsonBody</code> object configuration.
      */
 
     public JsonBody getJsonBody() {
@@ -615,12 +605,9 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      * as data from a form.
      * </p>
      * <p>
-     * Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the
-     * underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't allow
-     * additional bytes in by combining a statement that inspects the body of the web request, such as
-     * <a>ByteMatchStatement</a> or <a>RegexPatternSetReferenceStatement</a>, with a <a>SizeConstraintStatement</a> that
-     * enforces an 8 KB size limit on the body of the request. WAF doesn't support inspecting the entire contents of web
-     * requests whose bodies exceed the 8 KB limit.
+     * Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying host
+     * service. For information about how to handle oversized request bodies, see the <code>JsonBody</code> object
+     * configuration.
      * </p>
      * 
      * @param jsonBody
@@ -628,17 +615,178 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
      *        part of a request that contains any additional data that you want to send to your web server as the HTTP
      *        request body, such as data from a form. </p>
      *        <p>
-     *        Note that only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the
-     *        underlying host service. If you don't need to inspect more than 8 KB, you can guarantee that you don't
-     *        allow additional bytes in by combining a statement that inspects the body of the web request, such as
-     *        <a>ByteMatchStatement</a> or <a>RegexPatternSetReferenceStatement</a>, with a
-     *        <a>SizeConstraintStatement</a> that enforces an 8 KB size limit on the body of the request. WAF doesn't
-     *        support inspecting the entire contents of web requests whose bodies exceed the 8 KB limit.
+     *        Only the first 8 KB (8192 bytes) of the request body are forwarded to WAF for inspection by the underlying
+     *        host service. For information about how to handle oversized request bodies, see the <code>JsonBody</code>
+     *        object configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public FieldToMatch withJsonBody(JsonBody jsonBody) {
         setJsonBody(jsonBody);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Inspect the request headers. You must configure scope and pattern matching filters in the <code>Headers</code>
+     * object, to define the set of headers to and the parts of the headers that WAF inspects.
+     * </p>
+     * <p>
+     * Only the first 8 KB (8192 bytes) of a request's headers and only the first 200 headers are forwarded to WAF for
+     * inspection by the underlying host service. You must configure how to handle any oversize header content in the
+     * <code>Headers</code> object. WAF applies the pattern matching filters to the headers that it receives from the
+     * underlying host service.
+     * </p>
+     * 
+     * @param headers
+     *        Inspect the request headers. You must configure scope and pattern matching filters in the
+     *        <code>Headers</code> object, to define the set of headers to and the parts of the headers that WAF
+     *        inspects. </p>
+     *        <p>
+     *        Only the first 8 KB (8192 bytes) of a request's headers and only the first 200 headers are forwarded to
+     *        WAF for inspection by the underlying host service. You must configure how to handle any oversize header
+     *        content in the <code>Headers</code> object. WAF applies the pattern matching filters to the headers that
+     *        it receives from the underlying host service.
+     */
+
+    public void setHeaders(Headers headers) {
+        this.headers = headers;
+    }
+
+    /**
+     * <p>
+     * Inspect the request headers. You must configure scope and pattern matching filters in the <code>Headers</code>
+     * object, to define the set of headers to and the parts of the headers that WAF inspects.
+     * </p>
+     * <p>
+     * Only the first 8 KB (8192 bytes) of a request's headers and only the first 200 headers are forwarded to WAF for
+     * inspection by the underlying host service. You must configure how to handle any oversize header content in the
+     * <code>Headers</code> object. WAF applies the pattern matching filters to the headers that it receives from the
+     * underlying host service.
+     * </p>
+     * 
+     * @return Inspect the request headers. You must configure scope and pattern matching filters in the
+     *         <code>Headers</code> object, to define the set of headers to and the parts of the headers that WAF
+     *         inspects. </p>
+     *         <p>
+     *         Only the first 8 KB (8192 bytes) of a request's headers and only the first 200 headers are forwarded to
+     *         WAF for inspection by the underlying host service. You must configure how to handle any oversize header
+     *         content in the <code>Headers</code> object. WAF applies the pattern matching filters to the headers that
+     *         it receives from the underlying host service.
+     */
+
+    public Headers getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * <p>
+     * Inspect the request headers. You must configure scope and pattern matching filters in the <code>Headers</code>
+     * object, to define the set of headers to and the parts of the headers that WAF inspects.
+     * </p>
+     * <p>
+     * Only the first 8 KB (8192 bytes) of a request's headers and only the first 200 headers are forwarded to WAF for
+     * inspection by the underlying host service. You must configure how to handle any oversize header content in the
+     * <code>Headers</code> object. WAF applies the pattern matching filters to the headers that it receives from the
+     * underlying host service.
+     * </p>
+     * 
+     * @param headers
+     *        Inspect the request headers. You must configure scope and pattern matching filters in the
+     *        <code>Headers</code> object, to define the set of headers to and the parts of the headers that WAF
+     *        inspects. </p>
+     *        <p>
+     *        Only the first 8 KB (8192 bytes) of a request's headers and only the first 200 headers are forwarded to
+     *        WAF for inspection by the underlying host service. You must configure how to handle any oversize header
+     *        content in the <code>Headers</code> object. WAF applies the pattern matching filters to the headers that
+     *        it receives from the underlying host service.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FieldToMatch withHeaders(Headers headers) {
+        setHeaders(headers);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Inspect the request cookies. You must configure scope and pattern matching filters in the <code>Cookies</code>
+     * object, to define the set of cookies and the parts of the cookies that WAF inspects.
+     * </p>
+     * <p>
+     * Only the first 8 KB (8192 bytes) of a request's cookies and only the first 200 cookies are forwarded to WAF for
+     * inspection by the underlying host service. You must configure how to handle any oversize cookie content in the
+     * <code>Cookies</code> object. WAF applies the pattern matching filters to the cookies that it receives from the
+     * underlying host service.
+     * </p>
+     * 
+     * @param cookies
+     *        Inspect the request cookies. You must configure scope and pattern matching filters in the
+     *        <code>Cookies</code> object, to define the set of cookies and the parts of the cookies that WAF inspects.
+     *        </p>
+     *        <p>
+     *        Only the first 8 KB (8192 bytes) of a request's cookies and only the first 200 cookies are forwarded to
+     *        WAF for inspection by the underlying host service. You must configure how to handle any oversize cookie
+     *        content in the <code>Cookies</code> object. WAF applies the pattern matching filters to the cookies that
+     *        it receives from the underlying host service.
+     */
+
+    public void setCookies(Cookies cookies) {
+        this.cookies = cookies;
+    }
+
+    /**
+     * <p>
+     * Inspect the request cookies. You must configure scope and pattern matching filters in the <code>Cookies</code>
+     * object, to define the set of cookies and the parts of the cookies that WAF inspects.
+     * </p>
+     * <p>
+     * Only the first 8 KB (8192 bytes) of a request's cookies and only the first 200 cookies are forwarded to WAF for
+     * inspection by the underlying host service. You must configure how to handle any oversize cookie content in the
+     * <code>Cookies</code> object. WAF applies the pattern matching filters to the cookies that it receives from the
+     * underlying host service.
+     * </p>
+     * 
+     * @return Inspect the request cookies. You must configure scope and pattern matching filters in the
+     *         <code>Cookies</code> object, to define the set of cookies and the parts of the cookies that WAF inspects.
+     *         </p>
+     *         <p>
+     *         Only the first 8 KB (8192 bytes) of a request's cookies and only the first 200 cookies are forwarded to
+     *         WAF for inspection by the underlying host service. You must configure how to handle any oversize cookie
+     *         content in the <code>Cookies</code> object. WAF applies the pattern matching filters to the cookies that
+     *         it receives from the underlying host service.
+     */
+
+    public Cookies getCookies() {
+        return this.cookies;
+    }
+
+    /**
+     * <p>
+     * Inspect the request cookies. You must configure scope and pattern matching filters in the <code>Cookies</code>
+     * object, to define the set of cookies and the parts of the cookies that WAF inspects.
+     * </p>
+     * <p>
+     * Only the first 8 KB (8192 bytes) of a request's cookies and only the first 200 cookies are forwarded to WAF for
+     * inspection by the underlying host service. You must configure how to handle any oversize cookie content in the
+     * <code>Cookies</code> object. WAF applies the pattern matching filters to the cookies that it receives from the
+     * underlying host service.
+     * </p>
+     * 
+     * @param cookies
+     *        Inspect the request cookies. You must configure scope and pattern matching filters in the
+     *        <code>Cookies</code> object, to define the set of cookies and the parts of the cookies that WAF inspects.
+     *        </p>
+     *        <p>
+     *        Only the first 8 KB (8192 bytes) of a request's cookies and only the first 200 cookies are forwarded to
+     *        WAF for inspection by the underlying host service. You must configure how to handle any oversize cookie
+     *        content in the <code>Cookies</code> object. WAF applies the pattern matching filters to the cookies that
+     *        it receives from the underlying host service.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FieldToMatch withCookies(Cookies cookies) {
+        setCookies(cookies);
         return this;
     }
 
@@ -669,7 +817,11 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
         if (getMethod() != null)
             sb.append("Method: ").append(getMethod()).append(",");
         if (getJsonBody() != null)
-            sb.append("JsonBody: ").append(getJsonBody());
+            sb.append("JsonBody: ").append(getJsonBody()).append(",");
+        if (getHeaders() != null)
+            sb.append("Headers: ").append(getHeaders()).append(",");
+        if (getCookies() != null)
+            sb.append("Cookies: ").append(getCookies());
         sb.append("}");
         return sb.toString();
     }
@@ -716,6 +868,14 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getJsonBody() != null && other.getJsonBody().equals(this.getJsonBody()) == false)
             return false;
+        if (other.getHeaders() == null ^ this.getHeaders() == null)
+            return false;
+        if (other.getHeaders() != null && other.getHeaders().equals(this.getHeaders()) == false)
+            return false;
+        if (other.getCookies() == null ^ this.getCookies() == null)
+            return false;
+        if (other.getCookies() != null && other.getCookies().equals(this.getCookies()) == false)
+            return false;
         return true;
     }
 
@@ -732,6 +892,8 @@ public class FieldToMatch implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getBody() == null) ? 0 : getBody().hashCode());
         hashCode = prime * hashCode + ((getMethod() == null) ? 0 : getMethod().hashCode());
         hashCode = prime * hashCode + ((getJsonBody() == null) ? 0 : getJsonBody().hashCode());
+        hashCode = prime * hashCode + ((getHeaders() == null) ? 0 : getHeaders().hashCode());
+        hashCode = prime * hashCode + ((getCookies() == null) ? 0 : getCookies().hashCode());
         return hashCode;
     }
 

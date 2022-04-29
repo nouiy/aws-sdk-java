@@ -39,6 +39,8 @@ public class RunbookMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TargetParameterName").build();
     private static final MarshallingInfo<List> TARGETS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Targets").build();
+    private static final MarshallingInfo<List> TARGETMAPS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("TargetMaps").build();
     private static final MarshallingInfo<String> MAXCONCURRENCY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxConcurrency").build();
     private static final MarshallingInfo<String> MAXERRORS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -67,6 +69,7 @@ public class RunbookMarshaller {
             protocolMarshaller.marshall(runbook.getParameters(), PARAMETERS_BINDING);
             protocolMarshaller.marshall(runbook.getTargetParameterName(), TARGETPARAMETERNAME_BINDING);
             protocolMarshaller.marshall(runbook.getTargets(), TARGETS_BINDING);
+            protocolMarshaller.marshall(runbook.getTargetMaps(), TARGETMAPS_BINDING);
             protocolMarshaller.marshall(runbook.getMaxConcurrency(), MAXCONCURRENCY_BINDING);
             protocolMarshaller.marshall(runbook.getMaxErrors(), MAXERRORS_BINDING);
             protocolMarshaller.marshall(runbook.getTargetLocations(), TARGETLOCATIONS_BINDING);

@@ -80,6 +80,14 @@ public class FieldToMatchJsonUnmarshaller implements Unmarshaller<FieldToMatch, 
                     context.nextToken();
                     fieldToMatch.setJsonBody(JsonBodyJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Headers", targetDepth)) {
+                    context.nextToken();
+                    fieldToMatch.setHeaders(HeadersJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("Cookies", targetDepth)) {
+                    context.nextToken();
+                    fieldToMatch.setCookies(CookiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

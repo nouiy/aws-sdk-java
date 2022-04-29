@@ -268,7 +268,8 @@ public enum CountryCode {
     EH("EH"),
     YE("YE"),
     ZM("ZM"),
-    ZW("ZW");
+    ZW("ZW"),
+    XK("XK");
 
     private String value;
 

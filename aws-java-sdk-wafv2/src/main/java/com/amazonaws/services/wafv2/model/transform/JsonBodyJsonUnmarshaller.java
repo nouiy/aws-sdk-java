@@ -60,6 +60,10 @@ public class JsonBodyJsonUnmarshaller implements Unmarshaller<JsonBody, JsonUnma
                     context.nextToken();
                     jsonBody.setInvalidFallbackBehavior(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("OversizeHandling", targetDepth)) {
+                    context.nextToken();
+                    jsonBody.setOversizeHandling(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

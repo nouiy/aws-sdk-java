@@ -72,6 +72,15 @@ public class VideoSelector implements Serializable, Cloneable, StructuredPojo {
      */
     private Hdr10Metadata hdr10Metadata;
     /**
+     * Use this setting if your input has video and audio durations that don't align, and your output or player has
+     * strict alignment requirements. Examples: Input audio track has a delayed start. Input video track ends before
+     * audio ends. When you set Pad video (padVideo) to Black (BLACK), MediaConvert generates black video frames so that
+     * output video and audio durations match. Black video frames are added at the beginning or end, depending on your
+     * input. To keep the default behavior and not generate black video, set Pad video to Disabled (DISABLED) or leave
+     * blank.
+     */
+    private String padVideo;
+    /**
      * Use PID (Pid) to select specific video data from an input file. Specify this value as an integer; the system
      * automatically converts it to the hexidecimal value. For example, 257 selects PID 0x101. A PID, or packet
      * identifier, is an identifier for a set of data in an MPEG-2 transport stream container.
@@ -526,6 +535,97 @@ public class VideoSelector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * Use this setting if your input has video and audio durations that don't align, and your output or player has
+     * strict alignment requirements. Examples: Input audio track has a delayed start. Input video track ends before
+     * audio ends. When you set Pad video (padVideo) to Black (BLACK), MediaConvert generates black video frames so that
+     * output video and audio durations match. Black video frames are added at the beginning or end, depending on your
+     * input. To keep the default behavior and not generate black video, set Pad video to Disabled (DISABLED) or leave
+     * blank.
+     * 
+     * @param padVideo
+     *        Use this setting if your input has video and audio durations that don't align, and your output or player
+     *        has strict alignment requirements. Examples: Input audio track has a delayed start. Input video track ends
+     *        before audio ends. When you set Pad video (padVideo) to Black (BLACK), MediaConvert generates black video
+     *        frames so that output video and audio durations match. Black video frames are added at the beginning or
+     *        end, depending on your input. To keep the default behavior and not generate black video, set Pad video to
+     *        Disabled (DISABLED) or leave blank.
+     * @see PadVideo
+     */
+
+    public void setPadVideo(String padVideo) {
+        this.padVideo = padVideo;
+    }
+
+    /**
+     * Use this setting if your input has video and audio durations that don't align, and your output or player has
+     * strict alignment requirements. Examples: Input audio track has a delayed start. Input video track ends before
+     * audio ends. When you set Pad video (padVideo) to Black (BLACK), MediaConvert generates black video frames so that
+     * output video and audio durations match. Black video frames are added at the beginning or end, depending on your
+     * input. To keep the default behavior and not generate black video, set Pad video to Disabled (DISABLED) or leave
+     * blank.
+     * 
+     * @return Use this setting if your input has video and audio durations that don't align, and your output or player
+     *         has strict alignment requirements. Examples: Input audio track has a delayed start. Input video track
+     *         ends before audio ends. When you set Pad video (padVideo) to Black (BLACK), MediaConvert generates black
+     *         video frames so that output video and audio durations match. Black video frames are added at the
+     *         beginning or end, depending on your input. To keep the default behavior and not generate black video, set
+     *         Pad video to Disabled (DISABLED) or leave blank.
+     * @see PadVideo
+     */
+
+    public String getPadVideo() {
+        return this.padVideo;
+    }
+
+    /**
+     * Use this setting if your input has video and audio durations that don't align, and your output or player has
+     * strict alignment requirements. Examples: Input audio track has a delayed start. Input video track ends before
+     * audio ends. When you set Pad video (padVideo) to Black (BLACK), MediaConvert generates black video frames so that
+     * output video and audio durations match. Black video frames are added at the beginning or end, depending on your
+     * input. To keep the default behavior and not generate black video, set Pad video to Disabled (DISABLED) or leave
+     * blank.
+     * 
+     * @param padVideo
+     *        Use this setting if your input has video and audio durations that don't align, and your output or player
+     *        has strict alignment requirements. Examples: Input audio track has a delayed start. Input video track ends
+     *        before audio ends. When you set Pad video (padVideo) to Black (BLACK), MediaConvert generates black video
+     *        frames so that output video and audio durations match. Black video frames are added at the beginning or
+     *        end, depending on your input. To keep the default behavior and not generate black video, set Pad video to
+     *        Disabled (DISABLED) or leave blank.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PadVideo
+     */
+
+    public VideoSelector withPadVideo(String padVideo) {
+        setPadVideo(padVideo);
+        return this;
+    }
+
+    /**
+     * Use this setting if your input has video and audio durations that don't align, and your output or player has
+     * strict alignment requirements. Examples: Input audio track has a delayed start. Input video track ends before
+     * audio ends. When you set Pad video (padVideo) to Black (BLACK), MediaConvert generates black video frames so that
+     * output video and audio durations match. Black video frames are added at the beginning or end, depending on your
+     * input. To keep the default behavior and not generate black video, set Pad video to Disabled (DISABLED) or leave
+     * blank.
+     * 
+     * @param padVideo
+     *        Use this setting if your input has video and audio durations that don't align, and your output or player
+     *        has strict alignment requirements. Examples: Input audio track has a delayed start. Input video track ends
+     *        before audio ends. When you set Pad video (padVideo) to Black (BLACK), MediaConvert generates black video
+     *        frames so that output video and audio durations match. Black video frames are added at the beginning or
+     *        end, depending on your input. To keep the default behavior and not generate black video, set Pad video to
+     *        Disabled (DISABLED) or leave blank.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PadVideo
+     */
+
+    public VideoSelector withPadVideo(PadVideo padVideo) {
+        this.padVideo = padVideo.toString();
+        return this;
+    }
+
+    /**
      * Use PID (Pid) to select specific video data from an input file. Specify this value as an integer; the system
      * automatically converts it to the hexidecimal value. For example, 257 selects PID 0x101. A PID, or packet
      * identifier, is an identifier for a set of data in an MPEG-2 transport stream container.
@@ -823,6 +923,8 @@ public class VideoSelector implements Serializable, Cloneable, StructuredPojo {
             sb.append("EmbeddedTimecodeOverride: ").append(getEmbeddedTimecodeOverride()).append(",");
         if (getHdr10Metadata() != null)
             sb.append("Hdr10Metadata: ").append(getHdr10Metadata()).append(",");
+        if (getPadVideo() != null)
+            sb.append("PadVideo: ").append(getPadVideo()).append(",");
         if (getPid() != null)
             sb.append("Pid: ").append(getPid()).append(",");
         if (getProgramNumber() != null)
@@ -865,6 +967,10 @@ public class VideoSelector implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getHdr10Metadata() != null && other.getHdr10Metadata().equals(this.getHdr10Metadata()) == false)
             return false;
+        if (other.getPadVideo() == null ^ this.getPadVideo() == null)
+            return false;
+        if (other.getPadVideo() != null && other.getPadVideo().equals(this.getPadVideo()) == false)
+            return false;
         if (other.getPid() == null ^ this.getPid() == null)
             return false;
         if (other.getPid() != null && other.getPid().equals(this.getPid()) == false)
@@ -894,6 +1000,7 @@ public class VideoSelector implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getColorSpaceUsage() == null) ? 0 : getColorSpaceUsage().hashCode());
         hashCode = prime * hashCode + ((getEmbeddedTimecodeOverride() == null) ? 0 : getEmbeddedTimecodeOverride().hashCode());
         hashCode = prime * hashCode + ((getHdr10Metadata() == null) ? 0 : getHdr10Metadata().hashCode());
+        hashCode = prime * hashCode + ((getPadVideo() == null) ? 0 : getPadVideo().hashCode());
         hashCode = prime * hashCode + ((getPid() == null) ? 0 : getPid().hashCode());
         hashCode = prime * hashCode + ((getProgramNumber() == null) ? 0 : getProgramNumber().hashCode());
         hashCode = prime * hashCode + ((getRotate() == null) ? 0 : getRotate().hashCode());

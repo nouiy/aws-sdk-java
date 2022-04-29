@@ -135,6 +135,10 @@ public class InputJsonUnmarshaller implements Unmarshaller<Input, JsonUnmarshall
                     context.nextToken();
                     input.setTimecodeStart(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("videoGenerator", targetDepth)) {
+                    context.nextToken();
+                    input.setVideoGenerator(InputVideoGeneratorJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("videoSelector", targetDepth)) {
                     context.nextToken();
                     input.setVideoSelector(VideoSelectorJsonUnmarshaller.getInstance().unmarshall(context));

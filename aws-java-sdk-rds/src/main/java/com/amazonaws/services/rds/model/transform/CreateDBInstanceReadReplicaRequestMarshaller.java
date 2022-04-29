@@ -233,6 +233,10 @@ public class CreateDBInstanceReadReplicaRequestMarshaller implements
             request.addParameter("CustomIamInstanceProfile", StringUtils.fromString(createDBInstanceReadReplicaRequest.getCustomIamInstanceProfile()));
         }
 
+        if (createDBInstanceReadReplicaRequest.getNetworkType() != null) {
+            request.addParameter("NetworkType", StringUtils.fromString(createDBInstanceReadReplicaRequest.getNetworkType()));
+        }
+
         if (createDBInstanceReadReplicaRequest.getSourceRegion() != null) {
             request.addParameter("SourceRegion", StringUtils.fromString(createDBInstanceReadReplicaRequest.getSourceRegion()));
         }

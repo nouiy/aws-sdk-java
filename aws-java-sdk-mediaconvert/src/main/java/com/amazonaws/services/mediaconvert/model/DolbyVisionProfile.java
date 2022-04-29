@@ -15,13 +15,15 @@ package com.amazonaws.services.mediaconvert.model;
 import javax.annotation.Generated;
 
 /**
- * In the current MediaConvert implementation, the Dolby Vision profile is always 5 (PROFILE_5). Therefore, all of your
- * inputs must contain Dolby Vision frame interleaved data.
+ * Required when you use Dolby Vision (DolbyVision) processing. Set Profile (DolbyVisionProfile) to Profile 5
+ * (Profile_5) to only include frame-interleaved Dolby Vision metadata in your output. Set Profile to Profile 8.1
+ * (Profile_8_1) to include both frame-interleaved Dolby Vision metadata and HDR10 metadata in your output.
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum DolbyVisionProfile {
 
-    PROFILE_5("PROFILE_5");
+    PROFILE_5("PROFILE_5"),
+    PROFILE_8_1("PROFILE_8_1");
 
     private String value;
 

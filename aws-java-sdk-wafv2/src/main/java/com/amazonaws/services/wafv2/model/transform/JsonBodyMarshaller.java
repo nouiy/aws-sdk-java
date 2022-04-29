@@ -33,6 +33,8 @@ public class JsonBodyMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MatchScope").build();
     private static final MarshallingInfo<String> INVALIDFALLBACKBEHAVIOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InvalidFallbackBehavior").build();
+    private static final MarshallingInfo<String> OVERSIZEHANDLING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OversizeHandling").build();
 
     private static final JsonBodyMarshaller instance = new JsonBodyMarshaller();
 
@@ -53,6 +55,7 @@ public class JsonBodyMarshaller {
             protocolMarshaller.marshall(jsonBody.getMatchPattern(), MATCHPATTERN_BINDING);
             protocolMarshaller.marshall(jsonBody.getMatchScope(), MATCHSCOPE_BINDING);
             protocolMarshaller.marshall(jsonBody.getInvalidFallbackBehavior(), INVALIDFALLBACKBEHAVIOR_BINDING);
+            protocolMarshaller.marshall(jsonBody.getOversizeHandling(), OVERSIZEHANDLING_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

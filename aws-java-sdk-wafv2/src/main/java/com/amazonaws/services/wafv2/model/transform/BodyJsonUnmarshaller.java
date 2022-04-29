@@ -48,6 +48,10 @@ public class BodyJsonUnmarshaller implements Unmarshaller<Body, JsonUnmarshaller
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("OversizeHandling", targetDepth)) {
+                    context.nextToken();
+                    body.setOversizeHandling(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

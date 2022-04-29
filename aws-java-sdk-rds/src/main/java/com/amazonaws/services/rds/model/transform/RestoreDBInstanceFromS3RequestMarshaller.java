@@ -285,6 +285,10 @@ public class RestoreDBInstanceFromS3RequestMarshaller implements Marshaller<Requ
             request.addParameter("MaxAllocatedStorage", StringUtils.fromInteger(restoreDBInstanceFromS3Request.getMaxAllocatedStorage()));
         }
 
+        if (restoreDBInstanceFromS3Request.getNetworkType() != null) {
+            request.addParameter("NetworkType", StringUtils.fromString(restoreDBInstanceFromS3Request.getNetworkType()));
+        }
+
         return request;
     }
 

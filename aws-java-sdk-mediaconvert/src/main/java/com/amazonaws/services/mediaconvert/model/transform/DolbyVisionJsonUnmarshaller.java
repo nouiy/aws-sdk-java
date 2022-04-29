@@ -56,6 +56,10 @@ public class DolbyVisionJsonUnmarshaller implements Unmarshaller<DolbyVision, Js
                     context.nextToken();
                     dolbyVision.setL6Mode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("mapping", targetDepth)) {
+                    context.nextToken();
+                    dolbyVision.setMapping(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("profile", targetDepth)) {
                     context.nextToken();
                     dolbyVision.setProfile(context.getUnmarshaller(String.class).unmarshall(context));

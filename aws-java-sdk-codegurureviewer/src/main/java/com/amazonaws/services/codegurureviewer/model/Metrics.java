@@ -30,11 +30,20 @@ public class Metrics implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * <code>MeteredLinesOfCode</code> is the number of lines of code in the repository where the code review happened.
-     * This does not include non-code lines such as comments and blank lines.
+     * <code>MeteredLinesOfCodeCount</code> is the number of lines of code in the repository where the code review
+     * happened. This does not include non-code lines such as comments and blank lines.
      * </p>
      */
     private Long meteredLinesOfCodeCount;
+    /**
+     * <p>
+     * <code>SuppressedLinesOfCodeCount</code> is the number of lines of code in the repository where the code review
+     * happened that CodeGuru Reviewer did not analyze. The lines suppressed in the analysis is based on the
+     * <code>excludeFiles</code> variable in the <code>aws-codeguru-reviewer.yml</code> file. This number does not
+     * include non-code lines such as comments and blank lines.
+     * </p>
+     */
+    private Long suppressedLinesOfCodeCount;
     /**
      * <p>
      * Total number of recommendations found in the code review.
@@ -44,13 +53,13 @@ public class Metrics implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * <code>MeteredLinesOfCode</code> is the number of lines of code in the repository where the code review happened.
-     * This does not include non-code lines such as comments and blank lines.
+     * <code>MeteredLinesOfCodeCount</code> is the number of lines of code in the repository where the code review
+     * happened. This does not include non-code lines such as comments and blank lines.
      * </p>
      * 
      * @param meteredLinesOfCodeCount
-     *        <code>MeteredLinesOfCode</code> is the number of lines of code in the repository where the code review
-     *        happened. This does not include non-code lines such as comments and blank lines.
+     *        <code>MeteredLinesOfCodeCount</code> is the number of lines of code in the repository where the code
+     *        review happened. This does not include non-code lines such as comments and blank lines.
      */
 
     public void setMeteredLinesOfCodeCount(Long meteredLinesOfCodeCount) {
@@ -59,12 +68,12 @@ public class Metrics implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * <code>MeteredLinesOfCode</code> is the number of lines of code in the repository where the code review happened.
-     * This does not include non-code lines such as comments and blank lines.
+     * <code>MeteredLinesOfCodeCount</code> is the number of lines of code in the repository where the code review
+     * happened. This does not include non-code lines such as comments and blank lines.
      * </p>
      * 
-     * @return <code>MeteredLinesOfCode</code> is the number of lines of code in the repository where the code review
-     *         happened. This does not include non-code lines such as comments and blank lines.
+     * @return <code>MeteredLinesOfCodeCount</code> is the number of lines of code in the repository where the code
+     *         review happened. This does not include non-code lines such as comments and blank lines.
      */
 
     public Long getMeteredLinesOfCodeCount() {
@@ -73,18 +82,76 @@ public class Metrics implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * <code>MeteredLinesOfCode</code> is the number of lines of code in the repository where the code review happened.
-     * This does not include non-code lines such as comments and blank lines.
+     * <code>MeteredLinesOfCodeCount</code> is the number of lines of code in the repository where the code review
+     * happened. This does not include non-code lines such as comments and blank lines.
      * </p>
      * 
      * @param meteredLinesOfCodeCount
-     *        <code>MeteredLinesOfCode</code> is the number of lines of code in the repository where the code review
-     *        happened. This does not include non-code lines such as comments and blank lines.
+     *        <code>MeteredLinesOfCodeCount</code> is the number of lines of code in the repository where the code
+     *        review happened. This does not include non-code lines such as comments and blank lines.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public Metrics withMeteredLinesOfCodeCount(Long meteredLinesOfCodeCount) {
         setMeteredLinesOfCodeCount(meteredLinesOfCodeCount);
+        return this;
+    }
+
+    /**
+     * <p>
+     * <code>SuppressedLinesOfCodeCount</code> is the number of lines of code in the repository where the code review
+     * happened that CodeGuru Reviewer did not analyze. The lines suppressed in the analysis is based on the
+     * <code>excludeFiles</code> variable in the <code>aws-codeguru-reviewer.yml</code> file. This number does not
+     * include non-code lines such as comments and blank lines.
+     * </p>
+     * 
+     * @param suppressedLinesOfCodeCount
+     *        <code>SuppressedLinesOfCodeCount</code> is the number of lines of code in the repository where the code
+     *        review happened that CodeGuru Reviewer did not analyze. The lines suppressed in the analysis is based on
+     *        the <code>excludeFiles</code> variable in the <code>aws-codeguru-reviewer.yml</code> file. This number
+     *        does not include non-code lines such as comments and blank lines.
+     */
+
+    public void setSuppressedLinesOfCodeCount(Long suppressedLinesOfCodeCount) {
+        this.suppressedLinesOfCodeCount = suppressedLinesOfCodeCount;
+    }
+
+    /**
+     * <p>
+     * <code>SuppressedLinesOfCodeCount</code> is the number of lines of code in the repository where the code review
+     * happened that CodeGuru Reviewer did not analyze. The lines suppressed in the analysis is based on the
+     * <code>excludeFiles</code> variable in the <code>aws-codeguru-reviewer.yml</code> file. This number does not
+     * include non-code lines such as comments and blank lines.
+     * </p>
+     * 
+     * @return <code>SuppressedLinesOfCodeCount</code> is the number of lines of code in the repository where the code
+     *         review happened that CodeGuru Reviewer did not analyze. The lines suppressed in the analysis is based on
+     *         the <code>excludeFiles</code> variable in the <code>aws-codeguru-reviewer.yml</code> file. This number
+     *         does not include non-code lines such as comments and blank lines.
+     */
+
+    public Long getSuppressedLinesOfCodeCount() {
+        return this.suppressedLinesOfCodeCount;
+    }
+
+    /**
+     * <p>
+     * <code>SuppressedLinesOfCodeCount</code> is the number of lines of code in the repository where the code review
+     * happened that CodeGuru Reviewer did not analyze. The lines suppressed in the analysis is based on the
+     * <code>excludeFiles</code> variable in the <code>aws-codeguru-reviewer.yml</code> file. This number does not
+     * include non-code lines such as comments and blank lines.
+     * </p>
+     * 
+     * @param suppressedLinesOfCodeCount
+     *        <code>SuppressedLinesOfCodeCount</code> is the number of lines of code in the repository where the code
+     *        review happened that CodeGuru Reviewer did not analyze. The lines suppressed in the analysis is based on
+     *        the <code>excludeFiles</code> variable in the <code>aws-codeguru-reviewer.yml</code> file. This number
+     *        does not include non-code lines such as comments and blank lines.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Metrics withSuppressedLinesOfCodeCount(Long suppressedLinesOfCodeCount) {
+        setSuppressedLinesOfCodeCount(suppressedLinesOfCodeCount);
         return this;
     }
 
@@ -142,6 +209,8 @@ public class Metrics implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getMeteredLinesOfCodeCount() != null)
             sb.append("MeteredLinesOfCodeCount: ").append(getMeteredLinesOfCodeCount()).append(",");
+        if (getSuppressedLinesOfCodeCount() != null)
+            sb.append("SuppressedLinesOfCodeCount: ").append(getSuppressedLinesOfCodeCount()).append(",");
         if (getFindingsCount() != null)
             sb.append("FindingsCount: ").append(getFindingsCount());
         sb.append("}");
@@ -162,6 +231,10 @@ public class Metrics implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getMeteredLinesOfCodeCount() != null && other.getMeteredLinesOfCodeCount().equals(this.getMeteredLinesOfCodeCount()) == false)
             return false;
+        if (other.getSuppressedLinesOfCodeCount() == null ^ this.getSuppressedLinesOfCodeCount() == null)
+            return false;
+        if (other.getSuppressedLinesOfCodeCount() != null && other.getSuppressedLinesOfCodeCount().equals(this.getSuppressedLinesOfCodeCount()) == false)
+            return false;
         if (other.getFindingsCount() == null ^ this.getFindingsCount() == null)
             return false;
         if (other.getFindingsCount() != null && other.getFindingsCount().equals(this.getFindingsCount()) == false)
@@ -175,6 +248,7 @@ public class Metrics implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getMeteredLinesOfCodeCount() == null) ? 0 : getMeteredLinesOfCodeCount().hashCode());
+        hashCode = prime * hashCode + ((getSuppressedLinesOfCodeCount() == null) ? 0 : getSuppressedLinesOfCodeCount().hashCode());
         hashCode = prime * hashCode + ((getFindingsCount() == null) ? 0 : getFindingsCount().hashCode());
         return hashCode;
     }

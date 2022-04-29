@@ -58,6 +58,8 @@ public class CodeReviewMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Metrics").build();
     private static final MarshallingInfo<List> ANALYSISTYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("AnalysisTypes").build();
+    private static final MarshallingInfo<String> CONFIGFILESTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConfigFileState").build();
 
     private static final CodeReviewMarshaller instance = new CodeReviewMarshaller();
 
@@ -90,6 +92,7 @@ public class CodeReviewMarshaller {
             protocolMarshaller.marshall(codeReview.getAssociationArn(), ASSOCIATIONARN_BINDING);
             protocolMarshaller.marshall(codeReview.getMetrics(), METRICS_BINDING);
             protocolMarshaller.marshall(codeReview.getAnalysisTypes(), ANALYSISTYPES_BINDING);
+            protocolMarshaller.marshall(codeReview.getConfigFileState(), CONFIGFILESTATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -29,6 +29,8 @@ public class MetricsMarshaller {
 
     private static final MarshallingInfo<Long> METEREDLINESOFCODECOUNT_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MeteredLinesOfCodeCount").build();
+    private static final MarshallingInfo<Long> SUPPRESSEDLINESOFCODECOUNT_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SuppressedLinesOfCodeCount").build();
     private static final MarshallingInfo<Long> FINDINGSCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("FindingsCount").build();
 
@@ -49,6 +51,7 @@ public class MetricsMarshaller {
 
         try {
             protocolMarshaller.marshall(metrics.getMeteredLinesOfCodeCount(), METEREDLINESOFCODECOUNT_BINDING);
+            protocolMarshaller.marshall(metrics.getSuppressedLinesOfCodeCount(), SUPPRESSEDLINESOFCODECOUNT_BINDING);
             protocolMarshaller.marshall(metrics.getFindingsCount(), FINDINGSCOUNT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

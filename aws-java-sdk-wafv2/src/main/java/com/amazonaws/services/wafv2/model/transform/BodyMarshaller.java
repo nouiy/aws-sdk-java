@@ -27,6 +27,9 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class BodyMarshaller {
 
+    private static final MarshallingInfo<String> OVERSIZEHANDLING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OversizeHandling").build();
+
     private static final BodyMarshaller instance = new BodyMarshaller();
 
     public static BodyMarshaller getInstance() {
@@ -43,6 +46,7 @@ public class BodyMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(body.getOversizeHandling(), OVERSIZEHANDLING_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

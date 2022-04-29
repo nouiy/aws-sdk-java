@@ -307,6 +307,10 @@ public class CreateDBInstanceRequestMarshaller implements Marshaller<Request<Cre
             request.addParameter("BackupTarget", StringUtils.fromString(createDBInstanceRequest.getBackupTarget()));
         }
 
+        if (createDBInstanceRequest.getNetworkType() != null) {
+            request.addParameter("NetworkType", StringUtils.fromString(createDBInstanceRequest.getNetworkType()));
+        }
+
         return request;
     }
 

@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.simplesystemsmanagement.model.transform;
 
+import java.util.Map;
 import java.math.*;
 
 import javax.annotation.Generated;
@@ -70,6 +71,16 @@ public class RunbookJsonUnmarshaller implements Unmarshaller<Runbook, JsonUnmars
                 if (context.testExpression("Targets", targetDepth)) {
                     context.nextToken();
                     runbook.setTargets(new ListUnmarshaller<Target>(TargetJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("TargetMaps", targetDepth)) {
+                    context.nextToken();
+                    runbook.setTargetMaps(new ListUnmarshaller<java.util.Map<String, java.util.List<String>>>(
+                            new MapUnmarshaller<String, java.util.List<String>>(context.getUnmarshaller(String.class), new ListUnmarshaller<String>(context
+                                    .getUnmarshaller(String.class))
+
+                            ))
 
                     .unmarshall(context));
                 }

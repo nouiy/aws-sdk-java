@@ -52,6 +52,10 @@ public class MetricsJsonUnmarshaller implements Unmarshaller<Metrics, JsonUnmars
                     context.nextToken();
                     metrics.setMeteredLinesOfCodeCount(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("SuppressedLinesOfCodeCount", targetDepth)) {
+                    context.nextToken();
+                    metrics.setSuppressedLinesOfCodeCount(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
                 if (context.testExpression("FindingsCount", targetDepth)) {
                     context.nextToken();
                     metrics.setFindingsCount(context.getUnmarshaller(Long.class).unmarshall(context));

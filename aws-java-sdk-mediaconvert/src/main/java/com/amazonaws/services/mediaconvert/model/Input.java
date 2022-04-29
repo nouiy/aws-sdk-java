@@ -163,6 +163,13 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
      */
     private String timecodeStart;
     /**
+     * Use this setting if you do not have a video input or if you want to add black video frames before, or after,
+     * other inputs. When you include Video generator, MediaConvert creates a video input with black frames and without
+     * an audio track. You can specify a value for Video generator, or you can specify an Input file, but you cannot
+     * specify both.
+     */
+    private InputVideoGenerator videoGenerator;
+    /**
      * Input video selectors contain the video settings for the input. Each of your inputs can have up to one video
      * selector.
      */
@@ -1466,6 +1473,58 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * Use this setting if you do not have a video input or if you want to add black video frames before, or after,
+     * other inputs. When you include Video generator, MediaConvert creates a video input with black frames and without
+     * an audio track. You can specify a value for Video generator, or you can specify an Input file, but you cannot
+     * specify both.
+     * 
+     * @param videoGenerator
+     *        Use this setting if you do not have a video input or if you want to add black video frames before, or
+     *        after, other inputs. When you include Video generator, MediaConvert creates a video input with black
+     *        frames and without an audio track. You can specify a value for Video generator, or you can specify an
+     *        Input file, but you cannot specify both.
+     */
+
+    public void setVideoGenerator(InputVideoGenerator videoGenerator) {
+        this.videoGenerator = videoGenerator;
+    }
+
+    /**
+     * Use this setting if you do not have a video input or if you want to add black video frames before, or after,
+     * other inputs. When you include Video generator, MediaConvert creates a video input with black frames and without
+     * an audio track. You can specify a value for Video generator, or you can specify an Input file, but you cannot
+     * specify both.
+     * 
+     * @return Use this setting if you do not have a video input or if you want to add black video frames before, or
+     *         after, other inputs. When you include Video generator, MediaConvert creates a video input with black
+     *         frames and without an audio track. You can specify a value for Video generator, or you can specify an
+     *         Input file, but you cannot specify both.
+     */
+
+    public InputVideoGenerator getVideoGenerator() {
+        return this.videoGenerator;
+    }
+
+    /**
+     * Use this setting if you do not have a video input or if you want to add black video frames before, or after,
+     * other inputs. When you include Video generator, MediaConvert creates a video input with black frames and without
+     * an audio track. You can specify a value for Video generator, or you can specify an Input file, but you cannot
+     * specify both.
+     * 
+     * @param videoGenerator
+     *        Use this setting if you do not have a video input or if you want to add black video frames before, or
+     *        after, other inputs. When you include Video generator, MediaConvert creates a video input with black
+     *        frames and without an audio track. You can specify a value for Video generator, or you can specify an
+     *        Input file, but you cannot specify both.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Input withVideoGenerator(InputVideoGenerator videoGenerator) {
+        setVideoGenerator(videoGenerator);
+        return this;
+    }
+
+    /**
      * Input video selectors contain the video settings for the input. Each of your inputs can have up to one video
      * selector.
      * 
@@ -1557,6 +1616,8 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
             sb.append("TimecodeSource: ").append(getTimecodeSource()).append(",");
         if (getTimecodeStart() != null)
             sb.append("TimecodeStart: ").append(getTimecodeStart()).append(",");
+        if (getVideoGenerator() != null)
+            sb.append("VideoGenerator: ").append(getVideoGenerator()).append(",");
         if (getVideoSelector() != null)
             sb.append("VideoSelector: ").append(getVideoSelector());
         sb.append("}");
@@ -1653,6 +1714,10 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTimecodeStart() != null && other.getTimecodeStart().equals(this.getTimecodeStart()) == false)
             return false;
+        if (other.getVideoGenerator() == null ^ this.getVideoGenerator() == null)
+            return false;
+        if (other.getVideoGenerator() != null && other.getVideoGenerator().equals(this.getVideoGenerator()) == false)
+            return false;
         if (other.getVideoSelector() == null ^ this.getVideoSelector() == null)
             return false;
         if (other.getVideoSelector() != null && other.getVideoSelector().equals(this.getVideoSelector()) == false)
@@ -1685,6 +1750,7 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getSupplementalImps() == null) ? 0 : getSupplementalImps().hashCode());
         hashCode = prime * hashCode + ((getTimecodeSource() == null) ? 0 : getTimecodeSource().hashCode());
         hashCode = prime * hashCode + ((getTimecodeStart() == null) ? 0 : getTimecodeStart().hashCode());
+        hashCode = prime * hashCode + ((getVideoGenerator() == null) ? 0 : getVideoGenerator().hashCode());
         hashCode = prime * hashCode + ((getVideoSelector() == null) ? 0 : getVideoSelector().hashCode());
         return hashCode;
     }

@@ -37,6 +37,8 @@ public class VideoSelectorMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("embeddedTimecodeOverride").build();
     private static final MarshallingInfo<StructuredPojo> HDR10METADATA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("hdr10Metadata").build();
+    private static final MarshallingInfo<String> PADVIDEO_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("padVideo").build();
     private static final MarshallingInfo<Integer> PID_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("pid").build();
     private static final MarshallingInfo<Integer> PROGRAMNUMBER_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -67,6 +69,7 @@ public class VideoSelectorMarshaller {
             protocolMarshaller.marshall(videoSelector.getColorSpaceUsage(), COLORSPACEUSAGE_BINDING);
             protocolMarshaller.marshall(videoSelector.getEmbeddedTimecodeOverride(), EMBEDDEDTIMECODEOVERRIDE_BINDING);
             protocolMarshaller.marshall(videoSelector.getHdr10Metadata(), HDR10METADATA_BINDING);
+            protocolMarshaller.marshall(videoSelector.getPadVideo(), PADVIDEO_BINDING);
             protocolMarshaller.marshall(videoSelector.getPid(), PID_BINDING);
             protocolMarshaller.marshall(videoSelector.getProgramNumber(), PROGRAMNUMBER_BINDING);
             protocolMarshaller.marshall(videoSelector.getRotate(), ROTATE_BINDING);

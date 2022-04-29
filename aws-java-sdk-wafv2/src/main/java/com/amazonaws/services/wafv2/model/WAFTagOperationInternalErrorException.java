@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * WAF couldn’t perform your tagging operation because of an internal error. Retry your request.
+ * WAF couldn’t perform your tagging operation because of an internal error. Retry ybjectNoteWebRequestComponentour
+ * request.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

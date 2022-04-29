@@ -79,7 +79,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
     private java.nio.ByteBuffer searchString;
     /**
      * <p>
-     * The part of a web request that you want WAF to inspect. For more information, see <a>FieldToMatch</a>.
+     * The part of the web request that you want WAF to inspect. For more information, see <a>FieldToMatch</a>.
      * </p>
      */
     private FieldToMatch fieldToMatch;
@@ -94,7 +94,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
     private java.util.List<TextTransformation> textTransformations;
     /**
      * <p>
-     * The area within the portion of a web request that you want WAF to search for <code>SearchString</code>. Valid
+     * The area within the portion of the web request that you want WAF to search for <code>SearchString</code>. Valid
      * values include the following:
      * </p>
      * <p>
@@ -458,11 +458,11 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The part of a web request that you want WAF to inspect. For more information, see <a>FieldToMatch</a>.
+     * The part of the web request that you want WAF to inspect. For more information, see <a>FieldToMatch</a>.
      * </p>
      * 
      * @param fieldToMatch
-     *        The part of a web request that you want WAF to inspect. For more information, see <a>FieldToMatch</a>.
+     *        The part of the web request that you want WAF to inspect. For more information, see <a>FieldToMatch</a>.
      */
 
     public void setFieldToMatch(FieldToMatch fieldToMatch) {
@@ -471,10 +471,10 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The part of a web request that you want WAF to inspect. For more information, see <a>FieldToMatch</a>.
+     * The part of the web request that you want WAF to inspect. For more information, see <a>FieldToMatch</a>.
      * </p>
      * 
-     * @return The part of a web request that you want WAF to inspect. For more information, see <a>FieldToMatch</a>.
+     * @return The part of the web request that you want WAF to inspect. For more information, see <a>FieldToMatch</a>.
      */
 
     public FieldToMatch getFieldToMatch() {
@@ -483,11 +483,11 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The part of a web request that you want WAF to inspect. For more information, see <a>FieldToMatch</a>.
+     * The part of the web request that you want WAF to inspect. For more information, see <a>FieldToMatch</a>.
      * </p>
      * 
      * @param fieldToMatch
-     *        The part of a web request that you want WAF to inspect. For more information, see <a>FieldToMatch</a>.
+     *        The part of the web request that you want WAF to inspect. For more information, see <a>FieldToMatch</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -592,7 +592,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The area within the portion of a web request that you want WAF to search for <code>SearchString</code>. Valid
+     * The area within the portion of the web request that you want WAF to search for <code>SearchString</code>. Valid
      * values include the following:
      * </p>
      * <p>
@@ -646,7 +646,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @param positionalConstraint
-     *        The area within the portion of a web request that you want WAF to search for <code>SearchString</code>.
+     *        The area within the portion of the web request that you want WAF to search for <code>SearchString</code>.
      *        Valid values include the following:</p>
      *        <p>
      *        <b>CONTAINS</b>
@@ -707,7 +707,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The area within the portion of a web request that you want WAF to search for <code>SearchString</code>. Valid
+     * The area within the portion of the web request that you want WAF to search for <code>SearchString</code>. Valid
      * values include the following:
      * </p>
      * <p>
@@ -760,7 +760,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * The value of <code>SearchString</code> must appear at the end of the specified part of the web request.
      * </p>
      * 
-     * @return The area within the portion of a web request that you want WAF to search for <code>SearchString</code>.
+     * @return The area within the portion of the web request that you want WAF to search for <code>SearchString</code>.
      *         Valid values include the following:</p>
      *         <p>
      *         <b>CONTAINS</b>
@@ -821,7 +821,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The area within the portion of a web request that you want WAF to search for <code>SearchString</code>. Valid
+     * The area within the portion of the web request that you want WAF to search for <code>SearchString</code>. Valid
      * values include the following:
      * </p>
      * <p>
@@ -875,7 +875,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @param positionalConstraint
-     *        The area within the portion of a web request that you want WAF to search for <code>SearchString</code>.
+     *        The area within the portion of the web request that you want WAF to search for <code>SearchString</code>.
      *        Valid values include the following:</p>
      *        <p>
      *        <b>CONTAINS</b>
@@ -938,7 +938,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The area within the portion of a web request that you want WAF to search for <code>SearchString</code>. Valid
+     * The area within the portion of the web request that you want WAF to search for <code>SearchString</code>. Valid
      * values include the following:
      * </p>
      * <p>
@@ -992,7 +992,7 @@ public class ByteMatchStatement implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @param positionalConstraint
-     *        The area within the portion of a web request that you want WAF to search for <code>SearchString</code>.
+     *        The area within the portion of the web request that you want WAF to search for <code>SearchString</code>.
      *        Valid values include the following:</p>
      *        <p>
      *        <b>CONTAINS</b>
