@@ -91,6 +91,10 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * <p>
      * The friendly name of the member account.
      * </p>
+     * <p>
+     * The account name can consist of only the characters [a-z],[A-Z],[0-9], hyphen (-), or dot (.) You can't separate
+     * characters with a dash (–).
+     * </p>
      */
     private String accountName;
     /**
@@ -535,9 +539,16 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * <p>
      * The friendly name of the member account.
      * </p>
+     * <p>
+     * The account name can consist of only the characters [a-z],[A-Z],[0-9], hyphen (-), or dot (.) You can't separate
+     * characters with a dash (–).
+     * </p>
      * 
      * @param accountName
-     *        The friendly name of the member account.
+     *        The friendly name of the member account. </p>
+     *        <p>
+     *        The account name can consist of only the characters [a-z],[A-Z],[0-9], hyphen (-), or dot (.) You can't
+     *        separate characters with a dash (–).
      */
 
     public void setAccountName(String accountName) {
@@ -548,8 +559,15 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * <p>
      * The friendly name of the member account.
      * </p>
+     * <p>
+     * The account name can consist of only the characters [a-z],[A-Z],[0-9], hyphen (-), or dot (.) You can't separate
+     * characters with a dash (–).
+     * </p>
      * 
-     * @return The friendly name of the member account.
+     * @return The friendly name of the member account. </p>
+     *         <p>
+     *         The account name can consist of only the characters [a-z],[A-Z],[0-9], hyphen (-), or dot (.) You can't
+     *         separate characters with a dash (–).
      */
 
     public String getAccountName() {
@@ -560,9 +578,16 @@ public class CreateGovCloudAccountRequest extends com.amazonaws.AmazonWebService
      * <p>
      * The friendly name of the member account.
      * </p>
+     * <p>
+     * The account name can consist of only the characters [a-z],[A-Z],[0-9], hyphen (-), or dot (.) You can't separate
+     * characters with a dash (–).
+     * </p>
      * 
      * @param accountName
-     *        The friendly name of the member account.
+     *        The friendly name of the member account. </p>
+     *        <p>
+     *        The account name can consist of only the characters [a-z],[A-Z],[0-9], hyphen (-), or dot (.) You can't
+     *        separate characters with a dash (–).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

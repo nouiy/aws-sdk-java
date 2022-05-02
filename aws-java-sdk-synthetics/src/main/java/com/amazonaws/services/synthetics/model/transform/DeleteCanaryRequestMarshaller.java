@@ -29,6 +29,8 @@ public class DeleteCanaryRequestMarshaller {
 
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<Boolean> DELETELAMBDA_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("deleteLambda").build();
 
     private static final DeleteCanaryRequestMarshaller instance = new DeleteCanaryRequestMarshaller();
 
@@ -47,6 +49,7 @@ public class DeleteCanaryRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(deleteCanaryRequest.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(deleteCanaryRequest.getDeleteLambda(), DELETELAMBDA_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

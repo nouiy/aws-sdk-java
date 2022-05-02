@@ -474,6 +474,39 @@ public class AWSOutpostsAsyncClient extends AWSOutpostsClient implements AWSOutp
     }
 
     @Override
+    public java.util.concurrent.Future<ListAssetsResult> listAssetsAsync(ListAssetsRequest request) {
+
+        return listAssetsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssetsResult> listAssetsAsync(final ListAssetsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAssetsRequest, ListAssetsResult> asyncHandler) {
+        final ListAssetsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAssetsResult>() {
+            @Override
+            public ListAssetsResult call() throws Exception {
+                ListAssetsResult result = null;
+
+                try {
+                    result = executeListAssets(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListCatalogItemsResult> listCatalogItemsAsync(ListCatalogItemsRequest request) {
 
         return listCatalogItemsAsync(request, null);

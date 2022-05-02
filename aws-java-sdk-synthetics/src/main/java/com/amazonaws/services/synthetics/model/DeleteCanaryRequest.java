@@ -33,6 +33,15 @@ public class DeleteCanaryRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      */
     private String name;
+    /**
+     * <p>
+     * Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.
+     * </p>
+     * <p>
+     * Type: Boolean
+     * </p>
+     */
+    private Boolean deleteLambda;
 
     /**
      * <p>
@@ -87,6 +96,82 @@ public class DeleteCanaryRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.
+     * </p>
+     * <p>
+     * Type: Boolean
+     * </p>
+     * 
+     * @param deleteLambda
+     *        Specifies whether to also delete the Lambda functions and layers used by this canary. The default is
+     *        false.</p>
+     *        <p>
+     *        Type: Boolean
+     */
+
+    public void setDeleteLambda(Boolean deleteLambda) {
+        this.deleteLambda = deleteLambda;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.
+     * </p>
+     * <p>
+     * Type: Boolean
+     * </p>
+     * 
+     * @return Specifies whether to also delete the Lambda functions and layers used by this canary. The default is
+     *         false.</p>
+     *         <p>
+     *         Type: Boolean
+     */
+
+    public Boolean getDeleteLambda() {
+        return this.deleteLambda;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.
+     * </p>
+     * <p>
+     * Type: Boolean
+     * </p>
+     * 
+     * @param deleteLambda
+     *        Specifies whether to also delete the Lambda functions and layers used by this canary. The default is
+     *        false.</p>
+     *        <p>
+     *        Type: Boolean
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteCanaryRequest withDeleteLambda(Boolean deleteLambda) {
+        setDeleteLambda(deleteLambda);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.
+     * </p>
+     * <p>
+     * Type: Boolean
+     * </p>
+     * 
+     * @return Specifies whether to also delete the Lambda functions and layers used by this canary. The default is
+     *         false.</p>
+     *         <p>
+     *         Type: Boolean
+     */
+
+    public Boolean isDeleteLambda() {
+        return this.deleteLambda;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -99,7 +184,9 @@ public class DeleteCanaryRequest extends com.amazonaws.AmazonWebServiceRequest i
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getName() != null)
-            sb.append("Name: ").append(getName());
+            sb.append("Name: ").append(getName()).append(",");
+        if (getDeleteLambda() != null)
+            sb.append("DeleteLambda: ").append(getDeleteLambda());
         sb.append("}");
         return sb.toString();
     }
@@ -118,6 +205,10 @@ public class DeleteCanaryRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getDeleteLambda() == null ^ this.getDeleteLambda() == null)
+            return false;
+        if (other.getDeleteLambda() != null && other.getDeleteLambda().equals(this.getDeleteLambda()) == false)
+            return false;
         return true;
     }
 
@@ -127,6 +218,7 @@ public class DeleteCanaryRequest extends com.amazonaws.AmazonWebServiceRequest i
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getDeleteLambda() == null) ? 0 : getDeleteLambda().hashCode());
         return hashCode;
     }
 

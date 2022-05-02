@@ -1,3 +1,16 @@
+# __1.12.211__ __2022-05-02__
+## __AWS Organizations__
+  - ### Features
+    - This release adds the INVALID_PAYMENT_INSTRUMENT as a fail reason and an error message.
+
+## __AWS Outposts__
+  - ### Features
+    - This release adds a new API called ListAssets to the Outposts SDK, which lists the hardware assets in an Outpost.
+
+## __Synthetics__
+  - ### Features
+    - CloudWatch Synthetics has introduced a new feature to provide customers with an option to delete the underlying resources that Synthetics canary creates when the user chooses to delete the canary.
+
 # __1.12.210__ __2022-04-29__
 ## __AWS Elemental MediaConvert__
   - ### Features

@@ -184,6 +184,19 @@ public class AbstractAWSOutpostsAsync extends AbstractAWSOutposts implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<ListAssetsResult> listAssetsAsync(ListAssetsRequest request) {
+
+        return listAssetsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssetsResult> listAssetsAsync(ListAssetsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAssetsRequest, ListAssetsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListCatalogItemsResult> listCatalogItemsAsync(ListCatalogItemsRequest request) {
 
         return listCatalogItemsAsync(request, null);

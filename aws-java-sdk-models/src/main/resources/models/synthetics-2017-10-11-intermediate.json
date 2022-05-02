@@ -137,7 +137,7 @@
       "asyncReturnType" : "DeleteCanaryResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Permanently deletes the specified canary.</p> <p>When you delete a canary, resources used and created by the canary are not automatically deleted. After you delete a canary that you do not intend to use again, you should also delete the following:</p> <ul> <li> <p>The Lambda functions and layers used by this canary. These have the prefix <code>cwsyn-<i>MyCanaryName</i> </code>.</p> </li> <li> <p>The CloudWatch alarms created for this canary. These alarms have a name of <code>Synthetics-SharpDrop-Alarm-<i>MyCanaryName</i> </code>.</p> </li> <li> <p>Amazon S3 objects and buckets, such as the canary's artifact location.</p> </li> <li> <p>IAM roles created for the canary. If they were created in the console, these roles have the name <code> role/service-role/CloudWatchSyntheticsRole-<i>MyCanaryName</i> </code>.</p> </li> <li> <p>CloudWatch Logs log groups created for the canary. These logs groups have the name <code>/aws/lambda/cwsyn-<i>MyCanaryName</i> </code>. </p> </li> </ul> <p>Before you delete a canary, you might want to use <code>GetCanary</code> to display the information about this canary. Make note of the information returned by this operation so that you can delete these resources after you delete the canary.</p>",
+      "documentation" : "<p>Permanently deletes the specified canary.</p> <p>If you specify <code>DeleteLambda</code> to <code>true</code>, CloudWatch Synthetics also deletes the Lambda functions and layers that are used by the canary.</p> <p>Other esources used and created by the canary are not automatically deleted. After you delete a canary that you do not intend to use again, you should also delete the following:</p> <ul> <li> <p>The CloudWatch alarms created for this canary. These alarms have a name of <code>Synthetics-SharpDrop-Alarm-<i>MyCanaryName</i> </code>.</p> </li> <li> <p>Amazon S3 objects and buckets, such as the canary's artifact location.</p> </li> <li> <p>IAM roles created for the canary. If they were created in the console, these roles have the name <code> role/service-role/CloudWatchSyntheticsRole-<i>MyCanaryName</i> </code>.</p> </li> <li> <p>CloudWatch Logs log groups created for the canary. These logs groups have the name <code>/aws/lambda/cwsyn-<i>MyCanaryName</i> </code>. </p> </li> </ul> <p>Before you delete a canary, you might want to use <code>GetCanary</code> to display the information about this canary. Make note of the information returned by this operation so that you can delete these resources after you delete the canary.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -9087,6 +9087,39 @@
       "enums" : [ {
         "name" : "INVALID_PERMISSIONS",
         "value" : "INVALID_PERMISSIONS"
+      }, {
+        "name" : "CREATE_PENDING",
+        "value" : "CREATE_PENDING"
+      }, {
+        "name" : "CREATE_IN_PROGRESS",
+        "value" : "CREATE_IN_PROGRESS"
+      }, {
+        "name" : "CREATE_FAILED",
+        "value" : "CREATE_FAILED"
+      }, {
+        "name" : "UPDATE_PENDING",
+        "value" : "UPDATE_PENDING"
+      }, {
+        "name" : "UPDATE_IN_PROGRESS",
+        "value" : "UPDATE_IN_PROGRESS"
+      }, {
+        "name" : "UPDATE_COMPLETE",
+        "value" : "UPDATE_COMPLETE"
+      }, {
+        "name" : "ROLLBACK_COMPLETE",
+        "value" : "ROLLBACK_COMPLETE"
+      }, {
+        "name" : "ROLLBACK_FAILED",
+        "value" : "ROLLBACK_FAILED"
+      }, {
+        "name" : "DELETE_IN_PROGRESS",
+        "value" : "DELETE_IN_PROGRESS"
+      }, {
+        "name" : "DELETE_FAILED",
+        "value" : "DELETE_FAILED"
+      }, {
+        "name" : "SYNC_DELETE_IN_PROGRESS",
+        "value" : "SYNC_DELETE_IN_PROGRESS"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.synthetics.enum.CanaryStateReasonCode",
@@ -12389,8 +12422,147 @@
           "variableSetterType" : "String"
         },
         "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "DeleteLambda",
+        "c2jShape" : "boolean",
+        "deprecated" : false,
+        "documentation" : "<p>Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean</p>\n@param deleteLambda Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withDeleteLambda",
+        "getterDocumentation" : "/**<p>Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean</p>\n@return Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean*/",
+        "getterMethodName" : "getDeleteLambda",
+        "getterModel" : {
+          "returnType" : "Boolean",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : "querystring",
+          "marshallLocation" : "QUERY_PARAM",
+          "marshallLocationName" : "deleteLambda",
+          "queryString" : true,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "deleteLambda",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "Boolean",
+        "marshallingType" : "BOOLEAN",
+        "name" : "DeleteLambda",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean</p>\n@param deleteLambda Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean*/",
+        "setterMethodName" : "setDeleteLambda",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "Boolean",
+          "variableName" : "deleteLambda",
+          "variableType" : "Boolean",
+          "documentation" : "",
+          "simpleType" : "Boolean",
+          "variableSetterType" : "Boolean"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean</p>\n@param deleteLambda Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "Boolean",
+          "variableName" : "deleteLambda",
+          "variableType" : "Boolean",
+          "documentation" : "<p>Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean</p>",
+          "simpleType" : "Boolean",
+          "variableSetterType" : "Boolean"
+        },
+        "xmlNameSpaceUri" : null
       } ],
       "membersAsMap" : {
+        "DeleteLambda" : {
+          "c2jName" : "DeleteLambda",
+          "c2jShape" : "boolean",
+          "deprecated" : false,
+          "documentation" : "<p>Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean</p>\n@param deleteLambda Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withDeleteLambda",
+          "getterDocumentation" : "/**<p>Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean</p>\n@return Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean*/",
+          "getterMethodName" : "getDeleteLambda",
+          "getterModel" : {
+            "returnType" : "Boolean",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : "querystring",
+            "marshallLocation" : "QUERY_PARAM",
+            "marshallLocationName" : "deleteLambda",
+            "queryString" : true,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "deleteLambda",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "Boolean",
+          "marshallingType" : "BOOLEAN",
+          "name" : "DeleteLambda",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean</p>\n@param deleteLambda Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean*/",
+          "setterMethodName" : "setDeleteLambda",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "Boolean",
+            "variableName" : "deleteLambda",
+            "variableType" : "Boolean",
+            "documentation" : "",
+            "simpleType" : "Boolean",
+            "variableSetterType" : "Boolean"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean</p>\n@param deleteLambda Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "Boolean",
+            "variableName" : "deleteLambda",
+            "variableType" : "Boolean",
+            "documentation" : "<p>Specifies whether to also delete the Lambda functions and layers used by this canary. The default is false.</p> <p>Type: Boolean</p>",
+            "simpleType" : "Boolean",
+            "variableSetterType" : "Boolean"
+          },
+          "xmlNameSpaceUri" : null
+        },
         "Name" : {
           "c2jName" : "Name",
           "c2jShape" : "CanaryName",

@@ -88,6 +88,11 @@ public class AbstractAWSOutposts implements AWSOutposts {
     }
 
     @Override
+    public ListAssetsResult listAssets(ListAssetsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListCatalogItemsResult listCatalogItems(ListCatalogItemsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

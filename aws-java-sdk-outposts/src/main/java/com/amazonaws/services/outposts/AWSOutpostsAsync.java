@@ -323,7 +323,7 @@ public interface AWSOutpostsAsync extends AWSOutposts {
 
     /**
      * <p>
-     * Lists the instance types for the specified Outpost.
+     * Gets the instance types for the specified Outpost.
      * </p>
      * 
      * @param getOutpostInstanceTypesRequest
@@ -336,7 +336,7 @@ public interface AWSOutpostsAsync extends AWSOutposts {
 
     /**
      * <p>
-     * Lists the instance types for the specified Outpost.
+     * Gets the instance types for the specified Outpost.
      * </p>
      * 
      * @param getOutpostInstanceTypesRequest
@@ -416,8 +416,43 @@ public interface AWSOutpostsAsync extends AWSOutposts {
 
     /**
      * <p>
-     * Use to create a list of every item in the catalog. Add filters to your request to return a more specific list of
-     * results. Use filters to match an item class, storage option, or EC2 family.
+     * Lists the hardware assets in an Outpost. If you are using Dedicated Hosts on Amazon Web Services Outposts, you
+     * can filter your request by host ID to return a list of hardware assets that allocate resources for Dedicated
+     * Hosts.
+     * </p>
+     * 
+     * @param listAssetsRequest
+     * @return A Java Future containing the result of the ListAssets operation returned by the service.
+     * @sample AWSOutpostsAsync.ListAssets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/ListAssets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListAssetsResult> listAssetsAsync(ListAssetsRequest listAssetsRequest);
+
+    /**
+     * <p>
+     * Lists the hardware assets in an Outpost. If you are using Dedicated Hosts on Amazon Web Services Outposts, you
+     * can filter your request by host ID to return a list of hardware assets that allocate resources for Dedicated
+     * Hosts.
+     * </p>
+     * 
+     * @param listAssetsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAssets operation returned by the service.
+     * @sample AWSOutpostsAsyncHandler.ListAssets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/ListAssets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListAssetsResult> listAssetsAsync(ListAssetsRequest listAssetsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAssetsRequest, ListAssetsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the items in the catalog. Add filters to your request to return a more specific list of results. Use
+     * filters to match an item class, storage option, or EC2 family.
      * </p>
      * <p>
      * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
@@ -434,8 +469,8 @@ public interface AWSOutpostsAsync extends AWSOutposts {
 
     /**
      * <p>
-     * Use to create a list of every item in the catalog. Add filters to your request to return a more specific list of
-     * results. Use filters to match an item class, storage option, or EC2 family.
+     * Lists the items in the catalog. Add filters to your request to return a more specific list of results. Use
+     * filters to match an item class, storage option, or EC2 family.
      * </p>
      * <p>
      * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
@@ -457,8 +492,8 @@ public interface AWSOutpostsAsync extends AWSOutposts {
 
     /**
      * <p>
-     * Create a list of the Outpost orders for your Amazon Web Services account. You can filter your request by Outpost
-     * to return a more specific list of results.
+     * Lists the Outpost orders for your Amazon Web Services account. You can filter your request by Outpost to return a
+     * more specific list of results.
      * </p>
      * 
      * @param listOrdersRequest
@@ -471,8 +506,8 @@ public interface AWSOutpostsAsync extends AWSOutposts {
 
     /**
      * <p>
-     * Create a list of the Outpost orders for your Amazon Web Services account. You can filter your request by Outpost
-     * to return a more specific list of results.
+     * Lists the Outpost orders for your Amazon Web Services account. You can filter your request by Outpost to return a
+     * more specific list of results.
      * </p>
      * 
      * @param listOrdersRequest
@@ -490,9 +525,9 @@ public interface AWSOutpostsAsync extends AWSOutposts {
 
     /**
      * <p>
-     * Create a list of the Outposts for your Amazon Web Services account. Add filters to your request to return a more
-     * specific list of results. Use filters to match an Outpost lifecycle status, Availability Zone (
-     * <code>us-east-1a</code>), and AZ ID (<code>use1-az1</code>).
+     * Lists the Outposts for your Amazon Web Services account. Add filters to your request to return a more specific
+     * list of results. Use filters to match an Outpost lifecycle status, Availability Zone (<code>us-east-1a</code>),
+     * and AZ ID (<code>use1-az1</code>).
      * </p>
      * <p>
      * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
@@ -509,9 +544,9 @@ public interface AWSOutpostsAsync extends AWSOutposts {
 
     /**
      * <p>
-     * Create a list of the Outposts for your Amazon Web Services account. Add filters to your request to return a more
-     * specific list of results. Use filters to match an Outpost lifecycle status, Availability Zone (
-     * <code>us-east-1a</code>), and AZ ID (<code>use1-az1</code>).
+     * Lists the Outposts for your Amazon Web Services account. Add filters to your request to return a more specific
+     * list of results. Use filters to match an Outpost lifecycle status, Availability Zone (<code>us-east-1a</code>),
+     * and AZ ID (<code>use1-az1</code>).
      * </p>
      * <p>
      * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
@@ -533,9 +568,9 @@ public interface AWSOutpostsAsync extends AWSOutposts {
 
     /**
      * <p>
-     * Create a list of the Outpost sites for your Amazon Web Services account. Add operating address filters to your
-     * request to return a more specific list of results. Use filters to match site city, country code, or state/region
-     * of the operating address.
+     * Lists the Outpost sites for your Amazon Web Services account. Add operating address filters to your request to
+     * return a more specific list of results. Use filters to match site city, country code, or state/region of the
+     * operating address.
      * </p>
      * <p>
      * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
@@ -552,9 +587,9 @@ public interface AWSOutpostsAsync extends AWSOutposts {
 
     /**
      * <p>
-     * Create a list of the Outpost sites for your Amazon Web Services account. Add operating address filters to your
-     * request to return a more specific list of results. Use filters to match site city, country code, or state/region
-     * of the operating address.
+     * Lists the Outpost sites for your Amazon Web Services account. Add operating address filters to your request to
+     * return a more specific list of results. Use filters to match site city, country code, or state/region of the
+     * operating address.
      * </p>
      * <p>
      * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only

@@ -731,7 +731,7 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
 
     /**
      * <p>
-     * Lists the instance types for the specified Outpost.
+     * Gets the instance types for the specified Outpost.
      * </p>
      * 
      * @param getOutpostInstanceTypesRequest
@@ -922,8 +922,73 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
 
     /**
      * <p>
-     * Use to create a list of every item in the catalog. Add filters to your request to return a more specific list of
-     * results. Use filters to match an item class, storage option, or EC2 family.
+     * Lists the hardware assets in an Outpost. If you are using Dedicated Hosts on Amazon Web Services Outposts, you
+     * can filter your request by host ID to return a list of hardware assets that allocate resources for Dedicated
+     * Hosts.
+     * </p>
+     * 
+     * @param listAssetsRequest
+     * @return Result of the ListAssets operation returned by the service.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.ListAssets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/ListAssets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListAssetsResult listAssets(ListAssetsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAssets(request);
+    }
+
+    @SdkInternalApi
+    final ListAssetsResult executeListAssets(ListAssetsRequest listAssetsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAssetsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAssetsRequest> request = null;
+        Response<ListAssetsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAssetsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listAssetsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Outposts");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAssets");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAssetsResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListAssetsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the items in the catalog. Add filters to your request to return a more specific list of results. Use
+     * filters to match an item class, storage option, or EC2 family.
      * </p>
      * <p>
      * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
@@ -988,8 +1053,8 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
 
     /**
      * <p>
-     * Create a list of the Outpost orders for your Amazon Web Services account. You can filter your request by Outpost
-     * to return a more specific list of results.
+     * Lists the Outpost orders for your Amazon Web Services account. You can filter your request by Outpost to return a
+     * more specific list of results.
      * </p>
      * 
      * @param listOrdersRequest
@@ -1052,9 +1117,9 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
 
     /**
      * <p>
-     * Create a list of the Outposts for your Amazon Web Services account. Add filters to your request to return a more
-     * specific list of results. Use filters to match an Outpost lifecycle status, Availability Zone (
-     * <code>us-east-1a</code>), and AZ ID (<code>use1-az1</code>).
+     * Lists the Outposts for your Amazon Web Services account. Add filters to your request to return a more specific
+     * list of results. Use filters to match an Outpost lifecycle status, Availability Zone (<code>us-east-1a</code>),
+     * and AZ ID (<code>use1-az1</code>).
      * </p>
      * <p>
      * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
@@ -1119,9 +1184,9 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
 
     /**
      * <p>
-     * Create a list of the Outpost sites for your Amazon Web Services account. Add operating address filters to your
-     * request to return a more specific list of results. Use filters to match site city, country code, or state/region
-     * of the operating address.
+     * Lists the Outpost sites for your Amazon Web Services account. Add operating address filters to your request to
+     * return a more specific list of results. Use filters to match site city, country code, or state/region of the
+     * operating address.
      * </p>
      * <p>
      * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
