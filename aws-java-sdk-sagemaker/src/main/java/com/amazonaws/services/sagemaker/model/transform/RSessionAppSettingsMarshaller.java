@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.sagemaker.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -26,6 +27,11 @@ import com.amazonaws.annotation.SdkInternalApi;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 @SdkInternalApi
 public class RSessionAppSettingsMarshaller {
+
+    private static final MarshallingInfo<StructuredPojo> DEFAULTRESOURCESPEC_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultResourceSpec").build();
+    private static final MarshallingInfo<List> CUSTOMIMAGES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("CustomImages").build();
 
     private static final RSessionAppSettingsMarshaller instance = new RSessionAppSettingsMarshaller();
 
@@ -43,6 +49,8 @@ public class RSessionAppSettingsMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(rSessionAppSettings.getDefaultResourceSpec(), DEFAULTRESOURCESPEC_BINDING);
+            protocolMarshaller.marshall(rSessionAppSettings.getCustomImages(), CUSTOMIMAGES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

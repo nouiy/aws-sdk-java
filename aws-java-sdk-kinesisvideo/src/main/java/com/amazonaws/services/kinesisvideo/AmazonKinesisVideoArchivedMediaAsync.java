@@ -985,6 +985,39 @@ public interface AmazonKinesisVideoArchivedMediaAsync extends AmazonKinesisVideo
 
     /**
      * <p>
+     * Retrieves a list of Images corresponding to each timestamp for a given time range, sampling interval, and image
+     * format configuration.
+     * </p>
+     * 
+     * @param getImagesRequest
+     * @return A Java Future containing the result of the GetImages operation returned by the service.
+     * @sample AmazonKinesisVideoArchivedMediaAsync.GetImages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesis-video-archived-media-2017-09-30/GetImages"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetImagesResult> getImagesAsync(GetImagesRequest getImagesRequest);
+
+    /**
+     * <p>
+     * Retrieves a list of Images corresponding to each timestamp for a given time range, sampling interval, and image
+     * format configuration.
+     * </p>
+     * 
+     * @param getImagesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetImages operation returned by the service.
+     * @sample AmazonKinesisVideoArchivedMediaAsyncHandler.GetImages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesis-video-archived-media-2017-09-30/GetImages"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetImagesResult> getImagesAsync(GetImagesRequest getImagesRequest,
+            com.amazonaws.handlers.AsyncHandler<GetImagesRequest, GetImagesResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets media for a list of fragments (specified by fragment number) from the archived data in an Amazon Kinesis
      * video stream.
      * </p>

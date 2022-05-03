@@ -80,6 +80,36 @@ public class AbstractAmazonKinesisVideoAsync extends AbstractAmazonKinesisVideo 
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeImageGenerationConfigurationResult> describeImageGenerationConfigurationAsync(
+            DescribeImageGenerationConfigurationRequest request) {
+
+        return describeImageGenerationConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeImageGenerationConfigurationResult> describeImageGenerationConfigurationAsync(
+            DescribeImageGenerationConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeImageGenerationConfigurationRequest, DescribeImageGenerationConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeNotificationConfigurationResult> describeNotificationConfigurationAsync(
+            DescribeNotificationConfigurationRequest request) {
+
+        return describeNotificationConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeNotificationConfigurationResult> describeNotificationConfigurationAsync(
+            DescribeNotificationConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeNotificationConfigurationRequest, DescribeNotificationConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeSignalingChannelResult> describeSignalingChannelAsync(DescribeSignalingChannelRequest request) {
 
         return describeSignalingChannelAsync(request, null);
@@ -244,6 +274,36 @@ public class AbstractAmazonKinesisVideoAsync extends AbstractAmazonKinesisVideo 
     @Override
     public java.util.concurrent.Future<UpdateDataRetentionResult> updateDataRetentionAsync(UpdateDataRetentionRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateDataRetentionRequest, UpdateDataRetentionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateImageGenerationConfigurationResult> updateImageGenerationConfigurationAsync(
+            UpdateImageGenerationConfigurationRequest request) {
+
+        return updateImageGenerationConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateImageGenerationConfigurationResult> updateImageGenerationConfigurationAsync(
+            UpdateImageGenerationConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateImageGenerationConfigurationRequest, UpdateImageGenerationConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateNotificationConfigurationResult> updateNotificationConfigurationAsync(
+            UpdateNotificationConfigurationRequest request) {
+
+        return updateNotificationConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateNotificationConfigurationResult> updateNotificationConfigurationAsync(
+            UpdateNotificationConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateNotificationConfigurationRequest, UpdateNotificationConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

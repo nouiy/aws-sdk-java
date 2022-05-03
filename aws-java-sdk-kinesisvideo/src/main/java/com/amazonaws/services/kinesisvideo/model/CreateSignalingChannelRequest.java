@@ -27,7 +27,8 @@ public class CreateSignalingChannelRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A name for the signaling channel that you are creating. It must be unique for each AWS account and AWS Region.
+     * A name for the signaling channel that you are creating. It must be unique for each Amazon Web Services account
+     * and Amazon Web Services Region.
      * </p>
      */
     private String channelName;
@@ -53,12 +54,13 @@ public class CreateSignalingChannelRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A name for the signaling channel that you are creating. It must be unique for each AWS account and AWS Region.
+     * A name for the signaling channel that you are creating. It must be unique for each Amazon Web Services account
+     * and Amazon Web Services Region.
      * </p>
      * 
      * @param channelName
-     *        A name for the signaling channel that you are creating. It must be unique for each AWS account and AWS
-     *        Region.
+     *        A name for the signaling channel that you are creating. It must be unique for each Amazon Web Services
+     *        account and Amazon Web Services Region.
      */
 
     public void setChannelName(String channelName) {
@@ -67,11 +69,12 @@ public class CreateSignalingChannelRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A name for the signaling channel that you are creating. It must be unique for each AWS account and AWS Region.
+     * A name for the signaling channel that you are creating. It must be unique for each Amazon Web Services account
+     * and Amazon Web Services Region.
      * </p>
      * 
-     * @return A name for the signaling channel that you are creating. It must be unique for each AWS account and AWS
-     *         Region.
+     * @return A name for the signaling channel that you are creating. It must be unique for each Amazon Web Services
+     *         account and Amazon Web Services Region.
      */
 
     public String getChannelName() {
@@ -80,12 +83,13 @@ public class CreateSignalingChannelRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A name for the signaling channel that you are creating. It must be unique for each AWS account and AWS Region.
+     * A name for the signaling channel that you are creating. It must be unique for each Amazon Web Services account
+     * and Amazon Web Services Region.
      * </p>
      * 
      * @param channelName
-     *        A name for the signaling channel that you are creating. It must be unique for each AWS account and AWS
-     *        Region.
+     *        A name for the signaling channel that you are creating. It must be unique for each Amazon Web Services
+     *        account and Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

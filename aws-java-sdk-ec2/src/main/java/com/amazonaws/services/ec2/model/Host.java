@@ -134,6 +134,12 @@ public class Host implements Serializable, Cloneable {
      * </p>
      */
     private Boolean memberOfServiceLinkedResourceGroup;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Outpost on which the Dedicated Host is allocated.
+     * </p>
+     */
+    private String outpostArn;
 
     /**
      * <p>
@@ -1082,6 +1088,49 @@ public class Host implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Outpost on which the Dedicated Host is allocated.
+     * </p>
+     * 
+     * @param outpostArn
+     *        The Amazon Resource Name (ARN) of the Amazon Web Services Outpost on which the Dedicated Host is
+     *        allocated.
+     */
+
+    public void setOutpostArn(String outpostArn) {
+        this.outpostArn = outpostArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Outpost on which the Dedicated Host is allocated.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the Amazon Web Services Outpost on which the Dedicated Host is
+     *         allocated.
+     */
+
+    public String getOutpostArn() {
+        return this.outpostArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Outpost on which the Dedicated Host is allocated.
+     * </p>
+     * 
+     * @param outpostArn
+     *        The Amazon Resource Name (ARN) of the Amazon Web Services Outpost on which the Dedicated Host is
+     *        allocated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Host withOutpostArn(String outpostArn) {
+        setOutpostArn(outpostArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1126,7 +1175,9 @@ public class Host implements Serializable, Cloneable {
         if (getAvailabilityZoneId() != null)
             sb.append("AvailabilityZoneId: ").append(getAvailabilityZoneId()).append(",");
         if (getMemberOfServiceLinkedResourceGroup() != null)
-            sb.append("MemberOfServiceLinkedResourceGroup: ").append(getMemberOfServiceLinkedResourceGroup());
+            sb.append("MemberOfServiceLinkedResourceGroup: ").append(getMemberOfServiceLinkedResourceGroup()).append(",");
+        if (getOutpostArn() != null)
+            sb.append("OutpostArn: ").append(getOutpostArn());
         sb.append("}");
         return sb.toString();
     }
@@ -1210,6 +1261,10 @@ public class Host implements Serializable, Cloneable {
         if (other.getMemberOfServiceLinkedResourceGroup() != null
                 && other.getMemberOfServiceLinkedResourceGroup().equals(this.getMemberOfServiceLinkedResourceGroup()) == false)
             return false;
+        if (other.getOutpostArn() == null ^ this.getOutpostArn() == null)
+            return false;
+        if (other.getOutpostArn() != null && other.getOutpostArn().equals(this.getOutpostArn()) == false)
+            return false;
         return true;
     }
 
@@ -1235,6 +1290,7 @@ public class Host implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getOwnerId() == null) ? 0 : getOwnerId().hashCode());
         hashCode = prime * hashCode + ((getAvailabilityZoneId() == null) ? 0 : getAvailabilityZoneId().hashCode());
         hashCode = prime * hashCode + ((getMemberOfServiceLinkedResourceGroup() == null) ? 0 : getMemberOfServiceLinkedResourceGroup().hashCode());
+        hashCode = prime * hashCode + ((getOutpostArn() == null) ? 0 : getOutpostArn().hashCode());
         return hashCode;
     }
 

@@ -139,6 +139,11 @@ public class HostStaxUnmarshaller implements Unmarshaller<Host, StaxUnmarshaller
                     host.setMemberOfServiceLinkedResourceGroup(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("outpostArn", targetDepth)) {
+                    host.setOutpostArn(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return host;

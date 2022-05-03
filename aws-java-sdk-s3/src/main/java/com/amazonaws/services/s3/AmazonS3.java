@@ -3481,6 +3481,10 @@ public interface AmazonS3 extends S3DirectSpi {
      * To copy an object, the caller's account must have read access to the source object and
      * write access to the destination bucket.
      * </p>
+     * <p>For information about maximum and minimum part sizes and other multipart upload specifications,
+     * see <a href=\"https://docs.aws.amazon.com/AmazonS3/latest/userguide/qfacts.html\">Multipart upload limits</a>
+     * in the <i>Amazon S3 User Guide</i>.
+     * </p>
      * <p>
      * If constraints are specified in the <code>CopyPartRequest</code>
      * (e.g.
@@ -4979,8 +4983,11 @@ public interface AmazonS3 extends S3DirectSpi {
      * 10,000, inclusive. A part number uniquely identifies a part and also
      * defines its position within the object being uploaded. If you upload a
      * new part using the same part number that was specified in uploading a
-     * previous part, the previously uploaded part is overwritten. <b>Note:</b> if
-     * part size is not specified, 0 will be used and could cause unexpected results.
+     * previous part, the previously uploaded part is overwritten.
+     * <p>
+     * For information about maximum and minimum part sizes and other multipart upload specifications,
+     * see <a href=\"https://docs.aws.amazon.com/AmazonS3/latest/userguide/qfacts.html\">Multipart upload limits</a>
+     * in the <i>Amazon S3 User Guide</i>.</p>
      * <p>
      * To ensure data is not corrupted traversing the network, specify the
      * Content-MD5 header in the Upload Part request. Amazon S3 checks the part

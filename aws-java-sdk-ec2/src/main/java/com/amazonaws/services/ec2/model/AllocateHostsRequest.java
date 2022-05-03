@@ -101,6 +101,12 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
      * </p>
      */
     private String hostRecovery;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Outpost on which to allocate the Dedicated Host.
+     * </p>
+     */
+    private String outpostArn;
 
     /**
      * <p>
@@ -726,6 +732,47 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Outpost on which to allocate the Dedicated Host.
+     * </p>
+     * 
+     * @param outpostArn
+     *        The Amazon Resource Name (ARN) of the Amazon Web Services Outpost on which to allocate the Dedicated Host.
+     */
+
+    public void setOutpostArn(String outpostArn) {
+        this.outpostArn = outpostArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Outpost on which to allocate the Dedicated Host.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the Amazon Web Services Outpost on which to allocate the Dedicated
+     *         Host.
+     */
+
+    public String getOutpostArn() {
+        return this.outpostArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Outpost on which to allocate the Dedicated Host.
+     * </p>
+     * 
+     * @param outpostArn
+     *        The Amazon Resource Name (ARN) of the Amazon Web Services Outpost on which to allocate the Dedicated Host.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AllocateHostsRequest withOutpostArn(String outpostArn) {
+        setOutpostArn(outpostArn);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -763,7 +810,9 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
         if (getTagSpecifications() != null)
             sb.append("TagSpecifications: ").append(getTagSpecifications()).append(",");
         if (getHostRecovery() != null)
-            sb.append("HostRecovery: ").append(getHostRecovery());
+            sb.append("HostRecovery: ").append(getHostRecovery()).append(",");
+        if (getOutpostArn() != null)
+            sb.append("OutpostArn: ").append(getOutpostArn());
         sb.append("}");
         return sb.toString();
     }
@@ -810,6 +859,10 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
             return false;
         if (other.getHostRecovery() != null && other.getHostRecovery().equals(this.getHostRecovery()) == false)
             return false;
+        if (other.getOutpostArn() == null ^ this.getOutpostArn() == null)
+            return false;
+        if (other.getOutpostArn() != null && other.getOutpostArn().equals(this.getOutpostArn()) == false)
+            return false;
         return true;
     }
 
@@ -826,6 +879,7 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
         hashCode = prime * hashCode + ((getQuantity() == null) ? 0 : getQuantity().hashCode());
         hashCode = prime * hashCode + ((getTagSpecifications() == null) ? 0 : getTagSpecifications().hashCode());
         hashCode = prime * hashCode + ((getHostRecovery() == null) ? 0 : getHostRecovery().hashCode());
+        hashCode = prime * hashCode + ((getOutpostArn() == null) ? 0 : getOutpostArn().hashCode());
         return hashCode;
     }
 

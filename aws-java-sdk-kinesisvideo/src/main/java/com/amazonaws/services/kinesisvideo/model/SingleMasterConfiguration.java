@@ -30,18 +30,18 @@ public class SingleMasterConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The period of time a signaling channel retains underlivered messages before they are discarded.
+     * The period of time a signaling channel retains undelivered messages before they are discarded.
      * </p>
      */
     private Integer messageTtlSeconds;
 
     /**
      * <p>
-     * The period of time a signaling channel retains underlivered messages before they are discarded.
+     * The period of time a signaling channel retains undelivered messages before they are discarded.
      * </p>
      * 
      * @param messageTtlSeconds
-     *        The period of time a signaling channel retains underlivered messages before they are discarded.
+     *        The period of time a signaling channel retains undelivered messages before they are discarded.
      */
 
     public void setMessageTtlSeconds(Integer messageTtlSeconds) {
@@ -50,10 +50,10 @@ public class SingleMasterConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The period of time a signaling channel retains underlivered messages before they are discarded.
+     * The period of time a signaling channel retains undelivered messages before they are discarded.
      * </p>
      * 
-     * @return The period of time a signaling channel retains underlivered messages before they are discarded.
+     * @return The period of time a signaling channel retains undelivered messages before they are discarded.
      */
 
     public Integer getMessageTtlSeconds() {
@@ -62,11 +62,11 @@ public class SingleMasterConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The period of time a signaling channel retains underlivered messages before they are discarded.
+     * The period of time a signaling channel retains undelivered messages before they are discarded.
      * </p>
      * 
      * @param messageTtlSeconds
-     *        The period of time a signaling channel retains underlivered messages before they are discarded.
+     *        The period of time a signaling channel retains undelivered messages before they are discarded.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

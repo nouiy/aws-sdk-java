@@ -218,6 +218,78 @@ public interface AmazonKinesisVideoAsync extends AmazonKinesisVideo {
 
     /**
      * <p>
+     * Gets the <code>ImageGenerationConfiguration</code> for a given Kinesis video stream.
+     * </p>
+     * 
+     * @param describeImageGenerationConfigurationRequest
+     * @return A Java Future containing the result of the DescribeImageGenerationConfiguration operation returned by the
+     *         service.
+     * @sample AmazonKinesisVideoAsync.DescribeImageGenerationConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/DescribeImageGenerationConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeImageGenerationConfigurationResult> describeImageGenerationConfigurationAsync(
+            DescribeImageGenerationConfigurationRequest describeImageGenerationConfigurationRequest);
+
+    /**
+     * <p>
+     * Gets the <code>ImageGenerationConfiguration</code> for a given Kinesis video stream.
+     * </p>
+     * 
+     * @param describeImageGenerationConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeImageGenerationConfiguration operation returned by the
+     *         service.
+     * @sample AmazonKinesisVideoAsyncHandler.DescribeImageGenerationConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/DescribeImageGenerationConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeImageGenerationConfigurationResult> describeImageGenerationConfigurationAsync(
+            DescribeImageGenerationConfigurationRequest describeImageGenerationConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeImageGenerationConfigurationRequest, DescribeImageGenerationConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the <code>NotificationConfiguration</code> for a given Kinesis video stream.
+     * </p>
+     * 
+     * @param describeNotificationConfigurationRequest
+     * @return A Java Future containing the result of the DescribeNotificationConfiguration operation returned by the
+     *         service.
+     * @sample AmazonKinesisVideoAsync.DescribeNotificationConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/DescribeNotificationConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeNotificationConfigurationResult> describeNotificationConfigurationAsync(
+            DescribeNotificationConfigurationRequest describeNotificationConfigurationRequest);
+
+    /**
+     * <p>
+     * Gets the <code>NotificationConfiguration</code> for a given Kinesis video stream.
+     * </p>
+     * 
+     * @param describeNotificationConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeNotificationConfiguration operation returned by the
+     *         service.
+     * @sample AmazonKinesisVideoAsyncHandler.DescribeNotificationConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/DescribeNotificationConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeNotificationConfigurationResult> describeNotificationConfigurationAsync(
+            DescribeNotificationConfigurationRequest describeNotificationConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeNotificationConfigurationRequest, DescribeNotificationConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the most current information about the signaling channel. You must specify either the name or the Amazon
      * Resource Name (ARN) of the channel that you want to describe.
      * </p>
@@ -531,10 +603,10 @@ public interface AmazonKinesisVideoAsync extends AmazonKinesisVideo {
     /**
      * <p>
      * Adds one or more tags to a signaling channel. A <i>tag</i> is a key-value pair (the value is optional) that you
-     * can define and assign to AWS resources. If you specify a tag that already exists, the tag value is replaced with
-     * the value that you specify in the request. For more information, see <a
+     * can define and assign to Amazon Web Services resources. If you specify a tag that already exists, the tag value
+     * is replaced with the value that you specify in the request. For more information, see <a
      * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using Cost Allocation
-     * Tags</a> in the <i>AWS Billing and Cost Management User Guide</i>.
+     * Tags</a> in the <i>Billing and Cost Management and Cost Management User Guide</i>.
      * </p>
      * 
      * @param tagResourceRequest
@@ -548,10 +620,10 @@ public interface AmazonKinesisVideoAsync extends AmazonKinesisVideo {
     /**
      * <p>
      * Adds one or more tags to a signaling channel. A <i>tag</i> is a key-value pair (the value is optional) that you
-     * can define and assign to AWS resources. If you specify a tag that already exists, the tag value is replaced with
-     * the value that you specify in the request. For more information, see <a
+     * can define and assign to Amazon Web Services resources. If you specify a tag that already exists, the tag value
+     * is replaced with the value that you specify in the request. For more information, see <a
      * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using Cost Allocation
-     * Tags</a> in the <i>AWS Billing and Cost Management User Guide</i>.
+     * Tags</a> in the <i>Billing and Cost Management and Cost Management User Guide</i>.
      * </p>
      * 
      * @param tagResourceRequest
@@ -570,10 +642,10 @@ public interface AmazonKinesisVideoAsync extends AmazonKinesisVideo {
     /**
      * <p>
      * Adds one or more tags to a stream. A <i>tag</i> is a key-value pair (the value is optional) that you can define
-     * and assign to AWS resources. If you specify a tag that already exists, the tag value is replaced with the value
-     * that you specify in the request. For more information, see <a
+     * and assign to Amazon Web Services resources. If you specify a tag that already exists, the tag value is replaced
+     * with the value that you specify in the request. For more information, see <a
      * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using Cost Allocation
-     * Tags</a> in the <i>AWS Billing and Cost Management User Guide</i>.
+     * Tags</a> in the <i>Billing and Cost Management and Cost Management User Guide</i>.
      * </p>
      * <p>
      * You must provide either the <code>StreamName</code> or the <code>StreamARN</code>.
@@ -582,7 +654,7 @@ public interface AmazonKinesisVideoAsync extends AmazonKinesisVideo {
      * This operation requires permission for the <code>KinesisVideo:TagStream</code> action.
      * </p>
      * <p>
-     * Kinesis video streams support up to 50 tags.
+     * A Kinesis video stream can support up to 50 tags.
      * </p>
      * 
      * @param tagStreamRequest
@@ -596,10 +668,10 @@ public interface AmazonKinesisVideoAsync extends AmazonKinesisVideo {
     /**
      * <p>
      * Adds one or more tags to a stream. A <i>tag</i> is a key-value pair (the value is optional) that you can define
-     * and assign to AWS resources. If you specify a tag that already exists, the tag value is replaced with the value
-     * that you specify in the request. For more information, see <a
+     * and assign to Amazon Web Services resources. If you specify a tag that already exists, the tag value is replaced
+     * with the value that you specify in the request. For more information, see <a
      * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html">Using Cost Allocation
-     * Tags</a> in the <i>AWS Billing and Cost Management User Guide</i>.
+     * Tags</a> in the <i>Billing and Cost Management and Cost Management User Guide</i>.
      * </p>
      * <p>
      * You must provide either the <code>StreamName</code> or the <code>StreamARN</code>.
@@ -608,7 +680,7 @@ public interface AmazonKinesisVideoAsync extends AmazonKinesisVideo {
      * This operation requires permission for the <code>KinesisVideo:TagStream</code> action.
      * </p>
      * <p>
-     * Kinesis video streams support up to 50 tags.
+     * A Kinesis video stream can support up to 50 tags.
      * </p>
      * 
      * @param tagStreamRequest
@@ -784,6 +856,76 @@ public interface AmazonKinesisVideoAsync extends AmazonKinesisVideo {
      */
     java.util.concurrent.Future<UpdateDataRetentionResult> updateDataRetentionAsync(UpdateDataRetentionRequest updateDataRetentionRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateDataRetentionRequest, UpdateDataRetentionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the <code>StreamInfo</code> and <code>ImageProcessingConfiguration</code> fields.
+     * </p>
+     * 
+     * @param updateImageGenerationConfigurationRequest
+     * @return A Java Future containing the result of the UpdateImageGenerationConfiguration operation returned by the
+     *         service.
+     * @sample AmazonKinesisVideoAsync.UpdateImageGenerationConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/UpdateImageGenerationConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateImageGenerationConfigurationResult> updateImageGenerationConfigurationAsync(
+            UpdateImageGenerationConfigurationRequest updateImageGenerationConfigurationRequest);
+
+    /**
+     * <p>
+     * Updates the <code>StreamInfo</code> and <code>ImageProcessingConfiguration</code> fields.
+     * </p>
+     * 
+     * @param updateImageGenerationConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateImageGenerationConfiguration operation returned by the
+     *         service.
+     * @sample AmazonKinesisVideoAsyncHandler.UpdateImageGenerationConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/UpdateImageGenerationConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateImageGenerationConfigurationResult> updateImageGenerationConfigurationAsync(
+            UpdateImageGenerationConfigurationRequest updateImageGenerationConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateImageGenerationConfigurationRequest, UpdateImageGenerationConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the notification information for a stream.
+     * </p>
+     * 
+     * @param updateNotificationConfigurationRequest
+     * @return A Java Future containing the result of the UpdateNotificationConfiguration operation returned by the
+     *         service.
+     * @sample AmazonKinesisVideoAsync.UpdateNotificationConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/UpdateNotificationConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateNotificationConfigurationResult> updateNotificationConfigurationAsync(
+            UpdateNotificationConfigurationRequest updateNotificationConfigurationRequest);
+
+    /**
+     * <p>
+     * Updates the notification information for a stream.
+     * </p>
+     * 
+     * @param updateNotificationConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateNotificationConfiguration operation returned by the
+     *         service.
+     * @sample AmazonKinesisVideoAsyncHandler.UpdateNotificationConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/UpdateNotificationConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateNotificationConfigurationResult> updateNotificationConfigurationAsync(
+            UpdateNotificationConfigurationRequest updateNotificationConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateNotificationConfigurationRequest, UpdateNotificationConfigurationResult> asyncHandler);
 
     /**
      * <p>

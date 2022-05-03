@@ -2144,6 +2144,9 @@ public class AmazonS3Client extends AmazonWebServiceClient implements AmazonS3 {
      * To copy an object, the caller's account must have read access to the source object and
      * write access to the destination bucket.
      * </p>
+     * <p>For information about maximum and minimum part sizes and other multipart upload specifications,
+     * see <a href=\"https://docs.aws.amazon.com/AmazonS3/latest/userguide/qfacts.html\">Multipart upload limits</a>
+     * in the <i>Amazon S3 User Guide</i>. </p>
      * <p>
      * If constraints are specified in the <code>CopyPartRequest</code>
      * (e.g.

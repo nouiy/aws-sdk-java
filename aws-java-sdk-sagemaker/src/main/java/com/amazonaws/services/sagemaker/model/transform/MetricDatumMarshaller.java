@@ -33,6 +33,8 @@ public class MetricDatumMarshaller {
             .marshallLocationName("Value").build();
     private static final MarshallingInfo<String> SET_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Set").build();
+    private static final MarshallingInfo<String> STANDARDMETRICNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StandardMetricName").build();
 
     private static final MetricDatumMarshaller instance = new MetricDatumMarshaller();
 
@@ -53,6 +55,7 @@ public class MetricDatumMarshaller {
             protocolMarshaller.marshall(metricDatum.getMetricName(), METRICNAME_BINDING);
             protocolMarshaller.marshall(metricDatum.getValue(), VALUE_BINDING);
             protocolMarshaller.marshall(metricDatum.getSet(), SET_BINDING);
+            protocolMarshaller.marshall(metricDatum.getStandardMetricName(), STANDARDMETRICNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

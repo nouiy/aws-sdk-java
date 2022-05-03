@@ -16,7 +16,13 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The signaling channel is currently not available for this operation.
+ * The resource is currently not available for this operation. New resources cannot be created with the same name as
+ * existing resources. Also, resources cannot be updated or deleted unless they are in an <code>ACTIVE</code> state.
+ * </p>
+ * <p>
+ * If this exception is returned, do not use it to determine whether the requested resource already exists. Instead, it
+ * is recommended you use the resource-specific describe API, for example, <code>DescribeStream</code> for video
+ * streams.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -10794,7 +10794,9 @@ public interface AmazonEC2 {
 
     /**
      * <p>
-     * Stops an Amazon EBS-backed instance.
+     * Stops an Amazon EBS-backed instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html">Stop and start your instance</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * You can use the Stop action to hibernate an instance if the instance is <a

@@ -849,6 +849,81 @@ public class AmazonKinesisVideoArchivedMediaClient extends AmazonWebServiceClien
 
     /**
      * <p>
+     * Retrieves a list of Images corresponding to each timestamp for a given time range, sampling interval, and image
+     * format configuration.
+     * </p>
+     * 
+     * @param getImagesRequest
+     * @return Result of the GetImages operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         <code>GetMedia</code> throws this error when Kinesis Video Streams can't find the stream that you
+     *         specified.</p>
+     *         <p>
+     *         <code>GetHLSStreamingSessionURL</code> and <code>GetDASHStreamingSessionURL</code> throw this error if a
+     *         session with a <code>PlaybackMode</code> of <code>ON_DEMAND</code> or <code>LIVE_REPLAY</code>is
+     *         requested for a stream that has no fragments within the requested time range, or if a session with a
+     *         <code>PlaybackMode</code> of <code>LIVE</code> is requested for a stream that has no fragments within the
+     *         last 30 seconds.
+     * @throws InvalidArgumentException
+     *         A specified parameter exceeds its restrictions, is not supported, or can't be used.
+     * @throws ClientLimitExceededException
+     *         Kinesis Video Streams has throttled the request because you have exceeded a limit. Try making the call
+     *         later. For information about limits, see <a
+     *         href="http://docs.aws.amazon.com/kinesisvideostreams/latest/dg/limits.html">Kinesis Video Streams
+     *         Limits</a>.
+     * @throws NotAuthorizedException
+     *         Status Code: 403, The caller is not authorized to perform an operation on the given stream, or the token
+     *         has expired.
+     * @sample AmazonKinesisVideoArchivedMedia.GetImages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesis-video-archived-media-2017-09-30/GetImages"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetImagesResult getImages(GetImagesRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetImages(request);
+    }
+
+    @SdkInternalApi
+    final GetImagesResult executeGetImages(GetImagesRequest getImagesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getImagesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetImagesRequest> request = null;
+        Response<GetImagesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetImagesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getImagesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Kinesis Video Archived Media");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetImages");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetImagesResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetImagesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets media for a list of fragments (specified by fragment number) from the archived data in an Amazon Kinesis
      * video stream.
      * </p>

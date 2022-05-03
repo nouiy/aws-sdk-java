@@ -46,6 +46,12 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String set;
+    /**
+     * <p>
+     * The name of the standard metric.
+     * </p>
+     */
+    private String standardMetricName;
 
     /**
      * <p>
@@ -206,6 +212,65 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The name of the standard metric.
+     * </p>
+     * 
+     * @param standardMetricName
+     *        The name of the standard metric.
+     * @see AutoMLMetricExtendedEnum
+     */
+
+    public void setStandardMetricName(String standardMetricName) {
+        this.standardMetricName = standardMetricName;
+    }
+
+    /**
+     * <p>
+     * The name of the standard metric.
+     * </p>
+     * 
+     * @return The name of the standard metric.
+     * @see AutoMLMetricExtendedEnum
+     */
+
+    public String getStandardMetricName() {
+        return this.standardMetricName;
+    }
+
+    /**
+     * <p>
+     * The name of the standard metric.
+     * </p>
+     * 
+     * @param standardMetricName
+     *        The name of the standard metric.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutoMLMetricExtendedEnum
+     */
+
+    public MetricDatum withStandardMetricName(String standardMetricName) {
+        setStandardMetricName(standardMetricName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the standard metric.
+     * </p>
+     * 
+     * @param standardMetricName
+     *        The name of the standard metric.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutoMLMetricExtendedEnum
+     */
+
+    public MetricDatum withStandardMetricName(AutoMLMetricExtendedEnum standardMetricName) {
+        this.standardMetricName = standardMetricName.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -222,7 +287,9 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
         if (getValue() != null)
             sb.append("Value: ").append(getValue()).append(",");
         if (getSet() != null)
-            sb.append("Set: ").append(getSet());
+            sb.append("Set: ").append(getSet()).append(",");
+        if (getStandardMetricName() != null)
+            sb.append("StandardMetricName: ").append(getStandardMetricName());
         sb.append("}");
         return sb.toString();
     }
@@ -249,6 +316,10 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSet() != null && other.getSet().equals(this.getSet()) == false)
             return false;
+        if (other.getStandardMetricName() == null ^ this.getStandardMetricName() == null)
+            return false;
+        if (other.getStandardMetricName() != null && other.getStandardMetricName().equals(this.getStandardMetricName()) == false)
+            return false;
         return true;
     }
 
@@ -260,6 +331,7 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getMetricName() == null) ? 0 : getMetricName().hashCode());
         hashCode = prime * hashCode + ((getValue() == null) ? 0 : getValue().hashCode());
         hashCode = prime * hashCode + ((getSet() == null) ? 0 : getSet().hashCode());
+        hashCode = prime * hashCode + ((getStandardMetricName() == null) ? 0 : getStandardMetricName().hashCode());
         return hashCode;
     }
 

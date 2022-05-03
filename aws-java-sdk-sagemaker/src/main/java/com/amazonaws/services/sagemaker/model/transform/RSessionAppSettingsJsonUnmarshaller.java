@@ -48,6 +48,16 @@ public class RSessionAppSettingsJsonUnmarshaller implements Unmarshaller<RSessio
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("DefaultResourceSpec", targetDepth)) {
+                    context.nextToken();
+                    rSessionAppSettings.setDefaultResourceSpec(ResourceSpecJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("CustomImages", targetDepth)) {
+                    context.nextToken();
+                    rSessionAppSettings.setCustomImages(new ListUnmarshaller<CustomImage>(CustomImageJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

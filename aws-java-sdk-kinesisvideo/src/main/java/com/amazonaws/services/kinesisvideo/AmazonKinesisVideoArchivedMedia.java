@@ -603,6 +603,39 @@ public interface AmazonKinesisVideoArchivedMedia {
 
     /**
      * <p>
+     * Retrieves a list of Images corresponding to each timestamp for a given time range, sampling interval, and image
+     * format configuration.
+     * </p>
+     * 
+     * @param getImagesRequest
+     * @return Result of the GetImages operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         <code>GetMedia</code> throws this error when Kinesis Video Streams can't find the stream that you
+     *         specified.</p>
+     *         <p>
+     *         <code>GetHLSStreamingSessionURL</code> and <code>GetDASHStreamingSessionURL</code> throw this error if a
+     *         session with a <code>PlaybackMode</code> of <code>ON_DEMAND</code> or <code>LIVE_REPLAY</code>is
+     *         requested for a stream that has no fragments within the requested time range, or if a session with a
+     *         <code>PlaybackMode</code> of <code>LIVE</code> is requested for a stream that has no fragments within the
+     *         last 30 seconds.
+     * @throws InvalidArgumentException
+     *         A specified parameter exceeds its restrictions, is not supported, or can't be used.
+     * @throws ClientLimitExceededException
+     *         Kinesis Video Streams has throttled the request because you have exceeded a limit. Try making the call
+     *         later. For information about limits, see <a
+     *         href="http://docs.aws.amazon.com/kinesisvideostreams/latest/dg/limits.html">Kinesis Video Streams
+     *         Limits</a>.
+     * @throws NotAuthorizedException
+     *         Status Code: 403, The caller is not authorized to perform an operation on the given stream, or the token
+     *         has expired.
+     * @sample AmazonKinesisVideoArchivedMedia.GetImages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesis-video-archived-media-2017-09-30/GetImages"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetImagesResult getImages(GetImagesRequest getImagesRequest);
+
+    /**
+     * <p>
      * Gets media for a list of fragments (specified by fragment number) from the archived data in an Amazon Kinesis
      * video stream.
      * </p>

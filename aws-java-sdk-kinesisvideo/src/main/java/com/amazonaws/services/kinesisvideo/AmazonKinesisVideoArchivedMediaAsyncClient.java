@@ -173,6 +173,39 @@ public class AmazonKinesisVideoArchivedMediaAsyncClient extends AmazonKinesisVid
     }
 
     @Override
+    public java.util.concurrent.Future<GetImagesResult> getImagesAsync(GetImagesRequest request) {
+
+        return getImagesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetImagesResult> getImagesAsync(final GetImagesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetImagesRequest, GetImagesResult> asyncHandler) {
+        final GetImagesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetImagesResult>() {
+            @Override
+            public GetImagesResult call() throws Exception {
+                GetImagesResult result = null;
+
+                try {
+                    result = executeGetImages(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetMediaForFragmentListResult> getMediaForFragmentListAsync(GetMediaForFragmentListRequest request) {
 
         return getMediaForFragmentListAsync(request, null);

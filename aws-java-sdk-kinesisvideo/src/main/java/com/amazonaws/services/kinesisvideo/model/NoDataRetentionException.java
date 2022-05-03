@@ -16,8 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * A streaming session was requested for a stream that does not retain data (that is, has a
- * <code>DataRetentionInHours</code> of 0).
+ * The Stream data retention in hours is equal to zero.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

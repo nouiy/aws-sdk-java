@@ -63,8 +63,7 @@ public class CreateStreamRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String mediaType;
     /**
      * <p>
-     * The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to encrypt
-     * stream data.
+     * The ID of the Key Management Service (KMS) key that you want Kinesis Video Streams to use to encrypt stream data.
      * </p>
      * <p>
      * If no key ID is specified, the default, Kinesis Video-managed key (<code>aws/kinesisvideo</code>) is used.
@@ -316,8 +315,7 @@ public class CreateStreamRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to encrypt
-     * stream data.
+     * The ID of the Key Management Service (KMS) key that you want Kinesis Video Streams to use to encrypt stream data.
      * </p>
      * <p>
      * If no key ID is specified, the default, Kinesis Video-managed key (<code>aws/kinesisvideo</code>) is used.
@@ -329,8 +327,8 @@ public class CreateStreamRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param kmsKeyId
-     *        The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to
-     *        encrypt stream data.</p>
+     *        The ID of the Key Management Service (KMS) key that you want Kinesis Video Streams to use to encrypt
+     *        stream data.</p>
      *        <p>
      *        If no key ID is specified, the default, Kinesis Video-managed key (<code>aws/kinesisvideo</code>) is used.
      *        </p>
@@ -346,8 +344,7 @@ public class CreateStreamRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to encrypt
-     * stream data.
+     * The ID of the Key Management Service (KMS) key that you want Kinesis Video Streams to use to encrypt stream data.
      * </p>
      * <p>
      * If no key ID is specified, the default, Kinesis Video-managed key (<code>aws/kinesisvideo</code>) is used.
@@ -358,8 +355,8 @@ public class CreateStreamRequest extends com.amazonaws.AmazonWebServiceRequest i
      * >DescribeKey</a>.
      * </p>
      * 
-     * @return The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to
-     *         encrypt stream data.</p>
+     * @return The ID of the Key Management Service (KMS) key that you want Kinesis Video Streams to use to encrypt
+     *         stream data.</p>
      *         <p>
      *         If no key ID is specified, the default, Kinesis Video-managed key (<code>aws/kinesisvideo</code>) is
      *         used.
@@ -376,8 +373,7 @@ public class CreateStreamRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to encrypt
-     * stream data.
+     * The ID of the Key Management Service (KMS) key that you want Kinesis Video Streams to use to encrypt stream data.
      * </p>
      * <p>
      * If no key ID is specified, the default, Kinesis Video-managed key (<code>aws/kinesisvideo</code>) is used.
@@ -389,8 +385,8 @@ public class CreateStreamRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param kmsKeyId
-     *        The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to
-     *        encrypt stream data.</p>
+     *        The ID of the Key Management Service (KMS) key that you want Kinesis Video Streams to use to encrypt
+     *        stream data.</p>
      *        <p>
      *        If no key ID is specified, the default, Kinesis Video-managed key (<code>aws/kinesisvideo</code>) is used.
      *        </p>

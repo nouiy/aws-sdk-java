@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum ChannelType {
 
-    SINGLE_MASTER("SINGLE_MASTER");
+    SINGLE_MASTER("SINGLE_MASTER"),
+    FULL_MESH("FULL_MESH");
 
     private String value;
 

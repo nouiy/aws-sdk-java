@@ -103,6 +103,10 @@ public class AllocateHostsRequestMarshaller implements Marshaller<Request<Alloca
             request.addParameter("HostRecovery", StringUtils.fromString(allocateHostsRequest.getHostRecovery()));
         }
 
+        if (allocateHostsRequest.getOutpostArn() != null) {
+            request.addParameter("OutpostArn", StringUtils.fromString(allocateHostsRequest.getOutpostArn()));
+        }
+
         return request;
     }
 

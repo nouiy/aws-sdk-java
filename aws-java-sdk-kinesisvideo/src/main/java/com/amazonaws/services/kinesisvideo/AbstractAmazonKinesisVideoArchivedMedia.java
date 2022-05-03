@@ -43,6 +43,11 @@ public class AbstractAmazonKinesisVideoArchivedMedia implements AmazonKinesisVid
     }
 
     @Override
+    public GetImagesResult getImages(GetImagesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetMediaForFragmentListResult getMediaForFragmentList(GetMediaForFragmentListRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

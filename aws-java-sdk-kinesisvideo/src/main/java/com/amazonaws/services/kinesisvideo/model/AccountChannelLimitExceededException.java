@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * You have reached the maximum limit of active signaling channels for this AWS account in this region.
+ * You have reached the maximum limit of active signaling channels for this Amazon Web Services account in this region.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

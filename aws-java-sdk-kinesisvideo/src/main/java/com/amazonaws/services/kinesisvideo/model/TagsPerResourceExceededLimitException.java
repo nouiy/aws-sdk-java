@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * You have exceeded the limit of tags that you can associate with the resource. Kinesis video streams support up to 50
- * tags.
+ * You have exceeded the limit of tags that you can associate with the resource. A Kinesis video stream can support up
+ * to 50 tags.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -28,6 +28,110 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RSessionAppSettings implements Serializable, Cloneable, StructuredPojo {
 
+    private ResourceSpec defaultResourceSpec;
+    /**
+     * <p>
+     * A list of custom SageMaker images that are configured to run as a RSession app.
+     * </p>
+     */
+    private java.util.List<CustomImage> customImages;
+
+    /**
+     * @param defaultResourceSpec
+     */
+
+    public void setDefaultResourceSpec(ResourceSpec defaultResourceSpec) {
+        this.defaultResourceSpec = defaultResourceSpec;
+    }
+
+    /**
+     * @return
+     */
+
+    public ResourceSpec getDefaultResourceSpec() {
+        return this.defaultResourceSpec;
+    }
+
+    /**
+     * @param defaultResourceSpec
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RSessionAppSettings withDefaultResourceSpec(ResourceSpec defaultResourceSpec) {
+        setDefaultResourceSpec(defaultResourceSpec);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of custom SageMaker images that are configured to run as a RSession app.
+     * </p>
+     * 
+     * @return A list of custom SageMaker images that are configured to run as a RSession app.
+     */
+
+    public java.util.List<CustomImage> getCustomImages() {
+        return customImages;
+    }
+
+    /**
+     * <p>
+     * A list of custom SageMaker images that are configured to run as a RSession app.
+     * </p>
+     * 
+     * @param customImages
+     *        A list of custom SageMaker images that are configured to run as a RSession app.
+     */
+
+    public void setCustomImages(java.util.Collection<CustomImage> customImages) {
+        if (customImages == null) {
+            this.customImages = null;
+            return;
+        }
+
+        this.customImages = new java.util.ArrayList<CustomImage>(customImages);
+    }
+
+    /**
+     * <p>
+     * A list of custom SageMaker images that are configured to run as a RSession app.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setCustomImages(java.util.Collection)} or {@link #withCustomImages(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param customImages
+     *        A list of custom SageMaker images that are configured to run as a RSession app.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RSessionAppSettings withCustomImages(CustomImage... customImages) {
+        if (this.customImages == null) {
+            setCustomImages(new java.util.ArrayList<CustomImage>(customImages.length));
+        }
+        for (CustomImage ele : customImages) {
+            this.customImages.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of custom SageMaker images that are configured to run as a RSession app.
+     * </p>
+     * 
+     * @param customImages
+     *        A list of custom SageMaker images that are configured to run as a RSession app.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RSessionAppSettings withCustomImages(java.util.Collection<CustomImage> customImages) {
+        setCustomImages(customImages);
+        return this;
+    }
+
     /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
@@ -40,6 +144,10 @@ public class RSessionAppSettings implements Serializable, Cloneable, StructuredP
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getDefaultResourceSpec() != null)
+            sb.append("DefaultResourceSpec: ").append(getDefaultResourceSpec()).append(",");
+        if (getCustomImages() != null)
+            sb.append("CustomImages: ").append(getCustomImages());
         sb.append("}");
         return sb.toString();
     }
@@ -54,6 +162,14 @@ public class RSessionAppSettings implements Serializable, Cloneable, StructuredP
         if (obj instanceof RSessionAppSettings == false)
             return false;
         RSessionAppSettings other = (RSessionAppSettings) obj;
+        if (other.getDefaultResourceSpec() == null ^ this.getDefaultResourceSpec() == null)
+            return false;
+        if (other.getDefaultResourceSpec() != null && other.getDefaultResourceSpec().equals(this.getDefaultResourceSpec()) == false)
+            return false;
+        if (other.getCustomImages() == null ^ this.getCustomImages() == null)
+            return false;
+        if (other.getCustomImages() != null && other.getCustomImages().equals(this.getCustomImages()) == false)
+            return false;
         return true;
     }
 
@@ -62,6 +178,8 @@ public class RSessionAppSettings implements Serializable, Cloneable, StructuredP
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getDefaultResourceSpec() == null) ? 0 : getDefaultResourceSpec().hashCode());
+        hashCode = prime * hashCode + ((getCustomImages() == null) ? 0 : getCustomImages().hashCode());
         return hashCode;
     }
 

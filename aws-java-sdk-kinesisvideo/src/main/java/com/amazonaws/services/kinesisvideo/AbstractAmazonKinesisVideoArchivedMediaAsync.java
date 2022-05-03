@@ -67,6 +67,19 @@ public class AbstractAmazonKinesisVideoArchivedMediaAsync extends AbstractAmazon
     }
 
     @Override
+    public java.util.concurrent.Future<GetImagesResult> getImagesAsync(GetImagesRequest request) {
+
+        return getImagesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetImagesResult> getImagesAsync(GetImagesRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetImagesRequest, GetImagesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetMediaForFragmentListResult> getMediaForFragmentListAsync(GetMediaForFragmentListRequest request) {
 
         return getMediaForFragmentListAsync(request, null);

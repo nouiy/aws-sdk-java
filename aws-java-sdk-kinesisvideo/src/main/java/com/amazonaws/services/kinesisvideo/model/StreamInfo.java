@@ -54,8 +54,7 @@ public class StreamInfo implements Serializable, Cloneable, StructuredPojo {
     private String mediaType;
     /**
      * <p>
-     * The ID of the AWS Key Management Service (AWS KMS) key that Kinesis Video Streams uses to encrypt data on the
-     * stream.
+     * The ID of the Key Management Service (KMS) key that Kinesis Video Streams uses to encrypt data on the stream.
      * </p>
      */
     private String kmsKeyId;
@@ -246,13 +245,12 @@ public class StreamInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS Key Management Service (AWS KMS) key that Kinesis Video Streams uses to encrypt data on the
-     * stream.
+     * The ID of the Key Management Service (KMS) key that Kinesis Video Streams uses to encrypt data on the stream.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ID of the AWS Key Management Service (AWS KMS) key that Kinesis Video Streams uses to encrypt data on
-     *        the stream.
+     *        The ID of the Key Management Service (KMS) key that Kinesis Video Streams uses to encrypt data on the
+     *        stream.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -261,12 +259,11 @@ public class StreamInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS Key Management Service (AWS KMS) key that Kinesis Video Streams uses to encrypt data on the
-     * stream.
+     * The ID of the Key Management Service (KMS) key that Kinesis Video Streams uses to encrypt data on the stream.
      * </p>
      * 
-     * @return The ID of the AWS Key Management Service (AWS KMS) key that Kinesis Video Streams uses to encrypt data on
-     *         the stream.
+     * @return The ID of the Key Management Service (KMS) key that Kinesis Video Streams uses to encrypt data on the
+     *         stream.
      */
 
     public String getKmsKeyId() {
@@ -275,13 +272,12 @@ public class StreamInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS Key Management Service (AWS KMS) key that Kinesis Video Streams uses to encrypt data on the
-     * stream.
+     * The ID of the Key Management Service (KMS) key that Kinesis Video Streams uses to encrypt data on the stream.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ID of the AWS Key Management Service (AWS KMS) key that Kinesis Video Streams uses to encrypt data on
-     *        the stream.
+     *        The ID of the Key Management Service (KMS) key that Kinesis Video Streams uses to encrypt data on the
+     *        stream.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
