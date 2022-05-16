@@ -657,7 +657,7 @@ public class Portal implements Serializable, Cloneable, StructuredPojo {
         if (getCreationDate() != null)
             sb.append("CreationDate: ").append(getCreationDate()).append(",");
         if (getDisplayName() != null)
-            sb.append("DisplayName: ").append(getDisplayName()).append(",");
+            sb.append("DisplayName: ").append("***Sensitive Data Redacted***").append(",");
         if (getNetworkSettingsArn() != null)
             sb.append("NetworkSettingsArn: ").append(getNetworkSettingsArn()).append(",");
         if (getPortalArn() != null)

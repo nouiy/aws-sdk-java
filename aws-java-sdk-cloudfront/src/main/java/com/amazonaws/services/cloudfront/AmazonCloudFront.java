@@ -957,6 +957,14 @@ public interface AmazonCloudFront {
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html"
      *         >Quotas</a> (formerly known as limits) in the <i>Amazon CloudFront Developer Guide</i>.
+     * @throws TooLongCSPInResponseHeadersPolicyException
+     *         The length of the <code>Content-Security-Policy</code> header value in the response headers policy
+     *         exceeds the maximum.
+     *         </p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html"
+     *         >Quotas</a> (formerly known as limits) in the <i>Amazon CloudFront Developer Guide</i>.
      * @sample AmazonCloudFront.CreateResponseHeadersPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/CreateResponseHeadersPolicy"
      *      target="_top">AWS API Documentation</a>
@@ -3376,6 +3384,14 @@ public interface AmazonCloudFront {
      *         existing response headers policy, use <code>UpdateResponseHeadersPolicy</code>.
      * @throws TooManyCustomHeadersInResponseHeadersPolicyException
      *         The number of custom headers in the response headers policy exceeds the maximum.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html"
+     *         >Quotas</a> (formerly known as limits) in the <i>Amazon CloudFront Developer Guide</i>.
+     * @throws TooLongCSPInResponseHeadersPolicyException
+     *         The length of the <code>Content-Security-Policy</code> header value in the response headers policy
+     *         exceeds the maximum.
+     *         </p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html"

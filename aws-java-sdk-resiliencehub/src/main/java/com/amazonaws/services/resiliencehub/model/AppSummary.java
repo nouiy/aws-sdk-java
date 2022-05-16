@@ -30,13 +30,19 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:
-     * <code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
+     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
+     * :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
+     * see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
      * (ARNs)</a> in the <i>AWS General Reference</i>.
      * </p>
      */
     private String appArn;
+    /**
+     * <p>
+     * Assessment execution schedule with 'Daily' or 'Disabled' values.
+     * </p>
+     */
+    private String assessmentSchedule;
     /**
      * <p>
      * The current status of compliance for the resiliency policy.
@@ -70,17 +76,17 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:
-     * <code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
+     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
+     * :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
+     * see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
      * (ARNs)</a> in the <i>AWS General Reference</i>.
      * </p>
      * 
      * @param appArn
      *        The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     *        :dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
-     *        see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource
-     *        Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     *        :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information
+     *        about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
+     *        Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
      */
 
     public void setAppArn(String appArn) {
@@ -89,16 +95,16 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:
-     * <code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
+     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
+     * :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
+     * see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
      * (ARNs)</a> in the <i>AWS General Reference</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     *         :dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
-     *         see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource
-     *         Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     *         :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information
+     *         about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
+     *         Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
      */
 
     public String getAppArn() {
@@ -107,22 +113,81 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>:dcps:
-     * <code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
+     * The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
+     * :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
+     * see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names
      * (ARNs)</a> in the <i>AWS General Reference</i>.
      * </p>
      * 
      * @param appArn
      *        The Amazon Resource Name (ARN) of the application. The format for this ARN is: arn:<code>partition</code>
-     *        :dcps:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs,
-     *        see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource
-     *        Names (ARNs)</a> in the <i>AWS General Reference</i>.
+     *        :resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information
+     *        about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">
+     *        Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public AppSummary withAppArn(String appArn) {
         setAppArn(appArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Assessment execution schedule with 'Daily' or 'Disabled' values.
+     * </p>
+     * 
+     * @param assessmentSchedule
+     *        Assessment execution schedule with 'Daily' or 'Disabled' values.
+     * @see AppAssessmentScheduleType
+     */
+
+    public void setAssessmentSchedule(String assessmentSchedule) {
+        this.assessmentSchedule = assessmentSchedule;
+    }
+
+    /**
+     * <p>
+     * Assessment execution schedule with 'Daily' or 'Disabled' values.
+     * </p>
+     * 
+     * @return Assessment execution schedule with 'Daily' or 'Disabled' values.
+     * @see AppAssessmentScheduleType
+     */
+
+    public String getAssessmentSchedule() {
+        return this.assessmentSchedule;
+    }
+
+    /**
+     * <p>
+     * Assessment execution schedule with 'Daily' or 'Disabled' values.
+     * </p>
+     * 
+     * @param assessmentSchedule
+     *        Assessment execution schedule with 'Daily' or 'Disabled' values.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AppAssessmentScheduleType
+     */
+
+    public AppSummary withAssessmentSchedule(String assessmentSchedule) {
+        setAssessmentSchedule(assessmentSchedule);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Assessment execution schedule with 'Daily' or 'Disabled' values.
+     * </p>
+     * 
+     * @param assessmentSchedule
+     *        Assessment execution schedule with 'Daily' or 'Disabled' values.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AppAssessmentScheduleType
+     */
+
+    public AppSummary withAssessmentSchedule(AppAssessmentScheduleType assessmentSchedule) {
+        this.assessmentSchedule = assessmentSchedule.toString();
         return this;
     }
 
@@ -359,6 +424,8 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getAppArn() != null)
             sb.append("AppArn: ").append(getAppArn()).append(",");
+        if (getAssessmentSchedule() != null)
+            sb.append("AssessmentSchedule: ").append(getAssessmentSchedule()).append(",");
         if (getComplianceStatus() != null)
             sb.append("ComplianceStatus: ").append(getComplianceStatus()).append(",");
         if (getCreationTime() != null)
@@ -386,6 +453,10 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
         if (other.getAppArn() == null ^ this.getAppArn() == null)
             return false;
         if (other.getAppArn() != null && other.getAppArn().equals(this.getAppArn()) == false)
+            return false;
+        if (other.getAssessmentSchedule() == null ^ this.getAssessmentSchedule() == null)
+            return false;
+        if (other.getAssessmentSchedule() != null && other.getAssessmentSchedule().equals(this.getAssessmentSchedule()) == false)
             return false;
         if (other.getComplianceStatus() == null ^ this.getComplianceStatus() == null)
             return false;
@@ -416,6 +487,7 @@ public class AppSummary implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getAppArn() == null) ? 0 : getAppArn().hashCode());
+        hashCode = prime * hashCode + ((getAssessmentSchedule() == null) ? 0 : getAssessmentSchedule().hashCode());
         hashCode = prime * hashCode + ((getComplianceStatus() == null) ? 0 : getComplianceStatus().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());

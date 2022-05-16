@@ -1271,7 +1271,9 @@ public interface AWSServiceCatalog {
 
     /**
      * <p>
-     * Lists all portfolios for which sharing was accepted by this account.
+     * Lists all imported portfolios for which account-to-account shares were accepted by this account. By specifying
+     * the <code>PortfolioShareType</code>, you can list portfolios for which organizational shares were accepted by
+     * this account.
      * </p>
      * 
      * @param listAcceptedPortfolioSharesRequest

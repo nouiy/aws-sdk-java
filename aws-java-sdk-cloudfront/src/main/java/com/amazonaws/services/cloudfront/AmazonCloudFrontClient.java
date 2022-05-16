@@ -717,6 +717,10 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
             exceptionUnmarshallersMap.put("InvalidLambdaFunctionAssociation", new InvalidLambdaFunctionAssociationExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new InvalidLambdaFunctionAssociationExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooLongCSPInResponseHeadersPolicy") == null) {
+            exceptionUnmarshallersMap.put("TooLongCSPInResponseHeadersPolicy", new TooLongCSPInResponseHeadersPolicyExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new TooLongCSPInResponseHeadersPolicyExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("TooManyLambdaFunctionAssociations") == null) {
             exceptionUnmarshallersMap.put("TooManyLambdaFunctionAssociations", new TooManyLambdaFunctionAssociationsExceptionUnmarshaller());
         }
@@ -2272,6 +2276,14 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
      *         >Quotas</a> (formerly known as limits) in the <i>Amazon CloudFront Developer Guide</i>.
      * @throws TooManyCustomHeadersInResponseHeadersPolicyException
      *         The number of custom headers in the response headers policy exceeds the maximum.
+     *         </p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html"
+     *         >Quotas</a> (formerly known as limits) in the <i>Amazon CloudFront Developer Guide</i>.
+     * @throws TooLongCSPInResponseHeadersPolicyException
+     *         The length of the <code>Content-Security-Policy</code> header value in the response headers policy
+     *         exceeds the maximum.
      *         </p>
      *         <p>
      *         For more information, see <a
@@ -7974,6 +7986,14 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
      *         existing response headers policy, use <code>UpdateResponseHeadersPolicy</code>.
      * @throws TooManyCustomHeadersInResponseHeadersPolicyException
      *         The number of custom headers in the response headers policy exceeds the maximum.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html"
+     *         >Quotas</a> (formerly known as limits) in the <i>Amazon CloudFront Developer Guide</i>.
+     * @throws TooLongCSPInResponseHeadersPolicyException
+     *         The length of the <code>Content-Security-Policy</code> header value in the response headers policy
+     *         exceeds the maximum.
+     *         </p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html"
