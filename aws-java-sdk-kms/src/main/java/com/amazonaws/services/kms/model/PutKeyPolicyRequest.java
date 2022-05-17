@@ -89,10 +89,32 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * </ul>
      * <p>
-     * The key policy cannot exceed 32 kilobytes (32768 bytes). For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/resource-limits.html">Resource Quotas</a> in the
-     * <i>Key Management Service Developer Guide</i>.
+     * A key policy document must conform to the following rules.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Up to 32 kilobytes (32768 bytes)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be UTF-8 encoded
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009), linefeed
+     * (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
+     * <code>Sid</code> element of an IAM policy document.)
+     * </p>
+     * </li>
+     * </ul>
      */
     private String policy;
     /**
@@ -354,10 +376,32 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * </ul>
      * <p>
-     * The key policy cannot exceed 32 kilobytes (32768 bytes). For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/resource-limits.html">Resource Quotas</a> in the
-     * <i>Key Management Service Developer Guide</i>.
+     * A key policy document must conform to the following rules.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Up to 32 kilobytes (32768 bytes)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be UTF-8 encoded
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009), linefeed
+     * (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
+     * <code>Sid</code> element of an IAM policy document.)
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param policy
      *        The key policy to attach to the KMS key.</p>
@@ -388,9 +432,31 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        </ul>
      *        <p>
-     *        The key policy cannot exceed 32 kilobytes (32768 bytes). For more information, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/resource-limits.html">Resource Quotas</a> in
-     *        the <i>Key Management Service Developer Guide</i>.
+     *        A key policy document must conform to the following rules.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Up to 32 kilobytes (32768 bytes)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Must be UTF-8 encoded
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009),
+     *        linefeed (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
+     *        <code>Sid</code> element of an IAM policy document.)
+     *        </p>
+     *        </li>
      */
 
     public void setPolicy(String policy) {
@@ -428,10 +494,32 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * </ul>
      * <p>
-     * The key policy cannot exceed 32 kilobytes (32768 bytes). For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/resource-limits.html">Resource Quotas</a> in the
-     * <i>Key Management Service Developer Guide</i>.
+     * A key policy document must conform to the following rules.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Up to 32 kilobytes (32768 bytes)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be UTF-8 encoded
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009), linefeed
+     * (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
+     * <code>Sid</code> element of an IAM policy document.)
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @return The key policy to attach to the KMS key.</p>
      *         <p>
@@ -461,9 +549,31 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </li>
      *         </ul>
      *         <p>
-     *         The key policy cannot exceed 32 kilobytes (32768 bytes). For more information, see <a
-     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/resource-limits.html">Resource Quotas</a> in
-     *         the <i>Key Management Service Developer Guide</i>.
+     *         A key policy document must conform to the following rules.
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Up to 32 kilobytes (32768 bytes)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Must be UTF-8 encoded
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009),
+     *         linefeed (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
+     *         <code>Sid</code> element of an IAM policy document.)
+     *         </p>
+     *         </li>
      */
 
     public String getPolicy() {
@@ -501,10 +611,32 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * </ul>
      * <p>
-     * The key policy cannot exceed 32 kilobytes (32768 bytes). For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/resource-limits.html">Resource Quotas</a> in the
-     * <i>Key Management Service Developer Guide</i>.
+     * A key policy document must conform to the following rules.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Up to 32 kilobytes (32768 bytes)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be UTF-8 encoded
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009), linefeed
+     * (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
+     * <code>Sid</code> element of an IAM policy document.)
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param policy
      *        The key policy to attach to the KMS key.</p>
@@ -535,9 +667,31 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        </ul>
      *        <p>
-     *        The key policy cannot exceed 32 kilobytes (32768 bytes). For more information, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/resource-limits.html">Resource Quotas</a> in
-     *        the <i>Key Management Service Developer Guide</i>.
+     *        A key policy document must conform to the following rules.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Up to 32 kilobytes (32768 bytes)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Must be UTF-8 encoded
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009),
+     *        linefeed (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
+     *        <code>Sid</code> element of an IAM policy document.)
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

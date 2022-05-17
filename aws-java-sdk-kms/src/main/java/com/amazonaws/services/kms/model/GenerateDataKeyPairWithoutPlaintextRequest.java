@@ -297,7 +297,7 @@ public class GenerateDataKeyPairWithoutPlaintextRequest extends com.amazonaws.Am
      * @param keyId
      *        Specifies the symmetric encryption KMS key that encrypts the private key in the data key pair. You cannot
      *        specify an asymmetric KMS key or a KMS key in a custom key store. To get the type and origin of your KMS
-     *        key, use the <a>DescribeKey</a> operation.</p>
+     *        key, use the <a>DescribeKey</a> operation. </p>
      *        <p>
      *        To specify a KMS key, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix
      *        it with <code>"alias/"</code>. To specify a KMS key in a different Amazon Web Services account, you must
@@ -380,7 +380,7 @@ public class GenerateDataKeyPairWithoutPlaintextRequest extends com.amazonaws.Am
      * 
      * @return Specifies the symmetric encryption KMS key that encrypts the private key in the data key pair. You cannot
      *         specify an asymmetric KMS key or a KMS key in a custom key store. To get the type and origin of your KMS
-     *         key, use the <a>DescribeKey</a> operation.</p>
+     *         key, use the <a>DescribeKey</a> operation. </p>
      *         <p>
      *         To specify a KMS key, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix
      *         it with <code>"alias/"</code>. To specify a KMS key in a different Amazon Web Services account, you must
@@ -464,7 +464,7 @@ public class GenerateDataKeyPairWithoutPlaintextRequest extends com.amazonaws.Am
      * @param keyId
      *        Specifies the symmetric encryption KMS key that encrypts the private key in the data key pair. You cannot
      *        specify an asymmetric KMS key or a KMS key in a custom key store. To get the type and origin of your KMS
-     *        key, use the <a>DescribeKey</a> operation.</p>
+     *        key, use the <a>DescribeKey</a> operation. </p>
      *        <p>
      *        To specify a KMS key, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix
      *        it with <code>"alias/"</code>. To specify a KMS key in a different Amazon Web Services account, you must

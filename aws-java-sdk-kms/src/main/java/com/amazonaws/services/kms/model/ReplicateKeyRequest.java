@@ -122,9 +122,31 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Guide</i> </i>.
      * </p>
      * </li>
+     * </ul>
+     * <p>
+     * A key policy document must conform to the following rules.
+     * </p>
+     * <ul>
      * <li>
      * <p>
-     * The key policy size quota is 32 kilobytes (32768 bytes).
+     * Up to 32 kilobytes (32768 bytes)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be UTF-8 encoded
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009), linefeed
+     * (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
+     * <code>Sid</code> element of an IAM policy document.)
      * </p>
      * </li>
      * </ul>
@@ -611,9 +633,31 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Guide</i> </i>.
      * </p>
      * </li>
+     * </ul>
+     * <p>
+     * A key policy document must conform to the following rules.
+     * </p>
+     * <ul>
      * <li>
      * <p>
-     * The key policy size quota is 32 kilobytes (32768 bytes).
+     * Up to 32 kilobytes (32768 bytes)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be UTF-8 encoded
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009), linefeed
+     * (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
+     * <code>Sid</code> element of an IAM policy document.)
      * </p>
      * </li>
      * </ul>
@@ -652,9 +696,31 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        User Guide</i> </i>.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        A key policy document must conform to the following rules.
+     *        </p>
+     *        <ul>
      *        <li>
      *        <p>
-     *        The key policy size quota is 32 kilobytes (32768 bytes).
+     *        Up to 32 kilobytes (32768 bytes)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Must be UTF-8 encoded
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009),
+     *        linefeed (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
+     *        <code>Sid</code> element of an IAM policy document.)
      *        </p>
      *        </li>
      */
@@ -698,9 +764,31 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Guide</i> </i>.
      * </p>
      * </li>
+     * </ul>
+     * <p>
+     * A key policy document must conform to the following rules.
+     * </p>
+     * <ul>
      * <li>
      * <p>
-     * The key policy size quota is 32 kilobytes (32768 bytes).
+     * Up to 32 kilobytes (32768 bytes)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be UTF-8 encoded
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009), linefeed
+     * (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
+     * <code>Sid</code> element of an IAM policy document.)
      * </p>
      * </li>
      * </ul>
@@ -738,9 +826,31 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         User Guide</i> </i>.
      *         </p>
      *         </li>
+     *         </ul>
+     *         <p>
+     *         A key policy document must conform to the following rules.
+     *         </p>
+     *         <ul>
      *         <li>
      *         <p>
-     *         The key policy size quota is 32 kilobytes (32768 bytes).
+     *         Up to 32 kilobytes (32768 bytes)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Must be UTF-8 encoded
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009),
+     *         linefeed (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
+     *         <code>Sid</code> element of an IAM policy document.)
      *         </p>
      *         </li>
      */
@@ -784,9 +894,31 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Guide</i> </i>.
      * </p>
      * </li>
+     * </ul>
+     * <p>
+     * A key policy document must conform to the following rules.
+     * </p>
+     * <ul>
      * <li>
      * <p>
-     * The key policy size quota is 32 kilobytes (32768 bytes).
+     * Up to 32 kilobytes (32768 bytes)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be UTF-8 encoded
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009), linefeed
+     * (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
+     * <code>Sid</code> element of an IAM policy document.)
      * </p>
      * </li>
      * </ul>
@@ -825,9 +957,31 @@ public class ReplicateKeyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        User Guide</i> </i>.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        A key policy document must conform to the following rules.
+     *        </p>
+     *        <ul>
      *        <li>
      *        <p>
-     *        The key policy size quota is 32 kilobytes (32768 bytes).
+     *        Up to 32 kilobytes (32768 bytes)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Must be UTF-8 encoded
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009),
+     *        linefeed (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
+     *        <code>Sid</code> element of an IAM policy document.)
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

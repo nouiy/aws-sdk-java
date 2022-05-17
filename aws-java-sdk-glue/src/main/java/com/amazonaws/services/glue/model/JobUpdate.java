@@ -210,6 +210,13 @@ public class JobUpdate implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String glueVersion;
+    /**
+     * <p>
+     * The representation of a directed acyclic graph on which both the Glue Studio visual component and Glue Studio
+     * code generation is based.
+     * </p>
+     */
+    private java.util.Map<String, CodeGenConfigurationNode> codeGenConfigurationNodes;
 
     /**
      * <p>
@@ -1461,6 +1468,80 @@ public class JobUpdate implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The representation of a directed acyclic graph on which both the Glue Studio visual component and Glue Studio
+     * code generation is based.
+     * </p>
+     * 
+     * @return The representation of a directed acyclic graph on which both the Glue Studio visual component and Glue
+     *         Studio code generation is based.
+     */
+
+    public java.util.Map<String, CodeGenConfigurationNode> getCodeGenConfigurationNodes() {
+        return codeGenConfigurationNodes;
+    }
+
+    /**
+     * <p>
+     * The representation of a directed acyclic graph on which both the Glue Studio visual component and Glue Studio
+     * code generation is based.
+     * </p>
+     * 
+     * @param codeGenConfigurationNodes
+     *        The representation of a directed acyclic graph on which both the Glue Studio visual component and Glue
+     *        Studio code generation is based.
+     */
+
+    public void setCodeGenConfigurationNodes(java.util.Map<String, CodeGenConfigurationNode> codeGenConfigurationNodes) {
+        this.codeGenConfigurationNodes = codeGenConfigurationNodes;
+    }
+
+    /**
+     * <p>
+     * The representation of a directed acyclic graph on which both the Glue Studio visual component and Glue Studio
+     * code generation is based.
+     * </p>
+     * 
+     * @param codeGenConfigurationNodes
+     *        The representation of a directed acyclic graph on which both the Glue Studio visual component and Glue
+     *        Studio code generation is based.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobUpdate withCodeGenConfigurationNodes(java.util.Map<String, CodeGenConfigurationNode> codeGenConfigurationNodes) {
+        setCodeGenConfigurationNodes(codeGenConfigurationNodes);
+        return this;
+    }
+
+    /**
+     * Add a single CodeGenConfigurationNodes entry
+     *
+     * @see JobUpdate#withCodeGenConfigurationNodes
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobUpdate addCodeGenConfigurationNodesEntry(String key, CodeGenConfigurationNode value) {
+        if (null == this.codeGenConfigurationNodes) {
+            this.codeGenConfigurationNodes = new java.util.HashMap<String, CodeGenConfigurationNode>();
+        }
+        if (this.codeGenConfigurationNodes.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.codeGenConfigurationNodes.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into CodeGenConfigurationNodes.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobUpdate clearCodeGenConfigurationNodesEntries() {
+        this.codeGenConfigurationNodes = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1505,7 +1586,9 @@ public class JobUpdate implements Serializable, Cloneable, StructuredPojo {
         if (getNotificationProperty() != null)
             sb.append("NotificationProperty: ").append(getNotificationProperty()).append(",");
         if (getGlueVersion() != null)
-            sb.append("GlueVersion: ").append(getGlueVersion());
+            sb.append("GlueVersion: ").append(getGlueVersion()).append(",");
+        if (getCodeGenConfigurationNodes() != null)
+            sb.append("CodeGenConfigurationNodes: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -1588,6 +1671,10 @@ public class JobUpdate implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getGlueVersion() != null && other.getGlueVersion().equals(this.getGlueVersion()) == false)
             return false;
+        if (other.getCodeGenConfigurationNodes() == null ^ this.getCodeGenConfigurationNodes() == null)
+            return false;
+        if (other.getCodeGenConfigurationNodes() != null && other.getCodeGenConfigurationNodes().equals(this.getCodeGenConfigurationNodes()) == false)
+            return false;
         return true;
     }
 
@@ -1613,6 +1700,7 @@ public class JobUpdate implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getSecurityConfiguration() == null) ? 0 : getSecurityConfiguration().hashCode());
         hashCode = prime * hashCode + ((getNotificationProperty() == null) ? 0 : getNotificationProperty().hashCode());
         hashCode = prime * hashCode + ((getGlueVersion() == null) ? 0 : getGlueVersion().hashCode());
+        hashCode = prime * hashCode + ((getCodeGenConfigurationNodes() == null) ? 0 : getCodeGenConfigurationNodes().hashCode());
         return hashCode;
     }
 
