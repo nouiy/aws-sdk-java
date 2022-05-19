@@ -41,6 +41,12 @@ public class SNSConfiguration implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private String snsTopicArn;
+    /**
+     * <p>
+     * The text format for alerts.
+     * </p>
+     */
+    private String snsFormat;
 
     /**
      * <p>
@@ -123,6 +129,65 @@ public class SNSConfiguration implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The text format for alerts.
+     * </p>
+     * 
+     * @param snsFormat
+     *        The text format for alerts.
+     * @see SnsFormat
+     */
+
+    public void setSnsFormat(String snsFormat) {
+        this.snsFormat = snsFormat;
+    }
+
+    /**
+     * <p>
+     * The text format for alerts.
+     * </p>
+     * 
+     * @return The text format for alerts.
+     * @see SnsFormat
+     */
+
+    public String getSnsFormat() {
+        return this.snsFormat;
+    }
+
+    /**
+     * <p>
+     * The text format for alerts.
+     * </p>
+     * 
+     * @param snsFormat
+     *        The text format for alerts.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SnsFormat
+     */
+
+    public SNSConfiguration withSnsFormat(String snsFormat) {
+        setSnsFormat(snsFormat);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The text format for alerts.
+     * </p>
+     * 
+     * @param snsFormat
+     *        The text format for alerts.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SnsFormat
+     */
+
+    public SNSConfiguration withSnsFormat(SnsFormat snsFormat) {
+        this.snsFormat = snsFormat.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -137,7 +202,9 @@ public class SNSConfiguration implements Serializable, Cloneable, StructuredPojo
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getSnsTopicArn() != null)
-            sb.append("SnsTopicArn: ").append(getSnsTopicArn());
+            sb.append("SnsTopicArn: ").append(getSnsTopicArn()).append(",");
+        if (getSnsFormat() != null)
+            sb.append("SnsFormat: ").append(getSnsFormat());
         sb.append("}");
         return sb.toString();
     }
@@ -160,6 +227,10 @@ public class SNSConfiguration implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getSnsTopicArn() != null && other.getSnsTopicArn().equals(this.getSnsTopicArn()) == false)
             return false;
+        if (other.getSnsFormat() == null ^ this.getSnsFormat() == null)
+            return false;
+        if (other.getSnsFormat() != null && other.getSnsFormat().equals(this.getSnsFormat()) == false)
+            return false;
         return true;
     }
 
@@ -170,6 +241,7 @@ public class SNSConfiguration implements Serializable, Cloneable, StructuredPojo
 
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getSnsTopicArn() == null) ? 0 : getSnsTopicArn().hashCode());
+        hashCode = prime * hashCode + ((getSnsFormat() == null) ? 0 : getSnsFormat().hashCode());
         return hashCode;
     }
 

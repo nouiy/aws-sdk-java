@@ -1,3 +1,12 @@
+# __1.12.224__ __2022-05-19__
+## __Amazon Lookout for Metrics__
+  - ### Features
+    - In this release we added SnsFormat to SNSConfiguration to support human readable alert.
+
+## __GameSparks__
+  - ### Features
+    - This release adds an optional DeploymentResult field in the responses of GetStageDeploymentIntegrationTests and ListStageDeploymentIntegrationTests APIs.
+
 # __1.12.223__ __2022-05-18__
 ## __AWS App Mesh__
   - ### Features
