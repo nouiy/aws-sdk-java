@@ -172,6 +172,18 @@ public class CreateAutoPredictorRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private MonitorConfig monitorConfig;
+    /**
+     * <p>
+     * The time boundary Forecast uses to align and aggregate any data that doesn't align with your forecast frequency.
+     * Provide the unit of time and the time boundary as a key value pair. For more information on specifying a time
+     * boundary, see <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/data-aggregation.html#specifying-time-boundary">Specifying a
+     * Time Boundary</a>. If you don't provide a time boundary, Forecast uses a set of <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/data-aggregation.html#default-time-boundaries">Default Time
+     * Boundaries</a>.
+     * </p>
+     */
+    private TimeAlignmentBoundary timeAlignmentBoundary;
 
     /**
      * <p>
@@ -1321,6 +1333,82 @@ public class CreateAutoPredictorRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The time boundary Forecast uses to align and aggregate any data that doesn't align with your forecast frequency.
+     * Provide the unit of time and the time boundary as a key value pair. For more information on specifying a time
+     * boundary, see <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/data-aggregation.html#specifying-time-boundary">Specifying a
+     * Time Boundary</a>. If you don't provide a time boundary, Forecast uses a set of <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/data-aggregation.html#default-time-boundaries">Default Time
+     * Boundaries</a>.
+     * </p>
+     * 
+     * @param timeAlignmentBoundary
+     *        The time boundary Forecast uses to align and aggregate any data that doesn't align with your forecast
+     *        frequency. Provide the unit of time and the time boundary as a key value pair. For more information on
+     *        specifying a time boundary, see <a
+     *        href="https://docs.aws.amazon.com/forecast/latest/dg/data-aggregation.html#specifying-time-boundary"
+     *        >Specifying a Time Boundary</a>. If you don't provide a time boundary, Forecast uses a set of <a
+     *        href="https://docs.aws.amazon.com/forecast/latest/dg/data-aggregation.html#default-time-boundaries"
+     *        >Default Time Boundaries</a>.
+     */
+
+    public void setTimeAlignmentBoundary(TimeAlignmentBoundary timeAlignmentBoundary) {
+        this.timeAlignmentBoundary = timeAlignmentBoundary;
+    }
+
+    /**
+     * <p>
+     * The time boundary Forecast uses to align and aggregate any data that doesn't align with your forecast frequency.
+     * Provide the unit of time and the time boundary as a key value pair. For more information on specifying a time
+     * boundary, see <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/data-aggregation.html#specifying-time-boundary">Specifying a
+     * Time Boundary</a>. If you don't provide a time boundary, Forecast uses a set of <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/data-aggregation.html#default-time-boundaries">Default Time
+     * Boundaries</a>.
+     * </p>
+     * 
+     * @return The time boundary Forecast uses to align and aggregate any data that doesn't align with your forecast
+     *         frequency. Provide the unit of time and the time boundary as a key value pair. For more information on
+     *         specifying a time boundary, see <a
+     *         href="https://docs.aws.amazon.com/forecast/latest/dg/data-aggregation.html#specifying-time-boundary"
+     *         >Specifying a Time Boundary</a>. If you don't provide a time boundary, Forecast uses a set of <a
+     *         href="https://docs.aws.amazon.com/forecast/latest/dg/data-aggregation.html#default-time-boundaries"
+     *         >Default Time Boundaries</a>.
+     */
+
+    public TimeAlignmentBoundary getTimeAlignmentBoundary() {
+        return this.timeAlignmentBoundary;
+    }
+
+    /**
+     * <p>
+     * The time boundary Forecast uses to align and aggregate any data that doesn't align with your forecast frequency.
+     * Provide the unit of time and the time boundary as a key value pair. For more information on specifying a time
+     * boundary, see <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/data-aggregation.html#specifying-time-boundary">Specifying a
+     * Time Boundary</a>. If you don't provide a time boundary, Forecast uses a set of <a
+     * href="https://docs.aws.amazon.com/forecast/latest/dg/data-aggregation.html#default-time-boundaries">Default Time
+     * Boundaries</a>.
+     * </p>
+     * 
+     * @param timeAlignmentBoundary
+     *        The time boundary Forecast uses to align and aggregate any data that doesn't align with your forecast
+     *        frequency. Provide the unit of time and the time boundary as a key value pair. For more information on
+     *        specifying a time boundary, see <a
+     *        href="https://docs.aws.amazon.com/forecast/latest/dg/data-aggregation.html#specifying-time-boundary"
+     *        >Specifying a Time Boundary</a>. If you don't provide a time boundary, Forecast uses a set of <a
+     *        href="https://docs.aws.amazon.com/forecast/latest/dg/data-aggregation.html#default-time-boundaries"
+     *        >Default Time Boundaries</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAutoPredictorRequest withTimeAlignmentBoundary(TimeAlignmentBoundary timeAlignmentBoundary) {
+        setTimeAlignmentBoundary(timeAlignmentBoundary);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1355,7 +1443,9 @@ public class CreateAutoPredictorRequest extends com.amazonaws.AmazonWebServiceRe
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getMonitorConfig() != null)
-            sb.append("MonitorConfig: ").append(getMonitorConfig());
+            sb.append("MonitorConfig: ").append(getMonitorConfig()).append(",");
+        if (getTimeAlignmentBoundary() != null)
+            sb.append("TimeAlignmentBoundary: ").append(getTimeAlignmentBoundary());
         sb.append("}");
         return sb.toString();
     }
@@ -1418,6 +1508,10 @@ public class CreateAutoPredictorRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getMonitorConfig() != null && other.getMonitorConfig().equals(this.getMonitorConfig()) == false)
             return false;
+        if (other.getTimeAlignmentBoundary() == null ^ this.getTimeAlignmentBoundary() == null)
+            return false;
+        if (other.getTimeAlignmentBoundary() != null && other.getTimeAlignmentBoundary().equals(this.getTimeAlignmentBoundary()) == false)
+            return false;
         return true;
     }
 
@@ -1438,6 +1532,7 @@ public class CreateAutoPredictorRequest extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getExplainPredictor() == null) ? 0 : getExplainPredictor().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getMonitorConfig() == null) ? 0 : getMonitorConfig().hashCode());
+        hashCode = prime * hashCode + ((getTimeAlignmentBoundary() == null) ? 0 : getTimeAlignmentBoundary().hashCode());
         return hashCode;
     }
 

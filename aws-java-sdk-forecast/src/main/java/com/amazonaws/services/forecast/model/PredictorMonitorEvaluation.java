@@ -28,8 +28,17 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PredictorMonitorEvaluation implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the resource to monitor.
+     * </p>
+     */
     private String resourceArn;
-
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the monitor resource.
+     * </p>
+     */
     private String monitorArn;
     /**
      * <p>
@@ -88,7 +97,12 @@ public class PredictorMonitorEvaluation implements Serializable, Cloneable, Stru
     private String message;
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the resource to monitor.
+     * </p>
+     * 
      * @param resourceArn
+     *        The Amazon Resource Name (ARN) of the resource to monitor.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -96,7 +110,11 @@ public class PredictorMonitorEvaluation implements Serializable, Cloneable, Stru
     }
 
     /**
-     * @return
+     * <p>
+     * The Amazon Resource Name (ARN) of the resource to monitor.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the resource to monitor.
      */
 
     public String getResourceArn() {
@@ -104,7 +122,12 @@ public class PredictorMonitorEvaluation implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the resource to monitor.
+     * </p>
+     * 
      * @param resourceArn
+     *        The Amazon Resource Name (ARN) of the resource to monitor.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -114,7 +137,12 @@ public class PredictorMonitorEvaluation implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the monitor resource.
+     * </p>
+     * 
      * @param monitorArn
+     *        The Amazon Resource Name (ARN) of the monitor resource.
      */
 
     public void setMonitorArn(String monitorArn) {
@@ -122,7 +150,11 @@ public class PredictorMonitorEvaluation implements Serializable, Cloneable, Stru
     }
 
     /**
-     * @return
+     * <p>
+     * The Amazon Resource Name (ARN) of the monitor resource.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the monitor resource.
      */
 
     public String getMonitorArn() {
@@ -130,7 +162,12 @@ public class PredictorMonitorEvaluation implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the monitor resource.
+     * </p>
+     * 
      * @param monitorArn
+     *        The Amazon Resource Name (ARN) of the monitor resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

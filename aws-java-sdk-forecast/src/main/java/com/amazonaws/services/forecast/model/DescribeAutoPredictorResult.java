@@ -181,6 +181,12 @@ public class DescribeAutoPredictorResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private MonitorInfo monitorInfo;
+    /**
+     * <p>
+     * The time boundary Forecast uses when aggregating data.
+     * </p>
+     */
+    private TimeAlignmentBoundary timeAlignmentBoundary;
 
     /**
      * <p>
@@ -1319,6 +1325,46 @@ public class DescribeAutoPredictorResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The time boundary Forecast uses when aggregating data.
+     * </p>
+     * 
+     * @param timeAlignmentBoundary
+     *        The time boundary Forecast uses when aggregating data.
+     */
+
+    public void setTimeAlignmentBoundary(TimeAlignmentBoundary timeAlignmentBoundary) {
+        this.timeAlignmentBoundary = timeAlignmentBoundary;
+    }
+
+    /**
+     * <p>
+     * The time boundary Forecast uses when aggregating data.
+     * </p>
+     * 
+     * @return The time boundary Forecast uses when aggregating data.
+     */
+
+    public TimeAlignmentBoundary getTimeAlignmentBoundary() {
+        return this.timeAlignmentBoundary;
+    }
+
+    /**
+     * <p>
+     * The time boundary Forecast uses when aggregating data.
+     * </p>
+     * 
+     * @param timeAlignmentBoundary
+     *        The time boundary Forecast uses when aggregating data.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeAutoPredictorResult withTimeAlignmentBoundary(TimeAlignmentBoundary timeAlignmentBoundary) {
+        setTimeAlignmentBoundary(timeAlignmentBoundary);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1365,7 +1411,9 @@ public class DescribeAutoPredictorResult extends com.amazonaws.AmazonWebServiceR
         if (getExplainabilityInfo() != null)
             sb.append("ExplainabilityInfo: ").append(getExplainabilityInfo()).append(",");
         if (getMonitorInfo() != null)
-            sb.append("MonitorInfo: ").append(getMonitorInfo());
+            sb.append("MonitorInfo: ").append(getMonitorInfo()).append(",");
+        if (getTimeAlignmentBoundary() != null)
+            sb.append("TimeAlignmentBoundary: ").append(getTimeAlignmentBoundary());
         sb.append("}");
         return sb.toString();
     }
@@ -1453,6 +1501,10 @@ public class DescribeAutoPredictorResult extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getMonitorInfo() != null && other.getMonitorInfo().equals(this.getMonitorInfo()) == false)
             return false;
+        if (other.getTimeAlignmentBoundary() == null ^ this.getTimeAlignmentBoundary() == null)
+            return false;
+        if (other.getTimeAlignmentBoundary() != null && other.getTimeAlignmentBoundary().equals(this.getTimeAlignmentBoundary()) == false)
+            return false;
         return true;
     }
 
@@ -1479,6 +1531,7 @@ public class DescribeAutoPredictorResult extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getOptimizationMetric() == null) ? 0 : getOptimizationMetric().hashCode());
         hashCode = prime * hashCode + ((getExplainabilityInfo() == null) ? 0 : getExplainabilityInfo().hashCode());
         hashCode = prime * hashCode + ((getMonitorInfo() == null) ? 0 : getMonitorInfo().hashCode());
+        hashCode = prime * hashCode + ((getTimeAlignmentBoundary() == null) ? 0 : getTimeAlignmentBoundary().hashCode());
         return hashCode;
     }
 

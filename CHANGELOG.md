@@ -1,3 +1,20 @@
+# __1.12.229__ __2022-05-26__
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - C7g instances, powered by the latest generation AWS Graviton3 processors, provide the best price performance in Amazon EC2 for compute-intensive workloads.
+
+## __Amazon Forecast Service__
+  - ### Features
+    - Introduced a new field in Auto Predictor as Time Alignment Boundary. It helps in aligning the timestamps generated during Forecast exports
+
+## __Amazon Lightsail__
+  - ### Features
+    - Amazon Lightsail now supports the ability to configure a Lightsail Container Service to pull images from Amazon ECR private repositories in your account.
+
+## __EMR Serverless Web Service__
+  - ### Features
+    - This release adds support for Amazon EMR Serverless, a serverless runtime environment that simplifies running analytics applications using the latest open source frameworks such as Apache Spark and Apache Hive.
+
 # __1.12.228__ __2022-05-25__
 ## __AWS App Runner__
   - ### Features

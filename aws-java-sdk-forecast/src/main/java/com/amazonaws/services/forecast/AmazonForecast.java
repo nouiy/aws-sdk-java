@@ -1698,9 +1698,8 @@ public interface AmazonForecast {
      * different windows of time.
      * </p>
      * <p>
-     * For information about monitoring see <a
-     * href="https://docs.aws.amazon.com/forecast/latest/dg/predictor-monitoring-results.html">Viewing Monitoring
-     * Results</a>. For more information about retrieving monitoring results see <a
+     * For information about monitoring see <a>predictor-monitoring</a>. For more information about retrieving
+     * monitoring results see <a
      * href="https://docs.aws.amazon.com/forecast/latest/dg/predictor-monitoring-results.html">Viewing Monitoring
      * Results</a>.
      * </p>
