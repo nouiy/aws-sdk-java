@@ -283,7 +283,9 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Creates an endpoint for an Amazon EFS file system.
+     * Creates an endpoint for an Amazon EFS file system that DataSync can access for a transfer. For more information,
+     * see <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-efs-location.html">Creating a location
+     * for Amazon EFS</a>.
      * </p>
      * 
      * @param createLocationEfsRequest
@@ -1161,7 +1163,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Returns metadata, such as the path information about an Amazon EFS location.
+     * Returns metadata about your DataSync location for an Amazon EFS file system.
      * </p>
      * 
      * @param describeLocationEfsRequest

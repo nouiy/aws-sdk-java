@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.230-SNAPSHOT</version>
+    <version>1.12.230</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -16,7 +16,7 @@
   <!-- The dependencies section in pom.xml is auto generated. No manual changes are allowed -->
   <dependencies>
     <dependency>
-        <artifactId>aws-java-sdk-emrserverlessweb</artifactId>
+        <artifactId>aws-java-sdk-emrserverless</artifactId>
         <groupId>com.amazonaws</groupId>
         <optional>false</optional>
         <version>${awsjavasdk.version}</version>
@@ -1965,8 +1965,8 @@
                           </taglets>
                           <groups>
                               <group>
-                                  <title>EMR Serverless Web</title>
-                                  <packages>com.amazonaws.services.emrserverlessweb*</packages>
+                                  <title>EMR Serverless</title>
+                                  <packages>com.amazonaws.services.emrserverless*</packages>
                               </group>
                               <group>
                                   <title>Amazon Chime SDK Media Pipelines</title>

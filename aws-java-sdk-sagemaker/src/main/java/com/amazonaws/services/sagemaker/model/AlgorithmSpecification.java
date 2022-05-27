@@ -37,21 +37,45 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
     /**
      * <p>
      * The registry path of the Docker image that contains the training algorithm. For information about docker registry
-     * paths for built-in algorithms, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Algorithms
-     * Provided by Amazon SageMaker: Common Parameters</a>. SageMaker supports both
+     * paths for SageMaker built-in algorithms, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Docker Registry
+     * Paths and Example Code</a> in the <i>Amazon SageMaker developer guide</i>. SageMaker supports both
      * <code>registry/repository[:tag]</code> and <code>registry/repository[@digest]</code> image path formats. For more
-     * information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own
-     * Algorithms with Amazon SageMaker</a>.
+     * information about using your custom training container, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own Algorithms with Amazon
+     * SageMaker</a>.
      * </p>
+     * <note>
+     * <p>
+     * You must specify either the algorithm name to the <code>AlgorithmName</code> parameter or the image URI of the
+     * algorithm container to the <code>TrainingImage</code> parameter.
+     * </p>
+     * <p>
+     * For more information, see the note in the <code>AlgorithmName</code> parameter description.
+     * </p>
+     * </note>
      */
     private String trainingImage;
     /**
      * <p>
      * The name of the algorithm resource to use for the training job. This must be an algorithm resource that you
-     * created or subscribe to on Amazon Web Services Marketplace. If you specify a value for this parameter, you can't
-     * specify a value for <code>TrainingImage</code>.
+     * created or subscribe to on Amazon Web Services Marketplace.
      * </p>
+     * <note>
+     * <p>
+     * You must specify either the algorithm name to the <code>AlgorithmName</code> parameter or the image URI of the
+     * algorithm container to the <code>TrainingImage</code> parameter.
+     * </p>
+     * <p>
+     * Note that the <code>AlgorithmName</code> parameter is mutually exclusive with the <code>TrainingImage</code>
+     * parameter. If you specify a value for the <code>AlgorithmName</code> parameter, you can't specify a value for
+     * <code>TrainingImage</code>, and vice versa.
+     * </p>
+     * <p>
+     * If you specify values for both parameters, the training job might break; if you don't specify any value for both
+     * parameters, the training job might raise a <code>null</code> error.
+     * </p>
+     * </note>
      */
     private String algorithmName;
 
@@ -110,23 +134,40 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
     /**
      * <p>
      * The registry path of the Docker image that contains the training algorithm. For information about docker registry
-     * paths for built-in algorithms, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Algorithms
-     * Provided by Amazon SageMaker: Common Parameters</a>. SageMaker supports both
+     * paths for SageMaker built-in algorithms, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Docker Registry
+     * Paths and Example Code</a> in the <i>Amazon SageMaker developer guide</i>. SageMaker supports both
      * <code>registry/repository[:tag]</code> and <code>registry/repository[@digest]</code> image path formats. For more
-     * information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own
-     * Algorithms with Amazon SageMaker</a>.
+     * information about using your custom training container, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own Algorithms with Amazon
+     * SageMaker</a>.
      * </p>
+     * <note>
+     * <p>
+     * You must specify either the algorithm name to the <code>AlgorithmName</code> parameter or the image URI of the
+     * algorithm container to the <code>TrainingImage</code> parameter.
+     * </p>
+     * <p>
+     * For more information, see the note in the <code>AlgorithmName</code> parameter description.
+     * </p>
+     * </note>
      * 
      * @param trainingImage
      *        The registry path of the Docker image that contains the training algorithm. For information about docker
-     *        registry paths for built-in algorithms, see <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html"
-     *        >Algorithms Provided by Amazon SageMaker: Common Parameters</a>. SageMaker supports both
-     *        <code>registry/repository[:tag]</code> and <code>registry/repository[@digest]</code> image path formats.
-     *        For more information, see <a
+     *        registry paths for SageMaker built-in algorithms, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Docker
+     *        Registry Paths and Example Code</a> in the <i>Amazon SageMaker developer guide</i>. SageMaker supports
+     *        both <code>registry/repository[:tag]</code> and <code>registry/repository[@digest]</code> image path
+     *        formats. For more information about using your custom training container, see <a
      *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own Algorithms with
-     *        Amazon SageMaker</a>.
+     *        Amazon SageMaker</a>.</p> <note>
+     *        <p>
+     *        You must specify either the algorithm name to the <code>AlgorithmName</code> parameter or the image URI of
+     *        the algorithm container to the <code>TrainingImage</code> parameter.
+     *        </p>
+     *        <p>
+     *        For more information, see the note in the <code>AlgorithmName</code> parameter description.
+     *        </p>
      */
 
     public void setTrainingImage(String trainingImage) {
@@ -136,22 +177,39 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
     /**
      * <p>
      * The registry path of the Docker image that contains the training algorithm. For information about docker registry
-     * paths for built-in algorithms, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Algorithms
-     * Provided by Amazon SageMaker: Common Parameters</a>. SageMaker supports both
+     * paths for SageMaker built-in algorithms, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Docker Registry
+     * Paths and Example Code</a> in the <i>Amazon SageMaker developer guide</i>. SageMaker supports both
      * <code>registry/repository[:tag]</code> and <code>registry/repository[@digest]</code> image path formats. For more
-     * information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own
-     * Algorithms with Amazon SageMaker</a>.
+     * information about using your custom training container, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own Algorithms with Amazon
+     * SageMaker</a>.
      * </p>
+     * <note>
+     * <p>
+     * You must specify either the algorithm name to the <code>AlgorithmName</code> parameter or the image URI of the
+     * algorithm container to the <code>TrainingImage</code> parameter.
+     * </p>
+     * <p>
+     * For more information, see the note in the <code>AlgorithmName</code> parameter description.
+     * </p>
+     * </note>
      * 
      * @return The registry path of the Docker image that contains the training algorithm. For information about docker
-     *         registry paths for built-in algorithms, see <a
-     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html"
-     *         >Algorithms Provided by Amazon SageMaker: Common Parameters</a>. SageMaker supports both
-     *         <code>registry/repository[:tag]</code> and <code>registry/repository[@digest]</code> image path formats.
-     *         For more information, see <a
+     *         registry paths for SageMaker built-in algorithms, see <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Docker
+     *         Registry Paths and Example Code</a> in the <i>Amazon SageMaker developer guide</i>. SageMaker supports
+     *         both <code>registry/repository[:tag]</code> and <code>registry/repository[@digest]</code> image path
+     *         formats. For more information about using your custom training container, see <a
      *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own Algorithms
-     *         with Amazon SageMaker</a>.
+     *         with Amazon SageMaker</a>.</p> <note>
+     *         <p>
+     *         You must specify either the algorithm name to the <code>AlgorithmName</code> parameter or the image URI
+     *         of the algorithm container to the <code>TrainingImage</code> parameter.
+     *         </p>
+     *         <p>
+     *         For more information, see the note in the <code>AlgorithmName</code> parameter description.
+     *         </p>
      */
 
     public String getTrainingImage() {
@@ -161,23 +219,40 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
     /**
      * <p>
      * The registry path of the Docker image that contains the training algorithm. For information about docker registry
-     * paths for built-in algorithms, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Algorithms
-     * Provided by Amazon SageMaker: Common Parameters</a>. SageMaker supports both
+     * paths for SageMaker built-in algorithms, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Docker Registry
+     * Paths and Example Code</a> in the <i>Amazon SageMaker developer guide</i>. SageMaker supports both
      * <code>registry/repository[:tag]</code> and <code>registry/repository[@digest]</code> image path formats. For more
-     * information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own
-     * Algorithms with Amazon SageMaker</a>.
+     * information about using your custom training container, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own Algorithms with Amazon
+     * SageMaker</a>.
      * </p>
+     * <note>
+     * <p>
+     * You must specify either the algorithm name to the <code>AlgorithmName</code> parameter or the image URI of the
+     * algorithm container to the <code>TrainingImage</code> parameter.
+     * </p>
+     * <p>
+     * For more information, see the note in the <code>AlgorithmName</code> parameter description.
+     * </p>
+     * </note>
      * 
      * @param trainingImage
      *        The registry path of the Docker image that contains the training algorithm. For information about docker
-     *        registry paths for built-in algorithms, see <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html"
-     *        >Algorithms Provided by Amazon SageMaker: Common Parameters</a>. SageMaker supports both
-     *        <code>registry/repository[:tag]</code> and <code>registry/repository[@digest]</code> image path formats.
-     *        For more information, see <a
+     *        registry paths for SageMaker built-in algorithms, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html">Docker
+     *        Registry Paths and Example Code</a> in the <i>Amazon SageMaker developer guide</i>. SageMaker supports
+     *        both <code>registry/repository[:tag]</code> and <code>registry/repository[@digest]</code> image path
+     *        formats. For more information about using your custom training container, see <a
      *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html">Using Your Own Algorithms with
-     *        Amazon SageMaker</a>.
+     *        Amazon SageMaker</a>.</p> <note>
+     *        <p>
+     *        You must specify either the algorithm name to the <code>AlgorithmName</code> parameter or the image URI of
+     *        the algorithm container to the <code>TrainingImage</code> parameter.
+     *        </p>
+     *        <p>
+     *        For more information, see the note in the <code>AlgorithmName</code> parameter description.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -189,14 +264,40 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
     /**
      * <p>
      * The name of the algorithm resource to use for the training job. This must be an algorithm resource that you
-     * created or subscribe to on Amazon Web Services Marketplace. If you specify a value for this parameter, you can't
-     * specify a value for <code>TrainingImage</code>.
+     * created or subscribe to on Amazon Web Services Marketplace.
      * </p>
+     * <note>
+     * <p>
+     * You must specify either the algorithm name to the <code>AlgorithmName</code> parameter or the image URI of the
+     * algorithm container to the <code>TrainingImage</code> parameter.
+     * </p>
+     * <p>
+     * Note that the <code>AlgorithmName</code> parameter is mutually exclusive with the <code>TrainingImage</code>
+     * parameter. If you specify a value for the <code>AlgorithmName</code> parameter, you can't specify a value for
+     * <code>TrainingImage</code>, and vice versa.
+     * </p>
+     * <p>
+     * If you specify values for both parameters, the training job might break; if you don't specify any value for both
+     * parameters, the training job might raise a <code>null</code> error.
+     * </p>
+     * </note>
      * 
      * @param algorithmName
      *        The name of the algorithm resource to use for the training job. This must be an algorithm resource that
-     *        you created or subscribe to on Amazon Web Services Marketplace. If you specify a value for this parameter,
-     *        you can't specify a value for <code>TrainingImage</code>.
+     *        you created or subscribe to on Amazon Web Services Marketplace.</p> <note>
+     *        <p>
+     *        You must specify either the algorithm name to the <code>AlgorithmName</code> parameter or the image URI of
+     *        the algorithm container to the <code>TrainingImage</code> parameter.
+     *        </p>
+     *        <p>
+     *        Note that the <code>AlgorithmName</code> parameter is mutually exclusive with the
+     *        <code>TrainingImage</code> parameter. If you specify a value for the <code>AlgorithmName</code> parameter,
+     *        you can't specify a value for <code>TrainingImage</code>, and vice versa.
+     *        </p>
+     *        <p>
+     *        If you specify values for both parameters, the training job might break; if you don't specify any value
+     *        for both parameters, the training job might raise a <code>null</code> error.
+     *        </p>
      */
 
     public void setAlgorithmName(String algorithmName) {
@@ -206,13 +307,39 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
     /**
      * <p>
      * The name of the algorithm resource to use for the training job. This must be an algorithm resource that you
-     * created or subscribe to on Amazon Web Services Marketplace. If you specify a value for this parameter, you can't
-     * specify a value for <code>TrainingImage</code>.
+     * created or subscribe to on Amazon Web Services Marketplace.
      * </p>
+     * <note>
+     * <p>
+     * You must specify either the algorithm name to the <code>AlgorithmName</code> parameter or the image URI of the
+     * algorithm container to the <code>TrainingImage</code> parameter.
+     * </p>
+     * <p>
+     * Note that the <code>AlgorithmName</code> parameter is mutually exclusive with the <code>TrainingImage</code>
+     * parameter. If you specify a value for the <code>AlgorithmName</code> parameter, you can't specify a value for
+     * <code>TrainingImage</code>, and vice versa.
+     * </p>
+     * <p>
+     * If you specify values for both parameters, the training job might break; if you don't specify any value for both
+     * parameters, the training job might raise a <code>null</code> error.
+     * </p>
+     * </note>
      * 
      * @return The name of the algorithm resource to use for the training job. This must be an algorithm resource that
-     *         you created or subscribe to on Amazon Web Services Marketplace. If you specify a value for this
-     *         parameter, you can't specify a value for <code>TrainingImage</code>.
+     *         you created or subscribe to on Amazon Web Services Marketplace.</p> <note>
+     *         <p>
+     *         You must specify either the algorithm name to the <code>AlgorithmName</code> parameter or the image URI
+     *         of the algorithm container to the <code>TrainingImage</code> parameter.
+     *         </p>
+     *         <p>
+     *         Note that the <code>AlgorithmName</code> parameter is mutually exclusive with the
+     *         <code>TrainingImage</code> parameter. If you specify a value for the <code>AlgorithmName</code>
+     *         parameter, you can't specify a value for <code>TrainingImage</code>, and vice versa.
+     *         </p>
+     *         <p>
+     *         If you specify values for both parameters, the training job might break; if you don't specify any value
+     *         for both parameters, the training job might raise a <code>null</code> error.
+     *         </p>
      */
 
     public String getAlgorithmName() {
@@ -222,14 +349,40 @@ public class AlgorithmSpecification implements Serializable, Cloneable, Structur
     /**
      * <p>
      * The name of the algorithm resource to use for the training job. This must be an algorithm resource that you
-     * created or subscribe to on Amazon Web Services Marketplace. If you specify a value for this parameter, you can't
-     * specify a value for <code>TrainingImage</code>.
+     * created or subscribe to on Amazon Web Services Marketplace.
      * </p>
+     * <note>
+     * <p>
+     * You must specify either the algorithm name to the <code>AlgorithmName</code> parameter or the image URI of the
+     * algorithm container to the <code>TrainingImage</code> parameter.
+     * </p>
+     * <p>
+     * Note that the <code>AlgorithmName</code> parameter is mutually exclusive with the <code>TrainingImage</code>
+     * parameter. If you specify a value for the <code>AlgorithmName</code> parameter, you can't specify a value for
+     * <code>TrainingImage</code>, and vice versa.
+     * </p>
+     * <p>
+     * If you specify values for both parameters, the training job might break; if you don't specify any value for both
+     * parameters, the training job might raise a <code>null</code> error.
+     * </p>
+     * </note>
      * 
      * @param algorithmName
      *        The name of the algorithm resource to use for the training job. This must be an algorithm resource that
-     *        you created or subscribe to on Amazon Web Services Marketplace. If you specify a value for this parameter,
-     *        you can't specify a value for <code>TrainingImage</code>.
+     *        you created or subscribe to on Amazon Web Services Marketplace.</p> <note>
+     *        <p>
+     *        You must specify either the algorithm name to the <code>AlgorithmName</code> parameter or the image URI of
+     *        the algorithm container to the <code>TrainingImage</code> parameter.
+     *        </p>
+     *        <p>
+     *        Note that the <code>AlgorithmName</code> parameter is mutually exclusive with the
+     *        <code>TrainingImage</code> parameter. If you specify a value for the <code>AlgorithmName</code> parameter,
+     *        you can't specify a value for <code>TrainingImage</code>, and vice versa.
+     *        </p>
+     *        <p>
+     *        If you specify values for both parameters, the training job might break; if you don't specify any value
+     *        for both parameters, the training job might raise a <code>null</code> error.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
