@@ -113,6 +113,41 @@ public class AmazonChimeSDKMeetingsAsyncClient extends AmazonChimeSDKMeetingsCli
     }
 
     @Override
+    public java.util.concurrent.Future<BatchUpdateAttendeeCapabilitiesExceptResult> batchUpdateAttendeeCapabilitiesExceptAsync(
+            BatchUpdateAttendeeCapabilitiesExceptRequest request) {
+
+        return batchUpdateAttendeeCapabilitiesExceptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchUpdateAttendeeCapabilitiesExceptResult> batchUpdateAttendeeCapabilitiesExceptAsync(
+            final BatchUpdateAttendeeCapabilitiesExceptRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchUpdateAttendeeCapabilitiesExceptRequest, BatchUpdateAttendeeCapabilitiesExceptResult> asyncHandler) {
+        final BatchUpdateAttendeeCapabilitiesExceptRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchUpdateAttendeeCapabilitiesExceptResult>() {
+            @Override
+            public BatchUpdateAttendeeCapabilitiesExceptResult call() throws Exception {
+                BatchUpdateAttendeeCapabilitiesExceptResult result = null;
+
+                try {
+                    result = executeBatchUpdateAttendeeCapabilitiesExcept(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateAttendeeResult> createAttendeeAsync(CreateAttendeeRequest request) {
 
         return createAttendeeAsync(request, null);
@@ -427,6 +462,39 @@ public class AmazonChimeSDKMeetingsAsyncClient extends AmazonChimeSDKMeetingsCli
 
                 try {
                     result = executeStopMeetingTranscription(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAttendeeCapabilitiesResult> updateAttendeeCapabilitiesAsync(UpdateAttendeeCapabilitiesRequest request) {
+
+        return updateAttendeeCapabilitiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAttendeeCapabilitiesResult> updateAttendeeCapabilitiesAsync(final UpdateAttendeeCapabilitiesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateAttendeeCapabilitiesRequest, UpdateAttendeeCapabilitiesResult> asyncHandler) {
+        final UpdateAttendeeCapabilitiesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateAttendeeCapabilitiesResult>() {
+            @Override
+            public UpdateAttendeeCapabilitiesResult call() throws Exception {
+                UpdateAttendeeCapabilitiesResult result = null;
+
+                try {
+                    result = executeUpdateAttendeeCapabilities(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

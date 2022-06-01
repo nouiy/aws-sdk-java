@@ -54,6 +54,12 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String joinToken;
+    /**
+     * <p>
+     * The capabilities (audio, video, or content) assigned to an attendee.
+     * </p>
+     */
+    private AttendeeCapabilities capabilities;
 
     /**
      * <p>
@@ -182,6 +188,46 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The capabilities (audio, video, or content) assigned to an attendee.
+     * </p>
+     * 
+     * @param capabilities
+     *        The capabilities (audio, video, or content) assigned to an attendee.
+     */
+
+    public void setCapabilities(AttendeeCapabilities capabilities) {
+        this.capabilities = capabilities;
+    }
+
+    /**
+     * <p>
+     * The capabilities (audio, video, or content) assigned to an attendee.
+     * </p>
+     * 
+     * @return The capabilities (audio, video, or content) assigned to an attendee.
+     */
+
+    public AttendeeCapabilities getCapabilities() {
+        return this.capabilities;
+    }
+
+    /**
+     * <p>
+     * The capabilities (audio, video, or content) assigned to an attendee.
+     * </p>
+     * 
+     * @param capabilities
+     *        The capabilities (audio, video, or content) assigned to an attendee.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Attendee withCapabilities(AttendeeCapabilities capabilities) {
+        setCapabilities(capabilities);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -198,7 +244,9 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
         if (getAttendeeId() != null)
             sb.append("AttendeeId: ").append(getAttendeeId()).append(",");
         if (getJoinToken() != null)
-            sb.append("JoinToken: ").append("***Sensitive Data Redacted***");
+            sb.append("JoinToken: ").append("***Sensitive Data Redacted***").append(",");
+        if (getCapabilities() != null)
+            sb.append("Capabilities: ").append(getCapabilities());
         sb.append("}");
         return sb.toString();
     }
@@ -225,6 +273,10 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getJoinToken() != null && other.getJoinToken().equals(this.getJoinToken()) == false)
             return false;
+        if (other.getCapabilities() == null ^ this.getCapabilities() == null)
+            return false;
+        if (other.getCapabilities() != null && other.getCapabilities().equals(this.getCapabilities()) == false)
+            return false;
         return true;
     }
 
@@ -236,6 +288,7 @@ public class Attendee implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getExternalUserId() == null) ? 0 : getExternalUserId().hashCode());
         hashCode = prime * hashCode + ((getAttendeeId() == null) ? 0 : getAttendeeId().hashCode());
         hashCode = prime * hashCode + ((getJoinToken() == null) ? 0 : getJoinToken().hashCode());
+        hashCode = prime * hashCode + ((getCapabilities() == null) ? 0 : getCapabilities().hashCode());
         return hashCode;
     }
 

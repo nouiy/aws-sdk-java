@@ -714,6 +714,8 @@ public class ResourceRecordSet implements Serializable, Cloneable {
      */
     private String trafficPolicyInstanceId;
 
+    private CidrRoutingConfig cidrRoutingConfig;
+
     /**
      * Default constructor for ResourceRecordSet object. Callers should use the setter or fluent setter (with...)
      * methods to initialize the object after creating it.
@@ -6148,6 +6150,32 @@ public class ResourceRecordSet implements Serializable, Cloneable {
     }
 
     /**
+     * @param cidrRoutingConfig
+     */
+
+    public void setCidrRoutingConfig(CidrRoutingConfig cidrRoutingConfig) {
+        this.cidrRoutingConfig = cidrRoutingConfig;
+    }
+
+    /**
+     * @return
+     */
+
+    public CidrRoutingConfig getCidrRoutingConfig() {
+        return this.cidrRoutingConfig;
+    }
+
+    /**
+     * @param cidrRoutingConfig
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceRecordSet withCidrRoutingConfig(CidrRoutingConfig cidrRoutingConfig) {
+        setCidrRoutingConfig(cidrRoutingConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -6184,7 +6212,9 @@ public class ResourceRecordSet implements Serializable, Cloneable {
         if (getHealthCheckId() != null)
             sb.append("HealthCheckId: ").append(getHealthCheckId()).append(",");
         if (getTrafficPolicyInstanceId() != null)
-            sb.append("TrafficPolicyInstanceId: ").append(getTrafficPolicyInstanceId());
+            sb.append("TrafficPolicyInstanceId: ").append(getTrafficPolicyInstanceId()).append(",");
+        if (getCidrRoutingConfig() != null)
+            sb.append("CidrRoutingConfig: ").append(getCidrRoutingConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -6251,6 +6281,10 @@ public class ResourceRecordSet implements Serializable, Cloneable {
             return false;
         if (other.getTrafficPolicyInstanceId() != null && other.getTrafficPolicyInstanceId().equals(this.getTrafficPolicyInstanceId()) == false)
             return false;
+        if (other.getCidrRoutingConfig() == null ^ this.getCidrRoutingConfig() == null)
+            return false;
+        if (other.getCidrRoutingConfig() != null && other.getCidrRoutingConfig().equals(this.getCidrRoutingConfig()) == false)
+            return false;
         return true;
     }
 
@@ -6272,6 +6306,7 @@ public class ResourceRecordSet implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getAliasTarget() == null) ? 0 : getAliasTarget().hashCode());
         hashCode = prime * hashCode + ((getHealthCheckId() == null) ? 0 : getHealthCheckId().hashCode());
         hashCode = prime * hashCode + ((getTrafficPolicyInstanceId() == null) ? 0 : getTrafficPolicyInstanceId().hashCode());
+        hashCode = prime * hashCode + ((getCidrRoutingConfig() == null) ? 0 : getCidrRoutingConfig().hashCode());
         return hashCode;
     }
 

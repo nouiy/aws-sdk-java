@@ -93,6 +93,19 @@ public class AbstractAWSBackupGatewayAsync extends AbstractAWSBackupGateway impl
     }
 
     @Override
+    public java.util.concurrent.Future<GetGatewayResult> getGatewayAsync(GetGatewayRequest request) {
+
+        return getGatewayAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetGatewayResult> getGatewayAsync(GetGatewayRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetGatewayRequest, GetGatewayResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ImportHypervisorConfigurationResult> importHypervisorConfigurationAsync(ImportHypervisorConfigurationRequest request) {
 
         return importHypervisorConfigurationAsync(request, null);
@@ -218,6 +231,19 @@ public class AbstractAWSBackupGatewayAsync extends AbstractAWSBackupGateway impl
     @Override
     public java.util.concurrent.Future<UpdateGatewayInformationResult> updateGatewayInformationAsync(UpdateGatewayInformationRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateGatewayInformationRequest, UpdateGatewayInformationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateGatewaySoftwareNowResult> updateGatewaySoftwareNowAsync(UpdateGatewaySoftwareNowRequest request) {
+
+        return updateGatewaySoftwareNowAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateGatewaySoftwareNowResult> updateGatewaySoftwareNowAsync(UpdateGatewaySoftwareNowRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateGatewaySoftwareNowRequest, UpdateGatewaySoftwareNowResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

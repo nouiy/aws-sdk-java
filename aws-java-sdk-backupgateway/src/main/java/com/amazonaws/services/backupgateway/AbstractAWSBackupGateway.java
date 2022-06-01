@@ -53,6 +53,11 @@ public class AbstractAWSBackupGateway implements AWSBackupGateway {
     }
 
     @Override
+    public GetGatewayResult getGateway(GetGatewayRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ImportHypervisorConfigurationResult importHypervisorConfiguration(ImportHypervisorConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -99,6 +104,11 @@ public class AbstractAWSBackupGateway implements AWSBackupGateway {
 
     @Override
     public UpdateGatewayInformationResult updateGatewayInformation(UpdateGatewayInformationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateGatewaySoftwareNowResult updateGatewaySoftwareNow(UpdateGatewaySoftwareNowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

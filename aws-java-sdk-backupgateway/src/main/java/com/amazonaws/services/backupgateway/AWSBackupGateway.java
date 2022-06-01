@@ -159,6 +159,25 @@ public interface AWSBackupGateway {
 
     /**
      * <p>
+     * By providing the ARN (Amazon Resource Name), this API returns the gateway.
+     * </p>
+     * 
+     * @param getGatewayRequest
+     * @return Result of the GetGateway operation returned by the service.
+     * @throws ValidationException
+     *         The operation did not succeed because a validation error occurred.
+     * @throws InternalServerException
+     *         The operation did not succeed because an internal error occurred. Try again later.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action wasn't found.
+     * @sample AWSBackupGateway.GetGateway
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/GetGateway" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetGatewayResult getGateway(GetGatewayRequest getGatewayRequest);
+
+    /**
+     * <p>
      * Connect to a hypervisor by importing its configuration.
      * </p>
      * 
@@ -349,6 +368,31 @@ public interface AWSBackupGateway {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateGatewayInformationResult updateGatewayInformation(UpdateGatewayInformationRequest updateGatewayInformationRequest);
+
+    /**
+     * <p>
+     * Updates the gateway virtual machine (VM) software. The request immediately triggers the software update.
+     * </p>
+     * <note>
+     * <p>
+     * When you make this request, you get a <code>200 OK</code> success response immediately. However, it might take
+     * some time for the update to complete.
+     * </p>
+     * </note>
+     * 
+     * @param updateGatewaySoftwareNowRequest
+     * @return Result of the UpdateGatewaySoftwareNow operation returned by the service.
+     * @throws ValidationException
+     *         The operation did not succeed because a validation error occurred.
+     * @throws InternalServerException
+     *         The operation did not succeed because an internal error occurred. Try again later.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action wasn't found.
+     * @sample AWSBackupGateway.UpdateGatewaySoftwareNow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/UpdateGatewaySoftwareNow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateGatewaySoftwareNowResult updateGatewaySoftwareNow(UpdateGatewaySoftwareNowRequest updateGatewaySoftwareNowRequest);
 
     /**
      * <p>

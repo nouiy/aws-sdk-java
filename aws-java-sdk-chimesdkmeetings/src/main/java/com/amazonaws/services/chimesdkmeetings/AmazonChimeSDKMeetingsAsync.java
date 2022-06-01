@@ -73,6 +73,45 @@ public interface AmazonChimeSDKMeetingsAsync extends AmazonChimeSDKMeetings {
 
     /**
      * <p>
+     * Updates <code>AttendeeCapabilities</code> except the capabilities listed in an <code>ExcludedAttendeeIds</code>
+     * table.
+     * </p>
+     * 
+     * @param batchUpdateAttendeeCapabilitiesExceptRequest
+     * @return A Java Future containing the result of the BatchUpdateAttendeeCapabilitiesExcept operation returned by
+     *         the service.
+     * @sample AmazonChimeSDKMeetingsAsync.BatchUpdateAttendeeCapabilitiesExcept
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/BatchUpdateAttendeeCapabilitiesExcept"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchUpdateAttendeeCapabilitiesExceptResult> batchUpdateAttendeeCapabilitiesExceptAsync(
+            BatchUpdateAttendeeCapabilitiesExceptRequest batchUpdateAttendeeCapabilitiesExceptRequest);
+
+    /**
+     * <p>
+     * Updates <code>AttendeeCapabilities</code> except the capabilities listed in an <code>ExcludedAttendeeIds</code>
+     * table.
+     * </p>
+     * 
+     * @param batchUpdateAttendeeCapabilitiesExceptRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchUpdateAttendeeCapabilitiesExcept operation returned by
+     *         the service.
+     * @sample AmazonChimeSDKMeetingsAsyncHandler.BatchUpdateAttendeeCapabilitiesExcept
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/BatchUpdateAttendeeCapabilitiesExcept"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchUpdateAttendeeCapabilitiesExceptResult> batchUpdateAttendeeCapabilitiesExceptAsync(
+            BatchUpdateAttendeeCapabilitiesExceptRequest batchUpdateAttendeeCapabilitiesExceptRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchUpdateAttendeeCapabilitiesExceptRequest, BatchUpdateAttendeeCapabilitiesExceptResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a new attendee for an active Amazon Chime SDK meeting. For more information about the Amazon Chime SDK,
      * see <a href="https://docs.aws.amazon.com/chime/latest/dg/meetings-sdk.html">Using the Amazon Chime SDK</a> in the
      * <i>Amazon Chime Developer Guide</i>.
@@ -432,5 +471,38 @@ public interface AmazonChimeSDKMeetingsAsync extends AmazonChimeSDKMeetings {
      */
     java.util.concurrent.Future<StopMeetingTranscriptionResult> stopMeetingTranscriptionAsync(StopMeetingTranscriptionRequest stopMeetingTranscriptionRequest,
             com.amazonaws.handlers.AsyncHandler<StopMeetingTranscriptionRequest, StopMeetingTranscriptionResult> asyncHandler);
+
+    /**
+     * <p>
+     * The capabilties that you want to update.
+     * </p>
+     * 
+     * @param updateAttendeeCapabilitiesRequest
+     * @return A Java Future containing the result of the UpdateAttendeeCapabilities operation returned by the service.
+     * @sample AmazonChimeSDKMeetingsAsync.UpdateAttendeeCapabilities
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/UpdateAttendeeCapabilities"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAttendeeCapabilitiesResult> updateAttendeeCapabilitiesAsync(
+            UpdateAttendeeCapabilitiesRequest updateAttendeeCapabilitiesRequest);
+
+    /**
+     * <p>
+     * The capabilties that you want to update.
+     * </p>
+     * 
+     * @param updateAttendeeCapabilitiesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateAttendeeCapabilities operation returned by the service.
+     * @sample AmazonChimeSDKMeetingsAsyncHandler.UpdateAttendeeCapabilities
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/UpdateAttendeeCapabilities"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAttendeeCapabilitiesResult> updateAttendeeCapabilitiesAsync(
+            UpdateAttendeeCapabilitiesRequest updateAttendeeCapabilitiesRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateAttendeeCapabilitiesRequest, UpdateAttendeeCapabilitiesResult> asyncHandler);
 
 }

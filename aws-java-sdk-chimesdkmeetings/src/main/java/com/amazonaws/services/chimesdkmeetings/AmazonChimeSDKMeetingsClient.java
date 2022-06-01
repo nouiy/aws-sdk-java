@@ -82,6 +82,9 @@ public class AmazonChimeSDKMeetingsClient extends AmazonWebServiceClient impleme
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.chimesdkmeetings.model.transform.ConflictExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("UnprocessableEntityException").withExceptionUnmarshaller(
                                     com.amazonaws.services.chimesdkmeetings.model.transform.UnprocessableEntityExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -180,9 +183,9 @@ public class AmazonChimeSDKMeetingsClient extends AmazonWebServiceClient impleme
      * @throws ServiceUnavailableException
      *         The service is currently unavailable.
      * @throws ServiceFailureException
-     *         The service encountered an unexpected error.
+     *         The service is currently unavailable.
      * @throws ThrottlingException
-     *         The number of customer requests exceeds the request rate limit.
+     *         The number of requests exceeds the limit.
      * @sample AmazonChimeSDKMeetings.BatchCreateAttendee
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/BatchCreateAttendee"
      *      target="_top">AWS API Documentation</a>
@@ -233,6 +236,78 @@ public class AmazonChimeSDKMeetingsClient extends AmazonWebServiceClient impleme
 
     /**
      * <p>
+     * Updates <code>AttendeeCapabilities</code> except the capabilities listed in an <code>ExcludedAttendeeIds</code>
+     * table.
+     * </p>
+     * 
+     * @param batchUpdateAttendeeCapabilitiesExceptRequest
+     * @return Result of the BatchUpdateAttendeeCapabilitiesExcept operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ConflictException
+     *         Multiple instances of the same request have been made simultaneously.
+     * @throws UnauthorizedException
+     *         The user isn't authorized to request a resource.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @sample AmazonChimeSDKMeetings.BatchUpdateAttendeeCapabilitiesExcept
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/BatchUpdateAttendeeCapabilitiesExcept"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchUpdateAttendeeCapabilitiesExceptResult batchUpdateAttendeeCapabilitiesExcept(BatchUpdateAttendeeCapabilitiesExceptRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchUpdateAttendeeCapabilitiesExcept(request);
+    }
+
+    @SdkInternalApi
+    final BatchUpdateAttendeeCapabilitiesExceptResult executeBatchUpdateAttendeeCapabilitiesExcept(
+            BatchUpdateAttendeeCapabilitiesExceptRequest batchUpdateAttendeeCapabilitiesExceptRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchUpdateAttendeeCapabilitiesExceptRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchUpdateAttendeeCapabilitiesExceptRequest> request = null;
+        Response<BatchUpdateAttendeeCapabilitiesExceptResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchUpdateAttendeeCapabilitiesExceptRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchUpdateAttendeeCapabilitiesExceptRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Meetings");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchUpdateAttendeeCapabilitiesExcept");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchUpdateAttendeeCapabilitiesExceptResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchUpdateAttendeeCapabilitiesExceptResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a new attendee for an active Amazon Chime SDK meeting. For more information about the Amazon Chime SDK,
      * see <a href="https://docs.aws.amazon.com/chime/latest/dg/meetings-sdk.html">Using the Amazon Chime SDK</a> in the
      * <i>Amazon Chime Developer Guide</i>.
@@ -255,9 +330,9 @@ public class AmazonChimeSDKMeetingsClient extends AmazonWebServiceClient impleme
      * @throws ServiceUnavailableException
      *         The service is currently unavailable.
      * @throws ServiceFailureException
-     *         The service encountered an unexpected error.
+     *         The service is currently unavailable.
      * @throws ThrottlingException
-     *         The number of customer requests exceeds the request rate limit.
+     *         The number of requests exceeds the limit.
      * @sample AmazonChimeSDKMeetings.CreateAttendee
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/CreateAttendee"
      *      target="_top">AWS API Documentation</a>
@@ -325,9 +400,9 @@ public class AmazonChimeSDKMeetingsClient extends AmazonWebServiceClient impleme
      * @throws UnauthorizedException
      *         The user isn't authorized to request a resource.
      * @throws ThrottlingException
-     *         The number of customer requests exceeds the request rate limit.
+     *         The number of requests exceeds the limit.
      * @throws ServiceFailureException
-     *         The service encountered an unexpected error.
+     *         The service is currently unavailable.
      * @throws ServiceUnavailableException
      *         The service is currently unavailable.
      * @throws LimitExceededException
@@ -399,9 +474,9 @@ public class AmazonChimeSDKMeetingsClient extends AmazonWebServiceClient impleme
      * @throws UnauthorizedException
      *         The user isn't authorized to request a resource.
      * @throws ThrottlingException
-     *         The number of customer requests exceeds the request rate limit.
+     *         The number of requests exceeds the limit.
      * @throws ServiceFailureException
-     *         The service encountered an unexpected error.
+     *         The service is currently unavailable.
      * @throws ServiceUnavailableException
      *         The service is currently unavailable.
      * @throws LimitExceededException
@@ -477,9 +552,9 @@ public class AmazonChimeSDKMeetingsClient extends AmazonWebServiceClient impleme
      * @throws ServiceUnavailableException
      *         The service is currently unavailable.
      * @throws ServiceFailureException
-     *         The service encountered an unexpected error.
+     *         The service is currently unavailable.
      * @throws ThrottlingException
-     *         The number of customer requests exceeds the request rate limit.
+     *         The number of requests exceeds the limit.
      * @sample AmazonChimeSDKMeetings.DeleteAttendee
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/DeleteAttendee"
      *      target="_top">AWS API Documentation</a>
@@ -549,9 +624,9 @@ public class AmazonChimeSDKMeetingsClient extends AmazonWebServiceClient impleme
      * @throws ServiceUnavailableException
      *         The service is currently unavailable.
      * @throws ServiceFailureException
-     *         The service encountered an unexpected error.
+     *         The service is currently unavailable.
      * @throws ThrottlingException
-     *         The number of customer requests exceeds the request rate limit.
+     *         The number of requests exceeds the limit.
      * @sample AmazonChimeSDKMeetings.DeleteMeeting
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/DeleteMeeting"
      *      target="_top">AWS API Documentation</a>
@@ -620,9 +695,9 @@ public class AmazonChimeSDKMeetingsClient extends AmazonWebServiceClient impleme
      * @throws ServiceUnavailableException
      *         The service is currently unavailable.
      * @throws ServiceFailureException
-     *         The service encountered an unexpected error.
+     *         The service is currently unavailable.
      * @throws ThrottlingException
-     *         The number of customer requests exceeds the request rate limit.
+     *         The number of requests exceeds the limit.
      * @sample AmazonChimeSDKMeetings.GetAttendee
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/GetAttendee" target="_top">AWS
      *      API Documentation</a>
@@ -691,9 +766,9 @@ public class AmazonChimeSDKMeetingsClient extends AmazonWebServiceClient impleme
      * @throws ServiceUnavailableException
      *         The service is currently unavailable.
      * @throws ServiceFailureException
-     *         The service encountered an unexpected error.
+     *         The service is currently unavailable.
      * @throws ThrottlingException
-     *         The number of customer requests exceeds the request rate limit.
+     *         The number of requests exceeds the limit.
      * @sample AmazonChimeSDKMeetings.GetMeeting
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/GetMeeting" target="_top">AWS
      *      API Documentation</a>
@@ -762,9 +837,9 @@ public class AmazonChimeSDKMeetingsClient extends AmazonWebServiceClient impleme
      * @throws ServiceUnavailableException
      *         The service is currently unavailable.
      * @throws ServiceFailureException
-     *         The service encountered an unexpected error.
+     *         The service is currently unavailable.
      * @throws ThrottlingException
-     *         The number of customer requests exceeds the request rate limit.
+     *         The number of requests exceeds the limit.
      * @sample AmazonChimeSDKMeetings.ListAttendees
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/ListAttendees"
      *      target="_top">AWS API Documentation</a>
@@ -833,11 +908,11 @@ public class AmazonChimeSDKMeetingsClient extends AmazonWebServiceClient impleme
      * @throws UnprocessableEntityException
      *         The request was well-formed but was unable to be followed due to semantic errors.
      * @throws ThrottlingException
-     *         The number of customer requests exceeds the request rate limit.
+     *         The number of requests exceeds the limit.
      * @throws ServiceUnavailableException
      *         The service is currently unavailable.
      * @throws ServiceFailureException
-     *         The service encountered an unexpected error.
+     *         The service is currently unavailable.
      * @sample AmazonChimeSDKMeetings.StartMeetingTranscription
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/StartMeetingTranscription"
      *      target="_top">AWS API Documentation</a>
@@ -906,11 +981,11 @@ public class AmazonChimeSDKMeetingsClient extends AmazonWebServiceClient impleme
      * @throws UnprocessableEntityException
      *         The request was well-formed but was unable to be followed due to semantic errors.
      * @throws ThrottlingException
-     *         The number of customer requests exceeds the request rate limit.
+     *         The number of requests exceeds the limit.
      * @throws ServiceUnavailableException
      *         The service is currently unavailable.
      * @throws ServiceFailureException
-     *         The service encountered an unexpected error.
+     *         The service is currently unavailable.
      * @sample AmazonChimeSDKMeetings.StopMeetingTranscription
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/StopMeetingTranscription"
      *      target="_top">AWS API Documentation</a>
@@ -951,6 +1026,75 @@ public class AmazonChimeSDKMeetingsClient extends AmazonWebServiceClient impleme
             HttpResponseHandler<AmazonWebServiceResponse<StopMeetingTranscriptionResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new StopMeetingTranscriptionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * The capabilties that you want to update.
+     * </p>
+     * 
+     * @param updateAttendeeCapabilitiesRequest
+     * @return Result of the UpdateAttendeeCapabilities operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ConflictException
+     *         Multiple instances of the same request have been made simultaneously.
+     * @throws UnauthorizedException
+     *         The user isn't authorized to request a resource.
+     * @throws NotFoundException
+     *         One or more of the resources in the request does not exist in the system.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @sample AmazonChimeSDKMeetings.UpdateAttendeeCapabilities
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-meetings-2021-07-15/UpdateAttendeeCapabilities"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateAttendeeCapabilitiesResult updateAttendeeCapabilities(UpdateAttendeeCapabilitiesRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateAttendeeCapabilities(request);
+    }
+
+    @SdkInternalApi
+    final UpdateAttendeeCapabilitiesResult executeUpdateAttendeeCapabilities(UpdateAttendeeCapabilitiesRequest updateAttendeeCapabilitiesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateAttendeeCapabilitiesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateAttendeeCapabilitiesRequest> request = null;
+        Response<UpdateAttendeeCapabilitiesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateAttendeeCapabilitiesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateAttendeeCapabilitiesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Meetings");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateAttendeeCapabilities");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateAttendeeCapabilitiesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateAttendeeCapabilitiesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

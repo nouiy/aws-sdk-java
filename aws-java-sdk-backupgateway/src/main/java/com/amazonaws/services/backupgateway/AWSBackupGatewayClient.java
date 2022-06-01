@@ -471,6 +471,67 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
 
     /**
      * <p>
+     * By providing the ARN (Amazon Resource Name), this API returns the gateway.
+     * </p>
+     * 
+     * @param getGatewayRequest
+     * @return Result of the GetGateway operation returned by the service.
+     * @throws ValidationException
+     *         The operation did not succeed because a validation error occurred.
+     * @throws InternalServerException
+     *         The operation did not succeed because an internal error occurred. Try again later.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action wasn't found.
+     * @sample AWSBackupGateway.GetGateway
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/GetGateway" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetGatewayResult getGateway(GetGatewayRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetGateway(request);
+    }
+
+    @SdkInternalApi
+    final GetGatewayResult executeGetGateway(GetGatewayRequest getGatewayRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getGatewayRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetGatewayRequest> request = null;
+        Response<GetGatewayResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetGatewayRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getGatewayRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup Gateway");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetGateway");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetGatewayResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetGatewayResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Connect to a hypervisor by importing its configuration.
      * </p>
      * 
@@ -1080,6 +1141,75 @@ public class AWSBackupGatewayClient extends AmazonWebServiceClient implements AW
             HttpResponseHandler<AmazonWebServiceResponse<UpdateGatewayInformationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateGatewayInformationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the gateway virtual machine (VM) software. The request immediately triggers the software update.
+     * </p>
+     * <note>
+     * <p>
+     * When you make this request, you get a <code>200 OK</code> success response immediately. However, it might take
+     * some time for the update to complete.
+     * </p>
+     * </note>
+     * 
+     * @param updateGatewaySoftwareNowRequest
+     * @return Result of the UpdateGatewaySoftwareNow operation returned by the service.
+     * @throws ValidationException
+     *         The operation did not succeed because a validation error occurred.
+     * @throws InternalServerException
+     *         The operation did not succeed because an internal error occurred. Try again later.
+     * @throws ResourceNotFoundException
+     *         A resource that is required for the action wasn't found.
+     * @sample AWSBackupGateway.UpdateGatewaySoftwareNow
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-gateway-2021-01-01/UpdateGatewaySoftwareNow"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateGatewaySoftwareNowResult updateGatewaySoftwareNow(UpdateGatewaySoftwareNowRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateGatewaySoftwareNow(request);
+    }
+
+    @SdkInternalApi
+    final UpdateGatewaySoftwareNowResult executeUpdateGatewaySoftwareNow(UpdateGatewaySoftwareNowRequest updateGatewaySoftwareNowRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateGatewaySoftwareNowRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateGatewaySoftwareNowRequest> request = null;
+        Response<UpdateGatewaySoftwareNowResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateGatewaySoftwareNowRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateGatewaySoftwareNowRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Backup Gateway");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateGatewaySoftwareNow");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateGatewaySoftwareNowResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateGatewaySoftwareNowResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

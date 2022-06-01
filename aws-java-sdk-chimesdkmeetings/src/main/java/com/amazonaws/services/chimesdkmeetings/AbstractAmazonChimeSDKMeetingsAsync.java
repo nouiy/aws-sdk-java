@@ -41,6 +41,21 @@ public class AbstractAmazonChimeSDKMeetingsAsync extends AbstractAmazonChimeSDKM
     }
 
     @Override
+    public java.util.concurrent.Future<BatchUpdateAttendeeCapabilitiesExceptResult> batchUpdateAttendeeCapabilitiesExceptAsync(
+            BatchUpdateAttendeeCapabilitiesExceptRequest request) {
+
+        return batchUpdateAttendeeCapabilitiesExceptAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchUpdateAttendeeCapabilitiesExceptResult> batchUpdateAttendeeCapabilitiesExceptAsync(
+            BatchUpdateAttendeeCapabilitiesExceptRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchUpdateAttendeeCapabilitiesExceptRequest, BatchUpdateAttendeeCapabilitiesExceptResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateAttendeeResult> createAttendeeAsync(CreateAttendeeRequest request) {
 
         return createAttendeeAsync(request, null);
@@ -166,6 +181,19 @@ public class AbstractAmazonChimeSDKMeetingsAsync extends AbstractAmazonChimeSDKM
     @Override
     public java.util.concurrent.Future<StopMeetingTranscriptionResult> stopMeetingTranscriptionAsync(StopMeetingTranscriptionRequest request,
             com.amazonaws.handlers.AsyncHandler<StopMeetingTranscriptionRequest, StopMeetingTranscriptionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAttendeeCapabilitiesResult> updateAttendeeCapabilitiesAsync(UpdateAttendeeCapabilitiesRequest request) {
+
+        return updateAttendeeCapabilitiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAttendeeCapabilitiesResult> updateAttendeeCapabilitiesAsync(UpdateAttendeeCapabilitiesRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateAttendeeCapabilitiesRequest, UpdateAttendeeCapabilitiesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

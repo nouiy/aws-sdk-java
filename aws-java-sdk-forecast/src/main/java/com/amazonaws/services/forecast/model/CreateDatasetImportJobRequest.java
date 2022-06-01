@@ -170,6 +170,12 @@ public class CreateDatasetImportJobRequest extends com.amazonaws.AmazonWebServic
      * </ul>
      */
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * The format of the imported data, CSV or PARQUET. The default value is CSV.
+     * </p>
+     */
+    private String format;
 
     /**
      * <p>
@@ -1203,6 +1209,46 @@ public class CreateDatasetImportJobRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The format of the imported data, CSV or PARQUET. The default value is CSV.
+     * </p>
+     * 
+     * @param format
+     *        The format of the imported data, CSV or PARQUET. The default value is CSV.
+     */
+
+    public void setFormat(String format) {
+        this.format = format;
+    }
+
+    /**
+     * <p>
+     * The format of the imported data, CSV or PARQUET. The default value is CSV.
+     * </p>
+     * 
+     * @return The format of the imported data, CSV or PARQUET. The default value is CSV.
+     */
+
+    public String getFormat() {
+        return this.format;
+    }
+
+    /**
+     * <p>
+     * The format of the imported data, CSV or PARQUET. The default value is CSV.
+     * </p>
+     * 
+     * @param format
+     *        The format of the imported data, CSV or PARQUET. The default value is CSV.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDatasetImportJobRequest withFormat(String format) {
+        setFormat(format);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1229,7 +1275,9 @@ public class CreateDatasetImportJobRequest extends com.amazonaws.AmazonWebServic
         if (getGeolocationFormat() != null)
             sb.append("GeolocationFormat: ").append(getGeolocationFormat()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getFormat() != null)
+            sb.append("Format: ").append(getFormat());
         sb.append("}");
         return sb.toString();
     }
@@ -1276,6 +1324,10 @@ public class CreateDatasetImportJobRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getFormat() == null ^ this.getFormat() == null)
+            return false;
+        if (other.getFormat() != null && other.getFormat().equals(this.getFormat()) == false)
+            return false;
         return true;
     }
 
@@ -1292,6 +1344,7 @@ public class CreateDatasetImportJobRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getUseGeolocationForTimeZone() == null) ? 0 : getUseGeolocationForTimeZone().hashCode());
         hashCode = prime * hashCode + ((getGeolocationFormat() == null) ? 0 : getGeolocationFormat().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getFormat() == null) ? 0 : getFormat().hashCode());
         return hashCode;
     }
 

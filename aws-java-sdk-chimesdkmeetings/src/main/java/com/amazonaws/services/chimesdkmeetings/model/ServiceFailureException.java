@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The service encountered an unexpected error.
+ * The service is currently unavailable.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
