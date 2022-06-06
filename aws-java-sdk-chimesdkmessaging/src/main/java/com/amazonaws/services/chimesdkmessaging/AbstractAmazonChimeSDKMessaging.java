@@ -219,6 +219,11 @@ public class AbstractAmazonChimeSDKMessaging implements AmazonChimeSDKMessaging 
     }
 
     @Override
+    public SearchChannelsResult searchChannels(SearchChannelsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public SendChannelMessageResult sendChannelMessage(SendChannelMessageRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

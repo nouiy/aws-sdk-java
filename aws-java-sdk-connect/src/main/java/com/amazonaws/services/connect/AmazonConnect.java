@@ -1811,6 +1811,29 @@ public interface AmazonConnect {
 
     /**
      * <p>
+     * Gets the real-time active user data from the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param getCurrentUserDataRequest
+     * @return Result of the GetCurrentUserData operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws InvalidParameterException
+     *         One or more of the specified parameters are not valid.
+     * @throws InternalServiceException
+     *         Request processing failed because of an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @sample AmazonConnect.GetCurrentUserData
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetCurrentUserData" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetCurrentUserDataResult getCurrentUserData(GetCurrentUserDataRequest getCurrentUserDataRequest);
+
+    /**
+     * <p>
      * Retrieves a token for federation.
      * </p>
      * <note>

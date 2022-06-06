@@ -2287,6 +2287,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<GetCurrentUserDataResult> getCurrentUserDataAsync(GetCurrentUserDataRequest request) {
+
+        return getCurrentUserDataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCurrentUserDataResult> getCurrentUserDataAsync(final GetCurrentUserDataRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetCurrentUserDataRequest, GetCurrentUserDataResult> asyncHandler) {
+        final GetCurrentUserDataRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetCurrentUserDataResult>() {
+            @Override
+            public GetCurrentUserDataResult call() throws Exception {
+                GetCurrentUserDataResult result = null;
+
+                try {
+                    result = executeGetCurrentUserData(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetFederationTokenResult> getFederationTokenAsync(GetFederationTokenRequest request) {
 
         return getFederationTokenAsync(request, null);

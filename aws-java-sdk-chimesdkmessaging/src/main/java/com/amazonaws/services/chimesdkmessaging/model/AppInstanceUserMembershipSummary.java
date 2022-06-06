@@ -36,7 +36,7 @@ public class AppInstanceUserMembershipSummary implements Serializable, Cloneable
     private String type;
     /**
      * <p>
-     * The time at which a message was last read.
+     * The time at which an <code>AppInstanceUser</code> last marked a channel as read.
      * </p>
      */
     private java.util.Date readMarkerTimestamp;
@@ -102,11 +102,11 @@ public class AppInstanceUserMembershipSummary implements Serializable, Cloneable
 
     /**
      * <p>
-     * The time at which a message was last read.
+     * The time at which an <code>AppInstanceUser</code> last marked a channel as read.
      * </p>
      * 
      * @param readMarkerTimestamp
-     *        The time at which a message was last read.
+     *        The time at which an <code>AppInstanceUser</code> last marked a channel as read.
      */
 
     public void setReadMarkerTimestamp(java.util.Date readMarkerTimestamp) {
@@ -115,10 +115,10 @@ public class AppInstanceUserMembershipSummary implements Serializable, Cloneable
 
     /**
      * <p>
-     * The time at which a message was last read.
+     * The time at which an <code>AppInstanceUser</code> last marked a channel as read.
      * </p>
      * 
-     * @return The time at which a message was last read.
+     * @return The time at which an <code>AppInstanceUser</code> last marked a channel as read.
      */
 
     public java.util.Date getReadMarkerTimestamp() {
@@ -127,11 +127,11 @@ public class AppInstanceUserMembershipSummary implements Serializable, Cloneable
 
     /**
      * <p>
-     * The time at which a message was last read.
+     * The time at which an <code>AppInstanceUser</code> last marked a channel as read.
      * </p>
      * 
      * @param readMarkerTimestamp
-     *        The time at which a message was last read.
+     *        The time at which an <code>AppInstanceUser</code> last marked a channel as read.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

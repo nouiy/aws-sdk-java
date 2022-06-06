@@ -358,6 +358,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public GetCurrentUserDataResult getCurrentUserData(GetCurrentUserDataRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetFederationTokenResult getFederationToken(GetFederationTokenRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

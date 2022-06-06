@@ -54,8 +54,8 @@ import com.amazonaws.services.chimesdkmessaging.model.transform.*;
  * The Amazon Chime SDK Messaging APIs in this section allow software developers to send and receive messages in custom
  * messaging applications. These APIs depend on the frameworks provided by the Amazon Chime SDK Identity APIs. For more
  * information about the messaging APIs, see <a
- * href="https://docs.aws.amazon.com/chime/latest/APIReference/API_Operations_Amazon_Chime_SDK_Messaging">Amazon Chime
- * SDK messaging</a>
+ * href="https://docs.aws.amazon.com/chime/latest/APIReference/API_Operations_Amazon_Chime_SDK_Messaging.html">Amazon
+ * Chime SDK messaging</a>.
  * </p>
  */
 @ThreadSafe
@@ -3125,6 +3125,8 @@ public class AmazonChimeSDKMessagingClient extends AmazonWebServiceClient implem
      *         The input parameters don't match the service's restrictions.
      * @throws ForbiddenException
      *         The client is permanently forbidden from making the request.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
      * @throws UnauthorizedClientException
      *         The client is not currently authorized to make the request.
      * @throws ThrottledClientException
@@ -3171,6 +3173,75 @@ public class AmazonChimeSDKMessagingClient extends AmazonWebServiceClient implem
 
             HttpResponseHandler<AmazonWebServiceResponse<RedactChannelMessageResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new RedactChannelMessageResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Allows an <code>AppInstanceUser</code> to search the channels that they belong to. The
+     * <code>AppInstanceUser</code> can search by membership or external ID. An <code>AppInstanceAdmin</code> can search
+     * across all channels within the <code>AppInstance</code>.
+     * </p>
+     * 
+     * @param searchChannelsRequest
+     * @return Result of the SearchChannels operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.SearchChannels
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/SearchChannels"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public SearchChannelsResult searchChannels(SearchChannelsRequest request) {
+        request = beforeClientExecution(request);
+        return executeSearchChannels(request);
+    }
+
+    @SdkInternalApi
+    final SearchChannelsResult executeSearchChannels(SearchChannelsRequest searchChannelsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(searchChannelsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<SearchChannelsRequest> request = null;
+        Response<SearchChannelsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new SearchChannelsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(searchChannelsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Messaging");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "SearchChannels");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<SearchChannelsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new SearchChannelsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

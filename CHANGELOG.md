@@ -1,3 +1,12 @@
+# __1.12.234__ __2022-06-06__
+## __Amazon Chime SDK Messaging__
+  - ### Features
+    - This release adds support for searching channels by members via the SearchChannels API, removes required restrictions for Name and Mode in UpdateChannel API and enhances CreateChannel API by exposing member and moderator list as well as channel id as optional parameters.
+
+## __Amazon Connect Service__
+  - ### Features
+    - This release adds a new API, GetCurrentUserData, which returns real-time details about users' current activity.
+
 # __1.12.233__ __2022-06-02__
 ## __AWS Proton__
   - ### Features

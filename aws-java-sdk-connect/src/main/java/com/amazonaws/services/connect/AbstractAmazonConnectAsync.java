@@ -894,6 +894,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<GetCurrentUserDataResult> getCurrentUserDataAsync(GetCurrentUserDataRequest request) {
+
+        return getCurrentUserDataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCurrentUserDataResult> getCurrentUserDataAsync(GetCurrentUserDataRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetCurrentUserDataRequest, GetCurrentUserDataResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetFederationTokenResult> getFederationTokenAsync(GetFederationTokenRequest request) {
 
         return getFederationTokenAsync(request, null);

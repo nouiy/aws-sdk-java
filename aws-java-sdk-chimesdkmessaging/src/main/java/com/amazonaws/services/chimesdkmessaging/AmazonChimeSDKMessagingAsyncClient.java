@@ -29,8 +29,8 @@ import java.util.concurrent.ExecutorService;
  * The Amazon Chime SDK Messaging APIs in this section allow software developers to send and receive messages in custom
  * messaging applications. These APIs depend on the frameworks provided by the Amazon Chime SDK Identity APIs. For more
  * information about the messaging APIs, see <a
- * href="https://docs.aws.amazon.com/chime/latest/APIReference/API_Operations_Amazon_Chime_SDK_Messaging">Amazon Chime
- * SDK messaging</a>
+ * href="https://docs.aws.amazon.com/chime/latest/APIReference/API_Operations_Amazon_Chime_SDK_Messaging.html">Amazon
+ * Chime SDK messaging</a>.
  * </p>
  */
 @ThreadSafe
@@ -1332,6 +1332,39 @@ public class AmazonChimeSDKMessagingAsyncClient extends AmazonChimeSDKMessagingC
 
                 try {
                     result = executeRedactChannelMessage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchChannelsResult> searchChannelsAsync(SearchChannelsRequest request) {
+
+        return searchChannelsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchChannelsResult> searchChannelsAsync(final SearchChannelsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchChannelsRequest, SearchChannelsResult> asyncHandler) {
+        final SearchChannelsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchChannelsResult>() {
+            @Override
+            public SearchChannelsResult call() throws Exception {
+                SearchChannelsResult result = null;
+
+                try {
+                    result = executeSearchChannels(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

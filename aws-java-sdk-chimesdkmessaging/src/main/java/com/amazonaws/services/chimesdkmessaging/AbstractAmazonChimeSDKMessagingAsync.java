@@ -536,6 +536,19 @@ public class AbstractAmazonChimeSDKMessagingAsync extends AbstractAmazonChimeSDK
     }
 
     @Override
+    public java.util.concurrent.Future<SearchChannelsResult> searchChannelsAsync(SearchChannelsRequest request) {
+
+        return searchChannelsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchChannelsResult> searchChannelsAsync(SearchChannelsRequest request,
+            com.amazonaws.handlers.AsyncHandler<SearchChannelsRequest, SearchChannelsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<SendChannelMessageResult> sendChannelMessageAsync(SendChannelMessageRequest request) {
 
         return sendChannelMessageAsync(request, null);

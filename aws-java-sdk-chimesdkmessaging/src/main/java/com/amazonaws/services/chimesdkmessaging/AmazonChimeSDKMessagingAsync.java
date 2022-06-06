@@ -29,8 +29,8 @@ import com.amazonaws.services.chimesdkmessaging.model.*;
  * The Amazon Chime SDK Messaging APIs in this section allow software developers to send and receive messages in custom
  * messaging applications. These APIs depend on the frameworks provided by the Amazon Chime SDK Identity APIs. For more
  * information about the messaging APIs, see <a
- * href="https://docs.aws.amazon.com/chime/latest/APIReference/API_Operations_Amazon_Chime_SDK_Messaging">Amazon Chime
- * SDK messaging</a>
+ * href="https://docs.aws.amazon.com/chime/latest/APIReference/API_Operations_Amazon_Chime_SDK_Messaging.html">Amazon
+ * Chime SDK messaging</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -2039,6 +2039,41 @@ public interface AmazonChimeSDKMessagingAsync extends AmazonChimeSDKMessaging {
      */
     java.util.concurrent.Future<RedactChannelMessageResult> redactChannelMessageAsync(RedactChannelMessageRequest redactChannelMessageRequest,
             com.amazonaws.handlers.AsyncHandler<RedactChannelMessageRequest, RedactChannelMessageResult> asyncHandler);
+
+    /**
+     * <p>
+     * Allows an <code>AppInstanceUser</code> to search the channels that they belong to. The
+     * <code>AppInstanceUser</code> can search by membership or external ID. An <code>AppInstanceAdmin</code> can search
+     * across all channels within the <code>AppInstance</code>.
+     * </p>
+     * 
+     * @param searchChannelsRequest
+     * @return A Java Future containing the result of the SearchChannels operation returned by the service.
+     * @sample AmazonChimeSDKMessagingAsync.SearchChannels
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/SearchChannels"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchChannelsResult> searchChannelsAsync(SearchChannelsRequest searchChannelsRequest);
+
+    /**
+     * <p>
+     * Allows an <code>AppInstanceUser</code> to search the channels that they belong to. The
+     * <code>AppInstanceUser</code> can search by membership or external ID. An <code>AppInstanceAdmin</code> can search
+     * across all channels within the <code>AppInstance</code>.
+     * </p>
+     * 
+     * @param searchChannelsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchChannels operation returned by the service.
+     * @sample AmazonChimeSDKMessagingAsyncHandler.SearchChannels
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/SearchChannels"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchChannelsResult> searchChannelsAsync(SearchChannelsRequest searchChannelsRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchChannelsRequest, SearchChannelsResult> asyncHandler);
 
     /**
      * <p>

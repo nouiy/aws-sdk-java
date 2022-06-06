@@ -2460,6 +2460,37 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Gets the real-time active user data from the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param getCurrentUserDataRequest
+     * @return A Java Future containing the result of the GetCurrentUserData operation returned by the service.
+     * @sample AmazonConnectAsync.GetCurrentUserData
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetCurrentUserData" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetCurrentUserDataResult> getCurrentUserDataAsync(GetCurrentUserDataRequest getCurrentUserDataRequest);
+
+    /**
+     * <p>
+     * Gets the real-time active user data from the specified Amazon Connect instance.
+     * </p>
+     * 
+     * @param getCurrentUserDataRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetCurrentUserData operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.GetCurrentUserData
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/GetCurrentUserData" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetCurrentUserDataResult> getCurrentUserDataAsync(GetCurrentUserDataRequest getCurrentUserDataRequest,
+            com.amazonaws.handlers.AsyncHandler<GetCurrentUserDataRequest, GetCurrentUserDataResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves a token for federation.
      * </p>
      * <note>

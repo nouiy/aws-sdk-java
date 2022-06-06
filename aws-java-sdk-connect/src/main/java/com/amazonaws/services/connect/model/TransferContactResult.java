@@ -25,7 +25,7 @@ public class TransferContactResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The identifier of the contact in this instance of Amazon Connect
+     * The identifier of the contact in this instance of Amazon Connect.
      * </p>
      */
     private String contactId;
@@ -38,11 +38,11 @@ public class TransferContactResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The identifier of the contact in this instance of Amazon Connect
+     * The identifier of the contact in this instance of Amazon Connect.
      * </p>
      * 
      * @param contactId
-     *        The identifier of the contact in this instance of Amazon Connect
+     *        The identifier of the contact in this instance of Amazon Connect.
      */
 
     public void setContactId(String contactId) {
@@ -51,10 +51,10 @@ public class TransferContactResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The identifier of the contact in this instance of Amazon Connect
+     * The identifier of the contact in this instance of Amazon Connect.
      * </p>
      * 
-     * @return The identifier of the contact in this instance of Amazon Connect
+     * @return The identifier of the contact in this instance of Amazon Connect.
      */
 
     public String getContactId() {
@@ -63,11 +63,11 @@ public class TransferContactResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The identifier of the contact in this instance of Amazon Connect
+     * The identifier of the contact in this instance of Amazon Connect.
      * </p>
      * 
      * @param contactId
-     *        The identifier of the contact in this instance of Amazon Connect
+     *        The identifier of the contact in this instance of Amazon Connect.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
