@@ -132,6 +132,9 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.auditmanager.model.transform.ValidationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.auditmanager.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.auditmanager.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.auditmanager.model.AWSAuditManagerException.class));
@@ -2487,7 +2490,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns a list of the in-scope Amazon Web Services services for the specified assessment.
+     * Returns a list of the in-scope Amazon Web Services for the specified assessment.
      * </p>
      * 
      * @param getServicesInScopeRequest
@@ -3426,6 +3429,8 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
      *         The resource that's specified in the request can't be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
      * @sample AWSAuditManager.RegisterAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/RegisterAccount" target="_top">AWS
      *      API Documentation</a>
@@ -3548,6 +3553,46 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
      * <p>
      * The share request specifies a recipient and notifies them that a custom framework is available. Recipients have
      * 120 days to accept or decline the request. If no action is taken, the share request expires.
+     * </p>
+     * <p>
+     * When you create a share request, Audit Manager stores a snapshot of your custom framework in the US East (N.
+     * Virginia) Amazon Web Services Region. Audit Manager also stores a backup of the same snapshot in the US West
+     * (Oregon) Amazon Web Services Region.
+     * </p>
+     * <p>
+     * Audit Manager deletes the snapshot and the backup snapshot when one of the following events occurs:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The sender revokes the share request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The recipient declines the share request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The recipient encounters an error and doesn't successfully accept the share request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The share request expires before the recipient responds to the request.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When a sender <a href=
+     * "https://docs.aws.amazon.com/audit-manager/latest/userguide/framework-sharing.html#framework-sharing-resend"
+     * >resends a share request</a>, the snapshot is replaced with an updated version that corresponds with the latest
+     * version of the custom framework.
+     * </p>
+     * <p>
+     * When a recipient accepts a share request, the snapshot is replicated into their Amazon Web Services account under
+     * the Amazon Web Services Region that was specified in the share request.
      * </p>
      * <important>
      * <p>

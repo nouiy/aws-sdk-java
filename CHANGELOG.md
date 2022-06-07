@@ -1,3 +1,12 @@
+# __1.12.235__ __2022-06-07__
+## __AWS Audit Manager__
+  - ### Features
+    - This release introduces 2 updates to the Audit Manager API. The roleType and roleArn attributes are now required when you use the CreateAssessment or UpdateAssessment operation. We also added a throttling exception to the RegisterAccount API operation.
+
+## __AWS Cost Explorer Service__
+  - ### Features
+    - Added two new APIs to support cost allocation tags operations: ListCostAllocationTags, UpdateCostAllocationTagsStatus.
+
 # __1.12.234__ __2022-06-06__
 ## __Amazon Chime SDK Messaging__
   - ### Features

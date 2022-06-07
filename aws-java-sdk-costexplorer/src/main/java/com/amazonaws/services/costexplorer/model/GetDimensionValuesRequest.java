@@ -69,15 +69,15 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * BILLING_ENTITY - The Amazon Web Services seller that your account is with. Possible values are the following:
      * </p>
      * <p>
-     * - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services services.
+     * - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services.
      * </p>
      * <p>
-     * - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that is an acting reseller for Amazon Web
-     * Services services in India.
+     * - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that's an acting reseller for Amazon Web
+     * Services in India.
      * </p>
      * <p>
-     * - Amazon Web Services Marketplace: The entity that supports the sale of solutions built on Amazon Web Services by
-     * third-party software providers.
+     * - Amazon Web Services Marketplace: The entity that supports the sale of solutions that are built on Amazon Web
+     * Services by third-party software providers.
      * </p>
      * </li>
      * <li>
@@ -104,13 +104,14 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * <li>
      * <p>
      * INSTANCE_TYPE_FAMILY - A family of instance types optimized to fit different use cases. Examples are
-     * <code>Compute Optimized</code> (<code>C4</code>, <code>C5</code>, <code>C6g</code>, <code>C7g</code> etc.),
-     * <code>Memory Optimization</code> (<code>R4</code>, <code>R5n</code>, <code>R5b</code>, <code>R6g</code> etc).
+     * <code>Compute Optimized</code> (for example, <code>C4</code>, <code>C5</code>, <code>C6g</code>, and
+     * <code>C7g</code>), <code>Memory Optimization</code> (for example, <code>R4</code>, <code>R5n</code>,
+     * <code>R5b</code>, and <code>R6g</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * INVOICING_ENTITY - The name of the entity issuing the Amazon Web Services invoice.
+     * INVOICING_ENTITY - The name of the entity that issues the Amazon Web Services invoice.
      * </p>
      * </li>
      * <li>
@@ -142,7 +143,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * PURCHASE_TYPE - The reservation type of the purchase to which this usage is related. Examples include On-Demand
+     * PURCHASE_TYPE - The reservation type of the purchase that this usage is related to. Examples include On-Demand
      * Instances and Standard Reserved Instances.
      * </p>
      * </li>
@@ -190,7 +191,8 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * RECORD_TYPE - The different types of charges such as RI fees, usage costs, tax refunds, and credits.
+     * RECORD_TYPE - The different types of charges such as Reserved Instance (RI) fees, usage costs, tax refunds, and
+     * credits.
      * </p>
      * </li>
      * <li>
@@ -269,7 +271,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * PAYMENT_OPTION - Payment option for the given Savings Plans (for example, All Upfront)
+     * PAYMENT_OPTION - The payment option for the given Savings Plans (for example, All Upfront)
      * </p>
      * </li>
      * <li>
@@ -300,7 +302,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
     private Expression filter;
     /**
      * <p>
-     * The value by which you want to sort the data.
+     * The value that you want to sort the data by.
      * </p>
      * <p>
      * The key represents cost and usage metrics. The following values are supported:
@@ -343,18 +345,18 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * </ul>
      * <p>
-     * Supported values for <code>SortOrder</code> are <code>ASCENDING</code> or <code>DESCENDING</code>.
+     * The supported values for the <code>SortOrder</code> key are <code>ASCENDING</code> or <code>DESCENDING</code>.
      * </p>
      * <p>
      * When you specify a <code>SortBy</code> paramater, the context must be <code>COST_AND_USAGE</code>. Further, when
-     * using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> are not supported.
+     * using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> aren't supported.
      * </p>
      */
     private java.util.List<SortDefinition> sortBy;
     /**
      * <p>
-     * This field is only used when SortBy is provided in the request. The maximum number of objects that to be returned
-     * for this request. If MaxResults is not specified with SortBy, the request will return 1000 results as the default
+     * This field is only used when SortBy is provided in the request. The maximum number of objects that are returned
+     * for this request. If MaxResults isn't specified with SortBy, the request returns 1000 results as the default
      * value for this parameter.
      * </p>
      * <p>
@@ -557,15 +559,15 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * BILLING_ENTITY - The Amazon Web Services seller that your account is with. Possible values are the following:
      * </p>
      * <p>
-     * - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services services.
+     * - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services.
      * </p>
      * <p>
-     * - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that is an acting reseller for Amazon Web
-     * Services services in India.
+     * - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that's an acting reseller for Amazon Web
+     * Services in India.
      * </p>
      * <p>
-     * - Amazon Web Services Marketplace: The entity that supports the sale of solutions built on Amazon Web Services by
-     * third-party software providers.
+     * - Amazon Web Services Marketplace: The entity that supports the sale of solutions that are built on Amazon Web
+     * Services by third-party software providers.
      * </p>
      * </li>
      * <li>
@@ -592,13 +594,14 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * <li>
      * <p>
      * INSTANCE_TYPE_FAMILY - A family of instance types optimized to fit different use cases. Examples are
-     * <code>Compute Optimized</code> (<code>C4</code>, <code>C5</code>, <code>C6g</code>, <code>C7g</code> etc.),
-     * <code>Memory Optimization</code> (<code>R4</code>, <code>R5n</code>, <code>R5b</code>, <code>R6g</code> etc).
+     * <code>Compute Optimized</code> (for example, <code>C4</code>, <code>C5</code>, <code>C6g</code>, and
+     * <code>C7g</code>), <code>Memory Optimization</code> (for example, <code>R4</code>, <code>R5n</code>,
+     * <code>R5b</code>, and <code>R6g</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * INVOICING_ENTITY - The name of the entity issuing the Amazon Web Services invoice.
+     * INVOICING_ENTITY - The name of the entity that issues the Amazon Web Services invoice.
      * </p>
      * </li>
      * <li>
@@ -630,7 +633,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * PURCHASE_TYPE - The reservation type of the purchase to which this usage is related. Examples include On-Demand
+     * PURCHASE_TYPE - The reservation type of the purchase that this usage is related to. Examples include On-Demand
      * Instances and Standard Reserved Instances.
      * </p>
      * </li>
@@ -678,7 +681,8 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * RECORD_TYPE - The different types of charges such as RI fees, usage costs, tax refunds, and credits.
+     * RECORD_TYPE - The different types of charges such as Reserved Instance (RI) fees, usage costs, tax refunds, and
+     * credits.
      * </p>
      * </li>
      * <li>
@@ -757,7 +761,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * PAYMENT_OPTION - Payment option for the given Savings Plans (for example, All Upfront)
+     * PAYMENT_OPTION - The payment option for the given Savings Plans (for example, All Upfront)
      * </p>
      * </li>
      * <li>
@@ -804,15 +808,15 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        following:
      *        </p>
      *        <p>
-     *        - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services services.
+     *        - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services.
      *        </p>
      *        <p>
-     *        - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that is an acting reseller for
-     *        Amazon Web Services services in India.
+     *        - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that's an acting reseller for Amazon
+     *        Web Services in India.
      *        </p>
      *        <p>
-     *        - Amazon Web Services Marketplace: The entity that supports the sale of solutions built on Amazon Web
-     *        Services by third-party software providers.
+     *        - Amazon Web Services Marketplace: The entity that supports the sale of solutions that are built on Amazon
+     *        Web Services by third-party software providers.
      *        </p>
      *        </li>
      *        <li>
@@ -839,14 +843,14 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        <li>
      *        <p>
      *        INSTANCE_TYPE_FAMILY - A family of instance types optimized to fit different use cases. Examples are
-     *        <code>Compute Optimized</code> (<code>C4</code>, <code>C5</code>, <code>C6g</code>, <code>C7g</code>
-     *        etc.), <code>Memory Optimization</code> (<code>R4</code>, <code>R5n</code>, <code>R5b</code>,
-     *        <code>R6g</code> etc).
+     *        <code>Compute Optimized</code> (for example, <code>C4</code>, <code>C5</code>, <code>C6g</code>, and
+     *        <code>C7g</code>), <code>Memory Optimization</code> (for example, <code>R4</code>, <code>R5n</code>,
+     *        <code>R5b</code>, and <code>R6g</code>).
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        INVOICING_ENTITY - The name of the entity issuing the Amazon Web Services invoice.
+     *        INVOICING_ENTITY - The name of the entity that issues the Amazon Web Services invoice.
      *        </p>
      *        </li>
      *        <li>
@@ -878,7 +882,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        </li>
      *        <li>
      *        <p>
-     *        PURCHASE_TYPE - The reservation type of the purchase to which this usage is related. Examples include
+     *        PURCHASE_TYPE - The reservation type of the purchase that this usage is related to. Examples include
      *        On-Demand Instances and Standard Reserved Instances.
      *        </p>
      *        </li>
@@ -926,7 +930,8 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        </li>
      *        <li>
      *        <p>
-     *        RECORD_TYPE - The different types of charges such as RI fees, usage costs, tax refunds, and credits.
+     *        RECORD_TYPE - The different types of charges such as Reserved Instance (RI) fees, usage costs, tax
+     *        refunds, and credits.
      *        </p>
      *        </li>
      *        <li>
@@ -1005,7 +1010,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        </li>
      *        <li>
      *        <p>
-     *        PAYMENT_OPTION - Payment option for the given Savings Plans (for example, All Upfront)
+     *        PAYMENT_OPTION - The payment option for the given Savings Plans (for example, All Upfront)
      *        </p>
      *        </li>
      *        <li>
@@ -1058,15 +1063,15 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * BILLING_ENTITY - The Amazon Web Services seller that your account is with. Possible values are the following:
      * </p>
      * <p>
-     * - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services services.
+     * - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services.
      * </p>
      * <p>
-     * - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that is an acting reseller for Amazon Web
-     * Services services in India.
+     * - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that's an acting reseller for Amazon Web
+     * Services in India.
      * </p>
      * <p>
-     * - Amazon Web Services Marketplace: The entity that supports the sale of solutions built on Amazon Web Services by
-     * third-party software providers.
+     * - Amazon Web Services Marketplace: The entity that supports the sale of solutions that are built on Amazon Web
+     * Services by third-party software providers.
      * </p>
      * </li>
      * <li>
@@ -1093,13 +1098,14 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * <li>
      * <p>
      * INSTANCE_TYPE_FAMILY - A family of instance types optimized to fit different use cases. Examples are
-     * <code>Compute Optimized</code> (<code>C4</code>, <code>C5</code>, <code>C6g</code>, <code>C7g</code> etc.),
-     * <code>Memory Optimization</code> (<code>R4</code>, <code>R5n</code>, <code>R5b</code>, <code>R6g</code> etc).
+     * <code>Compute Optimized</code> (for example, <code>C4</code>, <code>C5</code>, <code>C6g</code>, and
+     * <code>C7g</code>), <code>Memory Optimization</code> (for example, <code>R4</code>, <code>R5n</code>,
+     * <code>R5b</code>, and <code>R6g</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * INVOICING_ENTITY - The name of the entity issuing the Amazon Web Services invoice.
+     * INVOICING_ENTITY - The name of the entity that issues the Amazon Web Services invoice.
      * </p>
      * </li>
      * <li>
@@ -1131,7 +1137,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * PURCHASE_TYPE - The reservation type of the purchase to which this usage is related. Examples include On-Demand
+     * PURCHASE_TYPE - The reservation type of the purchase that this usage is related to. Examples include On-Demand
      * Instances and Standard Reserved Instances.
      * </p>
      * </li>
@@ -1179,7 +1185,8 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * RECORD_TYPE - The different types of charges such as RI fees, usage costs, tax refunds, and credits.
+     * RECORD_TYPE - The different types of charges such as Reserved Instance (RI) fees, usage costs, tax refunds, and
+     * credits.
      * </p>
      * </li>
      * <li>
@@ -1258,7 +1265,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * PAYMENT_OPTION - Payment option for the given Savings Plans (for example, All Upfront)
+     * PAYMENT_OPTION - The payment option for the given Savings Plans (for example, All Upfront)
      * </p>
      * </li>
      * <li>
@@ -1305,15 +1312,15 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *         following:
      *         </p>
      *         <p>
-     *         - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services services.
+     *         - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services.
      *         </p>
      *         <p>
-     *         - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that is an acting reseller for
-     *         Amazon Web Services services in India.
+     *         - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that's an acting reseller for
+     *         Amazon Web Services in India.
      *         </p>
      *         <p>
-     *         - Amazon Web Services Marketplace: The entity that supports the sale of solutions built on Amazon Web
-     *         Services by third-party software providers.
+     *         - Amazon Web Services Marketplace: The entity that supports the sale of solutions that are built on
+     *         Amazon Web Services by third-party software providers.
      *         </p>
      *         </li>
      *         <li>
@@ -1340,14 +1347,14 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *         <li>
      *         <p>
      *         INSTANCE_TYPE_FAMILY - A family of instance types optimized to fit different use cases. Examples are
-     *         <code>Compute Optimized</code> (<code>C4</code>, <code>C5</code>, <code>C6g</code>, <code>C7g</code>
-     *         etc.), <code>Memory Optimization</code> (<code>R4</code>, <code>R5n</code>, <code>R5b</code>,
-     *         <code>R6g</code> etc).
+     *         <code>Compute Optimized</code> (for example, <code>C4</code>, <code>C5</code>, <code>C6g</code>, and
+     *         <code>C7g</code>), <code>Memory Optimization</code> (for example, <code>R4</code>, <code>R5n</code>,
+     *         <code>R5b</code>, and <code>R6g</code>).
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         INVOICING_ENTITY - The name of the entity issuing the Amazon Web Services invoice.
+     *         INVOICING_ENTITY - The name of the entity that issues the Amazon Web Services invoice.
      *         </p>
      *         </li>
      *         <li>
@@ -1380,7 +1387,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *         </li>
      *         <li>
      *         <p>
-     *         PURCHASE_TYPE - The reservation type of the purchase to which this usage is related. Examples include
+     *         PURCHASE_TYPE - The reservation type of the purchase that this usage is related to. Examples include
      *         On-Demand Instances and Standard Reserved Instances.
      *         </p>
      *         </li>
@@ -1428,7 +1435,8 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *         </li>
      *         <li>
      *         <p>
-     *         RECORD_TYPE - The different types of charges such as RI fees, usage costs, tax refunds, and credits.
+     *         RECORD_TYPE - The different types of charges such as Reserved Instance (RI) fees, usage costs, tax
+     *         refunds, and credits.
      *         </p>
      *         </li>
      *         <li>
@@ -1507,7 +1515,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *         </li>
      *         <li>
      *         <p>
-     *         PAYMENT_OPTION - Payment option for the given Savings Plans (for example, All Upfront)
+     *         PAYMENT_OPTION - The payment option for the given Savings Plans (for example, All Upfront)
      *         </p>
      *         </li>
      *         <li>
@@ -1560,15 +1568,15 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * BILLING_ENTITY - The Amazon Web Services seller that your account is with. Possible values are the following:
      * </p>
      * <p>
-     * - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services services.
+     * - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services.
      * </p>
      * <p>
-     * - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that is an acting reseller for Amazon Web
-     * Services services in India.
+     * - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that's an acting reseller for Amazon Web
+     * Services in India.
      * </p>
      * <p>
-     * - Amazon Web Services Marketplace: The entity that supports the sale of solutions built on Amazon Web Services by
-     * third-party software providers.
+     * - Amazon Web Services Marketplace: The entity that supports the sale of solutions that are built on Amazon Web
+     * Services by third-party software providers.
      * </p>
      * </li>
      * <li>
@@ -1595,13 +1603,14 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * <li>
      * <p>
      * INSTANCE_TYPE_FAMILY - A family of instance types optimized to fit different use cases. Examples are
-     * <code>Compute Optimized</code> (<code>C4</code>, <code>C5</code>, <code>C6g</code>, <code>C7g</code> etc.),
-     * <code>Memory Optimization</code> (<code>R4</code>, <code>R5n</code>, <code>R5b</code>, <code>R6g</code> etc).
+     * <code>Compute Optimized</code> (for example, <code>C4</code>, <code>C5</code>, <code>C6g</code>, and
+     * <code>C7g</code>), <code>Memory Optimization</code> (for example, <code>R4</code>, <code>R5n</code>,
+     * <code>R5b</code>, and <code>R6g</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * INVOICING_ENTITY - The name of the entity issuing the Amazon Web Services invoice.
+     * INVOICING_ENTITY - The name of the entity that issues the Amazon Web Services invoice.
      * </p>
      * </li>
      * <li>
@@ -1633,7 +1642,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * PURCHASE_TYPE - The reservation type of the purchase to which this usage is related. Examples include On-Demand
+     * PURCHASE_TYPE - The reservation type of the purchase that this usage is related to. Examples include On-Demand
      * Instances and Standard Reserved Instances.
      * </p>
      * </li>
@@ -1681,7 +1690,8 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * RECORD_TYPE - The different types of charges such as RI fees, usage costs, tax refunds, and credits.
+     * RECORD_TYPE - The different types of charges such as Reserved Instance (RI) fees, usage costs, tax refunds, and
+     * credits.
      * </p>
      * </li>
      * <li>
@@ -1760,7 +1770,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * PAYMENT_OPTION - Payment option for the given Savings Plans (for example, All Upfront)
+     * PAYMENT_OPTION - The payment option for the given Savings Plans (for example, All Upfront)
      * </p>
      * </li>
      * <li>
@@ -1807,15 +1817,15 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        following:
      *        </p>
      *        <p>
-     *        - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services services.
+     *        - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services.
      *        </p>
      *        <p>
-     *        - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that is an acting reseller for
-     *        Amazon Web Services services in India.
+     *        - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that's an acting reseller for Amazon
+     *        Web Services in India.
      *        </p>
      *        <p>
-     *        - Amazon Web Services Marketplace: The entity that supports the sale of solutions built on Amazon Web
-     *        Services by third-party software providers.
+     *        - Amazon Web Services Marketplace: The entity that supports the sale of solutions that are built on Amazon
+     *        Web Services by third-party software providers.
      *        </p>
      *        </li>
      *        <li>
@@ -1842,14 +1852,14 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        <li>
      *        <p>
      *        INSTANCE_TYPE_FAMILY - A family of instance types optimized to fit different use cases. Examples are
-     *        <code>Compute Optimized</code> (<code>C4</code>, <code>C5</code>, <code>C6g</code>, <code>C7g</code>
-     *        etc.), <code>Memory Optimization</code> (<code>R4</code>, <code>R5n</code>, <code>R5b</code>,
-     *        <code>R6g</code> etc).
+     *        <code>Compute Optimized</code> (for example, <code>C4</code>, <code>C5</code>, <code>C6g</code>, and
+     *        <code>C7g</code>), <code>Memory Optimization</code> (for example, <code>R4</code>, <code>R5n</code>,
+     *        <code>R5b</code>, and <code>R6g</code>).
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        INVOICING_ENTITY - The name of the entity issuing the Amazon Web Services invoice.
+     *        INVOICING_ENTITY - The name of the entity that issues the Amazon Web Services invoice.
      *        </p>
      *        </li>
      *        <li>
@@ -1881,7 +1891,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        </li>
      *        <li>
      *        <p>
-     *        PURCHASE_TYPE - The reservation type of the purchase to which this usage is related. Examples include
+     *        PURCHASE_TYPE - The reservation type of the purchase that this usage is related to. Examples include
      *        On-Demand Instances and Standard Reserved Instances.
      *        </p>
      *        </li>
@@ -1929,7 +1939,8 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        </li>
      *        <li>
      *        <p>
-     *        RECORD_TYPE - The different types of charges such as RI fees, usage costs, tax refunds, and credits.
+     *        RECORD_TYPE - The different types of charges such as Reserved Instance (RI) fees, usage costs, tax
+     *        refunds, and credits.
      *        </p>
      *        </li>
      *        <li>
@@ -2008,7 +2019,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        </li>
      *        <li>
      *        <p>
-     *        PAYMENT_OPTION - Payment option for the given Savings Plans (for example, All Upfront)
+     *        PAYMENT_OPTION - The payment option for the given Savings Plans (for example, All Upfront)
      *        </p>
      *        </li>
      *        <li>
@@ -2063,15 +2074,15 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * BILLING_ENTITY - The Amazon Web Services seller that your account is with. Possible values are the following:
      * </p>
      * <p>
-     * - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services services.
+     * - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services.
      * </p>
      * <p>
-     * - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that is an acting reseller for Amazon Web
-     * Services services in India.
+     * - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that's an acting reseller for Amazon Web
+     * Services in India.
      * </p>
      * <p>
-     * - Amazon Web Services Marketplace: The entity that supports the sale of solutions built on Amazon Web Services by
-     * third-party software providers.
+     * - Amazon Web Services Marketplace: The entity that supports the sale of solutions that are built on Amazon Web
+     * Services by third-party software providers.
      * </p>
      * </li>
      * <li>
@@ -2098,13 +2109,14 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * <li>
      * <p>
      * INSTANCE_TYPE_FAMILY - A family of instance types optimized to fit different use cases. Examples are
-     * <code>Compute Optimized</code> (<code>C4</code>, <code>C5</code>, <code>C6g</code>, <code>C7g</code> etc.),
-     * <code>Memory Optimization</code> (<code>R4</code>, <code>R5n</code>, <code>R5b</code>, <code>R6g</code> etc).
+     * <code>Compute Optimized</code> (for example, <code>C4</code>, <code>C5</code>, <code>C6g</code>, and
+     * <code>C7g</code>), <code>Memory Optimization</code> (for example, <code>R4</code>, <code>R5n</code>,
+     * <code>R5b</code>, and <code>R6g</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * INVOICING_ENTITY - The name of the entity issuing the Amazon Web Services invoice.
+     * INVOICING_ENTITY - The name of the entity that issues the Amazon Web Services invoice.
      * </p>
      * </li>
      * <li>
@@ -2136,7 +2148,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * PURCHASE_TYPE - The reservation type of the purchase to which this usage is related. Examples include On-Demand
+     * PURCHASE_TYPE - The reservation type of the purchase that this usage is related to. Examples include On-Demand
      * Instances and Standard Reserved Instances.
      * </p>
      * </li>
@@ -2184,7 +2196,8 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * RECORD_TYPE - The different types of charges such as RI fees, usage costs, tax refunds, and credits.
+     * RECORD_TYPE - The different types of charges such as Reserved Instance (RI) fees, usage costs, tax refunds, and
+     * credits.
      * </p>
      * </li>
      * <li>
@@ -2263,7 +2276,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * PAYMENT_OPTION - Payment option for the given Savings Plans (for example, All Upfront)
+     * PAYMENT_OPTION - The payment option for the given Savings Plans (for example, All Upfront)
      * </p>
      * </li>
      * <li>
@@ -2310,15 +2323,15 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        following:
      *        </p>
      *        <p>
-     *        - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services services.
+     *        - Amazon Web Services(Amazon Web Services): The entity that sells Amazon Web Services.
      *        </p>
      *        <p>
-     *        - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that is an acting reseller for
-     *        Amazon Web Services services in India.
+     *        - AISPL (Amazon Internet Services Pvt. Ltd.): The local Indian entity that's an acting reseller for Amazon
+     *        Web Services in India.
      *        </p>
      *        <p>
-     *        - Amazon Web Services Marketplace: The entity that supports the sale of solutions built on Amazon Web
-     *        Services by third-party software providers.
+     *        - Amazon Web Services Marketplace: The entity that supports the sale of solutions that are built on Amazon
+     *        Web Services by third-party software providers.
      *        </p>
      *        </li>
      *        <li>
@@ -2345,14 +2358,14 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        <li>
      *        <p>
      *        INSTANCE_TYPE_FAMILY - A family of instance types optimized to fit different use cases. Examples are
-     *        <code>Compute Optimized</code> (<code>C4</code>, <code>C5</code>, <code>C6g</code>, <code>C7g</code>
-     *        etc.), <code>Memory Optimization</code> (<code>R4</code>, <code>R5n</code>, <code>R5b</code>,
-     *        <code>R6g</code> etc).
+     *        <code>Compute Optimized</code> (for example, <code>C4</code>, <code>C5</code>, <code>C6g</code>, and
+     *        <code>C7g</code>), <code>Memory Optimization</code> (for example, <code>R4</code>, <code>R5n</code>,
+     *        <code>R5b</code>, and <code>R6g</code>).
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        INVOICING_ENTITY - The name of the entity issuing the Amazon Web Services invoice.
+     *        INVOICING_ENTITY - The name of the entity that issues the Amazon Web Services invoice.
      *        </p>
      *        </li>
      *        <li>
@@ -2384,7 +2397,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        </li>
      *        <li>
      *        <p>
-     *        PURCHASE_TYPE - The reservation type of the purchase to which this usage is related. Examples include
+     *        PURCHASE_TYPE - The reservation type of the purchase that this usage is related to. Examples include
      *        On-Demand Instances and Standard Reserved Instances.
      *        </p>
      *        </li>
@@ -2432,7 +2445,8 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        </li>
      *        <li>
      *        <p>
-     *        RECORD_TYPE - The different types of charges such as RI fees, usage costs, tax refunds, and credits.
+     *        RECORD_TYPE - The different types of charges such as Reserved Instance (RI) fees, usage costs, tax
+     *        refunds, and credits.
      *        </p>
      *        </li>
      *        <li>
@@ -2511,7 +2525,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        </li>
      *        <li>
      *        <p>
-     *        PAYMENT_OPTION - Payment option for the given Savings Plans (for example, All Upfront)
+     *        PAYMENT_OPTION - The payment option for the given Savings Plans (for example, All Upfront)
      *        </p>
      *        </li>
      *        <li>
@@ -2572,7 +2586,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The value by which you want to sort the data.
+     * The value that you want to sort the data by.
      * </p>
      * <p>
      * The key represents cost and usage metrics. The following values are supported:
@@ -2615,14 +2629,14 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * </ul>
      * <p>
-     * Supported values for <code>SortOrder</code> are <code>ASCENDING</code> or <code>DESCENDING</code>.
+     * The supported values for the <code>SortOrder</code> key are <code>ASCENDING</code> or <code>DESCENDING</code>.
      * </p>
      * <p>
      * When you specify a <code>SortBy</code> paramater, the context must be <code>COST_AND_USAGE</code>. Further, when
-     * using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> are not supported.
+     * using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> aren't supported.
      * </p>
      * 
-     * @return The value by which you want to sort the data.</p>
+     * @return The value that you want to sort the data by.</p>
      *         <p>
      *         The key represents cost and usage metrics. The following values are supported:
      *         </p>
@@ -2664,11 +2678,12 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *         </li>
      *         </ul>
      *         <p>
-     *         Supported values for <code>SortOrder</code> are <code>ASCENDING</code> or <code>DESCENDING</code>.
+     *         The supported values for the <code>SortOrder</code> key are <code>ASCENDING</code> or
+     *         <code>DESCENDING</code>.
      *         </p>
      *         <p>
      *         When you specify a <code>SortBy</code> paramater, the context must be <code>COST_AND_USAGE</code>.
-     *         Further, when using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> are not
+     *         Further, when using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> aren't
      *         supported.
      */
 
@@ -2678,7 +2693,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The value by which you want to sort the data.
+     * The value that you want to sort the data by.
      * </p>
      * <p>
      * The key represents cost and usage metrics. The following values are supported:
@@ -2721,15 +2736,15 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * </ul>
      * <p>
-     * Supported values for <code>SortOrder</code> are <code>ASCENDING</code> or <code>DESCENDING</code>.
+     * The supported values for the <code>SortOrder</code> key are <code>ASCENDING</code> or <code>DESCENDING</code>.
      * </p>
      * <p>
      * When you specify a <code>SortBy</code> paramater, the context must be <code>COST_AND_USAGE</code>. Further, when
-     * using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> are not supported.
+     * using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> aren't supported.
      * </p>
      * 
      * @param sortBy
-     *        The value by which you want to sort the data.</p>
+     *        The value that you want to sort the data by.</p>
      *        <p>
      *        The key represents cost and usage metrics. The following values are supported:
      *        </p>
@@ -2771,11 +2786,12 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        </li>
      *        </ul>
      *        <p>
-     *        Supported values for <code>SortOrder</code> are <code>ASCENDING</code> or <code>DESCENDING</code>.
+     *        The supported values for the <code>SortOrder</code> key are <code>ASCENDING</code> or
+     *        <code>DESCENDING</code>.
      *        </p>
      *        <p>
      *        When you specify a <code>SortBy</code> paramater, the context must be <code>COST_AND_USAGE</code>.
-     *        Further, when using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> are not
+     *        Further, when using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> aren't
      *        supported.
      */
 
@@ -2790,7 +2806,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The value by which you want to sort the data.
+     * The value that you want to sort the data by.
      * </p>
      * <p>
      * The key represents cost and usage metrics. The following values are supported:
@@ -2833,11 +2849,11 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * </ul>
      * <p>
-     * Supported values for <code>SortOrder</code> are <code>ASCENDING</code> or <code>DESCENDING</code>.
+     * The supported values for the <code>SortOrder</code> key are <code>ASCENDING</code> or <code>DESCENDING</code>.
      * </p>
      * <p>
      * When you specify a <code>SortBy</code> paramater, the context must be <code>COST_AND_USAGE</code>. Further, when
-     * using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> are not supported.
+     * using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> aren't supported.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2846,7 +2862,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param sortBy
-     *        The value by which you want to sort the data.</p>
+     *        The value that you want to sort the data by.</p>
      *        <p>
      *        The key represents cost and usage metrics. The following values are supported:
      *        </p>
@@ -2888,11 +2904,12 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        </li>
      *        </ul>
      *        <p>
-     *        Supported values for <code>SortOrder</code> are <code>ASCENDING</code> or <code>DESCENDING</code>.
+     *        The supported values for the <code>SortOrder</code> key are <code>ASCENDING</code> or
+     *        <code>DESCENDING</code>.
      *        </p>
      *        <p>
      *        When you specify a <code>SortBy</code> paramater, the context must be <code>COST_AND_USAGE</code>.
-     *        Further, when using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> are not
+     *        Further, when using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> aren't
      *        supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2909,7 +2926,7 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The value by which you want to sort the data.
+     * The value that you want to sort the data by.
      * </p>
      * <p>
      * The key represents cost and usage metrics. The following values are supported:
@@ -2952,15 +2969,15 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * </ul>
      * <p>
-     * Supported values for <code>SortOrder</code> are <code>ASCENDING</code> or <code>DESCENDING</code>.
+     * The supported values for the <code>SortOrder</code> key are <code>ASCENDING</code> or <code>DESCENDING</code>.
      * </p>
      * <p>
      * When you specify a <code>SortBy</code> paramater, the context must be <code>COST_AND_USAGE</code>. Further, when
-     * using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> are not supported.
+     * using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> aren't supported.
      * </p>
      * 
      * @param sortBy
-     *        The value by which you want to sort the data.</p>
+     *        The value that you want to sort the data by.</p>
      *        <p>
      *        The key represents cost and usage metrics. The following values are supported:
      *        </p>
@@ -3002,11 +3019,12 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      *        </li>
      *        </ul>
      *        <p>
-     *        Supported values for <code>SortOrder</code> are <code>ASCENDING</code> or <code>DESCENDING</code>.
+     *        The supported values for the <code>SortOrder</code> key are <code>ASCENDING</code> or
+     *        <code>DESCENDING</code>.
      *        </p>
      *        <p>
      *        When you specify a <code>SortBy</code> paramater, the context must be <code>COST_AND_USAGE</code>.
-     *        Further, when using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> are not
+     *        Further, when using <code>SortBy</code>, <code>NextPageToken</code> and <code>SearchString</code> aren't
      *        supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -3018,8 +3036,8 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * This field is only used when SortBy is provided in the request. The maximum number of objects that to be returned
-     * for this request. If MaxResults is not specified with SortBy, the request will return 1000 results as the default
+     * This field is only used when SortBy is provided in the request. The maximum number of objects that are returned
+     * for this request. If MaxResults isn't specified with SortBy, the request returns 1000 results as the default
      * value for this parameter.
      * </p>
      * <p>
@@ -3027,9 +3045,9 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param maxResults
-     *        This field is only used when SortBy is provided in the request. The maximum number of objects that to be
-     *        returned for this request. If MaxResults is not specified with SortBy, the request will return 1000
-     *        results as the default value for this parameter.</p>
+     *        This field is only used when SortBy is provided in the request. The maximum number of objects that are
+     *        returned for this request. If MaxResults isn't specified with SortBy, the request returns 1000 results as
+     *        the default value for this parameter.</p>
      *        <p>
      *        For <code>GetDimensionValues</code>, MaxResults has an upper limit of 1000.
      */
@@ -3040,17 +3058,17 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * This field is only used when SortBy is provided in the request. The maximum number of objects that to be returned
-     * for this request. If MaxResults is not specified with SortBy, the request will return 1000 results as the default
+     * This field is only used when SortBy is provided in the request. The maximum number of objects that are returned
+     * for this request. If MaxResults isn't specified with SortBy, the request returns 1000 results as the default
      * value for this parameter.
      * </p>
      * <p>
      * For <code>GetDimensionValues</code>, MaxResults has an upper limit of 1000.
      * </p>
      * 
-     * @return This field is only used when SortBy is provided in the request. The maximum number of objects that to be
-     *         returned for this request. If MaxResults is not specified with SortBy, the request will return 1000
-     *         results as the default value for this parameter.</p>
+     * @return This field is only used when SortBy is provided in the request. The maximum number of objects that are
+     *         returned for this request. If MaxResults isn't specified with SortBy, the request returns 1000 results as
+     *         the default value for this parameter.</p>
      *         <p>
      *         For <code>GetDimensionValues</code>, MaxResults has an upper limit of 1000.
      */
@@ -3061,8 +3079,8 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * This field is only used when SortBy is provided in the request. The maximum number of objects that to be returned
-     * for this request. If MaxResults is not specified with SortBy, the request will return 1000 results as the default
+     * This field is only used when SortBy is provided in the request. The maximum number of objects that are returned
+     * for this request. If MaxResults isn't specified with SortBy, the request returns 1000 results as the default
      * value for this parameter.
      * </p>
      * <p>
@@ -3070,9 +3088,9 @@ public class GetDimensionValuesRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param maxResults
-     *        This field is only used when SortBy is provided in the request. The maximum number of objects that to be
-     *        returned for this request. If MaxResults is not specified with SortBy, the request will return 1000
-     *        results as the default value for this parameter.</p>
+     *        This field is only used when SortBy is provided in the request. The maximum number of objects that are
+     *        returned for this request. If MaxResults isn't specified with SortBy, the request returns 1000 results as
+     *        the default value for this parameter.</p>
      *        <p>
      *        For <code>GetDimensionValues</code>, MaxResults has an upper limit of 1000.
      * @return Returns a reference to this object so that method calls can be chained together.
