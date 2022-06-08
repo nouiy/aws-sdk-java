@@ -3923,6 +3923,61 @@ public interface AmazonRedshiftAsync extends AmazonRedshift {
 
     /**
      * <p>
+     * Returns a database user name and temporary password with temporary authorization to log in to an Amazon Redshift
+     * database. The database user is mapped 1:1 to the source Identity and Access Management (IAM) identity. For more
+     * information about IAM identities, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html">IAM
+     * Identities (users, user groups, and roles)</a> in the Amazon Web Services Identity and Access Management User
+     * Guide.
+     * </p>
+     * <p>
+     * The Identity and Access Management (IAM) identity that runs this operation must have an IAM policy attached that
+     * allows access to all necessary actions and resources. For more information about permissions, see <a
+     * href="https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-identity-based.html">Using
+     * identity-based policies (IAM policies)</a> in the Amazon Redshift Cluster Management Guide.
+     * </p>
+     * 
+     * @param getClusterCredentialsWithIAMRequest
+     * @return A Java Future containing the result of the GetClusterCredentialsWithIAM operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsync.GetClusterCredentialsWithIAM
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/GetClusterCredentialsWithIAM"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetClusterCredentialsWithIAMResult> getClusterCredentialsWithIAMAsync(
+            GetClusterCredentialsWithIAMRequest getClusterCredentialsWithIAMRequest);
+
+    /**
+     * <p>
+     * Returns a database user name and temporary password with temporary authorization to log in to an Amazon Redshift
+     * database. The database user is mapped 1:1 to the source Identity and Access Management (IAM) identity. For more
+     * information about IAM identities, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html">IAM
+     * Identities (users, user groups, and roles)</a> in the Amazon Web Services Identity and Access Management User
+     * Guide.
+     * </p>
+     * <p>
+     * The Identity and Access Management (IAM) identity that runs this operation must have an IAM policy attached that
+     * allows access to all necessary actions and resources. For more information about permissions, see <a
+     * href="https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-identity-based.html">Using
+     * identity-based policies (IAM policies)</a> in the Amazon Redshift Cluster Management Guide.
+     * </p>
+     * 
+     * @param getClusterCredentialsWithIAMRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetClusterCredentialsWithIAM operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsyncHandler.GetClusterCredentialsWithIAM
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/GetClusterCredentialsWithIAM"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetClusterCredentialsWithIAMResult> getClusterCredentialsWithIAMAsync(
+            GetClusterCredentialsWithIAMRequest getClusterCredentialsWithIAMRequest,
+            com.amazonaws.handlers.AsyncHandler<GetClusterCredentialsWithIAMRequest, GetClusterCredentialsWithIAMResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets the configuration options for the reserved-node exchange. These options include information about the source
      * reserved node and target reserved node offering. Details include the node type, the price, the node count, and
      * the offering type.

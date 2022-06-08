@@ -64,6 +64,11 @@ public class AbstractAWSDatabaseMigrationService implements AWSDatabaseMigration
     }
 
     @Override
+    public CreateFleetAdvisorCollectorResult createFleetAdvisorCollector(CreateFleetAdvisorCollectorRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateReplicationInstanceResult createReplicationInstance(CreateReplicationInstanceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -95,6 +100,16 @@ public class AbstractAWSDatabaseMigrationService implements AWSDatabaseMigration
 
     @Override
     public DeleteEventSubscriptionResult deleteEventSubscription(DeleteEventSubscriptionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteFleetAdvisorCollectorResult deleteFleetAdvisorCollector(DeleteFleetAdvisorCollectorRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteFleetAdvisorDatabasesResult deleteFleetAdvisorDatabases(DeleteFleetAdvisorDatabasesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -165,6 +180,31 @@ public class AbstractAWSDatabaseMigrationService implements AWSDatabaseMigration
 
     @Override
     public DescribeEventsResult describeEvents(DescribeEventsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeFleetAdvisorCollectorsResult describeFleetAdvisorCollectors(DescribeFleetAdvisorCollectorsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeFleetAdvisorDatabasesResult describeFleetAdvisorDatabases(DescribeFleetAdvisorDatabasesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeFleetAdvisorLsaAnalysisResult describeFleetAdvisorLsaAnalysis(DescribeFleetAdvisorLsaAnalysisRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeFleetAdvisorSchemaObjectSummaryResult describeFleetAdvisorSchemaObjectSummary(DescribeFleetAdvisorSchemaObjectSummaryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeFleetAdvisorSchemasResult describeFleetAdvisorSchemas(DescribeFleetAdvisorSchemasRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -286,6 +326,11 @@ public class AbstractAWSDatabaseMigrationService implements AWSDatabaseMigration
 
     @Override
     public RemoveTagsFromResourceResult removeTagsFromResource(RemoveTagsFromResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RunFleetAdvisorLsaAnalysisResult runFleetAdvisorLsaAnalysis(RunFleetAdvisorLsaAnalysisRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
