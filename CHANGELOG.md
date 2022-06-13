@@ -1,3 +1,8 @@
+# __1.12.239__ __2022-06-13__
+## __AWS Outposts__
+  - ### Features
+    - This release adds API operations AWS uses to install Outpost servers.
+
 # __1.12.238__ __2022-06-10__
 ## __Amazon Fraud Detector__
   - ### Features

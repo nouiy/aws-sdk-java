@@ -606,6 +606,83 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
     }
 
     /**
+     * <note>
+     * <p>
+     * Amazon Web Services uses this action to install Outpost servers.
+     * </p>
+     * </note>
+     * <p>
+     * Gets information about a specified connection.
+     * </p>
+     * <p>
+     * Use CloudTrail to monitor this action or Amazon Web Services managed policy for Amazon Web Services Outposts to
+     * secure it. For more information, see <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/security-iam-awsmanpol.html"> Amazon Web Services
+     * managed policies for Amazon Web Services Outposts</a> and <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/logging-using-cloudtrail.html"> Logging Amazon Web
+     * Services Outposts API calls with Amazon Web Services CloudTrail</a> in the <i>Amazon Web Services Outposts User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param getConnectionRequest
+     * @return Result of the GetConnection operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.GetConnection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetConnection" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetConnectionResult getConnection(GetConnectionRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetConnection(request);
+    }
+
+    @SdkInternalApi
+    final GetConnectionResult executeGetConnection(GetConnectionRequest getConnectionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getConnectionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetConnectionRequest> request = null;
+        Response<GetConnectionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetConnectionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getConnectionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Outposts");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetConnection");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetConnectionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetConnectionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
      * <p>
      * Gets an order.
      * </p>
@@ -1300,6 +1377,83 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
 
             HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <note>
+     * <p>
+     * Amazon Web Services uses this action to install Outpost servers.
+     * </p>
+     * </note>
+     * <p>
+     * Starts the connection required for Outpost server installation.
+     * </p>
+     * <p>
+     * Use CloudTrail to monitor this action or Amazon Web Services managed policy for Amazon Web Services Outposts to
+     * secure it. For more information, see <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/security-iam-awsmanpol.html"> Amazon Web Services
+     * managed policies for Amazon Web Services Outposts</a> and <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/logging-using-cloudtrail.html"> Logging Amazon Web
+     * Services Outposts API calls with Amazon Web Services CloudTrail</a> in the <i>Amazon Web Services Outposts User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param startConnectionRequest
+     * @return Result of the StartConnection operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.StartConnection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/StartConnection" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public StartConnectionResult startConnection(StartConnectionRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartConnection(request);
+    }
+
+    @SdkInternalApi
+    final StartConnectionResult executeStartConnection(StartConnectionRequest startConnectionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startConnectionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartConnectionRequest> request = null;
+        Response<StartConnectionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartConnectionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startConnectionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Outposts");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartConnection");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartConnectionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartConnectionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

@@ -260,6 +260,65 @@ public interface AWSOutpostsAsync extends AWSOutposts {
             com.amazonaws.handlers.AsyncHandler<GetCatalogItemRequest, GetCatalogItemResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * Amazon Web Services uses this action to install Outpost servers.
+     * </p>
+     * </note>
+     * <p>
+     * Gets information about a specified connection.
+     * </p>
+     * <p>
+     * Use CloudTrail to monitor this action or Amazon Web Services managed policy for Amazon Web Services Outposts to
+     * secure it. For more information, see <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/security-iam-awsmanpol.html"> Amazon Web Services
+     * managed policies for Amazon Web Services Outposts</a> and <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/logging-using-cloudtrail.html"> Logging Amazon Web
+     * Services Outposts API calls with Amazon Web Services CloudTrail</a> in the <i>Amazon Web Services Outposts User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param getConnectionRequest
+     * @return A Java Future containing the result of the GetConnection operation returned by the service.
+     * @sample AWSOutpostsAsync.GetConnection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetConnection" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetConnectionResult> getConnectionAsync(GetConnectionRequest getConnectionRequest);
+
+    /**
+     * <note>
+     * <p>
+     * Amazon Web Services uses this action to install Outpost servers.
+     * </p>
+     * </note>
+     * <p>
+     * Gets information about a specified connection.
+     * </p>
+     * <p>
+     * Use CloudTrail to monitor this action or Amazon Web Services managed policy for Amazon Web Services Outposts to
+     * secure it. For more information, see <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/security-iam-awsmanpol.html"> Amazon Web Services
+     * managed policies for Amazon Web Services Outposts</a> and <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/logging-using-cloudtrail.html"> Logging Amazon Web
+     * Services Outposts API calls with Amazon Web Services CloudTrail</a> in the <i>Amazon Web Services Outposts User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param getConnectionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetConnection operation returned by the service.
+     * @sample AWSOutpostsAsyncHandler.GetConnection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetConnection" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetConnectionResult> getConnectionAsync(GetConnectionRequest getConnectionRequest,
+            com.amazonaws.handlers.AsyncHandler<GetConnectionRequest, GetConnectionResult> asyncHandler);
+
+    /**
      * <p>
      * Gets an order.
      * </p>
@@ -639,6 +698,65 @@ public interface AWSOutpostsAsync extends AWSOutposts {
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <note>
+     * <p>
+     * Amazon Web Services uses this action to install Outpost servers.
+     * </p>
+     * </note>
+     * <p>
+     * Starts the connection required for Outpost server installation.
+     * </p>
+     * <p>
+     * Use CloudTrail to monitor this action or Amazon Web Services managed policy for Amazon Web Services Outposts to
+     * secure it. For more information, see <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/security-iam-awsmanpol.html"> Amazon Web Services
+     * managed policies for Amazon Web Services Outposts</a> and <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/logging-using-cloudtrail.html"> Logging Amazon Web
+     * Services Outposts API calls with Amazon Web Services CloudTrail</a> in the <i>Amazon Web Services Outposts User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param startConnectionRequest
+     * @return A Java Future containing the result of the StartConnection operation returned by the service.
+     * @sample AWSOutpostsAsync.StartConnection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/StartConnection" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartConnectionResult> startConnectionAsync(StartConnectionRequest startConnectionRequest);
+
+    /**
+     * <note>
+     * <p>
+     * Amazon Web Services uses this action to install Outpost servers.
+     * </p>
+     * </note>
+     * <p>
+     * Starts the connection required for Outpost server installation.
+     * </p>
+     * <p>
+     * Use CloudTrail to monitor this action or Amazon Web Services managed policy for Amazon Web Services Outposts to
+     * secure it. For more information, see <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/security-iam-awsmanpol.html"> Amazon Web Services
+     * managed policies for Amazon Web Services Outposts</a> and <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/logging-using-cloudtrail.html"> Logging Amazon Web
+     * Services Outposts API calls with Amazon Web Services CloudTrail</a> in the <i>Amazon Web Services Outposts User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param startConnectionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartConnection operation returned by the service.
+     * @sample AWSOutpostsAsyncHandler.StartConnection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/StartConnection" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartConnectionResult> startConnectionAsync(StartConnectionRequest startConnectionRequest,
+            com.amazonaws.handlers.AsyncHandler<StartConnectionRequest, StartConnectionResult> asyncHandler);
 
     /**
      * <p>

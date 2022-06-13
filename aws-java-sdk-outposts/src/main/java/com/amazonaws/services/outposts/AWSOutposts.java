@@ -210,6 +210,41 @@ public interface AWSOutposts {
     GetCatalogItemResult getCatalogItem(GetCatalogItemRequest getCatalogItemRequest);
 
     /**
+     * <note>
+     * <p>
+     * Amazon Web Services uses this action to install Outpost servers.
+     * </p>
+     * </note>
+     * <p>
+     * Gets information about a specified connection.
+     * </p>
+     * <p>
+     * Use CloudTrail to monitor this action or Amazon Web Services managed policy for Amazon Web Services Outposts to
+     * secure it. For more information, see <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/security-iam-awsmanpol.html"> Amazon Web Services
+     * managed policies for Amazon Web Services Outposts</a> and <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/logging-using-cloudtrail.html"> Logging Amazon Web
+     * Services Outposts API calls with Amazon Web Services CloudTrail</a> in the <i>Amazon Web Services Outposts User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param getConnectionRequest
+     * @return Result of the GetConnection operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.GetConnection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/GetConnection" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetConnectionResult getConnection(GetConnectionRequest getConnectionRequest);
+
+    /**
      * <p>
      * Gets an order.
      * </p>
@@ -449,6 +484,41 @@ public interface AWSOutposts {
      *      API Documentation</a>
      */
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <note>
+     * <p>
+     * Amazon Web Services uses this action to install Outpost servers.
+     * </p>
+     * </note>
+     * <p>
+     * Starts the connection required for Outpost server installation.
+     * </p>
+     * <p>
+     * Use CloudTrail to monitor this action or Amazon Web Services managed policy for Amazon Web Services Outposts to
+     * secure it. For more information, see <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/security-iam-awsmanpol.html"> Amazon Web Services
+     * managed policies for Amazon Web Services Outposts</a> and <a
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/logging-using-cloudtrail.html"> Logging Amazon Web
+     * Services Outposts API calls with Amazon Web Services CloudTrail</a> in the <i>Amazon Web Services Outposts User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param startConnectionRequest
+     * @return Result of the StartConnection operation returned by the service.
+     * @throws AccessDeniedException
+     *         You do not have permission to perform this operation.
+     * @throws ValidationException
+     *         A parameter is not valid.
+     * @throws NotFoundException
+     *         The specified request is not valid.
+     * @throws InternalServerException
+     *         An internal error has occurred.
+     * @sample AWSOutposts.StartConnection
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/outposts-2019-12-03/StartConnection" target="_top">AWS API
+     *      Documentation</a>
+     */
+    StartConnectionResult startConnection(StartConnectionRequest startConnectionRequest);
 
     /**
      * <p>
