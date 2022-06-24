@@ -103,7 +103,13 @@ public class ExecuteStatementRequest extends com.amazonaws.AmazonWebServiceReque
     private String schema;
     /**
      * <p>
-     * The name or ARN of the secret that enables access to the DB cluster.
+     * The ARN of the secret that enables access to the DB cluster. Enter the database user name and password for the
+     * credentials in the secret.
+     * </p>
+     * <p>
+     * For information about creating the secret, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/create_database_secret.html">Create a database
+     * secret</a>.
      * </p>
      */
     private String secretArn;
@@ -687,11 +693,22 @@ public class ExecuteStatementRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name or ARN of the secret that enables access to the DB cluster.
+     * The ARN of the secret that enables access to the DB cluster. Enter the database user name and password for the
+     * credentials in the secret.
+     * </p>
+     * <p>
+     * For information about creating the secret, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/create_database_secret.html">Create a database
+     * secret</a>.
      * </p>
      * 
      * @param secretArn
-     *        The name or ARN of the secret that enables access to the DB cluster.
+     *        The ARN of the secret that enables access to the DB cluster. Enter the database user name and password for
+     *        the credentials in the secret.</p>
+     *        <p>
+     *        For information about creating the secret, see <a
+     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/create_database_secret.html">Create a
+     *        database secret</a>.
      */
 
     public void setSecretArn(String secretArn) {
@@ -700,10 +717,21 @@ public class ExecuteStatementRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name or ARN of the secret that enables access to the DB cluster.
+     * The ARN of the secret that enables access to the DB cluster. Enter the database user name and password for the
+     * credentials in the secret.
+     * </p>
+     * <p>
+     * For information about creating the secret, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/create_database_secret.html">Create a database
+     * secret</a>.
      * </p>
      * 
-     * @return The name or ARN of the secret that enables access to the DB cluster.
+     * @return The ARN of the secret that enables access to the DB cluster. Enter the database user name and password
+     *         for the credentials in the secret.</p>
+     *         <p>
+     *         For information about creating the secret, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/create_database_secret.html">Create a
+     *         database secret</a>.
      */
 
     public String getSecretArn() {
@@ -712,11 +740,22 @@ public class ExecuteStatementRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name or ARN of the secret that enables access to the DB cluster.
+     * The ARN of the secret that enables access to the DB cluster. Enter the database user name and password for the
+     * credentials in the secret.
+     * </p>
+     * <p>
+     * For information about creating the secret, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/create_database_secret.html">Create a database
+     * secret</a>.
      * </p>
      * 
      * @param secretArn
-     *        The name or ARN of the secret that enables access to the DB cluster.
+     *        The ARN of the secret that enables access to the DB cluster. Enter the database user name and password for
+     *        the credentials in the secret.</p>
+     *        <p>
+     *        For information about creating the secret, see <a
+     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/create_database_secret.html">Create a
+     *        database secret</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

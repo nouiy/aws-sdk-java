@@ -1,3 +1,12 @@
+# __1.12.248__ __2022-06-24__
+## __AWS Glue__
+  - ### Features
+    - This release enables the new ListCrawls API for viewing the AWS Glue Crawler run history.
+
+## __AWS RDS DataService__
+  - ### Features
+    - Documentation updates for RDS Data API
+
 # __1.12.247__ __2022-06-23__
 ## __AWS Elemental MediaConvert__
   - ### Features
@@ -87,10 +96,6 @@
 ## __Redshift Data API Service__
   - ### Features
     - This release adds a new --workgroup-name field to operations that connect to an endpoint. Customers can now execute queries against their serverless workgroups.
-
-## __Redshift Serverless__
-  - ### Features
-    - Add new API operations for Amazon Redshift Serverless, a new way of using Amazon Redshift without needing to manually manage provisioned clusters. The new operations let you interact with Redshift Serverless resources, such as create snapshots, list VPC endpoints, delete resource policies, and more.
 
 # __1.12.241__ __2022-06-15__
 ## __AWS Service Catalog App Registry__

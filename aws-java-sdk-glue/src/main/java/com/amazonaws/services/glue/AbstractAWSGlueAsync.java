@@ -1673,6 +1673,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     }
 
     @Override
+    public java.util.concurrent.Future<ListCrawlsResult> listCrawlsAsync(ListCrawlsRequest request) {
+
+        return listCrawlsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCrawlsResult> listCrawlsAsync(ListCrawlsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListCrawlsRequest, ListCrawlsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListCustomEntityTypesResult> listCustomEntityTypesAsync(ListCustomEntityTypesRequest request) {
 
         return listCustomEntityTypesAsync(request, null);

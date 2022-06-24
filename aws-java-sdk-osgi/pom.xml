@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.248-SNAPSHOT</version>
+    <version>1.12.248</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -17,12 +17,6 @@
   <dependencies>
     <dependency>
         <artifactId>aws-java-sdk-connectcampaign</artifactId>
-        <groupId>com.amazonaws</groupId>
-        <optional>false</optional>
-        <version>${awsjavasdk.version}</version>
-    </dependency>
-    <dependency>
-        <artifactId>aws-java-sdk-redshiftserverless</artifactId>
         <groupId>com.amazonaws</groupId>
         <optional>false</optional>
         <version>${awsjavasdk.version}</version>
@@ -1985,10 +1979,6 @@
                               <group>
                                   <title>AmazonConnectCampaign</title>
                                   <packages>com.amazonaws.services.connectcampaign*</packages>
-                              </group>
-                              <group>
-                                  <title>Redshift Serverless</title>
-                                  <packages>com.amazonaws.services.redshiftserverless*</packages>
                               </group>
                               <group>
                                   <title>AWSMainframeModernization</title>

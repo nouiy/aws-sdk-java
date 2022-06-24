@@ -4243,6 +4243,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<ListCrawlsResult> listCrawlsAsync(ListCrawlsRequest request) {
+
+        return listCrawlsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCrawlsResult> listCrawlsAsync(final ListCrawlsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListCrawlsRequest, ListCrawlsResult> asyncHandler) {
+        final ListCrawlsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListCrawlsResult>() {
+            @Override
+            public ListCrawlsResult call() throws Exception {
+                ListCrawlsResult result = null;
+
+                try {
+                    result = executeListCrawls(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListCustomEntityTypesResult> listCustomEntityTypesAsync(ListCustomEntityTypesRequest request) {
 
         return listCustomEntityTypesAsync(request, null);

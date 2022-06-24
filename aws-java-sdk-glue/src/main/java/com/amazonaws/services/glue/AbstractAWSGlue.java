@@ -658,6 +658,11 @@ public class AbstractAWSGlue implements AWSGlue {
     }
 
     @Override
+    public ListCrawlsResult listCrawls(ListCrawlsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListCustomEntityTypesResult listCustomEntityTypes(ListCustomEntityTypesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

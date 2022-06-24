@@ -8464,6 +8464,93 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
 
     /**
      * <p>
+     * Returns all the crawls of a specified crawler. Returns only the crawls that have occurred since the launch date
+     * of the crawler history feature, and only retains up to 12 months of crawls. Older crawls will not be returned.
+     * </p>
+     * <p>
+     * You may use this API to:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Retrive all the crawls of a specified crawler.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Retrieve all the crawls of a specified crawler within a limited count.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Retrieve all the crawls of a specified crawler in a specific time range.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Retrieve all the crawls of a specified crawler with a particular state, crawl ID, or DPU hour value.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param listCrawlsRequest
+     * @return Result of the ListCrawls operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @sample AWSGlue.ListCrawls
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListCrawls" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListCrawlsResult listCrawls(ListCrawlsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListCrawls(request);
+    }
+
+    @SdkInternalApi
+    final ListCrawlsResult executeListCrawls(ListCrawlsRequest listCrawlsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listCrawlsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListCrawlsRequest> request = null;
+        Response<ListCrawlsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListCrawlsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listCrawlsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Glue");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListCrawls");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListCrawlsResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListCrawlsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists all the custom patterns that have been created.
      * </p>
      * 

@@ -2954,6 +2954,51 @@ public interface AWSGlue {
 
     /**
      * <p>
+     * Returns all the crawls of a specified crawler. Returns only the crawls that have occurred since the launch date
+     * of the crawler history feature, and only retains up to 12 months of crawls. Older crawls will not be returned.
+     * </p>
+     * <p>
+     * You may use this API to:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Retrive all the crawls of a specified crawler.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Retrieve all the crawls of a specified crawler within a limited count.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Retrieve all the crawls of a specified crawler in a specific time range.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Retrieve all the crawls of a specified crawler with a particular state, crawl ID, or DPU hour value.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param listCrawlsRequest
+     * @return Result of the ListCrawls operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @sample AWSGlue.ListCrawls
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListCrawls" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListCrawlsResult listCrawls(ListCrawlsRequest listCrawlsRequest);
+
+    /**
+     * <p>
      * Lists all the custom patterns that have been created.
      * </p>
      * 
