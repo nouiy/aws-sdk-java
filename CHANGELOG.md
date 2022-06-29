@@ -1,3 +1,32 @@
+# __1.12.251__ __2022-06-29__
+## __AWS Elemental MediaLive__
+  - ### Features
+    - This release adds support for automatic renewal of MediaLive reservations at the end of each reservation term. Automatic renewal is optional. This release also adds support for labelling accessibility-focused audio and caption tracks in HLS outputs.
+
+## __Amazon AppStream__
+  - ### Features
+    - Includes support for StreamingExperienceSettings in CreateStack and UpdateStack APIs
+
+## __Amazon EMR__
+  - ### Features
+    - This release introduces additional optional parameter "Throughput" to VolumeSpecification to enable user to configure throughput for gp3 ebs volumes.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - This release adds: UpdateFeatureGroup, UpdateFeatureMetadata, DescribeFeatureMetadata APIs; FeatureMetadata type in Search API; LastModifiedTime, LastUpdateStatus, OnlineStoreTotalSizeBytes in DescribeFeatureGroup API.
+
+## __Amazon Translate__
+  - ### Features
+    - Added ListLanguages API which can be used to list the languages supported by Translate.
+
+## __Elastic Load Balancing__
+  - ### Features
+    - This release adds two attributes for ALB. One, helps to preserve the host header and the other helps to modify, preserve, or remove the X-Forwarded-For header in the HTTP request.
+
+## __Redshift Serverless__
+  - ### Features
+    - Add new API operations for Amazon Redshift Serverless, a new way of using Amazon Redshift without needing to manually manage provisioned clusters. The new operations let you interact with Redshift Serverless resources, such as create snapshots, list VPC endpoints, delete resource policies, and more.
+
 # __1.12.250__ __2022-06-28__
 ## __AWS DataSync__
   - ### Features

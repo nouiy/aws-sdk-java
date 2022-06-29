@@ -2562,6 +2562,21 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Shows the metadata for a feature within a feature group.
+     * </p>
+     * 
+     * @param describeFeatureMetadataRequest
+     * @return Result of the DescribeFeatureMetadata operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DescribeFeatureMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeFeatureMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeFeatureMetadataResult describeFeatureMetadata(DescribeFeatureMetadataRequest describeFeatureMetadataRequest);
+
+    /**
+     * <p>
      * Returns information about the specified flow definition.
      * </p>
      * 
@@ -4639,6 +4654,36 @@ public interface AmazonSageMaker {
      *      Documentation</a>
      */
     UpdateExperimentResult updateExperiment(UpdateExperimentRequest updateExperimentRequest);
+
+    /**
+     * <p>
+     * Updates the feature group.
+     * </p>
+     * 
+     * @param updateFeatureGroupRequest
+     * @return Result of the UpdateFeatureGroup operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.UpdateFeatureGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateFeatureGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateFeatureGroupResult updateFeatureGroup(UpdateFeatureGroupRequest updateFeatureGroupRequest);
+
+    /**
+     * <p>
+     * Updates the description and parameters of the feature group.
+     * </p>
+     * 
+     * @param updateFeatureMetadataRequest
+     * @return Result of the UpdateFeatureMetadata operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.UpdateFeatureMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateFeatureMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateFeatureMetadataResult updateFeatureMetadata(UpdateFeatureMetadataRequest updateFeatureMetadataRequest);
 
     /**
      * <p>

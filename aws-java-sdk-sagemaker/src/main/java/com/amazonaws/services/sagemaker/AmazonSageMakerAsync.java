@@ -5053,6 +5053,37 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Shows the metadata for a feature within a feature group.
+     * </p>
+     * 
+     * @param describeFeatureMetadataRequest
+     * @return A Java Future containing the result of the DescribeFeatureMetadata operation returned by the service.
+     * @sample AmazonSageMakerAsync.DescribeFeatureMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeFeatureMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeFeatureMetadataResult> describeFeatureMetadataAsync(DescribeFeatureMetadataRequest describeFeatureMetadataRequest);
+
+    /**
+     * <p>
+     * Shows the metadata for a feature within a feature group.
+     * </p>
+     * 
+     * @param describeFeatureMetadataRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeFeatureMetadata operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.DescribeFeatureMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeFeatureMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeFeatureMetadataResult> describeFeatureMetadataAsync(DescribeFeatureMetadataRequest describeFeatureMetadataRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeFeatureMetadataRequest, DescribeFeatureMetadataResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns information about the specified flow definition.
      * </p>
      * 
@@ -9618,6 +9649,68 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      */
     java.util.concurrent.Future<UpdateExperimentResult> updateExperimentAsync(UpdateExperimentRequest updateExperimentRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateExperimentRequest, UpdateExperimentResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the feature group.
+     * </p>
+     * 
+     * @param updateFeatureGroupRequest
+     * @return A Java Future containing the result of the UpdateFeatureGroup operation returned by the service.
+     * @sample AmazonSageMakerAsync.UpdateFeatureGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateFeatureGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFeatureGroupResult> updateFeatureGroupAsync(UpdateFeatureGroupRequest updateFeatureGroupRequest);
+
+    /**
+     * <p>
+     * Updates the feature group.
+     * </p>
+     * 
+     * @param updateFeatureGroupRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateFeatureGroup operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.UpdateFeatureGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateFeatureGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFeatureGroupResult> updateFeatureGroupAsync(UpdateFeatureGroupRequest updateFeatureGroupRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateFeatureGroupRequest, UpdateFeatureGroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the description and parameters of the feature group.
+     * </p>
+     * 
+     * @param updateFeatureMetadataRequest
+     * @return A Java Future containing the result of the UpdateFeatureMetadata operation returned by the service.
+     * @sample AmazonSageMakerAsync.UpdateFeatureMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateFeatureMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFeatureMetadataResult> updateFeatureMetadataAsync(UpdateFeatureMetadataRequest updateFeatureMetadataRequest);
+
+    /**
+     * <p>
+     * Updates the description and parameters of the feature group.
+     * </p>
+     * 
+     * @param updateFeatureMetadataRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateFeatureMetadata operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.UpdateFeatureMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateFeatureMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateFeatureMetadataResult> updateFeatureMetadataAsync(UpdateFeatureMetadataRequest updateFeatureMetadataRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateFeatureMetadataRequest, UpdateFeatureMetadataResult> asyncHandler);
 
     /**
      * <p>

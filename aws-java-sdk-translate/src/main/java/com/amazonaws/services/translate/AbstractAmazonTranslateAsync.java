@@ -119,6 +119,19 @@ public class AbstractAmazonTranslateAsync extends AbstractAmazonTranslate implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListLanguagesResult> listLanguagesAsync(ListLanguagesRequest request) {
+
+        return listLanguagesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLanguagesResult> listLanguagesAsync(ListLanguagesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListLanguagesRequest, ListLanguagesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListParallelDataResult> listParallelDataAsync(ListParallelDataRequest request) {
 
         return listParallelDataAsync(request, null);

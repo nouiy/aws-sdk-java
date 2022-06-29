@@ -228,15 +228,14 @@ public interface AmazonTranslateAsync extends AmazonTranslate {
 
     /**
      * <p>
-     * Creates or updates a custom terminology, depending on whether or not one already exists for the given terminology
-     * name. Importing a terminology with the same name as an existing one will merge the terminologies based on the
-     * chosen merge strategy. Currently, the only supported merge strategy is OVERWRITE, and so the imported terminology
-     * will overwrite an existing terminology of the same name.
+     * Creates or updates a custom terminology, depending on whether one already exists for the given terminology name.
+     * Importing a terminology with the same name as an existing one will merge the terminologies based on the chosen
+     * merge strategy. The only supported merge strategy is OVERWRITE, where the imported terminology overwrites the
+     * existing terminology of the same name.
      * </p>
      * <p>
-     * If you import a terminology that overwrites an existing one, the new terminology take up to 10 minutes to fully
-     * propagate and be available for use in a translation due to cache policies with the DataPlane service that
-     * performs the translations.
+     * If you import a terminology that overwrites an existing one, the new terminology takes up to 10 minutes to fully
+     * propagate. After that, translations have access to the new terminology.
      * </p>
      * 
      * @param importTerminologyRequest
@@ -249,15 +248,14 @@ public interface AmazonTranslateAsync extends AmazonTranslate {
 
     /**
      * <p>
-     * Creates or updates a custom terminology, depending on whether or not one already exists for the given terminology
-     * name. Importing a terminology with the same name as an existing one will merge the terminologies based on the
-     * chosen merge strategy. Currently, the only supported merge strategy is OVERWRITE, and so the imported terminology
-     * will overwrite an existing terminology of the same name.
+     * Creates or updates a custom terminology, depending on whether one already exists for the given terminology name.
+     * Importing a terminology with the same name as an existing one will merge the terminologies based on the chosen
+     * merge strategy. The only supported merge strategy is OVERWRITE, where the imported terminology overwrites the
+     * existing terminology of the same name.
      * </p>
      * <p>
-     * If you import a terminology that overwrites an existing one, the new terminology take up to 10 minutes to fully
-     * propagate and be available for use in a translation due to cache policies with the DataPlane service that
-     * performs the translations.
+     * If you import a terminology that overwrites an existing one, the new terminology takes up to 10 minutes to fully
+     * propagate. After that, translations have access to the new terminology.
      * </p>
      * 
      * @param importTerminologyRequest
@@ -272,6 +270,37 @@ public interface AmazonTranslateAsync extends AmazonTranslate {
      */
     java.util.concurrent.Future<ImportTerminologyResult> importTerminologyAsync(ImportTerminologyRequest importTerminologyRequest,
             com.amazonaws.handlers.AsyncHandler<ImportTerminologyRequest, ImportTerminologyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides a list of languages (RFC-5646 codes and names) that Amazon Translate supports.
+     * </p>
+     * 
+     * @param listLanguagesRequest
+     * @return A Java Future containing the result of the ListLanguages operation returned by the service.
+     * @sample AmazonTranslateAsync.ListLanguages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/translate-2017-07-01/ListLanguages" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListLanguagesResult> listLanguagesAsync(ListLanguagesRequest listLanguagesRequest);
+
+    /**
+     * <p>
+     * Provides a list of languages (RFC-5646 codes and names) that Amazon Translate supports.
+     * </p>
+     * 
+     * @param listLanguagesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListLanguages operation returned by the service.
+     * @sample AmazonTranslateAsyncHandler.ListLanguages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/translate-2017-07-01/ListLanguages" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListLanguagesResult> listLanguagesAsync(ListLanguagesRequest listLanguagesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListLanguagesRequest, ListLanguagesResult> asyncHandler);
 
     /**
      * <p>

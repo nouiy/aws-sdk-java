@@ -307,6 +307,39 @@ public class AmazonTranslateAsyncClient extends AmazonTranslateClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListLanguagesResult> listLanguagesAsync(ListLanguagesRequest request) {
+
+        return listLanguagesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLanguagesResult> listLanguagesAsync(final ListLanguagesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListLanguagesRequest, ListLanguagesResult> asyncHandler) {
+        final ListLanguagesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListLanguagesResult>() {
+            @Override
+            public ListLanguagesResult call() throws Exception {
+                ListLanguagesResult result = null;
+
+                try {
+                    result = executeListLanguages(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListParallelDataResult> listParallelDataAsync(ListParallelDataRequest request) {
 
         return listParallelDataAsync(request, null);

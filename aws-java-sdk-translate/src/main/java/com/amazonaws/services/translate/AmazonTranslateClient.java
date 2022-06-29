@@ -110,6 +110,9 @@ public class AmazonTranslateClient extends AmazonWebServiceClient implements Ama
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.translate.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("UnsupportedDisplayLanguageCodeException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.translate.model.transform.UnsupportedDisplayLanguageCodeExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("TooManyRequestsException").withExceptionUnmarshaller(
                                     com.amazonaws.services.translate.model.transform.TooManyRequestsExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -173,11 +176,11 @@ public class AmazonTranslateClient extends AmazonWebServiceClient implements Ama
      * @param createParallelDataRequest
      * @return Result of the CreateParallelData operation returned by the service.
      * @throws InvalidParameterValueException
-     *         The value of the parameter is invalid. Review the value of the parameter you are using to correct it, and
-     *         then retry your operation.
+     *         The value of the parameter is not valid. Review the value of the parameter you are using to correct it,
+     *         and then retry your operation.
      * @throws InvalidRequestException
-     *         The request that you made is invalid. Check your request to determine why it's invalid and then retry the
-     *         request.
+     *         The request that you made is not valid. Check your request to determine why it's not valid and then retry
+     *         the request.
      * @throws LimitExceededException
      *         The specified limit has been exceeded. Review your request and retry it with a quantity below the stated
      *         limit.
@@ -315,8 +318,8 @@ public class AmazonTranslateClient extends AmazonWebServiceClient implements Ama
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again.
      * @throws InvalidParameterValueException
-     *         The value of the parameter is invalid. Review the value of the parameter you are using to correct it, and
-     *         then retry your operation.
+     *         The value of the parameter is not valid. Review the value of the parameter you are using to correct it,
+     *         and then retry your operation.
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @sample AmazonTranslate.DeleteTerminology
@@ -444,8 +447,8 @@ public class AmazonTranslateClient extends AmazonWebServiceClient implements Ama
      *         The resource you are looking for has not been found. Review the resource you're looking for and see if a
      *         different resource will accomplish your needs before retrying the revised request.
      * @throws InvalidParameterValueException
-     *         The value of the parameter is invalid. Review the value of the parameter you are using to correct it, and
-     *         then retry your operation.
+     *         The value of the parameter is not valid. Review the value of the parameter you are using to correct it,
+     *         and then retry your operation.
      * @throws TooManyRequestsException
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again.
@@ -510,8 +513,8 @@ public class AmazonTranslateClient extends AmazonWebServiceClient implements Ama
      *         The resource you are looking for has not been found. Review the resource you're looking for and see if a
      *         different resource will accomplish your needs before retrying the revised request.
      * @throws InvalidParameterValueException
-     *         The value of the parameter is invalid. Review the value of the parameter you are using to correct it, and
-     *         then retry your operation.
+     *         The value of the parameter is not valid. Review the value of the parameter you are using to correct it,
+     *         and then retry your operation.
      * @throws TooManyRequestsException
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again.
@@ -567,22 +570,21 @@ public class AmazonTranslateClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Creates or updates a custom terminology, depending on whether or not one already exists for the given terminology
-     * name. Importing a terminology with the same name as an existing one will merge the terminologies based on the
-     * chosen merge strategy. Currently, the only supported merge strategy is OVERWRITE, and so the imported terminology
-     * will overwrite an existing terminology of the same name.
+     * Creates or updates a custom terminology, depending on whether one already exists for the given terminology name.
+     * Importing a terminology with the same name as an existing one will merge the terminologies based on the chosen
+     * merge strategy. The only supported merge strategy is OVERWRITE, where the imported terminology overwrites the
+     * existing terminology of the same name.
      * </p>
      * <p>
-     * If you import a terminology that overwrites an existing one, the new terminology take up to 10 minutes to fully
-     * propagate and be available for use in a translation due to cache policies with the DataPlane service that
-     * performs the translations.
+     * If you import a terminology that overwrites an existing one, the new terminology takes up to 10 minutes to fully
+     * propagate. After that, translations have access to the new terminology.
      * </p>
      * 
      * @param importTerminologyRequest
      * @return Result of the ImportTerminology operation returned by the service.
      * @throws InvalidParameterValueException
-     *         The value of the parameter is invalid. Review the value of the parameter you are using to correct it, and
-     *         then retry your operation.
+     *         The value of the parameter is not valid. Review the value of the parameter you are using to correct it,
+     *         and then retry your operation.
      * @throws LimitExceededException
      *         The specified limit has been exceeded. Review your request and retry it with a quantity below the stated
      *         limit.
@@ -641,14 +643,79 @@ public class AmazonTranslateClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Provides a list of languages (RFC-5646 codes and names) that Amazon Translate supports.
+     * </p>
+     * 
+     * @param listLanguagesRequest
+     * @return Result of the ListLanguages operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         The value of the parameter is not valid. Review the value of the parameter you are using to correct it,
+     *         and then retry your operation.
+     * @throws TooManyRequestsException
+     *         You have made too many requests within a short period of time. Wait for a short time and then try your
+     *         request again.
+     * @throws UnsupportedDisplayLanguageCodeException
+     *         Requested display language code is not supported.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AmazonTranslate.ListLanguages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/translate-2017-07-01/ListLanguages" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListLanguagesResult listLanguages(ListLanguagesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListLanguages(request);
+    }
+
+    @SdkInternalApi
+    final ListLanguagesResult executeListLanguages(ListLanguagesRequest listLanguagesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listLanguagesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListLanguagesRequest> request = null;
+        Response<ListLanguagesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListLanguagesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listLanguagesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Translate");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListLanguages");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListLanguagesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListLanguagesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Provides a list of your parallel data resources in Amazon Translate.
      * </p>
      * 
      * @param listParallelDataRequest
      * @return Result of the ListParallelData operation returned by the service.
      * @throws InvalidParameterValueException
-     *         The value of the parameter is invalid. Review the value of the parameter you are using to correct it, and
-     *         then retry your operation.
+     *         The value of the parameter is not valid. Review the value of the parameter you are using to correct it,
+     *         and then retry your operation.
      * @throws TooManyRequestsException
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again.
@@ -710,8 +777,8 @@ public class AmazonTranslateClient extends AmazonWebServiceClient implements Ama
      * @param listTerminologiesRequest
      * @return Result of the ListTerminologies operation returned by the service.
      * @throws InvalidParameterValueException
-     *         The value of the parameter is invalid. Review the value of the parameter you are using to correct it, and
-     *         then retry your operation.
+     *         The value of the parameter is not valid. Review the value of the parameter you are using to correct it,
+     *         and then retry your operation.
      * @throws TooManyRequestsException
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again.
@@ -773,13 +840,13 @@ public class AmazonTranslateClient extends AmazonWebServiceClient implements Ama
      * @param listTextTranslationJobsRequest
      * @return Result of the ListTextTranslationJobs operation returned by the service.
      * @throws InvalidRequestException
-     *         The request that you made is invalid. Check your request to determine why it's invalid and then retry the
-     *         request.
+     *         The request that you made is not valid. Check your request to determine why it's not valid and then retry
+     *         the request.
      * @throws TooManyRequestsException
      *         You have made too many requests within a short period of time. Wait for a short time and then try your
      *         request again.
      * @throws InvalidFilterException
-     *         The filter specified for the operation is invalid. Specify a different filter.
+     *         The filter specified for the operation is not valid. Specify a different filter.
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @sample AmazonTranslate.ListTextTranslationJobs
@@ -856,14 +923,14 @@ public class AmazonTranslateClient extends AmazonWebServiceClient implements Ama
      *         Amazon Translate does not support translation from the language of the source text into the requested
      *         target language. For more information, see <a>how-to-error-msg</a>.
      * @throws InvalidRequestException
-     *         The request that you made is invalid. Check your request to determine why it's invalid and then retry the
-     *         request.
+     *         The request that you made is not valid. Check your request to determine why it's not valid and then retry
+     *         the request.
      * @throws ResourceNotFoundException
      *         The resource you are looking for has not been found. Review the resource you're looking for and see if a
      *         different resource will accomplish your needs before retrying the revised request.
      * @throws InvalidParameterValueException
-     *         The value of the parameter is invalid. Review the value of the parameter you are using to correct it, and
-     *         then retry your operation.
+     *         The value of the parameter is not valid. Review the value of the parameter you are using to correct it,
+     *         and then retry your operation.
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @sample AmazonTranslate.StartTextTranslationJob
@@ -999,8 +1066,8 @@ public class AmazonTranslateClient extends AmazonWebServiceClient implements Ama
      * @param translateTextRequest
      * @return Result of the TranslateText operation returned by the service.
      * @throws InvalidRequestException
-     *         The request that you made is invalid. Check your request to determine why it's invalid and then retry the
-     *         request.
+     *         The request that you made is not valid. Check your request to determine why it's not valid and then retry
+     *         the request.
      * @throws TextSizeLimitExceededException
      *         The size of the text you submitted exceeds the size limit. Reduce the size of the text or use a smaller
      *         document and then retry your request.
@@ -1022,7 +1089,7 @@ public class AmazonTranslateClient extends AmazonWebServiceClient implements Ama
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @throws ServiceUnavailableException
-     *         The Amazon Translate service is temporarily unavailable. Please wait a bit and then retry your request.
+     *         The Amazon Translate service is temporarily unavailable. Wait a bit and then retry your request.
      * @sample AmazonTranslate.TranslateText
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/translate-2017-07-01/TranslateText" target="_top">AWS API
      *      Documentation</a>
@@ -1081,11 +1148,11 @@ public class AmazonTranslateClient extends AmazonWebServiceClient implements Ama
      * @throws ConcurrentModificationException
      *         Another modification is being made. That modification must complete before you can make your change.
      * @throws InvalidParameterValueException
-     *         The value of the parameter is invalid. Review the value of the parameter you are using to correct it, and
-     *         then retry your operation.
+     *         The value of the parameter is not valid. Review the value of the parameter you are using to correct it,
+     *         and then retry your operation.
      * @throws InvalidRequestException
-     *         The request that you made is invalid. Check your request to determine why it's invalid and then retry the
-     *         request.
+     *         The request that you made is not valid. Check your request to determine why it's not valid and then retry
+     *         the request.
      * @throws LimitExceededException
      *         The specified limit has been exceeded. Review your request and retry it with a quantity below the stated
      *         limit.

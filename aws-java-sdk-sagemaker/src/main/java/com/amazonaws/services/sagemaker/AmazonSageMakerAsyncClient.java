@@ -3643,6 +3643,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeFeatureMetadataResult> describeFeatureMetadataAsync(DescribeFeatureMetadataRequest request) {
+
+        return describeFeatureMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeFeatureMetadataResult> describeFeatureMetadataAsync(final DescribeFeatureMetadataRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeFeatureMetadataRequest, DescribeFeatureMetadataResult> asyncHandler) {
+        final DescribeFeatureMetadataRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeFeatureMetadataResult>() {
+            @Override
+            public DescribeFeatureMetadataResult call() throws Exception {
+                DescribeFeatureMetadataResult result = null;
+
+                try {
+                    result = executeDescribeFeatureMetadata(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeFlowDefinitionResult> describeFlowDefinitionAsync(DescribeFlowDefinitionRequest request) {
 
         return describeFlowDefinitionAsync(request, null);
@@ -7957,6 +7990,72 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
 
                 try {
                     result = executeUpdateExperiment(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFeatureGroupResult> updateFeatureGroupAsync(UpdateFeatureGroupRequest request) {
+
+        return updateFeatureGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFeatureGroupResult> updateFeatureGroupAsync(final UpdateFeatureGroupRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateFeatureGroupRequest, UpdateFeatureGroupResult> asyncHandler) {
+        final UpdateFeatureGroupRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateFeatureGroupResult>() {
+            @Override
+            public UpdateFeatureGroupResult call() throws Exception {
+                UpdateFeatureGroupResult result = null;
+
+                try {
+                    result = executeUpdateFeatureGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFeatureMetadataResult> updateFeatureMetadataAsync(UpdateFeatureMetadataRequest request) {
+
+        return updateFeatureMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFeatureMetadataResult> updateFeatureMetadataAsync(final UpdateFeatureMetadataRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateFeatureMetadataRequest, UpdateFeatureMetadataResult> asyncHandler) {
+        final UpdateFeatureMetadataRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateFeatureMetadataResult>() {
+            @Override
+            public UpdateFeatureMetadataResult call() throws Exception {
+                UpdateFeatureMetadataResult result = null;
+
+                try {
+                    result = executeUpdateFeatureMetadata(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -63,6 +63,11 @@ public class AbstractAmazonTranslate implements AmazonTranslate {
     }
 
     @Override
+    public ListLanguagesResult listLanguages(ListLanguagesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListParallelDataResult listParallelData(ListParallelDataRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

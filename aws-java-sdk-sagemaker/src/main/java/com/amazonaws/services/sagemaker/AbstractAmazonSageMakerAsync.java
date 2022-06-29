@@ -1437,6 +1437,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeFeatureMetadataResult> describeFeatureMetadataAsync(DescribeFeatureMetadataRequest request) {
+
+        return describeFeatureMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeFeatureMetadataResult> describeFeatureMetadataAsync(DescribeFeatureMetadataRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeFeatureMetadataRequest, DescribeFeatureMetadataResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeFlowDefinitionResult> describeFlowDefinitionAsync(DescribeFlowDefinitionRequest request) {
 
         return describeFlowDefinitionAsync(request, null);
@@ -3158,6 +3171,32 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<UpdateExperimentResult> updateExperimentAsync(UpdateExperimentRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateExperimentRequest, UpdateExperimentResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFeatureGroupResult> updateFeatureGroupAsync(UpdateFeatureGroupRequest request) {
+
+        return updateFeatureGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFeatureGroupResult> updateFeatureGroupAsync(UpdateFeatureGroupRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateFeatureGroupRequest, UpdateFeatureGroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFeatureMetadataResult> updateFeatureMetadataAsync(UpdateFeatureMetadataRequest request) {
+
+        return updateFeatureMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFeatureMetadataResult> updateFeatureMetadataAsync(UpdateFeatureMetadataRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateFeatureMetadataRequest, UpdateFeatureMetadataResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

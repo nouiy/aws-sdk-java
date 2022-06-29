@@ -564,6 +564,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public DescribeFeatureMetadataResult describeFeatureMetadata(DescribeFeatureMetadataRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeFlowDefinitionResult describeFlowDefinition(DescribeFlowDefinitionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1210,6 +1215,16 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public UpdateExperimentResult updateExperiment(UpdateExperimentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateFeatureGroupResult updateFeatureGroup(UpdateFeatureGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateFeatureMetadataResult updateFeatureMetadata(UpdateFeatureMetadataRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -30,7 +30,8 @@ public enum ResourceType {
     Pipeline("Pipeline"),
     PipelineExecution("PipelineExecution"),
     FeatureGroup("FeatureGroup"),
-    Project("Project");
+    Project("Project"),
+    FeatureMetadata("FeatureMetadata");
 
     private String value;
 
