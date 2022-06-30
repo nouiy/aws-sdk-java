@@ -123,38 +123,20 @@ public class AmazonWorkMailClient extends AmazonWebServiceClient implements Amaz
                             new JsonErrorShapeMetadata().withErrorCode("DirectoryUnavailableException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workmail.model.transform.DirectoryUnavailableExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidConfigurationException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.workmail.model.transform.InvalidConfigurationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidParameterException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.workmail.model.transform.InvalidParameterExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("MailDomainStateException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workmail.model.transform.MailDomainStateExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidCustomSesConfigurationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workmail.model.transform.InvalidCustomSesConfigurationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("MailDomainNotFoundException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.workmail.model.transform.MailDomainNotFoundExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("DirectoryServiceAuthenticationFailedException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.workmail.model.transform.DirectoryServiceAuthenticationFailedExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("NameAvailabilityException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workmail.model.transform.NameAvailabilityExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("EmailAddressInUseException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.workmail.model.transform.EmailAddressInUseExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("LimitExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workmail.model.transform.LimitExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("EntityAlreadyRegisteredException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workmail.model.transform.EntityAlreadyRegisteredExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("TooManyTagsException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.workmail.model.transform.TooManyTagsExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidPasswordException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workmail.model.transform.InvalidPasswordExceptionUnmarshaller.getInstance()))
@@ -165,26 +147,44 @@ public class AmazonWorkMailClient extends AmazonWebServiceClient implements Amaz
                             new JsonErrorShapeMetadata().withErrorCode("UnsupportedOperationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workmail.model.transform.UnsupportedOperationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("EntityNotFoundException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.workmail.model.transform.EntityNotFoundExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("DirectoryInUseException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workmail.model.transform.DirectoryInUseExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("MailDomainInUseException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workmail.model.transform.MailDomainInUseExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ReservedNameException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.workmail.model.transform.ReservedNameExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("OrganizationStateException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.workmail.model.transform.OrganizationStateExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("OrganizationNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workmail.model.transform.OrganizationNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("EntityStateException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workmail.model.transform.EntityStateExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidConfigurationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.workmail.model.transform.InvalidConfigurationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidParameterException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.workmail.model.transform.InvalidParameterExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("MailDomainNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.workmail.model.transform.MailDomainNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("DirectoryServiceAuthenticationFailedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.workmail.model.transform.DirectoryServiceAuthenticationFailedExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("EmailAddressInUseException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.workmail.model.transform.EmailAddressInUseExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("TooManyTagsException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.workmail.model.transform.TooManyTagsExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("EntityNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.workmail.model.transform.EntityNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ReservedNameException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.workmail.model.transform.ReservedNameExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("OrganizationStateException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.workmail.model.transform.OrganizationStateExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.workmail.model.AmazonWorkMailException.class));
 
     public static AmazonWorkMailClientBuilder builder() {
@@ -512,6 +512,75 @@ public class AmazonWorkMailClient extends AmazonWebServiceClient implements Amaz
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateAliasResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateAliasResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates an <code>AvailabilityConfiguration</code> for the given WorkMail organization and domain.
+     * </p>
+     * 
+     * @param createAvailabilityConfigurationRequest
+     * @return Result of the CreateAvailabilityConfiguration operation returned by the service.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @throws NameAvailabilityException
+     *         The user, group, or resource name isn't unique in Amazon WorkMail.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @throws LimitExceededException
+     *         The request exceeds the limit of the resource.
+     * @sample AmazonWorkMail.CreateAvailabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/CreateAvailabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateAvailabilityConfigurationResult createAvailabilityConfiguration(CreateAvailabilityConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateAvailabilityConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final CreateAvailabilityConfigurationResult executeCreateAvailabilityConfiguration(
+            CreateAvailabilityConfigurationRequest createAvailabilityConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createAvailabilityConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateAvailabilityConfigurationRequest> request = null;
+        Response<CreateAvailabilityConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateAvailabilityConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createAvailabilityConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkMail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateAvailabilityConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateAvailabilityConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateAvailabilityConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1012,6 +1081,69 @@ public class AmazonWorkMailClient extends AmazonWebServiceClient implements Amaz
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteAliasResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteAliasResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes the <code>AvailabilityConfiguration</code> for the given WorkMail organization and domain.
+     * </p>
+     * 
+     * @param deleteAvailabilityConfigurationRequest
+     * @return Result of the DeleteAvailabilityConfiguration operation returned by the service.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @sample AmazonWorkMail.DeleteAvailabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteAvailabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteAvailabilityConfigurationResult deleteAvailabilityConfiguration(DeleteAvailabilityConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteAvailabilityConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final DeleteAvailabilityConfigurationResult executeDeleteAvailabilityConfiguration(
+            DeleteAvailabilityConfigurationRequest deleteAvailabilityConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteAvailabilityConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteAvailabilityConfigurationRequest> request = null;
+        Response<DeleteAvailabilityConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteAvailabilityConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteAvailabilityConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkMail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteAvailabilityConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteAvailabilityConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteAvailabilityConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2895,6 +3027,68 @@ public class AmazonWorkMailClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * List all the <code>AvailabilityConfiguration</code>'s for the given WorkMail organization.
+     * </p>
+     * 
+     * @param listAvailabilityConfigurationsRequest
+     * @return Result of the ListAvailabilityConfigurations operation returned by the service.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @sample AmazonWorkMail.ListAvailabilityConfigurations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListAvailabilityConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListAvailabilityConfigurationsResult listAvailabilityConfigurations(ListAvailabilityConfigurationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAvailabilityConfigurations(request);
+    }
+
+    @SdkInternalApi
+    final ListAvailabilityConfigurationsResult executeListAvailabilityConfigurations(ListAvailabilityConfigurationsRequest listAvailabilityConfigurationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAvailabilityConfigurationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAvailabilityConfigurationsRequest> request = null;
+        Response<ListAvailabilityConfigurationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAvailabilityConfigurationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listAvailabilityConfigurationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkMail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAvailabilityConfigurations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAvailabilityConfigurationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListAvailabilityConfigurationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns an overview of the members of a group. Users and groups can be members of a group.
      * </p>
      * 
@@ -4417,6 +4611,82 @@ public class AmazonWorkMailClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Performs a test on an availability provider to ensure that access is allowed. For EWS, it verifies the provided
+     * credentials can be used to successfully log in. For Lambda, it verifies that the Lambda function can be invoked
+     * and that the resource access policy was configured to deny anonymous access. An anonymous invocation is one done
+     * without providing either a <code>SourceArn</code> or <code>SourceAccount</code> header.
+     * </p>
+     * <note>
+     * <p>
+     * The request must contain either one provider definition (<code>EwsProvider</code> or <code>LambdaProvider</code>)
+     * or the <code>DomainName</code> parameter. If the <code>DomainName</code> parameter is provided, the configuration
+     * stored under the <code>DomainName</code> will be tested.
+     * </p>
+     * </note>
+     * 
+     * @param testAvailabilityConfigurationRequest
+     * @return Result of the TestAvailabilityConfiguration operation returned by the service.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @throws ResourceNotFoundException
+     *         The resource cannot be found.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @sample AmazonWorkMail.TestAvailabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/TestAvailabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public TestAvailabilityConfigurationResult testAvailabilityConfiguration(TestAvailabilityConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeTestAvailabilityConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final TestAvailabilityConfigurationResult executeTestAvailabilityConfiguration(TestAvailabilityConfigurationRequest testAvailabilityConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(testAvailabilityConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<TestAvailabilityConfigurationRequest> request = null;
+        Response<TestAvailabilityConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new TestAvailabilityConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(testAvailabilityConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkMail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "TestAvailabilityConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<TestAvailabilityConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new TestAvailabilityConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Untags the specified tags from the specified Amazon WorkMail organization resource.
      * </p>
      * 
@@ -4462,6 +4732,73 @@ public class AmazonWorkMailClient extends AmazonWebServiceClient implements Amaz
 
             HttpResponseHandler<AmazonWebServiceResponse<UntagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UntagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates an existing <code>AvailabilityConfiguration</code> for the given WorkMail organization and domain.
+     * </p>
+     * 
+     * @param updateAvailabilityConfigurationRequest
+     * @return Result of the UpdateAvailabilityConfiguration operation returned by the service.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @throws ResourceNotFoundException
+     *         The resource cannot be found.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @sample AmazonWorkMail.UpdateAvailabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/UpdateAvailabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateAvailabilityConfigurationResult updateAvailabilityConfiguration(UpdateAvailabilityConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateAvailabilityConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final UpdateAvailabilityConfigurationResult executeUpdateAvailabilityConfiguration(
+            UpdateAvailabilityConfigurationRequest updateAvailabilityConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateAvailabilityConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateAvailabilityConfigurationRequest> request = null;
+        Response<UpdateAvailabilityConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateAvailabilityConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateAvailabilityConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkMail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateAvailabilityConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateAvailabilityConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateAvailabilityConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

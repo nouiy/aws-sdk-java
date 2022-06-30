@@ -249,6 +249,41 @@ public class AmazonWorkMailAsyncClient extends AmazonWorkMailClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<CreateAvailabilityConfigurationResult> createAvailabilityConfigurationAsync(
+            CreateAvailabilityConfigurationRequest request) {
+
+        return createAvailabilityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAvailabilityConfigurationResult> createAvailabilityConfigurationAsync(
+            final CreateAvailabilityConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateAvailabilityConfigurationRequest, CreateAvailabilityConfigurationResult> asyncHandler) {
+        final CreateAvailabilityConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateAvailabilityConfigurationResult>() {
+            @Override
+            public CreateAvailabilityConfigurationResult call() throws Exception {
+                CreateAvailabilityConfigurationResult result = null;
+
+                try {
+                    result = executeCreateAvailabilityConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateGroupResult> createGroupAsync(CreateGroupRequest request) {
 
         return createGroupAsync(request, null);
@@ -464,6 +499,41 @@ public class AmazonWorkMailAsyncClient extends AmazonWorkMailClient implements A
 
                 try {
                     result = executeDeleteAlias(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAvailabilityConfigurationResult> deleteAvailabilityConfigurationAsync(
+            DeleteAvailabilityConfigurationRequest request) {
+
+        return deleteAvailabilityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAvailabilityConfigurationResult> deleteAvailabilityConfigurationAsync(
+            final DeleteAvailabilityConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteAvailabilityConfigurationRequest, DeleteAvailabilityConfigurationResult> asyncHandler) {
+        final DeleteAvailabilityConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteAvailabilityConfigurationResult>() {
+            @Override
+            public DeleteAvailabilityConfigurationResult call() throws Exception {
+                DeleteAvailabilityConfigurationResult result = null;
+
+                try {
+                    result = executeDeleteAvailabilityConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1413,6 +1483,40 @@ public class AmazonWorkMailAsyncClient extends AmazonWorkMailClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<ListAvailabilityConfigurationsResult> listAvailabilityConfigurationsAsync(ListAvailabilityConfigurationsRequest request) {
+
+        return listAvailabilityConfigurationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAvailabilityConfigurationsResult> listAvailabilityConfigurationsAsync(
+            final ListAvailabilityConfigurationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAvailabilityConfigurationsRequest, ListAvailabilityConfigurationsResult> asyncHandler) {
+        final ListAvailabilityConfigurationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAvailabilityConfigurationsResult>() {
+            @Override
+            public ListAvailabilityConfigurationsResult call() throws Exception {
+                ListAvailabilityConfigurationsResult result = null;
+
+                try {
+                    result = executeListAvailabilityConfigurations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListGroupMembersResult> listGroupMembersAsync(ListGroupMembersRequest request) {
 
         return listGroupMembersAsync(request, null);
@@ -2177,6 +2281,40 @@ public class AmazonWorkMailAsyncClient extends AmazonWorkMailClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<TestAvailabilityConfigurationResult> testAvailabilityConfigurationAsync(TestAvailabilityConfigurationRequest request) {
+
+        return testAvailabilityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<TestAvailabilityConfigurationResult> testAvailabilityConfigurationAsync(
+            final TestAvailabilityConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<TestAvailabilityConfigurationRequest, TestAvailabilityConfigurationResult> asyncHandler) {
+        final TestAvailabilityConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<TestAvailabilityConfigurationResult>() {
+            @Override
+            public TestAvailabilityConfigurationResult call() throws Exception {
+                TestAvailabilityConfigurationResult result = null;
+
+                try {
+                    result = executeTestAvailabilityConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request) {
 
         return untagResourceAsync(request, null);
@@ -2194,6 +2332,41 @@ public class AmazonWorkMailAsyncClient extends AmazonWorkMailClient implements A
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAvailabilityConfigurationResult> updateAvailabilityConfigurationAsync(
+            UpdateAvailabilityConfigurationRequest request) {
+
+        return updateAvailabilityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAvailabilityConfigurationResult> updateAvailabilityConfigurationAsync(
+            final UpdateAvailabilityConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateAvailabilityConfigurationRequest, UpdateAvailabilityConfigurationResult> asyncHandler) {
+        final UpdateAvailabilityConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateAvailabilityConfigurationResult>() {
+            @Override
+            public UpdateAvailabilityConfigurationResult call() throws Exception {
+                UpdateAvailabilityConfigurationResult result = null;
+
+                try {
+                    result = executeUpdateAvailabilityConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

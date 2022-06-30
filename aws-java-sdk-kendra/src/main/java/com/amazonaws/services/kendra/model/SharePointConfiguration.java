@@ -30,32 +30,29 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The version of Microsoft SharePoint that you are using as a data source.
+     * The version of Microsoft SharePoint that you use.
      * </p>
      */
     private String sharePointVersion;
     /**
      * <p>
-     * The URLs of the Microsoft SharePoint site that contains the documents that should be indexed.
+     * The Microsoft SharePoint site URLs for the documents you want to indext.
      * </p>
      */
     private java.util.List<String> urls;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of credentials stored in Secrets Manager. The credentials should be a
-     * user/password pair. If you use SharePoint Server, you also need to provide the sever domain name as part of the
-     * credentials. For more information, see <a
+     * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password required to
+     * connect to the SharePoint instance. If you use SharePoint Server, you also need to provide the sever domain name
+     * as part of the credentials. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft SharePoint Data
-     * Source</a>. For more information about Secrets Manager see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a> in the
-     * <i>Secrets Manager </i> user guide.
+     * Source</a>.
      * </p>
      */
     private String secretArn;
     /**
      * <p>
-     * <code>TRUE</code> to include attachments to documents stored in your Microsoft SharePoint site in the index;
-     * otherwise, <code>FALSE</code>.
+     * <code>TRUE</code> to index document attachments.
      * </p>
      */
     private Boolean crawlAttachments;
@@ -75,7 +72,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the display URL of the SharePoint document.
+     * The regex applies to the display URL of the SharePoint document.
      * </p>
      */
     private java.util.List<String> inclusionPatterns;
@@ -87,11 +84,17 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the display URL of the SharePoint document.
+     * The regex applies to the display URL of the SharePoint document.
      * </p>
      */
     private java.util.List<String> exclusionPatterns;
-
+    /**
+     * <p>
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your Microsoft SharePoint. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
+     * </p>
+     */
     private DataSourceVpcConfiguration vpcConfiguration;
     /**
      * <p>
@@ -111,21 +114,24 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     private String documentTitleFieldName;
     /**
      * <p>
-     * A Boolean value that specifies whether local groups are disabled (<code>True</code>) or enabled (
-     * <code>False</code>).
+     * <code>TRUE</code> to disable local groups information.
      * </p>
      */
     private Boolean disableLocalGroups;
-
+    /**
+     * <p>
+     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint.
+     * </p>
+     */
     private S3Path sslCertificateS3Path;
 
     /**
      * <p>
-     * The version of Microsoft SharePoint that you are using as a data source.
+     * The version of Microsoft SharePoint that you use.
      * </p>
      * 
      * @param sharePointVersion
-     *        The version of Microsoft SharePoint that you are using as a data source.
+     *        The version of Microsoft SharePoint that you use.
      * @see SharePointVersion
      */
 
@@ -135,10 +141,10 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The version of Microsoft SharePoint that you are using as a data source.
+     * The version of Microsoft SharePoint that you use.
      * </p>
      * 
-     * @return The version of Microsoft SharePoint that you are using as a data source.
+     * @return The version of Microsoft SharePoint that you use.
      * @see SharePointVersion
      */
 
@@ -148,11 +154,11 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The version of Microsoft SharePoint that you are using as a data source.
+     * The version of Microsoft SharePoint that you use.
      * </p>
      * 
      * @param sharePointVersion
-     *        The version of Microsoft SharePoint that you are using as a data source.
+     *        The version of Microsoft SharePoint that you use.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SharePointVersion
      */
@@ -164,11 +170,11 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The version of Microsoft SharePoint that you are using as a data source.
+     * The version of Microsoft SharePoint that you use.
      * </p>
      * 
      * @param sharePointVersion
-     *        The version of Microsoft SharePoint that you are using as a data source.
+     *        The version of Microsoft SharePoint that you use.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SharePointVersion
      */
@@ -180,10 +186,10 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The URLs of the Microsoft SharePoint site that contains the documents that should be indexed.
+     * The Microsoft SharePoint site URLs for the documents you want to indext.
      * </p>
      * 
-     * @return The URLs of the Microsoft SharePoint site that contains the documents that should be indexed.
+     * @return The Microsoft SharePoint site URLs for the documents you want to indext.
      */
 
     public java.util.List<String> getUrls() {
@@ -192,11 +198,11 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The URLs of the Microsoft SharePoint site that contains the documents that should be indexed.
+     * The Microsoft SharePoint site URLs for the documents you want to indext.
      * </p>
      * 
      * @param urls
-     *        The URLs of the Microsoft SharePoint site that contains the documents that should be indexed.
+     *        The Microsoft SharePoint site URLs for the documents you want to indext.
      */
 
     public void setUrls(java.util.Collection<String> urls) {
@@ -210,7 +216,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The URLs of the Microsoft SharePoint site that contains the documents that should be indexed.
+     * The Microsoft SharePoint site URLs for the documents you want to indext.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -219,7 +225,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param urls
-     *        The URLs of the Microsoft SharePoint site that contains the documents that should be indexed.
+     *        The Microsoft SharePoint site URLs for the documents you want to indext.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -235,11 +241,11 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The URLs of the Microsoft SharePoint site that contains the documents that should be indexed.
+     * The Microsoft SharePoint site URLs for the documents you want to indext.
      * </p>
      * 
      * @param urls
-     *        The URLs of the Microsoft SharePoint site that contains the documents that should be indexed.
+     *        The Microsoft SharePoint site URLs for the documents you want to indext.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -250,23 +256,19 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of credentials stored in Secrets Manager. The credentials should be a
-     * user/password pair. If you use SharePoint Server, you also need to provide the sever domain name as part of the
-     * credentials. For more information, see <a
+     * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password required to
+     * connect to the SharePoint instance. If you use SharePoint Server, you also need to provide the sever domain name
+     * as part of the credentials. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft SharePoint Data
-     * Source</a>. For more information about Secrets Manager see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a> in the
-     * <i>Secrets Manager </i> user guide.
+     * Source</a>.
      * </p>
      * 
      * @param secretArn
-     *        The Amazon Resource Name (ARN) of credentials stored in Secrets Manager. The credentials should be a
-     *        user/password pair. If you use SharePoint Server, you also need to provide the sever domain name as part
-     *        of the credentials. For more information, see <a
+     *        The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password
+     *        required to connect to the SharePoint instance. If you use SharePoint Server, you also need to provide the
+     *        sever domain name as part of the credentials. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft
-     *        SharePoint Data Source</a>. For more information about Secrets Manager see <a
-     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a>
-     *        in the <i>Secrets Manager </i> user guide.
+     *        SharePoint Data Source</a>.
      */
 
     public void setSecretArn(String secretArn) {
@@ -275,22 +277,18 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of credentials stored in Secrets Manager. The credentials should be a
-     * user/password pair. If you use SharePoint Server, you also need to provide the sever domain name as part of the
-     * credentials. For more information, see <a
+     * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password required to
+     * connect to the SharePoint instance. If you use SharePoint Server, you also need to provide the sever domain name
+     * as part of the credentials. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft SharePoint Data
-     * Source</a>. For more information about Secrets Manager see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a> in the
-     * <i>Secrets Manager </i> user guide.
+     * Source</a>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of credentials stored in Secrets Manager. The credentials should be a
-     *         user/password pair. If you use SharePoint Server, you also need to provide the sever domain name as part
-     *         of the credentials. For more information, see <a
+     * @return The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password
+     *         required to connect to the SharePoint instance. If you use SharePoint Server, you also need to provide
+     *         the sever domain name as part of the credentials. For more information, see <a
      *         href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft
-     *         SharePoint Data Source</a>. For more information about Secrets Manager see <a
-     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets
-     *         Manager</a> in the <i>Secrets Manager </i> user guide.
+     *         SharePoint Data Source</a>.
      */
 
     public String getSecretArn() {
@@ -299,23 +297,19 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of credentials stored in Secrets Manager. The credentials should be a
-     * user/password pair. If you use SharePoint Server, you also need to provide the sever domain name as part of the
-     * credentials. For more information, see <a
+     * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password required to
+     * connect to the SharePoint instance. If you use SharePoint Server, you also need to provide the sever domain name
+     * as part of the credentials. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft SharePoint Data
-     * Source</a>. For more information about Secrets Manager see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a> in the
-     * <i>Secrets Manager </i> user guide.
+     * Source</a>.
      * </p>
      * 
      * @param secretArn
-     *        The Amazon Resource Name (ARN) of credentials stored in Secrets Manager. The credentials should be a
-     *        user/password pair. If you use SharePoint Server, you also need to provide the sever domain name as part
-     *        of the credentials. For more information, see <a
+     *        The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password
+     *        required to connect to the SharePoint instance. If you use SharePoint Server, you also need to provide the
+     *        sever domain name as part of the credentials. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html">Using a Microsoft
-     *        SharePoint Data Source</a>. For more information about Secrets Manager see <a
-     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a>
-     *        in the <i>Secrets Manager </i> user guide.
+     *        SharePoint Data Source</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -326,13 +320,11 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * <code>TRUE</code> to include attachments to documents stored in your Microsoft SharePoint site in the index;
-     * otherwise, <code>FALSE</code>.
+     * <code>TRUE</code> to index document attachments.
      * </p>
      * 
      * @param crawlAttachments
-     *        <code>TRUE</code> to include attachments to documents stored in your Microsoft SharePoint site in the
-     *        index; otherwise, <code>FALSE</code>.
+     *        <code>TRUE</code> to index document attachments.
      */
 
     public void setCrawlAttachments(Boolean crawlAttachments) {
@@ -341,12 +333,10 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * <code>TRUE</code> to include attachments to documents stored in your Microsoft SharePoint site in the index;
-     * otherwise, <code>FALSE</code>.
+     * <code>TRUE</code> to index document attachments.
      * </p>
      * 
-     * @return <code>TRUE</code> to include attachments to documents stored in your Microsoft SharePoint site in the
-     *         index; otherwise, <code>FALSE</code>.
+     * @return <code>TRUE</code> to index document attachments.
      */
 
     public Boolean getCrawlAttachments() {
@@ -355,13 +345,11 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * <code>TRUE</code> to include attachments to documents stored in your Microsoft SharePoint site in the index;
-     * otherwise, <code>FALSE</code>.
+     * <code>TRUE</code> to index document attachments.
      * </p>
      * 
      * @param crawlAttachments
-     *        <code>TRUE</code> to include attachments to documents stored in your Microsoft SharePoint site in the
-     *        index; otherwise, <code>FALSE</code>.
+     *        <code>TRUE</code> to index document attachments.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -372,12 +360,10 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * <code>TRUE</code> to include attachments to documents stored in your Microsoft SharePoint site in the index;
-     * otherwise, <code>FALSE</code>.
+     * <code>TRUE</code> to index document attachments.
      * </p>
      * 
-     * @return <code>TRUE</code> to include attachments to documents stored in your Microsoft SharePoint site in the
-     *         index; otherwise, <code>FALSE</code>.
+     * @return <code>TRUE</code> to index document attachments.
      */
 
     public Boolean isCrawlAttachments() {
@@ -460,7 +446,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the display URL of the SharePoint document.
+     * The regex applies to the display URL of the SharePoint document.
      * </p>
      * 
      * @return A list of regular expression patterns to include certain documents in your SharePoint. Documents that
@@ -468,7 +454,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      *         the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
      *         precedence and the document isn't included in the index.</p>
      *         <p>
-     *         The regex is applied to the display URL of the SharePoint document.
+     *         The regex applies to the display URL of the SharePoint document.
      */
 
     public java.util.List<String> getInclusionPatterns() {
@@ -483,7 +469,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the display URL of the SharePoint document.
+     * The regex applies to the display URL of the SharePoint document.
      * </p>
      * 
      * @param inclusionPatterns
@@ -492,7 +478,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
      *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The regex is applied to the display URL of the SharePoint document.
+     *        The regex applies to the display URL of the SharePoint document.
      */
 
     public void setInclusionPatterns(java.util.Collection<String> inclusionPatterns) {
@@ -512,7 +498,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the display URL of the SharePoint document.
+     * The regex applies to the display URL of the SharePoint document.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -526,7 +512,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
      *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The regex is applied to the display URL of the SharePoint document.
+     *        The regex applies to the display URL of the SharePoint document.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -548,7 +534,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the display URL of the SharePoint document.
+     * The regex applies to the display URL of the SharePoint document.
      * </p>
      * 
      * @param inclusionPatterns
@@ -557,7 +543,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
      *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The regex is applied to the display URL of the SharePoint document.
+     *        The regex applies to the display URL of the SharePoint document.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -574,7 +560,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the display URL of the SharePoint document.
+     * The regex applies to the display URL of the SharePoint document.
      * </p>
      * 
      * @return A list of regular expression patterns to exclude certain documents in your SharePoint. Documents that
@@ -582,7 +568,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      *         the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
      *         precedence and the document isn't included in the index.</p>
      *         <p>
-     *         The regex is applied to the display URL of the SharePoint document.
+     *         The regex applies to the display URL of the SharePoint document.
      */
 
     public java.util.List<String> getExclusionPatterns() {
@@ -597,7 +583,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the display URL of the SharePoint document.
+     * The regex applies to the display URL of the SharePoint document.
      * </p>
      * 
      * @param exclusionPatterns
@@ -606,7 +592,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
      *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The regex is applied to the display URL of the SharePoint document.
+     *        The regex applies to the display URL of the SharePoint document.
      */
 
     public void setExclusionPatterns(java.util.Collection<String> exclusionPatterns) {
@@ -626,7 +612,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the display URL of the SharePoint document.
+     * The regex applies to the display URL of the SharePoint document.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -640,7 +626,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
      *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The regex is applied to the display URL of the SharePoint document.
+     *        The regex applies to the display URL of the SharePoint document.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -662,7 +648,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * isn't included in the index.
      * </p>
      * <p>
-     * The regex is applied to the display URL of the SharePoint document.
+     * The regex applies to the display URL of the SharePoint document.
      * </p>
      * 
      * @param exclusionPatterns
@@ -671,7 +657,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      *        the index. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes
      *        precedence and the document isn't included in the index.</p>
      *        <p>
-     *        The regex is applied to the display URL of the SharePoint document.
+     *        The regex applies to the display URL of the SharePoint document.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -681,7 +667,16 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your Microsoft SharePoint. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
+     * </p>
+     * 
      * @param vpcConfiguration
+     *        Configuration information for an Amazon Virtual Private Cloud to connect to your Microsoft SharePoint. For
+     *        more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
      */
 
     public void setVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
@@ -689,7 +684,15 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your Microsoft SharePoint. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
+     * </p>
+     * 
+     * @return Configuration information for an Amazon Virtual Private Cloud to connect to your Microsoft SharePoint.
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
      */
 
     public DataSourceVpcConfiguration getVpcConfiguration() {
@@ -697,7 +700,16 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your Microsoft SharePoint. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
+     * </p>
+     * 
      * @param vpcConfiguration
+     *        Configuration information for an Amazon Virtual Private Cloud to connect to your Microsoft SharePoint. For
+     *        more information, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -850,13 +862,11 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A Boolean value that specifies whether local groups are disabled (<code>True</code>) or enabled (
-     * <code>False</code>).
+     * <code>TRUE</code> to disable local groups information.
      * </p>
      * 
      * @param disableLocalGroups
-     *        A Boolean value that specifies whether local groups are disabled (<code>True</code>) or enabled (
-     *        <code>False</code>).
+     *        <code>TRUE</code> to disable local groups information.
      */
 
     public void setDisableLocalGroups(Boolean disableLocalGroups) {
@@ -865,12 +875,10 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A Boolean value that specifies whether local groups are disabled (<code>True</code>) or enabled (
-     * <code>False</code>).
+     * <code>TRUE</code> to disable local groups information.
      * </p>
      * 
-     * @return A Boolean value that specifies whether local groups are disabled (<code>True</code>) or enabled (
-     *         <code>False</code>).
+     * @return <code>TRUE</code> to disable local groups information.
      */
 
     public Boolean getDisableLocalGroups() {
@@ -879,13 +887,11 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A Boolean value that specifies whether local groups are disabled (<code>True</code>) or enabled (
-     * <code>False</code>).
+     * <code>TRUE</code> to disable local groups information.
      * </p>
      * 
      * @param disableLocalGroups
-     *        A Boolean value that specifies whether local groups are disabled (<code>True</code>) or enabled (
-     *        <code>False</code>).
+     *        <code>TRUE</code> to disable local groups information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -896,12 +902,10 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A Boolean value that specifies whether local groups are disabled (<code>True</code>) or enabled (
-     * <code>False</code>).
+     * <code>TRUE</code> to disable local groups information.
      * </p>
      * 
-     * @return A Boolean value that specifies whether local groups are disabled (<code>True</code>) or enabled (
-     *         <code>False</code>).
+     * @return <code>TRUE</code> to disable local groups information.
      */
 
     public Boolean isDisableLocalGroups() {
@@ -909,7 +913,12 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint.
+     * </p>
+     * 
      * @param sslCertificateS3Path
+     *        The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint.
      */
 
     public void setSslCertificateS3Path(S3Path sslCertificateS3Path) {
@@ -917,7 +926,11 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint.
+     * </p>
+     * 
+     * @return The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint.
      */
 
     public S3Path getSslCertificateS3Path() {
@@ -925,7 +938,12 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint.
+     * </p>
+     * 
      * @param sslCertificateS3Path
+     *        The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to SharePoint.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

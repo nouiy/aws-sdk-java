@@ -92,6 +92,45 @@ public interface AmazonAthenaAsync extends AmazonAthena {
 
     /**
      * <p>
+     * Returns the details of a single prepared statement or a list of up to 256 prepared statements for the array of
+     * prepared statement names that you provide. Requires you to have access to the workgroup to which the prepared
+     * statements belong. If a prepared statement cannot be retrieved for the name specified, the statement is listed in
+     * <code>UnprocessedPreparedStatementNames</code>.
+     * </p>
+     * 
+     * @param batchGetPreparedStatementRequest
+     * @return A Java Future containing the result of the BatchGetPreparedStatement operation returned by the service.
+     * @sample AmazonAthenaAsync.BatchGetPreparedStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/BatchGetPreparedStatement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetPreparedStatementResult> batchGetPreparedStatementAsync(
+            BatchGetPreparedStatementRequest batchGetPreparedStatementRequest);
+
+    /**
+     * <p>
+     * Returns the details of a single prepared statement or a list of up to 256 prepared statements for the array of
+     * prepared statement names that you provide. Requires you to have access to the workgroup to which the prepared
+     * statements belong. If a prepared statement cannot be retrieved for the name specified, the statement is listed in
+     * <code>UnprocessedPreparedStatementNames</code>.
+     * </p>
+     * 
+     * @param batchGetPreparedStatementRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchGetPreparedStatement operation returned by the service.
+     * @sample AmazonAthenaAsyncHandler.BatchGetPreparedStatement
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/BatchGetPreparedStatement"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetPreparedStatementResult> batchGetPreparedStatementAsync(
+            BatchGetPreparedStatementRequest batchGetPreparedStatementRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchGetPreparedStatementRequest, BatchGetPreparedStatementResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the details of a single query execution or a list of up to 50 query executions, which you provide as an
      * array of query execution ID strings. Requires you to have access to the workgroup in which the queries ran. To
      * get a list of query execution IDs, use <a>ListQueryExecutionsInput$WorkGroup</a>. Query executions differ from
@@ -821,7 +860,7 @@ public interface AmazonAthenaAsync extends AmazonAthena {
 
     /**
      * <p>
-     * Lists the prepared statements in the specfied workgroup.
+     * Lists the prepared statements in the specified workgroup.
      * </p>
      * 
      * @param listPreparedStatementsRequest
@@ -834,7 +873,7 @@ public interface AmazonAthenaAsync extends AmazonAthena {
 
     /**
      * <p>
-     * Lists the prepared statements in the specfied workgroup.
+     * Lists the prepared statements in the specified workgroup.
      * </p>
      * 
      * @param listPreparedStatementsRequest

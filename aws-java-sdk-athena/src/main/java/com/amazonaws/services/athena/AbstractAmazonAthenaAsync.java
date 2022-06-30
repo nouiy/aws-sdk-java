@@ -41,6 +41,19 @@ public class AbstractAmazonAthenaAsync extends AbstractAmazonAthena implements A
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetPreparedStatementResult> batchGetPreparedStatementAsync(BatchGetPreparedStatementRequest request) {
+
+        return batchGetPreparedStatementAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetPreparedStatementResult> batchGetPreparedStatementAsync(BatchGetPreparedStatementRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchGetPreparedStatementRequest, BatchGetPreparedStatementResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchGetQueryExecutionResult> batchGetQueryExecutionAsync(BatchGetQueryExecutionRequest request) {
 
         return batchGetQueryExecutionAsync(request, null);

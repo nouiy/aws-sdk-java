@@ -80,6 +80,21 @@ public class AbstractAmazonWorkMailAsync extends AbstractAmazonWorkMail implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreateAvailabilityConfigurationResult> createAvailabilityConfigurationAsync(
+            CreateAvailabilityConfigurationRequest request) {
+
+        return createAvailabilityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAvailabilityConfigurationResult> createAvailabilityConfigurationAsync(
+            CreateAvailabilityConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateAvailabilityConfigurationRequest, CreateAvailabilityConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateGroupResult> createGroupAsync(CreateGroupRequest request) {
 
         return createGroupAsync(request, null);
@@ -166,6 +181,21 @@ public class AbstractAmazonWorkMailAsync extends AbstractAmazonWorkMail implemen
     @Override
     public java.util.concurrent.Future<DeleteAliasResult> deleteAliasAsync(DeleteAliasRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteAliasRequest, DeleteAliasResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAvailabilityConfigurationResult> deleteAvailabilityConfigurationAsync(
+            DeleteAvailabilityConfigurationRequest request) {
+
+        return deleteAvailabilityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAvailabilityConfigurationResult> deleteAvailabilityConfigurationAsync(
+            DeleteAvailabilityConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteAvailabilityConfigurationRequest, DeleteAvailabilityConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -543,6 +573,19 @@ public class AbstractAmazonWorkMailAsync extends AbstractAmazonWorkMail implemen
     }
 
     @Override
+    public java.util.concurrent.Future<ListAvailabilityConfigurationsResult> listAvailabilityConfigurationsAsync(ListAvailabilityConfigurationsRequest request) {
+
+        return listAvailabilityConfigurationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAvailabilityConfigurationsResult> listAvailabilityConfigurationsAsync(ListAvailabilityConfigurationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAvailabilityConfigurationsRequest, ListAvailabilityConfigurationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListGroupMembersResult> listGroupMembersAsync(ListGroupMembersRequest request) {
 
         return listGroupMembersAsync(request, null);
@@ -846,6 +889,19 @@ public class AbstractAmazonWorkMailAsync extends AbstractAmazonWorkMail implemen
     }
 
     @Override
+    public java.util.concurrent.Future<TestAvailabilityConfigurationResult> testAvailabilityConfigurationAsync(TestAvailabilityConfigurationRequest request) {
+
+        return testAvailabilityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<TestAvailabilityConfigurationResult> testAvailabilityConfigurationAsync(TestAvailabilityConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<TestAvailabilityConfigurationRequest, TestAvailabilityConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request) {
 
         return untagResourceAsync(request, null);
@@ -854,6 +910,21 @@ public class AbstractAmazonWorkMailAsync extends AbstractAmazonWorkMail implemen
     @Override
     public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAvailabilityConfigurationResult> updateAvailabilityConfigurationAsync(
+            UpdateAvailabilityConfigurationRequest request) {
+
+        return updateAvailabilityConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAvailabilityConfigurationResult> updateAvailabilityConfigurationAsync(
+            UpdateAvailabilityConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateAvailabilityConfigurationRequest, UpdateAvailabilityConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

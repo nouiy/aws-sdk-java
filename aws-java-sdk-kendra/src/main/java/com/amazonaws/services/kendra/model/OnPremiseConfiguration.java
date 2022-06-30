@@ -44,7 +44,7 @@ public class OnPremiseConfiguration implements Serializable, Cloneable, Structur
     private String organizationName;
     /**
      * <p>
-     * Information required to find a specific file in an Amazon S3 bucket.
+     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to GitHub.
      * </p>
      */
     private S3Path sslCertificateS3Path;
@@ -143,11 +143,11 @@ public class OnPremiseConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Information required to find a specific file in an Amazon S3 bucket.
+     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to GitHub.
      * </p>
      * 
      * @param sslCertificateS3Path
-     *        Information required to find a specific file in an Amazon S3 bucket.
+     *        The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to GitHub.
      */
 
     public void setSslCertificateS3Path(S3Path sslCertificateS3Path) {
@@ -156,10 +156,10 @@ public class OnPremiseConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Information required to find a specific file in an Amazon S3 bucket.
+     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to GitHub.
      * </p>
      * 
-     * @return Information required to find a specific file in an Amazon S3 bucket.
+     * @return The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to GitHub.
      */
 
     public S3Path getSslCertificateS3Path() {
@@ -168,11 +168,11 @@ public class OnPremiseConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Information required to find a specific file in an Amazon S3 bucket.
+     * The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to GitHub.
      * </p>
      * 
      * @param sslCertificateS3Path
-     *        Information required to find a specific file in an Amazon S3 bucket.
+     *        The path to the SSL certificate stored in an Amazon S3 bucket. You use this to connect to GitHub.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

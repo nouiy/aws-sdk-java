@@ -120,6 +120,12 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * </p>
      */
     private GitHubConfiguration gitHubConfiguration;
+    /**
+     * <p>
+     * Provides the configuration information to connect to Alfresco as your data source.
+     * </p>
+     */
+    private AlfrescoConfiguration alfrescoConfiguration;
 
     /**
      * <p>
@@ -748,6 +754,46 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Provides the configuration information to connect to Alfresco as your data source.
+     * </p>
+     * 
+     * @param alfrescoConfiguration
+     *        Provides the configuration information to connect to Alfresco as your data source.
+     */
+
+    public void setAlfrescoConfiguration(AlfrescoConfiguration alfrescoConfiguration) {
+        this.alfrescoConfiguration = alfrescoConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides the configuration information to connect to Alfresco as your data source.
+     * </p>
+     * 
+     * @return Provides the configuration information to connect to Alfresco as your data source.
+     */
+
+    public AlfrescoConfiguration getAlfrescoConfiguration() {
+        return this.alfrescoConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides the configuration information to connect to Alfresco as your data source.
+     * </p>
+     * 
+     * @param alfrescoConfiguration
+     *        Provides the configuration information to connect to Alfresco as your data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataSourceConfiguration withAlfrescoConfiguration(AlfrescoConfiguration alfrescoConfiguration) {
+        setAlfrescoConfiguration(alfrescoConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -790,7 +836,9 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
         if (getJiraConfiguration() != null)
             sb.append("JiraConfiguration: ").append(getJiraConfiguration()).append(",");
         if (getGitHubConfiguration() != null)
-            sb.append("GitHubConfiguration: ").append(getGitHubConfiguration());
+            sb.append("GitHubConfiguration: ").append(getGitHubConfiguration()).append(",");
+        if (getAlfrescoConfiguration() != null)
+            sb.append("AlfrescoConfiguration: ").append(getAlfrescoConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -869,6 +917,10 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
             return false;
         if (other.getGitHubConfiguration() != null && other.getGitHubConfiguration().equals(this.getGitHubConfiguration()) == false)
             return false;
+        if (other.getAlfrescoConfiguration() == null ^ this.getAlfrescoConfiguration() == null)
+            return false;
+        if (other.getAlfrescoConfiguration() != null && other.getAlfrescoConfiguration().equals(this.getAlfrescoConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -893,6 +945,7 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getQuipConfiguration() == null) ? 0 : getQuipConfiguration().hashCode());
         hashCode = prime * hashCode + ((getJiraConfiguration() == null) ? 0 : getJiraConfiguration().hashCode());
         hashCode = prime * hashCode + ((getGitHubConfiguration() == null) ? 0 : getGitHubConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getAlfrescoConfiguration() == null) ? 0 : getAlfrescoConfiguration().hashCode());
         return hashCode;
     }
 

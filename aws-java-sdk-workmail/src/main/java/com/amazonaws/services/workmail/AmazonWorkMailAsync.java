@@ -213,6 +213,41 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
 
     /**
      * <p>
+     * Creates an <code>AvailabilityConfiguration</code> for the given WorkMail organization and domain.
+     * </p>
+     * 
+     * @param createAvailabilityConfigurationRequest
+     * @return A Java Future containing the result of the CreateAvailabilityConfiguration operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsync.CreateAvailabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/CreateAvailabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAvailabilityConfigurationResult> createAvailabilityConfigurationAsync(
+            CreateAvailabilityConfigurationRequest createAvailabilityConfigurationRequest);
+
+    /**
+     * <p>
+     * Creates an <code>AvailabilityConfiguration</code> for the given WorkMail organization and domain.
+     * </p>
+     * 
+     * @param createAvailabilityConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateAvailabilityConfiguration operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsyncHandler.CreateAvailabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/CreateAvailabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAvailabilityConfigurationResult> createAvailabilityConfigurationAsync(
+            CreateAvailabilityConfigurationRequest createAvailabilityConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateAvailabilityConfigurationRequest, CreateAvailabilityConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a group that can be used in Amazon WorkMail by calling the <a>RegisterToWorkMail</a> operation.
      * </p>
      * 
@@ -477,6 +512,41 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
      */
     java.util.concurrent.Future<DeleteAliasResult> deleteAliasAsync(DeleteAliasRequest deleteAliasRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteAliasRequest, DeleteAliasResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the <code>AvailabilityConfiguration</code> for the given WorkMail organization and domain.
+     * </p>
+     * 
+     * @param deleteAvailabilityConfigurationRequest
+     * @return A Java Future containing the result of the DeleteAvailabilityConfiguration operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsync.DeleteAvailabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteAvailabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAvailabilityConfigurationResult> deleteAvailabilityConfigurationAsync(
+            DeleteAvailabilityConfigurationRequest deleteAvailabilityConfigurationRequest);
+
+    /**
+     * <p>
+     * Deletes the <code>AvailabilityConfiguration</code> for the given WorkMail organization and domain.
+     * </p>
+     * 
+     * @param deleteAvailabilityConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteAvailabilityConfiguration operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsyncHandler.DeleteAvailabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteAvailabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAvailabilityConfigurationResult> deleteAvailabilityConfigurationAsync(
+            DeleteAvailabilityConfigurationRequest deleteAvailabilityConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteAvailabilityConfigurationRequest, DeleteAvailabilityConfigurationResult> asyncHandler);
 
     /**
      * <p>
@@ -1438,6 +1508,41 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
 
     /**
      * <p>
+     * List all the <code>AvailabilityConfiguration</code>'s for the given WorkMail organization.
+     * </p>
+     * 
+     * @param listAvailabilityConfigurationsRequest
+     * @return A Java Future containing the result of the ListAvailabilityConfigurations operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsync.ListAvailabilityConfigurations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListAvailabilityConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAvailabilityConfigurationsResult> listAvailabilityConfigurationsAsync(
+            ListAvailabilityConfigurationsRequest listAvailabilityConfigurationsRequest);
+
+    /**
+     * <p>
+     * List all the <code>AvailabilityConfiguration</code>'s for the given WorkMail organization.
+     * </p>
+     * 
+     * @param listAvailabilityConfigurationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAvailabilityConfigurations operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsyncHandler.ListAvailabilityConfigurations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListAvailabilityConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAvailabilityConfigurationsResult> listAvailabilityConfigurationsAsync(
+            ListAvailabilityConfigurationsRequest listAvailabilityConfigurationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAvailabilityConfigurationsRequest, ListAvailabilityConfigurationsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns an overview of the members of a group. Users and groups can be members of a group.
      * </p>
      * 
@@ -2197,6 +2302,61 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
 
     /**
      * <p>
+     * Performs a test on an availability provider to ensure that access is allowed. For EWS, it verifies the provided
+     * credentials can be used to successfully log in. For Lambda, it verifies that the Lambda function can be invoked
+     * and that the resource access policy was configured to deny anonymous access. An anonymous invocation is one done
+     * without providing either a <code>SourceArn</code> or <code>SourceAccount</code> header.
+     * </p>
+     * <note>
+     * <p>
+     * The request must contain either one provider definition (<code>EwsProvider</code> or <code>LambdaProvider</code>)
+     * or the <code>DomainName</code> parameter. If the <code>DomainName</code> parameter is provided, the configuration
+     * stored under the <code>DomainName</code> will be tested.
+     * </p>
+     * </note>
+     * 
+     * @param testAvailabilityConfigurationRequest
+     * @return A Java Future containing the result of the TestAvailabilityConfiguration operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsync.TestAvailabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/TestAvailabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<TestAvailabilityConfigurationResult> testAvailabilityConfigurationAsync(
+            TestAvailabilityConfigurationRequest testAvailabilityConfigurationRequest);
+
+    /**
+     * <p>
+     * Performs a test on an availability provider to ensure that access is allowed. For EWS, it verifies the provided
+     * credentials can be used to successfully log in. For Lambda, it verifies that the Lambda function can be invoked
+     * and that the resource access policy was configured to deny anonymous access. An anonymous invocation is one done
+     * without providing either a <code>SourceArn</code> or <code>SourceAccount</code> header.
+     * </p>
+     * <note>
+     * <p>
+     * The request must contain either one provider definition (<code>EwsProvider</code> or <code>LambdaProvider</code>)
+     * or the <code>DomainName</code> parameter. If the <code>DomainName</code> parameter is provided, the configuration
+     * stored under the <code>DomainName</code> will be tested.
+     * </p>
+     * </note>
+     * 
+     * @param testAvailabilityConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the TestAvailabilityConfiguration operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsyncHandler.TestAvailabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/TestAvailabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<TestAvailabilityConfigurationResult> testAvailabilityConfigurationAsync(
+            TestAvailabilityConfigurationRequest testAvailabilityConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<TestAvailabilityConfigurationRequest, TestAvailabilityConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Untags the specified tags from the specified Amazon WorkMail organization resource.
      * </p>
      * 
@@ -2225,6 +2385,41 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
      */
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates an existing <code>AvailabilityConfiguration</code> for the given WorkMail organization and domain.
+     * </p>
+     * 
+     * @param updateAvailabilityConfigurationRequest
+     * @return A Java Future containing the result of the UpdateAvailabilityConfiguration operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsync.UpdateAvailabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/UpdateAvailabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAvailabilityConfigurationResult> updateAvailabilityConfigurationAsync(
+            UpdateAvailabilityConfigurationRequest updateAvailabilityConfigurationRequest);
+
+    /**
+     * <p>
+     * Updates an existing <code>AvailabilityConfiguration</code> for the given WorkMail organization and domain.
+     * </p>
+     * 
+     * @param updateAvailabilityConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateAvailabilityConfiguration operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsyncHandler.UpdateAvailabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/UpdateAvailabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAvailabilityConfigurationResult> updateAvailabilityConfigurationAsync(
+            UpdateAvailabilityConfigurationRequest updateAvailabilityConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateAvailabilityConfigurationRequest, UpdateAvailabilityConfigurationResult> asyncHandler);
 
     /**
      * <p>

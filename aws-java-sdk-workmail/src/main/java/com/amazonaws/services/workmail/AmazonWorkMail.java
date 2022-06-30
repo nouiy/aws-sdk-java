@@ -203,6 +203,30 @@ public interface AmazonWorkMail {
 
     /**
      * <p>
+     * Creates an <code>AvailabilityConfiguration</code> for the given WorkMail organization and domain.
+     * </p>
+     * 
+     * @param createAvailabilityConfigurationRequest
+     * @return Result of the CreateAvailabilityConfiguration operation returned by the service.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @throws NameAvailabilityException
+     *         The user, group, or resource name isn't unique in Amazon WorkMail.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @throws LimitExceededException
+     *         The request exceeds the limit of the resource.
+     * @sample AmazonWorkMail.CreateAvailabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/CreateAvailabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateAvailabilityConfigurationResult createAvailabilityConfiguration(CreateAvailabilityConfigurationRequest createAvailabilityConfigurationRequest);
+
+    /**
+     * <p>
      * Creates a group that can be used in Amazon WorkMail by calling the <a>RegisterToWorkMail</a> operation.
      * </p>
      * 
@@ -402,6 +426,24 @@ public interface AmazonWorkMail {
      *      Documentation</a>
      */
     DeleteAliasResult deleteAlias(DeleteAliasRequest deleteAliasRequest);
+
+    /**
+     * <p>
+     * Deletes the <code>AvailabilityConfiguration</code> for the given WorkMail organization and domain.
+     * </p>
+     * 
+     * @param deleteAvailabilityConfigurationRequest
+     * @return Result of the DeleteAvailabilityConfiguration operation returned by the service.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @sample AmazonWorkMail.DeleteAvailabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteAvailabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteAvailabilityConfigurationResult deleteAvailabilityConfiguration(DeleteAvailabilityConfigurationRequest deleteAvailabilityConfigurationRequest);
 
     /**
      * <p>
@@ -1070,6 +1112,24 @@ public interface AmazonWorkMail {
 
     /**
      * <p>
+     * List all the <code>AvailabilityConfiguration</code>'s for the given WorkMail organization.
+     * </p>
+     * 
+     * @param listAvailabilityConfigurationsRequest
+     * @return Result of the ListAvailabilityConfigurations operation returned by the service.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @sample AmazonWorkMail.ListAvailabilityConfigurations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListAvailabilityConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListAvailabilityConfigurationsResult listAvailabilityConfigurations(ListAvailabilityConfigurationsRequest listAvailabilityConfigurationsRequest);
+
+    /**
+     * <p>
      * Returns an overview of the members of a group. Users and groups can be members of a group.
      * </p>
      * 
@@ -1609,6 +1669,38 @@ public interface AmazonWorkMail {
 
     /**
      * <p>
+     * Performs a test on an availability provider to ensure that access is allowed. For EWS, it verifies the provided
+     * credentials can be used to successfully log in. For Lambda, it verifies that the Lambda function can be invoked
+     * and that the resource access policy was configured to deny anonymous access. An anonymous invocation is one done
+     * without providing either a <code>SourceArn</code> or <code>SourceAccount</code> header.
+     * </p>
+     * <note>
+     * <p>
+     * The request must contain either one provider definition (<code>EwsProvider</code> or <code>LambdaProvider</code>)
+     * or the <code>DomainName</code> parameter. If the <code>DomainName</code> parameter is provided, the configuration
+     * stored under the <code>DomainName</code> will be tested.
+     * </p>
+     * </note>
+     * 
+     * @param testAvailabilityConfigurationRequest
+     * @return Result of the TestAvailabilityConfiguration operation returned by the service.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @throws ResourceNotFoundException
+     *         The resource cannot be found.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @sample AmazonWorkMail.TestAvailabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/TestAvailabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    TestAvailabilityConfigurationResult testAvailabilityConfiguration(TestAvailabilityConfigurationRequest testAvailabilityConfigurationRequest);
+
+    /**
+     * <p>
      * Untags the specified tags from the specified Amazon WorkMail organization resource.
      * </p>
      * 
@@ -1621,6 +1713,28 @@ public interface AmazonWorkMail {
      *      Documentation</a>
      */
     UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * Updates an existing <code>AvailabilityConfiguration</code> for the given WorkMail organization and domain.
+     * </p>
+     * 
+     * @param updateAvailabilityConfigurationRequest
+     * @return Result of the UpdateAvailabilityConfiguration operation returned by the service.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @throws ResourceNotFoundException
+     *         The resource cannot be found.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @sample AmazonWorkMail.UpdateAvailabilityConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/UpdateAvailabilityConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateAvailabilityConfigurationResult updateAvailabilityConfiguration(UpdateAvailabilityConfigurationRequest updateAvailabilityConfigurationRequest);
 
     /**
      * <p>

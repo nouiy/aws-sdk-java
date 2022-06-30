@@ -52,25 +52,25 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
     private String secretArn;
     /**
      * <p>
-     * Specify whether to crawl file comments in Quip. You can specify one or more of these options.
+     * <code>TRUE</code> to index file comments.
      * </p>
      */
     private Boolean crawlFileComments;
     /**
      * <p>
-     * Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
+     * <code>TRUE</code> to index the contents of chat rooms.
      * </p>
      */
     private Boolean crawlChatRooms;
     /**
      * <p>
-     * Specify whether to crawl attachments in Quip. You can specify one or more of these options.
+     * <code>TRUE</code> to index attachments.
      * </p>
      */
     private Boolean crawlAttachments;
     /**
      * <p>
-     * The identifier of the Quip folder IDs to index.
+     * The identifier of the Quip folders you want to index.
      * </p>
      */
     private java.util.List<String> folderIds;
@@ -270,11 +270,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl file comments in Quip. You can specify one or more of these options.
+     * <code>TRUE</code> to index file comments.
      * </p>
      * 
      * @param crawlFileComments
-     *        Specify whether to crawl file comments in Quip. You can specify one or more of these options.
+     *        <code>TRUE</code> to index file comments.
      */
 
     public void setCrawlFileComments(Boolean crawlFileComments) {
@@ -283,10 +283,10 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl file comments in Quip. You can specify one or more of these options.
+     * <code>TRUE</code> to index file comments.
      * </p>
      * 
-     * @return Specify whether to crawl file comments in Quip. You can specify one or more of these options.
+     * @return <code>TRUE</code> to index file comments.
      */
 
     public Boolean getCrawlFileComments() {
@@ -295,11 +295,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl file comments in Quip. You can specify one or more of these options.
+     * <code>TRUE</code> to index file comments.
      * </p>
      * 
      * @param crawlFileComments
-     *        Specify whether to crawl file comments in Quip. You can specify one or more of these options.
+     *        <code>TRUE</code> to index file comments.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -310,10 +310,10 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl file comments in Quip. You can specify one or more of these options.
+     * <code>TRUE</code> to index file comments.
      * </p>
      * 
-     * @return Specify whether to crawl file comments in Quip. You can specify one or more of these options.
+     * @return <code>TRUE</code> to index file comments.
      */
 
     public Boolean isCrawlFileComments() {
@@ -322,11 +322,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
+     * <code>TRUE</code> to index the contents of chat rooms.
      * </p>
      * 
      * @param crawlChatRooms
-     *        Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
+     *        <code>TRUE</code> to index the contents of chat rooms.
      */
 
     public void setCrawlChatRooms(Boolean crawlChatRooms) {
@@ -335,10 +335,10 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
+     * <code>TRUE</code> to index the contents of chat rooms.
      * </p>
      * 
-     * @return Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
+     * @return <code>TRUE</code> to index the contents of chat rooms.
      */
 
     public Boolean getCrawlChatRooms() {
@@ -347,11 +347,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
+     * <code>TRUE</code> to index the contents of chat rooms.
      * </p>
      * 
      * @param crawlChatRooms
-     *        Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
+     *        <code>TRUE</code> to index the contents of chat rooms.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -362,10 +362,10 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
+     * <code>TRUE</code> to index the contents of chat rooms.
      * </p>
      * 
-     * @return Specify whether to crawl chat rooms in Quip. You can specify one or more of these options.
+     * @return <code>TRUE</code> to index the contents of chat rooms.
      */
 
     public Boolean isCrawlChatRooms() {
@@ -374,11 +374,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl attachments in Quip. You can specify one or more of these options.
+     * <code>TRUE</code> to index attachments.
      * </p>
      * 
      * @param crawlAttachments
-     *        Specify whether to crawl attachments in Quip. You can specify one or more of these options.
+     *        <code>TRUE</code> to index attachments.
      */
 
     public void setCrawlAttachments(Boolean crawlAttachments) {
@@ -387,10 +387,10 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl attachments in Quip. You can specify one or more of these options.
+     * <code>TRUE</code> to index attachments.
      * </p>
      * 
-     * @return Specify whether to crawl attachments in Quip. You can specify one or more of these options.
+     * @return <code>TRUE</code> to index attachments.
      */
 
     public Boolean getCrawlAttachments() {
@@ -399,11 +399,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl attachments in Quip. You can specify one or more of these options.
+     * <code>TRUE</code> to index attachments.
      * </p>
      * 
      * @param crawlAttachments
-     *        Specify whether to crawl attachments in Quip. You can specify one or more of these options.
+     *        <code>TRUE</code> to index attachments.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -414,10 +414,10 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify whether to crawl attachments in Quip. You can specify one or more of these options.
+     * <code>TRUE</code> to index attachments.
      * </p>
      * 
-     * @return Specify whether to crawl attachments in Quip. You can specify one or more of these options.
+     * @return <code>TRUE</code> to index attachments.
      */
 
     public Boolean isCrawlAttachments() {
@@ -426,10 +426,10 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The identifier of the Quip folder IDs to index.
+     * The identifier of the Quip folders you want to index.
      * </p>
      * 
-     * @return The identifier of the Quip folder IDs to index.
+     * @return The identifier of the Quip folders you want to index.
      */
 
     public java.util.List<String> getFolderIds() {
@@ -438,11 +438,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The identifier of the Quip folder IDs to index.
+     * The identifier of the Quip folders you want to index.
      * </p>
      * 
      * @param folderIds
-     *        The identifier of the Quip folder IDs to index.
+     *        The identifier of the Quip folders you want to index.
      */
 
     public void setFolderIds(java.util.Collection<String> folderIds) {
@@ -456,7 +456,7 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The identifier of the Quip folder IDs to index.
+     * The identifier of the Quip folders you want to index.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -465,7 +465,7 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param folderIds
-     *        The identifier of the Quip folder IDs to index.
+     *        The identifier of the Quip folders you want to index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -481,11 +481,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The identifier of the Quip folder IDs to index.
+     * The identifier of the Quip folders you want to index.
      * </p>
      * 
      * @param folderIds
-     *        The identifier of the Quip folder IDs to index.
+     *        The identifier of the Quip folders you want to index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

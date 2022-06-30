@@ -30,25 +30,27 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The URL of the Jira account. For example, company.attlassian.net or https://jira.company.com. You can find your
-     * Jira account URL in the URL of your profile page for Jira desktop.
+     * The URL of the Jira account. For example, <i>company.atlassian.net</i> or <i>https://jira.company.com</i>. You
+     * can find your Jira account URL in the URL of your profile page for Jira desktop.
      * </p>
      */
     private String jiraAccountUrl;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs required to connect
-     * to your Jira data source. The secret must contain a JSON structure with the following keys:
+     * The Amazon Resource Name (ARN) of a secret in Secrets Manager contains the key-value pairs required to connect to
+     * your Jira data source. The secret must contain a JSON structure with the following keys:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * jira-id—The ID of the Jira account.
+     * jiraId—The Jira username.
      * </p>
      * </li>
      * <li>
      * <p>
-     * jiraCredentials—The password of the Jira account user.
+     * jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html#jira-authentication"> Authentication for
+     * a Jira data source</a>.
      * </p>
      * </li>
      * </ul>
@@ -56,7 +58,9 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
     private String secretArn;
     /**
      * <p>
-     * Specify to use the change log option to update your index.
+     * <code>TRUE</code> to use the Jira change log to determine which documents require updating in the index.
+     * Depending on the change log's size, it may take longer for Amazon Kendra to use the change log than to scan all
+     * of your documents in Jira.
      * </p>
      */
     private Boolean useChangeLog;
@@ -158,13 +162,13 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The URL of the Jira account. For example, company.attlassian.net or https://jira.company.com. You can find your
-     * Jira account URL in the URL of your profile page for Jira desktop.
+     * The URL of the Jira account. For example, <i>company.atlassian.net</i> or <i>https://jira.company.com</i>. You
+     * can find your Jira account URL in the URL of your profile page for Jira desktop.
      * </p>
      * 
      * @param jiraAccountUrl
-     *        The URL of the Jira account. For example, company.attlassian.net or https://jira.company.com. You can find
-     *        your Jira account URL in the URL of your profile page for Jira desktop.
+     *        The URL of the Jira account. For example, <i>company.atlassian.net</i> or <i>https://jira.company.com</i>.
+     *        You can find your Jira account URL in the URL of your profile page for Jira desktop.
      */
 
     public void setJiraAccountUrl(String jiraAccountUrl) {
@@ -173,12 +177,13 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The URL of the Jira account. For example, company.attlassian.net or https://jira.company.com. You can find your
-     * Jira account URL in the URL of your profile page for Jira desktop.
+     * The URL of the Jira account. For example, <i>company.atlassian.net</i> or <i>https://jira.company.com</i>. You
+     * can find your Jira account URL in the URL of your profile page for Jira desktop.
      * </p>
      * 
-     * @return The URL of the Jira account. For example, company.attlassian.net or https://jira.company.com. You can
-     *         find your Jira account URL in the URL of your profile page for Jira desktop.
+     * @return The URL of the Jira account. For example, <i>company.atlassian.net</i> or
+     *         <i>https://jira.company.com</i>. You can find your Jira account URL in the URL of your profile page for
+     *         Jira desktop.
      */
 
     public String getJiraAccountUrl() {
@@ -187,13 +192,13 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The URL of the Jira account. For example, company.attlassian.net or https://jira.company.com. You can find your
-     * Jira account URL in the URL of your profile page for Jira desktop.
+     * The URL of the Jira account. For example, <i>company.atlassian.net</i> or <i>https://jira.company.com</i>. You
+     * can find your Jira account URL in the URL of your profile page for Jira desktop.
      * </p>
      * 
      * @param jiraAccountUrl
-     *        The URL of the Jira account. For example, company.attlassian.net or https://jira.company.com. You can find
-     *        your Jira account URL in the URL of your profile page for Jira desktop.
+     *        The URL of the Jira account. For example, <i>company.atlassian.net</i> or <i>https://jira.company.com</i>.
+     *        You can find your Jira account URL in the URL of your profile page for Jira desktop.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -204,34 +209,38 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs required to connect
-     * to your Jira data source. The secret must contain a JSON structure with the following keys:
+     * The Amazon Resource Name (ARN) of a secret in Secrets Manager contains the key-value pairs required to connect to
+     * your Jira data source. The secret must contain a JSON structure with the following keys:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * jira-id—The ID of the Jira account.
+     * jiraId—The Jira username.
      * </p>
      * </li>
      * <li>
      * <p>
-     * jiraCredentials—The password of the Jira account user.
+     * jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html#jira-authentication"> Authentication for
+     * a Jira data source</a>.
      * </p>
      * </li>
      * </ul>
      * 
      * @param secretArn
-     *        The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs required to
+     *        The Amazon Resource Name (ARN) of a secret in Secrets Manager contains the key-value pairs required to
      *        connect to your Jira data source. The secret must contain a JSON structure with the following keys:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        jira-id—The ID of the Jira account.
+     *        jiraId—The Jira username.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        jiraCredentials—The password of the Jira account user.
+     *        jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html#jira-authentication">
+     *        Authentication for a Jira data source</a>.
      *        </p>
      *        </li>
      */
@@ -242,33 +251,37 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs required to connect
-     * to your Jira data source. The secret must contain a JSON structure with the following keys:
+     * The Amazon Resource Name (ARN) of a secret in Secrets Manager contains the key-value pairs required to connect to
+     * your Jira data source. The secret must contain a JSON structure with the following keys:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * jira-id—The ID of the Jira account.
+     * jiraId—The Jira username.
      * </p>
      * </li>
      * <li>
      * <p>
-     * jiraCredentials—The password of the Jira account user.
+     * jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html#jira-authentication"> Authentication for
+     * a Jira data source</a>.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs required to
+     * @return The Amazon Resource Name (ARN) of a secret in Secrets Manager contains the key-value pairs required to
      *         connect to your Jira data source. The secret must contain a JSON structure with the following keys:</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         jira-id—The ID of the Jira account.
+     *         jiraId—The Jira username.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         jiraCredentials—The password of the Jira account user.
+     *         jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html#jira-authentication">
+     *         Authentication for a Jira data source</a>.
      *         </p>
      *         </li>
      */
@@ -279,34 +292,38 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs required to connect
-     * to your Jira data source. The secret must contain a JSON structure with the following keys:
+     * The Amazon Resource Name (ARN) of a secret in Secrets Manager contains the key-value pairs required to connect to
+     * your Jira data source. The secret must contain a JSON structure with the following keys:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * jira-id—The ID of the Jira account.
+     * jiraId—The Jira username.
      * </p>
      * </li>
      * <li>
      * <p>
-     * jiraCredentials—The password of the Jira account user.
+     * jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html#jira-authentication"> Authentication for
+     * a Jira data source</a>.
      * </p>
      * </li>
      * </ul>
      * 
      * @param secretArn
-     *        The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the key-value pairs required to
+     *        The Amazon Resource Name (ARN) of a secret in Secrets Manager contains the key-value pairs required to
      *        connect to your Jira data source. The secret must contain a JSON structure with the following keys:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        jira-id—The ID of the Jira account.
+     *        jiraId—The Jira username.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        jiraCredentials—The password of the Jira account user.
+     *        jiraCredentials—The Jira API token. For more information on creating an API token in Jira, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-jira.html#jira-authentication">
+     *        Authentication for a Jira data source</a>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -319,11 +336,15 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify to use the change log option to update your index.
+     * <code>TRUE</code> to use the Jira change log to determine which documents require updating in the index.
+     * Depending on the change log's size, it may take longer for Amazon Kendra to use the change log than to scan all
+     * of your documents in Jira.
      * </p>
      * 
      * @param useChangeLog
-     *        Specify to use the change log option to update your index.
+     *        <code>TRUE</code> to use the Jira change log to determine which documents require updating in the index.
+     *        Depending on the change log's size, it may take longer for Amazon Kendra to use the change log than to
+     *        scan all of your documents in Jira.
      */
 
     public void setUseChangeLog(Boolean useChangeLog) {
@@ -332,10 +353,14 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify to use the change log option to update your index.
+     * <code>TRUE</code> to use the Jira change log to determine which documents require updating in the index.
+     * Depending on the change log's size, it may take longer for Amazon Kendra to use the change log than to scan all
+     * of your documents in Jira.
      * </p>
      * 
-     * @return Specify to use the change log option to update your index.
+     * @return <code>TRUE</code> to use the Jira change log to determine which documents require updating in the index.
+     *         Depending on the change log's size, it may take longer for Amazon Kendra to use the change log than to
+     *         scan all of your documents in Jira.
      */
 
     public Boolean getUseChangeLog() {
@@ -344,11 +369,15 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify to use the change log option to update your index.
+     * <code>TRUE</code> to use the Jira change log to determine which documents require updating in the index.
+     * Depending on the change log's size, it may take longer for Amazon Kendra to use the change log than to scan all
+     * of your documents in Jira.
      * </p>
      * 
      * @param useChangeLog
-     *        Specify to use the change log option to update your index.
+     *        <code>TRUE</code> to use the Jira change log to determine which documents require updating in the index.
+     *        Depending on the change log's size, it may take longer for Amazon Kendra to use the change log than to
+     *        scan all of your documents in Jira.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -359,10 +388,14 @@ public class JiraConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Specify to use the change log option to update your index.
+     * <code>TRUE</code> to use the Jira change log to determine which documents require updating in the index.
+     * Depending on the change log's size, it may take longer for Amazon Kendra to use the change log than to scan all
+     * of your documents in Jira.
      * </p>
      * 
-     * @return Specify to use the change log option to update your index.
+     * @return <code>TRUE</code> to use the Jira change log to determine which documents require updating in the index.
+     *         Depending on the change log's size, it may take longer for Amazon Kendra to use the change log than to
+     *         scan all of your documents in Jira.
      */
 
     public Boolean isUseChangeLog() {

@@ -444,6 +444,11 @@ public class AWSkendraClient extends AmazonWebServiceClient implements AWSkendra
      * CloudWatch. Any error messages related to processing the batch are sent to your Amazon Web Services CloudWatch
      * log.
      * </p>
+     * <p>
+     * For an example of ingesting inline documents using Python and Java SDKs, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-binary-doc.html">Adding files directly to an
+     * index</a>.
+     * </p>
      * 
      * @param batchPutDocumentRequest
      * @return Result of the BatchPutDocument operation returned by the service.
@@ -590,6 +595,12 @@ public class AWSkendraClient extends AmazonWebServiceClient implements AWSkendra
      * Amazon S3 and <a href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-custom.html">custom</a> data
      * sources are the only supported data sources in the Amazon Web Services GovCloud (US-West) region.
      * </p>
+     * <p>
+     * For an example of creating an index and data source using the Python SDK, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/gs-python.html">Getting started with Python SDK</a>. For an
+     * example of creating an index and data source using the Java SDK, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/gs-java.html">Getting started with Java SDK</a>.
+     * </p>
      * 
      * @param createDataSourceRequest
      * @return Result of the CreateDataSource operation returned by the service.
@@ -652,7 +663,7 @@ public class AWSkendraClient extends AmazonWebServiceClient implements AWSkendra
     /**
      * <p>
      * Creates an Amazon Kendra experience such as a search application. For more information on creating a search
-     * application experience, see <a
+     * application experience, including using the Python and Java SDKs, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/deploying-search-experience-no-code.html">Building a search
      * experience with no code</a>.
      * </p>
@@ -721,6 +732,10 @@ public class AWSkendraClient extends AmazonWebServiceClient implements AWSkendra
      * <p>
      * Adding FAQs to an index is an asynchronous operation.
      * </p>
+     * <p>
+     * For an example of adding an FAQ to an index using Python and Java SDKs, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/in-creating-faq.html#using-faq-file">Using you FAQ file</a>.
+     * </p>
      * 
      * @param createFaqRequest
      * @return Result of the CreateFaq operation returned by the service.
@@ -788,6 +803,12 @@ public class AWSkendraClient extends AmazonWebServiceClient implements AWSkendra
      * <p>
      * Once the index is active you can index your documents using the <code>BatchPutDocument</code> API or using one of
      * the supported data sources.
+     * </p>
+     * <p>
+     * For an example of creating an index and data source using the Python SDK, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/gs-python.html">Getting started with Python SDK</a>. For an
+     * example of creating an index and data source using the Java SDK, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/gs-java.html">Getting started with Java SDK</a>.
      * </p>
      * 
      * @param createIndexRequest
@@ -867,6 +888,11 @@ public class AWSkendraClient extends AmazonWebServiceClient implements AWSkendra
      * <code>CreateQuerySuggestionsBlockList</code> is currently not supported in the Amazon Web Services GovCloud
      * (US-West) region.
      * </p>
+     * <p>
+     * For an example of creating a block list for query suggestions using the Python SDK, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/query-suggestions.html#suggestions-block-list">Query
+     * suggestions block list</a>.
+     * </p>
      * 
      * @param createQuerySuggestionsBlockListRequest
      * @return Result of the CreateQuerySuggestionsBlockList operation returned by the service.
@@ -931,6 +957,11 @@ public class AWSkendraClient extends AmazonWebServiceClient implements AWSkendra
     /**
      * <p>
      * Creates a thesaurus for an index. The thesaurus contains a list of synonyms in Solr format.
+     * </p>
+     * <p>
+     * For an example of adding a thesaurus file to an index, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/index-synonyms-adding-thesaurus-file.html">Adding custom
+     * synonyms to an index</a>.
      * </p>
      * 
      * @param createThesaurusRequest

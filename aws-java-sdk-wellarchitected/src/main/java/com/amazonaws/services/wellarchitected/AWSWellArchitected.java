@@ -1016,6 +1016,29 @@ public interface AWSWellArchitected {
 
     /**
      * <p>
+     * Updates whether the Amazon Web Services account is opted into organization sharing features.
+     * </p>
+     * 
+     * @param updateGlobalSettingsRequest
+     * @return Result of the UpdateGlobalSettings operation returned by the service.
+     * @throws ValidationException
+     *         The user input is not valid.
+     * @throws ConflictException
+     *         The resource already exists.
+     * @throws InternalServerException
+     *         There is a problem with the Well-Architected Tool API service.
+     * @throws AccessDeniedException
+     *         User does not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         Request was denied due to request throttling.
+     * @sample AWSWellArchitected.UpdateGlobalSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wellarchitected-2020-03-31/UpdateGlobalSettings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateGlobalSettingsResult updateGlobalSettings(UpdateGlobalSettingsRequest updateGlobalSettingsRequest);
+
+    /**
+     * <p>
      * Update lens review.
      * </p>
      * 
