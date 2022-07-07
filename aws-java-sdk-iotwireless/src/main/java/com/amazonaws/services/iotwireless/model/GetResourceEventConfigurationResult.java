@@ -26,13 +26,13 @@ public class GetResourceEventConfigurationResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Event configuration for the device registration state event
+     * Event configuration for the device registration state event.
      * </p>
      */
     private DeviceRegistrationStateEventConfiguration deviceRegistrationState;
     /**
      * <p>
-     * Event configuration for the Proximity event
+     * Event configuration for the proximity event.
      * </p>
      */
     private ProximityEventConfiguration proximity;
@@ -51,11 +51,11 @@ public class GetResourceEventConfigurationResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Event configuration for the device registration state event
+     * Event configuration for the device registration state event.
      * </p>
      * 
      * @param deviceRegistrationState
-     *        Event configuration for the device registration state event
+     *        Event configuration for the device registration state event.
      */
 
     public void setDeviceRegistrationState(DeviceRegistrationStateEventConfiguration deviceRegistrationState) {
@@ -64,10 +64,10 @@ public class GetResourceEventConfigurationResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Event configuration for the device registration state event
+     * Event configuration for the device registration state event.
      * </p>
      * 
-     * @return Event configuration for the device registration state event
+     * @return Event configuration for the device registration state event.
      */
 
     public DeviceRegistrationStateEventConfiguration getDeviceRegistrationState() {
@@ -76,11 +76,11 @@ public class GetResourceEventConfigurationResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Event configuration for the device registration state event
+     * Event configuration for the device registration state event.
      * </p>
      * 
      * @param deviceRegistrationState
-     *        Event configuration for the device registration state event
+     *        Event configuration for the device registration state event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -91,11 +91,11 @@ public class GetResourceEventConfigurationResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Event configuration for the Proximity event
+     * Event configuration for the proximity event.
      * </p>
      * 
      * @param proximity
-     *        Event configuration for the Proximity event
+     *        Event configuration for the proximity event.
      */
 
     public void setProximity(ProximityEventConfiguration proximity) {
@@ -104,10 +104,10 @@ public class GetResourceEventConfigurationResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Event configuration for the Proximity event
+     * Event configuration for the proximity event.
      * </p>
      * 
-     * @return Event configuration for the Proximity event
+     * @return Event configuration for the proximity event.
      */
 
     public ProximityEventConfiguration getProximity() {
@@ -116,11 +116,11 @@ public class GetResourceEventConfigurationResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Event configuration for the Proximity event
+     * Event configuration for the proximity event.
      * </p>
      * 
      * @param proximity
-     *        Event configuration for the Proximity event
+     *        Event configuration for the proximity event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

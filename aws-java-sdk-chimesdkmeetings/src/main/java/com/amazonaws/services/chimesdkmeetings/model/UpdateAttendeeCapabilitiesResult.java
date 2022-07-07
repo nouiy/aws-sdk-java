@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateAttendeeCapabilitiesResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The updated attendee data.
+     * </p>
+     */
     private Attendee attendee;
 
     /**
+     * <p>
+     * The updated attendee data.
+     * </p>
+     * 
      * @param attendee
+     *        The updated attendee data.
      */
 
     public void setAttendee(Attendee attendee) {
@@ -34,7 +44,11 @@ public class UpdateAttendeeCapabilitiesResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * The updated attendee data.
+     * </p>
+     * 
+     * @return The updated attendee data.
      */
 
     public Attendee getAttendee() {
@@ -42,7 +56,12 @@ public class UpdateAttendeeCapabilitiesResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The updated attendee data.
+     * </p>
+     * 
      * @param attendee
+     *        The updated attendee data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

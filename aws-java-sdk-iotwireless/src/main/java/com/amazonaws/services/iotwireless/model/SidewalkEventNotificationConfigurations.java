@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * SidewalkEventNotificationConfigurations object Event configuration object for Sidewalk related event topics.
+ * <code>SidewalkEventNotificationConfigurations</code> object, which is the event configuration object for
+ * Sidewalk-related event topics.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/SidewalkEventNotificationConfigurations"

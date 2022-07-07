@@ -64,6 +64,12 @@ public class ResourceConfigJsonUnmarshaller implements Unmarshaller<ResourceConf
                     context.nextToken();
                     resourceConfig.setVolumeKmsKeyId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("InstanceGroups", targetDepth)) {
+                    context.nextToken();
+                    resourceConfig.setInstanceGroups(new ListUnmarshaller<InstanceGroup>(InstanceGroupJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

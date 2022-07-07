@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.chimesdkmeetings.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -41,6 +42,8 @@ public class MeetingMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MeetingFeatures").build();
     private static final MarshallingInfo<String> PRIMARYMEETINGID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrimaryMeetingId").build();
+    private static final MarshallingInfo<List> TENANTIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("TenantIds").build();
 
     private static final MeetingMarshaller instance = new MeetingMarshaller();
 
@@ -65,6 +68,7 @@ public class MeetingMarshaller {
             protocolMarshaller.marshall(meeting.getMediaPlacement(), MEDIAPLACEMENT_BINDING);
             protocolMarshaller.marshall(meeting.getMeetingFeatures(), MEETINGFEATURES_BINDING);
             protocolMarshaller.marshall(meeting.getPrimaryMeetingId(), PRIMARYMEETINGID_BINDING);
+            protocolMarshaller.marshall(meeting.getTenantIds(), TENANTIDS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

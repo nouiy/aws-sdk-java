@@ -78,6 +78,12 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String primaryMeetingId;
+    /**
+     * <p>
+     * Array of strings.
+     * </p>
+     */
+    private java.util.List<String> tenantIds;
 
     /**
      * <p>
@@ -405,6 +411,76 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Array of strings.
+     * </p>
+     * 
+     * @return Array of strings.
+     */
+
+    public java.util.List<String> getTenantIds() {
+        return tenantIds;
+    }
+
+    /**
+     * <p>
+     * Array of strings.
+     * </p>
+     * 
+     * @param tenantIds
+     *        Array of strings.
+     */
+
+    public void setTenantIds(java.util.Collection<String> tenantIds) {
+        if (tenantIds == null) {
+            this.tenantIds = null;
+            return;
+        }
+
+        this.tenantIds = new java.util.ArrayList<String>(tenantIds);
+    }
+
+    /**
+     * <p>
+     * Array of strings.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTenantIds(java.util.Collection)} or {@link #withTenantIds(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param tenantIds
+     *        Array of strings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Meeting withTenantIds(String... tenantIds) {
+        if (this.tenantIds == null) {
+            setTenantIds(new java.util.ArrayList<String>(tenantIds.length));
+        }
+        for (String ele : tenantIds) {
+            this.tenantIds.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Array of strings.
+     * </p>
+     * 
+     * @param tenantIds
+     *        Array of strings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Meeting withTenantIds(java.util.Collection<String> tenantIds) {
+        setTenantIds(tenantIds);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -429,7 +505,9 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
         if (getMeetingFeatures() != null)
             sb.append("MeetingFeatures: ").append(getMeetingFeatures()).append(",");
         if (getPrimaryMeetingId() != null)
-            sb.append("PrimaryMeetingId: ").append(getPrimaryMeetingId());
+            sb.append("PrimaryMeetingId: ").append(getPrimaryMeetingId()).append(",");
+        if (getTenantIds() != null)
+            sb.append("TenantIds: ").append(getTenantIds());
         sb.append("}");
         return sb.toString();
     }
@@ -472,6 +550,10 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getPrimaryMeetingId() != null && other.getPrimaryMeetingId().equals(this.getPrimaryMeetingId()) == false)
             return false;
+        if (other.getTenantIds() == null ^ this.getTenantIds() == null)
+            return false;
+        if (other.getTenantIds() != null && other.getTenantIds().equals(this.getTenantIds()) == false)
+            return false;
         return true;
     }
 
@@ -487,6 +569,7 @@ public class Meeting implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getMediaPlacement() == null) ? 0 : getMediaPlacement().hashCode());
         hashCode = prime * hashCode + ((getMeetingFeatures() == null) ? 0 : getMeetingFeatures().hashCode());
         hashCode = prime * hashCode + ((getPrimaryMeetingId() == null) ? 0 : getPrimaryMeetingId().hashCode());
+        hashCode = prime * hashCode + ((getTenantIds() == null) ? 0 : getTenantIds().hashCode());
         return hashCode;
     }
 

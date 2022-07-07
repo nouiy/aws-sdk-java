@@ -83,6 +83,12 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private String primaryMeetingId;
+    /**
+     * <p>
+     * A consistent and opaque identifier, created and maintained by the builder to represent a segment of their users.
+     * </p>
+     */
+    private java.util.List<String> tenantIds;
 
     /**
      * <p>
@@ -492,6 +498,80 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * A consistent and opaque identifier, created and maintained by the builder to represent a segment of their users.
+     * </p>
+     * 
+     * @return A consistent and opaque identifier, created and maintained by the builder to represent a segment of their
+     *         users.
+     */
+
+    public java.util.List<String> getTenantIds() {
+        return tenantIds;
+    }
+
+    /**
+     * <p>
+     * A consistent and opaque identifier, created and maintained by the builder to represent a segment of their users.
+     * </p>
+     * 
+     * @param tenantIds
+     *        A consistent and opaque identifier, created and maintained by the builder to represent a segment of their
+     *        users.
+     */
+
+    public void setTenantIds(java.util.Collection<String> tenantIds) {
+        if (tenantIds == null) {
+            this.tenantIds = null;
+            return;
+        }
+
+        this.tenantIds = new java.util.ArrayList<String>(tenantIds);
+    }
+
+    /**
+     * <p>
+     * A consistent and opaque identifier, created and maintained by the builder to represent a segment of their users.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTenantIds(java.util.Collection)} or {@link #withTenantIds(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param tenantIds
+     *        A consistent and opaque identifier, created and maintained by the builder to represent a segment of their
+     *        users.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateMeetingWithAttendeesRequest withTenantIds(String... tenantIds) {
+        if (this.tenantIds == null) {
+            setTenantIds(new java.util.ArrayList<String>(tenantIds.length));
+        }
+        for (String ele : tenantIds) {
+            this.tenantIds.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A consistent and opaque identifier, created and maintained by the builder to represent a segment of their users.
+     * </p>
+     * 
+     * @param tenantIds
+     *        A consistent and opaque identifier, created and maintained by the builder to represent a segment of their
+     *        users.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateMeetingWithAttendeesRequest withTenantIds(java.util.Collection<String> tenantIds) {
+        setTenantIds(tenantIds);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -518,7 +598,9 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
         if (getAttendees() != null)
             sb.append("Attendees: ").append(getAttendees()).append(",");
         if (getPrimaryMeetingId() != null)
-            sb.append("PrimaryMeetingId: ").append(getPrimaryMeetingId());
+            sb.append("PrimaryMeetingId: ").append(getPrimaryMeetingId()).append(",");
+        if (getTenantIds() != null)
+            sb.append("TenantIds: ").append(getTenantIds());
         sb.append("}");
         return sb.toString();
     }
@@ -565,6 +647,10 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getPrimaryMeetingId() != null && other.getPrimaryMeetingId().equals(this.getPrimaryMeetingId()) == false)
             return false;
+        if (other.getTenantIds() == null ^ this.getTenantIds() == null)
+            return false;
+        if (other.getTenantIds() != null && other.getTenantIds().equals(this.getTenantIds()) == false)
+            return false;
         return true;
     }
 
@@ -581,6 +667,7 @@ public class CreateMeetingWithAttendeesRequest extends com.amazonaws.AmazonWebSe
         hashCode = prime * hashCode + ((getNotificationsConfiguration() == null) ? 0 : getNotificationsConfiguration().hashCode());
         hashCode = prime * hashCode + ((getAttendees() == null) ? 0 : getAttendees().hashCode());
         hashCode = prime * hashCode + ((getPrimaryMeetingId() == null) ? 0 : getPrimaryMeetingId().hashCode());
+        hashCode = prime * hashCode + ((getTenantIds() == null) ? 0 : getTenantIds().hashCode());
         return hashCode;
     }
 

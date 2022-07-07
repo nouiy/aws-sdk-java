@@ -47,6 +47,8 @@ public class CreateMeetingWithAttendeesRequestMarshaller {
             .marshallLocationName("Attendees").build();
     private static final MarshallingInfo<String> PRIMARYMEETINGID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrimaryMeetingId").build();
+    private static final MarshallingInfo<List> TENANTIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("TenantIds").build();
 
     private static final CreateMeetingWithAttendeesRequestMarshaller instance = new CreateMeetingWithAttendeesRequestMarshaller();
 
@@ -72,6 +74,7 @@ public class CreateMeetingWithAttendeesRequestMarshaller {
             protocolMarshaller.marshall(createMeetingWithAttendeesRequest.getNotificationsConfiguration(), NOTIFICATIONSCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createMeetingWithAttendeesRequest.getAttendees(), ATTENDEES_BINDING);
             protocolMarshaller.marshall(createMeetingWithAttendeesRequest.getPrimaryMeetingId(), PRIMARYMEETINGID_BINDING);
+            protocolMarshaller.marshall(createMeetingWithAttendeesRequest.getTenantIds(), TENANTIDS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

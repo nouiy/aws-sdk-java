@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The number of requests exceeds the limit.
+ * The number of customer requests exceeds the request rate limit.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

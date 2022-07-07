@@ -117,6 +117,12 @@ public class ResourceConfig implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      */
     private String volumeKmsKeyId;
+    /**
+     * <p>
+     * The configuration of a heterogeneous cluster in JSON format.
+     * </p>
+     */
+    private java.util.List<InstanceGroup> instanceGroups;
 
     /**
      * <p>
@@ -679,6 +685,76 @@ public class ResourceConfig implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The configuration of a heterogeneous cluster in JSON format.
+     * </p>
+     * 
+     * @return The configuration of a heterogeneous cluster in JSON format.
+     */
+
+    public java.util.List<InstanceGroup> getInstanceGroups() {
+        return instanceGroups;
+    }
+
+    /**
+     * <p>
+     * The configuration of a heterogeneous cluster in JSON format.
+     * </p>
+     * 
+     * @param instanceGroups
+     *        The configuration of a heterogeneous cluster in JSON format.
+     */
+
+    public void setInstanceGroups(java.util.Collection<InstanceGroup> instanceGroups) {
+        if (instanceGroups == null) {
+            this.instanceGroups = null;
+            return;
+        }
+
+        this.instanceGroups = new java.util.ArrayList<InstanceGroup>(instanceGroups);
+    }
+
+    /**
+     * <p>
+     * The configuration of a heterogeneous cluster in JSON format.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setInstanceGroups(java.util.Collection)} or {@link #withInstanceGroups(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param instanceGroups
+     *        The configuration of a heterogeneous cluster in JSON format.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceConfig withInstanceGroups(InstanceGroup... instanceGroups) {
+        if (this.instanceGroups == null) {
+            setInstanceGroups(new java.util.ArrayList<InstanceGroup>(instanceGroups.length));
+        }
+        for (InstanceGroup ele : instanceGroups) {
+            this.instanceGroups.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The configuration of a heterogeneous cluster in JSON format.
+     * </p>
+     * 
+     * @param instanceGroups
+     *        The configuration of a heterogeneous cluster in JSON format.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceConfig withInstanceGroups(java.util.Collection<InstanceGroup> instanceGroups) {
+        setInstanceGroups(instanceGroups);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -697,7 +773,9 @@ public class ResourceConfig implements Serializable, Cloneable, StructuredPojo {
         if (getVolumeSizeInGB() != null)
             sb.append("VolumeSizeInGB: ").append(getVolumeSizeInGB()).append(",");
         if (getVolumeKmsKeyId() != null)
-            sb.append("VolumeKmsKeyId: ").append(getVolumeKmsKeyId());
+            sb.append("VolumeKmsKeyId: ").append(getVolumeKmsKeyId()).append(",");
+        if (getInstanceGroups() != null)
+            sb.append("InstanceGroups: ").append(getInstanceGroups());
         sb.append("}");
         return sb.toString();
     }
@@ -728,6 +806,10 @@ public class ResourceConfig implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getVolumeKmsKeyId() != null && other.getVolumeKmsKeyId().equals(this.getVolumeKmsKeyId()) == false)
             return false;
+        if (other.getInstanceGroups() == null ^ this.getInstanceGroups() == null)
+            return false;
+        if (other.getInstanceGroups() != null && other.getInstanceGroups().equals(this.getInstanceGroups()) == false)
+            return false;
         return true;
     }
 
@@ -740,6 +822,7 @@ public class ResourceConfig implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getInstanceCount() == null) ? 0 : getInstanceCount().hashCode());
         hashCode = prime * hashCode + ((getVolumeSizeInGB() == null) ? 0 : getVolumeSizeInGB().hashCode());
         hashCode = prime * hashCode + ((getVolumeKmsKeyId() == null) ? 0 : getVolumeKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getInstanceGroups() == null) ? 0 : getInstanceGroups().hashCode());
         return hashCode;
     }
 

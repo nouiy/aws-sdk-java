@@ -39,31 +39,31 @@ public class UpdateResourceEventConfigurationRequest extends com.amazonaws.Amazo
     private String identifierType;
     /**
      * <p>
-     * Partner type of the resource if the identifier type is PartnerAccountId
+     * Partner type of the resource if the identifier type is <code>PartnerAccountId</code>
      * </p>
      */
     private String partnerType;
     /**
      * <p>
-     * Event configuration for the device registration state event
+     * Event configuration for the device registration state event.
      * </p>
      */
     private DeviceRegistrationStateEventConfiguration deviceRegistrationState;
     /**
      * <p>
-     * Event configuration for the Proximity event
+     * Event configuration for the proximity event.
      * </p>
      */
     private ProximityEventConfiguration proximity;
     /**
      * <p>
-     * Event configuration for the join event
+     * Event configuration for the join event.
      * </p>
      */
     private JoinEventConfiguration join;
     /**
      * <p>
-     * Event configuration for the connection status event
+     * Event configuration for the connection status event.
      * </p>
      */
     private ConnectionStatusEventConfiguration connectionStatus;
@@ -169,11 +169,11 @@ public class UpdateResourceEventConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Partner type of the resource if the identifier type is PartnerAccountId
+     * Partner type of the resource if the identifier type is <code>PartnerAccountId</code>
      * </p>
      * 
      * @param partnerType
-     *        Partner type of the resource if the identifier type is PartnerAccountId
+     *        Partner type of the resource if the identifier type is <code>PartnerAccountId</code>
      * @see EventNotificationPartnerType
      */
 
@@ -183,10 +183,10 @@ public class UpdateResourceEventConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Partner type of the resource if the identifier type is PartnerAccountId
+     * Partner type of the resource if the identifier type is <code>PartnerAccountId</code>
      * </p>
      * 
-     * @return Partner type of the resource if the identifier type is PartnerAccountId
+     * @return Partner type of the resource if the identifier type is <code>PartnerAccountId</code>
      * @see EventNotificationPartnerType
      */
 
@@ -196,11 +196,11 @@ public class UpdateResourceEventConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Partner type of the resource if the identifier type is PartnerAccountId
+     * Partner type of the resource if the identifier type is <code>PartnerAccountId</code>
      * </p>
      * 
      * @param partnerType
-     *        Partner type of the resource if the identifier type is PartnerAccountId
+     *        Partner type of the resource if the identifier type is <code>PartnerAccountId</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EventNotificationPartnerType
      */
@@ -212,11 +212,11 @@ public class UpdateResourceEventConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Partner type of the resource if the identifier type is PartnerAccountId
+     * Partner type of the resource if the identifier type is <code>PartnerAccountId</code>
      * </p>
      * 
      * @param partnerType
-     *        Partner type of the resource if the identifier type is PartnerAccountId
+     *        Partner type of the resource if the identifier type is <code>PartnerAccountId</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EventNotificationPartnerType
      */
@@ -228,11 +228,11 @@ public class UpdateResourceEventConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Event configuration for the device registration state event
+     * Event configuration for the device registration state event.
      * </p>
      * 
      * @param deviceRegistrationState
-     *        Event configuration for the device registration state event
+     *        Event configuration for the device registration state event.
      */
 
     public void setDeviceRegistrationState(DeviceRegistrationStateEventConfiguration deviceRegistrationState) {
@@ -241,10 +241,10 @@ public class UpdateResourceEventConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Event configuration for the device registration state event
+     * Event configuration for the device registration state event.
      * </p>
      * 
-     * @return Event configuration for the device registration state event
+     * @return Event configuration for the device registration state event.
      */
 
     public DeviceRegistrationStateEventConfiguration getDeviceRegistrationState() {
@@ -253,11 +253,11 @@ public class UpdateResourceEventConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Event configuration for the device registration state event
+     * Event configuration for the device registration state event.
      * </p>
      * 
      * @param deviceRegistrationState
-     *        Event configuration for the device registration state event
+     *        Event configuration for the device registration state event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -268,11 +268,11 @@ public class UpdateResourceEventConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Event configuration for the Proximity event
+     * Event configuration for the proximity event.
      * </p>
      * 
      * @param proximity
-     *        Event configuration for the Proximity event
+     *        Event configuration for the proximity event.
      */
 
     public void setProximity(ProximityEventConfiguration proximity) {
@@ -281,10 +281,10 @@ public class UpdateResourceEventConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Event configuration for the Proximity event
+     * Event configuration for the proximity event.
      * </p>
      * 
-     * @return Event configuration for the Proximity event
+     * @return Event configuration for the proximity event.
      */
 
     public ProximityEventConfiguration getProximity() {
@@ -293,11 +293,11 @@ public class UpdateResourceEventConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Event configuration for the Proximity event
+     * Event configuration for the proximity event.
      * </p>
      * 
      * @param proximity
-     *        Event configuration for the Proximity event
+     *        Event configuration for the proximity event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -308,11 +308,11 @@ public class UpdateResourceEventConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Event configuration for the join event
+     * Event configuration for the join event.
      * </p>
      * 
      * @param join
-     *        Event configuration for the join event
+     *        Event configuration for the join event.
      */
 
     public void setJoin(JoinEventConfiguration join) {
@@ -321,10 +321,10 @@ public class UpdateResourceEventConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Event configuration for the join event
+     * Event configuration for the join event.
      * </p>
      * 
-     * @return Event configuration for the join event
+     * @return Event configuration for the join event.
      */
 
     public JoinEventConfiguration getJoin() {
@@ -333,11 +333,11 @@ public class UpdateResourceEventConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Event configuration for the join event
+     * Event configuration for the join event.
      * </p>
      * 
      * @param join
-     *        Event configuration for the join event
+     *        Event configuration for the join event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -348,11 +348,11 @@ public class UpdateResourceEventConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Event configuration for the connection status event
+     * Event configuration for the connection status event.
      * </p>
      * 
      * @param connectionStatus
-     *        Event configuration for the connection status event
+     *        Event configuration for the connection status event.
      */
 
     public void setConnectionStatus(ConnectionStatusEventConfiguration connectionStatus) {
@@ -361,10 +361,10 @@ public class UpdateResourceEventConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Event configuration for the connection status event
+     * Event configuration for the connection status event.
      * </p>
      * 
-     * @return Event configuration for the connection status event
+     * @return Event configuration for the connection status event.
      */
 
     public ConnectionStatusEventConfiguration getConnectionStatus() {
@@ -373,11 +373,11 @@ public class UpdateResourceEventConfigurationRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Event configuration for the connection status event
+     * Event configuration for the connection status event.
      * </p>
      * 
      * @param connectionStatus
-     *        Event configuration for the connection status event
+     *        Event configuration for the connection status event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

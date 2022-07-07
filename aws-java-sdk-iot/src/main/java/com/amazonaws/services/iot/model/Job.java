@@ -183,7 +183,12 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
      * </note>
      */
     private java.util.Map<String, String> documentParameters;
-
+    /**
+     * <p>
+     * Indicates whether a job is concurrent. Will be true when a job is rolling out new job executions or canceling
+     * previously created executions, otherwise false.
+     * </p>
+     */
     private Boolean isConcurrent;
 
     /**
@@ -1343,7 +1348,14 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Indicates whether a job is concurrent. Will be true when a job is rolling out new job executions or canceling
+     * previously created executions, otherwise false.
+     * </p>
+     * 
      * @param isConcurrent
+     *        Indicates whether a job is concurrent. Will be true when a job is rolling out new job executions or
+     *        canceling previously created executions, otherwise false.
      */
 
     public void setIsConcurrent(Boolean isConcurrent) {
@@ -1351,7 +1363,13 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Indicates whether a job is concurrent. Will be true when a job is rolling out new job executions or canceling
+     * previously created executions, otherwise false.
+     * </p>
+     * 
+     * @return Indicates whether a job is concurrent. Will be true when a job is rolling out new job executions or
+     *         canceling previously created executions, otherwise false.
      */
 
     public Boolean getIsConcurrent() {
@@ -1359,7 +1377,14 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Indicates whether a job is concurrent. Will be true when a job is rolling out new job executions or canceling
+     * previously created executions, otherwise false.
+     * </p>
+     * 
      * @param isConcurrent
+     *        Indicates whether a job is concurrent. Will be true when a job is rolling out new job executions or
+     *        canceling previously created executions, otherwise false.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1369,7 +1394,13 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Indicates whether a job is concurrent. Will be true when a job is rolling out new job executions or canceling
+     * previously created executions, otherwise false.
+     * </p>
+     * 
+     * @return Indicates whether a job is concurrent. Will be true when a job is rolling out new job executions or
+     *         canceling previously created executions, otherwise false.
      */
 
     public Boolean isConcurrent() {
