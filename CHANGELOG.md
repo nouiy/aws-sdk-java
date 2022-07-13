@@ -1,3 +1,8 @@
+# __1.12.260__ __2022-07-13__
+## __Amazon AppConfig__
+  - ### Features
+    - Adding Create, Get, Update, Delete, and List APIs for new two new resources: Extensions and ExtensionAssociations.
+
 # __1.12.259__ __2022-07-12__
 ## __AWS Network Manager__
   - ### Features
