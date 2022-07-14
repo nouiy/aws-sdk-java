@@ -401,7 +401,7 @@ public interface AWSGlue {
 
     /**
      * <p>
-     * Cancels the statement..
+     * Cancels the statement.
      * </p>
      * 
      * @param cancelStatementRequest
@@ -3167,7 +3167,7 @@ public interface AWSGlue {
 
     /**
      * <p>
-     * Retrieve a session..
+     * Retrieve a list of sessions.
      * </p>
      * 
      * @param listSessionsRequest
@@ -3548,6 +3548,7 @@ public interface AWSGlue {
      * @throws EntityNotFoundException
      *         A specified entity does not exist
      * @throws IllegalBlueprintStateException
+     *         The blueprint is in an invalid state to perform a requested operation.
      * @sample AWSGlue.StartBlueprintRun
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartBlueprintRun" target="_top">AWS API
      *      Documentation</a>
@@ -3995,6 +3996,7 @@ public interface AWSGlue {
      * @throws InternalServiceException
      *         An internal service error occurred.
      * @throws IllegalBlueprintStateException
+     *         The blueprint is in an invalid state to perform a requested operation.
      * @sample AWSGlue.UpdateBlueprint
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateBlueprint" target="_top">AWS API
      *      Documentation</a>
@@ -4195,7 +4197,7 @@ public interface AWSGlue {
 
     /**
      * <p>
-     * Updates an existing job definition.
+     * Updates an existing job definition. The previous job definition is completely overwritten by this information.
      * </p>
      * 
      * @param updateJobRequest

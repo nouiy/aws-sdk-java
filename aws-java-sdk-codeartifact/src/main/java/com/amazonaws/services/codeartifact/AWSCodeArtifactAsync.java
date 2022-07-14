@@ -185,6 +185,13 @@ import com.amazonaws.services.codeartifact.model.*;
  * </li>
  * <li>
  * <p>
+ * <code>DescribePackage</code>: Returns a <a
+ * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageDescription.html"
+ * >PackageDescription</a> object that contains details about a package.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <code>DescribePackageVersion</code>: Returns a <a
  * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionDescription.html"
  * >PackageVersionDescription</a> object that contains details about a package version.
@@ -302,6 +309,12 @@ import com.amazonaws.services.codeartifact.model.*;
  * <li>
  * <p>
  * <code>PutDomainPermissionsPolicy</code>: Attaches a resource policy to a domain.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <code>PutPackageOriginConfiguration</code>: Sets the package origin configuration for a package, which determine how
+ * new versions of the package can be added to a specific repository.
  * </p>
  * </li>
  * <li>
@@ -715,6 +728,39 @@ public interface AWSCodeArtifactAsync extends AWSCodeArtifact {
 
     /**
      * <p>
+     * Returns a <a href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageDescription.html">
+     * PackageDescription</a> object that contains information about the requested package.
+     * </p>
+     * 
+     * @param describePackageRequest
+     * @return A Java Future containing the result of the DescribePackage operation returned by the service.
+     * @sample AWSCodeArtifactAsync.DescribePackage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/DescribePackage" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribePackageResult> describePackageAsync(DescribePackageRequest describePackageRequest);
+
+    /**
+     * <p>
+     * Returns a <a href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageDescription.html">
+     * PackageDescription</a> object that contains information about the requested package.
+     * </p>
+     * 
+     * @param describePackageRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribePackage operation returned by the service.
+     * @sample AWSCodeArtifactAsyncHandler.DescribePackage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/DescribePackage" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribePackageResult> describePackageAsync(DescribePackageRequest describePackageRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribePackageRequest, DescribePackageResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a <a
      * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionDescription.html"
      * >PackageVersionDescription</a> object that contains information about the requested package version.
@@ -1034,7 +1080,9 @@ public interface AWSCodeArtifactAsync extends AWSCodeArtifact {
 
     /**
      * <p>
-     * Gets the readme file or descriptive text for a package version.
+     * Gets the readme file or descriptive text for a package version. For packages that do not contain a readme file,
+     * CodeArtifact extracts a description from a metadata file. For example, from the <code>&lt;description&gt;</code>
+     * element in the <code>pom.xml</code> file of a Maven package.
      * </p>
      * <p>
      * The returned text might contain formatting. For example, it might contain formatting for Markdown or
@@ -1051,7 +1099,9 @@ public interface AWSCodeArtifactAsync extends AWSCodeArtifact {
 
     /**
      * <p>
-     * Gets the readme file or descriptive text for a package version.
+     * Gets the readme file or descriptive text for a package version. For packages that do not contain a readme file,
+     * CodeArtifact extracts a description from a metadata file. For example, from the <code>&lt;description&gt;</code>
+     * element in the <code>pom.xml</code> file of a Maven package.
      * </p>
      * <p>
      * The returned text might contain formatting. For example, it might contain formatting for Markdown or
@@ -1517,6 +1567,69 @@ public interface AWSCodeArtifactAsync extends AWSCodeArtifact {
     java.util.concurrent.Future<PutDomainPermissionsPolicyResult> putDomainPermissionsPolicyAsync(
             PutDomainPermissionsPolicyRequest putDomainPermissionsPolicyRequest,
             com.amazonaws.handlers.AsyncHandler<PutDomainPermissionsPolicyRequest, PutDomainPermissionsPolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Sets the package origin configuration for a package.
+     * </p>
+     * <p>
+     * The package origin configuration determines how new versions of a package can be added to a repository. You can
+     * allow or block direct publishing of new package versions, or ingestion and retaining of new package versions from
+     * an external connection or upstream source. For more information about package origin controls and configuration,
+     * see <a href="https://docs.aws.amazon.com/codeartifact/latest/ug/package-origin-controls.html">Editing package
+     * origin controls</a> in the <i>CodeArtifact User Guide</i>.
+     * </p>
+     * <p>
+     * <code>PutPackageOriginConfiguration</code> can be called on a package that doesn't yet exist in the repository.
+     * When called on a package that does not exist, a package is created in the repository with no versions and the
+     * requested restrictions are set on the package. This can be used to preemptively block ingesting or retaining any
+     * versions from external connections or upstream repositories, or to block publishing any versions of the package
+     * into the repository before connecting any package managers or publishers to the repository.
+     * </p>
+     * 
+     * @param putPackageOriginConfigurationRequest
+     * @return A Java Future containing the result of the PutPackageOriginConfiguration operation returned by the
+     *         service.
+     * @sample AWSCodeArtifactAsync.PutPackageOriginConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/PutPackageOriginConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutPackageOriginConfigurationResult> putPackageOriginConfigurationAsync(
+            PutPackageOriginConfigurationRequest putPackageOriginConfigurationRequest);
+
+    /**
+     * <p>
+     * Sets the package origin configuration for a package.
+     * </p>
+     * <p>
+     * The package origin configuration determines how new versions of a package can be added to a repository. You can
+     * allow or block direct publishing of new package versions, or ingestion and retaining of new package versions from
+     * an external connection or upstream source. For more information about package origin controls and configuration,
+     * see <a href="https://docs.aws.amazon.com/codeartifact/latest/ug/package-origin-controls.html">Editing package
+     * origin controls</a> in the <i>CodeArtifact User Guide</i>.
+     * </p>
+     * <p>
+     * <code>PutPackageOriginConfiguration</code> can be called on a package that doesn't yet exist in the repository.
+     * When called on a package that does not exist, a package is created in the repository with no versions and the
+     * requested restrictions are set on the package. This can be used to preemptively block ingesting or retaining any
+     * versions from external connections or upstream repositories, or to block publishing any versions of the package
+     * into the repository before connecting any package managers or publishers to the repository.
+     * </p>
+     * 
+     * @param putPackageOriginConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutPackageOriginConfiguration operation returned by the
+     *         service.
+     * @sample AWSCodeArtifactAsyncHandler.PutPackageOriginConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/PutPackageOriginConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutPackageOriginConfigurationResult> putPackageOriginConfigurationAsync(
+            PutPackageOriginConfigurationRequest putPackageOriginConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<PutPackageOriginConfigurationRequest, PutPackageOriginConfigurationResult> asyncHandler);
 
     /**
      * <p>

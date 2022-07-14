@@ -27,51 +27,53 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The unique identifier of the data source to update.
+     * The identifier of the data source you want to update.
      * </p>
      */
     private String id;
     /**
      * <p>
-     * The name of the data source to update. The name of the data source can't be updated. To rename a data source you
-     * must delete the data source and re-create it.
+     * A new name for the data source connector. You must first delete the data source and re-create it to change the
+     * name of the data source.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The identifier of the index that contains the data source to update.
+     * The identifier of the index used with the data source connector.
      * </p>
      */
     private String indexId;
     /**
      * <p>
-     * Configuration information for an Amazon Kendra data source you want to update.
+     * Configuration information you want to update for the data source connector.
      * </p>
      */
     private DataSourceConfiguration configuration;
     /**
      * <p>
-     * The new description for the data source.
+     * A new description for the data source connector.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * The new update schedule for the data source.
+     * The sync schedule you want to update for the data source connector.
      * </p>
      */
     private String schedule;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the new role to use when the data source is accessing resources on your behalf.
+     * The Amazon Resource Name (ARN) of a role with permission to access the data source. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon Kendra</a>.
      * </p>
      */
     private String roleArn;
     /**
      * <p>
-     * The code for a language. This allows you to support a language for all documents when updating the data source.
-     * English is supported by default. For more information on supported languages, including their codes, see <a
+     * The code for a language you want to update for the data source connector. This allows you to support a language
+     * for all documents when updating the data source. English is supported by default. For more information on
+     * supported languages, including their codes, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages other
      * than English</a>.
      * </p>
@@ -79,8 +81,8 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private String languageCode;
     /**
      * <p>
-     * Configuration information for altering document metadata and content during the document ingestion process when
-     * you update a data source.
+     * Configuration information you want to update for altering document metadata and content during the document
+     * ingestion process.
      * </p>
      * <p>
      * For more information on how to create, modify and delete document metadata, or make other content alterations
@@ -93,11 +95,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The unique identifier of the data source to update.
+     * The identifier of the data source you want to update.
      * </p>
      * 
      * @param id
-     *        The unique identifier of the data source to update.
+     *        The identifier of the data source you want to update.
      */
 
     public void setId(String id) {
@@ -106,10 +108,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The unique identifier of the data source to update.
+     * The identifier of the data source you want to update.
      * </p>
      * 
-     * @return The unique identifier of the data source to update.
+     * @return The identifier of the data source you want to update.
      */
 
     public String getId() {
@@ -118,11 +120,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The unique identifier of the data source to update.
+     * The identifier of the data source you want to update.
      * </p>
      * 
      * @param id
-     *        The unique identifier of the data source to update.
+     *        The identifier of the data source you want to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,13 +135,13 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the data source to update. The name of the data source can't be updated. To rename a data source you
-     * must delete the data source and re-create it.
+     * A new name for the data source connector. You must first delete the data source and re-create it to change the
+     * name of the data source.
      * </p>
      * 
      * @param name
-     *        The name of the data source to update. The name of the data source can't be updated. To rename a data
-     *        source you must delete the data source and re-create it.
+     *        A new name for the data source connector. You must first delete the data source and re-create it to change
+     *        the name of the data source.
      */
 
     public void setName(String name) {
@@ -148,12 +150,12 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the data source to update. The name of the data source can't be updated. To rename a data source you
-     * must delete the data source and re-create it.
+     * A new name for the data source connector. You must first delete the data source and re-create it to change the
+     * name of the data source.
      * </p>
      * 
-     * @return The name of the data source to update. The name of the data source can't be updated. To rename a data
-     *         source you must delete the data source and re-create it.
+     * @return A new name for the data source connector. You must first delete the data source and re-create it to
+     *         change the name of the data source.
      */
 
     public String getName() {
@@ -162,13 +164,13 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the data source to update. The name of the data source can't be updated. To rename a data source you
-     * must delete the data source and re-create it.
+     * A new name for the data source connector. You must first delete the data source and re-create it to change the
+     * name of the data source.
      * </p>
      * 
      * @param name
-     *        The name of the data source to update. The name of the data source can't be updated. To rename a data
-     *        source you must delete the data source and re-create it.
+     *        A new name for the data source connector. You must first delete the data source and re-create it to change
+     *        the name of the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -179,11 +181,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the index that contains the data source to update.
+     * The identifier of the index used with the data source connector.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the index that contains the data source to update.
+     *        The identifier of the index used with the data source connector.
      */
 
     public void setIndexId(String indexId) {
@@ -192,10 +194,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the index that contains the data source to update.
+     * The identifier of the index used with the data source connector.
      * </p>
      * 
-     * @return The identifier of the index that contains the data source to update.
+     * @return The identifier of the index used with the data source connector.
      */
 
     public String getIndexId() {
@@ -204,11 +206,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier of the index that contains the data source to update.
+     * The identifier of the index used with the data source connector.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the index that contains the data source to update.
+     *        The identifier of the index used with the data source connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -219,11 +221,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration information for an Amazon Kendra data source you want to update.
+     * Configuration information you want to update for the data source connector.
      * </p>
      * 
      * @param configuration
-     *        Configuration information for an Amazon Kendra data source you want to update.
+     *        Configuration information you want to update for the data source connector.
      */
 
     public void setConfiguration(DataSourceConfiguration configuration) {
@@ -232,10 +234,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration information for an Amazon Kendra data source you want to update.
+     * Configuration information you want to update for the data source connector.
      * </p>
      * 
-     * @return Configuration information for an Amazon Kendra data source you want to update.
+     * @return Configuration information you want to update for the data source connector.
      */
 
     public DataSourceConfiguration getConfiguration() {
@@ -244,11 +246,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration information for an Amazon Kendra data source you want to update.
+     * Configuration information you want to update for the data source connector.
      * </p>
      * 
      * @param configuration
-     *        Configuration information for an Amazon Kendra data source you want to update.
+     *        Configuration information you want to update for the data source connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -259,11 +261,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new description for the data source.
+     * A new description for the data source connector.
      * </p>
      * 
      * @param description
-     *        The new description for the data source.
+     *        A new description for the data source connector.
      */
 
     public void setDescription(String description) {
@@ -272,10 +274,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new description for the data source.
+     * A new description for the data source connector.
      * </p>
      * 
-     * @return The new description for the data source.
+     * @return A new description for the data source connector.
      */
 
     public String getDescription() {
@@ -284,11 +286,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new description for the data source.
+     * A new description for the data source connector.
      * </p>
      * 
      * @param description
-     *        The new description for the data source.
+     *        A new description for the data source connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -299,11 +301,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new update schedule for the data source.
+     * The sync schedule you want to update for the data source connector.
      * </p>
      * 
      * @param schedule
-     *        The new update schedule for the data source.
+     *        The sync schedule you want to update for the data source connector.
      */
 
     public void setSchedule(String schedule) {
@@ -312,10 +314,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new update schedule for the data source.
+     * The sync schedule you want to update for the data source connector.
      * </p>
      * 
-     * @return The new update schedule for the data source.
+     * @return The sync schedule you want to update for the data source connector.
      */
 
     public String getSchedule() {
@@ -324,11 +326,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new update schedule for the data source.
+     * The sync schedule you want to update for the data source connector.
      * </p>
      * 
      * @param schedule
-     *        The new update schedule for the data source.
+     *        The sync schedule you want to update for the data source connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -339,12 +341,13 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the new role to use when the data source is accessing resources on your behalf.
+     * The Amazon Resource Name (ARN) of a role with permission to access the data source. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon Kendra</a>.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the new role to use when the data source is accessing resources on your
-     *        behalf.
+     *        The Amazon Resource Name (ARN) of a role with permission to access the data source. For more information,
+     *        see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon Kendra</a>.
      */
 
     public void setRoleArn(String roleArn) {
@@ -353,11 +356,13 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the new role to use when the data source is accessing resources on your behalf.
+     * The Amazon Resource Name (ARN) of a role with permission to access the data source. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon Kendra</a>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the new role to use when the data source is accessing resources on your
-     *         behalf.
+     * @return The Amazon Resource Name (ARN) of a role with permission to access the data source. For more information,
+     *         see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
+     *         Kendra</a>.
      */
 
     public String getRoleArn() {
@@ -366,12 +371,13 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the new role to use when the data source is accessing resources on your behalf.
+     * The Amazon Resource Name (ARN) of a role with permission to access the data source. For more information, see <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon Kendra</a>.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the new role to use when the data source is accessing resources on your
-     *        behalf.
+     *        The Amazon Resource Name (ARN) of a role with permission to access the data source. For more information,
+     *        see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon Kendra</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -382,17 +388,19 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The code for a language. This allows you to support a language for all documents when updating the data source.
-     * English is supported by default. For more information on supported languages, including their codes, see <a
+     * The code for a language you want to update for the data source connector. This allows you to support a language
+     * for all documents when updating the data source. English is supported by default. For more information on
+     * supported languages, including their codes, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages other
      * than English</a>.
      * </p>
      * 
      * @param languageCode
-     *        The code for a language. This allows you to support a language for all documents when updating the data
-     *        source. English is supported by default. For more information on supported languages, including their
-     *        codes, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding
-     *        documents in languages other than English</a>.
+     *        The code for a language you want to update for the data source connector. This allows you to support a
+     *        language for all documents when updating the data source. English is supported by default. For more
+     *        information on supported languages, including their codes, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages
+     *        other than English</a>.
      */
 
     public void setLanguageCode(String languageCode) {
@@ -401,16 +409,18 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The code for a language. This allows you to support a language for all documents when updating the data source.
-     * English is supported by default. For more information on supported languages, including their codes, see <a
+     * The code for a language you want to update for the data source connector. This allows you to support a language
+     * for all documents when updating the data source. English is supported by default. For more information on
+     * supported languages, including their codes, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages other
      * than English</a>.
      * </p>
      * 
-     * @return The code for a language. This allows you to support a language for all documents when updating the data
-     *         source. English is supported by default. For more information on supported languages, including their
-     *         codes, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding
-     *         documents in languages other than English</a>.
+     * @return The code for a language you want to update for the data source connector. This allows you to support a
+     *         language for all documents when updating the data source. English is supported by default. For more
+     *         information on supported languages, including their codes, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in
+     *         languages other than English</a>.
      */
 
     public String getLanguageCode() {
@@ -419,17 +429,19 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The code for a language. This allows you to support a language for all documents when updating the data source.
-     * English is supported by default. For more information on supported languages, including their codes, see <a
+     * The code for a language you want to update for the data source connector. This allows you to support a language
+     * for all documents when updating the data source. English is supported by default. For more information on
+     * supported languages, including their codes, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages other
      * than English</a>.
      * </p>
      * 
      * @param languageCode
-     *        The code for a language. This allows you to support a language for all documents when updating the data
-     *        source. English is supported by default. For more information on supported languages, including their
-     *        codes, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding
-     *        documents in languages other than English</a>.
+     *        The code for a language you want to update for the data source connector. This allows you to support a
+     *        language for all documents when updating the data source. English is supported by default. For more
+     *        information on supported languages, including their codes, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html">Adding documents in languages
+     *        other than English</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -440,8 +452,8 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration information for altering document metadata and content during the document ingestion process when
-     * you update a data source.
+     * Configuration information you want to update for altering document metadata and content during the document
+     * ingestion process.
      * </p>
      * <p>
      * For more information on how to create, modify and delete document metadata, or make other content alterations
@@ -451,8 +463,8 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param customDocumentEnrichmentConfiguration
-     *        Configuration information for altering document metadata and content during the document ingestion process
-     *        when you update a data source.</p>
+     *        Configuration information you want to update for altering document metadata and content during the
+     *        document ingestion process.</p>
      *        <p>
      *        For more information on how to create, modify and delete document metadata, or make other content
      *        alterations when you ingest documents into Amazon Kendra, see <a
@@ -466,8 +478,8 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration information for altering document metadata and content during the document ingestion process when
-     * you update a data source.
+     * Configuration information you want to update for altering document metadata and content during the document
+     * ingestion process.
      * </p>
      * <p>
      * For more information on how to create, modify and delete document metadata, or make other content alterations
@@ -476,8 +488,8 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * during the ingestion process</a>.
      * </p>
      * 
-     * @return Configuration information for altering document metadata and content during the document ingestion
-     *         process when you update a data source.</p>
+     * @return Configuration information you want to update for altering document metadata and content during the
+     *         document ingestion process.</p>
      *         <p>
      *         For more information on how to create, modify and delete document metadata, or make other content
      *         alterations when you ingest documents into Amazon Kendra, see <a
@@ -491,8 +503,8 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration information for altering document metadata and content during the document ingestion process when
-     * you update a data source.
+     * Configuration information you want to update for altering document metadata and content during the document
+     * ingestion process.
      * </p>
      * <p>
      * For more information on how to create, modify and delete document metadata, or make other content alterations
@@ -502,8 +514,8 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param customDocumentEnrichmentConfiguration
-     *        Configuration information for altering document metadata and content during the document ingestion process
-     *        when you update a data source.</p>
+     *        Configuration information you want to update for altering document metadata and content during the
+     *        document ingestion process.</p>
      *        <p>
      *        For more information on how to create, modify and delete document metadata, or make other content
      *        alterations when you ingest documents into Amazon Kendra, see <a

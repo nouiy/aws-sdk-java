@@ -49,8 +49,8 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
     private String type;
     /**
      * <p>
-     * Describes how the data source is configured. The specific information in the description depends on the data
-     * source provider.
+     * Configuration details for the data source. This shows how the data source is configured. The configuration
+     * options for a data source depend on the data source provider.
      * </p>
      */
     private DataSourceConfiguration configuration;
@@ -68,7 +68,7 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
     private java.util.Date updatedAt;
     /**
      * <p>
-     * The description of the data source.
+     * The description for the data source.
      * </p>
      */
     private String description;
@@ -303,13 +303,13 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Describes how the data source is configured. The specific information in the description depends on the data
-     * source provider.
+     * Configuration details for the data source. This shows how the data source is configured. The configuration
+     * options for a data source depend on the data source provider.
      * </p>
      * 
      * @param configuration
-     *        Describes how the data source is configured. The specific information in the description depends on the
-     *        data source provider.
+     *        Configuration details for the data source. This shows how the data source is configured. The configuration
+     *        options for a data source depend on the data source provider.
      */
 
     public void setConfiguration(DataSourceConfiguration configuration) {
@@ -318,12 +318,12 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Describes how the data source is configured. The specific information in the description depends on the data
-     * source provider.
+     * Configuration details for the data source. This shows how the data source is configured. The configuration
+     * options for a data source depend on the data source provider.
      * </p>
      * 
-     * @return Describes how the data source is configured. The specific information in the description depends on the
-     *         data source provider.
+     * @return Configuration details for the data source. This shows how the data source is configured. The
+     *         configuration options for a data source depend on the data source provider.
      */
 
     public DataSourceConfiguration getConfiguration() {
@@ -332,13 +332,13 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Describes how the data source is configured. The specific information in the description depends on the data
-     * source provider.
+     * Configuration details for the data source. This shows how the data source is configured. The configuration
+     * options for a data source depend on the data source provider.
      * </p>
      * 
      * @param configuration
-     *        Describes how the data source is configured. The specific information in the description depends on the
-     *        data source provider.
+     *        Configuration details for the data source. This shows how the data source is configured. The configuration
+     *        options for a data source depend on the data source provider.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -429,11 +429,11 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The description of the data source.
+     * The description for the data source.
      * </p>
      * 
      * @param description
-     *        The description of the data source.
+     *        The description for the data source.
      */
 
     public void setDescription(String description) {
@@ -442,10 +442,10 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The description of the data source.
+     * The description for the data source.
      * </p>
      * 
-     * @return The description of the data source.
+     * @return The description for the data source.
      */
 
     public String getDescription() {
@@ -454,11 +454,11 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The description of the data source.
+     * The description for the data source.
      * </p>
      * 
      * @param description
-     *        The description of the data source.
+     *        The description for the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

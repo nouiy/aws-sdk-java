@@ -70,7 +70,7 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
     private Boolean crawlAttachments;
     /**
      * <p>
-     * The identifier of the Quip folders you want to index.
+     * The identifiers of the Quip folders you want to index.
      * </p>
      */
     private java.util.List<String> folderIds;
@@ -426,10 +426,10 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The identifier of the Quip folders you want to index.
+     * The identifiers of the Quip folders you want to index.
      * </p>
      * 
-     * @return The identifier of the Quip folders you want to index.
+     * @return The identifiers of the Quip folders you want to index.
      */
 
     public java.util.List<String> getFolderIds() {
@@ -438,11 +438,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The identifier of the Quip folders you want to index.
+     * The identifiers of the Quip folders you want to index.
      * </p>
      * 
      * @param folderIds
-     *        The identifier of the Quip folders you want to index.
+     *        The identifiers of the Quip folders you want to index.
      */
 
     public void setFolderIds(java.util.Collection<String> folderIds) {
@@ -456,7 +456,7 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The identifier of the Quip folders you want to index.
+     * The identifiers of the Quip folders you want to index.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -465,7 +465,7 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param folderIds
-     *        The identifier of the Quip folders you want to index.
+     *        The identifiers of the Quip folders you want to index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -481,11 +481,11 @@ public class QuipConfiguration implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The identifier of the Quip folders you want to index.
+     * The identifiers of the Quip folders you want to index.
      * </p>
      * 
      * @param folderIds
-     *        The identifier of the Quip folders you want to index.
+     *        The identifiers of the Quip folders you want to index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

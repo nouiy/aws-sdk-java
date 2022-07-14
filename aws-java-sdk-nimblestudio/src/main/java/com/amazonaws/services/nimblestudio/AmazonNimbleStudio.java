@@ -1040,7 +1040,7 @@ public interface AmazonNimbleStudio {
 
     /**
      * <p>
-     * Lists the streaming image resources in a studio.
+     * Lists the streaming sessions in a studio.
      * </p>
      * 
      * @param listStreamingSessionsRequest

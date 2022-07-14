@@ -36,23 +36,24 @@ public class PackageVersionDescription implements Serializable, Cloneable, Struc
     private String format;
     /**
      * <p>
-     * The namespace of the package. The package component that specifies its namespace depends on its type. For
-     * example:
+     * The namespace of the package version. The package version component that specifies its namespace depends on its
+     * type. For example:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * The namespace of a Maven package is its <code>groupId</code>.
+     * The namespace of a Maven package version is its <code>groupId</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The namespace of an npm package is its <code>scope</code>.
+     * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     * Python and NuGet package versions do not contain a corresponding component, package versions of those formats do
+     * not have a namespace.
      * </p>
      * </li>
      * </ul>
@@ -121,6 +122,14 @@ public class PackageVersionDescription implements Serializable, Cloneable, Struc
      * </p>
      */
     private String status;
+    /**
+     * <p>
+     * A <a href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionOrigin.html">
+     * PackageVersionOrigin</a> object that contains information about how the package version was added to the
+     * repository.
+     * </p>
+     */
+    private PackageVersionOrigin origin;
 
     /**
      * <p>
@@ -183,44 +192,46 @@ public class PackageVersionDescription implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The namespace of the package. The package component that specifies its namespace depends on its type. For
-     * example:
+     * The namespace of the package version. The package version component that specifies its namespace depends on its
+     * type. For example:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * The namespace of a Maven package is its <code>groupId</code>.
+     * The namespace of a Maven package version is its <code>groupId</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The namespace of an npm package is its <code>scope</code>.
+     * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     * Python and NuGet package versions do not contain a corresponding component, package versions of those formats do
+     * not have a namespace.
      * </p>
      * </li>
      * </ul>
      * 
      * @param namespace
-     *        The namespace of the package. The package component that specifies its namespace depends on its type. For
-     *        example: </p>
+     *        The namespace of the package version. The package version component that specifies its namespace depends
+     *        on its type. For example:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        The namespace of a Maven package is its <code>groupId</code>.
+     *        The namespace of a Maven package version is its <code>groupId</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        The namespace of an npm package is its <code>scope</code>.
+     *        The namespace of an npm package version is its <code>scope</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     *        Python and NuGet package versions do not contain a corresponding component, package versions of those
+     *        formats do not have a namespace.
      *        </p>
      *        </li>
      */
@@ -231,43 +242,45 @@ public class PackageVersionDescription implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The namespace of the package. The package component that specifies its namespace depends on its type. For
-     * example:
+     * The namespace of the package version. The package version component that specifies its namespace depends on its
+     * type. For example:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * The namespace of a Maven package is its <code>groupId</code>.
+     * The namespace of a Maven package version is its <code>groupId</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The namespace of an npm package is its <code>scope</code>.
+     * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     * Python and NuGet package versions do not contain a corresponding component, package versions of those formats do
+     * not have a namespace.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The namespace of the package. The package component that specifies its namespace depends on its type. For
-     *         example: </p>
+     * @return The namespace of the package version. The package version component that specifies its namespace depends
+     *         on its type. For example:</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         The namespace of a Maven package is its <code>groupId</code>.
+     *         The namespace of a Maven package version is its <code>groupId</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         The namespace of an npm package is its <code>scope</code>.
+     *         The namespace of an npm package version is its <code>scope</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     *         Python and NuGet package versions do not contain a corresponding component, package versions of those
+     *         formats do not have a namespace.
      *         </p>
      *         </li>
      */
@@ -278,44 +291,46 @@ public class PackageVersionDescription implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The namespace of the package. The package component that specifies its namespace depends on its type. For
-     * example:
+     * The namespace of the package version. The package version component that specifies its namespace depends on its
+     * type. For example:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * The namespace of a Maven package is its <code>groupId</code>.
+     * The namespace of a Maven package version is its <code>groupId</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The namespace of an npm package is its <code>scope</code>.
+     * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     * Python and NuGet package versions do not contain a corresponding component, package versions of those formats do
+     * not have a namespace.
      * </p>
      * </li>
      * </ul>
      * 
      * @param namespace
-     *        The namespace of the package. The package component that specifies its namespace depends on its type. For
-     *        example: </p>
+     *        The namespace of the package version. The package version component that specifies its namespace depends
+     *        on its type. For example:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        The namespace of a Maven package is its <code>groupId</code>.
+     *        The namespace of a Maven package version is its <code>groupId</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        The namespace of an npm package is its <code>scope</code>.
+     *        The namespace of an npm package version is its <code>scope</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     *        Python and NuGet package versions do not contain a corresponding component, package versions of those
+     *        formats do not have a namespace.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -797,6 +812,58 @@ public class PackageVersionDescription implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * A <a href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionOrigin.html">
+     * PackageVersionOrigin</a> object that contains information about how the package version was added to the
+     * repository.
+     * </p>
+     * 
+     * @param origin
+     *        A <a href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionOrigin.html">
+     *        PackageVersionOrigin</a> object that contains information about how the package version was added to the
+     *        repository.
+     */
+
+    public void setOrigin(PackageVersionOrigin origin) {
+        this.origin = origin;
+    }
+
+    /**
+     * <p>
+     * A <a href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionOrigin.html">
+     * PackageVersionOrigin</a> object that contains information about how the package version was added to the
+     * repository.
+     * </p>
+     * 
+     * @return A <a href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionOrigin.html">
+     *         PackageVersionOrigin</a> object that contains information about how the package version was added to the
+     *         repository.
+     */
+
+    public PackageVersionOrigin getOrigin() {
+        return this.origin;
+    }
+
+    /**
+     * <p>
+     * A <a href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionOrigin.html">
+     * PackageVersionOrigin</a> object that contains information about how the package version was added to the
+     * repository.
+     * </p>
+     * 
+     * @param origin
+     *        A <a href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionOrigin.html">
+     *        PackageVersionOrigin</a> object that contains information about how the package version was added to the
+     *        repository.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PackageVersionDescription withOrigin(PackageVersionOrigin origin) {
+        setOrigin(origin);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -831,7 +898,9 @@ public class PackageVersionDescription implements Serializable, Cloneable, Struc
         if (getRevision() != null)
             sb.append("Revision: ").append(getRevision()).append(",");
         if (getStatus() != null)
-            sb.append("Status: ").append(getStatus());
+            sb.append("Status: ").append(getStatus()).append(",");
+        if (getOrigin() != null)
+            sb.append("Origin: ").append(getOrigin());
         sb.append("}");
         return sb.toString();
     }
@@ -894,6 +963,10 @@ public class PackageVersionDescription implements Serializable, Cloneable, Struc
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
+        if (other.getOrigin() == null ^ this.getOrigin() == null)
+            return false;
+        if (other.getOrigin() != null && other.getOrigin().equals(this.getOrigin()) == false)
+            return false;
         return true;
     }
 
@@ -914,6 +987,7 @@ public class PackageVersionDescription implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getLicenses() == null) ? 0 : getLicenses().hashCode());
         hashCode = prime * hashCode + ((getRevision() == null) ? 0 : getRevision().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getOrigin() == null) ? 0 : getOrigin().hashCode());
         return hashCode;
     }
 

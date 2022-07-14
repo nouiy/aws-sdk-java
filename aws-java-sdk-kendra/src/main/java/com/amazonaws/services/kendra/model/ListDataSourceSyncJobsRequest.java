@@ -33,7 +33,7 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
     private String id;
     /**
      * <p>
-     * The identifier of the index that contains the data source.
+     * The identifier of the index used with the data source.
      * </p>
      */
     private String indexId;
@@ -107,11 +107,11 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of the index that contains the data source.
+     * The identifier of the index used with the data source.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the index that contains the data source.
+     *        The identifier of the index used with the data source.
      */
 
     public void setIndexId(String indexId) {
@@ -120,10 +120,10 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of the index that contains the data source.
+     * The identifier of the index used with the data source.
      * </p>
      * 
-     * @return The identifier of the index that contains the data source.
+     * @return The identifier of the index used with the data source.
      */
 
     public String getIndexId() {
@@ -132,11 +132,11 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier of the index that contains the data source.
+     * The identifier of the index used with the data source.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the index that contains the data source.
+     *        The identifier of the index used with the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

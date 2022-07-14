@@ -2424,7 +2424,7 @@ public class AmazonNimbleStudioClient extends AmazonWebServiceClient implements 
 
     /**
      * <p>
-     * Lists the streaming image resources in a studio.
+     * Lists the streaming sessions in a studio.
      * </p>
      * 
      * @param listStreamingSessionsRequest

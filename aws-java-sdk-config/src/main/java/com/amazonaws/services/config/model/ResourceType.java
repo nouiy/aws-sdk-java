@@ -139,7 +139,22 @@ public enum ResourceType {
     AWSECRPublicRepository("AWS::ECR::PublicRepository"),
     AWSGuardDutyDetector("AWS::GuardDuty::Detector"),
     AWSEMRSecurityConfiguration("AWS::EMR::SecurityConfiguration"),
-    AWSSageMakerCodeRepository("AWS::SageMaker::CodeRepository");
+    AWSSageMakerCodeRepository("AWS::SageMaker::CodeRepository"),
+    AWSRoute53ResolverResolverEndpoint("AWS::Route53Resolver::ResolverEndpoint"),
+    AWSRoute53ResolverResolverRule("AWS::Route53Resolver::ResolverRule"),
+    AWSRoute53ResolverResolverRuleAssociation("AWS::Route53Resolver::ResolverRuleAssociation"),
+    AWSDMSReplicationSubnetGroup("AWS::DMS::ReplicationSubnetGroup"),
+    AWSDMSEventSubscription("AWS::DMS::EventSubscription"),
+    AWSMSKCluster("AWS::MSK::Cluster"),
+    AWSStepFunctionsActivity("AWS::StepFunctions::Activity"),
+    AWSWorkSpacesWorkspace("AWS::WorkSpaces::Workspace"),
+    AWSWorkSpacesConnectionAlias("AWS::WorkSpaces::ConnectionAlias"),
+    AWSSageMakerModel("AWS::SageMaker::Model"),
+    AWSElasticLoadBalancingV2Listener("AWS::ElasticLoadBalancingV2::Listener"),
+    AWSStepFunctionsStateMachine("AWS::StepFunctions::StateMachine"),
+    AWSBatchJobQueue("AWS::Batch::JobQueue"),
+    AWSBatchComputeEnvironment("AWS::Batch::ComputeEnvironment"),
+    AWSAccessAnalyzerAnalyzer("AWS::AccessAnalyzer::Analyzer");
 
     private String value;
 

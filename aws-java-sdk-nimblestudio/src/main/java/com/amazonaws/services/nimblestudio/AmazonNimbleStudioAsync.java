@@ -1103,7 +1103,7 @@ public interface AmazonNimbleStudioAsync extends AmazonNimbleStudio {
 
     /**
      * <p>
-     * Lists the streaming image resources in a studio.
+     * Lists the streaming sessions in a studio.
      * </p>
      * 
      * @param listStreamingSessionsRequest
@@ -1116,7 +1116,7 @@ public interface AmazonNimbleStudioAsync extends AmazonNimbleStudio {
 
     /**
      * <p>
-     * Lists the streaming image resources in a studio.
+     * Lists the streaming sessions in a studio.
      * </p>
      * 
      * @param listStreamingSessionsRequest

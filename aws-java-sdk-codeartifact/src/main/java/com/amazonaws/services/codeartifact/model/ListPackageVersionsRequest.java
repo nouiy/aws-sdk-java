@@ -27,7 +27,7 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the domain that contains the repository that contains the returned package versions.
+     * The name of the domain that contains the repository that contains the requested package versions.
      * </p>
      */
     private String domain;
@@ -40,20 +40,20 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
     private String domainOwner;
     /**
      * <p>
-     * The name of the repository that contains the package.
+     * The name of the repository that contains the requested package versions.
      * </p>
      */
     private String repository;
     /**
      * <p>
-     * The format of the returned packages.
+     * The format of the returned package versions.
      * </p>
      */
     private String format;
     /**
      * <p>
-     * The namespace of the package. The package component that specifies its namespace depends on its type. For
-     * example:
+     * The namespace of the package that contains the requested package versions. The package component that specifies
+     * its namespace depends on its type. For example:
      * </p>
      * <ul>
      * <li>
@@ -68,7 +68,8 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     * Python and NuGet packages do not contain a corresponding component, packages of those formats do not have a
+     * namespace.
      * </p>
      * </li>
      * </ul>
@@ -76,19 +77,19 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
     private String namespace;
     /**
      * <p>
-     * The name of the package for which you want to return a list of package versions.
+     * The name of the package for which you want to request package versions.
      * </p>
      */
     private String packageValue;
     /**
      * <p>
-     * A string that specifies the status of the package versions to include in the returned list.
+     * A string that filters the requested package versions by status.
      * </p>
      */
     private String status;
     /**
      * <p>
-     * How to sort the returned list of package versions.
+     * How to sort the requested list of package versions.
      * </p>
      */
     private String sortBy;
@@ -105,14 +106,21 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * The <code>originType</code> used to filter package versions. Only package versions with the provided
+     * <code>originType</code> will be returned.
+     * </p>
+     */
+    private String originType;
 
     /**
      * <p>
-     * The name of the domain that contains the repository that contains the returned package versions.
+     * The name of the domain that contains the repository that contains the requested package versions.
      * </p>
      * 
      * @param domain
-     *        The name of the domain that contains the repository that contains the returned package versions.
+     *        The name of the domain that contains the repository that contains the requested package versions.
      */
 
     public void setDomain(String domain) {
@@ -121,10 +129,10 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the domain that contains the repository that contains the returned package versions.
+     * The name of the domain that contains the repository that contains the requested package versions.
      * </p>
      * 
-     * @return The name of the domain that contains the repository that contains the returned package versions.
+     * @return The name of the domain that contains the repository that contains the requested package versions.
      */
 
     public String getDomain() {
@@ -133,11 +141,11 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the domain that contains the repository that contains the returned package versions.
+     * The name of the domain that contains the repository that contains the requested package versions.
      * </p>
      * 
      * @param domain
-     *        The name of the domain that contains the repository that contains the returned package versions.
+     *        The name of the domain that contains the repository that contains the requested package versions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -194,11 +202,11 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the repository that contains the package.
+     * The name of the repository that contains the requested package versions.
      * </p>
      * 
      * @param repository
-     *        The name of the repository that contains the package.
+     *        The name of the repository that contains the requested package versions.
      */
 
     public void setRepository(String repository) {
@@ -207,10 +215,10 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the repository that contains the package.
+     * The name of the repository that contains the requested package versions.
      * </p>
      * 
-     * @return The name of the repository that contains the package.
+     * @return The name of the repository that contains the requested package versions.
      */
 
     public String getRepository() {
@@ -219,11 +227,11 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the repository that contains the package.
+     * The name of the repository that contains the requested package versions.
      * </p>
      * 
      * @param repository
-     *        The name of the repository that contains the package.
+     *        The name of the repository that contains the requested package versions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -234,11 +242,11 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The format of the returned packages.
+     * The format of the returned package versions.
      * </p>
      * 
      * @param format
-     *        The format of the returned packages.
+     *        The format of the returned package versions.
      * @see PackageFormat
      */
 
@@ -248,10 +256,10 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The format of the returned packages.
+     * The format of the returned package versions.
      * </p>
      * 
-     * @return The format of the returned packages.
+     * @return The format of the returned package versions.
      * @see PackageFormat
      */
 
@@ -261,11 +269,11 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The format of the returned packages.
+     * The format of the returned package versions.
      * </p>
      * 
      * @param format
-     *        The format of the returned packages.
+     *        The format of the returned package versions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PackageFormat
      */
@@ -277,11 +285,11 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The format of the returned packages.
+     * The format of the returned package versions.
      * </p>
      * 
      * @param format
-     *        The format of the returned packages.
+     *        The format of the returned package versions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PackageFormat
      */
@@ -293,8 +301,8 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The namespace of the package. The package component that specifies its namespace depends on its type. For
-     * example:
+     * The namespace of the package that contains the requested package versions. The package component that specifies
+     * its namespace depends on its type. For example:
      * </p>
      * <ul>
      * <li>
@@ -309,14 +317,15 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     * Python and NuGet packages do not contain a corresponding component, packages of those formats do not have a
+     * namespace.
      * </p>
      * </li>
      * </ul>
      * 
      * @param namespace
-     *        The namespace of the package. The package component that specifies its namespace depends on its type. For
-     *        example: </p>
+     *        The namespace of the package that contains the requested package versions. The package component that
+     *        specifies its namespace depends on its type. For example:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -330,7 +339,8 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        <li>
      *        <p>
-     *        A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     *        Python and NuGet packages do not contain a corresponding component, packages of those formats do not have
+     *        a namespace.
      *        </p>
      *        </li>
      */
@@ -341,8 +351,8 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The namespace of the package. The package component that specifies its namespace depends on its type. For
-     * example:
+     * The namespace of the package that contains the requested package versions. The package component that specifies
+     * its namespace depends on its type. For example:
      * </p>
      * <ul>
      * <li>
@@ -357,13 +367,14 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     * Python and NuGet packages do not contain a corresponding component, packages of those formats do not have a
+     * namespace.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The namespace of the package. The package component that specifies its namespace depends on its type. For
-     *         example: </p>
+     * @return The namespace of the package that contains the requested package versions. The package component that
+     *         specifies its namespace depends on its type. For example:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -377,7 +388,8 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
      *         </li>
      *         <li>
      *         <p>
-     *         A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     *         Python and NuGet packages do not contain a corresponding component, packages of those formats do not have
+     *         a namespace.
      *         </p>
      *         </li>
      */
@@ -388,8 +400,8 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The namespace of the package. The package component that specifies its namespace depends on its type. For
-     * example:
+     * The namespace of the package that contains the requested package versions. The package component that specifies
+     * its namespace depends on its type. For example:
      * </p>
      * <ul>
      * <li>
@@ -404,14 +416,15 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     * Python and NuGet packages do not contain a corresponding component, packages of those formats do not have a
+     * namespace.
      * </p>
      * </li>
      * </ul>
      * 
      * @param namespace
-     *        The namespace of the package. The package component that specifies its namespace depends on its type. For
-     *        example: </p>
+     *        The namespace of the package that contains the requested package versions. The package component that
+     *        specifies its namespace depends on its type. For example:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -425,7 +438,8 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        <li>
      *        <p>
-     *        A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     *        Python and NuGet packages do not contain a corresponding component, packages of those formats do not have
+     *        a namespace.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -438,11 +452,11 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the package for which you want to return a list of package versions.
+     * The name of the package for which you want to request package versions.
      * </p>
      * 
      * @param packageValue
-     *        The name of the package for which you want to return a list of package versions.
+     *        The name of the package for which you want to request package versions.
      */
 
     public void setPackage(String packageValue) {
@@ -451,10 +465,10 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the package for which you want to return a list of package versions.
+     * The name of the package for which you want to request package versions.
      * </p>
      * 
-     * @return The name of the package for which you want to return a list of package versions.
+     * @return The name of the package for which you want to request package versions.
      */
 
     public String getPackage() {
@@ -463,11 +477,11 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of the package for which you want to return a list of package versions.
+     * The name of the package for which you want to request package versions.
      * </p>
      * 
      * @param packageValue
-     *        The name of the package for which you want to return a list of package versions.
+     *        The name of the package for which you want to request package versions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -478,11 +492,11 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A string that specifies the status of the package versions to include in the returned list.
+     * A string that filters the requested package versions by status.
      * </p>
      * 
      * @param status
-     *        A string that specifies the status of the package versions to include in the returned list.
+     *        A string that filters the requested package versions by status.
      * @see PackageVersionStatus
      */
 
@@ -492,10 +506,10 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A string that specifies the status of the package versions to include in the returned list.
+     * A string that filters the requested package versions by status.
      * </p>
      * 
-     * @return A string that specifies the status of the package versions to include in the returned list.
+     * @return A string that filters the requested package versions by status.
      * @see PackageVersionStatus
      */
 
@@ -505,11 +519,11 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A string that specifies the status of the package versions to include in the returned list.
+     * A string that filters the requested package versions by status.
      * </p>
      * 
      * @param status
-     *        A string that specifies the status of the package versions to include in the returned list.
+     *        A string that filters the requested package versions by status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PackageVersionStatus
      */
@@ -521,11 +535,11 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A string that specifies the status of the package versions to include in the returned list.
+     * A string that filters the requested package versions by status.
      * </p>
      * 
      * @param status
-     *        A string that specifies the status of the package versions to include in the returned list.
+     *        A string that filters the requested package versions by status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PackageVersionStatus
      */
@@ -537,11 +551,11 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * How to sort the returned list of package versions.
+     * How to sort the requested list of package versions.
      * </p>
      * 
      * @param sortBy
-     *        How to sort the returned list of package versions.
+     *        How to sort the requested list of package versions.
      * @see PackageVersionSortType
      */
 
@@ -551,10 +565,10 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * How to sort the returned list of package versions.
+     * How to sort the requested list of package versions.
      * </p>
      * 
-     * @return How to sort the returned list of package versions.
+     * @return How to sort the requested list of package versions.
      * @see PackageVersionSortType
      */
 
@@ -564,11 +578,11 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * How to sort the returned list of package versions.
+     * How to sort the requested list of package versions.
      * </p>
      * 
      * @param sortBy
-     *        How to sort the returned list of package versions.
+     *        How to sort the requested list of package versions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PackageVersionSortType
      */
@@ -580,11 +594,11 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * How to sort the returned list of package versions.
+     * How to sort the requested list of package versions.
      * </p>
      * 
      * @param sortBy
-     *        How to sort the returned list of package versions.
+     *        How to sort the requested list of package versions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PackageVersionSortType
      */
@@ -681,6 +695,73 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The <code>originType</code> used to filter package versions. Only package versions with the provided
+     * <code>originType</code> will be returned.
+     * </p>
+     * 
+     * @param originType
+     *        The <code>originType</code> used to filter package versions. Only package versions with the provided
+     *        <code>originType</code> will be returned.
+     * @see PackageVersionOriginType
+     */
+
+    public void setOriginType(String originType) {
+        this.originType = originType;
+    }
+
+    /**
+     * <p>
+     * The <code>originType</code> used to filter package versions. Only package versions with the provided
+     * <code>originType</code> will be returned.
+     * </p>
+     * 
+     * @return The <code>originType</code> used to filter package versions. Only package versions with the provided
+     *         <code>originType</code> will be returned.
+     * @see PackageVersionOriginType
+     */
+
+    public String getOriginType() {
+        return this.originType;
+    }
+
+    /**
+     * <p>
+     * The <code>originType</code> used to filter package versions. Only package versions with the provided
+     * <code>originType</code> will be returned.
+     * </p>
+     * 
+     * @param originType
+     *        The <code>originType</code> used to filter package versions. Only package versions with the provided
+     *        <code>originType</code> will be returned.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PackageVersionOriginType
+     */
+
+    public ListPackageVersionsRequest withOriginType(String originType) {
+        setOriginType(originType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The <code>originType</code> used to filter package versions. Only package versions with the provided
+     * <code>originType</code> will be returned.
+     * </p>
+     * 
+     * @param originType
+     *        The <code>originType</code> used to filter package versions. Only package versions with the provided
+     *        <code>originType</code> will be returned.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PackageVersionOriginType
+     */
+
+    public ListPackageVersionsRequest withOriginType(PackageVersionOriginType originType) {
+        this.originType = originType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -711,7 +792,9 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getOriginType() != null)
+            sb.append("OriginType: ").append(getOriginType());
         sb.append("}");
         return sb.toString();
     }
@@ -766,6 +849,10 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getOriginType() == null ^ this.getOriginType() == null)
+            return false;
+        if (other.getOriginType() != null && other.getOriginType().equals(this.getOriginType()) == false)
+            return false;
         return true;
     }
 
@@ -784,6 +871,7 @@ public class ListPackageVersionsRequest extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getSortBy() == null) ? 0 : getSortBy().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getOriginType() == null) ? 0 : getOriginType().hashCode());
         return hashCode;
     }
 

@@ -59,6 +59,7 @@ public interface AmazonAthenaAsync extends AmazonAthena {
      * </p>
      * 
      * @param batchGetNamedQueryRequest
+     *        Contains an array of named query IDs.
      * @return A Java Future containing the result of the BatchGetNamedQuery operation returned by the service.
      * @sample AmazonAthenaAsync.BatchGetNamedQuery
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/BatchGetNamedQuery" target="_top">AWS API
@@ -78,6 +79,7 @@ public interface AmazonAthenaAsync extends AmazonAthena {
      * </p>
      * 
      * @param batchGetNamedQueryRequest
+     *        Contains an array of named query IDs.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -138,6 +140,7 @@ public interface AmazonAthenaAsync extends AmazonAthena {
      * </p>
      * 
      * @param batchGetQueryExecutionRequest
+     *        Contains an array of query execution IDs.
      * @return A Java Future containing the result of the BatchGetQueryExecution operation returned by the service.
      * @sample AmazonAthenaAsync.BatchGetQueryExecution
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/BatchGetQueryExecution" target="_top">AWS
@@ -154,6 +157,7 @@ public interface AmazonAthenaAsync extends AmazonAthena {
      * </p>
      * 
      * @param batchGetQueryExecutionRequest
+     *        Contains an array of query execution IDs.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or

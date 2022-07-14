@@ -40,35 +40,36 @@ public class ListPackageVersionAssetsRequest extends com.amazonaws.AmazonWebServ
     private String domainOwner;
     /**
      * <p>
-     * The name of the repository that contains the package that contains the returned package version assets.
+     * The name of the repository that contains the package that contains the requested package version assets.
      * </p>
      */
     private String repository;
     /**
      * <p>
-     * The format of the package that contains the returned package version assets.
+     * The format of the package that contains the requested package version assets.
      * </p>
      */
     private String format;
     /**
      * <p>
-     * The namespace of the package. The package component that specifies its namespace depends on its type. For
-     * example:
+     * The namespace of the package version that contains the requested package version assets. The package version
+     * component that specifies its namespace depends on its type. For example:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * The namespace of a Maven package is its <code>groupId</code>.
+     * The namespace of a Maven package version is its <code>groupId</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The namespace of an npm package is its <code>scope</code>.
+     * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     * Python and NuGet package versions do not contain a corresponding component, package versions of those formats do
+     * not have a namespace.
      * </p>
      * </li>
      * </ul>
@@ -76,7 +77,7 @@ public class ListPackageVersionAssetsRequest extends com.amazonaws.AmazonWebServ
     private String namespace;
     /**
      * <p>
-     * The name of the package that contains the returned package version assets.
+     * The name of the package that contains the requested package version assets.
      * </p>
      */
     private String packageValue;
@@ -188,11 +189,11 @@ public class ListPackageVersionAssetsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the repository that contains the package that contains the returned package version assets.
+     * The name of the repository that contains the package that contains the requested package version assets.
      * </p>
      * 
      * @param repository
-     *        The name of the repository that contains the package that contains the returned package version assets.
+     *        The name of the repository that contains the package that contains the requested package version assets.
      */
 
     public void setRepository(String repository) {
@@ -201,10 +202,10 @@ public class ListPackageVersionAssetsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the repository that contains the package that contains the returned package version assets.
+     * The name of the repository that contains the package that contains the requested package version assets.
      * </p>
      * 
-     * @return The name of the repository that contains the package that contains the returned package version assets.
+     * @return The name of the repository that contains the package that contains the requested package version assets.
      */
 
     public String getRepository() {
@@ -213,11 +214,11 @@ public class ListPackageVersionAssetsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the repository that contains the package that contains the returned package version assets.
+     * The name of the repository that contains the package that contains the requested package version assets.
      * </p>
      * 
      * @param repository
-     *        The name of the repository that contains the package that contains the returned package version assets.
+     *        The name of the repository that contains the package that contains the requested package version assets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -228,11 +229,11 @@ public class ListPackageVersionAssetsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The format of the package that contains the returned package version assets.
+     * The format of the package that contains the requested package version assets.
      * </p>
      * 
      * @param format
-     *        The format of the package that contains the returned package version assets.
+     *        The format of the package that contains the requested package version assets.
      * @see PackageFormat
      */
 
@@ -242,10 +243,10 @@ public class ListPackageVersionAssetsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The format of the package that contains the returned package version assets.
+     * The format of the package that contains the requested package version assets.
      * </p>
      * 
-     * @return The format of the package that contains the returned package version assets.
+     * @return The format of the package that contains the requested package version assets.
      * @see PackageFormat
      */
 
@@ -255,11 +256,11 @@ public class ListPackageVersionAssetsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The format of the package that contains the returned package version assets.
+     * The format of the package that contains the requested package version assets.
      * </p>
      * 
      * @param format
-     *        The format of the package that contains the returned package version assets.
+     *        The format of the package that contains the requested package version assets.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PackageFormat
      */
@@ -271,11 +272,11 @@ public class ListPackageVersionAssetsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The format of the package that contains the returned package version assets.
+     * The format of the package that contains the requested package version assets.
      * </p>
      * 
      * @param format
-     *        The format of the package that contains the returned package version assets.
+     *        The format of the package that contains the requested package version assets.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PackageFormat
      */
@@ -287,44 +288,46 @@ public class ListPackageVersionAssetsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The namespace of the package. The package component that specifies its namespace depends on its type. For
-     * example:
+     * The namespace of the package version that contains the requested package version assets. The package version
+     * component that specifies its namespace depends on its type. For example:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * The namespace of a Maven package is its <code>groupId</code>.
+     * The namespace of a Maven package version is its <code>groupId</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The namespace of an npm package is its <code>scope</code>.
+     * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     * Python and NuGet package versions do not contain a corresponding component, package versions of those formats do
+     * not have a namespace.
      * </p>
      * </li>
      * </ul>
      * 
      * @param namespace
-     *        The namespace of the package. The package component that specifies its namespace depends on its type. For
-     *        example: </p>
+     *        The namespace of the package version that contains the requested package version assets. The package
+     *        version component that specifies its namespace depends on its type. For example:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        The namespace of a Maven package is its <code>groupId</code>.
+     *        The namespace of a Maven package version is its <code>groupId</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        The namespace of an npm package is its <code>scope</code>.
+     *        The namespace of an npm package version is its <code>scope</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     *        Python and NuGet package versions do not contain a corresponding component, package versions of those
+     *        formats do not have a namespace.
      *        </p>
      *        </li>
      */
@@ -335,43 +338,45 @@ public class ListPackageVersionAssetsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The namespace of the package. The package component that specifies its namespace depends on its type. For
-     * example:
+     * The namespace of the package version that contains the requested package version assets. The package version
+     * component that specifies its namespace depends on its type. For example:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * The namespace of a Maven package is its <code>groupId</code>.
+     * The namespace of a Maven package version is its <code>groupId</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The namespace of an npm package is its <code>scope</code>.
+     * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     * Python and NuGet package versions do not contain a corresponding component, package versions of those formats do
+     * not have a namespace.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The namespace of the package. The package component that specifies its namespace depends on its type. For
-     *         example: </p>
+     * @return The namespace of the package version that contains the requested package version assets. The package
+     *         version component that specifies its namespace depends on its type. For example:</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         The namespace of a Maven package is its <code>groupId</code>.
+     *         The namespace of a Maven package version is its <code>groupId</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         The namespace of an npm package is its <code>scope</code>.
+     *         The namespace of an npm package version is its <code>scope</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     *         Python and NuGet package versions do not contain a corresponding component, package versions of those
+     *         formats do not have a namespace.
      *         </p>
      *         </li>
      */
@@ -382,44 +387,46 @@ public class ListPackageVersionAssetsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The namespace of the package. The package component that specifies its namespace depends on its type. For
-     * example:
+     * The namespace of the package version that contains the requested package version assets. The package version
+     * component that specifies its namespace depends on its type. For example:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * The namespace of a Maven package is its <code>groupId</code>.
+     * The namespace of a Maven package version is its <code>groupId</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The namespace of an npm package is its <code>scope</code>.
+     * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     * Python and NuGet package versions do not contain a corresponding component, package versions of those formats do
+     * not have a namespace.
      * </p>
      * </li>
      * </ul>
      * 
      * @param namespace
-     *        The namespace of the package. The package component that specifies its namespace depends on its type. For
-     *        example: </p>
+     *        The namespace of the package version that contains the requested package version assets. The package
+     *        version component that specifies its namespace depends on its type. For example:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        The namespace of a Maven package is its <code>groupId</code>.
+     *        The namespace of a Maven package version is its <code>groupId</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        The namespace of an npm package is its <code>scope</code>.
+     *        The namespace of an npm package version is its <code>scope</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     *        Python and NuGet package versions do not contain a corresponding component, package versions of those
+     *        formats do not have a namespace.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -432,11 +439,11 @@ public class ListPackageVersionAssetsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the package that contains the returned package version assets.
+     * The name of the package that contains the requested package version assets.
      * </p>
      * 
      * @param packageValue
-     *        The name of the package that contains the returned package version assets.
+     *        The name of the package that contains the requested package version assets.
      */
 
     public void setPackage(String packageValue) {
@@ -445,10 +452,10 @@ public class ListPackageVersionAssetsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the package that contains the returned package version assets.
+     * The name of the package that contains the requested package version assets.
      * </p>
      * 
-     * @return The name of the package that contains the returned package version assets.
+     * @return The name of the package that contains the requested package version assets.
      */
 
     public String getPackage() {
@@ -457,11 +464,11 @@ public class ListPackageVersionAssetsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the package that contains the returned package version assets.
+     * The name of the package that contains the requested package version assets.
      * </p>
      * 
      * @param packageValue
-     *        The name of the package that contains the returned package version assets.
+     *        The name of the package that contains the requested package version assets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -48,6 +48,14 @@ public class PackageVersionSummary implements Serializable, Cloneable, Structure
      * </p>
      */
     private String status;
+    /**
+     * <p>
+     * A <a href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionOrigin.html">
+     * PackageVersionOrigin</a> object that contains information about how the package version was added to the
+     * repository.
+     * </p>
+     */
+    private PackageVersionOrigin origin;
 
     /**
      * <p>
@@ -189,6 +197,58 @@ public class PackageVersionSummary implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * A <a href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionOrigin.html">
+     * PackageVersionOrigin</a> object that contains information about how the package version was added to the
+     * repository.
+     * </p>
+     * 
+     * @param origin
+     *        A <a href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionOrigin.html">
+     *        PackageVersionOrigin</a> object that contains information about how the package version was added to the
+     *        repository.
+     */
+
+    public void setOrigin(PackageVersionOrigin origin) {
+        this.origin = origin;
+    }
+
+    /**
+     * <p>
+     * A <a href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionOrigin.html">
+     * PackageVersionOrigin</a> object that contains information about how the package version was added to the
+     * repository.
+     * </p>
+     * 
+     * @return A <a href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionOrigin.html">
+     *         PackageVersionOrigin</a> object that contains information about how the package version was added to the
+     *         repository.
+     */
+
+    public PackageVersionOrigin getOrigin() {
+        return this.origin;
+    }
+
+    /**
+     * <p>
+     * A <a href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionOrigin.html">
+     * PackageVersionOrigin</a> object that contains information about how the package version was added to the
+     * repository.
+     * </p>
+     * 
+     * @param origin
+     *        A <a href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionOrigin.html">
+     *        PackageVersionOrigin</a> object that contains information about how the package version was added to the
+     *        repository.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PackageVersionSummary withOrigin(PackageVersionOrigin origin) {
+        setOrigin(origin);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -205,7 +265,9 @@ public class PackageVersionSummary implements Serializable, Cloneable, Structure
         if (getRevision() != null)
             sb.append("Revision: ").append(getRevision()).append(",");
         if (getStatus() != null)
-            sb.append("Status: ").append(getStatus());
+            sb.append("Status: ").append(getStatus()).append(",");
+        if (getOrigin() != null)
+            sb.append("Origin: ").append(getOrigin());
         sb.append("}");
         return sb.toString();
     }
@@ -232,6 +294,10 @@ public class PackageVersionSummary implements Serializable, Cloneable, Structure
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
+        if (other.getOrigin() == null ^ this.getOrigin() == null)
+            return false;
+        if (other.getOrigin() != null && other.getOrigin().equals(this.getOrigin()) == false)
+            return false;
         return true;
     }
 
@@ -243,6 +309,7 @@ public class PackageVersionSummary implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getVersion() == null) ? 0 : getVersion().hashCode());
         hashCode = prime * hashCode + ((getRevision() == null) ? 0 : getRevision().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getOrigin() == null) ? 0 : getOrigin().hashCode());
         return hashCode;
     }
 

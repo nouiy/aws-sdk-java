@@ -27,7 +27,7 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name for the new index.
+     * A name for the index.
      * </p>
      */
     private String name;
@@ -123,11 +123,11 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name for the new index.
+     * A name for the index.
      * </p>
      * 
      * @param name
-     *        The name for the new index.
+     *        A name for the index.
      */
 
     public void setName(String name) {
@@ -136,10 +136,10 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name for the new index.
+     * A name for the index.
      * </p>
      * 
-     * @return The name for the new index.
+     * @return A name for the index.
      */
 
     public String getName() {
@@ -148,11 +148,11 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name for the new index.
+     * A name for the index.
      * </p>
      * 
      * @param name
-     *        The name for the new index.
+     *        A name for the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

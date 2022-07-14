@@ -82,15 +82,6 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.outposts.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.outposts.model.transform.ConflictExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.outposts.model.transform.ValidationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("NotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.outposts.model.transform.NotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -99,6 +90,15 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.outposts.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.outposts.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.outposts.model.transform.ConflictExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.outposts.model.transform.ValidationExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.outposts.model.AWSOutpostsException.class));
 
     public static AWSOutpostsClientBuilder builder() {

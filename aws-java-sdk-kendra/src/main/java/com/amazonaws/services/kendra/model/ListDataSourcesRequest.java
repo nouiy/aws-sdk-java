@@ -27,7 +27,7 @@ public class ListDataSourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier of the index that contains the data source.
+     * The identifier of the index used with one or more data sources.
      * </p>
      */
     private String indexId;
@@ -48,11 +48,11 @@ public class ListDataSourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier of the index that contains the data source.
+     * The identifier of the index used with one or more data sources.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the index that contains the data source.
+     *        The identifier of the index used with one or more data sources.
      */
 
     public void setIndexId(String indexId) {
@@ -61,10 +61,10 @@ public class ListDataSourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier of the index that contains the data source.
+     * The identifier of the index used with one or more data sources.
      * </p>
      * 
-     * @return The identifier of the index that contains the data source.
+     * @return The identifier of the index used with one or more data sources.
      */
 
     public String getIndexId() {
@@ -73,11 +73,11 @@ public class ListDataSourcesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The identifier of the index that contains the data source.
+     * The identifier of the index used with one or more data sources.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the index that contains the data source.
+     *        The identifier of the index used with one or more data sources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

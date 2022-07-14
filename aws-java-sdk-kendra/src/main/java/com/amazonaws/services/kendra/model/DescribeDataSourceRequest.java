@@ -27,24 +27,24 @@ public class DescribeDataSourceRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The unique identifier of the data source to describe.
+     * The identifier of the data source.
      * </p>
      */
     private String id;
     /**
      * <p>
-     * The identifier of the index that contains the data source.
+     * The identifier of the index used with the data source.
      * </p>
      */
     private String indexId;
 
     /**
      * <p>
-     * The unique identifier of the data source to describe.
+     * The identifier of the data source.
      * </p>
      * 
      * @param id
-     *        The unique identifier of the data source to describe.
+     *        The identifier of the data source.
      */
 
     public void setId(String id) {
@@ -53,10 +53,10 @@ public class DescribeDataSourceRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The unique identifier of the data source to describe.
+     * The identifier of the data source.
      * </p>
      * 
-     * @return The unique identifier of the data source to describe.
+     * @return The identifier of the data source.
      */
 
     public String getId() {
@@ -65,11 +65,11 @@ public class DescribeDataSourceRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The unique identifier of the data source to describe.
+     * The identifier of the data source.
      * </p>
      * 
      * @param id
-     *        The unique identifier of the data source to describe.
+     *        The identifier of the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +80,11 @@ public class DescribeDataSourceRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier of the index that contains the data source.
+     * The identifier of the index used with the data source.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the index that contains the data source.
+     *        The identifier of the index used with the data source.
      */
 
     public void setIndexId(String indexId) {
@@ -93,10 +93,10 @@ public class DescribeDataSourceRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier of the index that contains the data source.
+     * The identifier of the index used with the data source.
      * </p>
      * 
-     * @return The identifier of the index that contains the data source.
+     * @return The identifier of the index used with the data source.
      */
 
     public String getIndexId() {
@@ -105,11 +105,11 @@ public class DescribeDataSourceRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The identifier of the index that contains the data source.
+     * The identifier of the index used with the data source.
      * </p>
      * 
      * @param indexId
-     *        The identifier of the index that contains the data source.
+     *        The identifier of the index used with the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

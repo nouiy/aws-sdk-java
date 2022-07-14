@@ -166,6 +166,7 @@ public class AmazonAthenaClient extends AmazonWebServiceClient implements Amazon
      * </p>
      * 
      * @param batchGetNamedQueryRequest
+     *        Contains an array of named query IDs.
      * @return Result of the BatchGetNamedQuery operation returned by the service.
      * @throws InternalServerException
      *         Indicates a platform issue, which may be due to a transient condition or outage.
@@ -294,6 +295,7 @@ public class AmazonAthenaClient extends AmazonWebServiceClient implements Amazon
      * </p>
      * 
      * @param batchGetQueryExecutionRequest
+     *        Contains an array of query execution IDs.
      * @return Result of the BatchGetQueryExecution operation returned by the service.
      * @throws InternalServerException
      *         Indicates a platform issue, which may be due to a transient condition or outage.

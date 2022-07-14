@@ -52,23 +52,25 @@ public class DeletePackageVersionsRequest extends com.amazonaws.AmazonWebService
     private String format;
     /**
      * <p>
-     * The namespace of the package. The package component that specifies its namespace depends on its type. For
-     * example:
+     * The namespace of the package versions to be deleted. The package version component that specifies its namespace
+     * depends on its type. For example:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * The namespace of a Maven package is its <code>groupId</code>.
+     * The namespace of a Maven package version is its <code>groupId</code>. The namespace is required when deleting
+     * Maven package versions.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The namespace of an npm package is its <code>scope</code>.
+     * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     * Python and NuGet package versions do not contain a corresponding component, package versions of those formats do
+     * not have a namespace.
      * </p>
      * </li>
      * </ul>
@@ -280,44 +282,48 @@ public class DeletePackageVersionsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The namespace of the package. The package component that specifies its namespace depends on its type. For
-     * example:
+     * The namespace of the package versions to be deleted. The package version component that specifies its namespace
+     * depends on its type. For example:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * The namespace of a Maven package is its <code>groupId</code>.
+     * The namespace of a Maven package version is its <code>groupId</code>. The namespace is required when deleting
+     * Maven package versions.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The namespace of an npm package is its <code>scope</code>.
+     * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     * Python and NuGet package versions do not contain a corresponding component, package versions of those formats do
+     * not have a namespace.
      * </p>
      * </li>
      * </ul>
      * 
      * @param namespace
-     *        The namespace of the package. The package component that specifies its namespace depends on its type. For
-     *        example: </p>
+     *        The namespace of the package versions to be deleted. The package version component that specifies its
+     *        namespace depends on its type. For example:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        The namespace of a Maven package is its <code>groupId</code>.
+     *        The namespace of a Maven package version is its <code>groupId</code>. The namespace is required when
+     *        deleting Maven package versions.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        The namespace of an npm package is its <code>scope</code>.
+     *        The namespace of an npm package version is its <code>scope</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     *        Python and NuGet package versions do not contain a corresponding component, package versions of those
+     *        formats do not have a namespace.
      *        </p>
      *        </li>
      */
@@ -328,43 +334,47 @@ public class DeletePackageVersionsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The namespace of the package. The package component that specifies its namespace depends on its type. For
-     * example:
+     * The namespace of the package versions to be deleted. The package version component that specifies its namespace
+     * depends on its type. For example:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * The namespace of a Maven package is its <code>groupId</code>.
+     * The namespace of a Maven package version is its <code>groupId</code>. The namespace is required when deleting
+     * Maven package versions.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The namespace of an npm package is its <code>scope</code>.
+     * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     * Python and NuGet package versions do not contain a corresponding component, package versions of those formats do
+     * not have a namespace.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The namespace of the package. The package component that specifies its namespace depends on its type. For
-     *         example: </p>
+     * @return The namespace of the package versions to be deleted. The package version component that specifies its
+     *         namespace depends on its type. For example:</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         The namespace of a Maven package is its <code>groupId</code>.
+     *         The namespace of a Maven package version is its <code>groupId</code>. The namespace is required when
+     *         deleting Maven package versions.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         The namespace of an npm package is its <code>scope</code>.
+     *         The namespace of an npm package version is its <code>scope</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     *         Python and NuGet package versions do not contain a corresponding component, package versions of those
+     *         formats do not have a namespace.
      *         </p>
      *         </li>
      */
@@ -375,44 +385,48 @@ public class DeletePackageVersionsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The namespace of the package. The package component that specifies its namespace depends on its type. For
-     * example:
+     * The namespace of the package versions to be deleted. The package version component that specifies its namespace
+     * depends on its type. For example:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * The namespace of a Maven package is its <code>groupId</code>.
+     * The namespace of a Maven package version is its <code>groupId</code>. The namespace is required when deleting
+     * Maven package versions.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The namespace of an npm package is its <code>scope</code>.
+     * The namespace of an npm package version is its <code>scope</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     * Python and NuGet package versions do not contain a corresponding component, package versions of those formats do
+     * not have a namespace.
      * </p>
      * </li>
      * </ul>
      * 
      * @param namespace
-     *        The namespace of the package. The package component that specifies its namespace depends on its type. For
-     *        example: </p>
+     *        The namespace of the package versions to be deleted. The package version component that specifies its
+     *        namespace depends on its type. For example:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        The namespace of a Maven package is its <code>groupId</code>.
+     *        The namespace of a Maven package version is its <code>groupId</code>. The namespace is required when
+     *        deleting Maven package versions.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        The namespace of an npm package is its <code>scope</code>.
+     *        The namespace of an npm package version is its <code>scope</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        A Python package does not contain a corresponding component, so Python packages do not have a namespace.
+     *        Python and NuGet package versions do not contain a corresponding component, package versions of those
+     *        formats do not have a namespace.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

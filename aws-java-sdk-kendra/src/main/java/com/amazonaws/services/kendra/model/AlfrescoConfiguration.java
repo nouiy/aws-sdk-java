@@ -21,6 +21,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Provides the configuration information to connect to Alfresco as your data source.
  * </p>
+ * <note>
+ * <p>
+ * Alfresco data source connector is currently in preview mode. Basic authentication is currently supported. If you
+ * would like to use Alfresco connector in production, contact <a href="http://aws.amazon.com/contact-us/">Support</a>.
+ * </p>
+ * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/AlfrescoConfiguration" target="_top">AWS API
  *      Documentation</a>
@@ -73,7 +79,7 @@ public class AlfrescoConfiguration implements Serializable, Cloneable, Structure
     private Boolean crawlSystemFolders;
     /**
      * <p>
-     * <code>TRUE</code> to index comments of wikis and blogs.
+     * <code>TRUE</code> to index comments of blogs and other content.
      * </p>
      */
     private Boolean crawlComments;
@@ -431,11 +437,11 @@ public class AlfrescoConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * <code>TRUE</code> to index comments of wikis and blogs.
+     * <code>TRUE</code> to index comments of blogs and other content.
      * </p>
      * 
      * @param crawlComments
-     *        <code>TRUE</code> to index comments of wikis and blogs.
+     *        <code>TRUE</code> to index comments of blogs and other content.
      */
 
     public void setCrawlComments(Boolean crawlComments) {
@@ -444,10 +450,10 @@ public class AlfrescoConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * <code>TRUE</code> to index comments of wikis and blogs.
+     * <code>TRUE</code> to index comments of blogs and other content.
      * </p>
      * 
-     * @return <code>TRUE</code> to index comments of wikis and blogs.
+     * @return <code>TRUE</code> to index comments of blogs and other content.
      */
 
     public Boolean getCrawlComments() {
@@ -456,11 +462,11 @@ public class AlfrescoConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * <code>TRUE</code> to index comments of wikis and blogs.
+     * <code>TRUE</code> to index comments of blogs and other content.
      * </p>
      * 
      * @param crawlComments
-     *        <code>TRUE</code> to index comments of wikis and blogs.
+     *        <code>TRUE</code> to index comments of blogs and other content.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -471,10 +477,10 @@ public class AlfrescoConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * <code>TRUE</code> to index comments of wikis and blogs.
+     * <code>TRUE</code> to index comments of blogs and other content.
      * </p>
      * 
-     * @return <code>TRUE</code> to index comments of wikis and blogs.
+     * @return <code>TRUE</code> to index comments of blogs and other content.
      */
 
     public Boolean isCrawlComments() {

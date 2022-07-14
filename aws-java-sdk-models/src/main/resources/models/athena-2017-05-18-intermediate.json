@@ -118,7 +118,7 @@
         "variableDeclarationType" : "BatchGetNamedQueryRequest",
         "variableName" : "batchGetNamedQueryRequest",
         "variableType" : "BatchGetNamedQueryRequest",
-        "documentation" : "",
+        "documentation" : "<p>Contains an array of named query IDs.</p>",
         "simpleType" : "BatchGetNamedQueryRequest",
         "variableSetterType" : "BatchGetNamedQueryRequest"
       },
@@ -200,7 +200,7 @@
         "variableDeclarationType" : "BatchGetQueryExecutionRequest",
         "variableName" : "batchGetQueryExecutionRequest",
         "variableType" : "BatchGetQueryExecutionRequest",
-        "documentation" : "",
+        "documentation" : "<p>Contains an array of query execution IDs.</p>",
         "simpleType" : "BatchGetQueryExecutionRequest",
         "variableSetterType" : "BatchGetQueryExecutionRequest"
       },
@@ -2406,7 +2406,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "",
+      "documentation" : "<p>Contains an array of named query IDs.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -4575,7 +4575,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "",
+      "documentation" : "<p>Contains an array of query execution IDs.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -33765,7 +33765,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "OutputLocation",
-        "c2jShape" : "String",
+        "c2jShape" : "ResultOutputLocation",
         "deprecated" : false,
         "documentation" : "<p>The location in Amazon S3 where your query results are stored, such as <code>s3://path/to/query/bucket/</code>. To run the query, you must specify the query results location using one of the ways: either for individual queries using either this setting (client-side), or in the workgroup, using <a>WorkGroupConfiguration</a>. If none of them is set, Athena issues an error that no output location is provided. For more information, see <a href=\"https://docs.aws.amazon.com/athena/latest/ug/querying.html\">Query Results</a>. If workgroup settings override client-side settings, then the query uses the settings specified for the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.</p>",
         "endpointDiscoveryId" : false,
@@ -33903,7 +33903,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "ExpectedBucketOwner",
-        "c2jShape" : "String",
+        "c2jShape" : "AwsAccountId",
         "deprecated" : false,
         "documentation" : "<p>The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for <code>ExpectedBucketOwner</code> when it makes Amazon S3 calls to your specified output location. If the <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match the actual owner of the Amazon S3 bucket, the call fails with a permissions error.</p> <p>This is a client-side setting. If workgroup settings override client-side settings, then the query uses the <code>ExpectedBucketOwner</code> setting that is specified for the workgroup, and also uses the location for storing query results specified in the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a href=\"https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html\">Workgroup Settings Override Client-Side Settings</a>.</p>",
         "endpointDiscoveryId" : false,
@@ -34183,7 +34183,7 @@
         },
         "ExpectedBucketOwner" : {
           "c2jName" : "ExpectedBucketOwner",
-          "c2jShape" : "String",
+          "c2jShape" : "AwsAccountId",
           "deprecated" : false,
           "documentation" : "<p>The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for <code>ExpectedBucketOwner</code> when it makes Amazon S3 calls to your specified output location. If the <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match the actual owner of the Amazon S3 bucket, the call fails with a permissions error.</p> <p>This is a client-side setting. If workgroup settings override client-side settings, then the query uses the <code>ExpectedBucketOwner</code> setting that is specified for the workgroup, and also uses the location for storing query results specified in the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a href=\"https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html\">Workgroup Settings Override Client-Side Settings</a>.</p>",
           "endpointDiscoveryId" : false,
@@ -34253,7 +34253,7 @@
         },
         "OutputLocation" : {
           "c2jName" : "OutputLocation",
-          "c2jShape" : "String",
+          "c2jShape" : "ResultOutputLocation",
           "deprecated" : false,
           "documentation" : "<p>The location in Amazon S3 where your query results are stored, such as <code>s3://path/to/query/bucket/</code>. To run the query, you must specify the query results location using one of the ways: either for individual queries using either this setting (client-side), or in the workgroup, using <a>WorkGroupConfiguration</a>. If none of them is set, Athena issues an error that no output location is provided. For more information, see <a href=\"https://docs.aws.amazon.com/athena/latest/ug/querying.html\">Query Results</a>. If workgroup settings override client-side settings, then the query uses the settings specified for the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.</p>",
           "endpointDiscoveryId" : false,
@@ -34366,7 +34366,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "OutputLocation",
-        "c2jShape" : "String",
+        "c2jShape" : "ResultOutputLocation",
         "deprecated" : false,
         "documentation" : "<p>The location in Amazon S3 where your query results are stored, such as <code>s3://path/to/query/bucket/</code>. For more information, see <a href=\"https://docs.aws.amazon.com/athena/latest/ug/querying.html\">Query Results</a> If workgroup settings override client-side settings, then the query uses the location for the query results and the encryption configuration that are specified for the workgroup. The \"workgroup settings override\" is specified in <code>EnforceWorkGroupConfiguration</code> (true/false) in the <code>WorkGroupConfiguration</code>. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.</p>",
         "endpointDiscoveryId" : false,
@@ -34642,7 +34642,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "ExpectedBucketOwner",
-        "c2jShape" : "String",
+        "c2jShape" : "AwsAccountId",
         "deprecated" : false,
         "documentation" : "<p>The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for <code>ExpectedBucketOwner</code> when it makes Amazon S3 calls to your specified output location. If the <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match the actual owner of the Amazon S3 bucket, the call fails with a permissions error.</p> <p>If workgroup settings override client-side settings, then the query uses the <code>ExpectedBucketOwner</code> setting that is specified for the workgroup, and also uses the location for storing query results specified in the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a href=\"https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html\">Workgroup Settings Override Client-Side Settings</a>.</p>",
         "endpointDiscoveryId" : false,
@@ -35060,7 +35060,7 @@
         },
         "ExpectedBucketOwner" : {
           "c2jName" : "ExpectedBucketOwner",
-          "c2jShape" : "String",
+          "c2jShape" : "AwsAccountId",
           "deprecated" : false,
           "documentation" : "<p>The Amazon Web Services account ID that you expect to be the owner of the Amazon S3 bucket specified by <a>ResultConfiguration$OutputLocation</a>. If set, Athena uses the value for <code>ExpectedBucketOwner</code> when it makes Amazon S3 calls to your specified output location. If the <code>ExpectedBucketOwner</code> Amazon Web Services account ID does not match the actual owner of the Amazon S3 bucket, the call fails with a permissions error.</p> <p>If workgroup settings override client-side settings, then the query uses the <code>ExpectedBucketOwner</code> setting that is specified for the workgroup, and also uses the location for storing query results specified in the workgroup. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a> and <a href=\"https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html\">Workgroup Settings Override Client-Side Settings</a>.</p>",
           "endpointDiscoveryId" : false,
@@ -35130,7 +35130,7 @@
         },
         "OutputLocation" : {
           "c2jName" : "OutputLocation",
-          "c2jShape" : "String",
+          "c2jShape" : "ResultOutputLocation",
           "deprecated" : false,
           "documentation" : "<p>The location in Amazon S3 where your query results are stored, such as <code>s3://path/to/query/bucket/</code>. For more information, see <a href=\"https://docs.aws.amazon.com/athena/latest/ug/querying.html\">Query Results</a> If workgroup settings override client-side settings, then the query uses the location for the query results and the encryption configuration that are specified for the workgroup. The \"workgroup settings override\" is specified in <code>EnforceWorkGroupConfiguration</code> (true/false) in the <code>WorkGroupConfiguration</code>. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.</p>",
           "endpointDiscoveryId" : false,

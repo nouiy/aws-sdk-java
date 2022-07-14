@@ -583,7 +583,7 @@ public interface AWSGlueAsync extends AWSGlue {
 
     /**
      * <p>
-     * Cancels the statement..
+     * Cancels the statement.
      * </p>
      * 
      * @param cancelStatementRequest
@@ -596,7 +596,7 @@ public interface AWSGlueAsync extends AWSGlue {
 
     /**
      * <p>
-     * Cancels the statement..
+     * Cancels the statement.
      * </p>
      * 
      * @param cancelStatementRequest
@@ -4661,7 +4661,7 @@ public interface AWSGlueAsync extends AWSGlue {
 
     /**
      * <p>
-     * Retrieve a session..
+     * Retrieve a list of sessions.
      * </p>
      * 
      * @param listSessionsRequest
@@ -4674,7 +4674,7 @@ public interface AWSGlueAsync extends AWSGlue {
 
     /**
      * <p>
-     * Retrieve a session..
+     * Retrieve a list of sessions.
      * </p>
      * 
      * @param listSessionsRequest
@@ -6142,7 +6142,7 @@ public interface AWSGlueAsync extends AWSGlue {
 
     /**
      * <p>
-     * Updates an existing job definition.
+     * Updates an existing job definition. The previous job definition is completely overwritten by this information.
      * </p>
      * 
      * @param updateJobRequest
@@ -6155,7 +6155,7 @@ public interface AWSGlueAsync extends AWSGlue {
 
     /**
      * <p>
-     * Updates an existing job definition.
+     * Updates an existing job definition. The previous job definition is completely overwritten by this information.
      * </p>
      * 
      * @param updateJobRequest

@@ -207,6 +207,48 @@ public interface AWSkendra {
 
     /**
      * <p>
+     * Creates an access configuration for your documents. This includes user and group access information for your
+     * documents. This is useful for user context filtering, where search results are filtered based on the user or
+     * their group access to documents.
+     * </p>
+     * <p>
+     * You can use this to re-configure your existing document level access control without indexing all of your
+     * documents again. For example, your index contains top-secret company documents that only certain employees or
+     * users should access. One of these users leaves the company or switches to a team that should be blocked from
+     * access to top-secret documents. Your documents in your index still give this user access to top-secret documents
+     * due to the user having access at the time your documents were indexed. You can create a specific access control
+     * configuration for this user with deny access. You can later update the access control configuration to allow
+     * access in the case the user returns to the company and re-joins the 'top-secret' team. You can re-configure
+     * access control for your documents circumstances change.
+     * </p>
+     * <p>
+     * To apply your access control configuration to certain documents, you call the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_BatchPutDocument.html">BatchPutDocument</a> API with the
+     * <code>AccessControlConfigurationId</code> included in the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_Document.html">Document</a> object. If you use an S3
+     * bucket as a data source, you update the <code>.metadata.json</code> with the
+     * <code>AccessControlConfigurationId</code> and synchronize your data source. Amazon Kendra currently only supports
+     * access control configuration for S3 data sources and documents indexed using the <code>BatchPutDocument</code>
+     * API.
+     * </p>
+     * 
+     * @param createAccessControlConfigurationRequest
+     * @return Result of the CreateAccessControlConfiguration operation returned by the service.
+     * @throws ServiceQuotaExceededException
+     * @throws ValidationException
+     * @throws ThrottlingException
+     * @throws ConflictException
+     * @throws AccessDeniedException
+     * @throws ResourceNotFoundException
+     * @throws InternalServerException
+     * @sample AWSkendra.CreateAccessControlConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/CreateAccessControlConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateAccessControlConfigurationResult createAccessControlConfiguration(CreateAccessControlConfigurationRequest createAccessControlConfigurationRequest);
+
+    /**
+     * <p>
      * Creates a data source that you want to use with an Amazon Kendra index.
      * </p>
      * <p>
@@ -276,7 +318,7 @@ public interface AWSkendra {
      * </p>
      * <p>
      * For an example of adding an FAQ to an index using Python and Java SDKs, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/in-creating-faq.html#using-faq-file">Using you FAQ file</a>.
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/in-creating-faq.html#using-faq-file">Using your FAQ file</a>.
      * </p>
      * 
      * @param createFaqRequest
@@ -296,7 +338,7 @@ public interface AWSkendra {
 
     /**
      * <p>
-     * Creates a new Amazon Kendra index. Index creation is an asynchronous API. To determine if index creation has
+     * Creates an Amazon Kendra index. Index creation is an asynchronous API. To determine if index creation has
      * completed, check the <code>Status</code> field returned from a call to <code>DescribeIndex</code>. The
      * <code>Status</code> field is set to <code>ACTIVE</code> when the index is ready to use.
      * </p>
@@ -391,6 +433,27 @@ public interface AWSkendra {
      *      Documentation</a>
      */
     CreateThesaurusResult createThesaurus(CreateThesaurusRequest createThesaurusRequest);
+
+    /**
+     * <p>
+     * Deletes an access control configuration that you created for your documents in an index. This includes user and
+     * group access information for your documents. This is useful for user context filtering, where search results are
+     * filtered based on the user or their group access to documents.
+     * </p>
+     * 
+     * @param deleteAccessControlConfigurationRequest
+     * @return Result of the DeleteAccessControlConfiguration operation returned by the service.
+     * @throws ValidationException
+     * @throws ThrottlingException
+     * @throws ConflictException
+     * @throws ResourceNotFoundException
+     * @throws AccessDeniedException
+     * @throws InternalServerException
+     * @sample AWSkendra.DeleteAccessControlConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DeleteAccessControlConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteAccessControlConfigurationResult deleteAccessControlConfiguration(DeleteAccessControlConfigurationRequest deleteAccessControlConfigurationRequest);
 
     /**
      * <p>
@@ -559,6 +622,27 @@ public interface AWSkendra {
 
     /**
      * <p>
+     * Gets information about an access control configuration that you created for your documents in an index. This
+     * includes user and group access information for your documents. This is useful for user context filtering, where
+     * search results are filtered based on the user or their group access to documents.
+     * </p>
+     * 
+     * @param describeAccessControlConfigurationRequest
+     * @return Result of the DescribeAccessControlConfiguration operation returned by the service.
+     * @throws ValidationException
+     * @throws ThrottlingException
+     * @throws ResourceNotFoundException
+     * @throws AccessDeniedException
+     * @throws InternalServerException
+     * @sample AWSkendra.DescribeAccessControlConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DescribeAccessControlConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeAccessControlConfigurationResult describeAccessControlConfiguration(
+            DescribeAccessControlConfigurationRequest describeAccessControlConfigurationRequest);
+
+    /**
+     * <p>
      * Gets information about an Amazon Kendra data source.
      * </p>
      * 
@@ -616,7 +700,7 @@ public interface AWSkendra {
 
     /**
      * <p>
-     * Describes an existing Amazon Kendra index.
+     * Gets information about an existing Amazon Kendra index.
      * </p>
      * 
      * @param describeIndexRequest
@@ -659,7 +743,7 @@ public interface AWSkendra {
 
     /**
      * <p>
-     * Describes a block list used for query suggestions for an index.
+     * Gets information about a block list used for query suggestions for an index.
      * </p>
      * <p>
      * This is used to check the current settings that are applied to a block list.
@@ -684,7 +768,7 @@ public interface AWSkendra {
 
     /**
      * <p>
-     * Describes the settings of query suggestions for an index.
+     * Gets information on the settings of query suggestions for an index.
      * </p>
      * <p>
      * This is used to check the current settings applied to query suggestions.
@@ -709,7 +793,7 @@ public interface AWSkendra {
 
     /**
      * <p>
-     * Describes an existing Amazon Kendra thesaurus.
+     * Gets information about an existing Amazon Kendra thesaurus.
      * </p>
      * 
      * @param describeThesaurusRequest
@@ -811,6 +895,26 @@ public interface AWSkendra {
      *      Documentation</a>
      */
     GetSnapshotsResult getSnapshots(GetSnapshotsRequest getSnapshotsRequest);
+
+    /**
+     * <p>
+     * Lists one or more access control configurations for an index. This includes user and group access information for
+     * your documents. This is useful for user context filtering, where search results are filtered based on the user or
+     * their group access to documents.
+     * </p>
+     * 
+     * @param listAccessControlConfigurationsRequest
+     * @return Result of the ListAccessControlConfigurations operation returned by the service.
+     * @throws ValidationException
+     * @throws ThrottlingException
+     * @throws ResourceNotFoundException
+     * @throws AccessDeniedException
+     * @throws InternalServerException
+     * @sample AWSkendra.ListAccessControlConfigurations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ListAccessControlConfigurations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListAccessControlConfigurationsResult listAccessControlConfigurations(ListAccessControlConfigurationsRequest listAccessControlConfigurationsRequest);
 
     /**
      * <p>
@@ -1015,7 +1119,7 @@ public interface AWSkendra {
 
     /**
      * <p>
-     * Lists the Amazon Kendra thesauri associated with an index.
+     * Lists the thesauri for an index.
      * </p>
      * 
      * @param listThesauriRequest
@@ -1042,8 +1146,8 @@ public interface AWSkendra {
      * can see top-secret company documents in their search results.
      * </p>
      * <p>
-     * You map users to their groups when you want to filter search results for different users based on their group’s
-     * access to documents. For more information on filtering search results for different users, see <a
+     * This is useful for user context filtering, where search results are filtered based on the user or their group
+     * access to documents. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/user-context-filter.html">Filtering on user context</a>.
      * </p>
      * <p>
@@ -1222,6 +1326,46 @@ public interface AWSkendra {
 
     /**
      * <p>
+     * Updates an access control configuration for your documents in an index. This includes user and group access
+     * information for your documents. This is useful for user context filtering, where search results are filtered
+     * based on the user or their group access to documents.
+     * </p>
+     * <p>
+     * You can update an access control configuration you created without indexing all of your documents again. For
+     * example, your index contains top-secret company documents that only certain employees or users should access. You
+     * created an 'allow' access control configuration for one user who recently joined the 'top-secret' team, switching
+     * from a team with 'deny' access to top-secret documents. However, the user suddenly returns to their previous team
+     * and should no longer have access to top secret documents. You can update the access control configuration to
+     * re-configure access control for your documents as circumstances change.
+     * </p>
+     * <p>
+     * You call the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_BatchPutDocument.html">BatchPutDocument</a> API to apply
+     * the updated access control configuration, with the <code>AccessControlConfigurationId</code> included in the <a
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_Document.html">Document</a> object. If you use an S3
+     * bucket as a data source, you synchronize your data source to apply the the
+     * <code>AccessControlConfigurationId</code> in the <code>.metadata.json</code> file. Amazon Kendra currently only
+     * supports access control configuration for S3 data sources and documents indexed using the
+     * <code>BatchPutDocument</code> API.
+     * </p>
+     * 
+     * @param updateAccessControlConfigurationRequest
+     * @return Result of the UpdateAccessControlConfiguration operation returned by the service.
+     * @throws ValidationException
+     * @throws ThrottlingException
+     * @throws ConflictException
+     * @throws ResourceNotFoundException
+     * @throws AccessDeniedException
+     * @throws ServiceQuotaExceededException
+     * @throws InternalServerException
+     * @sample AWSkendra.UpdateAccessControlConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UpdateAccessControlConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateAccessControlConfigurationResult updateAccessControlConfiguration(UpdateAccessControlConfigurationRequest updateAccessControlConfigurationRequest);
+
+    /**
+     * <p>
      * Updates an existing Amazon Kendra data source.
      * </p>
      * 
@@ -1354,7 +1498,7 @@ public interface AWSkendra {
 
     /**
      * <p>
-     * Updates a thesaurus file associated with an index.
+     * Updates a thesaurus for an index.
      * </p>
      * 
      * @param updateThesaurusRequest

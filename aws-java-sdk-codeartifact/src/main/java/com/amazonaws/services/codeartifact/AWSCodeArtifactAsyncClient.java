@@ -185,6 +185,13 @@ import java.util.concurrent.ExecutorService;
  * </li>
  * <li>
  * <p>
+ * <code>DescribePackage</code>: Returns a <a
+ * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageDescription.html"
+ * >PackageDescription</a> object that contains details about a package.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <code>DescribePackageVersion</code>: Returns a <a
  * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionDescription.html"
  * >PackageVersionDescription</a> object that contains details about a package version.
@@ -302,6 +309,12 @@ import java.util.concurrent.ExecutorService;
  * <li>
  * <p>
  * <code>PutDomainPermissionsPolicy</code>: Attaches a resource policy to a domain.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <code>PutPackageOriginConfiguration</code>: Sets the package origin configuration for a package, which determine how
+ * new versions of the package can be added to a specific repository.
  * </p>
  * </li>
  * <li>
@@ -684,6 +697,39 @@ public class AWSCodeArtifactAsyncClient extends AWSCodeArtifactClient implements
 
                 try {
                     result = executeDescribeDomain(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribePackageResult> describePackageAsync(DescribePackageRequest request) {
+
+        return describePackageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribePackageResult> describePackageAsync(final DescribePackageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribePackageRequest, DescribePackageResult> asyncHandler) {
+        final DescribePackageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribePackageResult>() {
+            @Override
+            public DescribePackageResult call() throws Exception {
+                DescribePackageResult result = null;
+
+                try {
+                    result = executeDescribePackage(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1314,6 +1360,40 @@ public class AWSCodeArtifactAsyncClient extends AWSCodeArtifactClient implements
 
                 try {
                     result = executePutDomainPermissionsPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutPackageOriginConfigurationResult> putPackageOriginConfigurationAsync(PutPackageOriginConfigurationRequest request) {
+
+        return putPackageOriginConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutPackageOriginConfigurationResult> putPackageOriginConfigurationAsync(
+            final PutPackageOriginConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutPackageOriginConfigurationRequest, PutPackageOriginConfigurationResult> asyncHandler) {
+        final PutPackageOriginConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutPackageOriginConfigurationResult>() {
+            @Override
+            public PutPackageOriginConfigurationResult call() throws Exception {
+                PutPackageOriginConfigurationResult result = null;
+
+                try {
+                    result = executePutPackageOriginConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

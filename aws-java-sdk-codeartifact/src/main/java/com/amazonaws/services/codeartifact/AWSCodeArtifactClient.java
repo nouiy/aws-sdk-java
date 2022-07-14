@@ -210,6 +210,13 @@ import com.amazonaws.services.codeartifact.model.transform.*;
  * </li>
  * <li>
  * <p>
+ * <code>DescribePackage</code>: Returns a <a
+ * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageDescription.html"
+ * >PackageDescription</a> object that contains details about a package.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <code>DescribePackageVersion</code>: Returns a <a
  * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionDescription.html"
  * >PackageVersionDescription</a> object that contains details about a package version.
@@ -327,6 +334,12 @@ import com.amazonaws.services.codeartifact.model.transform.*;
  * <li>
  * <p>
  * <code>PutDomainPermissionsPolicy</code>: Attaches a resource policy to a domain.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <code>PutPackageOriginConfiguration</code>: Sets the package origin configuration for a package, which determine how
+ * new versions of the package can be added to a specific repository.
  * </p>
  * </li>
  * <li>
@@ -1157,6 +1170,72 @@ public class AWSCodeArtifactClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
+     * Returns a <a href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageDescription.html">
+     * PackageDescription</a> object that contains information about the requested package.
+     * </p>
+     * 
+     * @param describePackageRequest
+     * @return Result of the DescribePackage operation returned by the service.
+     * @throws AccessDeniedException
+     *         The operation did not succeed because of an unauthorized access attempt.
+     * @throws InternalServerException
+     *         The operation did not succeed because of an error that occurred inside CodeArtifact.
+     * @throws ResourceNotFoundException
+     *         The operation did not succeed because the resource requested is not found in the service.
+     * @throws ThrottlingException
+     *         The operation did not succeed because too many requests are sent to the service.
+     * @throws ValidationException
+     *         The operation did not succeed because a parameter in the request was sent with an invalid value.
+     * @sample AWSCodeArtifact.DescribePackage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/DescribePackage" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribePackageResult describePackage(DescribePackageRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribePackage(request);
+    }
+
+    @SdkInternalApi
+    final DescribePackageResult executeDescribePackage(DescribePackageRequest describePackageRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describePackageRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribePackageRequest> request = null;
+        Response<DescribePackageResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribePackageRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describePackageRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "codeartifact");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribePackage");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribePackageResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribePackageResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a <a
      * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionDescription.html"
      * >PackageVersionDescription</a> object that contains information about the requested package version.
@@ -1680,7 +1759,9 @@ public class AWSCodeArtifactClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Gets the readme file or descriptive text for a package version.
+     * Gets the readme file or descriptive text for a package version. For packages that do not contain a readme file,
+     * CodeArtifact extracts a description from a metadata file. For example, from the <code>&lt;description&gt;</code>
+     * element in the <code>pom.xml</code> file of a Maven package.
      * </p>
      * <p>
      * The returned text might contain formatting. For example, it might contain formatting for Markdown or
@@ -2511,6 +2592,87 @@ public class AWSCodeArtifactClient extends AmazonWebServiceClient implements AWS
             HttpResponseHandler<AmazonWebServiceResponse<PutDomainPermissionsPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new PutDomainPermissionsPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Sets the package origin configuration for a package.
+     * </p>
+     * <p>
+     * The package origin configuration determines how new versions of a package can be added to a repository. You can
+     * allow or block direct publishing of new package versions, or ingestion and retaining of new package versions from
+     * an external connection or upstream source. For more information about package origin controls and configuration,
+     * see <a href="https://docs.aws.amazon.com/codeartifact/latest/ug/package-origin-controls.html">Editing package
+     * origin controls</a> in the <i>CodeArtifact User Guide</i>.
+     * </p>
+     * <p>
+     * <code>PutPackageOriginConfiguration</code> can be called on a package that doesn't yet exist in the repository.
+     * When called on a package that does not exist, a package is created in the repository with no versions and the
+     * requested restrictions are set on the package. This can be used to preemptively block ingesting or retaining any
+     * versions from external connections or upstream repositories, or to block publishing any versions of the package
+     * into the repository before connecting any package managers or publishers to the repository.
+     * </p>
+     * 
+     * @param putPackageOriginConfigurationRequest
+     * @return Result of the PutPackageOriginConfiguration operation returned by the service.
+     * @throws AccessDeniedException
+     *         The operation did not succeed because of an unauthorized access attempt.
+     * @throws InternalServerException
+     *         The operation did not succeed because of an error that occurred inside CodeArtifact.
+     * @throws ResourceNotFoundException
+     *         The operation did not succeed because the resource requested is not found in the service.
+     * @throws ThrottlingException
+     *         The operation did not succeed because too many requests are sent to the service.
+     * @throws ValidationException
+     *         The operation did not succeed because a parameter in the request was sent with an invalid value.
+     * @sample AWSCodeArtifact.PutPackageOriginConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/PutPackageOriginConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PutPackageOriginConfigurationResult putPackageOriginConfiguration(PutPackageOriginConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executePutPackageOriginConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final PutPackageOriginConfigurationResult executePutPackageOriginConfiguration(PutPackageOriginConfigurationRequest putPackageOriginConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putPackageOriginConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutPackageOriginConfigurationRequest> request = null;
+        Response<PutPackageOriginConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutPackageOriginConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(putPackageOriginConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "codeartifact");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutPackageOriginConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutPackageOriginConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new PutPackageOriginConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

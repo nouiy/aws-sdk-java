@@ -41,14 +41,14 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
      * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password required to
      * connect to the Confluence instance. If you use Confluence cloud, you use a generated API token as the password.
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluemce data
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluence data
      * source</a>.
      * </p>
      */
     private String secretArn;
     /**
      * <p>
-     * The version or the type of the Confluence installation to connect to.
+     * The version or the type of Confluence installation to connect to.
      * </p>
      */
     private String version;
@@ -160,7 +160,7 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
      * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password required to
      * connect to the Confluence instance. If you use Confluence cloud, you use a generated API token as the password.
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluemce data
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluence data
      * source</a>.
      * </p>
      * 
@@ -168,7 +168,7 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
      *        The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password
      *        required to connect to the Confluence instance. If you use Confluence cloud, you use a generated API token
      *        as the password. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluemce data
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluence data
      *        source</a>.
      */
 
@@ -181,14 +181,14 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
      * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password required to
      * connect to the Confluence instance. If you use Confluence cloud, you use a generated API token as the password.
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluemce data
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluence data
      * source</a>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password
      *         required to connect to the Confluence instance. If you use Confluence cloud, you use a generated API
      *         token as the password. For more information, see <a
-     *         href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluemce data
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluence data
      *         source</a>.
      */
 
@@ -201,7 +201,7 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
      * The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password required to
      * connect to the Confluence instance. If you use Confluence cloud, you use a generated API token as the password.
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluemce data
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluence data
      * source</a>.
      * </p>
      * 
@@ -209,7 +209,7 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
      *        The Amazon Resource Name (ARN) of an Secrets Manager secret that contains the user name and password
      *        required to connect to the Confluence instance. If you use Confluence cloud, you use a generated API token
      *        as the password. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluemce data
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-confluence.html">Using a Confluence data
      *        source</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -221,11 +221,11 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The version or the type of the Confluence installation to connect to.
+     * The version or the type of Confluence installation to connect to.
      * </p>
      * 
      * @param version
-     *        The version or the type of the Confluence installation to connect to.
+     *        The version or the type of Confluence installation to connect to.
      * @see ConfluenceVersion
      */
 
@@ -235,10 +235,10 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The version or the type of the Confluence installation to connect to.
+     * The version or the type of Confluence installation to connect to.
      * </p>
      * 
-     * @return The version or the type of the Confluence installation to connect to.
+     * @return The version or the type of Confluence installation to connect to.
      * @see ConfluenceVersion
      */
 
@@ -248,11 +248,11 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The version or the type of the Confluence installation to connect to.
+     * The version or the type of Confluence installation to connect to.
      * </p>
      * 
      * @param version
-     *        The version or the type of the Confluence installation to connect to.
+     *        The version or the type of Confluence installation to connect to.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ConfluenceVersion
      */
@@ -264,11 +264,11 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The version or the type of the Confluence installation to connect to.
+     * The version or the type of Confluence installation to connect to.
      * </p>
      * 
      * @param version
-     *        The version or the type of the Confluence installation to connect to.
+     *        The version or the type of Confluence installation to connect to.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ConfluenceVersion
      */
