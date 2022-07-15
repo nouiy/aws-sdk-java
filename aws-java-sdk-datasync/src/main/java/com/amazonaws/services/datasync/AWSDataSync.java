@@ -297,30 +297,33 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Creates a task.
+     * Configures a task, which defines where and how DataSync transfers your data.
      * </p>
      * <p>
-     * A task includes a source location and a destination location, and a configuration that specifies how data is
-     * transferred. A task always transfers data from the source location to the destination location. The configuration
-     * specifies options such as task scheduling, bandwidth limits, etc. A task is the complete definition of a data
-     * transfer.
+     * A task includes a source location, a destination location, and the preferences for how and when you want to
+     * transfer your data (such as bandwidth limits, scheduling, among other options).
      * </p>
      * <p>
      * When you create a task that transfers data between Amazon Web Services services in different Amazon Web Services
-     * Regions, one of the two locations that you specify must reside in the Region where DataSync is being used. The
-     * other location must be specified in a different Region.
+     * Regions, one of your locations must reside in the Region where you're using DataSync.
      * </p>
      * <p>
-     * You can transfer data between commercial Amazon Web Services Regions except for China, or between Amazon Web
-     * Services GovCloud (US) Regions.
+     * For more information, see the following topics:
      * </p>
-     * <important>
+     * <ul>
+     * <li>
      * <p>
-     * When you use DataSync to copy files or objects between Amazon Web Services Regions, you pay for data transfer
-     * between Regions. This is billed as data transfer OUT from your source Region to your destination Region. For more
-     * information, see <a href="http://aws.amazon.com/ec2/pricing/on-demand/#Data_Transfer">Data Transfer pricing</a>.
+     * <a href="https://docs.aws.amazon.com/datasync/latest/userguide/working-with-locations.html">Working with DataSync
+     * locations</a>
      * </p>
-     * </important>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-task.html">Configure DataSync task
+     * settings</a>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param createTaskRequest
      *        CreateTaskRequest
@@ -712,7 +715,7 @@ public interface AWSDataSync {
 
     /**
      * <p>
-     * Returns a list of all the tasks.
+     * Returns a list of the DataSync tasks you created.
      * </p>
      * 
      * @param listTasksRequest

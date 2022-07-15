@@ -28,14 +28,15 @@ public class CreateLocationFsxOntapRequest extends com.amazonaws.AmazonWebServic
     private FsxProtocol protocol;
     /**
      * <p>
-     * Specifies the security groups that DataSync can use to access your FSx for ONTAP file system. You must configure
-     * the security groups to allow outbound traffic on the following ports (depending on the protocol that you're
-     * using):
+     * Specifies the Amazon EC2 security groups that provide access to your file system's preferred subnet.
+     * </p>
+     * <p>
+     * The security groups must allow outbound traffic on the following ports (depending on the protocol you use):
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b>Network File System (NFS)</b>: TCP port 2049
+     * <b>Network File System (NFS)</b>: TCP ports 111, 635, and 2049
      * </p>
      * </li>
      * <li>
@@ -45,7 +46,7 @@ public class CreateLocationFsxOntapRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * </ul>
      * <p>
-     * Your file system's security groups must also allow inbound traffic on the same port.
+     * Your file system's security groups must also allow inbound traffic on the same ports.
      * </p>
      */
     private java.util.List<String> securityGroupArns;
@@ -105,14 +106,15 @@ public class CreateLocationFsxOntapRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Specifies the security groups that DataSync can use to access your FSx for ONTAP file system. You must configure
-     * the security groups to allow outbound traffic on the following ports (depending on the protocol that you're
-     * using):
+     * Specifies the Amazon EC2 security groups that provide access to your file system's preferred subnet.
+     * </p>
+     * <p>
+     * The security groups must allow outbound traffic on the following ports (depending on the protocol you use):
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b>Network File System (NFS)</b>: TCP port 2049
+     * <b>Network File System (NFS)</b>: TCP ports 111, 635, and 2049
      * </p>
      * </li>
      * <li>
@@ -122,16 +124,18 @@ public class CreateLocationFsxOntapRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * </ul>
      * <p>
-     * Your file system's security groups must also allow inbound traffic on the same port.
+     * Your file system's security groups must also allow inbound traffic on the same ports.
      * </p>
      * 
-     * @return Specifies the security groups that DataSync can use to access your FSx for ONTAP file system. You must
-     *         configure the security groups to allow outbound traffic on the following ports (depending on the protocol
-     *         that you're using):</p>
+     * @return Specifies the Amazon EC2 security groups that provide access to your file system's preferred subnet.</p>
+     *         <p>
+     *         The security groups must allow outbound traffic on the following ports (depending on the protocol you
+     *         use):
+     *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <b>Network File System (NFS)</b>: TCP port 2049
+     *         <b>Network File System (NFS)</b>: TCP ports 111, 635, and 2049
      *         </p>
      *         </li>
      *         <li>
@@ -141,7 +145,7 @@ public class CreateLocationFsxOntapRequest extends com.amazonaws.AmazonWebServic
      *         </li>
      *         </ul>
      *         <p>
-     *         Your file system's security groups must also allow inbound traffic on the same port.
+     *         Your file system's security groups must also allow inbound traffic on the same ports.
      */
 
     public java.util.List<String> getSecurityGroupArns() {
@@ -150,14 +154,15 @@ public class CreateLocationFsxOntapRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Specifies the security groups that DataSync can use to access your FSx for ONTAP file system. You must configure
-     * the security groups to allow outbound traffic on the following ports (depending on the protocol that you're
-     * using):
+     * Specifies the Amazon EC2 security groups that provide access to your file system's preferred subnet.
+     * </p>
+     * <p>
+     * The security groups must allow outbound traffic on the following ports (depending on the protocol you use):
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b>Network File System (NFS)</b>: TCP port 2049
+     * <b>Network File System (NFS)</b>: TCP ports 111, 635, and 2049
      * </p>
      * </li>
      * <li>
@@ -167,17 +172,19 @@ public class CreateLocationFsxOntapRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * </ul>
      * <p>
-     * Your file system's security groups must also allow inbound traffic on the same port.
+     * Your file system's security groups must also allow inbound traffic on the same ports.
      * </p>
      * 
      * @param securityGroupArns
-     *        Specifies the security groups that DataSync can use to access your FSx for ONTAP file system. You must
-     *        configure the security groups to allow outbound traffic on the following ports (depending on the protocol
-     *        that you're using):</p>
+     *        Specifies the Amazon EC2 security groups that provide access to your file system's preferred subnet.</p>
+     *        <p>
+     *        The security groups must allow outbound traffic on the following ports (depending on the protocol you
+     *        use):
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>Network File System (NFS)</b>: TCP port 2049
+     *        <b>Network File System (NFS)</b>: TCP ports 111, 635, and 2049
      *        </p>
      *        </li>
      *        <li>
@@ -187,7 +194,7 @@ public class CreateLocationFsxOntapRequest extends com.amazonaws.AmazonWebServic
      *        </li>
      *        </ul>
      *        <p>
-     *        Your file system's security groups must also allow inbound traffic on the same port.
+     *        Your file system's security groups must also allow inbound traffic on the same ports.
      */
 
     public void setSecurityGroupArns(java.util.Collection<String> securityGroupArns) {
@@ -201,14 +208,15 @@ public class CreateLocationFsxOntapRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Specifies the security groups that DataSync can use to access your FSx for ONTAP file system. You must configure
-     * the security groups to allow outbound traffic on the following ports (depending on the protocol that you're
-     * using):
+     * Specifies the Amazon EC2 security groups that provide access to your file system's preferred subnet.
+     * </p>
+     * <p>
+     * The security groups must allow outbound traffic on the following ports (depending on the protocol you use):
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b>Network File System (NFS)</b>: TCP port 2049
+     * <b>Network File System (NFS)</b>: TCP ports 111, 635, and 2049
      * </p>
      * </li>
      * <li>
@@ -218,7 +226,7 @@ public class CreateLocationFsxOntapRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * </ul>
      * <p>
-     * Your file system's security groups must also allow inbound traffic on the same port.
+     * Your file system's security groups must also allow inbound traffic on the same ports.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -227,13 +235,15 @@ public class CreateLocationFsxOntapRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param securityGroupArns
-     *        Specifies the security groups that DataSync can use to access your FSx for ONTAP file system. You must
-     *        configure the security groups to allow outbound traffic on the following ports (depending on the protocol
-     *        that you're using):</p>
+     *        Specifies the Amazon EC2 security groups that provide access to your file system's preferred subnet.</p>
+     *        <p>
+     *        The security groups must allow outbound traffic on the following ports (depending on the protocol you
+     *        use):
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>Network File System (NFS)</b>: TCP port 2049
+     *        <b>Network File System (NFS)</b>: TCP ports 111, 635, and 2049
      *        </p>
      *        </li>
      *        <li>
@@ -243,7 +253,7 @@ public class CreateLocationFsxOntapRequest extends com.amazonaws.AmazonWebServic
      *        </li>
      *        </ul>
      *        <p>
-     *        Your file system's security groups must also allow inbound traffic on the same port.
+     *        Your file system's security groups must also allow inbound traffic on the same ports.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -259,14 +269,15 @@ public class CreateLocationFsxOntapRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Specifies the security groups that DataSync can use to access your FSx for ONTAP file system. You must configure
-     * the security groups to allow outbound traffic on the following ports (depending on the protocol that you're
-     * using):
+     * Specifies the Amazon EC2 security groups that provide access to your file system's preferred subnet.
+     * </p>
+     * <p>
+     * The security groups must allow outbound traffic on the following ports (depending on the protocol you use):
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b>Network File System (NFS)</b>: TCP port 2049
+     * <b>Network File System (NFS)</b>: TCP ports 111, 635, and 2049
      * </p>
      * </li>
      * <li>
@@ -276,17 +287,19 @@ public class CreateLocationFsxOntapRequest extends com.amazonaws.AmazonWebServic
      * </li>
      * </ul>
      * <p>
-     * Your file system's security groups must also allow inbound traffic on the same port.
+     * Your file system's security groups must also allow inbound traffic on the same ports.
      * </p>
      * 
      * @param securityGroupArns
-     *        Specifies the security groups that DataSync can use to access your FSx for ONTAP file system. You must
-     *        configure the security groups to allow outbound traffic on the following ports (depending on the protocol
-     *        that you're using):</p>
+     *        Specifies the Amazon EC2 security groups that provide access to your file system's preferred subnet.</p>
+     *        <p>
+     *        The security groups must allow outbound traffic on the following ports (depending on the protocol you
+     *        use):
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>Network File System (NFS)</b>: TCP port 2049
+     *        <b>Network File System (NFS)</b>: TCP ports 111, 635, and 2049
      *        </p>
      *        </li>
      *        <li>
@@ -296,7 +309,7 @@ public class CreateLocationFsxOntapRequest extends com.amazonaws.AmazonWebServic
      *        </li>
      *        </ul>
      *        <p>
-     *        Your file system's security groups must also allow inbound traffic on the same port.
+     *        Your file system's security groups must also allow inbound traffic on the same ports.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

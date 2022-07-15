@@ -63,10 +63,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * This action option is available for rules. It isn't available for web ACL default actions.
  * </p>
- * <p>
- * This is used in the context of other settings, for example to specify values for <a>RuleAction</a> and web ACL
- * <a>DefaultAction</a>.
- * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/CaptchaAction" target="_top">AWS API
  *      Documentation</a>

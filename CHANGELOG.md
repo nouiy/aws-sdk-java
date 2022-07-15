@@ -1,3 +1,20 @@
+# __1.12.262__ __2022-07-15__
+## __AWS DataSync__
+  - ### Features
+    - Documentation updates for AWS DataSync regarding configuring Amazon FSx for ONTAP location security groups and SMB user permissions.
+
+## __AWS WAFV2__
+  - ### Features
+    - This SDK release provide customers ability to add sensitivity level for WAF SQLI Match Statements.
+
+## __Amazon CloudWatch Evidently__
+  - ### Features
+    - This release adds support for the new segmentation feature.
+
+## __Elastic Disaster Recovery Service__
+  - ### Features
+    - Changed existing APIs to allow choosing a dynamic volume type for replicating volumes, to reduce costs for customers.
+
 # __1.12.261__ __2022-07-14__
 ## __AWS Config__
   - ### Features
