@@ -478,6 +478,39 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Creates an edge deployment plan, consisting of multiple stages. Each stage may have a different deployment
+     * configuration and devices.
+     * </p>
+     * 
+     * @param createEdgeDeploymentPlanRequest
+     * @return Result of the CreateEdgeDeploymentPlan operation returned by the service.
+     * @throws ResourceLimitExceededException
+     *         You have exceeded an SageMaker resource limit. For example, you might have too many training jobs
+     *         created.
+     * @sample AmazonSageMaker.CreateEdgeDeploymentPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateEdgeDeploymentPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateEdgeDeploymentPlanResult createEdgeDeploymentPlan(CreateEdgeDeploymentPlanRequest createEdgeDeploymentPlanRequest);
+
+    /**
+     * <p>
+     * Creates a new stage in an existing edge deployment plan.
+     * </p>
+     * 
+     * @param createEdgeDeploymentStageRequest
+     * @return Result of the CreateEdgeDeploymentStage operation returned by the service.
+     * @throws ResourceLimitExceededException
+     *         You have exceeded an SageMaker resource limit. For example, you might have too many training jobs
+     *         created.
+     * @sample AmazonSageMaker.CreateEdgeDeploymentStage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateEdgeDeploymentStage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateEdgeDeploymentStageResult createEdgeDeploymentStage(CreateEdgeDeploymentStageRequest createEdgeDeploymentStageRequest);
+
+    /**
+     * <p>
      * Starts a SageMaker Edge Manager model packaging job. Edge Manager will use the model artifacts from the Amazon
      * Simple Storage Service bucket that you specify. After the model has been packaged, Amazon SageMaker saves the
      * resulting artifacts to an S3 bucket that you specify.
@@ -1800,6 +1833,37 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Deletes an edge deployment plan if (and only if) all the stages in the plan are inactive or there are no stages
+     * in the plan.
+     * </p>
+     * 
+     * @param deleteEdgeDeploymentPlanRequest
+     * @return Result of the DeleteEdgeDeploymentPlan operation returned by the service.
+     * @throws ResourceInUseException
+     *         Resource being accessed is in use.
+     * @sample AmazonSageMaker.DeleteEdgeDeploymentPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteEdgeDeploymentPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteEdgeDeploymentPlanResult deleteEdgeDeploymentPlan(DeleteEdgeDeploymentPlanRequest deleteEdgeDeploymentPlanRequest);
+
+    /**
+     * <p>
+     * Delete a stage in an edge deployment plan if (and only if) the stage is inactive.
+     * </p>
+     * 
+     * @param deleteEdgeDeploymentStageRequest
+     * @return Result of the DeleteEdgeDeploymentStage operation returned by the service.
+     * @throws ResourceInUseException
+     *         Resource being accessed is in use.
+     * @sample AmazonSageMaker.DeleteEdgeDeploymentStage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteEdgeDeploymentStage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteEdgeDeploymentStageResult deleteEdgeDeploymentStage(DeleteEdgeDeploymentStageRequest deleteEdgeDeploymentStageRequest);
+
+    /**
+     * <p>
      * Deletes an endpoint. SageMaker frees up all of the resources that were deployed when the endpoint was created.
      * </p>
      * <p>
@@ -2487,6 +2551,21 @@ public interface AmazonSageMaker {
      *      Documentation</a>
      */
     DescribeDomainResult describeDomain(DescribeDomainRequest describeDomainRequest);
+
+    /**
+     * <p>
+     * Describes an edge deployment plan with deployment status per stage.
+     * </p>
+     * 
+     * @param describeEdgeDeploymentPlanRequest
+     * @return Result of the DescribeEdgeDeploymentPlan operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DescribeEdgeDeploymentPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeEdgeDeploymentPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeEdgeDeploymentPlanResult describeEdgeDeploymentPlan(DescribeEdgeDeploymentPlanRequest describeEdgeDeploymentPlanRequest);
 
     /**
      * <p>
@@ -3392,6 +3471,19 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Lists all edge deployment plans.
+     * </p>
+     * 
+     * @param listEdgeDeploymentPlansRequest
+     * @return Result of the ListEdgeDeploymentPlans operation returned by the service.
+     * @sample AmazonSageMaker.ListEdgeDeploymentPlans
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListEdgeDeploymentPlans"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListEdgeDeploymentPlansResult listEdgeDeploymentPlans(ListEdgeDeploymentPlansRequest listEdgeDeploymentPlansRequest);
+
+    /**
+     * <p>
      * Returns a list of edge packaging jobs.
      * </p>
      * 
@@ -3815,6 +3907,19 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Lists devices allocated to the stage, containing detailed device information and deployment status.
+     * </p>
+     * 
+     * @param listStageDevicesRequest
+     * @return Result of the ListStageDevices operation returned by the service.
+     * @sample AmazonSageMaker.ListStageDevices
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListStageDevices" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListStageDevicesResult listStageDevices(ListStageDevicesRequest listStageDevicesRequest);
+
+    /**
+     * <p>
      * Lists the Studio Lifecycle Configurations in your Amazon Web Services Account.
      * </p>
      * 
@@ -4161,6 +4266,19 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Starts a stage in an edge deployment plan.
+     * </p>
+     * 
+     * @param startEdgeDeploymentStageRequest
+     * @return Result of the StartEdgeDeploymentStage operation returned by the service.
+     * @sample AmazonSageMaker.StartEdgeDeploymentStage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StartEdgeDeploymentStage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartEdgeDeploymentStageResult startEdgeDeploymentStage(StartEdgeDeploymentStageRequest startEdgeDeploymentStageRequest);
+
+    /**
+     * <p>
      * Starts a previously stopped monitoring schedule.
      * </p>
      * <note>
@@ -4254,6 +4372,19 @@ public interface AmazonSageMaker {
      *      API Documentation</a>
      */
     StopCompilationJobResult stopCompilationJob(StopCompilationJobRequest stopCompilationJobRequest);
+
+    /**
+     * <p>
+     * Stops a stage in an edge deployment plan.
+     * </p>
+     * 
+     * @param stopEdgeDeploymentStageRequest
+     * @return Result of the StopEdgeDeploymentStage operation returned by the service.
+     * @sample AmazonSageMaker.StopEdgeDeploymentStage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopEdgeDeploymentStage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StopEdgeDeploymentStageResult stopEdgeDeploymentStage(StopEdgeDeploymentStageRequest stopEdgeDeploymentStageRequest);
 
     /**
      * <p>

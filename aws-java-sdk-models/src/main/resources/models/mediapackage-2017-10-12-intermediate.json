@@ -16148,6 +16148,75 @@
         },
         "xmlNameSpaceUri" : null
       }, {
+        "c2jName" : "IncludeIframeOnlyStream",
+        "c2jShape" : "__boolean",
+        "deprecated" : false,
+        "documentation" : "When enabled, an I-Frame only stream will be included in the output.",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**When enabled, an I-Frame only stream will be included in the output.\n@param includeIframeOnlyStream When enabled, an I-Frame only stream will be included in the output.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withIncludeIframeOnlyStream",
+        "getterDocumentation" : "/**When enabled, an I-Frame only stream will be included in the output.\n@return When enabled, an I-Frame only stream will be included in the output.*/",
+        "getterMethodName" : "getIncludeIframeOnlyStream",
+        "getterModel" : {
+          "returnType" : "Boolean",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "includeIframeOnlyStream",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "includeIframeOnlyStream",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "Boolean",
+        "marshallingType" : "BOOLEAN",
+        "name" : "IncludeIframeOnlyStream",
+        "sensitive" : false,
+        "setterDocumentation" : "/**When enabled, an I-Frame only stream will be included in the output.\n@param includeIframeOnlyStream When enabled, an I-Frame only stream will be included in the output.*/",
+        "setterMethodName" : "setIncludeIframeOnlyStream",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "Boolean",
+          "variableName" : "includeIframeOnlyStream",
+          "variableType" : "Boolean",
+          "documentation" : "",
+          "simpleType" : "Boolean",
+          "variableSetterType" : "Boolean"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**When enabled, an I-Frame only stream will be included in the output.\n@param includeIframeOnlyStream When enabled, an I-Frame only stream will be included in the output.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "Boolean",
+          "variableName" : "includeIframeOnlyStream",
+          "variableType" : "Boolean",
+          "documentation" : "When enabled, an I-Frame only stream will be included in the output.",
+          "simpleType" : "Boolean",
+          "variableSetterType" : "Boolean"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
         "c2jName" : "ManifestLayout",
         "c2jShape" : "ManifestLayout",
         "deprecated" : false,
@@ -17352,6 +17421,76 @@
             "documentation" : "",
             "simpleType" : "DashEncryption",
             "variableSetterType" : "DashEncryption"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "IncludeIframeOnlyStream" : {
+          "c2jName" : "IncludeIframeOnlyStream",
+          "c2jShape" : "__boolean",
+          "deprecated" : false,
+          "documentation" : "When enabled, an I-Frame only stream will be included in the output.",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**When enabled, an I-Frame only stream will be included in the output.\n@param includeIframeOnlyStream When enabled, an I-Frame only stream will be included in the output.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withIncludeIframeOnlyStream",
+          "getterDocumentation" : "/**When enabled, an I-Frame only stream will be included in the output.\n@return When enabled, an I-Frame only stream will be included in the output.*/",
+          "getterMethodName" : "getIncludeIframeOnlyStream",
+          "getterModel" : {
+            "returnType" : "Boolean",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "includeIframeOnlyStream",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "includeIframeOnlyStream",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "Boolean",
+          "marshallingType" : "BOOLEAN",
+          "name" : "IncludeIframeOnlyStream",
+          "sensitive" : false,
+          "setterDocumentation" : "/**When enabled, an I-Frame only stream will be included in the output.\n@param includeIframeOnlyStream When enabled, an I-Frame only stream will be included in the output.*/",
+          "setterMethodName" : "setIncludeIframeOnlyStream",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "Boolean",
+            "variableName" : "includeIframeOnlyStream",
+            "variableType" : "Boolean",
+            "documentation" : "",
+            "simpleType" : "Boolean",
+            "variableSetterType" : "Boolean"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**When enabled, an I-Frame only stream will be included in the output.\n@param includeIframeOnlyStream When enabled, an I-Frame only stream will be included in the output.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "Boolean",
+            "variableName" : "includeIframeOnlyStream",
+            "variableType" : "Boolean",
+            "documentation" : "When enabled, an I-Frame only stream will be included in the output.",
+            "simpleType" : "Boolean",
+            "variableSetterType" : "Boolean"
           },
           "xmlNameSpaceUri" : null
         },
@@ -39787,6 +39926,18 @@
       "enums" : [ {
         "name" : "PRESETAUDIO1",
         "value" : "PRESET-AUDIO-1"
+      }, {
+        "name" : "PRESETAUDIO2",
+        "value" : "PRESET-AUDIO-2"
+      }, {
+        "name" : "PRESETAUDIO3",
+        "value" : "PRESET-AUDIO-3"
+      }, {
+        "name" : "SHARED",
+        "value" : "SHARED"
+      }, {
+        "name" : "UNENCRYPTED",
+        "value" : "UNENCRYPTED"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.mediapackage.enum.PresetSpeke20Audio",
@@ -39834,6 +39985,33 @@
       "enums" : [ {
         "name" : "PRESETVIDEO1",
         "value" : "PRESET-VIDEO-1"
+      }, {
+        "name" : "PRESETVIDEO2",
+        "value" : "PRESET-VIDEO-2"
+      }, {
+        "name" : "PRESETVIDEO3",
+        "value" : "PRESET-VIDEO-3"
+      }, {
+        "name" : "PRESETVIDEO4",
+        "value" : "PRESET-VIDEO-4"
+      }, {
+        "name" : "PRESETVIDEO5",
+        "value" : "PRESET-VIDEO-5"
+      }, {
+        "name" : "PRESETVIDEO6",
+        "value" : "PRESET-VIDEO-6"
+      }, {
+        "name" : "PRESETVIDEO7",
+        "value" : "PRESET-VIDEO-7"
+      }, {
+        "name" : "PRESETVIDEO8",
+        "value" : "PRESET-VIDEO-8"
+      }, {
+        "name" : "SHARED",
+        "value" : "SHARED"
+      }, {
+        "name" : "UNENCRYPTED",
+        "value" : "UNENCRYPTED"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.mediapackage.enum.PresetSpeke20Video",

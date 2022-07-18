@@ -137,8 +137,9 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
     /**
      * <p>
      * The price protection threshold for Spot Instance. This is the maximum you’ll pay for an Spot Instance, expressed
-     * as a percentage above the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2
-     * selects instance types with your attributes, it excludes instance types priced above your threshold.
+     * as a percentage above the least expensive current generation M, C, or R instance type with your specified
+     * attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types priced above
+     * your threshold.
      * </p>
      * <p>
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
@@ -167,8 +168,9 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
     /**
      * <p>
      * The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand Instance,
-     * expressed as a percentage above the cheapest M, C, or R instance type with your specified attributes. When Amazon
-     * EC2 selects instance types with your attributes, it excludes instance types priced above your threshold.
+     * expressed as a percentage above the least expensive current generation M, C, or R instance type with your
+     * specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types
+     * priced above your threshold.
      * </p>
      * <p>
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
@@ -1338,8 +1340,9 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
     /**
      * <p>
      * The price protection threshold for Spot Instance. This is the maximum you’ll pay for an Spot Instance, expressed
-     * as a percentage above the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2
-     * selects instance types with your attributes, it excludes instance types priced above your threshold.
+     * as a percentage above the least expensive current generation M, C, or R instance type with your specified
+     * attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types priced above
+     * your threshold.
      * </p>
      * <p>
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
@@ -1366,9 +1369,9 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * 
      * @param spotMaxPricePercentageOverLowestPrice
      *        The price protection threshold for Spot Instance. This is the maximum you’ll pay for an Spot Instance,
-     *        expressed as a percentage above the cheapest M, C, or R instance type with your specified attributes. When
-     *        Amazon EC2 selects instance types with your attributes, it excludes instance types priced above your
-     *        threshold.</p>
+     *        expressed as a percentage above the least expensive current generation M, C, or R instance type with your
+     *        specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance
+     *        types priced above your threshold.</p>
      *        <p>
      *        The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *        </p>
@@ -1400,8 +1403,9 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
     /**
      * <p>
      * The price protection threshold for Spot Instance. This is the maximum you’ll pay for an Spot Instance, expressed
-     * as a percentage above the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2
-     * selects instance types with your attributes, it excludes instance types priced above your threshold.
+     * as a percentage above the least expensive current generation M, C, or R instance type with your specified
+     * attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types priced above
+     * your threshold.
      * </p>
      * <p>
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
@@ -1427,9 +1431,9 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * </p>
      * 
      * @return The price protection threshold for Spot Instance. This is the maximum you’ll pay for an Spot Instance,
-     *         expressed as a percentage above the cheapest M, C, or R instance type with your specified attributes.
-     *         When Amazon EC2 selects instance types with your attributes, it excludes instance types priced above your
-     *         threshold.</p>
+     *         expressed as a percentage above the least expensive current generation M, C, or R instance type with your
+     *         specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance
+     *         types priced above your threshold.</p>
      *         <p>
      *         The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *         </p>
@@ -1461,8 +1465,9 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
     /**
      * <p>
      * The price protection threshold for Spot Instance. This is the maximum you’ll pay for an Spot Instance, expressed
-     * as a percentage above the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2
-     * selects instance types with your attributes, it excludes instance types priced above your threshold.
+     * as a percentage above the least expensive current generation M, C, or R instance type with your specified
+     * attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types priced above
+     * your threshold.
      * </p>
      * <p>
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
@@ -1489,9 +1494,9 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * 
      * @param spotMaxPricePercentageOverLowestPrice
      *        The price protection threshold for Spot Instance. This is the maximum you’ll pay for an Spot Instance,
-     *        expressed as a percentage above the cheapest M, C, or R instance type with your specified attributes. When
-     *        Amazon EC2 selects instance types with your attributes, it excludes instance types priced above your
-     *        threshold.</p>
+     *        expressed as a percentage above the least expensive current generation M, C, or R instance type with your
+     *        specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance
+     *        types priced above your threshold.</p>
      *        <p>
      *        The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *        </p>
@@ -1525,8 +1530,9 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
     /**
      * <p>
      * The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand Instance,
-     * expressed as a percentage above the cheapest M, C, or R instance type with your specified attributes. When Amazon
-     * EC2 selects instance types with your attributes, it excludes instance types priced above your threshold.
+     * expressed as a percentage above the least expensive current generation M, C, or R instance type with your
+     * specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types
+     * priced above your threshold.
      * </p>
      * <p>
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
@@ -1553,9 +1559,9 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * 
      * @param onDemandMaxPricePercentageOverLowestPrice
      *        The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand
-     *        Instance, expressed as a percentage above the cheapest M, C, or R instance type with your specified
-     *        attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types priced
-     *        above your threshold.</p>
+     *        Instance, expressed as a percentage above the least expensive current generation M, C, or R instance type
+     *        with your specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes
+     *        instance types priced above your threshold.</p>
      *        <p>
      *        The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *        </p>
@@ -1587,8 +1593,9 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
     /**
      * <p>
      * The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand Instance,
-     * expressed as a percentage above the cheapest M, C, or R instance type with your specified attributes. When Amazon
-     * EC2 selects instance types with your attributes, it excludes instance types priced above your threshold.
+     * expressed as a percentage above the least expensive current generation M, C, or R instance type with your
+     * specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types
+     * priced above your threshold.
      * </p>
      * <p>
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
@@ -1614,9 +1621,9 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * </p>
      * 
      * @return The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand
-     *         Instance, expressed as a percentage above the cheapest M, C, or R instance type with your specified
-     *         attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types
-     *         priced above your threshold.</p>
+     *         Instance, expressed as a percentage above the least expensive current generation M, C, or R instance type
+     *         with your specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes
+     *         instance types priced above your threshold.</p>
      *         <p>
      *         The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *         </p>
@@ -1648,8 +1655,9 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
     /**
      * <p>
      * The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand Instance,
-     * expressed as a percentage above the cheapest M, C, or R instance type with your specified attributes. When Amazon
-     * EC2 selects instance types with your attributes, it excludes instance types priced above your threshold.
+     * expressed as a percentage above the least expensive current generation M, C, or R instance type with your
+     * specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types
+     * priced above your threshold.
      * </p>
      * <p>
      * The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
@@ -1676,9 +1684,9 @@ public class InstanceRequirementsRequest implements Serializable, Cloneable {
      * 
      * @param onDemandMaxPricePercentageOverLowestPrice
      *        The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand
-     *        Instance, expressed as a percentage above the cheapest M, C, or R instance type with your specified
-     *        attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types priced
-     *        above your threshold.</p>
+     *        Instance, expressed as a percentage above the least expensive current generation M, C, or R instance type
+     *        with your specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes
+     *        instance types priced above your threshold.</p>
      *        <p>
      *        The parameter accepts an integer, which Amazon EC2 interprets as a percentage.
      *        </p>

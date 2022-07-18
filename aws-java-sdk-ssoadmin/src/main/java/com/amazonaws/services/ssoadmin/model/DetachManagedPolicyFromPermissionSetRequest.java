@@ -41,7 +41,7 @@ public class DetachManagedPolicyFromPermissionSetRequest extends com.amazonaws.A
     private String permissionSetArn;
     /**
      * <p>
-     * The IAM managed policy ARN to be attached to a permission set.
+     * The Amazon Web Services managed policy ARN to be detached from a permission set.
      * </p>
      */
     private String managedPolicyArn;
@@ -140,11 +140,11 @@ public class DetachManagedPolicyFromPermissionSetRequest extends com.amazonaws.A
 
     /**
      * <p>
-     * The IAM managed policy ARN to be attached to a permission set.
+     * The Amazon Web Services managed policy ARN to be detached from a permission set.
      * </p>
      * 
      * @param managedPolicyArn
-     *        The IAM managed policy ARN to be attached to a permission set.
+     *        The Amazon Web Services managed policy ARN to be detached from a permission set.
      */
 
     public void setManagedPolicyArn(String managedPolicyArn) {
@@ -153,10 +153,10 @@ public class DetachManagedPolicyFromPermissionSetRequest extends com.amazonaws.A
 
     /**
      * <p>
-     * The IAM managed policy ARN to be attached to a permission set.
+     * The Amazon Web Services managed policy ARN to be detached from a permission set.
      * </p>
      * 
-     * @return The IAM managed policy ARN to be attached to a permission set.
+     * @return The Amazon Web Services managed policy ARN to be detached from a permission set.
      */
 
     public String getManagedPolicyArn() {
@@ -165,11 +165,11 @@ public class DetachManagedPolicyFromPermissionSetRequest extends com.amazonaws.A
 
     /**
      * <p>
-     * The IAM managed policy ARN to be attached to a permission set.
+     * The Amazon Web Services managed policy ARN to be detached from a permission set.
      * </p>
      * 
      * @param managedPolicyArn
-     *        The IAM managed policy ARN to be attached to a permission set.
+     *        The Amazon Web Services managed policy ARN to be detached from a permission set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -28,7 +28,7 @@ public class ServiceDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the service.
+     * The name of the service.
      * </p>
      */
     private String serviceName;
@@ -123,11 +123,11 @@ public class ServiceDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the service.
+     * The name of the service.
      * </p>
      * 
      * @param serviceName
-     *        The Amazon Resource Name (ARN) of the service.
+     *        The name of the service.
      */
 
     public void setServiceName(String serviceName) {
@@ -136,10 +136,10 @@ public class ServiceDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the service.
+     * The name of the service.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the service.
+     * @return The name of the service.
      */
 
     public String getServiceName() {
@@ -148,11 +148,11 @@ public class ServiceDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the service.
+     * The name of the service.
      * </p>
      * 
      * @param serviceName
-     *        The Amazon Resource Name (ARN) of the service.
+     *        The name of the service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

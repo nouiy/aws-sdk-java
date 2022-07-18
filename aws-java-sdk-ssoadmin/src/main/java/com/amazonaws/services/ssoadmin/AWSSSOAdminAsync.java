@@ -25,26 +25,51 @@ import com.amazonaws.services.ssoadmin.model.*;
  * {@link com.amazonaws.services.ssoadmin.AbstractAWSSSOAdminAsync} instead.
  * </p>
  * <p>
- * <p>
- * Amazon Web Services Single Sign On (SSO) is a cloud SSO service that makes it easy to centrally manage SSO access to
- * multiple Amazon Web Services accounts and business applications. This guide provides information on SSO operations
- * which could be used for access management of Amazon Web Services accounts. For information about Amazon Web Services
- * SSO features, see the <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html">Amazon Web
- * Services Single Sign-On User Guide</a>.
- * </p>
- * <p>
- * Many operations in the SSO APIs rely on identifiers for users and groups, known as principals. For more information
- * about how to work with principals and principal IDs in Amazon Web Services SSO, see the <a
- * href="https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/welcome.html">Amazon Web Services SSO
- * Identity Store API Reference</a>.
- * </p>
+ * <p/>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AWSSSOAdminAsync extends AWSSSOAdmin {
 
     /**
      * <p>
-     * Attaches an IAM managed policy ARN to a permission set.
+     * Attaches the specified IAM customer managed policy to the specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param attachCustomerManagedPolicyReferenceToPermissionSetRequest
+     * @return A Java Future containing the result of the AttachCustomerManagedPolicyReferenceToPermissionSet operation
+     *         returned by the service.
+     * @sample AWSSSOAdminAsync.AttachCustomerManagedPolicyReferenceToPermissionSet
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/AttachCustomerManagedPolicyReferenceToPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AttachCustomerManagedPolicyReferenceToPermissionSetResult> attachCustomerManagedPolicyReferenceToPermissionSetAsync(
+            AttachCustomerManagedPolicyReferenceToPermissionSetRequest attachCustomerManagedPolicyReferenceToPermissionSetRequest);
+
+    /**
+     * <p>
+     * Attaches the specified IAM customer managed policy to the specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param attachCustomerManagedPolicyReferenceToPermissionSetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AttachCustomerManagedPolicyReferenceToPermissionSet operation
+     *         returned by the service.
+     * @sample AWSSSOAdminAsyncHandler.AttachCustomerManagedPolicyReferenceToPermissionSet
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/AttachCustomerManagedPolicyReferenceToPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AttachCustomerManagedPolicyReferenceToPermissionSetResult> attachCustomerManagedPolicyReferenceToPermissionSetAsync(
+            AttachCustomerManagedPolicyReferenceToPermissionSetRequest attachCustomerManagedPolicyReferenceToPermissionSetRequest,
+            com.amazonaws.handlers.AsyncHandler<AttachCustomerManagedPolicyReferenceToPermissionSetRequest, AttachCustomerManagedPolicyReferenceToPermissionSetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Attaches an Amazon Web Services managed IAM policy ARN to a permission set.
      * </p>
      * <note>
      * <p>
@@ -66,7 +91,7 @@ public interface AWSSSOAdminAsync extends AWSSSOAdmin {
 
     /**
      * <p>
-     * Attaches an IAM managed policy ARN to a permission set.
+     * Attaches an Amazon Web Services managed IAM policy ARN to a permission set.
      * </p>
      * <note>
      * <p>
@@ -378,6 +403,43 @@ public interface AWSSSOAdminAsync extends AWSSSOAdmin {
 
     /**
      * <p>
+     * Deletes the permissions boundary from a specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param deletePermissionsBoundaryFromPermissionSetRequest
+     * @return A Java Future containing the result of the DeletePermissionsBoundaryFromPermissionSet operation returned
+     *         by the service.
+     * @sample AWSSSOAdminAsync.DeletePermissionsBoundaryFromPermissionSet
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DeletePermissionsBoundaryFromPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePermissionsBoundaryFromPermissionSetResult> deletePermissionsBoundaryFromPermissionSetAsync(
+            DeletePermissionsBoundaryFromPermissionSetRequest deletePermissionsBoundaryFromPermissionSetRequest);
+
+    /**
+     * <p>
+     * Deletes the permissions boundary from a specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param deletePermissionsBoundaryFromPermissionSetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeletePermissionsBoundaryFromPermissionSet operation returned
+     *         by the service.
+     * @sample AWSSSOAdminAsyncHandler.DeletePermissionsBoundaryFromPermissionSet
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DeletePermissionsBoundaryFromPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePermissionsBoundaryFromPermissionSetResult> deletePermissionsBoundaryFromPermissionSetAsync(
+            DeletePermissionsBoundaryFromPermissionSetRequest deletePermissionsBoundaryFromPermissionSetRequest,
+            com.amazonaws.handlers.AsyncHandler<DeletePermissionsBoundaryFromPermissionSetRequest, DeletePermissionsBoundaryFromPermissionSetResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes the status of the assignment creation request.
      * </p>
      * 
@@ -565,7 +627,44 @@ public interface AWSSSOAdminAsync extends AWSSSOAdmin {
 
     /**
      * <p>
-     * Detaches the attached IAM managed policy ARN from the specified permission set.
+     * Detaches the specified IAM customer managed policy from the specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param detachCustomerManagedPolicyReferenceFromPermissionSetRequest
+     * @return A Java Future containing the result of the DetachCustomerManagedPolicyReferenceFromPermissionSet
+     *         operation returned by the service.
+     * @sample AWSSSOAdminAsync.DetachCustomerManagedPolicyReferenceFromPermissionSet
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DetachCustomerManagedPolicyReferenceFromPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DetachCustomerManagedPolicyReferenceFromPermissionSetResult> detachCustomerManagedPolicyReferenceFromPermissionSetAsync(
+            DetachCustomerManagedPolicyReferenceFromPermissionSetRequest detachCustomerManagedPolicyReferenceFromPermissionSetRequest);
+
+    /**
+     * <p>
+     * Detaches the specified IAM customer managed policy from the specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param detachCustomerManagedPolicyReferenceFromPermissionSetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DetachCustomerManagedPolicyReferenceFromPermissionSet
+     *         operation returned by the service.
+     * @sample AWSSSOAdminAsyncHandler.DetachCustomerManagedPolicyReferenceFromPermissionSet
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DetachCustomerManagedPolicyReferenceFromPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DetachCustomerManagedPolicyReferenceFromPermissionSetResult> detachCustomerManagedPolicyReferenceFromPermissionSetAsync(
+            DetachCustomerManagedPolicyReferenceFromPermissionSetRequest detachCustomerManagedPolicyReferenceFromPermissionSetRequest,
+            com.amazonaws.handlers.AsyncHandler<DetachCustomerManagedPolicyReferenceFromPermissionSetRequest, DetachCustomerManagedPolicyReferenceFromPermissionSetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Detaches the attached Amazon Web Services managed IAM policy ARN from the specified permission set.
      * </p>
      * 
      * @param detachManagedPolicyFromPermissionSetRequest
@@ -580,7 +679,7 @@ public interface AWSSSOAdminAsync extends AWSSSOAdmin {
 
     /**
      * <p>
-     * Detaches the attached IAM managed policy ARN from the specified permission set.
+     * Detaches the attached Amazon Web Services managed IAM policy ARN from the specified permission set.
      * </p>
      * 
      * @param detachManagedPolicyFromPermissionSetRequest
@@ -632,6 +731,41 @@ public interface AWSSSOAdminAsync extends AWSSSOAdmin {
     java.util.concurrent.Future<GetInlinePolicyForPermissionSetResult> getInlinePolicyForPermissionSetAsync(
             GetInlinePolicyForPermissionSetRequest getInlinePolicyForPermissionSetRequest,
             com.amazonaws.handlers.AsyncHandler<GetInlinePolicyForPermissionSetRequest, GetInlinePolicyForPermissionSetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Obtains the permissions boundary for a specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param getPermissionsBoundaryForPermissionSetRequest
+     * @return A Java Future containing the result of the GetPermissionsBoundaryForPermissionSet operation returned by
+     *         the service.
+     * @sample AWSSSOAdminAsync.GetPermissionsBoundaryForPermissionSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/GetPermissionsBoundaryForPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetPermissionsBoundaryForPermissionSetResult> getPermissionsBoundaryForPermissionSetAsync(
+            GetPermissionsBoundaryForPermissionSetRequest getPermissionsBoundaryForPermissionSetRequest);
+
+    /**
+     * <p>
+     * Obtains the permissions boundary for a specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param getPermissionsBoundaryForPermissionSetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetPermissionsBoundaryForPermissionSet operation returned by
+     *         the service.
+     * @sample AWSSSOAdminAsyncHandler.GetPermissionsBoundaryForPermissionSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/GetPermissionsBoundaryForPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetPermissionsBoundaryForPermissionSetResult> getPermissionsBoundaryForPermissionSetAsync(
+            GetPermissionsBoundaryForPermissionSetRequest getPermissionsBoundaryForPermissionSetRequest,
+            com.amazonaws.handlers.AsyncHandler<GetPermissionsBoundaryForPermissionSetRequest, GetPermissionsBoundaryForPermissionSetResult> asyncHandler);
 
     /**
      * <p>
@@ -773,6 +907,43 @@ public interface AWSSSOAdminAsync extends AWSSSOAdmin {
 
     /**
      * <p>
+     * Lists all IAM customer managed policies attached to a specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param listCustomerManagedPolicyReferencesInPermissionSetRequest
+     * @return A Java Future containing the result of the ListCustomerManagedPolicyReferencesInPermissionSet operation
+     *         returned by the service.
+     * @sample AWSSSOAdminAsync.ListCustomerManagedPolicyReferencesInPermissionSet
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/ListCustomerManagedPolicyReferencesInPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListCustomerManagedPolicyReferencesInPermissionSetResult> listCustomerManagedPolicyReferencesInPermissionSetAsync(
+            ListCustomerManagedPolicyReferencesInPermissionSetRequest listCustomerManagedPolicyReferencesInPermissionSetRequest);
+
+    /**
+     * <p>
+     * Lists all IAM customer managed policies attached to a specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param listCustomerManagedPolicyReferencesInPermissionSetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListCustomerManagedPolicyReferencesInPermissionSet operation
+     *         returned by the service.
+     * @sample AWSSSOAdminAsyncHandler.ListCustomerManagedPolicyReferencesInPermissionSet
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/ListCustomerManagedPolicyReferencesInPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListCustomerManagedPolicyReferencesInPermissionSetResult> listCustomerManagedPolicyReferencesInPermissionSetAsync(
+            ListCustomerManagedPolicyReferencesInPermissionSetRequest listCustomerManagedPolicyReferencesInPermissionSetRequest,
+            com.amazonaws.handlers.AsyncHandler<ListCustomerManagedPolicyReferencesInPermissionSetRequest, ListCustomerManagedPolicyReferencesInPermissionSetResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists the SSO instances that the caller has access to.
      * </p>
      * 
@@ -804,7 +975,7 @@ public interface AWSSSOAdminAsync extends AWSSSOAdmin {
 
     /**
      * <p>
-     * Lists the IAM managed policy that is attached to a specified permission set.
+     * Lists the Amazon Web Services managed IAM policy that is attached to a specified permission set.
      * </p>
      * 
      * @param listManagedPoliciesInPermissionSetRequest
@@ -819,7 +990,7 @@ public interface AWSSSOAdminAsync extends AWSSSOAdmin {
 
     /**
      * <p>
-     * Lists the IAM managed policy that is attached to a specified permission set.
+     * Lists the Amazon Web Services managed IAM policy that is attached to a specified permission set.
      * </p>
      * 
      * @param listManagedPoliciesInPermissionSetRequest
@@ -1048,6 +1219,43 @@ public interface AWSSSOAdminAsync extends AWSSSOAdmin {
     java.util.concurrent.Future<PutInlinePolicyToPermissionSetResult> putInlinePolicyToPermissionSetAsync(
             PutInlinePolicyToPermissionSetRequest putInlinePolicyToPermissionSetRequest,
             com.amazonaws.handlers.AsyncHandler<PutInlinePolicyToPermissionSetRequest, PutInlinePolicyToPermissionSetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Attaches an Amazon Web Services managed or customer managed IAM policy to the specified <a>PermissionSet</a> as a
+     * permissions boundary.
+     * </p>
+     * 
+     * @param putPermissionsBoundaryToPermissionSetRequest
+     * @return A Java Future containing the result of the PutPermissionsBoundaryToPermissionSet operation returned by
+     *         the service.
+     * @sample AWSSSOAdminAsync.PutPermissionsBoundaryToPermissionSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/PutPermissionsBoundaryToPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutPermissionsBoundaryToPermissionSetResult> putPermissionsBoundaryToPermissionSetAsync(
+            PutPermissionsBoundaryToPermissionSetRequest putPermissionsBoundaryToPermissionSetRequest);
+
+    /**
+     * <p>
+     * Attaches an Amazon Web Services managed or customer managed IAM policy to the specified <a>PermissionSet</a> as a
+     * permissions boundary.
+     * </p>
+     * 
+     * @param putPermissionsBoundaryToPermissionSetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutPermissionsBoundaryToPermissionSet operation returned by
+     *         the service.
+     * @sample AWSSSOAdminAsyncHandler.PutPermissionsBoundaryToPermissionSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/PutPermissionsBoundaryToPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutPermissionsBoundaryToPermissionSetResult> putPermissionsBoundaryToPermissionSetAsync(
+            PutPermissionsBoundaryToPermissionSetRequest putPermissionsBoundaryToPermissionSetRequest,
+            com.amazonaws.handlers.AsyncHandler<PutPermissionsBoundaryToPermissionSetRequest, PutPermissionsBoundaryToPermissionSetResult> asyncHandler);
 
     /**
      * <p>

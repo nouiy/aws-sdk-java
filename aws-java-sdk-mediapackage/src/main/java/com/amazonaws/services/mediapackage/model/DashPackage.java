@@ -31,6 +31,8 @@ public class DashPackage implements Serializable, Cloneable, StructuredPojo {
     private String adsOnDeliveryRestrictions;
 
     private DashEncryption encryption;
+    /** When enabled, an I-Frame only stream will be included in the output. */
+    private Boolean includeIframeOnlyStream;
     /**
      * Determines the position of some tags in the Media Presentation Description (MPD). When set to FULL, elements like
      * SegmentTemplate and ContentProtection are included in each Representation. When set to COMPACT, duplicate
@@ -218,6 +220,50 @@ public class DashPackage implements Serializable, Cloneable, StructuredPojo {
     public DashPackage withEncryption(DashEncryption encryption) {
         setEncryption(encryption);
         return this;
+    }
+
+    /**
+     * When enabled, an I-Frame only stream will be included in the output.
+     * 
+     * @param includeIframeOnlyStream
+     *        When enabled, an I-Frame only stream will be included in the output.
+     */
+
+    public void setIncludeIframeOnlyStream(Boolean includeIframeOnlyStream) {
+        this.includeIframeOnlyStream = includeIframeOnlyStream;
+    }
+
+    /**
+     * When enabled, an I-Frame only stream will be included in the output.
+     * 
+     * @return When enabled, an I-Frame only stream will be included in the output.
+     */
+
+    public Boolean getIncludeIframeOnlyStream() {
+        return this.includeIframeOnlyStream;
+    }
+
+    /**
+     * When enabled, an I-Frame only stream will be included in the output.
+     * 
+     * @param includeIframeOnlyStream
+     *        When enabled, an I-Frame only stream will be included in the output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DashPackage withIncludeIframeOnlyStream(Boolean includeIframeOnlyStream) {
+        setIncludeIframeOnlyStream(includeIframeOnlyStream);
+        return this;
+    }
+
+    /**
+     * When enabled, an I-Frame only stream will be included in the output.
+     * 
+     * @return When enabled, an I-Frame only stream will be included in the output.
+     */
+
+    public Boolean isIncludeIframeOnlyStream() {
+        return this.includeIframeOnlyStream;
     }
 
     /**
@@ -858,6 +904,8 @@ public class DashPackage implements Serializable, Cloneable, StructuredPojo {
             sb.append("AdsOnDeliveryRestrictions: ").append(getAdsOnDeliveryRestrictions()).append(",");
         if (getEncryption() != null)
             sb.append("Encryption: ").append(getEncryption()).append(",");
+        if (getIncludeIframeOnlyStream() != null)
+            sb.append("IncludeIframeOnlyStream: ").append(getIncludeIframeOnlyStream()).append(",");
         if (getManifestLayout() != null)
             sb.append("ManifestLayout: ").append(getManifestLayout()).append(",");
         if (getManifestWindowSeconds() != null)
@@ -907,6 +955,10 @@ public class DashPackage implements Serializable, Cloneable, StructuredPojo {
         if (other.getEncryption() == null ^ this.getEncryption() == null)
             return false;
         if (other.getEncryption() != null && other.getEncryption().equals(this.getEncryption()) == false)
+            return false;
+        if (other.getIncludeIframeOnlyStream() == null ^ this.getIncludeIframeOnlyStream() == null)
+            return false;
+        if (other.getIncludeIframeOnlyStream() != null && other.getIncludeIframeOnlyStream().equals(this.getIncludeIframeOnlyStream()) == false)
             return false;
         if (other.getManifestLayout() == null ^ this.getManifestLayout() == null)
             return false;
@@ -968,6 +1020,7 @@ public class DashPackage implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAdTriggers() == null) ? 0 : getAdTriggers().hashCode());
         hashCode = prime * hashCode + ((getAdsOnDeliveryRestrictions() == null) ? 0 : getAdsOnDeliveryRestrictions().hashCode());
         hashCode = prime * hashCode + ((getEncryption() == null) ? 0 : getEncryption().hashCode());
+        hashCode = prime * hashCode + ((getIncludeIframeOnlyStream() == null) ? 0 : getIncludeIframeOnlyStream().hashCode());
         hashCode = prime * hashCode + ((getManifestLayout() == null) ? 0 : getManifestLayout().hashCode());
         hashCode = prime * hashCode + ((getManifestWindowSeconds() == null) ? 0 : getManifestWindowSeconds().hashCode());
         hashCode = prime * hashCode + ((getMinBufferTimeSeconds() == null) ? 0 : getMinBufferTimeSeconds().hashCode());

@@ -236,6 +236,32 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<CreateEdgeDeploymentPlanResult> createEdgeDeploymentPlanAsync(CreateEdgeDeploymentPlanRequest request) {
+
+        return createEdgeDeploymentPlanAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEdgeDeploymentPlanResult> createEdgeDeploymentPlanAsync(CreateEdgeDeploymentPlanRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateEdgeDeploymentPlanRequest, CreateEdgeDeploymentPlanResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEdgeDeploymentStageResult> createEdgeDeploymentStageAsync(CreateEdgeDeploymentStageRequest request) {
+
+        return createEdgeDeploymentStageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEdgeDeploymentStageResult> createEdgeDeploymentStageAsync(CreateEdgeDeploymentStageRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateEdgeDeploymentStageRequest, CreateEdgeDeploymentStageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateEdgePackagingJobResult> createEdgePackagingJobAsync(CreateEdgePackagingJobRequest request) {
 
         return createEdgePackagingJobAsync(request, null);
@@ -831,6 +857,32 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteEdgeDeploymentPlanResult> deleteEdgeDeploymentPlanAsync(DeleteEdgeDeploymentPlanRequest request) {
+
+        return deleteEdgeDeploymentPlanAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEdgeDeploymentPlanResult> deleteEdgeDeploymentPlanAsync(DeleteEdgeDeploymentPlanRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteEdgeDeploymentPlanRequest, DeleteEdgeDeploymentPlanResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEdgeDeploymentStageResult> deleteEdgeDeploymentStageAsync(DeleteEdgeDeploymentStageRequest request) {
+
+        return deleteEdgeDeploymentStageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEdgeDeploymentStageResult> deleteEdgeDeploymentStageAsync(DeleteEdgeDeploymentStageRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteEdgeDeploymentStageRequest, DeleteEdgeDeploymentStageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteEndpointResult> deleteEndpointAsync(DeleteEndpointRequest request) {
 
         return deleteEndpointAsync(request, null);
@@ -1367,6 +1419,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<DescribeDomainResult> describeDomainAsync(DescribeDomainRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeDomainRequest, DescribeDomainResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEdgeDeploymentPlanResult> describeEdgeDeploymentPlanAsync(DescribeEdgeDeploymentPlanRequest request) {
+
+        return describeEdgeDeploymentPlanAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEdgeDeploymentPlanResult> describeEdgeDeploymentPlanAsync(DescribeEdgeDeploymentPlanRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeEdgeDeploymentPlanRequest, DescribeEdgeDeploymentPlanResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2170,6 +2235,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListEdgeDeploymentPlansResult> listEdgeDeploymentPlansAsync(ListEdgeDeploymentPlansRequest request) {
+
+        return listEdgeDeploymentPlansAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEdgeDeploymentPlansResult> listEdgeDeploymentPlansAsync(ListEdgeDeploymentPlansRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListEdgeDeploymentPlansRequest, ListEdgeDeploymentPlansResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListEdgePackagingJobsResult> listEdgePackagingJobsAsync(ListEdgePackagingJobsRequest request) {
 
         return listEdgePackagingJobsAsync(request, null);
@@ -2581,6 +2659,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListStageDevicesResult> listStageDevicesAsync(ListStageDevicesRequest request) {
+
+        return listStageDevicesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStageDevicesResult> listStageDevicesAsync(ListStageDevicesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListStageDevicesRequest, ListStageDevicesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListStudioLifecycleConfigsResult> listStudioLifecycleConfigsAsync(ListStudioLifecycleConfigsRequest request) {
 
         return listStudioLifecycleConfigsAsync(request, null);
@@ -2834,6 +2925,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<StartEdgeDeploymentStageResult> startEdgeDeploymentStageAsync(StartEdgeDeploymentStageRequest request) {
+
+        return startEdgeDeploymentStageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartEdgeDeploymentStageResult> startEdgeDeploymentStageAsync(StartEdgeDeploymentStageRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartEdgeDeploymentStageRequest, StartEdgeDeploymentStageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<StartMonitoringScheduleResult> startMonitoringScheduleAsync(StartMonitoringScheduleRequest request) {
 
         return startMonitoringScheduleAsync(request, null);
@@ -2894,6 +2998,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<StopCompilationJobResult> stopCompilationJobAsync(StopCompilationJobRequest request,
             com.amazonaws.handlers.AsyncHandler<StopCompilationJobRequest, StopCompilationJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopEdgeDeploymentStageResult> stopEdgeDeploymentStageAsync(StopEdgeDeploymentStageRequest request) {
+
+        return stopEdgeDeploymentStageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopEdgeDeploymentStageResult> stopEdgeDeploymentStageAsync(StopEdgeDeploymentStageRequest request,
+            com.amazonaws.handlers.AsyncHandler<StopEdgeDeploymentStageRequest, StopEdgeDeploymentStageResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

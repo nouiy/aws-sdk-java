@@ -38,7 +38,11 @@ public class TransitGatewayRoute implements Serializable, Cloneable {
      * </p>
      */
     private String prefixListId;
-
+    /**
+     * <p>
+     * The ID of the transit gateway route table announcement.
+     * </p>
+     */
     private String transitGatewayRouteTableAnnouncementId;
     /**
      * <p>
@@ -140,7 +144,12 @@ public class TransitGatewayRoute implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The ID of the transit gateway route table announcement.
+     * </p>
+     * 
      * @param transitGatewayRouteTableAnnouncementId
+     *        The ID of the transit gateway route table announcement.
      */
 
     public void setTransitGatewayRouteTableAnnouncementId(String transitGatewayRouteTableAnnouncementId) {
@@ -148,7 +157,11 @@ public class TransitGatewayRoute implements Serializable, Cloneable {
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the transit gateway route table announcement.
+     * </p>
+     * 
+     * @return The ID of the transit gateway route table announcement.
      */
 
     public String getTransitGatewayRouteTableAnnouncementId() {
@@ -156,7 +169,12 @@ public class TransitGatewayRoute implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The ID of the transit gateway route table announcement.
+     * </p>
+     * 
      * @param transitGatewayRouteTableAnnouncementId
+     *        The ID of the transit gateway route table announcement.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

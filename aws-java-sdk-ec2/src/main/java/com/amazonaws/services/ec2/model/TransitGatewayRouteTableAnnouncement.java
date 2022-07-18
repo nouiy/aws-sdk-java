@@ -38,7 +38,11 @@ public class TransitGatewayRouteTableAnnouncement implements Serializable, Clone
      * </p>
      */
     private String transitGatewayId;
-
+    /**
+     * <p>
+     * The ID of the core network for the transit gateway route table announcement.
+     * </p>
+     */
     private String coreNetworkId;
     /**
      * <p>
@@ -46,7 +50,11 @@ public class TransitGatewayRouteTableAnnouncement implements Serializable, Clone
      * </p>
      */
     private String peerTransitGatewayId;
-
+    /**
+     * <p>
+     * The ID of the core network ID for the peer.
+     * </p>
+     */
     private String peerCoreNetworkId;
     /**
      * <p>
@@ -166,7 +174,12 @@ public class TransitGatewayRouteTableAnnouncement implements Serializable, Clone
     }
 
     /**
+     * <p>
+     * The ID of the core network for the transit gateway route table announcement.
+     * </p>
+     * 
      * @param coreNetworkId
+     *        The ID of the core network for the transit gateway route table announcement.
      */
 
     public void setCoreNetworkId(String coreNetworkId) {
@@ -174,7 +187,11 @@ public class TransitGatewayRouteTableAnnouncement implements Serializable, Clone
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the core network for the transit gateway route table announcement.
+     * </p>
+     * 
+     * @return The ID of the core network for the transit gateway route table announcement.
      */
 
     public String getCoreNetworkId() {
@@ -182,7 +199,12 @@ public class TransitGatewayRouteTableAnnouncement implements Serializable, Clone
     }
 
     /**
+     * <p>
+     * The ID of the core network for the transit gateway route table announcement.
+     * </p>
+     * 
      * @param coreNetworkId
+     *        The ID of the core network for the transit gateway route table announcement.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -232,7 +254,12 @@ public class TransitGatewayRouteTableAnnouncement implements Serializable, Clone
     }
 
     /**
+     * <p>
+     * The ID of the core network ID for the peer.
+     * </p>
+     * 
      * @param peerCoreNetworkId
+     *        The ID of the core network ID for the peer.
      */
 
     public void setPeerCoreNetworkId(String peerCoreNetworkId) {
@@ -240,7 +267,11 @@ public class TransitGatewayRouteTableAnnouncement implements Serializable, Clone
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the core network ID for the peer.
+     * </p>
+     * 
+     * @return The ID of the core network ID for the peer.
      */
 
     public String getPeerCoreNetworkId() {
@@ -248,7 +279,12 @@ public class TransitGatewayRouteTableAnnouncement implements Serializable, Clone
     }
 
     /**
+     * <p>
+     * The ID of the core network ID for the peer.
+     * </p>
+     * 
      * @param peerCoreNetworkId
+     *        The ID of the core network ID for the peer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

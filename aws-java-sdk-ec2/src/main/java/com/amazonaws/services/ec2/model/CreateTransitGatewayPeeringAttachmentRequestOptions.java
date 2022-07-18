@@ -16,6 +16,9 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
+ * <p>
+ * Describes whether dynamic routing is enabled or disabled for the transit gateway peering request.
+ * </p>
  * 
  * @see <a
  *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateTransitGatewayPeeringAttachmentRequestOptions"
@@ -24,10 +27,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateTransitGatewayPeeringAttachmentRequestOptions implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Indicates whether dynamic routing is enabled or disabled.
+     * </p>
+     */
     private String dynamicRouting;
 
     /**
+     * <p>
+     * Indicates whether dynamic routing is enabled or disabled.
+     * </p>
+     * 
      * @param dynamicRouting
+     *        Indicates whether dynamic routing is enabled or disabled.
      * @see DynamicRoutingValue
      */
 
@@ -36,7 +49,11 @@ public class CreateTransitGatewayPeeringAttachmentRequestOptions implements Seri
     }
 
     /**
-     * @return
+     * <p>
+     * Indicates whether dynamic routing is enabled or disabled.
+     * </p>
+     * 
+     * @return Indicates whether dynamic routing is enabled or disabled.
      * @see DynamicRoutingValue
      */
 
@@ -45,7 +62,12 @@ public class CreateTransitGatewayPeeringAttachmentRequestOptions implements Seri
     }
 
     /**
+     * <p>
+     * Indicates whether dynamic routing is enabled or disabled.
+     * </p>
+     * 
      * @param dynamicRouting
+     *        Indicates whether dynamic routing is enabled or disabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DynamicRoutingValue
      */
@@ -56,7 +78,12 @@ public class CreateTransitGatewayPeeringAttachmentRequestOptions implements Seri
     }
 
     /**
+     * <p>
+     * Indicates whether dynamic routing is enabled or disabled.
+     * </p>
+     * 
      * @param dynamicRouting
+     *        Indicates whether dynamic routing is enabled or disabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DynamicRoutingValue
      */

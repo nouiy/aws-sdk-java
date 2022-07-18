@@ -50,7 +50,11 @@ public class CreateTransitGatewayPeeringAttachmentRequest extends AmazonWebServi
      * </p>
      */
     private String peerRegion;
-
+    /**
+     * <p>
+     * Requests a transit gateway peering attachment.
+     * </p>
+     */
     private CreateTransitGatewayPeeringAttachmentRequestOptions options;
     /**
      * <p>
@@ -220,7 +224,12 @@ public class CreateTransitGatewayPeeringAttachmentRequest extends AmazonWebServi
     }
 
     /**
+     * <p>
+     * Requests a transit gateway peering attachment.
+     * </p>
+     * 
      * @param options
+     *        Requests a transit gateway peering attachment.
      */
 
     public void setOptions(CreateTransitGatewayPeeringAttachmentRequestOptions options) {
@@ -228,7 +237,11 @@ public class CreateTransitGatewayPeeringAttachmentRequest extends AmazonWebServi
     }
 
     /**
-     * @return
+     * <p>
+     * Requests a transit gateway peering attachment.
+     * </p>
+     * 
+     * @return Requests a transit gateway peering attachment.
      */
 
     public CreateTransitGatewayPeeringAttachmentRequestOptions getOptions() {
@@ -236,7 +249,12 @@ public class CreateTransitGatewayPeeringAttachmentRequest extends AmazonWebServi
     }
 
     /**
+     * <p>
+     * Requests a transit gateway peering attachment.
+     * </p>
+     * 
      * @param options
+     *        Requests a transit gateway peering attachment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

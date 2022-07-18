@@ -330,8 +330,9 @@ public interface AmazonEC2 {
     /**
      * <p>
      * Allocate a CIDR from an IPAM pool. In IPAM, an allocation is a CIDR assignment from an IPAM pool to another
-     * resource or IPAM pool. For more information, see <a href="/vpc/latest/ipam/allocate-cidrs-ipam.html">Allocate
-     * CIDRs</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     * resource or IPAM pool. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/allocate-cidrs-ipam.html">Allocate CIDRs</a> in the <i>Amazon
+     * VPC IPAM User Guide</i>.
      * </p>
      * 
      * @param allocateIpamPoolCidrRequest
@@ -1672,8 +1673,8 @@ public interface AmazonEC2 {
      * Amazon Web Services Regions and accounts throughout your Amazon Web Services Organization.
      * </p>
      * <p>
-     * For more information, see <a href="/vpc/latest/ipam/create-ipam.html">Create an IPAM</a> in the <i>Amazon VPC
-     * IPAM User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/create-ipam.html">Create an
+     * IPAM</a> in the <i>Amazon VPC IPAM User Guide</i>.
      * </p>
      * 
      * @param createIpamRequest
@@ -1692,8 +1693,8 @@ public interface AmazonEC2 {
      * create a pool for each.
      * </p>
      * <p>
-     * For more information, see <a href="/vpc/latest/ipam/create-top-ipam.html">Create a top-level pool</a> in the
-     * <i>Amazon VPC IPAM User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/create-top-ipam.html">Create a
+     * top-level pool</a> in the <i>Amazon VPC IPAM User Guide</i>.
      * </p>
      * 
      * @param createIpamPoolRequest
@@ -1712,8 +1713,8 @@ public interface AmazonEC2 {
      * addresses across multiple unconnected networks without causing IP address overlap or conflict.
      * </p>
      * <p>
-     * For more information, see <a href="/vpc/latest/ipam/add-scope-ipam.html">Add a scope</a> in the <i>Amazon VPC
-     * IPAM User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/add-scope-ipam.html">Add a
+     * scope</a> in the <i>Amazon VPC IPAM User Guide</i>.
      * </p>
      * 
      * @param createIpamScopeRequest
@@ -1781,7 +1782,7 @@ public interface AmazonEC2 {
 
     /**
      * <p>
-     * Creates a new version for a launch template. You can specify an existing version of launch template from which to
+     * Creates a new version of a launch template. You can specify an existing version of launch template from which to
      * base the new version.
      * </p>
      * <p>
@@ -1795,7 +1796,7 @@ public interface AmazonEC2 {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#manage-launch-template-versions"
-     * >Modify a launch template (manage launch template versions)</a>in the <i>Amazon Elastic Compute Cloud User
+     * >Modify a launch template (manage launch template versions)</a> in the <i>Amazon Elastic Compute Cloud User
      * Guide</i>.
      * </p>
      * 
@@ -2399,11 +2400,11 @@ public interface AmazonEC2 {
      * </p>
      * <p>
      * For more information about tags, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Resources</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>. For more information about creating IAM policies that control
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tag your Amazon EC2 resources</a> in
+     * the <i>Amazon Elastic Compute Cloud User Guide</i>. For more information about creating IAM policies that control
      * users' access to resources based on tags, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-iam-actions-resources.html">Supported
-     * Resource-Level Permissions for Amazon EC2 API Actions</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * resource-level permissions for Amazon EC2 API actions</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param createTagsRequest
@@ -2606,8 +2607,8 @@ public interface AmazonEC2 {
     /**
      * <p>
      * Requests a transit gateway peering attachment between the specified transit gateway (requester) and a peer
-     * transit gateway (accepter). The transit gateways must be in different Regions. The peer transit gateway can be in
-     * your account or a different Amazon Web Services account.
+     * transit gateway (accepter). The peer transit gateway can be in your account or a different Amazon Web Services
+     * account.
      * </p>
      * <p>
      * After you create the peering attachment, the owner of the accepter transit gateway must accept the attachment
@@ -3169,8 +3170,8 @@ public interface AmazonEC2 {
      * data for CIDRs.
      * </p>
      * <p>
-     * For more information, see <a href="/vpc/latest/ipam/delete-ipam.html">Delete an IPAM</a> in the <i>Amazon VPC
-     * IPAM User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/delete-ipam.html">Delete an
+     * IPAM</a> in the <i>Amazon VPC IPAM User Guide</i>.
      * </p>
      * 
      * @param deleteIpamRequest
@@ -3195,8 +3196,8 @@ public interface AmazonEC2 {
      * </p>
      * </note>
      * <p>
-     * For more information, see <a href="/vpc/latest/ipam/delete-pool-ipam.html">Delete a pool</a> in the <i>Amazon VPC
-     * IPAM User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/delete-pool-ipam.html">Delete a
+     * pool</a> in the <i>Amazon VPC IPAM User Guide</i>.
      * </p>
      * 
      * @param deleteIpamPoolRequest
@@ -3212,8 +3213,8 @@ public interface AmazonEC2 {
      * Delete the scope for an IPAM. You cannot delete the default scopes.
      * </p>
      * <p>
-     * For more information, see <a href="/vpc/latest/ipam/delete-scope-ipam.html">Delete a scope</a> in the <i>Amazon
-     * VPC IPAM User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/delete-scope-ipam.html">Delete a
+     * scope</a> in the <i>Amazon VPC IPAM User Guide</i>.
      * </p>
      * 
      * @param deleteIpamScopeRequest
@@ -3602,8 +3603,8 @@ public interface AmazonEC2 {
      * </p>
      * <p>
      * To list the current tags, use <a>DescribeTags</a>. For more information about tags, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Resources</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tag your Amazon EC2 resources</a> in
+     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param deleteTagsRequest
@@ -4040,8 +4041,8 @@ public interface AmazonEC2 {
      * <p>
      * Deprovision a CIDR provisioned from an IPAM pool. If you deprovision a CIDR from a pool that has a source pool,
      * the CIDR is recycled back into the source pool. For more information, see <a
-     * href="/vpc/latest/ipam/depro-pool-cidr-ipam.html">Deprovision pool CIDRs</a> in the <i>Amazon VPC IPAM User
-     * Guide</i>.
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/depro-pool-cidr-ipam.html">Deprovision pool CIDRs</a> in the
+     * <i>Amazon VPC IPAM User Guide</i>.
      * </p>
      * 
      * @param deprovisionIpamPoolCidrRequest
@@ -5245,8 +5246,8 @@ public interface AmazonEC2 {
      * Get information about your IPAM pools.
      * </p>
      * <p>
-     * For more information, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the <i>Amazon VPC
-     * IPAM User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/what-is-it-ipam.html">What is
+     * IPAM?</a> in the <i>Amazon VPC IPAM User Guide</i>.
      * </p>
      * 
      * @param describeIpamsRequest
@@ -6315,8 +6316,8 @@ public interface AmazonEC2 {
      * </p>
      * <p>
      * For more information about tags, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Resources</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tag your Amazon EC2 resources</a> in
+     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param describeTagsRequest
@@ -7077,8 +7078,9 @@ public interface AmazonEC2 {
 
     /**
      * <p>
-     * Disable the IPAM account. For more information, see <a href="/vpc/latest/ipam/enable-integ-ipam.html">Enable
-     * integration with Organizations</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     * Disable the IPAM account. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/enable-integ-ipam.html">Enable integration with
+     * Organizations</a> in the <i>Amazon VPC IPAM User Guide</i>.
      * </p>
      * 
      * @param disableIpamOrganizationAdminAccountRequest
@@ -7488,8 +7490,8 @@ public interface AmazonEC2 {
      * <p>
      * Enable an Organizations member account as the IPAM admin account. You cannot select the Organizations management
      * account as the IPAM admin account. For more information, see <a
-     * href="/vpc/latest/ipam/enable-integ-ipam.html">Enable integration with Organizations</a> in the <i>Amazon VPC
-     * IPAM User Guide</i>.
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/enable-integ-ipam.html">Enable integration with
+     * Organizations</a> in the <i>Amazon VPC IPAM User Guide</i>.
      * </p>
      * 
      * @param enableIpamOrganizationAdminAccountRequest
@@ -7952,8 +7954,8 @@ public interface AmazonEC2 {
     /**
      * <p>
      * Retrieve historical information about a CIDR within an IPAM scope. For more information, see <a
-     * href="/vpc/latest/ipam/view-history-cidr-ipam.html">View the history of IP addresses</a> in the <i>Amazon VPC
-     * IPAM User Guide</i>.
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/view-history-cidr-ipam.html">View the history of IP
+     * addresses</a> in the <i>Amazon VPC IPAM User Guide</i>.
      * </p>
      * 
      * @param getIpamAddressHistoryRequest
@@ -8009,8 +8011,9 @@ public interface AmazonEC2 {
      * </p>
      * <p>
      * This action calls on other describe actions to get instance information. Depending on your instance
-     * configuration, you may need to allow the following actions in your IAM policy: DescribeSpotInstanceRequests,
-     * DescribeInstanceCreditSpecifications, DescribeVolumes, DescribeInstanceAttribute, and DescribeElasticGpus. Or,
+     * configuration, you may need to allow the following actions in your IAM policy:
+     * <code>DescribeSpotInstanceRequests</code>, <code>DescribeInstanceCreditSpecifications</code>,
+     * <code>DescribeVolumes</code>, <code>DescribeInstanceAttribute</code>, and <code>DescribeElasticGpus</code>. Or,
      * you can allow <code>describe*</code> depending on your instance requirements.
      * </p>
      * 
@@ -8993,8 +8996,8 @@ public interface AmazonEC2 {
      * Modify the configurations of an IPAM pool.
      * </p>
      * <p>
-     * For more information, see <a href="/vpc/latest/ipam/mod-pool-ipam.html">Modify a pool</a> in the <i>Amazon VPC
-     * IPAM User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/mod-pool-ipam.html">Modify a
+     * pool</a> in the <i>Amazon VPC IPAM User Guide</i>.
      * </p>
      * 
      * @param modifyIpamPoolRequest
@@ -9012,9 +9015,10 @@ public interface AmazonEC2 {
      * auto-imported into a pool, and it will be removed from any pool it has an allocation in.
      * </p>
      * <p>
-     * For more information, see <a href="/vpc/latest/ipam/move-resource-ipam.html">Move resource CIDRs between
-     * scopes</a> and <a href="/vpc/latest/ipam/change-monitoring-state-ipam.html">Change the monitoring state of
-     * resource CIDRs</a> in the <i>Amazon VPC IPAM User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/move-resource-ipam.html">Move
+     * resource CIDRs between scopes</a> and <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/change-monitoring-state-ipam.html">Change the monitoring state
+     * of resource CIDRs</a> in the <i>Amazon VPC IPAM User Guide</i>.
      * </p>
      * 
      * @param modifyIpamResourceCidrRequest
@@ -9744,8 +9748,9 @@ public interface AmazonEC2 {
      * <p>
      * If you already have an IPv4 BYOIP CIDR with Amazon Web Services, you can move the CIDR to IPAM from a public IPv4
      * pool. You cannot move an IPv6 CIDR to IPAM. If you are bringing a new IP address to Amazon Web Services for the
-     * first time, complete the steps in <a href="/vpc/latest/ipam/tutorials-byoip-ipam.html">Tutorial: BYOIP address
-     * CIDRs to IPAM</a>.
+     * first time, complete the steps in <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoip-ipam.html">Tutorial: BYOIP address CIDRs to
+     * IPAM</a>.
      * </p>
      * 
      * @param moveByoipCidrToIpamRequest
@@ -9791,8 +9796,8 @@ public interface AmazonEC2 {
      * transfer a CIDR from a top-level pool to a pool within it.
      * </p>
      * <p>
-     * For more information, see <a href="/vpc/latest/ipam/prov-cidr-ipam.html">Provision CIDRs to pools</a> in the
-     * <i>Amazon VPC IPAM User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/ipam/prov-cidr-ipam.html">Provision
+     * CIDRs to pools</a> in the <i>Amazon VPC IPAM User Guide</i>.
      * </p>
      * 
      * @param provisionIpamPoolCidrRequest
@@ -9808,8 +9813,9 @@ public interface AmazonEC2 {
      * Provision a CIDR to a public IPv4 pool.
      * </p>
      * <p>
-     * For more information about IPAM, see <a href="/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the
-     * <i>Amazon VPC IPAM User Guide</i>.
+     * For more information about IPAM, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/what-is-it-ipam.html">What is IPAM?</a> in the <i>Amazon VPC
+     * IPAM User Guide</i>.
      * </p>
      * 
      * @param provisionPublicIpv4PoolCidrRequest
@@ -9921,7 +9927,8 @@ public interface AmazonEC2 {
      * <note>
      * <p>
      * For Amazon EBS-backed instances, <a>CreateImage</a> creates and registers the AMI in a single request, so you
-     * don't have to register the AMI yourself.
+     * don't have to register the AMI yourself. We recommend that you always use <a>CreateImage</a> unless you have a
+     * specific reason to use RegisterImage.
      * </p>
      * </note>
      * <p>
@@ -10201,8 +10208,8 @@ public interface AmazonEC2 {
      * an allocation for a resource without deleting the resource, set its monitored state to false using <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyIpamResourceCidr.html"
      * >ModifyIpamResourceCidr</a>. For more information, see <a
-     * href="/vpc/latest/ipam/release-pool-alloc-ipam.html">Release an allocation</a> in the <i>Amazon VPC IPAM User
-     * Guide</i>.
+     * href="https://docs.aws.amazon.com/vpc/latest/ipam/release-pool-alloc-ipam.html">Release an allocation</a> in the
+     * <i>Amazon VPC IPAM User Guide</i>.
      * </p>
      * 
      * @param releaseIpamPoolAllocationRequest

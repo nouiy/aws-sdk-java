@@ -84,7 +84,7 @@ public class GetInlinePolicyForPermissionSetResult extends com.amazonaws.AmazonW
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getInlinePolicy() != null)
-            sb.append("InlinePolicy: ").append("***Sensitive Data Redacted***");
+            sb.append("InlinePolicy: ").append(getInlinePolicy());
         sb.append("}");
         return sb.toString();
     }

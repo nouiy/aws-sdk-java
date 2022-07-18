@@ -16,6 +16,9 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
+ * <p>
+ * Describes dynamic routing for the transit gateway peering attachment.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/TransitGatewayPeeringAttachmentOptions"
  *      target="_top">AWS API Documentation</a>
@@ -23,10 +26,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class TransitGatewayPeeringAttachmentOptions implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Describes whether dynamic routing is enabled or disabled for the transit gateway peering attachment.
+     * </p>
+     */
     private String dynamicRouting;
 
     /**
+     * <p>
+     * Describes whether dynamic routing is enabled or disabled for the transit gateway peering attachment.
+     * </p>
+     * 
      * @param dynamicRouting
+     *        Describes whether dynamic routing is enabled or disabled for the transit gateway peering attachment.
      * @see DynamicRoutingValue
      */
 
@@ -35,7 +48,11 @@ public class TransitGatewayPeeringAttachmentOptions implements Serializable, Clo
     }
 
     /**
-     * @return
+     * <p>
+     * Describes whether dynamic routing is enabled or disabled for the transit gateway peering attachment.
+     * </p>
+     * 
+     * @return Describes whether dynamic routing is enabled or disabled for the transit gateway peering attachment.
      * @see DynamicRoutingValue
      */
 
@@ -44,7 +61,12 @@ public class TransitGatewayPeeringAttachmentOptions implements Serializable, Clo
     }
 
     /**
+     * <p>
+     * Describes whether dynamic routing is enabled or disabled for the transit gateway peering attachment.
+     * </p>
+     * 
      * @param dynamicRouting
+     *        Describes whether dynamic routing is enabled or disabled for the transit gateway peering attachment.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DynamicRoutingValue
      */
@@ -55,7 +77,12 @@ public class TransitGatewayPeeringAttachmentOptions implements Serializable, Clo
     }
 
     /**
+     * <p>
+     * Describes whether dynamic routing is enabled or disabled for the transit gateway peering attachment.
+     * </p>
+     * 
      * @param dynamicRouting
+     *        Describes whether dynamic routing is enabled or disabled for the transit gateway peering attachment.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DynamicRoutingValue
      */

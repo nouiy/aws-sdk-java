@@ -303,9 +303,41 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     private com.amazonaws.internal.SdkInternalList<ElasticInferenceAccelerator> elasticInferenceAccelerators;
     /**
      * <p>
-     * The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The specified
-     * tags are applied to all instances or volumes that are created during launch. To tag a resource after it has been
-     * created, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     * The tags to apply to the resources that are created during instance launch.
+     * </p>
+     * <p>
+     * You can specify tags for the following resources only:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Instances
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Volumes
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Elastic graphics
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Spot Instance requests
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Network interfaces
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To tag a resource after it has been created, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TagSpecification> tagSpecifications;
@@ -412,7 +444,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * Indicates whether an instance is enabled for stop protection. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * Protection</a>.
+     * protection</a>.
      * </p>
      */
     private Boolean disableApiStop;
@@ -2624,14 +2656,76 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The specified
-     * tags are applied to all instances or volumes that are created during launch. To tag a resource after it has been
-     * created, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     * The tags to apply to the resources that are created during instance launch.
+     * </p>
+     * <p>
+     * You can specify tags for the following resources only:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Instances
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Volumes
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Elastic graphics
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Spot Instance requests
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Network interfaces
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To tag a resource after it has been created, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      * </p>
      * 
-     * @return The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The
-     *         specified tags are applied to all instances or volumes that are created during launch. To tag a resource
-     *         after it has been created, see <a
+     * @return The tags to apply to the resources that are created during instance launch.</p>
+     *         <p>
+     *         You can specify tags for the following resources only:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Instances
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Volumes
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Elastic graphics
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Spot Instance requests
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Network interfaces
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         To tag a resource after it has been created, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      */
 
@@ -2644,15 +2738,77 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The specified
-     * tags are applied to all instances or volumes that are created during launch. To tag a resource after it has been
-     * created, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     * The tags to apply to the resources that are created during instance launch.
+     * </p>
+     * <p>
+     * You can specify tags for the following resources only:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Instances
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Volumes
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Elastic graphics
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Spot Instance requests
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Network interfaces
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To tag a resource after it has been created, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      * </p>
      * 
      * @param tagSpecifications
-     *        The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The
-     *        specified tags are applied to all instances or volumes that are created during launch. To tag a resource
-     *        after it has been created, see <a
+     *        The tags to apply to the resources that are created during instance launch.</p>
+     *        <p>
+     *        You can specify tags for the following resources only:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Instances
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Volumes
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Elastic graphics
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Spot Instance requests
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Network interfaces
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        To tag a resource after it has been created, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      */
 
@@ -2667,9 +2823,41 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The specified
-     * tags are applied to all instances or volumes that are created during launch. To tag a resource after it has been
-     * created, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     * The tags to apply to the resources that are created during instance launch.
+     * </p>
+     * <p>
+     * You can specify tags for the following resources only:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Instances
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Volumes
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Elastic graphics
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Spot Instance requests
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Network interfaces
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To tag a resource after it has been created, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2678,9 +2866,39 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      * 
      * @param tagSpecifications
-     *        The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The
-     *        specified tags are applied to all instances or volumes that are created during launch. To tag a resource
-     *        after it has been created, see <a
+     *        The tags to apply to the resources that are created during instance launch.</p>
+     *        <p>
+     *        You can specify tags for the following resources only:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Instances
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Volumes
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Elastic graphics
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Spot Instance requests
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Network interfaces
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        To tag a resource after it has been created, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2697,15 +2915,77 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The specified
-     * tags are applied to all instances or volumes that are created during launch. To tag a resource after it has been
-     * created, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
+     * The tags to apply to the resources that are created during instance launch.
+     * </p>
+     * <p>
+     * You can specify tags for the following resources only:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Instances
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Volumes
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Elastic graphics
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Spot Instance requests
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Network interfaces
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To tag a resource after it has been created, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      * </p>
      * 
      * @param tagSpecifications
-     *        The tags to apply to the resources during launch. You can only tag instances and volumes on launch. The
-     *        specified tags are applied to all instances or volumes that are created during launch. To tag a resource
-     *        after it has been created, see <a
+     *        The tags to apply to the resources that are created during instance launch.</p>
+     *        <p>
+     *        You can specify tags for the following resources only:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Instances
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Volumes
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Elastic graphics
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Spot Instance requests
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Network interfaces
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        To tag a resource after it has been created, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html">CreateTags</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -3378,13 +3658,13 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * Indicates whether an instance is enabled for stop protection. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * Protection</a>.
+     * protection</a>.
      * </p>
      * 
      * @param disableApiStop
      *        Indicates whether an instance is enabled for stop protection. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *        Protection</a>.
+     *        protection</a>.
      */
 
     public void setDisableApiStop(Boolean disableApiStop) {
@@ -3395,12 +3675,12 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * Indicates whether an instance is enabled for stop protection. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * Protection</a>.
+     * protection</a>.
      * </p>
      * 
      * @return Indicates whether an instance is enabled for stop protection. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *         Protection</a>.
+     *         protection</a>.
      */
 
     public Boolean getDisableApiStop() {
@@ -3411,13 +3691,13 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * Indicates whether an instance is enabled for stop protection. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * Protection</a>.
+     * protection</a>.
      * </p>
      * 
      * @param disableApiStop
      *        Indicates whether an instance is enabled for stop protection. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *        Protection</a>.
+     *        protection</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3430,12 +3710,12 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * Indicates whether an instance is enabled for stop protection. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * Protection</a>.
+     * protection</a>.
      * </p>
      * 
      * @return Indicates whether an instance is enabled for stop protection. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *         Protection</a>.
+     *         protection</a>.
      */
 
     public Boolean isDisableApiStop() {

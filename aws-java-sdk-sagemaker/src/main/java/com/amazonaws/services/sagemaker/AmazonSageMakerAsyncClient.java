@@ -619,6 +619,72 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreateEdgeDeploymentPlanResult> createEdgeDeploymentPlanAsync(CreateEdgeDeploymentPlanRequest request) {
+
+        return createEdgeDeploymentPlanAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEdgeDeploymentPlanResult> createEdgeDeploymentPlanAsync(final CreateEdgeDeploymentPlanRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateEdgeDeploymentPlanRequest, CreateEdgeDeploymentPlanResult> asyncHandler) {
+        final CreateEdgeDeploymentPlanRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateEdgeDeploymentPlanResult>() {
+            @Override
+            public CreateEdgeDeploymentPlanResult call() throws Exception {
+                CreateEdgeDeploymentPlanResult result = null;
+
+                try {
+                    result = executeCreateEdgeDeploymentPlan(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEdgeDeploymentStageResult> createEdgeDeploymentStageAsync(CreateEdgeDeploymentStageRequest request) {
+
+        return createEdgeDeploymentStageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEdgeDeploymentStageResult> createEdgeDeploymentStageAsync(final CreateEdgeDeploymentStageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateEdgeDeploymentStageRequest, CreateEdgeDeploymentStageResult> asyncHandler) {
+        final CreateEdgeDeploymentStageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateEdgeDeploymentStageResult>() {
+            @Override
+            public CreateEdgeDeploymentStageResult call() throws Exception {
+                CreateEdgeDeploymentStageResult result = null;
+
+                try {
+                    result = executeCreateEdgeDeploymentStage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateEdgePackagingJobResult> createEdgePackagingJobAsync(CreateEdgePackagingJobRequest request) {
 
         return createEdgePackagingJobAsync(request, null);
@@ -2116,6 +2182,72 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteEdgeDeploymentPlanResult> deleteEdgeDeploymentPlanAsync(DeleteEdgeDeploymentPlanRequest request) {
+
+        return deleteEdgeDeploymentPlanAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEdgeDeploymentPlanResult> deleteEdgeDeploymentPlanAsync(final DeleteEdgeDeploymentPlanRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteEdgeDeploymentPlanRequest, DeleteEdgeDeploymentPlanResult> asyncHandler) {
+        final DeleteEdgeDeploymentPlanRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteEdgeDeploymentPlanResult>() {
+            @Override
+            public DeleteEdgeDeploymentPlanResult call() throws Exception {
+                DeleteEdgeDeploymentPlanResult result = null;
+
+                try {
+                    result = executeDeleteEdgeDeploymentPlan(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEdgeDeploymentStageResult> deleteEdgeDeploymentStageAsync(DeleteEdgeDeploymentStageRequest request) {
+
+        return deleteEdgeDeploymentStageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEdgeDeploymentStageResult> deleteEdgeDeploymentStageAsync(final DeleteEdgeDeploymentStageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteEdgeDeploymentStageRequest, DeleteEdgeDeploymentStageResult> asyncHandler) {
+        final DeleteEdgeDeploymentStageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteEdgeDeploymentStageResult>() {
+            @Override
+            public DeleteEdgeDeploymentStageResult call() throws Exception {
+                DeleteEdgeDeploymentStageResult result = null;
+
+                try {
+                    result = executeDeleteEdgeDeploymentStage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteEndpointResult> deleteEndpointAsync(DeleteEndpointRequest request) {
 
         return deleteEndpointAsync(request, null);
@@ -3462,6 +3594,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
 
                 try {
                     result = executeDescribeDomain(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEdgeDeploymentPlanResult> describeEdgeDeploymentPlanAsync(DescribeEdgeDeploymentPlanRequest request) {
+
+        return describeEdgeDeploymentPlanAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEdgeDeploymentPlanResult> describeEdgeDeploymentPlanAsync(final DescribeEdgeDeploymentPlanRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeEdgeDeploymentPlanRequest, DescribeEdgeDeploymentPlanResult> asyncHandler) {
+        final DescribeEdgeDeploymentPlanRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeEdgeDeploymentPlanResult>() {
+            @Override
+            public DescribeEdgeDeploymentPlanResult call() throws Exception {
+                DescribeEdgeDeploymentPlanResult result = null;
+
+                try {
+                    result = executeDescribeEdgeDeploymentPlan(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -5479,6 +5644,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListEdgeDeploymentPlansResult> listEdgeDeploymentPlansAsync(ListEdgeDeploymentPlansRequest request) {
+
+        return listEdgeDeploymentPlansAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEdgeDeploymentPlansResult> listEdgeDeploymentPlansAsync(final ListEdgeDeploymentPlansRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListEdgeDeploymentPlansRequest, ListEdgeDeploymentPlansResult> asyncHandler) {
+        final ListEdgeDeploymentPlansRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListEdgeDeploymentPlansResult>() {
+            @Override
+            public ListEdgeDeploymentPlansResult call() throws Exception {
+                ListEdgeDeploymentPlansResult result = null;
+
+                try {
+                    result = executeListEdgeDeploymentPlans(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListEdgePackagingJobsResult> listEdgePackagingJobsAsync(ListEdgePackagingJobsRequest request) {
 
         return listEdgePackagingJobsAsync(request, null);
@@ -6511,6 +6709,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListStageDevicesResult> listStageDevicesAsync(ListStageDevicesRequest request) {
+
+        return listStageDevicesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStageDevicesResult> listStageDevicesAsync(final ListStageDevicesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListStageDevicesRequest, ListStageDevicesResult> asyncHandler) {
+        final ListStageDevicesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListStageDevicesResult>() {
+            @Override
+            public ListStageDevicesResult call() throws Exception {
+                ListStageDevicesResult result = null;
+
+                try {
+                    result = executeListStageDevices(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListStudioLifecycleConfigsResult> listStudioLifecycleConfigsAsync(ListStudioLifecycleConfigsRequest request) {
 
         return listStudioLifecycleConfigsAsync(request, null);
@@ -7144,6 +7375,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<StartEdgeDeploymentStageResult> startEdgeDeploymentStageAsync(StartEdgeDeploymentStageRequest request) {
+
+        return startEdgeDeploymentStageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartEdgeDeploymentStageResult> startEdgeDeploymentStageAsync(final StartEdgeDeploymentStageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartEdgeDeploymentStageRequest, StartEdgeDeploymentStageResult> asyncHandler) {
+        final StartEdgeDeploymentStageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartEdgeDeploymentStageResult>() {
+            @Override
+            public StartEdgeDeploymentStageResult call() throws Exception {
+                StartEdgeDeploymentStageResult result = null;
+
+                try {
+                    result = executeStartEdgeDeploymentStage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<StartMonitoringScheduleResult> startMonitoringScheduleAsync(StartMonitoringScheduleRequest request) {
 
         return startMonitoringScheduleAsync(request, null);
@@ -7293,6 +7557,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
 
                 try {
                     result = executeStopCompilationJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopEdgeDeploymentStageResult> stopEdgeDeploymentStageAsync(StopEdgeDeploymentStageRequest request) {
+
+        return stopEdgeDeploymentStageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StopEdgeDeploymentStageResult> stopEdgeDeploymentStageAsync(final StopEdgeDeploymentStageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StopEdgeDeploymentStageRequest, StopEdgeDeploymentStageResult> asyncHandler) {
+        final StopEdgeDeploymentStageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StopEdgeDeploymentStageResult>() {
+            @Override
+            public StopEdgeDeploymentStageResult call() throws Exception {
+                StopEdgeDeploymentStageResult result = null;
+
+                try {
+                    result = executeStopEdgeDeploymentStage(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -870,6 +870,72 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Creates an edge deployment plan, consisting of multiple stages. Each stage may have a different deployment
+     * configuration and devices.
+     * </p>
+     * 
+     * @param createEdgeDeploymentPlanRequest
+     * @return A Java Future containing the result of the CreateEdgeDeploymentPlan operation returned by the service.
+     * @sample AmazonSageMakerAsync.CreateEdgeDeploymentPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateEdgeDeploymentPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEdgeDeploymentPlanResult> createEdgeDeploymentPlanAsync(CreateEdgeDeploymentPlanRequest createEdgeDeploymentPlanRequest);
+
+    /**
+     * <p>
+     * Creates an edge deployment plan, consisting of multiple stages. Each stage may have a different deployment
+     * configuration and devices.
+     * </p>
+     * 
+     * @param createEdgeDeploymentPlanRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateEdgeDeploymentPlan operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.CreateEdgeDeploymentPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateEdgeDeploymentPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEdgeDeploymentPlanResult> createEdgeDeploymentPlanAsync(CreateEdgeDeploymentPlanRequest createEdgeDeploymentPlanRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateEdgeDeploymentPlanRequest, CreateEdgeDeploymentPlanResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a new stage in an existing edge deployment plan.
+     * </p>
+     * 
+     * @param createEdgeDeploymentStageRequest
+     * @return A Java Future containing the result of the CreateEdgeDeploymentStage operation returned by the service.
+     * @sample AmazonSageMakerAsync.CreateEdgeDeploymentStage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateEdgeDeploymentStage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEdgeDeploymentStageResult> createEdgeDeploymentStageAsync(
+            CreateEdgeDeploymentStageRequest createEdgeDeploymentStageRequest);
+
+    /**
+     * <p>
+     * Creates a new stage in an existing edge deployment plan.
+     * </p>
+     * 
+     * @param createEdgeDeploymentStageRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateEdgeDeploymentStage operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.CreateEdgeDeploymentStage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateEdgeDeploymentStage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEdgeDeploymentStageResult> createEdgeDeploymentStageAsync(
+            CreateEdgeDeploymentStageRequest createEdgeDeploymentStageRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateEdgeDeploymentStageRequest, CreateEdgeDeploymentStageResult> asyncHandler);
+
+    /**
+     * <p>
      * Starts a SageMaker Edge Manager model packaging job. Edge Manager will use the model artifacts from the Amazon
      * Simple Storage Service bucket that you specify. After the model has been packaged, Amazon SageMaker saves the
      * resulting artifacts to an S3 bucket that you specify.
@@ -3437,6 +3503,72 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Deletes an edge deployment plan if (and only if) all the stages in the plan are inactive or there are no stages
+     * in the plan.
+     * </p>
+     * 
+     * @param deleteEdgeDeploymentPlanRequest
+     * @return A Java Future containing the result of the DeleteEdgeDeploymentPlan operation returned by the service.
+     * @sample AmazonSageMakerAsync.DeleteEdgeDeploymentPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteEdgeDeploymentPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEdgeDeploymentPlanResult> deleteEdgeDeploymentPlanAsync(DeleteEdgeDeploymentPlanRequest deleteEdgeDeploymentPlanRequest);
+
+    /**
+     * <p>
+     * Deletes an edge deployment plan if (and only if) all the stages in the plan are inactive or there are no stages
+     * in the plan.
+     * </p>
+     * 
+     * @param deleteEdgeDeploymentPlanRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteEdgeDeploymentPlan operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.DeleteEdgeDeploymentPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteEdgeDeploymentPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEdgeDeploymentPlanResult> deleteEdgeDeploymentPlanAsync(DeleteEdgeDeploymentPlanRequest deleteEdgeDeploymentPlanRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteEdgeDeploymentPlanRequest, DeleteEdgeDeploymentPlanResult> asyncHandler);
+
+    /**
+     * <p>
+     * Delete a stage in an edge deployment plan if (and only if) the stage is inactive.
+     * </p>
+     * 
+     * @param deleteEdgeDeploymentStageRequest
+     * @return A Java Future containing the result of the DeleteEdgeDeploymentStage operation returned by the service.
+     * @sample AmazonSageMakerAsync.DeleteEdgeDeploymentStage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteEdgeDeploymentStage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEdgeDeploymentStageResult> deleteEdgeDeploymentStageAsync(
+            DeleteEdgeDeploymentStageRequest deleteEdgeDeploymentStageRequest);
+
+    /**
+     * <p>
+     * Delete a stage in an edge deployment plan if (and only if) the stage is inactive.
+     * </p>
+     * 
+     * @param deleteEdgeDeploymentStageRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteEdgeDeploymentStage operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.DeleteEdgeDeploymentStage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteEdgeDeploymentStage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEdgeDeploymentStageResult> deleteEdgeDeploymentStageAsync(
+            DeleteEdgeDeploymentStageRequest deleteEdgeDeploymentStageRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteEdgeDeploymentStageRequest, DeleteEdgeDeploymentStageResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes an endpoint. SageMaker frees up all of the resources that were deployed when the endpoint was created.
      * </p>
      * <p>
@@ -4893,6 +5025,39 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      */
     java.util.concurrent.Future<DescribeDomainResult> describeDomainAsync(DescribeDomainRequest describeDomainRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeDomainRequest, DescribeDomainResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes an edge deployment plan with deployment status per stage.
+     * </p>
+     * 
+     * @param describeEdgeDeploymentPlanRequest
+     * @return A Java Future containing the result of the DescribeEdgeDeploymentPlan operation returned by the service.
+     * @sample AmazonSageMakerAsync.DescribeEdgeDeploymentPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeEdgeDeploymentPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeEdgeDeploymentPlanResult> describeEdgeDeploymentPlanAsync(
+            DescribeEdgeDeploymentPlanRequest describeEdgeDeploymentPlanRequest);
+
+    /**
+     * <p>
+     * Describes an edge deployment plan with deployment status per stage.
+     * </p>
+     * 
+     * @param describeEdgeDeploymentPlanRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeEdgeDeploymentPlan operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.DescribeEdgeDeploymentPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeEdgeDeploymentPlan"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeEdgeDeploymentPlanResult> describeEdgeDeploymentPlanAsync(
+            DescribeEdgeDeploymentPlanRequest describeEdgeDeploymentPlanRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeEdgeDeploymentPlanRequest, DescribeEdgeDeploymentPlanResult> asyncHandler);
 
     /**
      * <p>
@@ -6916,6 +7081,37 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Lists all edge deployment plans.
+     * </p>
+     * 
+     * @param listEdgeDeploymentPlansRequest
+     * @return A Java Future containing the result of the ListEdgeDeploymentPlans operation returned by the service.
+     * @sample AmazonSageMakerAsync.ListEdgeDeploymentPlans
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListEdgeDeploymentPlans"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEdgeDeploymentPlansResult> listEdgeDeploymentPlansAsync(ListEdgeDeploymentPlansRequest listEdgeDeploymentPlansRequest);
+
+    /**
+     * <p>
+     * Lists all edge deployment plans.
+     * </p>
+     * 
+     * @param listEdgeDeploymentPlansRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListEdgeDeploymentPlans operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.ListEdgeDeploymentPlans
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListEdgeDeploymentPlans"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEdgeDeploymentPlansResult> listEdgeDeploymentPlansAsync(ListEdgeDeploymentPlansRequest listEdgeDeploymentPlansRequest,
+            com.amazonaws.handlers.AsyncHandler<ListEdgeDeploymentPlansRequest, ListEdgeDeploymentPlansResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of edge packaging jobs.
      * </p>
      * 
@@ -7921,6 +8117,37 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Lists devices allocated to the stage, containing detailed device information and deployment status.
+     * </p>
+     * 
+     * @param listStageDevicesRequest
+     * @return A Java Future containing the result of the ListStageDevices operation returned by the service.
+     * @sample AmazonSageMakerAsync.ListStageDevices
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListStageDevices" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListStageDevicesResult> listStageDevicesAsync(ListStageDevicesRequest listStageDevicesRequest);
+
+    /**
+     * <p>
+     * Lists devices allocated to the stage, containing detailed device information and deployment status.
+     * </p>
+     * 
+     * @param listStageDevicesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListStageDevices operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.ListStageDevices
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListStageDevices" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListStageDevicesResult> listStageDevicesAsync(ListStageDevicesRequest listStageDevicesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListStageDevicesRequest, ListStageDevicesResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists the Studio Lifecycle Configurations in your Amazon Web Services Account.
      * </p>
      * 
@@ -8656,6 +8883,37 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Starts a stage in an edge deployment plan.
+     * </p>
+     * 
+     * @param startEdgeDeploymentStageRequest
+     * @return A Java Future containing the result of the StartEdgeDeploymentStage operation returned by the service.
+     * @sample AmazonSageMakerAsync.StartEdgeDeploymentStage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StartEdgeDeploymentStage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartEdgeDeploymentStageResult> startEdgeDeploymentStageAsync(StartEdgeDeploymentStageRequest startEdgeDeploymentStageRequest);
+
+    /**
+     * <p>
+     * Starts a stage in an edge deployment plan.
+     * </p>
+     * 
+     * @param startEdgeDeploymentStageRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartEdgeDeploymentStage operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.StartEdgeDeploymentStage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StartEdgeDeploymentStage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartEdgeDeploymentStageResult> startEdgeDeploymentStageAsync(StartEdgeDeploymentStageRequest startEdgeDeploymentStageRequest,
+            com.amazonaws.handlers.AsyncHandler<StartEdgeDeploymentStageRequest, StartEdgeDeploymentStageResult> asyncHandler);
+
+    /**
+     * <p>
      * Starts a previously stopped monitoring schedule.
      * </p>
      * <note>
@@ -8842,6 +9100,37 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      */
     java.util.concurrent.Future<StopCompilationJobResult> stopCompilationJobAsync(StopCompilationJobRequest stopCompilationJobRequest,
             com.amazonaws.handlers.AsyncHandler<StopCompilationJobRequest, StopCompilationJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Stops a stage in an edge deployment plan.
+     * </p>
+     * 
+     * @param stopEdgeDeploymentStageRequest
+     * @return A Java Future containing the result of the StopEdgeDeploymentStage operation returned by the service.
+     * @sample AmazonSageMakerAsync.StopEdgeDeploymentStage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopEdgeDeploymentStage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopEdgeDeploymentStageResult> stopEdgeDeploymentStageAsync(StopEdgeDeploymentStageRequest stopEdgeDeploymentStageRequest);
+
+    /**
+     * <p>
+     * Stops a stage in an edge deployment plan.
+     * </p>
+     * 
+     * @param stopEdgeDeploymentStageRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StopEdgeDeploymentStage operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.StopEdgeDeploymentStage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/StopEdgeDeploymentStage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StopEdgeDeploymentStageResult> stopEdgeDeploymentStageAsync(StopEdgeDeploymentStageRequest stopEdgeDeploymentStageRequest,
+            com.amazonaws.handlers.AsyncHandler<StopEdgeDeploymentStageRequest, StopEdgeDeploymentStageResult> asyncHandler);
 
     /**
      * <p>

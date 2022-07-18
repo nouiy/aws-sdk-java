@@ -32,7 +32,11 @@ public class PeeringTgwInfo implements Serializable, Cloneable {
      * </p>
      */
     private String transitGatewayId;
-
+    /**
+     * <p>
+     * The ID of the core network where the transit gateway peer is located.
+     * </p>
+     */
     private String coreNetworkId;
     /**
      * <p>
@@ -88,7 +92,12 @@ public class PeeringTgwInfo implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The ID of the core network where the transit gateway peer is located.
+     * </p>
+     * 
      * @param coreNetworkId
+     *        The ID of the core network where the transit gateway peer is located.
      */
 
     public void setCoreNetworkId(String coreNetworkId) {
@@ -96,7 +105,11 @@ public class PeeringTgwInfo implements Serializable, Cloneable {
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the core network where the transit gateway peer is located.
+     * </p>
+     * 
+     * @return The ID of the core network where the transit gateway peer is located.
      */
 
     public String getCoreNetworkId() {
@@ -104,7 +117,12 @@ public class PeeringTgwInfo implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The ID of the core network where the transit gateway peer is located.
+     * </p>
+     * 
      * @param coreNetworkId
+     *        The ID of the core network where the transit gateway peer is located.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

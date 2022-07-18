@@ -59,34 +59,31 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * <p>
-     * A key policy document must conform to the following rules.
+     * A key policy document can include only the following characters:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Up to 32 kilobytes (32768 bytes)
+     * Printable ASCII characters from the space character (<code>\u0020</code>) through the end of the ASCII character
+     * range.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Must be UTF-8 encoded
+     * Printable characters in the Basic Latin and Latin-1 Supplement character set (through <code>\u00FF</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009), linefeed
-     * (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
-     * <code>Sid</code> element of an IAM policy document.)
+     * The tab (<code>\u0009</code>), line feed (<code>\u000A</code>), and carriage return (<code>\u000D</code>) special
+     * characters
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For help writing and formatting a JSON policy document, see the <a
+     * For information about key policies, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html">Key policies in KMS</a> in the
+     * <i>Key Management Service Developer Guide</i>. For help writing and formatting a JSON policy document, see the <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html">IAM JSON Policy Reference</a> in
      * the <i> <i>Identity and Access Management User Guide</i> </i>.
      * </p>
@@ -137,6 +134,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code> or
+     * <code>SIGN_VERIFY</code>.
+     * </p>
+     * </li>
      * </ul>
      */
     private String keyUsage;
@@ -155,7 +158,8 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Specifies the type of KMS key to create. The default value, <code>SYMMETRIC_DEFAULT</code>, creates a KMS key
-     * with a 256-bit symmetric key for encryption and decryption. For help choosing a key spec for your KMS key, see <a
+     * with a 256-bit AES-GCM key that is used for encryption and decryption, except in China Regions, where it creates
+     * a 128-bit symmetric key that uses SM4 encryption. For help choosing a key spec for your KMS key, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html#symm-asymm-choose">Choosing a KMS key
      * type</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.
      * </p>
@@ -189,7 +193,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <ul>
      * <li>
      * <p>
-     * <code>SYMMETRIC_DEFAULT</code> (AES-256-GCM)
+     * <code>SYMMETRIC_DEFAULT</code>
      * </p>
      * </li>
      * </ul>
@@ -277,6 +281,18 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * </li>
+     * <li>
+     * <p>
+     * SM2 key pairs (China Regions only)
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>SM2</code>
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
      * </ul>
      */
     private String keySpec;
@@ -321,7 +337,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * <p>
      * This operation is part of the <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom Key Store
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store
      * feature</a> feature in KMS, which combines the convenience and extensive integration of KMS with the isolation
      * and control of a single-tenant key store.
      * </p>
@@ -444,34 +460,31 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * <p>
-     * A key policy document must conform to the following rules.
+     * A key policy document can include only the following characters:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Up to 32 kilobytes (32768 bytes)
+     * Printable ASCII characters from the space character (<code>\u0020</code>) through the end of the ASCII character
+     * range.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Must be UTF-8 encoded
+     * Printable characters in the Basic Latin and Latin-1 Supplement character set (through <code>\u00FF</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009), linefeed
-     * (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
-     * <code>Sid</code> element of an IAM policy document.)
+     * The tab (<code>\u0009</code>), line feed (<code>\u000A</code>), and carriage return (<code>\u000D</code>) special
+     * characters
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For help writing and formatting a JSON policy document, see the <a
+     * For information about key policies, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html">Key policies in KMS</a> in the
+     * <i>Key Management Service Developer Guide</i>. For help writing and formatting a JSON policy document, see the <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html">IAM JSON Policy Reference</a> in
      * the <i> <i>Identity and Access Management User Guide</i> </i>.
      * </p>
@@ -508,35 +521,33 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        </ul>
      *        <p>
-     *        A key policy document must conform to the following rules.
+     *        A key policy document can include only the following characters:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Up to 32 kilobytes (32768 bytes)
+     *        Printable ASCII characters from the space character (<code>\u0020</code>) through the end of the ASCII
+     *        character range.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Must be UTF-8 encoded
+     *        Printable characters in the Basic Latin and Latin-1 Supplement character set (through <code>\u00FF</code>
+     *        ).
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009),
-     *        linefeed (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
-     *        <code>Sid</code> element of an IAM policy document.)
+     *        The tab (<code>\u0009</code>), line feed (<code>\u000A</code>), and carriage return (<code>\u000D</code>)
+     *        special characters
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        For help writing and formatting a JSON policy document, see the <a
-     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html">IAM JSON Policy
+     *        For information about key policies, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html">Key policies in KMS</a> in
+     *        the <i>Key Management Service Developer Guide</i>. For help writing and formatting a JSON policy document,
+     *        see the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html">IAM JSON Policy
      *        Reference</a> in the <i> <i>Identity and Access Management User Guide</i> </i>.
      */
 
@@ -578,34 +589,31 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * <p>
-     * A key policy document must conform to the following rules.
+     * A key policy document can include only the following characters:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Up to 32 kilobytes (32768 bytes)
+     * Printable ASCII characters from the space character (<code>\u0020</code>) through the end of the ASCII character
+     * range.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Must be UTF-8 encoded
+     * Printable characters in the Basic Latin and Latin-1 Supplement character set (through <code>\u00FF</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009), linefeed
-     * (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
-     * <code>Sid</code> element of an IAM policy document.)
+     * The tab (<code>\u0009</code>), line feed (<code>\u000A</code>), and carriage return (<code>\u000D</code>) special
+     * characters
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For help writing and formatting a JSON policy document, see the <a
+     * For information about key policies, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html">Key policies in KMS</a> in the
+     * <i>Key Management Service Developer Guide</i>. For help writing and formatting a JSON policy document, see the <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html">IAM JSON Policy Reference</a> in
      * the <i> <i>Identity and Access Management User Guide</i> </i>.
      * </p>
@@ -641,36 +649,34 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         </li>
      *         </ul>
      *         <p>
-     *         A key policy document must conform to the following rules.
+     *         A key policy document can include only the following characters:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         Up to 32 kilobytes (32768 bytes)
+     *         Printable ASCII characters from the space character (<code>\u0020</code>) through the end of the ASCII
+     *         character range.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Must be UTF-8 encoded
+     *         Printable characters in the Basic Latin and Latin-1 Supplement character set (through <code>\u00FF</code>
+     *         ).
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009),
-     *         linefeed (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
-     *         <code>Sid</code> element of an IAM policy document.)
+     *         The tab (<code>\u0009</code>), line feed (<code>\u000A</code>), and carriage return (<code>\u000D</code>)
+     *         special characters
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         For help writing and formatting a JSON policy document, see the <a
-     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html">IAM JSON Policy
-     *         Reference</a> in the <i> <i>Identity and Access Management User Guide</i> </i>.
+     *         For information about key policies, see <a
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html">Key policies in KMS</a> in
+     *         the <i>Key Management Service Developer Guide</i>. For help writing and formatting a JSON policy
+     *         document, see the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html">IAM
+     *         JSON Policy Reference</a> in the <i> <i>Identity and Access Management User Guide</i> </i>.
      */
 
     public String getPolicy() {
@@ -711,34 +717,31 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * <p>
-     * A key policy document must conform to the following rules.
+     * A key policy document can include only the following characters:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Up to 32 kilobytes (32768 bytes)
+     * Printable ASCII characters from the space character (<code>\u0020</code>) through the end of the ASCII character
+     * range.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Must be UTF-8 encoded
+     * Printable characters in the Basic Latin and Latin-1 Supplement character set (through <code>\u00FF</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009), linefeed
-     * (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
-     * <code>Sid</code> element of an IAM policy document.)
+     * The tab (<code>\u0009</code>), line feed (<code>\u000A</code>), and carriage return (<code>\u000D</code>) special
+     * characters
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For help writing and formatting a JSON policy document, see the <a
+     * For information about key policies, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html">Key policies in KMS</a> in the
+     * <i>Key Management Service Developer Guide</i>. For help writing and formatting a JSON policy document, see the <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html">IAM JSON Policy Reference</a> in
      * the <i> <i>Identity and Access Management User Guide</i> </i>.
      * </p>
@@ -775,35 +778,33 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        </ul>
      *        <p>
-     *        A key policy document must conform to the following rules.
+     *        A key policy document can include only the following characters:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Up to 32 kilobytes (32768 bytes)
+     *        Printable ASCII characters from the space character (<code>\u0020</code>) through the end of the ASCII
+     *        character range.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Must be UTF-8 encoded
+     *        Printable characters in the Basic Latin and Latin-1 Supplement character set (through <code>\u00FF</code>
+     *        ).
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        The only Unicode characters that are permitted in a key policy document are the horizontal tab (U+0009),
-     *        linefeed (U+000A), carriage return (U+000D), and characters in the range U+0020 to U+00FF.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        The <code>Sid</code> element in a key policy statement can include spaces. (Spaces are prohibited in the
-     *        <code>Sid</code> element of an IAM policy document.)
+     *        The tab (<code>\u0009</code>), line feed (<code>\u000A</code>), and carriage return (<code>\u000D</code>)
+     *        special characters
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        For help writing and formatting a JSON policy document, see the <a
-     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html">IAM JSON Policy
+     *        For information about key policies, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html">Key policies in KMS</a> in
+     *        the <i>Key Management Service Developer Guide</i>. For help writing and formatting a JSON policy document,
+     *        see the <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html">IAM JSON Policy
      *        Reference</a> in the <i> <i>Identity and Access Management User Guide</i> </i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -924,6 +925,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code> or
+     * <code>SIGN_VERIFY</code>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param keyUsage
@@ -956,6 +963,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        <li>
      *        <p>
      *        For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code>
+     *        or <code>SIGN_VERIFY</code>.
      *        </p>
      *        </li>
      * @see KeyUsageType
@@ -997,6 +1010,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code> or
+     * <code>SIGN_VERIFY</code>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return Determines the <a
@@ -1028,6 +1047,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         <li>
      *         <p>
      *         For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code>
+     *         or <code>SIGN_VERIFY</code>.
      *         </p>
      *         </li>
      * @see KeyUsageType
@@ -1069,6 +1094,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code> or
+     * <code>SIGN_VERIFY</code>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param keyUsage
@@ -1101,6 +1132,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        <li>
      *        <p>
      *        For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code>
+     *        or <code>SIGN_VERIFY</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1144,6 +1181,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code> or
+     * <code>SIGN_VERIFY</code>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param keyUsage
@@ -1176,6 +1219,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        <li>
      *        <p>
      *        For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code>
+     *        or <code>SIGN_VERIFY</code>.
      *        </p>
      *        </li>
      * @see KeyUsageType
@@ -1217,6 +1266,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code> or
+     * <code>SIGN_VERIFY</code>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param keyUsage
@@ -1249,6 +1304,12 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        <li>
      *        <p>
      *        For asymmetric KMS keys with ECC key material, specify <code>SIGN_VERIFY</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For asymmetric KMS keys with SM2 key material (China Regions only), specify <code>ENCRYPT_DECRYPT</code>
+     *        or <code>SIGN_VERIFY</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1381,7 +1442,8 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Specifies the type of KMS key to create. The default value, <code>SYMMETRIC_DEFAULT</code>, creates a KMS key
-     * with a 256-bit symmetric key for encryption and decryption. For help choosing a key spec for your KMS key, see <a
+     * with a 256-bit AES-GCM key that is used for encryption and decryption, except in China Regions, where it creates
+     * a 128-bit symmetric key that uses SM4 encryption. For help choosing a key spec for your KMS key, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html#symm-asymm-choose">Choosing a KMS key
      * type</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.
      * </p>
@@ -1415,7 +1477,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <ul>
      * <li>
      * <p>
-     * <code>SYMMETRIC_DEFAULT</code> (AES-256-GCM)
+     * <code>SYMMETRIC_DEFAULT</code>
      * </p>
      * </li>
      * </ul>
@@ -1503,11 +1565,24 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * </li>
+     * <li>
+     * <p>
+     * SM2 key pairs (China Regions only)
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>SM2</code>
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * @param keySpec
      *        Specifies the type of KMS key to create. The default value, <code>SYMMETRIC_DEFAULT</code>, creates a KMS
-     *        key with a 256-bit symmetric key for encryption and decryption. For help choosing a key spec for your KMS
+     *        key with a 256-bit AES-GCM key that is used for encryption and decryption, except in China Regions, where
+     *        it creates a 128-bit symmetric key that uses SM4 encryption. For help choosing a key spec for your KMS
      *        key, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html#symm-asymm-choose">Choosing a
      *        KMS key type</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
@@ -1541,7 +1616,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SYMMETRIC_DEFAULT</code> (AES-256-GCM)
+     *        <code>SYMMETRIC_DEFAULT</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1629,6 +1704,18 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </li>
      *        </ul>
      *        </li>
+     *        <li>
+     *        <p>
+     *        SM2 key pairs (China Regions only)
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>SM2</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
      * @see KeySpec
      */
 
@@ -1639,7 +1726,8 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Specifies the type of KMS key to create. The default value, <code>SYMMETRIC_DEFAULT</code>, creates a KMS key
-     * with a 256-bit symmetric key for encryption and decryption. For help choosing a key spec for your KMS key, see <a
+     * with a 256-bit AES-GCM key that is used for encryption and decryption, except in China Regions, where it creates
+     * a 128-bit symmetric key that uses SM4 encryption. For help choosing a key spec for your KMS key, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html#symm-asymm-choose">Choosing a KMS key
      * type</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.
      * </p>
@@ -1673,7 +1761,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <ul>
      * <li>
      * <p>
-     * <code>SYMMETRIC_DEFAULT</code> (AES-256-GCM)
+     * <code>SYMMETRIC_DEFAULT</code>
      * </p>
      * </li>
      * </ul>
@@ -1761,10 +1849,23 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * </li>
+     * <li>
+     * <p>
+     * SM2 key pairs (China Regions only)
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>SM2</code>
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * @return Specifies the type of KMS key to create. The default value, <code>SYMMETRIC_DEFAULT</code>, creates a KMS
-     *         key with a 256-bit symmetric key for encryption and decryption. For help choosing a key spec for your KMS
+     *         key with a 256-bit AES-GCM key that is used for encryption and decryption, except in China Regions, where
+     *         it creates a 128-bit symmetric key that uses SM4 encryption. For help choosing a key spec for your KMS
      *         key, see <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html#symm-asymm-choose">Choosing a
      *         KMS key type</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
@@ -1798,7 +1899,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>SYMMETRIC_DEFAULT</code> (AES-256-GCM)
+     *         <code>SYMMETRIC_DEFAULT</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -1886,6 +1987,18 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         </li>
      *         </ul>
      *         </li>
+     *         <li>
+     *         <p>
+     *         SM2 key pairs (China Regions only)
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>SM2</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         </li>
      * @see KeySpec
      */
 
@@ -1896,7 +2009,8 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Specifies the type of KMS key to create. The default value, <code>SYMMETRIC_DEFAULT</code>, creates a KMS key
-     * with a 256-bit symmetric key for encryption and decryption. For help choosing a key spec for your KMS key, see <a
+     * with a 256-bit AES-GCM key that is used for encryption and decryption, except in China Regions, where it creates
+     * a 128-bit symmetric key that uses SM4 encryption. For help choosing a key spec for your KMS key, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html#symm-asymm-choose">Choosing a KMS key
      * type</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.
      * </p>
@@ -1930,7 +2044,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <ul>
      * <li>
      * <p>
-     * <code>SYMMETRIC_DEFAULT</code> (AES-256-GCM)
+     * <code>SYMMETRIC_DEFAULT</code>
      * </p>
      * </li>
      * </ul>
@@ -2018,11 +2132,24 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * </li>
+     * <li>
+     * <p>
+     * SM2 key pairs (China Regions only)
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>SM2</code>
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * @param keySpec
      *        Specifies the type of KMS key to create. The default value, <code>SYMMETRIC_DEFAULT</code>, creates a KMS
-     *        key with a 256-bit symmetric key for encryption and decryption. For help choosing a key spec for your KMS
+     *        key with a 256-bit AES-GCM key that is used for encryption and decryption, except in China Regions, where
+     *        it creates a 128-bit symmetric key that uses SM4 encryption. For help choosing a key spec for your KMS
      *        key, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html#symm-asymm-choose">Choosing a
      *        KMS key type</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
@@ -2056,7 +2183,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SYMMETRIC_DEFAULT</code> (AES-256-GCM)
+     *        <code>SYMMETRIC_DEFAULT</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -2140,6 +2267,18 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        <li>
      *        <p>
      *        <code>ECC_SECG_P256K1</code> (secp256k1), commonly used for cryptocurrencies.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        SM2 key pairs (China Regions only)
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>SM2</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -2156,7 +2295,8 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Specifies the type of KMS key to create. The default value, <code>SYMMETRIC_DEFAULT</code>, creates a KMS key
-     * with a 256-bit symmetric key for encryption and decryption. For help choosing a key spec for your KMS key, see <a
+     * with a 256-bit AES-GCM key that is used for encryption and decryption, except in China Regions, where it creates
+     * a 128-bit symmetric key that uses SM4 encryption. For help choosing a key spec for your KMS key, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html#symm-asymm-choose">Choosing a KMS key
      * type</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.
      * </p>
@@ -2190,7 +2330,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <ul>
      * <li>
      * <p>
-     * <code>SYMMETRIC_DEFAULT</code> (AES-256-GCM)
+     * <code>SYMMETRIC_DEFAULT</code>
      * </p>
      * </li>
      * </ul>
@@ -2278,11 +2418,24 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * </li>
+     * <li>
+     * <p>
+     * SM2 key pairs (China Regions only)
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>SM2</code>
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * @param keySpec
      *        Specifies the type of KMS key to create. The default value, <code>SYMMETRIC_DEFAULT</code>, creates a KMS
-     *        key with a 256-bit symmetric key for encryption and decryption. For help choosing a key spec for your KMS
+     *        key with a 256-bit AES-GCM key that is used for encryption and decryption, except in China Regions, where
+     *        it creates a 128-bit symmetric key that uses SM4 encryption. For help choosing a key spec for your KMS
      *        key, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html#symm-asymm-choose">Choosing a
      *        KMS key type</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
@@ -2316,7 +2469,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SYMMETRIC_DEFAULT</code> (AES-256-GCM)
+     *        <code>SYMMETRIC_DEFAULT</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -2400,6 +2553,18 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        <li>
      *        <p>
      *        <code>ECC_SECG_P256K1</code> (secp256k1), commonly used for cryptocurrencies.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        SM2 key pairs (China Regions only)
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>SM2</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -2414,7 +2579,8 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Specifies the type of KMS key to create. The default value, <code>SYMMETRIC_DEFAULT</code>, creates a KMS key
-     * with a 256-bit symmetric key for encryption and decryption. For help choosing a key spec for your KMS key, see <a
+     * with a 256-bit AES-GCM key that is used for encryption and decryption, except in China Regions, where it creates
+     * a 128-bit symmetric key that uses SM4 encryption. For help choosing a key spec for your KMS key, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html#symm-asymm-choose">Choosing a KMS key
      * type</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.
      * </p>
@@ -2448,7 +2614,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * <ul>
      * <li>
      * <p>
-     * <code>SYMMETRIC_DEFAULT</code> (AES-256-GCM)
+     * <code>SYMMETRIC_DEFAULT</code>
      * </p>
      * </li>
      * </ul>
@@ -2536,11 +2702,24 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </li>
      * </ul>
      * </li>
+     * <li>
+     * <p>
+     * SM2 key pairs (China Regions only)
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>SM2</code>
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * @param keySpec
      *        Specifies the type of KMS key to create. The default value, <code>SYMMETRIC_DEFAULT</code>, creates a KMS
-     *        key with a 256-bit symmetric key for encryption and decryption. For help choosing a key spec for your KMS
+     *        key with a 256-bit AES-GCM key that is used for encryption and decryption, except in China Regions, where
+     *        it creates a 128-bit symmetric key that uses SM4 encryption. For help choosing a key spec for your KMS
      *        key, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-types.html#symm-asymm-choose">Choosing a
      *        KMS key type</a> in the <i> <i>Key Management Service Developer Guide</i> </i>.</p>
@@ -2574,7 +2753,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SYMMETRIC_DEFAULT</code> (AES-256-GCM)
+     *        <code>SYMMETRIC_DEFAULT</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -2658,6 +2837,18 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        <li>
      *        <p>
      *        <code>ECC_SECG_P256K1</code> (secp256k1), commonly used for cryptocurrencies.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        SM2 key pairs (China Regions only)
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>SM2</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -2905,7 +3096,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * <p>
      * This operation is part of the <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom Key Store
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store
      * feature</a> feature in KMS, which combines the convenience and extensive integration of KMS with the isolation
      * and control of a single-tenant key store.
      * </p>
@@ -2929,8 +3120,8 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </p>
      *        <p>
      *        This operation is part of the <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom Key
-     *        Store feature</a> feature in KMS, which combines the convenience and extensive integration of KMS with the
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
+     *        store feature</a> feature in KMS, which combines the convenience and extensive integration of KMS with the
      *        isolation and control of a single-tenant key store.
      */
 
@@ -2959,7 +3150,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * <p>
      * This operation is part of the <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom Key Store
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store
      * feature</a> feature in KMS, which combines the convenience and extensive integration of KMS with the isolation
      * and control of a single-tenant key store.
      * </p>
@@ -2982,8 +3173,8 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *         </p>
      *         <p>
      *         This operation is part of the <a
-     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom Key
-     *         Store feature</a> feature in KMS, which combines the convenience and extensive integration of KMS with
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
+     *         store feature</a> feature in KMS, which combines the convenience and extensive integration of KMS with
      *         the isolation and control of a single-tenant key store.
      */
 
@@ -3012,7 +3203,7 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * <p>
      * This operation is part of the <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom Key Store
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store
      * feature</a> feature in KMS, which combines the convenience and extensive integration of KMS with the isolation
      * and control of a single-tenant key store.
      * </p>
@@ -3036,8 +3227,8 @@ public class CreateKeyRequest extends com.amazonaws.AmazonWebServiceRequest impl
      *        </p>
      *        <p>
      *        This operation is part of the <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">Custom Key
-     *        Store feature</a> feature in KMS, which combines the convenience and extensive integration of KMS with the
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
+     *        store feature</a> feature in KMS, which combines the convenience and extensive integration of KMS with the
      *        isolation and control of a single-tenant key store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

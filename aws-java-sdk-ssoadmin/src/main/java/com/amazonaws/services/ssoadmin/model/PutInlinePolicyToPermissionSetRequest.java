@@ -195,7 +195,7 @@ public class PutInlinePolicyToPermissionSetRequest extends com.amazonaws.AmazonW
         if (getPermissionSetArn() != null)
             sb.append("PermissionSetArn: ").append(getPermissionSetArn()).append(",");
         if (getInlinePolicy() != null)
-            sb.append("InlinePolicy: ").append("***Sensitive Data Redacted***");
+            sb.append("InlinePolicy: ").append(getInlinePolicy());
         sb.append("}");
         return sb.toString();
     }

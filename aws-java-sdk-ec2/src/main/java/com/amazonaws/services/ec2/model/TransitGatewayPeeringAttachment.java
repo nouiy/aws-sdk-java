@@ -50,7 +50,11 @@ public class TransitGatewayPeeringAttachment implements Serializable, Cloneable 
      * </p>
      */
     private PeeringTgwInfo accepterTgwInfo;
-
+    /**
+     * <p>
+     * Details about the transit gateway peering attachment.
+     * </p>
+     */
     private TransitGatewayPeeringAttachmentOptions options;
     /**
      * <p>
@@ -239,7 +243,12 @@ public class TransitGatewayPeeringAttachment implements Serializable, Cloneable 
     }
 
     /**
+     * <p>
+     * Details about the transit gateway peering attachment.
+     * </p>
+     * 
      * @param options
+     *        Details about the transit gateway peering attachment.
      */
 
     public void setOptions(TransitGatewayPeeringAttachmentOptions options) {
@@ -247,7 +256,11 @@ public class TransitGatewayPeeringAttachment implements Serializable, Cloneable 
     }
 
     /**
-     * @return
+     * <p>
+     * Details about the transit gateway peering attachment.
+     * </p>
+     * 
+     * @return Details about the transit gateway peering attachment.
      */
 
     public TransitGatewayPeeringAttachmentOptions getOptions() {
@@ -255,7 +268,12 @@ public class TransitGatewayPeeringAttachment implements Serializable, Cloneable 
     }
 
     /**
+     * <p>
+     * Details about the transit gateway peering attachment.
+     * </p>
+     * 
      * @param options
+     *        Details about the transit gateway peering attachment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

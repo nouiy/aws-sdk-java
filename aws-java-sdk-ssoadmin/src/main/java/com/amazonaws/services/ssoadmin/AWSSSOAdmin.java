@@ -26,19 +26,7 @@ import com.amazonaws.services.ssoadmin.model.*;
  * {@link com.amazonaws.services.ssoadmin.AbstractAWSSSOAdmin} instead.
  * </p>
  * <p>
- * <p>
- * Amazon Web Services Single Sign On (SSO) is a cloud SSO service that makes it easy to centrally manage SSO access to
- * multiple Amazon Web Services accounts and business applications. This guide provides information on SSO operations
- * which could be used for access management of Amazon Web Services accounts. For information about Amazon Web Services
- * SSO features, see the <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html">Amazon Web
- * Services Single Sign-On User Guide</a>.
- * </p>
- * <p>
- * Many operations in the SSO APIs rely on identifiers for users and groups, known as principals. For more information
- * about how to work with principals and principal IDs in Amazon Web Services SSO, see the <a
- * href="https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/welcome.html">Amazon Web Services SSO
- * Identity Store API Reference</a>.
- * </p>
+ * <p/>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AWSSSOAdmin {
@@ -53,7 +41,39 @@ public interface AWSSSOAdmin {
 
     /**
      * <p>
-     * Attaches an IAM managed policy ARN to a permission set.
+     * Attaches the specified IAM customer managed policy to the specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param attachCustomerManagedPolicyReferenceToPermissionSetRequest
+     * @return Result of the AttachCustomerManagedPolicyReferenceToPermissionSet operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Indicates that a requested resource is not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception, or failure with an internal
+     *         server.
+     * @throws ServiceQuotaExceededException
+     *         Indicates that the principal has crossed the permitted number of resources that can be created.
+     * @throws ThrottlingException
+     *         Indicates that the principal has crossed the throttling limits of the API operations.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ConflictException
+     *         Occurs when a conflict with a previous successful write is detected. This generally occurs when the
+     *         previous write did not have time to propagate to the host serving the current request. A retry (with
+     *         appropriate backoff logic) is the recommended response to this exception.
+     * @sample AWSSSOAdmin.AttachCustomerManagedPolicyReferenceToPermissionSet
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/AttachCustomerManagedPolicyReferenceToPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AttachCustomerManagedPolicyReferenceToPermissionSetResult attachCustomerManagedPolicyReferenceToPermissionSet(
+            AttachCustomerManagedPolicyReferenceToPermissionSetRequest attachCustomerManagedPolicyReferenceToPermissionSetRequest);
+
+    /**
+     * <p>
+     * Attaches an Amazon Web Services managed IAM policy ARN to a permission set.
      * </p>
      * <note>
      * <p>
@@ -322,6 +342,32 @@ public interface AWSSSOAdmin {
 
     /**
      * <p>
+     * Deletes the permissions boundary from a specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param deletePermissionsBoundaryFromPermissionSetRequest
+     * @return Result of the DeletePermissionsBoundaryFromPermissionSet operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Indicates that a requested resource is not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception, or failure with an internal
+     *         server.
+     * @throws ThrottlingException
+     *         Indicates that the principal has crossed the throttling limits of the API operations.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSSSOAdmin.DeletePermissionsBoundaryFromPermissionSet
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DeletePermissionsBoundaryFromPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeletePermissionsBoundaryFromPermissionSetResult deletePermissionsBoundaryFromPermissionSet(
+            DeletePermissionsBoundaryFromPermissionSetRequest deletePermissionsBoundaryFromPermissionSetRequest);
+
+    /**
+     * <p>
      * Describes the status of the assignment creation request.
      * </p>
      * 
@@ -454,7 +500,37 @@ public interface AWSSSOAdmin {
 
     /**
      * <p>
-     * Detaches the attached IAM managed policy ARN from the specified permission set.
+     * Detaches the specified IAM customer managed policy from the specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param detachCustomerManagedPolicyReferenceFromPermissionSetRequest
+     * @return Result of the DetachCustomerManagedPolicyReferenceFromPermissionSet operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Indicates that a requested resource is not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception, or failure with an internal
+     *         server.
+     * @throws ThrottlingException
+     *         Indicates that the principal has crossed the throttling limits of the API operations.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ConflictException
+     *         Occurs when a conflict with a previous successful write is detected. This generally occurs when the
+     *         previous write did not have time to propagate to the host serving the current request. A retry (with
+     *         appropriate backoff logic) is the recommended response to this exception.
+     * @sample AWSSSOAdmin.DetachCustomerManagedPolicyReferenceFromPermissionSet
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DetachCustomerManagedPolicyReferenceFromPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DetachCustomerManagedPolicyReferenceFromPermissionSetResult detachCustomerManagedPolicyReferenceFromPermissionSet(
+            DetachCustomerManagedPolicyReferenceFromPermissionSetRequest detachCustomerManagedPolicyReferenceFromPermissionSetRequest);
+
+    /**
+     * <p>
+     * Detaches the attached Amazon Web Services managed IAM policy ARN from the specified permission set.
      * </p>
      * 
      * @param detachManagedPolicyFromPermissionSetRequest
@@ -504,6 +580,31 @@ public interface AWSSSOAdmin {
      *      target="_top">AWS API Documentation</a>
      */
     GetInlinePolicyForPermissionSetResult getInlinePolicyForPermissionSet(GetInlinePolicyForPermissionSetRequest getInlinePolicyForPermissionSetRequest);
+
+    /**
+     * <p>
+     * Obtains the permissions boundary for a specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param getPermissionsBoundaryForPermissionSetRequest
+     * @return Result of the GetPermissionsBoundaryForPermissionSet operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Indicates that a requested resource is not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception, or failure with an internal
+     *         server.
+     * @throws ThrottlingException
+     *         Indicates that the principal has crossed the throttling limits of the API operations.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSSSOAdmin.GetPermissionsBoundaryForPermissionSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/GetPermissionsBoundaryForPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetPermissionsBoundaryForPermissionSetResult getPermissionsBoundaryForPermissionSet(
+            GetPermissionsBoundaryForPermissionSetRequest getPermissionsBoundaryForPermissionSetRequest);
 
     /**
      * <p>
@@ -607,6 +708,32 @@ public interface AWSSSOAdmin {
 
     /**
      * <p>
+     * Lists all IAM customer managed policies attached to a specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param listCustomerManagedPolicyReferencesInPermissionSetRequest
+     * @return Result of the ListCustomerManagedPolicyReferencesInPermissionSet operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Indicates that a requested resource is not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception, or failure with an internal
+     *         server.
+     * @throws ThrottlingException
+     *         Indicates that the principal has crossed the throttling limits of the API operations.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSSSOAdmin.ListCustomerManagedPolicyReferencesInPermissionSet
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/ListCustomerManagedPolicyReferencesInPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListCustomerManagedPolicyReferencesInPermissionSetResult listCustomerManagedPolicyReferencesInPermissionSet(
+            ListCustomerManagedPolicyReferencesInPermissionSetRequest listCustomerManagedPolicyReferencesInPermissionSetRequest);
+
+    /**
+     * <p>
      * Lists the SSO instances that the caller has access to.
      * </p>
      * 
@@ -629,7 +756,7 @@ public interface AWSSSOAdmin {
 
     /**
      * <p>
-     * Lists the IAM managed policy that is attached to a specified permission set.
+     * Lists the Amazon Web Services managed IAM policy that is attached to a specified permission set.
      * </p>
      * 
      * @param listManagedPoliciesInPermissionSetRequest
@@ -814,6 +941,36 @@ public interface AWSSSOAdmin {
      *      target="_top">AWS API Documentation</a>
      */
     PutInlinePolicyToPermissionSetResult putInlinePolicyToPermissionSet(PutInlinePolicyToPermissionSetRequest putInlinePolicyToPermissionSetRequest);
+
+    /**
+     * <p>
+     * Attaches an Amazon Web Services managed or customer managed IAM policy to the specified <a>PermissionSet</a> as a
+     * permissions boundary.
+     * </p>
+     * 
+     * @param putPermissionsBoundaryToPermissionSetRequest
+     * @return Result of the PutPermissionsBoundaryToPermissionSet operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Indicates that a requested resource is not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception, or failure with an internal
+     *         server.
+     * @throws ThrottlingException
+     *         Indicates that the principal has crossed the throttling limits of the API operations.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ConflictException
+     *         Occurs when a conflict with a previous successful write is detected. This generally occurs when the
+     *         previous write did not have time to propagate to the host serving the current request. A retry (with
+     *         appropriate backoff logic) is the recommended response to this exception.
+     * @sample AWSSSOAdmin.PutPermissionsBoundaryToPermissionSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/PutPermissionsBoundaryToPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PutPermissionsBoundaryToPermissionSetResult putPermissionsBoundaryToPermissionSet(
+            PutPermissionsBoundaryToPermissionSetRequest putPermissionsBoundaryToPermissionSetRequest);
 
     /**
      * <p>

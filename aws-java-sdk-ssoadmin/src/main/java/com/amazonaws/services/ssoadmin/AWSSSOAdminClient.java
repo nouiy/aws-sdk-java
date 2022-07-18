@@ -50,19 +50,7 @@ import com.amazonaws.services.ssoadmin.model.transform.*;
  * Client for accessing SSO Admin. All service calls made using this client are blocking, and will not return until the
  * service call completes.
  * <p>
- * <p>
- * Amazon Web Services Single Sign On (SSO) is a cloud SSO service that makes it easy to centrally manage SSO access to
- * multiple Amazon Web Services accounts and business applications. This guide provides information on SSO operations
- * which could be used for access management of Amazon Web Services accounts. For information about Amazon Web Services
- * SSO features, see the <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html">Amazon Web
- * Services Single Sign-On User Guide</a>.
- * </p>
- * <p>
- * Many operations in the SSO APIs rely on identifiers for users and groups, known as principals. For more information
- * about how to work with principals and principal IDs in Amazon Web Services SSO, see the <a
- * href="https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/welcome.html">Amazon Web Services SSO
- * Identity Store API Reference</a>.
- * </p>
+ * <p/>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -87,6 +75,15 @@ public class AWSSSOAdminClient extends AmazonWebServiceClient implements AWSSSOA
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.ssoadmin.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.ssoadmin.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.ssoadmin.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.ssoadmin.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -96,17 +93,8 @@ public class AWSSSOAdminClient extends AmazonWebServiceClient implements AWSSSOA
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.ssoadmin.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.ssoadmin.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.ssoadmin.model.transform.ValidationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.ssoadmin.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.ssoadmin.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.ssoadmin.model.AWSSSOAdminException.class));
 
     public static AWSSSOAdminClientBuilder builder() {
@@ -157,7 +145,84 @@ public class AWSSSOAdminClient extends AmazonWebServiceClient implements AWSSSOA
 
     /**
      * <p>
-     * Attaches an IAM managed policy ARN to a permission set.
+     * Attaches the specified IAM customer managed policy to the specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param attachCustomerManagedPolicyReferenceToPermissionSetRequest
+     * @return Result of the AttachCustomerManagedPolicyReferenceToPermissionSet operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Indicates that a requested resource is not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception, or failure with an internal
+     *         server.
+     * @throws ServiceQuotaExceededException
+     *         Indicates that the principal has crossed the permitted number of resources that can be created.
+     * @throws ThrottlingException
+     *         Indicates that the principal has crossed the throttling limits of the API operations.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ConflictException
+     *         Occurs when a conflict with a previous successful write is detected. This generally occurs when the
+     *         previous write did not have time to propagate to the host serving the current request. A retry (with
+     *         appropriate backoff logic) is the recommended response to this exception.
+     * @sample AWSSSOAdmin.AttachCustomerManagedPolicyReferenceToPermissionSet
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/AttachCustomerManagedPolicyReferenceToPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public AttachCustomerManagedPolicyReferenceToPermissionSetResult attachCustomerManagedPolicyReferenceToPermissionSet(
+            AttachCustomerManagedPolicyReferenceToPermissionSetRequest request) {
+        request = beforeClientExecution(request);
+        return executeAttachCustomerManagedPolicyReferenceToPermissionSet(request);
+    }
+
+    @SdkInternalApi
+    final AttachCustomerManagedPolicyReferenceToPermissionSetResult executeAttachCustomerManagedPolicyReferenceToPermissionSet(
+            AttachCustomerManagedPolicyReferenceToPermissionSetRequest attachCustomerManagedPolicyReferenceToPermissionSetRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(attachCustomerManagedPolicyReferenceToPermissionSetRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AttachCustomerManagedPolicyReferenceToPermissionSetRequest> request = null;
+        Response<AttachCustomerManagedPolicyReferenceToPermissionSetResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AttachCustomerManagedPolicyReferenceToPermissionSetRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(attachCustomerManagedPolicyReferenceToPermissionSetRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SSO Admin");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AttachCustomerManagedPolicyReferenceToPermissionSet");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<AttachCustomerManagedPolicyReferenceToPermissionSetResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new AttachCustomerManagedPolicyReferenceToPermissionSetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Attaches an Amazon Web Services managed IAM policy ARN to a permission set.
      * </p>
      * <note>
      * <p>
@@ -776,6 +841,76 @@ public class AWSSSOAdminClient extends AmazonWebServiceClient implements AWSSSOA
 
     /**
      * <p>
+     * Deletes the permissions boundary from a specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param deletePermissionsBoundaryFromPermissionSetRequest
+     * @return Result of the DeletePermissionsBoundaryFromPermissionSet operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Indicates that a requested resource is not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception, or failure with an internal
+     *         server.
+     * @throws ThrottlingException
+     *         Indicates that the principal has crossed the throttling limits of the API operations.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSSSOAdmin.DeletePermissionsBoundaryFromPermissionSet
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DeletePermissionsBoundaryFromPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeletePermissionsBoundaryFromPermissionSetResult deletePermissionsBoundaryFromPermissionSet(DeletePermissionsBoundaryFromPermissionSetRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeletePermissionsBoundaryFromPermissionSet(request);
+    }
+
+    @SdkInternalApi
+    final DeletePermissionsBoundaryFromPermissionSetResult executeDeletePermissionsBoundaryFromPermissionSet(
+            DeletePermissionsBoundaryFromPermissionSetRequest deletePermissionsBoundaryFromPermissionSetRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deletePermissionsBoundaryFromPermissionSetRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeletePermissionsBoundaryFromPermissionSetRequest> request = null;
+        Response<DeletePermissionsBoundaryFromPermissionSetResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeletePermissionsBoundaryFromPermissionSetRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deletePermissionsBoundaryFromPermissionSetRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SSO Admin");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeletePermissionsBoundaryFromPermissionSet");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeletePermissionsBoundaryFromPermissionSetResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new DeletePermissionsBoundaryFromPermissionSetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describes the status of the assignment creation request.
      * </p>
      * 
@@ -1128,7 +1263,82 @@ public class AWSSSOAdminClient extends AmazonWebServiceClient implements AWSSSOA
 
     /**
      * <p>
-     * Detaches the attached IAM managed policy ARN from the specified permission set.
+     * Detaches the specified IAM customer managed policy from the specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param detachCustomerManagedPolicyReferenceFromPermissionSetRequest
+     * @return Result of the DetachCustomerManagedPolicyReferenceFromPermissionSet operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Indicates that a requested resource is not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception, or failure with an internal
+     *         server.
+     * @throws ThrottlingException
+     *         Indicates that the principal has crossed the throttling limits of the API operations.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ConflictException
+     *         Occurs when a conflict with a previous successful write is detected. This generally occurs when the
+     *         previous write did not have time to propagate to the host serving the current request. A retry (with
+     *         appropriate backoff logic) is the recommended response to this exception.
+     * @sample AWSSSOAdmin.DetachCustomerManagedPolicyReferenceFromPermissionSet
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/DetachCustomerManagedPolicyReferenceFromPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DetachCustomerManagedPolicyReferenceFromPermissionSetResult detachCustomerManagedPolicyReferenceFromPermissionSet(
+            DetachCustomerManagedPolicyReferenceFromPermissionSetRequest request) {
+        request = beforeClientExecution(request);
+        return executeDetachCustomerManagedPolicyReferenceFromPermissionSet(request);
+    }
+
+    @SdkInternalApi
+    final DetachCustomerManagedPolicyReferenceFromPermissionSetResult executeDetachCustomerManagedPolicyReferenceFromPermissionSet(
+            DetachCustomerManagedPolicyReferenceFromPermissionSetRequest detachCustomerManagedPolicyReferenceFromPermissionSetRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(detachCustomerManagedPolicyReferenceFromPermissionSetRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DetachCustomerManagedPolicyReferenceFromPermissionSetRequest> request = null;
+        Response<DetachCustomerManagedPolicyReferenceFromPermissionSetResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DetachCustomerManagedPolicyReferenceFromPermissionSetRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(detachCustomerManagedPolicyReferenceFromPermissionSetRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SSO Admin");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DetachCustomerManagedPolicyReferenceFromPermissionSet");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DetachCustomerManagedPolicyReferenceFromPermissionSetResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new DetachCustomerManagedPolicyReferenceFromPermissionSetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Detaches the attached Amazon Web Services managed IAM policy ARN from the specified permission set.
      * </p>
      * 
      * @param detachManagedPolicyFromPermissionSetRequest
@@ -1258,6 +1468,75 @@ public class AWSSSOAdminClient extends AmazonWebServiceClient implements AWSSSOA
             HttpResponseHandler<AmazonWebServiceResponse<GetInlinePolicyForPermissionSetResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new GetInlinePolicyForPermissionSetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Obtains the permissions boundary for a specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param getPermissionsBoundaryForPermissionSetRequest
+     * @return Result of the GetPermissionsBoundaryForPermissionSet operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Indicates that a requested resource is not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception, or failure with an internal
+     *         server.
+     * @throws ThrottlingException
+     *         Indicates that the principal has crossed the throttling limits of the API operations.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSSSOAdmin.GetPermissionsBoundaryForPermissionSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/GetPermissionsBoundaryForPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetPermissionsBoundaryForPermissionSetResult getPermissionsBoundaryForPermissionSet(GetPermissionsBoundaryForPermissionSetRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetPermissionsBoundaryForPermissionSet(request);
+    }
+
+    @SdkInternalApi
+    final GetPermissionsBoundaryForPermissionSetResult executeGetPermissionsBoundaryForPermissionSet(
+            GetPermissionsBoundaryForPermissionSetRequest getPermissionsBoundaryForPermissionSetRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getPermissionsBoundaryForPermissionSetRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetPermissionsBoundaryForPermissionSetRequest> request = null;
+        Response<GetPermissionsBoundaryForPermissionSetResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetPermissionsBoundaryForPermissionSetRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getPermissionsBoundaryForPermissionSetRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SSO Admin");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetPermissionsBoundaryForPermissionSet");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetPermissionsBoundaryForPermissionSetResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new GetPermissionsBoundaryForPermissionSetResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1545,6 +1824,77 @@ public class AWSSSOAdminClient extends AmazonWebServiceClient implements AWSSSOA
 
     /**
      * <p>
+     * Lists all IAM customer managed policies attached to a specified <a>PermissionSet</a>.
+     * </p>
+     * 
+     * @param listCustomerManagedPolicyReferencesInPermissionSetRequest
+     * @return Result of the ListCustomerManagedPolicyReferencesInPermissionSet operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Indicates that a requested resource is not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception, or failure with an internal
+     *         server.
+     * @throws ThrottlingException
+     *         Indicates that the principal has crossed the throttling limits of the API operations.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSSSOAdmin.ListCustomerManagedPolicyReferencesInPermissionSet
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/ListCustomerManagedPolicyReferencesInPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListCustomerManagedPolicyReferencesInPermissionSetResult listCustomerManagedPolicyReferencesInPermissionSet(
+            ListCustomerManagedPolicyReferencesInPermissionSetRequest request) {
+        request = beforeClientExecution(request);
+        return executeListCustomerManagedPolicyReferencesInPermissionSet(request);
+    }
+
+    @SdkInternalApi
+    final ListCustomerManagedPolicyReferencesInPermissionSetResult executeListCustomerManagedPolicyReferencesInPermissionSet(
+            ListCustomerManagedPolicyReferencesInPermissionSetRequest listCustomerManagedPolicyReferencesInPermissionSetRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listCustomerManagedPolicyReferencesInPermissionSetRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListCustomerManagedPolicyReferencesInPermissionSetRequest> request = null;
+        Response<ListCustomerManagedPolicyReferencesInPermissionSetResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListCustomerManagedPolicyReferencesInPermissionSetRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listCustomerManagedPolicyReferencesInPermissionSetRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SSO Admin");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListCustomerManagedPolicyReferencesInPermissionSet");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListCustomerManagedPolicyReferencesInPermissionSetResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new ListCustomerManagedPolicyReferencesInPermissionSetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists the SSO instances that the caller has access to.
      * </p>
      * 
@@ -1609,7 +1959,7 @@ public class AWSSSOAdminClient extends AmazonWebServiceClient implements AWSSSOA
 
     /**
      * <p>
-     * Lists the IAM managed policy that is attached to a specified permission set.
+     * Lists the Amazon Web Services managed IAM policy that is attached to a specified permission set.
      * </p>
      * 
      * @param listManagedPoliciesInPermissionSetRequest
@@ -2088,6 +2438,80 @@ public class AWSSSOAdminClient extends AmazonWebServiceClient implements AWSSSOA
             HttpResponseHandler<AmazonWebServiceResponse<PutInlinePolicyToPermissionSetResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new PutInlinePolicyToPermissionSetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Attaches an Amazon Web Services managed or customer managed IAM policy to the specified <a>PermissionSet</a> as a
+     * permissions boundary.
+     * </p>
+     * 
+     * @param putPermissionsBoundaryToPermissionSetRequest
+     * @return Result of the PutPermissionsBoundaryToPermissionSet operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Indicates that a requested resource is not found.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception, or failure with an internal
+     *         server.
+     * @throws ThrottlingException
+     *         Indicates that the principal has crossed the throttling limits of the API operations.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ConflictException
+     *         Occurs when a conflict with a previous successful write is detected. This generally occurs when the
+     *         previous write did not have time to propagate to the host serving the current request. A retry (with
+     *         appropriate backoff logic) is the recommended response to this exception.
+     * @sample AWSSSOAdmin.PutPermissionsBoundaryToPermissionSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sso-admin-2020-07-20/PutPermissionsBoundaryToPermissionSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PutPermissionsBoundaryToPermissionSetResult putPermissionsBoundaryToPermissionSet(PutPermissionsBoundaryToPermissionSetRequest request) {
+        request = beforeClientExecution(request);
+        return executePutPermissionsBoundaryToPermissionSet(request);
+    }
+
+    @SdkInternalApi
+    final PutPermissionsBoundaryToPermissionSetResult executePutPermissionsBoundaryToPermissionSet(
+            PutPermissionsBoundaryToPermissionSetRequest putPermissionsBoundaryToPermissionSetRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putPermissionsBoundaryToPermissionSetRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutPermissionsBoundaryToPermissionSetRequest> request = null;
+        Response<PutPermissionsBoundaryToPermissionSetResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutPermissionsBoundaryToPermissionSetRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(putPermissionsBoundaryToPermissionSetRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SSO Admin");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutPermissionsBoundaryToPermissionSet");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutPermissionsBoundaryToPermissionSetResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new PutPermissionsBoundaryToPermissionSetResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
