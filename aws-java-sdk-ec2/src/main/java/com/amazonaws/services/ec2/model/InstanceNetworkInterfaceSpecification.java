@@ -130,8 +130,9 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * </p>
      * <p>
      * You can only assign a carrier IP address to a network interface that is in a subnet in a Wavelength Zone. For
-     * more information about carrier IP addresses, see Carrier IP addresses in the Amazon Web Services Wavelength
-     * Developer Guide.
+     * more information about carrier IP addresses, see <a
+     * href="https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#provider-owned-ip"
+     * >Carrier IP address</a> in the <i>Amazon Web Services Wavelength Developer Guide</i>.
      * </p>
      */
     private Boolean associateCarrierIpAddress;
@@ -976,16 +977,18 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * </p>
      * <p>
      * You can only assign a carrier IP address to a network interface that is in a subnet in a Wavelength Zone. For
-     * more information about carrier IP addresses, see Carrier IP addresses in the Amazon Web Services Wavelength
-     * Developer Guide.
+     * more information about carrier IP addresses, see <a
+     * href="https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#provider-owned-ip"
+     * >Carrier IP address</a> in the <i>Amazon Web Services Wavelength Developer Guide</i>.
      * </p>
      * 
      * @param associateCarrierIpAddress
      *        Indicates whether to assign a carrier IP address to the network interface.</p>
      *        <p>
      *        You can only assign a carrier IP address to a network interface that is in a subnet in a Wavelength Zone.
-     *        For more information about carrier IP addresses, see Carrier IP addresses in the Amazon Web Services
-     *        Wavelength Developer Guide.
+     *        For more information about carrier IP addresses, see <a href=
+     *        "https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#provider-owned-ip"
+     *        >Carrier IP address</a> in the <i>Amazon Web Services Wavelength Developer Guide</i>.
      */
 
     public void setAssociateCarrierIpAddress(Boolean associateCarrierIpAddress) {
@@ -998,15 +1001,17 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * </p>
      * <p>
      * You can only assign a carrier IP address to a network interface that is in a subnet in a Wavelength Zone. For
-     * more information about carrier IP addresses, see Carrier IP addresses in the Amazon Web Services Wavelength
-     * Developer Guide.
+     * more information about carrier IP addresses, see <a
+     * href="https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#provider-owned-ip"
+     * >Carrier IP address</a> in the <i>Amazon Web Services Wavelength Developer Guide</i>.
      * </p>
      * 
      * @return Indicates whether to assign a carrier IP address to the network interface.</p>
      *         <p>
      *         You can only assign a carrier IP address to a network interface that is in a subnet in a Wavelength Zone.
-     *         For more information about carrier IP addresses, see Carrier IP addresses in the Amazon Web Services
-     *         Wavelength Developer Guide.
+     *         For more information about carrier IP addresses, see <a href=
+     *         "https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#provider-owned-ip"
+     *         >Carrier IP address</a> in the <i>Amazon Web Services Wavelength Developer Guide</i>.
      */
 
     public Boolean getAssociateCarrierIpAddress() {
@@ -1019,16 +1024,18 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * </p>
      * <p>
      * You can only assign a carrier IP address to a network interface that is in a subnet in a Wavelength Zone. For
-     * more information about carrier IP addresses, see Carrier IP addresses in the Amazon Web Services Wavelength
-     * Developer Guide.
+     * more information about carrier IP addresses, see <a
+     * href="https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#provider-owned-ip"
+     * >Carrier IP address</a> in the <i>Amazon Web Services Wavelength Developer Guide</i>.
      * </p>
      * 
      * @param associateCarrierIpAddress
      *        Indicates whether to assign a carrier IP address to the network interface.</p>
      *        <p>
      *        You can only assign a carrier IP address to a network interface that is in a subnet in a Wavelength Zone.
-     *        For more information about carrier IP addresses, see Carrier IP addresses in the Amazon Web Services
-     *        Wavelength Developer Guide.
+     *        For more information about carrier IP addresses, see <a href=
+     *        "https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#provider-owned-ip"
+     *        >Carrier IP address</a> in the <i>Amazon Web Services Wavelength Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1043,15 +1050,17 @@ public class InstanceNetworkInterfaceSpecification implements Serializable, Clon
      * </p>
      * <p>
      * You can only assign a carrier IP address to a network interface that is in a subnet in a Wavelength Zone. For
-     * more information about carrier IP addresses, see Carrier IP addresses in the Amazon Web Services Wavelength
-     * Developer Guide.
+     * more information about carrier IP addresses, see <a
+     * href="https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#provider-owned-ip"
+     * >Carrier IP address</a> in the <i>Amazon Web Services Wavelength Developer Guide</i>.
      * </p>
      * 
      * @return Indicates whether to assign a carrier IP address to the network interface.</p>
      *         <p>
      *         You can only assign a carrier IP address to a network interface that is in a subnet in a Wavelength Zone.
-     *         For more information about carrier IP addresses, see Carrier IP addresses in the Amazon Web Services
-     *         Wavelength Developer Guide.
+     *         For more information about carrier IP addresses, see <a href=
+     *         "https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#provider-owned-ip"
+     *         >Carrier IP address</a> in the <i>Amazon Web Services Wavelength Developer Guide</i>.
      */
 
     public Boolean isAssociateCarrierIpAddress() {

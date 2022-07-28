@@ -100,8 +100,8 @@ public class ImageAttribute implements Serializable, Cloneable {
     /**
      * <p>
      * The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the AMI was
-     * last used to launch an EC2 instance. When the AMI is used, there is a 24-hour delay before that usage is
-     * reported.
+     * last used to launch an EC2 instance. When the AMI is used to launch an instance, there is a 24-hour delay before
+     * that usage is reported.
      * </p>
      * <note>
      * <p>
@@ -684,8 +684,8 @@ public class ImageAttribute implements Serializable, Cloneable {
     /**
      * <p>
      * The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the AMI was
-     * last used to launch an EC2 instance. When the AMI is used, there is a 24-hour delay before that usage is
-     * reported.
+     * last used to launch an EC2 instance. When the AMI is used to launch an instance, there is a 24-hour delay before
+     * that usage is reported.
      * </p>
      * <note>
      * <p>
@@ -695,8 +695,8 @@ public class ImageAttribute implements Serializable, Cloneable {
      * 
      * @param lastLaunchedTime
      *        The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the AMI
-     *        was last used to launch an EC2 instance. When the AMI is used, there is a 24-hour delay before that usage
-     *        is reported.</p> <note>
+     *        was last used to launch an EC2 instance. When the AMI is used to launch an instance, there is a 24-hour
+     *        delay before that usage is reported.</p> <note>
      *        <p>
      *        <code>lastLaunchedTime</code> data is available starting April 2017.
      *        </p>
@@ -709,8 +709,8 @@ public class ImageAttribute implements Serializable, Cloneable {
     /**
      * <p>
      * The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the AMI was
-     * last used to launch an EC2 instance. When the AMI is used, there is a 24-hour delay before that usage is
-     * reported.
+     * last used to launch an EC2 instance. When the AMI is used to launch an instance, there is a 24-hour delay before
+     * that usage is reported.
      * </p>
      * <note>
      * <p>
@@ -719,8 +719,8 @@ public class ImageAttribute implements Serializable, Cloneable {
      * </note>
      * 
      * @return The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the
-     *         AMI was last used to launch an EC2 instance. When the AMI is used, there is a 24-hour delay before that
-     *         usage is reported.</p> <note>
+     *         AMI was last used to launch an EC2 instance. When the AMI is used to launch an instance, there is a
+     *         24-hour delay before that usage is reported.</p> <note>
      *         <p>
      *         <code>lastLaunchedTime</code> data is available starting April 2017.
      *         </p>
@@ -733,8 +733,8 @@ public class ImageAttribute implements Serializable, Cloneable {
     /**
      * <p>
      * The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the AMI was
-     * last used to launch an EC2 instance. When the AMI is used, there is a 24-hour delay before that usage is
-     * reported.
+     * last used to launch an EC2 instance. When the AMI is used to launch an instance, there is a 24-hour delay before
+     * that usage is reported.
      * </p>
      * <note>
      * <p>
@@ -744,8 +744,8 @@ public class ImageAttribute implements Serializable, Cloneable {
      * 
      * @param lastLaunchedTime
      *        The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the AMI
-     *        was last used to launch an EC2 instance. When the AMI is used, there is a 24-hour delay before that usage
-     *        is reported.</p> <note>
+     *        was last used to launch an EC2 instance. When the AMI is used to launch an instance, there is a 24-hour
+     *        delay before that usage is reported.</p> <note>
      *        <p>
      *        <code>lastLaunchedTime</code> data is available starting April 2017.
      *        </p>

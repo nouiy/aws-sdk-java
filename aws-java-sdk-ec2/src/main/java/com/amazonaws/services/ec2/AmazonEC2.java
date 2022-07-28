@@ -860,7 +860,8 @@ public interface AmazonEC2 {
      * </p>
      * <p>
      * An outbound rule permits instances to send traffic to the specified IPv4 or IPv6 CIDR address ranges, or to the
-     * instances that are associated with the specified source security groups.
+     * instances that are associated with the specified source security groups. When specifying an outbound rule for
+     * your security group in a VPC, the <code>IpPermissions</code> must include a destination for the traffic.
      * </p>
      * <p>
      * You specify a protocol for each rule (for example, TCP). For the TCP and UDP protocols, you must also specify the
@@ -889,7 +890,8 @@ public interface AmazonEC2 {
      * </p>
      * <p>
      * An inbound rule permits instances to receive traffic from the specified IPv4 or IPv6 CIDR address range, or from
-     * the instances that are associated with the specified destination security groups.
+     * the instances that are associated with the specified destination security groups. When specifying an inbound rule
+     * for your security group in a VPC, the <code>IpPermissions</code> must include a source for the traffic.
      * </p>
      * <p>
      * You specify a protocol for each rule (for example, TCP). For TCP and UDP, you must also specify the destination
@@ -904,6 +906,13 @@ public interface AmazonEC2 {
      * For more information about VPC security group quotas, see <a
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html">Amazon VPC quotas</a>.
      * </p>
+     * <note>
+     * <p>
+     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
+     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
+     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param authorizeSecurityGroupIngressRequest
      * @return Result of the AuthorizeSecurityGroupIngress operation returned by the service.
@@ -2215,6 +2224,13 @@ public interface AmazonEC2 {
      * For more information about VPC security group limits, see <a
      * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html">Amazon VPC Limits</a>.
      * </p>
+     * <note>
+     * <p>
+     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
+     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
+     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param createSecurityGroupRequest
      * @return Result of the CreateSecurityGroup operation returned by the service.
@@ -3512,6 +3528,13 @@ public interface AmazonEC2 {
      * security group, the operation fails with <code>InvalidGroup.InUse</code> in EC2-Classic or
      * <code>DependencyViolation</code> in EC2-VPC.
      * </p>
+     * <note>
+     * <p>
+     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
+     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
+     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param deleteSecurityGroupRequest
      * @return Result of the DeleteSecurityGroup operation returned by the service.
@@ -4184,6 +4207,13 @@ public interface AmazonEC2 {
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
+     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
+     * EC2-Classic to a VPC</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param describeAccountAttributesRequest
      * @return Result of the DescribeAccountAttributes operation returned by the service.
@@ -5960,6 +5990,13 @@ public interface AmazonEC2 {
      * href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html">Security groups for your
      * VPC</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
+     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
+     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param describeSecurityGroupsRequest
      * @return Result of the DescribeSecurityGroups operation returned by the service.
@@ -10689,6 +10726,13 @@ public interface AmazonEC2 {
      * Rule changes are propagated to instances within the security group as quickly as possible. However, a small delay
      * might occur.
      * </p>
+     * <note>
+     * <p>
+     * We are retiring EC2-Classic on August 15, 2022. We recommend that you migrate from EC2-Classic to a VPC. For more
+     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from
+     * EC2-Classic to a VPC</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param revokeSecurityGroupIngressRequest
      * @return Result of the RevokeSecurityGroupIngress operation returned by the service.
