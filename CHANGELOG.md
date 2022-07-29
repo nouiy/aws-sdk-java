@@ -1,3 +1,16 @@
+# __1.12.272__ __2022-07-29__
+## __AWS Shield__
+  - ### Features
+    - AWS Shield Advanced now supports filtering for ListProtections and ListProtectionGroups.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Documentation updates for Amazon EC2.
+
+## __Amazon FSx__
+  - ### Features
+    - Documentation updates for Amazon FSx
+
 # __1.12.271__ __2022-07-28__
 ## __Amazon Elastic Compute Cloud__
   - ### Features

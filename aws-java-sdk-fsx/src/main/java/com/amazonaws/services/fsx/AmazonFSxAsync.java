@@ -1874,7 +1874,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Lists tags for an Amazon FSx file systems and backups in the case of Amazon FSx for Windows File Server.
+     * Lists tags for Amazon FSx resources.
      * </p>
      * <p>
      * When retrieving all tags, you can optionally specify the <code>MaxResults</code> parameter to limit the number of
@@ -1917,7 +1917,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Lists tags for an Amazon FSx file systems and backups in the case of Amazon FSx for Windows File Server.
+     * Lists tags for Amazon FSx resources.
      * </p>
      * <p>
      * When retrieving all tags, you can optionally specify the <code>MaxResults</code> parameter to limit the number of
