@@ -1808,6 +1808,39 @@ public class AmazonWorkspacesAsyncClient extends AmazonWorkspacesClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<ModifySamlPropertiesResult> modifySamlPropertiesAsync(ModifySamlPropertiesRequest request) {
+
+        return modifySamlPropertiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifySamlPropertiesResult> modifySamlPropertiesAsync(final ModifySamlPropertiesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ModifySamlPropertiesRequest, ModifySamlPropertiesResult> asyncHandler) {
+        final ModifySamlPropertiesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ModifySamlPropertiesResult>() {
+            @Override
+            public ModifySamlPropertiesResult call() throws Exception {
+                ModifySamlPropertiesResult result = null;
+
+                try {
+                    result = executeModifySamlProperties(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ModifySelfservicePermissionsResult> modifySelfservicePermissionsAsync(ModifySelfservicePermissionsRequest request) {
 
         return modifySelfservicePermissionsAsync(request, null);

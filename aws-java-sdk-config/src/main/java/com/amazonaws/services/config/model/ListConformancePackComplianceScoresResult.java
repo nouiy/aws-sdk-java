@@ -32,7 +32,7 @@ public class ListConformancePackComplianceScoresResult extends com.amazonaws.Ama
     private String nextToken;
     /**
      * <p>
-     * A list of <code>ConformancePackComplianceScore</code> objects
+     * A list of <code>ConformancePackComplianceScore</code> objects.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<ConformancePackComplianceScore> conformancePackComplianceScores;
@@ -82,10 +82,10 @@ public class ListConformancePackComplianceScoresResult extends com.amazonaws.Ama
 
     /**
      * <p>
-     * A list of <code>ConformancePackComplianceScore</code> objects
+     * A list of <code>ConformancePackComplianceScore</code> objects.
      * </p>
      * 
-     * @return A list of <code>ConformancePackComplianceScore</code> objects
+     * @return A list of <code>ConformancePackComplianceScore</code> objects.
      */
 
     public java.util.List<ConformancePackComplianceScore> getConformancePackComplianceScores() {
@@ -97,11 +97,11 @@ public class ListConformancePackComplianceScoresResult extends com.amazonaws.Ama
 
     /**
      * <p>
-     * A list of <code>ConformancePackComplianceScore</code> objects
+     * A list of <code>ConformancePackComplianceScore</code> objects.
      * </p>
      * 
      * @param conformancePackComplianceScores
-     *        A list of <code>ConformancePackComplianceScore</code> objects
+     *        A list of <code>ConformancePackComplianceScore</code> objects.
      */
 
     public void setConformancePackComplianceScores(java.util.Collection<ConformancePackComplianceScore> conformancePackComplianceScores) {
@@ -115,7 +115,7 @@ public class ListConformancePackComplianceScoresResult extends com.amazonaws.Ama
 
     /**
      * <p>
-     * A list of <code>ConformancePackComplianceScore</code> objects
+     * A list of <code>ConformancePackComplianceScore</code> objects.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -124,7 +124,7 @@ public class ListConformancePackComplianceScoresResult extends com.amazonaws.Ama
      * </p>
      * 
      * @param conformancePackComplianceScores
-     *        A list of <code>ConformancePackComplianceScore</code> objects
+     *        A list of <code>ConformancePackComplianceScore</code> objects.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -141,11 +141,11 @@ public class ListConformancePackComplianceScoresResult extends com.amazonaws.Ama
 
     /**
      * <p>
-     * A list of <code>ConformancePackComplianceScore</code> objects
+     * A list of <code>ConformancePackComplianceScore</code> objects.
      * </p>
      * 
      * @param conformancePackComplianceScores
-     *        A list of <code>ConformancePackComplianceScore</code> objects
+     *        A list of <code>ConformancePackComplianceScore</code> objects.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

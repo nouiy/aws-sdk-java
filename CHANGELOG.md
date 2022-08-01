@@ -1,3 +1,12 @@
+# __1.12.273__ __2022-08-01__
+## __AWS Config__
+  - ### Features
+    - Documentation update for PutConfigRule and PutOrganizationConfigRule
+
+## __Amazon WorkSpaces__
+  - ### Features
+    - This release introduces ModifySamlProperties, a new API that allows control of SAML properties associated with a WorkSpaces directory. The DescribeWorkspaceDirectories API will now additionally return SAML properties in its responses.
+
 # __1.12.272__ __2022-07-29__
 ## __AWS Shield__
   - ### Features

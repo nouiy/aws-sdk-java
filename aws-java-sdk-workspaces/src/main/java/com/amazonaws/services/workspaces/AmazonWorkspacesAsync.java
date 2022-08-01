@@ -1942,6 +1942,39 @@ public interface AmazonWorkspacesAsync extends AmazonWorkspaces {
 
     /**
      * <p>
+     * Modifies multiple properties related to SAML 2.0 authentication, including the enablement status, user access
+     * URL, and relay state parameter name that are used for configuring federation with an SAML 2.0 identity provider.
+     * </p>
+     * 
+     * @param modifySamlPropertiesRequest
+     * @return A Java Future containing the result of the ModifySamlProperties operation returned by the service.
+     * @sample AmazonWorkspacesAsync.ModifySamlProperties
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifySamlProperties"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifySamlPropertiesResult> modifySamlPropertiesAsync(ModifySamlPropertiesRequest modifySamlPropertiesRequest);
+
+    /**
+     * <p>
+     * Modifies multiple properties related to SAML 2.0 authentication, including the enablement status, user access
+     * URL, and relay state parameter name that are used for configuring federation with an SAML 2.0 identity provider.
+     * </p>
+     * 
+     * @param modifySamlPropertiesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifySamlProperties operation returned by the service.
+     * @sample AmazonWorkspacesAsyncHandler.ModifySamlProperties
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifySamlProperties"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifySamlPropertiesResult> modifySamlPropertiesAsync(ModifySamlPropertiesRequest modifySamlPropertiesRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifySamlPropertiesRequest, ModifySamlPropertiesResult> asyncHandler);
+
+    /**
+     * <p>
      * Modifies the self-service WorkSpace management capabilities for your users. For more information, see <a href=
      * "https://docs.aws.amazon.com/workspaces/latest/adminguide/enable-user-self-service-workspace-management.html"
      * >Enable Self-Service WorkSpace Management Capabilities for Your Users</a>.

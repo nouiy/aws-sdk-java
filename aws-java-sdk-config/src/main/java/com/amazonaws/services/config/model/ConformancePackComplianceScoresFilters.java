@@ -30,17 +30,24 @@ public class ConformancePackComplianceScoresFilters implements Serializable, Clo
 
     /**
      * <p>
-     * The name of a conformance pack whose score should be included in the compliance score result.
+     * The names of the conformance packs whose compliance scores you want to include in the conformance pack compliance
+     * score result set. You can include up to 25 conformance packs in the <code>ConformancePackNames</code> array of
+     * strings, each with a character limit of 256 characters for the conformance pack name.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> conformancePackNames;
 
     /**
      * <p>
-     * The name of a conformance pack whose score should be included in the compliance score result.
+     * The names of the conformance packs whose compliance scores you want to include in the conformance pack compliance
+     * score result set. You can include up to 25 conformance packs in the <code>ConformancePackNames</code> array of
+     * strings, each with a character limit of 256 characters for the conformance pack name.
      * </p>
      * 
-     * @return The name of a conformance pack whose score should be included in the compliance score result.
+     * @return The names of the conformance packs whose compliance scores you want to include in the conformance pack
+     *         compliance score result set. You can include up to 25 conformance packs in the
+     *         <code>ConformancePackNames</code> array of strings, each with a character limit of 256 characters for the
+     *         conformance pack name.
      */
 
     public java.util.List<String> getConformancePackNames() {
@@ -52,11 +59,16 @@ public class ConformancePackComplianceScoresFilters implements Serializable, Clo
 
     /**
      * <p>
-     * The name of a conformance pack whose score should be included in the compliance score result.
+     * The names of the conformance packs whose compliance scores you want to include in the conformance pack compliance
+     * score result set. You can include up to 25 conformance packs in the <code>ConformancePackNames</code> array of
+     * strings, each with a character limit of 256 characters for the conformance pack name.
      * </p>
      * 
      * @param conformancePackNames
-     *        The name of a conformance pack whose score should be included in the compliance score result.
+     *        The names of the conformance packs whose compliance scores you want to include in the conformance pack
+     *        compliance score result set. You can include up to 25 conformance packs in the
+     *        <code>ConformancePackNames</code> array of strings, each with a character limit of 256 characters for the
+     *        conformance pack name.
      */
 
     public void setConformancePackNames(java.util.Collection<String> conformancePackNames) {
@@ -70,7 +82,9 @@ public class ConformancePackComplianceScoresFilters implements Serializable, Clo
 
     /**
      * <p>
-     * The name of a conformance pack whose score should be included in the compliance score result.
+     * The names of the conformance packs whose compliance scores you want to include in the conformance pack compliance
+     * score result set. You can include up to 25 conformance packs in the <code>ConformancePackNames</code> array of
+     * strings, each with a character limit of 256 characters for the conformance pack name.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -79,7 +93,10 @@ public class ConformancePackComplianceScoresFilters implements Serializable, Clo
      * </p>
      * 
      * @param conformancePackNames
-     *        The name of a conformance pack whose score should be included in the compliance score result.
+     *        The names of the conformance packs whose compliance scores you want to include in the conformance pack
+     *        compliance score result set. You can include up to 25 conformance packs in the
+     *        <code>ConformancePackNames</code> array of strings, each with a character limit of 256 characters for the
+     *        conformance pack name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,11 +112,16 @@ public class ConformancePackComplianceScoresFilters implements Serializable, Clo
 
     /**
      * <p>
-     * The name of a conformance pack whose score should be included in the compliance score result.
+     * The names of the conformance packs whose compliance scores you want to include in the conformance pack compliance
+     * score result set. You can include up to 25 conformance packs in the <code>ConformancePackNames</code> array of
+     * strings, each with a character limit of 256 characters for the conformance pack name.
      * </p>
      * 
      * @param conformancePackNames
-     *        The name of a conformance pack whose score should be included in the compliance score result.
+     *        The names of the conformance packs whose compliance scores you want to include in the conformance pack
+     *        compliance score result set. You can include up to 25 conformance packs in the
+     *        <code>ConformancePackNames</code> array of strings, each with a character limit of 256 characters for the
+     *        conformance pack name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

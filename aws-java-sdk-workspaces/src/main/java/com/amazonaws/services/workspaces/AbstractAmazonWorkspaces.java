@@ -273,6 +273,11 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
     }
 
     @Override
+    public ModifySamlPropertiesResult modifySamlProperties(ModifySamlPropertiesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ModifySelfservicePermissionsResult modifySelfservicePermissions(ModifySelfservicePermissionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

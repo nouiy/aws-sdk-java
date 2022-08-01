@@ -1257,6 +1257,28 @@ public interface AmazonWorkspaces {
 
     /**
      * <p>
+     * Modifies multiple properties related to SAML 2.0 authentication, including the enablement status, user access
+     * URL, and relay state parameter name that are used for configuring federation with an SAML 2.0 identity provider.
+     * </p>
+     * 
+     * @param modifySamlPropertiesRequest
+     * @return Result of the ModifySamlProperties operation returned by the service.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @sample AmazonWorkspaces.ModifySamlProperties
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ModifySamlProperties"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ModifySamlPropertiesResult modifySamlProperties(ModifySamlPropertiesRequest modifySamlPropertiesRequest);
+
+    /**
+     * <p>
      * Modifies the self-service WorkSpace management capabilities for your users. For more information, see <a href=
      * "https://docs.aws.amazon.com/workspaces/latest/adminguide/enable-user-self-service-workspace-management.html"
      * >Enable Self-Service WorkSpace Management Capabilities for Your Users</a>.

@@ -677,6 +677,19 @@ public class AbstractAmazonWorkspacesAsync extends AbstractAmazonWorkspaces impl
     }
 
     @Override
+    public java.util.concurrent.Future<ModifySamlPropertiesResult> modifySamlPropertiesAsync(ModifySamlPropertiesRequest request) {
+
+        return modifySamlPropertiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifySamlPropertiesResult> modifySamlPropertiesAsync(ModifySamlPropertiesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ModifySamlPropertiesRequest, ModifySamlPropertiesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ModifySelfservicePermissionsResult> modifySelfservicePermissionsAsync(ModifySelfservicePermissionsRequest request) {
 
         return modifySelfservicePermissionsAsync(request, null);

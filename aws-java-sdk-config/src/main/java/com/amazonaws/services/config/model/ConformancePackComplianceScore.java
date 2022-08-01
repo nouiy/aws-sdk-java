@@ -22,7 +22,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * A compliance score is the percentage of the number of compliant rule-resource combinations in a conformance pack
  * compared to the number of total possible rule-resource combinations in the conformance pack. This metric provides you
  * with a high-level view of the compliance state of your conformance packs, and can be used to identify, investigate,
- * and understand compliance deviations in your conformance packs.
+ * and understand the level of compliance in your conformance packs.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ConformancePackComplianceScore"
@@ -33,7 +33,8 @@ public class ConformancePackComplianceScore implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Compliance score for the conformance pack.
+     * Compliance score for the conformance pack. Conformance packs with no evaluation results will have a compliance
+     * score of <code>INSUFFICIENT_DATA</code>.
      * </p>
      */
     private String score;
@@ -52,11 +53,13 @@ public class ConformancePackComplianceScore implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Compliance score for the conformance pack.
+     * Compliance score for the conformance pack. Conformance packs with no evaluation results will have a compliance
+     * score of <code>INSUFFICIENT_DATA</code>.
      * </p>
      * 
      * @param score
-     *        Compliance score for the conformance pack.
+     *        Compliance score for the conformance pack. Conformance packs with no evaluation results will have a
+     *        compliance score of <code>INSUFFICIENT_DATA</code>.
      */
 
     public void setScore(String score) {
@@ -65,10 +68,12 @@ public class ConformancePackComplianceScore implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Compliance score for the conformance pack.
+     * Compliance score for the conformance pack. Conformance packs with no evaluation results will have a compliance
+     * score of <code>INSUFFICIENT_DATA</code>.
      * </p>
      * 
-     * @return Compliance score for the conformance pack.
+     * @return Compliance score for the conformance pack. Conformance packs with no evaluation results will have a
+     *         compliance score of <code>INSUFFICIENT_DATA</code>.
      */
 
     public String getScore() {
@@ -77,11 +82,13 @@ public class ConformancePackComplianceScore implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Compliance score for the conformance pack.
+     * Compliance score for the conformance pack. Conformance packs with no evaluation results will have a compliance
+     * score of <code>INSUFFICIENT_DATA</code>.
      * </p>
      * 
      * @param score
-     *        Compliance score for the conformance pack.
+     *        Compliance score for the conformance pack. Conformance packs with no evaluation results will have a
+     *        compliance score of <code>INSUFFICIENT_DATA</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

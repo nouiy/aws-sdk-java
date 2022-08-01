@@ -1601,7 +1601,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <li>
      *         <p>
      *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
-     *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
+     *         permissions to call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
@@ -1612,7 +1612,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <ul>
      *         <li>
      *         <p>
-     *         To call IAM <code>GetRole</code> action or create a service linked role.
+     *         To call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
@@ -5576,9 +5576,14 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * Returns a list of conformance pack compliance scores. A compliance score is the percentage of the number of
      * compliant rule-resource combinations in a conformance pack compared to the number of total possible rule-resource
      * combinations in the conformance pack. This metric provides you with a high-level view of the compliance state of
-     * your conformance packs, and can be used to identify, investigate, and understand compliance deviations in your
+     * your conformance packs, and can be used to identify, investigate, and understand the level of compliance in your
      * conformance packs.
      * </p>
+     * <note>
+     * <p>
+     * Conformance packs with no evaluation results will have a compliance score of <code>INSUFFICIENT_DATA</code>.
+     * </p>
+     * </note>
      * 
      * @param listConformancePackComplianceScoresRequest
      * @return Result of the ListConformancePackComplianceScores operation returned by the service.
@@ -5927,25 +5932,30 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Adds or updates an Config rule for evaluating whether your Amazon Web Services resources comply with your desired
-     * configurations.
+     * Adds or updates an Config rule to evaluate if your Amazon Web Services resources comply with your desired
+     * configurations. For information on how many Config rules you can have per account, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/configlimits.html"> <b>Service Limits</b> </a> in
+     * the <i>Config Developer Guide</i>.
      * </p>
      * <p>
-     * You can use this action for Config custom rules and Config managed rules. A Config custom rule is a rule that you
-     * develop and maintain. An Config managed rule is a customizable, predefined rule that Config provides.
+     * There are two types of rules: Config Custom Rules and Config Managed Rules. You can use
+     * <code>PutConfigRule</code> to create both Config custom rules and Config managed rules.
      * </p>
      * <p>
-     * If you are adding a new Config custom rule, you must first create the Lambda function that the rule invokes to
-     * evaluate your resources. When you use the <code>PutConfigRule</code> action to add the rule to Config, you must
-     * specify the Amazon Resource Name (ARN) that Lambda assigns to the function. Specify the ARN for the
-     * <code>SourceIdentifier</code> key. This key is part of the <code>Source</code> object, which is part of the
-     * <code>ConfigRule</code> object.
+     * Custom rules are rules that you can create using either Guard or Lambda functions. Guard (<a
+     * href="https://github.com/aws-cloudformation/cloudformation-guard">Guard GitHub Repository</a>) is a
+     * policy-as-code language that allows you to write policies that are enforced by Config Custom Policy rules. Lambda
+     * uses custom code that you upload to evaluate a custom rule. If you are adding a new Custom Lambda rule, you first
+     * need to create an Lambda function that the rule invokes to evaluate your resources. When you use
+     * <code>PutConfigRule</code> to add a Custom Lambda rule to Config, you must specify the Amazon Resource Name (ARN)
+     * that Lambda assigns to the function. You specify the ARN in the <code>SourceIdentifier</code> key. This key is
+     * part of the <code>Source</code> object, which is part of the <code>ConfigRule</code> object.
      * </p>
      * <p>
-     * If you are adding an Config managed rule, specify the rule's identifier for the <code>SourceIdentifier</code>
-     * key. To reference Config managed rule identifiers, see <a
-     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html">About
-     * Config managed rules</a>.
+     * Managed rules are predefined, customizable rules created by Config. For a list of managed rules, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of Config
+     * Managed Rules</a>. If you are adding an Config managed rule, you must specify the rule's identifier for the
+     * <code>SourceIdentifier</code> key.
      * </p>
      * <p>
      * For any new rule that you add, specify the <code>ConfigRuleName</code> in the <code>ConfigRule</code> object. Do
@@ -5956,11 +5966,6 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * If you are updating a rule that you added previously, you can specify the rule by <code>ConfigRuleName</code>,
      * <code>ConfigRuleId</code>, or <code>ConfigRuleArn</code> in the <code>ConfigRule</code> data type that you use in
      * this request.
-     * </p>
-     * <p>
-     * For information on how many Config rules you can have per account, see <a
-     * href="https://docs.aws.amazon.com/config/latest/developerguide/configlimits.html"> <b>Service Limits</b> </a> in
-     * the Config Developer Guide.
      * </p>
      * <p>
      * For more information about developing and using Config rules, see <a
@@ -6037,7 +6042,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <li>
      *         <p>
      *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
-     *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
+     *         permissions to call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
@@ -6048,7 +6053,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <ul>
      *         <li>
      *         <p>
-     *         To call IAM <code>GetRole</code> action or create a service linked role.
+     *         To call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
@@ -6133,7 +6138,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * <p>
      * To register a delegated administrator, see <a href=
      * "https://docs.aws.amazon.com/config/latest/developerguide/set-up-aggregator-cli.html#register-a-delegated-administrator-cli"
-     * >Register a Delegated Administrator</a> in the Config developer guide.
+     * >Register a Delegated Administrator</a> in the <i>Config developer guide</i>.
      * </p>
      * </note>
      * 
@@ -6327,8 +6332,8 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * the Config Developer Guide.
      * </p>
      * <p>
-     * This API creates a service linked role <code>AWSServiceRoleForConfigConforms</code> in your account. The service
-     * linked role is created only when the role does not exist in your account.
+     * This API creates a service-linked role <code>AWSServiceRoleForConfigConforms</code> in your account. The
+     * service-linked role is created only when the role does not exist in your account.
      * </p>
      * <note>
      * <p>
@@ -6358,7 +6363,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <li>
      *         <p>
      *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
-     *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
+     *         permissions to call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
@@ -6369,7 +6374,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <ul>
      *         <li>
      *         <p>
-     *         To call IAM <code>GetRole</code> action or create a service linked role.
+     *         To call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
@@ -6693,10 +6698,10 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Adds or updates organization Config rule for your entire organization evaluating whether your Amazon Web Services
-     * resources comply with your desired configurations. For information on how many organization Config rules you can
-     * have per account, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/configlimits.html">
-     * <b>Service Limits</b> </a> in the Config Developer Guide.
+     * Adds or updates an Config rule for your entire organization to evaluate if your Amazon Web Services resources
+     * comply with your desired configurations. For information on how many organization Config rules you can have per
+     * account, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/configlimits.html"> <b>Service
+     * Limits</b> </a> in the <i>Config Developer Guide</i>.
      * </p>
      * <p>
      * Only a master account and a delegated administrator can create or update an organization Config rule. When
@@ -6706,8 +6711,8 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * </p>
      * <p>
      * This API enables organization service access through the <code>EnableAWSServiceAccess</code> action and creates a
-     * service linked role <code>AWSServiceRoleForConfigMultiAccountSetup</code> in the master or delegated
-     * administrator account of your organization. The service linked role is created only when the role does not exist
+     * service-linked role <code>AWSServiceRoleForConfigMultiAccountSetup</code> in the master or delegated
+     * administrator account of your organization. The service-linked role is created only when the role does not exist
      * in the caller account. Config verifies the existence of role with <code>GetRole</code> action.
      * </p>
      * <p>
@@ -6716,19 +6721,33 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * You can use this action to create both Config custom rules and Config managed rules. If you are adding a new
-     * Config custom rule, you must first create Lambda function in the master account or a delegated administrator that
-     * the rule invokes to evaluate your resources. You also need to create an IAM role in the managed-account that can
-     * be assumed by the Lambda function. When you use the <code>PutOrganizationConfigRule</code> action to add the rule
-     * to Config, you must specify the Amazon Resource Name (ARN) that Lambda assigns to the function. If you are adding
-     * an Config managed rule, specify the rule's identifier for the <code>RuleIdentifier</code> key.
+     * There are two types of rules: Config Custom Rules and Config Managed Rules. You can use
+     * <code>PutOrganizationConfigRule</code> to create both Config custom rules and Config managed rules.
+     * </p>
+     * <p>
+     * Custom rules are rules that you can create using either Guard or Lambda functions. Guard (<a
+     * href="https://github.com/aws-cloudformation/cloudformation-guard">Guard GitHub Repository</a>) is a
+     * policy-as-code language that allows you to write policies that are enforced by Config Custom Policy rules. Lambda
+     * uses custom code that you upload to evaluate a custom rule. If you are adding a new Custom Lambda rule, you first
+     * need to create an Lambda function in the master account or a delegated administrator that the rule invokes to
+     * evaluate your resources. You also need to create an IAM role in the managed account that can be assumed by the
+     * Lambda function. When you use <code>PutOrganizationConfigRule</code> to add a Custom Lambda rule to Config, you
+     * must specify the Amazon Resource Name (ARN) that Lambda assigns to the function.
+     * </p>
+     * <p>
+     * Managed rules are predefined, customizable rules created by Config. For a list of managed rules, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of Config
+     * Managed Rules</a>. If you are adding an Config managed rule, you must specify the rule's identifier for the
+     * <code>RuleIdentifier</code> key.
      * </p>
      * <note>
      * <p>
      * Prerequisite: Ensure you call <code>EnableAllFeatures</code> API to enable all features in an organization.
      * </p>
      * <p>
-     * Specify either <code>OrganizationCustomRuleMetadata</code> or <code>OrganizationManagedRuleMetadata</code>.
+     * Make sure to specify one of either <code>OrganizationCustomPolicyRuleMetadata</code> for Custom Policy rules,
+     * <code>OrganizationCustomRuleMetadata</code> for Custom Lambda rules, or
+     * <code>OrganizationManagedRuleMetadata</code> for managed rules.
      * </p>
      * </note>
      * 
@@ -6849,7 +6868,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <li>
      *         <p>
      *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
-     *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
+     *         permissions to call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
@@ -6860,7 +6879,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <ul>
      *         <li>
      *         <p>
-     *         To call IAM <code>GetRole</code> action or create a service linked role.
+     *         To call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
@@ -6934,9 +6953,9 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * </p>
      * <p>
      * This API enables organization service access for <code>config-multiaccountsetup.amazonaws.com</code> through the
-     * <code>EnableAWSServiceAccess</code> action and creates a service linked role
+     * <code>EnableAWSServiceAccess</code> action and creates a service-linked role
      * <code>AWSServiceRoleForConfigMultiAccountSetup</code> in the master or delegated administrator account of your
-     * organization. The service linked role is created only when the role does not exist in the caller account. To use
+     * organization. The service-linked role is created only when the role does not exist in the caller account. To use
      * this API with delegated administrator, register a delegated administrator by calling Amazon Web Services
      * Organization <code>register-delegate-admin</code> for <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
@@ -7067,7 +7086,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <li>
      *         <p>
      *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
-     *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
+     *         permissions to call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
@@ -7078,7 +7097,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <ul>
      *         <li>
      *         <p>
-     *         To call IAM <code>GetRole</code> action or create a service linked role.
+     *         To call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
@@ -7193,7 +7212,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <li>
      *         <p>
      *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
-     *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
+     *         permissions to call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
@@ -7204,7 +7223,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <ul>
      *         <li>
      *         <p>
-     *         To call IAM <code>GetRole</code> action or create a service linked role.
+     *         To call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
@@ -7300,7 +7319,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <li>
      *         <p>
      *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
-     *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
+     *         permissions to call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
@@ -7311,7 +7330,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <ul>
      *         <li>
      *         <p>
-     *         To call IAM <code>GetRole</code> action or create a service linked role.
+     *         To call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
@@ -7421,7 +7440,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <li>
      *         <p>
      *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
-     *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
+     *         permissions to call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
@@ -7432,7 +7451,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <ul>
      *         <li>
      *         <p>
-     *         To call IAM <code>GetRole</code> action or create a service linked role.
+     *         To call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
@@ -7730,7 +7749,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      * <p>
      * For more information about query components, see the <a
      * href="https://docs.aws.amazon.com/config/latest/developerguide/query-components.html"> <b>Query Components</b>
-     * </a> section in the Config Developer Guide.
+     * </a> section in the <i>Config Developer Guide</i>.
      * </p>
      * 
      * @param selectResourceConfigRequest
@@ -8049,7 +8068,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <li>
      *         <p>
      *         For PutOrganizationConfigRule, organization Config rule cannot be created because you do not have
-     *         permissions to call IAM <code>GetRole</code> action or create a service linked role.
+     *         permissions to call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
@@ -8060,7 +8079,7 @@ public class AmazonConfigClient extends AmazonWebServiceClient implements Amazon
      *         <ul>
      *         <li>
      *         <p>
-     *         To call IAM <code>GetRole</code> action or create a service linked role.
+     *         To call IAM <code>GetRole</code> action or create a service-linked role.
      *         </p>
      *         </li>
      *         <li>
