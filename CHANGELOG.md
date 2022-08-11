@@ -1,3 +1,16 @@
+# __1.12.280__ __2022-08-11__
+## __AWS Backup Storage__
+  - ### Features
+    - This is the first public release of AWS Backup Storage. We are exposing some previously-internal APIs for use by external services. These APIs are not meant to be used directly by customers.
+
+## __AWS Glue__
+  - ### Features
+    - Add support for Python 3.9 AWS Glue Python Shell jobs
+
+## __AWS Private 5G__
+  - ### Features
+    - This is the initial SDK release for AWS Private 5G. AWS Private 5G is a managed service that makes it easy to deploy, operate, and scale your own private mobile network at your on-premises location.
+
 # __1.12.279__ __2022-08-10__
 ## __Amazon Data Lifecycle Manager__
   - ### Features
