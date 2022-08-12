@@ -40,6 +40,12 @@ public class AppInstanceUserMembershipSummary implements Serializable, Cloneable
      * </p>
      */
     private java.util.Date readMarkerTimestamp;
+    /**
+     * <p>
+     * The ID of the SubChannel that the <code>AppInstanceUser</code> is a member of.
+     * </p>
+     */
+    private String subChannelId;
 
     /**
      * <p>
@@ -141,6 +147,46 @@ public class AppInstanceUserMembershipSummary implements Serializable, Cloneable
     }
 
     /**
+     * <p>
+     * The ID of the SubChannel that the <code>AppInstanceUser</code> is a member of.
+     * </p>
+     * 
+     * @param subChannelId
+     *        The ID of the SubChannel that the <code>AppInstanceUser</code> is a member of.
+     */
+
+    public void setSubChannelId(String subChannelId) {
+        this.subChannelId = subChannelId;
+    }
+
+    /**
+     * <p>
+     * The ID of the SubChannel that the <code>AppInstanceUser</code> is a member of.
+     * </p>
+     * 
+     * @return The ID of the SubChannel that the <code>AppInstanceUser</code> is a member of.
+     */
+
+    public String getSubChannelId() {
+        return this.subChannelId;
+    }
+
+    /**
+     * <p>
+     * The ID of the SubChannel that the <code>AppInstanceUser</code> is a member of.
+     * </p>
+     * 
+     * @param subChannelId
+     *        The ID of the SubChannel that the <code>AppInstanceUser</code> is a member of.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AppInstanceUserMembershipSummary withSubChannelId(String subChannelId) {
+        setSubChannelId(subChannelId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -155,7 +201,9 @@ public class AppInstanceUserMembershipSummary implements Serializable, Cloneable
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
         if (getReadMarkerTimestamp() != null)
-            sb.append("ReadMarkerTimestamp: ").append(getReadMarkerTimestamp());
+            sb.append("ReadMarkerTimestamp: ").append(getReadMarkerTimestamp()).append(",");
+        if (getSubChannelId() != null)
+            sb.append("SubChannelId: ").append(getSubChannelId());
         sb.append("}");
         return sb.toString();
     }
@@ -178,6 +226,10 @@ public class AppInstanceUserMembershipSummary implements Serializable, Cloneable
             return false;
         if (other.getReadMarkerTimestamp() != null && other.getReadMarkerTimestamp().equals(this.getReadMarkerTimestamp()) == false)
             return false;
+        if (other.getSubChannelId() == null ^ this.getSubChannelId() == null)
+            return false;
+        if (other.getSubChannelId() != null && other.getSubChannelId().equals(this.getSubChannelId()) == false)
+            return false;
         return true;
     }
 
@@ -188,6 +240,7 @@ public class AppInstanceUserMembershipSummary implements Serializable, Cloneable
 
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getReadMarkerTimestamp() == null) ? 0 : getReadMarkerTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getSubChannelId() == null) ? 0 : getSubChannelId().hashCode());
         return hashCode;
     }
 

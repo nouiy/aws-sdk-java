@@ -94,6 +94,13 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private java.util.List<String> moderatorArns;
+    /**
+     * <p>
+     * The attributes required to configure and create an elastic channel. An elastic channel can support a maximum of
+     * 1-million users, excluding moderators.
+     * </p>
+     */
+    private ElasticChannelConfiguration elasticChannelConfiguration;
 
     /**
      * <p>
@@ -692,6 +699,52 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The attributes required to configure and create an elastic channel. An elastic channel can support a maximum of
+     * 1-million users, excluding moderators.
+     * </p>
+     * 
+     * @param elasticChannelConfiguration
+     *        The attributes required to configure and create an elastic channel. An elastic channel can support a
+     *        maximum of 1-million users, excluding moderators.
+     */
+
+    public void setElasticChannelConfiguration(ElasticChannelConfiguration elasticChannelConfiguration) {
+        this.elasticChannelConfiguration = elasticChannelConfiguration;
+    }
+
+    /**
+     * <p>
+     * The attributes required to configure and create an elastic channel. An elastic channel can support a maximum of
+     * 1-million users, excluding moderators.
+     * </p>
+     * 
+     * @return The attributes required to configure and create an elastic channel. An elastic channel can support a
+     *         maximum of 1-million users, excluding moderators.
+     */
+
+    public ElasticChannelConfiguration getElasticChannelConfiguration() {
+        return this.elasticChannelConfiguration;
+    }
+
+    /**
+     * <p>
+     * The attributes required to configure and create an elastic channel. An elastic channel can support a maximum of
+     * 1-million users, excluding moderators.
+     * </p>
+     * 
+     * @param elasticChannelConfiguration
+     *        The attributes required to configure and create an elastic channel. An elastic channel can support a
+     *        maximum of 1-million users, excluding moderators.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateChannelRequest withElasticChannelConfiguration(ElasticChannelConfiguration elasticChannelConfiguration) {
+        setElasticChannelConfiguration(elasticChannelConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -724,7 +777,9 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getMemberArns() != null)
             sb.append("MemberArns: ").append(getMemberArns()).append(",");
         if (getModeratorArns() != null)
-            sb.append("ModeratorArns: ").append(getModeratorArns());
+            sb.append("ModeratorArns: ").append(getModeratorArns()).append(",");
+        if (getElasticChannelConfiguration() != null)
+            sb.append("ElasticChannelConfiguration: ").append(getElasticChannelConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -783,6 +838,10 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getModeratorArns() != null && other.getModeratorArns().equals(this.getModeratorArns()) == false)
             return false;
+        if (other.getElasticChannelConfiguration() == null ^ this.getElasticChannelConfiguration() == null)
+            return false;
+        if (other.getElasticChannelConfiguration() != null && other.getElasticChannelConfiguration().equals(this.getElasticChannelConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -802,6 +861,7 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getChannelId() == null) ? 0 : getChannelId().hashCode());
         hashCode = prime * hashCode + ((getMemberArns() == null) ? 0 : getMemberArns().hashCode());
         hashCode = prime * hashCode + ((getModeratorArns() == null) ? 0 : getModeratorArns().hashCode());
+        hashCode = prime * hashCode + ((getElasticChannelConfiguration() == null) ? 0 : getElasticChannelConfiguration().hashCode());
         return hashCode;
     }
 

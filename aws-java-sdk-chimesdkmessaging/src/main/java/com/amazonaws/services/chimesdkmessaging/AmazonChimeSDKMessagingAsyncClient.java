@@ -1247,6 +1247,39 @@ public class AmazonChimeSDKMessagingAsyncClient extends AmazonChimeSDKMessagingC
     }
 
     @Override
+    public java.util.concurrent.Future<ListSubChannelsResult> listSubChannelsAsync(ListSubChannelsRequest request) {
+
+        return listSubChannelsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSubChannelsResult> listSubChannelsAsync(final ListSubChannelsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListSubChannelsRequest, ListSubChannelsResult> asyncHandler) {
+        final ListSubChannelsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListSubChannelsResult>() {
+            @Override
+            public ListSubChannelsResult call() throws Exception {
+                ListSubChannelsResult result = null;
+
+                try {
+                    result = executeListSubChannels(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
 
         return listTagsForResourceAsync(request, null);

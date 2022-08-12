@@ -4,7 +4,7 @@ The **AWS SDK for Java** enables Java developers to easily work with [Amazon Web
 build scalable solutions with Amazon S3, Amazon DynamoDB, Amazon Glacier, and more. You can get
 started in minutes using ***Maven*** or by downloading a [single zip file][install-jar].
 
-### ���� Note: A version 2.x of the SDK is available, see the [AWS SDK for Java 2.x](#aws-sdk-for-java-2x) section for more information
+### :mega: Note: A version 2.x of the SDK is available, see the [AWS SDK for Java 2.x](#aws-sdk-for-java-2x) section for more information
 
 * [SDK Homepage][sdk-website]
 * [API Docs][docs-api]
@@ -50,7 +50,7 @@ dependencies.
     <dependency>
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk-bom</artifactId>
-      <version>1.12.280</version>
+      <version>1.12.281</version>
       <type>pom</type>
       <scope>import</scope>
     </dependency>

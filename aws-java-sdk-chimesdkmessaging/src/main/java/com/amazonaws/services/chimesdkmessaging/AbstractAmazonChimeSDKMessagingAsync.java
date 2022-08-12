@@ -495,6 +495,19 @@ public class AbstractAmazonChimeSDKMessagingAsync extends AbstractAmazonChimeSDK
     }
 
     @Override
+    public java.util.concurrent.Future<ListSubChannelsResult> listSubChannelsAsync(ListSubChannelsRequest request) {
+
+        return listSubChannelsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSubChannelsResult> listSubChannelsAsync(ListSubChannelsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListSubChannelsRequest, ListSubChannelsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
 
         return listTagsForResourceAsync(request, null);

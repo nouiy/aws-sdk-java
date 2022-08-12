@@ -1921,6 +1921,39 @@ public interface AmazonChimeSDKMessagingAsync extends AmazonChimeSDKMessaging {
 
     /**
      * <p>
+     * Lists all the SubChannels in an elastic channel when given a channel ID. Available only to the app instance
+     * admins and channel moderators of elastic channels.
+     * </p>
+     * 
+     * @param listSubChannelsRequest
+     * @return A Java Future containing the result of the ListSubChannels operation returned by the service.
+     * @sample AmazonChimeSDKMessagingAsync.ListSubChannels
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/ListSubChannels"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSubChannelsResult> listSubChannelsAsync(ListSubChannelsRequest listSubChannelsRequest);
+
+    /**
+     * <p>
+     * Lists all the SubChannels in an elastic channel when given a channel ID. Available only to the app instance
+     * admins and channel moderators of elastic channels.
+     * </p>
+     * 
+     * @param listSubChannelsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListSubChannels operation returned by the service.
+     * @sample AmazonChimeSDKMessagingAsyncHandler.ListSubChannels
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/ListSubChannels"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSubChannelsResult> listSubChannelsAsync(ListSubChannelsRequest listSubChannelsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListSubChannelsRequest, ListSubChannelsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists the tags applied to an Amazon Chime SDK messaging resource.
      * </p>
      * 

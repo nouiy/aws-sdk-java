@@ -53,6 +53,8 @@ public class CreateChannelRequestMarshaller {
             .marshallLocationName("MemberArns").build();
     private static final MarshallingInfo<List> MODERATORARNS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ModeratorArns").build();
+    private static final MarshallingInfo<StructuredPojo> ELASTICCHANNELCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ElasticChannelConfiguration").build();
 
     private static final CreateChannelRequestMarshaller instance = new CreateChannelRequestMarshaller();
 
@@ -81,6 +83,7 @@ public class CreateChannelRequestMarshaller {
             protocolMarshaller.marshall(createChannelRequest.getChannelId(), CHANNELID_BINDING);
             protocolMarshaller.marshall(createChannelRequest.getMemberArns(), MEMBERARNS_BINDING);
             protocolMarshaller.marshall(createChannelRequest.getModeratorArns(), MODERATORARNS_BINDING);
+            protocolMarshaller.marshall(createChannelRequest.getElasticChannelConfiguration(), ELASTICCHANNELCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
