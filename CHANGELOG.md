@@ -1,3 +1,12 @@
+# __1.12.283__ __2022-08-16__
+## __AWS Service Catalog__
+  - ### Features
+    - Documentation updates for Service Catalog
+
+## __Amazon Rekognition__
+  - ### Features
+    - This release adds APIs which support copying an Amazon Rekognition Custom Labels model and managing project policies across AWS account.
+
 # __1.12.282__ __2022-08-15__
 ## __AWS SSO Identity Store__
   - ### Features

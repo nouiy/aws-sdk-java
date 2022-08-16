@@ -139,6 +139,12 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * <ul>
  * <li>
  * <p>
+ * <a
+ * href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_CopyProjectVersion.html">CopyProjectVersion</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
  * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_CreateDataset.html">CreateDataset</a>
  * </p>
  * </li>
@@ -161,6 +167,13 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * <li>
  * <p>
  * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DeleteProject.html">DeleteProject</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a
+ * href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_DeleteProjectPolicy.html">DeleteProjectPolicy
+ * </a>
  * </p>
  * </li>
  * <li>
@@ -207,6 +220,18 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * <p>
  * <a
  * href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_ListDatasetLabels.html">ListDatasetLabels</a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a
+ * href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_ListProjectPolicies.html">ListProjectPolicies
+ * </a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_PutProjectPolicy.html">PutProjectPolicy</a>
  * </p>
  * </li>
  * <li>
@@ -368,6 +393,12 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * <a
  * href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StopStreamProcessor.html">StopStreamProcessor
  * </a>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <a href="https://docs.aws.amazon.com/rekognition/latest/APIReference/API_UpdateStreamProcessor.html">
+ * UpdateStreamProcessor</a>
  * </p>
  * </li>
  * </ul>
@@ -613,6 +644,39 @@ public class AmazonRekognitionAsyncClient extends AmazonRekognitionClient implem
 
                 try {
                     result = executeCompareFaces(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CopyProjectVersionResult> copyProjectVersionAsync(CopyProjectVersionRequest request) {
+
+        return copyProjectVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CopyProjectVersionResult> copyProjectVersionAsync(final CopyProjectVersionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CopyProjectVersionRequest, CopyProjectVersionResult> asyncHandler) {
+        final CopyProjectVersionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CopyProjectVersionResult>() {
+            @Override
+            public CopyProjectVersionResult call() throws Exception {
+                CopyProjectVersionResult result = null;
+
+                try {
+                    result = executeCopyProjectVersion(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -910,6 +974,39 @@ public class AmazonRekognitionAsyncClient extends AmazonRekognitionClient implem
 
                 try {
                     result = executeDeleteProject(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteProjectPolicyResult> deleteProjectPolicyAsync(DeleteProjectPolicyRequest request) {
+
+        return deleteProjectPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteProjectPolicyResult> deleteProjectPolicyAsync(final DeleteProjectPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteProjectPolicyRequest, DeleteProjectPolicyResult> asyncHandler) {
+        final DeleteProjectPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteProjectPolicyResult>() {
+            @Override
+            public DeleteProjectPolicyResult call() throws Exception {
+                DeleteProjectPolicyResult result = null;
+
+                try {
+                    result = executeDeleteProjectPolicy(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1850,6 +1947,39 @@ public class AmazonRekognitionAsyncClient extends AmazonRekognitionClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListProjectPoliciesResult> listProjectPoliciesAsync(ListProjectPoliciesRequest request) {
+
+        return listProjectPoliciesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListProjectPoliciesResult> listProjectPoliciesAsync(final ListProjectPoliciesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListProjectPoliciesRequest, ListProjectPoliciesResult> asyncHandler) {
+        final ListProjectPoliciesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListProjectPoliciesResult>() {
+            @Override
+            public ListProjectPoliciesResult call() throws Exception {
+                ListProjectPoliciesResult result = null;
+
+                try {
+                    result = executeListProjectPolicies(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListStreamProcessorsResult> listStreamProcessorsAsync(ListStreamProcessorsRequest request) {
 
         return listStreamProcessorsAsync(request, null);
@@ -1900,6 +2030,39 @@ public class AmazonRekognitionAsyncClient extends AmazonRekognitionClient implem
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutProjectPolicyResult> putProjectPolicyAsync(PutProjectPolicyRequest request) {
+
+        return putProjectPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutProjectPolicyResult> putProjectPolicyAsync(final PutProjectPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutProjectPolicyRequest, PutProjectPolicyResult> asyncHandler) {
+        final PutProjectPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutProjectPolicyResult>() {
+            @Override
+            public PutProjectPolicyResult call() throws Exception {
+                PutProjectPolicyResult result = null;
+
+                try {
+                    result = executePutProjectPolicy(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

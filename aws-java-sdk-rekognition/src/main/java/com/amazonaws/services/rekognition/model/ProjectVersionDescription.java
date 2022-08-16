@@ -113,6 +113,13 @@ public class ProjectVersionDescription implements Serializable, Cloneable, Struc
      * </p>
      */
     private Integer maxInferenceUnits;
+    /**
+     * <p>
+     * If the model version was copied from a different project, <code>SourceProjectVersionArn</code> contains the ARN
+     * of the source model version.
+     * </p>
+     */
+    private String sourceProjectVersionArn;
 
     /**
      * <p>
@@ -721,6 +728,52 @@ public class ProjectVersionDescription implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * If the model version was copied from a different project, <code>SourceProjectVersionArn</code> contains the ARN
+     * of the source model version.
+     * </p>
+     * 
+     * @param sourceProjectVersionArn
+     *        If the model version was copied from a different project, <code>SourceProjectVersionArn</code> contains
+     *        the ARN of the source model version.
+     */
+
+    public void setSourceProjectVersionArn(String sourceProjectVersionArn) {
+        this.sourceProjectVersionArn = sourceProjectVersionArn;
+    }
+
+    /**
+     * <p>
+     * If the model version was copied from a different project, <code>SourceProjectVersionArn</code> contains the ARN
+     * of the source model version.
+     * </p>
+     * 
+     * @return If the model version was copied from a different project, <code>SourceProjectVersionArn</code> contains
+     *         the ARN of the source model version.
+     */
+
+    public String getSourceProjectVersionArn() {
+        return this.sourceProjectVersionArn;
+    }
+
+    /**
+     * <p>
+     * If the model version was copied from a different project, <code>SourceProjectVersionArn</code> contains the ARN
+     * of the source model version.
+     * </p>
+     * 
+     * @param sourceProjectVersionArn
+     *        If the model version was copied from a different project, <code>SourceProjectVersionArn</code> contains
+     *        the ARN of the source model version.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProjectVersionDescription withSourceProjectVersionArn(String sourceProjectVersionArn) {
+        setSourceProjectVersionArn(sourceProjectVersionArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -759,7 +812,9 @@ public class ProjectVersionDescription implements Serializable, Cloneable, Struc
         if (getKmsKeyId() != null)
             sb.append("KmsKeyId: ").append(getKmsKeyId()).append(",");
         if (getMaxInferenceUnits() != null)
-            sb.append("MaxInferenceUnits: ").append(getMaxInferenceUnits());
+            sb.append("MaxInferenceUnits: ").append(getMaxInferenceUnits()).append(",");
+        if (getSourceProjectVersionArn() != null)
+            sb.append("SourceProjectVersionArn: ").append(getSourceProjectVersionArn());
         sb.append("}");
         return sb.toString();
     }
@@ -831,6 +886,10 @@ public class ProjectVersionDescription implements Serializable, Cloneable, Struc
             return false;
         if (other.getMaxInferenceUnits() != null && other.getMaxInferenceUnits().equals(this.getMaxInferenceUnits()) == false)
             return false;
+        if (other.getSourceProjectVersionArn() == null ^ this.getSourceProjectVersionArn() == null)
+            return false;
+        if (other.getSourceProjectVersionArn() != null && other.getSourceProjectVersionArn().equals(this.getSourceProjectVersionArn()) == false)
+            return false;
         return true;
     }
 
@@ -853,6 +912,7 @@ public class ProjectVersionDescription implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getManifestSummary() == null) ? 0 : getManifestSummary().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getMaxInferenceUnits() == null) ? 0 : getMaxInferenceUnits().hashCode());
+        hashCode = prime * hashCode + ((getSourceProjectVersionArn() == null) ? 0 : getSourceProjectVersionArn().hashCode());
         return hashCode;
     }
 
