@@ -102,6 +102,27 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
      * </p>
      */
     private java.util.List<String> exclusionPatterns;
+    /**
+     * <p>
+     * Configuration information to connect to your Confluence URL instance via a web proxy. You can use this option for
+     * Confluence Server.
+     * </p>
+     * <p>
+     * You must provide the website host name and port number. For example, the host name of
+     * <i>https://a.example.com/page1.html</i> is "a.example.com" and the port is 443, the standard port for HTTPS.
+     * </p>
+     * <p>
+     * Web proxy credentials are optional and you can use them to connect to a web proxy server that requires basic
+     * authentication of user name and password. To store web proxy credentials, you use a secret in Secrets Manager.
+     * </p>
+     * <p>
+     * It is recommended that you follow best security practices when configuring your web proxy. This includes setting
+     * up throttling, setting up logging and monitoring, and applying security patches on a regular basis. If you use
+     * your web proxy with multiple data sources, sync jobs that occur at the same time could strain the load on your
+     * proxy. It is recommended you prepare your proxy beforehand for any security and load requirements.
+     * </p>
+     */
+    private ProxyConfiguration proxyConfiguration;
 
     /**
      * <p>
@@ -679,6 +700,142 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Configuration information to connect to your Confluence URL instance via a web proxy. You can use this option for
+     * Confluence Server.
+     * </p>
+     * <p>
+     * You must provide the website host name and port number. For example, the host name of
+     * <i>https://a.example.com/page1.html</i> is "a.example.com" and the port is 443, the standard port for HTTPS.
+     * </p>
+     * <p>
+     * Web proxy credentials are optional and you can use them to connect to a web proxy server that requires basic
+     * authentication of user name and password. To store web proxy credentials, you use a secret in Secrets Manager.
+     * </p>
+     * <p>
+     * It is recommended that you follow best security practices when configuring your web proxy. This includes setting
+     * up throttling, setting up logging and monitoring, and applying security patches on a regular basis. If you use
+     * your web proxy with multiple data sources, sync jobs that occur at the same time could strain the load on your
+     * proxy. It is recommended you prepare your proxy beforehand for any security and load requirements.
+     * </p>
+     * 
+     * @param proxyConfiguration
+     *        Configuration information to connect to your Confluence URL instance via a web proxy. You can use this
+     *        option for Confluence Server.</p>
+     *        <p>
+     *        You must provide the website host name and port number. For example, the host name of
+     *        <i>https://a.example.com/page1.html</i> is "a.example.com" and the port is 443, the standard port for
+     *        HTTPS.
+     *        </p>
+     *        <p>
+     *        Web proxy credentials are optional and you can use them to connect to a web proxy server that requires
+     *        basic authentication of user name and password. To store web proxy credentials, you use a secret in
+     *        Secrets Manager.
+     *        </p>
+     *        <p>
+     *        It is recommended that you follow best security practices when configuring your web proxy. This includes
+     *        setting up throttling, setting up logging and monitoring, and applying security patches on a regular
+     *        basis. If you use your web proxy with multiple data sources, sync jobs that occur at the same time could
+     *        strain the load on your proxy. It is recommended you prepare your proxy beforehand for any security and
+     *        load requirements.
+     */
+
+    public void setProxyConfiguration(ProxyConfiguration proxyConfiguration) {
+        this.proxyConfiguration = proxyConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration information to connect to your Confluence URL instance via a web proxy. You can use this option for
+     * Confluence Server.
+     * </p>
+     * <p>
+     * You must provide the website host name and port number. For example, the host name of
+     * <i>https://a.example.com/page1.html</i> is "a.example.com" and the port is 443, the standard port for HTTPS.
+     * </p>
+     * <p>
+     * Web proxy credentials are optional and you can use them to connect to a web proxy server that requires basic
+     * authentication of user name and password. To store web proxy credentials, you use a secret in Secrets Manager.
+     * </p>
+     * <p>
+     * It is recommended that you follow best security practices when configuring your web proxy. This includes setting
+     * up throttling, setting up logging and monitoring, and applying security patches on a regular basis. If you use
+     * your web proxy with multiple data sources, sync jobs that occur at the same time could strain the load on your
+     * proxy. It is recommended you prepare your proxy beforehand for any security and load requirements.
+     * </p>
+     * 
+     * @return Configuration information to connect to your Confluence URL instance via a web proxy. You can use this
+     *         option for Confluence Server.</p>
+     *         <p>
+     *         You must provide the website host name and port number. For example, the host name of
+     *         <i>https://a.example.com/page1.html</i> is "a.example.com" and the port is 443, the standard port for
+     *         HTTPS.
+     *         </p>
+     *         <p>
+     *         Web proxy credentials are optional and you can use them to connect to a web proxy server that requires
+     *         basic authentication of user name and password. To store web proxy credentials, you use a secret in
+     *         Secrets Manager.
+     *         </p>
+     *         <p>
+     *         It is recommended that you follow best security practices when configuring your web proxy. This includes
+     *         setting up throttling, setting up logging and monitoring, and applying security patches on a regular
+     *         basis. If you use your web proxy with multiple data sources, sync jobs that occur at the same time could
+     *         strain the load on your proxy. It is recommended you prepare your proxy beforehand for any security and
+     *         load requirements.
+     */
+
+    public ProxyConfiguration getProxyConfiguration() {
+        return this.proxyConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration information to connect to your Confluence URL instance via a web proxy. You can use this option for
+     * Confluence Server.
+     * </p>
+     * <p>
+     * You must provide the website host name and port number. For example, the host name of
+     * <i>https://a.example.com/page1.html</i> is "a.example.com" and the port is 443, the standard port for HTTPS.
+     * </p>
+     * <p>
+     * Web proxy credentials are optional and you can use them to connect to a web proxy server that requires basic
+     * authentication of user name and password. To store web proxy credentials, you use a secret in Secrets Manager.
+     * </p>
+     * <p>
+     * It is recommended that you follow best security practices when configuring your web proxy. This includes setting
+     * up throttling, setting up logging and monitoring, and applying security patches on a regular basis. If you use
+     * your web proxy with multiple data sources, sync jobs that occur at the same time could strain the load on your
+     * proxy. It is recommended you prepare your proxy beforehand for any security and load requirements.
+     * </p>
+     * 
+     * @param proxyConfiguration
+     *        Configuration information to connect to your Confluence URL instance via a web proxy. You can use this
+     *        option for Confluence Server.</p>
+     *        <p>
+     *        You must provide the website host name and port number. For example, the host name of
+     *        <i>https://a.example.com/page1.html</i> is "a.example.com" and the port is 443, the standard port for
+     *        HTTPS.
+     *        </p>
+     *        <p>
+     *        Web proxy credentials are optional and you can use them to connect to a web proxy server that requires
+     *        basic authentication of user name and password. To store web proxy credentials, you use a secret in
+     *        Secrets Manager.
+     *        </p>
+     *        <p>
+     *        It is recommended that you follow best security practices when configuring your web proxy. This includes
+     *        setting up throttling, setting up logging and monitoring, and applying security patches on a regular
+     *        basis. If you use your web proxy with multiple data sources, sync jobs that occur at the same time could
+     *        strain the load on your proxy. It is recommended you prepare your proxy beforehand for any security and
+     *        load requirements.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConfluenceConfiguration withProxyConfiguration(ProxyConfiguration proxyConfiguration) {
+        setProxyConfiguration(proxyConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -709,7 +866,9 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
         if (getInclusionPatterns() != null)
             sb.append("InclusionPatterns: ").append(getInclusionPatterns()).append(",");
         if (getExclusionPatterns() != null)
-            sb.append("ExclusionPatterns: ").append(getExclusionPatterns());
+            sb.append("ExclusionPatterns: ").append(getExclusionPatterns()).append(",");
+        if (getProxyConfiguration() != null)
+            sb.append("ProxyConfiguration: ").append(getProxyConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -764,6 +923,10 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
             return false;
         if (other.getExclusionPatterns() != null && other.getExclusionPatterns().equals(this.getExclusionPatterns()) == false)
             return false;
+        if (other.getProxyConfiguration() == null ^ this.getProxyConfiguration() == null)
+            return false;
+        if (other.getProxyConfiguration() != null && other.getProxyConfiguration().equals(this.getProxyConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -782,6 +945,7 @@ public class ConfluenceConfiguration implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getVpcConfiguration() == null) ? 0 : getVpcConfiguration().hashCode());
         hashCode = prime * hashCode + ((getInclusionPatterns() == null) ? 0 : getInclusionPatterns().hashCode());
         hashCode = prime * hashCode + ((getExclusionPatterns() == null) ? 0 : getExclusionPatterns().hashCode());
+        hashCode = prime * hashCode + ((getProxyConfiguration() == null) ? 0 : getProxyConfiguration().hashCode());
         return hashCode;
     }
 

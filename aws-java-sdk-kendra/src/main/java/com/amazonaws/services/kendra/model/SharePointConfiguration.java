@@ -138,6 +138,27 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
      * </p>
      */
     private String authenticationType;
+    /**
+     * <p>
+     * Configuration information to connect to your Microsoft SharePoint site URLs via instance via a web proxy. You can
+     * use this option for SharePoint Server.
+     * </p>
+     * <p>
+     * You must provide the website host name and port number. For example, the host name of
+     * <i>https://a.example.com/page1.html</i> is "a.example.com" and the port is 443, the standard port for HTTPS.
+     * </p>
+     * <p>
+     * Web proxy credentials are optional and you can use them to connect to a web proxy server that requires basic
+     * authentication of user name and password. To store web proxy credentials, you use a secret in Secrets Manager.
+     * </p>
+     * <p>
+     * It is recommended that you follow best security practices when configuring your web proxy. This includes setting
+     * up throttling, setting up logging and monitoring, and applying security patches on a regular basis. If you use
+     * your web proxy with multiple data sources, sync jobs that occur at the same time could strain the load on your
+     * proxy. It is recommended you prepare your proxy beforehand for any security and load requirements.
+     * </p>
+     */
+    private ProxyConfiguration proxyConfiguration;
 
     /**
      * <p>
@@ -1075,6 +1096,142 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Configuration information to connect to your Microsoft SharePoint site URLs via instance via a web proxy. You can
+     * use this option for SharePoint Server.
+     * </p>
+     * <p>
+     * You must provide the website host name and port number. For example, the host name of
+     * <i>https://a.example.com/page1.html</i> is "a.example.com" and the port is 443, the standard port for HTTPS.
+     * </p>
+     * <p>
+     * Web proxy credentials are optional and you can use them to connect to a web proxy server that requires basic
+     * authentication of user name and password. To store web proxy credentials, you use a secret in Secrets Manager.
+     * </p>
+     * <p>
+     * It is recommended that you follow best security practices when configuring your web proxy. This includes setting
+     * up throttling, setting up logging and monitoring, and applying security patches on a regular basis. If you use
+     * your web proxy with multiple data sources, sync jobs that occur at the same time could strain the load on your
+     * proxy. It is recommended you prepare your proxy beforehand for any security and load requirements.
+     * </p>
+     * 
+     * @param proxyConfiguration
+     *        Configuration information to connect to your Microsoft SharePoint site URLs via instance via a web proxy.
+     *        You can use this option for SharePoint Server.</p>
+     *        <p>
+     *        You must provide the website host name and port number. For example, the host name of
+     *        <i>https://a.example.com/page1.html</i> is "a.example.com" and the port is 443, the standard port for
+     *        HTTPS.
+     *        </p>
+     *        <p>
+     *        Web proxy credentials are optional and you can use them to connect to a web proxy server that requires
+     *        basic authentication of user name and password. To store web proxy credentials, you use a secret in
+     *        Secrets Manager.
+     *        </p>
+     *        <p>
+     *        It is recommended that you follow best security practices when configuring your web proxy. This includes
+     *        setting up throttling, setting up logging and monitoring, and applying security patches on a regular
+     *        basis. If you use your web proxy with multiple data sources, sync jobs that occur at the same time could
+     *        strain the load on your proxy. It is recommended you prepare your proxy beforehand for any security and
+     *        load requirements.
+     */
+
+    public void setProxyConfiguration(ProxyConfiguration proxyConfiguration) {
+        this.proxyConfiguration = proxyConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration information to connect to your Microsoft SharePoint site URLs via instance via a web proxy. You can
+     * use this option for SharePoint Server.
+     * </p>
+     * <p>
+     * You must provide the website host name and port number. For example, the host name of
+     * <i>https://a.example.com/page1.html</i> is "a.example.com" and the port is 443, the standard port for HTTPS.
+     * </p>
+     * <p>
+     * Web proxy credentials are optional and you can use them to connect to a web proxy server that requires basic
+     * authentication of user name and password. To store web proxy credentials, you use a secret in Secrets Manager.
+     * </p>
+     * <p>
+     * It is recommended that you follow best security practices when configuring your web proxy. This includes setting
+     * up throttling, setting up logging and monitoring, and applying security patches on a regular basis. If you use
+     * your web proxy with multiple data sources, sync jobs that occur at the same time could strain the load on your
+     * proxy. It is recommended you prepare your proxy beforehand for any security and load requirements.
+     * </p>
+     * 
+     * @return Configuration information to connect to your Microsoft SharePoint site URLs via instance via a web proxy.
+     *         You can use this option for SharePoint Server.</p>
+     *         <p>
+     *         You must provide the website host name and port number. For example, the host name of
+     *         <i>https://a.example.com/page1.html</i> is "a.example.com" and the port is 443, the standard port for
+     *         HTTPS.
+     *         </p>
+     *         <p>
+     *         Web proxy credentials are optional and you can use them to connect to a web proxy server that requires
+     *         basic authentication of user name and password. To store web proxy credentials, you use a secret in
+     *         Secrets Manager.
+     *         </p>
+     *         <p>
+     *         It is recommended that you follow best security practices when configuring your web proxy. This includes
+     *         setting up throttling, setting up logging and monitoring, and applying security patches on a regular
+     *         basis. If you use your web proxy with multiple data sources, sync jobs that occur at the same time could
+     *         strain the load on your proxy. It is recommended you prepare your proxy beforehand for any security and
+     *         load requirements.
+     */
+
+    public ProxyConfiguration getProxyConfiguration() {
+        return this.proxyConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration information to connect to your Microsoft SharePoint site URLs via instance via a web proxy. You can
+     * use this option for SharePoint Server.
+     * </p>
+     * <p>
+     * You must provide the website host name and port number. For example, the host name of
+     * <i>https://a.example.com/page1.html</i> is "a.example.com" and the port is 443, the standard port for HTTPS.
+     * </p>
+     * <p>
+     * Web proxy credentials are optional and you can use them to connect to a web proxy server that requires basic
+     * authentication of user name and password. To store web proxy credentials, you use a secret in Secrets Manager.
+     * </p>
+     * <p>
+     * It is recommended that you follow best security practices when configuring your web proxy. This includes setting
+     * up throttling, setting up logging and monitoring, and applying security patches on a regular basis. If you use
+     * your web proxy with multiple data sources, sync jobs that occur at the same time could strain the load on your
+     * proxy. It is recommended you prepare your proxy beforehand for any security and load requirements.
+     * </p>
+     * 
+     * @param proxyConfiguration
+     *        Configuration information to connect to your Microsoft SharePoint site URLs via instance via a web proxy.
+     *        You can use this option for SharePoint Server.</p>
+     *        <p>
+     *        You must provide the website host name and port number. For example, the host name of
+     *        <i>https://a.example.com/page1.html</i> is "a.example.com" and the port is 443, the standard port for
+     *        HTTPS.
+     *        </p>
+     *        <p>
+     *        Web proxy credentials are optional and you can use them to connect to a web proxy server that requires
+     *        basic authentication of user name and password. To store web proxy credentials, you use a secret in
+     *        Secrets Manager.
+     *        </p>
+     *        <p>
+     *        It is recommended that you follow best security practices when configuring your web proxy. This includes
+     *        setting up throttling, setting up logging and monitoring, and applying security patches on a regular
+     *        basis. If you use your web proxy with multiple data sources, sync jobs that occur at the same time could
+     *        strain the load on your proxy. It is recommended you prepare your proxy beforehand for any security and
+     *        load requirements.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SharePointConfiguration withProxyConfiguration(ProxyConfiguration proxyConfiguration) {
+        setProxyConfiguration(proxyConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1111,7 +1268,9 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
         if (getSslCertificateS3Path() != null)
             sb.append("SslCertificateS3Path: ").append(getSslCertificateS3Path()).append(",");
         if (getAuthenticationType() != null)
-            sb.append("AuthenticationType: ").append(getAuthenticationType());
+            sb.append("AuthenticationType: ").append(getAuthenticationType()).append(",");
+        if (getProxyConfiguration() != null)
+            sb.append("ProxyConfiguration: ").append(getProxyConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1178,6 +1337,10 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
             return false;
         if (other.getAuthenticationType() != null && other.getAuthenticationType().equals(this.getAuthenticationType()) == false)
             return false;
+        if (other.getProxyConfiguration() == null ^ this.getProxyConfiguration() == null)
+            return false;
+        if (other.getProxyConfiguration() != null && other.getProxyConfiguration().equals(this.getProxyConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1199,6 +1362,7 @@ public class SharePointConfiguration implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getDisableLocalGroups() == null) ? 0 : getDisableLocalGroups().hashCode());
         hashCode = prime * hashCode + ((getSslCertificateS3Path() == null) ? 0 : getSslCertificateS3Path().hashCode());
         hashCode = prime * hashCode + ((getAuthenticationType() == null) ? 0 : getAuthenticationType().hashCode());
+        hashCode = prime * hashCode + ((getProxyConfiguration() == null) ? 0 : getProxyConfiguration().hashCode());
         return hashCode;
     }
 

@@ -37,7 +37,7 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
     private String indexId;
     /**
      * <p>
-     * The name that you gave the data source when it was created.
+     * The name for the data source.
      * </p>
      */
     private String name;
@@ -54,6 +54,14 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      */
     private DataSourceConfiguration configuration;
+    /**
+     * <p>
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
+     * </p>
+     */
+    private DataSourceVpcConfiguration vpcConfiguration;
     /**
      * <p>
      * The Unix timestamp of when the data source was created.
@@ -204,11 +212,11 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The name that you gave the data source when it was created.
+     * The name for the data source.
      * </p>
      * 
      * @param name
-     *        The name that you gave the data source when it was created.
+     *        The name for the data source.
      */
 
     public void setName(String name) {
@@ -217,10 +225,10 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The name that you gave the data source when it was created.
+     * The name for the data source.
      * </p>
      * 
-     * @return The name that you gave the data source when it was created.
+     * @return The name for the data source.
      */
 
     public String getName() {
@@ -229,11 +237,11 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The name that you gave the data source when it was created.
+     * The name for the data source.
      * </p>
      * 
      * @param name
-     *        The name that you gave the data source when it was created.
+     *        The name for the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -344,6 +352,58 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
 
     public DescribeDataSourceResult withConfiguration(DataSourceConfiguration configuration) {
         setConfiguration(configuration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
+     * </p>
+     * 
+     * @param vpcConfiguration
+     *        Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring
+     *        a VPC</a>.
+     */
+
+    public void setVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
+        this.vpcConfiguration = vpcConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
+     * </p>
+     * 
+     * @return Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
+     */
+
+    public DataSourceVpcConfiguration getVpcConfiguration() {
+        return this.vpcConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
+     * </p>
+     * 
+     * @param vpcConfiguration
+     *        Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring
+     *        a VPC</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeDataSourceResult withVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
+        setVpcConfiguration(vpcConfiguration);
         return this;
     }
 
@@ -827,6 +887,8 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
             sb.append("Type: ").append(getType()).append(",");
         if (getConfiguration() != null)
             sb.append("Configuration: ").append(getConfiguration()).append(",");
+        if (getVpcConfiguration() != null)
+            sb.append("VpcConfiguration: ").append(getVpcConfiguration()).append(",");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getUpdatedAt() != null)
@@ -879,6 +941,10 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
             return false;
         if (other.getConfiguration() != null && other.getConfiguration().equals(this.getConfiguration()) == false)
             return false;
+        if (other.getVpcConfiguration() == null ^ this.getVpcConfiguration() == null)
+            return false;
+        if (other.getVpcConfiguration() != null && other.getVpcConfiguration().equals(this.getVpcConfiguration()) == false)
+            return false;
         if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
             return false;
         if (other.getCreatedAt() != null && other.getCreatedAt().equals(this.getCreatedAt()) == false)
@@ -929,6 +995,7 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getConfiguration() == null) ? 0 : getConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getVpcConfiguration() == null) ? 0 : getVpcConfiguration().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());

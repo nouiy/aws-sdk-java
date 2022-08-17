@@ -37,7 +37,8 @@ public enum DataSourceType {
     QUIP("QUIP"),
     JIRA("JIRA"),
     GITHUB("GITHUB"),
-    ALFRESCO("ALFRESCO");
+    ALFRESCO("ALFRESCO"),
+    TEMPLATE("TEMPLATE");
 
     private String value;
 

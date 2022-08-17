@@ -116,6 +116,10 @@ public class DataSourceConfigurationJsonUnmarshaller implements Unmarshaller<Dat
                     context.nextToken();
                     dataSourceConfiguration.setAlfrescoConfiguration(AlfrescoConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("TemplateConfiguration", targetDepth)) {
+                    context.nextToken();
+                    dataSourceConfiguration.setTemplateConfiguration(TemplateConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

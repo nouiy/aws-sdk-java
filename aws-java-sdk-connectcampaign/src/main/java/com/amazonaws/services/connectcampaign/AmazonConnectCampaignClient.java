@@ -500,6 +500,8 @@ public class AmazonConnectCampaignClient extends AmazonWebServiceClient implemen
      *         Request processing failed because of an error or failure with the service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws AccessDeniedException
      *         You do not have sufficient access to perform this action.
      * @throws ThrottlingException
@@ -889,6 +891,8 @@ public class AmazonConnectCampaignClient extends AmazonWebServiceClient implemen
      *         Request processing failed because of an error or failure with the service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws ConflictException
      *         The request could not be processed because of conflict in the current state of the resource.
      * @throws InvalidCampaignStateException
@@ -1027,6 +1031,8 @@ public class AmazonConnectCampaignClient extends AmazonWebServiceClient implemen
      *         Request processing failed because of an error or failure with the service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws ConflictException
      *         The request could not be processed because of conflict in the current state of the resource.
      * @throws InvalidCampaignStateException
@@ -1095,6 +1101,8 @@ public class AmazonConnectCampaignClient extends AmazonWebServiceClient implemen
      *         Request processing failed because of an error or failure with the service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws ConflictException
      *         The request could not be processed because of conflict in the current state of the resource.
      * @throws InvalidCampaignStateException
@@ -1233,6 +1241,8 @@ public class AmazonConnectCampaignClient extends AmazonWebServiceClient implemen
      *         Request processing failed because of an error or failure with the service.
      * @throws ResourceNotFoundException
      *         The specified resource was not found.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
      * @throws ConflictException
      *         The request could not be processed because of conflict in the current state of the resource.
      * @throws InvalidCampaignStateException

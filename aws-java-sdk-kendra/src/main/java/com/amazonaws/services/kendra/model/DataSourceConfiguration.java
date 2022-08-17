@@ -126,6 +126,12 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
      * </p>
      */
     private AlfrescoConfiguration alfrescoConfiguration;
+    /**
+     * <p>
+     * Provides a template for the configuration information to connect to your data source.
+     * </p>
+     */
+    private TemplateConfiguration templateConfiguration;
 
     /**
      * <p>
@@ -794,6 +800,46 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Provides a template for the configuration information to connect to your data source.
+     * </p>
+     * 
+     * @param templateConfiguration
+     *        Provides a template for the configuration information to connect to your data source.
+     */
+
+    public void setTemplateConfiguration(TemplateConfiguration templateConfiguration) {
+        this.templateConfiguration = templateConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides a template for the configuration information to connect to your data source.
+     * </p>
+     * 
+     * @return Provides a template for the configuration information to connect to your data source.
+     */
+
+    public TemplateConfiguration getTemplateConfiguration() {
+        return this.templateConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides a template for the configuration information to connect to your data source.
+     * </p>
+     * 
+     * @param templateConfiguration
+     *        Provides a template for the configuration information to connect to your data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataSourceConfiguration withTemplateConfiguration(TemplateConfiguration templateConfiguration) {
+        setTemplateConfiguration(templateConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -838,7 +884,9 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
         if (getGitHubConfiguration() != null)
             sb.append("GitHubConfiguration: ").append(getGitHubConfiguration()).append(",");
         if (getAlfrescoConfiguration() != null)
-            sb.append("AlfrescoConfiguration: ").append(getAlfrescoConfiguration());
+            sb.append("AlfrescoConfiguration: ").append(getAlfrescoConfiguration()).append(",");
+        if (getTemplateConfiguration() != null)
+            sb.append("TemplateConfiguration: ").append(getTemplateConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -921,6 +969,10 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
             return false;
         if (other.getAlfrescoConfiguration() != null && other.getAlfrescoConfiguration().equals(this.getAlfrescoConfiguration()) == false)
             return false;
+        if (other.getTemplateConfiguration() == null ^ this.getTemplateConfiguration() == null)
+            return false;
+        if (other.getTemplateConfiguration() != null && other.getTemplateConfiguration().equals(this.getTemplateConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -946,6 +998,7 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getJiraConfiguration() == null) ? 0 : getJiraConfiguration().hashCode());
         hashCode = prime * hashCode + ((getGitHubConfiguration() == null) ? 0 : getGitHubConfiguration().hashCode());
         hashCode = prime * hashCode + ((getAlfrescoConfiguration() == null) ? 0 : getAlfrescoConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getTemplateConfiguration() == null) ? 0 : getTemplateConfiguration().hashCode());
         return hashCode;
     }
 

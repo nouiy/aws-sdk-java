@@ -27,8 +27,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A unique name for the data source connector. A data source name can't be changed without deleting and recreating
-     * the data source connector.
+     * A name for the data source connector.
      * </p>
      */
     private String name;
@@ -57,6 +56,14 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private DataSourceConfiguration configuration;
+    /**
+     * <p>
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
+     * </p>
+     */
+    private DataSourceVpcConfiguration vpcConfiguration;
     /**
      * <p>
      * A description for the data source connector.
@@ -128,13 +135,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A unique name for the data source connector. A data source name can't be changed without deleting and recreating
-     * the data source connector.
+     * A name for the data source connector.
      * </p>
      * 
      * @param name
-     *        A unique name for the data source connector. A data source name can't be changed without deleting and
-     *        recreating the data source connector.
+     *        A name for the data source connector.
      */
 
     public void setName(String name) {
@@ -143,12 +148,10 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A unique name for the data source connector. A data source name can't be changed without deleting and recreating
-     * the data source connector.
+     * A name for the data source connector.
      * </p>
      * 
-     * @return A unique name for the data source connector. A data source name can't be changed without deleting and
-     *         recreating the data source connector.
+     * @return A name for the data source connector.
      */
 
     public String getName() {
@@ -157,13 +160,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A unique name for the data source connector. A data source name can't be changed without deleting and recreating
-     * the data source connector.
+     * A name for the data source connector.
      * </p>
      * 
      * @param name
-     *        A unique name for the data source connector. A data source name can't be changed without deleting and
-     *        recreating the data source connector.
+     *        A name for the data source connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -347,6 +348,58 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     public CreateDataSourceRequest withConfiguration(DataSourceConfiguration configuration) {
         setConfiguration(configuration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
+     * </p>
+     * 
+     * @param vpcConfiguration
+     *        Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring
+     *        a VPC</a>.
+     */
+
+    public void setVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
+        this.vpcConfiguration = vpcConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
+     * </p>
+     * 
+     * @return Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
+     */
+
+    public DataSourceVpcConfiguration getVpcConfiguration() {
+        return this.vpcConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
+     * </p>
+     * 
+     * @param vpcConfiguration
+     *        Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring
+     *        a VPC</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDataSourceRequest withVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
+        setVpcConfiguration(vpcConfiguration);
         return this;
     }
 
@@ -832,6 +885,8 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
             sb.append("Type: ").append(getType()).append(",");
         if (getConfiguration() != null)
             sb.append("Configuration: ").append(getConfiguration()).append(",");
+        if (getVpcConfiguration() != null)
+            sb.append("VpcConfiguration: ").append(getVpcConfiguration()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getSchedule() != null)
@@ -876,6 +931,10 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getConfiguration() != null && other.getConfiguration().equals(this.getConfiguration()) == false)
             return false;
+        if (other.getVpcConfiguration() == null ^ this.getVpcConfiguration() == null)
+            return false;
+        if (other.getVpcConfiguration() != null && other.getVpcConfiguration().equals(this.getVpcConfiguration()) == false)
+            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
@@ -917,6 +976,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getIndexId() == null) ? 0 : getIndexId().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getConfiguration() == null) ? 0 : getConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getVpcConfiguration() == null) ? 0 : getVpcConfiguration().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getSchedule() == null) ? 0 : getSchedule().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());

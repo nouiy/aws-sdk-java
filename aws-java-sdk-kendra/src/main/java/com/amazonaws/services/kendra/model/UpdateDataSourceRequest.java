@@ -33,8 +33,7 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private String id;
     /**
      * <p>
-     * A new name for the data source connector. You must first delete the data source and re-create it to change the
-     * name of the data source.
+     * A new name for the data source connector.
      * </p>
      */
     private String name;
@@ -50,6 +49,14 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private DataSourceConfiguration configuration;
+    /**
+     * <p>
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
+     * </p>
+     */
+    private DataSourceVpcConfiguration vpcConfiguration;
     /**
      * <p>
      * A new description for the data source connector.
@@ -135,13 +142,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A new name for the data source connector. You must first delete the data source and re-create it to change the
-     * name of the data source.
+     * A new name for the data source connector.
      * </p>
      * 
      * @param name
-     *        A new name for the data source connector. You must first delete the data source and re-create it to change
-     *        the name of the data source.
+     *        A new name for the data source connector.
      */
 
     public void setName(String name) {
@@ -150,12 +155,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A new name for the data source connector. You must first delete the data source and re-create it to change the
-     * name of the data source.
+     * A new name for the data source connector.
      * </p>
      * 
-     * @return A new name for the data source connector. You must first delete the data source and re-create it to
-     *         change the name of the data source.
+     * @return A new name for the data source connector.
      */
 
     public String getName() {
@@ -164,13 +167,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A new name for the data source connector. You must first delete the data source and re-create it to change the
-     * name of the data source.
+     * A new name for the data source connector.
      * </p>
      * 
      * @param name
-     *        A new name for the data source connector. You must first delete the data source and re-create it to change
-     *        the name of the data source.
+     *        A new name for the data source connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -256,6 +257,58 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     public UpdateDataSourceRequest withConfiguration(DataSourceConfiguration configuration) {
         setConfiguration(configuration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
+     * </p>
+     * 
+     * @param vpcConfiguration
+     *        Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring
+     *        a VPC</a>.
+     */
+
+    public void setVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
+        this.vpcConfiguration = vpcConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
+     * </p>
+     * 
+     * @return Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a VPC</a>.
+     */
+
+    public DataSourceVpcConfiguration getVpcConfiguration() {
+        return this.vpcConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring a
+     * VPC</a>.
+     * </p>
+     * 
+     * @param vpcConfiguration
+     *        Configuration information for an Amazon Virtual Private Cloud to connect to your data source. For more
+     *        information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html">Configuring
+     *        a VPC</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDataSourceRequest withVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
+        setVpcConfiguration(vpcConfiguration);
         return this;
     }
 
@@ -549,6 +602,8 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
             sb.append("IndexId: ").append(getIndexId()).append(",");
         if (getConfiguration() != null)
             sb.append("Configuration: ").append(getConfiguration()).append(",");
+        if (getVpcConfiguration() != null)
+            sb.append("VpcConfiguration: ").append(getVpcConfiguration()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getSchedule() != null)
@@ -589,6 +644,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getConfiguration() != null && other.getConfiguration().equals(this.getConfiguration()) == false)
             return false;
+        if (other.getVpcConfiguration() == null ^ this.getVpcConfiguration() == null)
+            return false;
+        if (other.getVpcConfiguration() != null && other.getVpcConfiguration().equals(this.getVpcConfiguration()) == false)
+            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
@@ -622,6 +681,7 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getIndexId() == null) ? 0 : getIndexId().hashCode());
         hashCode = prime * hashCode + ((getConfiguration() == null) ? 0 : getConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getVpcConfiguration() == null) ? 0 : getVpcConfiguration().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getSchedule() == null) ? 0 : getSchedule().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());

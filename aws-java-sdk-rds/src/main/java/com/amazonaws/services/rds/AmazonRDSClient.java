@@ -1170,17 +1170,27 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * parameters for this API are one of CIDR range, EC2SecurityGroupId for VPC, or (EC2SecurityGroupOwnerId and either
      * EC2SecurityGroupName or EC2SecurityGroupId for non-VPC).
      * </p>
-     * <note>
      * <p>
      * You can't authorize ingress from an EC2 security group in one Amazon Web Services Region to an Amazon RDS DB
      * instance in another. You can't authorize ingress from a VPC security group in one VPC to an Amazon RDS DB
      * instance in another.
      * </p>
-     * </note>
      * <p>
      * For an overview of CIDR ranges, go to the <a
      * href="http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Wikipedia Tutorial</a>.
      * </p>
+     * <note>
+     * <p>
+     * EC2-Classic was retired on August 15, 2022. If you haven't migrated from EC2-Classic to a VPC, we recommend that
+     * you migrate as soon as possible. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a>
+     * in the <i>Amazon EC2 User Guide</i>, the blog <a
+     * href="http://aws.amazon.com/blogs/aws/ec2-classic-is-retiring-heres-how-to-prepare/">EC2-Classic Networking is
+     * Retiring – Here’s How to Prepare</a>, and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.Non-VPC2VPC.html">Moving a DB instance not
+     * in a VPC into a VPC</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param authorizeDBSecurityGroupIngressRequest
      * @return Result of the AuthorizeDBSecurityGroupIngress operation returned by the service.
@@ -2666,9 +2676,19 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * <p>
      * Creates a new DB security group. DB security groups control access to a DB instance.
      * </p>
-     * <note>
      * <p>
      * A DB security group controls access to EC2-Classic DB instances that are not in a VPC.
+     * </p>
+     * <note>
+     * <p>
+     * EC2-Classic was retired on August 15, 2022. If you haven't migrated from EC2-Classic to a VPC, we recommend that
+     * you migrate as soon as possible. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a>
+     * in the <i>Amazon EC2 User Guide</i>, the blog <a
+     * href="http://aws.amazon.com/blogs/aws/ec2-classic-is-retiring-heres-how-to-prepare/">EC2-Classic Networking is
+     * Retiring – Here’s How to Prepare</a>, and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.Non-VPC2VPC.html">Moving a DB instance not
+     * in a VPC into a VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </note>
      * 
@@ -2880,12 +2900,16 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * If you don't specify either the SourceType or the <code>SourceIds</code>, you are notified of events generated
      * from all RDS sources belonging to your customer account.
      * </p>
-     * <note>
      * <p>
-     * RDS event notification is only available for unencrypted SNS topics. If you specify an encrypted SNS topic, event
-     * notifications aren't sent for the topic.
+     * For more information about subscribing to an event for RDS DB engines, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.Subscribing.html"> Subscribing to Amazon
+     * RDS event notification</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
-     * </note>
+     * <p>
+     * For more information about subscribing to an event for Aurora DB engines, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Events.Subscribing.html"> Subscribing to
+     * Amazon RDS event notification</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
      * 
      * @param createEventSubscriptionRequest
      * @return Result of the CreateEventSubscription operation returned by the service.
@@ -3821,9 +3845,19 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * <p>
      * Deletes a DB security group.
      * </p>
-     * <note>
      * <p>
      * The specified DB security group must not be associated with any DB instances.
+     * </p>
+     * <note>
+     * <p>
+     * EC2-Classic was retired on August 15, 2022. If you haven't migrated from EC2-Classic to a VPC, we recommend that
+     * you migrate as soon as possible. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a>
+     * in the <i>Amazon EC2 User Guide</i>, the blog <a
+     * href="http://aws.amazon.com/blogs/aws/ec2-classic-is-retiring-heres-how-to-prepare/">EC2-Classic Networking is
+     * Retiring – Here’s How to Prepare</a>, and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.Non-VPC2VPC.html">Moving a DB instance not
+     * in a VPC into a VPC</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * </note>
      * 
@@ -5527,6 +5561,18 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * Returns a list of <code>DBSecurityGroup</code> descriptions. If a <code>DBSecurityGroupName</code> is specified,
      * the list will contain only the descriptions of the specified DB security group.
      * </p>
+     * <note>
+     * <p>
+     * EC2-Classic was retired on August 15, 2022. If you haven't migrated from EC2-Classic to a VPC, we recommend that
+     * you migrate as soon as possible. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a>
+     * in the <i>Amazon EC2 User Guide</i>, the blog <a
+     * href="http://aws.amazon.com/blogs/aws/ec2-classic-is-retiring-heres-how-to-prepare/">EC2-Classic Networking is
+     * Retiring – Here’s How to Prepare</a>, and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.Non-VPC2VPC.html">Moving a DB instance not
+     * in a VPC into a VPC</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param describeDBSecurityGroupsRequest
      * @return Result of the DescribeDBSecurityGroups operation returned by the service.
@@ -10108,6 +10154,18 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * Required parameters for this API are one of CIDRIP, EC2SecurityGroupId for VPC, or (EC2SecurityGroupOwnerId and
      * either EC2SecurityGroupName or EC2SecurityGroupId).
      * </p>
+     * <note>
+     * <p>
+     * EC2-Classic was retired on August 15, 2022. If you haven't migrated from EC2-Classic to a VPC, we recommend that
+     * you migrate as soon as possible. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html">Migrate from EC2-Classic to a VPC</a>
+     * in the <i>Amazon EC2 User Guide</i>, the blog <a
+     * href="http://aws.amazon.com/blogs/aws/ec2-classic-is-retiring-heres-how-to-prepare/">EC2-Classic Networking is
+     * Retiring – Here’s How to Prepare</a>, and <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.Non-VPC2VPC.html">Moving a DB instance not
+     * in a VPC into a VPC</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param revokeDBSecurityGroupIngressRequest
      * @return Result of the RevokeDBSecurityGroupIngress operation returned by the service.

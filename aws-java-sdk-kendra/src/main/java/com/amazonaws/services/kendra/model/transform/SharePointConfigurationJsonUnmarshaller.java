@@ -109,6 +109,10 @@ public class SharePointConfigurationJsonUnmarshaller implements Unmarshaller<Sha
                     context.nextToken();
                     sharePointConfiguration.setAuthenticationType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ProxyConfiguration", targetDepth)) {
+                    context.nextToken();
+                    sharePointConfiguration.setProxyConfiguration(ProxyConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

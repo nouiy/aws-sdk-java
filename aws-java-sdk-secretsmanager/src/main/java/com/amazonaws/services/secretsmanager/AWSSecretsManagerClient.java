@@ -247,6 +247,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         you didn't include such an ARN as a parameter in this call.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
+     *         </p>
+     *         </li>
      * @sample AWSSecretsManager.CancelRotateSecret
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/CancelRotateSecret"
      *      target="_top">AWS API Documentation</a>
@@ -366,6 +374,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         you didn't include such an ARN as a parameter in this call.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
+     *         </p>
+     *         </li>
      * @throws LimitExceededException
      *         The request failed because it would exceed one of the Secrets Manager quotas.
      * @throws EncryptionFailureException
@@ -468,6 +484,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         <p>
      *         You tried to enable rotation on a secret that doesn't already have a Lambda function ARN configured and
      *         you didn't include such an ARN as a parameter in this call.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
      *         </p>
      *         </li>
      * @throws InvalidParameterException
@@ -585,6 +609,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         <p>
      *         You tried to enable rotation on a secret that doesn't already have a Lambda function ARN configured and
      *         you didn't include such an ARN as a parameter in this call.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
      *         </p>
      *         </li>
      * @throws InternalServiceErrorException
@@ -740,6 +772,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         you didn't include such an ARN as a parameter in this call.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
+     *         </p>
+     *         </li>
      * @throws InternalServiceErrorException
      *         An error occurred on the server side.
      * @sample AWSSecretsManager.GetRandomPassword
@@ -828,6 +868,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         you didn't include such an ARN as a parameter in this call.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
+     *         </p>
+     *         </li>
      * @throws InvalidParameterException
      *         The parameter name or value is invalid.
      * @sample AWSSecretsManager.GetResourcePolicy
@@ -890,6 +938,12 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      * applications</a>.
      * </p>
      * <p>
+     * To retrieve the previous version of a secret, use <code>VersionStage</code> and specify AWSPREVIOUS. To revert to
+     * the previous version of a secret, call <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/secretsmanager/update-secret-version-stage.html"
+     * >UpdateSecretVersionStage</a>.
+     * </p>
+     * <p>
      * <b>Required permissions: </b> <code>secretsmanager:GetSecretValue</code>. If the secret is encrypted using a
      * customer-managed key instead of the Amazon Web Services managed key <code>aws/secretsmanager</code>, then you
      * also need <code>kms:Decrypt</code> permissions for that key. For more information, see <a href=
@@ -920,6 +974,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         <p>
      *         You tried to enable rotation on a secret that doesn't already have a Lambda function ARN configured and
      *         you didn't include such an ARN as a parameter in this call.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
      *         </p>
      *         </li>
      * @throws DecryptionFailureException
@@ -1182,6 +1244,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         you didn't include such an ARN as a parameter in this call.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
+     *         </p>
+     *         </li>
      * @throws PublicPolicyException
      *         The <code>BlockPublicPolicy</code> parameter is set to true, and the resource policy did not prevent
      *         broad access to the secret.
@@ -1291,6 +1361,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         you didn't include such an ARN as a parameter in this call.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
+     *         </p>
+     *         </li>
      * @throws LimitExceededException
      *         The request failed because it would exceed one of the Secrets Manager quotas.
      * @throws EncryptionFailureException
@@ -1388,6 +1466,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         you didn't include such an ARN as a parameter in this call.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
+     *         </p>
+     *         </li>
      * @throws InvalidParameterException
      *         The parameter name or value is invalid.
      * @throws InternalServiceErrorException
@@ -1478,6 +1564,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         you didn't include such an ARN as a parameter in this call.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
+     *         </p>
+     *         </li>
      * @throws InvalidParameterException
      *         The parameter name or value is invalid.
      * @throws InternalServiceErrorException
@@ -1566,6 +1660,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         <p>
      *         You tried to enable rotation on a secret that doesn't already have a Lambda function ARN configured and
      *         you didn't include such an ARN as a parameter in this call.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
      *         </p>
      *         </li>
      * @throws InternalServiceErrorException
@@ -1695,6 +1797,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         you didn't include such an ARN as a parameter in this call.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
+     *         </p>
+     *         </li>
      * @sample AWSSecretsManager.RotateSecret
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/RotateSecret" target="_top">AWS
      *      API Documentation</a>
@@ -1779,6 +1889,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         <p>
      *         You tried to enable rotation on a secret that doesn't already have a Lambda function ARN configured and
      *         you didn't include such an ARN as a parameter in this call.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
      *         </p>
      *         </li>
      * @throws InvalidParameterException
@@ -1916,6 +2034,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         you didn't include such an ARN as a parameter in this call.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
+     *         </p>
+     *         </li>
      * @throws InvalidParameterException
      *         The parameter name or value is invalid.
      * @throws InternalServiceErrorException
@@ -2012,6 +2138,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         you didn't include such an ARN as a parameter in this call.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
+     *         </p>
+     *         </li>
      * @throws InvalidParameterException
      *         The parameter name or value is invalid.
      * @throws InternalServiceErrorException
@@ -2090,17 +2224,6 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      * <a>UpdateSecretVersionStage</a>.
      * </p>
      * <p>
-     * If you don't specify an KMS encryption key, Secrets Manager uses the Amazon Web Services managed key
-     * <code>aws/secretsmanager</code>. If this key doesn't already exist in your account, then Secrets Manager creates
-     * it for you automatically. All users and roles in the Amazon Web Services account automatically have access to use
-     * <code>aws/secretsmanager</code>. Creating <code>aws/secretsmanager</code> can result in a one-time significant
-     * delay in returning the result.
-     * </p>
-     * <p>
-     * If the secret is in a different Amazon Web Services account from the credentials calling the API, then you can't
-     * use <code>aws/secretsmanager</code> to encrypt the secret, and you must create and use a customer managed key.
-     * </p>
-     * <p>
      * <b>Required permissions: </b> <code>secretsmanager:UpdateSecret</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"
      * > IAM policy actions for Secrets Manager</a> and <a
@@ -2130,6 +2253,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         <p>
      *         You tried to enable rotation on a secret that doesn't already have a Lambda function ARN configured and
      *         you didn't include such an ARN as a parameter in this call.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
      *         </p>
      *         </li>
      * @throws LimitExceededException
@@ -2258,6 +2389,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         you didn't include such an ARN as a parameter in this call.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
+     *         </p>
+     *         </li>
      * @throws LimitExceededException
      *         The request failed because it would exceed one of the Secrets Manager quotas.
      * @throws InternalServiceErrorException
@@ -2374,6 +2513,14 @@ public class AWSSecretsManagerClient extends AmazonWebServiceClient implements A
      *         <p>
      *         You tried to enable rotation on a secret that doesn't already have a Lambda function ARN configured and
      *         you didn't include such an ARN as a parameter in this call.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The secret is managed by another service, and you must use that service to update it. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/service-linked-secrets.html">Secrets
+     *         managed by other Amazon Web Services services</a>.
      *         </p>
      *         </li>
      * @sample AWSSecretsManager.ValidateResourcePolicy

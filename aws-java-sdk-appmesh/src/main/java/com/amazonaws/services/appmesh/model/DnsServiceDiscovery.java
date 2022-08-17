@@ -36,7 +36,8 @@ public class DnsServiceDiscovery implements Serializable, Cloneable, StructuredP
     private String hostname;
     /**
      * <p>
-     * The IP version to use to control traffic within the mesh.
+     * The preferred IP version that this virtual node uses. Setting the IP preference on the virtual node only
+     * overrides the IP preference set for the mesh on this specific node.
      * </p>
      */
     private String ipPreference;
@@ -89,11 +90,13 @@ public class DnsServiceDiscovery implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The IP version to use to control traffic within the mesh.
+     * The preferred IP version that this virtual node uses. Setting the IP preference on the virtual node only
+     * overrides the IP preference set for the mesh on this specific node.
      * </p>
      * 
      * @param ipPreference
-     *        The IP version to use to control traffic within the mesh.
+     *        The preferred IP version that this virtual node uses. Setting the IP preference on the virtual node only
+     *        overrides the IP preference set for the mesh on this specific node.
      * @see IpPreference
      */
 
@@ -103,10 +106,12 @@ public class DnsServiceDiscovery implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The IP version to use to control traffic within the mesh.
+     * The preferred IP version that this virtual node uses. Setting the IP preference on the virtual node only
+     * overrides the IP preference set for the mesh on this specific node.
      * </p>
      * 
-     * @return The IP version to use to control traffic within the mesh.
+     * @return The preferred IP version that this virtual node uses. Setting the IP preference on the virtual node only
+     *         overrides the IP preference set for the mesh on this specific node.
      * @see IpPreference
      */
 
@@ -116,11 +121,13 @@ public class DnsServiceDiscovery implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The IP version to use to control traffic within the mesh.
+     * The preferred IP version that this virtual node uses. Setting the IP preference on the virtual node only
+     * overrides the IP preference set for the mesh on this specific node.
      * </p>
      * 
      * @param ipPreference
-     *        The IP version to use to control traffic within the mesh.
+     *        The preferred IP version that this virtual node uses. Setting the IP preference on the virtual node only
+     *        overrides the IP preference set for the mesh on this specific node.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpPreference
      */
@@ -132,11 +139,13 @@ public class DnsServiceDiscovery implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The IP version to use to control traffic within the mesh.
+     * The preferred IP version that this virtual node uses. Setting the IP preference on the virtual node only
+     * overrides the IP preference set for the mesh on this specific node.
      * </p>
      * 
      * @param ipPreference
-     *        The IP version to use to control traffic within the mesh.
+     *        The preferred IP version that this virtual node uses. Setting the IP preference on the virtual node only
+     *        overrides the IP preference set for the mesh on this specific node.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpPreference
      */

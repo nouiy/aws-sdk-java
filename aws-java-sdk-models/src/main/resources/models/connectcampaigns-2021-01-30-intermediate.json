@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientMutationMethods", "ClientConstructors" ],
+    "deprecatedSuppressions" : [ "ClientMutationMethods", "ClientConstructors", "EnumSetterOverload" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -375,6 +375,10 @@
         "documentation" : "<p>The specified resource was not found.</p>",
         "httpStatusCode" : 404
       }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "httpStatusCode" : 400
+      }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>You do not have sufficient access to perform this action.</p>",
         "httpStatusCode" : 403
@@ -669,6 +673,10 @@
         "documentation" : "<p>The specified resource was not found.</p>",
         "httpStatusCode" : 404
       }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "httpStatusCode" : 400
+      }, {
         "exceptionName" : "ConflictException",
         "documentation" : "<p>The request could not be processed because of conflict in the current state of the resource.</p>",
         "httpStatusCode" : 409
@@ -787,6 +795,10 @@
         "documentation" : "<p>The specified resource was not found.</p>",
         "httpStatusCode" : 404
       }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "httpStatusCode" : 400
+      }, {
         "exceptionName" : "ConflictException",
         "documentation" : "<p>The request could not be processed because of conflict in the current state of the resource.</p>",
         "httpStatusCode" : 409
@@ -843,6 +855,10 @@
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>The specified resource was not found.</p>",
         "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "httpStatusCode" : 400
       }, {
         "exceptionName" : "ConflictException",
         "documentation" : "<p>The request could not be processed because of conflict in the current state of the resource.</p>",
@@ -957,6 +973,10 @@
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>The specified resource was not found.</p>",
         "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The input fails to satisfy the constraints specified by an AWS service.</p>",
+        "httpStatusCode" : 400
       }, {
         "exceptionName" : "ConflictException",
         "documentation" : "<p>The request could not be processed because of conflict in the current state of the resource.</p>",
