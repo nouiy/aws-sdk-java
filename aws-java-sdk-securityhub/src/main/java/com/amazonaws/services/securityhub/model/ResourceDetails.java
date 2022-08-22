@@ -520,6 +520,24 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private AwsEcsTaskDetails awsEcsTask;
+    /**
+     * <p>
+     * Provides details about an Backup backup vault.
+     * </p>
+     */
+    private AwsBackupBackupVaultDetails awsBackupBackupVault;
+    /**
+     * <p>
+     * Provides details about an Backup backup plan.
+     * </p>
+     */
+    private AwsBackupBackupPlanDetails awsBackupBackupPlan;
+    /**
+     * <p>
+     * Provides details about an Backup backup, or recovery point.
+     * </p>
+     */
+    private AwsBackupRecoveryPointDetails awsBackupRecoveryPoint;
 
     /**
      * <p>
@@ -3731,6 +3749,126 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Provides details about an Backup backup vault.
+     * </p>
+     * 
+     * @param awsBackupBackupVault
+     *        Provides details about an Backup backup vault.
+     */
+
+    public void setAwsBackupBackupVault(AwsBackupBackupVaultDetails awsBackupBackupVault) {
+        this.awsBackupBackupVault = awsBackupBackupVault;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Backup backup vault.
+     * </p>
+     * 
+     * @return Provides details about an Backup backup vault.
+     */
+
+    public AwsBackupBackupVaultDetails getAwsBackupBackupVault() {
+        return this.awsBackupBackupVault;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Backup backup vault.
+     * </p>
+     * 
+     * @param awsBackupBackupVault
+     *        Provides details about an Backup backup vault.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsBackupBackupVault(AwsBackupBackupVaultDetails awsBackupBackupVault) {
+        setAwsBackupBackupVault(awsBackupBackupVault);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Backup backup plan.
+     * </p>
+     * 
+     * @param awsBackupBackupPlan
+     *        Provides details about an Backup backup plan.
+     */
+
+    public void setAwsBackupBackupPlan(AwsBackupBackupPlanDetails awsBackupBackupPlan) {
+        this.awsBackupBackupPlan = awsBackupBackupPlan;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Backup backup plan.
+     * </p>
+     * 
+     * @return Provides details about an Backup backup plan.
+     */
+
+    public AwsBackupBackupPlanDetails getAwsBackupBackupPlan() {
+        return this.awsBackupBackupPlan;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Backup backup plan.
+     * </p>
+     * 
+     * @param awsBackupBackupPlan
+     *        Provides details about an Backup backup plan.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsBackupBackupPlan(AwsBackupBackupPlanDetails awsBackupBackupPlan) {
+        setAwsBackupBackupPlan(awsBackupBackupPlan);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Backup backup, or recovery point.
+     * </p>
+     * 
+     * @param awsBackupRecoveryPoint
+     *        Provides details about an Backup backup, or recovery point.
+     */
+
+    public void setAwsBackupRecoveryPoint(AwsBackupRecoveryPointDetails awsBackupRecoveryPoint) {
+        this.awsBackupRecoveryPoint = awsBackupRecoveryPoint;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Backup backup, or recovery point.
+     * </p>
+     * 
+     * @return Provides details about an Backup backup, or recovery point.
+     */
+
+    public AwsBackupRecoveryPointDetails getAwsBackupRecoveryPoint() {
+        return this.awsBackupRecoveryPoint;
+    }
+
+    /**
+     * <p>
+     * Provides details about an Backup backup, or recovery point.
+     * </p>
+     * 
+     * @param awsBackupRecoveryPoint
+     *        Provides details about an Backup backup, or recovery point.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsBackupRecoveryPoint(AwsBackupRecoveryPointDetails awsBackupRecoveryPoint) {
+        setAwsBackupRecoveryPoint(awsBackupRecoveryPoint);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3893,7 +4031,13 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         if (getAwsWafRuleGroup() != null)
             sb.append("AwsWafRuleGroup: ").append(getAwsWafRuleGroup()).append(",");
         if (getAwsEcsTask() != null)
-            sb.append("AwsEcsTask: ").append(getAwsEcsTask());
+            sb.append("AwsEcsTask: ").append(getAwsEcsTask()).append(",");
+        if (getAwsBackupBackupVault() != null)
+            sb.append("AwsBackupBackupVault: ").append(getAwsBackupBackupVault()).append(",");
+        if (getAwsBackupBackupPlan() != null)
+            sb.append("AwsBackupBackupPlan: ").append(getAwsBackupBackupPlan()).append(",");
+        if (getAwsBackupRecoveryPoint() != null)
+            sb.append("AwsBackupRecoveryPoint: ").append(getAwsBackupRecoveryPoint());
         sb.append("}");
         return sb.toString();
     }
@@ -4218,6 +4362,18 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getAwsEcsTask() != null && other.getAwsEcsTask().equals(this.getAwsEcsTask()) == false)
             return false;
+        if (other.getAwsBackupBackupVault() == null ^ this.getAwsBackupBackupVault() == null)
+            return false;
+        if (other.getAwsBackupBackupVault() != null && other.getAwsBackupBackupVault().equals(this.getAwsBackupBackupVault()) == false)
+            return false;
+        if (other.getAwsBackupBackupPlan() == null ^ this.getAwsBackupBackupPlan() == null)
+            return false;
+        if (other.getAwsBackupBackupPlan() != null && other.getAwsBackupBackupPlan().equals(this.getAwsBackupBackupPlan()) == false)
+            return false;
+        if (other.getAwsBackupRecoveryPoint() == null ^ this.getAwsBackupRecoveryPoint() == null)
+            return false;
+        if (other.getAwsBackupRecoveryPoint() != null && other.getAwsBackupRecoveryPoint().equals(this.getAwsBackupRecoveryPoint()) == false)
+            return false;
         return true;
     }
 
@@ -4302,6 +4458,9 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getAwsWafRule() == null) ? 0 : getAwsWafRule().hashCode());
         hashCode = prime * hashCode + ((getAwsWafRuleGroup() == null) ? 0 : getAwsWafRuleGroup().hashCode());
         hashCode = prime * hashCode + ((getAwsEcsTask() == null) ? 0 : getAwsEcsTask().hashCode());
+        hashCode = prime * hashCode + ((getAwsBackupBackupVault() == null) ? 0 : getAwsBackupBackupVault().hashCode());
+        hashCode = prime * hashCode + ((getAwsBackupBackupPlan() == null) ? 0 : getAwsBackupBackupPlan().hashCode());
+        hashCode = prime * hashCode + ((getAwsBackupRecoveryPoint() == null) ? 0 : getAwsBackupRecoveryPoint().hashCode());
         return hashCode;
     }
 

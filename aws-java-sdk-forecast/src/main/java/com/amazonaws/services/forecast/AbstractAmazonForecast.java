@@ -83,6 +83,21 @@ public class AbstractAmazonForecast implements AmazonForecast {
     }
 
     @Override
+    public CreateWhatIfAnalysisResult createWhatIfAnalysis(CreateWhatIfAnalysisRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateWhatIfForecastResult createWhatIfForecast(CreateWhatIfForecastRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateWhatIfForecastExportResult createWhatIfForecastExport(CreateWhatIfForecastExportRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteDatasetResult deleteDataset(DeleteDatasetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -138,6 +153,21 @@ public class AbstractAmazonForecast implements AmazonForecast {
     }
 
     @Override
+    public DeleteWhatIfAnalysisResult deleteWhatIfAnalysis(DeleteWhatIfAnalysisRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteWhatIfForecastResult deleteWhatIfForecast(DeleteWhatIfForecastRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteWhatIfForecastExportResult deleteWhatIfForecastExport(DeleteWhatIfForecastExportRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeAutoPredictorResult describeAutoPredictor(DescribeAutoPredictorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -189,6 +219,21 @@ public class AbstractAmazonForecast implements AmazonForecast {
 
     @Override
     public DescribePredictorBacktestExportJobResult describePredictorBacktestExportJob(DescribePredictorBacktestExportJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeWhatIfAnalysisResult describeWhatIfAnalysis(DescribeWhatIfAnalysisRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeWhatIfForecastResult describeWhatIfForecast(DescribeWhatIfForecastRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeWhatIfForecastExportResult describeWhatIfForecastExport(DescribeWhatIfForecastExportRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -254,6 +299,21 @@ public class AbstractAmazonForecast implements AmazonForecast {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListWhatIfAnalysesResult listWhatIfAnalyses(ListWhatIfAnalysesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListWhatIfForecastExportsResult listWhatIfForecastExports(ListWhatIfForecastExportsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListWhatIfForecastsResult listWhatIfForecasts(ListWhatIfForecastsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

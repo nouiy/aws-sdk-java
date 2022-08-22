@@ -71,10 +71,6 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </li>
      * </ul>
      * <p>
-     * Constraints: You can't specify <code>copy-on-write</code> if the engine version of the source DB cluster is
-     * earlier than 1.11.
-     * </p>
-     * <p>
      * If you don't specify a <code>RestoreType</code> value, then the new DB cluster is restored as a full copy of the
      * source DB cluster.
      * </p>
@@ -407,10 +403,6 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </li>
      * </ul>
      * <p>
-     * Constraints: You can't specify <code>copy-on-write</code> if the engine version of the source DB cluster is
-     * earlier than 1.11.
-     * </p>
-     * <p>
      * If you don't specify a <code>RestoreType</code> value, then the new DB cluster is restored as a full copy of the
      * source DB cluster.
      * </p>
@@ -429,10 +421,6 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *        </p>
      *        </li>
      *        </ul>
-     *        <p>
-     *        Constraints: You can't specify <code>copy-on-write</code> if the engine version of the source DB cluster
-     *        is earlier than 1.11.
-     *        </p>
      *        <p>
      *        If you don't specify a <code>RestoreType</code> value, then the new DB cluster is restored as a full copy
      *        of the source DB cluster.
@@ -459,10 +447,6 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </li>
      * </ul>
      * <p>
-     * Constraints: You can't specify <code>copy-on-write</code> if the engine version of the source DB cluster is
-     * earlier than 1.11.
-     * </p>
-     * <p>
      * If you don't specify a <code>RestoreType</code> value, then the new DB cluster is restored as a full copy of the
      * source DB cluster.
      * </p>
@@ -480,10 +464,6 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *         </p>
      *         </li>
      *         </ul>
-     *         <p>
-     *         Constraints: You can't specify <code>copy-on-write</code> if the engine version of the source DB cluster
-     *         is earlier than 1.11.
-     *         </p>
      *         <p>
      *         If you don't specify a <code>RestoreType</code> value, then the new DB cluster is restored as a full copy
      *         of the source DB cluster.
@@ -510,10 +490,6 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * </li>
      * </ul>
      * <p>
-     * Constraints: You can't specify <code>copy-on-write</code> if the engine version of the source DB cluster is
-     * earlier than 1.11.
-     * </p>
-     * <p>
      * If you don't specify a <code>RestoreType</code> value, then the new DB cluster is restored as a full copy of the
      * source DB cluster.
      * </p>
@@ -532,10 +508,6 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      *        </p>
      *        </li>
      *        </ul>
-     *        <p>
-     *        Constraints: You can't specify <code>copy-on-write</code> if the engine version of the source DB cluster
-     *        is earlier than 1.11.
-     *        </p>
      *        <p>
      *        If you don't specify a <code>RestoreType</code> value, then the new DB cluster is restored as a full copy
      *        of the source DB cluster.

@@ -41,37 +41,41 @@ public class BatchUpdateFindingsUnprocessedFinding implements Serializable, Clon
      * <ul>
      * <li>
      * <p>
-     * <code>ConcurrentUpdateError</code> - Another process or request attempted to update the finding while this
-     * request was being processed
+     * <code>ConcurrentUpdateError</code> - Another request attempted to update the finding while this request was being
+     * processed. This error may also occur if you call <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchUpdateFindings.html">
+     * <code>BatchUpdateFindings</code> </a> and <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchImportFindings.html">
+     * <code>BatchImportFindings</code> </a> at the same time.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>DuplicatedFindingIdentifier</code> - The request included two or more findings with the same
-     * <code>FindingIdentifier</code>
+     * <code>FindingIdentifier</code>.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>FindingNotFound</code> - The <code>FindingIdentifier</code> included in the request did not match an
-     * existing finding
+     * existing finding.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FindingSizeExceeded</code> - The finding size was greater than the permissible value of 240 KB
+     * <code>FindingSizeExceeded</code> - The finding size was greater than the permissible value of 240 KB.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>InternalFailure</code> - An internal service failure occurred when updating the finding
+     * <code>InternalFailure</code> - An internal service failure occurred when updating the finding.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>InvalidInput</code> - The finding update contained an invalid value that did not satisfy the <a
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html">Amazon Web
-     * Services Security Finding Format</a> syntax
+     * Services Security Finding Format</a> syntax.
      * </p>
      * </li>
      * </ul>
@@ -163,37 +167,41 @@ public class BatchUpdateFindingsUnprocessedFinding implements Serializable, Clon
      * <ul>
      * <li>
      * <p>
-     * <code>ConcurrentUpdateError</code> - Another process or request attempted to update the finding while this
-     * request was being processed
+     * <code>ConcurrentUpdateError</code> - Another request attempted to update the finding while this request was being
+     * processed. This error may also occur if you call <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchUpdateFindings.html">
+     * <code>BatchUpdateFindings</code> </a> and <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchImportFindings.html">
+     * <code>BatchImportFindings</code> </a> at the same time.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>DuplicatedFindingIdentifier</code> - The request included two or more findings with the same
-     * <code>FindingIdentifier</code>
+     * <code>FindingIdentifier</code>.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>FindingNotFound</code> - The <code>FindingIdentifier</code> included in the request did not match an
-     * existing finding
+     * existing finding.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FindingSizeExceeded</code> - The finding size was greater than the permissible value of 240 KB
+     * <code>FindingSizeExceeded</code> - The finding size was greater than the permissible value of 240 KB.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>InternalFailure</code> - An internal service failure occurred when updating the finding
+     * <code>InternalFailure</code> - An internal service failure occurred when updating the finding.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>InvalidInput</code> - The finding update contained an invalid value that did not satisfy the <a
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html">Amazon Web
-     * Services Security Finding Format</a> syntax
+     * Services Security Finding Format</a> syntax.
      * </p>
      * </li>
      * </ul>
@@ -203,37 +211,41 @@ public class BatchUpdateFindingsUnprocessedFinding implements Serializable, Clon
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ConcurrentUpdateError</code> - Another process or request attempted to update the finding while this
-     *        request was being processed
+     *        <code>ConcurrentUpdateError</code> - Another request attempted to update the finding while this request
+     *        was being processed. This error may also occur if you call <a
+     *        href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchUpdateFindings.html">
+     *        <code>BatchUpdateFindings</code> </a> and <a
+     *        href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchImportFindings.html">
+     *        <code>BatchImportFindings</code> </a> at the same time.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>DuplicatedFindingIdentifier</code> - The request included two or more findings with the same
-     *        <code>FindingIdentifier</code>
+     *        <code>FindingIdentifier</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>FindingNotFound</code> - The <code>FindingIdentifier</code> included in the request did not match an
-     *        existing finding
+     *        existing finding.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FindingSizeExceeded</code> - The finding size was greater than the permissible value of 240 KB
+     *        <code>FindingSizeExceeded</code> - The finding size was greater than the permissible value of 240 KB.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>InternalFailure</code> - An internal service failure occurred when updating the finding
+     *        <code>InternalFailure</code> - An internal service failure occurred when updating the finding.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>InvalidInput</code> - The finding update contained an invalid value that did not satisfy the <a
      *        href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html">Amazon
-     *        Web Services Security Finding Format</a> syntax
+     *        Web Services Security Finding Format</a> syntax.
      *        </p>
      *        </li>
      */
@@ -249,37 +261,41 @@ public class BatchUpdateFindingsUnprocessedFinding implements Serializable, Clon
      * <ul>
      * <li>
      * <p>
-     * <code>ConcurrentUpdateError</code> - Another process or request attempted to update the finding while this
-     * request was being processed
+     * <code>ConcurrentUpdateError</code> - Another request attempted to update the finding while this request was being
+     * processed. This error may also occur if you call <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchUpdateFindings.html">
+     * <code>BatchUpdateFindings</code> </a> and <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchImportFindings.html">
+     * <code>BatchImportFindings</code> </a> at the same time.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>DuplicatedFindingIdentifier</code> - The request included two or more findings with the same
-     * <code>FindingIdentifier</code>
+     * <code>FindingIdentifier</code>.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>FindingNotFound</code> - The <code>FindingIdentifier</code> included in the request did not match an
-     * existing finding
+     * existing finding.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FindingSizeExceeded</code> - The finding size was greater than the permissible value of 240 KB
+     * <code>FindingSizeExceeded</code> - The finding size was greater than the permissible value of 240 KB.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>InternalFailure</code> - An internal service failure occurred when updating the finding
+     * <code>InternalFailure</code> - An internal service failure occurred when updating the finding.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>InvalidInput</code> - The finding update contained an invalid value that did not satisfy the <a
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html">Amazon Web
-     * Services Security Finding Format</a> syntax
+     * Services Security Finding Format</a> syntax.
      * </p>
      * </li>
      * </ul>
@@ -288,37 +304,41 @@ public class BatchUpdateFindingsUnprocessedFinding implements Serializable, Clon
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>ConcurrentUpdateError</code> - Another process or request attempted to update the finding while
-     *         this request was being processed
+     *         <code>ConcurrentUpdateError</code> - Another request attempted to update the finding while this request
+     *         was being processed. This error may also occur if you call <a
+     *         href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchUpdateFindings.html">
+     *         <code>BatchUpdateFindings</code> </a> and <a
+     *         href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchImportFindings.html">
+     *         <code>BatchImportFindings</code> </a> at the same time.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>DuplicatedFindingIdentifier</code> - The request included two or more findings with the same
-     *         <code>FindingIdentifier</code>
+     *         <code>FindingIdentifier</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>FindingNotFound</code> - The <code>FindingIdentifier</code> included in the request did not match
-     *         an existing finding
+     *         an existing finding.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>FindingSizeExceeded</code> - The finding size was greater than the permissible value of 240 KB
+     *         <code>FindingSizeExceeded</code> - The finding size was greater than the permissible value of 240 KB.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>InternalFailure</code> - An internal service failure occurred when updating the finding
+     *         <code>InternalFailure</code> - An internal service failure occurred when updating the finding.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>InvalidInput</code> - The finding update contained an invalid value that did not satisfy the <a
      *         href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html">Amazon
-     *         Web Services Security Finding Format</a> syntax
+     *         Web Services Security Finding Format</a> syntax.
      *         </p>
      *         </li>
      */
@@ -334,37 +354,41 @@ public class BatchUpdateFindingsUnprocessedFinding implements Serializable, Clon
      * <ul>
      * <li>
      * <p>
-     * <code>ConcurrentUpdateError</code> - Another process or request attempted to update the finding while this
-     * request was being processed
+     * <code>ConcurrentUpdateError</code> - Another request attempted to update the finding while this request was being
+     * processed. This error may also occur if you call <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchUpdateFindings.html">
+     * <code>BatchUpdateFindings</code> </a> and <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchImportFindings.html">
+     * <code>BatchImportFindings</code> </a> at the same time.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>DuplicatedFindingIdentifier</code> - The request included two or more findings with the same
-     * <code>FindingIdentifier</code>
+     * <code>FindingIdentifier</code>.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>FindingNotFound</code> - The <code>FindingIdentifier</code> included in the request did not match an
-     * existing finding
+     * existing finding.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FindingSizeExceeded</code> - The finding size was greater than the permissible value of 240 KB
+     * <code>FindingSizeExceeded</code> - The finding size was greater than the permissible value of 240 KB.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>InternalFailure</code> - An internal service failure occurred when updating the finding
+     * <code>InternalFailure</code> - An internal service failure occurred when updating the finding.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>InvalidInput</code> - The finding update contained an invalid value that did not satisfy the <a
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html">Amazon Web
-     * Services Security Finding Format</a> syntax
+     * Services Security Finding Format</a> syntax.
      * </p>
      * </li>
      * </ul>
@@ -374,37 +398,41 @@ public class BatchUpdateFindingsUnprocessedFinding implements Serializable, Clon
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>ConcurrentUpdateError</code> - Another process or request attempted to update the finding while this
-     *        request was being processed
+     *        <code>ConcurrentUpdateError</code> - Another request attempted to update the finding while this request
+     *        was being processed. This error may also occur if you call <a
+     *        href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchUpdateFindings.html">
+     *        <code>BatchUpdateFindings</code> </a> and <a
+     *        href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchImportFindings.html">
+     *        <code>BatchImportFindings</code> </a> at the same time.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>DuplicatedFindingIdentifier</code> - The request included two or more findings with the same
-     *        <code>FindingIdentifier</code>
+     *        <code>FindingIdentifier</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>FindingNotFound</code> - The <code>FindingIdentifier</code> included in the request did not match an
-     *        existing finding
+     *        existing finding.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FindingSizeExceeded</code> - The finding size was greater than the permissible value of 240 KB
+     *        <code>FindingSizeExceeded</code> - The finding size was greater than the permissible value of 240 KB.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>InternalFailure</code> - An internal service failure occurred when updating the finding
+     *        <code>InternalFailure</code> - An internal service failure occurred when updating the finding.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>InvalidInput</code> - The finding update contained an invalid value that did not satisfy the <a
      *        href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-findings-format.html">Amazon
-     *        Web Services Security Finding Format</a> syntax
+     *        Web Services Security Finding Format</a> syntax.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -19,9 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides consistent format for the contents of the Security Hub-aggregated findings. <code>AwsSecurityFinding</code>
- * format enables you to share findings between Amazon Web Services security services and third-party solutions, and
- * security standards checks.
+ * Provides a consistent format for Security Hub findings. <code>AwsSecurityFinding</code> format allows you to share
+ * findings between Amazon Web Services security services and third-party solutions.
  * </p>
  * <note>
  * <p>

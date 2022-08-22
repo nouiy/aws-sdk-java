@@ -176,6 +176,8 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
      * @throws InvalidRequestException
      *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
      *         characters. Check your request and try again.
+     * @throws ResourceAlreadyExistsException
+     *         The resource already exists.
      * @throws ResourceNotFoundException
      *         The requested resource can't be found.
      * @throws InternalFailureException

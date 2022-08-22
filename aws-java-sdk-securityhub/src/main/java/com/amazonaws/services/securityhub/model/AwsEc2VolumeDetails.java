@@ -65,8 +65,40 @@ public class AwsEc2VolumeDetails implements Serializable, Cloneable, StructuredP
     private String snapshotId;
     /**
      * <p>
-     * The volume state.
+     * The volume state. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>available</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>creating</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>deleted</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>deleting</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>error</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>in-use</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private String status;
     /**
@@ -341,11 +373,74 @@ public class AwsEc2VolumeDetails implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The volume state.
+     * The volume state. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>available</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>creating</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>deleted</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>deleting</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>error</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>in-use</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param status
-     *        The volume state.
+     *        The volume state. Valid values are as follows:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>available</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>creating</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>deleted</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>deleting</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>error</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>in-use</code>
+     *        </p>
+     *        </li>
      */
 
     public void setStatus(String status) {
@@ -354,10 +449,73 @@ public class AwsEc2VolumeDetails implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The volume state.
+     * The volume state. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>available</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>creating</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>deleted</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>deleting</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>error</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>in-use</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The volume state.
+     * @return The volume state. Valid values are as follows:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>available</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>creating</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>deleted</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>deleting</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>error</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>in-use</code>
+     *         </p>
+     *         </li>
      */
 
     public String getStatus() {
@@ -366,11 +524,74 @@ public class AwsEc2VolumeDetails implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The volume state.
+     * The volume state. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>available</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>creating</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>deleted</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>deleting</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>error</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>in-use</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param status
-     *        The volume state.
+     *        The volume state. Valid values are as follows:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>available</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>creating</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>deleted</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>deleting</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>error</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>in-use</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

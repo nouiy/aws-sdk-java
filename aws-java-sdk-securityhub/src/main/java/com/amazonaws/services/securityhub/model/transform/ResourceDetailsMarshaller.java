@@ -181,6 +181,12 @@ public class ResourceDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsWafRuleGroup").build();
     private static final MarshallingInfo<StructuredPojo> AWSECSTASK_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsEcsTask").build();
+    private static final MarshallingInfo<StructuredPojo> AWSBACKUPBACKUPVAULT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsBackupBackupVault").build();
+    private static final MarshallingInfo<StructuredPojo> AWSBACKUPBACKUPPLAN_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsBackupBackupPlan").build();
+    private static final MarshallingInfo<StructuredPojo> AWSBACKUPRECOVERYPOINT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsBackupRecoveryPoint").build();
 
     private static final ResourceDetailsMarshaller instance = new ResourceDetailsMarshaller();
 
@@ -274,6 +280,9 @@ public class ResourceDetailsMarshaller {
             protocolMarshaller.marshall(resourceDetails.getAwsWafRule(), AWSWAFRULE_BINDING);
             protocolMarshaller.marshall(resourceDetails.getAwsWafRuleGroup(), AWSWAFRULEGROUP_BINDING);
             protocolMarshaller.marshall(resourceDetails.getAwsEcsTask(), AWSECSTASK_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsBackupBackupVault(), AWSBACKUPBACKUPVAULT_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsBackupBackupPlan(), AWSBACKUPBACKUPPLAN_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsBackupRecoveryPoint(), AWSBACKUPRECOVERYPOINT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

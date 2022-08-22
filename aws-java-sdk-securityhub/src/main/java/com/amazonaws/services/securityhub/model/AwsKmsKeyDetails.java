@@ -60,8 +60,35 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
     private String keyManager;
     /**
      * <p>
-     * The state of the KMS key.
+     * The state of the KMS key. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Disabled</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Enabled</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PendingDeletion</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PendingImport</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Unavailable</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private String keyState;
     /**
@@ -289,11 +316,64 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The state of the KMS key.
+     * The state of the KMS key. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Disabled</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Enabled</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PendingDeletion</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PendingImport</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Unavailable</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param keyState
-     *        The state of the KMS key.
+     *        The state of the KMS key. Valid values are as follows:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Disabled</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Enabled</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PendingDeletion</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PendingImport</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Unavailable</code>
+     *        </p>
+     *        </li>
      */
 
     public void setKeyState(String keyState) {
@@ -302,10 +382,63 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The state of the KMS key.
+     * The state of the KMS key. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Disabled</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Enabled</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PendingDeletion</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PendingImport</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Unavailable</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The state of the KMS key.
+     * @return The state of the KMS key. Valid values are as follows:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>Disabled</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Enabled</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>PendingDeletion</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>PendingImport</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Unavailable</code>
+     *         </p>
+     *         </li>
      */
 
     public String getKeyState() {
@@ -314,11 +447,64 @@ public class AwsKmsKeyDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The state of the KMS key.
+     * The state of the KMS key. Valid values are as follows:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Disabled</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Enabled</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PendingDeletion</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PendingImport</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Unavailable</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param keyState
-     *        The state of the KMS key.
+     *        The state of the KMS key. Valid values are as follows:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Disabled</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Enabled</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PendingDeletion</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PendingImport</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Unavailable</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

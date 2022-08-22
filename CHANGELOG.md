@@ -1,3 +1,36 @@
+# __1.12.287__ __2022-08-22__
+## __AWS IoT SiteWise__
+  - ### Features
+    - Enable non-unique asset names under different hierarchies
+
+## __AWS SecurityHub__
+  - ### Features
+    - Added new resource details objects to ASFF, including resources for AwsBackupBackupVault, AwsBackupBackupPlan and AwsBackupRecoveryPoint. Added FixAvailable, FixedInVersion and Remediation  to Vulnerability.
+
+## __AWS Support App__
+  - ### Features
+    - This is the initial SDK release for the AWS Support App in Slack.
+
+## __Amazon DocumentDB with MongoDB compatibility__
+  - ### Features
+    - Update document for volume clone
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - R6a instances are powered by 3rd generation AMD EPYC (Milan) processors delivering all-core turbo frequency of 3.6 GHz. C6id, M6id, and R6id instances are powered by 3rd generation Intel Xeon Scalable processor (Ice Lake) delivering all-core turbo frequency of 3.5 GHz.
+
+## __Amazon Forecast Query Service__
+  - ### Features
+    - releasing What-If Analysis APIs
+
+## __Amazon Forecast Service__
+  - ### Features
+    - releasing What-If Analysis APIs and update ARN regex pattern to be more strict in accordance with security recommendation
+
+## __Amazon Lex Model Building V2__
+  - ### Features
+    - This release introduces a new feature to stop a running BotRecommendation Job for Automated Chatbot Designer.
+
 # __1.12.286__ __2022-08-19__
 ## __AWSKendraFrontendService__
   - ### Features

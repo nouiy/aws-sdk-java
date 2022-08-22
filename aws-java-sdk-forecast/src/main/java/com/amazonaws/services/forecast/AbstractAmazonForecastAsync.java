@@ -173,6 +173,45 @@ public class AbstractAmazonForecastAsync extends AbstractAmazonForecast implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreateWhatIfAnalysisResult> createWhatIfAnalysisAsync(CreateWhatIfAnalysisRequest request) {
+
+        return createWhatIfAnalysisAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateWhatIfAnalysisResult> createWhatIfAnalysisAsync(CreateWhatIfAnalysisRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateWhatIfAnalysisRequest, CreateWhatIfAnalysisResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateWhatIfForecastResult> createWhatIfForecastAsync(CreateWhatIfForecastRequest request) {
+
+        return createWhatIfForecastAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateWhatIfForecastResult> createWhatIfForecastAsync(CreateWhatIfForecastRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateWhatIfForecastRequest, CreateWhatIfForecastResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateWhatIfForecastExportResult> createWhatIfForecastExportAsync(CreateWhatIfForecastExportRequest request) {
+
+        return createWhatIfForecastExportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateWhatIfForecastExportResult> createWhatIfForecastExportAsync(CreateWhatIfForecastExportRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateWhatIfForecastExportRequest, CreateWhatIfForecastExportResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteDatasetResult> deleteDatasetAsync(DeleteDatasetRequest request) {
 
         return deleteDatasetAsync(request, null);
@@ -318,6 +357,45 @@ public class AbstractAmazonForecastAsync extends AbstractAmazonForecast implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteWhatIfAnalysisResult> deleteWhatIfAnalysisAsync(DeleteWhatIfAnalysisRequest request) {
+
+        return deleteWhatIfAnalysisAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteWhatIfAnalysisResult> deleteWhatIfAnalysisAsync(DeleteWhatIfAnalysisRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteWhatIfAnalysisRequest, DeleteWhatIfAnalysisResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteWhatIfForecastResult> deleteWhatIfForecastAsync(DeleteWhatIfForecastRequest request) {
+
+        return deleteWhatIfForecastAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteWhatIfForecastResult> deleteWhatIfForecastAsync(DeleteWhatIfForecastRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteWhatIfForecastRequest, DeleteWhatIfForecastResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteWhatIfForecastExportResult> deleteWhatIfForecastExportAsync(DeleteWhatIfForecastExportRequest request) {
+
+        return deleteWhatIfForecastExportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteWhatIfForecastExportResult> deleteWhatIfForecastExportAsync(DeleteWhatIfForecastExportRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteWhatIfForecastExportRequest, DeleteWhatIfForecastExportResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeAutoPredictorResult> describeAutoPredictorAsync(DescribeAutoPredictorRequest request) {
 
         return describeAutoPredictorAsync(request, null);
@@ -458,6 +536,45 @@ public class AbstractAmazonForecastAsync extends AbstractAmazonForecast implemen
     public java.util.concurrent.Future<DescribePredictorBacktestExportJobResult> describePredictorBacktestExportJobAsync(
             DescribePredictorBacktestExportJobRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribePredictorBacktestExportJobRequest, DescribePredictorBacktestExportJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeWhatIfAnalysisResult> describeWhatIfAnalysisAsync(DescribeWhatIfAnalysisRequest request) {
+
+        return describeWhatIfAnalysisAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeWhatIfAnalysisResult> describeWhatIfAnalysisAsync(DescribeWhatIfAnalysisRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeWhatIfAnalysisRequest, DescribeWhatIfAnalysisResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeWhatIfForecastResult> describeWhatIfForecastAsync(DescribeWhatIfForecastRequest request) {
+
+        return describeWhatIfForecastAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeWhatIfForecastResult> describeWhatIfForecastAsync(DescribeWhatIfForecastRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeWhatIfForecastRequest, DescribeWhatIfForecastResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeWhatIfForecastExportResult> describeWhatIfForecastExportAsync(DescribeWhatIfForecastExportRequest request) {
+
+        return describeWhatIfForecastExportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeWhatIfForecastExportResult> describeWhatIfForecastExportAsync(DescribeWhatIfForecastExportRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeWhatIfForecastExportRequest, DescribeWhatIfForecastExportResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -629,6 +746,45 @@ public class AbstractAmazonForecastAsync extends AbstractAmazonForecast implemen
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWhatIfAnalysesResult> listWhatIfAnalysesAsync(ListWhatIfAnalysesRequest request) {
+
+        return listWhatIfAnalysesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWhatIfAnalysesResult> listWhatIfAnalysesAsync(ListWhatIfAnalysesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListWhatIfAnalysesRequest, ListWhatIfAnalysesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWhatIfForecastExportsResult> listWhatIfForecastExportsAsync(ListWhatIfForecastExportsRequest request) {
+
+        return listWhatIfForecastExportsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWhatIfForecastExportsResult> listWhatIfForecastExportsAsync(ListWhatIfForecastExportsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListWhatIfForecastExportsRequest, ListWhatIfForecastExportsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWhatIfForecastsResult> listWhatIfForecastsAsync(ListWhatIfForecastsRequest request) {
+
+        return listWhatIfForecastsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListWhatIfForecastsResult> listWhatIfForecastsAsync(ListWhatIfForecastsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListWhatIfForecastsRequest, ListWhatIfForecastsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
