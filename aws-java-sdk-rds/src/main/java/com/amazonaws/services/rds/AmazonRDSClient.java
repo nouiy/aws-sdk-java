@@ -10913,7 +10913,7 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
     /**
      * <p>
      * Switches over an Oracle standby database in an Oracle Data Guard environment, making it the new primary database.
-     * Issue this command in the AWS Region that hosts the current standby database.
+     * Issue this command in the Region that hosts the current standby database.
      * </p>
      * 
      * @param switchoverReadReplicaRequest

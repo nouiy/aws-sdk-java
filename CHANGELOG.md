@@ -1,3 +1,12 @@
+# __1.12.291__ __2022-08-26__
+## __AWS Elemental MediaPackage__
+  - ### Features
+    - This release adds Ads AdTriggers and AdsOnDeliveryRestrictions to describe calls for CMAF endpoints on MediaPackage.
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - Removes support for RDS Custom from DBInstanceClass in ModifyDBInstance
+
 # __1.12.290__ __2022-08-25__
 ## __AWS IoT Wireless__
   - ### Features

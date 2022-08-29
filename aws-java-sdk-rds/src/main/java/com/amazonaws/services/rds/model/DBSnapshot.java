@@ -226,7 +226,7 @@ public class DBSnapshot implements Serializable, Cloneable {
      * <p>
      * If you back up a read replica, you can determine the replica lag by comparing SnapshotDatabaseTime with
      * originalSnapshotCreateTime. For example, if originalSnapshotCreateTime is two hours later than
-     * SnapshotDatabaseTime, then the replica lag is two hours. *** REVIEWERS 7/27: Switchover
+     * SnapshotDatabaseTime, then the replica lag is two hours.
      * </p>
      */
     private java.util.Date snapshotDatabaseTime;
@@ -1601,7 +1601,7 @@ public class DBSnapshot implements Serializable, Cloneable {
      * <p>
      * If you back up a read replica, you can determine the replica lag by comparing SnapshotDatabaseTime with
      * originalSnapshotCreateTime. For example, if originalSnapshotCreateTime is two hours later than
-     * SnapshotDatabaseTime, then the replica lag is two hours. *** REVIEWERS 7/27: Switchover
+     * SnapshotDatabaseTime, then the replica lag is two hours.
      * </p>
      * 
      * @param snapshotDatabaseTime
@@ -1611,7 +1611,7 @@ public class DBSnapshot implements Serializable, Cloneable {
      *        <p>
      *        If you back up a read replica, you can determine the replica lag by comparing SnapshotDatabaseTime with
      *        originalSnapshotCreateTime. For example, if originalSnapshotCreateTime is two hours later than
-     *        SnapshotDatabaseTime, then the replica lag is two hours. *** REVIEWERS 7/27: Switchover
+     *        SnapshotDatabaseTime, then the replica lag is two hours.
      */
 
     public void setSnapshotDatabaseTime(java.util.Date snapshotDatabaseTime) {
@@ -1627,7 +1627,7 @@ public class DBSnapshot implements Serializable, Cloneable {
      * <p>
      * If you back up a read replica, you can determine the replica lag by comparing SnapshotDatabaseTime with
      * originalSnapshotCreateTime. For example, if originalSnapshotCreateTime is two hours later than
-     * SnapshotDatabaseTime, then the replica lag is two hours. *** REVIEWERS 7/27: Switchover
+     * SnapshotDatabaseTime, then the replica lag is two hours.
      * </p>
      * 
      * @return The timestamp of the most recent transaction applied to the database that you're backing up. Thus, if you
@@ -1636,7 +1636,7 @@ public class DBSnapshot implements Serializable, Cloneable {
      *         <p>
      *         If you back up a read replica, you can determine the replica lag by comparing SnapshotDatabaseTime with
      *         originalSnapshotCreateTime. For example, if originalSnapshotCreateTime is two hours later than
-     *         SnapshotDatabaseTime, then the replica lag is two hours. *** REVIEWERS 7/27: Switchover
+     *         SnapshotDatabaseTime, then the replica lag is two hours.
      */
 
     public java.util.Date getSnapshotDatabaseTime() {
@@ -1652,7 +1652,7 @@ public class DBSnapshot implements Serializable, Cloneable {
      * <p>
      * If you back up a read replica, you can determine the replica lag by comparing SnapshotDatabaseTime with
      * originalSnapshotCreateTime. For example, if originalSnapshotCreateTime is two hours later than
-     * SnapshotDatabaseTime, then the replica lag is two hours. *** REVIEWERS 7/27: Switchover
+     * SnapshotDatabaseTime, then the replica lag is two hours.
      * </p>
      * 
      * @param snapshotDatabaseTime
@@ -1662,7 +1662,7 @@ public class DBSnapshot implements Serializable, Cloneable {
      *        <p>
      *        If you back up a read replica, you can determine the replica lag by comparing SnapshotDatabaseTime with
      *        originalSnapshotCreateTime. For example, if originalSnapshotCreateTime is two hours later than
-     *        SnapshotDatabaseTime, then the replica lag is two hours. *** REVIEWERS 7/27: Switchover
+     *        SnapshotDatabaseTime, then the replica lag is two hours.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
