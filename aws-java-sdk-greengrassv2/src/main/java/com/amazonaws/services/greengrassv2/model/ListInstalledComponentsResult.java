@@ -27,6 +27,12 @@ public class ListInstalledComponentsResult extends com.amazonaws.AmazonWebServic
      * <p>
      * A list that summarizes each component on the core device.
      * </p>
+     * <note>
+     * <p>
+     * Accuracy of the <code>lastStatusChangeTimestamp</code> response depends on Greengrass nucleus v2.7.0. It performs
+     * best on Greengrass nucleus v2.7.0 and can be inaccurate on earlier versions.
+     * </p>
+     * </note>
      */
     private java.util.List<InstalledComponent> installedComponents;
     /**
@@ -40,8 +46,18 @@ public class ListInstalledComponentsResult extends com.amazonaws.AmazonWebServic
      * <p>
      * A list that summarizes each component on the core device.
      * </p>
+     * <note>
+     * <p>
+     * Accuracy of the <code>lastStatusChangeTimestamp</code> response depends on Greengrass nucleus v2.7.0. It performs
+     * best on Greengrass nucleus v2.7.0 and can be inaccurate on earlier versions.
+     * </p>
+     * </note>
      * 
-     * @return A list that summarizes each component on the core device.
+     * @return A list that summarizes each component on the core device.</p> <note>
+     *         <p>
+     *         Accuracy of the <code>lastStatusChangeTimestamp</code> response depends on Greengrass nucleus v2.7.0. It
+     *         performs best on Greengrass nucleus v2.7.0 and can be inaccurate on earlier versions.
+     *         </p>
      */
 
     public java.util.List<InstalledComponent> getInstalledComponents() {
@@ -52,9 +68,19 @@ public class ListInstalledComponentsResult extends com.amazonaws.AmazonWebServic
      * <p>
      * A list that summarizes each component on the core device.
      * </p>
+     * <note>
+     * <p>
+     * Accuracy of the <code>lastStatusChangeTimestamp</code> response depends on Greengrass nucleus v2.7.0. It performs
+     * best on Greengrass nucleus v2.7.0 and can be inaccurate on earlier versions.
+     * </p>
+     * </note>
      * 
      * @param installedComponents
-     *        A list that summarizes each component on the core device.
+     *        A list that summarizes each component on the core device.</p> <note>
+     *        <p>
+     *        Accuracy of the <code>lastStatusChangeTimestamp</code> response depends on Greengrass nucleus v2.7.0. It
+     *        performs best on Greengrass nucleus v2.7.0 and can be inaccurate on earlier versions.
+     *        </p>
      */
 
     public void setInstalledComponents(java.util.Collection<InstalledComponent> installedComponents) {
@@ -70,6 +96,12 @@ public class ListInstalledComponentsResult extends com.amazonaws.AmazonWebServic
      * <p>
      * A list that summarizes each component on the core device.
      * </p>
+     * <note>
+     * <p>
+     * Accuracy of the <code>lastStatusChangeTimestamp</code> response depends on Greengrass nucleus v2.7.0. It performs
+     * best on Greengrass nucleus v2.7.0 and can be inaccurate on earlier versions.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setInstalledComponents(java.util.Collection)} or {@link #withInstalledComponents(java.util.Collection)}
@@ -77,7 +109,11 @@ public class ListInstalledComponentsResult extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param installedComponents
-     *        A list that summarizes each component on the core device.
+     *        A list that summarizes each component on the core device.</p> <note>
+     *        <p>
+     *        Accuracy of the <code>lastStatusChangeTimestamp</code> response depends on Greengrass nucleus v2.7.0. It
+     *        performs best on Greengrass nucleus v2.7.0 and can be inaccurate on earlier versions.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,9 +131,19 @@ public class ListInstalledComponentsResult extends com.amazonaws.AmazonWebServic
      * <p>
      * A list that summarizes each component on the core device.
      * </p>
+     * <note>
+     * <p>
+     * Accuracy of the <code>lastStatusChangeTimestamp</code> response depends on Greengrass nucleus v2.7.0. It performs
+     * best on Greengrass nucleus v2.7.0 and can be inaccurate on earlier versions.
+     * </p>
+     * </note>
      * 
      * @param installedComponents
-     *        A list that summarizes each component on the core device.
+     *        A list that summarizes each component on the core device.</p> <note>
+     *        <p>
+     *        Accuracy of the <code>lastStatusChangeTimestamp</code> response depends on Greengrass nucleus v2.7.0. It
+     *        performs best on Greengrass nucleus v2.7.0 and can be inaccurate on earlier versions.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -301,6 +301,76 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
+     * Creates and defines the settings for an allow list.
+     * </p>
+     * 
+     * @param createAllowListRequest
+     * @return Result of the CreateAllowList operation returned by the service.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws ServiceQuotaExceededException
+     *         The request failed because fulfilling the request would exceed one or more service quotas for your
+     *         account.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @throws ResourceNotFoundException
+     *         The request failed because the specified resource wasn't found.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws ConflictException
+     *         The request failed because it conflicts with the current state of the specified resource.
+     * @sample AmazonMacie2.CreateAllowList
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/CreateAllowList" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateAllowListResult createAllowList(CreateAllowListRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateAllowList(request);
+    }
+
+    @SdkInternalApi
+    final CreateAllowListResult executeCreateAllowList(CreateAllowListRequest createAllowListRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createAllowListRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateAllowListRequest> request = null;
+        Response<CreateAllowListResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateAllowListRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createAllowListRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Macie2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateAllowList");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateAllowListResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateAllowListResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates and defines the settings for a classification job.
      * </p>
      * 
@@ -783,6 +853,71 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
             HttpResponseHandler<AmazonWebServiceResponse<DeclineInvitationsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeclineInvitationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes an allow list.
+     * </p>
+     * 
+     * @param deleteAllowListRequest
+     * @return Result of the DeleteAllowList operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The request failed because the specified resource wasn't found.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @sample AmazonMacie2.DeleteAllowList
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/DeleteAllowList" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteAllowListResult deleteAllowList(DeleteAllowListRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteAllowList(request);
+    }
+
+    @SdkInternalApi
+    final DeleteAllowListResult executeDeleteAllowList(DeleteAllowListRequest deleteAllowListRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteAllowListRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteAllowListRequest> request = null;
+        Response<DeleteAllowListResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteAllowListRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteAllowListRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Macie2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteAllowList");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteAllowListResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteAllowListResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1867,6 +2002,71 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
+     * Retrieves the settings and status of an allow list.
+     * </p>
+     * 
+     * @param getAllowListRequest
+     * @return Result of the GetAllowList operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The request failed because the specified resource wasn't found.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @sample AmazonMacie2.GetAllowList
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetAllowList" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetAllowListResult getAllowList(GetAllowListRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetAllowList(request);
+    }
+
+    @SdkInternalApi
+    final GetAllowListResult executeGetAllowList(GetAllowListRequest getAllowListRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getAllowListRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetAllowListRequest> request = null;
+        Response<GetAllowListResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetAllowListRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getAllowListRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Macie2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetAllowList");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetAllowListResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetAllowListResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves (queries) aggregated statistical data about S3 buckets that Amazon Macie monitors and analyzes.
      * </p>
      * 
@@ -2646,8 +2846,8 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Retrieves the status and configuration settings for retrieving (revealing) occurrences of sensitive data reported
-     * by findings.
+     * Retrieves the status and configuration settings for retrieving occurrences of sensitive data reported by
+     * findings.
      * </p>
      * 
      * @param getRevealConfigurationRequest
@@ -2711,7 +2911,7 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Retrieves (reveals) occurrences of sensitive data reported by a finding.
+     * Retrieves occurrences of sensitive data reported by a finding.
      * </p>
      * 
      * @param getSensitiveDataOccurrencesRequest
@@ -2782,7 +2982,7 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Checks whether occurrences of sensitive data can be retrieved (revealed) for a finding.
+     * Checks whether occurrences of sensitive data can be retrieved for a finding.
      * </p>
      * 
      * @param getSensitiveDataOccurrencesAvailabilityRequest
@@ -2976,6 +3176,69 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
             HttpResponseHandler<AmazonWebServiceResponse<GetUsageTotalsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetUsageTotalsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves a subset of information about all the allow lists for an account.
+     * </p>
+     * 
+     * @param listAllowListsRequest
+     * @return Result of the ListAllowLists operation returned by the service.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @sample AmazonMacie2.ListAllowLists
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ListAllowLists" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListAllowListsResult listAllowLists(ListAllowListsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAllowLists(request);
+    }
+
+    @SdkInternalApi
+    final ListAllowListsResult executeListAllowLists(ListAllowListsRequest listAllowListsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAllowListsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAllowListsRequest> request = null;
+        Response<ListAllowListsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAllowListsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listAllowListsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Macie2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAllowLists");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAllowListsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListAllowListsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3541,8 +3804,7 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Retrieves the tags (keys and values) that are associated with a classification job, custom data identifier,
-     * findings filter, or member account.
+     * Retrieves the tags (keys and values) that are associated with an Amazon Macie resource.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -3814,8 +4076,7 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Adds or updates one or more tags (keys and values) that are associated with a classification job, custom data
-     * identifier, findings filter, or member account.
+     * Adds or updates one or more tags (keys and values) that are associated with an Amazon Macie resource.
      * </p>
      * 
      * @param tagResourceRequest
@@ -3942,8 +4203,7 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Removes one or more tags (keys and values) from a classification job, custom data identifier, findings filter, or
-     * member account.
+     * Removes one or more tags (keys and values) from an Amazon Macie resource.
      * </p>
      * 
      * @param untagResourceRequest
@@ -3986,6 +4246,71 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
             HttpResponseHandler<AmazonWebServiceResponse<UntagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UntagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the settings for an allow list.
+     * </p>
+     * 
+     * @param updateAllowListRequest
+     * @return Result of the UpdateAllowList operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The request failed because the specified resource wasn't found.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @sample AmazonMacie2.UpdateAllowList
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/UpdateAllowList" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateAllowListResult updateAllowList(UpdateAllowListRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateAllowList(request);
+    }
+
+    @SdkInternalApi
+    final UpdateAllowListResult executeUpdateAllowList(UpdateAllowListRequest updateAllowListRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateAllowListRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateAllowListRequest> request = null;
+        Response<UpdateAllowListResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateAllowListRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateAllowListRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Macie2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateAllowList");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateAllowListResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateAllowListResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -4353,8 +4678,7 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Updates the status and configuration settings for retrieving (revealing) occurrences of sensitive data reported
-     * by findings.
+     * Updates the status and configuration settings for retrieving occurrences of sensitive data reported by findings.
      * </p>
      * 
      * @param updateRevealConfigurationRequest

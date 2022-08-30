@@ -45,15 +45,14 @@ public class ListInferenceEventsRequest extends com.amazonaws.AmazonWebServiceRe
     private String inferenceSchedulerName;
     /**
      * <p>
-     * Lookout for Equipment will return all the inference events with start time equal to or greater than the start
+     * Lookout for Equipment will return all the inference events with an end time equal to or greater than the start
      * time given.
      * </p>
      */
     private java.util.Date intervalStartTime;
     /**
      * <p>
-     * Lookout for Equipment will return all the inference events with end time equal to or less than the end time
-     * given.
+     * Returns all the inference events with an end start time equal to or greater than less than the end time given
      * </p>
      */
     private java.util.Date intervalEndTime;
@@ -180,12 +179,12 @@ public class ListInferenceEventsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Lookout for Equipment will return all the inference events with start time equal to or greater than the start
+     * Lookout for Equipment will return all the inference events with an end time equal to or greater than the start
      * time given.
      * </p>
      * 
      * @param intervalStartTime
-     *        Lookout for Equipment will return all the inference events with start time equal to or greater than the
+     *        Lookout for Equipment will return all the inference events with an end time equal to or greater than the
      *        start time given.
      */
 
@@ -195,11 +194,11 @@ public class ListInferenceEventsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Lookout for Equipment will return all the inference events with start time equal to or greater than the start
+     * Lookout for Equipment will return all the inference events with an end time equal to or greater than the start
      * time given.
      * </p>
      * 
-     * @return Lookout for Equipment will return all the inference events with start time equal to or greater than the
+     * @return Lookout for Equipment will return all the inference events with an end time equal to or greater than the
      *         start time given.
      */
 
@@ -209,12 +208,12 @@ public class ListInferenceEventsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Lookout for Equipment will return all the inference events with start time equal to or greater than the start
+     * Lookout for Equipment will return all the inference events with an end time equal to or greater than the start
      * time given.
      * </p>
      * 
      * @param intervalStartTime
-     *        Lookout for Equipment will return all the inference events with start time equal to or greater than the
+     *        Lookout for Equipment will return all the inference events with an end time equal to or greater than the
      *        start time given.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -226,13 +225,12 @@ public class ListInferenceEventsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Lookout for Equipment will return all the inference events with end time equal to or less than the end time
-     * given.
+     * Returns all the inference events with an end start time equal to or greater than less than the end time given
      * </p>
      * 
      * @param intervalEndTime
-     *        Lookout for Equipment will return all the inference events with end time equal to or less than the end
-     *        time given.
+     *        Returns all the inference events with an end start time equal to or greater than less than the end time
+     *        given
      */
 
     public void setIntervalEndTime(java.util.Date intervalEndTime) {
@@ -241,12 +239,11 @@ public class ListInferenceEventsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Lookout for Equipment will return all the inference events with end time equal to or less than the end time
-     * given.
+     * Returns all the inference events with an end start time equal to or greater than less than the end time given
      * </p>
      * 
-     * @return Lookout for Equipment will return all the inference events with end time equal to or less than the end
-     *         time given.
+     * @return Returns all the inference events with an end start time equal to or greater than less than the end time
+     *         given
      */
 
     public java.util.Date getIntervalEndTime() {
@@ -255,13 +252,12 @@ public class ListInferenceEventsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Lookout for Equipment will return all the inference events with end time equal to or less than the end time
-     * given.
+     * Returns all the inference events with an end start time equal to or greater than less than the end time given
      * </p>
      * 
      * @param intervalEndTime
-     *        Lookout for Equipment will return all the inference events with end time equal to or less than the end
-     *        time given.
+     *        Returns all the inference events with an end start time equal to or greater than less than the end time
+     *        given
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

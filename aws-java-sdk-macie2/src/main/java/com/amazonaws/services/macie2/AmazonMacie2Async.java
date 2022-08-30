@@ -105,6 +105,37 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
+     * Creates and defines the settings for an allow list.
+     * </p>
+     * 
+     * @param createAllowListRequest
+     * @return A Java Future containing the result of the CreateAllowList operation returned by the service.
+     * @sample AmazonMacie2Async.CreateAllowList
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/CreateAllowList" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAllowListResult> createAllowListAsync(CreateAllowListRequest createAllowListRequest);
+
+    /**
+     * <p>
+     * Creates and defines the settings for an allow list.
+     * </p>
+     * 
+     * @param createAllowListRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateAllowList operation returned by the service.
+     * @sample AmazonMacie2AsyncHandler.CreateAllowList
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/CreateAllowList" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateAllowListResult> createAllowListAsync(CreateAllowListRequest createAllowListRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateAllowListRequest, CreateAllowListResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates and defines the settings for a classification job.
      * </p>
      * 
@@ -321,6 +352,37 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
      */
     java.util.concurrent.Future<DeclineInvitationsResult> declineInvitationsAsync(DeclineInvitationsRequest declineInvitationsRequest,
             com.amazonaws.handlers.AsyncHandler<DeclineInvitationsRequest, DeclineInvitationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes an allow list.
+     * </p>
+     * 
+     * @param deleteAllowListRequest
+     * @return A Java Future containing the result of the DeleteAllowList operation returned by the service.
+     * @sample AmazonMacie2Async.DeleteAllowList
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/DeleteAllowList" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAllowListResult> deleteAllowListAsync(DeleteAllowListRequest deleteAllowListRequest);
+
+    /**
+     * <p>
+     * Deletes an allow list.
+     * </p>
+     * 
+     * @param deleteAllowListRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteAllowList operation returned by the service.
+     * @sample AmazonMacie2AsyncHandler.DeleteAllowList
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/DeleteAllowList" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAllowListResult> deleteAllowListAsync(DeleteAllowListRequest deleteAllowListRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteAllowListRequest, DeleteAllowListResult> asyncHandler);
 
     /**
      * <p>
@@ -819,6 +881,37 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
+     * Retrieves the settings and status of an allow list.
+     * </p>
+     * 
+     * @param getAllowListRequest
+     * @return A Java Future containing the result of the GetAllowList operation returned by the service.
+     * @sample AmazonMacie2Async.GetAllowList
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetAllowList" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetAllowListResult> getAllowListAsync(GetAllowListRequest getAllowListRequest);
+
+    /**
+     * <p>
+     * Retrieves the settings and status of an allow list.
+     * </p>
+     * 
+     * @param getAllowListRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetAllowList operation returned by the service.
+     * @sample AmazonMacie2AsyncHandler.GetAllowList
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetAllowList" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetAllowListResult> getAllowListAsync(GetAllowListRequest getAllowListRequest,
+            com.amazonaws.handlers.AsyncHandler<GetAllowListRequest, GetAllowListResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves (queries) aggregated statistical data about S3 buckets that Amazon Macie monitors and analyzes.
      * </p>
      * 
@@ -1170,8 +1263,8 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves the status and configuration settings for retrieving (revealing) occurrences of sensitive data reported
-     * by findings.
+     * Retrieves the status and configuration settings for retrieving occurrences of sensitive data reported by
+     * findings.
      * </p>
      * 
      * @param getRevealConfigurationRequest
@@ -1184,8 +1277,8 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves the status and configuration settings for retrieving (revealing) occurrences of sensitive data reported
-     * by findings.
+     * Retrieves the status and configuration settings for retrieving occurrences of sensitive data reported by
+     * findings.
      * </p>
      * 
      * @param getRevealConfigurationRequest
@@ -1203,7 +1296,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves (reveals) occurrences of sensitive data reported by a finding.
+     * Retrieves occurrences of sensitive data reported by a finding.
      * </p>
      * 
      * @param getSensitiveDataOccurrencesRequest
@@ -1217,7 +1310,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves (reveals) occurrences of sensitive data reported by a finding.
+     * Retrieves occurrences of sensitive data reported by a finding.
      * </p>
      * 
      * @param getSensitiveDataOccurrencesRequest
@@ -1236,7 +1329,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Checks whether occurrences of sensitive data can be retrieved (revealed) for a finding.
+     * Checks whether occurrences of sensitive data can be retrieved for a finding.
      * </p>
      * 
      * @param getSensitiveDataOccurrencesAvailabilityRequest
@@ -1251,7 +1344,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Checks whether occurrences of sensitive data can be retrieved (revealed) for a finding.
+     * Checks whether occurrences of sensitive data can be retrieved for a finding.
      * </p>
      * 
      * @param getSensitiveDataOccurrencesAvailabilityRequest
@@ -1330,6 +1423,37 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
      */
     java.util.concurrent.Future<GetUsageTotalsResult> getUsageTotalsAsync(GetUsageTotalsRequest getUsageTotalsRequest,
             com.amazonaws.handlers.AsyncHandler<GetUsageTotalsRequest, GetUsageTotalsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a subset of information about all the allow lists for an account.
+     * </p>
+     * 
+     * @param listAllowListsRequest
+     * @return A Java Future containing the result of the ListAllowLists operation returned by the service.
+     * @sample AmazonMacie2Async.ListAllowLists
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ListAllowLists" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListAllowListsResult> listAllowListsAsync(ListAllowListsRequest listAllowListsRequest);
+
+    /**
+     * <p>
+     * Retrieves a subset of information about all the allow lists for an account.
+     * </p>
+     * 
+     * @param listAllowListsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAllowLists operation returned by the service.
+     * @sample AmazonMacie2AsyncHandler.ListAllowLists
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ListAllowLists" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListAllowListsResult> listAllowListsAsync(ListAllowListsRequest listAllowListsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAllowListsRequest, ListAllowListsResult> asyncHandler);
 
     /**
      * <p>
@@ -1591,8 +1715,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves the tags (keys and values) that are associated with a classification job, custom data identifier,
-     * findings filter, or member account.
+     * Retrieves the tags (keys and values) that are associated with an Amazon Macie resource.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -1605,8 +1728,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves the tags (keys and values) that are associated with a classification job, custom data identifier,
-     * findings filter, or member account.
+     * Retrieves the tags (keys and values) that are associated with an Amazon Macie resource.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -1727,8 +1849,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Adds or updates one or more tags (keys and values) that are associated with a classification job, custom data
-     * identifier, findings filter, or member account.
+     * Adds or updates one or more tags (keys and values) that are associated with an Amazon Macie resource.
      * </p>
      * 
      * @param tagResourceRequest
@@ -1741,8 +1862,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Adds or updates one or more tags (keys and values) that are associated with a classification job, custom data
-     * identifier, findings filter, or member account.
+     * Adds or updates one or more tags (keys and values) that are associated with an Amazon Macie resource.
      * </p>
      * 
      * @param tagResourceRequest
@@ -1791,8 +1911,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Removes one or more tags (keys and values) from a classification job, custom data identifier, findings filter, or
-     * member account.
+     * Removes one or more tags (keys and values) from an Amazon Macie resource.
      * </p>
      * 
      * @param untagResourceRequest
@@ -1805,8 +1924,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Removes one or more tags (keys and values) from a classification job, custom data identifier, findings filter, or
-     * member account.
+     * Removes one or more tags (keys and values) from an Amazon Macie resource.
      * </p>
      * 
      * @param untagResourceRequest
@@ -1821,6 +1939,37 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
      */
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the settings for an allow list.
+     * </p>
+     * 
+     * @param updateAllowListRequest
+     * @return A Java Future containing the result of the UpdateAllowList operation returned by the service.
+     * @sample AmazonMacie2Async.UpdateAllowList
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/UpdateAllowList" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAllowListResult> updateAllowListAsync(UpdateAllowListRequest updateAllowListRequest);
+
+    /**
+     * <p>
+     * Updates the settings for an allow list.
+     * </p>
+     * 
+     * @param updateAllowListRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateAllowList operation returned by the service.
+     * @sample AmazonMacie2AsyncHandler.UpdateAllowList
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/UpdateAllowList" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAllowListResult> updateAllowListAsync(UpdateAllowListRequest updateAllowListRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateAllowListRequest, UpdateAllowListResult> asyncHandler);
 
     /**
      * <p>
@@ -1983,8 +2132,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Updates the status and configuration settings for retrieving (revealing) occurrences of sensitive data reported
-     * by findings.
+     * Updates the status and configuration settings for retrieving occurrences of sensitive data reported by findings.
      * </p>
      * 
      * @param updateRevealConfigurationRequest
@@ -1998,8 +2146,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Updates the status and configuration settings for retrieving (revealing) occurrences of sensitive data reported
-     * by findings.
+     * Updates the status and configuration settings for retrieving occurrences of sensitive data reported by findings.
      * </p>
      * 
      * @param updateRevealConfigurationRequest

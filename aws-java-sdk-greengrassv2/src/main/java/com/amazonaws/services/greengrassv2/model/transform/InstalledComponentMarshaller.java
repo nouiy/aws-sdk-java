@@ -37,6 +37,8 @@ public class InstalledComponentMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lifecycleStateDetails").build();
     private static final MarshallingInfo<Boolean> ISROOT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("isRoot").build();
+    private static final MarshallingInfo<java.util.Date> LASTSTATUSCHANGETIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastStatusChangeTimestamp").timestampFormat("unixTimestamp").build();
 
     private static final InstalledComponentMarshaller instance = new InstalledComponentMarshaller();
 
@@ -59,6 +61,7 @@ public class InstalledComponentMarshaller {
             protocolMarshaller.marshall(installedComponent.getLifecycleState(), LIFECYCLESTATE_BINDING);
             protocolMarshaller.marshall(installedComponent.getLifecycleStateDetails(), LIFECYCLESTATEDETAILS_BINDING);
             protocolMarshaller.marshall(installedComponent.getIsRoot(), ISROOT_BINDING);
+            protocolMarshaller.marshall(installedComponent.getLastStatusChangeTimestamp(), LASTSTATUSCHANGETIMESTAMP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

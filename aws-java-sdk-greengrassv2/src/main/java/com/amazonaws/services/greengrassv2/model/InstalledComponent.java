@@ -58,6 +58,17 @@ public class InstalledComponent implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private Boolean isRoot;
+    /**
+     * <p>
+     * The status of how current the data is.
+     * </p>
+     * <p>
+     * This response is based off of component state changes. The status reflects component disruptions and deployments.
+     * If a component only sees a configuration update during a deployment, it might not undergo a state change and this
+     * status would not be updated.
+     * </p>
+     */
+    private java.util.Date lastStatusChangeTimestamp;
 
     /**
      * <p>
@@ -291,6 +302,73 @@ public class InstalledComponent implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The status of how current the data is.
+     * </p>
+     * <p>
+     * This response is based off of component state changes. The status reflects component disruptions and deployments.
+     * If a component only sees a configuration update during a deployment, it might not undergo a state change and this
+     * status would not be updated.
+     * </p>
+     * 
+     * @param lastStatusChangeTimestamp
+     *        The status of how current the data is.</p>
+     *        <p>
+     *        This response is based off of component state changes. The status reflects component disruptions and
+     *        deployments. If a component only sees a configuration update during a deployment, it might not undergo a
+     *        state change and this status would not be updated.
+     */
+
+    public void setLastStatusChangeTimestamp(java.util.Date lastStatusChangeTimestamp) {
+        this.lastStatusChangeTimestamp = lastStatusChangeTimestamp;
+    }
+
+    /**
+     * <p>
+     * The status of how current the data is.
+     * </p>
+     * <p>
+     * This response is based off of component state changes. The status reflects component disruptions and deployments.
+     * If a component only sees a configuration update during a deployment, it might not undergo a state change and this
+     * status would not be updated.
+     * </p>
+     * 
+     * @return The status of how current the data is.</p>
+     *         <p>
+     *         This response is based off of component state changes. The status reflects component disruptions and
+     *         deployments. If a component only sees a configuration update during a deployment, it might not undergo a
+     *         state change and this status would not be updated.
+     */
+
+    public java.util.Date getLastStatusChangeTimestamp() {
+        return this.lastStatusChangeTimestamp;
+    }
+
+    /**
+     * <p>
+     * The status of how current the data is.
+     * </p>
+     * <p>
+     * This response is based off of component state changes. The status reflects component disruptions and deployments.
+     * If a component only sees a configuration update during a deployment, it might not undergo a state change and this
+     * status would not be updated.
+     * </p>
+     * 
+     * @param lastStatusChangeTimestamp
+     *        The status of how current the data is.</p>
+     *        <p>
+     *        This response is based off of component state changes. The status reflects component disruptions and
+     *        deployments. If a component only sees a configuration update during a deployment, it might not undergo a
+     *        state change and this status would not be updated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InstalledComponent withLastStatusChangeTimestamp(java.util.Date lastStatusChangeTimestamp) {
+        setLastStatusChangeTimestamp(lastStatusChangeTimestamp);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -311,7 +389,9 @@ public class InstalledComponent implements Serializable, Cloneable, StructuredPo
         if (getLifecycleStateDetails() != null)
             sb.append("LifecycleStateDetails: ").append(getLifecycleStateDetails()).append(",");
         if (getIsRoot() != null)
-            sb.append("IsRoot: ").append(getIsRoot());
+            sb.append("IsRoot: ").append(getIsRoot()).append(",");
+        if (getLastStatusChangeTimestamp() != null)
+            sb.append("LastStatusChangeTimestamp: ").append(getLastStatusChangeTimestamp());
         sb.append("}");
         return sb.toString();
     }
@@ -346,6 +426,10 @@ public class InstalledComponent implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getIsRoot() != null && other.getIsRoot().equals(this.getIsRoot()) == false)
             return false;
+        if (other.getLastStatusChangeTimestamp() == null ^ this.getLastStatusChangeTimestamp() == null)
+            return false;
+        if (other.getLastStatusChangeTimestamp() != null && other.getLastStatusChangeTimestamp().equals(this.getLastStatusChangeTimestamp()) == false)
+            return false;
         return true;
     }
 
@@ -359,6 +443,7 @@ public class InstalledComponent implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getLifecycleState() == null) ? 0 : getLifecycleState().hashCode());
         hashCode = prime * hashCode + ((getLifecycleStateDetails() == null) ? 0 : getLifecycleStateDetails().hashCode());
         hashCode = prime * hashCode + ((getIsRoot() == null) ? 0 : getIsRoot().hashCode());
+        hashCode = prime * hashCode + ((getLastStatusChangeTimestamp() == null) ? 0 : getLastStatusChangeTimestamp().hashCode());
         return hashCode;
     }
 

@@ -39,6 +39,11 @@ public class AbstractAmazonMacie2 implements AmazonMacie2 {
     }
 
     @Override
+    public CreateAllowListResult createAllowList(CreateAllowListRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateClassificationJobResult createClassificationJob(CreateClassificationJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -70,6 +75,11 @@ public class AbstractAmazonMacie2 implements AmazonMacie2 {
 
     @Override
     public DeclineInvitationsResult declineInvitations(DeclineInvitationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteAllowListResult deleteAllowList(DeleteAllowListRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -145,6 +155,11 @@ public class AbstractAmazonMacie2 implements AmazonMacie2 {
 
     @Override
     public GetAdministratorAccountResult getAdministratorAccount(GetAdministratorAccountRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetAllowListResult getAllowList(GetAllowListRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -229,6 +244,11 @@ public class AbstractAmazonMacie2 implements AmazonMacie2 {
     }
 
     @Override
+    public ListAllowListsResult listAllowLists(ListAllowListsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListClassificationJobsResult listClassificationJobs(ListClassificationJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -300,6 +320,11 @@ public class AbstractAmazonMacie2 implements AmazonMacie2 {
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateAllowListResult updateAllowList(UpdateAllowListRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -68,6 +68,10 @@ public class InstalledComponentJsonUnmarshaller implements Unmarshaller<Installe
                     context.nextToken();
                     installedComponent.setIsRoot(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("lastStatusChangeTimestamp", targetDepth)) {
+                    context.nextToken();
+                    installedComponent.setLastStatusChangeTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -21,8 +21,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Specifies the configuration settings for retrieving occurrences of sensitive data reported by findings, and the
  * status of the configuration for an Amazon Macie account. When you enable the configuration for the first time, your
- * request must specify an AWS Key Management Service (AWS KMS) key. Otherwise, an error occurs. Macie uses the
- * specified key to encrypt the sensitive data that you retrieve.
+ * request must specify an Key Management Service (KMS) key. Otherwise, an error occurs. Macie uses the specified key to
+ * encrypt the sensitive data that you retrieve.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/RevealConfiguration" target="_top">AWS API

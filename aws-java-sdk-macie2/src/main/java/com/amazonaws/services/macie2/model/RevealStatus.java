@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The status of the configuration for the Amazon Macie account. In a request, valid values are:
+ * The status of the configuration for retrieving occurrences of sensitive data reported by findings. Valid values are:
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

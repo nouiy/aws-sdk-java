@@ -105,6 +105,34 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
+     * Creates and defines the settings for an allow list.
+     * </p>
+     * 
+     * @param createAllowListRequest
+     * @return Result of the CreateAllowList operation returned by the service.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws ServiceQuotaExceededException
+     *         The request failed because fulfilling the request would exceed one or more service quotas for your
+     *         account.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @throws ResourceNotFoundException
+     *         The request failed because the specified resource wasn't found.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws ConflictException
+     *         The request failed because it conflicts with the current state of the specified resource.
+     * @sample AmazonMacie2.CreateAllowList
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/CreateAllowList" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateAllowListResult createAllowList(CreateAllowListRequest createAllowListRequest);
+
+    /**
+     * <p>
      * Creates and defines the settings for a classification job.
      * </p>
      * 
@@ -298,6 +326,29 @@ public interface AmazonMacie2 {
      *      Documentation</a>
      */
     DeclineInvitationsResult declineInvitations(DeclineInvitationsRequest declineInvitationsRequest);
+
+    /**
+     * <p>
+     * Deletes an allow list.
+     * </p>
+     * 
+     * @param deleteAllowListRequest
+     * @return Result of the DeleteAllowList operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The request failed because the specified resource wasn't found.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @sample AmazonMacie2.DeleteAllowList
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/DeleteAllowList" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteAllowListResult deleteAllowList(DeleteAllowListRequest deleteAllowListRequest);
 
     /**
      * <p>
@@ -725,6 +776,29 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
+     * Retrieves the settings and status of an allow list.
+     * </p>
+     * 
+     * @param getAllowListRequest
+     * @return Result of the GetAllowList operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The request failed because the specified resource wasn't found.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @sample AmazonMacie2.GetAllowList
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/GetAllowList" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetAllowListResult getAllowList(GetAllowListRequest getAllowListRequest);
+
+    /**
+     * <p>
      * Retrieves (queries) aggregated statistical data about S3 buckets that Amazon Macie monitors and analyzes.
      * </p>
      * 
@@ -1036,8 +1110,8 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves the status and configuration settings for retrieving (revealing) occurrences of sensitive data reported
-     * by findings.
+     * Retrieves the status and configuration settings for retrieving occurrences of sensitive data reported by
+     * findings.
      * </p>
      * 
      * @param getRevealConfigurationRequest
@@ -1058,7 +1132,7 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves (reveals) occurrences of sensitive data reported by a finding.
+     * Retrieves occurrences of sensitive data reported by a finding.
      * </p>
      * 
      * @param getSensitiveDataOccurrencesRequest
@@ -1085,7 +1159,7 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Checks whether occurrences of sensitive data can be retrieved (revealed) for a finding.
+     * Checks whether occurrences of sensitive data can be retrieved for a finding.
      * </p>
      * 
      * @param getSensitiveDataOccurrencesAvailabilityRequest
@@ -1160,6 +1234,27 @@ public interface AmazonMacie2 {
      *      Documentation</a>
      */
     GetUsageTotalsResult getUsageTotals(GetUsageTotalsRequest getUsageTotalsRequest);
+
+    /**
+     * <p>
+     * Retrieves a subset of information about all the allow lists for an account.
+     * </p>
+     * 
+     * @param listAllowListsRequest
+     * @return Result of the ListAllowLists operation returned by the service.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @sample AmazonMacie2.ListAllowLists
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ListAllowLists" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListAllowListsResult listAllowLists(ListAllowListsRequest listAllowListsRequest);
 
     /**
      * <p>
@@ -1373,8 +1468,7 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves the tags (keys and values) that are associated with a classification job, custom data identifier,
-     * findings filter, or member account.
+     * Retrieves the tags (keys and values) that are associated with an Amazon Macie resource.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -1474,8 +1568,7 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Adds or updates one or more tags (keys and values) that are associated with a classification job, custom data
-     * identifier, findings filter, or member account.
+     * Adds or updates one or more tags (keys and values) that are associated with an Amazon Macie resource.
      * </p>
      * 
      * @param tagResourceRequest
@@ -1516,8 +1609,7 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Removes one or more tags (keys and values) from a classification job, custom data identifier, findings filter, or
-     * member account.
+     * Removes one or more tags (keys and values) from an Amazon Macie resource.
      * </p>
      * 
      * @param untagResourceRequest
@@ -1527,6 +1619,29 @@ public interface AmazonMacie2 {
      *      Documentation</a>
      */
     UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * Updates the settings for an allow list.
+     * </p>
+     * 
+     * @param updateAllowListRequest
+     * @return Result of the UpdateAllowList operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The request failed because the specified resource wasn't found.
+     * @throws ThrottlingException
+     *         The request failed because you sent too many requests during a certain amount of time.
+     * @throws ValidationException
+     *         The request failed because it contains a syntax error.
+     * @throws InternalServerException
+     *         The request failed due to an unknown internal server error, exception, or failure.
+     * @throws AccessDeniedException
+     *         The request was denied because you don't have sufficient access to the specified resource.
+     * @sample AmazonMacie2.UpdateAllowList
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/UpdateAllowList" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateAllowListResult updateAllowList(UpdateAllowListRequest updateAllowListRequest);
 
     /**
      * <p>
@@ -1670,8 +1785,7 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Updates the status and configuration settings for retrieving (revealing) occurrences of sensitive data reported
-     * by findings.
+     * Updates the status and configuration settings for retrieving occurrences of sensitive data reported by findings.
      * </p>
      * 
      * @param updateRevealConfigurationRequest

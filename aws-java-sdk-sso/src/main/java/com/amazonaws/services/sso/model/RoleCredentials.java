@@ -32,8 +32,7 @@ public class RoleCredentials implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The identifier used for the temporary security credentials. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using Temporary
-     * Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web Services IAM
-     * User Guide</i>.
+     * Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      * </p>
      */
     private String accessKeyId;
@@ -41,8 +40,7 @@ public class RoleCredentials implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The key that is used to sign the request. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using Temporary
-     * Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web Services IAM
-     * User Guide</i>.
+     * Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      * </p>
      */
     private String secretAccessKey;
@@ -50,8 +48,7 @@ public class RoleCredentials implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The token used for temporary credentials. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using Temporary
-     * Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web Services IAM
-     * User Guide</i>.
+     * Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      * </p>
      */
     private String sessionToken;
@@ -66,15 +63,13 @@ public class RoleCredentials implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The identifier used for the temporary security credentials. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using Temporary
-     * Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web Services IAM
-     * User Guide</i>.
+     * Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      * </p>
      * 
      * @param accessKeyId
      *        The identifier used for the temporary security credentials. For more information, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using
-     *        Temporary Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web
-     *        Services IAM User Guide</i>.
+     *        Temporary Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      */
 
     public void setAccessKeyId(String accessKeyId) {
@@ -85,14 +80,12 @@ public class RoleCredentials implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The identifier used for the temporary security credentials. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using Temporary
-     * Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web Services IAM
-     * User Guide</i>.
+     * Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      * </p>
      * 
      * @return The identifier used for the temporary security credentials. For more information, see <a
      *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using
-     *         Temporary Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon
-     *         Web Services IAM User Guide</i>.
+     *         Temporary Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      */
 
     public String getAccessKeyId() {
@@ -103,15 +96,13 @@ public class RoleCredentials implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The identifier used for the temporary security credentials. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using Temporary
-     * Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web Services IAM
-     * User Guide</i>.
+     * Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      * </p>
      * 
      * @param accessKeyId
      *        The identifier used for the temporary security credentials. For more information, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using
-     *        Temporary Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web
-     *        Services IAM User Guide</i>.
+     *        Temporary Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -124,15 +115,13 @@ public class RoleCredentials implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The key that is used to sign the request. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using Temporary
-     * Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web Services IAM
-     * User Guide</i>.
+     * Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      * </p>
      * 
      * @param secretAccessKey
      *        The key that is used to sign the request. For more information, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using
-     *        Temporary Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web
-     *        Services IAM User Guide</i>.
+     *        Temporary Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      */
 
     public void setSecretAccessKey(String secretAccessKey) {
@@ -143,14 +132,12 @@ public class RoleCredentials implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The key that is used to sign the request. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using Temporary
-     * Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web Services IAM
-     * User Guide</i>.
+     * Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      * </p>
      * 
      * @return The key that is used to sign the request. For more information, see <a
      *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using
-     *         Temporary Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon
-     *         Web Services IAM User Guide</i>.
+     *         Temporary Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      */
 
     public String getSecretAccessKey() {
@@ -161,15 +148,13 @@ public class RoleCredentials implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The key that is used to sign the request. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using Temporary
-     * Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web Services IAM
-     * User Guide</i>.
+     * Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      * </p>
      * 
      * @param secretAccessKey
      *        The key that is used to sign the request. For more information, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using
-     *        Temporary Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web
-     *        Services IAM User Guide</i>.
+     *        Temporary Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -182,15 +167,13 @@ public class RoleCredentials implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The token used for temporary credentials. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using Temporary
-     * Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web Services IAM
-     * User Guide</i>.
+     * Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      * </p>
      * 
      * @param sessionToken
      *        The token used for temporary credentials. For more information, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using
-     *        Temporary Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web
-     *        Services IAM User Guide</i>.
+     *        Temporary Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      */
 
     public void setSessionToken(String sessionToken) {
@@ -201,14 +184,12 @@ public class RoleCredentials implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The token used for temporary credentials. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using Temporary
-     * Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web Services IAM
-     * User Guide</i>.
+     * Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      * </p>
      * 
      * @return The token used for temporary credentials. For more information, see <a
      *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using
-     *         Temporary Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon
-     *         Web Services IAM User Guide</i>.
+     *         Temporary Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      */
 
     public String getSessionToken() {
@@ -219,15 +200,13 @@ public class RoleCredentials implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The token used for temporary credentials. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using Temporary
-     * Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web Services IAM
-     * User Guide</i>.
+     * Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      * </p>
      * 
      * @param sessionToken
      *        The token used for temporary credentials. For more information, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html">Using
-     *        Temporary Security Credentials to Request Access to Amazon Web Services Resources</a> in the <i>Amazon Web
-     *        Services IAM User Guide</i>.
+     *        Temporary Security Credentials to Request Access to AWS Resources</a> in the <i>AWS IAM User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

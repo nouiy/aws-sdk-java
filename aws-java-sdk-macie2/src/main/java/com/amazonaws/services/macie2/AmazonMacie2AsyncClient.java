@@ -146,6 +146,39 @@ public class AmazonMacie2AsyncClient extends AmazonMacie2Client implements Amazo
     }
 
     @Override
+    public java.util.concurrent.Future<CreateAllowListResult> createAllowListAsync(CreateAllowListRequest request) {
+
+        return createAllowListAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAllowListResult> createAllowListAsync(final CreateAllowListRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateAllowListRequest, CreateAllowListResult> asyncHandler) {
+        final CreateAllowListRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateAllowListResult>() {
+            @Override
+            public CreateAllowListResult call() throws Exception {
+                CreateAllowListResult result = null;
+
+                try {
+                    result = executeCreateAllowList(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateClassificationJobResult> createClassificationJobAsync(CreateClassificationJobRequest request) {
 
         return createClassificationJobAsync(request, null);
@@ -361,6 +394,39 @@ public class AmazonMacie2AsyncClient extends AmazonMacie2Client implements Amazo
 
                 try {
                     result = executeDeclineInvitations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAllowListResult> deleteAllowListAsync(DeleteAllowListRequest request) {
+
+        return deleteAllowListAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAllowListResult> deleteAllowListAsync(final DeleteAllowListRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteAllowListRequest, DeleteAllowListResult> asyncHandler) {
+        final DeleteAllowListRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteAllowListResult>() {
+            @Override
+            public DeleteAllowListResult call() throws Exception {
+                DeleteAllowListResult result = null;
+
+                try {
+                    result = executeDeleteAllowList(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -864,6 +930,39 @@ public class AmazonMacie2AsyncClient extends AmazonMacie2Client implements Amazo
 
                 try {
                     result = executeGetAdministratorAccount(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAllowListResult> getAllowListAsync(GetAllowListRequest request) {
+
+        return getAllowListAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAllowListResult> getAllowListAsync(final GetAllowListRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAllowListRequest, GetAllowListResult> asyncHandler) {
+        final GetAllowListRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAllowListResult>() {
+            @Override
+            public GetAllowListResult call() throws Exception {
+                GetAllowListResult result = null;
+
+                try {
+                    result = executeGetAllowList(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1414,6 +1513,39 @@ public class AmazonMacie2AsyncClient extends AmazonMacie2Client implements Amazo
     }
 
     @Override
+    public java.util.concurrent.Future<ListAllowListsResult> listAllowListsAsync(ListAllowListsRequest request) {
+
+        return listAllowListsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAllowListsResult> listAllowListsAsync(final ListAllowListsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAllowListsRequest, ListAllowListsResult> asyncHandler) {
+        final ListAllowListsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAllowListsResult>() {
+            @Override
+            public ListAllowListsResult call() throws Exception {
+                ListAllowListsResult result = null;
+
+                try {
+                    result = executeListAllowLists(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListClassificationJobsResult> listClassificationJobsAsync(ListClassificationJobsRequest request) {
 
         return listClassificationJobsAsync(request, null);
@@ -1898,6 +2030,39 @@ public class AmazonMacie2AsyncClient extends AmazonMacie2Client implements Amazo
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAllowListResult> updateAllowListAsync(UpdateAllowListRequest request) {
+
+        return updateAllowListAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAllowListResult> updateAllowListAsync(final UpdateAllowListRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateAllowListRequest, UpdateAllowListResult> asyncHandler) {
+        final UpdateAllowListRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateAllowListResult>() {
+            @Override
+            public UpdateAllowListResult call() throws Exception {
+                UpdateAllowListResult result = null;
+
+                try {
+                    result = executeUpdateAllowList(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
