@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * A CloudFront origin access control.
+ * A CloudFront origin access control configuration.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/OriginAccessControlConfig"
@@ -74,9 +74,9 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
      * CloudFront signs the origin request. If the viewer request contains the <code>Authorization</code> header, then
      * CloudFront doesn't sign the origin request and instead passes along the <code>Authorization</code> header from
      * the viewer request. <b>WARNING: To pass along the <code>Authorization</code> header from the viewer request, you
-     * <i>must</i> add the <code>Authorization</code> header to an <a
-     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html">origin
-     * request policy</a> for all cache behaviors that use origins associated with this origin access control.</b>
+     * <i>must</i> add the <code>Authorization</code> header to a <a
+     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html">cache
+     * policy</a> for all cache behaviors that use origins associated with this origin access control.</b>
      * </p>
      * </li>
      * </ul>
@@ -265,9 +265,9 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
      * CloudFront signs the origin request. If the viewer request contains the <code>Authorization</code> header, then
      * CloudFront doesn't sign the origin request and instead passes along the <code>Authorization</code> header from
      * the viewer request. <b>WARNING: To pass along the <code>Authorization</code> header from the viewer request, you
-     * <i>must</i> add the <code>Authorization</code> header to an <a
-     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html">origin
-     * request policy</a> for all cache behaviors that use origins associated with this origin access control.</b>
+     * <i>must</i> add the <code>Authorization</code> header to a <a
+     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html">cache
+     * policy</a> for all cache behaviors that use origins associated with this origin access control.</b>
      * </p>
      * </li>
      * </ul>
@@ -300,10 +300,9 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
      *        header, then CloudFront doesn't sign the origin request and instead passes along the
      *        <code>Authorization</code> header from the viewer request. <b>WARNING: To pass along the
      *        <code>Authorization</code> header from the viewer request, you <i>must</i> add the
-     *        <code>Authorization</code> header to an <a
-     *        href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html"
-     *        >origin request policy</a> for all cache behaviors that use origins associated with this origin access
-     *        control.</b>
+     *        <code>Authorization</code> header to a <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html"
+     *        >cache policy</a> for all cache behaviors that use origins associated with this origin access control.</b>
      *        </p>
      *        </li>
      * @see OriginAccessControlSigningBehaviors
@@ -342,9 +341,9 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
      * CloudFront signs the origin request. If the viewer request contains the <code>Authorization</code> header, then
      * CloudFront doesn't sign the origin request and instead passes along the <code>Authorization</code> header from
      * the viewer request. <b>WARNING: To pass along the <code>Authorization</code> header from the viewer request, you
-     * <i>must</i> add the <code>Authorization</code> header to an <a
-     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html">origin
-     * request policy</a> for all cache behaviors that use origins associated with this origin access control.</b>
+     * <i>must</i> add the <code>Authorization</code> header to a <a
+     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html">cache
+     * policy</a> for all cache behaviors that use origins associated with this origin access control.</b>
      * </p>
      * </li>
      * </ul>
@@ -376,9 +375,9 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
      *         header, then CloudFront doesn't sign the origin request and instead passes along the
      *         <code>Authorization</code> header from the viewer request. <b>WARNING: To pass along the
      *         <code>Authorization</code> header from the viewer request, you <i>must</i> add the
-     *         <code>Authorization</code> header to an <a
-     *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html"
-     *         >origin request policy</a> for all cache behaviors that use origins associated with this origin access
+     *         <code>Authorization</code> header to a <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html"
+     *         >cache policy</a> for all cache behaviors that use origins associated with this origin access
      *         control.</b>
      *         </p>
      *         </li>
@@ -418,9 +417,9 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
      * CloudFront signs the origin request. If the viewer request contains the <code>Authorization</code> header, then
      * CloudFront doesn't sign the origin request and instead passes along the <code>Authorization</code> header from
      * the viewer request. <b>WARNING: To pass along the <code>Authorization</code> header from the viewer request, you
-     * <i>must</i> add the <code>Authorization</code> header to an <a
-     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html">origin
-     * request policy</a> for all cache behaviors that use origins associated with this origin access control.</b>
+     * <i>must</i> add the <code>Authorization</code> header to a <a
+     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html">cache
+     * policy</a> for all cache behaviors that use origins associated with this origin access control.</b>
      * </p>
      * </li>
      * </ul>
@@ -453,10 +452,9 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
      *        header, then CloudFront doesn't sign the origin request and instead passes along the
      *        <code>Authorization</code> header from the viewer request. <b>WARNING: To pass along the
      *        <code>Authorization</code> header from the viewer request, you <i>must</i> add the
-     *        <code>Authorization</code> header to an <a
-     *        href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html"
-     *        >origin request policy</a> for all cache behaviors that use origins associated with this origin access
-     *        control.</b>
+     *        <code>Authorization</code> header to a <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html"
+     *        >cache policy</a> for all cache behaviors that use origins associated with this origin access control.</b>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -497,9 +495,9 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
      * CloudFront signs the origin request. If the viewer request contains the <code>Authorization</code> header, then
      * CloudFront doesn't sign the origin request and instead passes along the <code>Authorization</code> header from
      * the viewer request. <b>WARNING: To pass along the <code>Authorization</code> header from the viewer request, you
-     * <i>must</i> add the <code>Authorization</code> header to an <a
-     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html">origin
-     * request policy</a> for all cache behaviors that use origins associated with this origin access control.</b>
+     * <i>must</i> add the <code>Authorization</code> header to a <a
+     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html">cache
+     * policy</a> for all cache behaviors that use origins associated with this origin access control.</b>
      * </p>
      * </li>
      * </ul>
@@ -532,10 +530,9 @@ public class OriginAccessControlConfig implements Serializable, Cloneable {
      *        header, then CloudFront doesn't sign the origin request and instead passes along the
      *        <code>Authorization</code> header from the viewer request. <b>WARNING: To pass along the
      *        <code>Authorization</code> header from the viewer request, you <i>must</i> add the
-     *        <code>Authorization</code> header to an <a
-     *        href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html"
-     *        >origin request policy</a> for all cache behaviors that use origins associated with this origin access
-     *        control.</b>
+     *        <code>Authorization</code> header to a <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html"
+     *        >cache policy</a> for all cache behaviors that use origins associated with this origin access control.</b>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

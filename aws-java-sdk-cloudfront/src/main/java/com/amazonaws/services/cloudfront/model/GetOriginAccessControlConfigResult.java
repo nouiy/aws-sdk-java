@@ -25,7 +25,7 @@ public class GetOriginAccessControlConfigResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Contains an origin access control.
+     * Contains an origin access control configuration.
      * </p>
      */
     private OriginAccessControlConfig originAccessControlConfig;
@@ -38,11 +38,11 @@ public class GetOriginAccessControlConfigResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Contains an origin access control.
+     * Contains an origin access control configuration.
      * </p>
      * 
      * @param originAccessControlConfig
-     *        Contains an origin access control.
+     *        Contains an origin access control configuration.
      */
 
     public void setOriginAccessControlConfig(OriginAccessControlConfig originAccessControlConfig) {
@@ -51,10 +51,10 @@ public class GetOriginAccessControlConfigResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Contains an origin access control.
+     * Contains an origin access control configuration.
      * </p>
      * 
-     * @return Contains an origin access control.
+     * @return Contains an origin access control configuration.
      */
 
     public OriginAccessControlConfig getOriginAccessControlConfig() {
@@ -63,11 +63,11 @@ public class GetOriginAccessControlConfigResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Contains an origin access control.
+     * Contains an origin access control configuration.
      * </p>
      * 
      * @param originAccessControlConfig
-     *        Contains an origin access control.
+     *        Contains an origin access control configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

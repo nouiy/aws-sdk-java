@@ -143,7 +143,7 @@ public class HyperParameterTrainingJobDefinition implements Serializable, Clonea
      * The configuration for the hyperparameter tuning resources, including the compute instances and storage volumes,
      * used for training jobs launched by the tuning job. By default, storage volumes hold model artifacts and
      * incremental states. Choose <code>File</code> for <code>TrainingInputMode</code> in the
-     * <code>AlgorithmSpecification</code>parameter to additionally store training data in the storage volume
+     * <code>AlgorithmSpecification</code> parameter to additionally store training data in the storage volume
      * (optional).
      * </p>
      */
@@ -1025,7 +1025,7 @@ public class HyperParameterTrainingJobDefinition implements Serializable, Clonea
      * The configuration for the hyperparameter tuning resources, including the compute instances and storage volumes,
      * used for training jobs launched by the tuning job. By default, storage volumes hold model artifacts and
      * incremental states. Choose <code>File</code> for <code>TrainingInputMode</code> in the
-     * <code>AlgorithmSpecification</code>parameter to additionally store training data in the storage volume
+     * <code>AlgorithmSpecification</code> parameter to additionally store training data in the storage volume
      * (optional).
      * </p>
      * 
@@ -1033,7 +1033,7 @@ public class HyperParameterTrainingJobDefinition implements Serializable, Clonea
      *        The configuration for the hyperparameter tuning resources, including the compute instances and storage
      *        volumes, used for training jobs launched by the tuning job. By default, storage volumes hold model
      *        artifacts and incremental states. Choose <code>File</code> for <code>TrainingInputMode</code> in the
-     *        <code>AlgorithmSpecification</code>parameter to additionally store training data in the storage volume
+     *        <code>AlgorithmSpecification</code> parameter to additionally store training data in the storage volume
      *        (optional).
      */
 
@@ -1046,14 +1046,14 @@ public class HyperParameterTrainingJobDefinition implements Serializable, Clonea
      * The configuration for the hyperparameter tuning resources, including the compute instances and storage volumes,
      * used for training jobs launched by the tuning job. By default, storage volumes hold model artifacts and
      * incremental states. Choose <code>File</code> for <code>TrainingInputMode</code> in the
-     * <code>AlgorithmSpecification</code>parameter to additionally store training data in the storage volume
+     * <code>AlgorithmSpecification</code> parameter to additionally store training data in the storage volume
      * (optional).
      * </p>
      * 
      * @return The configuration for the hyperparameter tuning resources, including the compute instances and storage
      *         volumes, used for training jobs launched by the tuning job. By default, storage volumes hold model
      *         artifacts and incremental states. Choose <code>File</code> for <code>TrainingInputMode</code> in the
-     *         <code>AlgorithmSpecification</code>parameter to additionally store training data in the storage volume
+     *         <code>AlgorithmSpecification</code> parameter to additionally store training data in the storage volume
      *         (optional).
      */
 
@@ -1066,7 +1066,7 @@ public class HyperParameterTrainingJobDefinition implements Serializable, Clonea
      * The configuration for the hyperparameter tuning resources, including the compute instances and storage volumes,
      * used for training jobs launched by the tuning job. By default, storage volumes hold model artifacts and
      * incremental states. Choose <code>File</code> for <code>TrainingInputMode</code> in the
-     * <code>AlgorithmSpecification</code>parameter to additionally store training data in the storage volume
+     * <code>AlgorithmSpecification</code> parameter to additionally store training data in the storage volume
      * (optional).
      * </p>
      * 
@@ -1074,7 +1074,7 @@ public class HyperParameterTrainingJobDefinition implements Serializable, Clonea
      *        The configuration for the hyperparameter tuning resources, including the compute instances and storage
      *        volumes, used for training jobs launched by the tuning job. By default, storage volumes hold model
      *        artifacts and incremental states. Choose <code>File</code> for <code>TrainingInputMode</code> in the
-     *        <code>AlgorithmSpecification</code>parameter to additionally store training data in the storage volume
+     *        <code>AlgorithmSpecification</code> parameter to additionally store training data in the storage volume
      *        (optional).
      * @return Returns a reference to this object so that method calls can be chained together.
      */

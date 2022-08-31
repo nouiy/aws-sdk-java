@@ -1952,7 +1952,7 @@ public interface AmazonCloudFront {
 
     /**
      * <p>
-     * Gets a CloudFront origin access control.
+     * Gets a CloudFront origin access control, including its unique identifier.
      * </p>
      * 
      * @param getOriginAccessControlRequest
@@ -1969,7 +1969,7 @@ public interface AmazonCloudFront {
 
     /**
      * <p>
-     * Gets a CloudFront origin access control.
+     * Gets a CloudFront origin access control configuration.
      * </p>
      * 
      * @param getOriginAccessControlConfigRequest

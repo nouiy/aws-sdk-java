@@ -25,20 +25,20 @@ public class ResourceNotFoundException extends com.amazonaws.services.identityst
 
     /**
      * <p>
-     * The type of resource in the identity store service, which is an enum object. Valid values include USER, GROUP,
+     * An enum object indicating the type of resource in the identity store service. Valid values include USER, GROUP,
      * and IDENTITY_STORE.
      * </p>
      */
     private String resourceType;
     /**
      * <p>
-     * The identifier for a resource in the identity store, which can be used as <code>UserId</code> or
+     * The identifier for a resource in the identity store that can be used as <code>UserId</code> or
      * <code>GroupId</code>. The format for <code>ResourceId</code> is either <code>UUID</code> or
      * <code>1234567890-UUID</code>, where <code>UUID</code> is a randomly generated value for each resource when it is
      * created and <code>1234567890</code> represents the <code>IdentityStoreId</code> string value. In the case that
-     * the identity store is migrated from a legacy single sign-on identity store, the <code>ResourceId</code> for that
-     * identity store will be in the format of <code>UUID</code>. Otherwise, it will be in the
-     * <code>1234567890-UUID</code> format.
+     * the identity store is migrated from a legacy SSO identity store, the <code>ResourceId</code> for that identity
+     * store will be in the format of <code>UUID</code>. Otherwise, it will be in the <code>1234567890-UUID</code>
+     * format.
      * </p>
      */
     private String resourceId;
@@ -62,12 +62,12 @@ public class ResourceNotFoundException extends com.amazonaws.services.identityst
 
     /**
      * <p>
-     * The type of resource in the identity store service, which is an enum object. Valid values include USER, GROUP,
+     * An enum object indicating the type of resource in the identity store service. Valid values include USER, GROUP,
      * and IDENTITY_STORE.
      * </p>
      * 
      * @param resourceType
-     *        The type of resource in the identity store service, which is an enum object. Valid values include USER,
+     *        An enum object indicating the type of resource in the identity store service. Valid values include USER,
      *        GROUP, and IDENTITY_STORE.
      * @see ResourceType
      */
@@ -79,11 +79,11 @@ public class ResourceNotFoundException extends com.amazonaws.services.identityst
 
     /**
      * <p>
-     * The type of resource in the identity store service, which is an enum object. Valid values include USER, GROUP,
+     * An enum object indicating the type of resource in the identity store service. Valid values include USER, GROUP,
      * and IDENTITY_STORE.
      * </p>
      * 
-     * @return The type of resource in the identity store service, which is an enum object. Valid values include USER,
+     * @return An enum object indicating the type of resource in the identity store service. Valid values include USER,
      *         GROUP, and IDENTITY_STORE.
      * @see ResourceType
      */
@@ -95,12 +95,12 @@ public class ResourceNotFoundException extends com.amazonaws.services.identityst
 
     /**
      * <p>
-     * The type of resource in the identity store service, which is an enum object. Valid values include USER, GROUP,
+     * An enum object indicating the type of resource in the identity store service. Valid values include USER, GROUP,
      * and IDENTITY_STORE.
      * </p>
      * 
      * @param resourceType
-     *        The type of resource in the identity store service, which is an enum object. Valid values include USER,
+     *        An enum object indicating the type of resource in the identity store service. Valid values include USER,
      *        GROUP, and IDENTITY_STORE.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
@@ -113,12 +113,12 @@ public class ResourceNotFoundException extends com.amazonaws.services.identityst
 
     /**
      * <p>
-     * The type of resource in the identity store service, which is an enum object. Valid values include USER, GROUP,
+     * An enum object indicating the type of resource in the identity store service. Valid values include USER, GROUP,
      * and IDENTITY_STORE.
      * </p>
      * 
      * @param resourceType
-     *        The type of resource in the identity store service, which is an enum object. Valid values include USER,
+     *        An enum object indicating the type of resource in the identity store service. Valid values include USER,
      *        GROUP, and IDENTITY_STORE.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
@@ -131,23 +131,23 @@ public class ResourceNotFoundException extends com.amazonaws.services.identityst
 
     /**
      * <p>
-     * The identifier for a resource in the identity store, which can be used as <code>UserId</code> or
+     * The identifier for a resource in the identity store that can be used as <code>UserId</code> or
      * <code>GroupId</code>. The format for <code>ResourceId</code> is either <code>UUID</code> or
      * <code>1234567890-UUID</code>, where <code>UUID</code> is a randomly generated value for each resource when it is
      * created and <code>1234567890</code> represents the <code>IdentityStoreId</code> string value. In the case that
-     * the identity store is migrated from a legacy single sign-on identity store, the <code>ResourceId</code> for that
-     * identity store will be in the format of <code>UUID</code>. Otherwise, it will be in the
-     * <code>1234567890-UUID</code> format.
+     * the identity store is migrated from a legacy SSO identity store, the <code>ResourceId</code> for that identity
+     * store will be in the format of <code>UUID</code>. Otherwise, it will be in the <code>1234567890-UUID</code>
+     * format.
      * </p>
      * 
      * @param resourceId
-     *        The identifier for a resource in the identity store, which can be used as <code>UserId</code> or
+     *        The identifier for a resource in the identity store that can be used as <code>UserId</code> or
      *        <code>GroupId</code>. The format for <code>ResourceId</code> is either <code>UUID</code> or
      *        <code>1234567890-UUID</code>, where <code>UUID</code> is a randomly generated value for each resource when
      *        it is created and <code>1234567890</code> represents the <code>IdentityStoreId</code> string value. In the
-     *        case that the identity store is migrated from a legacy single sign-on identity store, the
-     *        <code>ResourceId</code> for that identity store will be in the format of <code>UUID</code>. Otherwise, it
-     *        will be in the <code>1234567890-UUID</code> format.
+     *        case that the identity store is migrated from a legacy SSO identity store, the <code>ResourceId</code> for
+     *        that identity store will be in the format of <code>UUID</code>. Otherwise, it will be in the
+     *        <code>1234567890-UUID</code> format.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("ResourceId")
@@ -157,20 +157,20 @@ public class ResourceNotFoundException extends com.amazonaws.services.identityst
 
     /**
      * <p>
-     * The identifier for a resource in the identity store, which can be used as <code>UserId</code> or
+     * The identifier for a resource in the identity store that can be used as <code>UserId</code> or
      * <code>GroupId</code>. The format for <code>ResourceId</code> is either <code>UUID</code> or
      * <code>1234567890-UUID</code>, where <code>UUID</code> is a randomly generated value for each resource when it is
      * created and <code>1234567890</code> represents the <code>IdentityStoreId</code> string value. In the case that
-     * the identity store is migrated from a legacy single sign-on identity store, the <code>ResourceId</code> for that
-     * identity store will be in the format of <code>UUID</code>. Otherwise, it will be in the
-     * <code>1234567890-UUID</code> format.
+     * the identity store is migrated from a legacy SSO identity store, the <code>ResourceId</code> for that identity
+     * store will be in the format of <code>UUID</code>. Otherwise, it will be in the <code>1234567890-UUID</code>
+     * format.
      * </p>
      * 
-     * @return The identifier for a resource in the identity store, which can be used as <code>UserId</code> or
+     * @return The identifier for a resource in the identity store that can be used as <code>UserId</code> or
      *         <code>GroupId</code>. The format for <code>ResourceId</code> is either <code>UUID</code> or
      *         <code>1234567890-UUID</code>, where <code>UUID</code> is a randomly generated value for each resource
      *         when it is created and <code>1234567890</code> represents the <code>IdentityStoreId</code> string value.
-     *         In the case that the identity store is migrated from a legacy single sign-on identity store, the
+     *         In the case that the identity store is migrated from a legacy SSO identity store, the
      *         <code>ResourceId</code> for that identity store will be in the format of <code>UUID</code>. Otherwise, it
      *         will be in the <code>1234567890-UUID</code> format.
      */
@@ -182,23 +182,23 @@ public class ResourceNotFoundException extends com.amazonaws.services.identityst
 
     /**
      * <p>
-     * The identifier for a resource in the identity store, which can be used as <code>UserId</code> or
+     * The identifier for a resource in the identity store that can be used as <code>UserId</code> or
      * <code>GroupId</code>. The format for <code>ResourceId</code> is either <code>UUID</code> or
      * <code>1234567890-UUID</code>, where <code>UUID</code> is a randomly generated value for each resource when it is
      * created and <code>1234567890</code> represents the <code>IdentityStoreId</code> string value. In the case that
-     * the identity store is migrated from a legacy single sign-on identity store, the <code>ResourceId</code> for that
-     * identity store will be in the format of <code>UUID</code>. Otherwise, it will be in the
-     * <code>1234567890-UUID</code> format.
+     * the identity store is migrated from a legacy SSO identity store, the <code>ResourceId</code> for that identity
+     * store will be in the format of <code>UUID</code>. Otherwise, it will be in the <code>1234567890-UUID</code>
+     * format.
      * </p>
      * 
      * @param resourceId
-     *        The identifier for a resource in the identity store, which can be used as <code>UserId</code> or
+     *        The identifier for a resource in the identity store that can be used as <code>UserId</code> or
      *        <code>GroupId</code>. The format for <code>ResourceId</code> is either <code>UUID</code> or
      *        <code>1234567890-UUID</code>, where <code>UUID</code> is a randomly generated value for each resource when
      *        it is created and <code>1234567890</code> represents the <code>IdentityStoreId</code> string value. In the
-     *        case that the identity store is migrated from a legacy single sign-on identity store, the
-     *        <code>ResourceId</code> for that identity store will be in the format of <code>UUID</code>. Otherwise, it
-     *        will be in the <code>1234567890-UUID</code> format.
+     *        case that the identity store is migrated from a legacy SSO identity store, the <code>ResourceId</code> for
+     *        that identity store will be in the format of <code>UUID</code>. Otherwise, it will be in the
+     *        <code>1234567890-UUID</code> format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

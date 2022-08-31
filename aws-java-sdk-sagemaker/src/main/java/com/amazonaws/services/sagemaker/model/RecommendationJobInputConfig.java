@@ -114,6 +114,13 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
      * </p>
      */
     private String volumeKmsKeyId;
+    /**
+     * <p>
+     * Specifies mandatory fields for running an Inference Recommender job. The fields specified in
+     * <code>ContainerConfig</code> override the corresponding fields in the model package.
+     * </p>
+     */
+    private RecommendationJobContainerConfig containerConfig;
 
     /**
      * <p>
@@ -683,6 +690,52 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * Specifies mandatory fields for running an Inference Recommender job. The fields specified in
+     * <code>ContainerConfig</code> override the corresponding fields in the model package.
+     * </p>
+     * 
+     * @param containerConfig
+     *        Specifies mandatory fields for running an Inference Recommender job. The fields specified in
+     *        <code>ContainerConfig</code> override the corresponding fields in the model package.
+     */
+
+    public void setContainerConfig(RecommendationJobContainerConfig containerConfig) {
+        this.containerConfig = containerConfig;
+    }
+
+    /**
+     * <p>
+     * Specifies mandatory fields for running an Inference Recommender job. The fields specified in
+     * <code>ContainerConfig</code> override the corresponding fields in the model package.
+     * </p>
+     * 
+     * @return Specifies mandatory fields for running an Inference Recommender job. The fields specified in
+     *         <code>ContainerConfig</code> override the corresponding fields in the model package.
+     */
+
+    public RecommendationJobContainerConfig getContainerConfig() {
+        return this.containerConfig;
+    }
+
+    /**
+     * <p>
+     * Specifies mandatory fields for running an Inference Recommender job. The fields specified in
+     * <code>ContainerConfig</code> override the corresponding fields in the model package.
+     * </p>
+     * 
+     * @param containerConfig
+     *        Specifies mandatory fields for running an Inference Recommender job. The fields specified in
+     *        <code>ContainerConfig</code> override the corresponding fields in the model package.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommendationJobInputConfig withContainerConfig(RecommendationJobContainerConfig containerConfig) {
+        setContainerConfig(containerConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -705,7 +758,9 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
         if (getEndpointConfigurations() != null)
             sb.append("EndpointConfigurations: ").append(getEndpointConfigurations()).append(",");
         if (getVolumeKmsKeyId() != null)
-            sb.append("VolumeKmsKeyId: ").append(getVolumeKmsKeyId());
+            sb.append("VolumeKmsKeyId: ").append(getVolumeKmsKeyId()).append(",");
+        if (getContainerConfig() != null)
+            sb.append("ContainerConfig: ").append(getContainerConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -744,6 +799,10 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
             return false;
         if (other.getVolumeKmsKeyId() != null && other.getVolumeKmsKeyId().equals(this.getVolumeKmsKeyId()) == false)
             return false;
+        if (other.getContainerConfig() == null ^ this.getContainerConfig() == null)
+            return false;
+        if (other.getContainerConfig() != null && other.getContainerConfig().equals(this.getContainerConfig()) == false)
+            return false;
         return true;
     }
 
@@ -758,6 +817,7 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
         hashCode = prime * hashCode + ((getResourceLimit() == null) ? 0 : getResourceLimit().hashCode());
         hashCode = prime * hashCode + ((getEndpointConfigurations() == null) ? 0 : getEndpointConfigurations().hashCode());
         hashCode = prime * hashCode + ((getVolumeKmsKeyId() == null) ? 0 : getVolumeKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getContainerConfig() == null) ? 0 : getContainerConfig().hashCode());
         return hashCode;
     }
 

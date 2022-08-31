@@ -75,6 +75,10 @@ public class RecommendationJobInputConfigJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     recommendationJobInputConfig.setVolumeKmsKeyId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ContainerConfig", targetDepth)) {
+                    context.nextToken();
+                    recommendationJobInputConfig.setContainerConfig(RecommendationJobContainerConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

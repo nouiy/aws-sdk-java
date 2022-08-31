@@ -30,6 +30,12 @@ public class ThrottlingException extends com.amazonaws.services.identitystore.mo
      * </p>
      */
     private String requestId;
+    /**
+     * <p>
+     * The number of seconds that you would like to wait before retrying the next request.
+     * </p>
+     */
+    private Integer retryAfterSeconds;
 
     /**
      * Constructs a new ThrottlingException with the specified error message.
@@ -86,6 +92,48 @@ public class ThrottlingException extends com.amazonaws.services.identitystore.mo
 
     public ThrottlingException withRequestId(String requestId) {
         setRequestId(requestId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of seconds that you would like to wait before retrying the next request.
+     * </p>
+     * 
+     * @param retryAfterSeconds
+     *        The number of seconds that you would like to wait before retrying the next request.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("RetryAfterSeconds")
+    public void setRetryAfterSeconds(Integer retryAfterSeconds) {
+        this.retryAfterSeconds = retryAfterSeconds;
+    }
+
+    /**
+     * <p>
+     * The number of seconds that you would like to wait before retrying the next request.
+     * </p>
+     * 
+     * @return The number of seconds that you would like to wait before retrying the next request.
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("RetryAfterSeconds")
+    public Integer getRetryAfterSeconds() {
+        return this.retryAfterSeconds;
+    }
+
+    /**
+     * <p>
+     * The number of seconds that you would like to wait before retrying the next request.
+     * </p>
+     * 
+     * @param retryAfterSeconds
+     *        The number of seconds that you would like to wait before retrying the next request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ThrottlingException withRetryAfterSeconds(Integer retryAfterSeconds) {
+        setRetryAfterSeconds(retryAfterSeconds);
         return this;
     }
 

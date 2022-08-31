@@ -25,7 +25,7 @@ public class GetOriginAccessControlResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Contains an origin access control.
+     * Contains an origin access control, including its unique identifier.
      * </p>
      */
     private OriginAccessControl originAccessControl;
@@ -38,11 +38,11 @@ public class GetOriginAccessControlResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Contains an origin access control.
+     * Contains an origin access control, including its unique identifier.
      * </p>
      * 
      * @param originAccessControl
-     *        Contains an origin access control.
+     *        Contains an origin access control, including its unique identifier.
      */
 
     public void setOriginAccessControl(OriginAccessControl originAccessControl) {
@@ -51,10 +51,10 @@ public class GetOriginAccessControlResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Contains an origin access control.
+     * Contains an origin access control, including its unique identifier.
      * </p>
      * 
-     * @return Contains an origin access control.
+     * @return Contains an origin access control, including its unique identifier.
      */
 
     public OriginAccessControl getOriginAccessControl() {
@@ -63,11 +63,11 @@ public class GetOriginAccessControlResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Contains an origin access control.
+     * Contains an origin access control, including its unique identifier.
      * </p>
      * 
      * @param originAccessControl
-     *        Contains an origin access control.
+     *        Contains an origin access control, including its unique identifier.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,8 +25,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <note>
  * <p>
- * HyperParameterTuningResourceConfig supports all of the capabilities of ResourceConfig with added functionality for
- * flexible instance management.
+ * <code>HyperParameterTuningResourceConfig</code> supports all of the capabilities of ResourceConfig with added
+ * functionality for flexible instance management.
  * </p>
  * </note>
  * 
@@ -63,7 +63,7 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      * Some instance types have a fixed total local storage size. If you select one of these instances for training,
      * <code>VolumeSizeInGB</code> cannot be greater than this total size. For a list of instance types with local
      * instance storage and their sizes, see <a
-     * href="https://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>.
+     * href="http://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>.
      * </p>
      * <note>
      * <p>
@@ -76,8 +76,8 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
     private Integer volumeSizeInGB;
     /**
      * <p>
-     * A key used by AWS Key Management Service to encrypt data on the storage volume attached to the compute instances
-     * used to run the training job. You can use either of the following formats to specify a key.
+     * A key used by Amazon Web Services Key Management Service to encrypt data on the storage volume attached to the
+     * compute instances used to run the training job. You can use either of the following formats to specify a key.
      * </p>
      * <p>
      * KMS Key ID:
@@ -86,7 +86,7 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      * <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
      * </p>
      * <p>
-     * Amazon Resource Name (ARN) of a AWS KMS key:
+     * Amazon Resource Name (ARN) of a KMS key:
      * </p>
      * <p>
      * <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code>
@@ -96,10 +96,10 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html">hardware module to encrypt</a>
      * storage volumes. If you choose one of these instance types, you cannot request a <code>VolumeKmsKeyId</code>. For
      * a list of instance types that use local storage, see <a
-     * href="https://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>. For
-     * more information about AWS Key Management Service, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-security-kms-permissions.html">AWS KMS encryption</a>
-     * for more information.
+     * href="http://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>. For
+     * more information about Amazon Web Services Key Management Service, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-security-kms-permissions.html">KMS encryption</a> for
+     * more information.
      * </p>
      */
     private String volumeKmsKeyId;
@@ -119,10 +119,11 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      * </p>
      * <note>
      * <p>
-     * If you only want to use a single InstanceConfig inside the <code>HyperParameterTuningResourceConfig</code> API,
-     * do not provide a value for <code>InstanceConfigs</code>. Instead, use <code>InstanceType</code>,
-     * <code>VolumeSizeInGB</code> and <code>InstanceCount</code>. If you use <code>InstanceConfigs</code>, do not
-     * provide values for <code>InstanceType</code>, <code>VolumeSizeInGB</code> or <code>InstanceCount</code>.
+     * If you only want to use a single instance configuration inside the
+     * <code>HyperParameterTuningResourceConfig</code> API, do not provide a value for <code>InstanceConfigs</code>.
+     * Instead, use <code>InstanceType</code>, <code>VolumeSizeInGB</code> and <code>InstanceCount</code>. If you use
+     * <code>InstanceConfigs</code>, do not provide values for <code>InstanceType</code>, <code>VolumeSizeInGB</code> or
+     * <code>InstanceCount</code>.
      * </p>
      * </note>
      */
@@ -266,7 +267,7 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      * Some instance types have a fixed total local storage size. If you select one of these instances for training,
      * <code>VolumeSizeInGB</code> cannot be greater than this total size. For a list of instance types with local
      * instance storage and their sizes, see <a
-     * href="https://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>.
+     * href="http://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>.
      * </p>
      * <note>
      * <p>
@@ -285,8 +286,7 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      *        Some instance types have a fixed total local storage size. If you select one of these instances for
      *        training, <code>VolumeSizeInGB</code> cannot be greater than this total size. For a list of instance types
      *        with local instance storage and their sizes, see <a
-     *        href="https://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store
-     *        volumes</a>.
+     *        href="http://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>.
      *        </p>
      *        <note>
      *        <p>
@@ -311,7 +311,7 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      * Some instance types have a fixed total local storage size. If you select one of these instances for training,
      * <code>VolumeSizeInGB</code> cannot be greater than this total size. For a list of instance types with local
      * instance storage and their sizes, see <a
-     * href="https://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>.
+     * href="http://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>.
      * </p>
      * <note>
      * <p>
@@ -329,7 +329,7 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      *         Some instance types have a fixed total local storage size. If you select one of these instances for
      *         training, <code>VolumeSizeInGB</code> cannot be greater than this total size. For a list of instance
      *         types with local instance storage and their sizes, see <a
-     *         href="https://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store
+     *         href="http://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store
      *         volumes</a>.
      *         </p>
      *         <note>
@@ -355,7 +355,7 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      * Some instance types have a fixed total local storage size. If you select one of these instances for training,
      * <code>VolumeSizeInGB</code> cannot be greater than this total size. For a list of instance types with local
      * instance storage and their sizes, see <a
-     * href="https://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>.
+     * href="http://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>.
      * </p>
      * <note>
      * <p>
@@ -374,8 +374,7 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      *        Some instance types have a fixed total local storage size. If you select one of these instances for
      *        training, <code>VolumeSizeInGB</code> cannot be greater than this total size. For a list of instance types
      *        with local instance storage and their sizes, see <a
-     *        href="https://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store
-     *        volumes</a>.
+     *        href="http://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>.
      *        </p>
      *        <note>
      *        <p>
@@ -393,8 +392,8 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
 
     /**
      * <p>
-     * A key used by AWS Key Management Service to encrypt data on the storage volume attached to the compute instances
-     * used to run the training job. You can use either of the following formats to specify a key.
+     * A key used by Amazon Web Services Key Management Service to encrypt data on the storage volume attached to the
+     * compute instances used to run the training job. You can use either of the following formats to specify a key.
      * </p>
      * <p>
      * KMS Key ID:
@@ -403,7 +402,7 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      * <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
      * </p>
      * <p>
-     * Amazon Resource Name (ARN) of a AWS KMS key:
+     * Amazon Resource Name (ARN) of a KMS key:
      * </p>
      * <p>
      * <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code>
@@ -413,15 +412,16 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html">hardware module to encrypt</a>
      * storage volumes. If you choose one of these instance types, you cannot request a <code>VolumeKmsKeyId</code>. For
      * a list of instance types that use local storage, see <a
-     * href="https://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>. For
-     * more information about AWS Key Management Service, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-security-kms-permissions.html">AWS KMS encryption</a>
-     * for more information.
+     * href="http://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>. For
+     * more information about Amazon Web Services Key Management Service, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-security-kms-permissions.html">KMS encryption</a> for
+     * more information.
      * </p>
      * 
      * @param volumeKmsKeyId
-     *        A key used by AWS Key Management Service to encrypt data on the storage volume attached to the compute
-     *        instances used to run the training job. You can use either of the following formats to specify a key.</p>
+     *        A key used by Amazon Web Services Key Management Service to encrypt data on the storage volume attached to
+     *        the compute instances used to run the training job. You can use either of the following formats to specify
+     *        a key.</p>
      *        <p>
      *        KMS Key ID:
      *        </p>
@@ -429,7 +429,7 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      *        <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
      *        </p>
      *        <p>
-     *        Amazon Resource Name (ARN) of a AWS KMS key:
+     *        Amazon Resource Name (ARN) of a KMS key:
      *        </p>
      *        <p>
      *        <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code>
@@ -439,9 +439,9 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html">hardware module to
      *        encrypt</a> storage volumes. If you choose one of these instance types, you cannot request a
      *        <code>VolumeKmsKeyId</code>. For a list of instance types that use local storage, see <a
-     *        href="https://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store
-     *        volumes</a>. For more information about AWS Key Management Service, see <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-security-kms-permissions.html">AWS KMS
+     *        href="http://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>.
+     *        For more information about Amazon Web Services Key Management Service, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-security-kms-permissions.html">KMS
      *        encryption</a> for more information.
      */
 
@@ -451,8 +451,8 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
 
     /**
      * <p>
-     * A key used by AWS Key Management Service to encrypt data on the storage volume attached to the compute instances
-     * used to run the training job. You can use either of the following formats to specify a key.
+     * A key used by Amazon Web Services Key Management Service to encrypt data on the storage volume attached to the
+     * compute instances used to run the training job. You can use either of the following formats to specify a key.
      * </p>
      * <p>
      * KMS Key ID:
@@ -461,7 +461,7 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      * <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
      * </p>
      * <p>
-     * Amazon Resource Name (ARN) of a AWS KMS key:
+     * Amazon Resource Name (ARN) of a KMS key:
      * </p>
      * <p>
      * <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code>
@@ -471,14 +471,15 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html">hardware module to encrypt</a>
      * storage volumes. If you choose one of these instance types, you cannot request a <code>VolumeKmsKeyId</code>. For
      * a list of instance types that use local storage, see <a
-     * href="https://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>. For
-     * more information about AWS Key Management Service, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-security-kms-permissions.html">AWS KMS encryption</a>
-     * for more information.
+     * href="http://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>. For
+     * more information about Amazon Web Services Key Management Service, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-security-kms-permissions.html">KMS encryption</a> for
+     * more information.
      * </p>
      * 
-     * @return A key used by AWS Key Management Service to encrypt data on the storage volume attached to the compute
-     *         instances used to run the training job. You can use either of the following formats to specify a key.</p>
+     * @return A key used by Amazon Web Services Key Management Service to encrypt data on the storage volume attached
+     *         to the compute instances used to run the training job. You can use either of the following formats to
+     *         specify a key.</p>
      *         <p>
      *         KMS Key ID:
      *         </p>
@@ -486,7 +487,7 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      *         <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
      *         </p>
      *         <p>
-     *         Amazon Resource Name (ARN) of a AWS KMS key:
+     *         Amazon Resource Name (ARN) of a KMS key:
      *         </p>
      *         <p>
      *         <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code>
@@ -496,9 +497,9 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html">hardware module to
      *         encrypt</a> storage volumes. If you choose one of these instance types, you cannot request a
      *         <code>VolumeKmsKeyId</code>. For a list of instance types that use local storage, see <a
-     *         href="https://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store
-     *         volumes</a>. For more information about AWS Key Management Service, see <a
-     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-security-kms-permissions.html">AWS KMS
+     *         href="http://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store
+     *         volumes</a>. For more information about Amazon Web Services Key Management Service, see <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-security-kms-permissions.html">KMS
      *         encryption</a> for more information.
      */
 
@@ -508,8 +509,8 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
 
     /**
      * <p>
-     * A key used by AWS Key Management Service to encrypt data on the storage volume attached to the compute instances
-     * used to run the training job. You can use either of the following formats to specify a key.
+     * A key used by Amazon Web Services Key Management Service to encrypt data on the storage volume attached to the
+     * compute instances used to run the training job. You can use either of the following formats to specify a key.
      * </p>
      * <p>
      * KMS Key ID:
@@ -518,7 +519,7 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      * <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
      * </p>
      * <p>
-     * Amazon Resource Name (ARN) of a AWS KMS key:
+     * Amazon Resource Name (ARN) of a KMS key:
      * </p>
      * <p>
      * <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code>
@@ -528,15 +529,16 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html">hardware module to encrypt</a>
      * storage volumes. If you choose one of these instance types, you cannot request a <code>VolumeKmsKeyId</code>. For
      * a list of instance types that use local storage, see <a
-     * href="https://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>. For
-     * more information about AWS Key Management Service, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-security-kms-permissions.html">AWS KMS encryption</a>
-     * for more information.
+     * href="http://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>. For
+     * more information about Amazon Web Services Key Management Service, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-security-kms-permissions.html">KMS encryption</a> for
+     * more information.
      * </p>
      * 
      * @param volumeKmsKeyId
-     *        A key used by AWS Key Management Service to encrypt data on the storage volume attached to the compute
-     *        instances used to run the training job. You can use either of the following formats to specify a key.</p>
+     *        A key used by Amazon Web Services Key Management Service to encrypt data on the storage volume attached to
+     *        the compute instances used to run the training job. You can use either of the following formats to specify
+     *        a key.</p>
      *        <p>
      *        KMS Key ID:
      *        </p>
@@ -544,7 +546,7 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      *        <code>"1234abcd-12ab-34cd-56ef-1234567890ab"</code>
      *        </p>
      *        <p>
-     *        Amazon Resource Name (ARN) of a AWS KMS key:
+     *        Amazon Resource Name (ARN) of a KMS key:
      *        </p>
      *        <p>
      *        <code>"arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"</code>
@@ -554,9 +556,9 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html">hardware module to
      *        encrypt</a> storage volumes. If you choose one of these instance types, you cannot request a
      *        <code>VolumeKmsKeyId</code>. For a list of instance types that use local storage, see <a
-     *        href="https://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store
-     *        volumes</a>. For more information about AWS Key Management Service, see <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-security-kms-permissions.html">AWS KMS
+     *        href="http://aws.amazon.com/releasenotes/host-instance-storage-volumes-table/">instance store volumes</a>.
+     *        For more information about Amazon Web Services Key Management Service, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-security-kms-permissions.html">KMS
      *        encryption</a> for more information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -642,10 +644,11 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      * </p>
      * <note>
      * <p>
-     * If you only want to use a single InstanceConfig inside the <code>HyperParameterTuningResourceConfig</code> API,
-     * do not provide a value for <code>InstanceConfigs</code>. Instead, use <code>InstanceType</code>,
-     * <code>VolumeSizeInGB</code> and <code>InstanceCount</code>. If you use <code>InstanceConfigs</code>, do not
-     * provide values for <code>InstanceType</code>, <code>VolumeSizeInGB</code> or <code>InstanceCount</code>.
+     * If you only want to use a single instance configuration inside the
+     * <code>HyperParameterTuningResourceConfig</code> API, do not provide a value for <code>InstanceConfigs</code>.
+     * Instead, use <code>InstanceType</code>, <code>VolumeSizeInGB</code> and <code>InstanceCount</code>. If you use
+     * <code>InstanceConfigs</code>, do not provide values for <code>InstanceType</code>, <code>VolumeSizeInGB</code> or
+     * <code>InstanceCount</code>.
      * </p>
      * </note>
      * 
@@ -654,7 +657,7 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      *         hyperparameter tuning jobs. The <code>AllocationStrategy</code> controls the order in which multiple
      *         configurations provided in <code>InstanceConfigs</code> are used.</p> <note>
      *         <p>
-     *         If you only want to use a single InstanceConfig inside the
+     *         If you only want to use a single instance configuration inside the
      *         <code>HyperParameterTuningResourceConfig</code> API, do not provide a value for
      *         <code>InstanceConfigs</code>. Instead, use <code>InstanceType</code>, <code>VolumeSizeInGB</code> and
      *         <code>InstanceCount</code>. If you use <code>InstanceConfigs</code>, do not provide values for
@@ -675,10 +678,11 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      * </p>
      * <note>
      * <p>
-     * If you only want to use a single InstanceConfig inside the <code>HyperParameterTuningResourceConfig</code> API,
-     * do not provide a value for <code>InstanceConfigs</code>. Instead, use <code>InstanceType</code>,
-     * <code>VolumeSizeInGB</code> and <code>InstanceCount</code>. If you use <code>InstanceConfigs</code>, do not
-     * provide values for <code>InstanceType</code>, <code>VolumeSizeInGB</code> or <code>InstanceCount</code>.
+     * If you only want to use a single instance configuration inside the
+     * <code>HyperParameterTuningResourceConfig</code> API, do not provide a value for <code>InstanceConfigs</code>.
+     * Instead, use <code>InstanceType</code>, <code>VolumeSizeInGB</code> and <code>InstanceCount</code>. If you use
+     * <code>InstanceConfigs</code>, do not provide values for <code>InstanceType</code>, <code>VolumeSizeInGB</code> or
+     * <code>InstanceCount</code>.
      * </p>
      * </note>
      * 
@@ -688,11 +692,11 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      *        hyperparameter tuning jobs. The <code>AllocationStrategy</code> controls the order in which multiple
      *        configurations provided in <code>InstanceConfigs</code> are used.</p> <note>
      *        <p>
-     *        If you only want to use a single InstanceConfig inside the <code>HyperParameterTuningResourceConfig</code>
-     *        API, do not provide a value for <code>InstanceConfigs</code>. Instead, use <code>InstanceType</code>,
-     *        <code>VolumeSizeInGB</code> and <code>InstanceCount</code>. If you use <code>InstanceConfigs</code>, do
-     *        not provide values for <code>InstanceType</code>, <code>VolumeSizeInGB</code> or
-     *        <code>InstanceCount</code>.
+     *        If you only want to use a single instance configuration inside the
+     *        <code>HyperParameterTuningResourceConfig</code> API, do not provide a value for
+     *        <code>InstanceConfigs</code>. Instead, use <code>InstanceType</code>, <code>VolumeSizeInGB</code> and
+     *        <code>InstanceCount</code>. If you use <code>InstanceConfigs</code>, do not provide values for
+     *        <code>InstanceType</code>, <code>VolumeSizeInGB</code> or <code>InstanceCount</code>.
      *        </p>
      */
 
@@ -714,10 +718,11 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      * </p>
      * <note>
      * <p>
-     * If you only want to use a single InstanceConfig inside the <code>HyperParameterTuningResourceConfig</code> API,
-     * do not provide a value for <code>InstanceConfigs</code>. Instead, use <code>InstanceType</code>,
-     * <code>VolumeSizeInGB</code> and <code>InstanceCount</code>. If you use <code>InstanceConfigs</code>, do not
-     * provide values for <code>InstanceType</code>, <code>VolumeSizeInGB</code> or <code>InstanceCount</code>.
+     * If you only want to use a single instance configuration inside the
+     * <code>HyperParameterTuningResourceConfig</code> API, do not provide a value for <code>InstanceConfigs</code>.
+     * Instead, use <code>InstanceType</code>, <code>VolumeSizeInGB</code> and <code>InstanceCount</code>. If you use
+     * <code>InstanceConfigs</code>, do not provide values for <code>InstanceType</code>, <code>VolumeSizeInGB</code> or
+     * <code>InstanceCount</code>.
      * </p>
      * </note>
      * <p>
@@ -732,11 +737,11 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      *        hyperparameter tuning jobs. The <code>AllocationStrategy</code> controls the order in which multiple
      *        configurations provided in <code>InstanceConfigs</code> are used.</p> <note>
      *        <p>
-     *        If you only want to use a single InstanceConfig inside the <code>HyperParameterTuningResourceConfig</code>
-     *        API, do not provide a value for <code>InstanceConfigs</code>. Instead, use <code>InstanceType</code>,
-     *        <code>VolumeSizeInGB</code> and <code>InstanceCount</code>. If you use <code>InstanceConfigs</code>, do
-     *        not provide values for <code>InstanceType</code>, <code>VolumeSizeInGB</code> or
-     *        <code>InstanceCount</code>.
+     *        If you only want to use a single instance configuration inside the
+     *        <code>HyperParameterTuningResourceConfig</code> API, do not provide a value for
+     *        <code>InstanceConfigs</code>. Instead, use <code>InstanceType</code>, <code>VolumeSizeInGB</code> and
+     *        <code>InstanceCount</code>. If you use <code>InstanceConfigs</code>, do not provide values for
+     *        <code>InstanceType</code>, <code>VolumeSizeInGB</code> or <code>InstanceCount</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -760,10 +765,11 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      * </p>
      * <note>
      * <p>
-     * If you only want to use a single InstanceConfig inside the <code>HyperParameterTuningResourceConfig</code> API,
-     * do not provide a value for <code>InstanceConfigs</code>. Instead, use <code>InstanceType</code>,
-     * <code>VolumeSizeInGB</code> and <code>InstanceCount</code>. If you use <code>InstanceConfigs</code>, do not
-     * provide values for <code>InstanceType</code>, <code>VolumeSizeInGB</code> or <code>InstanceCount</code>.
+     * If you only want to use a single instance configuration inside the
+     * <code>HyperParameterTuningResourceConfig</code> API, do not provide a value for <code>InstanceConfigs</code>.
+     * Instead, use <code>InstanceType</code>, <code>VolumeSizeInGB</code> and <code>InstanceCount</code>. If you use
+     * <code>InstanceConfigs</code>, do not provide values for <code>InstanceType</code>, <code>VolumeSizeInGB</code> or
+     * <code>InstanceCount</code>.
      * </p>
      * </note>
      * 
@@ -773,11 +779,11 @@ public class HyperParameterTuningResourceConfig implements Serializable, Cloneab
      *        hyperparameter tuning jobs. The <code>AllocationStrategy</code> controls the order in which multiple
      *        configurations provided in <code>InstanceConfigs</code> are used.</p> <note>
      *        <p>
-     *        If you only want to use a single InstanceConfig inside the <code>HyperParameterTuningResourceConfig</code>
-     *        API, do not provide a value for <code>InstanceConfigs</code>. Instead, use <code>InstanceType</code>,
-     *        <code>VolumeSizeInGB</code> and <code>InstanceCount</code>. If you use <code>InstanceConfigs</code>, do
-     *        not provide values for <code>InstanceType</code>, <code>VolumeSizeInGB</code> or
-     *        <code>InstanceCount</code>.
+     *        If you only want to use a single instance configuration inside the
+     *        <code>HyperParameterTuningResourceConfig</code> API, do not provide a value for
+     *        <code>InstanceConfigs</code>. Instead, use <code>InstanceType</code>, <code>VolumeSizeInGB</code> and
+     *        <code>InstanceCount</code>. If you use <code>InstanceConfigs</code>, do not provide values for
+     *        <code>InstanceType</code>, <code>VolumeSizeInGB</code> or <code>InstanceCount</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
