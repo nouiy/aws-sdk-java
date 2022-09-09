@@ -205,6 +205,9 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
                             new JsonErrorShapeMetadata().withErrorCode("InvalidEventSelectorsException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.InvalidEventSelectorsExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ChannelARNInvalidException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.ChannelARNInvalidExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("UnsupportedOperationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.UnsupportedOperationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -258,6 +261,9 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InsufficientSnsTopicPolicyException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.InsufficientSnsTopicPolicyExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ChannelNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.ChannelNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("MaxConcurrentQueriesException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.MaxConcurrentQueriesExceptionUnmarshaller.getInstance()))
@@ -1308,6 +1314,70 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
+     * Returns the specified CloudTrail service-linked channel. Amazon Web Services services create service-linked
+     * channels to view CloudTrail events.
+     * </p>
+     * 
+     * @param getChannelRequest
+     * @return Result of the GetChannel operation returned by the service.
+     * @throws ChannelARNInvalidException
+     *         The specified channel ARN is not valid or does not map to a channel in your account.
+     * @throws ChannelNotFoundException
+     *         The specified channel was not found.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.GetChannel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/GetChannel" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetChannelResult getChannel(GetChannelRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetChannel(request);
+    }
+
+    @SdkInternalApi
+    final GetChannelResult executeGetChannel(GetChannelRequest getChannelRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getChannelRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetChannelRequest> request = null;
+        Response<GetChannelResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetChannelRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getChannelRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudTrail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetChannel");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetChannelResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetChannelResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns information about an event data store specified as either an ARN or the ID portion of the ARN.
      * </p>
      * 
@@ -1839,6 +1909,68 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
             HttpResponseHandler<AmazonWebServiceResponse<GetTrailStatusResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetTrailStatusResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns all CloudTrail channels.
+     * </p>
+     * 
+     * @param listChannelsRequest
+     * @return Result of the ListChannels operation returned by the service.
+     * @throws InvalidNextTokenException
+     *         A token that is not valid, or a token that was previously used in a request with different parameters.
+     *         This exception is thrown if the token is not valid.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.ListChannels
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/ListChannels" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListChannelsResult listChannels(ListChannelsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListChannels(request);
+    }
+
+    @SdkInternalApi
+    final ListChannelsResult executeListChannels(ListChannelsRequest listChannelsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listChannelsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListChannelsRequest> request = null;
+        Response<ListChannelsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListChannelsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listChannelsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudTrail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListChannels");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListChannelsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListChannelsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3220,7 +3352,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * <p>
      * Updates an event data store. The required <code>EventDataStore</code> value is an ARN or the ID portion of the
      * ARN. Other parameters are optional, but at least one optional parameter must be specified, or CloudTrail throws
-     * an error. <code>RetentionPeriod</code> is in days, and valid values are integers between 90 and 2555. By default,
+     * an error. <code>RetentionPeriod</code> is in days, and valid values are integers between 90 and 2557. By default,
      * <code>TerminationProtection</code> is enabled. <code>AdvancedEventSelectors</code> includes or excludes
      * management and data events in your event data store; for more information about
      * <code>AdvancedEventSelectors</code>, see <a>PutEventSelectorsRequest$AdvancedEventSelectors</a>.

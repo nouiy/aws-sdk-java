@@ -427,8 +427,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String hsmConfigurationIdentifier;
     /**
      * <p>
-     * The Elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible cluster
-     * with AvailabilityZoneRelocation turned on.
+     * The Elastic IP (EIP) address for the cluster.
      * </p>
      * <p>
      * Constraints: The cluster must be provisioned in EC2-VPC and publicly-accessible through an Internet gateway. For
@@ -506,26 +505,9 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     private Boolean availabilityZoneRelocation;
     /**
      * <p>
-     * The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) when it is created.
-     * Possible values include the following.
+     * This parameter is retired. It does not set the AQUA configuration status. Amazon Redshift automatically
+     * determines whether to use AQUA (Advanced Query Accelerator).
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * disabled - Don't use AQUA.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * auto - Amazon Redshift determines whether to use AQUA.
-     * </p>
-     * </li>
-     * </ul>
      */
     private String aquaConfigurationStatus;
     /**
@@ -3115,8 +3097,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible cluster
-     * with AvailabilityZoneRelocation turned on.
+     * The Elastic IP (EIP) address for the cluster.
      * </p>
      * <p>
      * Constraints: The cluster must be provisioned in EC2-VPC and publicly-accessible through an Internet gateway. For
@@ -3126,8 +3107,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param elasticIp
-     *        The Elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible
-     *        cluster with AvailabilityZoneRelocation turned on.</p>
+     *        The Elastic IP (EIP) address for the cluster.</p>
      *        <p>
      *        Constraints: The cluster must be provisioned in EC2-VPC and publicly-accessible through an Internet
      *        gateway. For more information about provisioning clusters in EC2-VPC, go to <a
@@ -3141,8 +3121,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible cluster
-     * with AvailabilityZoneRelocation turned on.
+     * The Elastic IP (EIP) address for the cluster.
      * </p>
      * <p>
      * Constraints: The cluster must be provisioned in EC2-VPC and publicly-accessible through an Internet gateway. For
@@ -3151,8 +3130,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Platforms to Launch Your Cluster</a> in the Amazon Redshift Cluster Management Guide.
      * </p>
      * 
-     * @return The Elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible
-     *         cluster with AvailabilityZoneRelocation turned on.</p>
+     * @return The Elastic IP (EIP) address for the cluster.</p>
      *         <p>
      *         Constraints: The cluster must be provisioned in EC2-VPC and publicly-accessible through an Internet
      *         gateway. For more information about provisioning clusters in EC2-VPC, go to <a
@@ -3166,8 +3144,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible cluster
-     * with AvailabilityZoneRelocation turned on.
+     * The Elastic IP (EIP) address for the cluster.
      * </p>
      * <p>
      * Constraints: The cluster must be provisioned in EC2-VPC and publicly-accessible through an Internet gateway. For
@@ -3177,8 +3154,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param elasticIp
-     *        The Elastic IP (EIP) address for the cluster. You don't have to specify the EIP for a publicly accessible
-     *        cluster with AvailabilityZoneRelocation turned on.</p>
+     *        The Elastic IP (EIP) address for the cluster.</p>
      *        <p>
      *        Constraints: The cluster must be provisioned in EC2-VPC and publicly-accessible through an Internet
      *        gateway. For more information about provisioning clusters in EC2-VPC, go to <a
@@ -3740,47 +3716,13 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) when it is created.
-     * Possible values include the following.
+     * This parameter is retired. It does not set the AQUA configuration status. Amazon Redshift automatically
+     * determines whether to use AQUA (Advanced Query Accelerator).
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * disabled - Don't use AQUA.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * auto - Amazon Redshift determines whether to use AQUA.
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param aquaConfigurationStatus
-     *        The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) when it is
-     *        created. Possible values include the following.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node
-     *        type.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        disabled - Don't use AQUA.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        auto - Amazon Redshift determines whether to use AQUA.
-     *        </p>
-     *        </li>
+     *        This parameter is retired. It does not set the AQUA configuration status. Amazon Redshift automatically
+     *        determines whether to use AQUA (Advanced Query Accelerator).
      * @see AquaConfigurationStatus
      */
 
@@ -3790,46 +3732,12 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) when it is created.
-     * Possible values include the following.
+     * This parameter is retired. It does not set the AQUA configuration status. Amazon Redshift automatically
+     * determines whether to use AQUA (Advanced Query Accelerator).
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * disabled - Don't use AQUA.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * auto - Amazon Redshift determines whether to use AQUA.
-     * </p>
-     * </li>
-     * </ul>
      * 
-     * @return The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) when it is
-     *         created. Possible values include the following.</p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node
-     *         type.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         disabled - Don't use AQUA.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         auto - Amazon Redshift determines whether to use AQUA.
-     *         </p>
-     *         </li>
+     * @return This parameter is retired. It does not set the AQUA configuration status. Amazon Redshift automatically
+     *         determines whether to use AQUA (Advanced Query Accelerator).
      * @see AquaConfigurationStatus
      */
 
@@ -3839,47 +3747,13 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) when it is created.
-     * Possible values include the following.
+     * This parameter is retired. It does not set the AQUA configuration status. Amazon Redshift automatically
+     * determines whether to use AQUA (Advanced Query Accelerator).
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * disabled - Don't use AQUA.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * auto - Amazon Redshift determines whether to use AQUA.
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param aquaConfigurationStatus
-     *        The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) when it is
-     *        created. Possible values include the following.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node
-     *        type.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        disabled - Don't use AQUA.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        auto - Amazon Redshift determines whether to use AQUA.
-     *        </p>
-     *        </li>
+     *        This parameter is retired. It does not set the AQUA configuration status. Amazon Redshift automatically
+     *        determines whether to use AQUA (Advanced Query Accelerator).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AquaConfigurationStatus
      */
@@ -3891,47 +3765,13 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) when it is created.
-     * Possible values include the following.
+     * This parameter is retired. It does not set the AQUA configuration status. Amazon Redshift automatically
+     * determines whether to use AQUA (Advanced Query Accelerator).
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * disabled - Don't use AQUA.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * auto - Amazon Redshift determines whether to use AQUA.
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param aquaConfigurationStatus
-     *        The value represents how the cluster is configured to use AQUA (Advanced Query Accelerator) when it is
-     *        created. Possible values include the following.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node
-     *        type.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        disabled - Don't use AQUA.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        auto - Amazon Redshift determines whether to use AQUA.
-     *        </p>
-     *        </li>
+     *        This parameter is retired. It does not set the AQUA configuration status. Amazon Redshift automatically
+     *        determines whether to use AQUA (Advanced Query Accelerator).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AquaConfigurationStatus
      */

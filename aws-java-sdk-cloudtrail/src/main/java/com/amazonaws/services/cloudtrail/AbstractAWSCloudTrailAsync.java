@@ -155,6 +155,19 @@ public class AbstractAWSCloudTrailAsync extends AbstractAWSCloudTrail implements
     }
 
     @Override
+    public java.util.concurrent.Future<GetChannelResult> getChannelAsync(GetChannelRequest request) {
+
+        return getChannelAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetChannelResult> getChannelAsync(GetChannelRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetChannelRequest, GetChannelResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetEventDataStoreResult> getEventDataStoreAsync(GetEventDataStoreRequest request) {
 
         return getEventDataStoreAsync(request, null);
@@ -228,6 +241,19 @@ public class AbstractAWSCloudTrailAsync extends AbstractAWSCloudTrail implements
     @Override
     public java.util.concurrent.Future<GetTrailStatusResult> getTrailStatusAsync(GetTrailStatusRequest request,
             com.amazonaws.handlers.AsyncHandler<GetTrailStatusRequest, GetTrailStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListChannelsResult> listChannelsAsync(ListChannelsRequest request) {
+
+        return listChannelsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListChannelsResult> listChannelsAsync(ListChannelsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListChannelsRequest, ListChannelsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

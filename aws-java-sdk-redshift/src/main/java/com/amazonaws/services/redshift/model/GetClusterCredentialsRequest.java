@@ -52,7 +52,8 @@ public class GetClusterCredentialsRequest extends com.amazonaws.AmazonWebService
      * </li>
      * <li>
      * <p>
-     * Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or hyphen.
+     * Must contain uppercase or lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or
+     * hyphen.
      * </p>
      * </li>
      * <li>
@@ -91,7 +92,8 @@ public class GetClusterCredentialsRequest extends com.amazonaws.AmazonWebService
      * </li>
      * <li>
      * <p>
-     * Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or hyphen.
+     * Must contain uppercase or lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or
+     * hyphen.
      * </p>
      * </li>
      * <li>
@@ -204,7 +206,8 @@ public class GetClusterCredentialsRequest extends com.amazonaws.AmazonWebService
      * </li>
      * <li>
      * <p>
-     * Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or hyphen.
+     * Must contain uppercase or lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or
+     * hyphen.
      * </p>
      * </li>
      * <li>
@@ -249,8 +252,8 @@ public class GetClusterCredentialsRequest extends com.amazonaws.AmazonWebService
      *        </li>
      *        <li>
      *        <p>
-     *        Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or
-     *        hyphen.
+     *        Must contain uppercase or lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@),
+     *        or hyphen.
      *        </p>
      *        </li>
      *        <li>
@@ -300,7 +303,8 @@ public class GetClusterCredentialsRequest extends com.amazonaws.AmazonWebService
      * </li>
      * <li>
      * <p>
-     * Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or hyphen.
+     * Must contain uppercase or lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or
+     * hyphen.
      * </p>
      * </li>
      * <li>
@@ -344,8 +348,8 @@ public class GetClusterCredentialsRequest extends com.amazonaws.AmazonWebService
      *         </li>
      *         <li>
      *         <p>
-     *         Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or
-     *         hyphen.
+     *         Must contain uppercase or lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@),
+     *         or hyphen.
      *         </p>
      *         </li>
      *         <li>
@@ -395,7 +399,8 @@ public class GetClusterCredentialsRequest extends com.amazonaws.AmazonWebService
      * </li>
      * <li>
      * <p>
-     * Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or hyphen.
+     * Must contain uppercase or lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or
+     * hyphen.
      * </p>
      * </li>
      * <li>
@@ -440,8 +445,8 @@ public class GetClusterCredentialsRequest extends com.amazonaws.AmazonWebService
      *        </li>
      *        <li>
      *        <p>
-     *        Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or
-     *        hyphen.
+     *        Must contain uppercase or lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@),
+     *        or hyphen.
      *        </p>
      *        </li>
      *        <li>
@@ -485,7 +490,8 @@ public class GetClusterCredentialsRequest extends com.amazonaws.AmazonWebService
      * </li>
      * <li>
      * <p>
-     * Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or hyphen.
+     * Must contain uppercase or lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or
+     * hyphen.
      * </p>
      * </li>
      * <li>
@@ -521,8 +527,8 @@ public class GetClusterCredentialsRequest extends com.amazonaws.AmazonWebService
      *        </li>
      *        <li>
      *        <p>
-     *        Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or
-     *        hyphen.
+     *        Must contain uppercase or lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@),
+     *        or hyphen.
      *        </p>
      *        </li>
      *        <li>
@@ -564,7 +570,8 @@ public class GetClusterCredentialsRequest extends com.amazonaws.AmazonWebService
      * </li>
      * <li>
      * <p>
-     * Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or hyphen.
+     * Must contain uppercase or lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or
+     * hyphen.
      * </p>
      * </li>
      * <li>
@@ -599,8 +606,8 @@ public class GetClusterCredentialsRequest extends com.amazonaws.AmazonWebService
      *         </li>
      *         <li>
      *         <p>
-     *         Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or
-     *         hyphen.
+     *         Must contain uppercase or lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@),
+     *         or hyphen.
      *         </p>
      *         </li>
      *         <li>
@@ -642,7 +649,8 @@ public class GetClusterCredentialsRequest extends com.amazonaws.AmazonWebService
      * </li>
      * <li>
      * <p>
-     * Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or hyphen.
+     * Must contain uppercase or lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or
+     * hyphen.
      * </p>
      * </li>
      * <li>
@@ -678,8 +686,8 @@ public class GetClusterCredentialsRequest extends com.amazonaws.AmazonWebService
      *        </li>
      *        <li>
      *        <p>
-     *        Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or
-     *        hyphen.
+     *        Must contain uppercase or lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@),
+     *        or hyphen.
      *        </p>
      *        </li>
      *        <li>

@@ -4056,7 +4056,8 @@ public interface AmazonRedshiftAsync extends AmazonRedshift {
 
     /**
      * <p>
-     * Modifies whether a cluster can use AQUA (Advanced Query Accelerator).
+     * This operation is retired. Calling this operation does not change AQUA configuration. Amazon Redshift
+     * automatically determines whether to use AQUA (Advanced Query Accelerator).
      * </p>
      * 
      * @param modifyAquaConfigurationRequest
@@ -4069,7 +4070,8 @@ public interface AmazonRedshiftAsync extends AmazonRedshift {
 
     /**
      * <p>
-     * Modifies whether a cluster can use AQUA (Advanced Query Accelerator).
+     * This operation is retired. Calling this operation does not change AQUA configuration. Amazon Redshift
+     * automatically determines whether to use AQUA (Advanced Query Accelerator).
      * </p>
      * 
      * @param modifyAquaConfigurationRequest

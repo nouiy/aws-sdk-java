@@ -6976,7 +6976,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Modifies whether a cluster can use AQUA (Advanced Query Accelerator).
+     * This operation is retired. Calling this operation does not change AQUA configuration. Amazon Redshift
+     * automatically determines whether to use AQUA (Advanced Query Accelerator).
      * </p>
      * 
      * @param modifyAquaConfigurationRequest

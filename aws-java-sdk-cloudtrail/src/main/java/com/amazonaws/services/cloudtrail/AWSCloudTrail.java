@@ -615,6 +615,28 @@ public interface AWSCloudTrail {
 
     /**
      * <p>
+     * Returns the specified CloudTrail service-linked channel. Amazon Web Services services create service-linked
+     * channels to view CloudTrail events.
+     * </p>
+     * 
+     * @param getChannelRequest
+     * @return Result of the GetChannel operation returned by the service.
+     * @throws ChannelARNInvalidException
+     *         The specified channel ARN is not valid or does not map to a channel in your account.
+     * @throws ChannelNotFoundException
+     *         The specified channel was not found.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.GetChannel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/GetChannel" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetChannelResult getChannel(GetChannelRequest getChannelRequest);
+
+    /**
+     * <p>
      * Returns information about an event data store specified as either an ARN or the ID portion of the ARN.
      * </p>
      * 
@@ -903,6 +925,26 @@ public interface AWSCloudTrail {
      *      Documentation</a>
      */
     GetTrailStatusResult getTrailStatus(GetTrailStatusRequest getTrailStatusRequest);
+
+    /**
+     * <p>
+     * Returns all CloudTrail channels.
+     * </p>
+     * 
+     * @param listChannelsRequest
+     * @return Result of the ListChannels operation returned by the service.
+     * @throws InvalidNextTokenException
+     *         A token that is not valid, or a token that was previously used in a request with different parameters.
+     *         This exception is thrown if the token is not valid.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.ListChannels
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/ListChannels" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListChannelsResult listChannels(ListChannelsRequest listChannelsRequest);
 
     /**
      * <p>
@@ -1732,7 +1774,7 @@ public interface AWSCloudTrail {
      * <p>
      * Updates an event data store. The required <code>EventDataStore</code> value is an ARN or the ID portion of the
      * ARN. Other parameters are optional, but at least one optional parameter must be specified, or CloudTrail throws
-     * an error. <code>RetentionPeriod</code> is in days, and valid values are integers between 90 and 2555. By default,
+     * an error. <code>RetentionPeriod</code> is in days, and valid values are integers between 90 and 2557. By default,
      * <code>TerminationProtection</code> is enabled. <code>AdvancedEventSelectors</code> includes or excludes
      * management and data events in your event data store; for more information about
      * <code>AdvancedEventSelectors</code>, see <a>PutEventSelectorsRequest$AdvancedEventSelectors</a>.

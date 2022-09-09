@@ -369,6 +369,39 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
 
     /**
      * <p>
+     * Returns the specified CloudTrail service-linked channel. Amazon Web Services services create service-linked
+     * channels to view CloudTrail events.
+     * </p>
+     * 
+     * @param getChannelRequest
+     * @return A Java Future containing the result of the GetChannel operation returned by the service.
+     * @sample AWSCloudTrailAsync.GetChannel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/GetChannel" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetChannelResult> getChannelAsync(GetChannelRequest getChannelRequest);
+
+    /**
+     * <p>
+     * Returns the specified CloudTrail service-linked channel. Amazon Web Services services create service-linked
+     * channels to view CloudTrail events.
+     * </p>
+     * 
+     * @param getChannelRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetChannel operation returned by the service.
+     * @sample AWSCloudTrailAsyncHandler.GetChannel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/GetChannel" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetChannelResult> getChannelAsync(GetChannelRequest getChannelRequest,
+            com.amazonaws.handlers.AsyncHandler<GetChannelRequest, GetChannelResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns information about an event data store specified as either an ARN or the ID portion of the ARN.
      * </p>
      * 
@@ -626,6 +659,37 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      */
     java.util.concurrent.Future<GetTrailStatusResult> getTrailStatusAsync(GetTrailStatusRequest getTrailStatusRequest,
             com.amazonaws.handlers.AsyncHandler<GetTrailStatusRequest, GetTrailStatusResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns all CloudTrail channels.
+     * </p>
+     * 
+     * @param listChannelsRequest
+     * @return A Java Future containing the result of the ListChannels operation returned by the service.
+     * @sample AWSCloudTrailAsync.ListChannels
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/ListChannels" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListChannelsResult> listChannelsAsync(ListChannelsRequest listChannelsRequest);
+
+    /**
+     * <p>
+     * Returns all CloudTrail channels.
+     * </p>
+     * 
+     * @param listChannelsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListChannels operation returned by the service.
+     * @sample AWSCloudTrailAsyncHandler.ListChannels
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/ListChannels" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListChannelsResult> listChannelsAsync(ListChannelsRequest listChannelsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListChannelsRequest, ListChannelsResult> asyncHandler);
 
     /**
      * <p>
@@ -1397,7 +1461,7 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      * <p>
      * Updates an event data store. The required <code>EventDataStore</code> value is an ARN or the ID portion of the
      * ARN. Other parameters are optional, but at least one optional parameter must be specified, or CloudTrail throws
-     * an error. <code>RetentionPeriod</code> is in days, and valid values are integers between 90 and 2555. By default,
+     * an error. <code>RetentionPeriod</code> is in days, and valid values are integers between 90 and 2557. By default,
      * <code>TerminationProtection</code> is enabled. <code>AdvancedEventSelectors</code> includes or excludes
      * management and data events in your event data store; for more information about
      * <code>AdvancedEventSelectors</code>, see <a>PutEventSelectorsRequest$AdvancedEventSelectors</a>.
@@ -1415,7 +1479,7 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      * <p>
      * Updates an event data store. The required <code>EventDataStore</code> value is an ARN or the ID portion of the
      * ARN. Other parameters are optional, but at least one optional parameter must be specified, or CloudTrail throws
-     * an error. <code>RetentionPeriod</code> is in days, and valid values are integers between 90 and 2555. By default,
+     * an error. <code>RetentionPeriod</code> is in days, and valid values are integers between 90 and 2557. By default,
      * <code>TerminationProtection</code> is enabled. <code>AdvancedEventSelectors</code> includes or excludes
      * management and data events in your event data store; for more information about
      * <code>AdvancedEventSelectors</code>, see <a>PutEventSelectorsRequest$AdvancedEventSelectors</a>.
