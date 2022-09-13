@@ -5090,8 +5090,21 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Creates a static route for the specified local gateway route table.
+     * Creates a static route for the specified local gateway route table. You must specify one of the following
+     * targets:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>LocalGatewayVirtualInterfaceGroupId</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NetworkInterfaceId</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param createLocalGatewayRouteRequest
      * @return Result of the CreateLocalGatewayRoute operation returned by the service.
@@ -28278,6 +28291,62 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<ModifyLaunchTemplateResult> responseHandler = new StaxResponseHandler<ModifyLaunchTemplateResult>(
                     new ModifyLaunchTemplateResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Modifies the specified local gateway route.
+     * </p>
+     * 
+     * @param modifyLocalGatewayRouteRequest
+     * @return Result of the ModifyLocalGatewayRoute operation returned by the service.
+     * @sample AmazonEC2.ModifyLocalGatewayRoute
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyLocalGatewayRoute" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ModifyLocalGatewayRouteResult modifyLocalGatewayRoute(ModifyLocalGatewayRouteRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifyLocalGatewayRoute(request);
+    }
+
+    @SdkInternalApi
+    final ModifyLocalGatewayRouteResult executeModifyLocalGatewayRoute(ModifyLocalGatewayRouteRequest modifyLocalGatewayRouteRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifyLocalGatewayRouteRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifyLocalGatewayRouteRequest> request = null;
+        Response<ModifyLocalGatewayRouteResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifyLocalGatewayRouteRequestMarshaller().marshall(super.beforeMarshalling(modifyLocalGatewayRouteRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifyLocalGatewayRoute");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ModifyLocalGatewayRouteResult> responseHandler = new StaxResponseHandler<ModifyLocalGatewayRouteResult>(
+                    new ModifyLocalGatewayRouteResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

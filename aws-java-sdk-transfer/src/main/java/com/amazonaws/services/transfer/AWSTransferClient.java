@@ -90,11 +90,20 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
                             new JsonErrorShapeMetadata().withErrorCode("InvalidRequestException").withExceptionUnmarshaller(
                                     com.amazonaws.services.transfer.model.transform.InvalidRequestExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.transfer.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidNextTokenException").withExceptionUnmarshaller(
                                     com.amazonaws.services.transfer.model.transform.InvalidNextTokenExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.transfer.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InternalServiceError").withExceptionUnmarshaller(
+                                    com.amazonaws.services.transfer.model.transform.InternalServiceErrorExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceExistsException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.transfer.model.transform.ResourceExistsExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.transfer.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.transfer.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
@@ -102,17 +111,8 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.transfer.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.transfer.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceUnavailableException").withExceptionUnmarshaller(
                                     com.amazonaws.services.transfer.model.transform.ServiceUnavailableExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InternalServiceError").withExceptionUnmarshaller(
-                                    com.amazonaws.services.transfer.model.transform.InternalServiceErrorExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ResourceExistsException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.transfer.model.transform.ResourceExistsExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.transfer.model.AWSTransferException.class));
 
     public static AWSTransferClientBuilder builder() {
@@ -895,6 +895,71 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
 
     /**
      * <p>
+     * Deletes the host key that's specified in the <code>HoskKeyId</code> parameter.
+     * </p>
+     * 
+     * @param deleteHostKeyRequest
+     * @return Result of the DeleteHostKey operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSTransfer.DeleteHostKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DeleteHostKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteHostKeyResult deleteHostKey(DeleteHostKeyRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteHostKey(request);
+    }
+
+    @SdkInternalApi
+    final DeleteHostKeyResult executeDeleteHostKey(DeleteHostKeyRequest deleteHostKeyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteHostKeyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteHostKeyRequest> request = null;
+        Response<DeleteHostKeyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteHostKeyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteHostKeyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transfer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteHostKey");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteHostKeyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteHostKeyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes the profile that's specified in the <code>ProfileId</code> parameter.
      * </p>
      * 
@@ -1547,6 +1612,69 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
 
     /**
      * <p>
+     * Returns the details of the host key that's specified by the <code>HostKeyId</code> and <code>ServerId</code>.
+     * </p>
+     * 
+     * @param describeHostKeyRequest
+     * @return Result of the DescribeHostKey operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.DescribeHostKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DescribeHostKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeHostKeyResult describeHostKey(DescribeHostKeyRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeHostKey(request);
+    }
+
+    @SdkInternalApi
+    final DescribeHostKeyResult executeDescribeHostKey(DescribeHostKeyRequest describeHostKeyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeHostKeyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeHostKeyRequest> request = null;
+        Response<DescribeHostKeyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeHostKeyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeHostKeyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transfer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeHostKey");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeHostKeyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeHostKeyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns the details of the profile that's specified by the <code>ProfileId</code>.
      * </p>
      * 
@@ -1928,6 +2056,73 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
 
             HttpResponseHandler<AmazonWebServiceResponse<ImportCertificateResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ImportCertificateResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Adds a host key to the server specified by the <code>ServerId</code> parameter.
+     * </p>
+     * 
+     * @param importHostKeyRequest
+     * @return Result of the ImportHostKey operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceExistsException
+     *         The requested resource does not exist.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSTransfer.ImportHostKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ImportHostKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ImportHostKeyResult importHostKey(ImportHostKeyRequest request) {
+        request = beforeClientExecution(request);
+        return executeImportHostKey(request);
+    }
+
+    @SdkInternalApi
+    final ImportHostKeyResult executeImportHostKey(ImportHostKeyRequest importHostKeyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(importHostKeyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ImportHostKeyRequest> request = null;
+        Response<ImportHostKeyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ImportHostKeyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(importHostKeyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transfer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ImportHostKey");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ImportHostKeyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ImportHostKeyResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2331,6 +2526,71 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
 
             HttpResponseHandler<AmazonWebServiceResponse<ListExecutionsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListExecutionsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of host keys for the server specified by the <code>ServerId</code> paramter.
+     * </p>
+     * 
+     * @param listHostKeysRequest
+     * @return Result of the ListHostKeys operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> parameter that was passed is invalid.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.ListHostKeys
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ListHostKeys" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListHostKeysResult listHostKeys(ListHostKeysRequest request) {
+        request = beforeClientExecution(request);
+        return executeListHostKeys(request);
+    }
+
+    @SdkInternalApi
+    final ListHostKeysResult executeListHostKeys(ListHostKeysRequest listHostKeysRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listHostKeysRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListHostKeysRequest> request = null;
+        Response<ListHostKeysResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListHostKeysRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listHostKeysRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transfer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListHostKeys");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListHostKeysResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListHostKeysResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3507,6 +3767,72 @@ public class AWSTransferClient extends AmazonWebServiceClient implements AWSTran
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateConnectorResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateConnectorResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the description for the host key specified by the specified by the <code>ServerId</code> and
+     * <code>HostKeyId</code> parameters.
+     * </p>
+     * 
+     * @param updateHostKeyRequest
+     * @return Result of the UpdateHostKey operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSTransfer.UpdateHostKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/UpdateHostKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateHostKeyResult updateHostKey(UpdateHostKeyRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateHostKey(request);
+    }
+
+    @SdkInternalApi
+    final UpdateHostKeyResult executeUpdateHostKey(UpdateHostKeyRequest updateHostKeyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateHostKeyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateHostKeyRequest> request = null;
+        Response<UpdateHostKeyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateHostKeyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateHostKeyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transfer");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateHostKey");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateHostKeyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateHostKeyResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

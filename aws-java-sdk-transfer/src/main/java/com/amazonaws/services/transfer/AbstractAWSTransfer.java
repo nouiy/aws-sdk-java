@@ -84,6 +84,11 @@ public class AbstractAWSTransfer implements AWSTransfer {
     }
 
     @Override
+    public DeleteHostKeyResult deleteHostKey(DeleteHostKeyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteProfileResult deleteProfile(DeleteProfileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -134,6 +139,11 @@ public class AbstractAWSTransfer implements AWSTransfer {
     }
 
     @Override
+    public DescribeHostKeyResult describeHostKey(DescribeHostKeyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeProfileResult describeProfile(DescribeProfileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -164,6 +174,11 @@ public class AbstractAWSTransfer implements AWSTransfer {
     }
 
     @Override
+    public ImportHostKeyResult importHostKey(ImportHostKeyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ImportSshPublicKeyResult importSshPublicKey(ImportSshPublicKeyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -190,6 +205,11 @@ public class AbstractAWSTransfer implements AWSTransfer {
 
     @Override
     public ListExecutionsResult listExecutions(ListExecutionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListHostKeysResult listHostKeys(ListHostKeysRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -275,6 +295,11 @@ public class AbstractAWSTransfer implements AWSTransfer {
 
     @Override
     public UpdateConnectorResult updateConnector(UpdateConnectorRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateHostKeyResult updateHostKey(UpdateHostKeyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -39,9 +39,9 @@ public class CreateSegmentRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String name;
     /**
      * <p>
-     * The pattern to use for the segment. For more information about pattern syntax, see <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html">
-     * Segment rule pattern syntax</a>.
+     * The pattern to use for the segment. For more information about pattern syntax, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax.html"
+     * > Segment rule pattern syntax</a>.
      * </p>
      */
     private String pattern;
@@ -146,9 +146,9 @@ public class CreateSegmentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The pattern to use for the segment. For more information about pattern syntax, see <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html">
-     * Segment rule pattern syntax</a>.
+     * The pattern to use for the segment. For more information about pattern syntax, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax.html"
+     * > Segment rule pattern syntax</a>.
      * </p>
      * <p>
      * This field's value must be valid JSON according to RFC 7159, including the opening and closing braces. For
@@ -161,7 +161,7 @@ public class CreateSegmentRequest extends com.amazonaws.AmazonWebServiceRequest 
      * 
      * @param pattern
      *        The pattern to use for the segment. For more information about pattern syntax, see <a href=
-     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html"
+     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax.html"
      *        > Segment rule pattern syntax</a>.
      */
 
@@ -171,17 +171,17 @@ public class CreateSegmentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The pattern to use for the segment. For more information about pattern syntax, see <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html">
-     * Segment rule pattern syntax</a>.
+     * The pattern to use for the segment. For more information about pattern syntax, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax.html"
+     * > Segment rule pattern syntax</a>.
      * </p>
      * <p>
      * This field's value will be valid JSON according to RFC 7159, including the opening and closing braces. For
      * example: '{"key": "value"}'.
      * </p>
      * 
-     * @return The pattern to use for the segment. For more information about pattern syntax, see <a
-     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html"
+     * @return The pattern to use for the segment. For more information about pattern syntax, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax.html"
      *         > Segment rule pattern syntax</a>.
      */
 
@@ -191,9 +191,9 @@ public class CreateSegmentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The pattern to use for the segment. For more information about pattern syntax, see <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html">
-     * Segment rule pattern syntax</a>.
+     * The pattern to use for the segment. For more information about pattern syntax, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax.html"
+     * > Segment rule pattern syntax</a>.
      * </p>
      * <p>
      * This field's value must be valid JSON according to RFC 7159, including the opening and closing braces. For
@@ -206,7 +206,7 @@ public class CreateSegmentRequest extends com.amazonaws.AmazonWebServiceRequest 
      * 
      * @param pattern
      *        The pattern to use for the segment. For more information about pattern syntax, see <a href=
-     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html"
+     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html#CloudWatch-Evidently-segments-syntax.html"
      *        > Segment rule pattern syntax</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

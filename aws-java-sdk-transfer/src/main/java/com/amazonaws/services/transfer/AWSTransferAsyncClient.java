@@ -444,6 +444,39 @@ public class AWSTransferAsyncClient extends AWSTransferClient implements AWSTran
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteHostKeyResult> deleteHostKeyAsync(DeleteHostKeyRequest request) {
+
+        return deleteHostKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteHostKeyResult> deleteHostKeyAsync(final DeleteHostKeyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteHostKeyRequest, DeleteHostKeyResult> asyncHandler) {
+        final DeleteHostKeyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteHostKeyResult>() {
+            @Override
+            public DeleteHostKeyResult call() throws Exception {
+                DeleteHostKeyResult result = null;
+
+                try {
+                    result = executeDeleteHostKey(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteProfileResult> deleteProfileAsync(DeleteProfileRequest request) {
 
         return deleteProfileAsync(request, null);
@@ -774,6 +807,39 @@ public class AWSTransferAsyncClient extends AWSTransferClient implements AWSTran
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeHostKeyResult> describeHostKeyAsync(DescribeHostKeyRequest request) {
+
+        return describeHostKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeHostKeyResult> describeHostKeyAsync(final DescribeHostKeyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeHostKeyRequest, DescribeHostKeyResult> asyncHandler) {
+        final DescribeHostKeyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeHostKeyResult>() {
+            @Override
+            public DescribeHostKeyResult call() throws Exception {
+                DescribeHostKeyResult result = null;
+
+                try {
+                    result = executeDescribeHostKey(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeProfileResult> describeProfileAsync(DescribeProfileRequest request) {
 
         return describeProfileAsync(request, null);
@@ -972,6 +1038,39 @@ public class AWSTransferAsyncClient extends AWSTransferClient implements AWSTran
     }
 
     @Override
+    public java.util.concurrent.Future<ImportHostKeyResult> importHostKeyAsync(ImportHostKeyRequest request) {
+
+        return importHostKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ImportHostKeyResult> importHostKeyAsync(final ImportHostKeyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ImportHostKeyRequest, ImportHostKeyResult> asyncHandler) {
+        final ImportHostKeyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ImportHostKeyResult>() {
+            @Override
+            public ImportHostKeyResult call() throws Exception {
+                ImportHostKeyResult result = null;
+
+                try {
+                    result = executeImportHostKey(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ImportSshPublicKeyResult> importSshPublicKeyAsync(ImportSshPublicKeyRequest request) {
 
         return importSshPublicKeyAsync(request, null);
@@ -1154,6 +1253,39 @@ public class AWSTransferAsyncClient extends AWSTransferClient implements AWSTran
 
                 try {
                     result = executeListExecutions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListHostKeysResult> listHostKeysAsync(ListHostKeysRequest request) {
+
+        return listHostKeysAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListHostKeysResult> listHostKeysAsync(final ListHostKeysRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListHostKeysRequest, ListHostKeysResult> asyncHandler) {
+        final ListHostKeysRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListHostKeysResult>() {
+            @Override
+            public ListHostKeysResult call() throws Exception {
+                ListHostKeysResult result = null;
+
+                try {
+                    result = executeListHostKeys(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1715,6 +1847,39 @@ public class AWSTransferAsyncClient extends AWSTransferClient implements AWSTran
 
                 try {
                     result = executeUpdateConnector(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateHostKeyResult> updateHostKeyAsync(UpdateHostKeyRequest request) {
+
+        return updateHostKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateHostKeyResult> updateHostKeyAsync(final UpdateHostKeyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateHostKeyRequest, UpdateHostKeyResult> asyncHandler) {
+        final UpdateHostKeyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateHostKeyResult>() {
+            @Override
+            public UpdateHostKeyResult call() throws Exception {
+                UpdateHostKeyResult result = null;
+
+                try {
+                    result = executeUpdateHostKey(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

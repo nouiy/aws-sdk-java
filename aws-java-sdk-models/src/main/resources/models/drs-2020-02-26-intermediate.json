@@ -11172,7 +11172,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "lagDuration",
-        "c2jShape" : "ISO8601DatetimeString",
+        "c2jShape" : "ISO8601DurationString",
         "deprecated" : false,
         "documentation" : "<p>Data replication lag duration.</p>",
         "endpointDiscoveryId" : false,
@@ -11676,7 +11676,7 @@
         },
         "LagDuration" : {
           "c2jName" : "lagDuration",
-          "c2jShape" : "ISO8601DatetimeString",
+          "c2jShape" : "ISO8601DurationString",
           "deprecated" : false,
           "documentation" : "<p>Data replication lag duration.</p>",
           "endpointDiscoveryId" : false,
@@ -35529,7 +35529,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "elapsedReplicationDuration",
-        "c2jShape" : "ISO8601DatetimeString",
+        "c2jShape" : "ISO8601DurationString",
         "deprecated" : false,
         "documentation" : "<p>The amount of time that the Source Server has been replicating for.</p>",
         "endpointDiscoveryId" : false,
@@ -35877,7 +35877,7 @@
         },
         "ElapsedReplicationDuration" : {
           "c2jName" : "elapsedReplicationDuration",
-          "c2jShape" : "ISO8601DatetimeString",
+          "c2jShape" : "ISO8601DurationString",
           "deprecated" : false,
           "documentation" : "<p>The amount of time that the Source Server has been replicating for.</p>",
           "endpointDiscoveryId" : false,

@@ -424,6 +424,37 @@ public interface AWSTransferAsync extends AWSTransfer {
 
     /**
      * <p>
+     * Deletes the host key that's specified in the <code>HoskKeyId</code> parameter.
+     * </p>
+     * 
+     * @param deleteHostKeyRequest
+     * @return A Java Future containing the result of the DeleteHostKey operation returned by the service.
+     * @sample AWSTransferAsync.DeleteHostKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DeleteHostKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteHostKeyResult> deleteHostKeyAsync(DeleteHostKeyRequest deleteHostKeyRequest);
+
+    /**
+     * <p>
+     * Deletes the host key that's specified in the <code>HoskKeyId</code> parameter.
+     * </p>
+     * 
+     * @param deleteHostKeyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteHostKey operation returned by the service.
+     * @sample AWSTransferAsyncHandler.DeleteHostKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DeleteHostKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteHostKeyResult> deleteHostKeyAsync(DeleteHostKeyRequest deleteHostKeyRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteHostKeyRequest, DeleteHostKeyResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the profile that's specified in the <code>ProfileId</code> parameter.
      * </p>
      * 
@@ -766,6 +797,37 @@ public interface AWSTransferAsync extends AWSTransfer {
 
     /**
      * <p>
+     * Returns the details of the host key that's specified by the <code>HostKeyId</code> and <code>ServerId</code>.
+     * </p>
+     * 
+     * @param describeHostKeyRequest
+     * @return A Java Future containing the result of the DescribeHostKey operation returned by the service.
+     * @sample AWSTransferAsync.DescribeHostKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DescribeHostKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeHostKeyResult> describeHostKeyAsync(DescribeHostKeyRequest describeHostKeyRequest);
+
+    /**
+     * <p>
+     * Returns the details of the host key that's specified by the <code>HostKeyId</code> and <code>ServerId</code>.
+     * </p>
+     * 
+     * @param describeHostKeyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeHostKey operation returned by the service.
+     * @sample AWSTransferAsyncHandler.DescribeHostKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DescribeHostKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeHostKeyResult> describeHostKeyAsync(DescribeHostKeyRequest describeHostKeyRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeHostKeyRequest, DescribeHostKeyResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the details of the profile that's specified by the <code>ProfileId</code>.
      * </p>
      * 
@@ -980,6 +1042,37 @@ public interface AWSTransferAsync extends AWSTransfer {
 
     /**
      * <p>
+     * Adds a host key to the server specified by the <code>ServerId</code> parameter.
+     * </p>
+     * 
+     * @param importHostKeyRequest
+     * @return A Java Future containing the result of the ImportHostKey operation returned by the service.
+     * @sample AWSTransferAsync.ImportHostKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ImportHostKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ImportHostKeyResult> importHostKeyAsync(ImportHostKeyRequest importHostKeyRequest);
+
+    /**
+     * <p>
+     * Adds a host key to the server specified by the <code>ServerId</code> parameter.
+     * </p>
+     * 
+     * @param importHostKeyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ImportHostKey operation returned by the service.
+     * @sample AWSTransferAsyncHandler.ImportHostKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ImportHostKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ImportHostKeyResult> importHostKeyAsync(ImportHostKeyRequest importHostKeyRequest,
+            com.amazonaws.handlers.AsyncHandler<ImportHostKeyRequest, ImportHostKeyResult> asyncHandler);
+
+    /**
+     * <p>
      * Adds a Secure Shell (SSH) public key to a user account identified by a <code>UserName</code> value assigned to
      * the specific file transfer protocol-enabled server, identified by <code>ServerId</code>.
      * </p>
@@ -1185,6 +1278,37 @@ public interface AWSTransferAsync extends AWSTransfer {
      */
     java.util.concurrent.Future<ListExecutionsResult> listExecutionsAsync(ListExecutionsRequest listExecutionsRequest,
             com.amazonaws.handlers.AsyncHandler<ListExecutionsRequest, ListExecutionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of host keys for the server specified by the <code>ServerId</code> paramter.
+     * </p>
+     * 
+     * @param listHostKeysRequest
+     * @return A Java Future containing the result of the ListHostKeys operation returned by the service.
+     * @sample AWSTransferAsync.ListHostKeys
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ListHostKeys" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListHostKeysResult> listHostKeysAsync(ListHostKeysRequest listHostKeysRequest);
+
+    /**
+     * <p>
+     * Returns a list of host keys for the server specified by the <code>ServerId</code> paramter.
+     * </p>
+     * 
+     * @param listHostKeysRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListHostKeys operation returned by the service.
+     * @sample AWSTransferAsyncHandler.ListHostKeys
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ListHostKeys" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListHostKeysResult> listHostKeysAsync(ListHostKeysRequest listHostKeysRequest,
+            com.amazonaws.handlers.AsyncHandler<ListHostKeysRequest, ListHostKeysResult> asyncHandler);
 
     /**
      * <p>
@@ -1880,6 +2004,39 @@ public interface AWSTransferAsync extends AWSTransfer {
      */
     java.util.concurrent.Future<UpdateConnectorResult> updateConnectorAsync(UpdateConnectorRequest updateConnectorRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateConnectorRequest, UpdateConnectorResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the description for the host key specified by the specified by the <code>ServerId</code> and
+     * <code>HostKeyId</code> parameters.
+     * </p>
+     * 
+     * @param updateHostKeyRequest
+     * @return A Java Future containing the result of the UpdateHostKey operation returned by the service.
+     * @sample AWSTransferAsync.UpdateHostKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/UpdateHostKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateHostKeyResult> updateHostKeyAsync(UpdateHostKeyRequest updateHostKeyRequest);
+
+    /**
+     * <p>
+     * Updates the description for the host key specified by the specified by the <code>ServerId</code> and
+     * <code>HostKeyId</code> parameters.
+     * </p>
+     * 
+     * @param updateHostKeyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateHostKey operation returned by the service.
+     * @sample AWSTransferAsyncHandler.UpdateHostKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/UpdateHostKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateHostKeyResult> updateHostKeyAsync(UpdateHostKeyRequest updateHostKeyRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateHostKeyRequest, UpdateHostKeyResult> asyncHandler);
 
     /**
      * <p>

@@ -3929,8 +3929,21 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Creates a static route for the specified local gateway route table.
+     * Creates a static route for the specified local gateway route table. You must specify one of the following
+     * targets:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>LocalGatewayVirtualInterfaceGroupId</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NetworkInterfaceId</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param createLocalGatewayRouteRequest
      * @return A Java Future containing the result of the CreateLocalGatewayRoute operation returned by the service.
@@ -3942,8 +3955,21 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Creates a static route for the specified local gateway route table.
+     * Creates a static route for the specified local gateway route table. You must specify one of the following
+     * targets:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>LocalGatewayVirtualInterfaceGroupId</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NetworkInterfaceId</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param createLocalGatewayRouteRequest
      * @param asyncHandler
@@ -21134,6 +21160,37 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<ModifyLaunchTemplateResult> modifyLaunchTemplateAsync(ModifyLaunchTemplateRequest modifyLaunchTemplateRequest,
             com.amazonaws.handlers.AsyncHandler<ModifyLaunchTemplateRequest, ModifyLaunchTemplateResult> asyncHandler);
+
+    /**
+     * <p>
+     * Modifies the specified local gateway route.
+     * </p>
+     * 
+     * @param modifyLocalGatewayRouteRequest
+     * @return A Java Future containing the result of the ModifyLocalGatewayRoute operation returned by the service.
+     * @sample AmazonEC2Async.ModifyLocalGatewayRoute
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyLocalGatewayRoute" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyLocalGatewayRouteResult> modifyLocalGatewayRouteAsync(ModifyLocalGatewayRouteRequest modifyLocalGatewayRouteRequest);
+
+    /**
+     * <p>
+     * Modifies the specified local gateway route.
+     * </p>
+     * 
+     * @param modifyLocalGatewayRouteRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyLocalGatewayRoute operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.ModifyLocalGatewayRoute
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyLocalGatewayRoute" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyLocalGatewayRouteResult> modifyLocalGatewayRouteAsync(ModifyLocalGatewayRouteRequest modifyLocalGatewayRouteRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyLocalGatewayRouteRequest, ModifyLocalGatewayRouteResult> asyncHandler);
 
     /**
      * <p>

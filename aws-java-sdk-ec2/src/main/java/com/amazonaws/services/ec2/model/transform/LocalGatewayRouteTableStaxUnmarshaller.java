@@ -85,6 +85,10 @@ public class LocalGatewayRouteTableStaxUnmarshaller implements Unmarshaller<Loca
                     continue;
                 }
 
+                if (context.testExpression("mode", targetDepth)) {
+                    localGatewayRouteTable.setMode(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return localGatewayRouteTable;

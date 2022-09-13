@@ -74,7 +74,14 @@ public class Segment implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String name;
-    /** <p/> */
+    /**
+     * <p>
+     * The pattern that defines the attributes to use to evalute whether a user session will be in the segment. For more
+     * information about the pattern syntax, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html">Segment
+     * rule pattern syntax</a>.
+     * </p>
+     */
     private String pattern;
     /**
      * <p>
@@ -376,7 +383,12 @@ public class Segment implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The pattern that defines the attributes to use to evalute whether a user session will be in the segment. For more
+     * information about the pattern syntax, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html">Segment
+     * rule pattern syntax</a>.
+     * </p>
      * <p>
      * This field's value must be valid JSON according to RFC 7159, including the opening and closing braces. For
      * example: '{"key": "value"}'.
@@ -387,6 +399,10 @@ public class Segment implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param pattern
+     *        The pattern that defines the attributes to use to evalute whether a user session will be in the segment.
+     *        For more information about the pattern syntax, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html"
+     *        >Segment rule pattern syntax</a>.
      */
 
     public void setPattern(String pattern) {
@@ -394,13 +410,21 @@ public class Segment implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The pattern that defines the attributes to use to evalute whether a user session will be in the segment. For more
+     * information about the pattern syntax, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html">Segment
+     * rule pattern syntax</a>.
+     * </p>
      * <p>
      * This field's value will be valid JSON according to RFC 7159, including the opening and closing braces. For
      * example: '{"key": "value"}'.
      * </p>
      * 
-     * @return
+     * @return The pattern that defines the attributes to use to evalute whether a user session will be in the segment.
+     *         For more information about the pattern syntax, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html"
+     *         >Segment rule pattern syntax</a>.
      */
 
     public String getPattern() {
@@ -408,7 +432,12 @@ public class Segment implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * The pattern that defines the attributes to use to evalute whether a user session will be in the segment. For more
+     * information about the pattern syntax, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html">Segment
+     * rule pattern syntax</a>.
+     * </p>
      * <p>
      * This field's value must be valid JSON according to RFC 7159, including the opening and closing braces. For
      * example: '{"key": "value"}'.
@@ -419,6 +448,10 @@ public class Segment implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param pattern
+     *        The pattern that defines the attributes to use to evalute whether a user session will be in the segment.
+     *        For more information about the pattern syntax, see <a
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html"
+     *        >Segment rule pattern syntax</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

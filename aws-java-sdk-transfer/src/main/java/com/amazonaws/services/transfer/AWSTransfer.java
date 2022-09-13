@@ -321,6 +321,29 @@ public interface AWSTransfer {
 
     /**
      * <p>
+     * Deletes the host key that's specified in the <code>HoskKeyId</code> parameter.
+     * </p>
+     * 
+     * @param deleteHostKeyRequest
+     * @return Result of the DeleteHostKey operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSTransfer.DeleteHostKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DeleteHostKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteHostKeyResult deleteHostKey(DeleteHostKeyRequest deleteHostKeyRequest);
+
+    /**
+     * <p>
      * Deletes the profile that's specified in the <code>ProfileId</code> parameter.
      * </p>
      * 
@@ -553,6 +576,27 @@ public interface AWSTransfer {
 
     /**
      * <p>
+     * Returns the details of the host key that's specified by the <code>HostKeyId</code> and <code>ServerId</code>.
+     * </p>
+     * 
+     * @param describeHostKeyRequest
+     * @return Result of the DescribeHostKey operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.DescribeHostKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/DescribeHostKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeHostKeyResult describeHostKey(DescribeHostKeyRequest describeHostKeyRequest);
+
+    /**
+     * <p>
      * Returns the details of the profile that's specified by the <code>ProfileId</code>.
      * </p>
      * 
@@ -690,6 +734,31 @@ public interface AWSTransfer {
      *      Documentation</a>
      */
     ImportCertificateResult importCertificate(ImportCertificateRequest importCertificateRequest);
+
+    /**
+     * <p>
+     * Adds a host key to the server specified by the <code>ServerId</code> parameter.
+     * </p>
+     * 
+     * @param importHostKeyRequest
+     * @return Result of the ImportHostKey operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceExistsException
+     *         The requested resource does not exist.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSTransfer.ImportHostKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ImportHostKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ImportHostKeyResult importHostKey(ImportHostKeyRequest importHostKeyRequest);
 
     /**
      * <p>
@@ -841,6 +910,29 @@ public interface AWSTransfer {
      *      Documentation</a>
      */
     ListExecutionsResult listExecutions(ListExecutionsRequest listExecutionsRequest);
+
+    /**
+     * <p>
+     * Returns a list of host keys for the server specified by the <code>ServerId</code> paramter.
+     * </p>
+     * 
+     * @param listHostKeysRequest
+     * @return Result of the ListHostKeys operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> parameter that was passed is invalid.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @sample AWSTransfer.ListHostKeys
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ListHostKeys" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListHostKeysResult listHostKeys(ListHostKeysRequest listHostKeysRequest);
 
     /**
      * <p>
@@ -1302,6 +1394,30 @@ public interface AWSTransfer {
      *      Documentation</a>
      */
     UpdateConnectorResult updateConnector(UpdateConnectorRequest updateConnectorRequest);
+
+    /**
+     * <p>
+     * Updates the description for the host key specified by the specified by the <code>ServerId</code> and
+     * <code>HostKeyId</code> parameters.
+     * </p>
+     * 
+     * @param updateHostKeyRequest
+     * @return Result of the UpdateHostKey operation returned by the service.
+     * @throws ServiceUnavailableException
+     *         The request has failed because the Amazon Web ServicesTransfer Family service is not available.
+     * @throws InternalServiceErrorException
+     *         This exception is thrown when an error occurs in the Amazon Web ServicesTransfer Family service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when a resource is not found by the Amazon Web ServicesTransfer Family service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @sample AWSTransfer.UpdateHostKey
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/UpdateHostKey" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateHostKeyResult updateHostKey(UpdateHostKeyRequest updateHostKeyRequest);
 
     /**
      * <p>

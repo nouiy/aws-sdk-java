@@ -1846,8 +1846,21 @@ public interface AmazonEC2 {
 
     /**
      * <p>
-     * Creates a static route for the specified local gateway route table.
+     * Creates a static route for the specified local gateway route table. You must specify one of the following
+     * targets:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>LocalGatewayVirtualInterfaceGroupId</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NetworkInterfaceId</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param createLocalGatewayRouteRequest
      * @return Result of the CreateLocalGatewayRoute operation returned by the service.
@@ -9234,6 +9247,19 @@ public interface AmazonEC2 {
      *      Documentation</a>
      */
     ModifyLaunchTemplateResult modifyLaunchTemplate(ModifyLaunchTemplateRequest modifyLaunchTemplateRequest);
+
+    /**
+     * <p>
+     * Modifies the specified local gateway route.
+     * </p>
+     * 
+     * @param modifyLocalGatewayRouteRequest
+     * @return Result of the ModifyLocalGatewayRoute operation returned by the service.
+     * @sample AmazonEC2.ModifyLocalGatewayRoute
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyLocalGatewayRoute" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ModifyLocalGatewayRouteResult modifyLocalGatewayRoute(ModifyLocalGatewayRouteRequest modifyLocalGatewayRouteRequest);
 
     /**
      * <p>

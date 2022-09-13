@@ -7231,6 +7231,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<ModifyLocalGatewayRouteResult> modifyLocalGatewayRouteAsync(ModifyLocalGatewayRouteRequest request) {
+
+        return modifyLocalGatewayRouteAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyLocalGatewayRouteResult> modifyLocalGatewayRouteAsync(ModifyLocalGatewayRouteRequest request,
+            com.amazonaws.handlers.AsyncHandler<ModifyLocalGatewayRouteRequest, ModifyLocalGatewayRouteResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ModifyManagedPrefixListResult> modifyManagedPrefixListAsync(ModifyManagedPrefixListRequest request) {
 
         return modifyManagedPrefixListAsync(request, null);

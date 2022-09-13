@@ -171,6 +171,19 @@ public class AbstractAWSTransferAsync extends AbstractAWSTransfer implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteHostKeyResult> deleteHostKeyAsync(DeleteHostKeyRequest request) {
+
+        return deleteHostKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteHostKeyResult> deleteHostKeyAsync(DeleteHostKeyRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteHostKeyRequest, DeleteHostKeyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteProfileResult> deleteProfileAsync(DeleteProfileRequest request) {
 
         return deleteProfileAsync(request, null);
@@ -301,6 +314,19 @@ public class AbstractAWSTransferAsync extends AbstractAWSTransfer implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeHostKeyResult> describeHostKeyAsync(DescribeHostKeyRequest request) {
+
+        return describeHostKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeHostKeyResult> describeHostKeyAsync(DescribeHostKeyRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeHostKeyRequest, DescribeHostKeyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeProfileResult> describeProfileAsync(DescribeProfileRequest request) {
 
         return describeProfileAsync(request, null);
@@ -379,6 +405,19 @@ public class AbstractAWSTransferAsync extends AbstractAWSTransfer implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<ImportHostKeyResult> importHostKeyAsync(ImportHostKeyRequest request) {
+
+        return importHostKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ImportHostKeyResult> importHostKeyAsync(ImportHostKeyRequest request,
+            com.amazonaws.handlers.AsyncHandler<ImportHostKeyRequest, ImportHostKeyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ImportSshPublicKeyResult> importSshPublicKeyAsync(ImportSshPublicKeyRequest request) {
 
         return importSshPublicKeyAsync(request, null);
@@ -452,6 +491,19 @@ public class AbstractAWSTransferAsync extends AbstractAWSTransfer implements AWS
     @Override
     public java.util.concurrent.Future<ListExecutionsResult> listExecutionsAsync(ListExecutionsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListExecutionsRequest, ListExecutionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListHostKeysResult> listHostKeysAsync(ListHostKeysRequest request) {
+
+        return listHostKeysAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListHostKeysResult> listHostKeysAsync(ListHostKeysRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListHostKeysRequest, ListHostKeysResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -673,6 +725,19 @@ public class AbstractAWSTransferAsync extends AbstractAWSTransfer implements AWS
     @Override
     public java.util.concurrent.Future<UpdateConnectorResult> updateConnectorAsync(UpdateConnectorRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateConnectorRequest, UpdateConnectorResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateHostKeyResult> updateHostKeyAsync(UpdateHostKeyRequest request) {
+
+        return updateHostKeyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateHostKeyResult> updateHostKeyAsync(UpdateHostKeyRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateHostKeyRequest, UpdateHostKeyResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
