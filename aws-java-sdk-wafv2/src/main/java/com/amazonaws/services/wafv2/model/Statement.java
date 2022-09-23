@@ -196,6 +196,14 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * You cannot nest a <code>ManagedRuleGroupStatement</code>, for example for use inside a <code>NotStatement</code>
      * or <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.
      * </p>
+     * <note>
+     * <p>
+     * You are charged additional fees when you use the WAF Bot Control managed rule group
+     * <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP) managed
+     * rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     * href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
+     * </p>
+     * </note>
      */
     private ManagedRuleGroupStatement managedRuleGroupStatement;
     /**
@@ -1199,6 +1207,14 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * You cannot nest a <code>ManagedRuleGroupStatement</code>, for example for use inside a <code>NotStatement</code>
      * or <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.
      * </p>
+     * <note>
+     * <p>
+     * You are charged additional fees when you use the WAF Bot Control managed rule group
+     * <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP) managed
+     * rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     * href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
+     * </p>
+     * </note>
      * 
      * @param managedRuleGroupStatement
      *        A rule statement used to run the rules that are defined in a managed rule group. To use this, provide the
@@ -1208,6 +1224,14 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      *        You cannot nest a <code>ManagedRuleGroupStatement</code>, for example for use inside a
      *        <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement
      *        within a rule.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You are charged additional fees when you use the WAF Bot Control managed rule group
+     *        <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP)
+     *        managed rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     *        href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
+     *        </p>
      */
 
     public void setManagedRuleGroupStatement(ManagedRuleGroupStatement managedRuleGroupStatement) {
@@ -1224,6 +1248,14 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * You cannot nest a <code>ManagedRuleGroupStatement</code>, for example for use inside a <code>NotStatement</code>
      * or <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.
      * </p>
+     * <note>
+     * <p>
+     * You are charged additional fees when you use the WAF Bot Control managed rule group
+     * <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP) managed
+     * rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     * href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
+     * </p>
+     * </note>
      * 
      * @return A rule statement used to run the rules that are defined in a managed rule group. To use this, provide the
      *         vendor name and the name of the rule group in this statement. You can retrieve the required names by
@@ -1232,6 +1264,14 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      *         You cannot nest a <code>ManagedRuleGroupStatement</code>, for example for use inside a
      *         <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement
      *         within a rule.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         You are charged additional fees when you use the WAF Bot Control managed rule group
+     *         <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP)
+     *         managed rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     *         href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
+     *         </p>
      */
 
     public ManagedRuleGroupStatement getManagedRuleGroupStatement() {
@@ -1248,6 +1288,14 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * You cannot nest a <code>ManagedRuleGroupStatement</code>, for example for use inside a <code>NotStatement</code>
      * or <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.
      * </p>
+     * <note>
+     * <p>
+     * You are charged additional fees when you use the WAF Bot Control managed rule group
+     * <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP) managed
+     * rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     * href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
+     * </p>
+     * </note>
      * 
      * @param managedRuleGroupStatement
      *        A rule statement used to run the rules that are defined in a managed rule group. To use this, provide the
@@ -1257,6 +1305,14 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      *        You cannot nest a <code>ManagedRuleGroupStatement</code>, for example for use inside a
      *        <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement
      *        within a rule.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You are charged additional fees when you use the WAF Bot Control managed rule group
+     *        <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP)
+     *        managed rule group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+     *        href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

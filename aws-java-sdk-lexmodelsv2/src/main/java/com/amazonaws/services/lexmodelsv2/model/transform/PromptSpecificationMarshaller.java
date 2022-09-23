@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.lexmodelsv2.model.transform;
 
+import java.util.Map;
 import java.util.List;
 import javax.annotation.Generated;
 
@@ -36,6 +37,8 @@ public class PromptSpecificationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("allowInterrupt").build();
     private static final MarshallingInfo<String> MESSAGESELECTIONSTRATEGY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("messageSelectionStrategy").build();
+    private static final MarshallingInfo<Map> PROMPTATTEMPTSSPECIFICATION_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("promptAttemptsSpecification").build();
 
     private static final PromptSpecificationMarshaller instance = new PromptSpecificationMarshaller();
 
@@ -57,6 +60,7 @@ public class PromptSpecificationMarshaller {
             protocolMarshaller.marshall(promptSpecification.getMaxRetries(), MAXRETRIES_BINDING);
             protocolMarshaller.marshall(promptSpecification.getAllowInterrupt(), ALLOWINTERRUPT_BINDING);
             protocolMarshaller.marshall(promptSpecification.getMessageSelectionStrategy(), MESSAGESELECTIONSTRATEGY_BINDING);
+            protocolMarshaller.marshall(promptSpecification.getPromptAttemptsSpecification(), PROMPTATTEMPTSSPECIFICATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

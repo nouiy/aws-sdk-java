@@ -43,7 +43,8 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
     private AllowAction allow;
     /**
      * <p>
-     * Instructs WAF to count the web request and allow it.
+     * Instructs WAF to count the web request and then continue evaluating the request using the remaining rules in the
+     * web ACL.
      * </p>
      */
     private CountAction count;
@@ -136,11 +137,13 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Instructs WAF to count the web request and allow it.
+     * Instructs WAF to count the web request and then continue evaluating the request using the remaining rules in the
+     * web ACL.
      * </p>
      * 
      * @param count
-     *        Instructs WAF to count the web request and allow it.
+     *        Instructs WAF to count the web request and then continue evaluating the request using the remaining rules
+     *        in the web ACL.
      */
 
     public void setCount(CountAction count) {
@@ -149,10 +152,12 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Instructs WAF to count the web request and allow it.
+     * Instructs WAF to count the web request and then continue evaluating the request using the remaining rules in the
+     * web ACL.
      * </p>
      * 
-     * @return Instructs WAF to count the web request and allow it.
+     * @return Instructs WAF to count the web request and then continue evaluating the request using the remaining rules
+     *         in the web ACL.
      */
 
     public CountAction getCount() {
@@ -161,11 +166,13 @@ public class RuleAction implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Instructs WAF to count the web request and allow it.
+     * Instructs WAF to count the web request and then continue evaluating the request using the remaining rules in the
+     * web ACL.
      * </p>
      * 
      * @param count
-     *        Instructs WAF to count the web request and allow it.
+     *        Instructs WAF to count the web request and then continue evaluating the request using the remaining rules
+     *        in the web ACL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

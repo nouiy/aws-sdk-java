@@ -66,6 +66,11 @@ public class PromptSpecificationJsonUnmarshaller implements Unmarshaller<PromptS
                     context.nextToken();
                     promptSpecification.setMessageSelectionStrategy(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("promptAttemptsSpecification", targetDepth)) {
+                    context.nextToken();
+                    promptSpecification.setPromptAttemptsSpecification(new MapUnmarshaller<String, PromptAttemptSpecification>(context
+                            .getUnmarshaller(String.class), PromptAttemptSpecificationJsonUnmarshaller.getInstance()).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

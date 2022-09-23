@@ -27,6 +27,14 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * You cannot nest a <code>ManagedRuleGroupStatement</code>, for example for use inside a <code>NotStatement</code> or
  * <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.
  * </p>
+ * <note>
+ * <p>
+ * You are charged additional fees when you use the WAF Bot Control managed rule group
+ * <code>AWSManagedRulesBotControlRuleSet</code> or the WAF Fraud Control account takeover prevention (ATP) managed rule
+ * group <code>AWSManagedRulesATPRuleSet</code>. For more information, see <a
+ * href="http://aws.amazon.com/waf/pricing/">WAF Pricing</a>.
+ * </p>
+ * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ManagedRuleGroupStatement" target="_top">AWS
  *      API Documentation</a>

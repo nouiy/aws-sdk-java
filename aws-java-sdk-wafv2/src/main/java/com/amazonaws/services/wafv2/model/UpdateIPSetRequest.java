@@ -69,8 +69,9 @@ public class UpdateIPSetRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String description;
     /**
      * <p>
-     * Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in Classless
-     * Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
+     * Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses. All addresses
+     * must be specified using Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR
+     * ranges except for <code>/0</code>.
      * </p>
      * <p>
      * Example address strings:
@@ -468,8 +469,9 @@ public class UpdateIPSetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in Classless
-     * Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
+     * Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses. All addresses
+     * must be specified using Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR
+     * ranges except for <code>/0</code>.
      * </p>
      * <p>
      * Example address strings:
@@ -531,9 +533,9 @@ public class UpdateIPSetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * </ul>
      * 
-     * @return Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in
-     *         Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
-     *         </p>
+     * @return Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses. All
+     *         addresses must be specified using Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4
+     *         and IPv6 CIDR ranges except for <code>/0</code>. </p>
      *         <p>
      *         Example address strings:
      *         </p>
@@ -601,8 +603,9 @@ public class UpdateIPSetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in Classless
-     * Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
+     * Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses. All addresses
+     * must be specified using Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR
+     * ranges except for <code>/0</code>.
      * </p>
      * <p>
      * Example address strings:
@@ -665,9 +668,9 @@ public class UpdateIPSetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </ul>
      * 
      * @param addresses
-     *        Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in
-     *        Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
-     *        </p>
+     *        Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses. All
+     *        addresses must be specified using Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4
+     *        and IPv6 CIDR ranges except for <code>/0</code>. </p>
      *        <p>
      *        Example address strings:
      *        </p>
@@ -739,8 +742,9 @@ public class UpdateIPSetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in Classless
-     * Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
+     * Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses. All addresses
+     * must be specified using Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR
+     * ranges except for <code>/0</code>.
      * </p>
      * <p>
      * Example address strings:
@@ -808,9 +812,9 @@ public class UpdateIPSetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param addresses
-     *        Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in
-     *        Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
-     *        </p>
+     *        Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses. All
+     *        addresses must be specified using Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4
+     *        and IPv6 CIDR ranges except for <code>/0</code>. </p>
      *        <p>
      *        Example address strings:
      *        </p>
@@ -884,8 +888,9 @@ public class UpdateIPSetRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in Classless
-     * Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
+     * Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses. All addresses
+     * must be specified using Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR
+     * ranges except for <code>/0</code>.
      * </p>
      * <p>
      * Example address strings:
@@ -948,9 +953,9 @@ public class UpdateIPSetRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </ul>
      * 
      * @param addresses
-     *        Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in
-     *        Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
-     *        </p>
+     *        Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses. All
+     *        addresses must be specified using Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4
+     *        and IPv6 CIDR ranges except for <code>/0</code>. </p>
      *        <p>
      *        Example address strings:
      *        </p>

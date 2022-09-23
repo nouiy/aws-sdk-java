@@ -34367,6 +34367,9 @@
       }, {
         "name" : "CORRETTO_11",
         "value" : "CORRETTO_11"
+      }, {
+        "name" : "NODEJS_16",
+        "value" : "NODEJS_16"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.apprunner.enum.Runtime",

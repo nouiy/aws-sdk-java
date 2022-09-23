@@ -6563,6 +6563,53 @@ public interface AmazonLightsailAsync extends AmazonLightsail {
 
     /**
      * <p>
+     * Modifies the Amazon Lightsail instance metadata parameters on a running or stopped instance. When you modify the
+     * parameters on a running instance, the <code>GetInstance</code> or <code>GetInstances</code> API operation
+     * initially responds with a state of <code>pending</code>. After the parameter modifications are successfully
+     * applied, the state changes to <code>applied</code> in subsequent <code>GetInstance</code> or
+     * <code>GetInstances</code> API calls. For more information, see <a href=
+     * "https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-configuring-instance-metadata-service"
+     * >Use IMDSv2 with an Amazon Lightsail instance</a> in the <i>Amazon Lightsail Developer Guide</i>.
+     * </p>
+     * 
+     * @param updateInstanceMetadataOptionsRequest
+     * @return A Java Future containing the result of the UpdateInstanceMetadataOptions operation returned by the
+     *         service.
+     * @sample AmazonLightsailAsync.UpdateInstanceMetadataOptions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/UpdateInstanceMetadataOptions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateInstanceMetadataOptionsResult> updateInstanceMetadataOptionsAsync(
+            UpdateInstanceMetadataOptionsRequest updateInstanceMetadataOptionsRequest);
+
+    /**
+     * <p>
+     * Modifies the Amazon Lightsail instance metadata parameters on a running or stopped instance. When you modify the
+     * parameters on a running instance, the <code>GetInstance</code> or <code>GetInstances</code> API operation
+     * initially responds with a state of <code>pending</code>. After the parameter modifications are successfully
+     * applied, the state changes to <code>applied</code> in subsequent <code>GetInstance</code> or
+     * <code>GetInstances</code> API calls. For more information, see <a href=
+     * "https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-configuring-instance-metadata-service"
+     * >Use IMDSv2 with an Amazon Lightsail instance</a> in the <i>Amazon Lightsail Developer Guide</i>.
+     * </p>
+     * 
+     * @param updateInstanceMetadataOptionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateInstanceMetadataOptions operation returned by the
+     *         service.
+     * @sample AmazonLightsailAsyncHandler.UpdateInstanceMetadataOptions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/UpdateInstanceMetadataOptions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateInstanceMetadataOptionsResult> updateInstanceMetadataOptionsAsync(
+            UpdateInstanceMetadataOptionsRequest updateInstanceMetadataOptionsRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateInstanceMetadataOptionsRequest, UpdateInstanceMetadataOptionsResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates the specified attribute for a load balancer. You can only update one attribute at a time.
      * </p>
      * <p>

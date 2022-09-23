@@ -53,6 +53,12 @@ public class PromptSpecification implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private String messageSelectionStrategy;
+    /**
+     * <p>
+     * Specifies the advanced settings on each attempt of the prompt.
+     * </p>
+     */
+    private java.util.Map<String, PromptAttemptSpecification> promptAttemptsSpecification;
 
     /**
      * <p>
@@ -284,6 +290,74 @@ public class PromptSpecification implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * Specifies the advanced settings on each attempt of the prompt.
+     * </p>
+     * 
+     * @return Specifies the advanced settings on each attempt of the prompt.
+     */
+
+    public java.util.Map<String, PromptAttemptSpecification> getPromptAttemptsSpecification() {
+        return promptAttemptsSpecification;
+    }
+
+    /**
+     * <p>
+     * Specifies the advanced settings on each attempt of the prompt.
+     * </p>
+     * 
+     * @param promptAttemptsSpecification
+     *        Specifies the advanced settings on each attempt of the prompt.
+     */
+
+    public void setPromptAttemptsSpecification(java.util.Map<String, PromptAttemptSpecification> promptAttemptsSpecification) {
+        this.promptAttemptsSpecification = promptAttemptsSpecification;
+    }
+
+    /**
+     * <p>
+     * Specifies the advanced settings on each attempt of the prompt.
+     * </p>
+     * 
+     * @param promptAttemptsSpecification
+     *        Specifies the advanced settings on each attempt of the prompt.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PromptSpecification withPromptAttemptsSpecification(java.util.Map<String, PromptAttemptSpecification> promptAttemptsSpecification) {
+        setPromptAttemptsSpecification(promptAttemptsSpecification);
+        return this;
+    }
+
+    /**
+     * Add a single PromptAttemptsSpecification entry
+     *
+     * @see PromptSpecification#withPromptAttemptsSpecification
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PromptSpecification addPromptAttemptsSpecificationEntry(String key, PromptAttemptSpecification value) {
+        if (null == this.promptAttemptsSpecification) {
+            this.promptAttemptsSpecification = new java.util.HashMap<String, PromptAttemptSpecification>();
+        }
+        if (this.promptAttemptsSpecification.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.promptAttemptsSpecification.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into PromptAttemptsSpecification.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PromptSpecification clearPromptAttemptsSpecificationEntries() {
+        this.promptAttemptsSpecification = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -302,7 +376,9 @@ public class PromptSpecification implements Serializable, Cloneable, StructuredP
         if (getAllowInterrupt() != null)
             sb.append("AllowInterrupt: ").append(getAllowInterrupt()).append(",");
         if (getMessageSelectionStrategy() != null)
-            sb.append("MessageSelectionStrategy: ").append(getMessageSelectionStrategy());
+            sb.append("MessageSelectionStrategy: ").append(getMessageSelectionStrategy()).append(",");
+        if (getPromptAttemptsSpecification() != null)
+            sb.append("PromptAttemptsSpecification: ").append(getPromptAttemptsSpecification());
         sb.append("}");
         return sb.toString();
     }
@@ -333,6 +409,10 @@ public class PromptSpecification implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getMessageSelectionStrategy() != null && other.getMessageSelectionStrategy().equals(this.getMessageSelectionStrategy()) == false)
             return false;
+        if (other.getPromptAttemptsSpecification() == null ^ this.getPromptAttemptsSpecification() == null)
+            return false;
+        if (other.getPromptAttemptsSpecification() != null && other.getPromptAttemptsSpecification().equals(this.getPromptAttemptsSpecification()) == false)
+            return false;
         return true;
     }
 
@@ -345,6 +425,7 @@ public class PromptSpecification implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getMaxRetries() == null) ? 0 : getMaxRetries().hashCode());
         hashCode = prime * hashCode + ((getAllowInterrupt() == null) ? 0 : getAllowInterrupt().hashCode());
         hashCode = prime * hashCode + ((getMessageSelectionStrategy() == null) ? 0 : getMessageSelectionStrategy().hashCode());
+        hashCode = prime * hashCode + ((getPromptAttemptsSpecification() == null) ? 0 : getPromptAttemptsSpecification().hashCode());
         return hashCode;
     }
 

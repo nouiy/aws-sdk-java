@@ -109,6 +109,13 @@ public class FleetLaunchTemplateOverridesRequest implements Serializable, Clonea
      * </note>
      */
     private InstanceRequirementsRequest instanceRequirements;
+    /**
+     * <p>
+     * The ID of the AMI. An AMI is required to launch an instance. The AMI ID must be specified here or in the launch
+     * template.
+     * </p>
+     */
+    private String imageId;
 
     /**
      * <p>
@@ -647,6 +654,52 @@ public class FleetLaunchTemplateOverridesRequest implements Serializable, Clonea
     }
 
     /**
+     * <p>
+     * The ID of the AMI. An AMI is required to launch an instance. The AMI ID must be specified here or in the launch
+     * template.
+     * </p>
+     * 
+     * @param imageId
+     *        The ID of the AMI. An AMI is required to launch an instance. The AMI ID must be specified here or in the
+     *        launch template.
+     */
+
+    public void setImageId(String imageId) {
+        this.imageId = imageId;
+    }
+
+    /**
+     * <p>
+     * The ID of the AMI. An AMI is required to launch an instance. The AMI ID must be specified here or in the launch
+     * template.
+     * </p>
+     * 
+     * @return The ID of the AMI. An AMI is required to launch an instance. The AMI ID must be specified here or in the
+     *         launch template.
+     */
+
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
+     * <p>
+     * The ID of the AMI. An AMI is required to launch an instance. The AMI ID must be specified here or in the launch
+     * template.
+     * </p>
+     * 
+     * @param imageId
+     *        The ID of the AMI. An AMI is required to launch an instance. The AMI ID must be specified here or in the
+     *        launch template.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FleetLaunchTemplateOverridesRequest withImageId(String imageId) {
+        setImageId(imageId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -673,7 +726,9 @@ public class FleetLaunchTemplateOverridesRequest implements Serializable, Clonea
         if (getPlacement() != null)
             sb.append("Placement: ").append(getPlacement()).append(",");
         if (getInstanceRequirements() != null)
-            sb.append("InstanceRequirements: ").append(getInstanceRequirements());
+            sb.append("InstanceRequirements: ").append(getInstanceRequirements()).append(",");
+        if (getImageId() != null)
+            sb.append("ImageId: ").append(getImageId());
         sb.append("}");
         return sb.toString();
     }
@@ -720,6 +775,10 @@ public class FleetLaunchTemplateOverridesRequest implements Serializable, Clonea
             return false;
         if (other.getInstanceRequirements() != null && other.getInstanceRequirements().equals(this.getInstanceRequirements()) == false)
             return false;
+        if (other.getImageId() == null ^ this.getImageId() == null)
+            return false;
+        if (other.getImageId() != null && other.getImageId().equals(this.getImageId()) == false)
+            return false;
         return true;
     }
 
@@ -736,6 +795,7 @@ public class FleetLaunchTemplateOverridesRequest implements Serializable, Clonea
         hashCode = prime * hashCode + ((getPriority() == null) ? 0 : getPriority().hashCode());
         hashCode = prime * hashCode + ((getPlacement() == null) ? 0 : getPlacement().hashCode());
         hashCode = prime * hashCode + ((getInstanceRequirements() == null) ? 0 : getInstanceRequirements().hashCode());
+        hashCode = prime * hashCode + ((getImageId() == null) ? 0 : getImageId().hashCode());
         return hashCode;
     }
 

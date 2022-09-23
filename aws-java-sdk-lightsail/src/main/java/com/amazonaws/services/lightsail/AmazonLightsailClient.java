@@ -12598,6 +12598,90 @@ public class AmazonLightsailClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * Modifies the Amazon Lightsail instance metadata parameters on a running or stopped instance. When you modify the
+     * parameters on a running instance, the <code>GetInstance</code> or <code>GetInstances</code> API operation
+     * initially responds with a state of <code>pending</code>. After the parameter modifications are successfully
+     * applied, the state changes to <code>applied</code> in subsequent <code>GetInstance</code> or
+     * <code>GetInstances</code> API calls. For more information, see <a href=
+     * "https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-configuring-instance-metadata-service"
+     * >Use IMDSv2 with an Amazon Lightsail instance</a> in the <i>Amazon Lightsail Developer Guide</i>.
+     * </p>
+     * 
+     * @param updateInstanceMetadataOptionsRequest
+     * @return Result of the UpdateInstanceMetadataOptions operation returned by the service.
+     * @throws ServiceException
+     *         A general service exception.
+     * @throws InvalidInputException
+     *         Lightsail throws this exception when user input does not conform to the validation rules of an input
+     *         field.</p> <note>
+     *         <p>
+     *         Domain and distribution APIs are only available in the N. Virginia (<code>us-east-1</code>) Amazon Web
+     *         Services Region. Please set your Amazon Web Services Region configuration to <code>us-east-1</code> to
+     *         create, view, or edit these resources.
+     *         </p>
+     * @throws NotFoundException
+     *         Lightsail throws this exception when it cannot find a resource.
+     * @throws OperationFailureException
+     *         Lightsail throws this exception when an operation fails to execute.
+     * @throws AccessDeniedException
+     *         Lightsail throws this exception when the user cannot be authenticated or uses invalid credentials to
+     *         access a resource.
+     * @throws AccountSetupInProgressException
+     *         Lightsail throws this exception when an account is still in the setup in progress state.
+     * @throws UnauthenticatedException
+     *         Lightsail throws this exception when the user has not been authenticated.
+     * @sample AmazonLightsail.UpdateInstanceMetadataOptions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lightsail-2016-11-28/UpdateInstanceMetadataOptions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateInstanceMetadataOptionsResult updateInstanceMetadataOptions(UpdateInstanceMetadataOptionsRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateInstanceMetadataOptions(request);
+    }
+
+    @SdkInternalApi
+    final UpdateInstanceMetadataOptionsResult executeUpdateInstanceMetadataOptions(UpdateInstanceMetadataOptionsRequest updateInstanceMetadataOptionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateInstanceMetadataOptionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateInstanceMetadataOptionsRequest> request = null;
+        Response<UpdateInstanceMetadataOptionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateInstanceMetadataOptionsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateInstanceMetadataOptionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lightsail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateInstanceMetadataOptions");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateInstanceMetadataOptionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateInstanceMetadataOptionsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Updates the specified attribute for a load balancer. You can only update one attribute at a time.
      * </p>
      * <p>
