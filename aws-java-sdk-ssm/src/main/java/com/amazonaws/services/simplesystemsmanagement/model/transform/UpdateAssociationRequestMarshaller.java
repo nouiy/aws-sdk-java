@@ -67,6 +67,8 @@ public class UpdateAssociationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ScheduleOffset").build();
     private static final MarshallingInfo<List> TARGETMAPS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("TargetMaps").build();
+    private static final MarshallingInfo<StructuredPojo> ALARMCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AlarmConfiguration").build();
 
     private static final UpdateAssociationRequestMarshaller instance = new UpdateAssociationRequestMarshaller();
 
@@ -103,6 +105,7 @@ public class UpdateAssociationRequestMarshaller {
             protocolMarshaller.marshall(updateAssociationRequest.getTargetLocations(), TARGETLOCATIONS_BINDING);
             protocolMarshaller.marshall(updateAssociationRequest.getScheduleOffset(), SCHEDULEOFFSET_BINDING);
             protocolMarshaller.marshall(updateAssociationRequest.getTargetMaps(), TARGETMAPS_BINDING);
+            protocolMarshaller.marshall(updateAssociationRequest.getAlarmConfiguration(), ALARMCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

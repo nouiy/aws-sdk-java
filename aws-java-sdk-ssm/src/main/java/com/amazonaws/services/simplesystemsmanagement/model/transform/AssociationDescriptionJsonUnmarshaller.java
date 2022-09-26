@@ -168,6 +168,16 @@ public class AssociationDescriptionJsonUnmarshaller implements Unmarshaller<Asso
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("AlarmConfiguration", targetDepth)) {
+                    context.nextToken();
+                    associationDescription.setAlarmConfiguration(AlarmConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("TriggeredAlarms", targetDepth)) {
+                    context.nextToken();
+                    associationDescription.setTriggeredAlarms(new ListUnmarshaller<AlarmStateInformation>(AlarmStateInformationJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

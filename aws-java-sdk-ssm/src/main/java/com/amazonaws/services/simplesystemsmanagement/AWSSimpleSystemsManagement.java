@@ -406,7 +406,7 @@ public interface AWSSimpleSystemsManagement {
      * @throws InvalidTargetMapsException
      *         TargetMap parameter isn't valid.
      * @throws InvalidTagException
-     *         The specified tag key or value is not valid.
+     *         The tag key or value isn't valid.
      * @sample AWSSimpleSystemsManagement.CreateAssociation
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/CreateAssociation" target="_top">AWS API
      *      Documentation</a>

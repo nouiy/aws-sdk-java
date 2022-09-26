@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The specified tag key or value is not valid.
+ * The tag key or value isn't valid.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

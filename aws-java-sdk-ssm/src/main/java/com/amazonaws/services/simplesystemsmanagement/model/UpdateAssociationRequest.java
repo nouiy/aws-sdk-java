@@ -239,6 +239,8 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      */
     private com.amazonaws.internal.SdkInternalList<java.util.Map<String, java.util.List<String>>> targetMaps;
 
+    private AlarmConfiguration alarmConfiguration;
+
     /**
      * <p>
      * The ID of the association you want to update.
@@ -1857,6 +1859,32 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * @param alarmConfiguration
+     */
+
+    public void setAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
+        this.alarmConfiguration = alarmConfiguration;
+    }
+
+    /**
+     * @return
+     */
+
+    public AlarmConfiguration getAlarmConfiguration() {
+        return this.alarmConfiguration;
+    }
+
+    /**
+     * @param alarmConfiguration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateAssociationRequest withAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
+        setAlarmConfiguration(alarmConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1905,7 +1933,9 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getScheduleOffset() != null)
             sb.append("ScheduleOffset: ").append(getScheduleOffset()).append(",");
         if (getTargetMaps() != null)
-            sb.append("TargetMaps: ").append(getTargetMaps());
+            sb.append("TargetMaps: ").append(getTargetMaps()).append(",");
+        if (getAlarmConfiguration() != null)
+            sb.append("AlarmConfiguration: ").append(getAlarmConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1997,6 +2027,10 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getTargetMaps() != null && other.getTargetMaps().equals(this.getTargetMaps()) == false)
             return false;
+        if (other.getAlarmConfiguration() == null ^ this.getAlarmConfiguration() == null)
+            return false;
+        if (other.getAlarmConfiguration() != null && other.getAlarmConfiguration().equals(this.getAlarmConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -2024,6 +2058,7 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getTargetLocations() == null) ? 0 : getTargetLocations().hashCode());
         hashCode = prime * hashCode + ((getScheduleOffset() == null) ? 0 : getScheduleOffset().hashCode());
         hashCode = prime * hashCode + ((getTargetMaps() == null) ? 0 : getTargetMaps().hashCode());
+        hashCode = prime * hashCode + ((getAlarmConfiguration() == null) ? 0 : getAlarmConfiguration().hashCode());
         return hashCode;
     }
 

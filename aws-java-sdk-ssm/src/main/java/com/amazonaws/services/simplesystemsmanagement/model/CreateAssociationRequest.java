@@ -231,13 +231,14 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     private com.amazonaws.internal.SdkInternalList<java.util.Map<String, java.util.List<String>>> targetMaps;
     /**
      * <p>
-     * Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you can assign
-     * to your Amazon Web Services resources. Tags enable you to categorize your resources in different ways, for
-     * example, by purpose, owner, or environment. Each tag consists of a key and an optional value, both of which you
-     * define.
+     * Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such
+     * as by purpose, owner, or environment. For example, you might want to tag an association to identify the type of
+     * resource to which it applies, the environment, or the purpose of the association.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
+
+    private AlarmConfiguration alarmConfiguration;
 
     /**
      * <p>
@@ -1793,16 +1794,14 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you can assign
-     * to your Amazon Web Services resources. Tags enable you to categorize your resources in different ways, for
-     * example, by purpose, owner, or environment. Each tag consists of a key and an optional value, both of which you
-     * define.
+     * Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such
+     * as by purpose, owner, or environment. For example, you might want to tag an association to identify the type of
+     * resource to which it applies, the environment, or the purpose of the association.
      * </p>
      * 
-     * @return Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you
-     *         can assign to your Amazon Web Services resources. Tags enable you to categorize your resources in
-     *         different ways, for example, by purpose, owner, or environment. Each tag consists of a key and an
-     *         optional value, both of which you define.
+     * @return Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different
+     *         ways, such as by purpose, owner, or environment. For example, you might want to tag an association to
+     *         identify the type of resource to which it applies, the environment, or the purpose of the association.
      */
 
     public java.util.List<Tag> getTags() {
@@ -1814,17 +1813,15 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you can assign
-     * to your Amazon Web Services resources. Tags enable you to categorize your resources in different ways, for
-     * example, by purpose, owner, or environment. Each tag consists of a key and an optional value, both of which you
-     * define.
+     * Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such
+     * as by purpose, owner, or environment. For example, you might want to tag an association to identify the type of
+     * resource to which it applies, the environment, or the purpose of the association.
      * </p>
      * 
      * @param tags
-     *        Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you can
-     *        assign to your Amazon Web Services resources. Tags enable you to categorize your resources in different
-     *        ways, for example, by purpose, owner, or environment. Each tag consists of a key and an optional value,
-     *        both of which you define.
+     *        Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different
+     *        ways, such as by purpose, owner, or environment. For example, you might want to tag an association to
+     *        identify the type of resource to which it applies, the environment, or the purpose of the association.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -1838,10 +1835,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you can assign
-     * to your Amazon Web Services resources. Tags enable you to categorize your resources in different ways, for
-     * example, by purpose, owner, or environment. Each tag consists of a key and an optional value, both of which you
-     * define.
+     * Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such
+     * as by purpose, owner, or environment. For example, you might want to tag an association to identify the type of
+     * resource to which it applies, the environment, or the purpose of the association.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1850,10 +1846,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param tags
-     *        Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you can
-     *        assign to your Amazon Web Services resources. Tags enable you to categorize your resources in different
-     *        ways, for example, by purpose, owner, or environment. Each tag consists of a key and an optional value,
-     *        both of which you define.
+     *        Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different
+     *        ways, such as by purpose, owner, or environment. For example, you might want to tag an association to
+     *        identify the type of resource to which it applies, the environment, or the purpose of the association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1869,22 +1864,46 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you can assign
-     * to your Amazon Web Services resources. Tags enable you to categorize your resources in different ways, for
-     * example, by purpose, owner, or environment. Each tag consists of a key and an optional value, both of which you
-     * define.
+     * Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different ways, such
+     * as by purpose, owner, or environment. For example, you might want to tag an association to identify the type of
+     * resource to which it applies, the environment, or the purpose of the association.
      * </p>
      * 
      * @param tags
-     *        Adds or overwrites one or more tags for a State Manager association. <i>Tags</i> are metadata that you can
-     *        assign to your Amazon Web Services resources. Tags enable you to categorize your resources in different
-     *        ways, for example, by purpose, owner, or environment. Each tag consists of a key and an optional value,
-     *        both of which you define.
+     *        Optional metadata that you assign to a resource. Tags enable you to categorize a resource in different
+     *        ways, such as by purpose, owner, or environment. For example, you might want to tag an association to
+     *        identify the type of resource to which it applies, the environment, or the purpose of the association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public CreateAssociationRequest withTags(java.util.Collection<Tag> tags) {
         setTags(tags);
+        return this;
+    }
+
+    /**
+     * @param alarmConfiguration
+     */
+
+    public void setAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
+        this.alarmConfiguration = alarmConfiguration;
+    }
+
+    /**
+     * @return
+     */
+
+    public AlarmConfiguration getAlarmConfiguration() {
+        return this.alarmConfiguration;
+    }
+
+    /**
+     * @param alarmConfiguration
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAssociationRequest withAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
+        setAlarmConfiguration(alarmConfiguration);
         return this;
     }
 
@@ -1937,7 +1956,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getTargetMaps() != null)
             sb.append("TargetMaps: ").append(getTargetMaps()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getAlarmConfiguration() != null)
+            sb.append("AlarmConfiguration: ").append(getAlarmConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -2029,6 +2050,10 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getAlarmConfiguration() == null ^ this.getAlarmConfiguration() == null)
+            return false;
+        if (other.getAlarmConfiguration() != null && other.getAlarmConfiguration().equals(this.getAlarmConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -2056,6 +2081,7 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getScheduleOffset() == null) ? 0 : getScheduleOffset().hashCode());
         hashCode = prime * hashCode + ((getTargetMaps() == null) ? 0 : getTargetMaps().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getAlarmConfiguration() == null) ? 0 : getAlarmConfiguration().hashCode());
         return hashCode;
     }
 

@@ -1,3 +1,16 @@
+# __1.12.311__ __2022-09-26__
+## __AWS Cost and Usage Report Service__
+  - ### Features
+    - This release adds two new support regions(me-central-1/eu-south-2) for OSG.
+
+## __AWS IoT FleetWise__
+  - ### Features
+    - General availability (GA) for AWS IoT Fleetwise. It adds AWS IoT Fleetwise to AWS SDK. For more information, see https://docs.aws.amazon.com/iot-fleetwise/latest/APIReference/Welcome.html.
+
+## __Amazon Simple Systems Manager (SSM)__
+  - ### Features
+    - This release includes support for applying a CloudWatch alarm to Systems Manager capabilities like Automation, Run Command, State Manager, and Maintenance Windows.
+
 # __1.12.310__ __2022-09-23__
 ## __AWS App Runner__
   - ### Features
