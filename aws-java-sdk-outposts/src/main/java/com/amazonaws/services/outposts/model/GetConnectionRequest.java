@@ -27,18 +27,18 @@ public class GetConnectionRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ID of the connection you request.
+     * The ID of the connection.
      * </p>
      */
     private String connectionId;
 
     /**
      * <p>
-     * The ID of the connection you request.
+     * The ID of the connection.
      * </p>
      * 
      * @param connectionId
-     *        The ID of the connection you request.
+     *        The ID of the connection.
      */
 
     public void setConnectionId(String connectionId) {
@@ -47,10 +47,10 @@ public class GetConnectionRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ID of the connection you request.
+     * The ID of the connection.
      * </p>
      * 
-     * @return The ID of the connection you request.
+     * @return The ID of the connection.
      */
 
     public String getConnectionId() {
@@ -59,11 +59,11 @@ public class GetConnectionRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ID of the connection you request.
+     * The ID of the connection.
      * </p>
      * 
      * @param connectionId
-     *        The ID of the connection you request.
+     *        The ID of the connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

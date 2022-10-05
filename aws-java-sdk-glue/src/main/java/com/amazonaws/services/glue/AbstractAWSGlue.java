@@ -908,6 +908,11 @@ public class AbstractAWSGlue implements AWSGlue {
     }
 
     @Override
+    public UpdateJobFromSourceControlResult updateJobFromSourceControl(UpdateJobFromSourceControlRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateMLTransformResult updateMLTransform(UpdateMLTransformRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -924,6 +929,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public UpdateSchemaResult updateSchema(UpdateSchemaRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateSourceControlFromJobResult updateSourceControlFromJob(UpdateSourceControlFromJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

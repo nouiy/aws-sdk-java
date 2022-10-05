@@ -4220,6 +4220,37 @@ public interface AWSGlue {
 
     /**
      * <p>
+     * Synchronizes a job from the source control repository. This operation takes the job artifacts that are located in
+     * the remote repository and updates the Glue internal stores with these artifacts.
+     * </p>
+     * <p>
+     * This API supports optional parameters which take in the repository information.
+     * </p>
+     * 
+     * @param updateJobFromSourceControlRequest
+     * @return Result of the UpdateJobFromSourceControl operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws AlreadyExistsException
+     *         A resource to be created or added already exists.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws ValidationException
+     *         A value could not be validated.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @sample AWSGlue.UpdateJobFromSourceControl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateJobFromSourceControl"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateJobFromSourceControlResult updateJobFromSourceControl(UpdateJobFromSourceControlRequest updateJobFromSourceControlRequest);
+
+    /**
+     * <p>
      * Updates an existing machine learning transform. Call this operation to tune the algorithm parameters to achieve
      * better results.
      * </p>
@@ -4329,6 +4360,37 @@ public interface AWSGlue {
      *      Documentation</a>
      */
     UpdateSchemaResult updateSchema(UpdateSchemaRequest updateSchemaRequest);
+
+    /**
+     * <p>
+     * Synchronizes a job to the source control repository. This operation takes the job artifacts from the Glue
+     * internal stores and makes a commit to the remote repository that is configured on the job.
+     * </p>
+     * <p>
+     * This API supports optional parameters which take in the repository information.
+     * </p>
+     * 
+     * @param updateSourceControlFromJobRequest
+     * @return Result of the UpdateSourceControlFromJob operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws AlreadyExistsException
+     *         A resource to be created or added already exists.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws ValidationException
+     *         A value could not be validated.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @sample AWSGlue.UpdateSourceControlFromJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateSourceControlFromJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateSourceControlFromJobResult updateSourceControlFromJob(UpdateSourceControlFromJobRequest updateSourceControlFromJobRequest);
 
     /**
      * <p>

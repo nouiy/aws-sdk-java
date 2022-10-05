@@ -2329,6 +2329,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateJobFromSourceControlResult> updateJobFromSourceControlAsync(UpdateJobFromSourceControlRequest request) {
+
+        return updateJobFromSourceControlAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateJobFromSourceControlResult> updateJobFromSourceControlAsync(UpdateJobFromSourceControlRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateJobFromSourceControlRequest, UpdateJobFromSourceControlResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateMLTransformResult> updateMLTransformAsync(UpdateMLTransformRequest request) {
 
         return updateMLTransformAsync(request, null);
@@ -2376,6 +2389,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     @Override
     public java.util.concurrent.Future<UpdateSchemaResult> updateSchemaAsync(UpdateSchemaRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateSchemaRequest, UpdateSchemaResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSourceControlFromJobResult> updateSourceControlFromJobAsync(UpdateSourceControlFromJobRequest request) {
+
+        return updateSourceControlFromJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSourceControlFromJobResult> updateSourceControlFromJobAsync(UpdateSourceControlFromJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateSourceControlFromJobRequest, UpdateSourceControlFromJobResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

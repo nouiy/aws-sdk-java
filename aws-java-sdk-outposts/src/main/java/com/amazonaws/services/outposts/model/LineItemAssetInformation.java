@@ -36,7 +36,7 @@ public class LineItemAssetInformation implements Serializable, Cloneable, Struct
     private String assetId;
     /**
      * <p>
-     * MAC addresses of the asset.
+     * The MAC addresses of the asset.
      * </p>
      */
     private java.util.List<String> macAddressList;
@@ -83,10 +83,10 @@ public class LineItemAssetInformation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * MAC addresses of the asset.
+     * The MAC addresses of the asset.
      * </p>
      * 
-     * @return MAC addresses of the asset.
+     * @return The MAC addresses of the asset.
      */
 
     public java.util.List<String> getMacAddressList() {
@@ -95,11 +95,11 @@ public class LineItemAssetInformation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * MAC addresses of the asset.
+     * The MAC addresses of the asset.
      * </p>
      * 
      * @param macAddressList
-     *        MAC addresses of the asset.
+     *        The MAC addresses of the asset.
      */
 
     public void setMacAddressList(java.util.Collection<String> macAddressList) {
@@ -113,7 +113,7 @@ public class LineItemAssetInformation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * MAC addresses of the asset.
+     * The MAC addresses of the asset.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -122,7 +122,7 @@ public class LineItemAssetInformation implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param macAddressList
-     *        MAC addresses of the asset.
+     *        The MAC addresses of the asset.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,11 +138,11 @@ public class LineItemAssetInformation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * MAC addresses of the asset.
+     * The MAC addresses of the asset.
      * </p>
      * 
      * @param macAddressList
-     *        MAC addresses of the asset.
+     *        The MAC addresses of the asset.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

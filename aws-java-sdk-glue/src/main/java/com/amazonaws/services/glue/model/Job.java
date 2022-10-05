@@ -256,6 +256,13 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String executionClass;
+    /**
+     * <p>
+     * The details for a source control configuration for a job, allowing synchronization of job artifacts to or from a
+     * remote repository.
+     * </p>
+     */
+    private SourceControlDetails sourceControlDetails;
 
     /**
      * <p>
@@ -1900,6 +1907,52 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The details for a source control configuration for a job, allowing synchronization of job artifacts to or from a
+     * remote repository.
+     * </p>
+     * 
+     * @param sourceControlDetails
+     *        The details for a source control configuration for a job, allowing synchronization of job artifacts to or
+     *        from a remote repository.
+     */
+
+    public void setSourceControlDetails(SourceControlDetails sourceControlDetails) {
+        this.sourceControlDetails = sourceControlDetails;
+    }
+
+    /**
+     * <p>
+     * The details for a source control configuration for a job, allowing synchronization of job artifacts to or from a
+     * remote repository.
+     * </p>
+     * 
+     * @return The details for a source control configuration for a job, allowing synchronization of job artifacts to or
+     *         from a remote repository.
+     */
+
+    public SourceControlDetails getSourceControlDetails() {
+        return this.sourceControlDetails;
+    }
+
+    /**
+     * <p>
+     * The details for a source control configuration for a job, allowing synchronization of job artifacts to or from a
+     * remote repository.
+     * </p>
+     * 
+     * @param sourceControlDetails
+     *        The details for a source control configuration for a job, allowing synchronization of job artifacts to or
+     *        from a remote repository.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Job withSourceControlDetails(SourceControlDetails sourceControlDetails) {
+        setSourceControlDetails(sourceControlDetails);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1954,7 +2007,9 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
         if (getCodeGenConfigurationNodes() != null)
             sb.append("CodeGenConfigurationNodes: ").append("***Sensitive Data Redacted***").append(",");
         if (getExecutionClass() != null)
-            sb.append("ExecutionClass: ").append(getExecutionClass());
+            sb.append("ExecutionClass: ").append(getExecutionClass()).append(",");
+        if (getSourceControlDetails() != null)
+            sb.append("SourceControlDetails: ").append(getSourceControlDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -2057,6 +2112,10 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getExecutionClass() != null && other.getExecutionClass().equals(this.getExecutionClass()) == false)
             return false;
+        if (other.getSourceControlDetails() == null ^ this.getSourceControlDetails() == null)
+            return false;
+        if (other.getSourceControlDetails() != null && other.getSourceControlDetails().equals(this.getSourceControlDetails()) == false)
+            return false;
         return true;
     }
 
@@ -2087,6 +2146,7 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getGlueVersion() == null) ? 0 : getGlueVersion().hashCode());
         hashCode = prime * hashCode + ((getCodeGenConfigurationNodes() == null) ? 0 : getCodeGenConfigurationNodes().hashCode());
         hashCode = prime * hashCode + ((getExecutionClass() == null) ? 0 : getExecutionClass().hashCode());
+        hashCode = prime * hashCode + ((getSourceControlDetails() == null) ? 0 : getSourceControlDetails().hashCode());
         return hashCode;
     }
 

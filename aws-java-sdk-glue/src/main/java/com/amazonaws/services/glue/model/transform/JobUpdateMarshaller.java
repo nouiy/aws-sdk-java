@@ -67,6 +67,8 @@ public class JobUpdateMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CodeGenConfigurationNodes").build();
     private static final MarshallingInfo<String> EXECUTIONCLASS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExecutionClass").build();
+    private static final MarshallingInfo<StructuredPojo> SOURCECONTROLDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SourceControlDetails").build();
 
     private static final JobUpdateMarshaller instance = new JobUpdateMarshaller();
 
@@ -103,6 +105,7 @@ public class JobUpdateMarshaller {
             protocolMarshaller.marshall(jobUpdate.getGlueVersion(), GLUEVERSION_BINDING);
             protocolMarshaller.marshall(jobUpdate.getCodeGenConfigurationNodes(), CODEGENCONFIGURATIONNODES_BINDING);
             protocolMarshaller.marshall(jobUpdate.getExecutionClass(), EXECUTIONCLASS_BINDING);
+            protocolMarshaller.marshall(jobUpdate.getSourceControlDetails(), SOURCECONTROLDETAILS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

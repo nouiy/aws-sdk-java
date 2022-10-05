@@ -29,13 +29,6 @@ public class GetOutpostInstanceTypesRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * The ID or the Amazon Resource Name (ARN) of the Outpost.
      * </p>
-     * <note>
-     * <p>
-     * In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites
-     * throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code>
-     * or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.
-     * </p>
-     * </note>
      */
     private String outpostId;
 
@@ -47,22 +40,9 @@ public class GetOutpostInstanceTypesRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * The ID or the Amazon Resource Name (ARN) of the Outpost.
      * </p>
-     * <note>
-     * <p>
-     * In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites
-     * throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code>
-     * or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.
-     * </p>
-     * </note>
      * 
      * @param outpostId
-     *        The ID or the Amazon Resource Name (ARN) of the Outpost. </p> <note>
-     *        <p>
-     *        In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and
-     *        sites throughout the Outposts Query API. To address backwards compatibility, the parameter names
-     *        <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the
-     *        request with an ARN.
-     *        </p>
+     *        The ID or the Amazon Resource Name (ARN) of the Outpost.
      */
 
     public void setOutpostId(String outpostId) {
@@ -73,21 +53,8 @@ public class GetOutpostInstanceTypesRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * The ID or the Amazon Resource Name (ARN) of the Outpost.
      * </p>
-     * <note>
-     * <p>
-     * In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites
-     * throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code>
-     * or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.
-     * </p>
-     * </note>
      * 
-     * @return The ID or the Amazon Resource Name (ARN) of the Outpost. </p> <note>
-     *         <p>
-     *         In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts
-     *         and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names
-     *         <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the
-     *         request with an ARN.
-     *         </p>
+     * @return The ID or the Amazon Resource Name (ARN) of the Outpost.
      */
 
     public String getOutpostId() {
@@ -98,22 +65,9 @@ public class GetOutpostInstanceTypesRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * The ID or the Amazon Resource Name (ARN) of the Outpost.
      * </p>
-     * <note>
-     * <p>
-     * In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites
-     * throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code>
-     * or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.
-     * </p>
-     * </note>
      * 
      * @param outpostId
-     *        The ID or the Amazon Resource Name (ARN) of the Outpost. </p> <note>
-     *        <p>
-     *        In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and
-     *        sites throughout the Outposts Query API. To address backwards compatibility, the parameter names
-     *        <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the
-     *        request with an ARN.
-     *        </p>
+     *        The ID or the Amazon Resource Name (ARN) of the Outpost.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -11856,6 +11856,81 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
 
     /**
      * <p>
+     * Synchronizes a job from the source control repository. This operation takes the job artifacts that are located in
+     * the remote repository and updates the Glue internal stores with these artifacts.
+     * </p>
+     * <p>
+     * This API supports optional parameters which take in the repository information.
+     * </p>
+     * 
+     * @param updateJobFromSourceControlRequest
+     * @return Result of the UpdateJobFromSourceControl operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws AlreadyExistsException
+     *         A resource to be created or added already exists.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws ValidationException
+     *         A value could not be validated.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @sample AWSGlue.UpdateJobFromSourceControl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateJobFromSourceControl"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateJobFromSourceControlResult updateJobFromSourceControl(UpdateJobFromSourceControlRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateJobFromSourceControl(request);
+    }
+
+    @SdkInternalApi
+    final UpdateJobFromSourceControlResult executeUpdateJobFromSourceControl(UpdateJobFromSourceControlRequest updateJobFromSourceControlRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateJobFromSourceControlRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateJobFromSourceControlRequest> request = null;
+        Response<UpdateJobFromSourceControlResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateJobFromSourceControlRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateJobFromSourceControlRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Glue");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateJobFromSourceControl");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateJobFromSourceControlResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateJobFromSourceControlResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Updates an existing machine learning transform. Call this operation to tune the algorithm parameters to achieve
      * better results.
      * </p>
@@ -12124,6 +12199,81 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateSchemaResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateSchemaResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Synchronizes a job to the source control repository. This operation takes the job artifacts from the Glue
+     * internal stores and makes a commit to the remote repository that is configured on the job.
+     * </p>
+     * <p>
+     * This API supports optional parameters which take in the repository information.
+     * </p>
+     * 
+     * @param updateSourceControlFromJobRequest
+     * @return Result of the UpdateSourceControlFromJob operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access to a resource was denied.
+     * @throws AlreadyExistsException
+     *         A resource to be created or added already exists.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws ValidationException
+     *         A value could not be validated.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @sample AWSGlue.UpdateSourceControlFromJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateSourceControlFromJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateSourceControlFromJobResult updateSourceControlFromJob(UpdateSourceControlFromJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateSourceControlFromJob(request);
+    }
+
+    @SdkInternalApi
+    final UpdateSourceControlFromJobResult executeUpdateSourceControlFromJob(UpdateSourceControlFromJobRequest updateSourceControlFromJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateSourceControlFromJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateSourceControlFromJobRequest> request = null;
+        Response<UpdateSourceControlFromJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateSourceControlFromJobRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateSourceControlFromJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Glue");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateSourceControlFromJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateSourceControlFromJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateSourceControlFromJobResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

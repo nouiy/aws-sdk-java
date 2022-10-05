@@ -1,3 +1,16 @@
+# __1.12.317__ __2022-10-05__
+## __AWS Glue__
+  - ### Features
+    - This SDK release adds support to sync glue jobs with source control provider. Additionally, a new parameter called SourceControlDetails will be added to Job model.
+
+## __AWS Network Firewall__
+  - ### Features
+    - StreamExceptionPolicy configures how AWS Network Firewall processes traffic when a network connection breaks midstream
+
+## __AWS Outposts__
+  - ### Features
+    - This release adds the Asset state information to the ListAssets response. The ListAssets request supports filtering on Asset state.
+
 # __1.12.316__ __2022-10-04__
 ## __AWS S3 Control__
   - ### Features

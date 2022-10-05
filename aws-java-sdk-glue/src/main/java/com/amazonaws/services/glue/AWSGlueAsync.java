@@ -6173,6 +6173,47 @@ public interface AWSGlueAsync extends AWSGlue {
 
     /**
      * <p>
+     * Synchronizes a job from the source control repository. This operation takes the job artifacts that are located in
+     * the remote repository and updates the Glue internal stores with these artifacts.
+     * </p>
+     * <p>
+     * This API supports optional parameters which take in the repository information.
+     * </p>
+     * 
+     * @param updateJobFromSourceControlRequest
+     * @return A Java Future containing the result of the UpdateJobFromSourceControl operation returned by the service.
+     * @sample AWSGlueAsync.UpdateJobFromSourceControl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateJobFromSourceControl"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateJobFromSourceControlResult> updateJobFromSourceControlAsync(
+            UpdateJobFromSourceControlRequest updateJobFromSourceControlRequest);
+
+    /**
+     * <p>
+     * Synchronizes a job from the source control repository. This operation takes the job artifacts that are located in
+     * the remote repository and updates the Glue internal stores with these artifacts.
+     * </p>
+     * <p>
+     * This API supports optional parameters which take in the repository information.
+     * </p>
+     * 
+     * @param updateJobFromSourceControlRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateJobFromSourceControl operation returned by the service.
+     * @sample AWSGlueAsyncHandler.UpdateJobFromSourceControl
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateJobFromSourceControl"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateJobFromSourceControlResult> updateJobFromSourceControlAsync(
+            UpdateJobFromSourceControlRequest updateJobFromSourceControlRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateJobFromSourceControlRequest, UpdateJobFromSourceControlResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates an existing machine learning transform. Call this operation to tune the algorithm parameters to achieve
      * better results.
      * </p>
@@ -6334,6 +6375,47 @@ public interface AWSGlueAsync extends AWSGlue {
      */
     java.util.concurrent.Future<UpdateSchemaResult> updateSchemaAsync(UpdateSchemaRequest updateSchemaRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateSchemaRequest, UpdateSchemaResult> asyncHandler);
+
+    /**
+     * <p>
+     * Synchronizes a job to the source control repository. This operation takes the job artifacts from the Glue
+     * internal stores and makes a commit to the remote repository that is configured on the job.
+     * </p>
+     * <p>
+     * This API supports optional parameters which take in the repository information.
+     * </p>
+     * 
+     * @param updateSourceControlFromJobRequest
+     * @return A Java Future containing the result of the UpdateSourceControlFromJob operation returned by the service.
+     * @sample AWSGlueAsync.UpdateSourceControlFromJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateSourceControlFromJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSourceControlFromJobResult> updateSourceControlFromJobAsync(
+            UpdateSourceControlFromJobRequest updateSourceControlFromJobRequest);
+
+    /**
+     * <p>
+     * Synchronizes a job to the source control repository. This operation takes the job artifacts from the Glue
+     * internal stores and makes a commit to the remote repository that is configured on the job.
+     * </p>
+     * <p>
+     * This API supports optional parameters which take in the repository information.
+     * </p>
+     * 
+     * @param updateSourceControlFromJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateSourceControlFromJob operation returned by the service.
+     * @sample AWSGlueAsyncHandler.UpdateSourceControlFromJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateSourceControlFromJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSourceControlFromJobResult> updateSourceControlFromJobAsync(
+            UpdateSourceControlFromJobRequest updateSourceControlFromJobRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateSourceControlFromJobRequest, UpdateSourceControlFromJobResult> asyncHandler);
 
     /**
      * <p>

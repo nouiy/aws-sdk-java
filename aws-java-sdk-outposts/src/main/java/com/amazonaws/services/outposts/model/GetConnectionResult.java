@@ -25,24 +25,24 @@ public class GetConnectionResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The ID of the connection you receive.
+     * The ID of the connection.
      * </p>
      */
     private String connectionId;
     /**
      * <p>
-     * Information about a connection.
+     * Information about the connection.
      * </p>
      */
     private ConnectionDetails connectionDetails;
 
     /**
      * <p>
-     * The ID of the connection you receive.
+     * The ID of the connection.
      * </p>
      * 
      * @param connectionId
-     *        The ID of the connection you receive.
+     *        The ID of the connection.
      */
 
     public void setConnectionId(String connectionId) {
@@ -51,10 +51,10 @@ public class GetConnectionResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The ID of the connection you receive.
+     * The ID of the connection.
      * </p>
      * 
-     * @return The ID of the connection you receive.
+     * @return The ID of the connection.
      */
 
     public String getConnectionId() {
@@ -63,11 +63,11 @@ public class GetConnectionResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The ID of the connection you receive.
+     * The ID of the connection.
      * </p>
      * 
      * @param connectionId
-     *        The ID of the connection you receive.
+     *        The ID of the connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -78,11 +78,11 @@ public class GetConnectionResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Information about a connection.
+     * Information about the connection.
      * </p>
      * 
      * @param connectionDetails
-     *        Information about a connection.
+     *        Information about the connection.
      */
 
     public void setConnectionDetails(ConnectionDetails connectionDetails) {
@@ -91,10 +91,10 @@ public class GetConnectionResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Information about a connection.
+     * Information about the connection.
      * </p>
      * 
-     * @return Information about a connection.
+     * @return Information about the connection.
      */
 
     public ConnectionDetails getConnectionDetails() {
@@ -103,11 +103,11 @@ public class GetConnectionResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Information about a connection.
+     * Information about the connection.
      * </p>
      * 
      * @param connectionDetails
-     *        Information about a connection.
+     *        Information about the connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

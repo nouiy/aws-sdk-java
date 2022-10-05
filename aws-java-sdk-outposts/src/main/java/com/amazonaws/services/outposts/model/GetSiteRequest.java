@@ -29,13 +29,6 @@ public class GetSiteRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <p>
      * The ID or the Amazon Resource Name (ARN) of the site.
      * </p>
-     * <note>
-     * <p>
-     * In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites
-     * throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code>
-     * or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.
-     * </p>
-     * </note>
      */
     private String siteId;
 
@@ -43,22 +36,9 @@ public class GetSiteRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <p>
      * The ID or the Amazon Resource Name (ARN) of the site.
      * </p>
-     * <note>
-     * <p>
-     * In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites
-     * throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code>
-     * or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.
-     * </p>
-     * </note>
      * 
      * @param siteId
-     *        The ID or the Amazon Resource Name (ARN) of the site. </p> <note>
-     *        <p>
-     *        In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and
-     *        sites throughout the Outposts Query API. To address backwards compatibility, the parameter names
-     *        <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the
-     *        request with an ARN.
-     *        </p>
+     *        The ID or the Amazon Resource Name (ARN) of the site.
      */
 
     public void setSiteId(String siteId) {
@@ -69,21 +49,8 @@ public class GetSiteRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <p>
      * The ID or the Amazon Resource Name (ARN) of the site.
      * </p>
-     * <note>
-     * <p>
-     * In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites
-     * throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code>
-     * or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.
-     * </p>
-     * </note>
      * 
-     * @return The ID or the Amazon Resource Name (ARN) of the site. </p> <note>
-     *         <p>
-     *         In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts
-     *         and sites throughout the Outposts Query API. To address backwards compatibility, the parameter names
-     *         <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the
-     *         request with an ARN.
-     *         </p>
+     * @return The ID or the Amazon Resource Name (ARN) of the site.
      */
 
     public String getSiteId() {
@@ -94,22 +61,9 @@ public class GetSiteRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <p>
      * The ID or the Amazon Resource Name (ARN) of the site.
      * </p>
-     * <note>
-     * <p>
-     * In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and sites
-     * throughout the Outposts Query API. To address backwards compatibility, the parameter names <code>OutpostID</code>
-     * or <code>SiteID</code> remain in use. Despite the parameter name, you can make the request with an ARN.
-     * </p>
-     * </note>
      * 
      * @param siteId
-     *        The ID or the Amazon Resource Name (ARN) of the site. </p> <note>
-     *        <p>
-     *        In requests, Amazon Web Services Outposts accepts the Amazon Resource Name (ARN) or an ID for Outposts and
-     *        sites throughout the Outposts Query API. To address backwards compatibility, the parameter names
-     *        <code>OutpostID</code> or <code>SiteID</code> remain in use. Despite the parameter name, you can make the
-     *        request with an ARN.
-     *        </p>
+     *        The ID or the Amazon Resource Name (ARN) of the site.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
