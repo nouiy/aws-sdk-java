@@ -448,8 +448,8 @@ public class AmazonSimpleEmailServiceV2Client extends AmazonWebServiceClient imp
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -1264,8 +1264,8 @@ public class AmazonSimpleEmailServiceV2Client extends AmazonWebServiceClient imp
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -2066,8 +2066,8 @@ public class AmazonSimpleEmailServiceV2Client extends AmazonWebServiceClient imp
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -2186,6 +2186,68 @@ public class AmazonSimpleEmailServiceV2Client extends AmazonWebServiceClient imp
 
             HttpResponseHandler<AmazonWebServiceResponse<GetDedicatedIpResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetDedicatedIpResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieve information about the dedicated pool.
+     * </p>
+     * 
+     * @param getDedicatedIpPoolRequest
+     *        A request to obtain more information about a dedicated IP pool.
+     * @return Result of the GetDedicatedIpPool operation returned by the service.
+     * @throws TooManyRequestsException
+     *         Too many requests have been made to the operation.
+     * @throws NotFoundException
+     *         The resource you attempted to access doesn't exist.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @sample AmazonSimpleEmailServiceV2.GetDedicatedIpPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetDedicatedIpPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetDedicatedIpPoolResult getDedicatedIpPool(GetDedicatedIpPoolRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetDedicatedIpPool(request);
+    }
+
+    @SdkInternalApi
+    final GetDedicatedIpPoolResult executeGetDedicatedIpPool(GetDedicatedIpPoolRequest getDedicatedIpPoolRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getDedicatedIpPoolRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetDedicatedIpPoolRequest> request = null;
+        Response<GetDedicatedIpPoolResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetDedicatedIpPoolRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getDedicatedIpPoolRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SESv2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetDedicatedIpPool");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetDedicatedIpPoolResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetDedicatedIpPoolResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3064,8 +3126,8 @@ public class AmazonSimpleEmailServiceV2Client extends AmazonWebServiceClient imp
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -4954,8 +5016,8 @@ public class AmazonSimpleEmailServiceV2Client extends AmazonWebServiceClient imp
      * <p>
      * To use this operation, you must first create a custom verification email template. For more information about
      * creating and using custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -5528,8 +5590,8 @@ public class AmazonSimpleEmailServiceV2Client extends AmazonWebServiceClient imp
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.

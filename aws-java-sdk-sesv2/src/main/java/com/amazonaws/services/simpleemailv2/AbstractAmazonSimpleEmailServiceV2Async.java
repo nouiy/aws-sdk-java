@@ -417,6 +417,19 @@ public class AbstractAmazonSimpleEmailServiceV2Async extends AbstractAmazonSimpl
     }
 
     @Override
+    public java.util.concurrent.Future<GetDedicatedIpPoolResult> getDedicatedIpPoolAsync(GetDedicatedIpPoolRequest request) {
+
+        return getDedicatedIpPoolAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDedicatedIpPoolResult> getDedicatedIpPoolAsync(GetDedicatedIpPoolRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetDedicatedIpPoolRequest, GetDedicatedIpPoolResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetDedicatedIpsResult> getDedicatedIpsAsync(GetDedicatedIpsRequest request) {
 
         return getDedicatedIpsAsync(request, null);

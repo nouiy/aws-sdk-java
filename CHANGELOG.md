@@ -1,3 +1,20 @@
+# __1.12.323__ __2022-10-18__
+## __AWS Cloud Map__
+  - ### Features
+    - Updated the ListNamespaces API to support the NAME and HTTP_NAME filters, and the BEGINS_WITH filter condition.
+
+## __Amazon Fraud Detector__
+  - ### Features
+    - Documentation Updates for Amazon Fraud Detector
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - This change allows customers to enable data capturing while running a batch transform job, and configure monitoring schedule to monitoring the captured data.
+
+## __Amazon Simple Email Service__
+  - ### Features
+    - This release allows subscribers to enable Dedicated IPs (managed) to send email via a fully managed dedicated IP experience. It also adds identities' VerificationStatus in the response of GetEmailIdentity and ListEmailIdentities APIs, and ImportJobs counts in the response of ListImportJobs API.
+
 # __1.12.322__ __2022-10-17__
 ## __AWS Greengrass__
   - ### Features

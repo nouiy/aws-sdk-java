@@ -173,6 +173,11 @@ public class AbstractAmazonSimpleEmailServiceV2 implements AmazonSimpleEmailServ
     }
 
     @Override
+    public GetDedicatedIpPoolResult getDedicatedIpPool(GetDedicatedIpPoolRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetDedicatedIpsResult getDedicatedIps(GetDedicatedIpsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

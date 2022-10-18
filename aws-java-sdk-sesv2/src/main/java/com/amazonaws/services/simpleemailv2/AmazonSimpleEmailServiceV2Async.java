@@ -196,8 +196,8 @@ public interface AmazonSimpleEmailServiceV2Async extends AmazonSimpleEmailServic
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -220,8 +220,8 @@ public interface AmazonSimpleEmailServiceV2Async extends AmazonSimpleEmailServic
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -745,8 +745,8 @@ public interface AmazonSimpleEmailServiceV2Async extends AmazonSimpleEmailServic
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -769,8 +769,8 @@ public interface AmazonSimpleEmailServiceV2Async extends AmazonSimpleEmailServic
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -1243,8 +1243,8 @@ public interface AmazonSimpleEmailServiceV2Async extends AmazonSimpleEmailServic
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -1267,8 +1267,8 @@ public interface AmazonSimpleEmailServiceV2Async extends AmazonSimpleEmailServic
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -1324,6 +1324,39 @@ public interface AmazonSimpleEmailServiceV2Async extends AmazonSimpleEmailServic
      */
     java.util.concurrent.Future<GetDedicatedIpResult> getDedicatedIpAsync(GetDedicatedIpRequest getDedicatedIpRequest,
             com.amazonaws.handlers.AsyncHandler<GetDedicatedIpRequest, GetDedicatedIpResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieve information about the dedicated pool.
+     * </p>
+     * 
+     * @param getDedicatedIpPoolRequest
+     *        A request to obtain more information about a dedicated IP pool.
+     * @return A Java Future containing the result of the GetDedicatedIpPool operation returned by the service.
+     * @sample AmazonSimpleEmailServiceV2Async.GetDedicatedIpPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetDedicatedIpPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetDedicatedIpPoolResult> getDedicatedIpPoolAsync(GetDedicatedIpPoolRequest getDedicatedIpPoolRequest);
+
+    /**
+     * <p>
+     * Retrieve information about the dedicated pool.
+     * </p>
+     * 
+     * @param getDedicatedIpPoolRequest
+     *        A request to obtain more information about a dedicated IP pool.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetDedicatedIpPool operation returned by the service.
+     * @sample AmazonSimpleEmailServiceV2AsyncHandler.GetDedicatedIpPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetDedicatedIpPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetDedicatedIpPoolResult> getDedicatedIpPoolAsync(GetDedicatedIpPoolRequest getDedicatedIpPoolRequest,
+            com.amazonaws.handlers.AsyncHandler<GetDedicatedIpPoolRequest, GetDedicatedIpPoolResult> asyncHandler);
 
     /**
      * <p>
@@ -1861,8 +1894,8 @@ public interface AmazonSimpleEmailServiceV2Async extends AmazonSimpleEmailServic
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -1886,8 +1919,8 @@ public interface AmazonSimpleEmailServiceV2Async extends AmazonSimpleEmailServic
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -3063,8 +3096,8 @@ public interface AmazonSimpleEmailServiceV2Async extends AmazonSimpleEmailServic
      * <p>
      * To use this operation, you must first create a custom verification email template. For more information about
      * creating and using custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -3089,8 +3122,8 @@ public interface AmazonSimpleEmailServiceV2Async extends AmazonSimpleEmailServic
      * <p>
      * To use this operation, you must first create a custom verification email template. For more information about
      * creating and using custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -3426,8 +3459,8 @@ public interface AmazonSimpleEmailServiceV2Async extends AmazonSimpleEmailServic
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -3450,8 +3483,8 @@ public interface AmazonSimpleEmailServiceV2Async extends AmazonSimpleEmailServic
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.

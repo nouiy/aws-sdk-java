@@ -157,8 +157,8 @@ public interface AmazonSimpleEmailServiceV2 {
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -501,8 +501,8 @@ public interface AmazonSimpleEmailServiceV2 {
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -790,8 +790,8 @@ public interface AmazonSimpleEmailServiceV2 {
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -833,6 +833,26 @@ public interface AmazonSimpleEmailServiceV2 {
      *      Documentation</a>
      */
     GetDedicatedIpResult getDedicatedIp(GetDedicatedIpRequest getDedicatedIpRequest);
+
+    /**
+     * <p>
+     * Retrieve information about the dedicated pool.
+     * </p>
+     * 
+     * @param getDedicatedIpPoolRequest
+     *        A request to obtain more information about a dedicated IP pool.
+     * @return Result of the GetDedicatedIpPool operation returned by the service.
+     * @throws TooManyRequestsException
+     *         Too many requests have been made to the operation.
+     * @throws NotFoundException
+     *         The resource you attempted to access doesn't exist.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @sample AmazonSimpleEmailServiceV2.GetDedicatedIpPool
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sesv2-2019-09-27/GetDedicatedIpPool" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetDedicatedIpPoolResult getDedicatedIpPool(GetDedicatedIpPoolRequest getDedicatedIpPoolRequest);
 
     /**
      * <p>
@@ -1141,8 +1161,8 @@ public interface AmazonSimpleEmailServiceV2 {
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -1811,8 +1831,8 @@ public interface AmazonSimpleEmailServiceV2 {
      * <p>
      * To use this operation, you must first create a custom verification email template. For more information about
      * creating and using custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.
@@ -2043,8 +2063,8 @@ public interface AmazonSimpleEmailServiceV2 {
      * </p>
      * <p>
      * For more information about custom verification email templates, see <a
-     * href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-verify-address-custom.html">Using Custom
-     * Verification Email Templates</a> in the <i>Amazon SES Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html#send-email-verify-address-custom">Using
+     * custom verification email templates</a> in the <i>Amazon SES Developer Guide</i>.
      * </p>
      * <p>
      * You can execute this operation no more than once per second.

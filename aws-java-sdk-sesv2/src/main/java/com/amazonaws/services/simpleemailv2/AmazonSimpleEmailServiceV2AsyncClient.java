@@ -1052,6 +1052,39 @@ public class AmazonSimpleEmailServiceV2AsyncClient extends AmazonSimpleEmailServ
     }
 
     @Override
+    public java.util.concurrent.Future<GetDedicatedIpPoolResult> getDedicatedIpPoolAsync(GetDedicatedIpPoolRequest request) {
+
+        return getDedicatedIpPoolAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDedicatedIpPoolResult> getDedicatedIpPoolAsync(final GetDedicatedIpPoolRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetDedicatedIpPoolRequest, GetDedicatedIpPoolResult> asyncHandler) {
+        final GetDedicatedIpPoolRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetDedicatedIpPoolResult>() {
+            @Override
+            public GetDedicatedIpPoolResult call() throws Exception {
+                GetDedicatedIpPoolResult result = null;
+
+                try {
+                    result = executeGetDedicatedIpPool(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetDedicatedIpsResult> getDedicatedIpsAsync(GetDedicatedIpsRequest request) {
 
         return getDedicatedIpsAsync(request, null);
