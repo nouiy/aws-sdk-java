@@ -96,7 +96,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
     private Double resiliencyScore;
     /**
      * <p>
-     * The status of the action.
+     * The status of the application.
      * </p>
      */
     private String status;
@@ -587,11 +587,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the action.
+     * The status of the application.
      * </p>
      * 
      * @param status
-     *        The status of the action.
+     *        The status of the application.
      * @see AppStatusType
      */
 
@@ -601,10 +601,10 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the action.
+     * The status of the application.
      * </p>
      * 
-     * @return The status of the action.
+     * @return The status of the application.
      * @see AppStatusType
      */
 
@@ -614,11 +614,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the action.
+     * The status of the application.
      * </p>
      * 
      * @param status
-     *        The status of the action.
+     *        The status of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AppStatusType
      */
@@ -630,11 +630,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the action.
+     * The status of the application.
      * </p>
      * 
      * @param status
-     *        The status of the action.
+     *        The status of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AppStatusType
      */

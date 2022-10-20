@@ -72,14 +72,14 @@ public class CustomRoutingAccelerator implements Serializable, Cloneable, Struct
      * string, followed by .awsglobalaccelerator.com. For example: a1234567890abcdef.awsglobalaccelerator.com.
      * </p>
      * <p>
-     * If you have a dual-stack accelerator, you also have a second DNS name, DualStackDnsName, that points to both the
-     * A record and the AAAA record for all four static addresses for the accelerator (two IPv4 addresses and two IPv6
-     * addresses).
+     * If you have a dual-stack accelerator, you also have a second DNS name, <code>DualStackDnsName</code>, that points
+     * to both the A record and the AAAA record for all four static addresses for the accelerator: two IPv4 addresses
+     * and two IPv6 addresses.
      * </p>
      * <p>
      * For more information about the default DNS name, see <a href=
      * "https://docs.aws.amazon.com/global-accelerator/latest/dg/dns-addressing-custom-domains.dns-addressing.html">
-     * Support for DNS Addressing in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.
+     * Support for DNS addressing in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.
      * </p>
      */
     private String dnsName;
@@ -407,14 +407,14 @@ public class CustomRoutingAccelerator implements Serializable, Cloneable, Struct
      * string, followed by .awsglobalaccelerator.com. For example: a1234567890abcdef.awsglobalaccelerator.com.
      * </p>
      * <p>
-     * If you have a dual-stack accelerator, you also have a second DNS name, DualStackDnsName, that points to both the
-     * A record and the AAAA record for all four static addresses for the accelerator (two IPv4 addresses and two IPv6
-     * addresses).
+     * If you have a dual-stack accelerator, you also have a second DNS name, <code>DualStackDnsName</code>, that points
+     * to both the A record and the AAAA record for all four static addresses for the accelerator: two IPv4 addresses
+     * and two IPv6 addresses.
      * </p>
      * <p>
      * For more information about the default DNS name, see <a href=
      * "https://docs.aws.amazon.com/global-accelerator/latest/dg/dns-addressing-custom-domains.dns-addressing.html">
-     * Support for DNS Addressing in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.
+     * Support for DNS addressing in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.
      * </p>
      * 
      * @param dnsName
@@ -426,14 +426,14 @@ public class CustomRoutingAccelerator implements Serializable, Cloneable, Struct
      *        a1234567890abcdef.awsglobalaccelerator.com.
      *        </p>
      *        <p>
-     *        If you have a dual-stack accelerator, you also have a second DNS name, DualStackDnsName, that points to
-     *        both the A record and the AAAA record for all four static addresses for the accelerator (two IPv4
-     *        addresses and two IPv6 addresses).
+     *        If you have a dual-stack accelerator, you also have a second DNS name, <code>DualStackDnsName</code>, that
+     *        points to both the A record and the AAAA record for all four static addresses for the accelerator: two
+     *        IPv4 addresses and two IPv6 addresses.
      *        </p>
      *        <p>
      *        For more information about the default DNS name, see <a href=
      *        "https://docs.aws.amazon.com/global-accelerator/latest/dg/dns-addressing-custom-domains.dns-addressing.html"
-     *        > Support for DNS Addressing in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.
+     *        > Support for DNS addressing in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.
      */
 
     public void setDnsName(String dnsName) {
@@ -450,14 +450,14 @@ public class CustomRoutingAccelerator implements Serializable, Cloneable, Struct
      * string, followed by .awsglobalaccelerator.com. For example: a1234567890abcdef.awsglobalaccelerator.com.
      * </p>
      * <p>
-     * If you have a dual-stack accelerator, you also have a second DNS name, DualStackDnsName, that points to both the
-     * A record and the AAAA record for all four static addresses for the accelerator (two IPv4 addresses and two IPv6
-     * addresses).
+     * If you have a dual-stack accelerator, you also have a second DNS name, <code>DualStackDnsName</code>, that points
+     * to both the A record and the AAAA record for all four static addresses for the accelerator: two IPv4 addresses
+     * and two IPv6 addresses.
      * </p>
      * <p>
      * For more information about the default DNS name, see <a href=
      * "https://docs.aws.amazon.com/global-accelerator/latest/dg/dns-addressing-custom-domains.dns-addressing.html">
-     * Support for DNS Addressing in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.
+     * Support for DNS addressing in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.
      * </p>
      * 
      * @return The Domain Name System (DNS) name that Global Accelerator creates that points to an accelerator's static
@@ -468,14 +468,14 @@ public class CustomRoutingAccelerator implements Serializable, Cloneable, Struct
      *         a1234567890abcdef.awsglobalaccelerator.com.
      *         </p>
      *         <p>
-     *         If you have a dual-stack accelerator, you also have a second DNS name, DualStackDnsName, that points to
-     *         both the A record and the AAAA record for all four static addresses for the accelerator (two IPv4
-     *         addresses and two IPv6 addresses).
+     *         If you have a dual-stack accelerator, you also have a second DNS name, <code>DualStackDnsName</code>,
+     *         that points to both the A record and the AAAA record for all four static addresses for the accelerator:
+     *         two IPv4 addresses and two IPv6 addresses.
      *         </p>
      *         <p>
      *         For more information about the default DNS name, see <a href=
      *         "https://docs.aws.amazon.com/global-accelerator/latest/dg/dns-addressing-custom-domains.dns-addressing.html"
-     *         > Support for DNS Addressing in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.
+     *         > Support for DNS addressing in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.
      */
 
     public String getDnsName() {
@@ -492,14 +492,14 @@ public class CustomRoutingAccelerator implements Serializable, Cloneable, Struct
      * string, followed by .awsglobalaccelerator.com. For example: a1234567890abcdef.awsglobalaccelerator.com.
      * </p>
      * <p>
-     * If you have a dual-stack accelerator, you also have a second DNS name, DualStackDnsName, that points to both the
-     * A record and the AAAA record for all four static addresses for the accelerator (two IPv4 addresses and two IPv6
-     * addresses).
+     * If you have a dual-stack accelerator, you also have a second DNS name, <code>DualStackDnsName</code>, that points
+     * to both the A record and the AAAA record for all four static addresses for the accelerator: two IPv4 addresses
+     * and two IPv6 addresses.
      * </p>
      * <p>
      * For more information about the default DNS name, see <a href=
      * "https://docs.aws.amazon.com/global-accelerator/latest/dg/dns-addressing-custom-domains.dns-addressing.html">
-     * Support for DNS Addressing in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.
+     * Support for DNS addressing in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.
      * </p>
      * 
      * @param dnsName
@@ -511,14 +511,14 @@ public class CustomRoutingAccelerator implements Serializable, Cloneable, Struct
      *        a1234567890abcdef.awsglobalaccelerator.com.
      *        </p>
      *        <p>
-     *        If you have a dual-stack accelerator, you also have a second DNS name, DualStackDnsName, that points to
-     *        both the A record and the AAAA record for all four static addresses for the accelerator (two IPv4
-     *        addresses and two IPv6 addresses).
+     *        If you have a dual-stack accelerator, you also have a second DNS name, <code>DualStackDnsName</code>, that
+     *        points to both the A record and the AAAA record for all four static addresses for the accelerator: two
+     *        IPv4 addresses and two IPv6 addresses.
      *        </p>
      *        <p>
      *        For more information about the default DNS name, see <a href=
      *        "https://docs.aws.amazon.com/global-accelerator/latest/dg/dns-addressing-custom-domains.dns-addressing.html"
-     *        > Support for DNS Addressing in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.
+     *        > Support for DNS addressing in Global Accelerator</a> in the <i>Global Accelerator Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

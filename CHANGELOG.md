@@ -1,3 +1,20 @@
+# __1.12.325__ __2022-10-20__
+## __AWS Global Accelerator__
+  - ### Features
+    - Global Accelerator now supports AddEndpoints and RemoveEndpoints operations for standard endpoint groups.
+
+## __AWS Resilience Hub__
+  - ### Features
+    - In this release, we are introducing support for regional optimization for AWS Resilience Hub applications. It also includes a few documentation updates to improve clarity.
+
+## __Amazon DevOps Guru__
+  - ### Features
+    - This release adds information about the resources DevOps Guru is analyzing.
+
+## __CloudWatch RUM__
+  - ### Features
+    - CloudWatch RUM now supports Extended CloudWatch Metrics with Additional Dimensions
+
 # __1.12.324__ __2022-10-19__
 ## __AWS CloudTrail__
   - ### Features

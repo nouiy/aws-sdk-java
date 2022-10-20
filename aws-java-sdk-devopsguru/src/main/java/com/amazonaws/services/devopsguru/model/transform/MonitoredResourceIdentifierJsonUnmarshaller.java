@@ -60,6 +60,14 @@ public class MonitoredResourceIdentifierJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     monitoredResourceIdentifier.setResourcePermission(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LastUpdated", targetDepth)) {
+                    context.nextToken();
+                    monitoredResourceIdentifier.setLastUpdated(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("ResourceCollection", targetDepth)) {
+                    context.nextToken();
+                    monitoredResourceIdentifier.setResourceCollection(ResourceCollectionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -1927,9 +1927,9 @@ public class AmazonDevOpsGuruClient extends AmazonWebServiceClient implements Am
     /**
      * <p>
      * Returns a list of insights in your Amazon Web Services account. You can specify which insights are returned by
-     * their start time, one or more statuses (<code>ONGOING</code>, <code>CLOSED</code>, and <code>CLOSED</code>), one
-     * or more severities (<code>LOW</code>, <code>MEDIUM</code>, and <code>HIGH</code>), and type (
-     * <code>REACTIVE</code> or <code>PROACTIVE</code>).
+     * their start time, one or more statuses (<code>ONGOING</code> or <code>CLOSED</code>), one or more severities (
+     * <code>LOW</code>, <code>MEDIUM</code>, and <code>HIGH</code>), and type (<code>REACTIVE</code> or
+     * <code>PROACTIVE</code>).
      * </p>
      * <p>
      * Use the <code>Filters</code> parameter to specify status and severity search parameters. Use the

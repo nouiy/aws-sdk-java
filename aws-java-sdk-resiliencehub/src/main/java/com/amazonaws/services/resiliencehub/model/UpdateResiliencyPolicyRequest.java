@@ -36,12 +36,6 @@ public class UpdateResiliencyPolicyRequest extends com.amazonaws.AmazonWebServic
      * The type of resiliency policy to be created, including the recovery time objective (RTO) and recovery point
      * objective (RPO) in seconds.
      * </p>
-     * <note>
-     * <p>
-     * If you do not want to specify regional targets for a regional policy, you must set the values of
-     * <code>rpoInSecs</code> and <code>rtoInSecs</code> to <code>-1</code>.
-     * </p>
-     * </note>
      */
     private java.util.Map<String, FailurePolicy> policy;
     /**
@@ -141,19 +135,9 @@ public class UpdateResiliencyPolicyRequest extends com.amazonaws.AmazonWebServic
      * The type of resiliency policy to be created, including the recovery time objective (RTO) and recovery point
      * objective (RPO) in seconds.
      * </p>
-     * <note>
-     * <p>
-     * If you do not want to specify regional targets for a regional policy, you must set the values of
-     * <code>rpoInSecs</code> and <code>rtoInSecs</code> to <code>-1</code>.
-     * </p>
-     * </note>
      * 
      * @return The type of resiliency policy to be created, including the recovery time objective (RTO) and recovery
-     *         point objective (RPO) in seconds.</p> <note>
-     *         <p>
-     *         If you do not want to specify regional targets for a regional policy, you must set the values of
-     *         <code>rpoInSecs</code> and <code>rtoInSecs</code> to <code>-1</code>.
-     *         </p>
+     *         point objective (RPO) in seconds.
      */
 
     public java.util.Map<String, FailurePolicy> getPolicy() {
@@ -165,20 +149,10 @@ public class UpdateResiliencyPolicyRequest extends com.amazonaws.AmazonWebServic
      * The type of resiliency policy to be created, including the recovery time objective (RTO) and recovery point
      * objective (RPO) in seconds.
      * </p>
-     * <note>
-     * <p>
-     * If you do not want to specify regional targets for a regional policy, you must set the values of
-     * <code>rpoInSecs</code> and <code>rtoInSecs</code> to <code>-1</code>.
-     * </p>
-     * </note>
      * 
      * @param policy
      *        The type of resiliency policy to be created, including the recovery time objective (RTO) and recovery
-     *        point objective (RPO) in seconds.</p> <note>
-     *        <p>
-     *        If you do not want to specify regional targets for a regional policy, you must set the values of
-     *        <code>rpoInSecs</code> and <code>rtoInSecs</code> to <code>-1</code>.
-     *        </p>
+     *        point objective (RPO) in seconds.
      */
 
     public void setPolicy(java.util.Map<String, FailurePolicy> policy) {
@@ -190,20 +164,10 @@ public class UpdateResiliencyPolicyRequest extends com.amazonaws.AmazonWebServic
      * The type of resiliency policy to be created, including the recovery time objective (RTO) and recovery point
      * objective (RPO) in seconds.
      * </p>
-     * <note>
-     * <p>
-     * If you do not want to specify regional targets for a regional policy, you must set the values of
-     * <code>rpoInSecs</code> and <code>rtoInSecs</code> to <code>-1</code>.
-     * </p>
-     * </note>
      * 
      * @param policy
      *        The type of resiliency policy to be created, including the recovery time objective (RTO) and recovery
-     *        point objective (RPO) in seconds.</p> <note>
-     *        <p>
-     *        If you do not want to specify regional targets for a regional policy, you must set the values of
-     *        <code>rpoInSecs</code> and <code>rtoInSecs</code> to <code>-1</code>.
-     *        </p>
+     *        point objective (RPO) in seconds.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
