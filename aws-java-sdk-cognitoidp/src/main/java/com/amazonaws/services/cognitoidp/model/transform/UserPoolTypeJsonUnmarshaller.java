@@ -60,6 +60,10 @@ public class UserPoolTypeJsonUnmarshaller implements Unmarshaller<UserPoolType, 
                     context.nextToken();
                     userPoolType.setPolicies(UserPoolPolicyTypeJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("DeletionProtection", targetDepth)) {
+                    context.nextToken();
+                    userPoolType.setDeletionProtection(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("LambdaConfig", targetDepth)) {
                     context.nextToken();
                     userPoolType.setLambdaConfig(LambdaConfigTypeJsonUnmarshaller.getInstance().unmarshall(context));

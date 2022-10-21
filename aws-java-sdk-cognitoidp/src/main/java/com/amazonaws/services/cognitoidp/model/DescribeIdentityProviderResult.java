@@ -25,18 +25,18 @@ public class DescribeIdentityProviderResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The IdP that was deleted.
+     * The identity provider details.
      * </p>
      */
     private IdentityProviderType identityProvider;
 
     /**
      * <p>
-     * The IdP that was deleted.
+     * The identity provider details.
      * </p>
      * 
      * @param identityProvider
-     *        The IdP that was deleted.
+     *        The identity provider details.
      */
 
     public void setIdentityProvider(IdentityProviderType identityProvider) {
@@ -45,10 +45,10 @@ public class DescribeIdentityProviderResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The IdP that was deleted.
+     * The identity provider details.
      * </p>
      * 
-     * @return The IdP that was deleted.
+     * @return The identity provider details.
      */
 
     public IdentityProviderType getIdentityProvider() {
@@ -57,11 +57,11 @@ public class DescribeIdentityProviderResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The IdP that was deleted.
+     * The identity provider details.
      * </p>
      * 
      * @param identityProvider
-     *        The IdP that was deleted.
+     *        The identity provider details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

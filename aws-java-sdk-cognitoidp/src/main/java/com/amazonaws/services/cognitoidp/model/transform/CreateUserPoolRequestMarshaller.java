@@ -33,6 +33,8 @@ public class CreateUserPoolRequestMarshaller {
             .marshallLocationName("PoolName").build();
     private static final MarshallingInfo<StructuredPojo> POLICIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Policies").build();
+    private static final MarshallingInfo<String> DELETIONPROTECTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeletionProtection").build();
     private static final MarshallingInfo<StructuredPojo> LAMBDACONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LambdaConfig").build();
     private static final MarshallingInfo<List> AUTOVERIFIEDATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -92,6 +94,7 @@ public class CreateUserPoolRequestMarshaller {
         try {
             protocolMarshaller.marshall(createUserPoolRequest.getPoolName(), POOLNAME_BINDING);
             protocolMarshaller.marshall(createUserPoolRequest.getPolicies(), POLICIES_BINDING);
+            protocolMarshaller.marshall(createUserPoolRequest.getDeletionProtection(), DELETIONPROTECTION_BINDING);
             protocolMarshaller.marshall(createUserPoolRequest.getLambdaConfig(), LAMBDACONFIG_BINDING);
             protocolMarshaller.marshall(createUserPoolRequest.getAutoVerifiedAttributes(), AUTOVERIFIEDATTRIBUTES_BINDING);
             protocolMarshaller.marshall(createUserPoolRequest.getAliasAttributes(), ALIASATTRIBUTES_BINDING);
