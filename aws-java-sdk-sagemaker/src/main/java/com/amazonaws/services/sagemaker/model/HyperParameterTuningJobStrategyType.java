@@ -25,7 +25,8 @@ public enum HyperParameterTuningJobStrategyType {
 
     Bayesian("Bayesian"),
     Random("Random"),
-    Hyperband("Hyperband");
+    Hyperband("Hyperband"),
+    Grid("Grid");
 
     private String value;
 
