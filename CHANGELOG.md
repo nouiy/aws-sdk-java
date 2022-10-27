@@ -1,3 +1,28 @@
+# __1.12.330__ __2022-10-27__
+## __AWS Glue__
+  - ### Features
+    - Added support for custom datatypes when using custom csv classifier.
+
+## __AWS WAFV2__
+  - ### Features
+    - This release adds the following: Challenge rule action, to silently verify client browsers; rule group rule action override to any valid rule action, not just Count; token sharing between protected applications for challenge/CAPTCHA token; targeted rules option for Bot Control managed rule group.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Feature supports the replacement of instance root volume using an updated AMI without requiring customers to stop their instance.
+
+## __Amazon Redshift__
+  - ### Features
+    - This release clarifies use for the ElasticIp parameter of the CreateCluster and RestoreFromClusterSnapshot APIs.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - This change allows customers to provide a custom entrypoint script for the docker container to be run while executing training jobs, and provide custom arguments to the entrypoint script.
+
+## __Firewall Management Service__
+  - ### Features
+    - Add support NetworkFirewall Managed Rule Group Override flag in GetViolationDetails API
+
 # __1.12.329__ __2022-10-26__
 ## __AWS Identity and Access Management__
   - ### Features

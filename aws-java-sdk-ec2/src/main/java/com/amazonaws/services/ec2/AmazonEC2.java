@@ -2151,8 +2151,9 @@ public interface AmazonEC2 {
 
     /**
      * <p>
-     * Creates a root volume replacement task for an Amazon EC2 instance. The root volume can either be restored to its
-     * initial launch state, or it can be restored using a specific snapshot.
+     * Replaces the EBS-backed root volume for a <code>running</code> instance with a new volume that is restored to the
+     * original root volume's launch state, that is restored to a specific snapshot taken from the original root volume,
+     * or that is restored from an AMI that has the same key characteristics as that of the instance.
      * </p>
      * <p>
      * For more information, see <a

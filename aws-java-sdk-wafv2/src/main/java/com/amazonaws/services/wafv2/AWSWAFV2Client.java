@@ -897,6 +897,10 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      *         Alternately, you can suppress this warning by adding the following tag to the resource that you provide
      *         to this operation: <code>Tag</code> (key:<code>WAF:OversizeFieldsHandlingConstraintOptOut</code>, value:
      *         <code>true</code>).
+     * @throws WAFExpiredManagedRuleGroupVersionException
+     *         The operation failed because the specified version for the managed rule group has expired. You can
+     *         retrieve the available versions for the managed rule group by calling
+     *         <a>ListAvailableManagedRuleGroupVersions</a>.
      * @sample AWSWAFV2.CreateWebACL
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/CreateWebACL" target="_top">AWS API
      *      Documentation</a>
@@ -1883,8 +1887,7 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      * </p>
      * <p>
      * The mobile SDK is not generally available. Customers who have access to the mobile SDK can use it to establish
-     * and manage Security Token Service (STS) security tokens for use in HTTP(S) requests from a mobile device to WAF.
-     * For more information, see <a
+     * and manage WAF tokens for use in HTTP(S) requests from a mobile device to WAF. For more information, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-application-integration.html">WAF client
      * application integration</a> in the <i>WAF Developer Guide</i>.
      * </p>
@@ -2261,8 +2264,7 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      * </p>
      * <p>
      * The mobile SDK is not generally available. Customers who have access to the mobile SDK can use it to establish
-     * and manage Security Token Service (STS) security tokens for use in HTTP(S) requests from a mobile device to WAF.
-     * For more information, see <a
+     * and manage WAF tokens for use in HTTP(S) requests from a mobile device to WAF. For more information, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-application-integration.html">WAF client
      * application integration</a> in the <i>WAF Developer Guide</i>.
      * </p>
@@ -3457,8 +3459,7 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      * </p>
      * <p>
      * The mobile SDK is not generally available. Customers who have access to the mobile SDK can use it to establish
-     * and manage Security Token Service (STS) security tokens for use in HTTP(S) requests from a mobile device to WAF.
-     * For more information, see <a
+     * and manage WAF tokens for use in HTTP(S) requests from a mobile device to WAF. For more information, see <a
      * href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-application-integration.html">WAF client
      * application integration</a> in the <i>WAF Developer Guide</i>.
      * </p>

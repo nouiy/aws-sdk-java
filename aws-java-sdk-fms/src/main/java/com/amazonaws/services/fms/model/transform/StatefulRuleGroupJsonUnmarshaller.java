@@ -60,6 +60,10 @@ public class StatefulRuleGroupJsonUnmarshaller implements Unmarshaller<StatefulR
                     context.nextToken();
                     statefulRuleGroup.setPriority(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("Override", targetDepth)) {
+                    context.nextToken();
+                    statefulRuleGroup.setOverride(NetworkFirewallStatefulRuleGroupOverrideJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -1411,8 +1411,8 @@ public interface AmazonSageMaker {
      * </important></li>
      * <li>
      * <p>
-     * <code>InputDataConfig</code> - Describes the training dataset and the Amazon S3, EFS, or FSx location where it is
-     * stored.
+     * <code>InputDataConfig</code> - Describes the input required by the training job and the Amazon S3, EFS, or FSx
+     * location where it is stored.
      * </p>
      * </li>
      * <li>
