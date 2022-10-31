@@ -2324,6 +2324,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<DismissUserContactResult> dismissUserContactAsync(DismissUserContactRequest request) {
+
+        return dismissUserContactAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DismissUserContactResult> dismissUserContactAsync(final DismissUserContactRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DismissUserContactRequest, DismissUserContactResult> asyncHandler) {
+        final DismissUserContactRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DismissUserContactResult>() {
+            @Override
+            public DismissUserContactResult call() throws Exception {
+                DismissUserContactResult result = null;
+
+                try {
+                    result = executeDismissUserContact(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetContactAttributesResult> getContactAttributesAsync(GetContactAttributesRequest request) {
 
         return getContactAttributesAsync(request, null);

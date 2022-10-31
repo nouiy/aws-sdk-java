@@ -292,6 +292,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<AcceptAddressTransferResult> acceptAddressTransferAsync(AcceptAddressTransferRequest request) {
+
+        return acceptAddressTransferAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AcceptAddressTransferResult> acceptAddressTransferAsync(final AcceptAddressTransferRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AcceptAddressTransferRequest, AcceptAddressTransferResult> asyncHandler) {
+        final AcceptAddressTransferRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AcceptAddressTransferResult>() {
+            @Override
+            public AcceptAddressTransferResult call() throws Exception {
+                AcceptAddressTransferResult result = null;
+
+                try {
+                    result = executeAcceptAddressTransfer(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<AcceptReservedInstancesExchangeQuoteResult> acceptReservedInstancesExchangeQuoteAsync(
             AcceptReservedInstancesExchangeQuoteRequest request) {
 
@@ -7153,6 +7186,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeAddressTransfersResult> describeAddressTransfersAsync(DescribeAddressTransfersRequest request) {
+
+        return describeAddressTransfersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAddressTransfersResult> describeAddressTransfersAsync(final DescribeAddressTransfersRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeAddressTransfersRequest, DescribeAddressTransfersResult> asyncHandler) {
+        final DescribeAddressTransfersRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeAddressTransfersResult>() {
+            @Override
+            public DescribeAddressTransfersResult call() throws Exception {
+                DescribeAddressTransfersResult result = null;
+
+                try {
+                    result = executeDescribeAddressTransfers(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeAddressesResult> describeAddressesAsync(DescribeAddressesRequest request) {
 
         return describeAddressesAsync(request, null);
@@ -12886,6 +12952,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<DisableAddressTransferResult> disableAddressTransferAsync(DisableAddressTransferRequest request) {
+
+        return disableAddressTransferAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableAddressTransferResult> disableAddressTransferAsync(final DisableAddressTransferRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisableAddressTransferRequest, DisableAddressTransferResult> asyncHandler) {
+        final DisableAddressTransferRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisableAddressTransferResult>() {
+            @Override
+            public DisableAddressTransferResult call() throws Exception {
+                DisableAddressTransferResult result = null;
+
+                try {
+                    result = executeDisableAddressTransfer(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DisableEbsEncryptionByDefaultResult> disableEbsEncryptionByDefaultAsync(DisableEbsEncryptionByDefaultRequest request) {
 
         return disableEbsEncryptionByDefaultAsync(request, null);
@@ -13616,6 +13715,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeDisassociateVpcCidrBlock(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableAddressTransferResult> enableAddressTransferAsync(EnableAddressTransferRequest request) {
+
+        return enableAddressTransferAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableAddressTransferResult> enableAddressTransferAsync(final EnableAddressTransferRequest request,
+            final com.amazonaws.handlers.AsyncHandler<EnableAddressTransferRequest, EnableAddressTransferResult> asyncHandler) {
+        final EnableAddressTransferRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<EnableAddressTransferResult>() {
+            @Override
+            public EnableAddressTransferResult call() throws Exception {
+                EnableAddressTransferResult result = null;
+
+                try {
+                    result = executeEnableAddressTransfer(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

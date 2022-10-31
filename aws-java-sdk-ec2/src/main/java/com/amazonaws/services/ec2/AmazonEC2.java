@@ -133,6 +133,21 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Accepts an Elastic IP address transfer. For more information, see <a href=
+     * "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#using-instance-addressing-eips-transfer-accept"
+     * >Accept a transferred Elastic IP address</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param acceptAddressTransferRequest
+     * @return Result of the AcceptAddressTransfer operation returned by the service.
+     * @sample AmazonEC2.AcceptAddressTransfer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AcceptAddressTransfer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    AcceptAddressTransferResult acceptAddressTransfer(AcceptAddressTransferRequest acceptAddressTransferRequest);
+
+    /**
+     * <p>
      * Accepts the Convertible Reserved Instance exchange quote described in the
      * <a>GetReservedInstancesExchangeQuote</a> call.
      * </p>
@@ -4391,6 +4406,21 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Describes an Elastic IP address transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#transfer-EIPs-intro">Transfer Elastic IP
+     * addresses</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param describeAddressTransfersRequest
+     * @return Result of the DescribeAddressTransfers operation returned by the service.
+     * @sample AmazonEC2.DescribeAddressTransfers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeAddressTransfers" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeAddressTransfersResult describeAddressTransfers(DescribeAddressTransfersRequest describeAddressTransfersRequest);
+
+    /**
+     * <p>
      * Describes the specified Elastic IP addresses or all of your Elastic IP addresses.
      * </p>
      * <p>
@@ -7237,6 +7267,21 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Disables Elastic IP address transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#transfer-EIPs-intro">Transfer Elastic IP
+     * addresses</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param disableAddressTransferRequest
+     * @return Result of the DisableAddressTransfer operation returned by the service.
+     * @sample AmazonEC2.DisableAddressTransfer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableAddressTransfer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DisableAddressTransferResult disableAddressTransfer(DisableAddressTransferRequest disableAddressTransferRequest);
+
+    /**
+     * <p>
      * Disables EBS encryption by default for your account in the current Region.
      * </p>
      * <p>
@@ -7645,6 +7690,21 @@ public interface AmazonEC2 {
      *      API Documentation</a>
      */
     DisassociateVpcCidrBlockResult disassociateVpcCidrBlock(DisassociateVpcCidrBlockRequest disassociateVpcCidrBlockRequest);
+
+    /**
+     * <p>
+     * Enables Elastic IP address transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#transfer-EIPs-intro">Transfer Elastic IP
+     * addresses</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param enableAddressTransferRequest
+     * @return Result of the EnableAddressTransfer operation returned by the service.
+     * @sample AmazonEC2.EnableAddressTransfer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableAddressTransfer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    EnableAddressTransferResult enableAddressTransfer(EnableAddressTransferRequest enableAddressTransferRequest);
 
     /**
      * <p>

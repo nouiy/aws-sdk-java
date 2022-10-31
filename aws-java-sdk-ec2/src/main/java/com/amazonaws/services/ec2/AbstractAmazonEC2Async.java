@@ -27,6 +27,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<AcceptAddressTransferResult> acceptAddressTransferAsync(AcceptAddressTransferRequest request) {
+
+        return acceptAddressTransferAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AcceptAddressTransferResult> acceptAddressTransferAsync(AcceptAddressTransferRequest request,
+            com.amazonaws.handlers.AsyncHandler<AcceptAddressTransferRequest, AcceptAddressTransferResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<AcceptReservedInstancesExchangeQuoteResult> acceptReservedInstancesExchangeQuoteAsync(
             AcceptReservedInstancesExchangeQuoteRequest request) {
 
@@ -2872,6 +2885,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
             com.amazonaws.handlers.AsyncHandler<DescribeAccountAttributesRequest, DescribeAccountAttributesResult> asyncHandler) {
 
         return describeAccountAttributesAsync(new DescribeAccountAttributesRequest(), asyncHandler);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAddressTransfersResult> describeAddressTransfersAsync(DescribeAddressTransfersRequest request) {
+
+        return describeAddressTransfersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAddressTransfersResult> describeAddressTransfersAsync(DescribeAddressTransfersRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeAddressTransfersRequest, DescribeAddressTransfersResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
@@ -5821,6 +5847,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DisableAddressTransferResult> disableAddressTransferAsync(DisableAddressTransferRequest request) {
+
+        return disableAddressTransferAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableAddressTransferResult> disableAddressTransferAsync(DisableAddressTransferRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisableAddressTransferRequest, DisableAddressTransferResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DisableEbsEncryptionByDefaultResult> disableEbsEncryptionByDefaultAsync(DisableEbsEncryptionByDefaultRequest request) {
 
         return disableEbsEncryptionByDefaultAsync(request, null);
@@ -6120,6 +6159,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<DisassociateVpcCidrBlockResult> disassociateVpcCidrBlockAsync(DisassociateVpcCidrBlockRequest request,
             com.amazonaws.handlers.AsyncHandler<DisassociateVpcCidrBlockRequest, DisassociateVpcCidrBlockResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableAddressTransferResult> enableAddressTransferAsync(EnableAddressTransferRequest request) {
+
+        return enableAddressTransferAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableAddressTransferResult> enableAddressTransferAsync(EnableAddressTransferRequest request,
+            com.amazonaws.handlers.AsyncHandler<EnableAddressTransferRequest, EnableAddressTransferResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

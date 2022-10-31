@@ -327,6 +327,64 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Accepts an Elastic IP address transfer. For more information, see <a href=
+     * "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#using-instance-addressing-eips-transfer-accept"
+     * >Accept a transferred Elastic IP address</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param acceptAddressTransferRequest
+     * @return Result of the AcceptAddressTransfer operation returned by the service.
+     * @sample AmazonEC2.AcceptAddressTransfer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AcceptAddressTransfer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public AcceptAddressTransferResult acceptAddressTransfer(AcceptAddressTransferRequest request) {
+        request = beforeClientExecution(request);
+        return executeAcceptAddressTransfer(request);
+    }
+
+    @SdkInternalApi
+    final AcceptAddressTransferResult executeAcceptAddressTransfer(AcceptAddressTransferRequest acceptAddressTransferRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(acceptAddressTransferRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AcceptAddressTransferRequest> request = null;
+        Response<AcceptAddressTransferResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AcceptAddressTransferRequestMarshaller().marshall(super.beforeMarshalling(acceptAddressTransferRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AcceptAddressTransfer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<AcceptAddressTransferResult> responseHandler = new StaxResponseHandler<AcceptAddressTransferResult>(
+                    new AcceptAddressTransferResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Accepts the Convertible Reserved Instance exchange quote described in the
      * <a>GetReservedInstancesExchangeQuote</a> call.
      * </p>
@@ -13199,6 +13257,64 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Describes an Elastic IP address transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#transfer-EIPs-intro">Transfer Elastic IP
+     * addresses</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param describeAddressTransfersRequest
+     * @return Result of the DescribeAddressTransfers operation returned by the service.
+     * @sample AmazonEC2.DescribeAddressTransfers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeAddressTransfers" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribeAddressTransfersResult describeAddressTransfers(DescribeAddressTransfersRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeAddressTransfers(request);
+    }
+
+    @SdkInternalApi
+    final DescribeAddressTransfersResult executeDescribeAddressTransfers(DescribeAddressTransfersRequest describeAddressTransfersRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeAddressTransfersRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeAddressTransfersRequest> request = null;
+        Response<DescribeAddressTransfersResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeAddressTransfersRequestMarshaller().marshall(super.beforeMarshalling(describeAddressTransfersRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeAddressTransfers");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeAddressTransfersResult> responseHandler = new StaxResponseHandler<DescribeAddressTransfersResult>(
+                    new DescribeAddressTransfersResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describes the specified Elastic IP addresses or all of your Elastic IP addresses.
      * </p>
      * <p>
@@ -21967,6 +22083,64 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Disables Elastic IP address transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#transfer-EIPs-intro">Transfer Elastic IP
+     * addresses</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param disableAddressTransferRequest
+     * @return Result of the DisableAddressTransfer operation returned by the service.
+     * @sample AmazonEC2.DisableAddressTransfer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableAddressTransfer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DisableAddressTransferResult disableAddressTransfer(DisableAddressTransferRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisableAddressTransfer(request);
+    }
+
+    @SdkInternalApi
+    final DisableAddressTransferResult executeDisableAddressTransfer(DisableAddressTransferRequest disableAddressTransferRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disableAddressTransferRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisableAddressTransferRequest> request = null;
+        Response<DisableAddressTransferResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisableAddressTransferRequestMarshaller().marshall(super.beforeMarshalling(disableAddressTransferRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisableAddressTransfer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DisableAddressTransferResult> responseHandler = new StaxResponseHandler<DisableAddressTransferResult>(
+                    new DisableAddressTransferResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Disables EBS encryption by default for your account in the current Region.
      * </p>
      * <p>
@@ -23320,6 +23494,64 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<DisassociateVpcCidrBlockResult> responseHandler = new StaxResponseHandler<DisassociateVpcCidrBlockResult>(
                     new DisassociateVpcCidrBlockResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Enables Elastic IP address transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#transfer-EIPs-intro">Transfer Elastic IP
+     * addresses</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param enableAddressTransferRequest
+     * @return Result of the EnableAddressTransfer operation returned by the service.
+     * @sample AmazonEC2.EnableAddressTransfer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableAddressTransfer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public EnableAddressTransferResult enableAddressTransfer(EnableAddressTransferRequest request) {
+        request = beforeClientExecution(request);
+        return executeEnableAddressTransfer(request);
+    }
+
+    @SdkInternalApi
+    final EnableAddressTransferResult executeEnableAddressTransfer(EnableAddressTransferRequest enableAddressTransferRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(enableAddressTransferRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<EnableAddressTransferRequest> request = null;
+        Response<EnableAddressTransferResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new EnableAddressTransferRequestMarshaller().marshall(super.beforeMarshalling(enableAddressTransferRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "EnableAddressTransfer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<EnableAddressTransferResult> responseHandler = new StaxResponseHandler<EnableAddressTransferResult>(
+                    new EnableAddressTransferResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

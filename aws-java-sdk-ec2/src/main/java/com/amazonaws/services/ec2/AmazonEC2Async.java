@@ -70,6 +70,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Accepts an Elastic IP address transfer. For more information, see <a href=
+     * "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#using-instance-addressing-eips-transfer-accept"
+     * >Accept a transferred Elastic IP address</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param acceptAddressTransferRequest
+     * @return A Java Future containing the result of the AcceptAddressTransfer operation returned by the service.
+     * @sample AmazonEC2Async.AcceptAddressTransfer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AcceptAddressTransfer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<AcceptAddressTransferResult> acceptAddressTransferAsync(AcceptAddressTransferRequest acceptAddressTransferRequest);
+
+    /**
+     * <p>
+     * Accepts an Elastic IP address transfer. For more information, see <a href=
+     * "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#using-instance-addressing-eips-transfer-accept"
+     * >Accept a transferred Elastic IP address</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param acceptAddressTransferRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AcceptAddressTransfer operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.AcceptAddressTransfer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AcceptAddressTransfer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<AcceptAddressTransferResult> acceptAddressTransferAsync(AcceptAddressTransferRequest acceptAddressTransferRequest,
+            com.amazonaws.handlers.AsyncHandler<AcceptAddressTransferRequest, AcceptAddressTransferResult> asyncHandler);
+
+    /**
+     * <p>
      * Accepts the Convertible Reserved Instance exchange quote described in the
      * <a>GetReservedInstancesExchangeQuote</a> call.
      * </p>
@@ -9838,6 +9873,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Describes an Elastic IP address transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#transfer-EIPs-intro">Transfer Elastic IP
+     * addresses</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param describeAddressTransfersRequest
+     * @return A Java Future containing the result of the DescribeAddressTransfers operation returned by the service.
+     * @sample AmazonEC2Async.DescribeAddressTransfers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeAddressTransfers" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAddressTransfersResult> describeAddressTransfersAsync(DescribeAddressTransfersRequest describeAddressTransfersRequest);
+
+    /**
+     * <p>
+     * Describes an Elastic IP address transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#transfer-EIPs-intro">Transfer Elastic IP
+     * addresses</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param describeAddressTransfersRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeAddressTransfers operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DescribeAddressTransfers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeAddressTransfers" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAddressTransfersResult> describeAddressTransfersAsync(DescribeAddressTransfersRequest describeAddressTransfersRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeAddressTransfersRequest, DescribeAddressTransfersResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes the specified Elastic IP addresses or all of your Elastic IP addresses.
      * </p>
      * <p>
@@ -16480,6 +16550,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Disables Elastic IP address transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#transfer-EIPs-intro">Transfer Elastic IP
+     * addresses</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param disableAddressTransferRequest
+     * @return A Java Future containing the result of the DisableAddressTransfer operation returned by the service.
+     * @sample AmazonEC2Async.DisableAddressTransfer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableAddressTransfer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DisableAddressTransferResult> disableAddressTransferAsync(DisableAddressTransferRequest disableAddressTransferRequest);
+
+    /**
+     * <p>
+     * Disables Elastic IP address transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#transfer-EIPs-intro">Transfer Elastic IP
+     * addresses</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param disableAddressTransferRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisableAddressTransfer operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DisableAddressTransfer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableAddressTransfer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DisableAddressTransferResult> disableAddressTransferAsync(DisableAddressTransferRequest disableAddressTransferRequest,
+            com.amazonaws.handlers.AsyncHandler<DisableAddressTransferRequest, DisableAddressTransferResult> asyncHandler);
+
+    /**
+     * <p>
      * Disables EBS encryption by default for your account in the current Region.
      * </p>
      * <p>
@@ -17449,6 +17554,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<DisassociateVpcCidrBlockResult> disassociateVpcCidrBlockAsync(DisassociateVpcCidrBlockRequest disassociateVpcCidrBlockRequest,
             com.amazonaws.handlers.AsyncHandler<DisassociateVpcCidrBlockRequest, DisassociateVpcCidrBlockResult> asyncHandler);
+
+    /**
+     * <p>
+     * Enables Elastic IP address transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#transfer-EIPs-intro">Transfer Elastic IP
+     * addresses</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param enableAddressTransferRequest
+     * @return A Java Future containing the result of the EnableAddressTransfer operation returned by the service.
+     * @sample AmazonEC2Async.EnableAddressTransfer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableAddressTransfer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<EnableAddressTransferResult> enableAddressTransferAsync(EnableAddressTransferRequest enableAddressTransferRequest);
+
+    /**
+     * <p>
+     * Enables Elastic IP address transfer. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#transfer-EIPs-intro">Transfer Elastic IP
+     * addresses</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param enableAddressTransferRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the EnableAddressTransfer operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.EnableAddressTransfer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableAddressTransfer" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<EnableAddressTransferResult> enableAddressTransferAsync(EnableAddressTransferRequest enableAddressTransferRequest,
+            com.amazonaws.handlers.AsyncHandler<EnableAddressTransferRequest, EnableAddressTransferResult> asyncHandler);
 
     /**
      * <p>

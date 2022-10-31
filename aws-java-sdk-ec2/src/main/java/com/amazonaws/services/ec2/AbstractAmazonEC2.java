@@ -39,6 +39,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public AcceptAddressTransferResult acceptAddressTransfer(AcceptAddressTransferRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public AcceptReservedInstancesExchangeQuoteResult acceptReservedInstancesExchangeQuote(AcceptReservedInstancesExchangeQuoteRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1081,6 +1086,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DescribeAddressTransfersResult describeAddressTransfers(DescribeAddressTransfersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeAddressesResult describeAddresses(DescribeAddressesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2010,6 +2020,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DisableAddressTransferResult disableAddressTransfer(DisableAddressTransferRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DisableEbsEncryptionByDefaultResult disableEbsEncryptionByDefault(DisableEbsEncryptionByDefaultRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2116,6 +2131,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public DisassociateVpcCidrBlockResult disassociateVpcCidrBlock(DisassociateVpcCidrBlockRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public EnableAddressTransferResult enableAddressTransfer(EnableAddressTransferRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

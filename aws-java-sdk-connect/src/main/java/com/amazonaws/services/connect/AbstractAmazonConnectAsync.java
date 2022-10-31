@@ -909,6 +909,19 @@ public class AbstractAmazonConnectAsync extends AbstractAmazonConnect implements
     }
 
     @Override
+    public java.util.concurrent.Future<DismissUserContactResult> dismissUserContactAsync(DismissUserContactRequest request) {
+
+        return dismissUserContactAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DismissUserContactResult> dismissUserContactAsync(DismissUserContactRequest request,
+            com.amazonaws.handlers.AsyncHandler<DismissUserContactRequest, DismissUserContactResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetContactAttributesResult> getContactAttributesAsync(GetContactAttributesRequest request) {
 
         return getContactAttributesAsync(request, null);

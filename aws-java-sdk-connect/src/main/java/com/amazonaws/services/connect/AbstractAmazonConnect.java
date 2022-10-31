@@ -363,6 +363,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public DismissUserContactResult dismissUserContact(DismissUserContactRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetContactAttributesResult getContactAttributes(GetContactAttributesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

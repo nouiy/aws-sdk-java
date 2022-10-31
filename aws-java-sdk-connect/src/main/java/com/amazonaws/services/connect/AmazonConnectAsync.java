@@ -2627,6 +2627,43 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Dismisses contacts from an agent’s CCP and returns the agent to an available state, which allows the agent to
+     * receive a new routed contact. Contacts can only be dismissed if they are in a <code>MISSED</code>,
+     * <code>ERROR</code>, <code>ENDED</code>, or <code>REJECTED</code> state in the <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/about-contact-states.html">Agent Event Stream</a>.
+     * </p>
+     * 
+     * @param dismissUserContactRequest
+     * @return A Java Future containing the result of the DismissUserContact operation returned by the service.
+     * @sample AmazonConnectAsync.DismissUserContact
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DismissUserContact" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DismissUserContactResult> dismissUserContactAsync(DismissUserContactRequest dismissUserContactRequest);
+
+    /**
+     * <p>
+     * Dismisses contacts from an agent’s CCP and returns the agent to an available state, which allows the agent to
+     * receive a new routed contact. Contacts can only be dismissed if they are in a <code>MISSED</code>,
+     * <code>ERROR</code>, <code>ENDED</code>, or <code>REJECTED</code> state in the <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/about-contact-states.html">Agent Event Stream</a>.
+     * </p>
+     * 
+     * @param dismissUserContactRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DismissUserContact operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.DismissUserContact
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/DismissUserContact" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DismissUserContactResult> dismissUserContactAsync(DismissUserContactRequest dismissUserContactRequest,
+            com.amazonaws.handlers.AsyncHandler<DismissUserContactRequest, DismissUserContactResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves the contact attributes for the specified contact.
      * </p>
      * 
@@ -6191,8 +6228,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Updates the traffic distribution for a given traffic distribution group. For more information about updating a
-     * traffic distribution group see <a
+     * Updates the traffic distribution for a given traffic distribution group.
+     * </p>
+     * <p>
+     * For more information about updating a traffic distribution group, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/update-telephony-traffic-distribution.html">Update
      * telephony traffic distribution across Amazon Web Services Regions </a> in the <i>Amazon Connect Administrator
      * Guide</i>.
@@ -6209,8 +6248,10 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Updates the traffic distribution for a given traffic distribution group. For more information about updating a
-     * traffic distribution group see <a
+     * Updates the traffic distribution for a given traffic distribution group.
+     * </p>
+     * <p>
+     * For more information about updating a traffic distribution group, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/update-telephony-traffic-distribution.html">Update
      * telephony traffic distribution across Amazon Web Services Regions </a> in the <i>Amazon Connect Administrator
      * Guide</i>.
