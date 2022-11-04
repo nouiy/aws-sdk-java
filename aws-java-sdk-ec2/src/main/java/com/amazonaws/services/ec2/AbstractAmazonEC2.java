@@ -256,6 +256,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public CancelImageLaunchPermissionResult cancelImageLaunchPermission(CancelImageLaunchPermissionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CancelImportTaskResult cancelImportTask(CancelImportTaskRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

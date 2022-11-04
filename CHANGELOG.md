@@ -1,3 +1,16 @@
+# __1.12.336__ __2022-11-04__
+## __Amazon CloudWatch Logs__
+  - ### Features
+    - Doc-only update for bug fixes and support of export to buckets encrypted with SSE-KMS
+
+## __Amazon EMR Containers__
+  - ### Features
+    - Adding support for Job templates. Job templates allow you to create and store templates to configure Spark applications parameters. This helps you ensure consistent settings across applications by reusing and enforcing configuration overrides in data pipelines.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - This release adds API support for the recipient of an AMI account share to remove shared AMI launch permissions.
+
 # __1.12.335__ __2022-11-03__
 ## __Amazon MemoryDB__
   - ### Features

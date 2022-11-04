@@ -297,20 +297,6 @@ public class DefaultRequest<T> implements Request<T> {
             }
             builder.append(resourcePath);
         }
-        builder.append(" ");
-        if (!getParameters().isEmpty()) {
-            builder.append("Parameters: (")
-                   .append(Jackson.toJsonString(parameters));
-        }
-
-        if (!getHeaders().isEmpty()) {
-            builder.append("Headers: (");
-            for (String key : getHeaders().keySet()) {
-                String value = getHeaders().get(key);
-                builder.append(key).append(": ").append(value).append(", ");
-            }
-            builder.append(") ");
-        }
 
         return builder.toString();
     }

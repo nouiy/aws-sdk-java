@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specify the driver that the job runs on.
+ * Specify the driver that the job runs on. Exactly one of the two available job drivers is required, either
+ * sparkSqlJobDriver or sparkSubmitJobDriver.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/emr-containers-2020-10-01/JobDriver" target="_top">AWS API

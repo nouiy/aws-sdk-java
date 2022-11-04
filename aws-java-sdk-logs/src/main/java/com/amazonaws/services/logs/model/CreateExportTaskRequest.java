@@ -56,6 +56,9 @@ public class CreateExportTaskRequest extends com.amazonaws.AmazonWebServiceReque
      * The end time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970 00:00:00
      * UTC. Events with a timestamp later than this time are not exported.
      * </p>
+     * <p>
+     * You must specify a time that is not earlier than when this log group was created.
+     * </p>
      */
     private Long to;
     /**
@@ -249,10 +252,15 @@ public class CreateExportTaskRequest extends com.amazonaws.AmazonWebServiceReque
      * The end time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970 00:00:00
      * UTC. Events with a timestamp later than this time are not exported.
      * </p>
+     * <p>
+     * You must specify a time that is not earlier than when this log group was created.
+     * </p>
      * 
      * @param to
      *        The end time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970
-     *        00:00:00 UTC. Events with a timestamp later than this time are not exported.
+     *        00:00:00 UTC. Events with a timestamp later than this time are not exported.</p>
+     *        <p>
+     *        You must specify a time that is not earlier than when this log group was created.
      */
 
     public void setTo(Long to) {
@@ -264,9 +272,14 @@ public class CreateExportTaskRequest extends com.amazonaws.AmazonWebServiceReque
      * The end time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970 00:00:00
      * UTC. Events with a timestamp later than this time are not exported.
      * </p>
+     * <p>
+     * You must specify a time that is not earlier than when this log group was created.
+     * </p>
      * 
      * @return The end time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970
-     *         00:00:00 UTC. Events with a timestamp later than this time are not exported.
+     *         00:00:00 UTC. Events with a timestamp later than this time are not exported.</p>
+     *         <p>
+     *         You must specify a time that is not earlier than when this log group was created.
      */
 
     public Long getTo() {
@@ -278,10 +291,15 @@ public class CreateExportTaskRequest extends com.amazonaws.AmazonWebServiceReque
      * The end time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970 00:00:00
      * UTC. Events with a timestamp later than this time are not exported.
      * </p>
+     * <p>
+     * You must specify a time that is not earlier than when this log group was created.
+     * </p>
      * 
      * @param to
      *        The end time of the range for the request, expressed as the number of milliseconds after Jan 1, 1970
-     *        00:00:00 UTC. Events with a timestamp later than this time are not exported.
+     *        00:00:00 UTC. Events with a timestamp later than this time are not exported.</p>
+     *        <p>
+     *        You must specify a time that is not earlier than when this log group was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

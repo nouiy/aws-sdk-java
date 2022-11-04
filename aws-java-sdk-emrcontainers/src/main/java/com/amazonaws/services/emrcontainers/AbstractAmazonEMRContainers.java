@@ -33,12 +33,22 @@ public class AbstractAmazonEMRContainers implements AmazonEMRContainers {
     }
 
     @Override
+    public CreateJobTemplateResult createJobTemplate(CreateJobTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateManagedEndpointResult createManagedEndpoint(CreateManagedEndpointRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public CreateVirtualClusterResult createVirtualCluster(CreateVirtualClusterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteJobTemplateResult deleteJobTemplate(DeleteJobTemplateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -58,6 +68,11 @@ public class AbstractAmazonEMRContainers implements AmazonEMRContainers {
     }
 
     @Override
+    public DescribeJobTemplateResult describeJobTemplate(DescribeJobTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeManagedEndpointResult describeManagedEndpoint(DescribeManagedEndpointRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -69,6 +84,11 @@ public class AbstractAmazonEMRContainers implements AmazonEMRContainers {
 
     @Override
     public ListJobRunsResult listJobRuns(ListJobRunsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListJobTemplatesResult listJobTemplates(ListJobTemplatesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
