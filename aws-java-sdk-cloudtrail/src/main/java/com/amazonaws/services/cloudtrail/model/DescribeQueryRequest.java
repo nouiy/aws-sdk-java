@@ -30,6 +30,7 @@ public class DescribeQueryRequest extends com.amazonaws.AmazonWebServiceRequest 
      * The ARN (or the ID suffix of the ARN) of an event data store on which the specified query was run.
      * </p>
      */
+    @Deprecated
     private String eventDataStore;
     /**
      * <p>
@@ -46,7 +47,7 @@ public class DescribeQueryRequest extends com.amazonaws.AmazonWebServiceRequest 
      * @param eventDataStore
      *        The ARN (or the ID suffix of the ARN) of an event data store on which the specified query was run.
      */
-
+    @Deprecated
     public void setEventDataStore(String eventDataStore) {
         this.eventDataStore = eventDataStore;
     }
@@ -58,7 +59,7 @@ public class DescribeQueryRequest extends com.amazonaws.AmazonWebServiceRequest 
      * 
      * @return The ARN (or the ID suffix of the ARN) of an event data store on which the specified query was run.
      */
-
+    @Deprecated
     public String getEventDataStore() {
         return this.eventDataStore;
     }
@@ -72,7 +73,7 @@ public class DescribeQueryRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        The ARN (or the ID suffix of the ARN) of an event data store on which the specified query was run.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public DescribeQueryRequest withEventDataStore(String eventDataStore) {
         setEventDataStore(eventDataStore);
         return this;

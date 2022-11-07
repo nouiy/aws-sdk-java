@@ -526,15 +526,30 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     * <code>TransitEncryptionEnabled</code> after the cluster is created. To enable in-transit encryption on a cluster
-     * you must set <code>TransitEncryptionEnabled</code> to true when you create a cluster.
+     * TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you must set
+     * <code>TransitEncryptionEnabled</code> to true when you create a cluster.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a cache cluster in an Amazon VPC using Memcached version
-     * <code>1.6.12</code> or later.
+     * Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
      * </p>
      */
     private Boolean transitEncryptionEnabled;
+    /**
+     * <p>
+     * Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
+     * using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * </p>
+     */
+    private String networkType;
+    /**
+     * <p>
+     * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
+     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
+     * built on the <a href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * </p>
+     */
+    private String ipDiscovery;
 
     /**
      * Default constructor for CreateCacheClusterRequest object. Callers should use the setter or fluent setter
@@ -4222,21 +4237,19 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     * <code>TransitEncryptionEnabled</code> after the cluster is created. To enable in-transit encryption on a cluster
-     * you must set <code>TransitEncryptionEnabled</code> to true when you create a cluster.
+     * TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you must set
+     * <code>TransitEncryptionEnabled</code> to true when you create a cluster.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a cache cluster in an Amazon VPC using Memcached version
-     * <code>1.6.12</code> or later.
+     * Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
      * </p>
      * 
      * @param transitEncryptionEnabled
      *        A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     *        <code>TransitEncryptionEnabled</code> after the cluster is created. To enable in-transit encryption on a
-     *        cluster you must set <code>TransitEncryptionEnabled</code> to true when you create a cluster. </p>
+     *        TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you
+     *        must set <code>TransitEncryptionEnabled</code> to true when you create a cluster.</p>
      *        <p>
-     *        <b>Required:</b> Only available when creating a cache cluster in an Amazon VPC using Memcached version
-     *        <code>1.6.12</code> or later.
+     *        Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
      */
 
     public void setTransitEncryptionEnabled(Boolean transitEncryptionEnabled) {
@@ -4246,20 +4259,18 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     * <code>TransitEncryptionEnabled</code> after the cluster is created. To enable in-transit encryption on a cluster
-     * you must set <code>TransitEncryptionEnabled</code> to true when you create a cluster.
+     * TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you must set
+     * <code>TransitEncryptionEnabled</code> to true when you create a cluster.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a cache cluster in an Amazon VPC using Memcached version
-     * <code>1.6.12</code> or later.
+     * Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
      * </p>
      * 
      * @return A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     *         <code>TransitEncryptionEnabled</code> after the cluster is created. To enable in-transit encryption on a
-     *         cluster you must set <code>TransitEncryptionEnabled</code> to true when you create a cluster. </p>
+     *         TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you
+     *         must set <code>TransitEncryptionEnabled</code> to true when you create a cluster.</p>
      *         <p>
-     *         <b>Required:</b> Only available when creating a cache cluster in an Amazon VPC using Memcached version
-     *         <code>1.6.12</code> or later.
+     *         Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
      */
 
     public Boolean getTransitEncryptionEnabled() {
@@ -4269,21 +4280,19 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     * <code>TransitEncryptionEnabled</code> after the cluster is created. To enable in-transit encryption on a cluster
-     * you must set <code>TransitEncryptionEnabled</code> to true when you create a cluster.
+     * TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you must set
+     * <code>TransitEncryptionEnabled</code> to true when you create a cluster.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a cache cluster in an Amazon VPC using Memcached version
-     * <code>1.6.12</code> or later.
+     * Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
      * </p>
      * 
      * @param transitEncryptionEnabled
      *        A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     *        <code>TransitEncryptionEnabled</code> after the cluster is created. To enable in-transit encryption on a
-     *        cluster you must set <code>TransitEncryptionEnabled</code> to true when you create a cluster. </p>
+     *        TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you
+     *        must set <code>TransitEncryptionEnabled</code> to true when you create a cluster.</p>
      *        <p>
-     *        <b>Required:</b> Only available when creating a cache cluster in an Amazon VPC using Memcached version
-     *        <code>1.6.12</code> or later.
+     *        Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4295,24 +4304,208 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     * <code>TransitEncryptionEnabled</code> after the cluster is created. To enable in-transit encryption on a cluster
-     * you must set <code>TransitEncryptionEnabled</code> to true when you create a cluster.
+     * TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you must set
+     * <code>TransitEncryptionEnabled</code> to true when you create a cluster.
      * </p>
      * <p>
-     * <b>Required:</b> Only available when creating a cache cluster in an Amazon VPC using Memcached version
-     * <code>1.6.12</code> or later.
+     * Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
      * </p>
      * 
      * @return A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     *         <code>TransitEncryptionEnabled</code> after the cluster is created. To enable in-transit encryption on a
-     *         cluster you must set <code>TransitEncryptionEnabled</code> to true when you create a cluster. </p>
+     *         TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you
+     *         must set <code>TransitEncryptionEnabled</code> to true when you create a cluster.</p>
      *         <p>
-     *         <b>Required:</b> Only available when creating a cache cluster in an Amazon VPC using Memcached version
-     *         <code>1.6.12</code> or later.
+     *         Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
      */
 
     public Boolean isTransitEncryptionEnabled() {
         return this.transitEncryptionEnabled;
+    }
+
+    /**
+     * <p>
+     * Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
+     * using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * </p>
+     * 
+     * @param networkType
+     *        Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for
+     *        workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built
+     *        on the <a href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * @see NetworkType
+     */
+
+    public void setNetworkType(String networkType) {
+        this.networkType = networkType;
+    }
+
+    /**
+     * <p>
+     * Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
+     * using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * </p>
+     * 
+     * @return Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for
+     *         workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built
+     *         on the <a href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * @see NetworkType
+     */
+
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
+    /**
+     * <p>
+     * Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
+     * using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * </p>
+     * 
+     * @param networkType
+     *        Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for
+     *        workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built
+     *        on the <a href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see NetworkType
+     */
+
+    public CreateCacheClusterRequest withNetworkType(String networkType) {
+        setNetworkType(networkType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
+     * using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * </p>
+     * 
+     * @param networkType
+     *        Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for
+     *        workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built
+     *        on the <a href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * @see NetworkType
+     */
+
+    public void setNetworkType(NetworkType networkType) {
+        withNetworkType(networkType);
+    }
+
+    /**
+     * <p>
+     * Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for workloads
+     * using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built on the <a
+     * href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * </p>
+     * 
+     * @param networkType
+     *        Must be either <code>ipv4</code> | <code>ipv6</code> | <code>dual_stack</code>. IPv6 is supported for
+     *        workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances built
+     *        on the <a href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see NetworkType
+     */
+
+    public CreateCacheClusterRequest withNetworkType(NetworkType networkType) {
+        this.networkType = networkType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
+     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
+     * built on the <a href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * </p>
+     * 
+     * @param ipDiscovery
+     *        The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
+     *        is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     *        instances built on the <a href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * @see IpDiscovery
+     */
+
+    public void setIpDiscovery(String ipDiscovery) {
+        this.ipDiscovery = ipDiscovery;
+    }
+
+    /**
+     * <p>
+     * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
+     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
+     * built on the <a href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * </p>
+     * 
+     * @return The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
+     *         is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     *         instances built on the <a href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * @see IpDiscovery
+     */
+
+    public String getIpDiscovery() {
+        return this.ipDiscovery;
+    }
+
+    /**
+     * <p>
+     * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
+     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
+     * built on the <a href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * </p>
+     * 
+     * @param ipDiscovery
+     *        The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
+     *        is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     *        instances built on the <a href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IpDiscovery
+     */
+
+    public CreateCacheClusterRequest withIpDiscovery(String ipDiscovery) {
+        setIpDiscovery(ipDiscovery);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
+     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
+     * built on the <a href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * </p>
+     * 
+     * @param ipDiscovery
+     *        The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
+     *        is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     *        instances built on the <a href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * @see IpDiscovery
+     */
+
+    public void setIpDiscovery(IpDiscovery ipDiscovery) {
+        withIpDiscovery(ipDiscovery);
+    }
+
+    /**
+     * <p>
+     * The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6 is
+     * supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all instances
+     * built on the <a href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * </p>
+     * 
+     * @param ipDiscovery
+     *        The network type you choose when modifying a cluster, either <code>ipv4</code> | <code>ipv6</code>. IPv6
+     *        is supported for workloads using Redis engine version 6.2 onward or Memcached engine version 1.6.6 on all
+     *        instances built on the <a href="https://aws.amazon.com/ec2/nitro/">Nitro system</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IpDiscovery
+     */
+
+    public CreateCacheClusterRequest withIpDiscovery(IpDiscovery ipDiscovery) {
+        this.ipDiscovery = ipDiscovery.toString();
+        return this;
     }
 
     /**
@@ -4382,7 +4575,11 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
         if (getLogDeliveryConfigurations() != null)
             sb.append("LogDeliveryConfigurations: ").append(getLogDeliveryConfigurations()).append(",");
         if (getTransitEncryptionEnabled() != null)
-            sb.append("TransitEncryptionEnabled: ").append(getTransitEncryptionEnabled());
+            sb.append("TransitEncryptionEnabled: ").append(getTransitEncryptionEnabled()).append(",");
+        if (getNetworkType() != null)
+            sb.append("NetworkType: ").append(getNetworkType()).append(",");
+        if (getIpDiscovery() != null)
+            sb.append("IpDiscovery: ").append(getIpDiscovery());
         sb.append("}");
         return sb.toString();
     }
@@ -4509,6 +4706,14 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getTransitEncryptionEnabled() != null && other.getTransitEncryptionEnabled().equals(this.getTransitEncryptionEnabled()) == false)
             return false;
+        if (other.getNetworkType() == null ^ this.getNetworkType() == null)
+            return false;
+        if (other.getNetworkType() != null && other.getNetworkType().equals(this.getNetworkType()) == false)
+            return false;
+        if (other.getIpDiscovery() == null ^ this.getIpDiscovery() == null)
+            return false;
+        if (other.getIpDiscovery() != null && other.getIpDiscovery().equals(this.getIpDiscovery()) == false)
+            return false;
         return true;
     }
 
@@ -4545,6 +4750,8 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getPreferredOutpostArns() == null) ? 0 : getPreferredOutpostArns().hashCode());
         hashCode = prime * hashCode + ((getLogDeliveryConfigurations() == null) ? 0 : getLogDeliveryConfigurations().hashCode());
         hashCode = prime * hashCode + ((getTransitEncryptionEnabled() == null) ? 0 : getTransitEncryptionEnabled().hashCode());
+        hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
+        hashCode = prime * hashCode + ((getIpDiscovery() == null) ? 0 : getIpDiscovery().hashCode());
         return hashCode;
     }
 

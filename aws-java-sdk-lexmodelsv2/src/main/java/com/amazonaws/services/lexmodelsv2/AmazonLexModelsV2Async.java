@@ -32,6 +32,111 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
+     * Batch create custom vocabulary item for the specified locale in the specified bot.
+     * </p>
+     * 
+     * @param batchCreateCustomVocabularyItemRequest
+     * @return A Java Future containing the result of the BatchCreateCustomVocabularyItem operation returned by the
+     *         service.
+     * @sample AmazonLexModelsV2Async.BatchCreateCustomVocabularyItem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/BatchCreateCustomVocabularyItem"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchCreateCustomVocabularyItemResult> batchCreateCustomVocabularyItemAsync(
+            BatchCreateCustomVocabularyItemRequest batchCreateCustomVocabularyItemRequest);
+
+    /**
+     * <p>
+     * Batch create custom vocabulary item for the specified locale in the specified bot.
+     * </p>
+     * 
+     * @param batchCreateCustomVocabularyItemRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchCreateCustomVocabularyItem operation returned by the
+     *         service.
+     * @sample AmazonLexModelsV2AsyncHandler.BatchCreateCustomVocabularyItem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/BatchCreateCustomVocabularyItem"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchCreateCustomVocabularyItemResult> batchCreateCustomVocabularyItemAsync(
+            BatchCreateCustomVocabularyItemRequest batchCreateCustomVocabularyItemRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchCreateCustomVocabularyItemRequest, BatchCreateCustomVocabularyItemResult> asyncHandler);
+
+    /**
+     * <p>
+     * Batch delete custom vocabulary item for the specified locale in the specified bot.
+     * </p>
+     * 
+     * @param batchDeleteCustomVocabularyItemRequest
+     * @return A Java Future containing the result of the BatchDeleteCustomVocabularyItem operation returned by the
+     *         service.
+     * @sample AmazonLexModelsV2Async.BatchDeleteCustomVocabularyItem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/BatchDeleteCustomVocabularyItem"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchDeleteCustomVocabularyItemResult> batchDeleteCustomVocabularyItemAsync(
+            BatchDeleteCustomVocabularyItemRequest batchDeleteCustomVocabularyItemRequest);
+
+    /**
+     * <p>
+     * Batch delete custom vocabulary item for the specified locale in the specified bot.
+     * </p>
+     * 
+     * @param batchDeleteCustomVocabularyItemRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchDeleteCustomVocabularyItem operation returned by the
+     *         service.
+     * @sample AmazonLexModelsV2AsyncHandler.BatchDeleteCustomVocabularyItem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/BatchDeleteCustomVocabularyItem"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchDeleteCustomVocabularyItemResult> batchDeleteCustomVocabularyItemAsync(
+            BatchDeleteCustomVocabularyItemRequest batchDeleteCustomVocabularyItemRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchDeleteCustomVocabularyItemRequest, BatchDeleteCustomVocabularyItemResult> asyncHandler);
+
+    /**
+     * <p>
+     * Batch update custom vocabulary item for the specified locale in the specified bot.
+     * </p>
+     * 
+     * @param batchUpdateCustomVocabularyItemRequest
+     * @return A Java Future containing the result of the BatchUpdateCustomVocabularyItem operation returned by the
+     *         service.
+     * @sample AmazonLexModelsV2Async.BatchUpdateCustomVocabularyItem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/BatchUpdateCustomVocabularyItem"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchUpdateCustomVocabularyItemResult> batchUpdateCustomVocabularyItemAsync(
+            BatchUpdateCustomVocabularyItemRequest batchUpdateCustomVocabularyItemRequest);
+
+    /**
+     * <p>
+     * Batch update custom vocabulary item for the specified locale in the specified bot.
+     * </p>
+     * 
+     * @param batchUpdateCustomVocabularyItemRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchUpdateCustomVocabularyItem operation returned by the
+     *         service.
+     * @sample AmazonLexModelsV2AsyncHandler.BatchUpdateCustomVocabularyItem
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/BatchUpdateCustomVocabularyItem"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchUpdateCustomVocabularyItemResult> batchUpdateCustomVocabularyItemAsync(
+            BatchUpdateCustomVocabularyItemRequest batchUpdateCustomVocabularyItemRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchUpdateCustomVocabularyItemRequest, BatchUpdateCustomVocabularyItemResult> asyncHandler);
+
+    /**
+     * <p>
      * Builds a bot, its intents, and its slot types into a specific locale. A bot can be built into multiple locales.
      * At runtime the locale is used to choose a specific build of the bot.
      * </p>
@@ -1757,6 +1862,39 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
+     * List custom vocabulary items for the specified locale in the specified bot.
+     * </p>
+     * 
+     * @param listCustomVocabularyItemsRequest
+     * @return A Java Future containing the result of the ListCustomVocabularyItems operation returned by the service.
+     * @sample AmazonLexModelsV2Async.ListCustomVocabularyItems
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListCustomVocabularyItems"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListCustomVocabularyItemsResult> listCustomVocabularyItemsAsync(
+            ListCustomVocabularyItemsRequest listCustomVocabularyItemsRequest);
+
+    /**
+     * <p>
+     * List custom vocabulary items for the specified locale in the specified bot.
+     * </p>
+     * 
+     * @param listCustomVocabularyItemsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListCustomVocabularyItems operation returned by the service.
+     * @sample AmazonLexModelsV2AsyncHandler.ListCustomVocabularyItems
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListCustomVocabularyItems"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListCustomVocabularyItemsResult> listCustomVocabularyItemsAsync(
+            ListCustomVocabularyItemsRequest listCustomVocabularyItemsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListCustomVocabularyItemsRequest, ListCustomVocabularyItemsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists the exports for a bot, bot locale, or custom vocabulary. Exports are kept in the list for 7 days.
      * </p>
      * 
@@ -1850,7 +1988,8 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
-     * Gets a list of recommended intents provided by the bot recommendation that you can use in your bot.
+     * Gets a list of recommended intents provided by the bot recommendation that you can use in your bot. Intents in
+     * the response are ordered by relevance.
      * </p>
      * 
      * @param listRecommendedIntentsRequest
@@ -1863,7 +2002,8 @@ public interface AmazonLexModelsV2Async extends AmazonLexModelsV2 {
 
     /**
      * <p>
-     * Gets a list of recommended intents provided by the bot recommendation that you can use in your bot.
+     * Gets a list of recommended intents provided by the bot recommendation that you can use in your bot. Intents in
+     * the response are ordered by relevance.
      * </p>
      * 
      * @param listRecommendedIntentsRequest

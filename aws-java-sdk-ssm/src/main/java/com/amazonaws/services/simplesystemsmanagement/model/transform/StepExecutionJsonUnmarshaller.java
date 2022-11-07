@@ -147,6 +147,12 @@ public class StepExecutionJsonUnmarshaller implements Unmarshaller<StepExecution
                     context.nextToken();
                     stepExecution.setTargetLocation(TargetLocationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("TriggeredAlarms", targetDepth)) {
+                    context.nextToken();
+                    stepExecution.setTriggeredAlarms(new ListUnmarshaller<AlarmStateInformation>(AlarmStateInformationJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

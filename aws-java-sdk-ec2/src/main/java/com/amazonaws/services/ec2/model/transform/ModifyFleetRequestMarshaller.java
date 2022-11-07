@@ -413,6 +413,36 @@ public class ModifyFleetRequestMarshaller implements Marshaller<Request<ModifyFl
                                             StringUtils.fromInteger(acceleratorTotalMemoryMiB.getMax()));
                                 }
                             }
+
+                            NetworkBandwidthGbpsRequest networkBandwidthGbps = instanceRequirements.getNetworkBandwidthGbps();
+                            if (networkBandwidthGbps != null) {
+
+                                if (networkBandwidthGbps.getMin() != null) {
+                                    request.addParameter("LaunchTemplateConfig." + launchTemplateConfigsListIndex + ".Overrides." + overridesListIndex
+                                            + ".InstanceRequirements.NetworkBandwidthGbps.Min", StringUtils.fromDouble(networkBandwidthGbps.getMin()));
+                                }
+
+                                if (networkBandwidthGbps.getMax() != null) {
+                                    request.addParameter("LaunchTemplateConfig." + launchTemplateConfigsListIndex + ".Overrides." + overridesListIndex
+                                            + ".InstanceRequirements.NetworkBandwidthGbps.Max", StringUtils.fromDouble(networkBandwidthGbps.getMax()));
+                                }
+                            }
+
+                            com.amazonaws.internal.SdkInternalList<String> instanceRequirementsRequestAllowedInstanceTypesList = (com.amazonaws.internal.SdkInternalList<String>) instanceRequirements
+                                    .getAllowedInstanceTypes();
+                            if (!instanceRequirementsRequestAllowedInstanceTypesList.isEmpty()
+                                    || !instanceRequirementsRequestAllowedInstanceTypesList.isAutoConstruct()) {
+                                int allowedInstanceTypesListIndex = 1;
+
+                                for (String instanceRequirementsRequestAllowedInstanceTypesListValue : instanceRequirementsRequestAllowedInstanceTypesList) {
+                                    if (instanceRequirementsRequestAllowedInstanceTypesListValue != null) {
+                                        request.addParameter("LaunchTemplateConfig." + launchTemplateConfigsListIndex + ".Overrides." + overridesListIndex
+                                                + ".InstanceRequirements.AllowedInstanceType." + allowedInstanceTypesListIndex,
+                                                StringUtils.fromString(instanceRequirementsRequestAllowedInstanceTypesListValue));
+                                    }
+                                    allowedInstanceTypesListIndex++;
+                                }
+                            }
                         }
 
                         if (fleetLaunchTemplateConfigRequestOverridesListValue.getImageId() != null) {

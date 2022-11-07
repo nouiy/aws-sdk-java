@@ -17,7 +17,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Describes an instances distribution for an Auto Scaling group.
+ * Use this structure to specify the distribution of On-Demand Instances and Spot Instances and the allocation
+ * strategies used to fulfill On-Demand and Spot capacities for a mixed instances policy.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/InstancesDistribution" target="_top">AWS
@@ -113,14 +114,16 @@ public class InstancesDistribution implements Serializable, Cloneable {
     private Integer spotInstancePools;
     /**
      * <p>
-     * The maximum price per unit hour that you are willing to pay for a Spot Instance. If you keep the value at its
-     * default (unspecified), Amazon EC2 Auto Scaling uses the On-Demand price as the maximum Spot price. To remove a
-     * value that you previously set, include the property but specify an empty string ("") for the value.
+     * The maximum price per unit hour that you are willing to pay for a Spot Instance. If your maximum price is lower
+     * than the Spot price for the instance types that you selected, your Spot Instances are not launched. We do not
+     * recommend specifying a maximum price because it can lead to increased interruptions. When Spot Instances launch,
+     * you pay the current Spot price. To remove a maximum price that you previously set, include the property but
+     * specify an empty string ("") for the value.
      * </p>
      * <important>
      * <p>
-     * If your maximum price is lower than the Spot price for the instance types that you selected, your Spot Instances
-     * are not launched.
+     * If you specify a maximum price, your instances will be interrupted more frequently than if you do not specify
+     * one.
      * </p>
      * </important>
      * <p>
@@ -649,14 +652,16 @@ public class InstancesDistribution implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The maximum price per unit hour that you are willing to pay for a Spot Instance. If you keep the value at its
-     * default (unspecified), Amazon EC2 Auto Scaling uses the On-Demand price as the maximum Spot price. To remove a
-     * value that you previously set, include the property but specify an empty string ("") for the value.
+     * The maximum price per unit hour that you are willing to pay for a Spot Instance. If your maximum price is lower
+     * than the Spot price for the instance types that you selected, your Spot Instances are not launched. We do not
+     * recommend specifying a maximum price because it can lead to increased interruptions. When Spot Instances launch,
+     * you pay the current Spot price. To remove a maximum price that you previously set, include the property but
+     * specify an empty string ("") for the value.
      * </p>
      * <important>
      * <p>
-     * If your maximum price is lower than the Spot price for the instance types that you selected, your Spot Instances
-     * are not launched.
+     * If you specify a maximum price, your instances will be interrupted more frequently than if you do not specify
+     * one.
      * </p>
      * </important>
      * <p>
@@ -664,13 +669,14 @@ public class InstancesDistribution implements Serializable, Cloneable {
      * </p>
      * 
      * @param spotMaxPrice
-     *        The maximum price per unit hour that you are willing to pay for a Spot Instance. If you keep the value at
-     *        its default (unspecified), Amazon EC2 Auto Scaling uses the On-Demand price as the maximum Spot price. To
-     *        remove a value that you previously set, include the property but specify an empty string ("") for the
-     *        value.</p> <important>
+     *        The maximum price per unit hour that you are willing to pay for a Spot Instance. If your maximum price is
+     *        lower than the Spot price for the instance types that you selected, your Spot Instances are not launched.
+     *        We do not recommend specifying a maximum price because it can lead to increased interruptions. When Spot
+     *        Instances launch, you pay the current Spot price. To remove a maximum price that you previously set,
+     *        include the property but specify an empty string ("") for the value.</p> <important>
      *        <p>
-     *        If your maximum price is lower than the Spot price for the instance types that you selected, your Spot
-     *        Instances are not launched.
+     *        If you specify a maximum price, your instances will be interrupted more frequently than if you do not
+     *        specify one.
      *        </p>
      *        </important>
      *        <p>
@@ -683,27 +689,30 @@ public class InstancesDistribution implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The maximum price per unit hour that you are willing to pay for a Spot Instance. If you keep the value at its
-     * default (unspecified), Amazon EC2 Auto Scaling uses the On-Demand price as the maximum Spot price. To remove a
-     * value that you previously set, include the property but specify an empty string ("") for the value.
+     * The maximum price per unit hour that you are willing to pay for a Spot Instance. If your maximum price is lower
+     * than the Spot price for the instance types that you selected, your Spot Instances are not launched. We do not
+     * recommend specifying a maximum price because it can lead to increased interruptions. When Spot Instances launch,
+     * you pay the current Spot price. To remove a maximum price that you previously set, include the property but
+     * specify an empty string ("") for the value.
      * </p>
      * <important>
      * <p>
-     * If your maximum price is lower than the Spot price for the instance types that you selected, your Spot Instances
-     * are not launched.
+     * If you specify a maximum price, your instances will be interrupted more frequently than if you do not specify
+     * one.
      * </p>
      * </important>
      * <p>
      * Valid Range: Minimum value of 0.001
      * </p>
      * 
-     * @return The maximum price per unit hour that you are willing to pay for a Spot Instance. If you keep the value at
-     *         its default (unspecified), Amazon EC2 Auto Scaling uses the On-Demand price as the maximum Spot price. To
-     *         remove a value that you previously set, include the property but specify an empty string ("") for the
-     *         value.</p> <important>
+     * @return The maximum price per unit hour that you are willing to pay for a Spot Instance. If your maximum price is
+     *         lower than the Spot price for the instance types that you selected, your Spot Instances are not launched.
+     *         We do not recommend specifying a maximum price because it can lead to increased interruptions. When Spot
+     *         Instances launch, you pay the current Spot price. To remove a maximum price that you previously set,
+     *         include the property but specify an empty string ("") for the value.</p> <important>
      *         <p>
-     *         If your maximum price is lower than the Spot price for the instance types that you selected, your Spot
-     *         Instances are not launched.
+     *         If you specify a maximum price, your instances will be interrupted more frequently than if you do not
+     *         specify one.
      *         </p>
      *         </important>
      *         <p>
@@ -716,14 +725,16 @@ public class InstancesDistribution implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The maximum price per unit hour that you are willing to pay for a Spot Instance. If you keep the value at its
-     * default (unspecified), Amazon EC2 Auto Scaling uses the On-Demand price as the maximum Spot price. To remove a
-     * value that you previously set, include the property but specify an empty string ("") for the value.
+     * The maximum price per unit hour that you are willing to pay for a Spot Instance. If your maximum price is lower
+     * than the Spot price for the instance types that you selected, your Spot Instances are not launched. We do not
+     * recommend specifying a maximum price because it can lead to increased interruptions. When Spot Instances launch,
+     * you pay the current Spot price. To remove a maximum price that you previously set, include the property but
+     * specify an empty string ("") for the value.
      * </p>
      * <important>
      * <p>
-     * If your maximum price is lower than the Spot price for the instance types that you selected, your Spot Instances
-     * are not launched.
+     * If you specify a maximum price, your instances will be interrupted more frequently than if you do not specify
+     * one.
      * </p>
      * </important>
      * <p>
@@ -731,13 +742,14 @@ public class InstancesDistribution implements Serializable, Cloneable {
      * </p>
      * 
      * @param spotMaxPrice
-     *        The maximum price per unit hour that you are willing to pay for a Spot Instance. If you keep the value at
-     *        its default (unspecified), Amazon EC2 Auto Scaling uses the On-Demand price as the maximum Spot price. To
-     *        remove a value that you previously set, include the property but specify an empty string ("") for the
-     *        value.</p> <important>
+     *        The maximum price per unit hour that you are willing to pay for a Spot Instance. If your maximum price is
+     *        lower than the Spot price for the instance types that you selected, your Spot Instances are not launched.
+     *        We do not recommend specifying a maximum price because it can lead to increased interruptions. When Spot
+     *        Instances launch, you pay the current Spot price. To remove a maximum price that you previously set,
+     *        include the property but specify an empty string ("") for the value.</p> <important>
      *        <p>
-     *        If your maximum price is lower than the Spot price for the instance types that you selected, your Spot
-     *        Instances are not launched.
+     *        If you specify a maximum price, your instances will be interrupted more frequently than if you do not
+     *        specify one.
      *        </p>
      *        </important>
      *        <p>

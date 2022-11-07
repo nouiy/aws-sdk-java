@@ -23,10 +23,20 @@ import com.amazonaws.AmazonWebServiceResult;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreatePlacementGroupResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Information about the placement group.
+     * </p>
+     */
     private PlacementGroup placementGroup;
 
     /**
+     * <p>
+     * Information about the placement group.
+     * </p>
+     * 
      * @param placementGroup
+     *        Information about the placement group.
      */
 
     public void setPlacementGroup(PlacementGroup placementGroup) {
@@ -34,7 +44,11 @@ public class CreatePlacementGroupResult extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * Information about the placement group.
+     * </p>
+     * 
+     * @return Information about the placement group.
      */
 
     public PlacementGroup getPlacementGroup() {
@@ -42,7 +56,12 @@ public class CreatePlacementGroupResult extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * Information about the placement group.
+     * </p>
+     * 
      * @param placementGroup
+     *        Information about the placement group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

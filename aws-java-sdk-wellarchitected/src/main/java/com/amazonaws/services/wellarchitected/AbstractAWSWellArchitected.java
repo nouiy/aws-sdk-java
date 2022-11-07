@@ -133,6 +133,16 @@ public class AbstractAWSWellArchitected implements AWSWellArchitected {
     }
 
     @Override
+    public ListCheckDetailsResult listCheckDetails(ListCheckDetailsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListCheckSummariesResult listCheckSummaries(ListCheckSummariesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListLensReviewImprovementsResult listLensReviewImprovements(ListLensReviewImprovementsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

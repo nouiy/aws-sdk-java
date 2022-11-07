@@ -281,6 +281,14 @@ public class CreateCacheClusterRequestMarshaller implements Marshaller<Request<C
             request.addParameter("TransitEncryptionEnabled", StringUtils.fromBoolean(createCacheClusterRequest.getTransitEncryptionEnabled()));
         }
 
+        if (createCacheClusterRequest.getNetworkType() != null) {
+            request.addParameter("NetworkType", StringUtils.fromString(createCacheClusterRequest.getNetworkType()));
+        }
+
+        if (createCacheClusterRequest.getIpDiscovery() != null) {
+            request.addParameter("IpDiscovery", StringUtils.fromString(createCacheClusterRequest.getIpDiscovery()));
+        }
+
         return request;
     }
 

@@ -1660,8 +1660,8 @@ public interface AmazonElastiCache {
 
     /**
      * <p>
-     * Used to failover the primary region to a selected secondary region. The selected secondary region will become
-     * primary, and all other clusters will become secondary.
+     * Used to failover the primary region to a secondary region. The secondary region will become primary, and all
+     * other clusters will become secondary.
      * </p>
      * 
      * @param failoverGlobalReplicationGroupRequest

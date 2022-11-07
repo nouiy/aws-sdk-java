@@ -91,6 +91,10 @@ public class GetEventDataStoreResultJsonUnmarshaller implements Unmarshaller<Get
                     context.nextToken();
                     getEventDataStoreResult.setUpdatedTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("KmsKeyId", targetDepth)) {
+                    context.nextToken();
+                    getEventDataStoreResult.setKmsKeyId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

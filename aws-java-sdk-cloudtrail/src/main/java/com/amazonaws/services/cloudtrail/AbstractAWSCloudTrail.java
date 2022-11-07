@@ -68,6 +68,11 @@ public class AbstractAWSCloudTrail implements AWSCloudTrail {
     }
 
     @Override
+    public DeregisterOrganizationDelegatedAdminResult deregisterOrganizationDelegatedAdmin(DeregisterOrganizationDelegatedAdminRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeQueryResult describeQuery(DescribeQueryRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -184,6 +189,11 @@ public class AbstractAWSCloudTrail implements AWSCloudTrail {
 
     @Override
     public PutInsightSelectorsResult putInsightSelectors(PutInsightSelectorsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RegisterOrganizationDelegatedAdminResult registerOrganizationDelegatedAdmin(RegisterOrganizationDelegatedAdminRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

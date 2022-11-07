@@ -185,6 +185,22 @@ public class InstanceRequirementsRequestStaxUnmarshaller implements Unmarshaller
                             .setAcceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("NetworkBandwidthGbps", targetDepth)) {
+                    instanceRequirementsRequest.setNetworkBandwidthGbps(NetworkBandwidthGbpsRequestStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("AllowedInstanceType", targetDepth)) {
+                    instanceRequirementsRequest.withAllowedInstanceTypes(new ArrayList<String>());
+                    continue;
+                }
+
+                if (context.testExpression("AllowedInstanceType/item", targetDepth)) {
+                    instanceRequirementsRequest.withAllowedInstanceTypes(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return instanceRequirementsRequest;

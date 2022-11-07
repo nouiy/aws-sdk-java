@@ -371,6 +371,14 @@ public class CreateReplicationGroupRequestMarshaller implements Marshaller<Reque
             request.addParameter("DataTieringEnabled", StringUtils.fromBoolean(createReplicationGroupRequest.getDataTieringEnabled()));
         }
 
+        if (createReplicationGroupRequest.getNetworkType() != null) {
+            request.addParameter("NetworkType", StringUtils.fromString(createReplicationGroupRequest.getNetworkType()));
+        }
+
+        if (createReplicationGroupRequest.getIpDiscovery() != null) {
+            request.addParameter("IpDiscovery", StringUtils.fromString(createReplicationGroupRequest.getIpDiscovery()));
+        }
+
         return request;
     }
 

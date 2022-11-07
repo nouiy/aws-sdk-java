@@ -72,6 +72,111 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
     }
 
     @Override
+    public java.util.concurrent.Future<BatchCreateCustomVocabularyItemResult> batchCreateCustomVocabularyItemAsync(
+            BatchCreateCustomVocabularyItemRequest request) {
+
+        return batchCreateCustomVocabularyItemAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchCreateCustomVocabularyItemResult> batchCreateCustomVocabularyItemAsync(
+            final BatchCreateCustomVocabularyItemRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchCreateCustomVocabularyItemRequest, BatchCreateCustomVocabularyItemResult> asyncHandler) {
+        final BatchCreateCustomVocabularyItemRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchCreateCustomVocabularyItemResult>() {
+            @Override
+            public BatchCreateCustomVocabularyItemResult call() throws Exception {
+                BatchCreateCustomVocabularyItemResult result = null;
+
+                try {
+                    result = executeBatchCreateCustomVocabularyItem(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchDeleteCustomVocabularyItemResult> batchDeleteCustomVocabularyItemAsync(
+            BatchDeleteCustomVocabularyItemRequest request) {
+
+        return batchDeleteCustomVocabularyItemAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchDeleteCustomVocabularyItemResult> batchDeleteCustomVocabularyItemAsync(
+            final BatchDeleteCustomVocabularyItemRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchDeleteCustomVocabularyItemRequest, BatchDeleteCustomVocabularyItemResult> asyncHandler) {
+        final BatchDeleteCustomVocabularyItemRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchDeleteCustomVocabularyItemResult>() {
+            @Override
+            public BatchDeleteCustomVocabularyItemResult call() throws Exception {
+                BatchDeleteCustomVocabularyItemResult result = null;
+
+                try {
+                    result = executeBatchDeleteCustomVocabularyItem(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchUpdateCustomVocabularyItemResult> batchUpdateCustomVocabularyItemAsync(
+            BatchUpdateCustomVocabularyItemRequest request) {
+
+        return batchUpdateCustomVocabularyItemAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchUpdateCustomVocabularyItemResult> batchUpdateCustomVocabularyItemAsync(
+            final BatchUpdateCustomVocabularyItemRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchUpdateCustomVocabularyItemRequest, BatchUpdateCustomVocabularyItemResult> asyncHandler) {
+        final BatchUpdateCustomVocabularyItemRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchUpdateCustomVocabularyItemResult>() {
+            @Override
+            public BatchUpdateCustomVocabularyItemResult call() throws Exception {
+                BatchUpdateCustomVocabularyItemResult result = null;
+
+                try {
+                    result = executeBatchUpdateCustomVocabularyItem(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<BuildBotLocaleResult> buildBotLocaleAsync(BuildBotLocaleRequest request) {
 
         return buildBotLocaleAsync(request, null);
@@ -1545,6 +1650,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
 
                 try {
                     result = executeListBuiltInSlotTypes(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCustomVocabularyItemsResult> listCustomVocabularyItemsAsync(ListCustomVocabularyItemsRequest request) {
+
+        return listCustomVocabularyItemsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCustomVocabularyItemsResult> listCustomVocabularyItemsAsync(final ListCustomVocabularyItemsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListCustomVocabularyItemsRequest, ListCustomVocabularyItemsResult> asyncHandler) {
+        final ListCustomVocabularyItemsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListCustomVocabularyItemsResult>() {
+            @Override
+            public ListCustomVocabularyItemsResult call() throws Exception {
+                ListCustomVocabularyItemsResult result = null;
+
+                try {
+                    result = executeListCustomVocabularyItems(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

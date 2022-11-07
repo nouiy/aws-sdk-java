@@ -64,6 +64,10 @@ public class QueryExecutionJsonUnmarshaller implements Unmarshaller<QueryExecuti
                     context.nextToken();
                     queryExecution.setResultConfiguration(ResultConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ResultReuseConfiguration", targetDepth)) {
+                    context.nextToken();
+                    queryExecution.setResultReuseConfiguration(ResultReuseConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("QueryExecutionContext", targetDepth)) {
                     context.nextToken();
                     queryExecution.setQueryExecutionContext(QueryExecutionContextJsonUnmarshaller.getInstance().unmarshall(context));

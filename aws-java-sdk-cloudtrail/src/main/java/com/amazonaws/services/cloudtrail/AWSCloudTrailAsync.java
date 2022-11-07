@@ -288,6 +288,45 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
 
     /**
      * <p>
+     * Removes CloudTrail delegated administrator permissions from a member account in an organization.
+     * </p>
+     * 
+     * @param deregisterOrganizationDelegatedAdminRequest
+     *        Removes CloudTrail delegated administrator permissions from a specified member account in an organization
+     *        that is currently designated as a delegated administrator.
+     * @return A Java Future containing the result of the DeregisterOrganizationDelegatedAdmin operation returned by the
+     *         service.
+     * @sample AWSCloudTrailAsync.DeregisterOrganizationDelegatedAdmin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DeregisterOrganizationDelegatedAdmin"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeregisterOrganizationDelegatedAdminResult> deregisterOrganizationDelegatedAdminAsync(
+            DeregisterOrganizationDelegatedAdminRequest deregisterOrganizationDelegatedAdminRequest);
+
+    /**
+     * <p>
+     * Removes CloudTrail delegated administrator permissions from a member account in an organization.
+     * </p>
+     * 
+     * @param deregisterOrganizationDelegatedAdminRequest
+     *        Removes CloudTrail delegated administrator permissions from a specified member account in an organization
+     *        that is currently designated as a delegated administrator.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeregisterOrganizationDelegatedAdmin operation returned by the
+     *         service.
+     * @sample AWSCloudTrailAsyncHandler.DeregisterOrganizationDelegatedAdmin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DeregisterOrganizationDelegatedAdmin"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeregisterOrganizationDelegatedAdminResult> deregisterOrganizationDelegatedAdminAsync(
+            DeregisterOrganizationDelegatedAdminRequest deregisterOrganizationDelegatedAdminRequest,
+            com.amazonaws.handlers.AsyncHandler<DeregisterOrganizationDelegatedAdminRequest, DeregisterOrganizationDelegatedAdminResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns metadata about a query, including query run time in milliseconds, number of events scanned and matched,
      * and query status. You must specify an ARN for <code>EventDataStore</code>, and a value for <code>QueryID</code>.
      * </p>
@@ -372,7 +411,7 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      * Returns information about a specific channel. Amazon Web Services services create service-linked channels to get
      * information about CloudTrail events on your behalf. For more information about service-linked channels, see <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/viewing-service-linked-channels.html">Viewing
-     * service-linked channels for CloudTrail by using the CLI.</a>.
+     * service-linked channels for CloudTrail by using the CLI</a>.
      * </p>
      * 
      * @param getChannelRequest
@@ -388,7 +427,7 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      * Returns information about a specific channel. Amazon Web Services services create service-linked channels to get
      * information about CloudTrail events on your behalf. For more information about service-linked channels, see <a
      * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/viewing-service-linked-channels.html">Viewing
-     * service-linked channels for CloudTrail by using the CLI.</a>.
+     * service-linked channels for CloudTrail by using the CLI</a>.
      * </p>
      * 
      * @param getChannelRequest
@@ -1414,6 +1453,43 @@ public interface AWSCloudTrailAsync extends AWSCloudTrail {
      */
     java.util.concurrent.Future<PutInsightSelectorsResult> putInsightSelectorsAsync(PutInsightSelectorsRequest putInsightSelectorsRequest,
             com.amazonaws.handlers.AsyncHandler<PutInsightSelectorsRequest, PutInsightSelectorsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Registers an organization’s member account as the CloudTrail delegated administrator.
+     * </p>
+     * 
+     * @param registerOrganizationDelegatedAdminRequest
+     *        Specifies an organization member account ID as a CloudTrail delegated administrator.
+     * @return A Java Future containing the result of the RegisterOrganizationDelegatedAdmin operation returned by the
+     *         service.
+     * @sample AWSCloudTrailAsync.RegisterOrganizationDelegatedAdmin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/RegisterOrganizationDelegatedAdmin"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RegisterOrganizationDelegatedAdminResult> registerOrganizationDelegatedAdminAsync(
+            RegisterOrganizationDelegatedAdminRequest registerOrganizationDelegatedAdminRequest);
+
+    /**
+     * <p>
+     * Registers an organization’s member account as the CloudTrail delegated administrator.
+     * </p>
+     * 
+     * @param registerOrganizationDelegatedAdminRequest
+     *        Specifies an organization member account ID as a CloudTrail delegated administrator.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RegisterOrganizationDelegatedAdmin operation returned by the
+     *         service.
+     * @sample AWSCloudTrailAsyncHandler.RegisterOrganizationDelegatedAdmin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/RegisterOrganizationDelegatedAdmin"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RegisterOrganizationDelegatedAdminResult> registerOrganizationDelegatedAdminAsync(
+            RegisterOrganizationDelegatedAdminRequest registerOrganizationDelegatedAdminRequest,
+            com.amazonaws.handlers.AsyncHandler<RegisterOrganizationDelegatedAdminRequest, RegisterOrganizationDelegatedAdminResult> asyncHandler);
 
     /**
      * <p>

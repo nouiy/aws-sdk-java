@@ -241,6 +241,10 @@ public class ModifyReplicationGroupRequestMarshaller implements Marshaller<Reque
             }
         }
 
+        if (modifyReplicationGroupRequest.getIpDiscovery() != null) {
+            request.addParameter("IpDiscovery", StringUtils.fromString(modifyReplicationGroupRequest.getIpDiscovery()));
+        }
+
         return request;
     }
 

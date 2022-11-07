@@ -42,6 +42,8 @@ public class UpdateEventDataStoreRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RetentionPeriod").build();
     private static final MarshallingInfo<Boolean> TERMINATIONPROTECTIONENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TerminationProtectionEnabled").build();
+    private static final MarshallingInfo<String> KMSKEYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("KmsKeyId").build();
 
     private static final UpdateEventDataStoreRequestMarshaller instance = new UpdateEventDataStoreRequestMarshaller();
 
@@ -66,6 +68,7 @@ public class UpdateEventDataStoreRequestMarshaller {
             protocolMarshaller.marshall(updateEventDataStoreRequest.getOrganizationEnabled(), ORGANIZATIONENABLED_BINDING);
             protocolMarshaller.marshall(updateEventDataStoreRequest.getRetentionPeriod(), RETENTIONPERIOD_BINDING);
             protocolMarshaller.marshall(updateEventDataStoreRequest.getTerminationProtectionEnabled(), TERMINATIONPROTECTIONENABLED_BINDING);
+            protocolMarshaller.marshall(updateEventDataStoreRequest.getKmsKeyId(), KMSKEYID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

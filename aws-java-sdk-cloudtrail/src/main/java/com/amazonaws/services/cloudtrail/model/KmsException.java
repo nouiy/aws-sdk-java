@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This exception is thrown when there is an issue with the specified KMS key and the trail can’t be updated.
+ * This exception is thrown when there is an issue with the specified KMS key and the trail or event data store can't be
+ * updated.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

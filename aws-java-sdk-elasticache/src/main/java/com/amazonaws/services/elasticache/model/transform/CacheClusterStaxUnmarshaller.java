@@ -215,6 +215,15 @@ public class CacheClusterStaxUnmarshaller implements Unmarshaller<CacheCluster, 
                     continue;
                 }
 
+                if (context.testExpression("NetworkType", targetDepth)) {
+                    cacheCluster.setNetworkType(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("IpDiscovery", targetDepth)) {
+                    cacheCluster.setIpDiscovery(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return cacheCluster;

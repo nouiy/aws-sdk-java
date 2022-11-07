@@ -72,6 +72,10 @@ public class TargetLocationJsonUnmarshaller implements Unmarshaller<TargetLocati
                     context.nextToken();
                     targetLocation.setExecutionRoleName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("TargetLocationAlarmConfiguration", targetDepth)) {
+                    context.nextToken();
+                    targetLocation.setTargetLocationAlarmConfiguration(AlarmConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

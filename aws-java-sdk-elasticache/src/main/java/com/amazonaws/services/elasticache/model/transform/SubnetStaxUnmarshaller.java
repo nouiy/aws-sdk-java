@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.elasticache.model.transform;
 
+import java.util.ArrayList;
+
 import javax.xml.stream.events.XMLEvent;
 import javax.annotation.Generated;
 
@@ -57,6 +59,17 @@ public class SubnetStaxUnmarshaller implements Unmarshaller<Subnet, StaxUnmarsha
                     subnet.setSubnetOutpost(SubnetOutpostStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("SupportedNetworkTypes", targetDepth)) {
+                    subnet.withSupportedNetworkTypes(new ArrayList<String>());
+                    continue;
+                }
+
+                if (context.testExpression("SupportedNetworkTypes/member", targetDepth)) {
+                    subnet.withSupportedNetworkTypes(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return subnet;

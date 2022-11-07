@@ -30,6 +30,8 @@ public class ImageInserterMarshaller {
 
     private static final MarshallingInfo<List> INSERTABLEIMAGES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("insertableImages").build();
+    private static final MarshallingInfo<Integer> SDRREFERENCEWHITELEVEL_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sdrReferenceWhiteLevel").build();
 
     private static final ImageInserterMarshaller instance = new ImageInserterMarshaller();
 
@@ -48,6 +50,7 @@ public class ImageInserterMarshaller {
 
         try {
             protocolMarshaller.marshall(imageInserter.getInsertableImages(), INSERTABLEIMAGES_BINDING);
+            protocolMarshaller.marshall(imageInserter.getSdrReferenceWhiteLevel(), SDRREFERENCEWHITELEVEL_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

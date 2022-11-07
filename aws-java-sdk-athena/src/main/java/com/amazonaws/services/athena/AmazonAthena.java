@@ -408,6 +408,8 @@ public interface AmazonAthena {
      * @throws InvalidRequestException
      *         Indicates that something is wrong with the input to the request. For example, a required parameter may be
      *         missing or out of range.
+     * @throws TooManyRequestsException
+     *         Indicates that the request was throttled.
      * @sample AmazonAthena.GetQueryResults
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/GetQueryResults" target="_top">AWS API
      *      Documentation</a>

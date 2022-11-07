@@ -363,6 +363,35 @@ public class ModifySpotFleetRequestRequestMarshaller implements Marshaller<Reque
                                             StringUtils.fromInteger(acceleratorTotalMemoryMiB.getMax()));
                                 }
                             }
+
+                            NetworkBandwidthGbps networkBandwidthGbps = instanceRequirements.getNetworkBandwidthGbps();
+                            if (networkBandwidthGbps != null) {
+
+                                if (networkBandwidthGbps.getMin() != null) {
+                                    request.addParameter("LaunchTemplateConfig." + launchTemplateConfigsListIndex + ".Overrides." + overridesListIndex
+                                            + ".InstanceRequirements.NetworkBandwidthGbps.Min", StringUtils.fromDouble(networkBandwidthGbps.getMin()));
+                                }
+
+                                if (networkBandwidthGbps.getMax() != null) {
+                                    request.addParameter("LaunchTemplateConfig." + launchTemplateConfigsListIndex + ".Overrides." + overridesListIndex
+                                            + ".InstanceRequirements.NetworkBandwidthGbps.Max", StringUtils.fromDouble(networkBandwidthGbps.getMax()));
+                                }
+                            }
+
+                            com.amazonaws.internal.SdkInternalList<String> instanceRequirementsAllowedInstanceTypesList = (com.amazonaws.internal.SdkInternalList<String>) instanceRequirements
+                                    .getAllowedInstanceTypes();
+                            if (!instanceRequirementsAllowedInstanceTypesList.isEmpty() || !instanceRequirementsAllowedInstanceTypesList.isAutoConstruct()) {
+                                int allowedInstanceTypesListIndex = 1;
+
+                                for (String instanceRequirementsAllowedInstanceTypesListValue : instanceRequirementsAllowedInstanceTypesList) {
+                                    if (instanceRequirementsAllowedInstanceTypesListValue != null) {
+                                        request.addParameter("LaunchTemplateConfig." + launchTemplateConfigsListIndex + ".Overrides." + overridesListIndex
+                                                + ".InstanceRequirements.AllowedInstanceTypeSet." + allowedInstanceTypesListIndex,
+                                                StringUtils.fromString(instanceRequirementsAllowedInstanceTypesListValue));
+                                    }
+                                    allowedInstanceTypesListIndex++;
+                                }
+                            }
                         }
                         overridesListIndex++;
                     }

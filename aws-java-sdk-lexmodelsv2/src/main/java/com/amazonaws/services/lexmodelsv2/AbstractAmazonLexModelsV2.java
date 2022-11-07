@@ -29,6 +29,21 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
     }
 
     @Override
+    public BatchCreateCustomVocabularyItemResult batchCreateCustomVocabularyItem(BatchCreateCustomVocabularyItemRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public BatchDeleteCustomVocabularyItemResult batchDeleteCustomVocabularyItem(BatchDeleteCustomVocabularyItemRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public BatchUpdateCustomVocabularyItemResult batchUpdateCustomVocabularyItem(BatchUpdateCustomVocabularyItemRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public BuildBotLocaleResult buildBotLocale(BuildBotLocaleRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -250,6 +265,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
 
     @Override
     public ListBuiltInSlotTypesResult listBuiltInSlotTypes(ListBuiltInSlotTypesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListCustomVocabularyItemsResult listCustomVocabularyItems(ListCustomVocabularyItemsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

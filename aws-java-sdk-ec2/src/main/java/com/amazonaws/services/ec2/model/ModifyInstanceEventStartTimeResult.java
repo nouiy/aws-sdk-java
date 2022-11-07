@@ -23,10 +23,20 @@ import com.amazonaws.AmazonWebServiceResult;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ModifyInstanceEventStartTimeResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Information about the event.
+     * </p>
+     */
     private InstanceStatusEvent event;
 
     /**
+     * <p>
+     * Information about the event.
+     * </p>
+     * 
      * @param event
+     *        Information about the event.
      */
 
     public void setEvent(InstanceStatusEvent event) {
@@ -34,7 +44,11 @@ public class ModifyInstanceEventStartTimeResult extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * @return
+     * <p>
+     * Information about the event.
+     * </p>
+     * 
+     * @return Information about the event.
      */
 
     public InstanceStatusEvent getEvent() {
@@ -42,7 +56,12 @@ public class ModifyInstanceEventStartTimeResult extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Information about the event.
+     * </p>
+     * 
      * @param event
+     *        Information about the event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

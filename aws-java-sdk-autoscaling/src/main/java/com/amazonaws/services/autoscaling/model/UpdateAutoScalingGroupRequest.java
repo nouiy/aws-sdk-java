@@ -47,7 +47,7 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
     private LaunchTemplateSpecification launchTemplate;
     /**
      * <p>
-     * An embedded object that specifies a mixed instances policy. For more information, see <a
+     * The mixed instances policy. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html">Auto
      * Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User
      * Guide</i>.
@@ -376,14 +376,14 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An embedded object that specifies a mixed instances policy. For more information, see <a
+     * The mixed instances policy. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html">Auto
      * Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User
      * Guide</i>.
      * </p>
      * 
      * @param mixedInstancesPolicy
-     *        An embedded object that specifies a mixed instances policy. For more information, see <a href=
+     *        The mixed instances policy. For more information, see <a href=
      *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html">Auto
      *        Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling
      *        User Guide</i>.
@@ -395,13 +395,13 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An embedded object that specifies a mixed instances policy. For more information, see <a
+     * The mixed instances policy. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html">Auto
      * Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User
      * Guide</i>.
      * </p>
      * 
-     * @return An embedded object that specifies a mixed instances policy. For more information, see <a
+     * @return The mixed instances policy. For more information, see <a
      *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html"
      *         >Auto Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto
      *         Scaling User Guide</i>.
@@ -413,14 +413,14 @@ public class UpdateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An embedded object that specifies a mixed instances policy. For more information, see <a
+     * The mixed instances policy. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html">Auto
      * Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User
      * Guide</i>.
      * </p>
      * 
      * @param mixedInstancesPolicy
-     *        An embedded object that specifies a mixed instances policy. For more information, see <a href=
+     *        The mixed instances policy. For more information, see <a href=
      *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html">Auto
      *        Scaling groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling
      *        User Guide</i>.

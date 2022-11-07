@@ -301,6 +301,32 @@ public class AbstractAWSWellArchitectedAsync extends AbstractAWSWellArchitected 
     }
 
     @Override
+    public java.util.concurrent.Future<ListCheckDetailsResult> listCheckDetailsAsync(ListCheckDetailsRequest request) {
+
+        return listCheckDetailsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCheckDetailsResult> listCheckDetailsAsync(ListCheckDetailsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListCheckDetailsRequest, ListCheckDetailsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCheckSummariesResult> listCheckSummariesAsync(ListCheckSummariesRequest request) {
+
+        return listCheckSummariesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCheckSummariesResult> listCheckSummariesAsync(ListCheckSummariesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListCheckSummariesRequest, ListCheckSummariesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListLensReviewImprovementsResult> listLensReviewImprovementsAsync(ListLensReviewImprovementsRequest request) {
 
         return listLensReviewImprovementsAsync(request, null);

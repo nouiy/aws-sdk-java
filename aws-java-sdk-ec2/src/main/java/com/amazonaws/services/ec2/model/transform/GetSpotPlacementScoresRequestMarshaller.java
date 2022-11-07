@@ -351,6 +351,34 @@ public class GetSpotPlacementScoresRequestMarshaller implements Marshaller<Reque
                                 StringUtils.fromInteger(acceleratorTotalMemoryMiB.getMax()));
                     }
                 }
+
+                NetworkBandwidthGbpsRequest networkBandwidthGbps = instanceRequirements.getNetworkBandwidthGbps();
+                if (networkBandwidthGbps != null) {
+
+                    if (networkBandwidthGbps.getMin() != null) {
+                        request.addParameter("InstanceRequirementsWithMetadata.InstanceRequirements.NetworkBandwidthGbps.Min",
+                                StringUtils.fromDouble(networkBandwidthGbps.getMin()));
+                    }
+
+                    if (networkBandwidthGbps.getMax() != null) {
+                        request.addParameter("InstanceRequirementsWithMetadata.InstanceRequirements.NetworkBandwidthGbps.Max",
+                                StringUtils.fromDouble(networkBandwidthGbps.getMax()));
+                    }
+                }
+
+                com.amazonaws.internal.SdkInternalList<String> instanceRequirementsRequestAllowedInstanceTypesList = (com.amazonaws.internal.SdkInternalList<String>) instanceRequirements
+                        .getAllowedInstanceTypes();
+                if (!instanceRequirementsRequestAllowedInstanceTypesList.isEmpty() || !instanceRequirementsRequestAllowedInstanceTypesList.isAutoConstruct()) {
+                    int allowedInstanceTypesListIndex = 1;
+
+                    for (String instanceRequirementsRequestAllowedInstanceTypesListValue : instanceRequirementsRequestAllowedInstanceTypesList) {
+                        if (instanceRequirementsRequestAllowedInstanceTypesListValue != null) {
+                            request.addParameter("InstanceRequirementsWithMetadata.InstanceRequirements.AllowedInstanceType." + allowedInstanceTypesListIndex,
+                                    StringUtils.fromString(instanceRequirementsRequestAllowedInstanceTypesListValue));
+                        }
+                        allowedInstanceTypesListIndex++;
+                    }
+                }
             }
         }
 

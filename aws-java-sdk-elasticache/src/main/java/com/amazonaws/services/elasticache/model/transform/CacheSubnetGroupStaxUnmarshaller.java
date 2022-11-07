@@ -74,6 +74,17 @@ public class CacheSubnetGroupStaxUnmarshaller implements Unmarshaller<CacheSubne
                     cacheSubnetGroup.setARN(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("SupportedNetworkTypes", targetDepth)) {
+                    cacheSubnetGroup.withSupportedNetworkTypes(new ArrayList<String>());
+                    continue;
+                }
+
+                if (context.testExpression("SupportedNetworkTypes/member", targetDepth)) {
+                    cacheSubnetGroup.withSupportedNetworkTypes(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return cacheSubnetGroup;

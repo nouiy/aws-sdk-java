@@ -774,6 +774,72 @@ public class AWSWellArchitectedAsyncClient extends AWSWellArchitectedClient impl
     }
 
     @Override
+    public java.util.concurrent.Future<ListCheckDetailsResult> listCheckDetailsAsync(ListCheckDetailsRequest request) {
+
+        return listCheckDetailsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCheckDetailsResult> listCheckDetailsAsync(final ListCheckDetailsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListCheckDetailsRequest, ListCheckDetailsResult> asyncHandler) {
+        final ListCheckDetailsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListCheckDetailsResult>() {
+            @Override
+            public ListCheckDetailsResult call() throws Exception {
+                ListCheckDetailsResult result = null;
+
+                try {
+                    result = executeListCheckDetails(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCheckSummariesResult> listCheckSummariesAsync(ListCheckSummariesRequest request) {
+
+        return listCheckSummariesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCheckSummariesResult> listCheckSummariesAsync(final ListCheckSummariesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListCheckSummariesRequest, ListCheckSummariesResult> asyncHandler) {
+        final ListCheckSummariesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListCheckSummariesResult>() {
+            @Override
+            public ListCheckSummariesResult call() throws Exception {
+                ListCheckSummariesResult result = null;
+
+                try {
+                    result = executeListCheckSummaries(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListLensReviewImprovementsResult> listLensReviewImprovementsAsync(ListLensReviewImprovementsRequest request) {
 
         return listLensReviewImprovementsAsync(request, null);

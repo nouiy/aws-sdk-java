@@ -436,6 +436,41 @@ public class CreateAutoScalingGroupRequestMarshaller implements Marshaller<Reque
                                                     }
                                                 }
                                             }
+
+                                            {
+                                                NetworkBandwidthGbpsRequest networkBandwidthGbps = instanceRequirements.getNetworkBandwidthGbps();
+                                                if (networkBandwidthGbps != null) {
+
+                                                    if (networkBandwidthGbps.getMin() != null) {
+                                                        request.addParameter("MixedInstancesPolicy.LaunchTemplate.Overrides.member." + overridesListIndex
+                                                                + ".InstanceRequirements.NetworkBandwidthGbps.Min",
+                                                                StringUtils.fromDouble(networkBandwidthGbps.getMin()));
+                                                    }
+
+                                                    if (networkBandwidthGbps.getMax() != null) {
+                                                        request.addParameter("MixedInstancesPolicy.LaunchTemplate.Overrides.member." + overridesListIndex
+                                                                + ".InstanceRequirements.NetworkBandwidthGbps.Max",
+                                                                StringUtils.fromDouble(networkBandwidthGbps.getMax()));
+                                                    }
+                                                }
+                                            }
+
+                                            if (!instanceRequirements.getAllowedInstanceTypes().isEmpty()
+                                                    || !((com.amazonaws.internal.SdkInternalList<String>) instanceRequirements.getAllowedInstanceTypes())
+                                                            .isAutoConstruct()) {
+                                                com.amazonaws.internal.SdkInternalList<String> allowedInstanceTypesList = (com.amazonaws.internal.SdkInternalList<String>) instanceRequirements
+                                                        .getAllowedInstanceTypes();
+                                                int allowedInstanceTypesListIndex = 1;
+
+                                                for (String allowedInstanceTypesListValue : allowedInstanceTypesList) {
+                                                    if (allowedInstanceTypesListValue != null) {
+                                                        request.addParameter("MixedInstancesPolicy.LaunchTemplate.Overrides.member." + overridesListIndex
+                                                                + ".InstanceRequirements.AllowedInstanceTypes.member." + allowedInstanceTypesListIndex,
+                                                                StringUtils.fromString(allowedInstanceTypesListValue));
+                                                    }
+                                                    allowedInstanceTypesListIndex++;
+                                                }
+                                            }
                                         }
                                     }
                                 }

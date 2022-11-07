@@ -223,6 +223,10 @@ public class ModifyCacheClusterRequestMarshaller implements Marshaller<Request<M
             }
         }
 
+        if (modifyCacheClusterRequest.getIpDiscovery() != null) {
+            request.addParameter("IpDiscovery", StringUtils.fromString(modifyCacheClusterRequest.getIpDiscovery()));
+        }
+
         return request;
     }
 

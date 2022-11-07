@@ -25,18 +25,18 @@ public class UpdateShareInvitationResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The updated workload share invitation.
+     * The updated workload or custom lens share invitation.
      * </p>
      */
     private ShareInvitation shareInvitation;
 
     /**
      * <p>
-     * The updated workload share invitation.
+     * The updated workload or custom lens share invitation.
      * </p>
      * 
      * @param shareInvitation
-     *        The updated workload share invitation.
+     *        The updated workload or custom lens share invitation.
      */
 
     public void setShareInvitation(ShareInvitation shareInvitation) {
@@ -45,10 +45,10 @@ public class UpdateShareInvitationResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The updated workload share invitation.
+     * The updated workload or custom lens share invitation.
      * </p>
      * 
-     * @return The updated workload share invitation.
+     * @return The updated workload or custom lens share invitation.
      */
 
     public ShareInvitation getShareInvitation() {
@@ -57,11 +57,11 @@ public class UpdateShareInvitationResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The updated workload share invitation.
+     * The updated workload or custom lens share invitation.
      * </p>
      * 
      * @param shareInvitation
-     *        The updated workload share invitation.
+     *        The updated workload or custom lens share invitation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

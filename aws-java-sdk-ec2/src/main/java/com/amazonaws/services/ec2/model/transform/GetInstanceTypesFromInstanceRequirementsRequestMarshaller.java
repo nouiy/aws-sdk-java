@@ -296,6 +296,32 @@ public class GetInstanceTypesFromInstanceRequirementsRequestMarshaller implement
                     request.addParameter("InstanceRequirements.AcceleratorTotalMemoryMiB.Max", StringUtils.fromInteger(acceleratorTotalMemoryMiB.getMax()));
                 }
             }
+
+            NetworkBandwidthGbpsRequest networkBandwidthGbps = instanceRequirements.getNetworkBandwidthGbps();
+            if (networkBandwidthGbps != null) {
+
+                if (networkBandwidthGbps.getMin() != null) {
+                    request.addParameter("InstanceRequirements.NetworkBandwidthGbps.Min", StringUtils.fromDouble(networkBandwidthGbps.getMin()));
+                }
+
+                if (networkBandwidthGbps.getMax() != null) {
+                    request.addParameter("InstanceRequirements.NetworkBandwidthGbps.Max", StringUtils.fromDouble(networkBandwidthGbps.getMax()));
+                }
+            }
+
+            com.amazonaws.internal.SdkInternalList<String> instanceRequirementsRequestAllowedInstanceTypesList = (com.amazonaws.internal.SdkInternalList<String>) instanceRequirements
+                    .getAllowedInstanceTypes();
+            if (!instanceRequirementsRequestAllowedInstanceTypesList.isEmpty() || !instanceRequirementsRequestAllowedInstanceTypesList.isAutoConstruct()) {
+                int allowedInstanceTypesListIndex = 1;
+
+                for (String instanceRequirementsRequestAllowedInstanceTypesListValue : instanceRequirementsRequestAllowedInstanceTypesList) {
+                    if (instanceRequirementsRequestAllowedInstanceTypesListValue != null) {
+                        request.addParameter("InstanceRequirements.AllowedInstanceType." + allowedInstanceTypesListIndex,
+                                StringUtils.fromString(instanceRequirementsRequestAllowedInstanceTypesListValue));
+                    }
+                    allowedInstanceTypesListIndex++;
+                }
+            }
         }
 
         if (getInstanceTypesFromInstanceRequirementsRequest.getMaxResults() != null) {

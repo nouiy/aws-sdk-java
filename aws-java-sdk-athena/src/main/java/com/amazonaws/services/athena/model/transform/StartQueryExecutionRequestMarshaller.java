@@ -43,6 +43,8 @@ public class StartQueryExecutionRequestMarshaller {
             .marshallLocationName("WorkGroup").build();
     private static final MarshallingInfo<List> EXECUTIONPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExecutionParameters").build();
+    private static final MarshallingInfo<StructuredPojo> RESULTREUSECONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResultReuseConfiguration").build();
 
     private static final StartQueryExecutionRequestMarshaller instance = new StartQueryExecutionRequestMarshaller();
 
@@ -66,6 +68,7 @@ public class StartQueryExecutionRequestMarshaller {
             protocolMarshaller.marshall(startQueryExecutionRequest.getResultConfiguration(), RESULTCONFIGURATION_BINDING);
             protocolMarshaller.marshall(startQueryExecutionRequest.getWorkGroup(), WORKGROUP_BINDING);
             protocolMarshaller.marshall(startQueryExecutionRequest.getExecutionParameters(), EXECUTIONPARAMETERS_BINDING);
+            protocolMarshaller.marshall(startQueryExecutionRequest.getResultReuseConfiguration(), RESULTREUSECONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

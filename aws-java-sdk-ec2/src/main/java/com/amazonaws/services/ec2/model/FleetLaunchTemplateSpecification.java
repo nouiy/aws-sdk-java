@@ -23,7 +23,7 @@ import javax.annotation.Generated;
  * <p>
  * For information about launch templates, see <a
  * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html">Launch an instance from a launch
- * template</a> in the <i>Amazon EC2 User Guide for Linux Instances</i>.
+ * template</a> in the <i>Amazon EC2 User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/FleetLaunchTemplateSpecification"
