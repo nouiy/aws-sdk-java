@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The Auto-Tune action type. Valid values are JVM_HEAP_SIZE_TUNING, and JVM_YOUNG_GEN_TUNING.
+ * The Auto-Tune action type.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

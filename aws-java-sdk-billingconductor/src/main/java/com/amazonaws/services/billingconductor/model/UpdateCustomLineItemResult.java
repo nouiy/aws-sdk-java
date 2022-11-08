@@ -56,7 +56,7 @@ public class UpdateCustomLineItemResult extends com.amazonaws.AmazonWebServiceRe
     private ListCustomLineItemChargeDetails chargeDetails;
     /**
      * <p>
-     * The most recent time the custom line item was modified.
+     * The most recent time when the custom line item was modified.
      * </p>
      */
     private Long lastModifiedTime;
@@ -275,11 +275,11 @@ public class UpdateCustomLineItemResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The most recent time the custom line item was modified.
+     * The most recent time when the custom line item was modified.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The most recent time the custom line item was modified.
+     *        The most recent time when the custom line item was modified.
      */
 
     public void setLastModifiedTime(Long lastModifiedTime) {
@@ -288,10 +288,10 @@ public class UpdateCustomLineItemResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The most recent time the custom line item was modified.
+     * The most recent time when the custom line item was modified.
      * </p>
      * 
-     * @return The most recent time the custom line item was modified.
+     * @return The most recent time when the custom line item was modified.
      */
 
     public Long getLastModifiedTime() {
@@ -300,11 +300,11 @@ public class UpdateCustomLineItemResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The most recent time the custom line item was modified.
+     * The most recent time when the custom line item was modified.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The most recent time the custom line item was modified.
+     *        The most recent time when the custom line item was modified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

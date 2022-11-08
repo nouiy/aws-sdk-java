@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Container for the request parameters to the <code> <a>AssociatePackage</a> </code> operation.
+ * Container for the request parameters to the <code>AssociatePackage</code> operation.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -33,7 +33,7 @@ public class AssociatePackageRequest extends com.amazonaws.AmazonWebServiceReque
     private String packageID;
     /**
      * <p>
-     * The name of the domain to associate the package with.
+     * Name of the domain to associate the package with.
      * </p>
      */
     private String domainName;
@@ -83,11 +83,11 @@ public class AssociatePackageRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the domain to associate the package with.
+     * Name of the domain to associate the package with.
      * </p>
      * 
      * @param domainName
-     *        The name of the domain to associate the package with.
+     *        Name of the domain to associate the package with.
      */
 
     public void setDomainName(String domainName) {
@@ -96,10 +96,10 @@ public class AssociatePackageRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the domain to associate the package with.
+     * Name of the domain to associate the package with.
      * </p>
      * 
-     * @return The name of the domain to associate the package with.
+     * @return Name of the domain to associate the package with.
      */
 
     public String getDomainName() {
@@ -108,11 +108,11 @@ public class AssociatePackageRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the domain to associate the package with.
+     * Name of the domain to associate the package with.
      * </p>
      * 
      * @param domainName
-     *        The name of the domain to associate the package with.
+     *        Name of the domain to associate the package with.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

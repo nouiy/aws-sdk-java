@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains the specific price and frequency of a recurring charges for a reserved OpenSearch instance, or for a
- * reserved OpenSearch instance offering.
+ * Contains the specific price and frequency of a recurring charges for an OpenSearch Reserved Instance, or for a
+ * Reserved Instance offering.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

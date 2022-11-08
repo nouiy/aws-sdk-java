@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Container for the parameters to the <code> <a>AcceptInboundConnection</a> </code> operation.
+ * Container for the parameters to the <code>AcceptInboundConnection</code> operation.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -27,18 +27,18 @@ public class AcceptInboundConnectionRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID of the inbound connection you want to accept.
+     * The ID of the inbound connection to accept.
      * </p>
      */
     private String connectionId;
 
     /**
      * <p>
-     * The ID of the inbound connection you want to accept.
+     * The ID of the inbound connection to accept.
      * </p>
      * 
      * @param connectionId
-     *        The ID of the inbound connection you want to accept.
+     *        The ID of the inbound connection to accept.
      */
 
     public void setConnectionId(String connectionId) {
@@ -47,10 +47,10 @@ public class AcceptInboundConnectionRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID of the inbound connection you want to accept.
+     * The ID of the inbound connection to accept.
      * </p>
      * 
-     * @return The ID of the inbound connection you want to accept.
+     * @return The ID of the inbound connection to accept.
      */
 
     public String getConnectionId() {
@@ -59,11 +59,11 @@ public class AcceptInboundConnectionRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID of the inbound connection you want to accept.
+     * The ID of the inbound connection to accept.
      * </p>
      * 
      * @param connectionId
-     *        The ID of the inbound connection you want to accept.
+     *        The ID of the inbound connection to accept.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Container for the parameters to the <code> <a>DeleteOutboundConnection</a> </code> operation.
+ * Container for the parameters to the <code>DeleteOutboundConnection</code> operation.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -44,6 +44,8 @@ public class RequestCertificateRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CertificateAuthorityArn").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<String> KEYALGORITHM_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyAlgorithm").build();
 
     private static final RequestCertificateRequestMarshaller instance = new RequestCertificateRequestMarshaller();
 
@@ -69,6 +71,7 @@ public class RequestCertificateRequestMarshaller {
             protocolMarshaller.marshall(requestCertificateRequest.getOptions(), OPTIONS_BINDING);
             protocolMarshaller.marshall(requestCertificateRequest.getCertificateAuthorityArn(), CERTIFICATEAUTHORITYARN_BINDING);
             protocolMarshaller.marshall(requestCertificateRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(requestCertificateRequest.getKeyAlgorithm(), KEYALGORITHM_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

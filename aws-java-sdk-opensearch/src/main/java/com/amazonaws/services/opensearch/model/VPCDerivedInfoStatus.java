@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Status of the VPC options for the specified domain.
+ * Status of the VPC options for a specified domain.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

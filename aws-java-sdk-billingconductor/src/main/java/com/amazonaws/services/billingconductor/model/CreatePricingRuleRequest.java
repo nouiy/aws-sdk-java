@@ -27,8 +27,8 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The token that is needed to support idempotency. Idempotency isn't currently supported, but will be implemented
-     * in a future update.
+     * The token that's needed to support idempotency. Idempotency isn't currently supported, but will be implemented in
+     * a future update.
      * </p>
      */
     private String clientToken;
@@ -46,7 +46,7 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
     private String description;
     /**
      * <p>
-     * The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     * The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * </p>
      */
     private String scope;
@@ -58,7 +58,7 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
     private String type;
     /**
      * <p>
-     * A percentage modifier applied on the public pricing rates.
+     * A percentage modifier that's applied on the public pricing rates.
      * </p>
      */
     private Double modifierPercentage;
@@ -78,12 +78,12 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The token that is needed to support idempotency. Idempotency isn't currently supported, but will be implemented
-     * in a future update.
+     * The token that's needed to support idempotency. Idempotency isn't currently supported, but will be implemented in
+     * a future update.
      * </p>
      * 
      * @param clientToken
-     *        The token that is needed to support idempotency. Idempotency isn't currently supported, but will be
+     *        The token that's needed to support idempotency. Idempotency isn't currently supported, but will be
      *        implemented in a future update.
      */
 
@@ -93,11 +93,11 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The token that is needed to support idempotency. Idempotency isn't currently supported, but will be implemented
-     * in a future update.
+     * The token that's needed to support idempotency. Idempotency isn't currently supported, but will be implemented in
+     * a future update.
      * </p>
      * 
-     * @return The token that is needed to support idempotency. Idempotency isn't currently supported, but will be
+     * @return The token that's needed to support idempotency. Idempotency isn't currently supported, but will be
      *         implemented in a future update.
      */
 
@@ -107,12 +107,12 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The token that is needed to support idempotency. Idempotency isn't currently supported, but will be implemented
-     * in a future update.
+     * The token that's needed to support idempotency. Idempotency isn't currently supported, but will be implemented in
+     * a future update.
      * </p>
      * 
      * @param clientToken
-     *        The token that is needed to support idempotency. Idempotency isn't currently supported, but will be
+     *        The token that's needed to support idempotency. Idempotency isn't currently supported, but will be
      *        implemented in a future update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -204,11 +204,11 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     * The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * </p>
      * 
      * @param scope
-     *        The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     *        The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * @see PricingRuleScope
      */
 
@@ -218,10 +218,10 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     * The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * </p>
      * 
-     * @return The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     * @return The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * @see PricingRuleScope
      */
 
@@ -231,11 +231,11 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     * The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * </p>
      * 
      * @param scope
-     *        The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     *        The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PricingRuleScope
      */
@@ -247,11 +247,11 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     * The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * </p>
      * 
      * @param scope
-     *        The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     *        The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PricingRuleScope
      */
@@ -322,11 +322,11 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A percentage modifier applied on the public pricing rates.
+     * A percentage modifier that's applied on the public pricing rates.
      * </p>
      * 
      * @param modifierPercentage
-     *        A percentage modifier applied on the public pricing rates.
+     *        A percentage modifier that's applied on the public pricing rates.
      */
 
     public void setModifierPercentage(Double modifierPercentage) {
@@ -335,10 +335,10 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A percentage modifier applied on the public pricing rates.
+     * A percentage modifier that's applied on the public pricing rates.
      * </p>
      * 
-     * @return A percentage modifier applied on the public pricing rates.
+     * @return A percentage modifier that's applied on the public pricing rates.
      */
 
     public Double getModifierPercentage() {
@@ -347,11 +347,11 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A percentage modifier applied on the public pricing rates.
+     * A percentage modifier that's applied on the public pricing rates.
      * </p>
      * 
      * @param modifierPercentage
-     *        A percentage modifier applied on the public pricing rates.
+     *        A percentage modifier that's applied on the public pricing rates.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

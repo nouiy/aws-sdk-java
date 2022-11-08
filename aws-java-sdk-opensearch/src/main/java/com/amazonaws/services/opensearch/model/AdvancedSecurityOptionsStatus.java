@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The status of advanced security options for the specified domain.
+ * The status of fine-grained access control settings for a domain.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -27,24 +27,24 @@ public class AdvancedSecurityOptionsStatus implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Advanced security options for the specified domain.
+     * Container for fine-grained access control settings.
      * </p>
      */
     private AdvancedSecurityOptions options;
     /**
      * <p>
-     * Status of the advanced security options for the specified domain.
+     * Status of the fine-grained access control settings for a domain.
      * </p>
      */
     private OptionStatus status;
 
     /**
      * <p>
-     * Advanced security options for the specified domain.
+     * Container for fine-grained access control settings.
      * </p>
      * 
      * @param options
-     *        Advanced security options for the specified domain.
+     *        Container for fine-grained access control settings.
      */
 
     public void setOptions(AdvancedSecurityOptions options) {
@@ -53,10 +53,10 @@ public class AdvancedSecurityOptionsStatus implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Advanced security options for the specified domain.
+     * Container for fine-grained access control settings.
      * </p>
      * 
-     * @return Advanced security options for the specified domain.
+     * @return Container for fine-grained access control settings.
      */
 
     public AdvancedSecurityOptions getOptions() {
@@ -65,11 +65,11 @@ public class AdvancedSecurityOptionsStatus implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Advanced security options for the specified domain.
+     * Container for fine-grained access control settings.
      * </p>
      * 
      * @param options
-     *        Advanced security options for the specified domain.
+     *        Container for fine-grained access control settings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +80,11 @@ public class AdvancedSecurityOptionsStatus implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Status of the advanced security options for the specified domain.
+     * Status of the fine-grained access control settings for a domain.
      * </p>
      * 
      * @param status
-     *        Status of the advanced security options for the specified domain.
+     *        Status of the fine-grained access control settings for a domain.
      */
 
     public void setStatus(OptionStatus status) {
@@ -93,10 +93,10 @@ public class AdvancedSecurityOptionsStatus implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Status of the advanced security options for the specified domain.
+     * Status of the fine-grained access control settings for a domain.
      * </p>
      * 
-     * @return Status of the advanced security options for the specified domain.
+     * @return Status of the fine-grained access control settings for a domain.
      */
 
     public OptionStatus getStatus() {
@@ -105,11 +105,11 @@ public class AdvancedSecurityOptionsStatus implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Status of the advanced security options for the specified domain.
+     * Status of the fine-grained access control settings for a domain.
      * </p>
      * 
      * @param status
-     *        Status of the advanced security options for the specified domain.
+     *        Status of the fine-grained access control settings for a domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

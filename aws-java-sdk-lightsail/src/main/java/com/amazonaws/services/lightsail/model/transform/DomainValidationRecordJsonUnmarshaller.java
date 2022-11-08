@@ -56,6 +56,14 @@ public class DomainValidationRecordJsonUnmarshaller implements Unmarshaller<Doma
                     context.nextToken();
                     domainValidationRecord.setResourceRecord(ResourceRecordJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("dnsRecordCreationState", targetDepth)) {
+                    context.nextToken();
+                    domainValidationRecord.setDnsRecordCreationState(DnsRecordCreationStateJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("validationStatus", targetDepth)) {
+                    context.nextToken();
+                    domainValidationRecord.setValidationStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

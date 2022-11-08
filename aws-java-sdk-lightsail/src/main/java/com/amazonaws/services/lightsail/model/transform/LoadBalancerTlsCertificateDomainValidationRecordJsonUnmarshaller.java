@@ -69,6 +69,11 @@ public class LoadBalancerTlsCertificateDomainValidationRecordJsonUnmarshaller im
                     context.nextToken();
                     loadBalancerTlsCertificateDomainValidationRecord.setDomainName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("dnsRecordCreationState", targetDepth)) {
+                    context.nextToken();
+                    loadBalancerTlsCertificateDomainValidationRecord.setDnsRecordCreationState(LoadBalancerTlsCertificateDnsRecordCreationStateJsonUnmarshaller
+                            .getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

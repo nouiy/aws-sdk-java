@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The result of a <code>DescribeDomain</code> request. Contains the status of the domain specified in the request.
+ * Contains the status of the domain specified in the request.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -25,18 +25,18 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The current status of the domain.
+     * List that contains the status of each specified OpenSearch Service domain.
      * </p>
      */
     private DomainStatus domainStatus;
 
     /**
      * <p>
-     * The current status of the domain.
+     * List that contains the status of each specified OpenSearch Service domain.
      * </p>
      * 
      * @param domainStatus
-     *        The current status of the domain.
+     *        List that contains the status of each specified OpenSearch Service domain.
      */
 
     public void setDomainStatus(DomainStatus domainStatus) {
@@ -45,10 +45,10 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The current status of the domain.
+     * List that contains the status of each specified OpenSearch Service domain.
      * </p>
      * 
-     * @return The current status of the domain.
+     * @return List that contains the status of each specified OpenSearch Service domain.
      */
 
     public DomainStatus getDomainStatus() {
@@ -57,11 +57,11 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The current status of the domain.
+     * List that contains the status of each specified OpenSearch Service domain.
      * </p>
      * 
      * @param domainStatus
-     *        The current status of the domain.
+     *        List that contains the status of each specified OpenSearch Service domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

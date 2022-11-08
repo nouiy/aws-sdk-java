@@ -19,11 +19,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * <i> <b>Amazon Web Services Billing Conductor is in beta release and is subject to change. Your use of Amazon Web
- * Services Billing Conductor is subject to the Beta Service Participation terms of the <a
- * href="https://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a> (Section 1.10).</b> </i>
- * </p>
- * <p>
  * A representation of a linked account.
  * </p>
  * 

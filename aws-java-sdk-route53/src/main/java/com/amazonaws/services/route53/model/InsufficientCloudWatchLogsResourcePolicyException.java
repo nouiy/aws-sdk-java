@@ -42,6 +42,12 @@ import javax.annotation.Generated;
  * with query log. Update or provide a resource policy to grant permissions for the KMS key.
  * </p>
  * </li>
+ * <li>
+ * <p>
+ * The Key management service (KMS) key you specified is marked as disabled for the log group associated with query log.
+ * Update or provide a resource policy to grant permissions for the KMS key.
+ * </p>
+ * </li>
  * </ul>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

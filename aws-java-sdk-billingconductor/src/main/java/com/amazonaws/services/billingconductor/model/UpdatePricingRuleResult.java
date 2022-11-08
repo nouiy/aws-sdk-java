@@ -43,7 +43,7 @@ public class UpdatePricingRuleResult extends com.amazonaws.AmazonWebServiceResul
     private String description;
     /**
      * <p>
-     * The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     * The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * </p>
      */
     private String scope;
@@ -201,11 +201,11 @@ public class UpdatePricingRuleResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     * The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * </p>
      * 
      * @param scope
-     *        The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     *        The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * @see PricingRuleScope
      */
 
@@ -215,10 +215,10 @@ public class UpdatePricingRuleResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     * The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * </p>
      * 
-     * @return The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     * @return The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * @see PricingRuleScope
      */
 
@@ -228,11 +228,11 @@ public class UpdatePricingRuleResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     * The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * </p>
      * 
      * @param scope
-     *        The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     *        The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PricingRuleScope
      */
@@ -244,11 +244,11 @@ public class UpdatePricingRuleResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     * The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * </p>
      * 
      * @param scope
-     *        The scope of pricing rule that indicates if it is globally applicable, or is service-specific.
+     *        The scope of pricing rule that indicates if it's globally applicable, or it's service-specific.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PricingRuleScope
      */

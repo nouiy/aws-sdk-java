@@ -31,7 +31,7 @@ public class ListAccountAssociationsResult extends com.amazonaws.AmazonWebServic
     private java.util.List<AccountAssociationsListElement> linkedAccounts;
     /**
      * <p>
-     * The pagination token used on subsequent calls to get accounts.
+     * The pagination token that's used on subsequent calls to get accounts.
      * </p>
      */
     private String nextToken;
@@ -108,11 +108,11 @@ public class ListAccountAssociationsResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The pagination token used on subsequent calls to get accounts.
+     * The pagination token that's used on subsequent calls to get accounts.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used on subsequent calls to get accounts.
+     *        The pagination token that's used on subsequent calls to get accounts.
      */
 
     public void setNextToken(String nextToken) {
@@ -121,10 +121,10 @@ public class ListAccountAssociationsResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The pagination token used on subsequent calls to get accounts.
+     * The pagination token that's used on subsequent calls to get accounts.
      * </p>
      * 
-     * @return The pagination token used on subsequent calls to get accounts.
+     * @return The pagination token that's used on subsequent calls to get accounts.
      */
 
     public String getNextToken() {
@@ -133,11 +133,11 @@ public class ListAccountAssociationsResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The pagination token used on subsequent calls to get accounts.
+     * The pagination token that's used on subsequent calls to get accounts.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used on subsequent calls to get accounts.
+     *        The pagination token that's used on subsequent calls to get accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

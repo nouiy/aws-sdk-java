@@ -16,9 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The unit of a maintenance schedule duration. Valid value is HOUR. See <a
- * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/auto-tune.html" target="_blank"> Auto-Tune
- * for Amazon OpenSearch Service </a> for more information.
+ * The unit of a maintenance schedule duration. Valid value is <code>HOUR</code>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

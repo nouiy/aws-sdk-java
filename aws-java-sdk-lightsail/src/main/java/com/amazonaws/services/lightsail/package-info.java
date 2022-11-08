@@ -20,8 +20,8 @@
  * domains, and resource snapshots (backups) - for a low, predictable monthly price.
  * </p>
  * <p>
- * You can manage your Lightsail resources using the Lightsail console, Lightsail API, AWS Command Line Interface (AWS
- * CLI), or SDKs. For more information about Lightsail concepts and tasks, see the <a href=
+ * You can manage your Lightsail resources using the Lightsail console, Lightsail API, Command Line Interface (CLI), or
+ * SDKs. For more information about Lightsail concepts and tasks, see the <a href=
  * "https://lightsail.aws.amazon.com/ls/docs/en_us/articles/lightsail-how-to-set-up-access-keys-to-use-sdk-api-cli"
  * >Amazon Lightsail Developer Guide</a>.
  * </p>

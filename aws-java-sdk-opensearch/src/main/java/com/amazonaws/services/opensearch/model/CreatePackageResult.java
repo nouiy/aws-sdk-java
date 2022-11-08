@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Container for the response returned by the <code> <a>CreatePackage</a> </code> operation.
+ * Container for the response returned by the <code>CreatePackage</code> operation.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -25,18 +25,18 @@ public class CreatePackageResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Information about the package.
+     * Basic information about an OpenSearch Service package.
      * </p>
      */
     private PackageDetails packageDetails;
 
     /**
      * <p>
-     * Information about the package.
+     * Basic information about an OpenSearch Service package.
      * </p>
      * 
      * @param packageDetails
-     *        Information about the package.
+     *        Basic information about an OpenSearch Service package.
      */
 
     public void setPackageDetails(PackageDetails packageDetails) {
@@ -45,10 +45,10 @@ public class CreatePackageResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Information about the package.
+     * Basic information about an OpenSearch Service package.
      * </p>
      * 
-     * @return Information about the package.
+     * @return Basic information about an OpenSearch Service package.
      */
 
     public PackageDetails getPackageDetails() {
@@ -57,11 +57,11 @@ public class CreatePackageResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Information about the package.
+     * Basic information about an OpenSearch Service package.
      * </p>
      * 
      * @param packageDetails
-     *        Information about the package.
+     *        Basic information about an OpenSearch Service package.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

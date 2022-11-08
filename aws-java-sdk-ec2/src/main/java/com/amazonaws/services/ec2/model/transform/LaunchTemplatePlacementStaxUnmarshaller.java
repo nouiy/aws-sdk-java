@@ -82,6 +82,11 @@ public class LaunchTemplatePlacementStaxUnmarshaller implements Unmarshaller<Lau
                     launchTemplatePlacement.setPartitionNumber(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("groupId", targetDepth)) {
+                    launchTemplatePlacement.setGroupId(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return launchTemplatePlacement;

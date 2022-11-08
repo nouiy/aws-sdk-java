@@ -16,9 +16,9 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The type of EBS volume, standard, gp2, gp3 or io1. See <a href=
- * "http://docs.aws.amazon.com/opensearch-service/latest/developerguide/opensearch-createupdatedomains.html#opensearch-createdomain-configure-ebs"
- * target="_blank">Configuring EBS-based Storage</a> for more information.
+ * The type of EBS volume that a domain uses. For more information, see <a href=
+ * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/opensearch-createupdatedomains.html#opensearch-createdomain-configure-ebs"
+ * >Configuring EBS-based storage</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -39,7 +39,7 @@ public class ListBillingGroupCostReportsRequest extends com.amazonaws.AmazonWebS
     private Integer maxResults;
     /**
      * <p>
-     * The pagination token used on subsequent calls to get reports.
+     * The pagination token that's used on subsequent calls to get reports.
      * </p>
      */
     private String nextToken;
@@ -132,11 +132,11 @@ public class ListBillingGroupCostReportsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The pagination token used on subsequent calls to get reports.
+     * The pagination token that's used on subsequent calls to get reports.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used on subsequent calls to get reports.
+     *        The pagination token that's used on subsequent calls to get reports.
      */
 
     public void setNextToken(String nextToken) {
@@ -145,10 +145,10 @@ public class ListBillingGroupCostReportsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The pagination token used on subsequent calls to get reports.
+     * The pagination token that's used on subsequent calls to get reports.
      * </p>
      * 
-     * @return The pagination token used on subsequent calls to get reports.
+     * @return The pagination token that's used on subsequent calls to get reports.
      */
 
     public String getNextToken() {
@@ -157,11 +157,11 @@ public class ListBillingGroupCostReportsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The pagination token used on subsequent calls to get reports.
+     * The pagination token that's used on subsequent calls to get reports.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used on subsequent calls to get reports.
+     *        The pagination token that's used on subsequent calls to get reports.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

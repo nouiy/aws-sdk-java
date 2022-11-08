@@ -19,8 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Container for the parameters to the <code> <a>DeleteDomain</a> </code> operation. Specifies the name of the domain
- * you want to delete.
+ * Container for the parameters to the <code>DeleteDomain</code> operation.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

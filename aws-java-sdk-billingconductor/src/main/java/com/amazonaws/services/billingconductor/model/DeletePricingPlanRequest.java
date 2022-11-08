@@ -27,18 +27,18 @@ public class DeletePricingPlanRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the pricing plan you're deleting.
+     * The Amazon Resource Name (ARN) of the pricing plan that you're deleting.
      * </p>
      */
     private String arn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the pricing plan you're deleting.
+     * The Amazon Resource Name (ARN) of the pricing plan that you're deleting.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the pricing plan you're deleting.
+     *        The Amazon Resource Name (ARN) of the pricing plan that you're deleting.
      */
 
     public void setArn(String arn) {
@@ -47,10 +47,10 @@ public class DeletePricingPlanRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the pricing plan you're deleting.
+     * The Amazon Resource Name (ARN) of the pricing plan that you're deleting.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the pricing plan you're deleting.
+     * @return The Amazon Resource Name (ARN) of the pricing plan that you're deleting.
      */
 
     public String getArn() {
@@ -59,11 +59,11 @@ public class DeletePricingPlanRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the pricing plan you're deleting.
+     * The Amazon Resource Name (ARN) of the pricing plan that you're deleting.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the pricing plan you're deleting.
+     *        The Amazon Resource Name (ARN) of the pricing plan that you're deleting.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

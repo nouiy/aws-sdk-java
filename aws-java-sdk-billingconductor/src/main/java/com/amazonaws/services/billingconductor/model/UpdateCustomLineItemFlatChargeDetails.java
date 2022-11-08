@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A representation of the new charge details associated with a flat custom line item.
+ * A representation of the new charge details that are associated with a flat custom line item.
  * </p>
  * 
  * @see <a

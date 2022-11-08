@@ -36,7 +36,7 @@ public class DisassociateResourceResponseElement implements Serializable, Clonea
     private String arn;
     /**
      * <p>
-     * An <code>AssociateResourceError</code> shown if the resource disassociation fails.
+     * An <code>AssociateResourceError</code> that's shown if the resource disassociation fails.
      * </p>
      */
     private AssociateResourceError error;
@@ -83,11 +83,11 @@ public class DisassociateResourceResponseElement implements Serializable, Clonea
 
     /**
      * <p>
-     * An <code>AssociateResourceError</code> shown if the resource disassociation fails.
+     * An <code>AssociateResourceError</code> that's shown if the resource disassociation fails.
      * </p>
      * 
      * @param error
-     *        An <code>AssociateResourceError</code> shown if the resource disassociation fails.
+     *        An <code>AssociateResourceError</code> that's shown if the resource disassociation fails.
      */
 
     public void setError(AssociateResourceError error) {
@@ -96,10 +96,10 @@ public class DisassociateResourceResponseElement implements Serializable, Clonea
 
     /**
      * <p>
-     * An <code>AssociateResourceError</code> shown if the resource disassociation fails.
+     * An <code>AssociateResourceError</code> that's shown if the resource disassociation fails.
      * </p>
      * 
-     * @return An <code>AssociateResourceError</code> shown if the resource disassociation fails.
+     * @return An <code>AssociateResourceError</code> that's shown if the resource disassociation fails.
      */
 
     public AssociateResourceError getError() {
@@ -108,11 +108,11 @@ public class DisassociateResourceResponseElement implements Serializable, Clonea
 
     /**
      * <p>
-     * An <code>AssociateResourceError</code> shown if the resource disassociation fails.
+     * An <code>AssociateResourceError</code> that's shown if the resource disassociation fails.
      * </p>
      * 
      * @param error
-     *        An <code>AssociateResourceError</code> shown if the resource disassociation fails.
+     *        An <code>AssociateResourceError</code> that's shown if the resource disassociation fails.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

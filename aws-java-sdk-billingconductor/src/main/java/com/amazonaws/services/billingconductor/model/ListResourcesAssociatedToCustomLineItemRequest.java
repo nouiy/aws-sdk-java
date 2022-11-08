@@ -46,7 +46,7 @@ public class ListResourcesAssociatedToCustomLineItemRequest extends com.amazonaw
     private Integer maxResults;
     /**
      * <p>
-     * (Optional) The pagination token returned by a previous request.
+     * (Optional) The pagination token that's returned by a previous request.
      * </p>
      */
     private String nextToken;
@@ -180,11 +180,11 @@ public class ListResourcesAssociatedToCustomLineItemRequest extends com.amazonaw
 
     /**
      * <p>
-     * (Optional) The pagination token returned by a previous request.
+     * (Optional) The pagination token that's returned by a previous request.
      * </p>
      * 
      * @param nextToken
-     *        (Optional) The pagination token returned by a previous request.
+     *        (Optional) The pagination token that's returned by a previous request.
      */
 
     public void setNextToken(String nextToken) {
@@ -193,10 +193,10 @@ public class ListResourcesAssociatedToCustomLineItemRequest extends com.amazonaw
 
     /**
      * <p>
-     * (Optional) The pagination token returned by a previous request.
+     * (Optional) The pagination token that's returned by a previous request.
      * </p>
      * 
-     * @return (Optional) The pagination token returned by a previous request.
+     * @return (Optional) The pagination token that's returned by a previous request.
      */
 
     public String getNextToken() {
@@ -205,11 +205,11 @@ public class ListResourcesAssociatedToCustomLineItemRequest extends com.amazonaw
 
     /**
      * <p>
-     * (Optional) The pagination token returned by a previous request.
+     * (Optional) The pagination token that's returned by a previous request.
      * </p>
      * 
      * @param nextToken
-     *        (Optional) The pagination token returned by a previous request.
+     *        (Optional) The pagination token that's returned by a previous request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

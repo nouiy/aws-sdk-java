@@ -194,6 +194,10 @@ public class RunInstancesRequestMarshaller implements Marshaller<Request<RunInst
             if (placement.getHostResourceGroupArn() != null) {
                 request.addParameter("Placement.HostResourceGroupArn", StringUtils.fromString(placement.getHostResourceGroupArn()));
             }
+
+            if (placement.getGroupId() != null) {
+                request.addParameter("Placement.GroupId", StringUtils.fromString(placement.getGroupId()));
+            }
         }
 
         if (runInstancesRequest.getRamdiskId() != null) {

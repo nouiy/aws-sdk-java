@@ -61,7 +61,7 @@ public class UpdateBillingGroupResult extends com.amazonaws.AmazonWebServiceResu
     private Long size;
     /**
      * <p>
-     * The most recent time the billing group was modified.
+     * The most recent time when the billing group was modified.
      * </p>
      */
     private Long lastModifiedTime;
@@ -323,11 +323,11 @@ public class UpdateBillingGroupResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The most recent time the billing group was modified.
+     * The most recent time when the billing group was modified.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The most recent time the billing group was modified.
+     *        The most recent time when the billing group was modified.
      */
 
     public void setLastModifiedTime(Long lastModifiedTime) {
@@ -336,10 +336,10 @@ public class UpdateBillingGroupResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The most recent time the billing group was modified.
+     * The most recent time when the billing group was modified.
      * </p>
      * 
-     * @return The most recent time the billing group was modified.
+     * @return The most recent time when the billing group was modified.
      */
 
     public Long getLastModifiedTime() {
@@ -348,11 +348,11 @@ public class UpdateBillingGroupResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The most recent time the billing group was modified.
+     * The most recent time when the billing group was modified.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The most recent time the billing group was modified.
+     *        The most recent time when the billing group was modified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

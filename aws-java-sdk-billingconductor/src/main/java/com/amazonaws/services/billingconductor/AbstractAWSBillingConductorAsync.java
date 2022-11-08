@@ -253,6 +253,19 @@ public class AbstractAWSBillingConductorAsync extends AbstractAWSBillingConducto
     }
 
     @Override
+    public java.util.concurrent.Future<ListCustomLineItemVersionsResult> listCustomLineItemVersionsAsync(ListCustomLineItemVersionsRequest request) {
+
+        return listCustomLineItemVersionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCustomLineItemVersionsResult> listCustomLineItemVersionsAsync(ListCustomLineItemVersionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListCustomLineItemVersionsRequest, ListCustomLineItemVersionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListCustomLineItemsResult> listCustomLineItemsAsync(ListCustomLineItemsRequest request) {
 
         return listCustomLineItemsAsync(request, null);

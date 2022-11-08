@@ -37,7 +37,7 @@ public class ListPricingRulesResult extends com.amazonaws.AmazonWebServiceResult
     private java.util.List<PricingRuleListElement> pricingRules;
     /**
      * <p>
-     * The pagination token used on subsequent calls to get pricing rules.
+     * The pagination token that's used on subsequent calls to get pricing rules.
      * </p>
      */
     private String nextToken;
@@ -154,11 +154,11 @@ public class ListPricingRulesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The pagination token used on subsequent calls to get pricing rules.
+     * The pagination token that's used on subsequent calls to get pricing rules.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used on subsequent calls to get pricing rules.
+     *        The pagination token that's used on subsequent calls to get pricing rules.
      */
 
     public void setNextToken(String nextToken) {
@@ -167,10 +167,10 @@ public class ListPricingRulesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The pagination token used on subsequent calls to get pricing rules.
+     * The pagination token that's used on subsequent calls to get pricing rules.
      * </p>
      * 
-     * @return The pagination token used on subsequent calls to get pricing rules.
+     * @return The pagination token that's used on subsequent calls to get pricing rules.
      */
 
     public String getNextToken() {
@@ -179,11 +179,11 @@ public class ListPricingRulesResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The pagination token used on subsequent calls to get pricing rules.
+     * The pagination token that's used on subsequent calls to get pricing rules.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used on subsequent calls to get pricing rules.
+     *        The pagination token that's used on subsequent calls to get pricing rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

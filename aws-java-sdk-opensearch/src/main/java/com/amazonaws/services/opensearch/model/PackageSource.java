@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Amazon S3 location for importing the package specified as <code>S3BucketName</code> and <code>S3Key</code>
+ * The Amazon S3 location to import the package from.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

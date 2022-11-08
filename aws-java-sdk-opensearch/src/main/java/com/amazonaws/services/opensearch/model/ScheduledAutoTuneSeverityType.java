@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The Auto-Tune action severity. Valid values are LOW, MEDIUM, and HIGH.
+ * The Auto-Tune action severity.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

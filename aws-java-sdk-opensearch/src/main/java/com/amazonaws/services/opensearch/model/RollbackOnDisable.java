@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The rollback state while disabling Auto-Tune for the domain. Valid values are NO_ROLLBACK and DEFAULT_ROLLBACK.
+ * The rollback state while disabling Auto-Tune for the domain.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

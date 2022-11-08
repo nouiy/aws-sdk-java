@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A representation of the charge details associated with a percentage custom line item.
+ * A representation of the charge details that are associated with a percentage custom line item.
  * </p>
  * 
  * @see <a

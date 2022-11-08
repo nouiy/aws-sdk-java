@@ -27,18 +27,18 @@ public class DeletePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the pricing rule you are deleting.
+     * The Amazon Resource Name (ARN) of the pricing rule that you are deleting.
      * </p>
      */
     private String arn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the pricing rule you are deleting.
+     * The Amazon Resource Name (ARN) of the pricing rule that you are deleting.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the pricing rule you are deleting.
+     *        The Amazon Resource Name (ARN) of the pricing rule that you are deleting.
      */
 
     public void setArn(String arn) {
@@ -47,10 +47,10 @@ public class DeletePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the pricing rule you are deleting.
+     * The Amazon Resource Name (ARN) of the pricing rule that you are deleting.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the pricing rule you are deleting.
+     * @return The Amazon Resource Name (ARN) of the pricing rule that you are deleting.
      */
 
     public String getArn() {
@@ -59,11 +59,11 @@ public class DeletePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the pricing rule you are deleting.
+     * The Amazon Resource Name (ARN) of the pricing rule that you are deleting.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the pricing rule you are deleting.
+     *        The Amazon Resource Name (ARN) of the pricing rule that you are deleting.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -150,6 +150,11 @@ public class ModifyFleetRequestMarshaller implements Marshaller<Request<ModifyFl
                                 request.addParameter("LaunchTemplateConfig." + launchTemplateConfigsListIndex + ".Overrides." + overridesListIndex
                                         + ".Placement.HostResourceGroupArn", StringUtils.fromString(placement.getHostResourceGroupArn()));
                             }
+
+                            if (placement.getGroupId() != null) {
+                                request.addParameter("LaunchTemplateConfig." + launchTemplateConfigsListIndex + ".Overrides." + overridesListIndex
+                                        + ".Placement.GroupId", StringUtils.fromString(placement.getGroupId()));
+                            }
                         }
 
                         InstanceRequirementsRequest instanceRequirements = fleetLaunchTemplateConfigRequestOverridesListValue.getInstanceRequirements();

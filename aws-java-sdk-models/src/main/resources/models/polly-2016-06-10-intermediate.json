@@ -16001,6 +16001,18 @@
       }, {
         "name" : "Hiujin",
         "value" : "Hiujin"
+      }, {
+        "name" : "Laura",
+        "value" : "Laura"
+      }, {
+        "name" : "Elin",
+        "value" : "Elin"
+      }, {
+        "name" : "Ida",
+        "value" : "Ida"
+      }, {
+        "name" : "Suvi",
+        "value" : "Suvi"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.polly.enum.VoiceId",

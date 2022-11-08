@@ -57,6 +57,10 @@ public class ListResourcesAssociatedToCustomLineItemResponseElementJsonUnmarshal
                     context.nextToken();
                     listResourcesAssociatedToCustomLineItemResponseElement.setRelationship(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("EndBillingPeriod", targetDepth)) {
+                    context.nextToken();
+                    listResourcesAssociatedToCustomLineItemResponseElement.setEndBillingPeriod(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

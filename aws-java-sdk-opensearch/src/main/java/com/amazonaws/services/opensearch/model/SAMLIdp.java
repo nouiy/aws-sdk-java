@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The SAML identity povider's information.
+ * The SAML identity povider information.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -27,24 +27,24 @@ public class SAMLIdp implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The metadata of the SAML application in XML format.
+     * The metadata of the SAML application, in XML format.
      * </p>
      */
     private String metadataContent;
     /**
      * <p>
-     * The unique entity ID of the application in SAML identity provider.
+     * The unique entity ID of the application in the SAML identity provider.
      * </p>
      */
     private String entityId;
 
     /**
      * <p>
-     * The metadata of the SAML application in XML format.
+     * The metadata of the SAML application, in XML format.
      * </p>
      * 
      * @param metadataContent
-     *        The metadata of the SAML application in XML format.
+     *        The metadata of the SAML application, in XML format.
      */
 
     public void setMetadataContent(String metadataContent) {
@@ -53,10 +53,10 @@ public class SAMLIdp implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The metadata of the SAML application in XML format.
+     * The metadata of the SAML application, in XML format.
      * </p>
      * 
-     * @return The metadata of the SAML application in XML format.
+     * @return The metadata of the SAML application, in XML format.
      */
 
     public String getMetadataContent() {
@@ -65,11 +65,11 @@ public class SAMLIdp implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The metadata of the SAML application in XML format.
+     * The metadata of the SAML application, in XML format.
      * </p>
      * 
      * @param metadataContent
-     *        The metadata of the SAML application in XML format.
+     *        The metadata of the SAML application, in XML format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +80,11 @@ public class SAMLIdp implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique entity ID of the application in SAML identity provider.
+     * The unique entity ID of the application in the SAML identity provider.
      * </p>
      * 
      * @param entityId
-     *        The unique entity ID of the application in SAML identity provider.
+     *        The unique entity ID of the application in the SAML identity provider.
      */
 
     public void setEntityId(String entityId) {
@@ -93,10 +93,10 @@ public class SAMLIdp implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique entity ID of the application in SAML identity provider.
+     * The unique entity ID of the application in the SAML identity provider.
      * </p>
      * 
-     * @return The unique entity ID of the application in SAML identity provider.
+     * @return The unique entity ID of the application in the SAML identity provider.
      */
 
     public String getEntityId() {
@@ -105,11 +105,11 @@ public class SAMLIdp implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique entity ID of the application in SAML identity provider.
+     * The unique entity ID of the application in the SAML identity provider.
      * </p>
      * 
      * @param entityId
-     *        The unique entity ID of the application in SAML identity provider.
+     *        The unique entity ID of the application in the SAML identity provider.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

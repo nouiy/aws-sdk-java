@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Container for parameters to <code>PurchaseReservedInstanceOffering</code>
+ * Container for request parameters to the <code>PurchaseReservedInstanceOffering</code> operation.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -27,7 +27,7 @@ public class PurchaseReservedInstanceOfferingRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The ID of the reserved OpenSearch instance offering to purchase.
+     * The ID of the Reserved Instance offering to purchase.
      * </p>
      */
     private String reservedInstanceOfferingId;
@@ -46,11 +46,11 @@ public class PurchaseReservedInstanceOfferingRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The ID of the reserved OpenSearch instance offering to purchase.
+     * The ID of the Reserved Instance offering to purchase.
      * </p>
      * 
      * @param reservedInstanceOfferingId
-     *        The ID of the reserved OpenSearch instance offering to purchase.
+     *        The ID of the Reserved Instance offering to purchase.
      */
 
     public void setReservedInstanceOfferingId(String reservedInstanceOfferingId) {
@@ -59,10 +59,10 @@ public class PurchaseReservedInstanceOfferingRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The ID of the reserved OpenSearch instance offering to purchase.
+     * The ID of the Reserved Instance offering to purchase.
      * </p>
      * 
-     * @return The ID of the reserved OpenSearch instance offering to purchase.
+     * @return The ID of the Reserved Instance offering to purchase.
      */
 
     public String getReservedInstanceOfferingId() {
@@ -71,11 +71,11 @@ public class PurchaseReservedInstanceOfferingRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The ID of the reserved OpenSearch instance offering to purchase.
+     * The ID of the Reserved Instance offering to purchase.
      * </p>
      * 
      * @param reservedInstanceOfferingId
-     *        The ID of the reserved OpenSearch instance offering to purchase.
+     *        The ID of the Reserved Instance offering to purchase.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

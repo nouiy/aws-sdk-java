@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Container for the response returned by <code> <a>DissociatePackage</a> </code> operation.
+ * Container for the response returned by an <code>DissociatePackage</code> operation.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -25,18 +25,18 @@ public class DissociatePackageResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * <code>DomainPackageDetails</code>
+     * Information about a package that has been dissociated from the domain.
      * </p>
      */
     private DomainPackageDetails domainPackageDetails;
 
     /**
      * <p>
-     * <code>DomainPackageDetails</code>
+     * Information about a package that has been dissociated from the domain.
      * </p>
      * 
      * @param domainPackageDetails
-     *        <code>DomainPackageDetails</code>
+     *        Information about a package that has been dissociated from the domain.
      */
 
     public void setDomainPackageDetails(DomainPackageDetails domainPackageDetails) {
@@ -45,10 +45,10 @@ public class DissociatePackageResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * <code>DomainPackageDetails</code>
+     * Information about a package that has been dissociated from the domain.
      * </p>
      * 
-     * @return <code>DomainPackageDetails</code>
+     * @return Information about a package that has been dissociated from the domain.
      */
 
     public DomainPackageDetails getDomainPackageDetails() {
@@ -57,11 +57,11 @@ public class DissociatePackageResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * <code>DomainPackageDetails</code>
+     * Information about a package that has been dissociated from the domain.
      * </p>
      * 
      * @param domainPackageDetails
-     *        <code>DomainPackageDetails</code>
+     *        Information about a package that has been dissociated from the domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

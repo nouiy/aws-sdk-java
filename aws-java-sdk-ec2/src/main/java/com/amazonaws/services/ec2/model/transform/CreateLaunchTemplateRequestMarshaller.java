@@ -368,6 +368,10 @@ public class CreateLaunchTemplateRequestMarshaller implements Marshaller<Request
                 if (placement.getPartitionNumber() != null) {
                     request.addParameter("LaunchTemplateData.Placement.PartitionNumber", StringUtils.fromInteger(placement.getPartitionNumber()));
                 }
+
+                if (placement.getGroupId() != null) {
+                    request.addParameter("LaunchTemplateData.Placement.GroupId", StringUtils.fromString(placement.getGroupId()));
+                }
             }
 
             if (launchTemplateData.getRamDiskId() != null) {

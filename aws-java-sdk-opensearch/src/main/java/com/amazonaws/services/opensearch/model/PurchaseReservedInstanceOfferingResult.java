@@ -26,7 +26,7 @@ public class PurchaseReservedInstanceOfferingResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Details of the reserved OpenSearch instance which was purchased.
+     * The ID of the Reserved Instance offering that was purchased.
      * </p>
      */
     private String reservedInstanceId;
@@ -39,11 +39,11 @@ public class PurchaseReservedInstanceOfferingResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Details of the reserved OpenSearch instance which was purchased.
+     * The ID of the Reserved Instance offering that was purchased.
      * </p>
      * 
      * @param reservedInstanceId
-     *        Details of the reserved OpenSearch instance which was purchased.
+     *        The ID of the Reserved Instance offering that was purchased.
      */
 
     public void setReservedInstanceId(String reservedInstanceId) {
@@ -52,10 +52,10 @@ public class PurchaseReservedInstanceOfferingResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Details of the reserved OpenSearch instance which was purchased.
+     * The ID of the Reserved Instance offering that was purchased.
      * </p>
      * 
-     * @return Details of the reserved OpenSearch instance which was purchased.
+     * @return The ID of the Reserved Instance offering that was purchased.
      */
 
     public String getReservedInstanceId() {
@@ -64,11 +64,11 @@ public class PurchaseReservedInstanceOfferingResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Details of the reserved OpenSearch instance which was purchased.
+     * The ID of the Reserved Instance offering that was purchased.
      * </p>
      * 
      * @param reservedInstanceId
-     *        Details of the reserved OpenSearch instance which was purchased.
+     *        The ID of the Reserved Instance offering that was purchased.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

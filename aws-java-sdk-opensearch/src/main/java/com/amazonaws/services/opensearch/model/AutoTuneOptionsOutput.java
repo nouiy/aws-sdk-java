@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Auto-Tune options: the Auto-Tune desired state for the domain and list of maintenance schedules.
+ * The Auto-Tune settings for a domain, displayed when enabling or disabling Auto-Tune.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -27,24 +27,24 @@ public class AutoTuneOptionsOutput implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The <code>AutoTuneState</code> for the domain.
+     * The current state of Auto-Tune on the domain.
      * </p>
      */
     private String state;
     /**
      * <p>
-     * The error message while enabling or disabling Auto-Tune.
+     * Any errors that occurred while enabling or disabling Auto-Tune.
      * </p>
      */
     private String errorMessage;
 
     /**
      * <p>
-     * The <code>AutoTuneState</code> for the domain.
+     * The current state of Auto-Tune on the domain.
      * </p>
      * 
      * @param state
-     *        The <code>AutoTuneState</code> for the domain.
+     *        The current state of Auto-Tune on the domain.
      * @see AutoTuneState
      */
 
@@ -54,10 +54,10 @@ public class AutoTuneOptionsOutput implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The <code>AutoTuneState</code> for the domain.
+     * The current state of Auto-Tune on the domain.
      * </p>
      * 
-     * @return The <code>AutoTuneState</code> for the domain.
+     * @return The current state of Auto-Tune on the domain.
      * @see AutoTuneState
      */
 
@@ -67,11 +67,11 @@ public class AutoTuneOptionsOutput implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The <code>AutoTuneState</code> for the domain.
+     * The current state of Auto-Tune on the domain.
      * </p>
      * 
      * @param state
-     *        The <code>AutoTuneState</code> for the domain.
+     *        The current state of Auto-Tune on the domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutoTuneState
      */
@@ -83,11 +83,11 @@ public class AutoTuneOptionsOutput implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The <code>AutoTuneState</code> for the domain.
+     * The current state of Auto-Tune on the domain.
      * </p>
      * 
      * @param state
-     *        The <code>AutoTuneState</code> for the domain.
+     *        The current state of Auto-Tune on the domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutoTuneState
      */
@@ -99,11 +99,11 @@ public class AutoTuneOptionsOutput implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The error message while enabling or disabling Auto-Tune.
+     * Any errors that occurred while enabling or disabling Auto-Tune.
      * </p>
      * 
      * @param errorMessage
-     *        The error message while enabling or disabling Auto-Tune.
+     *        Any errors that occurred while enabling or disabling Auto-Tune.
      */
 
     public void setErrorMessage(String errorMessage) {
@@ -112,10 +112,10 @@ public class AutoTuneOptionsOutput implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The error message while enabling or disabling Auto-Tune.
+     * Any errors that occurred while enabling or disabling Auto-Tune.
      * </p>
      * 
-     * @return The error message while enabling or disabling Auto-Tune.
+     * @return Any errors that occurred while enabling or disabling Auto-Tune.
      */
 
     public String getErrorMessage() {
@@ -124,11 +124,11 @@ public class AutoTuneOptionsOutput implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The error message while enabling or disabling Auto-Tune.
+     * Any errors that occurred while enabling or disabling Auto-Tune.
      * </p>
      * 
      * @param errorMessage
-     *        The error message while enabling or disabling Auto-Tune.
+     *        Any errors that occurred while enabling or disabling Auto-Tune.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

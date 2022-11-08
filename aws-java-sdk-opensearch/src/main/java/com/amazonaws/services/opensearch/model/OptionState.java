@@ -16,11 +16,19 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The state of a requested change. One of the following:
+ * The state of a requested domain configuration change. Can be one of the following:
  * </p>
  * <ul>
- * <li>Processing: The request change is still in progress.</li>
- * <li>Active: The request change is processed and deployed to the domain.</li>
+ * <li>
+ * <p>
+ * <b>Processing</b> - The requested change is still in progress.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <b>Active</b> - The requested change is processed and deployed to the domain.
+ * </p>
+ * </li>
  * </ul>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

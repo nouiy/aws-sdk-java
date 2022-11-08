@@ -59,7 +59,7 @@ public class LoadBalancerTlsCertificate implements Serializable, Cloneable, Stru
     private java.util.Date createdAt;
     /**
      * <p>
-     * The AWS Region and Availability Zone where you created your certificate.
+     * The Amazon Web Services Region and Availability Zone where you created your certificate.
      * </p>
      */
     private ResourceLocation location;
@@ -476,11 +476,11 @@ public class LoadBalancerTlsCertificate implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The AWS Region and Availability Zone where you created your certificate.
+     * The Amazon Web Services Region and Availability Zone where you created your certificate.
      * </p>
      * 
      * @param location
-     *        The AWS Region and Availability Zone where you created your certificate.
+     *        The Amazon Web Services Region and Availability Zone where you created your certificate.
      */
 
     public void setLocation(ResourceLocation location) {
@@ -489,10 +489,10 @@ public class LoadBalancerTlsCertificate implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The AWS Region and Availability Zone where you created your certificate.
+     * The Amazon Web Services Region and Availability Zone where you created your certificate.
      * </p>
      * 
-     * @return The AWS Region and Availability Zone where you created your certificate.
+     * @return The Amazon Web Services Region and Availability Zone where you created your certificate.
      */
 
     public ResourceLocation getLocation() {
@@ -501,11 +501,11 @@ public class LoadBalancerTlsCertificate implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The AWS Region and Availability Zone where you created your certificate.
+     * The Amazon Web Services Region and Availability Zone where you created your certificate.
      * </p>
      * 
      * @param location
-     *        The AWS Region and Availability Zone where you created your certificate.
+     *        The Amazon Web Services Region and Availability Zone where you created your certificate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

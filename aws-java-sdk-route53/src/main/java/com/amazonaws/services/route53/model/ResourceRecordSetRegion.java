@@ -29,6 +29,7 @@ public enum ResourceRecordSetRegion {
     EuWest2("eu-west-2"),
     EuWest3("eu-west-3"),
     EuCentral1("eu-central-1"),
+    EuCentral2("eu-central-2"),
     ApSoutheast1("ap-southeast-1"),
     ApSoutheast2("ap-southeast-2"),
     ApSoutheast3("ap-southeast-3"),
@@ -41,6 +42,7 @@ public enum ResourceRecordSetRegion {
     CnNorthwest1("cn-northwest-1"),
     ApEast1("ap-east-1"),
     MeSouth1("me-south-1"),
+    MeCentral1("me-central-1"),
     ApSouth1("ap-south-1"),
     AfSouth1("af-south-1"),
     EuSouth1("eu-south-1");

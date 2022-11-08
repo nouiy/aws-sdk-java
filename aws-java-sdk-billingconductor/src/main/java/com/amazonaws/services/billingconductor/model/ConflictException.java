@@ -35,6 +35,12 @@ public class ConflictException extends com.amazonaws.services.billingconductor.m
      * </p>
      */
     private String resourceType;
+    /**
+     * <p>
+     * Reason for the inconsistent state.
+     * </p>
+     */
+    private String reason;
 
     /**
      * Constructs a new ConflictException with the specified error message.
@@ -127,6 +133,67 @@ public class ConflictException extends com.amazonaws.services.billingconductor.m
 
     public ConflictException withResourceType(String resourceType) {
         setResourceType(resourceType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Reason for the inconsistent state.
+     * </p>
+     * 
+     * @param reason
+     *        Reason for the inconsistent state.
+     * @see ConflictExceptionReason
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("Reason")
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    /**
+     * <p>
+     * Reason for the inconsistent state.
+     * </p>
+     * 
+     * @return Reason for the inconsistent state.
+     * @see ConflictExceptionReason
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("Reason")
+    public String getReason() {
+        return this.reason;
+    }
+
+    /**
+     * <p>
+     * Reason for the inconsistent state.
+     * </p>
+     * 
+     * @param reason
+     *        Reason for the inconsistent state.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConflictExceptionReason
+     */
+
+    public ConflictException withReason(String reason) {
+        setReason(reason);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Reason for the inconsistent state.
+     * </p>
+     * 
+     * @param reason
+     *        Reason for the inconsistent state.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConflictExceptionReason
+     */
+
+    public ConflictException withReason(ConflictExceptionReason reason) {
+        this.reason = reason.toString();
         return this;
     }
 

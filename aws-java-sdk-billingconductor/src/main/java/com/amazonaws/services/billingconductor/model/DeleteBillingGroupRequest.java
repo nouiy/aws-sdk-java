@@ -27,18 +27,18 @@ public class DeleteBillingGroupRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the billing group you're deleting.
+     * The Amazon Resource Name (ARN) of the billing group that you're deleting.
      * </p>
      */
     private String arn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the billing group you're deleting.
+     * The Amazon Resource Name (ARN) of the billing group that you're deleting.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the billing group you're deleting.
+     *        The Amazon Resource Name (ARN) of the billing group that you're deleting.
      */
 
     public void setArn(String arn) {
@@ -47,10 +47,10 @@ public class DeleteBillingGroupRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the billing group you're deleting.
+     * The Amazon Resource Name (ARN) of the billing group that you're deleting.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the billing group you're deleting.
+     * @return The Amazon Resource Name (ARN) of the billing group that you're deleting.
      */
 
     public String getArn() {
@@ -59,11 +59,11 @@ public class DeleteBillingGroupRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the billing group you're deleting.
+     * The Amazon Resource Name (ARN) of the billing group that you're deleting.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the billing group you're deleting.
+     *        The Amazon Resource Name (ARN) of the billing group that you're deleting.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

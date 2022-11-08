@@ -17,8 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The result of a <code> <a>RejectInboundConnection</a> </code> operation. Contains details about the rejected inbound
- * connection.
+ * Represents the output of a <code>RejectInboundConnection</code> operation.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -26,18 +25,18 @@ public class RejectInboundConnectionResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The <code> <a>InboundConnection</a> </code> of the rejected inbound connection.
+     * Contains details about the rejected inbound connection.
      * </p>
      */
     private InboundConnection connection;
 
     /**
      * <p>
-     * The <code> <a>InboundConnection</a> </code> of the rejected inbound connection.
+     * Contains details about the rejected inbound connection.
      * </p>
      * 
      * @param connection
-     *        The <code> <a>InboundConnection</a> </code> of the rejected inbound connection.
+     *        Contains details about the rejected inbound connection.
      */
 
     public void setConnection(InboundConnection connection) {
@@ -46,10 +45,10 @@ public class RejectInboundConnectionResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The <code> <a>InboundConnection</a> </code> of the rejected inbound connection.
+     * Contains details about the rejected inbound connection.
      * </p>
      * 
-     * @return The <code> <a>InboundConnection</a> </code> of the rejected inbound connection.
+     * @return Contains details about the rejected inbound connection.
      */
 
     public InboundConnection getConnection() {
@@ -58,11 +57,11 @@ public class RejectInboundConnectionResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The <code> <a>InboundConnection</a> </code> of the rejected inbound connection.
+     * Contains details about the rejected inbound connection.
      * </p>
      * 
      * @param connection
-     *        The <code> <a>InboundConnection</a> </code> of the rejected inbound connection.
+     *        Contains details about the rejected inbound connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

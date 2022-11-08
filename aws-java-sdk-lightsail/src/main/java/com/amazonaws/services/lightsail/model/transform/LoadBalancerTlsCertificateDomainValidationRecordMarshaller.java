@@ -37,6 +37,8 @@ public class LoadBalancerTlsCertificateDomainValidationRecordMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("validationStatus").build();
     private static final MarshallingInfo<String> DOMAINNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("domainName").build();
+    private static final MarshallingInfo<StructuredPojo> DNSRECORDCREATIONSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dnsRecordCreationState").build();
 
     private static final LoadBalancerTlsCertificateDomainValidationRecordMarshaller instance = new LoadBalancerTlsCertificateDomainValidationRecordMarshaller();
 
@@ -60,6 +62,7 @@ public class LoadBalancerTlsCertificateDomainValidationRecordMarshaller {
             protocolMarshaller.marshall(loadBalancerTlsCertificateDomainValidationRecord.getValue(), VALUE_BINDING);
             protocolMarshaller.marshall(loadBalancerTlsCertificateDomainValidationRecord.getValidationStatus(), VALIDATIONSTATUS_BINDING);
             protocolMarshaller.marshall(loadBalancerTlsCertificateDomainValidationRecord.getDomainName(), DOMAINNAME_BINDING);
+            protocolMarshaller.marshall(loadBalancerTlsCertificateDomainValidationRecord.getDnsRecordCreationState(), DNSRECORDCREATIONSTATE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

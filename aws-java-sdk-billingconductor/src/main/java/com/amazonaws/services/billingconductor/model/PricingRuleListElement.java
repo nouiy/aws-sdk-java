@@ -79,13 +79,13 @@ public class PricingRuleListElement implements Serializable, Cloneable, Structur
     private Long associatedPricingPlanCount;
     /**
      * <p>
-     * The time the pricing rule was created.
+     * The time when the pricing rule was created.
      * </p>
      */
     private Long creationTime;
     /**
      * <p>
-     * The most recent time the pricing rule was modified.
+     * The most recent time when the pricing rule was modified.
      * </p>
      */
     private Long lastModifiedTime;
@@ -456,11 +456,11 @@ public class PricingRuleListElement implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The time the pricing rule was created.
+     * The time when the pricing rule was created.
      * </p>
      * 
      * @param creationTime
-     *        The time the pricing rule was created.
+     *        The time when the pricing rule was created.
      */
 
     public void setCreationTime(Long creationTime) {
@@ -469,10 +469,10 @@ public class PricingRuleListElement implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The time the pricing rule was created.
+     * The time when the pricing rule was created.
      * </p>
      * 
-     * @return The time the pricing rule was created.
+     * @return The time when the pricing rule was created.
      */
 
     public Long getCreationTime() {
@@ -481,11 +481,11 @@ public class PricingRuleListElement implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The time the pricing rule was created.
+     * The time when the pricing rule was created.
      * </p>
      * 
      * @param creationTime
-     *        The time the pricing rule was created.
+     *        The time when the pricing rule was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -496,11 +496,11 @@ public class PricingRuleListElement implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The most recent time the pricing rule was modified.
+     * The most recent time when the pricing rule was modified.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The most recent time the pricing rule was modified.
+     *        The most recent time when the pricing rule was modified.
      */
 
     public void setLastModifiedTime(Long lastModifiedTime) {
@@ -509,10 +509,10 @@ public class PricingRuleListElement implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The most recent time the pricing rule was modified.
+     * The most recent time when the pricing rule was modified.
      * </p>
      * 
-     * @return The most recent time the pricing rule was modified.
+     * @return The most recent time when the pricing rule was modified.
      */
 
     public Long getLastModifiedTime() {
@@ -521,11 +521,11 @@ public class PricingRuleListElement implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The most recent time the pricing rule was modified.
+     * The most recent time when the pricing rule was modified.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The most recent time the pricing rule was modified.
+     *        The most recent time when the pricing rule was modified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

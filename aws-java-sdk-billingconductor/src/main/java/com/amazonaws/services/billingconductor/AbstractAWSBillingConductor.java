@@ -114,6 +114,11 @@ public class AbstractAWSBillingConductor implements AWSBillingConductor {
     }
 
     @Override
+    public ListCustomLineItemVersionsResult listCustomLineItemVersions(ListCustomLineItemVersionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListCustomLineItemsResult listCustomLineItems(ListCustomLineItemsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

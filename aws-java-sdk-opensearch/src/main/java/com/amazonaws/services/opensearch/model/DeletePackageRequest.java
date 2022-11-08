@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Container for the request parameters to the <code> <a>DeletePackage</a> </code> operation.
+ * Deletes a package from OpenSearch Service. The package can't be associated with any OpenSearch Service domain.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

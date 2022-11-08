@@ -19,8 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Container for the parameters to the <code> <a>StartServiceSoftwareUpdate</a> </code> operation. Specifies the name of
- * the domain to schedule a service software update for.
+ * Container for the request parameters to the <code>StartServiceSoftwareUpdate</code> operation.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

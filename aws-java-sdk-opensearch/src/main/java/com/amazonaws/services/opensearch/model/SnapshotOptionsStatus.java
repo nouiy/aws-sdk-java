@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Status of a daily automated snapshot.
+ * Container for information about a daily automated snapshot for an OpenSearch Service domain.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

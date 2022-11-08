@@ -115,6 +115,12 @@ public class Placement implements Serializable, Cloneable {
      * </p>
      */
     private String hostResourceGroupArn;
+    /**
+     * <p>
+     * The Group Id of the placement group.
+     * </p>
+     */
+    private String groupId;
 
     /**
      * Default constructor for Placement object. Callers should use the setter or fluent setter (with...) methods to
@@ -775,6 +781,46 @@ public class Placement implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The Group Id of the placement group.
+     * </p>
+     * 
+     * @param groupId
+     *        The Group Id of the placement group.
+     */
+
+    public void setGroupId(String groupId) {
+        this.groupId = groupId;
+    }
+
+    /**
+     * <p>
+     * The Group Id of the placement group.
+     * </p>
+     * 
+     * @return The Group Id of the placement group.
+     */
+
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    /**
+     * <p>
+     * The Group Id of the placement group.
+     * </p>
+     * 
+     * @param groupId
+     *        The Group Id of the placement group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Placement withGroupId(String groupId) {
+        setGroupId(groupId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -801,7 +847,9 @@ public class Placement implements Serializable, Cloneable {
         if (getSpreadDomain() != null)
             sb.append("SpreadDomain: ").append(getSpreadDomain()).append(",");
         if (getHostResourceGroupArn() != null)
-            sb.append("HostResourceGroupArn: ").append(getHostResourceGroupArn());
+            sb.append("HostResourceGroupArn: ").append(getHostResourceGroupArn()).append(",");
+        if (getGroupId() != null)
+            sb.append("GroupId: ").append(getGroupId());
         sb.append("}");
         return sb.toString();
     }
@@ -848,6 +896,10 @@ public class Placement implements Serializable, Cloneable {
             return false;
         if (other.getHostResourceGroupArn() != null && other.getHostResourceGroupArn().equals(this.getHostResourceGroupArn()) == false)
             return false;
+        if (other.getGroupId() == null ^ this.getGroupId() == null)
+            return false;
+        if (other.getGroupId() != null && other.getGroupId().equals(this.getGroupId()) == false)
+            return false;
         return true;
     }
 
@@ -864,6 +916,7 @@ public class Placement implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getTenancy() == null) ? 0 : getTenancy().hashCode());
         hashCode = prime * hashCode + ((getSpreadDomain() == null) ? 0 : getSpreadDomain().hashCode());
         hashCode = prime * hashCode + ((getHostResourceGroupArn() == null) ? 0 : getHostResourceGroupArn().hashCode());
+        hashCode = prime * hashCode + ((getGroupId() == null) ? 0 : getGroupId().hashCode());
         return hashCode;
     }
 
