@@ -460,7 +460,7 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
         if (getUsername() != null)
             sb.append("Username: ").append(getUsername()).append(",");
         if (getEmailAddress() != null)
-            sb.append("EmailAddress: ").append(getEmailAddress()).append(",");
+            sb.append("EmailAddress: ").append("***Sensitive Data Redacted***").append(",");
         if (getGivenName() != null)
             sb.append("GivenName: ").append(getGivenName()).append(",");
         if (getSurname() != null)

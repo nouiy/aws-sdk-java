@@ -715,6 +715,9 @@ public class DBInstance implements Serializable, Cloneable {
      * <p>
      * Specifies the storage throughput for the DB instance.
      * </p>
+     * <p>
+     * This setting applies only to the <code>gp3</code> storage type.
+     * </p>
      */
     private Integer storageThroughput;
 
@@ -5885,9 +5888,14 @@ public class DBInstance implements Serializable, Cloneable {
      * <p>
      * Specifies the storage throughput for the DB instance.
      * </p>
+     * <p>
+     * This setting applies only to the <code>gp3</code> storage type.
+     * </p>
      * 
      * @param storageThroughput
-     *        Specifies the storage throughput for the DB instance.
+     *        Specifies the storage throughput for the DB instance.</p>
+     *        <p>
+     *        This setting applies only to the <code>gp3</code> storage type.
      */
 
     public void setStorageThroughput(Integer storageThroughput) {
@@ -5898,8 +5906,13 @@ public class DBInstance implements Serializable, Cloneable {
      * <p>
      * Specifies the storage throughput for the DB instance.
      * </p>
+     * <p>
+     * This setting applies only to the <code>gp3</code> storage type.
+     * </p>
      * 
-     * @return Specifies the storage throughput for the DB instance.
+     * @return Specifies the storage throughput for the DB instance.</p>
+     *         <p>
+     *         This setting applies only to the <code>gp3</code> storage type.
      */
 
     public Integer getStorageThroughput() {
@@ -5910,9 +5923,14 @@ public class DBInstance implements Serializable, Cloneable {
      * <p>
      * Specifies the storage throughput for the DB instance.
      * </p>
+     * <p>
+     * This setting applies only to the <code>gp3</code> storage type.
+     * </p>
      * 
      * @param storageThroughput
-     *        Specifies the storage throughput for the DB instance.
+     *        Specifies the storage throughput for the DB instance.</p>
+     *        <p>
+     *        This setting applies only to the <code>gp3</code> storage type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -197,6 +197,19 @@ public class AbstractAmazonWorkDocsAsync extends AbstractAmazonWorkDocs implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteDocumentVersionResult> deleteDocumentVersionAsync(DeleteDocumentVersionRequest request) {
+
+        return deleteDocumentVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDocumentVersionResult> deleteDocumentVersionAsync(DeleteDocumentVersionRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteDocumentVersionRequest, DeleteDocumentVersionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteFolderResult> deleteFolderAsync(DeleteFolderRequest request) {
 
         return deleteFolderAsync(request, null);
@@ -506,6 +519,19 @@ public class AbstractAmazonWorkDocsAsync extends AbstractAmazonWorkDocs implemen
     @Override
     public java.util.concurrent.Future<RemoveResourcePermissionResult> removeResourcePermissionAsync(RemoveResourcePermissionRequest request,
             com.amazonaws.handlers.AsyncHandler<RemoveResourcePermissionRequest, RemoveResourcePermissionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<RestoreDocumentVersionsResult> restoreDocumentVersionsAsync(RestoreDocumentVersionsRequest request) {
+
+        return restoreDocumentVersionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RestoreDocumentVersionsResult> restoreDocumentVersionsAsync(RestoreDocumentVersionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<RestoreDocumentVersionsRequest, RestoreDocumentVersionsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

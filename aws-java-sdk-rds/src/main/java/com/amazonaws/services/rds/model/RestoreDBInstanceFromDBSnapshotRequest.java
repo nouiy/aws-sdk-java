@@ -70,6 +70,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </li>
      * <li>
      * <p>
+     * Can't be specified when <code>DBClusterSnapshotIdentifier</code> is specified.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be specified when <code>DBClusterSnapshotIdentifier</code> isn't specified.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * If you are restoring from a shared manual DB snapshot, the <code>DBSnapshotIdentifier</code> must be the ARN of
      * the shared DB snapshot.
      * </p>
@@ -594,6 +604,53 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      */
     private Integer storageThroughput;
+    /**
+     * <p>
+     * The identifier for the RDS for MySQL Multi-AZ DB cluster snapshot to restore from.
+     * </p>
+     * <p>
+     * For more information on Multi-AZ DB clusters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Must match the identifier of an existing Multi-AZ DB cluster snapshot.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Can't be specified when <code>DBSnapshotIdentifier</code> is specified.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be specified when <code>DBSnapshotIdentifier</code> isn't specified.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you are restoring from a shared manual Multi-AZ DB cluster snapshot, the
+     * <code>DBClusterSnapshotIdentifier</code> must be the ARN of the shared snapshot.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Can't be the identifier of an Aurora DB cluster snapshot.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Can't be the identifier of an RDS for PostgreSQL Multi-AZ DB cluster snapshot.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String dBClusterSnapshotIdentifier;
 
     /**
      * Default constructor for RestoreDBInstanceFromDBSnapshotRequest object. Callers should use the setter or fluent
@@ -640,6 +697,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        <li>
      *        <p>
      *        Must match the identifier of an existing DBSnapshot.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Can't be specified when <code>DBClusterSnapshotIdentifier</code> is specified.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Must be specified when <code>DBClusterSnapshotIdentifier</code> isn't specified.
      *        </p>
      *        </li>
      *        <li>
@@ -844,6 +911,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </li>
      * <li>
      * <p>
+     * Can't be specified when <code>DBClusterSnapshotIdentifier</code> is specified.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be specified when <code>DBClusterSnapshotIdentifier</code> isn't specified.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * If you are restoring from a shared manual DB snapshot, the <code>DBSnapshotIdentifier</code> must be the ARN of
      * the shared DB snapshot.
      * </p>
@@ -859,6 +936,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        <li>
      *        <p>
      *        Must match the identifier of an existing DBSnapshot.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Can't be specified when <code>DBClusterSnapshotIdentifier</code> is specified.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Must be specified when <code>DBClusterSnapshotIdentifier</code> isn't specified.
      *        </p>
      *        </li>
      *        <li>
@@ -888,6 +975,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </li>
      * <li>
      * <p>
+     * Can't be specified when <code>DBClusterSnapshotIdentifier</code> is specified.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be specified when <code>DBClusterSnapshotIdentifier</code> isn't specified.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * If you are restoring from a shared manual DB snapshot, the <code>DBSnapshotIdentifier</code> must be the ARN of
      * the shared DB snapshot.
      * </p>
@@ -902,6 +999,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *         <li>
      *         <p>
      *         Must match the identifier of an existing DBSnapshot.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Can't be specified when <code>DBClusterSnapshotIdentifier</code> is specified.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Must be specified when <code>DBClusterSnapshotIdentifier</code> isn't specified.
      *         </p>
      *         </li>
      *         <li>
@@ -931,6 +1038,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </li>
      * <li>
      * <p>
+     * Can't be specified when <code>DBClusterSnapshotIdentifier</code> is specified.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be specified when <code>DBClusterSnapshotIdentifier</code> isn't specified.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * If you are restoring from a shared manual DB snapshot, the <code>DBSnapshotIdentifier</code> must be the ARN of
      * the shared DB snapshot.
      * </p>
@@ -946,6 +1063,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        <li>
      *        <p>
      *        Must match the identifier of an existing DBSnapshot.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Can't be specified when <code>DBClusterSnapshotIdentifier</code> is specified.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Must be specified when <code>DBClusterSnapshotIdentifier</code> isn't specified.
      *        </p>
      *        </li>
      *        <li>
@@ -4516,6 +4643,289 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
     }
 
     /**
+     * <p>
+     * The identifier for the RDS for MySQL Multi-AZ DB cluster snapshot to restore from.
+     * </p>
+     * <p>
+     * For more information on Multi-AZ DB clusters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Must match the identifier of an existing Multi-AZ DB cluster snapshot.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Can't be specified when <code>DBSnapshotIdentifier</code> is specified.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be specified when <code>DBSnapshotIdentifier</code> isn't specified.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you are restoring from a shared manual Multi-AZ DB cluster snapshot, the
+     * <code>DBClusterSnapshotIdentifier</code> must be the ARN of the shared snapshot.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Can't be the identifier of an Aurora DB cluster snapshot.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Can't be the identifier of an RDS for PostgreSQL Multi-AZ DB cluster snapshot.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param dBClusterSnapshotIdentifier
+     *        The identifier for the RDS for MySQL Multi-AZ DB cluster snapshot to restore from.</p>
+     *        <p>
+     *        For more information on Multi-AZ DB clusters, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
+     *        deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     *        </p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Must match the identifier of an existing Multi-AZ DB cluster snapshot.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Can't be specified when <code>DBSnapshotIdentifier</code> is specified.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Must be specified when <code>DBSnapshotIdentifier</code> isn't specified.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you are restoring from a shared manual Multi-AZ DB cluster snapshot, the
+     *        <code>DBClusterSnapshotIdentifier</code> must be the ARN of the shared snapshot.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Can't be the identifier of an Aurora DB cluster snapshot.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Can't be the identifier of an RDS for PostgreSQL Multi-AZ DB cluster snapshot.
+     *        </p>
+     *        </li>
+     */
+
+    public void setDBClusterSnapshotIdentifier(String dBClusterSnapshotIdentifier) {
+        this.dBClusterSnapshotIdentifier = dBClusterSnapshotIdentifier;
+    }
+
+    /**
+     * <p>
+     * The identifier for the RDS for MySQL Multi-AZ DB cluster snapshot to restore from.
+     * </p>
+     * <p>
+     * For more information on Multi-AZ DB clusters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Must match the identifier of an existing Multi-AZ DB cluster snapshot.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Can't be specified when <code>DBSnapshotIdentifier</code> is specified.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be specified when <code>DBSnapshotIdentifier</code> isn't specified.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you are restoring from a shared manual Multi-AZ DB cluster snapshot, the
+     * <code>DBClusterSnapshotIdentifier</code> must be the ARN of the shared snapshot.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Can't be the identifier of an Aurora DB cluster snapshot.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Can't be the identifier of an RDS for PostgreSQL Multi-AZ DB cluster snapshot.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The identifier for the RDS for MySQL Multi-AZ DB cluster snapshot to restore from.</p>
+     *         <p>
+     *         For more information on Multi-AZ DB clusters, see <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html">
+     *         Multi-AZ deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     *         </p>
+     *         <p>
+     *         Constraints:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Must match the identifier of an existing Multi-AZ DB cluster snapshot.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Can't be specified when <code>DBSnapshotIdentifier</code> is specified.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Must be specified when <code>DBSnapshotIdentifier</code> isn't specified.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you are restoring from a shared manual Multi-AZ DB cluster snapshot, the
+     *         <code>DBClusterSnapshotIdentifier</code> must be the ARN of the shared snapshot.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Can't be the identifier of an Aurora DB cluster snapshot.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Can't be the identifier of an RDS for PostgreSQL Multi-AZ DB cluster snapshot.
+     *         </p>
+     *         </li>
+     */
+
+    public String getDBClusterSnapshotIdentifier() {
+        return this.dBClusterSnapshotIdentifier;
+    }
+
+    /**
+     * <p>
+     * The identifier for the RDS for MySQL Multi-AZ DB cluster snapshot to restore from.
+     * </p>
+     * <p>
+     * For more information on Multi-AZ DB clusters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Must match the identifier of an existing Multi-AZ DB cluster snapshot.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Can't be specified when <code>DBSnapshotIdentifier</code> is specified.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Must be specified when <code>DBSnapshotIdentifier</code> isn't specified.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you are restoring from a shared manual Multi-AZ DB cluster snapshot, the
+     * <code>DBClusterSnapshotIdentifier</code> must be the ARN of the shared snapshot.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Can't be the identifier of an Aurora DB cluster snapshot.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Can't be the identifier of an RDS for PostgreSQL Multi-AZ DB cluster snapshot.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param dBClusterSnapshotIdentifier
+     *        The identifier for the RDS for MySQL Multi-AZ DB cluster snapshot to restore from.</p>
+     *        <p>
+     *        For more information on Multi-AZ DB clusters, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
+     *        deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide</i>.
+     *        </p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Must match the identifier of an existing Multi-AZ DB cluster snapshot.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Can't be specified when <code>DBSnapshotIdentifier</code> is specified.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Must be specified when <code>DBSnapshotIdentifier</code> isn't specified.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you are restoring from a shared manual Multi-AZ DB cluster snapshot, the
+     *        <code>DBClusterSnapshotIdentifier</code> must be the ARN of the shared snapshot.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Can't be the identifier of an Aurora DB cluster snapshot.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Can't be the identifier of an RDS for PostgreSQL Multi-AZ DB cluster snapshot.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RestoreDBInstanceFromDBSnapshotRequest withDBClusterSnapshotIdentifier(String dBClusterSnapshotIdentifier) {
+        setDBClusterSnapshotIdentifier(dBClusterSnapshotIdentifier);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -4592,7 +5002,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
         if (getNetworkType() != null)
             sb.append("NetworkType: ").append(getNetworkType()).append(",");
         if (getStorageThroughput() != null)
-            sb.append("StorageThroughput: ").append(getStorageThroughput());
+            sb.append("StorageThroughput: ").append(getStorageThroughput()).append(",");
+        if (getDBClusterSnapshotIdentifier() != null)
+            sb.append("DBClusterSnapshotIdentifier: ").append(getDBClusterSnapshotIdentifier());
         sb.append("}");
         return sb.toString();
     }
@@ -4740,6 +5152,10 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
             return false;
         if (other.getStorageThroughput() != null && other.getStorageThroughput().equals(this.getStorageThroughput()) == false)
             return false;
+        if (other.getDBClusterSnapshotIdentifier() == null ^ this.getDBClusterSnapshotIdentifier() == null)
+            return false;
+        if (other.getDBClusterSnapshotIdentifier() != null && other.getDBClusterSnapshotIdentifier().equals(this.getDBClusterSnapshotIdentifier()) == false)
+            return false;
         return true;
     }
 
@@ -4781,6 +5197,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
         hashCode = prime * hashCode + ((getBackupTarget() == null) ? 0 : getBackupTarget().hashCode());
         hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
         hashCode = prime * hashCode + ((getStorageThroughput() == null) ? 0 : getStorageThroughput().hashCode());
+        hashCode = prime * hashCode + ((getDBClusterSnapshotIdentifier() == null) ? 0 : getDBClusterSnapshotIdentifier().hashCode());
         return hashCode;
     }
 

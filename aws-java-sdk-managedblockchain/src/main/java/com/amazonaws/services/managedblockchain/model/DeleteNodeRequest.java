@@ -40,6 +40,11 @@ public class DeleteNodeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </li>
      * <li>
      * <p>
+     * <code>n-ethereum-goerli</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>n-ethereum-rinkeby</code>
      * </p>
      * </li>
@@ -82,6 +87,11 @@ public class DeleteNodeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </li>
      * <li>
      * <p>
+     * <code>n-ethereum-goerli</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>n-ethereum-rinkeby</code>
      * </p>
      * </li>
@@ -101,6 +111,11 @@ public class DeleteNodeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <li>
      *        <p>
      *        <code>n-ethereum-mainnet</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>n-ethereum-goerli</code>
      *        </p>
      *        </li>
      *        <li>
@@ -134,6 +149,11 @@ public class DeleteNodeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </li>
      * <li>
      * <p>
+     * <code>n-ethereum-goerli</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>n-ethereum-rinkeby</code>
      * </p>
      * </li>
@@ -152,6 +172,11 @@ public class DeleteNodeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *         <li>
      *         <p>
      *         <code>n-ethereum-mainnet</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>n-ethereum-goerli</code>
      *         </p>
      *         </li>
      *         <li>
@@ -185,6 +210,11 @@ public class DeleteNodeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </li>
      * <li>
      * <p>
+     * <code>n-ethereum-goerli</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>n-ethereum-rinkeby</code>
      * </p>
      * </li>
@@ -204,6 +234,11 @@ public class DeleteNodeRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <li>
      *        <p>
      *        <code>n-ethereum-mainnet</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>n-ethereum-goerli</code>
      *        </p>
      *        </li>
      *        <li>

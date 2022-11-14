@@ -52,6 +52,10 @@ public class EnvironmentAccountConnectionJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     environmentAccountConnection.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("codebuildRoleArn", targetDepth)) {
+                    context.nextToken();
+                    environmentAccountConnection.setCodebuildRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("componentRoleArn", targetDepth)) {
                     context.nextToken();
                     environmentAccountConnection.setComponentRoleArn(context.getUnmarshaller(String.class).unmarshall(context));

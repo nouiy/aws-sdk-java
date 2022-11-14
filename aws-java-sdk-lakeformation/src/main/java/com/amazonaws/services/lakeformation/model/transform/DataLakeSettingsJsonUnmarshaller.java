@@ -68,6 +68,11 @@ public class DataLakeSettingsJsonUnmarshaller implements Unmarshaller<DataLakeSe
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("Parameters", targetDepth)) {
+                    context.nextToken();
+                    dataLakeSettings.setParameters(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
+                }
                 if (context.testExpression("TrustedResourceOwners", targetDepth)) {
                     context.nextToken();
                     dataLakeSettings.setTrustedResourceOwners(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))

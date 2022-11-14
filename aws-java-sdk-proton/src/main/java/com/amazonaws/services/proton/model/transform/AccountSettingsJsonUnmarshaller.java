@@ -48,6 +48,10 @@ public class AccountSettingsJsonUnmarshaller implements Unmarshaller<AccountSett
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("pipelineCodebuildRoleArn", targetDepth)) {
+                    context.nextToken();
+                    accountSettings.setPipelineCodebuildRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("pipelineProvisioningRepository", targetDepth)) {
                     context.nextToken();
                     accountSettings.setPipelineProvisioningRepository(RepositoryBranchJsonUnmarshaller.getInstance().unmarshall(context));

@@ -638,13 +638,20 @@ public interface AWSProtonAsync extends AWSProton {
      * <ul>
      * <li>
      * <p>
-     * Amazon Web Services-managed provisioning: Proton makes direct calls to provision your resources.
+     * <b>Amazon Web Services-managed provisioning</b> – Proton makes direct calls to provision your resources.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Self-managed provisioning: Proton makes pull requests on your repository to provide compiled infrastructure as
-     * code (IaC) files that your IaC engine uses to provision resources.
+     * <b>Self-managed provisioning</b> – Proton makes pull requests on your repository to provide compiled
+     * infrastructure as code (IaC) files that your IaC engine uses to provision resources.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>CodeBuild-based provisioning</b> – Proton uses CodeBuild to run shell commands that you provide. Your commands
+     * can read inputs that Proton provides, and are responsible for provisioning or deprovisioning infrastructure and
+     * generating output values.
      * </p>
      * </li>
      * </ul>
@@ -674,13 +681,20 @@ public interface AWSProtonAsync extends AWSProton {
      * <ul>
      * <li>
      * <p>
-     * Amazon Web Services-managed provisioning: Proton makes direct calls to provision your resources.
+     * <b>Amazon Web Services-managed provisioning</b> – Proton makes direct calls to provision your resources.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Self-managed provisioning: Proton makes pull requests on your repository to provide compiled infrastructure as
-     * code (IaC) files that your IaC engine uses to provision resources.
+     * <b>Self-managed provisioning</b> – Proton makes pull requests on your repository to provide compiled
+     * infrastructure as code (IaC) files that your IaC engine uses to provision resources.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>CodeBuild-based provisioning</b> – Proton uses CodeBuild to run shell commands that you provide. Your commands
+     * can read inputs that Proton provides, and are responsible for provisioning or deprovisioning infrastructure and
+     * generating output values.
      * </p>
      * </li>
      * </ul>
@@ -2698,13 +2712,29 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Notify Proton of status changes to a provisioned resource when you use self-managed provisioning.
+     * Notify Proton of the following information related to a provisioned resource (environment, service instance, or
+     * service pipeline):
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/proton/latest/userguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
-     * >Self-managed provisioning</a> in the <i>Proton User Guide</i>.
+     * For <a href=
+     * "https://docs.aws.amazon.com/proton/latest/userguide/ag-works-prov-methods.html#ag-works-prov-methods-codebuild"
+     * >CodeBuild-based provisioning</a>, provide your provisioned resource output values to Proton.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <a href=
+     * "https://docs.aws.amazon.com/proton/latest/userguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
+     * >self-managed provisioning</a>, notify Proton about the status of your provisioned resource. To disambiguate
+     * between different deployments of the same resource, set <code>deploymentId</code> to a unique deployment ID of
+     * your choice.
+     * </p>
+     * 
+     * <pre>
+     * <code> &lt;/li&gt; &lt;/ul&gt; </code>
+     * </pre>
      * 
      * @param notifyResourceDeploymentStatusChangeRequest
      * @return A Java Future containing the result of the NotifyResourceDeploymentStatusChange operation returned by the
@@ -2718,13 +2748,29 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Notify Proton of status changes to a provisioned resource when you use self-managed provisioning.
+     * Notify Proton of the following information related to a provisioned resource (environment, service instance, or
+     * service pipeline):
      * </p>
+     * <ul>
+     * <li>
      * <p>
-     * For more information, see <a href=
-     * "https://docs.aws.amazon.com/proton/latest/userguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
-     * >Self-managed provisioning</a> in the <i>Proton User Guide</i>.
+     * For <a href=
+     * "https://docs.aws.amazon.com/proton/latest/userguide/ag-works-prov-methods.html#ag-works-prov-methods-codebuild"
+     * >CodeBuild-based provisioning</a>, provide your provisioned resource output values to Proton.
      * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <a href=
+     * "https://docs.aws.amazon.com/proton/latest/userguide/ag-works-prov-methods.html#ag-works-prov-methods-self"
+     * >self-managed provisioning</a>, notify Proton about the status of your provisioned resource. To disambiguate
+     * between different deployments of the same resource, set <code>deploymentId</code> to a unique deployment ID of
+     * your choice.
+     * </p>
+     * 
+     * <pre>
+     * <code> &lt;/li&gt; &lt;/ul&gt; </code>
+     * </pre>
      * 
      * @param notifyResourceDeploymentStatusChangeRequest
      * @param asyncHandler
@@ -2974,8 +3020,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * If the environment is associated with an environment account connection, <i>don't</i> update or include the
-     * <code>protonServiceRoleArn</code> and <code>provisioningRepository</code> parameter to update or connect to an
-     * environment account connection.
+     * <code>protonServiceRoleArn</code>, <code>codebuildRoleArn</code>, and <code>provisioningRepository</code>
+     * parameters.
      * </p>
      * <p>
      * You can only update to a new environment account connection if that connection was created in the same
@@ -2988,17 +3034,17 @@ public interface AWSProtonAsync extends AWSProton {
      * an environment account connection if it <i>isn't</i> already associated with an environment connection.
      * </p>
      * <p>
-     * You can update either the <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code>
-     * parameter and value. You can’t update both.
+     * You can update either <code>environmentAccountConnectionId</code> or one or more of
+     * <code>protonServiceRoleArn</code>, <code>codebuildRoleArn</code>, and <code>provisioningRepository</code>.
      * </p>
      * <p>
-     * If the environment was configured for Amazon Web Services-managed provisioning, omit the
+     * If the environment was configured for Amazon Web Services-managed or CodeBuild-based provisioning, omit the
      * <code>provisioningRepository</code> parameter.
      * </p>
      * <p>
      * If the environment was configured for self-managed provisioning, specify the <code>provisioningRepository</code>
-     * parameter and omit the <code>protonServiceRoleArn</code> and <code>environmentAccountConnectionId</code>
-     * parameters.
+     * parameter and omit the <code>protonServiceRoleArn</code>, <code>codebuildRoleArn</code>, and
+     * <code>provisioningRepository</code> parameters.
      * </p>
      * <p>
      * For more information, see <a
@@ -3068,8 +3114,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * If the environment is associated with an environment account connection, <i>don't</i> update or include the
-     * <code>protonServiceRoleArn</code> and <code>provisioningRepository</code> parameter to update or connect to an
-     * environment account connection.
+     * <code>protonServiceRoleArn</code>, <code>codebuildRoleArn</code>, and <code>provisioningRepository</code>
+     * parameters.
      * </p>
      * <p>
      * You can only update to a new environment account connection if that connection was created in the same
@@ -3082,17 +3128,17 @@ public interface AWSProtonAsync extends AWSProton {
      * an environment account connection if it <i>isn't</i> already associated with an environment connection.
      * </p>
      * <p>
-     * You can update either the <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code>
-     * parameter and value. You can’t update both.
+     * You can update either <code>environmentAccountConnectionId</code> or one or more of
+     * <code>protonServiceRoleArn</code>, <code>codebuildRoleArn</code>, and <code>provisioningRepository</code>.
      * </p>
      * <p>
-     * If the environment was configured for Amazon Web Services-managed provisioning, omit the
+     * If the environment was configured for Amazon Web Services-managed or CodeBuild-based provisioning, omit the
      * <code>provisioningRepository</code> parameter.
      * </p>
      * <p>
      * If the environment was configured for self-managed provisioning, specify the <code>provisioningRepository</code>
-     * parameter and omit the <code>protonServiceRoleArn</code> and <code>environmentAccountConnectionId</code>
-     * parameters.
+     * parameter and omit the <code>protonServiceRoleArn</code>, <code>codebuildRoleArn</code>, and
+     * <code>provisioningRepository</code> parameters.
      * </p>
      * <p>
      * For more information, see <a

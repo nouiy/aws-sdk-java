@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum SubscriptionProtocolType {
 
-    HTTPS("HTTPS");
+    HTTPS("HTTPS"),
+    SQS("SQS");
 
     private String value;
 

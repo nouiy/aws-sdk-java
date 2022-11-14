@@ -93,6 +93,11 @@ public class AbstractAmazonWorkDocs implements AmazonWorkDocs {
     }
 
     @Override
+    public DeleteDocumentVersionResult deleteDocumentVersion(DeleteDocumentVersionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteFolderResult deleteFolder(DeleteFolderRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -209,6 +214,11 @@ public class AbstractAmazonWorkDocs implements AmazonWorkDocs {
 
     @Override
     public RemoveResourcePermissionResult removeResourcePermission(RemoveResourcePermissionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RestoreDocumentVersionsResult restoreDocumentVersions(RestoreDocumentVersionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

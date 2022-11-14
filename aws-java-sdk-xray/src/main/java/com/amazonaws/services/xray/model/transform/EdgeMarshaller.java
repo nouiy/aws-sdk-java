@@ -40,6 +40,10 @@ public class EdgeMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResponseTimeHistogram").build();
     private static final MarshallingInfo<List> ALIASES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Aliases").build();
+    private static final MarshallingInfo<String> EDGETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("EdgeType").build();
+    private static final MarshallingInfo<List> RECEIVEDEVENTAGEHISTOGRAM_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReceivedEventAgeHistogram").build();
 
     private static final EdgeMarshaller instance = new EdgeMarshaller();
 
@@ -63,6 +67,8 @@ public class EdgeMarshaller {
             protocolMarshaller.marshall(edge.getSummaryStatistics(), SUMMARYSTATISTICS_BINDING);
             protocolMarshaller.marshall(edge.getResponseTimeHistogram(), RESPONSETIMEHISTOGRAM_BINDING);
             protocolMarshaller.marshall(edge.getAliases(), ALIASES_BINDING);
+            protocolMarshaller.marshall(edge.getEdgeType(), EDGETYPE_BINDING);
+            protocolMarshaller.marshall(edge.getReceivedEventAgeHistogram(), RECEIVEDEVENTAGEHISTOGRAM_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

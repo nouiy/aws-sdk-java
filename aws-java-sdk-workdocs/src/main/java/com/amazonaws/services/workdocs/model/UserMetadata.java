@@ -280,7 +280,7 @@ public class UserMetadata implements Serializable, Cloneable, StructuredPojo {
         if (getSurname() != null)
             sb.append("Surname: ").append(getSurname()).append(",");
         if (getEmailAddress() != null)
-            sb.append("EmailAddress: ").append(getEmailAddress());
+            sb.append("EmailAddress: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

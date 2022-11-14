@@ -3999,6 +3999,8 @@ public interface AmazonRDS {
      * @throws NetworkTypeNotSupportedException
      *         The network type is invalid for the DB instance. Valid nework type values are <code>IPV4</code> and
      *         <code>DUAL</code>.
+     * @throws DBClusterSnapshotNotFoundException
+     *         <code>DBClusterSnapshotIdentifier</code> doesn't refer to an existing DB cluster snapshot.
      * @sample AmazonRDS.RestoreDBInstanceFromDBSnapshot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/RestoreDBInstanceFromDBSnapshot"
      *      target="_top">AWS API Documentation</a>

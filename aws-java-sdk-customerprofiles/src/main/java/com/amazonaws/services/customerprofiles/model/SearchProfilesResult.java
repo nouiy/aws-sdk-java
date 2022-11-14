@@ -25,7 +25,7 @@ public class SearchProfilesResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The list of SearchProfiles instances.
+     * The list of Profiles matching the search criteria.
      * </p>
      */
     private java.util.List<Profile> items;
@@ -38,10 +38,10 @@ public class SearchProfilesResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The list of SearchProfiles instances.
+     * The list of Profiles matching the search criteria.
      * </p>
      * 
-     * @return The list of SearchProfiles instances.
+     * @return The list of Profiles matching the search criteria.
      */
 
     public java.util.List<Profile> getItems() {
@@ -50,11 +50,11 @@ public class SearchProfilesResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The list of SearchProfiles instances.
+     * The list of Profiles matching the search criteria.
      * </p>
      * 
      * @param items
-     *        The list of SearchProfiles instances.
+     *        The list of Profiles matching the search criteria.
      */
 
     public void setItems(java.util.Collection<Profile> items) {
@@ -68,7 +68,7 @@ public class SearchProfilesResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The list of SearchProfiles instances.
+     * The list of Profiles matching the search criteria.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class SearchProfilesResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      * 
      * @param items
-     *        The list of SearchProfiles instances.
+     *        The list of Profiles matching the search criteria.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class SearchProfilesResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The list of SearchProfiles instances.
+     * The list of Profiles matching the search criteria.
      * </p>
      * 
      * @param items
-     *        The list of SearchProfiles instances.
+     *        The list of Profiles matching the search criteria.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

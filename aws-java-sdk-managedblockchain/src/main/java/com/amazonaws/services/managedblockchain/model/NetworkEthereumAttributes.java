@@ -40,6 +40,11 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      * </li>
      * <li>
      * <p>
+     * goerli = <code>5</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * rinkeby = <code>4</code>
      * </p>
      * </li>
@@ -64,6 +69,11 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      * </li>
      * <li>
      * <p>
+     * goerli = <code>5</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * rinkeby = <code>4</code>
      * </p>
      * </li>
@@ -80,6 +90,11 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      *        <li>
      *        <p>
      *        mainnet = <code>1</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        goerli = <code>5</code>
      *        </p>
      *        </li>
      *        <li>
@@ -110,6 +125,11 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      * </li>
      * <li>
      * <p>
+     * goerli = <code>5</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * rinkeby = <code>4</code>
      * </p>
      * </li>
@@ -125,6 +145,11 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      *         <li>
      *         <p>
      *         mainnet = <code>1</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         goerli = <code>5</code>
      *         </p>
      *         </li>
      *         <li>
@@ -155,6 +180,11 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      * </li>
      * <li>
      * <p>
+     * goerli = <code>5</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * rinkeby = <code>4</code>
      * </p>
      * </li>
@@ -171,6 +201,11 @@ public class NetworkEthereumAttributes implements Serializable, Cloneable, Struc
      *        <li>
      *        <p>
      *        mainnet = <code>1</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        goerli = <code>5</code>
      *        </p>
      *        </li>
      *        <li>

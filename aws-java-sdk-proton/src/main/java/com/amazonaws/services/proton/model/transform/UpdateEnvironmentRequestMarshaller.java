@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdateEnvironmentRequestMarshaller {
 
+    private static final MarshallingInfo<String> CODEBUILDROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("codebuildRoleArn").build();
     private static final MarshallingInfo<String> COMPONENTROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("componentRoleArn").build();
     private static final MarshallingInfo<String> DEPLOYMENTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -64,6 +66,7 @@ public class UpdateEnvironmentRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(updateEnvironmentRequest.getCodebuildRoleArn(), CODEBUILDROLEARN_BINDING);
             protocolMarshaller.marshall(updateEnvironmentRequest.getComponentRoleArn(), COMPONENTROLEARN_BINDING);
             protocolMarshaller.marshall(updateEnvironmentRequest.getDeploymentType(), DEPLOYMENTTYPE_BINDING);
             protocolMarshaller.marshall(updateEnvironmentRequest.getDescription(), DESCRIPTION_BINDING);

@@ -27,6 +27,17 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
+     * CodeBuild-based provisioning on your behalf.
+     * </p>
+     * <p>
+     * To use CodeBuild-based provisioning for the environment or for any service instance running in the environment,
+     * specify either the <code>environmentAccountConnectionId</code> or <code>codebuildRoleArn</code> parameter.
+     * </p>
+     */
+    private String codebuildRoleArn;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the IAM service role that Proton uses when provisioning directly defined
      * components in this environment. It determines the scope of infrastructure that a component can provision.
      * </p>
@@ -49,15 +60,15 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private String description;
     /**
      * <p>
-     * The ID of the environment account connection that you provide if you're provisioning your environment
-     * infrastructure resources to an environment account. For more information, see <a
+     * The ID of the environment account connection that you provide if you want Proton to provision infrastructure
+     * resources for your environment or for any of the service instances running in it in an environment account. For
+     * more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
      * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * <p>
-     * To use Amazon Web Services-managed provisioning for the environment, specify either the
-     * <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and omit the
-     * <code>provisioningRepository</code> parameter.
+     * If you specify the <code>environmentAccountConnectionId</code> parameter, don't specify
+     * <code>protonServiceRoleArn</code>, <code>codebuildRoleArn</code>, or <code>provisioningRepository</code>.
      * </p>
      */
     private String environmentAccountConnectionId;
@@ -69,13 +80,13 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private String name;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
-     * your behalf.
+     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
+     * Amazon Web Services-managed provisioning and CloudFormation on your behalf.
      * </p>
      * <p>
-     * To use Amazon Web Services-managed provisioning for the environment, specify either the
-     * <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and omit the
-     * <code>provisioningRepository</code> parameter.
+     * To use Amazon Web Services-managed provisioning for the environment or for any service instance running in the
+     * environment, specify either the <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code>
+     * parameter.
      * </p>
      */
     private String protonServiceRoleArn;
@@ -86,8 +97,8 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * <a>CreateRepository</a>.
      * </p>
      * <p>
-     * To use self-managed provisioning for the environment, specify this parameter and omit the
-     * <code>environmentAccountConnectionId</code> and <code>protonServiceRoleArn</code> parameters.
+     * To use self-managed provisioning for the environment or for any service instance running in the environment,
+     * specify this parameter.
      * </p>
      */
     private RepositoryBranchInput provisioningRepository;
@@ -130,6 +141,76 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private String templateName;
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
+     * CodeBuild-based provisioning on your behalf.
+     * </p>
+     * <p>
+     * To use CodeBuild-based provisioning for the environment or for any service instance running in the environment,
+     * specify either the <code>environmentAccountConnectionId</code> or <code>codebuildRoleArn</code> parameter.
+     * </p>
+     * 
+     * @param codebuildRoleArn
+     *        The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
+     *        using CodeBuild-based provisioning on your behalf.</p>
+     *        <p>
+     *        To use CodeBuild-based provisioning for the environment or for any service instance running in the
+     *        environment, specify either the <code>environmentAccountConnectionId</code> or
+     *        <code>codebuildRoleArn</code> parameter.
+     */
+
+    public void setCodebuildRoleArn(String codebuildRoleArn) {
+        this.codebuildRoleArn = codebuildRoleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
+     * CodeBuild-based provisioning on your behalf.
+     * </p>
+     * <p>
+     * To use CodeBuild-based provisioning for the environment or for any service instance running in the environment,
+     * specify either the <code>environmentAccountConnectionId</code> or <code>codebuildRoleArn</code> parameter.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
+     *         using CodeBuild-based provisioning on your behalf.</p>
+     *         <p>
+     *         To use CodeBuild-based provisioning for the environment or for any service instance running in the
+     *         environment, specify either the <code>environmentAccountConnectionId</code> or
+     *         <code>codebuildRoleArn</code> parameter.
+     */
+
+    public String getCodebuildRoleArn() {
+        return this.codebuildRoleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
+     * CodeBuild-based provisioning on your behalf.
+     * </p>
+     * <p>
+     * To use CodeBuild-based provisioning for the environment or for any service instance running in the environment,
+     * specify either the <code>environmentAccountConnectionId</code> or <code>codebuildRoleArn</code> parameter.
+     * </p>
+     * 
+     * @param codebuildRoleArn
+     *        The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
+     *        using CodeBuild-based provisioning on your behalf.</p>
+     *        <p>
+     *        To use CodeBuild-based provisioning for the environment or for any service instance running in the
+     *        environment, specify either the <code>environmentAccountConnectionId</code> or
+     *        <code>codebuildRoleArn</code> parameter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEnvironmentRequest withCodebuildRoleArn(String codebuildRoleArn) {
+        setCodebuildRoleArn(codebuildRoleArn);
+        return this;
+    }
 
     /**
      * <p>
@@ -273,26 +354,26 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the environment account connection that you provide if you're provisioning your environment
-     * infrastructure resources to an environment account. For more information, see <a
+     * The ID of the environment account connection that you provide if you want Proton to provision infrastructure
+     * resources for your environment or for any of the service instances running in it in an environment account. For
+     * more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
      * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * <p>
-     * To use Amazon Web Services-managed provisioning for the environment, specify either the
-     * <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and omit the
-     * <code>provisioningRepository</code> parameter.
+     * If you specify the <code>environmentAccountConnectionId</code> parameter, don't specify
+     * <code>protonServiceRoleArn</code>, <code>codebuildRoleArn</code>, or <code>provisioningRepository</code>.
      * </p>
      * 
      * @param environmentAccountConnectionId
-     *        The ID of the environment account connection that you provide if you're provisioning your environment
-     *        infrastructure resources to an environment account. For more information, see <a
+     *        The ID of the environment account connection that you provide if you want Proton to provision
+     *        infrastructure resources for your environment or for any of the service instances running in it in an
+     *        environment account. For more information, see <a
      *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment
      *        account connections</a> in the <i>Proton User guide</i>.</p>
      *        <p>
-     *        To use Amazon Web Services-managed provisioning for the environment, specify either the
-     *        <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and omit the
-     *        <code>provisioningRepository</code> parameter.
+     *        If you specify the <code>environmentAccountConnectionId</code> parameter, don't specify
+     *        <code>protonServiceRoleArn</code>, <code>codebuildRoleArn</code>, or <code>provisioningRepository</code>.
      */
 
     public void setEnvironmentAccountConnectionId(String environmentAccountConnectionId) {
@@ -301,25 +382,25 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the environment account connection that you provide if you're provisioning your environment
-     * infrastructure resources to an environment account. For more information, see <a
+     * The ID of the environment account connection that you provide if you want Proton to provision infrastructure
+     * resources for your environment or for any of the service instances running in it in an environment account. For
+     * more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
      * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * <p>
-     * To use Amazon Web Services-managed provisioning for the environment, specify either the
-     * <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and omit the
-     * <code>provisioningRepository</code> parameter.
+     * If you specify the <code>environmentAccountConnectionId</code> parameter, don't specify
+     * <code>protonServiceRoleArn</code>, <code>codebuildRoleArn</code>, or <code>provisioningRepository</code>.
      * </p>
      * 
-     * @return The ID of the environment account connection that you provide if you're provisioning your environment
-     *         infrastructure resources to an environment account. For more information, see <a
+     * @return The ID of the environment account connection that you provide if you want Proton to provision
+     *         infrastructure resources for your environment or for any of the service instances running in it in an
+     *         environment account. For more information, see <a
      *         href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment
      *         account connections</a> in the <i>Proton User guide</i>.</p>
      *         <p>
-     *         To use Amazon Web Services-managed provisioning for the environment, specify either the
-     *         <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and omit the
-     *         <code>provisioningRepository</code> parameter.
+     *         If you specify the <code>environmentAccountConnectionId</code> parameter, don't specify
+     *         <code>protonServiceRoleArn</code>, <code>codebuildRoleArn</code>, or <code>provisioningRepository</code>.
      */
 
     public String getEnvironmentAccountConnectionId() {
@@ -328,26 +409,26 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the environment account connection that you provide if you're provisioning your environment
-     * infrastructure resources to an environment account. For more information, see <a
+     * The ID of the environment account connection that you provide if you want Proton to provision infrastructure
+     * resources for your environment or for any of the service instances running in it in an environment account. For
+     * more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
      * connections</a> in the <i>Proton User guide</i>.
      * </p>
      * <p>
-     * To use Amazon Web Services-managed provisioning for the environment, specify either the
-     * <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and omit the
-     * <code>provisioningRepository</code> parameter.
+     * If you specify the <code>environmentAccountConnectionId</code> parameter, don't specify
+     * <code>protonServiceRoleArn</code>, <code>codebuildRoleArn</code>, or <code>provisioningRepository</code>.
      * </p>
      * 
      * @param environmentAccountConnectionId
-     *        The ID of the environment account connection that you provide if you're provisioning your environment
-     *        infrastructure resources to an environment account. For more information, see <a
+     *        The ID of the environment account connection that you provide if you want Proton to provision
+     *        infrastructure resources for your environment or for any of the service instances running in it in an
+     *        environment account. For more information, see <a
      *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment
      *        account connections</a> in the <i>Proton User guide</i>.</p>
      *        <p>
-     *        To use Amazon Web Services-managed provisioning for the environment, specify either the
-     *        <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and omit the
-     *        <code>provisioningRepository</code> parameter.
+     *        If you specify the <code>environmentAccountConnectionId</code> parameter, don't specify
+     *        <code>protonServiceRoleArn</code>, <code>codebuildRoleArn</code>, or <code>provisioningRepository</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -398,22 +479,22 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
-     * your behalf.
+     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
+     * Amazon Web Services-managed provisioning and CloudFormation on your behalf.
      * </p>
      * <p>
-     * To use Amazon Web Services-managed provisioning for the environment, specify either the
-     * <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and omit the
-     * <code>provisioningRepository</code> parameter.
+     * To use Amazon Web Services-managed provisioning for the environment or for any service instance running in the
+     * environment, specify either the <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code>
+     * parameter.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other
-     *        services on your behalf.</p>
+     *        The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
+     *        using Amazon Web Services-managed provisioning and CloudFormation on your behalf.</p>
      *        <p>
-     *        To use Amazon Web Services-managed provisioning for the environment, specify either the
-     *        <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and omit the
-     *        <code>provisioningRepository</code> parameter.
+     *        To use Amazon Web Services-managed provisioning for the environment or for any service instance running in
+     *        the environment, specify either the <code>environmentAccountConnectionId</code> or
+     *        <code>protonServiceRoleArn</code> parameter.
      */
 
     public void setProtonServiceRoleArn(String protonServiceRoleArn) {
@@ -422,21 +503,21 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
-     * your behalf.
+     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
+     * Amazon Web Services-managed provisioning and CloudFormation on your behalf.
      * </p>
      * <p>
-     * To use Amazon Web Services-managed provisioning for the environment, specify either the
-     * <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and omit the
-     * <code>provisioningRepository</code> parameter.
+     * To use Amazon Web Services-managed provisioning for the environment or for any service instance running in the
+     * environment, specify either the <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code>
+     * parameter.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other
-     *         services on your behalf.</p>
+     * @return The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
+     *         using Amazon Web Services-managed provisioning and CloudFormation on your behalf.</p>
      *         <p>
-     *         To use Amazon Web Services-managed provisioning for the environment, specify either the
-     *         <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and omit the
-     *         <code>provisioningRepository</code> parameter.
+     *         To use Amazon Web Services-managed provisioning for the environment or for any service instance running
+     *         in the environment, specify either the <code>environmentAccountConnectionId</code> or
+     *         <code>protonServiceRoleArn</code> parameter.
      */
 
     public String getProtonServiceRoleArn() {
@@ -445,22 +526,22 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
-     * your behalf.
+     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
+     * Amazon Web Services-managed provisioning and CloudFormation on your behalf.
      * </p>
      * <p>
-     * To use Amazon Web Services-managed provisioning for the environment, specify either the
-     * <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and omit the
-     * <code>provisioningRepository</code> parameter.
+     * To use Amazon Web Services-managed provisioning for the environment or for any service instance running in the
+     * environment, specify either the <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code>
+     * parameter.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other
-     *        services on your behalf.</p>
+     *        The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
+     *        using Amazon Web Services-managed provisioning and CloudFormation on your behalf.</p>
      *        <p>
-     *        To use Amazon Web Services-managed provisioning for the environment, specify either the
-     *        <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and omit the
-     *        <code>provisioningRepository</code> parameter.
+     *        To use Amazon Web Services-managed provisioning for the environment or for any service instance running in
+     *        the environment, specify either the <code>environmentAccountConnectionId</code> or
+     *        <code>protonServiceRoleArn</code> parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -476,8 +557,8 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * <a>CreateRepository</a>.
      * </p>
      * <p>
-     * To use self-managed provisioning for the environment, specify this parameter and omit the
-     * <code>environmentAccountConnectionId</code> and <code>protonServiceRoleArn</code> parameters.
+     * To use self-managed provisioning for the environment or for any service instance running in the environment,
+     * specify this parameter.
      * </p>
      * 
      * @param provisioningRepository
@@ -485,8 +566,8 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      *        provisioning. A linked repository is a repository that has been registered with Proton. For more
      *        information, see <a>CreateRepository</a>.</p>
      *        <p>
-     *        To use self-managed provisioning for the environment, specify this parameter and omit the
-     *        <code>environmentAccountConnectionId</code> and <code>protonServiceRoleArn</code> parameters.
+     *        To use self-managed provisioning for the environment or for any service instance running in the
+     *        environment, specify this parameter.
      */
 
     public void setProvisioningRepository(RepositoryBranchInput provisioningRepository) {
@@ -500,16 +581,16 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * <a>CreateRepository</a>.
      * </p>
      * <p>
-     * To use self-managed provisioning for the environment, specify this parameter and omit the
-     * <code>environmentAccountConnectionId</code> and <code>protonServiceRoleArn</code> parameters.
+     * To use self-managed provisioning for the environment or for any service instance running in the environment,
+     * specify this parameter.
      * </p>
      * 
      * @return The linked repository that you use to host your rendered infrastructure templates for self-managed
      *         provisioning. A linked repository is a repository that has been registered with Proton. For more
      *         information, see <a>CreateRepository</a>.</p>
      *         <p>
-     *         To use self-managed provisioning for the environment, specify this parameter and omit the
-     *         <code>environmentAccountConnectionId</code> and <code>protonServiceRoleArn</code> parameters.
+     *         To use self-managed provisioning for the environment or for any service instance running in the
+     *         environment, specify this parameter.
      */
 
     public RepositoryBranchInput getProvisioningRepository() {
@@ -523,8 +604,8 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * <a>CreateRepository</a>.
      * </p>
      * <p>
-     * To use self-managed provisioning for the environment, specify this parameter and omit the
-     * <code>environmentAccountConnectionId</code> and <code>protonServiceRoleArn</code> parameters.
+     * To use self-managed provisioning for the environment or for any service instance running in the environment,
+     * specify this parameter.
      * </p>
      * 
      * @param provisioningRepository
@@ -532,8 +613,8 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      *        provisioning. A linked repository is a repository that has been registered with Proton. For more
      *        information, see <a>CreateRepository</a>.</p>
      *        <p>
-     *        To use self-managed provisioning for the environment, specify this parameter and omit the
-     *        <code>environmentAccountConnectionId</code> and <code>protonServiceRoleArn</code> parameters.
+     *        To use self-managed provisioning for the environment or for any service instance running in the
+     *        environment, specify this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -850,6 +931,8 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getCodebuildRoleArn() != null)
+            sb.append("CodebuildRoleArn: ").append(getCodebuildRoleArn()).append(",");
         if (getComponentRoleArn() != null)
             sb.append("ComponentRoleArn: ").append(getComponentRoleArn()).append(",");
         if (getDescription() != null)
@@ -886,6 +969,10 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
         if (obj instanceof CreateEnvironmentRequest == false)
             return false;
         CreateEnvironmentRequest other = (CreateEnvironmentRequest) obj;
+        if (other.getCodebuildRoleArn() == null ^ this.getCodebuildRoleArn() == null)
+            return false;
+        if (other.getCodebuildRoleArn() != null && other.getCodebuildRoleArn().equals(this.getCodebuildRoleArn()) == false)
+            return false;
         if (other.getComponentRoleArn() == null ^ this.getComponentRoleArn() == null)
             return false;
         if (other.getComponentRoleArn() != null && other.getComponentRoleArn().equals(this.getComponentRoleArn()) == false)
@@ -939,6 +1026,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getCodebuildRoleArn() == null) ? 0 : getCodebuildRoleArn().hashCode());
         hashCode = prime * hashCode + ((getComponentRoleArn() == null) ? 0 : getComponentRoleArn().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getEnvironmentAccountConnectionId() == null) ? 0 : getEnvironmentAccountConnectionId().hashCode());

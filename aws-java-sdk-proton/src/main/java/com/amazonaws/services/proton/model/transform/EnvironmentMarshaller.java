@@ -29,6 +29,8 @@ public class EnvironmentMarshaller {
 
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("arn").build();
+    private static final MarshallingInfo<String> CODEBUILDROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("codebuildRoleArn").build();
     private static final MarshallingInfo<String> COMPONENTROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("componentRoleArn").build();
     private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -81,6 +83,7 @@ public class EnvironmentMarshaller {
 
         try {
             protocolMarshaller.marshall(environment.getArn(), ARN_BINDING);
+            protocolMarshaller.marshall(environment.getCodebuildRoleArn(), CODEBUILDROLEARN_BINDING);
             protocolMarshaller.marshall(environment.getComponentRoleArn(), COMPONENTROLEARN_BINDING);
             protocolMarshaller.marshall(environment.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(environment.getDeploymentStatus(), DEPLOYMENTSTATUS_BINDING);

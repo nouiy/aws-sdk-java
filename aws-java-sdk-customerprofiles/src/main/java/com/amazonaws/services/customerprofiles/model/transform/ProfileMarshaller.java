@@ -13,7 +13,7 @@
 package com.amazonaws.services.customerprofiles.model.transform;
 
 import java.util.Map;
-
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -73,6 +73,8 @@ public class ProfileMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BillingAddress").build();
     private static final MarshallingInfo<Map> ATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Attributes").build();
+    private static final MarshallingInfo<List> FOUNDBYITEMS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("FoundByItems").build();
 
     private static final ProfileMarshaller instance = new ProfileMarshaller();
 
@@ -112,6 +114,7 @@ public class ProfileMarshaller {
             protocolMarshaller.marshall(profile.getMailingAddress(), MAILINGADDRESS_BINDING);
             protocolMarshaller.marshall(profile.getBillingAddress(), BILLINGADDRESS_BINDING);
             protocolMarshaller.marshall(profile.getAttributes(), ATTRIBUTES_BINDING);
+            protocolMarshaller.marshall(profile.getFoundByItems(), FOUNDBYITEMS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

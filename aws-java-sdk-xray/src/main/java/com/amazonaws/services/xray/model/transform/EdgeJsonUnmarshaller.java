@@ -76,6 +76,16 @@ public class EdgeJsonUnmarshaller implements Unmarshaller<Edge, JsonUnmarshaller
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("EdgeType", targetDepth)) {
+                    context.nextToken();
+                    edge.setEdgeType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ReceivedEventAgeHistogram", targetDepth)) {
+                    context.nextToken();
+                    edge.setReceivedEventAgeHistogram(new ListUnmarshaller<HistogramEntry>(HistogramEntryJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

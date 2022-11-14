@@ -236,6 +236,10 @@ public class RestoreDBInstanceFromDBSnapshotRequestMarshaller implements
             request.addParameter("StorageThroughput", StringUtils.fromInteger(restoreDBInstanceFromDBSnapshotRequest.getStorageThroughput()));
         }
 
+        if (restoreDBInstanceFromDBSnapshotRequest.getDBClusterSnapshotIdentifier() != null) {
+            request.addParameter("DBClusterSnapshotIdentifier", StringUtils.fromString(restoreDBInstanceFromDBSnapshotRequest.getDBClusterSnapshotIdentifier()));
+        }
+
         return request;
     }
 

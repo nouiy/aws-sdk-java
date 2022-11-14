@@ -1675,6 +1675,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Specifies the storage throughput value for the DB instance.
      * </p>
      * <p>
+     * This setting applies only to the <code>gp3</code> storage type.
+     * </p>
+     * <p>
      * This setting doesn't apply to RDS Custom or Amazon Aurora.
      * </p>
      */
@@ -12731,11 +12734,17 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Specifies the storage throughput value for the DB instance.
      * </p>
      * <p>
+     * This setting applies only to the <code>gp3</code> storage type.
+     * </p>
+     * <p>
      * This setting doesn't apply to RDS Custom or Amazon Aurora.
      * </p>
      * 
      * @param storageThroughput
      *        Specifies the storage throughput value for the DB instance.</p>
+     *        <p>
+     *        This setting applies only to the <code>gp3</code> storage type.
+     *        </p>
      *        <p>
      *        This setting doesn't apply to RDS Custom or Amazon Aurora.
      */
@@ -12749,10 +12758,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Specifies the storage throughput value for the DB instance.
      * </p>
      * <p>
+     * This setting applies only to the <code>gp3</code> storage type.
+     * </p>
+     * <p>
      * This setting doesn't apply to RDS Custom or Amazon Aurora.
      * </p>
      * 
      * @return Specifies the storage throughput value for the DB instance.</p>
+     *         <p>
+     *         This setting applies only to the <code>gp3</code> storage type.
+     *         </p>
      *         <p>
      *         This setting doesn't apply to RDS Custom or Amazon Aurora.
      */
@@ -12766,11 +12781,17 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Specifies the storage throughput value for the DB instance.
      * </p>
      * <p>
+     * This setting applies only to the <code>gp3</code> storage type.
+     * </p>
+     * <p>
      * This setting doesn't apply to RDS Custom or Amazon Aurora.
      * </p>
      * 
      * @param storageThroughput
      *        Specifies the storage throughput value for the DB instance.</p>
+     *        <p>
+     *        This setting applies only to the <code>gp3</code> storage type.
+     *        </p>
      *        <p>
      *        This setting doesn't apply to RDS Custom or Amazon Aurora.
      * @return Returns a reference to this object so that method calls can be chained together.

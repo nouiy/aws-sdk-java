@@ -37,6 +37,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private String arn;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
+     * CodeBuild-based provisioning on your behalf.
+     * </p>
+     */
+    private String codebuildRoleArn;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the IAM service role that Proton uses when provisioning directly defined
      * components in this environment. It determines the scope of infrastructure that a component can provision.
      * </p>
@@ -77,8 +84,8 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private String description;
     /**
      * <p>
-     * The ID of the environment account connection that's used to provision infrastructure resources in an environment
-     * account.
+     * The ID of the environment account connection that Proton uses to provision infrastructure resources in an
+     * environment account.
      * </p>
      */
     private String environmentAccountConnectionId;
@@ -108,8 +115,8 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
-     * your behalf.
+     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
+     * Amazon Web Services-managed provisioning and CloudFormation on your behalf.
      * </p>
      */
     private String protonServiceRoleArn;
@@ -189,6 +196,52 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     public Environment withArn(String arn) {
         setArn(arn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
+     * CodeBuild-based provisioning on your behalf.
+     * </p>
+     * 
+     * @param codebuildRoleArn
+     *        The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
+     *        using CodeBuild-based provisioning on your behalf.
+     */
+
+    public void setCodebuildRoleArn(String codebuildRoleArn) {
+        this.codebuildRoleArn = codebuildRoleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
+     * CodeBuild-based provisioning on your behalf.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
+     *         using CodeBuild-based provisioning on your behalf.
+     */
+
+    public String getCodebuildRoleArn() {
+        return this.codebuildRoleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
+     * CodeBuild-based provisioning on your behalf.
+     * </p>
+     * 
+     * @param codebuildRoleArn
+     *        The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
+     *        using CodeBuild-based provisioning on your behalf.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Environment withCodebuildRoleArn(String codebuildRoleArn) {
+        setCodebuildRoleArn(codebuildRoleArn);
         return this;
     }
 
@@ -473,12 +526,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the environment account connection that's used to provision infrastructure resources in an environment
-     * account.
+     * The ID of the environment account connection that Proton uses to provision infrastructure resources in an
+     * environment account.
      * </p>
      * 
      * @param environmentAccountConnectionId
-     *        The ID of the environment account connection that's used to provision infrastructure resources in an
+     *        The ID of the environment account connection that Proton uses to provision infrastructure resources in an
      *        environment account.
      */
 
@@ -488,11 +541,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the environment account connection that's used to provision infrastructure resources in an environment
-     * account.
+     * The ID of the environment account connection that Proton uses to provision infrastructure resources in an
+     * environment account.
      * </p>
      * 
-     * @return The ID of the environment account connection that's used to provision infrastructure resources in an
+     * @return The ID of the environment account connection that Proton uses to provision infrastructure resources in an
      *         environment account.
      */
 
@@ -502,12 +555,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the environment account connection that's used to provision infrastructure resources in an environment
-     * account.
+     * The ID of the environment account connection that Proton uses to provision infrastructure resources in an
+     * environment account.
      * </p>
      * 
      * @param environmentAccountConnectionId
-     *        The ID of the environment account connection that's used to provision infrastructure resources in an
+     *        The ID of the environment account connection that Proton uses to provision infrastructure resources in an
      *        environment account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -679,13 +732,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
-     * your behalf.
+     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
+     * Amazon Web Services-managed provisioning and CloudFormation on your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other
-     *        services on your behalf.
+     *        The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
+     *        using Amazon Web Services-managed provisioning and CloudFormation on your behalf.
      */
 
     public void setProtonServiceRoleArn(String protonServiceRoleArn) {
@@ -694,12 +747,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
-     * your behalf.
+     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
+     * Amazon Web Services-managed provisioning and CloudFormation on your behalf.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other
-     *         services on your behalf.
+     * @return The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
+     *         using Amazon Web Services-managed provisioning and CloudFormation on your behalf.
      */
 
     public String getProtonServiceRoleArn() {
@@ -708,13 +761,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
-     * your behalf.
+     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
+     * Amazon Web Services-managed provisioning and CloudFormation on your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other
-     *        services on your behalf.
+     *        The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
+     *        using Amazon Web Services-managed provisioning and CloudFormation on your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1012,6 +1065,8 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
+        if (getCodebuildRoleArn() != null)
+            sb.append("CodebuildRoleArn: ").append(getCodebuildRoleArn()).append(",");
         if (getComponentRoleArn() != null)
             sb.append("ComponentRoleArn: ").append(getComponentRoleArn()).append(",");
         if (getCreatedAt() != null)
@@ -1063,6 +1118,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
         if (other.getArn() == null ^ this.getArn() == null)
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
+            return false;
+        if (other.getCodebuildRoleArn() == null ^ this.getCodebuildRoleArn() == null)
+            return false;
+        if (other.getCodebuildRoleArn() != null && other.getCodebuildRoleArn().equals(this.getCodebuildRoleArn()) == false)
             return false;
         if (other.getComponentRoleArn() == null ^ this.getComponentRoleArn() == null)
             return false;
@@ -1142,6 +1201,7 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
+        hashCode = prime * hashCode + ((getCodebuildRoleArn() == null) ? 0 : getCodebuildRoleArn().hashCode());
         hashCode = prime * hashCode + ((getComponentRoleArn() == null) ? 0 : getComponentRoleArn().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getDeploymentStatus() == null) ? 0 : getDeploymentStatus().hashCode());
