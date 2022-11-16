@@ -29,6 +29,8 @@ public class GetOpsItemRequestMarshaller {
 
     private static final MarshallingInfo<String> OPSITEMID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("OpsItemId").build();
+    private static final MarshallingInfo<String> OPSITEMARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OpsItemArn").build();
 
     private static final GetOpsItemRequestMarshaller instance = new GetOpsItemRequestMarshaller();
 
@@ -47,6 +49,7 @@ public class GetOpsItemRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(getOpsItemRequest.getOpsItemId(), OPSITEMID_BINDING);
+            protocolMarshaller.marshall(getOpsItemRequest.getOpsItemArn(), OPSITEMARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

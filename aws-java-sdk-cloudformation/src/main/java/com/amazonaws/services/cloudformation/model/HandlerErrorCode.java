@@ -37,7 +37,8 @@ public enum HandlerErrorCode {
     InvalidTypeConfiguration("InvalidTypeConfiguration"),
     HandlerInternalFailure("HandlerInternalFailure"),
     NonCompliant("NonCompliant"),
-    Unknown("Unknown");
+    Unknown("Unknown"),
+    UnsupportedTarget("UnsupportedTarget");
 
     private String value;
 

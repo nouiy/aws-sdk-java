@@ -259,6 +259,31 @@ public interface AWSIoTTwinMaker {
 
     /**
      * <p>
+     * Run queries to access information from your knowledge graph of entities within individual workspaces.
+     * </p>
+     * 
+     * @param executeQueryRequest
+     * @return Result of the ExecuteQuery operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error has occurred.
+     * @throws AccessDeniedException
+     *         Access is denied.
+     * @throws QueryTimeoutException
+     *         The query timeout exception.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
+     * @throws ServiceQuotaExceededException
+     *         The service quota was exceeded.
+     * @sample AWSIoTTwinMaker.ExecuteQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/ExecuteQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ExecuteQueryResult executeQuery(ExecuteQueryRequest executeQueryRequest);
+
+    /**
+     * <p>
      * Retrieves information about a component type.
      * </p>
      * 
@@ -272,6 +297,8 @@ public interface AWSIoTTwinMaker {
      *         The resource wasn't found.
      * @throws ThrottlingException
      *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
      * @sample AWSIoTTwinMaker.GetComponentType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/GetComponentType" target="_top">AWS
      *      API Documentation</a>
@@ -300,6 +327,27 @@ public interface AWSIoTTwinMaker {
      *      Documentation</a>
      */
     GetEntityResult getEntity(GetEntityRequest getEntityRequest);
+
+    /**
+     * <p>
+     * Gets the pricing plan.
+     * </p>
+     * 
+     * @param getPricingPlanRequest
+     * @return Result of the GetPricingPlan operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error has occurred.
+     * @throws AccessDeniedException
+     *         Access is denied.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
+     * @sample AWSIoTTwinMaker.GetPricingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/GetPricingPlan" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetPricingPlanResult getPricingPlan(GetPricingPlanRequest getPricingPlanRequest);
 
     /**
      * <p>
@@ -599,6 +647,27 @@ public interface AWSIoTTwinMaker {
      *      Documentation</a>
      */
     UpdateEntityResult updateEntity(UpdateEntityRequest updateEntityRequest);
+
+    /**
+     * <p>
+     * Update the pricing plan.
+     * </p>
+     * 
+     * @param updatePricingPlanRequest
+     * @return Result of the UpdatePricingPlan operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error has occurred.
+     * @throws AccessDeniedException
+     *         Access is denied.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
+     * @sample AWSIoTTwinMaker.UpdatePricingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/UpdatePricingPlan" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdatePricingPlanResult updatePricingPlan(UpdatePricingPlanRequest updatePricingPlanRequest);
 
     /**
      * <p>

@@ -48,14 +48,6 @@ public class FunctionResponseJsonUnmarshaller implements Unmarshaller<FunctionRe
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("implementedBy", targetDepth)) {
-                    context.nextToken();
-                    functionResponse.setImplementedBy(DataConnectorJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("isInherited", targetDepth)) {
-                    context.nextToken();
-                    functionResponse.setIsInherited(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
                 if (context.testExpression("requiredProperties", targetDepth)) {
                     context.nextToken();
                     functionResponse.setRequiredProperties(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
@@ -65,6 +57,14 @@ public class FunctionResponseJsonUnmarshaller implements Unmarshaller<FunctionRe
                 if (context.testExpression("scope", targetDepth)) {
                     context.nextToken();
                     functionResponse.setScope(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("implementedBy", targetDepth)) {
+                    context.nextToken();
+                    functionResponse.setImplementedBy(DataConnectorJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("isInherited", targetDepth)) {
+                    context.nextToken();
+                    functionResponse.setIsInherited(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

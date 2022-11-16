@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class StatusMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> ERROR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("error").build();
     private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("state").build();
+    private static final MarshallingInfo<StructuredPojo> ERROR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("error").build();
 
     private static final StatusMarshaller instance = new StatusMarshaller();
 
@@ -48,8 +48,8 @@ public class StatusMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(status.getError(), ERROR_BINDING);
             protocolMarshaller.marshall(status.getState(), STATE_BINDING);
+            protocolMarshaller.marshall(status.getError(), ERROR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

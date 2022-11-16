@@ -720,6 +720,13 @@ public class DBInstance implements Serializable, Cloneable {
      * </p>
      */
     private Integer storageThroughput;
+    /**
+     * <p>
+     * The Oracle system ID (Oracle SID) for a container database (CDB). The Oracle SID is also the name of the CDB.
+     * This setting is valid for RDS Custom only.
+     * </p>
+     */
+    private String dBSystemId;
 
     /**
      * <p>
@@ -5940,6 +5947,52 @@ public class DBInstance implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The Oracle system ID (Oracle SID) for a container database (CDB). The Oracle SID is also the name of the CDB.
+     * This setting is valid for RDS Custom only.
+     * </p>
+     * 
+     * @param dBSystemId
+     *        The Oracle system ID (Oracle SID) for a container database (CDB). The Oracle SID is also the name of the
+     *        CDB. This setting is valid for RDS Custom only.
+     */
+
+    public void setDBSystemId(String dBSystemId) {
+        this.dBSystemId = dBSystemId;
+    }
+
+    /**
+     * <p>
+     * The Oracle system ID (Oracle SID) for a container database (CDB). The Oracle SID is also the name of the CDB.
+     * This setting is valid for RDS Custom only.
+     * </p>
+     * 
+     * @return The Oracle system ID (Oracle SID) for a container database (CDB). The Oracle SID is also the name of the
+     *         CDB. This setting is valid for RDS Custom only.
+     */
+
+    public String getDBSystemId() {
+        return this.dBSystemId;
+    }
+
+    /**
+     * <p>
+     * The Oracle system ID (Oracle SID) for a container database (CDB). The Oracle SID is also the name of the CDB.
+     * This setting is valid for RDS Custom only.
+     * </p>
+     * 
+     * @param dBSystemId
+     *        The Oracle system ID (Oracle SID) for a container database (CDB). The Oracle SID is also the name of the
+     *        CDB. This setting is valid for RDS Custom only.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBInstance withDBSystemId(String dBSystemId) {
+        setDBSystemId(dBSystemId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -6104,7 +6157,9 @@ public class DBInstance implements Serializable, Cloneable {
         if (getActivityStreamPolicyStatus() != null)
             sb.append("ActivityStreamPolicyStatus: ").append(getActivityStreamPolicyStatus()).append(",");
         if (getStorageThroughput() != null)
-            sb.append("StorageThroughput: ").append(getStorageThroughput());
+            sb.append("StorageThroughput: ").append(getStorageThroughput()).append(",");
+        if (getDBSystemId() != null)
+            sb.append("DBSystemId: ").append(getDBSystemId());
         sb.append("}");
         return sb.toString();
     }
@@ -6436,6 +6491,10 @@ public class DBInstance implements Serializable, Cloneable {
             return false;
         if (other.getStorageThroughput() != null && other.getStorageThroughput().equals(this.getStorageThroughput()) == false)
             return false;
+        if (other.getDBSystemId() == null ^ this.getDBSystemId() == null)
+            return false;
+        if (other.getDBSystemId() != null && other.getDBSystemId().equals(this.getDBSystemId()) == false)
+            return false;
         return true;
     }
 
@@ -6522,6 +6581,7 @@ public class DBInstance implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
         hashCode = prime * hashCode + ((getActivityStreamPolicyStatus() == null) ? 0 : getActivityStreamPolicyStatus().hashCode());
         hashCode = prime * hashCode + ((getStorageThroughput() == null) ? 0 : getStorageThroughput().hashCode());
+        hashCode = prime * hashCode + ((getDBSystemId() == null) ? 0 : getDBSystemId().hashCode());
         return hashCode;
     }
 

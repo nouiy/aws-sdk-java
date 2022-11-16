@@ -78,6 +78,13 @@ public class UpdatePricingRuleResult extends com.amazonaws.AmazonWebServiceResul
      * </p>
      */
     private Long lastModifiedTime;
+    /**
+     * <p>
+     * The seller of services provided by Amazon Web Services, their affiliates, or third-party providers selling
+     * services via Amazon Web Services Marketplace.
+     * </p>
+     */
+    private String billingEntity;
 
     /**
      * <p>
@@ -484,6 +491,52 @@ public class UpdatePricingRuleResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * The seller of services provided by Amazon Web Services, their affiliates, or third-party providers selling
+     * services via Amazon Web Services Marketplace.
+     * </p>
+     * 
+     * @param billingEntity
+     *        The seller of services provided by Amazon Web Services, their affiliates, or third-party providers selling
+     *        services via Amazon Web Services Marketplace.
+     */
+
+    public void setBillingEntity(String billingEntity) {
+        this.billingEntity = billingEntity;
+    }
+
+    /**
+     * <p>
+     * The seller of services provided by Amazon Web Services, their affiliates, or third-party providers selling
+     * services via Amazon Web Services Marketplace.
+     * </p>
+     * 
+     * @return The seller of services provided by Amazon Web Services, their affiliates, or third-party providers
+     *         selling services via Amazon Web Services Marketplace.
+     */
+
+    public String getBillingEntity() {
+        return this.billingEntity;
+    }
+
+    /**
+     * <p>
+     * The seller of services provided by Amazon Web Services, their affiliates, or third-party providers selling
+     * services via Amazon Web Services Marketplace.
+     * </p>
+     * 
+     * @param billingEntity
+     *        The seller of services provided by Amazon Web Services, their affiliates, or third-party providers selling
+     *        services via Amazon Web Services Marketplace.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePricingRuleResult withBillingEntity(String billingEntity) {
+        setBillingEntity(billingEntity);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -512,7 +565,9 @@ public class UpdatePricingRuleResult extends com.amazonaws.AmazonWebServiceResul
         if (getAssociatedPricingPlanCount() != null)
             sb.append("AssociatedPricingPlanCount: ").append(getAssociatedPricingPlanCount()).append(",");
         if (getLastModifiedTime() != null)
-            sb.append("LastModifiedTime: ").append(getLastModifiedTime());
+            sb.append("LastModifiedTime: ").append(getLastModifiedTime()).append(",");
+        if (getBillingEntity() != null)
+            sb.append("BillingEntity: ").append(getBillingEntity());
         sb.append("}");
         return sb.toString();
     }
@@ -563,6 +618,10 @@ public class UpdatePricingRuleResult extends com.amazonaws.AmazonWebServiceResul
             return false;
         if (other.getLastModifiedTime() != null && other.getLastModifiedTime().equals(this.getLastModifiedTime()) == false)
             return false;
+        if (other.getBillingEntity() == null ^ this.getBillingEntity() == null)
+            return false;
+        if (other.getBillingEntity() != null && other.getBillingEntity().equals(this.getBillingEntity()) == false)
+            return false;
         return true;
     }
 
@@ -580,6 +639,7 @@ public class UpdatePricingRuleResult extends com.amazonaws.AmazonWebServiceResul
         hashCode = prime * hashCode + ((getService() == null) ? 0 : getService().hashCode());
         hashCode = prime * hashCode + ((getAssociatedPricingPlanCount() == null) ? 0 : getAssociatedPricingPlanCount().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
+        hashCode = prime * hashCode + ((getBillingEntity() == null) ? 0 : getBillingEntity().hashCode());
         return hashCode;
     }
 

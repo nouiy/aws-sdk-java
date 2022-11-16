@@ -48,13 +48,13 @@ public class PropertyFilterJsonUnmarshaller implements Unmarshaller<PropertyFilt
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("operator", targetDepth)) {
-                    context.nextToken();
-                    propertyFilter.setOperator(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("propertyName", targetDepth)) {
                     context.nextToken();
                     propertyFilter.setPropertyName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("operator", targetDepth)) {
+                    context.nextToken();
+                    propertyFilter.setOperator(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("value", targetDepth)) {
                     context.nextToken();

@@ -28,14 +28,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListEntitiesRequestMarshaller {
 
+    private static final MarshallingInfo<String> WORKSPACEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("workspaceId").build();
     private static final MarshallingInfo<List> FILTERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("filters").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("nextToken").build();
-    private static final MarshallingInfo<String> WORKSPACEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("workspaceId").build();
 
     private static final ListEntitiesRequestMarshaller instance = new ListEntitiesRequestMarshaller();
 
@@ -53,10 +53,10 @@ public class ListEntitiesRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(listEntitiesRequest.getWorkspaceId(), WORKSPACEID_BINDING);
             protocolMarshaller.marshall(listEntitiesRequest.getFilters(), FILTERS_BINDING);
             protocolMarshaller.marshall(listEntitiesRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listEntitiesRequest.getNextToken(), NEXTTOKEN_BINDING);
-            protocolMarshaller.marshall(listEntitiesRequest.getWorkspaceId(), WORKSPACEID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

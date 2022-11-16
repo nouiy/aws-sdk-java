@@ -48,10 +48,6 @@ public class PropertyValueJsonUnmarshaller implements Unmarshaller<PropertyValue
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("time", targetDepth)) {
-                    context.nextToken();
-                    propertyValue.setTime(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("timestamp", targetDepth)) {
                     context.nextToken();
                     propertyValue.setTimestamp(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
@@ -59,6 +55,10 @@ public class PropertyValueJsonUnmarshaller implements Unmarshaller<PropertyValue
                 if (context.testExpression("value", targetDepth)) {
                     context.nextToken();
                     propertyValue.setValue(DataValueJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("time", targetDepth)) {
+                    context.nextToken();
+                    propertyValue.setTime(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

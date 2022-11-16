@@ -203,7 +203,7 @@ public class Item implements Serializable, Cloneable, StructuredPojo {
         if (getItemId() != null)
             sb.append("ItemId: ").append(getItemId()).append(",");
         if (getProperties() != null)
-            sb.append("Properties: ").append(getProperties());
+            sb.append("Properties: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

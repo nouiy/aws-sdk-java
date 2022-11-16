@@ -48,6 +48,10 @@ public class ListEntitiesFilterJsonUnmarshaller implements Unmarshaller<ListEnti
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("parentEntityId", targetDepth)) {
+                    context.nextToken();
+                    listEntitiesFilter.setParentEntityId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("componentTypeId", targetDepth)) {
                     context.nextToken();
                     listEntitiesFilter.setComponentTypeId(context.getUnmarshaller(String.class).unmarshall(context));
@@ -55,10 +59,6 @@ public class ListEntitiesFilterJsonUnmarshaller implements Unmarshaller<ListEnti
                 if (context.testExpression("externalId", targetDepth)) {
                     context.nextToken();
                     listEntitiesFilter.setExternalId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("parentEntityId", targetDepth)) {
-                    context.nextToken();
-                    listEntitiesFilter.setParentEntityId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

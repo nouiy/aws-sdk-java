@@ -32,6 +32,8 @@ public class OutpostConfigResponseMarshaller {
             .marshallLocationName("outpostArns").build();
     private static final MarshallingInfo<String> CONTROLPLANEINSTANCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("controlPlaneInstanceType").build();
+    private static final MarshallingInfo<StructuredPojo> CONTROLPLANEPLACEMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("controlPlanePlacement").build();
 
     private static final OutpostConfigResponseMarshaller instance = new OutpostConfigResponseMarshaller();
 
@@ -51,6 +53,7 @@ public class OutpostConfigResponseMarshaller {
         try {
             protocolMarshaller.marshall(outpostConfigResponse.getOutpostArns(), OUTPOSTARNS_BINDING);
             protocolMarshaller.marshall(outpostConfigResponse.getControlPlaneInstanceType(), CONTROLPLANEINSTANCETYPE_BINDING);
+            protocolMarshaller.marshall(outpostConfigResponse.getControlPlanePlacement(), CONTROLPLANEPLACEMENT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

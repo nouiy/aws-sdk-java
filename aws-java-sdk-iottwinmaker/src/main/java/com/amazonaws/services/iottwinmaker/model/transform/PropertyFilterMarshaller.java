@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PropertyFilterMarshaller {
 
-    private static final MarshallingInfo<String> OPERATOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("operator").build();
     private static final MarshallingInfo<String> PROPERTYNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("propertyName").build();
+    private static final MarshallingInfo<String> OPERATOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("operator").build();
     private static final MarshallingInfo<StructuredPojo> VALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("value").build();
 
@@ -50,8 +50,8 @@ public class PropertyFilterMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(propertyFilter.getOperator(), OPERATOR_BINDING);
             protocolMarshaller.marshall(propertyFilter.getPropertyName(), PROPERTYNAME_BINDING);
+            protocolMarshaller.marshall(propertyFilter.getOperator(), OPERATOR_BINDING);
             protocolMarshaller.marshall(propertyFilter.getValue(), VALUE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

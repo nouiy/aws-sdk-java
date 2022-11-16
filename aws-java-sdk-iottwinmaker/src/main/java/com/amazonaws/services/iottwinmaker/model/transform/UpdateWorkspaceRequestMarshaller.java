@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdateWorkspaceRequestMarshaller {
 
+    private static final MarshallingInfo<String> WORKSPACEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("workspaceId").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("description").build();
     private static final MarshallingInfo<String> ROLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("role").build();
-    private static final MarshallingInfo<String> WORKSPACEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("workspaceId").build();
 
     private static final UpdateWorkspaceRequestMarshaller instance = new UpdateWorkspaceRequestMarshaller();
 
@@ -50,9 +50,9 @@ public class UpdateWorkspaceRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(updateWorkspaceRequest.getWorkspaceId(), WORKSPACEID_BINDING);
             protocolMarshaller.marshall(updateWorkspaceRequest.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateWorkspaceRequest.getRole(), ROLE_BINDING);
-            protocolMarshaller.marshall(updateWorkspaceRequest.getWorkspaceId(), WORKSPACEID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

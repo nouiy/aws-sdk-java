@@ -48,6 +48,12 @@ public class ComponentTypeSummary implements Serializable, Cloneable, Structured
     private java.util.Date creationDateTime;
     /**
      * <p>
+     * The date and time when the component type was last updated.
+     * </p>
+     */
+    private java.util.Date updateDateTime;
+    /**
+     * <p>
      * The description of the component type.
      * </p>
      */
@@ -58,12 +64,6 @@ public class ComponentTypeSummary implements Serializable, Cloneable, Structured
      * </p>
      */
     private Status status;
-    /**
-     * <p>
-     * The date and time when the component type was last updated.
-     * </p>
-     */
-    private java.util.Date updateDateTime;
 
     /**
      * <p>
@@ -187,6 +187,46 @@ public class ComponentTypeSummary implements Serializable, Cloneable, Structured
 
     /**
      * <p>
+     * The date and time when the component type was last updated.
+     * </p>
+     * 
+     * @param updateDateTime
+     *        The date and time when the component type was last updated.
+     */
+
+    public void setUpdateDateTime(java.util.Date updateDateTime) {
+        this.updateDateTime = updateDateTime;
+    }
+
+    /**
+     * <p>
+     * The date and time when the component type was last updated.
+     * </p>
+     * 
+     * @return The date and time when the component type was last updated.
+     */
+
+    public java.util.Date getUpdateDateTime() {
+        return this.updateDateTime;
+    }
+
+    /**
+     * <p>
+     * The date and time when the component type was last updated.
+     * </p>
+     * 
+     * @param updateDateTime
+     *        The date and time when the component type was last updated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentTypeSummary withUpdateDateTime(java.util.Date updateDateTime) {
+        setUpdateDateTime(updateDateTime);
+        return this;
+    }
+
+    /**
+     * <p>
      * The description of the component type.
      * </p>
      * 
@@ -266,46 +306,6 @@ public class ComponentTypeSummary implements Serializable, Cloneable, Structured
     }
 
     /**
-     * <p>
-     * The date and time when the component type was last updated.
-     * </p>
-     * 
-     * @param updateDateTime
-     *        The date and time when the component type was last updated.
-     */
-
-    public void setUpdateDateTime(java.util.Date updateDateTime) {
-        this.updateDateTime = updateDateTime;
-    }
-
-    /**
-     * <p>
-     * The date and time when the component type was last updated.
-     * </p>
-     * 
-     * @return The date and time when the component type was last updated.
-     */
-
-    public java.util.Date getUpdateDateTime() {
-        return this.updateDateTime;
-    }
-
-    /**
-     * <p>
-     * The date and time when the component type was last updated.
-     * </p>
-     * 
-     * @param updateDateTime
-     *        The date and time when the component type was last updated.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ComponentTypeSummary withUpdateDateTime(java.util.Date updateDateTime) {
-        setUpdateDateTime(updateDateTime);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -323,12 +323,12 @@ public class ComponentTypeSummary implements Serializable, Cloneable, Structured
             sb.append("ComponentTypeId: ").append(getComponentTypeId()).append(",");
         if (getCreationDateTime() != null)
             sb.append("CreationDateTime: ").append(getCreationDateTime()).append(",");
+        if (getUpdateDateTime() != null)
+            sb.append("UpdateDateTime: ").append(getUpdateDateTime()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getStatus() != null)
-            sb.append("Status: ").append(getStatus()).append(",");
-        if (getUpdateDateTime() != null)
-            sb.append("UpdateDateTime: ").append(getUpdateDateTime());
+            sb.append("Status: ").append(getStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -355,6 +355,10 @@ public class ComponentTypeSummary implements Serializable, Cloneable, Structured
             return false;
         if (other.getCreationDateTime() != null && other.getCreationDateTime().equals(this.getCreationDateTime()) == false)
             return false;
+        if (other.getUpdateDateTime() == null ^ this.getUpdateDateTime() == null)
+            return false;
+        if (other.getUpdateDateTime() != null && other.getUpdateDateTime().equals(this.getUpdateDateTime()) == false)
+            return false;
         if (other.getDescription() == null ^ this.getDescription() == null)
             return false;
         if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
@@ -362,10 +366,6 @@ public class ComponentTypeSummary implements Serializable, Cloneable, Structured
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
-            return false;
-        if (other.getUpdateDateTime() == null ^ this.getUpdateDateTime() == null)
-            return false;
-        if (other.getUpdateDateTime() != null && other.getUpdateDateTime().equals(this.getUpdateDateTime()) == false)
             return false;
         return true;
     }
@@ -378,9 +378,9 @@ public class ComponentTypeSummary implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getComponentTypeId() == null) ? 0 : getComponentTypeId().hashCode());
         hashCode = prime * hashCode + ((getCreationDateTime() == null) ? 0 : getCreationDateTime().hashCode());
+        hashCode = prime * hashCode + ((getUpdateDateTime() == null) ? 0 : getUpdateDateTime().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
-        hashCode = prime * hashCode + ((getUpdateDateTime() == null) ? 0 : getUpdateDateTime().hashCode());
         return hashCode;
     }
 

@@ -394,6 +394,11 @@ public class AWSBatchClient extends AmazonWebServiceClient implements AWSBatch {
      * </p>
      * <note>
      * <p>
+     * To create a compute environment that uses EKS resources, the caller must have permissions to call
+     * <code>eks:DescribeCluster</code>.
+     * </p>
+     * </note> <note>
+     * <p>
      * Batch doesn't automatically upgrade the AMIs in a compute environment after it's created. For example, it also
      * doesn't update the AMIs in your compute environment when a newer version of the Amazon ECS optimized AMI is
      * available. You're responsible for the management of the guest operating system. This includes any updates and

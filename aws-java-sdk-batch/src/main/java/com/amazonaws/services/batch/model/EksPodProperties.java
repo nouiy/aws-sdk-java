@@ -60,8 +60,7 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
      * policy</a> in the <i>Kubernetes documentation</i>.
      * </p>
      * <p>
-     * Valid values: <code>Default</code> | <code>ClusterFirst</code> | <code>ClusterFirstWithHostNet</code> |
-     * <code>None</code>
+     * Valid values: <code>Default</code> | <code>ClusterFirst</code> | <code>ClusterFirstWithHostNet</code>
      * </p>
      */
     private String dnsPolicy;
@@ -257,8 +256,7 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
      * policy</a> in the <i>Kubernetes documentation</i>.
      * </p>
      * <p>
-     * Valid values: <code>Default</code> | <code>ClusterFirst</code> | <code>ClusterFirstWithHostNet</code> |
-     * <code>None</code>
+     * Valid values: <code>Default</code> | <code>ClusterFirst</code> | <code>ClusterFirstWithHostNet</code>
      * </p>
      * 
      * @param dnsPolicy
@@ -269,8 +267,7 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
      *        href="https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-policy">Pod's DNS
      *        policy</a> in the <i>Kubernetes documentation</i>.</p>
      *        <p>
-     *        Valid values: <code>Default</code> | <code>ClusterFirst</code> | <code>ClusterFirstWithHostNet</code> |
-     *        <code>None</code>
+     *        Valid values: <code>Default</code> | <code>ClusterFirst</code> | <code>ClusterFirstWithHostNet</code>
      */
 
     public void setDnsPolicy(String dnsPolicy) {
@@ -287,8 +284,7 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
      * policy</a> in the <i>Kubernetes documentation</i>.
      * </p>
      * <p>
-     * Valid values: <code>Default</code> | <code>ClusterFirst</code> | <code>ClusterFirstWithHostNet</code> |
-     * <code>None</code>
+     * Valid values: <code>Default</code> | <code>ClusterFirst</code> | <code>ClusterFirstWithHostNet</code>
      * </p>
      * 
      * @return The DNS policy for the pod. The default value is <code>ClusterFirst</code>. If the
@@ -298,8 +294,7 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
      *         href="https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-policy">Pod's
      *         DNS policy</a> in the <i>Kubernetes documentation</i>.</p>
      *         <p>
-     *         Valid values: <code>Default</code> | <code>ClusterFirst</code> | <code>ClusterFirstWithHostNet</code> |
-     *         <code>None</code>
+     *         Valid values: <code>Default</code> | <code>ClusterFirst</code> | <code>ClusterFirstWithHostNet</code>
      */
 
     public String getDnsPolicy() {
@@ -316,8 +311,7 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
      * policy</a> in the <i>Kubernetes documentation</i>.
      * </p>
      * <p>
-     * Valid values: <code>Default</code> | <code>ClusterFirst</code> | <code>ClusterFirstWithHostNet</code> |
-     * <code>None</code>
+     * Valid values: <code>Default</code> | <code>ClusterFirst</code> | <code>ClusterFirstWithHostNet</code>
      * </p>
      * 
      * @param dnsPolicy
@@ -328,8 +322,7 @@ public class EksPodProperties implements Serializable, Cloneable, StructuredPojo
      *        href="https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-policy">Pod's DNS
      *        policy</a> in the <i>Kubernetes documentation</i>.</p>
      *        <p>
-     *        Valid values: <code>Default</code> | <code>ClusterFirst</code> | <code>ClusterFirstWithHostNet</code> |
-     *        <code>None</code>
+     *        Valid values: <code>Default</code> | <code>ClusterFirst</code> | <code>ClusterFirstWithHostNet</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

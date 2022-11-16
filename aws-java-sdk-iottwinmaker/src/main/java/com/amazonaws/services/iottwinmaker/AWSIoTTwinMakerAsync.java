@@ -316,6 +316,37 @@ public interface AWSIoTTwinMakerAsync extends AWSIoTTwinMaker {
 
     /**
      * <p>
+     * Run queries to access information from your knowledge graph of entities within individual workspaces.
+     * </p>
+     * 
+     * @param executeQueryRequest
+     * @return A Java Future containing the result of the ExecuteQuery operation returned by the service.
+     * @sample AWSIoTTwinMakerAsync.ExecuteQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/ExecuteQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ExecuteQueryResult> executeQueryAsync(ExecuteQueryRequest executeQueryRequest);
+
+    /**
+     * <p>
+     * Run queries to access information from your knowledge graph of entities within individual workspaces.
+     * </p>
+     * 
+     * @param executeQueryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ExecuteQuery operation returned by the service.
+     * @sample AWSIoTTwinMakerAsyncHandler.ExecuteQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/ExecuteQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ExecuteQueryResult> executeQueryAsync(ExecuteQueryRequest executeQueryRequest,
+            com.amazonaws.handlers.AsyncHandler<ExecuteQueryRequest, ExecuteQueryResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves information about a component type.
      * </p>
      * 
@@ -375,6 +406,37 @@ public interface AWSIoTTwinMakerAsync extends AWSIoTTwinMaker {
      */
     java.util.concurrent.Future<GetEntityResult> getEntityAsync(GetEntityRequest getEntityRequest,
             com.amazonaws.handlers.AsyncHandler<GetEntityRequest, GetEntityResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the pricing plan.
+     * </p>
+     * 
+     * @param getPricingPlanRequest
+     * @return A Java Future containing the result of the GetPricingPlan operation returned by the service.
+     * @sample AWSIoTTwinMakerAsync.GetPricingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/GetPricingPlan" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetPricingPlanResult> getPricingPlanAsync(GetPricingPlanRequest getPricingPlanRequest);
+
+    /**
+     * <p>
+     * Gets the pricing plan.
+     * </p>
+     * 
+     * @param getPricingPlanRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetPricingPlan operation returned by the service.
+     * @sample AWSIoTTwinMakerAsyncHandler.GetPricingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/GetPricingPlan" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetPricingPlanResult> getPricingPlanAsync(GetPricingPlanRequest getPricingPlanRequest,
+            com.amazonaws.handlers.AsyncHandler<GetPricingPlanRequest, GetPricingPlanResult> asyncHandler);
 
     /**
      * <p>
@@ -798,6 +860,37 @@ public interface AWSIoTTwinMakerAsync extends AWSIoTTwinMaker {
      */
     java.util.concurrent.Future<UpdateEntityResult> updateEntityAsync(UpdateEntityRequest updateEntityRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateEntityRequest, UpdateEntityResult> asyncHandler);
+
+    /**
+     * <p>
+     * Update the pricing plan.
+     * </p>
+     * 
+     * @param updatePricingPlanRequest
+     * @return A Java Future containing the result of the UpdatePricingPlan operation returned by the service.
+     * @sample AWSIoTTwinMakerAsync.UpdatePricingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/UpdatePricingPlan" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePricingPlanResult> updatePricingPlanAsync(UpdatePricingPlanRequest updatePricingPlanRequest);
+
+    /**
+     * <p>
+     * Update the pricing plan.
+     * </p>
+     * 
+     * @param updatePricingPlanRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdatePricingPlan operation returned by the service.
+     * @sample AWSIoTTwinMakerAsyncHandler.UpdatePricingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/UpdatePricingPlan" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePricingPlanResult> updatePricingPlanAsync(UpdatePricingPlanRequest updatePricingPlanRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdatePricingPlanRequest, UpdatePricingPlanResult> asyncHandler);
 
     /**
      * <p>

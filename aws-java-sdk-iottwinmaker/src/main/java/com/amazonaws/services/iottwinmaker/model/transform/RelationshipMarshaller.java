@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class RelationshipMarshaller {
 
-    private static final MarshallingInfo<String> RELATIONSHIPTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("relationshipType").build();
     private static final MarshallingInfo<String> TARGETCOMPONENTTYPEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("targetComponentTypeId").build();
+    private static final MarshallingInfo<String> RELATIONSHIPTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("relationshipType").build();
 
     private static final RelationshipMarshaller instance = new RelationshipMarshaller();
 
@@ -48,8 +48,8 @@ public class RelationshipMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(relationship.getRelationshipType(), RELATIONSHIPTYPE_BINDING);
             protocolMarshaller.marshall(relationship.getTargetComponentTypeId(), TARGETCOMPONENTTYPEID_BINDING);
+            protocolMarshaller.marshall(relationship.getRelationshipType(), RELATIONSHIPTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

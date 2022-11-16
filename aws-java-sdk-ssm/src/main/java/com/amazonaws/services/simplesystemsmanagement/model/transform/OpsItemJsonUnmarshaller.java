@@ -137,6 +137,10 @@ public class OpsItemJsonUnmarshaller implements Unmarshaller<OpsItem, JsonUnmars
                     context.nextToken();
                     opsItem.setPlannedEndTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("OpsItemArn", targetDepth)) {
+                    context.nextToken();
+                    opsItem.setOpsItemArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

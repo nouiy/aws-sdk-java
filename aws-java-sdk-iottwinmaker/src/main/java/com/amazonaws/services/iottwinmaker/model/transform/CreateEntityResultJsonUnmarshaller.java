@@ -48,6 +48,10 @@ public class CreateEntityResultJsonUnmarshaller implements Unmarshaller<CreateEn
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("entityId", targetDepth)) {
+                    context.nextToken();
+                    createEntityResult.setEntityId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     createEntityResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));
@@ -55,10 +59,6 @@ public class CreateEntityResultJsonUnmarshaller implements Unmarshaller<CreateEn
                 if (context.testExpression("creationDateTime", targetDepth)) {
                     context.nextToken();
                     createEntityResult.setCreationDateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
-                }
-                if (context.testExpression("entityId", targetDepth)) {
-                    context.nextToken();
-                    createEntityResult.setEntityId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("state", targetDepth)) {
                     context.nextToken();

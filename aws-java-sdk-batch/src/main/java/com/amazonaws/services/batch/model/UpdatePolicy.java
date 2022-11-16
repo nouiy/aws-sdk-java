@@ -20,8 +20,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Specifies the infrastructure update policy for the compute environment. For more information about infrastructure
- * updates, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/infrastructure-updates.html">Infrastructure
- * updates</a> in the <i>Batch User Guide</i>.
+ * updates, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html">Updating
+ * compute environments</a> in the <i>Batch User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/UpdatePolicy" target="_top">AWS API

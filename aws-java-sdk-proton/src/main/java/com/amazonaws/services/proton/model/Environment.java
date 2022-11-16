@@ -84,8 +84,8 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private String description;
     /**
      * <p>
-     * The ID of the environment account connection that Proton uses to provision infrastructure resources in an
-     * environment account.
+     * The ID of the environment account connection that's used to provision infrastructure resources in an environment
+     * account.
      * </p>
      */
     private String environmentAccountConnectionId;
@@ -115,8 +115,8 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
-     * Amazon Web Services-managed provisioning and CloudFormation on your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
+     * your behalf.
      * </p>
      */
     private String protonServiceRoleArn;
@@ -526,12 +526,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the environment account connection that Proton uses to provision infrastructure resources in an
-     * environment account.
+     * The ID of the environment account connection that's used to provision infrastructure resources in an environment
+     * account.
      * </p>
      * 
      * @param environmentAccountConnectionId
-     *        The ID of the environment account connection that Proton uses to provision infrastructure resources in an
+     *        The ID of the environment account connection that's used to provision infrastructure resources in an
      *        environment account.
      */
 
@@ -541,11 +541,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the environment account connection that Proton uses to provision infrastructure resources in an
-     * environment account.
+     * The ID of the environment account connection that's used to provision infrastructure resources in an environment
+     * account.
      * </p>
      * 
-     * @return The ID of the environment account connection that Proton uses to provision infrastructure resources in an
+     * @return The ID of the environment account connection that's used to provision infrastructure resources in an
      *         environment account.
      */
 
@@ -555,12 +555,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the environment account connection that Proton uses to provision infrastructure resources in an
-     * environment account.
+     * The ID of the environment account connection that's used to provision infrastructure resources in an environment
+     * account.
      * </p>
      * 
      * @param environmentAccountConnectionId
-     *        The ID of the environment account connection that Proton uses to provision infrastructure resources in an
+     *        The ID of the environment account connection that's used to provision infrastructure resources in an
      *        environment account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -732,13 +732,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
-     * Amazon Web Services-managed provisioning and CloudFormation on your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
+     * your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
-     *        using Amazon Web Services-managed provisioning and CloudFormation on your behalf.
+     *        The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other
+     *        services on your behalf.
      */
 
     public void setProtonServiceRoleArn(String protonServiceRoleArn) {
@@ -747,12 +747,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
-     * Amazon Web Services-managed provisioning and CloudFormation on your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
+     * your behalf.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
-     *         using Amazon Web Services-managed provisioning and CloudFormation on your behalf.
+     * @return The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other
+     *         services on your behalf.
      */
 
     public String getProtonServiceRoleArn() {
@@ -761,13 +761,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
-     * Amazon Web Services-managed provisioning and CloudFormation on your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
+     * your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
-     *        using Amazon Web Services-managed provisioning and CloudFormation on your behalf.
+     *        The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other
+     *        services on your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

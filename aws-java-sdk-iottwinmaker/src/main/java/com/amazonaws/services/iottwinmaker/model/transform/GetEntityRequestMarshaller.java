@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GetEntityRequestMarshaller {
 
-    private static final MarshallingInfo<String> ENTITYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
-            .marshallLocationName("entityId").build();
     private static final MarshallingInfo<String> WORKSPACEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("workspaceId").build();
+    private static final MarshallingInfo<String> ENTITYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
+            .marshallLocationName("entityId").build();
 
     private static final GetEntityRequestMarshaller instance = new GetEntityRequestMarshaller();
 
@@ -48,8 +48,8 @@ public class GetEntityRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(getEntityRequest.getEntityId(), ENTITYID_BINDING);
             protocolMarshaller.marshall(getEntityRequest.getWorkspaceId(), WORKSPACEID_BINDING);
+            protocolMarshaller.marshall(getEntityRequest.getEntityId(), ENTITYID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

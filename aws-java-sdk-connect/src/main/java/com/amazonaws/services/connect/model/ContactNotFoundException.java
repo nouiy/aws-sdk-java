@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The contact with the specified ID is not active or does not exist.
+ * The contact with the specified ID is not active or does not exist. Applies to Voice calls only, not to Chat, Task, or
+ * Voice Callback.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -214,6 +214,11 @@ public class DeleteCustomDBEngineVersionResultStaxUnmarshaller implements Unmars
                     deleteCustomDBEngineVersionResult.setSupportsBabelfish(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("CustomDBEngineVersionManifest", targetDepth)) {
+                    deleteCustomDBEngineVersionResult.setCustomDBEngineVersionManifest(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return deleteCustomDBEngineVersionResult;

@@ -180,6 +180,22 @@ public enum Region {
     EU_South_1("eu-south-1"),
 
     /**
+     * The EU (Spain) Amazon S3 Region. This region uses Amazon S3 servers
+     * located in Spain.
+     * <p>
+     *
+     * <pre>
+     * AmazonS3Client s3 = new AmazonS3Client();
+     * s3.setRegion(RegionUtils.getRegion("eu-south-2"));
+     * </pre>
+     *
+     * </p>
+     *
+     * @see AmazonS3Client#setRegion(com.amazonaws.regions.Region)
+     */
+    EU_South_2("eu-south-2"),
+
+    /**
      * The Asia Pacific (Hong Kong) Region. This region uses Amazon S3 servers located
      * in Hong Kong.
      * <p>

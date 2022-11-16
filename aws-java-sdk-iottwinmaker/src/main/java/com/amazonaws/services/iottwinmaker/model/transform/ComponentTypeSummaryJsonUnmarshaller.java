@@ -60,6 +60,10 @@ public class ComponentTypeSummaryJsonUnmarshaller implements Unmarshaller<Compon
                     context.nextToken();
                     componentTypeSummary.setCreationDateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("updateDateTime", targetDepth)) {
+                    context.nextToken();
+                    componentTypeSummary.setUpdateDateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
                 if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
                     componentTypeSummary.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
@@ -67,10 +71,6 @@ public class ComponentTypeSummaryJsonUnmarshaller implements Unmarshaller<Compon
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
                     componentTypeSummary.setStatus(StatusJsonUnmarshaller.getInstance().unmarshall(context));
-                }
-                if (context.testExpression("updateDateTime", targetDepth)) {
-                    context.nextToken();
-                    componentTypeSummary.setUpdateDateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -135,6 +135,12 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private String incidentTemplateTitle;
+    /**
+     * <p>
+     * Information about third-party services integrated into the response plan.
+     * </p>
+     */
+    private java.util.List<Integration> integrations;
 
     /**
      * <p>
@@ -963,6 +969,76 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * Information about third-party services integrated into the response plan.
+     * </p>
+     * 
+     * @return Information about third-party services integrated into the response plan.
+     */
+
+    public java.util.List<Integration> getIntegrations() {
+        return integrations;
+    }
+
+    /**
+     * <p>
+     * Information about third-party services integrated into the response plan.
+     * </p>
+     * 
+     * @param integrations
+     *        Information about third-party services integrated into the response plan.
+     */
+
+    public void setIntegrations(java.util.Collection<Integration> integrations) {
+        if (integrations == null) {
+            this.integrations = null;
+            return;
+        }
+
+        this.integrations = new java.util.ArrayList<Integration>(integrations);
+    }
+
+    /**
+     * <p>
+     * Information about third-party services integrated into the response plan.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setIntegrations(java.util.Collection)} or {@link #withIntegrations(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param integrations
+     *        Information about third-party services integrated into the response plan.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateResponsePlanRequest withIntegrations(Integration... integrations) {
+        if (this.integrations == null) {
+            setIntegrations(new java.util.ArrayList<Integration>(integrations.length));
+        }
+        for (Integration ele : integrations) {
+            this.integrations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about third-party services integrated into the response plan.
+     * </p>
+     * 
+     * @param integrations
+     *        Information about third-party services integrated into the response plan.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateResponsePlanRequest withIntegrations(java.util.Collection<Integration> integrations) {
+        setIntegrations(integrations);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -997,7 +1073,9 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
         if (getIncidentTemplateTags() != null)
             sb.append("IncidentTemplateTags: ").append(getIncidentTemplateTags()).append(",");
         if (getIncidentTemplateTitle() != null)
-            sb.append("IncidentTemplateTitle: ").append(getIncidentTemplateTitle());
+            sb.append("IncidentTemplateTitle: ").append(getIncidentTemplateTitle()).append(",");
+        if (getIntegrations() != null)
+            sb.append("Integrations: ").append(getIntegrations());
         sb.append("}");
         return sb.toString();
     }
@@ -1061,6 +1139,10 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getIncidentTemplateTitle() != null && other.getIncidentTemplateTitle().equals(this.getIncidentTemplateTitle()) == false)
             return false;
+        if (other.getIntegrations() == null ^ this.getIntegrations() == null)
+            return false;
+        if (other.getIntegrations() != null && other.getIntegrations().equals(this.getIntegrations()) == false)
+            return false;
         return true;
     }
 
@@ -1081,6 +1163,7 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getIncidentTemplateSummary() == null) ? 0 : getIncidentTemplateSummary().hashCode());
         hashCode = prime * hashCode + ((getIncidentTemplateTags() == null) ? 0 : getIncidentTemplateTags().hashCode());
         hashCode = prime * hashCode + ((getIncidentTemplateTitle() == null) ? 0 : getIncidentTemplateTitle().hashCode());
+        hashCode = prime * hashCode + ((getIntegrations() == null) ? 0 : getIntegrations().hashCode());
         return hashCode;
     }
 

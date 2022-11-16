@@ -154,6 +154,11 @@ public class AbstractAWSSimpleSystemsManagement implements AWSSimpleSystemsManag
     }
 
     @Override
+    public DeleteResourcePolicyResult deleteResourcePolicy(DeleteResourcePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeregisterManagedInstanceResult deregisterManagedInstance(DeregisterManagedInstanceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -456,6 +461,11 @@ public class AbstractAWSSimpleSystemsManagement implements AWSSimpleSystemsManag
     }
 
     @Override
+    public GetResourcePoliciesResult getResourcePolicies(GetResourcePoliciesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetServiceSettingResult getServiceSetting(GetServiceSettingRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -567,6 +577,11 @@ public class AbstractAWSSimpleSystemsManagement implements AWSSimpleSystemsManag
 
     @Override
     public PutParameterResult putParameter(PutParameterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutResourcePolicyResult putResourcePolicy(PutResourcePolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

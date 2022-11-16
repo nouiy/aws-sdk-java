@@ -52,14 +52,14 @@ public class EntityPropertyReferenceJsonUnmarshaller implements Unmarshaller<Ent
                     context.nextToken();
                     entityPropertyReference.setComponentName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("entityId", targetDepth)) {
-                    context.nextToken();
-                    entityPropertyReference.setEntityId(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("externalIdProperty", targetDepth)) {
                     context.nextToken();
                     entityPropertyReference.setExternalIdProperty(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
+                }
+                if (context.testExpression("entityId", targetDepth)) {
+                    context.nextToken();
+                    entityPropertyReference.setEntityId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("propertyName", targetDepth)) {
                     context.nextToken();

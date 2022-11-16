@@ -3019,6 +3019,21 @@
       }, {
         "name" : "NEGATION",
         "value" : "NEGATION"
+      }, {
+        "name" : "PERTAINS_TO_FAMILY",
+        "value" : "PERTAINS_TO_FAMILY"
+      }, {
+        "name" : "HYPOTHETICAL",
+        "value" : "HYPOTHETICAL"
+      }, {
+        "name" : "LOW_CONFIDENCE",
+        "value" : "LOW_CONFIDENCE"
+      }, {
+        "name" : "PAST_HISTORY",
+        "value" : "PAST_HISTORY"
+      }, {
+        "name" : "FUTURE",
+        "value" : "FUTURE"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.comprehendmedical.enum.AttributeName",
@@ -12513,6 +12528,27 @@
       }, {
         "name" : "TIME_TO_TREATMENT_NAME",
         "value" : "TIME_TO_TREATMENT_NAME"
+      }, {
+        "name" : "AMOUNT",
+        "value" : "AMOUNT"
+      }, {
+        "name" : "GENDER",
+        "value" : "GENDER"
+      }, {
+        "name" : "RACE_ETHNICITY",
+        "value" : "RACE_ETHNICITY"
+      }, {
+        "name" : "ALLERGIES",
+        "value" : "ALLERGIES"
+      }, {
+        "name" : "TOBACCO_USE",
+        "value" : "TOBACCO_USE"
+      }, {
+        "name" : "ALCOHOL_CONSUMPTION",
+        "value" : "ALCOHOL_CONSUMPTION"
+      }, {
+        "name" : "REC_DRUG_USE",
+        "value" : "REC_DRUG_USE"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.comprehendmedical.enum.EntitySubType",
@@ -12575,6 +12611,9 @@
       }, {
         "name" : "TIME_EXPRESSION",
         "value" : "TIME_EXPRESSION"
+      }, {
+        "name" : "BEHAVIORAL_ENVIRONMENTAL_SOCIAL",
+        "value" : "BEHAVIORAL_ENVIRONMENTAL_SOCIAL"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.comprehendmedical.enum.EntityType",
@@ -17170,6 +17209,15 @@
       }, {
         "name" : "SYMPTOM",
         "value" : "SYMPTOM"
+      }, {
+        "name" : "PERTAINS_TO_FAMILY",
+        "value" : "PERTAINS_TO_FAMILY"
+      }, {
+        "name" : "HYPOTHETICAL",
+        "value" : "HYPOTHETICAL"
+      }, {
+        "name" : "LOW_CONFIDENCE",
+        "value" : "LOW_CONFIDENCE"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.comprehendmedical.enum.ICD10CMTraitName",
@@ -25669,6 +25717,9 @@
       }, {
         "name" : "SYSTEM_ORGAN_SITE",
         "value" : "SYSTEM_ORGAN_SITE"
+      }, {
+        "name" : "AMOUNT",
+        "value" : "AMOUNT"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.comprehendmedical.enum.RelationshipType",
@@ -35353,6 +35404,21 @@
       }, {
         "name" : "SYMPTOM",
         "value" : "SYMPTOM"
+      }, {
+        "name" : "PERTAINS_TO_FAMILY",
+        "value" : "PERTAINS_TO_FAMILY"
+      }, {
+        "name" : "HYPOTHETICAL",
+        "value" : "HYPOTHETICAL"
+      }, {
+        "name" : "LOW_CONFIDENCE",
+        "value" : "LOW_CONFIDENCE"
+      }, {
+        "name" : "PAST_HISTORY",
+        "value" : "PAST_HISTORY"
+      }, {
+        "name" : "FUTURE",
+        "value" : "FUTURE"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.comprehendmedical.enum.SNOMEDCTTraitName",

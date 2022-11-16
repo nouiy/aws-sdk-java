@@ -68,6 +68,21 @@ public class ClusterPendingModifiedValuesStaxUnmarshaller implements Unmarshalle
                     clusterPendingModifiedValues.setEngineVersion(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("BackupRetentionPeriod", targetDepth)) {
+                    clusterPendingModifiedValues.setBackupRetentionPeriod(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("AllocatedStorage", targetDepth)) {
+                    clusterPendingModifiedValues.setAllocatedStorage(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("Iops", targetDepth)) {
+                    clusterPendingModifiedValues.setIops(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return clusterPendingModifiedValues;

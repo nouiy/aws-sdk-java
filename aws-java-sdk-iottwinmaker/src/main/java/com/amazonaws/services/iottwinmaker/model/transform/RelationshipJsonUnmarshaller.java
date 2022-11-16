@@ -48,13 +48,13 @@ public class RelationshipJsonUnmarshaller implements Unmarshaller<Relationship, 
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("relationshipType", targetDepth)) {
-                    context.nextToken();
-                    relationship.setRelationshipType(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("targetComponentTypeId", targetDepth)) {
                     context.nextToken();
                     relationship.setTargetComponentTypeId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("relationshipType", targetDepth)) {
+                    context.nextToken();
+                    relationship.setRelationshipType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -76,6 +76,12 @@ public class GetResponsePlanResultJsonUnmarshaller implements Unmarshaller<GetRe
                     context.nextToken();
                     getResponsePlanResult.setIncidentTemplate(IncidentTemplateJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("integrations", targetDepth)) {
+                    context.nextToken();
+                    getResponsePlanResult.setIntegrations(new ListUnmarshaller<Integration>(IntegrationJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     getResponsePlanResult.setName(context.getUnmarshaller(String.class).unmarshall(context));

@@ -66,6 +66,11 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * <p>
      * This parameter isn't applicable to jobs that are running on Fargate resources. Don't specify it.
      * </p>
+     * </note> <note>
+     * <p>
+     * Batch doesn't support changing the desired number of vCPUs of an existing compute environment. Don't specify this
+     * parameter for compute environments using Amazon EKS clusters.
+     * </p>
      * </note>
      */
     private Integer desiredvCpus;
@@ -568,6 +573,11 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * <p>
      * This parameter isn't applicable to jobs that are running on Fargate resources. Don't specify it.
      * </p>
+     * </note> <note>
+     * <p>
+     * Batch doesn't support changing the desired number of vCPUs of an existing compute environment. Don't specify this
+     * parameter for compute environments using Amazon EKS clusters.
+     * </p>
      * </note>
      * 
      * @param desiredvCpus
@@ -575,6 +585,11 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      *        minimum and maximum values based on job queue demand.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources. Don't specify it.
+     *        </p>
+     *        </note> <note>
+     *        <p>
+     *        Batch doesn't support changing the desired number of vCPUs of an existing compute environment. Don't
+     *        specify this parameter for compute environments using Amazon EKS clusters.
      *        </p>
      */
 
@@ -591,12 +606,22 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * <p>
      * This parameter isn't applicable to jobs that are running on Fargate resources. Don't specify it.
      * </p>
+     * </note> <note>
+     * <p>
+     * Batch doesn't support changing the desired number of vCPUs of an existing compute environment. Don't specify this
+     * parameter for compute environments using Amazon EKS clusters.
+     * </p>
      * </note>
      * 
      * @return The desired number of Amazon EC2 vCPUS in the compute environment. Batch modifies this value between the
      *         minimum and maximum values based on job queue demand.</p> <note>
      *         <p>
      *         This parameter isn't applicable to jobs that are running on Fargate resources. Don't specify it.
+     *         </p>
+     *         </note> <note>
+     *         <p>
+     *         Batch doesn't support changing the desired number of vCPUs of an existing compute environment. Don't
+     *         specify this parameter for compute environments using Amazon EKS clusters.
      *         </p>
      */
 
@@ -613,6 +638,11 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      * <p>
      * This parameter isn't applicable to jobs that are running on Fargate resources. Don't specify it.
      * </p>
+     * </note> <note>
+     * <p>
+     * Batch doesn't support changing the desired number of vCPUs of an existing compute environment. Don't specify this
+     * parameter for compute environments using Amazon EKS clusters.
+     * </p>
      * </note>
      * 
      * @param desiredvCpus
@@ -620,6 +650,11 @@ public class ComputeResourceUpdate implements Serializable, Cloneable, Structure
      *        minimum and maximum values based on job queue demand.</p> <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources. Don't specify it.
+     *        </p>
+     *        </note> <note>
+     *        <p>
+     *        Batch doesn't support changing the desired number of vCPUs of an existing compute environment. Don't
+     *        specify this parameter for compute environments using Amazon EKS clusters.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

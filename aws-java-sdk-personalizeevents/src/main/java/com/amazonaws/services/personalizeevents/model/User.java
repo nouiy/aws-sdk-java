@@ -206,7 +206,7 @@ public class User implements Serializable, Cloneable, StructuredPojo {
         if (getUserId() != null)
             sb.append("UserId: ").append(getUserId()).append(",");
         if (getProperties() != null)
-            sb.append("Properties: ").append(getProperties());
+            sb.append("Properties: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

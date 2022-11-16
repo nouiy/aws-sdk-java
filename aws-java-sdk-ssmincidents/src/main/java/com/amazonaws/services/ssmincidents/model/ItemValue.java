@@ -42,6 +42,12 @@ public class ItemValue implements Serializable, Cloneable, StructuredPojo {
     private String metricDefinition;
     /**
      * <p>
+     * Details about an incident that is associated with a PagerDuty incident.
+     * </p>
+     */
+    private PagerDutyIncidentDetail pagerDutyIncidentDetail;
+    /**
+     * <p>
      * The URL, if the related item is a non-Amazon Web Services resource.
      * </p>
      */
@@ -129,6 +135,46 @@ public class ItemValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Details about an incident that is associated with a PagerDuty incident.
+     * </p>
+     * 
+     * @param pagerDutyIncidentDetail
+     *        Details about an incident that is associated with a PagerDuty incident.
+     */
+
+    public void setPagerDutyIncidentDetail(PagerDutyIncidentDetail pagerDutyIncidentDetail) {
+        this.pagerDutyIncidentDetail = pagerDutyIncidentDetail;
+    }
+
+    /**
+     * <p>
+     * Details about an incident that is associated with a PagerDuty incident.
+     * </p>
+     * 
+     * @return Details about an incident that is associated with a PagerDuty incident.
+     */
+
+    public PagerDutyIncidentDetail getPagerDutyIncidentDetail() {
+        return this.pagerDutyIncidentDetail;
+    }
+
+    /**
+     * <p>
+     * Details about an incident that is associated with a PagerDuty incident.
+     * </p>
+     * 
+     * @param pagerDutyIncidentDetail
+     *        Details about an incident that is associated with a PagerDuty incident.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ItemValue withPagerDutyIncidentDetail(PagerDutyIncidentDetail pagerDutyIncidentDetail) {
+        setPagerDutyIncidentDetail(pagerDutyIncidentDetail);
+        return this;
+    }
+
+    /**
+     * <p>
      * The URL, if the related item is a non-Amazon Web Services resource.
      * </p>
      * 
@@ -183,6 +229,8 @@ public class ItemValue implements Serializable, Cloneable, StructuredPojo {
             sb.append("Arn: ").append(getArn()).append(",");
         if (getMetricDefinition() != null)
             sb.append("MetricDefinition: ").append(getMetricDefinition()).append(",");
+        if (getPagerDutyIncidentDetail() != null)
+            sb.append("PagerDutyIncidentDetail: ").append(getPagerDutyIncidentDetail()).append(",");
         if (getUrl() != null)
             sb.append("Url: ").append(getUrl());
         sb.append("}");
@@ -207,6 +255,10 @@ public class ItemValue implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getMetricDefinition() != null && other.getMetricDefinition().equals(this.getMetricDefinition()) == false)
             return false;
+        if (other.getPagerDutyIncidentDetail() == null ^ this.getPagerDutyIncidentDetail() == null)
+            return false;
+        if (other.getPagerDutyIncidentDetail() != null && other.getPagerDutyIncidentDetail().equals(this.getPagerDutyIncidentDetail()) == false)
+            return false;
         if (other.getUrl() == null ^ this.getUrl() == null)
             return false;
         if (other.getUrl() != null && other.getUrl().equals(this.getUrl()) == false)
@@ -221,6 +273,7 @@ public class ItemValue implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getMetricDefinition() == null) ? 0 : getMetricDefinition().hashCode());
+        hashCode = prime * hashCode + ((getPagerDutyIncidentDetail() == null) ? 0 : getPagerDutyIncidentDetail().hashCode());
         hashCode = prime * hashCode + ((getUrl() == null) ? 0 : getUrl().hashCode());
         return hashCode;
     }

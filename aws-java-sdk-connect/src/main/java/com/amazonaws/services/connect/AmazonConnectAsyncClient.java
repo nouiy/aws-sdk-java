@@ -3613,6 +3613,39 @@ public class AmazonConnectAsyncClient extends AmazonConnectClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<MonitorContactResult> monitorContactAsync(MonitorContactRequest request) {
+
+        return monitorContactAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<MonitorContactResult> monitorContactAsync(final MonitorContactRequest request,
+            final com.amazonaws.handlers.AsyncHandler<MonitorContactRequest, MonitorContactResult> asyncHandler) {
+        final MonitorContactRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<MonitorContactResult>() {
+            @Override
+            public MonitorContactResult call() throws Exception {
+                MonitorContactResult result = null;
+
+                try {
+                    result = executeMonitorContact(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<PutUserStatusResult> putUserStatusAsync(PutUserStatusRequest request) {
 
         return putUserStatusAsync(request, null);

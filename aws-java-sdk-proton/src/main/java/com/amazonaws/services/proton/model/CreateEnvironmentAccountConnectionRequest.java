@@ -41,9 +41,9 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
     private String codebuildRoleArn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     * provision directly defined components in the associated environment account. It determines the scope of
-     * infrastructure that a component can provision in the account.
+     * The Amazon Resource Name (ARN) of the IAM service role that Proton uses when provisioning directly defined
+     * components in the associated environment account. It determines the scope of infrastructure that a component can
+     * provision in the account.
      * </p>
      * <p>
      * You must specify <code>componentRoleArn</code> to allow directly defined components to be associated with any
@@ -73,9 +73,8 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
     private String managementAccountId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     * provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in the
-     * associated environment account.
+     * The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. Proton uses
+     * this role to provision infrastructure resources in the associated environment account.
      * </p>
      */
     private String roleArn;
@@ -188,9 +187,9 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     * provision directly defined components in the associated environment account. It determines the scope of
-     * infrastructure that a component can provision in the account.
+     * The Amazon Resource Name (ARN) of the IAM service role that Proton uses when provisioning directly defined
+     * components in the associated environment account. It determines the scope of infrastructure that a component can
+     * provision in the account.
      * </p>
      * <p>
      * You must specify <code>componentRoleArn</code> to allow directly defined components to be associated with any
@@ -203,9 +202,9 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      * </p>
      * 
      * @param componentRoleArn
-     *        The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     *        provision directly defined components in the associated environment account. It determines the scope of
-     *        infrastructure that a component can provision in the account.</p>
+     *        The Amazon Resource Name (ARN) of the IAM service role that Proton uses when provisioning directly defined
+     *        components in the associated environment account. It determines the scope of infrastructure that a
+     *        component can provision in the account.</p>
      *        <p>
      *        You must specify <code>componentRoleArn</code> to allow directly defined components to be associated with
      *        any environments running in this account.
@@ -222,9 +221,9 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     * provision directly defined components in the associated environment account. It determines the scope of
-     * infrastructure that a component can provision in the account.
+     * The Amazon Resource Name (ARN) of the IAM service role that Proton uses when provisioning directly defined
+     * components in the associated environment account. It determines the scope of infrastructure that a component can
+     * provision in the account.
      * </p>
      * <p>
      * You must specify <code>componentRoleArn</code> to allow directly defined components to be associated with any
@@ -236,9 +235,9 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      * <i>Proton User Guide</i>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role
-     *         to provision directly defined components in the associated environment account. It determines the scope
-     *         of infrastructure that a component can provision in the account.</p>
+     * @return The Amazon Resource Name (ARN) of the IAM service role that Proton uses when provisioning directly
+     *         defined components in the associated environment account. It determines the scope of infrastructure that
+     *         a component can provision in the account.</p>
      *         <p>
      *         You must specify <code>componentRoleArn</code> to allow directly defined components to be associated with
      *         any environments running in this account.
@@ -255,9 +254,9 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     * provision directly defined components in the associated environment account. It determines the scope of
-     * infrastructure that a component can provision in the account.
+     * The Amazon Resource Name (ARN) of the IAM service role that Proton uses when provisioning directly defined
+     * components in the associated environment account. It determines the scope of infrastructure that a component can
+     * provision in the account.
      * </p>
      * <p>
      * You must specify <code>componentRoleArn</code> to allow directly defined components to be associated with any
@@ -270,9 +269,9 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
      * </p>
      * 
      * @param componentRoleArn
-     *        The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     *        provision directly defined components in the associated environment account. It determines the scope of
-     *        infrastructure that a component can provision in the account.</p>
+     *        The Amazon Resource Name (ARN) of the IAM service role that Proton uses when provisioning directly defined
+     *        components in the associated environment account. It determines the scope of infrastructure that a
+     *        component can provision in the account.</p>
      *        <p>
      *        You must specify <code>componentRoleArn</code> to allow directly defined components to be associated with
      *        any environments running in this account.
@@ -389,15 +388,13 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     * provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in the
-     * associated environment account.
+     * The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. Proton uses
+     * this role to provision infrastructure resources in the associated environment account.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     *        provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in
-     *        the associated environment account.
+     *        The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. Proton
+     *        uses this role to provision infrastructure resources in the associated environment account.
      */
 
     public void setRoleArn(String roleArn) {
@@ -406,14 +403,12 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     * provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in the
-     * associated environment account.
+     * The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. Proton uses
+     * this role to provision infrastructure resources in the associated environment account.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role
-     *         to provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation
-     *         in the associated environment account.
+     * @return The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. Proton
+     *         uses this role to provision infrastructure resources in the associated environment account.
      */
 
     public String getRoleArn() {
@@ -422,15 +417,13 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     * provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in the
-     * associated environment account.
+     * The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. Proton uses
+     * this role to provision infrastructure resources in the associated environment account.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     *        provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in
-     *        the associated environment account.
+     *        The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. Proton
+     *        uses this role to provision infrastructure resources in the associated environment account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

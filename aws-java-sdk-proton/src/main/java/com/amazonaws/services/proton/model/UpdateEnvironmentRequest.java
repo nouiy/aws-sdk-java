@@ -106,11 +106,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private String description;
     /**
      * <p>
-     * The ID of the environment account connection that you provide if you want Proton to provision infrastructure
-     * resources for your environment or for any of the service instances running in it in an environment account. For
-     * more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton User guide</i>.
+     * The ID of the environment account connection.
      * </p>
      * <p>
      * You can only update to a new environment account connection if it was created in the same environment account
@@ -126,8 +122,8 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private String name;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
-     * Amazon Web Services-managed provisioning and CloudFormation on your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make API calls to other services
+     * your behalf.
      * </p>
      */
     private String protonServiceRoleArn;
@@ -757,11 +753,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the environment account connection that you provide if you want Proton to provision infrastructure
-     * resources for your environment or for any of the service instances running in it in an environment account. For
-     * more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton User guide</i>.
+     * The ID of the environment account connection.
      * </p>
      * <p>
      * You can only update to a new environment account connection if it was created in the same environment account
@@ -769,11 +761,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param environmentAccountConnectionId
-     *        The ID of the environment account connection that you provide if you want Proton to provision
-     *        infrastructure resources for your environment or for any of the service instances running in it in an
-     *        environment account. For more information, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment
-     *        account connections</a> in the <i>Proton User guide</i>.</p>
+     *        The ID of the environment account connection.</p>
      *        <p>
      *        You can only update to a new environment account connection if it was created in the same environment
      *        account that the current environment account connection was created in and is associated with the current
@@ -786,22 +774,14 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the environment account connection that you provide if you want Proton to provision infrastructure
-     * resources for your environment or for any of the service instances running in it in an environment account. For
-     * more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton User guide</i>.
+     * The ID of the environment account connection.
      * </p>
      * <p>
      * You can only update to a new environment account connection if it was created in the same environment account
      * that the current environment account connection was created in and is associated with the current environment.
      * </p>
      * 
-     * @return The ID of the environment account connection that you provide if you want Proton to provision
-     *         infrastructure resources for your environment or for any of the service instances running in it in an
-     *         environment account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment
-     *         account connections</a> in the <i>Proton User guide</i>.</p>
+     * @return The ID of the environment account connection.</p>
      *         <p>
      *         You can only update to a new environment account connection if it was created in the same environment
      *         account that the current environment account connection was created in and is associated with the current
@@ -814,11 +794,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the environment account connection that you provide if you want Proton to provision infrastructure
-     * resources for your environment or for any of the service instances running in it in an environment account. For
-     * more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>Proton User guide</i>.
+     * The ID of the environment account connection.
      * </p>
      * <p>
      * You can only update to a new environment account connection if it was created in the same environment account
@@ -826,11 +802,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param environmentAccountConnectionId
-     *        The ID of the environment account connection that you provide if you want Proton to provision
-     *        infrastructure resources for your environment or for any of the service instances running in it in an
-     *        environment account. For more information, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ag-env-account-connections.html">Environment
-     *        account connections</a> in the <i>Proton User guide</i>.</p>
+     *        The ID of the environment account connection.</p>
      *        <p>
      *        You can only update to a new environment account connection if it was created in the same environment
      *        account that the current environment account connection was created in and is associated with the current
@@ -885,13 +857,13 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
-     * Amazon Web Services-managed provisioning and CloudFormation on your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make API calls to other services
+     * your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
-     *        using Amazon Web Services-managed provisioning and CloudFormation on your behalf.
+     *        The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make API calls to other
+     *        services your behalf.
      */
 
     public void setProtonServiceRoleArn(String protonServiceRoleArn) {
@@ -900,12 +872,12 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
-     * Amazon Web Services-managed provisioning and CloudFormation on your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make API calls to other services
+     * your behalf.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
-     *         using Amazon Web Services-managed provisioning and CloudFormation on your behalf.
+     * @return The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make API calls to other
+     *         services your behalf.
      */
 
     public String getProtonServiceRoleArn() {
@@ -914,13 +886,13 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure using
-     * Amazon Web Services-managed provisioning and CloudFormation on your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make API calls to other services
+     * your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the IAM service role that allows Proton to provision infrastructure
-     *        using Amazon Web Services-managed provisioning and CloudFormation on your behalf.
+     *        The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make API calls to other
+     *        services your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -214,6 +214,11 @@ public class DBEngineVersionStaxUnmarshaller implements Unmarshaller<DBEngineVer
                     dBEngineVersion.setSupportsBabelfish(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("CustomDBEngineVersionManifest", targetDepth)) {
+                    dBEngineVersion.setCustomDBEngineVersionManifest(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return dBEngineVersion;

@@ -75,6 +75,13 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The seller of services provided by Amazon Web Services, their affiliates, or third-party providers selling
+     * services via Amazon Web Services Marketplace.
+     * </p>
+     */
+    private String billingEntity;
 
     /**
      * <p>
@@ -475,6 +482,52 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The seller of services provided by Amazon Web Services, their affiliates, or third-party providers selling
+     * services via Amazon Web Services Marketplace.
+     * </p>
+     * 
+     * @param billingEntity
+     *        The seller of services provided by Amazon Web Services, their affiliates, or third-party providers selling
+     *        services via Amazon Web Services Marketplace.
+     */
+
+    public void setBillingEntity(String billingEntity) {
+        this.billingEntity = billingEntity;
+    }
+
+    /**
+     * <p>
+     * The seller of services provided by Amazon Web Services, their affiliates, or third-party providers selling
+     * services via Amazon Web Services Marketplace.
+     * </p>
+     * 
+     * @return The seller of services provided by Amazon Web Services, their affiliates, or third-party providers
+     *         selling services via Amazon Web Services Marketplace.
+     */
+
+    public String getBillingEntity() {
+        return this.billingEntity;
+    }
+
+    /**
+     * <p>
+     * The seller of services provided by Amazon Web Services, their affiliates, or third-party providers selling
+     * services via Amazon Web Services Marketplace.
+     * </p>
+     * 
+     * @param billingEntity
+     *        The seller of services provided by Amazon Web Services, their affiliates, or third-party providers selling
+     *        services via Amazon Web Services Marketplace.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreatePricingRuleRequest withBillingEntity(String billingEntity) {
+        setBillingEntity(billingEntity);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -501,7 +554,9 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getService() != null)
             sb.append("Service: ").append(getService()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getBillingEntity() != null)
+            sb.append("BillingEntity: ").append(getBillingEntity());
         sb.append("}");
         return sb.toString();
     }
@@ -548,6 +603,10 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getBillingEntity() == null ^ this.getBillingEntity() == null)
+            return false;
+        if (other.getBillingEntity() != null && other.getBillingEntity().equals(this.getBillingEntity()) == false)
+            return false;
         return true;
     }
 
@@ -564,6 +623,7 @@ public class CreatePricingRuleRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getModifierPercentage() == null) ? 0 : getModifierPercentage().hashCode());
         hashCode = prime * hashCode + ((getService() == null) ? 0 : getService().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getBillingEntity() == null) ? 0 : getBillingEntity().hashCode());
         return hashCode;
     }
 

@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DataConnectorMarshaller {
 
-    private static final MarshallingInfo<Boolean> ISNATIVE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("isNative").build();
     private static final MarshallingInfo<StructuredPojo> LAMBDA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lambda").build();
+    private static final MarshallingInfo<Boolean> ISNATIVE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("isNative").build();
 
     private static final DataConnectorMarshaller instance = new DataConnectorMarshaller();
 
@@ -48,8 +48,8 @@ public class DataConnectorMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(dataConnector.getIsNative(), ISNATIVE_BINDING);
             protocolMarshaller.marshall(dataConnector.getLambda(), LAMBDA_BINDING);
+            protocolMarshaller.marshall(dataConnector.getIsNative(), ISNATIVE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

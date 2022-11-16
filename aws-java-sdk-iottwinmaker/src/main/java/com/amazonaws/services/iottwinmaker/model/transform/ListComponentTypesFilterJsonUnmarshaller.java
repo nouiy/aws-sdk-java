@@ -52,13 +52,13 @@ public class ListComponentTypesFilterJsonUnmarshaller implements Unmarshaller<Li
                     context.nextToken();
                     listComponentTypesFilter.setExtendsFrom(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("isAbstract", targetDepth)) {
-                    context.nextToken();
-                    listComponentTypesFilter.setIsAbstract(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
                 if (context.testExpression("namespace", targetDepth)) {
                     context.nextToken();
                     listComponentTypesFilter.setNamespace(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("isAbstract", targetDepth)) {
+                    context.nextToken();
+                    listComponentTypesFilter.setIsAbstract(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

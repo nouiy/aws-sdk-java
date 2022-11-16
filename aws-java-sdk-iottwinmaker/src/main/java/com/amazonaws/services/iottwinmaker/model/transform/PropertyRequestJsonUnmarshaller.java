@@ -52,13 +52,13 @@ public class PropertyRequestJsonUnmarshaller implements Unmarshaller<PropertyReq
                     context.nextToken();
                     propertyRequest.setDefinition(PropertyDefinitionRequestJsonUnmarshaller.getInstance().unmarshall(context));
                 }
-                if (context.testExpression("updateType", targetDepth)) {
-                    context.nextToken();
-                    propertyRequest.setUpdateType(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("value", targetDepth)) {
                     context.nextToken();
                     propertyRequest.setValue(DataValueJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("updateType", targetDepth)) {
+                    context.nextToken();
+                    propertyRequest.setUpdateType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

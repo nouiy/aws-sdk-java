@@ -205,6 +205,17 @@ public class DeleteCustomDBEngineVersionResult extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private Boolean supportsBabelfish;
+    /**
+     * <p>
+     * JSON string that lists the installation files and parameters that RDS Custom uses to create a custom engine
+     * version (CEV). RDS Custom applies the patches in the order in which they're listed in the manifest. You can set
+     * the Oracle home, Oracle base, and UNIX/Linux user and group using the installation parameters. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-cev.preparing.html#custom-cev.preparing.manifest.fields"
+     * >JSON fields in the CEV manifest</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     */
+    private String customDBEngineVersionManifest;
 
     /**
      * <p>
@@ -1759,6 +1770,76 @@ public class DeleteCustomDBEngineVersionResult extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * JSON string that lists the installation files and parameters that RDS Custom uses to create a custom engine
+     * version (CEV). RDS Custom applies the patches in the order in which they're listed in the manifest. You can set
+     * the Oracle home, Oracle base, and UNIX/Linux user and group using the installation parameters. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-cev.preparing.html#custom-cev.preparing.manifest.fields"
+     * >JSON fields in the CEV manifest</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * 
+     * @param customDBEngineVersionManifest
+     *        JSON string that lists the installation files and parameters that RDS Custom uses to create a custom
+     *        engine version (CEV). RDS Custom applies the patches in the order in which they're listed in the manifest.
+     *        You can set the Oracle home, Oracle base, and UNIX/Linux user and group using the installation parameters.
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-cev.preparing.html#custom-cev.preparing.manifest.fields"
+     *        >JSON fields in the CEV manifest</a> in the <i>Amazon RDS User Guide</i>.
+     */
+
+    public void setCustomDBEngineVersionManifest(String customDBEngineVersionManifest) {
+        this.customDBEngineVersionManifest = customDBEngineVersionManifest;
+    }
+
+    /**
+     * <p>
+     * JSON string that lists the installation files and parameters that RDS Custom uses to create a custom engine
+     * version (CEV). RDS Custom applies the patches in the order in which they're listed in the manifest. You can set
+     * the Oracle home, Oracle base, and UNIX/Linux user and group using the installation parameters. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-cev.preparing.html#custom-cev.preparing.manifest.fields"
+     * >JSON fields in the CEV manifest</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * 
+     * @return JSON string that lists the installation files and parameters that RDS Custom uses to create a custom
+     *         engine version (CEV). RDS Custom applies the patches in the order in which they're listed in the
+     *         manifest. You can set the Oracle home, Oracle base, and UNIX/Linux user and group using the installation
+     *         parameters. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-cev.preparing.html#custom-cev.preparing.manifest.fields"
+     *         >JSON fields in the CEV manifest</a> in the <i>Amazon RDS User Guide</i>.
+     */
+
+    public String getCustomDBEngineVersionManifest() {
+        return this.customDBEngineVersionManifest;
+    }
+
+    /**
+     * <p>
+     * JSON string that lists the installation files and parameters that RDS Custom uses to create a custom engine
+     * version (CEV). RDS Custom applies the patches in the order in which they're listed in the manifest. You can set
+     * the Oracle home, Oracle base, and UNIX/Linux user and group using the installation parameters. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-cev.preparing.html#custom-cev.preparing.manifest.fields"
+     * >JSON fields in the CEV manifest</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * 
+     * @param customDBEngineVersionManifest
+     *        JSON string that lists the installation files and parameters that RDS Custom uses to create a custom
+     *        engine version (CEV). RDS Custom applies the patches in the order in which they're listed in the manifest.
+     *        You can set the Oracle home, Oracle base, and UNIX/Linux user and group using the installation parameters.
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-cev.preparing.html#custom-cev.preparing.manifest.fields"
+     *        >JSON fields in the CEV manifest</a> in the <i>Amazon RDS User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteCustomDBEngineVersionResult withCustomDBEngineVersionManifest(String customDBEngineVersionManifest) {
+        setCustomDBEngineVersionManifest(customDBEngineVersionManifest);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1821,7 +1902,9 @@ public class DeleteCustomDBEngineVersionResult extends com.amazonaws.AmazonWebSe
         if (getTagList() != null)
             sb.append("TagList: ").append(getTagList()).append(",");
         if (getSupportsBabelfish() != null)
-            sb.append("SupportsBabelfish: ").append(getSupportsBabelfish());
+            sb.append("SupportsBabelfish: ").append(getSupportsBabelfish()).append(",");
+        if (getCustomDBEngineVersionManifest() != null)
+            sb.append("CustomDBEngineVersionManifest: ").append(getCustomDBEngineVersionManifest());
         sb.append("}");
         return sb.toString();
     }
@@ -1943,6 +2026,11 @@ public class DeleteCustomDBEngineVersionResult extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getSupportsBabelfish() != null && other.getSupportsBabelfish().equals(this.getSupportsBabelfish()) == false)
             return false;
+        if (other.getCustomDBEngineVersionManifest() == null ^ this.getCustomDBEngineVersionManifest() == null)
+            return false;
+        if (other.getCustomDBEngineVersionManifest() != null
+                && other.getCustomDBEngineVersionManifest().equals(this.getCustomDBEngineVersionManifest()) == false)
+            return false;
         return true;
     }
 
@@ -1977,6 +2065,7 @@ public class DeleteCustomDBEngineVersionResult extends com.amazonaws.AmazonWebSe
         hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         hashCode = prime * hashCode + ((getTagList() == null) ? 0 : getTagList().hashCode());
         hashCode = prime * hashCode + ((getSupportsBabelfish() == null) ? 0 : getSupportsBabelfish().hashCode());
+        hashCode = prime * hashCode + ((getCustomDBEngineVersionManifest() == null) ? 0 : getCustomDBEngineVersionManifest().hashCode());
         return hashCode;
     }
 

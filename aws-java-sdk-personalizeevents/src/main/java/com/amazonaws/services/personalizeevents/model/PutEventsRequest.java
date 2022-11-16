@@ -286,11 +286,11 @@ public class PutEventsRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (getTrackingId() != null)
             sb.append("TrackingId: ").append(getTrackingId()).append(",");
         if (getUserId() != null)
-            sb.append("UserId: ").append(getUserId()).append(",");
+            sb.append("UserId: ").append("***Sensitive Data Redacted***").append(",");
         if (getSessionId() != null)
             sb.append("SessionId: ").append(getSessionId()).append(",");
         if (getEventList() != null)
-            sb.append("EventList: ").append(getEventList());
+            sb.append("EventList: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

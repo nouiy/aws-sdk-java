@@ -56,16 +56,8 @@ public class LaunchTemplateSpecification implements Serializable, Cloneable, Str
     private String name;
     /**
      * <p>
-     * The launch template version number, <code>$Latest</code>, or <code>$Default</code>.
-     * </p>
-     * <p>
-     * If the value is <code>$Latest</code>, Amazon EKS uses the latest version of the launch template.
-     * </p>
-     * <p>
-     * If the value is <code>$Default</code>, Amazon EKS uses the default version of the launch template.
-     * </p>
-     * <p>
-     * Default: The default version of the launch template.
+     * The version number of the launch template to use. If no version is specified, then the template's default version
+     * is used.
      * </p>
      */
     private String version;
@@ -136,28 +128,13 @@ public class LaunchTemplateSpecification implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The launch template version number, <code>$Latest</code>, or <code>$Default</code>.
-     * </p>
-     * <p>
-     * If the value is <code>$Latest</code>, Amazon EKS uses the latest version of the launch template.
-     * </p>
-     * <p>
-     * If the value is <code>$Default</code>, Amazon EKS uses the default version of the launch template.
-     * </p>
-     * <p>
-     * Default: The default version of the launch template.
+     * The version number of the launch template to use. If no version is specified, then the template's default version
+     * is used.
      * </p>
      * 
      * @param version
-     *        The launch template version number, <code>$Latest</code>, or <code>$Default</code>.</p>
-     *        <p>
-     *        If the value is <code>$Latest</code>, Amazon EKS uses the latest version of the launch template.
-     *        </p>
-     *        <p>
-     *        If the value is <code>$Default</code>, Amazon EKS uses the default version of the launch template.
-     *        </p>
-     *        <p>
-     *        Default: The default version of the launch template.
+     *        The version number of the launch template to use. If no version is specified, then the template's default
+     *        version is used.
      */
 
     public void setVersion(String version) {
@@ -166,27 +143,12 @@ public class LaunchTemplateSpecification implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The launch template version number, <code>$Latest</code>, or <code>$Default</code>.
-     * </p>
-     * <p>
-     * If the value is <code>$Latest</code>, Amazon EKS uses the latest version of the launch template.
-     * </p>
-     * <p>
-     * If the value is <code>$Default</code>, Amazon EKS uses the default version of the launch template.
-     * </p>
-     * <p>
-     * Default: The default version of the launch template.
+     * The version number of the launch template to use. If no version is specified, then the template's default version
+     * is used.
      * </p>
      * 
-     * @return The launch template version number, <code>$Latest</code>, or <code>$Default</code>.</p>
-     *         <p>
-     *         If the value is <code>$Latest</code>, Amazon EKS uses the latest version of the launch template.
-     *         </p>
-     *         <p>
-     *         If the value is <code>$Default</code>, Amazon EKS uses the default version of the launch template.
-     *         </p>
-     *         <p>
-     *         Default: The default version of the launch template.
+     * @return The version number of the launch template to use. If no version is specified, then the template's default
+     *         version is used.
      */
 
     public String getVersion() {
@@ -195,28 +157,13 @@ public class LaunchTemplateSpecification implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The launch template version number, <code>$Latest</code>, or <code>$Default</code>.
-     * </p>
-     * <p>
-     * If the value is <code>$Latest</code>, Amazon EKS uses the latest version of the launch template.
-     * </p>
-     * <p>
-     * If the value is <code>$Default</code>, Amazon EKS uses the default version of the launch template.
-     * </p>
-     * <p>
-     * Default: The default version of the launch template.
+     * The version number of the launch template to use. If no version is specified, then the template's default version
+     * is used.
      * </p>
      * 
      * @param version
-     *        The launch template version number, <code>$Latest</code>, or <code>$Default</code>.</p>
-     *        <p>
-     *        If the value is <code>$Latest</code>, Amazon EKS uses the latest version of the launch template.
-     *        </p>
-     *        <p>
-     *        If the value is <code>$Default</code>, Amazon EKS uses the default version of the launch template.
-     *        </p>
-     *        <p>
-     *        Default: The default version of the launch template.
+     *        The version number of the launch template to use. If no version is specified, then the template's default
+     *        version is used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

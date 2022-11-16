@@ -27,12 +27,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListEntitiesFilterMarshaller {
 
+    private static final MarshallingInfo<String> PARENTENTITYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parentEntityId").build();
     private static final MarshallingInfo<String> COMPONENTTYPEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("componentTypeId").build();
     private static final MarshallingInfo<String> EXTERNALID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("externalId").build();
-    private static final MarshallingInfo<String> PARENTENTITYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parentEntityId").build();
 
     private static final ListEntitiesFilterMarshaller instance = new ListEntitiesFilterMarshaller();
 
@@ -50,9 +50,9 @@ public class ListEntitiesFilterMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(listEntitiesFilter.getParentEntityId(), PARENTENTITYID_BINDING);
             protocolMarshaller.marshall(listEntitiesFilter.getComponentTypeId(), COMPONENTTYPEID_BINDING);
             protocolMarshaller.marshall(listEntitiesFilter.getExternalId(), EXTERNALID_BINDING);
-            protocolMarshaller.marshall(listEntitiesFilter.getParentEntityId(), PARENTENTITYID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

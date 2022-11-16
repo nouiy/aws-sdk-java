@@ -92,6 +92,30 @@ public class CreateUserRequestMarshaller implements Marshaller<Request<CreateUse
             }
         }
 
+        {
+            AuthenticationMode authenticationMode = createUserRequest.getAuthenticationMode();
+            if (authenticationMode != null) {
+
+                if (authenticationMode.getType() != null) {
+                    request.addParameter("AuthenticationMode.Type", StringUtils.fromString(authenticationMode.getType()));
+                }
+
+                if (!authenticationMode.getPasswords().isEmpty()
+                        || !((com.amazonaws.internal.SdkInternalList<String>) authenticationMode.getPasswords()).isAutoConstruct()) {
+                    com.amazonaws.internal.SdkInternalList<String> passwordsList = (com.amazonaws.internal.SdkInternalList<String>) authenticationMode
+                            .getPasswords();
+                    int passwordsListIndex = 1;
+
+                    for (String passwordsListValue : passwordsList) {
+                        if (passwordsListValue != null) {
+                            request.addParameter("AuthenticationMode.Passwords.member." + passwordsListIndex, StringUtils.fromString(passwordsListValue));
+                        }
+                        passwordsListIndex++;
+                    }
+                }
+            }
+        }
+
         return request;
     }
 

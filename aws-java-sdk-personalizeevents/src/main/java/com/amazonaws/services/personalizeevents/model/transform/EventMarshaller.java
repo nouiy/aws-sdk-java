@@ -44,6 +44,8 @@ public class EventMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommendationId").build();
     private static final MarshallingInfo<List> IMPRESSION_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("impression").build();
+    private static final MarshallingInfo<StructuredPojo> METRICATTRIBUTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("metricAttribution").build();
 
     private static final EventMarshaller instance = new EventMarshaller();
 
@@ -69,6 +71,7 @@ public class EventMarshaller {
             protocolMarshaller.marshall(event.getSentAt(), SENTAT_BINDING);
             protocolMarshaller.marshall(event.getRecommendationId(), RECOMMENDATIONID_BINDING);
             protocolMarshaller.marshall(event.getImpression(), IMPRESSION_BINDING);
+            protocolMarshaller.marshall(event.getMetricAttribution(), METRICATTRIBUTION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

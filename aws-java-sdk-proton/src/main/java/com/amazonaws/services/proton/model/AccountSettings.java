@@ -45,8 +45,8 @@ public class AccountSettings implements Serializable, Cloneable, StructuredPojo 
     private RepositoryBranch pipelineProvisioningRepository;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the service role that Proton uses for provisioning pipelines. Proton assumes
-     * this role for Amazon Web Services-managed provisioning.
+     * The Amazon Resource Name (ARN) of the service role you want to use for provisioning pipelines. Assumed by Proton
+     * for Amazon Web Services-managed provisioning, and by customer-owned automation for self-managed provisioning.
      * </p>
      */
     private String pipelineServiceRoleArn;
@@ -151,13 +151,14 @@ public class AccountSettings implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the service role that Proton uses for provisioning pipelines. Proton assumes
-     * this role for Amazon Web Services-managed provisioning.
+     * The Amazon Resource Name (ARN) of the service role you want to use for provisioning pipelines. Assumed by Proton
+     * for Amazon Web Services-managed provisioning, and by customer-owned automation for self-managed provisioning.
      * </p>
      * 
      * @param pipelineServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the service role that Proton uses for provisioning pipelines. Proton
-     *        assumes this role for Amazon Web Services-managed provisioning.
+     *        The Amazon Resource Name (ARN) of the service role you want to use for provisioning pipelines. Assumed by
+     *        Proton for Amazon Web Services-managed provisioning, and by customer-owned automation for self-managed
+     *        provisioning.
      */
 
     public void setPipelineServiceRoleArn(String pipelineServiceRoleArn) {
@@ -166,12 +167,13 @@ public class AccountSettings implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the service role that Proton uses for provisioning pipelines. Proton assumes
-     * this role for Amazon Web Services-managed provisioning.
+     * The Amazon Resource Name (ARN) of the service role you want to use for provisioning pipelines. Assumed by Proton
+     * for Amazon Web Services-managed provisioning, and by customer-owned automation for self-managed provisioning.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the service role that Proton uses for provisioning pipelines. Proton
-     *         assumes this role for Amazon Web Services-managed provisioning.
+     * @return The Amazon Resource Name (ARN) of the service role you want to use for provisioning pipelines. Assumed by
+     *         Proton for Amazon Web Services-managed provisioning, and by customer-owned automation for self-managed
+     *         provisioning.
      */
 
     public String getPipelineServiceRoleArn() {
@@ -180,13 +182,14 @@ public class AccountSettings implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the service role that Proton uses for provisioning pipelines. Proton assumes
-     * this role for Amazon Web Services-managed provisioning.
+     * The Amazon Resource Name (ARN) of the service role you want to use for provisioning pipelines. Assumed by Proton
+     * for Amazon Web Services-managed provisioning, and by customer-owned automation for self-managed provisioning.
      * </p>
      * 
      * @param pipelineServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the service role that Proton uses for provisioning pipelines. Proton
-     *        assumes this role for Amazon Web Services-managed provisioning.
+     *        The Amazon Resource Name (ARN) of the service role you want to use for provisioning pipelines. Assumed by
+     *        Proton for Amazon Web Services-managed provisioning, and by customer-owned automation for self-managed
+     *        provisioning.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

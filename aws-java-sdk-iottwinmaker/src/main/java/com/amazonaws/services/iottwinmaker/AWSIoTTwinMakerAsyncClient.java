@@ -376,6 +376,39 @@ public class AWSIoTTwinMakerAsyncClient extends AWSIoTTwinMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<ExecuteQueryResult> executeQueryAsync(ExecuteQueryRequest request) {
+
+        return executeQueryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ExecuteQueryResult> executeQueryAsync(final ExecuteQueryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ExecuteQueryRequest, ExecuteQueryResult> asyncHandler) {
+        final ExecuteQueryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ExecuteQueryResult>() {
+            @Override
+            public ExecuteQueryResult call() throws Exception {
+                ExecuteQueryResult result = null;
+
+                try {
+                    result = executeExecuteQuery(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetComponentTypeResult> getComponentTypeAsync(GetComponentTypeRequest request) {
 
         return getComponentTypeAsync(request, null);
@@ -426,6 +459,39 @@ public class AWSIoTTwinMakerAsyncClient extends AWSIoTTwinMakerClient implements
 
                 try {
                     result = executeGetEntity(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPricingPlanResult> getPricingPlanAsync(GetPricingPlanRequest request) {
+
+        return getPricingPlanAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPricingPlanResult> getPricingPlanAsync(final GetPricingPlanRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetPricingPlanRequest, GetPricingPlanResult> asyncHandler) {
+        final GetPricingPlanRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetPricingPlanResult>() {
+            @Override
+            public GetPricingPlanResult call() throws Exception {
+                GetPricingPlanResult result = null;
+
+                try {
+                    result = executeGetPricingPlan(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -855,6 +921,39 @@ public class AWSIoTTwinMakerAsyncClient extends AWSIoTTwinMakerClient implements
 
                 try {
                     result = executeUpdateEntity(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePricingPlanResult> updatePricingPlanAsync(UpdatePricingPlanRequest request) {
+
+        return updatePricingPlanAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePricingPlanResult> updatePricingPlanAsync(final UpdatePricingPlanRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdatePricingPlanRequest, UpdatePricingPlanResult> asyncHandler) {
+        final UpdatePricingPlanRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdatePricingPlanResult>() {
+            @Override
+            public UpdatePricingPlanResult call() throws Exception {
+                UpdatePricingPlanResult result = null;
+
+                try {
+                    result = executeUpdatePricingPlan(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

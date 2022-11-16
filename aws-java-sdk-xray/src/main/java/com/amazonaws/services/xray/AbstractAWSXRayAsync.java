@@ -79,6 +79,19 @@ public class AbstractAWSXRayAsync extends AbstractAWSXRay implements AWSXRayAsyn
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteResourcePolicyResult> deleteResourcePolicyAsync(DeleteResourcePolicyRequest request) {
+
+        return deleteResourcePolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteResourcePolicyResult> deleteResourcePolicyAsync(DeleteResourcePolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteResourcePolicyRequest, DeleteResourcePolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteSamplingRuleResult> deleteSamplingRuleAsync(DeleteSamplingRuleRequest request) {
 
         return deleteSamplingRuleAsync(request, null);
@@ -274,6 +287,19 @@ public class AbstractAWSXRayAsync extends AbstractAWSXRay implements AWSXRayAsyn
     }
 
     @Override
+    public java.util.concurrent.Future<ListResourcePoliciesResult> listResourcePoliciesAsync(ListResourcePoliciesRequest request) {
+
+        return listResourcePoliciesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListResourcePoliciesResult> listResourcePoliciesAsync(ListResourcePoliciesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListResourcePoliciesRequest, ListResourcePoliciesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
 
         return listTagsForResourceAsync(request, null);
@@ -295,6 +321,19 @@ public class AbstractAWSXRayAsync extends AbstractAWSXRay implements AWSXRayAsyn
     @Override
     public java.util.concurrent.Future<PutEncryptionConfigResult> putEncryptionConfigAsync(PutEncryptionConfigRequest request,
             com.amazonaws.handlers.AsyncHandler<PutEncryptionConfigRequest, PutEncryptionConfigResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutResourcePolicyResult> putResourcePolicyAsync(PutResourcePolicyRequest request) {
+
+        return putResourcePolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutResourcePolicyResult> putResourcePolicyAsync(PutResourcePolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutResourcePolicyRequest, PutResourcePolicyResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

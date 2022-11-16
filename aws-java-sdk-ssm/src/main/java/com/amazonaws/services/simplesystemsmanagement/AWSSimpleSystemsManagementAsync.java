@@ -1121,6 +1121,45 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
+     * Deletes a Systems Manager resource policy. A resource policy helps you to define the IAM entity (for example, an
+     * Amazon Web Services account) that can manage your Systems Manager resources. Currently, <code>OpsItemGroup</code>
+     * is the only resource that supports Systems Manager resource policies. The resource policy for
+     * <code>OpsItemGroup</code> enables Amazon Web Services accounts to view and interact with OpsCenter operational
+     * work items (OpsItems).
+     * </p>
+     * 
+     * @param deleteResourcePolicyRequest
+     * @return A Java Future containing the result of the DeleteResourcePolicy operation returned by the service.
+     * @sample AWSSimpleSystemsManagementAsync.DeleteResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeleteResourcePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteResourcePolicyResult> deleteResourcePolicyAsync(DeleteResourcePolicyRequest deleteResourcePolicyRequest);
+
+    /**
+     * <p>
+     * Deletes a Systems Manager resource policy. A resource policy helps you to define the IAM entity (for example, an
+     * Amazon Web Services account) that can manage your Systems Manager resources. Currently, <code>OpsItemGroup</code>
+     * is the only resource that supports Systems Manager resource policies. The resource policy for
+     * <code>OpsItemGroup</code> enables Amazon Web Services accounts to view and interact with OpsCenter operational
+     * work items (OpsItems).
+     * </p>
+     * 
+     * @param deleteResourcePolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteResourcePolicy operation returned by the service.
+     * @sample AWSSimpleSystemsManagementAsyncHandler.DeleteResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeleteResourcePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteResourcePolicyResult> deleteResourcePolicyAsync(DeleteResourcePolicyRequest deleteResourcePolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteResourcePolicyRequest, DeleteResourcePolicyResult> asyncHandler);
+
+    /**
+     * <p>
      * Removes the server or virtual machine from the list of registered servers. You can reregister the node again at
      * any time. If you don't plan to use Run Command on the server, we suggest uninstalling SSM Agent first.
      * </p>
@@ -3515,6 +3554,37 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
+     * Returns an array of the <code>Policy</code> object.
+     * </p>
+     * 
+     * @param getResourcePoliciesRequest
+     * @return A Java Future containing the result of the GetResourcePolicies operation returned by the service.
+     * @sample AWSSimpleSystemsManagementAsync.GetResourcePolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetResourcePolicies" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetResourcePoliciesResult> getResourcePoliciesAsync(GetResourcePoliciesRequest getResourcePoliciesRequest);
+
+    /**
+     * <p>
+     * Returns an array of the <code>Policy</code> object.
+     * </p>
+     * 
+     * @param getResourcePoliciesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetResourcePolicies operation returned by the service.
+     * @sample AWSSimpleSystemsManagementAsyncHandler.GetResourcePolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetResourcePolicies" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetResourcePoliciesResult> getResourcePoliciesAsync(GetResourcePoliciesRequest getResourcePoliciesRequest,
+            com.amazonaws.handlers.AsyncHandler<GetResourcePoliciesRequest, GetResourcePoliciesResult> asyncHandler);
+
+    /**
+     * <p>
      * <code>ServiceSetting</code> is an account-level setting for an Amazon Web Services service. This setting defines
      * how a user interacts with or uses a service or a feature of a service. For example, if an Amazon Web Services
      * service charges money to the account based on feature or service usage, then the Amazon Web Services service team
@@ -4573,6 +4643,45 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      */
     java.util.concurrent.Future<PutParameterResult> putParameterAsync(PutParameterRequest putParameterRequest,
             com.amazonaws.handlers.AsyncHandler<PutParameterRequest, PutParameterResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates or updates a Systems Manager resource policy. A resource policy helps you to define the IAM entity (for
+     * example, an Amazon Web Services account) that can manage your Systems Manager resources. Currently,
+     * <code>OpsItemGroup</code> is the only resource that supports Systems Manager resource policies. The resource
+     * policy for <code>OpsItemGroup</code> enables Amazon Web Services accounts to view and interact with OpsCenter
+     * operational work items (OpsItems).
+     * </p>
+     * 
+     * @param putResourcePolicyRequest
+     * @return A Java Future containing the result of the PutResourcePolicy operation returned by the service.
+     * @sample AWSSimpleSystemsManagementAsync.PutResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/PutResourcePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutResourcePolicyResult> putResourcePolicyAsync(PutResourcePolicyRequest putResourcePolicyRequest);
+
+    /**
+     * <p>
+     * Creates or updates a Systems Manager resource policy. A resource policy helps you to define the IAM entity (for
+     * example, an Amazon Web Services account) that can manage your Systems Manager resources. Currently,
+     * <code>OpsItemGroup</code> is the only resource that supports Systems Manager resource policies. The resource
+     * policy for <code>OpsItemGroup</code> enables Amazon Web Services accounts to view and interact with OpsCenter
+     * operational work items (OpsItems).
+     * </p>
+     * 
+     * @param putResourcePolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutResourcePolicy operation returned by the service.
+     * @sample AWSSimpleSystemsManagementAsyncHandler.PutResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/PutResourcePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<PutResourcePolicyResult> putResourcePolicyAsync(PutResourcePolicyRequest putResourcePolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<PutResourcePolicyRequest, PutResourcePolicyResult> asyncHandler);
 
     /**
      * <p>

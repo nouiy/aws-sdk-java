@@ -82,6 +82,10 @@ public class EventJsonUnmarshaller implements Unmarshaller<Event, JsonUnmarshall
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("metricAttribution", targetDepth)) {
+                    context.nextToken();
+                    event.setMetricAttribution(MetricAttributionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

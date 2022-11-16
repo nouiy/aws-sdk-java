@@ -48,13 +48,13 @@ public class DataConnectorJsonUnmarshaller implements Unmarshaller<DataConnector
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("isNative", targetDepth)) {
-                    context.nextToken();
-                    dataConnector.setIsNative(context.getUnmarshaller(Boolean.class).unmarshall(context));
-                }
                 if (context.testExpression("lambda", targetDepth)) {
                     context.nextToken();
                     dataConnector.setLambda(LambdaFunctionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("isNative", targetDepth)) {
+                    context.nextToken();
+                    dataConnector.setIsNative(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -57,9 +57,8 @@ public class UpdateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
     private String id;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     * provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in the
-     * associated environment account.
+     * The Amazon Resource Name (ARN) of the IAM service role that's associated with the environment account connection
+     * to update.
      * </p>
      */
     private String roleArn;
@@ -258,15 +257,13 @@ public class UpdateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     * provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in the
-     * associated environment account.
+     * The Amazon Resource Name (ARN) of the IAM service role that's associated with the environment account connection
+     * to update.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     *        provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in
-     *        the associated environment account.
+     *        The Amazon Resource Name (ARN) of the IAM service role that's associated with the environment account
+     *        connection to update.
      */
 
     public void setRoleArn(String roleArn) {
@@ -275,14 +272,12 @@ public class UpdateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     * provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in the
-     * associated environment account.
+     * The Amazon Resource Name (ARN) of the IAM service role that's associated with the environment account connection
+     * to update.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role
-     *         to provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation
-     *         in the associated environment account.
+     * @return The Amazon Resource Name (ARN) of the IAM service role that's associated with the environment account
+     *         connection to update.
      */
 
     public String getRoleArn() {
@@ -291,15 +286,13 @@ public class UpdateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     * provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in the
-     * associated environment account.
+     * The Amazon Resource Name (ARN) of the IAM service role that's associated with the environment account connection
+     * to update.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     *        provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in
-     *        the associated environment account.
+     *        The Amazon Resource Name (ARN) of the IAM service role that's associated with the environment account
+     *        connection to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

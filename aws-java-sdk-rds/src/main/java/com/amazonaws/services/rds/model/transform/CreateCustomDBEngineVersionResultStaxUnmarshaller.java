@@ -214,6 +214,11 @@ public class CreateCustomDBEngineVersionResultStaxUnmarshaller implements Unmars
                     createCustomDBEngineVersionResult.setSupportsBabelfish(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("CustomDBEngineVersionManifest", targetDepth)) {
+                    createCustomDBEngineVersionResult.setCustomDBEngineVersionManifest(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return createCustomDBEngineVersionResult;

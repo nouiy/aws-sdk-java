@@ -56,6 +56,10 @@ public class ItemValueJsonUnmarshaller implements Unmarshaller<ItemValue, JsonUn
                     context.nextToken();
                     itemValue.setMetricDefinition(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("pagerDutyIncidentDetail", targetDepth)) {
+                    context.nextToken();
+                    itemValue.setPagerDutyIncidentDetail(PagerDutyIncidentDetailJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("url", targetDepth)) {
                     context.nextToken();
                     itemValue.setUrl(context.getUnmarshaller(String.class).unmarshall(context));

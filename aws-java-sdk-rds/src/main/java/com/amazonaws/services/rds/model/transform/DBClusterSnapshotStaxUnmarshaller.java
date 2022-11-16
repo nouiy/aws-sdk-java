@@ -165,6 +165,10 @@ public class DBClusterSnapshotStaxUnmarshaller implements Unmarshaller<DBCluster
                     continue;
                 }
 
+                if (context.testExpression("DBSystemId", targetDepth)) {
+                    dBClusterSnapshot.setDBSystemId(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return dBClusterSnapshot;

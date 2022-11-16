@@ -58,6 +58,10 @@ public class OutpostConfigResponseJsonUnmarshaller implements Unmarshaller<Outpo
                     context.nextToken();
                     outpostConfigResponse.setControlPlaneInstanceType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("controlPlanePlacement", targetDepth)) {
+                    context.nextToken();
+                    outpostConfigResponse.setControlPlanePlacement(ControlPlanePlacementResponseJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

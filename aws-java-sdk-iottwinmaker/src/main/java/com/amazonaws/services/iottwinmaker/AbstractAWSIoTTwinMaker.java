@@ -73,12 +73,22 @@ public class AbstractAWSIoTTwinMaker implements AWSIoTTwinMaker {
     }
 
     @Override
+    public ExecuteQueryResult executeQuery(ExecuteQueryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetComponentTypeResult getComponentType(GetComponentTypeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public GetEntityResult getEntity(GetEntityRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetPricingPlanResult getPricingPlan(GetPricingPlanRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -144,6 +154,11 @@ public class AbstractAWSIoTTwinMaker implements AWSIoTTwinMaker {
 
     @Override
     public UpdateEntityResult updateEntity(UpdateEntityRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdatePricingPlanResult updatePricingPlan(UpdatePricingPlanRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

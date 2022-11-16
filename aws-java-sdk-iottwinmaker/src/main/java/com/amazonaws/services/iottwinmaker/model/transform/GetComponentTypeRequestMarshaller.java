@@ -27,10 +27,10 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class GetComponentTypeRequestMarshaller {
 
-    private static final MarshallingInfo<String> COMPONENTTYPEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PATH).marshallLocationName("componentTypeId").build();
     private static final MarshallingInfo<String> WORKSPACEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("workspaceId").build();
+    private static final MarshallingInfo<String> COMPONENTTYPEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PATH).marshallLocationName("componentTypeId").build();
 
     private static final GetComponentTypeRequestMarshaller instance = new GetComponentTypeRequestMarshaller();
 
@@ -48,8 +48,8 @@ public class GetComponentTypeRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(getComponentTypeRequest.getComponentTypeId(), COMPONENTTYPEID_BINDING);
             protocolMarshaller.marshall(getComponentTypeRequest.getWorkspaceId(), WORKSPACEID_BINDING);
+            protocolMarshaller.marshall(getComponentTypeRequest.getComponentTypeId(), COMPONENTTYPEID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

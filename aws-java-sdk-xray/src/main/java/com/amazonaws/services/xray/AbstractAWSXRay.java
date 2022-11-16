@@ -58,6 +58,11 @@ public class AbstractAWSXRay implements AWSXRay {
     }
 
     @Override
+    public DeleteResourcePolicyResult deleteResourcePolicy(DeleteResourcePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteSamplingRuleResult deleteSamplingRule(DeleteSamplingRuleRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -133,12 +138,22 @@ public class AbstractAWSXRay implements AWSXRay {
     }
 
     @Override
+    public ListResourcePoliciesResult listResourcePolicies(ListResourcePoliciesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public PutEncryptionConfigResult putEncryptionConfig(PutEncryptionConfigRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutResourcePolicyResult putResourcePolicy(PutResourcePolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

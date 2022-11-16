@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum PricingRuleScope {
 
     GLOBAL("GLOBAL"),
-    SERVICE("SERVICE");
+    SERVICE("SERVICE"),
+    BILLING_ENTITY("BILLING_ENTITY");
 
     private String value;
 

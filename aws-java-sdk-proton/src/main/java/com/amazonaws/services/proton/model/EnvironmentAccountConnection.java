@@ -96,9 +96,7 @@ public class EnvironmentAccountConnection implements Serializable, Cloneable, St
     private java.util.Date requestedAt;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     * provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in the
-     * associated environment account.
+     * The IAM service role that's associated with the environment account connection.
      * </p>
      */
     private String roleArn;
@@ -543,15 +541,11 @@ public class EnvironmentAccountConnection implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     * provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in the
-     * associated environment account.
+     * The IAM service role that's associated with the environment account connection.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     *        provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in
-     *        the associated environment account.
+     *        The IAM service role that's associated with the environment account connection.
      */
 
     public void setRoleArn(String roleArn) {
@@ -560,14 +554,10 @@ public class EnvironmentAccountConnection implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     * provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in the
-     * associated environment account.
+     * The IAM service role that's associated with the environment account connection.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role
-     *         to provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation
-     *         in the associated environment account.
+     * @return The IAM service role that's associated with the environment account connection.
      */
 
     public String getRoleArn() {
@@ -576,15 +566,11 @@ public class EnvironmentAccountConnection implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     * provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in the
-     * associated environment account.
+     * The IAM service role that's associated with the environment account connection.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM service role in the environment account. Proton uses this role to
-     *        provision infrastructure resources using Amazon Web Services-managed provisioning and CloudFormation in
-     *        the associated environment account.
+     *        The IAM service role that's associated with the environment account connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

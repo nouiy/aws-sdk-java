@@ -44,6 +44,8 @@ public class CreateResponsePlanRequestMarshaller {
             .marshallLocationName("engagements").build();
     private static final MarshallingInfo<StructuredPojo> INCIDENTTEMPLATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("incidentTemplate").build();
+    private static final MarshallingInfo<List> INTEGRATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("integrations").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -71,6 +73,7 @@ public class CreateResponsePlanRequestMarshaller {
             protocolMarshaller.marshall(createResponsePlanRequest.getDisplayName(), DISPLAYNAME_BINDING);
             protocolMarshaller.marshall(createResponsePlanRequest.getEngagements(), ENGAGEMENTS_BINDING);
             protocolMarshaller.marshall(createResponsePlanRequest.getIncidentTemplate(), INCIDENTTEMPLATE_BINDING);
+            protocolMarshaller.marshall(createResponsePlanRequest.getIntegrations(), INTEGRATIONS_BINDING);
             protocolMarshaller.marshall(createResponsePlanRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createResponsePlanRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {

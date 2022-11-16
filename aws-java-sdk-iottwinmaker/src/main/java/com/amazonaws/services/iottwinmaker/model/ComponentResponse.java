@@ -36,22 +36,28 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
     private String componentName;
     /**
      * <p>
+     * The description of the component type.
+     * </p>
+     */
+    private String description;
+    /**
+     * <p>
      * The ID of the component type.
      * </p>
      */
     private String componentTypeId;
     /**
      * <p>
+     * The status of the component type.
+     * </p>
+     */
+    private Status status;
+    /**
+     * <p>
      * The name of the property definition set in the request.
      * </p>
      */
     private String definedIn;
-    /**
-     * <p>
-     * The description of the component type.
-     * </p>
-     */
-    private String description;
     /**
      * <p>
      * An object that maps strings to the properties to set in the component type. Each string in the mapping must be
@@ -61,10 +67,10 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
     private java.util.Map<String, PropertyResponse> properties;
     /**
      * <p>
-     * The status of the component type.
+     * The property groups.
      * </p>
      */
-    private Status status;
+    private java.util.Map<String, ComponentPropertyGroupResponse> propertyGroups;
 
     /**
      * <p>
@@ -103,6 +109,46 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
 
     public ComponentResponse withComponentName(String componentName) {
         setComponentName(componentName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The description of the component type.
+     * </p>
+     * 
+     * @param description
+     *        The description of the component type.
+     */
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * <p>
+     * The description of the component type.
+     * </p>
+     * 
+     * @return The description of the component type.
+     */
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * <p>
+     * The description of the component type.
+     * </p>
+     * 
+     * @param description
+     *        The description of the component type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentResponse withDescription(String description) {
+        setDescription(description);
         return this;
     }
 
@@ -148,6 +194,46 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
+     * The status of the component type.
+     * </p>
+     * 
+     * @param status
+     *        The status of the component type.
+     */
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    /**
+     * <p>
+     * The status of the component type.
+     * </p>
+     * 
+     * @return The status of the component type.
+     */
+
+    public Status getStatus() {
+        return this.status;
+    }
+
+    /**
+     * <p>
+     * The status of the component type.
+     * </p>
+     * 
+     * @param status
+     *        The status of the component type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentResponse withStatus(Status status) {
+        setStatus(status);
+        return this;
+    }
+
+    /**
+     * <p>
      * The name of the property definition set in the request.
      * </p>
      * 
@@ -183,46 +269,6 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
 
     public ComponentResponse withDefinedIn(String definedIn) {
         setDefinedIn(definedIn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The description of the component type.
-     * </p>
-     * 
-     * @param description
-     *        The description of the component type.
-     */
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * <p>
-     * The description of the component type.
-     * </p>
-     * 
-     * @return The description of the component type.
-     */
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    /**
-     * <p>
-     * The description of the component type.
-     * </p>
-     * 
-     * @param description
-     *        The description of the component type.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ComponentResponse withDescription(String description) {
-        setDescription(description);
         return this;
     }
 
@@ -302,41 +348,69 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The status of the component type.
+     * The property groups.
      * </p>
      * 
-     * @param status
-     *        The status of the component type.
+     * @return The property groups.
      */
 
-    public void setStatus(Status status) {
-        this.status = status;
+    public java.util.Map<String, ComponentPropertyGroupResponse> getPropertyGroups() {
+        return propertyGroups;
     }
 
     /**
      * <p>
-     * The status of the component type.
+     * The property groups.
      * </p>
      * 
-     * @return The status of the component type.
+     * @param propertyGroups
+     *        The property groups.
      */
 
-    public Status getStatus() {
-        return this.status;
+    public void setPropertyGroups(java.util.Map<String, ComponentPropertyGroupResponse> propertyGroups) {
+        this.propertyGroups = propertyGroups;
     }
 
     /**
      * <p>
-     * The status of the component type.
+     * The property groups.
      * </p>
      * 
-     * @param status
-     *        The status of the component type.
+     * @param propertyGroups
+     *        The property groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ComponentResponse withStatus(Status status) {
-        setStatus(status);
+    public ComponentResponse withPropertyGroups(java.util.Map<String, ComponentPropertyGroupResponse> propertyGroups) {
+        setPropertyGroups(propertyGroups);
+        return this;
+    }
+
+    /**
+     * Add a single PropertyGroups entry
+     *
+     * @see ComponentResponse#withPropertyGroups
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentResponse addPropertyGroupsEntry(String key, ComponentPropertyGroupResponse value) {
+        if (null == this.propertyGroups) {
+            this.propertyGroups = new java.util.HashMap<String, ComponentPropertyGroupResponse>();
+        }
+        if (this.propertyGroups.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.propertyGroups.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into PropertyGroups.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentResponse clearPropertyGroupsEntries() {
+        this.propertyGroups = null;
         return this;
     }
 
@@ -354,16 +428,18 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
         sb.append("{");
         if (getComponentName() != null)
             sb.append("ComponentName: ").append(getComponentName()).append(",");
-        if (getComponentTypeId() != null)
-            sb.append("ComponentTypeId: ").append(getComponentTypeId()).append(",");
-        if (getDefinedIn() != null)
-            sb.append("DefinedIn: ").append(getDefinedIn()).append(",");
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
+        if (getComponentTypeId() != null)
+            sb.append("ComponentTypeId: ").append(getComponentTypeId()).append(",");
+        if (getStatus() != null)
+            sb.append("Status: ").append(getStatus()).append(",");
+        if (getDefinedIn() != null)
+            sb.append("DefinedIn: ").append(getDefinedIn()).append(",");
         if (getProperties() != null)
             sb.append("Properties: ").append(getProperties()).append(",");
-        if (getStatus() != null)
-            sb.append("Status: ").append(getStatus());
+        if (getPropertyGroups() != null)
+            sb.append("PropertyGroups: ").append(getPropertyGroups());
         sb.append("}");
         return sb.toString();
     }
@@ -382,25 +458,29 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getComponentName() != null && other.getComponentName().equals(this.getComponentName()) == false)
             return false;
+        if (other.getDescription() == null ^ this.getDescription() == null)
+            return false;
+        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
+            return false;
         if (other.getComponentTypeId() == null ^ this.getComponentTypeId() == null)
             return false;
         if (other.getComponentTypeId() != null && other.getComponentTypeId().equals(this.getComponentTypeId()) == false)
+            return false;
+        if (other.getStatus() == null ^ this.getStatus() == null)
+            return false;
+        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
         if (other.getDefinedIn() == null ^ this.getDefinedIn() == null)
             return false;
         if (other.getDefinedIn() != null && other.getDefinedIn().equals(this.getDefinedIn()) == false)
             return false;
-        if (other.getDescription() == null ^ this.getDescription() == null)
-            return false;
-        if (other.getDescription() != null && other.getDescription().equals(this.getDescription()) == false)
-            return false;
         if (other.getProperties() == null ^ this.getProperties() == null)
             return false;
         if (other.getProperties() != null && other.getProperties().equals(this.getProperties()) == false)
             return false;
-        if (other.getStatus() == null ^ this.getStatus() == null)
+        if (other.getPropertyGroups() == null ^ this.getPropertyGroups() == null)
             return false;
-        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
+        if (other.getPropertyGroups() != null && other.getPropertyGroups().equals(this.getPropertyGroups()) == false)
             return false;
         return true;
     }
@@ -411,11 +491,12 @@ public class ComponentResponse implements Serializable, Cloneable, StructuredPoj
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getComponentName() == null) ? 0 : getComponentName().hashCode());
-        hashCode = prime * hashCode + ((getComponentTypeId() == null) ? 0 : getComponentTypeId().hashCode());
-        hashCode = prime * hashCode + ((getDefinedIn() == null) ? 0 : getDefinedIn().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
-        hashCode = prime * hashCode + ((getProperties() == null) ? 0 : getProperties().hashCode());
+        hashCode = prime * hashCode + ((getComponentTypeId() == null) ? 0 : getComponentTypeId().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getDefinedIn() == null) ? 0 : getDefinedIn().hashCode());
+        hashCode = prime * hashCode + ((getProperties() == null) ? 0 : getProperties().hashCode());
+        hashCode = prime * hashCode + ((getPropertyGroups() == null) ? 0 : getPropertyGroups().hashCode());
         return hashCode;
     }
 

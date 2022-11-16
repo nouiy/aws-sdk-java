@@ -145,6 +145,19 @@ public class AbstractAWSIoTTwinMakerAsync extends AbstractAWSIoTTwinMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<ExecuteQueryResult> executeQueryAsync(ExecuteQueryRequest request) {
+
+        return executeQueryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ExecuteQueryResult> executeQueryAsync(ExecuteQueryRequest request,
+            com.amazonaws.handlers.AsyncHandler<ExecuteQueryRequest, ExecuteQueryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetComponentTypeResult> getComponentTypeAsync(GetComponentTypeRequest request) {
 
         return getComponentTypeAsync(request, null);
@@ -166,6 +179,19 @@ public class AbstractAWSIoTTwinMakerAsync extends AbstractAWSIoTTwinMaker implem
     @Override
     public java.util.concurrent.Future<GetEntityResult> getEntityAsync(GetEntityRequest request,
             com.amazonaws.handlers.AsyncHandler<GetEntityRequest, GetEntityResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPricingPlanResult> getPricingPlanAsync(GetPricingPlanRequest request) {
+
+        return getPricingPlanAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPricingPlanResult> getPricingPlanAsync(GetPricingPlanRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetPricingPlanRequest, GetPricingPlanResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -335,6 +361,19 @@ public class AbstractAWSIoTTwinMakerAsync extends AbstractAWSIoTTwinMaker implem
     @Override
     public java.util.concurrent.Future<UpdateEntityResult> updateEntityAsync(UpdateEntityRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateEntityRequest, UpdateEntityResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePricingPlanResult> updatePricingPlanAsync(UpdatePricingPlanRequest request) {
+
+        return updatePricingPlanAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePricingPlanResult> updatePricingPlanAsync(UpdatePricingPlanRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdatePricingPlanRequest, UpdatePricingPlanResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

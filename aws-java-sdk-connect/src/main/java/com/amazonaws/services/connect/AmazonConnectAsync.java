@@ -4114,6 +4114,39 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
+     * Initiates silent monitoring of a contact. The Contact Control Panel (CCP) of the user specified by <i>userId</i>
+     * will be set to silent monitoring mode on the contact.
+     * </p>
+     * 
+     * @param monitorContactRequest
+     * @return A Java Future containing the result of the MonitorContact operation returned by the service.
+     * @sample AmazonConnectAsync.MonitorContact
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/MonitorContact" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<MonitorContactResult> monitorContactAsync(MonitorContactRequest monitorContactRequest);
+
+    /**
+     * <p>
+     * Initiates silent monitoring of a contact. The Contact Control Panel (CCP) of the user specified by <i>userId</i>
+     * will be set to silent monitoring mode on the contact.
+     * </p>
+     * 
+     * @param monitorContactRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the MonitorContact operation returned by the service.
+     * @sample AmazonConnectAsyncHandler.MonitorContact
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/MonitorContact" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<MonitorContactResult> monitorContactAsync(MonitorContactRequest monitorContactRequest,
+            com.amazonaws.handlers.AsyncHandler<MonitorContactRequest, MonitorContactResult> asyncHandler);
+
+    /**
+     * <p>
      * Changes the current status of a user or agent in Amazon Connect. If the agent is currently handling a contact,
      * this sets the agent's next status.
      * </p>

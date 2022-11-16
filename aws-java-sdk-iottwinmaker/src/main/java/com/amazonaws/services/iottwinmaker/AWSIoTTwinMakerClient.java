@@ -110,6 +110,9 @@ public class AWSIoTTwinMakerClient extends AmazonWebServiceClient implements AWS
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.iottwinmaker.model.transform.ValidationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("QueryTimeoutException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.iottwinmaker.model.transform.QueryTimeoutExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.iottwinmaker.model.AWSIoTTwinMakerException.class));
 
     public static AWSIoTTwinMakerClientBuilder builder() {
@@ -833,6 +836,82 @@ public class AWSIoTTwinMakerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
+     * Run queries to access information from your knowledge graph of entities within individual workspaces.
+     * </p>
+     * 
+     * @param executeQueryRequest
+     * @return Result of the ExecuteQuery operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error has occurred.
+     * @throws AccessDeniedException
+     *         Access is denied.
+     * @throws QueryTimeoutException
+     *         The query timeout exception.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
+     * @throws ServiceQuotaExceededException
+     *         The service quota was exceeded.
+     * @sample AWSIoTTwinMaker.ExecuteQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/ExecuteQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ExecuteQueryResult executeQuery(ExecuteQueryRequest request) {
+        request = beforeClientExecution(request);
+        return executeExecuteQuery(request);
+    }
+
+    @SdkInternalApi
+    final ExecuteQueryResult executeExecuteQuery(ExecuteQueryRequest executeQueryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(executeQueryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ExecuteQueryRequest> request = null;
+        Response<ExecuteQueryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ExecuteQueryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(executeQueryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoTTwinMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ExecuteQuery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ExecuteQueryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ExecuteQueryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves information about a component type.
      * </p>
      * 
@@ -846,6 +925,8 @@ public class AWSIoTTwinMakerClient extends AmazonWebServiceClient implements AWS
      *         The resource wasn't found.
      * @throws ThrottlingException
      *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
      * @sample AWSIoTTwinMaker.GetComponentType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/GetComponentType" target="_top">AWS
      *      API Documentation</a>
@@ -967,6 +1048,78 @@ public class AWSIoTTwinMakerClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<GetEntityResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetEntityResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the pricing plan.
+     * </p>
+     * 
+     * @param getPricingPlanRequest
+     * @return Result of the GetPricingPlan operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error has occurred.
+     * @throws AccessDeniedException
+     *         Access is denied.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
+     * @sample AWSIoTTwinMaker.GetPricingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/GetPricingPlan" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetPricingPlanResult getPricingPlan(GetPricingPlanRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetPricingPlan(request);
+    }
+
+    @SdkInternalApi
+    final GetPricingPlanResult executeGetPricingPlan(GetPricingPlanRequest getPricingPlanRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getPricingPlanRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetPricingPlanRequest> request = null;
+        Response<GetPricingPlanResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetPricingPlanRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getPricingPlanRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoTTwinMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetPricingPlan");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetPricingPlanResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetPricingPlanResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
@@ -1931,6 +2084,78 @@ public class AWSIoTTwinMakerClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateEntityResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateEntityResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Update the pricing plan.
+     * </p>
+     * 
+     * @param updatePricingPlanRequest
+     * @return Result of the UpdatePricingPlan operation returned by the service.
+     * @throws InternalServerException
+     *         An unexpected error has occurred.
+     * @throws AccessDeniedException
+     *         Access is denied.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws ValidationException
+     *         Failed
+     * @sample AWSIoTTwinMaker.UpdatePricingPlan
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iottwinmaker-2021-11-29/UpdatePricingPlan" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public UpdatePricingPlanResult updatePricingPlan(UpdatePricingPlanRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdatePricingPlan(request);
+    }
+
+    @SdkInternalApi
+    final UpdatePricingPlanResult executeUpdatePricingPlan(UpdatePricingPlanRequest updatePricingPlanRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updatePricingPlanRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdatePricingPlanRequest> request = null;
+        Response<UpdatePricingPlanResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdatePricingPlanRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updatePricingPlanRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoTTwinMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdatePricingPlan");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdatePricingPlanResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdatePricingPlanResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();

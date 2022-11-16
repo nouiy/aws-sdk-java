@@ -29,10 +29,10 @@ public class PropertyRequestMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> DEFINITION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("definition").build();
-    private static final MarshallingInfo<String> UPDATETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updateType").build();
     private static final MarshallingInfo<StructuredPojo> VALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("value").build();
+    private static final MarshallingInfo<String> UPDATETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updateType").build();
 
     private static final PropertyRequestMarshaller instance = new PropertyRequestMarshaller();
 
@@ -51,8 +51,8 @@ public class PropertyRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(propertyRequest.getDefinition(), DEFINITION_BINDING);
-            protocolMarshaller.marshall(propertyRequest.getUpdateType(), UPDATETYPE_BINDING);
             protocolMarshaller.marshall(propertyRequest.getValue(), VALUE_BINDING);
+            protocolMarshaller.marshall(propertyRequest.getUpdateType(), UPDATETYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

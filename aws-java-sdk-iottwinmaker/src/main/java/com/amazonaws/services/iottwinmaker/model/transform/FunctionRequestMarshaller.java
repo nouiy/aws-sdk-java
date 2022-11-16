@@ -28,12 +28,12 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class FunctionRequestMarshaller {
 
-    private static final MarshallingInfo<StructuredPojo> IMPLEMENTEDBY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("implementedBy").build();
     private static final MarshallingInfo<List> REQUIREDPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("requiredProperties").build();
     private static final MarshallingInfo<String> SCOPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("scope").build();
+    private static final MarshallingInfo<StructuredPojo> IMPLEMENTEDBY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("implementedBy").build();
 
     private static final FunctionRequestMarshaller instance = new FunctionRequestMarshaller();
 
@@ -51,9 +51,9 @@ public class FunctionRequestMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(functionRequest.getImplementedBy(), IMPLEMENTEDBY_BINDING);
             protocolMarshaller.marshall(functionRequest.getRequiredProperties(), REQUIREDPROPERTIES_BINDING);
             protocolMarshaller.marshall(functionRequest.getScope(), SCOPE_BINDING);
+            protocolMarshaller.marshall(functionRequest.getImplementedBy(), IMPLEMENTEDBY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

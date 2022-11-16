@@ -623,6 +623,12 @@ public class DBCluster implements Serializable, Cloneable {
      * </p>
      */
     private String networkType;
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     */
+    private String dBSystemId;
 
     /**
      * <p>
@@ -4969,6 +4975,46 @@ public class DBCluster implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @param dBSystemId
+     *        Reserved for future use.
+     */
+
+    public void setDBSystemId(String dBSystemId) {
+        this.dBSystemId = dBSystemId;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @return Reserved for future use.
+     */
+
+    public String getDBSystemId() {
+        return this.dBSystemId;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @param dBSystemId
+     *        Reserved for future use.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withDBSystemId(String dBSystemId) {
+        setDBSystemId(dBSystemId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -5117,7 +5163,9 @@ public class DBCluster implements Serializable, Cloneable {
         if (getServerlessV2ScalingConfiguration() != null)
             sb.append("ServerlessV2ScalingConfiguration: ").append(getServerlessV2ScalingConfiguration()).append(",");
         if (getNetworkType() != null)
-            sb.append("NetworkType: ").append(getNetworkType());
+            sb.append("NetworkType: ").append(getNetworkType()).append(",");
+        if (getDBSystemId() != null)
+            sb.append("DBSystemId: ").append(getDBSystemId());
         sb.append("}");
         return sb.toString();
     }
@@ -5415,6 +5463,10 @@ public class DBCluster implements Serializable, Cloneable {
             return false;
         if (other.getNetworkType() != null && other.getNetworkType().equals(this.getNetworkType()) == false)
             return false;
+        if (other.getDBSystemId() == null ^ this.getDBSystemId() == null)
+            return false;
+        if (other.getDBSystemId() != null && other.getDBSystemId().equals(this.getDBSystemId()) == false)
+            return false;
         return true;
     }
 
@@ -5492,6 +5544,7 @@ public class DBCluster implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getPerformanceInsightsRetentionPeriod() == null) ? 0 : getPerformanceInsightsRetentionPeriod().hashCode());
         hashCode = prime * hashCode + ((getServerlessV2ScalingConfiguration() == null) ? 0 : getServerlessV2ScalingConfiguration().hashCode());
         hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
+        hashCode = prime * hashCode + ((getDBSystemId() == null) ? 0 : getDBSystemId().hashCode());
         return hashCode;
     }
 

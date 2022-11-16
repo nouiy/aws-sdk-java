@@ -48,22 +48,27 @@ public class ComponentUpdateRequestJsonUnmarshaller implements Unmarshaller<Comp
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("componentTypeId", targetDepth)) {
+                if (context.testExpression("updateType", targetDepth)) {
                     context.nextToken();
-                    componentUpdateRequest.setComponentTypeId(context.getUnmarshaller(String.class).unmarshall(context));
+                    componentUpdateRequest.setUpdateType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("description", targetDepth)) {
                     context.nextToken();
                     componentUpdateRequest.setDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("componentTypeId", targetDepth)) {
+                    context.nextToken();
+                    componentUpdateRequest.setComponentTypeId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("propertyUpdates", targetDepth)) {
                     context.nextToken();
                     componentUpdateRequest.setPropertyUpdates(new MapUnmarshaller<String, PropertyRequest>(context.getUnmarshaller(String.class),
                             PropertyRequestJsonUnmarshaller.getInstance()).unmarshall(context));
                 }
-                if (context.testExpression("updateType", targetDepth)) {
+                if (context.testExpression("propertyGroupUpdates", targetDepth)) {
                     context.nextToken();
-                    componentUpdateRequest.setUpdateType(context.getUnmarshaller(String.class).unmarshall(context));
+                    componentUpdateRequest.setPropertyGroupUpdates(new MapUnmarshaller<String, ComponentPropertyGroupRequest>(context
+                            .getUnmarshaller(String.class), ComponentPropertyGroupRequestJsonUnmarshaller.getInstance()).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

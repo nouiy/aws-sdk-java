@@ -577,6 +577,10 @@ public interface AWSSimpleSystemsManagement {
      *         >What are the resource limits for OpsCenter?</a>.
      * @throws OpsItemInvalidParameterException
      *         A specified parameter argument isn't valid. Verify the available arguments and try again.
+     * @throws OpsItemAccessDeniedException
+     *         You don't have permission to view OpsItems in the specified account. Verify that your account is
+     *         configured either as a Systems Manager delegated administrator or that you are logged into the
+     *         Organizations management account.
      * @sample AWSSimpleSystemsManagement.CreateOpsItem
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/CreateOpsItem" target="_top">AWS API
      *      Documentation</a>
@@ -923,6 +927,31 @@ public interface AWSSimpleSystemsManagement {
      *      Documentation</a>
      */
     DeleteResourceDataSyncResult deleteResourceDataSync(DeleteResourceDataSyncRequest deleteResourceDataSyncRequest);
+
+    /**
+     * <p>
+     * Deletes a Systems Manager resource policy. A resource policy helps you to define the IAM entity (for example, an
+     * Amazon Web Services account) that can manage your Systems Manager resources. Currently, <code>OpsItemGroup</code>
+     * is the only resource that supports Systems Manager resource policies. The resource policy for
+     * <code>OpsItemGroup</code> enables Amazon Web Services accounts to view and interact with OpsCenter operational
+     * work items (OpsItems).
+     * </p>
+     * 
+     * @param deleteResourcePolicyRequest
+     * @return Result of the DeleteResourcePolicy operation returned by the service.
+     * @throws InternalServerErrorException
+     *         An error occurred on the server side.
+     * @throws ResourcePolicyInvalidParameterException
+     *         One or more parameters specified for the call aren't valid. Verify the parameters and their values and
+     *         try again.
+     * @throws ResourcePolicyConflictException
+     *         The hash provided in the call doesn't match the stored hash. This exception is thrown when trying to
+     *         update an obsolete policy version or when multiple requests to update a policy are sent.
+     * @sample AWSSimpleSystemsManagement.DeleteResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DeleteResourcePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteResourcePolicyResult deleteResourcePolicy(DeleteResourcePolicyRequest deleteResourcePolicyRequest);
 
     /**
      * <p>
@@ -2317,6 +2346,10 @@ public interface AWSSimpleSystemsManagement {
      *         An error occurred on the server side.
      * @throws OpsItemNotFoundException
      *         The specified OpsItem ID doesn't exist. Verify the ID and try again.
+     * @throws OpsItemAccessDeniedException
+     *         You don't have permission to view OpsItems in the specified account. Verify that your account is
+     *         configured either as a Systems Manager delegated administrator or that you are logged into the
+     *         Organizations management account.
      * @sample AWSSimpleSystemsManagement.GetOpsItem
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetOpsItem" target="_top">AWS API
      *      Documentation</a>
@@ -2518,6 +2551,24 @@ public interface AWSSimpleSystemsManagement {
      *      target="_top">AWS API Documentation</a>
      */
     GetPatchBaselineForPatchGroupResult getPatchBaselineForPatchGroup(GetPatchBaselineForPatchGroupRequest getPatchBaselineForPatchGroupRequest);
+
+    /**
+     * <p>
+     * Returns an array of the <code>Policy</code> object.
+     * </p>
+     * 
+     * @param getResourcePoliciesRequest
+     * @return Result of the GetResourcePolicies operation returned by the service.
+     * @throws InternalServerErrorException
+     *         An error occurred on the server side.
+     * @throws ResourcePolicyInvalidParameterException
+     *         One or more parameters specified for the call aren't valid. Verify the parameters and their values and
+     *         try again.
+     * @sample AWSSimpleSystemsManagement.GetResourcePolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/GetResourcePolicies" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetResourcePoliciesResult getResourcePolicies(GetResourcePoliciesRequest getResourcePoliciesRequest);
 
     /**
      * <p>
@@ -3326,6 +3377,35 @@ public interface AWSSimpleSystemsManagement {
      *      Documentation</a>
      */
     PutParameterResult putParameter(PutParameterRequest putParameterRequest);
+
+    /**
+     * <p>
+     * Creates or updates a Systems Manager resource policy. A resource policy helps you to define the IAM entity (for
+     * example, an Amazon Web Services account) that can manage your Systems Manager resources. Currently,
+     * <code>OpsItemGroup</code> is the only resource that supports Systems Manager resource policies. The resource
+     * policy for <code>OpsItemGroup</code> enables Amazon Web Services accounts to view and interact with OpsCenter
+     * operational work items (OpsItems).
+     * </p>
+     * 
+     * @param putResourcePolicyRequest
+     * @return Result of the PutResourcePolicy operation returned by the service.
+     * @throws InternalServerErrorException
+     *         An error occurred on the server side.
+     * @throws ResourcePolicyInvalidParameterException
+     *         One or more parameters specified for the call aren't valid. Verify the parameters and their values and
+     *         try again.
+     * @throws ResourcePolicyLimitExceededException
+     *         The <a>PutResourcePolicy</a> API action enforces two limits. A policy can't be greater than 1024 bytes in
+     *         size. And only one policy can be attached to <code>OpsItemGroup</code>. Verify these limits and try
+     *         again.
+     * @throws ResourcePolicyConflictException
+     *         The hash provided in the call doesn't match the stored hash. This exception is thrown when trying to
+     *         update an obsolete policy version or when multiple requests to update a policy are sent.
+     * @sample AWSSimpleSystemsManagement.PutResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/PutResourcePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    PutResourcePolicyResult putResourcePolicy(PutResourcePolicyRequest putResourcePolicyRequest);
 
     /**
      * <p>
@@ -4257,6 +4337,10 @@ public interface AWSSimpleSystemsManagement {
      *         >What are the resource limits for OpsCenter?</a>.
      * @throws OpsItemInvalidParameterException
      *         A specified parameter argument isn't valid. Verify the available arguments and try again.
+     * @throws OpsItemAccessDeniedException
+     *         You don't have permission to view OpsItems in the specified account. Verify that your account is
+     *         configured either as a Systems Manager delegated administrator or that you are logged into the
+     *         Organizations management account.
      * @sample AWSSimpleSystemsManagement.UpdateOpsItem
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/UpdateOpsItem" target="_top">AWS API
      *      Documentation</a>

@@ -558,6 +558,11 @@ public class AbstractAmazonConnect implements AmazonConnect {
     }
 
     @Override
+    public MonitorContactResult monitorContact(MonitorContactRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public PutUserStatusResult putUserStatus(PutUserStatusRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -1081,6 +1081,12 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private String networkType;
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     */
+    private String dBSystemId;
     /** The region where the source instance is located. */
     private String sourceRegion;
 
@@ -8060,6 +8066,46 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @param dBSystemId
+     *        Reserved for future use.
+     */
+
+    public void setDBSystemId(String dBSystemId) {
+        this.dBSystemId = dBSystemId;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @return Reserved for future use.
+     */
+
+    public String getDBSystemId() {
+        return this.dBSystemId;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @param dBSystemId
+     *        Reserved for future use.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDBClusterRequest withDBSystemId(String dBSystemId) {
+        setDBSystemId(dBSystemId);
+        return this;
+    }
+
+    /**
      * The region where the source instance is located.
      * 
      * @param sourceRegion
@@ -8197,6 +8243,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
             sb.append("ServerlessV2ScalingConfiguration: ").append(getServerlessV2ScalingConfiguration()).append(",");
         if (getNetworkType() != null)
             sb.append("NetworkType: ").append(getNetworkType()).append(",");
+        if (getDBSystemId() != null)
+            sb.append("DBSystemId: ").append(getDBSystemId()).append(",");
         if (getSourceRegion() != null)
             sb.append("SourceRegion: ").append(getSourceRegion());
         sb.append("}");
@@ -8400,6 +8448,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getNetworkType() != null && other.getNetworkType().equals(this.getNetworkType()) == false)
             return false;
+        if (other.getDBSystemId() == null ^ this.getDBSystemId() == null)
+            return false;
+        if (other.getDBSystemId() != null && other.getDBSystemId().equals(this.getDBSystemId()) == false)
+            return false;
         if (other.getSourceRegion() == null ^ this.getSourceRegion() == null)
             return false;
         if (other.getSourceRegion() != null && other.getSourceRegion().equals(this.getSourceRegion()) == false)
@@ -8458,6 +8510,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getPerformanceInsightsRetentionPeriod() == null) ? 0 : getPerformanceInsightsRetentionPeriod().hashCode());
         hashCode = prime * hashCode + ((getServerlessV2ScalingConfiguration() == null) ? 0 : getServerlessV2ScalingConfiguration().hashCode());
         hashCode = prime * hashCode + ((getNetworkType() == null) ? 0 : getNetworkType().hashCode());
+        hashCode = prime * hashCode + ((getDBSystemId() == null) ? 0 : getDBSystemId().hashCode());
         hashCode = prime * hashCode + ((getSourceRegion() == null) ? 0 : getSourceRegion().hashCode());
         return hashCode;
     }
