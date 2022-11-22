@@ -1,3 +1,12 @@
+# __1.12.348__ __2022-11-22__
+## __Amazon Appflow__
+  - ### Features
+    - Adding support for Amazon AppFlow to transfer the data to Amazon Redshift databases through Amazon Redshift Data API service. This feature will support the Redshift destination connector on both public and private accessible Amazon Redshift Clusters and Amazon Redshift Serverless.
+
+## __Amazon Kinesis Analytics__
+  - ### Features
+    - Support for Apache Flink 1.15 in Kinesis Data Analytics.
+
 # __1.12.347__ __2022-11-21__
 ## __AWS SDK for Java__
   - ### Features

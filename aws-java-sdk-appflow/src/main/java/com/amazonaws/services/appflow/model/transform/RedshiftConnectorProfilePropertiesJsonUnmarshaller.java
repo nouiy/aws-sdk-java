@@ -64,6 +64,26 @@ public class RedshiftConnectorProfilePropertiesJsonUnmarshaller implements Unmar
                     context.nextToken();
                     redshiftConnectorProfileProperties.setRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("dataApiRoleArn", targetDepth)) {
+                    context.nextToken();
+                    redshiftConnectorProfileProperties.setDataApiRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("isRedshiftServerless", targetDepth)) {
+                    context.nextToken();
+                    redshiftConnectorProfileProperties.setIsRedshiftServerless(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("clusterIdentifier", targetDepth)) {
+                    context.nextToken();
+                    redshiftConnectorProfileProperties.setClusterIdentifier(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("workgroupName", targetDepth)) {
+                    context.nextToken();
+                    redshiftConnectorProfileProperties.setWorkgroupName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("databaseName", targetDepth)) {
+                    context.nextToken();
+                    redshiftConnectorProfileProperties.setDatabaseName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

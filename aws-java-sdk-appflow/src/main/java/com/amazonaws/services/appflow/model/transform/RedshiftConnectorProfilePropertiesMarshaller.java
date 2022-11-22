@@ -35,6 +35,16 @@ public class RedshiftConnectorProfilePropertiesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("bucketPrefix").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("roleArn").build();
+    private static final MarshallingInfo<String> DATAAPIROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataApiRoleArn").build();
+    private static final MarshallingInfo<Boolean> ISREDSHIFTSERVERLESS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("isRedshiftServerless").build();
+    private static final MarshallingInfo<String> CLUSTERIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clusterIdentifier").build();
+    private static final MarshallingInfo<String> WORKGROUPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("workgroupName").build();
+    private static final MarshallingInfo<String> DATABASENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("databaseName").build();
 
     private static final RedshiftConnectorProfilePropertiesMarshaller instance = new RedshiftConnectorProfilePropertiesMarshaller();
 
@@ -56,6 +66,11 @@ public class RedshiftConnectorProfilePropertiesMarshaller {
             protocolMarshaller.marshall(redshiftConnectorProfileProperties.getBucketName(), BUCKETNAME_BINDING);
             protocolMarshaller.marshall(redshiftConnectorProfileProperties.getBucketPrefix(), BUCKETPREFIX_BINDING);
             protocolMarshaller.marshall(redshiftConnectorProfileProperties.getRoleArn(), ROLEARN_BINDING);
+            protocolMarshaller.marshall(redshiftConnectorProfileProperties.getDataApiRoleArn(), DATAAPIROLEARN_BINDING);
+            protocolMarshaller.marshall(redshiftConnectorProfileProperties.getIsRedshiftServerless(), ISREDSHIFTSERVERLESS_BINDING);
+            protocolMarshaller.marshall(redshiftConnectorProfileProperties.getClusterIdentifier(), CLUSTERIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(redshiftConnectorProfileProperties.getWorkgroupName(), WORKGROUPNAME_BINDING);
+            protocolMarshaller.marshall(redshiftConnectorProfileProperties.getDatabaseName(), DATABASENAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
