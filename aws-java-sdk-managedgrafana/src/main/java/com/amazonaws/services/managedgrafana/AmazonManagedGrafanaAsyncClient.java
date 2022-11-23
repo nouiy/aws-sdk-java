@@ -317,6 +317,40 @@ public class AmazonManagedGrafanaAsyncClient extends AmazonManagedGrafanaClient 
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeWorkspaceConfigurationResult> describeWorkspaceConfigurationAsync(DescribeWorkspaceConfigurationRequest request) {
+
+        return describeWorkspaceConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeWorkspaceConfigurationResult> describeWorkspaceConfigurationAsync(
+            final DescribeWorkspaceConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeWorkspaceConfigurationRequest, DescribeWorkspaceConfigurationResult> asyncHandler) {
+        final DescribeWorkspaceConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeWorkspaceConfigurationResult>() {
+            @Override
+            public DescribeWorkspaceConfigurationResult call() throws Exception {
+                DescribeWorkspaceConfigurationResult result = null;
+
+                try {
+                    result = executeDescribeWorkspaceConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DisassociateLicenseResult> disassociateLicenseAsync(DisassociateLicenseRequest request) {
 
         return disassociateLicenseAsync(request, null);
@@ -599,6 +633,39 @@ public class AmazonManagedGrafanaAsyncClient extends AmazonManagedGrafanaClient 
 
                 try {
                     result = executeUpdateWorkspaceAuthentication(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateWorkspaceConfigurationResult> updateWorkspaceConfigurationAsync(UpdateWorkspaceConfigurationRequest request) {
+
+        return updateWorkspaceConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateWorkspaceConfigurationResult> updateWorkspaceConfigurationAsync(final UpdateWorkspaceConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateWorkspaceConfigurationRequest, UpdateWorkspaceConfigurationResult> asyncHandler) {
+        final UpdateWorkspaceConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateWorkspaceConfigurationResult>() {
+            @Override
+            public UpdateWorkspaceConfigurationResult call() throws Exception {
+                UpdateWorkspaceConfigurationResult result = null;
+
+                try {
+                    result = executeUpdateWorkspaceConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

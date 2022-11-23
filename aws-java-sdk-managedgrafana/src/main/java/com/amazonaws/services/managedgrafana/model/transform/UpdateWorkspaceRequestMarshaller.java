@@ -34,8 +34,12 @@ public class UpdateWorkspaceRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("organizationRoleName").build();
     private static final MarshallingInfo<String> PERMISSIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("permissionType").build();
+    private static final MarshallingInfo<Boolean> REMOVEVPCCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("removeVpcConfiguration").build();
     private static final MarshallingInfo<String> STACKSETNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("stackSetName").build();
+    private static final MarshallingInfo<StructuredPojo> VPCCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("vpcConfiguration").build();
     private static final MarshallingInfo<List> WORKSPACEDATASOURCES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("workspaceDataSources").build();
     private static final MarshallingInfo<String> WORKSPACEDESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -70,7 +74,9 @@ public class UpdateWorkspaceRequestMarshaller {
             protocolMarshaller.marshall(updateWorkspaceRequest.getAccountAccessType(), ACCOUNTACCESSTYPE_BINDING);
             protocolMarshaller.marshall(updateWorkspaceRequest.getOrganizationRoleName(), ORGANIZATIONROLENAME_BINDING);
             protocolMarshaller.marshall(updateWorkspaceRequest.getPermissionType(), PERMISSIONTYPE_BINDING);
+            protocolMarshaller.marshall(updateWorkspaceRequest.getRemoveVpcConfiguration(), REMOVEVPCCONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateWorkspaceRequest.getStackSetName(), STACKSETNAME_BINDING);
+            protocolMarshaller.marshall(updateWorkspaceRequest.getVpcConfiguration(), VPCCONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateWorkspaceRequest.getWorkspaceDataSources(), WORKSPACEDATASOURCES_BINDING);
             protocolMarshaller.marshall(updateWorkspaceRequest.getWorkspaceDescription(), WORKSPACEDESCRIPTION_BINDING);
             protocolMarshaller.marshall(updateWorkspaceRequest.getWorkspaceId(), WORKSPACEID_BINDING);

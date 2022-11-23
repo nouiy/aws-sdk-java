@@ -20,7 +20,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * This structure defines which groups defined in the SAML assertion attribute are to be mapped to the Grafana
- * <code>Admin</code> and <code>Editor</code> roles in the workspace.
+ * <code>Admin</code> and <code>Editor</code> roles in the workspace. SAML authenticated users not part of
+ * <code>Admin</code> or <code>Editor</code> role groups have <code>Viewer</code> permission over the workspace.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/grafana-2020-08-18/RoleValues" target="_top">AWS API

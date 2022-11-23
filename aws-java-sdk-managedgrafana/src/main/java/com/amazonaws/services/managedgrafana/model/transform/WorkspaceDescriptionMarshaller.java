@@ -71,6 +71,8 @@ public class WorkspaceDescriptionMarshaller {
             .marshallLocationName("status").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<StructuredPojo> VPCCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("vpcConfiguration").build();
     private static final MarshallingInfo<String> WORKSPACEROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("workspaceRoleArn").build();
 
@@ -111,6 +113,7 @@ public class WorkspaceDescriptionMarshaller {
             protocolMarshaller.marshall(workspaceDescription.getStackSetName(), STACKSETNAME_BINDING);
             protocolMarshaller.marshall(workspaceDescription.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(workspaceDescription.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(workspaceDescription.getVpcConfiguration(), VPCCONFIGURATION_BINDING);
             protocolMarshaller.marshall(workspaceDescription.getWorkspaceRoleArn(), WORKSPACEROLEARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

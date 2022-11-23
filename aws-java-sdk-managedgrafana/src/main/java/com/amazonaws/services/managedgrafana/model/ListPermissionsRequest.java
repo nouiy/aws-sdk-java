@@ -52,9 +52,8 @@ public class ListPermissionsRequest extends com.amazonaws.AmazonWebServiceReques
     private String userId;
     /**
      * <p>
-     * (Optional) If you specify <code>SSO_USER</code>, then only the permissions of Amazon Web Services SSO users are
-     * returned. If you specify <code>SSO_GROUP</code>, only the permissions of Amazon Web Services SSO groups are
-     * returned.
+     * (Optional) If you specify <code>SSO_USER</code>, then only the permissions of IAM Identity Center users are
+     * returned. If you specify <code>SSO_GROUP</code>, only the permissions of IAM Identity Center groups are returned.
      * </p>
      */
     private String userType;
@@ -233,15 +232,14 @@ public class ListPermissionsRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * (Optional) If you specify <code>SSO_USER</code>, then only the permissions of Amazon Web Services SSO users are
-     * returned. If you specify <code>SSO_GROUP</code>, only the permissions of Amazon Web Services SSO groups are
-     * returned.
+     * (Optional) If you specify <code>SSO_USER</code>, then only the permissions of IAM Identity Center users are
+     * returned. If you specify <code>SSO_GROUP</code>, only the permissions of IAM Identity Center groups are returned.
      * </p>
      * 
      * @param userType
-     *        (Optional) If you specify <code>SSO_USER</code>, then only the permissions of Amazon Web Services SSO
-     *        users are returned. If you specify <code>SSO_GROUP</code>, only the permissions of Amazon Web Services SSO
-     *        groups are returned.
+     *        (Optional) If you specify <code>SSO_USER</code>, then only the permissions of IAM Identity Center users
+     *        are returned. If you specify <code>SSO_GROUP</code>, only the permissions of IAM Identity Center groups
+     *        are returned.
      * @see UserType
      */
 
@@ -251,14 +249,13 @@ public class ListPermissionsRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * (Optional) If you specify <code>SSO_USER</code>, then only the permissions of Amazon Web Services SSO users are
-     * returned. If you specify <code>SSO_GROUP</code>, only the permissions of Amazon Web Services SSO groups are
-     * returned.
+     * (Optional) If you specify <code>SSO_USER</code>, then only the permissions of IAM Identity Center users are
+     * returned. If you specify <code>SSO_GROUP</code>, only the permissions of IAM Identity Center groups are returned.
      * </p>
      * 
-     * @return (Optional) If you specify <code>SSO_USER</code>, then only the permissions of Amazon Web Services SSO
-     *         users are returned. If you specify <code>SSO_GROUP</code>, only the permissions of Amazon Web Services
-     *         SSO groups are returned.
+     * @return (Optional) If you specify <code>SSO_USER</code>, then only the permissions of IAM Identity Center users
+     *         are returned. If you specify <code>SSO_GROUP</code>, only the permissions of IAM Identity Center groups
+     *         are returned.
      * @see UserType
      */
 
@@ -268,15 +265,14 @@ public class ListPermissionsRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * (Optional) If you specify <code>SSO_USER</code>, then only the permissions of Amazon Web Services SSO users are
-     * returned. If you specify <code>SSO_GROUP</code>, only the permissions of Amazon Web Services SSO groups are
-     * returned.
+     * (Optional) If you specify <code>SSO_USER</code>, then only the permissions of IAM Identity Center users are
+     * returned. If you specify <code>SSO_GROUP</code>, only the permissions of IAM Identity Center groups are returned.
      * </p>
      * 
      * @param userType
-     *        (Optional) If you specify <code>SSO_USER</code>, then only the permissions of Amazon Web Services SSO
-     *        users are returned. If you specify <code>SSO_GROUP</code>, only the permissions of Amazon Web Services SSO
-     *        groups are returned.
+     *        (Optional) If you specify <code>SSO_USER</code>, then only the permissions of IAM Identity Center users
+     *        are returned. If you specify <code>SSO_GROUP</code>, only the permissions of IAM Identity Center groups
+     *        are returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UserType
      */
@@ -288,15 +284,14 @@ public class ListPermissionsRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * (Optional) If you specify <code>SSO_USER</code>, then only the permissions of Amazon Web Services SSO users are
-     * returned. If you specify <code>SSO_GROUP</code>, only the permissions of Amazon Web Services SSO groups are
-     * returned.
+     * (Optional) If you specify <code>SSO_USER</code>, then only the permissions of IAM Identity Center users are
+     * returned. If you specify <code>SSO_GROUP</code>, only the permissions of IAM Identity Center groups are returned.
      * </p>
      * 
      * @param userType
-     *        (Optional) If you specify <code>SSO_USER</code>, then only the permissions of Amazon Web Services SSO
-     *        users are returned. If you specify <code>SSO_GROUP</code>, only the permissions of Amazon Web Services SSO
-     *        groups are returned.
+     *        (Optional) If you specify <code>SSO_USER</code>, then only the permissions of IAM Identity Center users
+     *        are returned. If you specify <code>SSO_GROUP</code>, only the permissions of IAM Identity Center groups
+     *        are returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UserType
      */

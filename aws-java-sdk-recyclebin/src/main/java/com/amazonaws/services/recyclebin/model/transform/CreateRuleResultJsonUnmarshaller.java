@@ -80,6 +80,14 @@ public class CreateRuleResultJsonUnmarshaller implements Unmarshaller<CreateRule
                     context.nextToken();
                     createRuleResult.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LockConfiguration", targetDepth)) {
+                    context.nextToken();
+                    createRuleResult.setLockConfiguration(LockConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("LockState", targetDepth)) {
+                    context.nextToken();
+                    createRuleResult.setLockState(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

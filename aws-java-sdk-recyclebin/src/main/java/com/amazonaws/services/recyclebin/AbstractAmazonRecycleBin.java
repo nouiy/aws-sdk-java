@@ -53,7 +53,17 @@ public class AbstractAmazonRecycleBin implements AmazonRecycleBin {
     }
 
     @Override
+    public LockRuleResult lockRule(LockRuleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public TagResourceResult tagResource(TagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UnlockRuleResult unlockRule(UnlockRuleRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

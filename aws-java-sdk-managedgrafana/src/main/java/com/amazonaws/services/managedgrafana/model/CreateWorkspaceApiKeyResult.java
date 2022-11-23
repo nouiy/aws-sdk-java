@@ -25,7 +25,7 @@ public class CreateWorkspaceApiKeyResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The key token that was created. Use this value as a bearer token to authenticate HTTP requests to the workspace.
+     * The key token. Use this value as a bearer token to authenticate HTTP requests to the workspace.
      * </p>
      */
     private String key;
@@ -44,12 +44,11 @@ public class CreateWorkspaceApiKeyResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The key token that was created. Use this value as a bearer token to authenticate HTTP requests to the workspace.
+     * The key token. Use this value as a bearer token to authenticate HTTP requests to the workspace.
      * </p>
      * 
      * @param key
-     *        The key token that was created. Use this value as a bearer token to authenticate HTTP requests to the
-     *        workspace.
+     *        The key token. Use this value as a bearer token to authenticate HTTP requests to the workspace.
      */
 
     public void setKey(String key) {
@@ -58,11 +57,10 @@ public class CreateWorkspaceApiKeyResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The key token that was created. Use this value as a bearer token to authenticate HTTP requests to the workspace.
+     * The key token. Use this value as a bearer token to authenticate HTTP requests to the workspace.
      * </p>
      * 
-     * @return The key token that was created. Use this value as a bearer token to authenticate HTTP requests to the
-     *         workspace.
+     * @return The key token. Use this value as a bearer token to authenticate HTTP requests to the workspace.
      */
 
     public String getKey() {
@@ -71,12 +69,11 @@ public class CreateWorkspaceApiKeyResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The key token that was created. Use this value as a bearer token to authenticate HTTP requests to the workspace.
+     * The key token. Use this value as a bearer token to authenticate HTTP requests to the workspace.
      * </p>
      * 
      * @param key
-     *        The key token that was created. Use this value as a bearer token to authenticate HTTP requests to the
-     *        workspace.
+     *        The key token. Use this value as a bearer token to authenticate HTTP requests to the workspace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

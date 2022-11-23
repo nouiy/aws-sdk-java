@@ -38,6 +38,8 @@ public class CreateRuleRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceType").build();
     private static final MarshallingInfo<List> RESOURCETAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ResourceTags").build();
+    private static final MarshallingInfo<StructuredPojo> LOCKCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LockConfiguration").build();
 
     private static final CreateRuleRequestMarshaller instance = new CreateRuleRequestMarshaller();
 
@@ -60,6 +62,7 @@ public class CreateRuleRequestMarshaller {
             protocolMarshaller.marshall(createRuleRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createRuleRequest.getResourceType(), RESOURCETYPE_BINDING);
             protocolMarshaller.marshall(createRuleRequest.getResourceTags(), RESOURCETAGS_BINDING);
+            protocolMarshaller.marshall(createRuleRequest.getLockConfiguration(), LOCKCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

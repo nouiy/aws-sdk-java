@@ -27,7 +27,8 @@ public enum DataSourceType {
     TIMESTREAM("TIMESTREAM"),
     SITEWISE("SITEWISE"),
     ATHENA("ATHENA"),
-    REDSHIFT("REDSHIFT");
+    REDSHIFT("REDSHIFT"),
+    TWINMAKER("TWINMAKER");
 
     private String value;
 

@@ -74,6 +74,14 @@ public class UpdateRuleResultJsonUnmarshaller implements Unmarshaller<UpdateRule
                     context.nextToken();
                     updateRuleResult.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LockState", targetDepth)) {
+                    context.nextToken();
+                    updateRuleResult.setLockState(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("LockEndTime", targetDepth)) {
+                    context.nextToken();
+                    updateRuleResult.setLockEndTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

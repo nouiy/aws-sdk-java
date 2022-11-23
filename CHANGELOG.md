@@ -1,3 +1,12 @@
+# __1.12.349__ __2022-11-23__
+## __Amazon Managed Grafana__
+  - ### Features
+    - This release includes support for configuring a Grafana workspace to connect to a datasource within a VPC as well as new APIs for configuring Grafana settings.
+
+## __Amazon Recycle Bin__
+  - ### Features
+    - This release adds support for Rule Lock for Recycle Bin, which allows you to lock retention rules so that they can no longer be modified or deleted.
+
 # __1.12.348__ __2022-11-22__
 ## __Amazon Appflow__
   - ### Features
