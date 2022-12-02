@@ -1,4 +1,4 @@
-# __1.12.354__ __2022-12-01__
+# __1.12.355__ __2022-12-01__
 ## __AWS Step Functions__
   - ### Features
     - This release adds support for the AWS Step Functions Map state in Distributed mode. The changes include a new MapRun resource and several new and modified APIs.
