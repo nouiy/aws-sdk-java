@@ -1194,6 +1194,14 @@ public class UpdateDistributionRequestMarshaller implements Marshaller<Request<U
                 if (distributionConfig.getIsIPV6Enabled() != null) {
                     xmlWriter.startElement("IsIPV6Enabled").value(distributionConfig.getIsIPV6Enabled()).endElement();
                 }
+
+                if (distributionConfig.getContinuousDeploymentPolicyId() != null) {
+                    xmlWriter.startElement("ContinuousDeploymentPolicyId").value(distributionConfig.getContinuousDeploymentPolicyId()).endElement();
+                }
+
+                if (distributionConfig.getStaging() != null) {
+                    xmlWriter.startElement("Staging").value(distributionConfig.getStaging()).endElement();
+                }
                 xmlWriter.endElement();
             }
 

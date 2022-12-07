@@ -89,6 +89,11 @@ public class AbstractAmazonEKS implements AmazonEKS {
     }
 
     @Override
+    public DescribeAddonConfigurationResult describeAddonConfiguration(DescribeAddonConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeAddonVersionsResult describeAddonVersions(DescribeAddonVersionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

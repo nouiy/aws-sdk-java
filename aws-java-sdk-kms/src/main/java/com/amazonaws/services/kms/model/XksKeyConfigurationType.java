@@ -24,7 +24,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </a>that is associated with a KMS key in an external key store.
  * </p>
  * <p>
- * These fields appear in a <a>CreateKey</a> or <a>DescribeKey</a> response only for a KMS key in an external key store.
+ * This element appears in a <a>CreateKey</a> or <a>DescribeKey</a> response only for a KMS key in an external key
+ * store.
  * </p>
  * <p>
  * The <i>external key</i> is a symmetric encryption key that is hosted by an external key manager outside of Amazon Web

@@ -3445,6 +3445,41 @@ public class AmazonCloudFrontAsyncClient extends AmazonCloudFrontClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateDistributionWithStagingConfigResult> updateDistributionWithStagingConfigAsync(
+            UpdateDistributionWithStagingConfigRequest request) {
+
+        return updateDistributionWithStagingConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDistributionWithStagingConfigResult> updateDistributionWithStagingConfigAsync(
+            final UpdateDistributionWithStagingConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateDistributionWithStagingConfigRequest, UpdateDistributionWithStagingConfigResult> asyncHandler) {
+        final UpdateDistributionWithStagingConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateDistributionWithStagingConfigResult>() {
+            @Override
+            public UpdateDistributionWithStagingConfigResult call() throws Exception {
+                UpdateDistributionWithStagingConfigResult result = null;
+
+                try {
+                    result = executeUpdateDistributionWithStagingConfig(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateFieldLevelEncryptionConfigResult> updateFieldLevelEncryptionConfigAsync(
             UpdateFieldLevelEncryptionConfigRequest request) {
 

@@ -215,6 +215,8 @@ public enum CloudFrontActions implements Action {
     UpdateContinuousDeploymentPolicy("cloudfront:UpdateContinuousDeploymentPolicy"),
     /** Action for the UpdateDistribution operation. */
     UpdateDistribution("cloudfront:UpdateDistribution"),
+    /** Action for the UpdateDistributionWithStagingConfig operation. */
+    UpdateDistributionWithStagingConfig("cloudfront:UpdateDistributionWithStagingConfig"),
     /** Action for the UpdateFieldLevelEncryptionConfig operation. */
     UpdateFieldLevelEncryptionConfig("cloudfront:UpdateFieldLevelEncryptionConfig"),
     /** Action for the UpdateFieldLevelEncryptionProfile operation. */

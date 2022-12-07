@@ -514,6 +514,11 @@ public class AbstractAmazonCloudFront implements AmazonCloudFront {
     }
 
     @Override
+    public UpdateDistributionWithStagingConfigResult updateDistributionWithStagingConfig(UpdateDistributionWithStagingConfigRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateFieldLevelEncryptionConfigResult updateFieldLevelEncryptionConfig(UpdateFieldLevelEncryptionConfigRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

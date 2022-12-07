@@ -1309,6 +1309,21 @@ public class AbstractAmazonCloudFrontAsync extends AbstractAmazonCloudFront impl
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateDistributionWithStagingConfigResult> updateDistributionWithStagingConfigAsync(
+            UpdateDistributionWithStagingConfigRequest request) {
+
+        return updateDistributionWithStagingConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDistributionWithStagingConfigResult> updateDistributionWithStagingConfigAsync(
+            UpdateDistributionWithStagingConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateDistributionWithStagingConfigRequest, UpdateDistributionWithStagingConfigResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateFieldLevelEncryptionConfigResult> updateFieldLevelEncryptionConfigAsync(
             UpdateFieldLevelEncryptionConfigRequest request) {
 

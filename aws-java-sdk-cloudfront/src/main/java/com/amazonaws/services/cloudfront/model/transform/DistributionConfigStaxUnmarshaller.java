@@ -127,6 +127,16 @@ public class DistributionConfigStaxUnmarshaller implements Unmarshaller<Distribu
                     distributionConfig.setIsIPV6Enabled(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("ContinuousDeploymentPolicyId", targetDepth)) {
+                    distributionConfig.setContinuousDeploymentPolicyId(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("Staging", targetDepth)) {
+                    distributionConfig.setStaging(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return distributionConfig;

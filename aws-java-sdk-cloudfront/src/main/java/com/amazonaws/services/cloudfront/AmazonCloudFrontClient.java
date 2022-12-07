@@ -607,6 +607,10 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
             exceptionUnmarshallersMap.put("InvalidErrorCode", new InvalidErrorCodeExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new InvalidErrorCodeExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ContinuousDeploymentPolicyAlreadyExists") == null) {
+            exceptionUnmarshallersMap.put("ContinuousDeploymentPolicyAlreadyExists", new ContinuousDeploymentPolicyAlreadyExistsExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new ContinuousDeploymentPolicyAlreadyExistsExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("TooManyFieldLevelEncryptionFieldPatterns") == null) {
             exceptionUnmarshallersMap.put("TooManyFieldLevelEncryptionFieldPatterns", new TooManyFieldLevelEncryptionFieldPatternsExceptionUnmarshaller());
         }
@@ -653,6 +657,10 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
             exceptionUnmarshallersMap.put("PublicKeyInUse", new PublicKeyInUseExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new PublicKeyInUseExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("NoSuchContinuousDeploymentPolicy") == null) {
+            exceptionUnmarshallersMap.put("NoSuchContinuousDeploymentPolicy", new NoSuchContinuousDeploymentPolicyExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new NoSuchContinuousDeploymentPolicyExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("PreconditionFailed") == null) {
             exceptionUnmarshallersMap.put("PreconditionFailed", new PreconditionFailedExceptionUnmarshaller());
         }
@@ -673,6 +681,10 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
             exceptionUnmarshallersMap.put("CachePolicyAlreadyExists", new CachePolicyAlreadyExistsExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new CachePolicyAlreadyExistsExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("ContinuousDeploymentPolicyInUse") == null) {
+            exceptionUnmarshallersMap.put("ContinuousDeploymentPolicyInUse", new ContinuousDeploymentPolicyInUseExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new ContinuousDeploymentPolicyInUseExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("InvalidDomainNameForOriginAccessControl") == null) {
             exceptionUnmarshallersMap.put("InvalidDomainNameForOriginAccessControl", new InvalidDomainNameForOriginAccessControlExceptionUnmarshaller());
         }
@@ -685,6 +697,10 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
             exceptionUnmarshallersMap.put("InvalidLocationCode", new InvalidLocationCodeExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new InvalidLocationCodeExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyContinuousDeploymentPolicies") == null) {
+            exceptionUnmarshallersMap.put("TooManyContinuousDeploymentPolicies", new TooManyContinuousDeploymentPoliciesExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new TooManyContinuousDeploymentPoliciesExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("TooManyFunctionAssociations") == null) {
             exceptionUnmarshallersMap.put("TooManyFunctionAssociations", new TooManyFunctionAssociationsExceptionUnmarshaller());
         }
@@ -1378,6 +1394,11 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
      *         An argument is invalid.
      * @throws InconsistentQuantitiesException
      *         The value of <code>Quantity</code> and the size of <code>Items</code> don't match.
+     * @throws ContinuousDeploymentPolicyAlreadyExistsException
+     *         A continuous deployment policy with this configuration already exists.
+     * @throws TooManyContinuousDeploymentPoliciesException
+     *         You have reached the maximum number of continuous deployment policies for this Amazon Web Services
+     *         account.
      * @throws StagingDistributionInUseException
      *         A continuous deployment policy for this staging distribution already exists.
      * @sample AmazonCloudFront.CreateContinuousDeploymentPolicy
@@ -1602,6 +1623,10 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
      *         The real-time log configuration does not exist.
      * @throws RealtimeLogConfigOwnerMismatchException
      *         The specified real-time log configuration belongs to a different Amazon Web Services account.
+     * @throws ContinuousDeploymentPolicyInUseException
+     *         You cannot delete a continuous deployment policy that is associated with a primary distribution.
+     * @throws NoSuchContinuousDeploymentPolicyException
+     *         The continuous deployment policy doesn’t exist.
      * @throws InvalidDomainNameForOriginAccessControlException
      *         An origin access control is associated with an origin whose domain name is not supported.
      * @sample AmazonCloudFront.CreateDistribution
@@ -1818,6 +1843,10 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
      *         The real-time log configuration does not exist.
      * @throws RealtimeLogConfigOwnerMismatchException
      *         The specified real-time log configuration belongs to a different Amazon Web Services account.
+     * @throws ContinuousDeploymentPolicyInUseException
+     *         You cannot delete a continuous deployment policy that is associated with a primary distribution.
+     * @throws NoSuchContinuousDeploymentPolicyException
+     *         The continuous deployment policy doesn’t exist.
      * @throws InvalidDomainNameForOriginAccessControlException
      *         An origin access control is associated with an origin whose domain name is not supported.
      * @sample AmazonCloudFront.CreateDistributionWithTags
@@ -3104,6 +3133,10 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
      *         Access denied.
      * @throws PreconditionFailedException
      *         The precondition in one or more of the request fields evaluated to <code>false</code>.
+     * @throws ContinuousDeploymentPolicyInUseException
+     *         You cannot delete a continuous deployment policy that is associated with a primary distribution.
+     * @throws NoSuchContinuousDeploymentPolicyException
+     *         The continuous deployment policy doesn’t exist.
      * @sample AmazonCloudFront.DeleteContinuousDeploymentPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/DeleteContinuousDeploymentPolicy"
      *      target="_top">AWS API Documentation</a>
@@ -4466,6 +4499,8 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
      * @return Result of the GetContinuousDeploymentPolicy operation returned by the service.
      * @throws AccessDeniedException
      *         Access denied.
+     * @throws NoSuchContinuousDeploymentPolicyException
+     *         The continuous deployment policy doesn’t exist.
      * @sample AmazonCloudFront.GetContinuousDeploymentPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetContinuousDeploymentPolicy"
      *      target="_top">AWS API Documentation</a>
@@ -4524,6 +4559,8 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
      * @return Result of the GetContinuousDeploymentPolicyConfig operation returned by the service.
      * @throws AccessDeniedException
      *         Access denied.
+     * @throws NoSuchContinuousDeploymentPolicyException
+     *         The continuous deployment policy doesn’t exist.
      * @sample AmazonCloudFront.GetContinuousDeploymentPolicyConfig
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/GetContinuousDeploymentPolicyConfig"
      *      target="_top">AWS API Documentation</a>
@@ -6199,6 +6236,8 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
      *         An argument is invalid.
      * @throws AccessDeniedException
      *         Access denied.
+     * @throws NoSuchContinuousDeploymentPolicyException
+     *         The continuous deployment policy doesn’t exist.
      * @sample AmazonCloudFront.ListContinuousDeploymentPolicies
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/ListContinuousDeploymentPolicies"
      *      target="_top">AWS API Documentation</a>
@@ -8007,6 +8046,8 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
      *         The precondition in one or more of the request fields evaluated to <code>false</code>.
      * @throws StagingDistributionInUseException
      *         A continuous deployment policy for this staging distribution already exists.
+     * @throws NoSuchContinuousDeploymentPolicyException
+     *         The continuous deployment policy doesn’t exist.
      * @sample AmazonCloudFront.UpdateContinuousDeploymentPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateContinuousDeploymentPolicy"
      *      target="_top">AWS API Documentation</a>
@@ -8260,6 +8301,10 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
      *         The real-time log configuration does not exist.
      * @throws RealtimeLogConfigOwnerMismatchException
      *         The specified real-time log configuration belongs to a different Amazon Web Services account.
+     * @throws ContinuousDeploymentPolicyInUseException
+     *         You cannot delete a continuous deployment policy that is associated with a primary distribution.
+     * @throws NoSuchContinuousDeploymentPolicyException
+     *         The continuous deployment policy doesn’t exist.
      * @throws StagingDistributionInUseException
      *         A continuous deployment policy for this staging distribution already exists.
      * @throws IllegalOriginAccessConfigurationException
@@ -8304,6 +8349,227 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
 
             StaxResponseHandler<UpdateDistributionResult> responseHandler = new StaxResponseHandler<UpdateDistributionResult>(
                     new UpdateDistributionResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Copies the staging distribution's configuration to its corresponding primary distribution. The primary
+     * distribution retains its <code>Aliases</code> (also known as alternate domain names or CNAMEs) and
+     * <code>ContinuousDeploymentPolicyId</code> value, but otherwise its configuration is overwritten to match the
+     * staging distribution.
+     * </p>
+     * <p>
+     * You can use this operation in a continuous deployment workflow after you have tested configuration changes on the
+     * staging distribution. After using a continuous deployment policy to move a portion of your domain name’s traffic
+     * to the staging distribution and verifying that it works as intended, you can use this operation to copy the
+     * staging distribution’s configuration to the primary distribution. This action will disable the continuous
+     * deployment policy and move your domain’s traffic back to the primary distribution.
+     * </p>
+     * 
+     * @param updateDistributionWithStagingConfigRequest
+     * @return Result of the UpdateDistributionWithStagingConfig operation returned by the service.
+     * @throws AccessDeniedException
+     *         Access denied.
+     * @throws CNAMEAlreadyExistsException
+     *         The CNAME specified is already defined for CloudFront.
+     * @throws IllegalUpdateException
+     *         The update contains modifications that are not allowed.
+     * @throws InvalidIfMatchVersionException
+     *         The <code>If-Match</code> version is missing or not valid.
+     * @throws MissingBodyException
+     *         This operation requires a body. Ensure that the body is present and the <code>Content-Type</code> header
+     *         is set.
+     * @throws NoSuchDistributionException
+     *         The specified distribution does not exist.
+     * @throws PreconditionFailedException
+     *         The precondition in one or more of the request fields evaluated to <code>false</code>.
+     * @throws TooManyDistributionCNAMEsException
+     *         Your request contains more CNAMEs than are allowed per distribution.
+     * @throws InvalidDefaultRootObjectException
+     *         The default root object file name is too big or contains an invalid character.
+     * @throws InvalidRelativePathException
+     *         The relative path is too big, is not URL-encoded, or does not begin with a slash (/).
+     * @throws InvalidErrorCodeException
+     *         An invalid error code was specified.
+     * @throws InvalidResponseCodeException
+     *         A response code is not valid.
+     * @throws InvalidArgumentException
+     *         An argument is invalid.
+     * @throws InvalidOriginAccessIdentityException
+     *         The origin access identity is not valid or doesn't exist.
+     * @throws InvalidOriginAccessControlException
+     *         The origin access control is not valid.
+     * @throws TooManyTrustedSignersException
+     *         Your request contains more trusted signers than are allowed per distribution.
+     * @throws TrustedSignerDoesNotExistException
+     *         One or more of your trusted signers don't exist.
+     * @throws InvalidViewerCertificateException
+     *         A viewer certificate specified is not valid.
+     * @throws InvalidMinimumProtocolVersionException
+     *         The minimum protocol version specified is not valid.
+     * @throws InvalidRequiredProtocolException
+     *         This operation requires the HTTPS protocol. Ensure that you specify the HTTPS protocol in your request,
+     *         or omit the <code>RequiredProtocols</code> element from your distribution configuration.
+     * @throws NoSuchOriginException
+     *         No origin exists with the specified <code>Origin Id</code>.
+     * @throws TooManyOriginsException
+     *         You cannot create more origins for the distribution.
+     * @throws TooManyOriginGroupsPerDistributionException
+     *         Processing your request would cause you to exceed the maximum number of origin groups allowed.
+     * @throws TooManyCacheBehaviorsException
+     *         You cannot create more cache behaviors for the distribution.
+     * @throws TooManyCookieNamesInWhiteListException
+     *         Your request contains more cookie names in the whitelist than are allowed per cache behavior.
+     * @throws InvalidForwardCookiesException
+     *         Your request contains forward cookies option which doesn't match with the expectation for the
+     *         <code>whitelisted</code> list of cookie names. Either list of cookie names has been specified when not
+     *         allowed or list of cookie names is missing when expected.
+     * @throws TooManyHeadersInForwardedValuesException
+     *         Your request contains too many headers in forwarded values.
+     * @throws InvalidHeadersForS3OriginException
+     *         The headers specified are not valid for an Amazon S3 origin.
+     * @throws InconsistentQuantitiesException
+     *         The value of <code>Quantity</code> and the size of <code>Items</code> don't match.
+     * @throws TooManyCertificatesException
+     *         You cannot create anymore custom SSL/TLS certificates.
+     * @throws InvalidLocationCodeException
+     *         The location code specified is not valid.
+     * @throws InvalidGeoRestrictionParameterException
+     *         The specified geo restriction parameter is not valid.
+     * @throws InvalidTTLOrderException
+     *         The TTL order specified is not valid.
+     * @throws InvalidWebACLIdException
+     *         A web ACL ID specified is not valid. To specify a web ACL created using the latest version of WAF, use
+     *         the ACL ARN, for example
+     *         <code>arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/473e64fd-f30b-4765-81a0-62ad96dd167a</code>
+     *         . To specify a web ACL created using WAF Classic, use the ACL ID, for example
+     *         <code>473e64fd-f30b-4765-81a0-62ad96dd167a</code>.
+     * @throws TooManyOriginCustomHeadersException
+     *         Your request contains too many origin custom headers.
+     * @throws TooManyQueryStringParametersException
+     *         Your request contains too many query string parameters.
+     * @throws InvalidQueryStringParametersException
+     *         The query string parameters specified are not valid.
+     * @throws TooManyDistributionsWithLambdaAssociationsException
+     *         Processing your request would cause the maximum number of distributions with Lambda@Edge function
+     *         associations per owner to be exceeded.
+     * @throws TooManyDistributionsWithSingleFunctionARNException
+     *         The maximum number of distributions have been associated with the specified Lambda@Edge function.
+     * @throws TooManyLambdaFunctionAssociationsException
+     *         Your request contains more Lambda@Edge function associations than are allowed per distribution.
+     * @throws InvalidLambdaFunctionAssociationException
+     *         The specified Lambda@Edge function association is invalid.
+     * @throws TooManyDistributionsWithFunctionAssociationsException
+     *         You have reached the maximum number of distributions that are associated with a CloudFront function. For
+     *         more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html"
+     *         >Quotas</a> (formerly known as limits) in the <i>Amazon CloudFront Developer Guide</i>.
+     * @throws TooManyFunctionAssociationsException
+     *         You have reached the maximum number of CloudFront function associations for this distribution. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html"
+     *         >Quotas</a> (formerly known as limits) in the <i>Amazon CloudFront Developer Guide</i>.
+     * @throws InvalidFunctionAssociationException
+     *         A CloudFront function association is invalid.
+     * @throws InvalidOriginReadTimeoutException
+     *         The read timeout specified for the origin is not valid.
+     * @throws InvalidOriginKeepaliveTimeoutException
+     *         The keep alive timeout specified for the origin is not valid.
+     * @throws NoSuchFieldLevelEncryptionConfigException
+     *         The specified configuration for field-level encryption doesn't exist.
+     * @throws IllegalFieldLevelEncryptionConfigAssociationWithCacheBehaviorException
+     *         The specified configuration for field-level encryption can't be associated with the specified cache
+     *         behavior.
+     * @throws TooManyDistributionsAssociatedToFieldLevelEncryptionConfigException
+     *         The maximum number of distributions have been associated with the specified configuration for field-level
+     *         encryption.
+     * @throws NoSuchCachePolicyException
+     *         The cache policy does not exist.
+     * @throws TooManyDistributionsAssociatedToCachePolicyException
+     *         The maximum number of distributions have been associated with the specified cache policy. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html"
+     *         >Quotas</a> (formerly known as limits) in the <i>Amazon CloudFront Developer Guide</i>.
+     * @throws NoSuchResponseHeadersPolicyException
+     *         The response headers policy does not exist.
+     * @throws TooManyDistributionsAssociatedToResponseHeadersPolicyException
+     *         The maximum number of distributions have been associated with the specified response headers policy.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html"
+     *         >Quotas</a> (formerly known as limits) in the <i>Amazon CloudFront Developer Guide</i>.
+     * @throws NoSuchOriginRequestPolicyException
+     *         The origin request policy does not exist.
+     * @throws TooManyDistributionsAssociatedToOriginRequestPolicyException
+     *         The maximum number of distributions have been associated with the specified origin request policy. For
+     *         more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html"
+     *         >Quotas</a> (formerly known as limits) in the <i>Amazon CloudFront Developer Guide</i>.
+     * @throws TooManyDistributionsAssociatedToKeyGroupException
+     *         The number of distributions that reference this key group is more than the maximum allowed. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html"
+     *         >Quotas</a> (formerly known as limits) in the <i>Amazon CloudFront Developer Guide</i>.
+     * @throws TooManyKeyGroupsAssociatedToDistributionException
+     *         The number of key groups referenced by this distribution is more than the maximum allowed. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html"
+     *         >Quotas</a> (formerly known as limits) in the <i>Amazon CloudFront Developer Guide</i>.
+     * @throws TrustedKeyGroupDoesNotExistException
+     *         The specified key group does not exist.
+     * @throws NoSuchRealtimeLogConfigException
+     *         The real-time log configuration does not exist.
+     * @throws RealtimeLogConfigOwnerMismatchException
+     *         The specified real-time log configuration belongs to a different Amazon Web Services account.
+     * @sample AmazonCloudFront.UpdateDistributionWithStagingConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudfront-2020-05-31/UpdateDistributionWithStagingConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateDistributionWithStagingConfigResult updateDistributionWithStagingConfig(UpdateDistributionWithStagingConfigRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateDistributionWithStagingConfig(request);
+    }
+
+    @SdkInternalApi
+    final UpdateDistributionWithStagingConfigResult executeUpdateDistributionWithStagingConfig(
+            UpdateDistributionWithStagingConfigRequest updateDistributionWithStagingConfigRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateDistributionWithStagingConfigRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateDistributionWithStagingConfigRequest> request = null;
+        Response<UpdateDistributionWithStagingConfigResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateDistributionWithStagingConfigRequestMarshaller().marshall(super
+                        .beforeMarshalling(updateDistributionWithStagingConfigRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudFront");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateDistributionWithStagingConfig");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<UpdateDistributionWithStagingConfigResult> responseHandler = new StaxResponseHandler<UpdateDistributionWithStagingConfigResult>(
+                    new UpdateDistributionWithStagingConfigResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

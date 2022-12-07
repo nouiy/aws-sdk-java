@@ -55,6 +55,8 @@ public class AddonMarshaller {
             .marshallLocationName("owner").build();
     private static final MarshallingInfo<StructuredPojo> MARKETPLACEINFORMATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("marketplaceInformation").build();
+    private static final MarshallingInfo<String> CONFIGURATIONVALUES_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configurationValues").build();
 
     private static final AddonMarshaller instance = new AddonMarshaller();
 
@@ -85,6 +87,7 @@ public class AddonMarshaller {
             protocolMarshaller.marshall(addon.getPublisher(), PUBLISHER_BINDING);
             protocolMarshaller.marshall(addon.getOwner(), OWNER_BINDING);
             protocolMarshaller.marshall(addon.getMarketplaceInformation(), MARKETPLACEINFORMATION_BINDING);
+            protocolMarshaller.marshall(addon.getConfigurationValues(), CONFIGURATIONVALUES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

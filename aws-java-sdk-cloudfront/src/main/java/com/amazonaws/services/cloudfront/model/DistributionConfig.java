@@ -266,6 +266,20 @@ public class DistributionConfig implements Serializable, Cloneable {
      * </p>
      */
     private Boolean isIPV6Enabled;
+    /**
+     * <p>
+     * The identifier of a continuous deployment policy. For more information, see
+     * <code>CreateContinuousDeploymentPolicy</code>.
+     * </p>
+     */
+    private String continuousDeploymentPolicyId;
+    /**
+     * <p>
+     * A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>, this is a
+     * staging distribution. When this value is <code>false</code>, this is not a staging distribution.
+     * </p>
+     */
+    private Boolean staging;
 
     /**
      * Default constructor for DistributionConfig object. Callers should use the setter or fluent setter (with...)
@@ -2075,6 +2089,114 @@ public class DistributionConfig implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The identifier of a continuous deployment policy. For more information, see
+     * <code>CreateContinuousDeploymentPolicy</code>.
+     * </p>
+     * 
+     * @param continuousDeploymentPolicyId
+     *        The identifier of a continuous deployment policy. For more information, see
+     *        <code>CreateContinuousDeploymentPolicy</code>.
+     */
+
+    public void setContinuousDeploymentPolicyId(String continuousDeploymentPolicyId) {
+        this.continuousDeploymentPolicyId = continuousDeploymentPolicyId;
+    }
+
+    /**
+     * <p>
+     * The identifier of a continuous deployment policy. For more information, see
+     * <code>CreateContinuousDeploymentPolicy</code>.
+     * </p>
+     * 
+     * @return The identifier of a continuous deployment policy. For more information, see
+     *         <code>CreateContinuousDeploymentPolicy</code>.
+     */
+
+    public String getContinuousDeploymentPolicyId() {
+        return this.continuousDeploymentPolicyId;
+    }
+
+    /**
+     * <p>
+     * The identifier of a continuous deployment policy. For more information, see
+     * <code>CreateContinuousDeploymentPolicy</code>.
+     * </p>
+     * 
+     * @param continuousDeploymentPolicyId
+     *        The identifier of a continuous deployment policy. For more information, see
+     *        <code>CreateContinuousDeploymentPolicy</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DistributionConfig withContinuousDeploymentPolicyId(String continuousDeploymentPolicyId) {
+        setContinuousDeploymentPolicyId(continuousDeploymentPolicyId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>, this is a
+     * staging distribution. When this value is <code>false</code>, this is not a staging distribution.
+     * </p>
+     * 
+     * @param staging
+     *        A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>,
+     *        this is a staging distribution. When this value is <code>false</code>, this is not a staging distribution.
+     */
+
+    public void setStaging(Boolean staging) {
+        this.staging = staging;
+    }
+
+    /**
+     * <p>
+     * A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>, this is a
+     * staging distribution. When this value is <code>false</code>, this is not a staging distribution.
+     * </p>
+     * 
+     * @return A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>,
+     *         this is a staging distribution. When this value is <code>false</code>, this is not a staging
+     *         distribution.
+     */
+
+    public Boolean getStaging() {
+        return this.staging;
+    }
+
+    /**
+     * <p>
+     * A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>, this is a
+     * staging distribution. When this value is <code>false</code>, this is not a staging distribution.
+     * </p>
+     * 
+     * @param staging
+     *        A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>,
+     *        this is a staging distribution. When this value is <code>false</code>, this is not a staging distribution.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DistributionConfig withStaging(Boolean staging) {
+        setStaging(staging);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>, this is a
+     * staging distribution. When this value is <code>false</code>, this is not a staging distribution.
+     * </p>
+     * 
+     * @return A Boolean that indicates whether this is a staging distribution. When this value is <code>true</code>,
+     *         this is a staging distribution. When this value is <code>false</code>, this is not a staging
+     *         distribution.
+     */
+
+    public Boolean isStaging() {
+        return this.staging;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2119,7 +2241,11 @@ public class DistributionConfig implements Serializable, Cloneable {
         if (getHttpVersion() != null)
             sb.append("HttpVersion: ").append(getHttpVersion()).append(",");
         if (getIsIPV6Enabled() != null)
-            sb.append("IsIPV6Enabled: ").append(getIsIPV6Enabled());
+            sb.append("IsIPV6Enabled: ").append(getIsIPV6Enabled()).append(",");
+        if (getContinuousDeploymentPolicyId() != null)
+            sb.append("ContinuousDeploymentPolicyId: ").append(getContinuousDeploymentPolicyId()).append(",");
+        if (getStaging() != null)
+            sb.append("Staging: ").append(getStaging());
         sb.append("}");
         return sb.toString();
     }
@@ -2202,6 +2328,14 @@ public class DistributionConfig implements Serializable, Cloneable {
             return false;
         if (other.getIsIPV6Enabled() != null && other.getIsIPV6Enabled().equals(this.getIsIPV6Enabled()) == false)
             return false;
+        if (other.getContinuousDeploymentPolicyId() == null ^ this.getContinuousDeploymentPolicyId() == null)
+            return false;
+        if (other.getContinuousDeploymentPolicyId() != null && other.getContinuousDeploymentPolicyId().equals(this.getContinuousDeploymentPolicyId()) == false)
+            return false;
+        if (other.getStaging() == null ^ this.getStaging() == null)
+            return false;
+        if (other.getStaging() != null && other.getStaging().equals(this.getStaging()) == false)
+            return false;
         return true;
     }
 
@@ -2227,6 +2361,8 @@ public class DistributionConfig implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getWebACLId() == null) ? 0 : getWebACLId().hashCode());
         hashCode = prime * hashCode + ((getHttpVersion() == null) ? 0 : getHttpVersion().hashCode());
         hashCode = prime * hashCode + ((getIsIPV6Enabled() == null) ? 0 : getIsIPV6Enabled().hashCode());
+        hashCode = prime * hashCode + ((getContinuousDeploymentPolicyId() == null) ? 0 : getContinuousDeploymentPolicyId().hashCode());
+        hashCode = prime * hashCode + ((getStaging() == null) ? 0 : getStaging().hashCode());
         return hashCode;
     }
 

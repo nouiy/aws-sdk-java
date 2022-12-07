@@ -150,6 +150,10 @@ public class DistributionSummaryStaxUnmarshaller implements Unmarshaller<Distrib
                     continue;
                 }
 
+                if (context.testExpression("Staging", targetDepth)) {
+                    distributionSummary.setStaging(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return distributionSummary;

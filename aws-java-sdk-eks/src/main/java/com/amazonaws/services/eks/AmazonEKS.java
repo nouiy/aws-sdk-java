@@ -510,6 +510,27 @@ public interface AmazonEKS {
 
     /**
      * <p>
+     * Returns configuration options.
+     * </p>
+     * 
+     * @param describeAddonConfigurationRequest
+     * @return Result of the DescribeAddonConfiguration operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found. You can view your available clusters with <a>ListClusters</a>.
+     *         You can view your available managed node groups with <a>ListNodegroups</a>. Amazon EKS clusters and node
+     *         groups are Region-specific.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @sample AmazonEKS.DescribeAddonConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribeAddonConfiguration" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeAddonConfigurationResult describeAddonConfiguration(DescribeAddonConfigurationRequest describeAddonConfigurationRequest);
+
+    /**
+     * <p>
      * Describes the versions for an add-on. Information such as the Kubernetes versions that you can use the add-on
      * with, the <code>owner</code>, <code>publisher</code>, and the <code>type</code> of the add-on are returned.
      * </p>

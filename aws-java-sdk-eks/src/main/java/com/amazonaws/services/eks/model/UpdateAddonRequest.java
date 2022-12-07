@@ -95,6 +95,15 @@ public class UpdateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private String clientRequestToken;
+    /**
+     * <p>
+     * The set of configuration values for the add-on being created. Whatever values provided here are validated against
+     * the schema from <a
+     * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     * DescribeAddonConfiguration</a>
+     * </p>
+     */
+    private String configurationValues;
 
     /**
      * <p>
@@ -595,6 +604,64 @@ public class UpdateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The set of configuration values for the add-on being created. Whatever values provided here are validated against
+     * the schema from <a
+     * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     * DescribeAddonConfiguration</a>
+     * </p>
+     * 
+     * @param configurationValues
+     *        The set of configuration values for the add-on being created. Whatever values provided here are validated
+     *        against the schema from <a
+     *        href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html"
+     *        >DescribeAddonConfiguration</a>
+     */
+
+    public void setConfigurationValues(String configurationValues) {
+        this.configurationValues = configurationValues;
+    }
+
+    /**
+     * <p>
+     * The set of configuration values for the add-on being created. Whatever values provided here are validated against
+     * the schema from <a
+     * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     * DescribeAddonConfiguration</a>
+     * </p>
+     * 
+     * @return The set of configuration values for the add-on being created. Whatever values provided here are validated
+     *         against the schema from <a
+     *         href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html"
+     *         >DescribeAddonConfiguration</a>
+     */
+
+    public String getConfigurationValues() {
+        return this.configurationValues;
+    }
+
+    /**
+     * <p>
+     * The set of configuration values for the add-on being created. Whatever values provided here are validated against
+     * the schema from <a
+     * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     * DescribeAddonConfiguration</a>
+     * </p>
+     * 
+     * @param configurationValues
+     *        The set of configuration values for the add-on being created. Whatever values provided here are validated
+     *        against the schema from <a
+     *        href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html"
+     *        >DescribeAddonConfiguration</a>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateAddonRequest withConfigurationValues(String configurationValues) {
+        setConfigurationValues(configurationValues);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -617,7 +684,9 @@ public class UpdateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getResolveConflicts() != null)
             sb.append("ResolveConflicts: ").append(getResolveConflicts()).append(",");
         if (getClientRequestToken() != null)
-            sb.append("ClientRequestToken: ").append(getClientRequestToken());
+            sb.append("ClientRequestToken: ").append(getClientRequestToken()).append(",");
+        if (getConfigurationValues() != null)
+            sb.append("ConfigurationValues: ").append(getConfigurationValues());
         sb.append("}");
         return sb.toString();
     }
@@ -656,6 +725,10 @@ public class UpdateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getClientRequestToken() != null && other.getClientRequestToken().equals(this.getClientRequestToken()) == false)
             return false;
+        if (other.getConfigurationValues() == null ^ this.getConfigurationValues() == null)
+            return false;
+        if (other.getConfigurationValues() != null && other.getConfigurationValues().equals(this.getConfigurationValues()) == false)
+            return false;
         return true;
     }
 
@@ -670,6 +743,7 @@ public class UpdateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getServiceAccountRoleArn() == null) ? 0 : getServiceAccountRoleArn().hashCode());
         hashCode = prime * hashCode + ((getResolveConflicts() == null) ? 0 : getResolveConflicts().hashCode());
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
+        hashCode = prime * hashCode + ((getConfigurationValues() == null) ? 0 : getConfigurationValues().hashCode());
         return hashCode;
     }
 

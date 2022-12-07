@@ -64,6 +64,10 @@ public class RootCauseJsonUnmarshaller implements Unmarshaller<RootCause, JsonUn
                     context.nextToken();
                     rootCause.setUsageType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LinkedAccountName", targetDepth)) {
+                    context.nextToken();
+                    rootCause.setLinkedAccountName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -110,6 +110,12 @@ public class Addon implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private MarketplaceInformation marketplaceInformation;
+    /**
+     * <p>
+     * The provided configuration values.
+     * </p>
+     */
+    private String configurationValues;
 
     /**
      * <p>
@@ -697,6 +703,46 @@ public class Addon implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The provided configuration values.
+     * </p>
+     * 
+     * @param configurationValues
+     *        The provided configuration values.
+     */
+
+    public void setConfigurationValues(String configurationValues) {
+        this.configurationValues = configurationValues;
+    }
+
+    /**
+     * <p>
+     * The provided configuration values.
+     * </p>
+     * 
+     * @return The provided configuration values.
+     */
+
+    public String getConfigurationValues() {
+        return this.configurationValues;
+    }
+
+    /**
+     * <p>
+     * The provided configuration values.
+     * </p>
+     * 
+     * @param configurationValues
+     *        The provided configuration values.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Addon withConfigurationValues(String configurationValues) {
+        setConfigurationValues(configurationValues);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -733,7 +779,9 @@ public class Addon implements Serializable, Cloneable, StructuredPojo {
         if (getOwner() != null)
             sb.append("Owner: ").append(getOwner()).append(",");
         if (getMarketplaceInformation() != null)
-            sb.append("MarketplaceInformation: ").append(getMarketplaceInformation());
+            sb.append("MarketplaceInformation: ").append(getMarketplaceInformation()).append(",");
+        if (getConfigurationValues() != null)
+            sb.append("ConfigurationValues: ").append(getConfigurationValues());
         sb.append("}");
         return sb.toString();
     }
@@ -800,6 +848,10 @@ public class Addon implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getMarketplaceInformation() != null && other.getMarketplaceInformation().equals(this.getMarketplaceInformation()) == false)
             return false;
+        if (other.getConfigurationValues() == null ^ this.getConfigurationValues() == null)
+            return false;
+        if (other.getConfigurationValues() != null && other.getConfigurationValues().equals(this.getConfigurationValues()) == false)
+            return false;
         return true;
     }
 
@@ -821,6 +873,7 @@ public class Addon implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getPublisher() == null) ? 0 : getPublisher().hashCode());
         hashCode = prime * hashCode + ((getOwner() == null) ? 0 : getOwner().hashCode());
         hashCode = prime * hashCode + ((getMarketplaceInformation() == null) ? 0 : getMarketplaceInformation().hashCode());
+        hashCode = prime * hashCode + ((getConfigurationValues() == null) ? 0 : getConfigurationValues().hashCode());
         return hashCode;
     }
 

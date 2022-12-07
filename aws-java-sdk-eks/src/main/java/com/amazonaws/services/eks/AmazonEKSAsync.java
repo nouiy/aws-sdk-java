@@ -635,6 +635,39 @@ public interface AmazonEKSAsync extends AmazonEKS {
 
     /**
      * <p>
+     * Returns configuration options.
+     * </p>
+     * 
+     * @param describeAddonConfigurationRequest
+     * @return A Java Future containing the result of the DescribeAddonConfiguration operation returned by the service.
+     * @sample AmazonEKSAsync.DescribeAddonConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribeAddonConfiguration" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAddonConfigurationResult> describeAddonConfigurationAsync(
+            DescribeAddonConfigurationRequest describeAddonConfigurationRequest);
+
+    /**
+     * <p>
+     * Returns configuration options.
+     * </p>
+     * 
+     * @param describeAddonConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeAddonConfiguration operation returned by the service.
+     * @sample AmazonEKSAsyncHandler.DescribeAddonConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DescribeAddonConfiguration" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAddonConfigurationResult> describeAddonConfigurationAsync(
+            DescribeAddonConfigurationRequest describeAddonConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeAddonConfigurationRequest, DescribeAddonConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes the versions for an add-on. Information such as the Kubernetes versions that you can use the add-on
      * with, the <code>owner</code>, <code>publisher</code>, and the <code>type</code> of the add-on are returned.
      * </p>

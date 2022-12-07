@@ -185,6 +185,19 @@ public class AbstractAmazonEKSAsync extends AbstractAmazonEKS implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeAddonConfigurationResult> describeAddonConfigurationAsync(DescribeAddonConfigurationRequest request) {
+
+        return describeAddonConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAddonConfigurationResult> describeAddonConfigurationAsync(DescribeAddonConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeAddonConfigurationRequest, DescribeAddonConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeAddonVersionsResult> describeAddonVersionsAsync(DescribeAddonVersionsRequest request) {
 
         return describeAddonVersionsAsync(request, null);

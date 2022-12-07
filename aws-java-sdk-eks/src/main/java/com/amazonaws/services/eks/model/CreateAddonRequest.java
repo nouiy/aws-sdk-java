@@ -109,6 +109,15 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The set of configuration values for the add-on being created. Whatever values provided here are validated against
+     * the schema from <a
+     * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     * <code>DescribeAddonConfiguration</code> </a>.
+     * </p>
+     */
+    private String configurationValues;
 
     /**
      * <p>
@@ -742,6 +751,64 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The set of configuration values for the add-on being created. Whatever values provided here are validated against
+     * the schema from <a
+     * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     * <code>DescribeAddonConfiguration</code> </a>.
+     * </p>
+     * 
+     * @param configurationValues
+     *        The set of configuration values for the add-on being created. Whatever values provided here are validated
+     *        against the schema from <a
+     *        href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     *        <code>DescribeAddonConfiguration</code> </a>.
+     */
+
+    public void setConfigurationValues(String configurationValues) {
+        this.configurationValues = configurationValues;
+    }
+
+    /**
+     * <p>
+     * The set of configuration values for the add-on being created. Whatever values provided here are validated against
+     * the schema from <a
+     * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     * <code>DescribeAddonConfiguration</code> </a>.
+     * </p>
+     * 
+     * @return The set of configuration values for the add-on being created. Whatever values provided here are validated
+     *         against the schema from <a
+     *         href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     *         <code>DescribeAddonConfiguration</code> </a>.
+     */
+
+    public String getConfigurationValues() {
+        return this.configurationValues;
+    }
+
+    /**
+     * <p>
+     * The set of configuration values for the add-on being created. Whatever values provided here are validated against
+     * the schema from <a
+     * href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     * <code>DescribeAddonConfiguration</code> </a>.
+     * </p>
+     * 
+     * @param configurationValues
+     *        The set of configuration values for the add-on being created. Whatever values provided here are validated
+     *        against the schema from <a
+     *        href="https://docs.aws.amazon.com/eks/latest/APIReference/API_DescribeAddonConfiguration.html">
+     *        <code>DescribeAddonConfiguration</code> </a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAddonRequest withConfigurationValues(String configurationValues) {
+        setConfigurationValues(configurationValues);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -766,7 +833,9 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getClientRequestToken() != null)
             sb.append("ClientRequestToken: ").append(getClientRequestToken()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getConfigurationValues() != null)
+            sb.append("ConfigurationValues: ").append(getConfigurationValues());
         sb.append("}");
         return sb.toString();
     }
@@ -809,6 +878,10 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getConfigurationValues() == null ^ this.getConfigurationValues() == null)
+            return false;
+        if (other.getConfigurationValues() != null && other.getConfigurationValues().equals(this.getConfigurationValues()) == false)
+            return false;
         return true;
     }
 
@@ -824,6 +897,7 @@ public class CreateAddonRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getResolveConflicts() == null) ? 0 : getResolveConflicts().hashCode());
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getConfigurationValues() == null) ? 0 : getConfigurationValues().hashCode());
         return hashCode;
     }
 
