@@ -48,6 +48,10 @@ public class DescribePackagingGroupResultJsonUnmarshaller implements Unmarshalle
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("approximateAssetCount", targetDepth)) {
+                    context.nextToken();
+                    describePackagingGroupResult.setApproximateAssetCount(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     describePackagingGroupResult.setArn(context.getUnmarshaller(String.class).unmarshall(context));

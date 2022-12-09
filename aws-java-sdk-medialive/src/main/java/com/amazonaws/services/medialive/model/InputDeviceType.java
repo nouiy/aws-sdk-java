@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum InputDeviceType {
 
-    HD("HD");
+    HD("HD"),
+    UHD("UHD");
 
     private String value;
 

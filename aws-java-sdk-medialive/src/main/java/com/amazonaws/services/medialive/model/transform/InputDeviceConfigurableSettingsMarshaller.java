@@ -31,6 +31,8 @@ public class InputDeviceConfigurableSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configuredInput").build();
     private static final MarshallingInfo<Integer> MAXBITRATE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxBitrate").build();
+    private static final MarshallingInfo<Integer> LATENCYMS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("latencyMs").build();
 
     private static final InputDeviceConfigurableSettingsMarshaller instance = new InputDeviceConfigurableSettingsMarshaller();
 
@@ -50,6 +52,7 @@ public class InputDeviceConfigurableSettingsMarshaller {
         try {
             protocolMarshaller.marshall(inputDeviceConfigurableSettings.getConfiguredInput(), CONFIGUREDINPUT_BINDING);
             protocolMarshaller.marshall(inputDeviceConfigurableSettings.getMaxBitrate(), MAXBITRATE_BINDING);
+            protocolMarshaller.marshall(inputDeviceConfigurableSettings.getLatencyMs(), LATENCYMS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

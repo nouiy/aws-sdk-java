@@ -48,6 +48,10 @@ public class PackagingGroupJsonUnmarshaller implements Unmarshaller<PackagingGro
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("approximateAssetCount", targetDepth)) {
+                    context.nextToken();
+                    packagingGroup.setApproximateAssetCount(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("arn", targetDepth)) {
                     context.nextToken();
                     packagingGroup.setArn(context.getUnmarshaller(String.class).unmarshall(context));

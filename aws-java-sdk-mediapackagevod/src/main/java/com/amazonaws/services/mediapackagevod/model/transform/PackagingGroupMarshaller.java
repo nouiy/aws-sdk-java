@@ -29,6 +29,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class PackagingGroupMarshaller {
 
+    private static final MarshallingInfo<Integer> APPROXIMATEASSETCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("approximateAssetCount").build();
     private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("arn").build();
     private static final MarshallingInfo<StructuredPojo> AUTHORIZATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -58,6 +60,7 @@ public class PackagingGroupMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(packagingGroup.getApproximateAssetCount(), APPROXIMATEASSETCOUNT_BINDING);
             protocolMarshaller.marshall(packagingGroup.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(packagingGroup.getAuthorization(), AUTHORIZATION_BINDING);
             protocolMarshaller.marshall(packagingGroup.getDomainName(), DOMAINNAME_BINDING);

@@ -1,3 +1,20 @@
+# __1.12.362__ __2022-12-09__
+## __AWS Elemental MediaLive__
+  - ### Features
+    - Link devices now support buffer size (latency) configuration. A higher latency value means a longer delay in transmitting from the device to MediaLive, but improved resiliency. A lower latency value means a shorter delay, but less resiliency.
+
+## __AWS Elemental MediaPackage VOD__
+  - ### Features
+    - This release provides the approximate number of assets in a packaging group.
+
+## __AWS IoT FleetWise__
+  - ### Features
+    - Deprecated assignedValue property for actuators and attributes.  Added a message to invalid nodes and invalid decoder manifest exceptions.
+
+## __Amazon CloudWatch Logs__
+  - ### Features
+    - Doc-only update for CloudWatch Logs, for Tagging Permissions clarifications
+
 # __1.12.361__ __2022-12-08__
 ## __AWS IoT TwinMaker__
   - ### Features
