@@ -272,6 +272,76 @@ public class AmazonKinesisVideoAsyncClient extends AmazonKinesisVideoClient impl
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeMappedResourceConfigurationResult> describeMappedResourceConfigurationAsync(
+            DescribeMappedResourceConfigurationRequest request) {
+
+        return describeMappedResourceConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeMappedResourceConfigurationResult> describeMappedResourceConfigurationAsync(
+            final DescribeMappedResourceConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeMappedResourceConfigurationRequest, DescribeMappedResourceConfigurationResult> asyncHandler) {
+        final DescribeMappedResourceConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeMappedResourceConfigurationResult>() {
+            @Override
+            public DescribeMappedResourceConfigurationResult call() throws Exception {
+                DescribeMappedResourceConfigurationResult result = null;
+
+                try {
+                    result = executeDescribeMappedResourceConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeMediaStorageConfigurationResult> describeMediaStorageConfigurationAsync(
+            DescribeMediaStorageConfigurationRequest request) {
+
+        return describeMediaStorageConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeMediaStorageConfigurationResult> describeMediaStorageConfigurationAsync(
+            final DescribeMediaStorageConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeMediaStorageConfigurationRequest, DescribeMediaStorageConfigurationResult> asyncHandler) {
+        final DescribeMediaStorageConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeMediaStorageConfigurationResult>() {
+            @Override
+            public DescribeMediaStorageConfigurationResult call() throws Exception {
+                DescribeMediaStorageConfigurationResult result = null;
+
+                try {
+                    result = executeDescribeMediaStorageConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeNotificationConfigurationResult> describeNotificationConfigurationAsync(
             DescribeNotificationConfigurationRequest request) {
 
@@ -788,6 +858,41 @@ public class AmazonKinesisVideoAsyncClient extends AmazonKinesisVideoClient impl
 
                 try {
                     result = executeUpdateImageGenerationConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMediaStorageConfigurationResult> updateMediaStorageConfigurationAsync(
+            UpdateMediaStorageConfigurationRequest request) {
+
+        return updateMediaStorageConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateMediaStorageConfigurationResult> updateMediaStorageConfigurationAsync(
+            final UpdateMediaStorageConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateMediaStorageConfigurationRequest, UpdateMediaStorageConfigurationResult> asyncHandler) {
+        final UpdateMediaStorageConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateMediaStorageConfigurationResult>() {
+            @Override
+            public UpdateMediaStorageConfigurationResult call() throws Exception {
+                UpdateMediaStorageConfigurationResult result = null;
+
+                try {
+                    result = executeUpdateMediaStorageConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

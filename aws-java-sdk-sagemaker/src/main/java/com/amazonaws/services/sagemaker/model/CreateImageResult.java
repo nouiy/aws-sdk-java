@@ -25,18 +25,18 @@ public class CreateImageResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image.
+     * The ARN of the image.
      * </p>
      */
     private String imageArn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image.
+     * The ARN of the image.
      * </p>
      * 
      * @param imageArn
-     *        The Amazon Resource Name (ARN) of the image.
+     *        The ARN of the image.
      */
 
     public void setImageArn(String imageArn) {
@@ -45,10 +45,10 @@ public class CreateImageResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image.
+     * The ARN of the image.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the image.
+     * @return The ARN of the image.
      */
 
     public String getImageArn() {
@@ -57,11 +57,11 @@ public class CreateImageResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image.
+     * The ARN of the image.
      * </p>
      * 
      * @param imageArn
-     *        The Amazon Resource Name (ARN) of the image.
+     *        The ARN of the image.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

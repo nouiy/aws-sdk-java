@@ -395,6 +395,9 @@ public interface AmazonAthena {
      * @return Result of the GetCalculationExecutionCode operation returned by the service.
      * @throws InternalServerException
      *         Indicates a platform issue, which may be due to a transient condition or outage.
+     * @throws InvalidRequestException
+     *         Indicates that something is wrong with the input to the request. For example, a required parameter may be
+     *         missing or out of range.
      * @throws ResourceNotFoundException
      *         A resource, such as a workgroup, was not found.
      * @sample AmazonAthena.GetCalculationExecutionCode
@@ -581,8 +584,9 @@ public interface AmazonAthena {
     /**
      * <p>
      * Returns query execution runtime statistics related to a single execution of a query if you have access to the
-     * workgroup in which the query ran. The query execution runtime statistics is returned only when
-     * <a>QueryExecutionStatus$State</a> is in a SUCCEEDED or FAILED state.
+     * workgroup in which the query ran. Query execution runtime statistics are returned only when
+     * <a>QueryExecutionStatus$State</a> is in a SUCCEEDED or FAILED state. Stage-level input and output row count and
+     * data size statistics are not shown when a query has row-level filters defined in Lake Formation.
      * </p>
      * 
      * @param getQueryRuntimeStatisticsRequest
@@ -1102,6 +1106,9 @@ public interface AmazonAthena {
      * @return Result of the StopCalculationExecution operation returned by the service.
      * @throws InternalServerException
      *         Indicates a platform issue, which may be due to a transient condition or outage.
+     * @throws InvalidRequestException
+     *         Indicates that something is wrong with the input to the request. For example, a required parameter may be
+     *         missing or out of range.
      * @throws ResourceNotFoundException
      *         A resource, such as a workgroup, was not found.
      * @sample AmazonAthena.StopCalculationExecution

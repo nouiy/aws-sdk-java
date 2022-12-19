@@ -3623,6 +3623,21 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Lists the aliases of a specified image or image version.
+     * </p>
+     * 
+     * @param listAliasesRequest
+     * @return Result of the ListAliases operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.ListAliases
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListAliases" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListAliasesResult listAliases(ListAliasesRequest listAliasesRequest);
+
+    /**
+     * <p>
      * Lists the AppImageConfigs in your account and their properties. The list can be filtered by creation time or
      * modified time, and whether the AppImageConfig name contains a specified string.
      * </p>
@@ -5375,6 +5390,23 @@ public interface AmazonSageMaker {
      *      Documentation</a>
      */
     UpdateImageResult updateImage(UpdateImageRequest updateImageRequest);
+
+    /**
+     * <p>
+     * Updates the properties of a SageMaker image version.
+     * </p>
+     * 
+     * @param updateImageVersionRequest
+     * @return Result of the UpdateImageVersion operation returned by the service.
+     * @throws ResourceInUseException
+     *         Resource being accessed is in use.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.UpdateImageVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateImageVersion" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateImageVersionResult updateImageVersion(UpdateImageVersionRequest updateImageVersionRequest);
 
     /**
      * <p>

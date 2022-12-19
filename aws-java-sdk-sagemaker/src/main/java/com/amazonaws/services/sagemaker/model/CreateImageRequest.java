@@ -45,7 +45,7 @@ public class CreateImageRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String imageName;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that enables Amazon SageMaker to perform tasks on your behalf.
+     * The ARN of an IAM role that enables Amazon SageMaker to perform tasks on your behalf.
      * </p>
      */
     private String roleArn;
@@ -178,12 +178,11 @@ public class CreateImageRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that enables Amazon SageMaker to perform tasks on your behalf.
+     * The ARN of an IAM role that enables Amazon SageMaker to perform tasks on your behalf.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM role that enables Amazon SageMaker to perform tasks on your
-     *        behalf.
+     *        The ARN of an IAM role that enables Amazon SageMaker to perform tasks on your behalf.
      */
 
     public void setRoleArn(String roleArn) {
@@ -192,11 +191,10 @@ public class CreateImageRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that enables Amazon SageMaker to perform tasks on your behalf.
+     * The ARN of an IAM role that enables Amazon SageMaker to perform tasks on your behalf.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an IAM role that enables Amazon SageMaker to perform tasks on your
-     *         behalf.
+     * @return The ARN of an IAM role that enables Amazon SageMaker to perform tasks on your behalf.
      */
 
     public String getRoleArn() {
@@ -205,12 +203,11 @@ public class CreateImageRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that enables Amazon SageMaker to perform tasks on your behalf.
+     * The ARN of an IAM role that enables Amazon SageMaker to perform tasks on your behalf.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM role that enables Amazon SageMaker to perform tasks on your
-     *        behalf.
+     *        The ARN of an IAM role that enables Amazon SageMaker to perform tasks on your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

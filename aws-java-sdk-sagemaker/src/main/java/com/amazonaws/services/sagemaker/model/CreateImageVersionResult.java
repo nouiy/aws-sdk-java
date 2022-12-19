@@ -25,18 +25,18 @@ public class CreateImageVersionResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image version.
+     * The ARN of the image version.
      * </p>
      */
     private String imageVersionArn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image version.
+     * The ARN of the image version.
      * </p>
      * 
      * @param imageVersionArn
-     *        The Amazon Resource Name (ARN) of the image version.
+     *        The ARN of the image version.
      */
 
     public void setImageVersionArn(String imageVersionArn) {
@@ -45,10 +45,10 @@ public class CreateImageVersionResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image version.
+     * The ARN of the image version.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the image version.
+     * @return The ARN of the image version.
      */
 
     public String getImageVersionArn() {
@@ -57,11 +57,11 @@ public class CreateImageVersionResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image version.
+     * The ARN of the image version.
      * </p>
      * 
      * @param imageVersionArn
-     *        The Amazon Resource Name (ARN) of the image version.
+     *        The ARN of the image version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

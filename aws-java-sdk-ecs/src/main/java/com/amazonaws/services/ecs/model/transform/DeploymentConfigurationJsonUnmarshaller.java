@@ -60,6 +60,10 @@ public class DeploymentConfigurationJsonUnmarshaller implements Unmarshaller<Dep
                     context.nextToken();
                     deploymentConfiguration.setMinimumHealthyPercent(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("alarms", targetDepth)) {
+                    context.nextToken();
+                    deploymentConfiguration.setAlarms(DeploymentAlarmsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

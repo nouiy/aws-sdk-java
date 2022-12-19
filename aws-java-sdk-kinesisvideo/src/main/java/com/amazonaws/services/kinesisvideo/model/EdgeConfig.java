@@ -44,8 +44,8 @@ public class EdgeConfig implements Serializable, Cloneable, StructuredPojo {
     private RecorderConfig recorderConfig;
     /**
      * <p>
-     * The uploader configuration contains the <code>ScheduleExpression</code> details that are used, to schedule upload
-     * jobs for the recorded media files from the Edge Agent, to a Kinesis Video Stream.
+     * The uploader configuration contains the <code>ScheduleExpression</code> details that are used to schedule upload
+     * jobs for the recorded media files from the Edge Agent to a Kinesis Video Stream.
      * </p>
      */
     private UploaderConfig uploaderConfig;
@@ -145,13 +145,13 @@ public class EdgeConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The uploader configuration contains the <code>ScheduleExpression</code> details that are used, to schedule upload
-     * jobs for the recorded media files from the Edge Agent, to a Kinesis Video Stream.
+     * The uploader configuration contains the <code>ScheduleExpression</code> details that are used to schedule upload
+     * jobs for the recorded media files from the Edge Agent to a Kinesis Video Stream.
      * </p>
      * 
      * @param uploaderConfig
-     *        The uploader configuration contains the <code>ScheduleExpression</code> details that are used, to schedule
-     *        upload jobs for the recorded media files from the Edge Agent, to a Kinesis Video Stream.
+     *        The uploader configuration contains the <code>ScheduleExpression</code> details that are used to schedule
+     *        upload jobs for the recorded media files from the Edge Agent to a Kinesis Video Stream.
      */
 
     public void setUploaderConfig(UploaderConfig uploaderConfig) {
@@ -160,12 +160,12 @@ public class EdgeConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The uploader configuration contains the <code>ScheduleExpression</code> details that are used, to schedule upload
-     * jobs for the recorded media files from the Edge Agent, to a Kinesis Video Stream.
+     * The uploader configuration contains the <code>ScheduleExpression</code> details that are used to schedule upload
+     * jobs for the recorded media files from the Edge Agent to a Kinesis Video Stream.
      * </p>
      * 
-     * @return The uploader configuration contains the <code>ScheduleExpression</code> details that are used, to
-     *         schedule upload jobs for the recorded media files from the Edge Agent, to a Kinesis Video Stream.
+     * @return The uploader configuration contains the <code>ScheduleExpression</code> details that are used to schedule
+     *         upload jobs for the recorded media files from the Edge Agent to a Kinesis Video Stream.
      */
 
     public UploaderConfig getUploaderConfig() {
@@ -174,13 +174,13 @@ public class EdgeConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The uploader configuration contains the <code>ScheduleExpression</code> details that are used, to schedule upload
-     * jobs for the recorded media files from the Edge Agent, to a Kinesis Video Stream.
+     * The uploader configuration contains the <code>ScheduleExpression</code> details that are used to schedule upload
+     * jobs for the recorded media files from the Edge Agent to a Kinesis Video Stream.
      * </p>
      * 
      * @param uploaderConfig
-     *        The uploader configuration contains the <code>ScheduleExpression</code> details that are used, to schedule
-     *        upload jobs for the recorded media files from the Edge Agent, to a Kinesis Video Stream.
+     *        The uploader configuration contains the <code>ScheduleExpression</code> details that are used to schedule
+     *        upload jobs for the recorded media files from the Edge Agent to a Kinesis Video Stream.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

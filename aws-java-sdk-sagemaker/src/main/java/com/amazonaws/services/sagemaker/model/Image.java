@@ -55,7 +55,7 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
     private String failureReason;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image.
+     * The ARN of the image.
      * </p>
      */
     private String imageArn;
@@ -240,11 +240,11 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image.
+     * The ARN of the image.
      * </p>
      * 
      * @param imageArn
-     *        The Amazon Resource Name (ARN) of the image.
+     *        The ARN of the image.
      */
 
     public void setImageArn(String imageArn) {
@@ -253,10 +253,10 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image.
+     * The ARN of the image.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the image.
+     * @return The ARN of the image.
      */
 
     public String getImageArn() {
@@ -265,11 +265,11 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image.
+     * The ARN of the image.
      * </p>
      * 
      * @param imageArn
-     *        The Amazon Resource Name (ARN) of the image.
+     *        The ARN of the image.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

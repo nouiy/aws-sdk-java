@@ -884,6 +884,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public ListAliasesResult listAliases(ListAliasesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListAppImageConfigsResult listAppImageConfigs(ListAppImageConfigsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1430,6 +1435,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public UpdateImageResult updateImage(UpdateImageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateImageVersionResult updateImageVersion(UpdateImageVersionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -37,9 +37,14 @@ public class MediaSourceConfig implements Serializable, Cloneable, StructuredPoj
     private String mediaUriSecretArn;
     /**
      * <p>
-     * The Uniform Resource Identifier (Uri) type. The <code>FILE_URI</code> value can be used to stream local media
+     * The Uniform Resource Identifier (URI) type. The <code>FILE_URI</code> value can be used to stream local media
      * files.
      * </p>
+     * <note>
+     * <p>
+     * Preview only supports the <code>RTSP_URI</code> media source URI format .
+     * </p>
+     * </note>
      */
     private String mediaUriType;
 
@@ -85,13 +90,21 @@ public class MediaSourceConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Uniform Resource Identifier (Uri) type. The <code>FILE_URI</code> value can be used to stream local media
+     * The Uniform Resource Identifier (URI) type. The <code>FILE_URI</code> value can be used to stream local media
      * files.
      * </p>
+     * <note>
+     * <p>
+     * Preview only supports the <code>RTSP_URI</code> media source URI format .
+     * </p>
+     * </note>
      * 
      * @param mediaUriType
-     *        The Uniform Resource Identifier (Uri) type. The <code>FILE_URI</code> value can be used to stream local
-     *        media files.
+     *        The Uniform Resource Identifier (URI) type. The <code>FILE_URI</code> value can be used to stream local
+     *        media files.</p> <note>
+     *        <p>
+     *        Preview only supports the <code>RTSP_URI</code> media source URI format .
+     *        </p>
      * @see MediaUriType
      */
 
@@ -101,12 +114,20 @@ public class MediaSourceConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Uniform Resource Identifier (Uri) type. The <code>FILE_URI</code> value can be used to stream local media
+     * The Uniform Resource Identifier (URI) type. The <code>FILE_URI</code> value can be used to stream local media
      * files.
      * </p>
+     * <note>
+     * <p>
+     * Preview only supports the <code>RTSP_URI</code> media source URI format .
+     * </p>
+     * </note>
      * 
-     * @return The Uniform Resource Identifier (Uri) type. The <code>FILE_URI</code> value can be used to stream local
-     *         media files.
+     * @return The Uniform Resource Identifier (URI) type. The <code>FILE_URI</code> value can be used to stream local
+     *         media files.</p> <note>
+     *         <p>
+     *         Preview only supports the <code>RTSP_URI</code> media source URI format .
+     *         </p>
      * @see MediaUriType
      */
 
@@ -116,13 +137,21 @@ public class MediaSourceConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Uniform Resource Identifier (Uri) type. The <code>FILE_URI</code> value can be used to stream local media
+     * The Uniform Resource Identifier (URI) type. The <code>FILE_URI</code> value can be used to stream local media
      * files.
      * </p>
+     * <note>
+     * <p>
+     * Preview only supports the <code>RTSP_URI</code> media source URI format .
+     * </p>
+     * </note>
      * 
      * @param mediaUriType
-     *        The Uniform Resource Identifier (Uri) type. The <code>FILE_URI</code> value can be used to stream local
-     *        media files.
+     *        The Uniform Resource Identifier (URI) type. The <code>FILE_URI</code> value can be used to stream local
+     *        media files.</p> <note>
+     *        <p>
+     *        Preview only supports the <code>RTSP_URI</code> media source URI format .
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MediaUriType
      */
@@ -134,13 +163,21 @@ public class MediaSourceConfig implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The Uniform Resource Identifier (Uri) type. The <code>FILE_URI</code> value can be used to stream local media
+     * The Uniform Resource Identifier (URI) type. The <code>FILE_URI</code> value can be used to stream local media
      * files.
      * </p>
+     * <note>
+     * <p>
+     * Preview only supports the <code>RTSP_URI</code> media source URI format .
+     * </p>
+     * </note>
      * 
      * @param mediaUriType
-     *        The Uniform Resource Identifier (Uri) type. The <code>FILE_URI</code> value can be used to stream local
-     *        media files.
+     *        The Uniform Resource Identifier (URI) type. The <code>FILE_URI</code> value can be used to stream local
+     *        media files.</p> <note>
+     *        <p>
+     *        Preview only supports the <code>RTSP_URI</code> media source URI format .
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MediaUriType
      */

@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum ChannelProtocol {
 
     WSS("WSS"),
-    HTTPS("HTTPS");
+    HTTPS("HTTPS"),
+    WEBRTC("WEBRTC");
 
     private String value;
 

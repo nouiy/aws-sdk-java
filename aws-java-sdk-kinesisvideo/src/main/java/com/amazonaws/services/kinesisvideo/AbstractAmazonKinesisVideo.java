@@ -58,6 +58,16 @@ public class AbstractAmazonKinesisVideo implements AmazonKinesisVideo {
     }
 
     @Override
+    public DescribeMappedResourceConfigurationResult describeMappedResourceConfiguration(DescribeMappedResourceConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeMediaStorageConfigurationResult describeMediaStorageConfiguration(DescribeMediaStorageConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeNotificationConfigurationResult describeNotificationConfiguration(DescribeNotificationConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -134,6 +144,11 @@ public class AbstractAmazonKinesisVideo implements AmazonKinesisVideo {
 
     @Override
     public UpdateImageGenerationConfigurationResult updateImageGenerationConfiguration(UpdateImageGenerationConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateMediaStorageConfigurationResult updateMediaStorageConfiguration(UpdateMediaStorageConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

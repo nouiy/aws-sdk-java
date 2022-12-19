@@ -2287,6 +2287,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListAliasesResult> listAliasesAsync(ListAliasesRequest request) {
+
+        return listAliasesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAliasesResult> listAliasesAsync(ListAliasesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAliasesRequest, ListAliasesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListAppImageConfigsResult> listAppImageConfigsAsync(ListAppImageConfigsRequest request) {
 
         return listAppImageConfigsAsync(request, null);
@@ -3732,6 +3745,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<UpdateImageResult> updateImageAsync(UpdateImageRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateImageRequest, UpdateImageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateImageVersionResult> updateImageVersionAsync(UpdateImageVersionRequest request) {
+
+        return updateImageVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateImageVersionResult> updateImageVersionAsync(UpdateImageVersionRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateImageVersionRequest, UpdateImageVersionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

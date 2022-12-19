@@ -241,6 +241,10 @@ public class CreateDBInstanceReadReplicaRequestMarshaller implements
             request.addParameter("StorageThroughput", StringUtils.fromInteger(createDBInstanceReadReplicaRequest.getStorageThroughput()));
         }
 
+        if (createDBInstanceReadReplicaRequest.getEnableCustomerOwnedIp() != null) {
+            request.addParameter("EnableCustomerOwnedIp", StringUtils.fromBoolean(createDBInstanceReadReplicaRequest.getEnableCustomerOwnedIp()));
+        }
+
         if (createDBInstanceReadReplicaRequest.getSourceRegion() != null) {
             request.addParameter("SourceRegion", StringUtils.fromString(createDBInstanceReadReplicaRequest.getSourceRegion()));
         }

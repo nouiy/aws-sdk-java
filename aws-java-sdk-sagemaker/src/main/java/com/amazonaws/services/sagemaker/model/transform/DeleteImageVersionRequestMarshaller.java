@@ -31,6 +31,8 @@ public class DeleteImageVersionRequestMarshaller {
             .marshallLocationName("ImageName").build();
     private static final MarshallingInfo<Integer> VERSION_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Version").build();
+    private static final MarshallingInfo<String> ALIAS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Alias").build();
 
     private static final DeleteImageVersionRequestMarshaller instance = new DeleteImageVersionRequestMarshaller();
 
@@ -50,6 +52,7 @@ public class DeleteImageVersionRequestMarshaller {
         try {
             protocolMarshaller.marshall(deleteImageVersionRequest.getImageName(), IMAGENAME_BINDING);
             protocolMarshaller.marshall(deleteImageVersionRequest.getVersion(), VERSION_BINDING);
+            protocolMarshaller.marshall(deleteImageVersionRequest.getAlias(), ALIAS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

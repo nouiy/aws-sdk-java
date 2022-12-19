@@ -578,8 +578,8 @@ public class DBInstance implements Serializable, Cloneable {
      * </p>
      * <p>
      * For more information about CoIPs, see <a
-     * href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing"
-     * >Customer-owned IP addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/routing.html#ip-addressing">Customer-owned IP
+     * addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
      * </p>
      */
     private Boolean customerOwnedIpEnabled;
@@ -4828,8 +4828,8 @@ public class DBInstance implements Serializable, Cloneable {
      * </p>
      * <p>
      * For more information about CoIPs, see <a
-     * href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing"
-     * >Customer-owned IP addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/routing.html#ip-addressing">Customer-owned IP
+     * addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
      * </p>
      * 
      * @param customerOwnedIpEnabled
@@ -4845,9 +4845,9 @@ public class DBInstance implements Serializable, Cloneable {
      *        on Amazon Web Services Outposts</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
-     *        For more information about CoIPs, see <a href=
-     *        "https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing"
-     *        >Customer-owned IP addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
+     *        For more information about CoIPs, see <a
+     *        href="https://docs.aws.amazon.com/outposts/latest/userguide/routing.html#ip-addressing">Customer-owned IP
+     *        addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
      */
 
     public void setCustomerOwnedIpEnabled(Boolean customerOwnedIpEnabled) {
@@ -4870,8 +4870,8 @@ public class DBInstance implements Serializable, Cloneable {
      * </p>
      * <p>
      * For more information about CoIPs, see <a
-     * href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing"
-     * >Customer-owned IP addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/routing.html#ip-addressing">Customer-owned IP
+     * addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
      * </p>
      * 
      * @return Specifies whether a customer-owned IP address (CoIP) is enabled for an RDS on Outposts DB instance.</p>
@@ -4886,9 +4886,9 @@ public class DBInstance implements Serializable, Cloneable {
      *         RDS on Amazon Web Services Outposts</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
-     *         For more information about CoIPs, see <a href=
-     *         "https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing"
-     *         >Customer-owned IP addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
+     *         For more information about CoIPs, see <a
+     *         href="https://docs.aws.amazon.com/outposts/latest/userguide/routing.html#ip-addressing">Customer-owned IP
+     *         addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
      */
 
     public Boolean getCustomerOwnedIpEnabled() {
@@ -4911,8 +4911,8 @@ public class DBInstance implements Serializable, Cloneable {
      * </p>
      * <p>
      * For more information about CoIPs, see <a
-     * href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing"
-     * >Customer-owned IP addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/routing.html#ip-addressing">Customer-owned IP
+     * addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
      * </p>
      * 
      * @param customerOwnedIpEnabled
@@ -4928,9 +4928,9 @@ public class DBInstance implements Serializable, Cloneable {
      *        on Amazon Web Services Outposts</a> in the <i>Amazon RDS User Guide</i>.
      *        </p>
      *        <p>
-     *        For more information about CoIPs, see <a href=
-     *        "https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing"
-     *        >Customer-owned IP addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
+     *        For more information about CoIPs, see <a
+     *        href="https://docs.aws.amazon.com/outposts/latest/userguide/routing.html#ip-addressing">Customer-owned IP
+     *        addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4955,8 +4955,8 @@ public class DBInstance implements Serializable, Cloneable {
      * </p>
      * <p>
      * For more information about CoIPs, see <a
-     * href="https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing"
-     * >Customer-owned IP addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
+     * href="https://docs.aws.amazon.com/outposts/latest/userguide/routing.html#ip-addressing">Customer-owned IP
+     * addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
      * </p>
      * 
      * @return Specifies whether a customer-owned IP address (CoIP) is enabled for an RDS on Outposts DB instance.</p>
@@ -4971,9 +4971,9 @@ public class DBInstance implements Serializable, Cloneable {
      *         RDS on Amazon Web Services Outposts</a> in the <i>Amazon RDS User Guide</i>.
      *         </p>
      *         <p>
-     *         For more information about CoIPs, see <a href=
-     *         "https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing"
-     *         >Customer-owned IP addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
+     *         For more information about CoIPs, see <a
+     *         href="https://docs.aws.amazon.com/outposts/latest/userguide/routing.html#ip-addressing">Customer-owned IP
+     *         addresses</a> in the <i>Amazon Web Services Outposts User Guide</i>.
      */
 
     public Boolean isCustomerOwnedIpEnabled() {

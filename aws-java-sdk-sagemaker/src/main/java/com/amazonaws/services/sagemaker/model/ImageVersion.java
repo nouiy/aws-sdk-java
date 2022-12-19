@@ -42,7 +42,7 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
     private String failureReason;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image the version is based on.
+     * The ARN of the image the version is based on.
      * </p>
      */
     private String imageArn;
@@ -153,11 +153,11 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image the version is based on.
+     * The ARN of the image the version is based on.
      * </p>
      * 
      * @param imageArn
-     *        The Amazon Resource Name (ARN) of the image the version is based on.
+     *        The ARN of the image the version is based on.
      */
 
     public void setImageArn(String imageArn) {
@@ -166,10 +166,10 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image the version is based on.
+     * The ARN of the image the version is based on.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the image the version is based on.
+     * @return The ARN of the image the version is based on.
      */
 
     public String getImageArn() {
@@ -178,11 +178,11 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image the version is based on.
+     * The ARN of the image the version is based on.
      * </p>
      * 
      * @param imageArn
-     *        The Amazon Resource Name (ARN) of the image the version is based on.
+     *        The ARN of the image the version is based on.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

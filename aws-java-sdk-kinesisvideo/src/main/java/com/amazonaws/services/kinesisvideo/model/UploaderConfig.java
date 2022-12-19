@@ -19,8 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The configuration that consists of the <code>ScheduleConfig</code> attribute that's required, to schedule the jobs to
- * upload the recorded media files onto the Edge Agent in a Kinesis Video Stream.
+ * The configuration that consists of the <code>ScheduleExpression</code> and the <code>DurationInMinutesdetails</code>,
+ * that specify the scheduling to record from a camera, or local media file, onto the Edge Agent. If the
+ * <code>ScheduleExpression</code> is not provided, then the Edge Agent will always be in upload mode.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisvideo-2017-09-30/UploaderConfig" target="_top">AWS API
