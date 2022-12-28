@@ -60,6 +60,10 @@ public class CreateCustomDBEngineVersionRequestMarshaller implements
                     StringUtils.fromString(createCustomDBEngineVersionRequest.getDatabaseInstallationFilesS3Prefix()));
         }
 
+        if (createCustomDBEngineVersionRequest.getImageId() != null) {
+            request.addParameter("ImageId", StringUtils.fromString(createCustomDBEngineVersionRequest.getImageId()));
+        }
+
         if (createCustomDBEngineVersionRequest.getKMSKeyId() != null) {
             request.addParameter("KMSKeyId", StringUtils.fromString(createCustomDBEngineVersionRequest.getKMSKeyId()));
         }

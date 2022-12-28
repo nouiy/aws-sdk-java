@@ -60,6 +60,10 @@ public class AttachmentJsonUnmarshaller implements Unmarshaller<Attachment, Json
                     context.nextToken();
                     attachment.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("StatusMessage", targetDepth)) {
+                    context.nextToken();
+                    attachment.setStatusMessage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

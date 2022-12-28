@@ -75,6 +75,16 @@ public class DBEngineVersionStaxUnmarshaller implements Unmarshaller<DBEngineVer
                     continue;
                 }
 
+                if (context.testExpression("Image", targetDepth)) {
+                    dBEngineVersion.setImage(CustomDBEngineVersionAMIStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("DBEngineMediaType", targetDepth)) {
+                    dBEngineVersion.setDBEngineMediaType(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("SupportedCharacterSets", targetDepth)) {
                     dBEngineVersion.withSupportedCharacterSets(new ArrayList<CharacterSet>());
                     continue;

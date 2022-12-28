@@ -333,6 +333,30 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private String ipDiscovery;
+    /**
+     * <p>
+     * A flag that enables in-transit encryption when set to true. If you are enabling in-transit encryption for an
+     * existing cluster, you must also set <code>TransitEncryptionMode</code> to <code>preferred</code>.
+     * </p>
+     */
+    private Boolean transitEncryptionEnabled;
+    /**
+     * <p>
+     * A setting that allows you to migrate your clients to use in-transit encryption, with no downtime.
+     * </p>
+     * <p>
+     * You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and set
+     * <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both encrypted and
+     * unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted connections
+     * you can set the value to <code>required</code> to allow encrypted connections only.
+     * </p>
+     * <p>
+     * Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires you to
+     * first set the <code>TransitEncryptionMode</code> to <code>preferred</code> first, after that you can set
+     * <code>TransitEncryptionMode</code> to <code>required</code>.
+     * </p>
+     */
+    private String transitEncryptionMode;
 
     /**
      * <p>
@@ -2585,6 +2609,209 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * A flag that enables in-transit encryption when set to true. If you are enabling in-transit encryption for an
+     * existing cluster, you must also set <code>TransitEncryptionMode</code> to <code>preferred</code>.
+     * </p>
+     * 
+     * @param transitEncryptionEnabled
+     *        A flag that enables in-transit encryption when set to true. If you are enabling in-transit encryption for
+     *        an existing cluster, you must also set <code>TransitEncryptionMode</code> to <code>preferred</code>.
+     */
+
+    public void setTransitEncryptionEnabled(Boolean transitEncryptionEnabled) {
+        this.transitEncryptionEnabled = transitEncryptionEnabled;
+    }
+
+    /**
+     * <p>
+     * A flag that enables in-transit encryption when set to true. If you are enabling in-transit encryption for an
+     * existing cluster, you must also set <code>TransitEncryptionMode</code> to <code>preferred</code>.
+     * </p>
+     * 
+     * @return A flag that enables in-transit encryption when set to true. If you are enabling in-transit encryption for
+     *         an existing cluster, you must also set <code>TransitEncryptionMode</code> to <code>preferred</code>.
+     */
+
+    public Boolean getTransitEncryptionEnabled() {
+        return this.transitEncryptionEnabled;
+    }
+
+    /**
+     * <p>
+     * A flag that enables in-transit encryption when set to true. If you are enabling in-transit encryption for an
+     * existing cluster, you must also set <code>TransitEncryptionMode</code> to <code>preferred</code>.
+     * </p>
+     * 
+     * @param transitEncryptionEnabled
+     *        A flag that enables in-transit encryption when set to true. If you are enabling in-transit encryption for
+     *        an existing cluster, you must also set <code>TransitEncryptionMode</code> to <code>preferred</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyReplicationGroupRequest withTransitEncryptionEnabled(Boolean transitEncryptionEnabled) {
+        setTransitEncryptionEnabled(transitEncryptionEnabled);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A flag that enables in-transit encryption when set to true. If you are enabling in-transit encryption for an
+     * existing cluster, you must also set <code>TransitEncryptionMode</code> to <code>preferred</code>.
+     * </p>
+     * 
+     * @return A flag that enables in-transit encryption when set to true. If you are enabling in-transit encryption for
+     *         an existing cluster, you must also set <code>TransitEncryptionMode</code> to <code>preferred</code>.
+     */
+
+    public Boolean isTransitEncryptionEnabled() {
+        return this.transitEncryptionEnabled;
+    }
+
+    /**
+     * <p>
+     * A setting that allows you to migrate your clients to use in-transit encryption, with no downtime.
+     * </p>
+     * <p>
+     * You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and set
+     * <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both encrypted and
+     * unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted connections
+     * you can set the value to <code>required</code> to allow encrypted connections only.
+     * </p>
+     * <p>
+     * Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires you to
+     * first set the <code>TransitEncryptionMode</code> to <code>preferred</code> first, after that you can set
+     * <code>TransitEncryptionMode</code> to <code>required</code>.
+     * </p>
+     * 
+     * @param transitEncryptionMode
+     *        A setting that allows you to migrate your clients to use in-transit encryption, with no downtime.</p>
+     *        <p>
+     *        You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and
+     *        set <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both
+     *        encrypted and unencrypted connections at the same time. Once you migrate all your Redis clients to use
+     *        encrypted connections you can set the value to <code>required</code> to allow encrypted connections only.
+     *        </p>
+     *        <p>
+     *        Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires
+     *        you to first set the <code>TransitEncryptionMode</code> to <code>preferred</code> first, after that you
+     *        can set <code>TransitEncryptionMode</code> to <code>required</code>.
+     * @see TransitEncryptionMode
+     */
+
+    public void setTransitEncryptionMode(String transitEncryptionMode) {
+        this.transitEncryptionMode = transitEncryptionMode;
+    }
+
+    /**
+     * <p>
+     * A setting that allows you to migrate your clients to use in-transit encryption, with no downtime.
+     * </p>
+     * <p>
+     * You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and set
+     * <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both encrypted and
+     * unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted connections
+     * you can set the value to <code>required</code> to allow encrypted connections only.
+     * </p>
+     * <p>
+     * Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires you to
+     * first set the <code>TransitEncryptionMode</code> to <code>preferred</code> first, after that you can set
+     * <code>TransitEncryptionMode</code> to <code>required</code>.
+     * </p>
+     * 
+     * @return A setting that allows you to migrate your clients to use in-transit encryption, with no downtime.</p>
+     *         <p>
+     *         You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and
+     *         set <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both
+     *         encrypted and unencrypted connections at the same time. Once you migrate all your Redis clients to use
+     *         encrypted connections you can set the value to <code>required</code> to allow encrypted connections only.
+     *         </p>
+     *         <p>
+     *         Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires
+     *         you to first set the <code>TransitEncryptionMode</code> to <code>preferred</code> first, after that you
+     *         can set <code>TransitEncryptionMode</code> to <code>required</code>.
+     * @see TransitEncryptionMode
+     */
+
+    public String getTransitEncryptionMode() {
+        return this.transitEncryptionMode;
+    }
+
+    /**
+     * <p>
+     * A setting that allows you to migrate your clients to use in-transit encryption, with no downtime.
+     * </p>
+     * <p>
+     * You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and set
+     * <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both encrypted and
+     * unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted connections
+     * you can set the value to <code>required</code> to allow encrypted connections only.
+     * </p>
+     * <p>
+     * Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires you to
+     * first set the <code>TransitEncryptionMode</code> to <code>preferred</code> first, after that you can set
+     * <code>TransitEncryptionMode</code> to <code>required</code>.
+     * </p>
+     * 
+     * @param transitEncryptionMode
+     *        A setting that allows you to migrate your clients to use in-transit encryption, with no downtime.</p>
+     *        <p>
+     *        You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and
+     *        set <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both
+     *        encrypted and unencrypted connections at the same time. Once you migrate all your Redis clients to use
+     *        encrypted connections you can set the value to <code>required</code> to allow encrypted connections only.
+     *        </p>
+     *        <p>
+     *        Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires
+     *        you to first set the <code>TransitEncryptionMode</code> to <code>preferred</code> first, after that you
+     *        can set <code>TransitEncryptionMode</code> to <code>required</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TransitEncryptionMode
+     */
+
+    public ModifyReplicationGroupRequest withTransitEncryptionMode(String transitEncryptionMode) {
+        setTransitEncryptionMode(transitEncryptionMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A setting that allows you to migrate your clients to use in-transit encryption, with no downtime.
+     * </p>
+     * <p>
+     * You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and set
+     * <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both encrypted and
+     * unencrypted connections at the same time. Once you migrate all your Redis clients to use encrypted connections
+     * you can set the value to <code>required</code> to allow encrypted connections only.
+     * </p>
+     * <p>
+     * Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires you to
+     * first set the <code>TransitEncryptionMode</code> to <code>preferred</code> first, after that you can set
+     * <code>TransitEncryptionMode</code> to <code>required</code>.
+     * </p>
+     * 
+     * @param transitEncryptionMode
+     *        A setting that allows you to migrate your clients to use in-transit encryption, with no downtime.</p>
+     *        <p>
+     *        You must set <code>TransitEncryptionEnabled</code> to <code>true</code>, for your existing cluster, and
+     *        set <code>TransitEncryptionMode</code> to <code>preferred</code> in the same request to allow both
+     *        encrypted and unencrypted connections at the same time. Once you migrate all your Redis clients to use
+     *        encrypted connections you can set the value to <code>required</code> to allow encrypted connections only.
+     *        </p>
+     *        <p>
+     *        Setting <code>TransitEncryptionMode</code> to <code>required</code> is a two-step process that requires
+     *        you to first set the <code>TransitEncryptionMode</code> to <code>preferred</code> first, after that you
+     *        can set <code>TransitEncryptionMode</code> to <code>required</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TransitEncryptionMode
+     */
+
+    public ModifyReplicationGroupRequest withTransitEncryptionMode(TransitEncryptionMode transitEncryptionMode) {
+        this.transitEncryptionMode = transitEncryptionMode.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2647,7 +2874,11 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
         if (getLogDeliveryConfigurations() != null)
             sb.append("LogDeliveryConfigurations: ").append(getLogDeliveryConfigurations()).append(",");
         if (getIpDiscovery() != null)
-            sb.append("IpDiscovery: ").append(getIpDiscovery());
+            sb.append("IpDiscovery: ").append(getIpDiscovery()).append(",");
+        if (getTransitEncryptionEnabled() != null)
+            sb.append("TransitEncryptionEnabled: ").append(getTransitEncryptionEnabled()).append(",");
+        if (getTransitEncryptionMode() != null)
+            sb.append("TransitEncryptionMode: ").append(getTransitEncryptionMode());
         sb.append("}");
         return sb.toString();
     }
@@ -2766,6 +2997,14 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getIpDiscovery() != null && other.getIpDiscovery().equals(this.getIpDiscovery()) == false)
             return false;
+        if (other.getTransitEncryptionEnabled() == null ^ this.getTransitEncryptionEnabled() == null)
+            return false;
+        if (other.getTransitEncryptionEnabled() != null && other.getTransitEncryptionEnabled().equals(this.getTransitEncryptionEnabled()) == false)
+            return false;
+        if (other.getTransitEncryptionMode() == null ^ this.getTransitEncryptionMode() == null)
+            return false;
+        if (other.getTransitEncryptionMode() != null && other.getTransitEncryptionMode().equals(this.getTransitEncryptionMode()) == false)
+            return false;
         return true;
     }
 
@@ -2800,6 +3039,8 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getRemoveUserGroups() == null) ? 0 : getRemoveUserGroups().hashCode());
         hashCode = prime * hashCode + ((getLogDeliveryConfigurations() == null) ? 0 : getLogDeliveryConfigurations().hashCode());
         hashCode = prime * hashCode + ((getIpDiscovery() == null) ? 0 : getIpDiscovery().hashCode());
+        hashCode = prime * hashCode + ((getTransitEncryptionEnabled() == null) ? 0 : getTransitEncryptionEnabled().hashCode());
+        hashCode = prime * hashCode + ((getTransitEncryptionMode() == null) ? 0 : getTransitEncryptionMode().hashCode());
         return hashCode;
     }
 

@@ -245,6 +245,14 @@ public class ModifyReplicationGroupRequestMarshaller implements Marshaller<Reque
             request.addParameter("IpDiscovery", StringUtils.fromString(modifyReplicationGroupRequest.getIpDiscovery()));
         }
 
+        if (modifyReplicationGroupRequest.getTransitEncryptionEnabled() != null) {
+            request.addParameter("TransitEncryptionEnabled", StringUtils.fromBoolean(modifyReplicationGroupRequest.getTransitEncryptionEnabled()));
+        }
+
+        if (modifyReplicationGroupRequest.getTransitEncryptionMode() != null) {
+            request.addParameter("TransitEncryptionMode", StringUtils.fromString(modifyReplicationGroupRequest.getTransitEncryptionMode()));
+        }
+
         return request;
     }
 

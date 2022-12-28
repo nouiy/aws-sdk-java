@@ -56,6 +56,12 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
     private String databaseInstallationFilesS3Prefix;
     /**
      * <p>
+     * The ID of the AMI. An AMI ID is required to create a CEV for RDS Custom for SQL Server.
+     * </p>
+     */
+    private String imageId;
+    /**
+     * <p>
      * The Amazon Web Services KMS key identifier for an encrypted CEV. A symmetric encryption KMS key is required for
      * RDS Custom, but optional for Amazon RDS.
      * </p>
@@ -317,6 +323,46 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     public CreateCustomDBEngineVersionRequest withDatabaseInstallationFilesS3Prefix(String databaseInstallationFilesS3Prefix) {
         setDatabaseInstallationFilesS3Prefix(databaseInstallationFilesS3Prefix);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ID of the AMI. An AMI ID is required to create a CEV for RDS Custom for SQL Server.
+     * </p>
+     * 
+     * @param imageId
+     *        The ID of the AMI. An AMI ID is required to create a CEV for RDS Custom for SQL Server.
+     */
+
+    public void setImageId(String imageId) {
+        this.imageId = imageId;
+    }
+
+    /**
+     * <p>
+     * The ID of the AMI. An AMI ID is required to create a CEV for RDS Custom for SQL Server.
+     * </p>
+     * 
+     * @return The ID of the AMI. An AMI ID is required to create a CEV for RDS Custom for SQL Server.
+     */
+
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
+     * <p>
+     * The ID of the AMI. An AMI ID is required to create a CEV for RDS Custom for SQL Server.
+     * </p>
+     * 
+     * @param imageId
+     *        The ID of the AMI. An AMI ID is required to create a CEV for RDS Custom for SQL Server.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateCustomDBEngineVersionRequest withImageId(String imageId) {
+        setImageId(imageId);
         return this;
     }
 
@@ -842,6 +888,8 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
             sb.append("DatabaseInstallationFilesS3BucketName: ").append(getDatabaseInstallationFilesS3BucketName()).append(",");
         if (getDatabaseInstallationFilesS3Prefix() != null)
             sb.append("DatabaseInstallationFilesS3Prefix: ").append(getDatabaseInstallationFilesS3Prefix()).append(",");
+        if (getImageId() != null)
+            sb.append("ImageId: ").append(getImageId()).append(",");
         if (getKMSKeyId() != null)
             sb.append("KMSKeyId: ").append(getKMSKeyId()).append(",");
         if (getDescription() != null)
@@ -882,6 +930,10 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
         if (other.getDatabaseInstallationFilesS3Prefix() != null
                 && other.getDatabaseInstallationFilesS3Prefix().equals(this.getDatabaseInstallationFilesS3Prefix()) == false)
             return false;
+        if (other.getImageId() == null ^ this.getImageId() == null)
+            return false;
+        if (other.getImageId() != null && other.getImageId().equals(this.getImageId()) == false)
+            return false;
         if (other.getKMSKeyId() == null ^ this.getKMSKeyId() == null)
             return false;
         if (other.getKMSKeyId() != null && other.getKMSKeyId().equals(this.getKMSKeyId()) == false)
@@ -910,6 +962,7 @@ public class CreateCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
         hashCode = prime * hashCode + ((getEngineVersion() == null) ? 0 : getEngineVersion().hashCode());
         hashCode = prime * hashCode + ((getDatabaseInstallationFilesS3BucketName() == null) ? 0 : getDatabaseInstallationFilesS3BucketName().hashCode());
         hashCode = prime * hashCode + ((getDatabaseInstallationFilesS3Prefix() == null) ? 0 : getDatabaseInstallationFilesS3Prefix().hashCode());
+        hashCode = prime * hashCode + ((getImageId() == null) ? 0 : getImageId().hashCode());
         hashCode = prime * hashCode + ((getKMSKeyId() == null) ? 0 : getKMSKeyId().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getManifest() == null) ? 0 : getManifest().hashCode());

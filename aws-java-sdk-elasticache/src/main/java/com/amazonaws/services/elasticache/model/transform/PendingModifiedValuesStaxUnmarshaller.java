@@ -85,6 +85,15 @@ public class PendingModifiedValuesStaxUnmarshaller implements Unmarshaller<Pendi
                     continue;
                 }
 
+                if (context.testExpression("TransitEncryptionEnabled", targetDepth)) {
+                    pendingModifiedValues.setTransitEncryptionEnabled(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("TransitEncryptionMode", targetDepth)) {
+                    pendingModifiedValues.setTransitEncryptionMode(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return pendingModifiedValues;

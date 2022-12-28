@@ -75,6 +75,16 @@ public class DeleteCustomDBEngineVersionResultStaxUnmarshaller implements Unmars
                     continue;
                 }
 
+                if (context.testExpression("Image", targetDepth)) {
+                    deleteCustomDBEngineVersionResult.setImage(CustomDBEngineVersionAMIStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("DBEngineMediaType", targetDepth)) {
+                    deleteCustomDBEngineVersionResult.setDBEngineMediaType(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("SupportedCharacterSets", targetDepth)) {
                     deleteCustomDBEngineVersionResult.withSupportedCharacterSets(new ArrayList<CharacterSet>());
                     continue;

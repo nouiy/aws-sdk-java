@@ -525,9 +525,7 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
     private com.amazonaws.internal.SdkInternalList<LogDeliveryConfigurationRequest> logDeliveryConfigurations;
     /**
      * <p>
-     * A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     * TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you must set
-     * <code>TransitEncryptionEnabled</code> to true when you create a cluster.
+     * A flag that enables in-transit encryption when set to true.
      * </p>
      * <p>
      * Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
@@ -4236,18 +4234,14 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     * TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you must set
-     * <code>TransitEncryptionEnabled</code> to true when you create a cluster.
+     * A flag that enables in-transit encryption when set to true.
      * </p>
      * <p>
      * Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
      * </p>
      * 
      * @param transitEncryptionEnabled
-     *        A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     *        TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you
-     *        must set <code>TransitEncryptionEnabled</code> to true when you create a cluster.</p>
+     *        A flag that enables in-transit encryption when set to true.</p>
      *        <p>
      *        Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
      */
@@ -4258,17 +4252,13 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     * TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you must set
-     * <code>TransitEncryptionEnabled</code> to true when you create a cluster.
+     * A flag that enables in-transit encryption when set to true.
      * </p>
      * <p>
      * Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
      * </p>
      * 
-     * @return A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     *         TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you
-     *         must set <code>TransitEncryptionEnabled</code> to true when you create a cluster.</p>
+     * @return A flag that enables in-transit encryption when set to true.</p>
      *         <p>
      *         Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
      */
@@ -4279,18 +4269,14 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     * TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you must set
-     * <code>TransitEncryptionEnabled</code> to true when you create a cluster.
+     * A flag that enables in-transit encryption when set to true.
      * </p>
      * <p>
      * Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
      * </p>
      * 
      * @param transitEncryptionEnabled
-     *        A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     *        TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you
-     *        must set <code>TransitEncryptionEnabled</code> to true when you create a cluster.</p>
+     *        A flag that enables in-transit encryption when set to true.</p>
      *        <p>
      *        Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -4303,17 +4289,13 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     * TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you must set
-     * <code>TransitEncryptionEnabled</code> to true when you create a cluster.
+     * A flag that enables in-transit encryption when set to true.
      * </p>
      * <p>
      * Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
      * </p>
      * 
-     * @return A flag that enables in-transit encryption when set to true. You cannot modify the value of
-     *         TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you
-     *         must set <code>TransitEncryptionEnabled</code> to true when you create a cluster.</p>
+     * @return A flag that enables in-transit encryption when set to true.</p>
      *         <p>
      *         Only available when creating a cache cluster in an Amazon VPC using Memcached version 1.6.12 or later.
      */
