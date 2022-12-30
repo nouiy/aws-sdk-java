@@ -27,20 +27,18 @@ public class CreateResponseHeadersPolicyRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Contains metadata about the response headers policy, and a set of configurations that specify the response
-     * headers.
+     * Contains metadata about the response headers policy, and a set of configurations that specify the HTTP headers.
      * </p>
      */
     private ResponseHeadersPolicyConfig responseHeadersPolicyConfig;
 
     /**
      * <p>
-     * Contains metadata about the response headers policy, and a set of configurations that specify the response
-     * headers.
+     * Contains metadata about the response headers policy, and a set of configurations that specify the HTTP headers.
      * </p>
      * 
      * @param responseHeadersPolicyConfig
-     *        Contains metadata about the response headers policy, and a set of configurations that specify the response
+     *        Contains metadata about the response headers policy, and a set of configurations that specify the HTTP
      *        headers.
      */
 
@@ -50,12 +48,11 @@ public class CreateResponseHeadersPolicyRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Contains metadata about the response headers policy, and a set of configurations that specify the response
-     * headers.
+     * Contains metadata about the response headers policy, and a set of configurations that specify the HTTP headers.
      * </p>
      * 
-     * @return Contains metadata about the response headers policy, and a set of configurations that specify the
-     *         response headers.
+     * @return Contains metadata about the response headers policy, and a set of configurations that specify the HTTP
+     *         headers.
      */
 
     public ResponseHeadersPolicyConfig getResponseHeadersPolicyConfig() {
@@ -64,12 +61,11 @@ public class CreateResponseHeadersPolicyRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Contains metadata about the response headers policy, and a set of configurations that specify the response
-     * headers.
+     * Contains metadata about the response headers policy, and a set of configurations that specify the HTTP headers.
      * </p>
      * 
      * @param responseHeadersPolicyConfig
-     *        Contains metadata about the response headers policy, and a set of configurations that specify the response
+     *        Contains metadata about the response headers policy, and a set of configurations that specify the HTTP
      *        headers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

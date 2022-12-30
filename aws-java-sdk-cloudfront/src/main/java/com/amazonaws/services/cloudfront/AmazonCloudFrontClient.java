@@ -562,6 +562,11 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
             exceptionUnmarshallersMap.put("InvalidGeoRestrictionParameter", new InvalidGeoRestrictionParameterExceptionUnmarshaller());
         }
         exceptionUnmarshallers.add(new InvalidGeoRestrictionParameterExceptionUnmarshaller());
+        if (exceptionUnmarshallersMap.get("TooManyRemoveHeadersInResponseHeadersPolicy") == null) {
+            exceptionUnmarshallersMap
+                    .put("TooManyRemoveHeadersInResponseHeadersPolicy", new TooManyRemoveHeadersInResponseHeadersPolicyExceptionUnmarshaller());
+        }
+        exceptionUnmarshallers.add(new TooManyRemoveHeadersInResponseHeadersPolicyExceptionUnmarshaller());
         if (exceptionUnmarshallersMap.get("TooManyCustomHeadersInResponseHeadersPolicy") == null) {
             exceptionUnmarshallersMap
                     .put("TooManyCustomHeadersInResponseHeadersPolicy", new TooManyCustomHeadersInResponseHeadersPolicyExceptionUnmarshaller());
@@ -2699,14 +2704,19 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
      * Creates a response headers policy.
      * </p>
      * <p>
-     * A response headers policy contains information about a set of HTTP response headers and their values. To create a
-     * response headers policy, you provide some metadata about the policy, and a set of configurations that specify the
-     * response headers.
+     * A response headers policy contains information about a set of HTTP headers. To create a response headers policy,
+     * you provide some metadata about the policy and a set of configurations that specify the headers.
      * </p>
      * <p>
      * After you create a response headers policy, you can use its ID to attach it to one or more cache behaviors in a
-     * CloudFront distribution. When it's attached to a cache behavior, CloudFront adds the headers in the policy to
-     * HTTP responses that it sends for requests that match the cache behavior.
+     * CloudFront distribution. When it's attached to a cache behavior, the response headers policy affects the HTTP
+     * headers that CloudFront includes in HTTP responses to requests that match the cache behavior. CloudFront adds or
+     * removes response headers according to the configuration of the response headers policy.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/modifying-response-headers.html">Adding
+     * or removing HTTP headers in CloudFront responses</a> in the <i>Amazon CloudFront Developer Guide</i>.
      * </p>
      * 
      * @param createResponseHeadersPolicyRequest
@@ -2737,6 +2747,14 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
      * @throws TooLongCSPInResponseHeadersPolicyException
      *         The length of the <code>Content-Security-Policy</code> header value in the response headers policy
      *         exceeds the maximum.
+     *         </p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html"
+     *         >Quotas</a> (formerly known as limits) in the <i>Amazon CloudFront Developer Guide</i>.
+     * @throws TooManyRemoveHeadersInResponseHeadersPolicyException
+     *         The number of headers in <code>RemoveHeadersConfig</code> in the response headers policy exceeds the
+     *         maximum.
      *         </p>
      *         <p>
      *         For more information, see <a
@@ -9306,6 +9324,14 @@ public class AmazonCloudFrontClient extends AmazonWebServiceClient implements Am
      * @throws TooLongCSPInResponseHeadersPolicyException
      *         The length of the <code>Content-Security-Policy</code> header value in the response headers policy
      *         exceeds the maximum.
+     *         </p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html"
+     *         >Quotas</a> (formerly known as limits) in the <i>Amazon CloudFront Developer Guide</i>.
+     * @throws TooManyRemoveHeadersInResponseHeadersPolicyException
+     *         The number of headers in <code>RemoveHeadersConfig</code> in the response headers policy exceeds the
+     *         maximum.
      *         </p>
      *         <p>
      *         For more information, see <a

@@ -1,3 +1,12 @@
+# __1.12.376__ __2022-12-30__
+## __AWS IoT FleetWise__
+  - ### Features
+    - Update documentation - correct the epoch constant value of default value for expiryTime field in CreateCampaign request.
+
+## __Amazon CloudFront__
+  - ### Features
+    - Extend response headers policy to support removing headers from viewer responses
+
 # __1.12.375__ __2022-12-29__
 ## __AWS Secrets Manager__
   - ### Features

@@ -366,6 +366,35 @@ public class UpdateResponseHeadersPolicyRequestMarshaller implements
                         xmlWriter.endElement();
                     }
                 }
+
+                {
+                    ResponseHeadersPolicyRemoveHeadersConfig removeHeadersConfig = responseHeadersPolicyConfig.getRemoveHeadersConfig();
+                    if (removeHeadersConfig != null) {
+                        xmlWriter.startElement("RemoveHeadersConfig");
+
+                        if (removeHeadersConfig.getQuantity() != null) {
+                            xmlWriter.startElement("Quantity").value(removeHeadersConfig.getQuantity()).endElement();
+                        }
+
+                        com.amazonaws.internal.SdkInternalList<ResponseHeadersPolicyRemoveHeader> responseHeadersPolicyRemoveHeadersConfigItemsList = (com.amazonaws.internal.SdkInternalList<ResponseHeadersPolicyRemoveHeader>) removeHeadersConfig
+                                .getItems();
+                        if (!responseHeadersPolicyRemoveHeadersConfigItemsList.isEmpty()
+                                || !responseHeadersPolicyRemoveHeadersConfigItemsList.isAutoConstruct()) {
+                            xmlWriter.startElement("Items");
+
+                            for (ResponseHeadersPolicyRemoveHeader responseHeadersPolicyRemoveHeadersConfigItemsListValue : responseHeadersPolicyRemoveHeadersConfigItemsList) {
+                                xmlWriter.startElement("ResponseHeadersPolicyRemoveHeader");
+
+                                if (responseHeadersPolicyRemoveHeadersConfigItemsListValue.getHeader() != null) {
+                                    xmlWriter.startElement("Header").value(responseHeadersPolicyRemoveHeadersConfigItemsListValue.getHeader()).endElement();
+                                }
+                                xmlWriter.endElement();
+                            }
+                            xmlWriter.endElement();
+                        }
+                        xmlWriter.endElement();
+                    }
+                }
                 xmlWriter.endElement();
             }
 

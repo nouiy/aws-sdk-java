@@ -65,7 +65,7 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
      * data won't be collected after the campaign expires.
      * </p>
      * <p>
-     * Default: 253402243200 (December 31, 9999, 00:00:00 UTC)
+     * Default: 253402214400 (December 31, 9999, 00:00:00 UTC)
      * </p>
      */
     private java.util.Date expiryTime;
@@ -384,14 +384,14 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
      * data won't be collected after the campaign expires.
      * </p>
      * <p>
-     * Default: 253402243200 (December 31, 9999, 00:00:00 UTC)
+     * Default: 253402214400 (December 31, 9999, 00:00:00 UTC)
      * </p>
      * 
      * @param expiryTime
      *        (Optional) The time the campaign expires, in seconds since epoch (January 1, 1970 at midnight UTC time).
      *        Vehicle data won't be collected after the campaign expires. </p>
      *        <p>
-     *        Default: 253402243200 (December 31, 9999, 00:00:00 UTC)
+     *        Default: 253402214400 (December 31, 9999, 00:00:00 UTC)
      */
 
     public void setExpiryTime(java.util.Date expiryTime) {
@@ -404,13 +404,13 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
      * data won't be collected after the campaign expires.
      * </p>
      * <p>
-     * Default: 253402243200 (December 31, 9999, 00:00:00 UTC)
+     * Default: 253402214400 (December 31, 9999, 00:00:00 UTC)
      * </p>
      * 
      * @return (Optional) The time the campaign expires, in seconds since epoch (January 1, 1970 at midnight UTC time).
      *         Vehicle data won't be collected after the campaign expires. </p>
      *         <p>
-     *         Default: 253402243200 (December 31, 9999, 00:00:00 UTC)
+     *         Default: 253402214400 (December 31, 9999, 00:00:00 UTC)
      */
 
     public java.util.Date getExpiryTime() {
@@ -423,14 +423,14 @@ public class CreateCampaignRequest extends com.amazonaws.AmazonWebServiceRequest
      * data won't be collected after the campaign expires.
      * </p>
      * <p>
-     * Default: 253402243200 (December 31, 9999, 00:00:00 UTC)
+     * Default: 253402214400 (December 31, 9999, 00:00:00 UTC)
      * </p>
      * 
      * @param expiryTime
      *        (Optional) The time the campaign expires, in seconds since epoch (January 1, 1970 at midnight UTC time).
      *        Vehicle data won't be collected after the campaign expires. </p>
      *        <p>
-     *        Default: 253402243200 (December 31, 9999, 00:00:00 UTC)
+     *        Default: 253402214400 (December 31, 9999, 00:00:00 UTC)
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
