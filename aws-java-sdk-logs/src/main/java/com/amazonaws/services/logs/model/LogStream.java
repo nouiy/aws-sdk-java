@@ -58,7 +58,9 @@ public class LogStream implements Serializable, Cloneable, StructuredPojo {
     private Long lastEventTimestamp;
     /**
      * <p>
-     * The ingestion time, expressed as the number of milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code>.
+     * The ingestion time, expressed as the number of milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code> The
+     * <code>lastIngestionTime</code> value updates on an eventual consistency basis. It typically updates in less than
+     * an hour after ingestion, but in rare situations might take longer.
      * </p>
      */
     private Long lastIngestionTime;
@@ -66,6 +68,13 @@ public class LogStream implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The sequence token.
      * </p>
+     * <important>
+     * <p>
+     * The sequence token is now ignored in <code>PutLogEvents</code> actions. <code>PutLogEvents</code> actions are
+     * always accepted regardless of receiving an invalid sequence token. You don't need to obtain
+     * <code>uploadSequenceToken</code> to use a <code>PutLogEvents</code> action.
+     * </p>
+     * </important>
      */
     private String uploadSequenceToken;
     /**
@@ -276,11 +285,15 @@ public class LogStream implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ingestion time, expressed as the number of milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code>.
+     * The ingestion time, expressed as the number of milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code> The
+     * <code>lastIngestionTime</code> value updates on an eventual consistency basis. It typically updates in less than
+     * an hour after ingestion, but in rare situations might take longer.
      * </p>
      * 
      * @param lastIngestionTime
-     *        The ingestion time, expressed as the number of milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code>.
+     *        The ingestion time, expressed as the number of milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code>
+     *        The <code>lastIngestionTime</code> value updates on an eventual consistency basis. It typically updates in
+     *        less than an hour after ingestion, but in rare situations might take longer.
      */
 
     public void setLastIngestionTime(Long lastIngestionTime) {
@@ -289,10 +302,14 @@ public class LogStream implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ingestion time, expressed as the number of milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code>.
+     * The ingestion time, expressed as the number of milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code> The
+     * <code>lastIngestionTime</code> value updates on an eventual consistency basis. It typically updates in less than
+     * an hour after ingestion, but in rare situations might take longer.
      * </p>
      * 
-     * @return The ingestion time, expressed as the number of milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code>.
+     * @return The ingestion time, expressed as the number of milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code>
+     *         The <code>lastIngestionTime</code> value updates on an eventual consistency basis. It typically updates
+     *         in less than an hour after ingestion, but in rare situations might take longer.
      */
 
     public Long getLastIngestionTime() {
@@ -301,11 +318,15 @@ public class LogStream implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ingestion time, expressed as the number of milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code>.
+     * The ingestion time, expressed as the number of milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code> The
+     * <code>lastIngestionTime</code> value updates on an eventual consistency basis. It typically updates in less than
+     * an hour after ingestion, but in rare situations might take longer.
      * </p>
      * 
      * @param lastIngestionTime
-     *        The ingestion time, expressed as the number of milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code>.
+     *        The ingestion time, expressed as the number of milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code>
+     *        The <code>lastIngestionTime</code> value updates on an eventual consistency basis. It typically updates in
+     *        less than an hour after ingestion, but in rare situations might take longer.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -318,9 +339,21 @@ public class LogStream implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The sequence token.
      * </p>
+     * <important>
+     * <p>
+     * The sequence token is now ignored in <code>PutLogEvents</code> actions. <code>PutLogEvents</code> actions are
+     * always accepted regardless of receiving an invalid sequence token. You don't need to obtain
+     * <code>uploadSequenceToken</code> to use a <code>PutLogEvents</code> action.
+     * </p>
+     * </important>
      * 
      * @param uploadSequenceToken
-     *        The sequence token.
+     *        The sequence token.</p> <important>
+     *        <p>
+     *        The sequence token is now ignored in <code>PutLogEvents</code> actions. <code>PutLogEvents</code> actions
+     *        are always accepted regardless of receiving an invalid sequence token. You don't need to obtain
+     *        <code>uploadSequenceToken</code> to use a <code>PutLogEvents</code> action.
+     *        </p>
      */
 
     public void setUploadSequenceToken(String uploadSequenceToken) {
@@ -331,8 +364,20 @@ public class LogStream implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The sequence token.
      * </p>
+     * <important>
+     * <p>
+     * The sequence token is now ignored in <code>PutLogEvents</code> actions. <code>PutLogEvents</code> actions are
+     * always accepted regardless of receiving an invalid sequence token. You don't need to obtain
+     * <code>uploadSequenceToken</code> to use a <code>PutLogEvents</code> action.
+     * </p>
+     * </important>
      * 
-     * @return The sequence token.
+     * @return The sequence token.</p> <important>
+     *         <p>
+     *         The sequence token is now ignored in <code>PutLogEvents</code> actions. <code>PutLogEvents</code> actions
+     *         are always accepted regardless of receiving an invalid sequence token. You don't need to obtain
+     *         <code>uploadSequenceToken</code> to use a <code>PutLogEvents</code> action.
+     *         </p>
      */
 
     public String getUploadSequenceToken() {
@@ -343,9 +388,21 @@ public class LogStream implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The sequence token.
      * </p>
+     * <important>
+     * <p>
+     * The sequence token is now ignored in <code>PutLogEvents</code> actions. <code>PutLogEvents</code> actions are
+     * always accepted regardless of receiving an invalid sequence token. You don't need to obtain
+     * <code>uploadSequenceToken</code> to use a <code>PutLogEvents</code> action.
+     * </p>
+     * </important>
      * 
      * @param uploadSequenceToken
-     *        The sequence token.
+     *        The sequence token.</p> <important>
+     *        <p>
+     *        The sequence token is now ignored in <code>PutLogEvents</code> actions. <code>PutLogEvents</code> actions
+     *        are always accepted regardless of receiving an invalid sequence token. You don't need to obtain
+     *        <code>uploadSequenceToken</code> to use a <code>PutLogEvents</code> action.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

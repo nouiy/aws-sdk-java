@@ -18,6 +18,12 @@ import javax.annotation.Generated;
  * <p>
  * The event was already logged.
  * </p>
+ * <important>
+ * <p>
+ * <code>PutLogEvents</code> actions are now always accepted and never return <code>DataAlreadyAcceptedException</code>
+ * regardless of whether a given batch of log events has already been accepted.
+ * </p>
+ * </important>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DataAlreadyAcceptedException extends com.amazonaws.services.logs.model.AWSLogsException {

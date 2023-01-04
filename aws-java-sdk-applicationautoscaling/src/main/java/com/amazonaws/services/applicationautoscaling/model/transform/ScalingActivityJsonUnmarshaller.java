@@ -92,6 +92,12 @@ public class ScalingActivityJsonUnmarshaller implements Unmarshaller<ScalingActi
                     context.nextToken();
                     scalingActivity.setDetails(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("NotScaledReasons", targetDepth)) {
+                    context.nextToken();
+                    scalingActivity.setNotScaledReasons(new ListUnmarshaller<NotScaledReason>(NotScaledReasonJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

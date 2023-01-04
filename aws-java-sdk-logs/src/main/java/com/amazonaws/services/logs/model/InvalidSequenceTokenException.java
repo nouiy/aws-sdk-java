@@ -19,6 +19,12 @@ import javax.annotation.Generated;
  * The sequence token is not valid. You can get the correct sequence token in the <code>expectedSequenceToken</code>
  * field in the <code>InvalidSequenceTokenException</code> message.
  * </p>
+ * <important>
+ * <p>
+ * <code>PutLogEvents</code> actions are now always accepted and never return <code>InvalidSequenceTokenException</code>
+ * regardless of receiving an invalid sequence token.
+ * </p>
+ * </important>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class InvalidSequenceTokenException extends com.amazonaws.services.logs.model.AWSLogsException {

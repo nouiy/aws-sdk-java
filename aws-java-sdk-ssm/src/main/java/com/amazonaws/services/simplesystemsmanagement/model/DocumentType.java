@@ -33,7 +33,8 @@ public enum DocumentType {
     ProblemAnalysis("ProblemAnalysis"),
     ProblemAnalysisTemplate("ProblemAnalysisTemplate"),
     CloudFormation("CloudFormation"),
-    ConformancePackTemplate("ConformancePackTemplate");
+    ConformancePackTemplate("ConformancePackTemplate"),
+    QuickSetup("QuickSetup");
 
     private String value;
 
