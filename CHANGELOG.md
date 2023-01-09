@@ -1,3 +1,24 @@
+# __1.12.381__ __2023-01-09__
+## __AWS Network Firewall__
+  - ### Features
+    - Network Firewall now supports the Suricata rule action reject, in addition to the actions pass, drop, and alert.
+
+## __AWS Resource Access Manager__
+  - ### Features
+    - Enabled FIPS aws-us-gov endpoints in SDK.
+
+## __Amazon Elastic Container Registry Public__
+  - ### Features
+    - This release for Amazon ECR Public makes several change to bring the SDK into sync with the API.
+
+## __Amazon Kendra Intelligent Ranking__
+  - ### Features
+    - Introducing Amazon Kendra Intelligent Ranking, a new set of Kendra APIs that leverages Kendra semantic ranking capabilities to improve the quality of search results from other search services (i.e. OpenSearch, ElasticSearch, Solr).
+
+## __Amazon WorkSpaces Web__
+  - ### Features
+    - This release adds support for a new portal authentication type: AWS IAM Identity Center (successor to AWS Single Sign-On).
+
 # __1.12.380__ __2023-01-06__
 ## __AWS Audit Manager__
   - ### Features
