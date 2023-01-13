@@ -203,14 +203,20 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>metadata-options.http-put-response-hop-limit</code> - The http metadata request put response hop limit
+     * <code>metadata-options.http-put-response-hop-limit</code> - The HTTP metadata request put response hop limit
      * (integer, possible values <code>1</code> to <code>64</code>)
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>metadata-options.http-endpoint</code> - Enable or disable metadata access on http endpoint (
-     * <code>enabled</code> | <code>disabled</code>)
+     * <code>metadata-options.http-endpoint</code> - The status of access to the HTTP metadata endpoint on your instance
+     * (<code>enabled</code> | <code>disabled</code>)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>metadata-options.instance-metadata-tags</code> - The status of access to instance tags from the instance
+     * metadata (<code>enabled</code> | <code>disabled</code>)
      * </p>
      * </li>
      * <li>
@@ -734,14 +740,20 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>metadata-options.http-put-response-hop-limit</code> - The http metadata request put response hop limit
+     * <code>metadata-options.http-put-response-hop-limit</code> - The HTTP metadata request put response hop limit
      * (integer, possible values <code>1</code> to <code>64</code>)
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>metadata-options.http-endpoint</code> - Enable or disable metadata access on http endpoint (
-     * <code>enabled</code> | <code>disabled</code>)
+     * <code>metadata-options.http-endpoint</code> - The status of access to the HTTP metadata endpoint on your instance
+     * (<code>enabled</code> | <code>disabled</code>)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>metadata-options.instance-metadata-tags</code> - The status of access to instance tags from the instance
+     * metadata (<code>enabled</code> | <code>disabled</code>)
      * </p>
      * </li>
      * <li>
@@ -1240,14 +1252,20 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *         </li>
      *         <li>
      *         <p>
-     *         <code>metadata-options.http-put-response-hop-limit</code> - The http metadata request put response hop
+     *         <code>metadata-options.http-put-response-hop-limit</code> - The HTTP metadata request put response hop
      *         limit (integer, possible values <code>1</code> to <code>64</code>)
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>metadata-options.http-endpoint</code> - Enable or disable metadata access on http endpoint (
-     *         <code>enabled</code> | <code>disabled</code>)
+     *         <code>metadata-options.http-endpoint</code> - The status of access to the HTTP metadata endpoint on your
+     *         instance (<code>enabled</code> | <code>disabled</code>)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>metadata-options.instance-metadata-tags</code> - The status of access to instance tags from the
+     *         instance metadata (<code>enabled</code> | <code>disabled</code>)
      *         </p>
      *         </li>
      *         <li>
@@ -1759,14 +1777,20 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>metadata-options.http-put-response-hop-limit</code> - The http metadata request put response hop limit
+     * <code>metadata-options.http-put-response-hop-limit</code> - The HTTP metadata request put response hop limit
      * (integer, possible values <code>1</code> to <code>64</code>)
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>metadata-options.http-endpoint</code> - Enable or disable metadata access on http endpoint (
-     * <code>enabled</code> | <code>disabled</code>)
+     * <code>metadata-options.http-endpoint</code> - The status of access to the HTTP metadata endpoint on your instance
+     * (<code>enabled</code> | <code>disabled</code>)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>metadata-options.instance-metadata-tags</code> - The status of access to instance tags from the instance
+     * metadata (<code>enabled</code> | <code>disabled</code>)
      * </p>
      * </li>
      * <li>
@@ -2266,14 +2290,20 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>metadata-options.http-put-response-hop-limit</code> - The http metadata request put response hop
+     *        <code>metadata-options.http-put-response-hop-limit</code> - The HTTP metadata request put response hop
      *        limit (integer, possible values <code>1</code> to <code>64</code>)
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>metadata-options.http-endpoint</code> - Enable or disable metadata access on http endpoint (
-     *        <code>enabled</code> | <code>disabled</code>)
+     *        <code>metadata-options.http-endpoint</code> - The status of access to the HTTP metadata endpoint on your
+     *        instance (<code>enabled</code> | <code>disabled</code>)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>metadata-options.instance-metadata-tags</code> - The status of access to instance tags from the
+     *        instance metadata (<code>enabled</code> | <code>disabled</code>)
      *        </p>
      *        </li>
      *        <li>
@@ -2786,14 +2816,20 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>metadata-options.http-put-response-hop-limit</code> - The http metadata request put response hop limit
+     * <code>metadata-options.http-put-response-hop-limit</code> - The HTTP metadata request put response hop limit
      * (integer, possible values <code>1</code> to <code>64</code>)
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>metadata-options.http-endpoint</code> - Enable or disable metadata access on http endpoint (
-     * <code>enabled</code> | <code>disabled</code>)
+     * <code>metadata-options.http-endpoint</code> - The status of access to the HTTP metadata endpoint on your instance
+     * (<code>enabled</code> | <code>disabled</code>)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>metadata-options.instance-metadata-tags</code> - The status of access to instance tags from the instance
+     * metadata (<code>enabled</code> | <code>disabled</code>)
      * </p>
      * </li>
      * <li>
@@ -3298,14 +3334,20 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>metadata-options.http-put-response-hop-limit</code> - The http metadata request put response hop
+     *        <code>metadata-options.http-put-response-hop-limit</code> - The HTTP metadata request put response hop
      *        limit (integer, possible values <code>1</code> to <code>64</code>)
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>metadata-options.http-endpoint</code> - Enable or disable metadata access on http endpoint (
-     *        <code>enabled</code> | <code>disabled</code>)
+     *        <code>metadata-options.http-endpoint</code> - The status of access to the HTTP metadata endpoint on your
+     *        instance (<code>enabled</code> | <code>disabled</code>)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>metadata-options.instance-metadata-tags</code> - The status of access to instance tags from the
+     *        instance metadata (<code>enabled</code> | <code>disabled</code>)
      *        </p>
      *        </li>
      *        <li>
@@ -3820,14 +3862,20 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      * </li>
      * <li>
      * <p>
-     * <code>metadata-options.http-put-response-hop-limit</code> - The http metadata request put response hop limit
+     * <code>metadata-options.http-put-response-hop-limit</code> - The HTTP metadata request put response hop limit
      * (integer, possible values <code>1</code> to <code>64</code>)
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>metadata-options.http-endpoint</code> - Enable or disable metadata access on http endpoint (
-     * <code>enabled</code> | <code>disabled</code>)
+     * <code>metadata-options.http-endpoint</code> - The status of access to the HTTP metadata endpoint on your instance
+     * (<code>enabled</code> | <code>disabled</code>)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>metadata-options.instance-metadata-tags</code> - The status of access to instance tags from the instance
+     * metadata (<code>enabled</code> | <code>disabled</code>)
      * </p>
      * </li>
      * <li>
@@ -4327,14 +4375,20 @@ public class DescribeInstancesRequest extends AmazonWebServiceRequest implements
      *        </li>
      *        <li>
      *        <p>
-     *        <code>metadata-options.http-put-response-hop-limit</code> - The http metadata request put response hop
+     *        <code>metadata-options.http-put-response-hop-limit</code> - The HTTP metadata request put response hop
      *        limit (integer, possible values <code>1</code> to <code>64</code>)
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>metadata-options.http-endpoint</code> - Enable or disable metadata access on http endpoint (
-     *        <code>enabled</code> | <code>disabled</code>)
+     *        <code>metadata-options.http-endpoint</code> - The status of access to the HTTP metadata endpoint on your
+     *        instance (<code>enabled</code> | <code>disabled</code>)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>metadata-options.instance-metadata-tags</code> - The status of access to instance tags from the
+     *        instance metadata (<code>enabled</code> | <code>disabled</code>)
      *        </p>
      *        </li>
      *        <li>

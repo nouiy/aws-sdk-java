@@ -46,26 +46,26 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * <ul>
  * <li>
  * <p>
- * Amazon EC2: <a href="http://aws.amazon.com/ec2">AmazonEC2 product page</a>, <a
- * href="http://aws.amazon.com/documentation/ec2">Amazon EC2 documentation</a>
+ * Amazon EC2: <a href="http://aws.amazon.com/ec2">Amazon EC2 product page</a>, <a
+ * href="https://docs.aws.amazon.com/ec2/index.html">Amazon EC2 documentation</a>
  * </p>
  * </li>
  * <li>
  * <p>
  * Amazon EBS: <a href="http://aws.amazon.com/ebs">Amazon EBS product page</a>, <a
- * href="http://aws.amazon.com/documentation/ebs">Amazon EBS documentation</a>
+ * href="https://docs.aws.amazon.com/ebs/index.html">Amazon EBS documentation</a>
  * </p>
  * </li>
  * <li>
  * <p>
  * Amazon VPC: <a href="http://aws.amazon.com/vpc">Amazon VPC product page</a>, <a
- * href="http://aws.amazon.com/documentation/vpc">Amazon VPC documentation</a>
+ * href="https://docs.aws.amazon.com/vpc/index.html">Amazon VPC documentation</a>
  * </p>
  * </li>
  * <li>
  * <p>
- * Amazon Web Services VPN: <a href="http://aws.amazon.com/vpn">Amazon Web Services VPN product page</a>, <a
- * href="http://aws.amazon.com/documentation/vpn">Amazon Web Services VPN documentation</a>
+ * VPN: <a href="http://aws.amazon.com/vpn">VPN product page</a>, <a
+ * href="https://docs.aws.amazon.com/vpn/index.html">VPN documentation</a>
  * </p>
  * </li>
  * </ul>

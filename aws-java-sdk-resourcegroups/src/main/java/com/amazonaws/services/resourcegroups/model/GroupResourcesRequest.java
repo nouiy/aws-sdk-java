@@ -33,7 +33,7 @@ public class GroupResourcesRequest extends com.amazonaws.AmazonWebServiceRequest
     private String group;
     /**
      * <p>
-     * The list of ARNs for resources to be added to the group.
+     * The list of ARNs of the resources to be added to the group.
      * </p>
      */
     private java.util.List<String> resourceArns;
@@ -80,10 +80,10 @@ public class GroupResourcesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The list of ARNs for resources to be added to the group.
+     * The list of ARNs of the resources to be added to the group.
      * </p>
      * 
-     * @return The list of ARNs for resources to be added to the group.
+     * @return The list of ARNs of the resources to be added to the group.
      */
 
     public java.util.List<String> getResourceArns() {
@@ -92,11 +92,11 @@ public class GroupResourcesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The list of ARNs for resources to be added to the group.
+     * The list of ARNs of the resources to be added to the group.
      * </p>
      * 
      * @param resourceArns
-     *        The list of ARNs for resources to be added to the group.
+     *        The list of ARNs of the resources to be added to the group.
      */
 
     public void setResourceArns(java.util.Collection<String> resourceArns) {
@@ -110,7 +110,7 @@ public class GroupResourcesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The list of ARNs for resources to be added to the group.
+     * The list of ARNs of the resources to be added to the group.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -119,7 +119,7 @@ public class GroupResourcesRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param resourceArns
-     *        The list of ARNs for resources to be added to the group.
+     *        The list of ARNs of the resources to be added to the group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +135,11 @@ public class GroupResourcesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The list of ARNs for resources to be added to the group.
+     * The list of ARNs of the resources to be added to the group.
      * </p>
      * 
      * @param resourceArns
-     *        The list of ARNs for resources to be added to the group.
+     *        The list of ARNs of the resources to be added to the group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

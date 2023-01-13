@@ -28,17 +28,17 @@ public class DeleteVpcEndpointServiceConfigurationsRequest extends AmazonWebServ
 
     /**
      * <p>
-     * The IDs of one or more services.
+     * The IDs of the services.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> serviceIds;
 
     /**
      * <p>
-     * The IDs of one or more services.
+     * The IDs of the services.
      * </p>
      * 
-     * @return The IDs of one or more services.
+     * @return The IDs of the services.
      */
 
     public java.util.List<String> getServiceIds() {
@@ -50,11 +50,11 @@ public class DeleteVpcEndpointServiceConfigurationsRequest extends AmazonWebServ
 
     /**
      * <p>
-     * The IDs of one or more services.
+     * The IDs of the services.
      * </p>
      * 
      * @param serviceIds
-     *        The IDs of one or more services.
+     *        The IDs of the services.
      */
 
     public void setServiceIds(java.util.Collection<String> serviceIds) {
@@ -68,7 +68,7 @@ public class DeleteVpcEndpointServiceConfigurationsRequest extends AmazonWebServ
 
     /**
      * <p>
-     * The IDs of one or more services.
+     * The IDs of the services.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class DeleteVpcEndpointServiceConfigurationsRequest extends AmazonWebServ
      * </p>
      * 
      * @param serviceIds
-     *        The IDs of one or more services.
+     *        The IDs of the services.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class DeleteVpcEndpointServiceConfigurationsRequest extends AmazonWebServ
 
     /**
      * <p>
-     * The IDs of one or more services.
+     * The IDs of the services.
      * </p>
      * 
      * @param serviceIds
-     *        The IDs of one or more services.
+     *        The IDs of the services.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

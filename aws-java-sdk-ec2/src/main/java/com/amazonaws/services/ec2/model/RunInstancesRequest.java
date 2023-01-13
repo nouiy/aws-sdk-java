@@ -168,8 +168,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     private com.amazonaws.internal.SdkInternalList<String> securityGroupIds;
     /**
      * <p>
-     * [EC2-Classic, default VPC] The names of the security groups. For a nondefault VPC, you must use security group
-     * IDs instead.
+     * [EC2-Classic, default VPC] The names of the security groups.
      * </p>
      * <p>
      * If you specify a network interface, you must specify any security groups as part of the network interface.
@@ -1548,8 +1547,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * [EC2-Classic, default VPC] The names of the security groups. For a nondefault VPC, you must use security group
-     * IDs instead.
+     * [EC2-Classic, default VPC] The names of the security groups.
      * </p>
      * <p>
      * If you specify a network interface, you must specify any security groups as part of the network interface.
@@ -1558,8 +1556,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * Default: Amazon EC2 uses the default security group.
      * </p>
      * 
-     * @return [EC2-Classic, default VPC] The names of the security groups. For a nondefault VPC, you must use security
-     *         group IDs instead.</p>
+     * @return [EC2-Classic, default VPC] The names of the security groups.</p>
      *         <p>
      *         If you specify a network interface, you must specify any security groups as part of the network
      *         interface.
@@ -1577,8 +1574,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * [EC2-Classic, default VPC] The names of the security groups. For a nondefault VPC, you must use security group
-     * IDs instead.
+     * [EC2-Classic, default VPC] The names of the security groups.
      * </p>
      * <p>
      * If you specify a network interface, you must specify any security groups as part of the network interface.
@@ -1588,8 +1584,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      * 
      * @param securityGroups
-     *        [EC2-Classic, default VPC] The names of the security groups. For a nondefault VPC, you must use security
-     *        group IDs instead.</p>
+     *        [EC2-Classic, default VPC] The names of the security groups.</p>
      *        <p>
      *        If you specify a network interface, you must specify any security groups as part of the network interface.
      *        </p>
@@ -1608,8 +1603,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * [EC2-Classic, default VPC] The names of the security groups. For a nondefault VPC, you must use security group
-     * IDs instead.
+     * [EC2-Classic, default VPC] The names of the security groups.
      * </p>
      * <p>
      * If you specify a network interface, you must specify any security groups as part of the network interface.
@@ -1624,8 +1618,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      * 
      * @param securityGroups
-     *        [EC2-Classic, default VPC] The names of the security groups. For a nondefault VPC, you must use security
-     *        group IDs instead.</p>
+     *        [EC2-Classic, default VPC] The names of the security groups.</p>
      *        <p>
      *        If you specify a network interface, you must specify any security groups as part of the network interface.
      *        </p>
@@ -1646,8 +1639,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * [EC2-Classic, default VPC] The names of the security groups. For a nondefault VPC, you must use security group
-     * IDs instead.
+     * [EC2-Classic, default VPC] The names of the security groups.
      * </p>
      * <p>
      * If you specify a network interface, you must specify any security groups as part of the network interface.
@@ -1657,8 +1649,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      * 
      * @param securityGroups
-     *        [EC2-Classic, default VPC] The names of the security groups. For a nondefault VPC, you must use security
-     *        group IDs instead.</p>
+     *        [EC2-Classic, default VPC] The names of the security groups.</p>
      *        <p>
      *        If you specify a network interface, you must specify any security groups as part of the network interface.
      *        </p>

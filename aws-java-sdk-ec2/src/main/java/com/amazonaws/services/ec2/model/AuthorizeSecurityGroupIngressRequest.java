@@ -38,8 +38,8 @@ public class AuthorizeSecurityGroupIngressRequest extends AmazonWebServiceReques
     private String cidrIp;
     /**
      * <p>
-     * The start of port range for the TCP and UDP protocols, or an ICMP type number. For the ICMP type number, use
-     * <code>-1</code> to specify all types. If you specify all ICMP types, you must specify all codes.
+     * If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP, this is the type
+     * number. A value of -1 indicates all ICMP types. If you specify all ICMP types, you must specify all ICMP codes.
      * </p>
      * <p>
      * Alternatively, use a set of IP permissions to specify multiple rules and a description for the rule.
@@ -105,8 +105,8 @@ public class AuthorizeSecurityGroupIngressRequest extends AmazonWebServiceReques
     private String sourceSecurityGroupOwnerId;
     /**
      * <p>
-     * The end of port range for the TCP and UDP protocols, or an ICMP code number. For the ICMP code number, use
-     * <code>-1</code> to specify all codes. If you specify all ICMP types, you must specify all codes.
+     * If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP, this is the code. A
+     * value of -1 indicates all ICMP codes. If you specify all ICMP types, you must specify all ICMP codes.
      * </p>
      * <p>
      * Alternatively, use a set of IP permissions to specify multiple rules and a description for the rule.
@@ -206,16 +206,17 @@ public class AuthorizeSecurityGroupIngressRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * The start of port range for the TCP and UDP protocols, or an ICMP type number. For the ICMP type number, use
-     * <code>-1</code> to specify all types. If you specify all ICMP types, you must specify all codes.
+     * If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP, this is the type
+     * number. A value of -1 indicates all ICMP types. If you specify all ICMP types, you must specify all ICMP codes.
      * </p>
      * <p>
      * Alternatively, use a set of IP permissions to specify multiple rules and a description for the rule.
      * </p>
      * 
      * @param fromPort
-     *        The start of port range for the TCP and UDP protocols, or an ICMP type number. For the ICMP type number,
-     *        use <code>-1</code> to specify all types. If you specify all ICMP types, you must specify all codes.</p>
+     *        If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP, this is the
+     *        type number. A value of -1 indicates all ICMP types. If you specify all ICMP types, you must specify all
+     *        ICMP codes.</p>
      *        <p>
      *        Alternatively, use a set of IP permissions to specify multiple rules and a description for the rule.
      */
@@ -226,15 +227,16 @@ public class AuthorizeSecurityGroupIngressRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * The start of port range for the TCP and UDP protocols, or an ICMP type number. For the ICMP type number, use
-     * <code>-1</code> to specify all types. If you specify all ICMP types, you must specify all codes.
+     * If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP, this is the type
+     * number. A value of -1 indicates all ICMP types. If you specify all ICMP types, you must specify all ICMP codes.
      * </p>
      * <p>
      * Alternatively, use a set of IP permissions to specify multiple rules and a description for the rule.
      * </p>
      * 
-     * @return The start of port range for the TCP and UDP protocols, or an ICMP type number. For the ICMP type number,
-     *         use <code>-1</code> to specify all types. If you specify all ICMP types, you must specify all codes.</p>
+     * @return If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP, this is the
+     *         type number. A value of -1 indicates all ICMP types. If you specify all ICMP types, you must specify all
+     *         ICMP codes.</p>
      *         <p>
      *         Alternatively, use a set of IP permissions to specify multiple rules and a description for the rule.
      */
@@ -245,16 +247,17 @@ public class AuthorizeSecurityGroupIngressRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * The start of port range for the TCP and UDP protocols, or an ICMP type number. For the ICMP type number, use
-     * <code>-1</code> to specify all types. If you specify all ICMP types, you must specify all codes.
+     * If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP, this is the type
+     * number. A value of -1 indicates all ICMP types. If you specify all ICMP types, you must specify all ICMP codes.
      * </p>
      * <p>
      * Alternatively, use a set of IP permissions to specify multiple rules and a description for the rule.
      * </p>
      * 
      * @param fromPort
-     *        The start of port range for the TCP and UDP protocols, or an ICMP type number. For the ICMP type number,
-     *        use <code>-1</code> to specify all types. If you specify all ICMP types, you must specify all codes.</p>
+     *        If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP, this is the
+     *        type number. A value of -1 indicates all ICMP types. If you specify all ICMP types, you must specify all
+     *        ICMP codes.</p>
      *        <p>
      *        Alternatively, use a set of IP permissions to specify multiple rules and a description for the rule.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -663,16 +666,17 @@ public class AuthorizeSecurityGroupIngressRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * The end of port range for the TCP and UDP protocols, or an ICMP code number. For the ICMP code number, use
-     * <code>-1</code> to specify all codes. If you specify all ICMP types, you must specify all codes.
+     * If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP, this is the code. A
+     * value of -1 indicates all ICMP codes. If you specify all ICMP types, you must specify all ICMP codes.
      * </p>
      * <p>
      * Alternatively, use a set of IP permissions to specify multiple rules and a description for the rule.
      * </p>
      * 
      * @param toPort
-     *        The end of port range for the TCP and UDP protocols, or an ICMP code number. For the ICMP code number, use
-     *        <code>-1</code> to specify all codes. If you specify all ICMP types, you must specify all codes.</p>
+     *        If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP, this is the
+     *        code. A value of -1 indicates all ICMP codes. If you specify all ICMP types, you must specify all ICMP
+     *        codes.</p>
      *        <p>
      *        Alternatively, use a set of IP permissions to specify multiple rules and a description for the rule.
      */
@@ -683,15 +687,16 @@ public class AuthorizeSecurityGroupIngressRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * The end of port range for the TCP and UDP protocols, or an ICMP code number. For the ICMP code number, use
-     * <code>-1</code> to specify all codes. If you specify all ICMP types, you must specify all codes.
+     * If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP, this is the code. A
+     * value of -1 indicates all ICMP codes. If you specify all ICMP types, you must specify all ICMP codes.
      * </p>
      * <p>
      * Alternatively, use a set of IP permissions to specify multiple rules and a description for the rule.
      * </p>
      * 
-     * @return The end of port range for the TCP and UDP protocols, or an ICMP code number. For the ICMP code number,
-     *         use <code>-1</code> to specify all codes. If you specify all ICMP types, you must specify all codes.</p>
+     * @return If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP, this is the
+     *         code. A value of -1 indicates all ICMP codes. If you specify all ICMP types, you must specify all ICMP
+     *         codes.</p>
      *         <p>
      *         Alternatively, use a set of IP permissions to specify multiple rules and a description for the rule.
      */
@@ -702,16 +707,17 @@ public class AuthorizeSecurityGroupIngressRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * The end of port range for the TCP and UDP protocols, or an ICMP code number. For the ICMP code number, use
-     * <code>-1</code> to specify all codes. If you specify all ICMP types, you must specify all codes.
+     * If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP, this is the code. A
+     * value of -1 indicates all ICMP codes. If you specify all ICMP types, you must specify all ICMP codes.
      * </p>
      * <p>
      * Alternatively, use a set of IP permissions to specify multiple rules and a description for the rule.
      * </p>
      * 
      * @param toPort
-     *        The end of port range for the TCP and UDP protocols, or an ICMP code number. For the ICMP code number, use
-     *        <code>-1</code> to specify all codes. If you specify all ICMP types, you must specify all codes.</p>
+     *        If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP, this is the
+     *        code. A value of -1 indicates all ICMP codes. If you specify all ICMP types, you must specify all ICMP
+     *        codes.</p>
      *        <p>
      *        Alternatively, use a set of IP permissions to specify multiple rules and a description for the rule.
      * @return Returns a reference to this object so that method calls can be chained together.

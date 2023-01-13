@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientConstructors", "EnumSetterOverload", "ClientMutationMethods" ],
+    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientMutationMethods", "ClientConstructors" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -31681,6 +31681,9 @@
       }, {
         "name" : "POWER_15_KVA",
         "value" : "POWER_15_KVA"
+      }, {
+        "name" : "POWER_30_KVA",
+        "value" : "POWER_30_KVA"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.outposts.enum.PowerDrawKva",

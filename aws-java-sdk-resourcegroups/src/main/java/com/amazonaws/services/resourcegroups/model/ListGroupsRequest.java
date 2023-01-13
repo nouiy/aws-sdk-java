@@ -45,12 +45,12 @@ public class ListGroupsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <ul>
      * <li>
      * <p>
-     * <code>AWS:EC2::CapacityReservationPool</code>
+     * <code>AWS::EC2::CapacityReservationPool</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AWS:EC2::HostManagement</code>
+     * <code>AWS::EC2::HostManagement</code>
      * </p>
      * </li>
      * </ul>
@@ -100,12 +100,12 @@ public class ListGroupsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <ul>
      * <li>
      * <p>
-     * <code>AWS:EC2::CapacityReservationPool</code>
+     * <code>AWS::EC2::CapacityReservationPool</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AWS:EC2::HostManagement</code>
+     * <code>AWS::EC2::HostManagement</code>
      * </p>
      * </li>
      * </ul>
@@ -131,12 +131,12 @@ public class ListGroupsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>AWS:EC2::CapacityReservationPool</code>
+     *         <code>AWS::EC2::CapacityReservationPool</code>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>AWS:EC2::HostManagement</code>
+     *         <code>AWS::EC2::HostManagement</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -167,12 +167,12 @@ public class ListGroupsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <ul>
      * <li>
      * <p>
-     * <code>AWS:EC2::CapacityReservationPool</code>
+     * <code>AWS::EC2::CapacityReservationPool</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AWS:EC2::HostManagement</code>
+     * <code>AWS::EC2::HostManagement</code>
      * </p>
      * </li>
      * </ul>
@@ -198,12 +198,12 @@ public class ListGroupsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>AWS:EC2::CapacityReservationPool</code>
+     *        <code>AWS::EC2::CapacityReservationPool</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS:EC2::HostManagement</code>
+     *        <code>AWS::EC2::HostManagement</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -239,12 +239,12 @@ public class ListGroupsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <ul>
      * <li>
      * <p>
-     * <code>AWS:EC2::CapacityReservationPool</code>
+     * <code>AWS::EC2::CapacityReservationPool</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AWS:EC2::HostManagement</code>
+     * <code>AWS::EC2::HostManagement</code>
      * </p>
      * </li>
      * </ul>
@@ -275,12 +275,12 @@ public class ListGroupsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>AWS:EC2::CapacityReservationPool</code>
+     *        <code>AWS::EC2::CapacityReservationPool</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS:EC2::HostManagement</code>
+     *        <code>AWS::EC2::HostManagement</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -318,12 +318,12 @@ public class ListGroupsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <ul>
      * <li>
      * <p>
-     * <code>AWS:EC2::CapacityReservationPool</code>
+     * <code>AWS::EC2::CapacityReservationPool</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AWS:EC2::HostManagement</code>
+     * <code>AWS::EC2::HostManagement</code>
      * </p>
      * </li>
      * </ul>
@@ -349,12 +349,12 @@ public class ListGroupsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>AWS:EC2::CapacityReservationPool</code>
+     *        <code>AWS::EC2::CapacityReservationPool</code>
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AWS:EC2::HostManagement</code>
+     *        <code>AWS::EC2::HostManagement</code>
      *        </p>
      *        </li>
      *        </ul>

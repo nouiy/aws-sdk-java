@@ -222,7 +222,7 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * Indicates whether the instance is enabled for stop protection. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * Protection</a>.
+     * protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      */
     private Boolean disableApiStop;
@@ -1834,13 +1834,13 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * Indicates whether the instance is enabled for stop protection. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * Protection</a>.
+     * protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param disableApiStop
      *        Indicates whether the instance is enabled for stop protection. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *        Protection</a>.
+     *        protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
     public void setDisableApiStop(Boolean disableApiStop) {
@@ -1851,12 +1851,12 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * Indicates whether the instance is enabled for stop protection. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * Protection</a>.
+     * protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @return Indicates whether the instance is enabled for stop protection. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *         Protection</a>.
+     *         protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
     public Boolean getDisableApiStop() {
@@ -1867,13 +1867,13 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * Indicates whether the instance is enabled for stop protection. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * Protection</a>.
+     * protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param disableApiStop
      *        Indicates whether the instance is enabled for stop protection. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *        Protection</a>.
+     *        protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1886,12 +1886,12 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      * <p>
      * Indicates whether the instance is enabled for stop protection. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     * Protection</a>.
+     * protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @return Indicates whether the instance is enabled for stop protection. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html#Using_StopProtection">Stop
-     *         Protection</a>.
+     *         protection</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
     public Boolean isDisableApiStop() {

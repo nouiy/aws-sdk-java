@@ -117,7 +117,11 @@ public class FpgaImage implements Serializable, Cloneable {
      * </p>
      */
     private Boolean dataRetentionSupport;
-
+    /**
+     * <p>
+     * The instance types supported by the AFI.
+     * </p>
+     */
     private com.amazonaws.internal.SdkInternalList<String> instanceTypes;
 
     /**
@@ -817,7 +821,11 @@ public class FpgaImage implements Serializable, Cloneable {
     }
 
     /**
-     * @return
+     * <p>
+     * The instance types supported by the AFI.
+     * </p>
+     * 
+     * @return The instance types supported by the AFI.
      */
 
     public java.util.List<String> getInstanceTypes() {
@@ -828,7 +836,12 @@ public class FpgaImage implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The instance types supported by the AFI.
+     * </p>
+     * 
      * @param instanceTypes
+     *        The instance types supported by the AFI.
      */
 
     public void setInstanceTypes(java.util.Collection<String> instanceTypes) {
@@ -842,12 +855,16 @@ public class FpgaImage implements Serializable, Cloneable {
 
     /**
      * <p>
+     * The instance types supported by the AFI.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setInstanceTypes(java.util.Collection)} or {@link #withInstanceTypes(java.util.Collection)} if you want
      * to override the existing values.
      * </p>
      * 
      * @param instanceTypes
+     *        The instance types supported by the AFI.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -862,7 +879,12 @@ public class FpgaImage implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The instance types supported by the AFI.
+     * </p>
+     * 
      * @param instanceTypes
+     *        The instance types supported by the AFI.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

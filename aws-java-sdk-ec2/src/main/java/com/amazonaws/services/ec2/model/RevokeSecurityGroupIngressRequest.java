@@ -34,8 +34,8 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
     private String cidrIp;
     /**
      * <p>
-     * The start of port range for the TCP and UDP protocols, or an ICMP type number. For the ICMP type number, use
-     * <code>-1</code> to specify all ICMP types.
+     * If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP, this is the type
+     * number. A value of -1 indicates all ICMP types.
      * </p>
      */
     private Integer fromPort;
@@ -89,8 +89,8 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
     private String sourceSecurityGroupOwnerId;
     /**
      * <p>
-     * The end of port range for the TCP and UDP protocols, or an ICMP code number. For the ICMP code number, use
-     * <code>-1</code> to specify all ICMP codes for the ICMP type.
+     * If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP, this is the code. A
+     * value of -1 indicates all ICMP codes.
      * </p>
      */
     private Integer toPort;
@@ -167,13 +167,13 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The start of port range for the TCP and UDP protocols, or an ICMP type number. For the ICMP type number, use
-     * <code>-1</code> to specify all ICMP types.
+     * If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP, this is the type
+     * number. A value of -1 indicates all ICMP types.
      * </p>
      * 
      * @param fromPort
-     *        The start of port range for the TCP and UDP protocols, or an ICMP type number. For the ICMP type number,
-     *        use <code>-1</code> to specify all ICMP types.
+     *        If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP, this is the
+     *        type number. A value of -1 indicates all ICMP types.
      */
 
     public void setFromPort(Integer fromPort) {
@@ -182,12 +182,12 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The start of port range for the TCP and UDP protocols, or an ICMP type number. For the ICMP type number, use
-     * <code>-1</code> to specify all ICMP types.
+     * If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP, this is the type
+     * number. A value of -1 indicates all ICMP types.
      * </p>
      * 
-     * @return The start of port range for the TCP and UDP protocols, or an ICMP type number. For the ICMP type number,
-     *         use <code>-1</code> to specify all ICMP types.
+     * @return If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP, this is the
+     *         type number. A value of -1 indicates all ICMP types.
      */
 
     public Integer getFromPort() {
@@ -196,13 +196,13 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The start of port range for the TCP and UDP protocols, or an ICMP type number. For the ICMP type number, use
-     * <code>-1</code> to specify all ICMP types.
+     * If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP, this is the type
+     * number. A value of -1 indicates all ICMP types.
      * </p>
      * 
      * @param fromPort
-     *        The start of port range for the TCP and UDP protocols, or an ICMP type number. For the ICMP type number,
-     *        use <code>-1</code> to specify all ICMP types.
+     *        If the protocol is TCP or UDP, this is the start of the port range. If the protocol is ICMP, this is the
+     *        type number. A value of -1 indicates all ICMP types.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -563,13 +563,13 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The end of port range for the TCP and UDP protocols, or an ICMP code number. For the ICMP code number, use
-     * <code>-1</code> to specify all ICMP codes for the ICMP type.
+     * If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP, this is the code. A
+     * value of -1 indicates all ICMP codes.
      * </p>
      * 
      * @param toPort
-     *        The end of port range for the TCP and UDP protocols, or an ICMP code number. For the ICMP code number, use
-     *        <code>-1</code> to specify all ICMP codes for the ICMP type.
+     *        If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP, this is the
+     *        code. A value of -1 indicates all ICMP codes.
      */
 
     public void setToPort(Integer toPort) {
@@ -578,12 +578,12 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The end of port range for the TCP and UDP protocols, or an ICMP code number. For the ICMP code number, use
-     * <code>-1</code> to specify all ICMP codes for the ICMP type.
+     * If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP, this is the code. A
+     * value of -1 indicates all ICMP codes.
      * </p>
      * 
-     * @return The end of port range for the TCP and UDP protocols, or an ICMP code number. For the ICMP code number,
-     *         use <code>-1</code> to specify all ICMP codes for the ICMP type.
+     * @return If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP, this is the
+     *         code. A value of -1 indicates all ICMP codes.
      */
 
     public Integer getToPort() {
@@ -592,13 +592,13 @@ public class RevokeSecurityGroupIngressRequest extends AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The end of port range for the TCP and UDP protocols, or an ICMP code number. For the ICMP code number, use
-     * <code>-1</code> to specify all ICMP codes for the ICMP type.
+     * If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP, this is the code. A
+     * value of -1 indicates all ICMP codes.
      * </p>
      * 
      * @param toPort
-     *        The end of port range for the TCP and UDP protocols, or an ICMP code number. For the ICMP code number, use
-     *        <code>-1</code> to specify all ICMP codes for the ICMP type.
+     *        If the protocol is TCP or UDP, this is the end of the port range. If the protocol is ICMP, this is the
+     *        code. A value of -1 indicates all ICMP codes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

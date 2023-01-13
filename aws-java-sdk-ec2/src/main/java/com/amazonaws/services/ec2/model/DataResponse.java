@@ -46,8 +46,8 @@ public class DataResponse implements Serializable, Cloneable {
     private String destination;
     /**
      * <p>
-     * The metric used for the network performance request. Currently only <code>aggregate-latency</code> is supported,
-     * showing network latency during a specified period.
+     * The metric used for the network performance request. Only <code>aggregate-latency</code> is supported, which
+     * shows network latency during a specified period.
      * </p>
      */
     private String metric;
@@ -196,13 +196,13 @@ public class DataResponse implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The metric used for the network performance request. Currently only <code>aggregate-latency</code> is supported,
-     * showing network latency during a specified period.
+     * The metric used for the network performance request. Only <code>aggregate-latency</code> is supported, which
+     * shows network latency during a specified period.
      * </p>
      * 
      * @param metric
-     *        The metric used for the network performance request. Currently only <code>aggregate-latency</code> is
-     *        supported, showing network latency during a specified period.
+     *        The metric used for the network performance request. Only <code>aggregate-latency</code> is supported,
+     *        which shows network latency during a specified period.
      * @see MetricType
      */
 
@@ -212,12 +212,12 @@ public class DataResponse implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The metric used for the network performance request. Currently only <code>aggregate-latency</code> is supported,
-     * showing network latency during a specified period.
+     * The metric used for the network performance request. Only <code>aggregate-latency</code> is supported, which
+     * shows network latency during a specified period.
      * </p>
      * 
-     * @return The metric used for the network performance request. Currently only <code>aggregate-latency</code> is
-     *         supported, showing network latency during a specified period.
+     * @return The metric used for the network performance request. Only <code>aggregate-latency</code> is supported,
+     *         which shows network latency during a specified period.
      * @see MetricType
      */
 
@@ -227,13 +227,13 @@ public class DataResponse implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The metric used for the network performance request. Currently only <code>aggregate-latency</code> is supported,
-     * showing network latency during a specified period.
+     * The metric used for the network performance request. Only <code>aggregate-latency</code> is supported, which
+     * shows network latency during a specified period.
      * </p>
      * 
      * @param metric
-     *        The metric used for the network performance request. Currently only <code>aggregate-latency</code> is
-     *        supported, showing network latency during a specified period.
+     *        The metric used for the network performance request. Only <code>aggregate-latency</code> is supported,
+     *        which shows network latency during a specified period.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MetricType
      */
@@ -245,13 +245,13 @@ public class DataResponse implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The metric used for the network performance request. Currently only <code>aggregate-latency</code> is supported,
-     * showing network latency during a specified period.
+     * The metric used for the network performance request. Only <code>aggregate-latency</code> is supported, which
+     * shows network latency during a specified period.
      * </p>
      * 
      * @param metric
-     *        The metric used for the network performance request. Currently only <code>aggregate-latency</code> is
-     *        supported, showing network latency during a specified period.
+     *        The metric used for the network performance request. Only <code>aggregate-latency</code> is supported,
+     *        which shows network latency during a specified period.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MetricType
      */

@@ -17,15 +17,11 @@ package com.amazonaws.auth;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.internal.CredentialsEndpointProvider;
 import com.amazonaws.retry.internal.CredentialsEndpointRetryPolicy;
-import com.amazonaws.util.CollectionUtils;
 
+import java.net.InetAddress;
 import java.net.URI;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.net.UnknownHostException;
+import java.util.*;
 
 /**
  * <p>
@@ -47,9 +43,9 @@ public class ContainerCredentialsProvider implements AWSCredentialsProvider {
 
     static final String CONTAINER_AUTHORIZATION_TOKEN = "AWS_CONTAINER_AUTHORIZATION_TOKEN";
 
-    private static final Set<String> ALLOWED_FULL_URI_HOSTS = allowedHosts();
+    private static final String HTTPS = "https";
 
-    /** Default endpoint to retreive the Amazon ECS Credentials. */
+    /** Default endpoint to retrieve the Amazon ECS Credentials. */
     private static final String ECS_CREDENTIALS_ENDPOINT = "http://169.254.170.2";
 
     private final ContainerCredentialsFetcher credentialsFetcher;
@@ -115,10 +111,10 @@ public class ContainerCredentialsProvider implements AWSCredentialsProvider {
 
             URI uri = URI.create(fullUri);
 
-            if (!ALLOWED_FULL_URI_HOSTS.contains(uri.getHost())) {
+            if (!isHttps(uri) && !isAllowedHost(uri.getHost())) {
                 throw new SdkClientException("The full URI (" + uri + ") contained withing environment variable " +
-                    CONTAINER_CREDENTIALS_FULL_URI + " has an invalid host. Host can only be one of [" +
-                    CollectionUtils.join(ALLOWED_FULL_URI_HOSTS, ", ") + "]");
+                        CONTAINER_CREDENTIALS_FULL_URI + " has an invalid host. Host should resolve to a loopback " +
+                        "address or have the full URI be HTTPS.");
             }
 
             return uri;
@@ -131,13 +127,40 @@ public class ContainerCredentialsProvider implements AWSCredentialsProvider {
             }
             return new HashMap<String, String>();
         }
-    }
 
-    private static Set<String> allowedHosts() {
-        HashSet<String> hosts = new HashSet<String>();
-        hosts.add("127.0.0.1");
-        hosts.add("localhost");
-        return Collections.unmodifiableSet(hosts);
+        private boolean isHttps(URI endpoint) {
+            return Objects.equals(HTTPS, endpoint.getScheme());
+        }
+
+        /**
+         * Determines if the addresses for a given host are resolved to a loopback address.
+         * <p>
+         *     This is a best-effort in determining what address a host will be resolved to. DNS caching might be disabled,
+         *     or could expire between this check and when the API is invoked.
+         * </p>
+         * @param host The name or IP address of the host.
+         * @return A boolean specifying whether the host is allowed as an endpoint for credentials loading.
+         */
+        private boolean isAllowedHost(String host) {
+            try {
+                InetAddress[] addresses = InetAddress.getAllByName(host);
+                boolean allAllowed = true;
+                for (InetAddress address: addresses) {
+                    if (!isLoopbackAddress(address)) {
+                        allAllowed = false;
+                    }
+                }
+
+                return addresses.length > 0 && allAllowed;
+
+            } catch (UnknownHostException e) {
+                throw new SdkClientException(String.format("host (%s) could not be resolved to an IP address.", host), e);
+            }
+        }
+
+        private boolean isLoopbackAddress(InetAddress inetAddress) {
+            return inetAddress.isLoopbackAddress();
+        }
     }
 
 }

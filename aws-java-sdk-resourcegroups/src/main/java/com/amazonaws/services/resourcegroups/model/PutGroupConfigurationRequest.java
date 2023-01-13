@@ -34,13 +34,13 @@ public class PutGroupConfigurationRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The new configuration to associate with the specified group. A configuration associates the resource group with
-     * an AWS service and specifies how the service can interact with the resources in the group. A configuration is an
-     * array of <a>GroupConfigurationItem</a> elements.
+     * an Amazon Web Services service and specifies how the service can interact with the resources in the group. A
+     * configuration is an array of <a>GroupConfigurationItem</a> elements.
      * </p>
      * <p>
      * For information about the syntax of a service configuration, see <a
-     * href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service configurations for resource
-     * groups</a>.
+     * href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service configurations for Resource
+     * Groups</a>.
      * </p>
      * <note>
      * <p>
@@ -93,13 +93,13 @@ public class PutGroupConfigurationRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The new configuration to associate with the specified group. A configuration associates the resource group with
-     * an AWS service and specifies how the service can interact with the resources in the group. A configuration is an
-     * array of <a>GroupConfigurationItem</a> elements.
+     * an Amazon Web Services service and specifies how the service can interact with the resources in the group. A
+     * configuration is an array of <a>GroupConfigurationItem</a> elements.
      * </p>
      * <p>
      * For information about the syntax of a service configuration, see <a
-     * href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service configurations for resource
-     * groups</a>.
+     * href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service configurations for Resource
+     * Groups</a>.
      * </p>
      * <note>
      * <p>
@@ -108,12 +108,12 @@ public class PutGroupConfigurationRequest extends com.amazonaws.AmazonWebService
      * </note>
      * 
      * @return The new configuration to associate with the specified group. A configuration associates the resource
-     *         group with an AWS service and specifies how the service can interact with the resources in the group. A
-     *         configuration is an array of <a>GroupConfigurationItem</a> elements.</p>
+     *         group with an Amazon Web Services service and specifies how the service can interact with the resources
+     *         in the group. A configuration is an array of <a>GroupConfigurationItem</a> elements.</p>
      *         <p>
      *         For information about the syntax of a service configuration, see <a
      *         href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service configurations for
-     *         resource groups</a>.
+     *         Resource Groups</a>.
      *         </p>
      *         <note>
      *         <p>
@@ -129,13 +129,13 @@ public class PutGroupConfigurationRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The new configuration to associate with the specified group. A configuration associates the resource group with
-     * an AWS service and specifies how the service can interact with the resources in the group. A configuration is an
-     * array of <a>GroupConfigurationItem</a> elements.
+     * an Amazon Web Services service and specifies how the service can interact with the resources in the group. A
+     * configuration is an array of <a>GroupConfigurationItem</a> elements.
      * </p>
      * <p>
      * For information about the syntax of a service configuration, see <a
-     * href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service configurations for resource
-     * groups</a>.
+     * href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service configurations for Resource
+     * Groups</a>.
      * </p>
      * <note>
      * <p>
@@ -145,12 +145,12 @@ public class PutGroupConfigurationRequest extends com.amazonaws.AmazonWebService
      * 
      * @param configuration
      *        The new configuration to associate with the specified group. A configuration associates the resource group
-     *        with an AWS service and specifies how the service can interact with the resources in the group. A
-     *        configuration is an array of <a>GroupConfigurationItem</a> elements.</p>
+     *        with an Amazon Web Services service and specifies how the service can interact with the resources in the
+     *        group. A configuration is an array of <a>GroupConfigurationItem</a> elements.</p>
      *        <p>
      *        For information about the syntax of a service configuration, see <a
      *        href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service configurations for
-     *        resource groups</a>.
+     *        Resource Groups</a>.
      *        </p>
      *        <note>
      *        <p>
@@ -171,13 +171,13 @@ public class PutGroupConfigurationRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The new configuration to associate with the specified group. A configuration associates the resource group with
-     * an AWS service and specifies how the service can interact with the resources in the group. A configuration is an
-     * array of <a>GroupConfigurationItem</a> elements.
+     * an Amazon Web Services service and specifies how the service can interact with the resources in the group. A
+     * configuration is an array of <a>GroupConfigurationItem</a> elements.
      * </p>
      * <p>
      * For information about the syntax of a service configuration, see <a
-     * href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service configurations for resource
-     * groups</a>.
+     * href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service configurations for Resource
+     * Groups</a>.
      * </p>
      * <note>
      * <p>
@@ -192,12 +192,12 @@ public class PutGroupConfigurationRequest extends com.amazonaws.AmazonWebService
      * 
      * @param configuration
      *        The new configuration to associate with the specified group. A configuration associates the resource group
-     *        with an AWS service and specifies how the service can interact with the resources in the group. A
-     *        configuration is an array of <a>GroupConfigurationItem</a> elements.</p>
+     *        with an Amazon Web Services service and specifies how the service can interact with the resources in the
+     *        group. A configuration is an array of <a>GroupConfigurationItem</a> elements.</p>
      *        <p>
      *        For information about the syntax of a service configuration, see <a
      *        href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service configurations for
-     *        resource groups</a>.
+     *        Resource Groups</a>.
      *        </p>
      *        <note>
      *        <p>
@@ -220,13 +220,13 @@ public class PutGroupConfigurationRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The new configuration to associate with the specified group. A configuration associates the resource group with
-     * an AWS service and specifies how the service can interact with the resources in the group. A configuration is an
-     * array of <a>GroupConfigurationItem</a> elements.
+     * an Amazon Web Services service and specifies how the service can interact with the resources in the group. A
+     * configuration is an array of <a>GroupConfigurationItem</a> elements.
      * </p>
      * <p>
      * For information about the syntax of a service configuration, see <a
-     * href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service configurations for resource
-     * groups</a>.
+     * href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service configurations for Resource
+     * Groups</a>.
      * </p>
      * <note>
      * <p>
@@ -236,12 +236,12 @@ public class PutGroupConfigurationRequest extends com.amazonaws.AmazonWebService
      * 
      * @param configuration
      *        The new configuration to associate with the specified group. A configuration associates the resource group
-     *        with an AWS service and specifies how the service can interact with the resources in the group. A
-     *        configuration is an array of <a>GroupConfigurationItem</a> elements.</p>
+     *        with an Amazon Web Services service and specifies how the service can interact with the resources in the
+     *        group. A configuration is an array of <a>GroupConfigurationItem</a> elements.</p>
      *        <p>
      *        For information about the syntax of a service configuration, see <a
      *        href="https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html">Service configurations for
-     *        resource groups</a>.
+     *        Resource Groups</a>.
      *        </p>
      *        <note>
      *        <p>

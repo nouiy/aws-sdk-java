@@ -65,7 +65,8 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
     private String defaultTargetCapacityType;
     /**
      * <p>
-     * The unit for the target capacity.
+     * The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
+     * <code>InstanceRequirements</code> is specified.
      * </p>
      * <p>
      * Default: <code>units</code> (translates to number of instances)
@@ -255,14 +256,16 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
 
     /**
      * <p>
-     * The unit for the target capacity.
+     * The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
+     * <code>InstanceRequirements</code> is specified.
      * </p>
      * <p>
      * Default: <code>units</code> (translates to number of instances)
      * </p>
      * 
      * @param targetCapacityUnitType
-     *        The unit for the target capacity.</p>
+     *        The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
+     *        <code>InstanceRequirements</code> is specified.</p>
      *        <p>
      *        Default: <code>units</code> (translates to number of instances)
      * @see TargetCapacityUnitType
@@ -274,13 +277,15 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
 
     /**
      * <p>
-     * The unit for the target capacity.
+     * The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
+     * <code>InstanceRequirements</code> is specified.
      * </p>
      * <p>
      * Default: <code>units</code> (translates to number of instances)
      * </p>
      * 
-     * @return The unit for the target capacity.</p>
+     * @return The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
+     *         <code>InstanceRequirements</code> is specified.</p>
      *         <p>
      *         Default: <code>units</code> (translates to number of instances)
      * @see TargetCapacityUnitType
@@ -292,14 +297,16 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
 
     /**
      * <p>
-     * The unit for the target capacity.
+     * The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
+     * <code>InstanceRequirements</code> is specified.
      * </p>
      * <p>
      * Default: <code>units</code> (translates to number of instances)
      * </p>
      * 
      * @param targetCapacityUnitType
-     *        The unit for the target capacity.</p>
+     *        The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
+     *        <code>InstanceRequirements</code> is specified.</p>
      *        <p>
      *        Default: <code>units</code> (translates to number of instances)
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -313,14 +320,16 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
 
     /**
      * <p>
-     * The unit for the target capacity.
+     * The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
+     * <code>InstanceRequirements</code> is specified.
      * </p>
      * <p>
      * Default: <code>units</code> (translates to number of instances)
      * </p>
      * 
      * @param targetCapacityUnitType
-     *        The unit for the target capacity.</p>
+     *        The unit for the target capacity. <code>TargetCapacityUnitType</code> can only be specified when
+     *        <code>InstanceRequirements</code> is specified.</p>
      *        <p>
      *        Default: <code>units</code> (translates to number of instances)
      * @return Returns a reference to this object so that method calls can be chained together.

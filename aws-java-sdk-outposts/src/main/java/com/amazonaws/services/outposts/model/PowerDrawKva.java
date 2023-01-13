@@ -22,7 +22,8 @@ public enum PowerDrawKva {
 
     POWER_5_KVA("POWER_5_KVA"),
     POWER_10_KVA("POWER_10_KVA"),
-    POWER_15_KVA("POWER_15_KVA");
+    POWER_15_KVA("POWER_15_KVA"),
+    POWER_30_KVA("POWER_30_KVA");
 
     private String value;
 

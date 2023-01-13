@@ -40,9 +40,23 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
     /**
      * <p>
      * A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code> and
-     * <code>Message</code> structures. Possible values for <code>ErrorCode</code> are
-     * <code>CLOUDFORMATION_STACK_INACTIVE</code> and <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>.
+     * <code>Message</code> structures.
      * </p>
+     * <p>
+     * Possible values for <code>ErrorCode</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CLOUDFORMATION_STACK_INACTIVE</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private java.util.List<QueryError> queryErrors;
 
@@ -174,13 +188,40 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
     /**
      * <p>
      * A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code> and
-     * <code>Message</code> structures. Possible values for <code>ErrorCode</code> are
-     * <code>CLOUDFORMATION_STACK_INACTIVE</code> and <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>.
+     * <code>Message</code> structures.
      * </p>
+     * <p>
+     * Possible values for <code>ErrorCode</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CLOUDFORMATION_STACK_INACTIVE</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @return A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code>
-     *         and <code>Message</code> structures. Possible values for <code>ErrorCode</code> are
-     *         <code>CLOUDFORMATION_STACK_INACTIVE</code> and <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>.
+     *         and <code>Message</code> structures.</p>
+     *         <p>
+     *         Possible values for <code>ErrorCode</code>:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>CLOUDFORMATION_STACK_INACTIVE</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<QueryError> getQueryErrors() {
@@ -190,14 +231,41 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
     /**
      * <p>
      * A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code> and
-     * <code>Message</code> structures. Possible values for <code>ErrorCode</code> are
-     * <code>CLOUDFORMATION_STACK_INACTIVE</code> and <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>.
+     * <code>Message</code> structures.
      * </p>
+     * <p>
+     * Possible values for <code>ErrorCode</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CLOUDFORMATION_STACK_INACTIVE</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param queryErrors
      *        A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code>
-     *        and <code>Message</code> structures. Possible values for <code>ErrorCode</code> are
-     *        <code>CLOUDFORMATION_STACK_INACTIVE</code> and <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>.
+     *        and <code>Message</code> structures.</p>
+     *        <p>
+     *        Possible values for <code>ErrorCode</code>:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>CLOUDFORMATION_STACK_INACTIVE</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
+     *        </p>
+     *        </li>
      */
 
     public void setQueryErrors(java.util.Collection<QueryError> queryErrors) {
@@ -212,9 +280,23 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
     /**
      * <p>
      * A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code> and
-     * <code>Message</code> structures. Possible values for <code>ErrorCode</code> are
-     * <code>CLOUDFORMATION_STACK_INACTIVE</code> and <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>.
+     * <code>Message</code> structures.
      * </p>
+     * <p>
+     * Possible values for <code>ErrorCode</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CLOUDFORMATION_STACK_INACTIVE</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setQueryErrors(java.util.Collection)} or {@link #withQueryErrors(java.util.Collection)} if you want to
@@ -223,8 +305,21 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
      * 
      * @param queryErrors
      *        A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code>
-     *        and <code>Message</code> structures. Possible values for <code>ErrorCode</code> are
-     *        <code>CLOUDFORMATION_STACK_INACTIVE</code> and <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>.
+     *        and <code>Message</code> structures.</p>
+     *        <p>
+     *        Possible values for <code>ErrorCode</code>:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>CLOUDFORMATION_STACK_INACTIVE</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -241,14 +336,41 @@ public class SearchResourcesResult extends com.amazonaws.AmazonWebServiceResult<
     /**
      * <p>
      * A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code> and
-     * <code>Message</code> structures. Possible values for <code>ErrorCode</code> are
-     * <code>CLOUDFORMATION_STACK_INACTIVE</code> and <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>.
+     * <code>Message</code> structures.
      * </p>
+     * <p>
+     * Possible values for <code>ErrorCode</code>:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CLOUDFORMATION_STACK_INACTIVE</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param queryErrors
      *        A list of <code>QueryError</code> objects. Each error is an object that contains <code>ErrorCode</code>
-     *        and <code>Message</code> structures. Possible values for <code>ErrorCode</code> are
-     *        <code>CLOUDFORMATION_STACK_INACTIVE</code> and <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>.
+     *        and <code>Message</code> structures.</p>
+     *        <p>
+     *        Possible values for <code>ErrorCode</code>:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>CLOUDFORMATION_STACK_INACTIVE</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CLOUDFORMATION_STACK_NOT_EXISTING</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

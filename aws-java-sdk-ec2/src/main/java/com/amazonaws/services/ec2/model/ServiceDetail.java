@@ -101,7 +101,7 @@ public class ServiceDetail implements Serializable, Cloneable {
     private String payerResponsibility;
     /**
      * <p>
-     * Any tags assigned to the service.
+     * The tags assigned to the service.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
@@ -798,10 +798,10 @@ public class ServiceDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Any tags assigned to the service.
+     * The tags assigned to the service.
      * </p>
      * 
-     * @return Any tags assigned to the service.
+     * @return The tags assigned to the service.
      */
 
     public java.util.List<Tag> getTags() {
@@ -813,11 +813,11 @@ public class ServiceDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Any tags assigned to the service.
+     * The tags assigned to the service.
      * </p>
      * 
      * @param tags
-     *        Any tags assigned to the service.
+     *        The tags assigned to the service.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -831,7 +831,7 @@ public class ServiceDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Any tags assigned to the service.
+     * The tags assigned to the service.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -840,7 +840,7 @@ public class ServiceDetail implements Serializable, Cloneable {
      * </p>
      * 
      * @param tags
-     *        Any tags assigned to the service.
+     *        The tags assigned to the service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -856,11 +856,11 @@ public class ServiceDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Any tags assigned to the service.
+     * The tags assigned to the service.
      * </p>
      * 
      * @param tags
-     *        Any tags assigned to the service.
+     *        The tags assigned to the service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

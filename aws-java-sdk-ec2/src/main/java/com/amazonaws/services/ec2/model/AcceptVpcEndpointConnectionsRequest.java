@@ -34,7 +34,7 @@ public class AcceptVpcEndpointConnectionsRequest extends AmazonWebServiceRequest
     private String serviceId;
     /**
      * <p>
-     * The IDs of one or more interface VPC endpoints.
+     * The IDs of the interface VPC endpoints.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> vpcEndpointIds;
@@ -81,10 +81,10 @@ public class AcceptVpcEndpointConnectionsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The IDs of one or more interface VPC endpoints.
+     * The IDs of the interface VPC endpoints.
      * </p>
      * 
-     * @return The IDs of one or more interface VPC endpoints.
+     * @return The IDs of the interface VPC endpoints.
      */
 
     public java.util.List<String> getVpcEndpointIds() {
@@ -96,11 +96,11 @@ public class AcceptVpcEndpointConnectionsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The IDs of one or more interface VPC endpoints.
+     * The IDs of the interface VPC endpoints.
      * </p>
      * 
      * @param vpcEndpointIds
-     *        The IDs of one or more interface VPC endpoints.
+     *        The IDs of the interface VPC endpoints.
      */
 
     public void setVpcEndpointIds(java.util.Collection<String> vpcEndpointIds) {
@@ -114,7 +114,7 @@ public class AcceptVpcEndpointConnectionsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The IDs of one or more interface VPC endpoints.
+     * The IDs of the interface VPC endpoints.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -123,7 +123,7 @@ public class AcceptVpcEndpointConnectionsRequest extends AmazonWebServiceRequest
      * </p>
      * 
      * @param vpcEndpointIds
-     *        The IDs of one or more interface VPC endpoints.
+     *        The IDs of the interface VPC endpoints.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -139,11 +139,11 @@ public class AcceptVpcEndpointConnectionsRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The IDs of one or more interface VPC endpoints.
+     * The IDs of the interface VPC endpoints.
      * </p>
      * 
      * @param vpcEndpointIds
-     *        The IDs of one or more interface VPC endpoints.
+     *        The IDs of the interface VPC endpoints.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

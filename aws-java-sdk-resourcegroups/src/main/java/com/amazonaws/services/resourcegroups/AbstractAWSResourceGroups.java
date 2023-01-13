@@ -38,6 +38,11 @@ public class AbstractAWSResourceGroups implements AWSResourceGroups {
     }
 
     @Override
+    public GetAccountSettingsResult getAccountSettings(GetAccountSettingsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetGroupResult getGroup(GetGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -94,6 +99,11 @@ public class AbstractAWSResourceGroups implements AWSResourceGroups {
 
     @Override
     public UntagResult untag(UntagRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateAccountSettingsResult updateAccountSettings(UpdateAccountSettingsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -28,8 +28,8 @@ public class StaleIpPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The start of the port range for the TCP and UDP protocols, or an ICMP type number. A value of <code>-1</code>
-     * indicates all ICMP types.
+     * The start of the port range for the TCP and UDP protocols, or an ICMP type number. A value of -1 indicates all
+     * ICMP types.
      * </p>
      */
     private Integer fromPort;
@@ -69,13 +69,13 @@ public class StaleIpPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The start of the port range for the TCP and UDP protocols, or an ICMP type number. A value of <code>-1</code>
-     * indicates all ICMP types.
+     * The start of the port range for the TCP and UDP protocols, or an ICMP type number. A value of -1 indicates all
+     * ICMP types.
      * </p>
      * 
      * @param fromPort
-     *        The start of the port range for the TCP and UDP protocols, or an ICMP type number. A value of
-     *        <code>-1</code> indicates all ICMP types.
+     *        The start of the port range for the TCP and UDP protocols, or an ICMP type number. A value of -1 indicates
+     *        all ICMP types.
      */
 
     public void setFromPort(Integer fromPort) {
@@ -84,12 +84,12 @@ public class StaleIpPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The start of the port range for the TCP and UDP protocols, or an ICMP type number. A value of <code>-1</code>
-     * indicates all ICMP types.
+     * The start of the port range for the TCP and UDP protocols, or an ICMP type number. A value of -1 indicates all
+     * ICMP types.
      * </p>
      * 
-     * @return The start of the port range for the TCP and UDP protocols, or an ICMP type number. A value of
-     *         <code>-1</code> indicates all ICMP types.
+     * @return The start of the port range for the TCP and UDP protocols, or an ICMP type number. A value of -1
+     *         indicates all ICMP types.
      */
 
     public Integer getFromPort() {
@@ -98,13 +98,13 @@ public class StaleIpPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The start of the port range for the TCP and UDP protocols, or an ICMP type number. A value of <code>-1</code>
-     * indicates all ICMP types.
+     * The start of the port range for the TCP and UDP protocols, or an ICMP type number. A value of -1 indicates all
+     * ICMP types.
      * </p>
      * 
      * @param fromPort
-     *        The start of the port range for the TCP and UDP protocols, or an ICMP type number. A value of
-     *        <code>-1</code> indicates all ICMP types.
+     *        The start of the port range for the TCP and UDP protocols, or an ICMP type number. A value of -1 indicates
+     *        all ICMP types.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

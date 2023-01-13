@@ -20,9 +20,7 @@ import com.amazonaws.Request;
 import com.amazonaws.services.ec2.model.transform.DescribeVpcEndpointServicesRequestMarshaller;
 
 /**
- * <p>
- * Contains the parameters for DescribeVpcEndpointServices.
- * </p>
+ * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DescribeVpcEndpointServicesRequest extends AmazonWebServiceRequest implements Serializable, Cloneable,
@@ -30,13 +28,13 @@ public class DescribeVpcEndpointServicesRequest extends AmazonWebServiceRequest 
 
     /**
      * <p>
-     * One or more service names.
+     * The service names.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> serviceNames;
     /**
      * <p>
-     * One or more filters.
+     * The filters.
      * </p>
      * <ul>
      * <li>
@@ -96,10 +94,10 @@ public class DescribeVpcEndpointServicesRequest extends AmazonWebServiceRequest 
 
     /**
      * <p>
-     * One or more service names.
+     * The service names.
      * </p>
      * 
-     * @return One or more service names.
+     * @return The service names.
      */
 
     public java.util.List<String> getServiceNames() {
@@ -111,11 +109,11 @@ public class DescribeVpcEndpointServicesRequest extends AmazonWebServiceRequest 
 
     /**
      * <p>
-     * One or more service names.
+     * The service names.
      * </p>
      * 
      * @param serviceNames
-     *        One or more service names.
+     *        The service names.
      */
 
     public void setServiceNames(java.util.Collection<String> serviceNames) {
@@ -129,7 +127,7 @@ public class DescribeVpcEndpointServicesRequest extends AmazonWebServiceRequest 
 
     /**
      * <p>
-     * One or more service names.
+     * The service names.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -138,7 +136,7 @@ public class DescribeVpcEndpointServicesRequest extends AmazonWebServiceRequest 
      * </p>
      * 
      * @param serviceNames
-     *        One or more service names.
+     *        The service names.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -154,11 +152,11 @@ public class DescribeVpcEndpointServicesRequest extends AmazonWebServiceRequest 
 
     /**
      * <p>
-     * One or more service names.
+     * The service names.
      * </p>
      * 
      * @param serviceNames
-     *        One or more service names.
+     *        The service names.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -169,7 +167,7 @@ public class DescribeVpcEndpointServicesRequest extends AmazonWebServiceRequest 
 
     /**
      * <p>
-     * One or more filters.
+     * The filters.
      * </p>
      * <ul>
      * <li>
@@ -209,7 +207,7 @@ public class DescribeVpcEndpointServicesRequest extends AmazonWebServiceRequest 
      * </li>
      * </ul>
      * 
-     * @return One or more filters.</p>
+     * @return The filters.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -257,7 +255,7 @@ public class DescribeVpcEndpointServicesRequest extends AmazonWebServiceRequest 
 
     /**
      * <p>
-     * One or more filters.
+     * The filters.
      * </p>
      * <ul>
      * <li>
@@ -298,7 +296,7 @@ public class DescribeVpcEndpointServicesRequest extends AmazonWebServiceRequest 
      * </ul>
      * 
      * @param filters
-     *        One or more filters.</p>
+     *        The filters.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -348,7 +346,7 @@ public class DescribeVpcEndpointServicesRequest extends AmazonWebServiceRequest 
 
     /**
      * <p>
-     * One or more filters.
+     * The filters.
      * </p>
      * <ul>
      * <li>
@@ -394,7 +392,7 @@ public class DescribeVpcEndpointServicesRequest extends AmazonWebServiceRequest 
      * </p>
      * 
      * @param filters
-     *        One or more filters.</p>
+     *        The filters.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -446,7 +444,7 @@ public class DescribeVpcEndpointServicesRequest extends AmazonWebServiceRequest 
 
     /**
      * <p>
-     * One or more filters.
+     * The filters.
      * </p>
      * <ul>
      * <li>
@@ -487,7 +485,7 @@ public class DescribeVpcEndpointServicesRequest extends AmazonWebServiceRequest 
      * </ul>
      * 
      * @param filters
-     *        One or more filters.</p>
+     *        The filters.</p>
      *        <ul>
      *        <li>
      *        <p>

@@ -30,8 +30,8 @@ public class CreateClientVpnEndpointRequest extends AmazonWebServiceRequest impl
      * <p>
      * The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot
      * overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add
-     * manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block
-     * should be /22 or greater.
+     * manually. The address range cannot be changed after the Client VPN endpoint has been created. Client CIDR range
+     * must have a size of at least /22 and must not be greater than /12.
      * </p>
      */
     private String clientCidrBlock;
@@ -196,15 +196,15 @@ public class CreateClientVpnEndpointRequest extends AmazonWebServiceRequest impl
      * <p>
      * The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot
      * overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add
-     * manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block
-     * should be /22 or greater.
+     * manually. The address range cannot be changed after the Client VPN endpoint has been created. Client CIDR range
+     * must have a size of at least /22 and must not be greater than /12.
      * </p>
      * 
      * @param clientCidrBlock
      *        The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range
      *        cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes
      *        that you add manually. The address range cannot be changed after the Client VPN endpoint has been created.
-     *        The CIDR block should be /22 or greater.
+     *        Client CIDR range must have a size of at least /22 and must not be greater than /12.
      */
 
     public void setClientCidrBlock(String clientCidrBlock) {
@@ -215,14 +215,14 @@ public class CreateClientVpnEndpointRequest extends AmazonWebServiceRequest impl
      * <p>
      * The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot
      * overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add
-     * manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block
-     * should be /22 or greater.
+     * manually. The address range cannot be changed after the Client VPN endpoint has been created. Client CIDR range
+     * must have a size of at least /22 and must not be greater than /12.
      * </p>
      * 
      * @return The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range
      *         cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes
      *         that you add manually. The address range cannot be changed after the Client VPN endpoint has been
-     *         created. The CIDR block should be /22 or greater.
+     *         created. Client CIDR range must have a size of at least /22 and must not be greater than /12.
      */
 
     public String getClientCidrBlock() {
@@ -233,15 +233,15 @@ public class CreateClientVpnEndpointRequest extends AmazonWebServiceRequest impl
      * <p>
      * The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range cannot
      * overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes that you add
-     * manually. The address range cannot be changed after the Client VPN endpoint has been created. The CIDR block
-     * should be /22 or greater.
+     * manually. The address range cannot be changed after the Client VPN endpoint has been created. Client CIDR range
+     * must have a size of at least /22 and must not be greater than /12.
      * </p>
      * 
      * @param clientCidrBlock
      *        The IPv4 address range, in CIDR notation, from which to assign client IP addresses. The address range
      *        cannot overlap with the local CIDR of the VPC in which the associated subnet is located, or the routes
      *        that you add manually. The address range cannot be changed after the Client VPN endpoint has been created.
-     *        The CIDR block should be /22 or greater.
+     *        Client CIDR range must have a size of at least /22 and must not be greater than /12.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
