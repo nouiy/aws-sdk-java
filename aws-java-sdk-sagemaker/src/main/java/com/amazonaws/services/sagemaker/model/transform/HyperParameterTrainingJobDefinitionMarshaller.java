@@ -63,6 +63,8 @@ public class HyperParameterTrainingJobDefinitionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RetryStrategy").build();
     private static final MarshallingInfo<StructuredPojo> HYPERPARAMETERTUNINGRESOURCECONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HyperParameterTuningResourceConfig").build();
+    private static final MarshallingInfo<Map> ENVIRONMENT_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Environment").build();
 
     private static final HyperParameterTrainingJobDefinitionMarshaller instance = new HyperParameterTrainingJobDefinitionMarshaller();
 
@@ -99,6 +101,7 @@ public class HyperParameterTrainingJobDefinitionMarshaller {
             protocolMarshaller.marshall(hyperParameterTrainingJobDefinition.getRetryStrategy(), RETRYSTRATEGY_BINDING);
             protocolMarshaller
                     .marshall(hyperParameterTrainingJobDefinition.getHyperParameterTuningResourceConfig(), HYPERPARAMETERTUNINGRESOURCECONFIG_BINDING);
+            protocolMarshaller.marshall(hyperParameterTrainingJobDefinition.getEnvironment(), ENVIRONMENT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

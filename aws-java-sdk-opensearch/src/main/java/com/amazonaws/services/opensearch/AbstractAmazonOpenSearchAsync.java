@@ -275,6 +275,19 @@ public class AbstractAmazonOpenSearchAsync extends AbstractAmazonOpenSearch impl
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeDryRunProgressResult> describeDryRunProgressAsync(DescribeDryRunProgressRequest request) {
+
+        return describeDryRunProgressAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDryRunProgressResult> describeDryRunProgressAsync(DescribeDryRunProgressRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeDryRunProgressRequest, DescribeDryRunProgressResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeInboundConnectionsResult> describeInboundConnectionsAsync(DescribeInboundConnectionsRequest request) {
 
         return describeInboundConnectionsAsync(request, null);

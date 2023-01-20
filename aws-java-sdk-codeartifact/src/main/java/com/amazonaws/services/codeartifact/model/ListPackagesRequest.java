@@ -52,8 +52,12 @@ public class ListPackagesRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String format;
     /**
      * <p>
-     * The namespace used to filter requested packages. Only packages with the provided namespace will be returned. The
-     * package component that specifies its namespace depends on its type. For example:
+     * The namespace prefix used to filter requested packages. Only packages with a namespace that starts with the
+     * provided string value are returned. Note that although this option is called <code>--namespace</code> and not
+     * <code>--namespace-prefix</code>, it has prefix-matching behavior.
+     * </p>
+     * <p>
+     * Each package format uses namespace as follows:
      * </p>
      * <ul>
      * <li>
@@ -301,8 +305,12 @@ public class ListPackagesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The namespace used to filter requested packages. Only packages with the provided namespace will be returned. The
-     * package component that specifies its namespace depends on its type. For example:
+     * The namespace prefix used to filter requested packages. Only packages with a namespace that starts with the
+     * provided string value are returned. Note that although this option is called <code>--namespace</code> and not
+     * <code>--namespace-prefix</code>, it has prefix-matching behavior.
+     * </p>
+     * <p>
+     * Each package format uses namespace as follows:
      * </p>
      * <ul>
      * <li>
@@ -324,8 +332,12 @@ public class ListPackagesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </ul>
      * 
      * @param namespace
-     *        The namespace used to filter requested packages. Only packages with the provided namespace will be
-     *        returned. The package component that specifies its namespace depends on its type. For example:</p>
+     *        The namespace prefix used to filter requested packages. Only packages with a namespace that starts with
+     *        the provided string value are returned. Note that although this option is called <code>--namespace</code>
+     *        and not <code>--namespace-prefix</code>, it has prefix-matching behavior.</p>
+     *        <p>
+     *        Each package format uses namespace as follows:
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -351,8 +363,12 @@ public class ListPackagesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The namespace used to filter requested packages. Only packages with the provided namespace will be returned. The
-     * package component that specifies its namespace depends on its type. For example:
+     * The namespace prefix used to filter requested packages. Only packages with a namespace that starts with the
+     * provided string value are returned. Note that although this option is called <code>--namespace</code> and not
+     * <code>--namespace-prefix</code>, it has prefix-matching behavior.
+     * </p>
+     * <p>
+     * Each package format uses namespace as follows:
      * </p>
      * <ul>
      * <li>
@@ -373,8 +389,12 @@ public class ListPackagesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * </ul>
      * 
-     * @return The namespace used to filter requested packages. Only packages with the provided namespace will be
-     *         returned. The package component that specifies its namespace depends on its type. For example:</p>
+     * @return The namespace prefix used to filter requested packages. Only packages with a namespace that starts with
+     *         the provided string value are returned. Note that although this option is called <code>--namespace</code>
+     *         and not <code>--namespace-prefix</code>, it has prefix-matching behavior.</p>
+     *         <p>
+     *         Each package format uses namespace as follows:
+     *         </p>
      *         <ul>
      *         <li>
      *         <p>
@@ -400,8 +420,12 @@ public class ListPackagesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The namespace used to filter requested packages. Only packages with the provided namespace will be returned. The
-     * package component that specifies its namespace depends on its type. For example:
+     * The namespace prefix used to filter requested packages. Only packages with a namespace that starts with the
+     * provided string value are returned. Note that although this option is called <code>--namespace</code> and not
+     * <code>--namespace-prefix</code>, it has prefix-matching behavior.
+     * </p>
+     * <p>
+     * Each package format uses namespace as follows:
      * </p>
      * <ul>
      * <li>
@@ -423,8 +447,12 @@ public class ListPackagesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </ul>
      * 
      * @param namespace
-     *        The namespace used to filter requested packages. Only packages with the provided namespace will be
-     *        returned. The package component that specifies its namespace depends on its type. For example:</p>
+     *        The namespace prefix used to filter requested packages. Only packages with a namespace that starts with
+     *        the provided string value are returned. Note that although this option is called <code>--namespace</code>
+     *        and not <code>--namespace-prefix</code>, it has prefix-matching behavior.</p>
+     *        <p>
+     *        Each package format uses namespace as follows:
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>

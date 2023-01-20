@@ -48,6 +48,10 @@ public class OTAJobConfigJsonUnmarshaller implements Unmarshaller<OTAJobConfig, 
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("AllowMajorVersionUpdate", targetDepth)) {
+                    context.nextToken();
+                    oTAJobConfig.setAllowMajorVersionUpdate(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("ImageVersion", targetDepth)) {
                     context.nextToken();
                     oTAJobConfig.setImageVersion(context.getUnmarshaller(String.class).unmarshall(context));

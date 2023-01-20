@@ -889,7 +889,7 @@ public class AWSCodeArtifactClient extends AmazonWebServiceClient implements AWS
      * <code>Archived</code>. Archived packages cannot be downloaded from a repository and don't show up with list
      * package APIs (for example, <a
      * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_ListPackageVersions.html"
-     * >ListackageVersions</a>), but you can restore them using <a
+     * >ListPackageVersions</a>), but you can restore them using <a
      * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_UpdatePackageVersionsStatus.html"
      * >UpdatePackageVersionsStatus</a>.
      * </p>
@@ -1759,9 +1759,7 @@ public class AWSCodeArtifactClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Gets the readme file or descriptive text for a package version. For packages that do not contain a readme file,
-     * CodeArtifact extracts a description from a metadata file. For example, from the <code>&lt;description&gt;</code>
-     * element in the <code>pom.xml</code> file of a Maven package.
+     * Gets the readme file or descriptive text for a package version.
      * </p>
      * <p>
      * The returned text might contain formatting. For example, it might contain formatting for Markdown or

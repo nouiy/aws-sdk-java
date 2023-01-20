@@ -121,6 +121,11 @@ public class HyperParameterTrainingJobDefinitionJsonUnmarshaller implements Unma
                     hyperParameterTrainingJobDefinition.setHyperParameterTuningResourceConfig(HyperParameterTuningResourceConfigJsonUnmarshaller.getInstance()
                             .unmarshall(context));
                 }
+                if (context.testExpression("Environment", targetDepth)) {
+                    context.nextToken();
+                    hyperParameterTrainingJobDefinition.setEnvironment(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

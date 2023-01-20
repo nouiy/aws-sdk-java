@@ -16,6 +16,7 @@ import javax.annotation.Generated;
 
 import com.amazonaws.services.groundstation.model.*;
 import com.amazonaws.*;
+import com.amazonaws.services.groundstation.waiters.AWSGroundStationWaiters;
 
 /**
  * Abstract implementation of {@code AWSGroundStation}. Convenient method forms pass through to the corresponding
@@ -184,6 +185,11 @@ public class AbstractAWSGroundStation implements AWSGroundStation {
 
     @Override
     public com.amazonaws.ResponseMetadata getCachedResponseMetadata(com.amazonaws.AmazonWebServiceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public AWSGroundStationWaiters waiters() {
         throw new java.lang.UnsupportedOperationException();
     }
 

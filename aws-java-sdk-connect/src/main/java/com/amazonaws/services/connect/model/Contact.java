@@ -115,6 +115,14 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date scheduledTimestamp;
+    /**
+     * <p>
+     * The contactId that is <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html#relatedcontactid">related</a>
+     * to this contact.
+     * </p>
+     */
+    private String relatedContactId;
 
     /**
      * <p>
@@ -736,6 +744,58 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The contactId that is <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html#relatedcontactid">related</a>
+     * to this contact.
+     * </p>
+     * 
+     * @param relatedContactId
+     *        The contactId that is <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html#relatedcontactid"
+     *        >related</a> to this contact.
+     */
+
+    public void setRelatedContactId(String relatedContactId) {
+        this.relatedContactId = relatedContactId;
+    }
+
+    /**
+     * <p>
+     * The contactId that is <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html#relatedcontactid">related</a>
+     * to this contact.
+     * </p>
+     * 
+     * @return The contactId that is <a
+     *         href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html#relatedcontactid"
+     *         >related</a> to this contact.
+     */
+
+    public String getRelatedContactId() {
+        return this.relatedContactId;
+    }
+
+    /**
+     * <p>
+     * The contactId that is <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html#relatedcontactid">related</a>
+     * to this contact.
+     * </p>
+     * 
+     * @param relatedContactId
+     *        The contactId that is <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html#relatedcontactid"
+     *        >related</a> to this contact.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Contact withRelatedContactId(String relatedContactId) {
+        setRelatedContactId(relatedContactId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -774,7 +834,9 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
         if (getLastUpdateTimestamp() != null)
             sb.append("LastUpdateTimestamp: ").append(getLastUpdateTimestamp()).append(",");
         if (getScheduledTimestamp() != null)
-            sb.append("ScheduledTimestamp: ").append(getScheduledTimestamp());
+            sb.append("ScheduledTimestamp: ").append(getScheduledTimestamp()).append(",");
+        if (getRelatedContactId() != null)
+            sb.append("RelatedContactId: ").append(getRelatedContactId());
         sb.append("}");
         return sb.toString();
     }
@@ -845,6 +907,10 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getScheduledTimestamp() != null && other.getScheduledTimestamp().equals(this.getScheduledTimestamp()) == false)
             return false;
+        if (other.getRelatedContactId() == null ^ this.getRelatedContactId() == null)
+            return false;
+        if (other.getRelatedContactId() != null && other.getRelatedContactId().equals(this.getRelatedContactId()) == false)
+            return false;
         return true;
     }
 
@@ -867,6 +933,7 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getDisconnectTimestamp() == null) ? 0 : getDisconnectTimestamp().hashCode());
         hashCode = prime * hashCode + ((getLastUpdateTimestamp() == null) ? 0 : getLastUpdateTimestamp().hashCode());
         hashCode = prime * hashCode + ((getScheduledTimestamp() == null) ? 0 : getScheduledTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getRelatedContactId() == null) ? 0 : getRelatedContactId().hashCode());
         return hashCode;
     }
 

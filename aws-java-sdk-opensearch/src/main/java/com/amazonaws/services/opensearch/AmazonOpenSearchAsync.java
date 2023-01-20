@@ -80,9 +80,9 @@ public interface AmazonOpenSearchAsync extends AmazonOpenSearch {
     /**
      * <p>
      * Attaches tags to an existing Amazon OpenSearch Service domain. Tags are a set of case-sensitive key-value pairs.
-     * An domain can have up to 10 tags. For more information, see <a href=
-     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains.html#managedomains-awsresorcetagging"
-     * > Tagging Amazon OpenSearch Service domains</a>.
+     * A domain can have up to 10 tags. For more information, see <a href=
+     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-awsresourcetagging.html"
+     * >Tagging Amazon OpenSearch Service domains</a>.
      * </p>
      * 
      * @param addTagsRequest
@@ -96,9 +96,9 @@ public interface AmazonOpenSearchAsync extends AmazonOpenSearch {
     /**
      * <p>
      * Attaches tags to an existing Amazon OpenSearch Service domain. Tags are a set of case-sensitive key-value pairs.
-     * An domain can have up to 10 tags. For more information, see <a href=
-     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains.html#managedomains-awsresorcetagging"
-     * > Tagging Amazon OpenSearch Service domains</a>.
+     * A domain can have up to 10 tags. For more information, see <a href=
+     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-awsresourcetagging.html"
+     * >Tagging Amazon OpenSearch Service domains</a>.
      * </p>
      * 
      * @param addTagsRequest
@@ -664,6 +664,39 @@ public interface AmazonOpenSearchAsync extends AmazonOpenSearch {
      */
     java.util.concurrent.Future<DescribeDomainsResult> describeDomainsAsync(DescribeDomainsRequest describeDomainsRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeDomainsRequest, DescribeDomainsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes the progress of a pre-update dry run analysis on an Amazon OpenSearch Service domain. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes#dryrun"
+     * >Determining whether a change will cause a blue/green deployment</a>.
+     * </p>
+     * 
+     * @param describeDryRunProgressRequest
+     * @return A Java Future containing the result of the DescribeDryRunProgress operation returned by the service.
+     * @sample AmazonOpenSearchAsync.DescribeDryRunProgress
+     */
+    java.util.concurrent.Future<DescribeDryRunProgressResult> describeDryRunProgressAsync(DescribeDryRunProgressRequest describeDryRunProgressRequest);
+
+    /**
+     * <p>
+     * Describes the progress of a pre-update dry run analysis on an Amazon OpenSearch Service domain. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes#dryrun"
+     * >Determining whether a change will cause a blue/green deployment</a>.
+     * </p>
+     * 
+     * @param describeDryRunProgressRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeDryRunProgress operation returned by the service.
+     * @sample AmazonOpenSearchAsyncHandler.DescribeDryRunProgress
+     */
+    java.util.concurrent.Future<DescribeDryRunProgressResult> describeDryRunProgressAsync(DescribeDryRunProgressRequest describeDryRunProgressRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeDryRunProgressRequest, DescribeDryRunProgressResult> asyncHandler);
 
     /**
      * <p>

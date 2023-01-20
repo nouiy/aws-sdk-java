@@ -74,7 +74,38 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<LaunchTemplateInstanceNetworkInterfaceSpecificationRequest> networkInterfaces;
     /**
      * <p>
-     * The ID of the AMI.
+     * The ID of the AMI. Alternatively, you can specify a Systems Manager parameter, which will resolve to an AMI ID on
+     * launch.
+     * </p>
+     * <p>
+     * Valid formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ami-17characters00000</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>resolve:ssm:parameter-name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>resolve:ssm:parameter-name:version-number</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>resolve:ssm:parameter-name:label</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      */
     private String imageId;
@@ -682,11 +713,73 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AMI.
+     * The ID of the AMI. Alternatively, you can specify a Systems Manager parameter, which will resolve to an AMI ID on
+     * launch.
+     * </p>
+     * <p>
+     * Valid formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ami-17characters00000</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>resolve:ssm:parameter-name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>resolve:ssm:parameter-name:version-number</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>resolve:ssm:parameter-name:label</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param imageId
-     *        The ID of the AMI.
+     *        The ID of the AMI. Alternatively, you can specify a Systems Manager parameter, which will resolve to an
+     *        AMI ID on launch.</p>
+     *        <p>
+     *        Valid formats:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>ami-17characters00000</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>resolve:ssm:parameter-name</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>resolve:ssm:parameter-name:version-number</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>resolve:ssm:parameter-name:label</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
+     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
+     *        Guide</i>.
      */
 
     public void setImageId(String imageId) {
@@ -695,10 +788,72 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AMI.
+     * The ID of the AMI. Alternatively, you can specify a Systems Manager parameter, which will resolve to an AMI ID on
+     * launch.
+     * </p>
+     * <p>
+     * Valid formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ami-17characters00000</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>resolve:ssm:parameter-name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>resolve:ssm:parameter-name:version-number</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>resolve:ssm:parameter-name:label</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
-     * @return The ID of the AMI.
+     * @return The ID of the AMI. Alternatively, you can specify a Systems Manager parameter, which will resolve to an
+     *         AMI ID on launch.</p>
+     *         <p>
+     *         Valid formats:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>ami-17characters00000</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>resolve:ssm:parameter-name</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>resolve:ssm:parameter-name:version-number</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>resolve:ssm:parameter-name:label</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
+     *         >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
+     *         Guide</i>.
      */
 
     public String getImageId() {
@@ -707,11 +862,73 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the AMI.
+     * The ID of the AMI. Alternatively, you can specify a Systems Manager parameter, which will resolve to an AMI ID on
+     * launch.
+     * </p>
+     * <p>
+     * Valid formats:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ami-17characters00000</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>resolve:ssm:parameter-name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>resolve:ssm:parameter-name:version-number</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>resolve:ssm:parameter-name:label</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param imageId
-     *        The ID of the AMI.
+     *        The ID of the AMI. Alternatively, you can specify a Systems Manager parameter, which will resolve to an
+     *        AMI ID on launch.</p>
+     *        <p>
+     *        Valid formats:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>ami-17characters00000</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>resolve:ssm:parameter-name</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>resolve:ssm:parameter-name:version-number</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>resolve:ssm:parameter-name:label</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
+     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
+     *        Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

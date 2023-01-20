@@ -22,7 +22,7 @@ public class CreateVpcEndpointRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the domain to grant access to.
+     * The Amazon Resource Name (ARN) of the domain to create the endpoint for.
      * </p>
      */
     private String domainArn;
@@ -41,11 +41,11 @@ public class CreateVpcEndpointRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the domain to grant access to.
+     * The Amazon Resource Name (ARN) of the domain to create the endpoint for.
      * </p>
      * 
      * @param domainArn
-     *        The Amazon Resource Name (ARN) of the domain to grant access to.
+     *        The Amazon Resource Name (ARN) of the domain to create the endpoint for.
      */
 
     public void setDomainArn(String domainArn) {
@@ -54,10 +54,10 @@ public class CreateVpcEndpointRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the domain to grant access to.
+     * The Amazon Resource Name (ARN) of the domain to create the endpoint for.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the domain to grant access to.
+     * @return The Amazon Resource Name (ARN) of the domain to create the endpoint for.
      */
 
     public String getDomainArn() {
@@ -66,11 +66,11 @@ public class CreateVpcEndpointRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the domain to grant access to.
+     * The Amazon Resource Name (ARN) of the domain to create the endpoint for.
      * </p>
      * 
      * @param domainArn
-     *        The Amazon Resource Name (ARN) of the domain to grant access to.
+     *        The Amazon Resource Name (ARN) of the domain to create the endpoint for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

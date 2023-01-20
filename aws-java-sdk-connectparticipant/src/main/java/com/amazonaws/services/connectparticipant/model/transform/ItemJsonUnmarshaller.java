@@ -90,6 +90,14 @@ public class ItemJsonUnmarshaller implements Unmarshaller<Item, JsonUnmarshaller
                     context.nextToken();
                     item.setMessageMetadata(MessageMetadataJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("RelatedContactId", targetDepth)) {
+                    context.nextToken();
+                    item.setRelatedContactId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ContactId", targetDepth)) {
+                    context.nextToken();
+                    item.setContactId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

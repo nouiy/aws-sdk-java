@@ -236,6 +236,10 @@ public class M2tsSettingsJsonUnmarshaller implements Unmarshaller<M2tsSettings, 
                     context.nextToken();
                     m2tsSettings.setVideoPid(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("scte35PrerollPullupMilliseconds", targetDepth)) {
+                    context.nextToken();
+                    m2tsSettings.setScte35PrerollPullupMilliseconds(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

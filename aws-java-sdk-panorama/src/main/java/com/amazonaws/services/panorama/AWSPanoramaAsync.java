@@ -75,7 +75,7 @@ public interface AWSPanoramaAsync extends AWSPanorama {
 
     /**
      * <p>
-     * Creates a job to run on one or more devices. A job can update a device's software or reboot it.
+     * Creates a job to run on a device. A job can update a device's software or reboot it.
      * </p>
      * 
      * @param createJobForDevicesRequest
@@ -88,7 +88,7 @@ public interface AWSPanoramaAsync extends AWSPanorama {
 
     /**
      * <p>
-     * Creates a job to run on one or more devices. A job can update a device's software or reboot it.
+     * Creates a job to run on a device. A job can update a device's software or reboot it.
      * </p>
      * 
      * @param createJobForDevicesRequest

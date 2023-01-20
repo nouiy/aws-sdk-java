@@ -108,6 +108,10 @@ public class DescribeLaunchTemplateVersionsRequestMarshaller implements
             }
         }
 
+        if (describeLaunchTemplateVersionsRequest.getResolveAlias() != null) {
+            request.addParameter("ResolveAlias", StringUtils.fromBoolean(describeLaunchTemplateVersionsRequest.getResolveAlias()));
+        }
+
         return request;
     }
 

@@ -18,6 +18,7 @@ import com.amazonaws.*;
 import com.amazonaws.regions.*;
 
 import com.amazonaws.services.groundstation.model.*;
+import com.amazonaws.services.groundstation.waiters.AWSGroundStationWaiters;
 
 /**
  * Interface for accessing AWS Ground Station.
@@ -667,5 +668,7 @@ public interface AWSGroundStation {
      * @return The response metadata for the specified request, or null if none is available.
      */
     ResponseMetadata getCachedResponseMetadata(AmazonWebServiceRequest request);
+
+    AWSGroundStationWaiters waiters();
 
 }

@@ -48,6 +48,10 @@ public class ItemMarshaller {
             .marshallLocationName("Attachments").build();
     private static final MarshallingInfo<StructuredPojo> MESSAGEMETADATA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MessageMetadata").build();
+    private static final MarshallingInfo<String> RELATEDCONTACTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RelatedContactId").build();
+    private static final MarshallingInfo<String> CONTACTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ContactId").build();
 
     private static final ItemMarshaller instance = new ItemMarshaller();
 
@@ -75,6 +79,8 @@ public class ItemMarshaller {
             protocolMarshaller.marshall(item.getParticipantRole(), PARTICIPANTROLE_BINDING);
             protocolMarshaller.marshall(item.getAttachments(), ATTACHMENTS_BINDING);
             protocolMarshaller.marshall(item.getMessageMetadata(), MESSAGEMETADATA_BINDING);
+            protocolMarshaller.marshall(item.getRelatedContactId(), RELATEDCONTACTID_BINDING);
+            protocolMarshaller.marshall(item.getContactId(), CONTACTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -77,9 +77,9 @@ public interface AmazonOpenSearch {
     /**
      * <p>
      * Attaches tags to an existing Amazon OpenSearch Service domain. Tags are a set of case-sensitive key-value pairs.
-     * An domain can have up to 10 tags. For more information, see <a href=
-     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains.html#managedomains-awsresorcetagging"
-     * > Tagging Amazon OpenSearch Service domains</a>.
+     * A domain can have up to 10 tags. For more information, see <a href=
+     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-awsresourcetagging.html"
+     * >Tagging Amazon OpenSearch Service domains</a>.
      * </p>
      * 
      * @param addTagsRequest
@@ -517,6 +517,32 @@ public interface AmazonOpenSearch {
      * @sample AmazonOpenSearch.DescribeDomains
      */
     DescribeDomainsResult describeDomains(DescribeDomainsRequest describeDomainsRequest);
+
+    /**
+     * <p>
+     * Describes the progress of a pre-update dry run analysis on an Amazon OpenSearch Service domain. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes#dryrun"
+     * >Determining whether a change will cause a blue/green deployment</a>.
+     * </p>
+     * 
+     * @param describeDryRunProgressRequest
+     * @return Result of the DescribeDryRunProgress operation returned by the service.
+     * @throws BaseException
+     *         An error occurred while processing the request.
+     * @throws InternalException
+     *         The request processing has failed because of an unknown error, exception or failure (the failure is
+     *         internal to the service) . Gives http status code of 500.
+     * @throws ResourceNotFoundException
+     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     * @throws ValidationException
+     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     * @throws DisabledOperationException
+     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
+     *         409.
+     * @sample AmazonOpenSearch.DescribeDryRunProgress
+     */
+    DescribeDryRunProgressResult describeDryRunProgress(DescribeDryRunProgressRequest describeDryRunProgressRequest);
 
     /**
      * <p>

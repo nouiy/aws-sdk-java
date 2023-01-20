@@ -131,6 +131,16 @@ public class CodeGenConfigurationNodeMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DynamicTransform").build();
     private static final MarshallingInfo<StructuredPojo> EVALUATEDATAQUALITY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EvaluateDataQuality").build();
+    private static final MarshallingInfo<StructuredPojo> S3CATALOGHUDISOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3CatalogHudiSource").build();
+    private static final MarshallingInfo<StructuredPojo> CATALOGHUDISOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CatalogHudiSource").build();
+    private static final MarshallingInfo<StructuredPojo> S3HUDISOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3HudiSource").build();
+    private static final MarshallingInfo<StructuredPojo> S3HUDICATALOGTARGET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3HudiCatalogTarget").build();
+    private static final MarshallingInfo<StructuredPojo> S3HUDIDIRECTTARGET_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3HudiDirectTarget").build();
 
     private static final CodeGenConfigurationNodeMarshaller instance = new CodeGenConfigurationNodeMarshaller();
 
@@ -200,6 +210,11 @@ public class CodeGenConfigurationNodeMarshaller {
             protocolMarshaller.marshall(codeGenConfigurationNode.getPostgreSQLCatalogTarget(), POSTGRESQLCATALOGTARGET_BINDING);
             protocolMarshaller.marshall(codeGenConfigurationNode.getDynamicTransform(), DYNAMICTRANSFORM_BINDING);
             protocolMarshaller.marshall(codeGenConfigurationNode.getEvaluateDataQuality(), EVALUATEDATAQUALITY_BINDING);
+            protocolMarshaller.marshall(codeGenConfigurationNode.getS3CatalogHudiSource(), S3CATALOGHUDISOURCE_BINDING);
+            protocolMarshaller.marshall(codeGenConfigurationNode.getCatalogHudiSource(), CATALOGHUDISOURCE_BINDING);
+            protocolMarshaller.marshall(codeGenConfigurationNode.getS3HudiSource(), S3HUDISOURCE_BINDING);
+            protocolMarshaller.marshall(codeGenConfigurationNode.getS3HudiCatalogTarget(), S3HUDICATALOGTARGET_BINDING);
+            protocolMarshaller.marshall(codeGenConfigurationNode.getS3HudiDirectTarget(), S3HUDIDIRECTTARGET_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

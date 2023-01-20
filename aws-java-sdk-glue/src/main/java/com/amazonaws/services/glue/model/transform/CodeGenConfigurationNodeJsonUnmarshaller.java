@@ -258,6 +258,26 @@ public class CodeGenConfigurationNodeJsonUnmarshaller implements Unmarshaller<Co
                     context.nextToken();
                     codeGenConfigurationNode.setEvaluateDataQuality(EvaluateDataQualityJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("S3CatalogHudiSource", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setS3CatalogHudiSource(S3CatalogHudiSourceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("CatalogHudiSource", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setCatalogHudiSource(CatalogHudiSourceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("S3HudiSource", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setS3HudiSource(S3HudiSourceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("S3HudiCatalogTarget", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setS3HudiCatalogTarget(S3HudiCatalogTargetJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("S3HudiDirectTarget", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setS3HudiDirectTarget(S3HudiDirectTargetJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

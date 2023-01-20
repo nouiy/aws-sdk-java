@@ -31,10 +31,16 @@ public class UpdateDomainConfigResult extends com.amazonaws.AmazonWebServiceResu
     private DomainConfig domainConfig;
     /**
      * <p>
-     * Results of a dry run performed in an update domain request.
+     * Results of the dry run performed in the update domain request.
      * </p>
      */
     private DryRunResults dryRunResults;
+    /**
+     * <p>
+     * The status of the dry run being performed on the domain, if any.
+     * </p>
+     */
+    private DryRunProgressStatus dryRunProgressStatus;
 
     /**
      * <p>
@@ -78,11 +84,11 @@ public class UpdateDomainConfigResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Results of a dry run performed in an update domain request.
+     * Results of the dry run performed in the update domain request.
      * </p>
      * 
      * @param dryRunResults
-     *        Results of a dry run performed in an update domain request.
+     *        Results of the dry run performed in the update domain request.
      */
 
     public void setDryRunResults(DryRunResults dryRunResults) {
@@ -91,10 +97,10 @@ public class UpdateDomainConfigResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Results of a dry run performed in an update domain request.
+     * Results of the dry run performed in the update domain request.
      * </p>
      * 
-     * @return Results of a dry run performed in an update domain request.
+     * @return Results of the dry run performed in the update domain request.
      */
 
     public DryRunResults getDryRunResults() {
@@ -103,16 +109,56 @@ public class UpdateDomainConfigResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Results of a dry run performed in an update domain request.
+     * Results of the dry run performed in the update domain request.
      * </p>
      * 
      * @param dryRunResults
-     *        Results of a dry run performed in an update domain request.
+     *        Results of the dry run performed in the update domain request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public UpdateDomainConfigResult withDryRunResults(DryRunResults dryRunResults) {
         setDryRunResults(dryRunResults);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the dry run being performed on the domain, if any.
+     * </p>
+     * 
+     * @param dryRunProgressStatus
+     *        The status of the dry run being performed on the domain, if any.
+     */
+
+    public void setDryRunProgressStatus(DryRunProgressStatus dryRunProgressStatus) {
+        this.dryRunProgressStatus = dryRunProgressStatus;
+    }
+
+    /**
+     * <p>
+     * The status of the dry run being performed on the domain, if any.
+     * </p>
+     * 
+     * @return The status of the dry run being performed on the domain, if any.
+     */
+
+    public DryRunProgressStatus getDryRunProgressStatus() {
+        return this.dryRunProgressStatus;
+    }
+
+    /**
+     * <p>
+     * The status of the dry run being performed on the domain, if any.
+     * </p>
+     * 
+     * @param dryRunProgressStatus
+     *        The status of the dry run being performed on the domain, if any.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDomainConfigResult withDryRunProgressStatus(DryRunProgressStatus dryRunProgressStatus) {
+        setDryRunProgressStatus(dryRunProgressStatus);
         return this;
     }
 
@@ -131,7 +177,9 @@ public class UpdateDomainConfigResult extends com.amazonaws.AmazonWebServiceResu
         if (getDomainConfig() != null)
             sb.append("DomainConfig: ").append(getDomainConfig()).append(",");
         if (getDryRunResults() != null)
-            sb.append("DryRunResults: ").append(getDryRunResults());
+            sb.append("DryRunResults: ").append(getDryRunResults()).append(",");
+        if (getDryRunProgressStatus() != null)
+            sb.append("DryRunProgressStatus: ").append(getDryRunProgressStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -154,6 +202,10 @@ public class UpdateDomainConfigResult extends com.amazonaws.AmazonWebServiceResu
             return false;
         if (other.getDryRunResults() != null && other.getDryRunResults().equals(this.getDryRunResults()) == false)
             return false;
+        if (other.getDryRunProgressStatus() == null ^ this.getDryRunProgressStatus() == null)
+            return false;
+        if (other.getDryRunProgressStatus() != null && other.getDryRunProgressStatus().equals(this.getDryRunProgressStatus()) == false)
+            return false;
         return true;
     }
 
@@ -164,6 +216,7 @@ public class UpdateDomainConfigResult extends com.amazonaws.AmazonWebServiceResu
 
         hashCode = prime * hashCode + ((getDomainConfig() == null) ? 0 : getDomainConfig().hashCode());
         hashCode = prime * hashCode + ((getDryRunResults() == null) ? 0 : getDryRunResults().hashCode());
+        hashCode = prime * hashCode + ((getDryRunProgressStatus() == null) ? 0 : getDryRunProgressStatus().hashCode());
         return hashCode;
     }
 

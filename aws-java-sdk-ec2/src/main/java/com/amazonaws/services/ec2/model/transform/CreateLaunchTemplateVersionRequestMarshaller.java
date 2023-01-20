@@ -932,6 +932,10 @@ public class CreateLaunchTemplateVersionRequestMarshaller implements
             }
         }
 
+        if (createLaunchTemplateVersionRequest.getResolveAlias() != null) {
+            request.addParameter("ResolveAlias", StringUtils.fromBoolean(createLaunchTemplateVersionRequest.getResolveAlias()));
+        }
+
         return request;
     }
 

@@ -56,6 +56,11 @@ public class AssociateExternalConnectionRequest extends com.amazonaws.AmazonWebS
      * </li>
      * <li>
      * <p>
+     * <code>public:nuget-org</code> - for the NuGet Gallery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>public:pypi</code> - for the Python Package Index.
      * </p>
      * </li>
@@ -221,6 +226,11 @@ public class AssociateExternalConnectionRequest extends com.amazonaws.AmazonWebS
      * </li>
      * <li>
      * <p>
+     * <code>public:nuget-org</code> - for the NuGet Gallery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>public:pypi</code> - for the Python Package Index.
      * </p>
      * </li>
@@ -252,6 +262,11 @@ public class AssociateExternalConnectionRequest extends com.amazonaws.AmazonWebS
      *        <li>
      *        <p>
      *        <code>public:npmjs</code> - for the npm public repository.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>public:nuget-org</code> - for the NuGet Gallery.
      *        </p>
      *        </li>
      *        <li>
@@ -297,6 +312,11 @@ public class AssociateExternalConnectionRequest extends com.amazonaws.AmazonWebS
      * </li>
      * <li>
      * <p>
+     * <code>public:nuget-org</code> - for the NuGet Gallery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>public:pypi</code> - for the Python Package Index.
      * </p>
      * </li>
@@ -327,6 +347,11 @@ public class AssociateExternalConnectionRequest extends com.amazonaws.AmazonWebS
      *         <li>
      *         <p>
      *         <code>public:npmjs</code> - for the npm public repository.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>public:nuget-org</code> - for the NuGet Gallery.
      *         </p>
      *         </li>
      *         <li>
@@ -372,6 +397,11 @@ public class AssociateExternalConnectionRequest extends com.amazonaws.AmazonWebS
      * </li>
      * <li>
      * <p>
+     * <code>public:nuget-org</code> - for the NuGet Gallery.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>public:pypi</code> - for the Python Package Index.
      * </p>
      * </li>
@@ -403,6 +433,11 @@ public class AssociateExternalConnectionRequest extends com.amazonaws.AmazonWebS
      *        <li>
      *        <p>
      *        <code>public:npmjs</code> - for the npm public repository.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>public:nuget-org</code> - for the NuGet Gallery.
      *        </p>
      *        </li>
      *        <li>

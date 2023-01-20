@@ -91,6 +91,21 @@ public class Item implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private MessageMetadata messageMetadata;
+    /**
+     * <p>
+     * The contactId on which the transcript item was originally sent. This field is only populated for persistent chats
+     * when the transcript item is from the past chat session. For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html">Enable persistent chat</a>.
+     * </p>
+     */
+    private String relatedContactId;
+    /**
+     * <p>
+     * The contactId on which the transcript item was originally sent. This field is populated only when the transcript
+     * item is from the current chat session.
+     * </p>
+     */
+    private String contactId;
 
     /**
      * <p>
@@ -577,6 +592,107 @@ public class Item implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The contactId on which the transcript item was originally sent. This field is only populated for persistent chats
+     * when the transcript item is from the past chat session. For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html">Enable persistent chat</a>.
+     * </p>
+     * 
+     * @param relatedContactId
+     *        The contactId on which the transcript item was originally sent. This field is only populated for
+     *        persistent chats when the transcript item is from the past chat session. For more information, see <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html">Enable persistent
+     *        chat</a>.
+     */
+
+    public void setRelatedContactId(String relatedContactId) {
+        this.relatedContactId = relatedContactId;
+    }
+
+    /**
+     * <p>
+     * The contactId on which the transcript item was originally sent. This field is only populated for persistent chats
+     * when the transcript item is from the past chat session. For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html">Enable persistent chat</a>.
+     * </p>
+     * 
+     * @return The contactId on which the transcript item was originally sent. This field is only populated for
+     *         persistent chats when the transcript item is from the past chat session. For more information, see <a
+     *         href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html">Enable persistent
+     *         chat</a>.
+     */
+
+    public String getRelatedContactId() {
+        return this.relatedContactId;
+    }
+
+    /**
+     * <p>
+     * The contactId on which the transcript item was originally sent. This field is only populated for persistent chats
+     * when the transcript item is from the past chat session. For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html">Enable persistent chat</a>.
+     * </p>
+     * 
+     * @param relatedContactId
+     *        The contactId on which the transcript item was originally sent. This field is only populated for
+     *        persistent chats when the transcript item is from the past chat session. For more information, see <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html">Enable persistent
+     *        chat</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Item withRelatedContactId(String relatedContactId) {
+        setRelatedContactId(relatedContactId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The contactId on which the transcript item was originally sent. This field is populated only when the transcript
+     * item is from the current chat session.
+     * </p>
+     * 
+     * @param contactId
+     *        The contactId on which the transcript item was originally sent. This field is populated only when the
+     *        transcript item is from the current chat session.
+     */
+
+    public void setContactId(String contactId) {
+        this.contactId = contactId;
+    }
+
+    /**
+     * <p>
+     * The contactId on which the transcript item was originally sent. This field is populated only when the transcript
+     * item is from the current chat session.
+     * </p>
+     * 
+     * @return The contactId on which the transcript item was originally sent. This field is populated only when the
+     *         transcript item is from the current chat session.
+     */
+
+    public String getContactId() {
+        return this.contactId;
+    }
+
+    /**
+     * <p>
+     * The contactId on which the transcript item was originally sent. This field is populated only when the transcript
+     * item is from the current chat session.
+     * </p>
+     * 
+     * @param contactId
+     *        The contactId on which the transcript item was originally sent. This field is populated only when the
+     *        transcript item is from the current chat session.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Item withContactId(String contactId) {
+        setContactId(contactId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -607,7 +723,11 @@ public class Item implements Serializable, Cloneable, StructuredPojo {
         if (getAttachments() != null)
             sb.append("Attachments: ").append(getAttachments()).append(",");
         if (getMessageMetadata() != null)
-            sb.append("MessageMetadata: ").append(getMessageMetadata());
+            sb.append("MessageMetadata: ").append(getMessageMetadata()).append(",");
+        if (getRelatedContactId() != null)
+            sb.append("RelatedContactId: ").append(getRelatedContactId()).append(",");
+        if (getContactId() != null)
+            sb.append("ContactId: ").append(getContactId());
         sb.append("}");
         return sb.toString();
     }
@@ -662,6 +782,14 @@ public class Item implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getMessageMetadata() != null && other.getMessageMetadata().equals(this.getMessageMetadata()) == false)
             return false;
+        if (other.getRelatedContactId() == null ^ this.getRelatedContactId() == null)
+            return false;
+        if (other.getRelatedContactId() != null && other.getRelatedContactId().equals(this.getRelatedContactId()) == false)
+            return false;
+        if (other.getContactId() == null ^ this.getContactId() == null)
+            return false;
+        if (other.getContactId() != null && other.getContactId().equals(this.getContactId()) == false)
+            return false;
         return true;
     }
 
@@ -680,6 +808,8 @@ public class Item implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getParticipantRole() == null) ? 0 : getParticipantRole().hashCode());
         hashCode = prime * hashCode + ((getAttachments() == null) ? 0 : getAttachments().hashCode());
         hashCode = prime * hashCode + ((getMessageMetadata() == null) ? 0 : getMessageMetadata().hashCode());
+        hashCode = prime * hashCode + ((getRelatedContactId() == null) ? 0 : getRelatedContactId().hashCode());
+        hashCode = prime * hashCode + ((getContactId() == null) ? 0 : getContactId().hashCode());
         return hashCode;
     }
 

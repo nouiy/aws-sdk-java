@@ -121,6 +121,8 @@ public class M2tsSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("transportStreamId").build();
     private static final MarshallingInfo<String> VIDEOPID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("videoPid").build();
+    private static final MarshallingInfo<Double> SCTE35PREROLLPULLUPMILLISECONDS_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("scte35PrerollPullupMilliseconds").build();
 
     private static final M2tsSettingsMarshaller instance = new M2tsSettingsMarshaller();
 
@@ -185,6 +187,7 @@ public class M2tsSettingsMarshaller {
             protocolMarshaller.marshall(m2tsSettings.getTimedMetadataPid(), TIMEDMETADATAPID_BINDING);
             protocolMarshaller.marshall(m2tsSettings.getTransportStreamId(), TRANSPORTSTREAMID_BINDING);
             protocolMarshaller.marshall(m2tsSettings.getVideoPid(), VIDEOPID_BINDING);
+            protocolMarshaller.marshall(m2tsSettings.getScte35PrerollPullupMilliseconds(), SCTE35PREROLLPULLUPMILLISECONDS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

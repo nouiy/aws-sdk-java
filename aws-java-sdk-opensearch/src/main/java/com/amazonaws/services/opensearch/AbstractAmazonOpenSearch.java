@@ -123,6 +123,11 @@ public class AbstractAmazonOpenSearch implements AmazonOpenSearch {
     }
 
     @Override
+    public DescribeDryRunProgressResult describeDryRunProgress(DescribeDryRunProgressRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeInboundConnectionsResult describeInboundConnections(DescribeInboundConnectionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

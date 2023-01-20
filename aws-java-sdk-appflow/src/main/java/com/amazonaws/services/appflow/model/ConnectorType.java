@@ -42,7 +42,8 @@ public enum ConnectorType {
     Honeycode("Honeycode"),
     CustomerProfiles("CustomerProfiles"),
     SAPOData("SAPOData"),
-    CustomConnector("CustomConnector");
+    CustomConnector("CustomConnector"),
+    Pardot("Pardot");
 
     private String value;
 

@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class OTAJobConfigMarshaller {
 
+    private static final MarshallingInfo<Boolean> ALLOWMAJORVERSIONUPDATE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AllowMajorVersionUpdate").build();
     private static final MarshallingInfo<String> IMAGEVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ImageVersion").build();
 
@@ -46,6 +48,7 @@ public class OTAJobConfigMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(oTAJobConfig.getAllowMajorVersionUpdate(), ALLOWMAJORVERSIONUPDATE_BINDING);
             protocolMarshaller.marshall(oTAJobConfig.getImageVersion(), IMAGEVERSION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

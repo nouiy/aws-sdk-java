@@ -48,6 +48,14 @@ public class GetDataflowEndpointGroupResultJsonUnmarshaller implements Unmarshal
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("contactPostPassDurationSeconds", targetDepth)) {
+                    context.nextToken();
+                    getDataflowEndpointGroupResult.setContactPostPassDurationSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("contactPrePassDurationSeconds", targetDepth)) {
+                    context.nextToken();
+                    getDataflowEndpointGroupResult.setContactPrePassDurationSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("dataflowEndpointGroupArn", targetDepth)) {
                     context.nextToken();
                     getDataflowEndpointGroupResult.setDataflowEndpointGroupArn(context.getUnmarshaller(String.class).unmarshall(context));

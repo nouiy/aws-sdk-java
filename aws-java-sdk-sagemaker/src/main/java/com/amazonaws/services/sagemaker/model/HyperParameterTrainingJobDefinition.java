@@ -148,6 +148,26 @@ public class HyperParameterTrainingJobDefinition implements Serializable, Clonea
      * </p>
      */
     private HyperParameterTuningResourceConfig hyperParameterTuningResourceConfig;
+    /**
+     * <p>
+     * An environment variable that you can pass into the SageMaker <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html">CreateTrainingJob</a>
+     * API. You can use an existing <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html#sagemaker-CreateTrainingJob-request-Environment"
+     * >environment variable from the training container</a> or use your own. See <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-define-metrics.html">Define metrics
+     * and variables</a> for more information.
+     * </p>
+     * <note>
+     * <p>
+     * The maximum number of items specified for <code>Map Entries</code> refers to the maximum number of environment
+     * variables for each <code>TrainingJobDefinition</code> and also the maximum for the hyperparameter tuning job
+     * itself. That is, the sum of the number of environment variables for all the training job definitions can't exceed
+     * the maximum number specified.
+     * </p>
+     * </note>
+     */
+    private java.util.Map<String, String> environment;
 
     /**
      * <p>
@@ -1085,6 +1105,152 @@ public class HyperParameterTrainingJobDefinition implements Serializable, Clonea
     }
 
     /**
+     * <p>
+     * An environment variable that you can pass into the SageMaker <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html">CreateTrainingJob</a>
+     * API. You can use an existing <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html#sagemaker-CreateTrainingJob-request-Environment"
+     * >environment variable from the training container</a> or use your own. See <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-define-metrics.html">Define metrics
+     * and variables</a> for more information.
+     * </p>
+     * <note>
+     * <p>
+     * The maximum number of items specified for <code>Map Entries</code> refers to the maximum number of environment
+     * variables for each <code>TrainingJobDefinition</code> and also the maximum for the hyperparameter tuning job
+     * itself. That is, the sum of the number of environment variables for all the training job definitions can't exceed
+     * the maximum number specified.
+     * </p>
+     * </note>
+     * 
+     * @return An environment variable that you can pass into the SageMaker <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html"
+     *         >CreateTrainingJob</a> API. You can use an existing <a href=
+     *         "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html#sagemaker-CreateTrainingJob-request-Environment"
+     *         >environment variable from the training container</a> or use your own. See <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-define-metrics.html">Define
+     *         metrics and variables</a> for more information.</p> <note>
+     *         <p>
+     *         The maximum number of items specified for <code>Map Entries</code> refers to the maximum number of
+     *         environment variables for each <code>TrainingJobDefinition</code> and also the maximum for the
+     *         hyperparameter tuning job itself. That is, the sum of the number of environment variables for all the
+     *         training job definitions can't exceed the maximum number specified.
+     *         </p>
+     */
+
+    public java.util.Map<String, String> getEnvironment() {
+        return environment;
+    }
+
+    /**
+     * <p>
+     * An environment variable that you can pass into the SageMaker <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html">CreateTrainingJob</a>
+     * API. You can use an existing <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html#sagemaker-CreateTrainingJob-request-Environment"
+     * >environment variable from the training container</a> or use your own. See <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-define-metrics.html">Define metrics
+     * and variables</a> for more information.
+     * </p>
+     * <note>
+     * <p>
+     * The maximum number of items specified for <code>Map Entries</code> refers to the maximum number of environment
+     * variables for each <code>TrainingJobDefinition</code> and also the maximum for the hyperparameter tuning job
+     * itself. That is, the sum of the number of environment variables for all the training job definitions can't exceed
+     * the maximum number specified.
+     * </p>
+     * </note>
+     * 
+     * @param environment
+     *        An environment variable that you can pass into the SageMaker <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html"
+     *        >CreateTrainingJob</a> API. You can use an existing <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html#sagemaker-CreateTrainingJob-request-Environment"
+     *        >environment variable from the training container</a> or use your own. See <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-define-metrics.html">Define
+     *        metrics and variables</a> for more information.</p> <note>
+     *        <p>
+     *        The maximum number of items specified for <code>Map Entries</code> refers to the maximum number of
+     *        environment variables for each <code>TrainingJobDefinition</code> and also the maximum for the
+     *        hyperparameter tuning job itself. That is, the sum of the number of environment variables for all the
+     *        training job definitions can't exceed the maximum number specified.
+     *        </p>
+     */
+
+    public void setEnvironment(java.util.Map<String, String> environment) {
+        this.environment = environment;
+    }
+
+    /**
+     * <p>
+     * An environment variable that you can pass into the SageMaker <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html">CreateTrainingJob</a>
+     * API. You can use an existing <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html#sagemaker-CreateTrainingJob-request-Environment"
+     * >environment variable from the training container</a> or use your own. See <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-define-metrics.html">Define metrics
+     * and variables</a> for more information.
+     * </p>
+     * <note>
+     * <p>
+     * The maximum number of items specified for <code>Map Entries</code> refers to the maximum number of environment
+     * variables for each <code>TrainingJobDefinition</code> and also the maximum for the hyperparameter tuning job
+     * itself. That is, the sum of the number of environment variables for all the training job definitions can't exceed
+     * the maximum number specified.
+     * </p>
+     * </note>
+     * 
+     * @param environment
+     *        An environment variable that you can pass into the SageMaker <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html"
+     *        >CreateTrainingJob</a> API. You can use an existing <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html#sagemaker-CreateTrainingJob-request-Environment"
+     *        >environment variable from the training container</a> or use your own. See <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-define-metrics.html">Define
+     *        metrics and variables</a> for more information.</p> <note>
+     *        <p>
+     *        The maximum number of items specified for <code>Map Entries</code> refers to the maximum number of
+     *        environment variables for each <code>TrainingJobDefinition</code> and also the maximum for the
+     *        hyperparameter tuning job itself. That is, the sum of the number of environment variables for all the
+     *        training job definitions can't exceed the maximum number specified.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public HyperParameterTrainingJobDefinition withEnvironment(java.util.Map<String, String> environment) {
+        setEnvironment(environment);
+        return this;
+    }
+
+    /**
+     * Add a single Environment entry
+     *
+     * @see HyperParameterTrainingJobDefinition#withEnvironment
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public HyperParameterTrainingJobDefinition addEnvironmentEntry(String key, String value) {
+        if (null == this.environment) {
+            this.environment = new java.util.HashMap<String, String>();
+        }
+        if (this.environment.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.environment.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Environment.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public HyperParameterTrainingJobDefinition clearEnvironmentEntries() {
+        this.environment = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1129,7 +1295,9 @@ public class HyperParameterTrainingJobDefinition implements Serializable, Clonea
         if (getRetryStrategy() != null)
             sb.append("RetryStrategy: ").append(getRetryStrategy()).append(",");
         if (getHyperParameterTuningResourceConfig() != null)
-            sb.append("HyperParameterTuningResourceConfig: ").append(getHyperParameterTuningResourceConfig());
+            sb.append("HyperParameterTuningResourceConfig: ").append(getHyperParameterTuningResourceConfig()).append(",");
+        if (getEnvironment() != null)
+            sb.append("Environment: ").append(getEnvironment());
         sb.append("}");
         return sb.toString();
     }
@@ -1214,6 +1382,10 @@ public class HyperParameterTrainingJobDefinition implements Serializable, Clonea
         if (other.getHyperParameterTuningResourceConfig() != null
                 && other.getHyperParameterTuningResourceConfig().equals(this.getHyperParameterTuningResourceConfig()) == false)
             return false;
+        if (other.getEnvironment() == null ^ this.getEnvironment() == null)
+            return false;
+        if (other.getEnvironment() != null && other.getEnvironment().equals(this.getEnvironment()) == false)
+            return false;
         return true;
     }
 
@@ -1239,6 +1411,7 @@ public class HyperParameterTrainingJobDefinition implements Serializable, Clonea
         hashCode = prime * hashCode + ((getCheckpointConfig() == null) ? 0 : getCheckpointConfig().hashCode());
         hashCode = prime * hashCode + ((getRetryStrategy() == null) ? 0 : getRetryStrategy().hashCode());
         hashCode = prime * hashCode + ((getHyperParameterTuningResourceConfig() == null) ? 0 : getHyperParameterTuningResourceConfig().hashCode());
+        hashCode = prime * hashCode + ((getEnvironment() == null) ? 0 : getEnvironment().hashCode());
         return hashCode;
     }
 

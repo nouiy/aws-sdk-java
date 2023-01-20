@@ -24,7 +24,8 @@ public enum TargetFormat {
     Csv("csv"),
     Avro("avro"),
     Orc("orc"),
-    Parquet("parquet");
+    Parquet("parquet"),
+    Hudi("hudi");
 
     private String value;
 

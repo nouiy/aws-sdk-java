@@ -55,6 +55,8 @@ public class ContactMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastUpdateTimestamp").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> SCHEDULEDTIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ScheduledTimestamp").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> RELATEDCONTACTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RelatedContactId").build();
 
     private static final ContactMarshaller instance = new ContactMarshaller();
 
@@ -86,6 +88,7 @@ public class ContactMarshaller {
             protocolMarshaller.marshall(contact.getDisconnectTimestamp(), DISCONNECTTIMESTAMP_BINDING);
             protocolMarshaller.marshall(contact.getLastUpdateTimestamp(), LASTUPDATETIMESTAMP_BINDING);
             protocolMarshaller.marshall(contact.getScheduledTimestamp(), SCHEDULEDTIMESTAMP_BINDING);
+            protocolMarshaller.marshall(contact.getRelatedContactId(), RELATEDCONTACTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

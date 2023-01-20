@@ -176,6 +176,25 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      * </ul>
      */
     private com.amazonaws.internal.SdkInternalList<Filter> filters;
+    /**
+     * <p>
+     * If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI ID is
+     * displayed in the response for <code>imageId</code>.
+     * </p>
+     * <p>
+     * If <code>false</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the parameter is
+     * displayed in the response for <code>imageId</code>.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * <p>
+     * Default: <code>false</code>
+     * </p>
+     */
+    private Boolean resolveAlias;
 
     /**
      * <p>
@@ -1350,6 +1369,162 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI ID is
+     * displayed in the response for <code>imageId</code>.
+     * </p>
+     * <p>
+     * If <code>false</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the parameter is
+     * displayed in the response for <code>imageId</code>.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * <p>
+     * Default: <code>false</code>
+     * </p>
+     * 
+     * @param resolveAlias
+     *        If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI ID
+     *        is displayed in the response for <code>imageId</code>.</p>
+     *        <p>
+     *        If <code>false</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the
+     *        parameter is displayed in the response for <code>imageId</code>.
+     *        </p>
+     *        <p>
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
+     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
+     *        Guide</i>.
+     *        </p>
+     *        <p>
+     *        Default: <code>false</code>
+     */
+
+    public void setResolveAlias(Boolean resolveAlias) {
+        this.resolveAlias = resolveAlias;
+    }
+
+    /**
+     * <p>
+     * If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI ID is
+     * displayed in the response for <code>imageId</code>.
+     * </p>
+     * <p>
+     * If <code>false</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the parameter is
+     * displayed in the response for <code>imageId</code>.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * <p>
+     * Default: <code>false</code>
+     * </p>
+     * 
+     * @return If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI
+     *         ID is displayed in the response for <code>imageId</code>.</p>
+     *         <p>
+     *         If <code>false</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the
+     *         parameter is displayed in the response for <code>imageId</code>.
+     *         </p>
+     *         <p>
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
+     *         >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
+     *         Guide</i>.
+     *         </p>
+     *         <p>
+     *         Default: <code>false</code>
+     */
+
+    public Boolean getResolveAlias() {
+        return this.resolveAlias;
+    }
+
+    /**
+     * <p>
+     * If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI ID is
+     * displayed in the response for <code>imageId</code>.
+     * </p>
+     * <p>
+     * If <code>false</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the parameter is
+     * displayed in the response for <code>imageId</code>.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * <p>
+     * Default: <code>false</code>
+     * </p>
+     * 
+     * @param resolveAlias
+     *        If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI ID
+     *        is displayed in the response for <code>imageId</code>.</p>
+     *        <p>
+     *        If <code>false</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the
+     *        parameter is displayed in the response for <code>imageId</code>.
+     *        </p>
+     *        <p>
+     *        For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
+     *        >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
+     *        Guide</i>.
+     *        </p>
+     *        <p>
+     *        Default: <code>false</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeLaunchTemplateVersionsRequest withResolveAlias(Boolean resolveAlias) {
+        setResolveAlias(resolveAlias);
+        return this;
+    }
+
+    /**
+     * <p>
+     * If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI ID is
+     * displayed in the response for <code>imageId</code>.
+     * </p>
+     * <p>
+     * If <code>false</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the parameter is
+     * displayed in the response for <code>imageId</code>.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
+     * >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * </p>
+     * <p>
+     * Default: <code>false</code>
+     * </p>
+     * 
+     * @return If <code>true</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the AMI
+     *         ID is displayed in the response for <code>imageId</code>.</p>
+     *         <p>
+     *         If <code>false</code>, and if a Systems Manager parameter is specified for <code>ImageId</code>, the
+     *         parameter is displayed in the response for <code>imageId</code>.
+     *         </p>
+     *         <p>
+     *         For more information, see <a href=
+     *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#use-an-ssm-parameter-instead-of-an-ami-id"
+     *         >Use a Systems Manager parameter instead of an AMI ID</a> in the <i>Amazon Elastic Compute Cloud User
+     *         Guide</i>.
+     *         </p>
+     *         <p>
+     *         Default: <code>false</code>
+     */
+
+    public Boolean isResolveAlias() {
+        return this.resolveAlias;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -1387,7 +1562,9 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getFilters() != null)
-            sb.append("Filters: ").append(getFilters());
+            sb.append("Filters: ").append(getFilters()).append(",");
+        if (getResolveAlias() != null)
+            sb.append("ResolveAlias: ").append(getResolveAlias());
         sb.append("}");
         return sb.toString();
     }
@@ -1434,6 +1611,10 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
             return false;
         if (other.getFilters() != null && other.getFilters().equals(this.getFilters()) == false)
             return false;
+        if (other.getResolveAlias() == null ^ this.getResolveAlias() == null)
+            return false;
+        if (other.getResolveAlias() != null && other.getResolveAlias().equals(this.getResolveAlias()) == false)
+            return false;
         return true;
     }
 
@@ -1450,6 +1631,7 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getFilters() == null) ? 0 : getFilters().hashCode());
+        hashCode = prime * hashCode + ((getResolveAlias() == null) ? 0 : getResolveAlias().hashCode());
         return hashCode;
     }
 

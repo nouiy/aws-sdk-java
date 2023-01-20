@@ -713,6 +713,39 @@ public class AmazonOpenSearchAsyncClient extends AmazonOpenSearchClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeDryRunProgressResult> describeDryRunProgressAsync(DescribeDryRunProgressRequest request) {
+
+        return describeDryRunProgressAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDryRunProgressResult> describeDryRunProgressAsync(final DescribeDryRunProgressRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeDryRunProgressRequest, DescribeDryRunProgressResult> asyncHandler) {
+        final DescribeDryRunProgressRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeDryRunProgressResult>() {
+            @Override
+            public DescribeDryRunProgressResult call() throws Exception {
+                DescribeDryRunProgressResult result = null;
+
+                try {
+                    result = executeDescribeDryRunProgress(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeInboundConnectionsResult> describeInboundConnectionsAsync(DescribeInboundConnectionsRequest request) {
 
         return describeInboundConnectionsAsync(request, null);

@@ -346,6 +346,37 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
      * </p>
      */
     private EvaluateDataQuality evaluateDataQuality;
+    /**
+     * <p>
+     * Specifies a Hudi data source that is registered in the Glue Data Catalog. The Hudi data source must be stored in
+     * Amazon S3.
+     * </p>
+     */
+    private S3CatalogHudiSource s3CatalogHudiSource;
+    /**
+     * <p>
+     * Specifies a Hudi data source that is registered in the Glue Data Catalog.
+     * </p>
+     */
+    private CatalogHudiSource catalogHudiSource;
+    /**
+     * <p>
+     * Specifies a Hudi data source stored in Amazon S3.
+     * </p>
+     */
+    private S3HudiSource s3HudiSource;
+    /**
+     * <p>
+     * Specifies a target that writes to a Hudi data source in the Glue Data Catalog.
+     * </p>
+     */
+    private S3HudiCatalogTarget s3HudiCatalogTarget;
+    /**
+     * <p>
+     * Specifies a target that writes to a Hudi data source in Amazon S3.
+     * </p>
+     */
+    private S3HudiDirectTarget s3HudiDirectTarget;
 
     /**
      * <p>
@@ -2484,6 +2515,212 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Specifies a Hudi data source that is registered in the Glue Data Catalog. The Hudi data source must be stored in
+     * Amazon S3.
+     * </p>
+     * 
+     * @param s3CatalogHudiSource
+     *        Specifies a Hudi data source that is registered in the Glue Data Catalog. The Hudi data source must be
+     *        stored in Amazon S3.
+     */
+
+    public void setS3CatalogHudiSource(S3CatalogHudiSource s3CatalogHudiSource) {
+        this.s3CatalogHudiSource = s3CatalogHudiSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a Hudi data source that is registered in the Glue Data Catalog. The Hudi data source must be stored in
+     * Amazon S3.
+     * </p>
+     * 
+     * @return Specifies a Hudi data source that is registered in the Glue Data Catalog. The Hudi data source must be
+     *         stored in Amazon S3.
+     */
+
+    public S3CatalogHudiSource getS3CatalogHudiSource() {
+        return this.s3CatalogHudiSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a Hudi data source that is registered in the Glue Data Catalog. The Hudi data source must be stored in
+     * Amazon S3.
+     * </p>
+     * 
+     * @param s3CatalogHudiSource
+     *        Specifies a Hudi data source that is registered in the Glue Data Catalog. The Hudi data source must be
+     *        stored in Amazon S3.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withS3CatalogHudiSource(S3CatalogHudiSource s3CatalogHudiSource) {
+        setS3CatalogHudiSource(s3CatalogHudiSource);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies a Hudi data source that is registered in the Glue Data Catalog.
+     * </p>
+     * 
+     * @param catalogHudiSource
+     *        Specifies a Hudi data source that is registered in the Glue Data Catalog.
+     */
+
+    public void setCatalogHudiSource(CatalogHudiSource catalogHudiSource) {
+        this.catalogHudiSource = catalogHudiSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a Hudi data source that is registered in the Glue Data Catalog.
+     * </p>
+     * 
+     * @return Specifies a Hudi data source that is registered in the Glue Data Catalog.
+     */
+
+    public CatalogHudiSource getCatalogHudiSource() {
+        return this.catalogHudiSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a Hudi data source that is registered in the Glue Data Catalog.
+     * </p>
+     * 
+     * @param catalogHudiSource
+     *        Specifies a Hudi data source that is registered in the Glue Data Catalog.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withCatalogHudiSource(CatalogHudiSource catalogHudiSource) {
+        setCatalogHudiSource(catalogHudiSource);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies a Hudi data source stored in Amazon S3.
+     * </p>
+     * 
+     * @param s3HudiSource
+     *        Specifies a Hudi data source stored in Amazon S3.
+     */
+
+    public void setS3HudiSource(S3HudiSource s3HudiSource) {
+        this.s3HudiSource = s3HudiSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a Hudi data source stored in Amazon S3.
+     * </p>
+     * 
+     * @return Specifies a Hudi data source stored in Amazon S3.
+     */
+
+    public S3HudiSource getS3HudiSource() {
+        return this.s3HudiSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a Hudi data source stored in Amazon S3.
+     * </p>
+     * 
+     * @param s3HudiSource
+     *        Specifies a Hudi data source stored in Amazon S3.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withS3HudiSource(S3HudiSource s3HudiSource) {
+        setS3HudiSource(s3HudiSource);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a Hudi data source in the Glue Data Catalog.
+     * </p>
+     * 
+     * @param s3HudiCatalogTarget
+     *        Specifies a target that writes to a Hudi data source in the Glue Data Catalog.
+     */
+
+    public void setS3HudiCatalogTarget(S3HudiCatalogTarget s3HudiCatalogTarget) {
+        this.s3HudiCatalogTarget = s3HudiCatalogTarget;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a Hudi data source in the Glue Data Catalog.
+     * </p>
+     * 
+     * @return Specifies a target that writes to a Hudi data source in the Glue Data Catalog.
+     */
+
+    public S3HudiCatalogTarget getS3HudiCatalogTarget() {
+        return this.s3HudiCatalogTarget;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a Hudi data source in the Glue Data Catalog.
+     * </p>
+     * 
+     * @param s3HudiCatalogTarget
+     *        Specifies a target that writes to a Hudi data source in the Glue Data Catalog.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withS3HudiCatalogTarget(S3HudiCatalogTarget s3HudiCatalogTarget) {
+        setS3HudiCatalogTarget(s3HudiCatalogTarget);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a Hudi data source in Amazon S3.
+     * </p>
+     * 
+     * @param s3HudiDirectTarget
+     *        Specifies a target that writes to a Hudi data source in Amazon S3.
+     */
+
+    public void setS3HudiDirectTarget(S3HudiDirectTarget s3HudiDirectTarget) {
+        this.s3HudiDirectTarget = s3HudiDirectTarget;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a Hudi data source in Amazon S3.
+     * </p>
+     * 
+     * @return Specifies a target that writes to a Hudi data source in Amazon S3.
+     */
+
+    public S3HudiDirectTarget getS3HudiDirectTarget() {
+        return this.s3HudiDirectTarget;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a Hudi data source in Amazon S3.
+     * </p>
+     * 
+     * @param s3HudiDirectTarget
+     *        Specifies a target that writes to a Hudi data source in Amazon S3.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withS3HudiDirectTarget(S3HudiDirectTarget s3HudiDirectTarget) {
+        setS3HudiDirectTarget(s3HudiDirectTarget);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2598,7 +2835,17 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
         if (getDynamicTransform() != null)
             sb.append("DynamicTransform: ").append(getDynamicTransform()).append(",");
         if (getEvaluateDataQuality() != null)
-            sb.append("EvaluateDataQuality: ").append(getEvaluateDataQuality());
+            sb.append("EvaluateDataQuality: ").append(getEvaluateDataQuality()).append(",");
+        if (getS3CatalogHudiSource() != null)
+            sb.append("S3CatalogHudiSource: ").append(getS3CatalogHudiSource()).append(",");
+        if (getCatalogHudiSource() != null)
+            sb.append("CatalogHudiSource: ").append(getCatalogHudiSource()).append(",");
+        if (getS3HudiSource() != null)
+            sb.append("S3HudiSource: ").append(getS3HudiSource()).append(",");
+        if (getS3HudiCatalogTarget() != null)
+            sb.append("S3HudiCatalogTarget: ").append(getS3HudiCatalogTarget()).append(",");
+        if (getS3HudiDirectTarget() != null)
+            sb.append("S3HudiDirectTarget: ").append(getS3HudiDirectTarget());
         sb.append("}");
         return sb.toString();
     }
@@ -2823,6 +3070,26 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
             return false;
         if (other.getEvaluateDataQuality() != null && other.getEvaluateDataQuality().equals(this.getEvaluateDataQuality()) == false)
             return false;
+        if (other.getS3CatalogHudiSource() == null ^ this.getS3CatalogHudiSource() == null)
+            return false;
+        if (other.getS3CatalogHudiSource() != null && other.getS3CatalogHudiSource().equals(this.getS3CatalogHudiSource()) == false)
+            return false;
+        if (other.getCatalogHudiSource() == null ^ this.getCatalogHudiSource() == null)
+            return false;
+        if (other.getCatalogHudiSource() != null && other.getCatalogHudiSource().equals(this.getCatalogHudiSource()) == false)
+            return false;
+        if (other.getS3HudiSource() == null ^ this.getS3HudiSource() == null)
+            return false;
+        if (other.getS3HudiSource() != null && other.getS3HudiSource().equals(this.getS3HudiSource()) == false)
+            return false;
+        if (other.getS3HudiCatalogTarget() == null ^ this.getS3HudiCatalogTarget() == null)
+            return false;
+        if (other.getS3HudiCatalogTarget() != null && other.getS3HudiCatalogTarget().equals(this.getS3HudiCatalogTarget()) == false)
+            return false;
+        if (other.getS3HudiDirectTarget() == null ^ this.getS3HudiDirectTarget() == null)
+            return false;
+        if (other.getS3HudiDirectTarget() != null && other.getS3HudiDirectTarget().equals(this.getS3HudiDirectTarget()) == false)
+            return false;
         return true;
     }
 
@@ -2883,6 +3150,11 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getPostgreSQLCatalogTarget() == null) ? 0 : getPostgreSQLCatalogTarget().hashCode());
         hashCode = prime * hashCode + ((getDynamicTransform() == null) ? 0 : getDynamicTransform().hashCode());
         hashCode = prime * hashCode + ((getEvaluateDataQuality() == null) ? 0 : getEvaluateDataQuality().hashCode());
+        hashCode = prime * hashCode + ((getS3CatalogHudiSource() == null) ? 0 : getS3CatalogHudiSource().hashCode());
+        hashCode = prime * hashCode + ((getCatalogHudiSource() == null) ? 0 : getCatalogHudiSource().hashCode());
+        hashCode = prime * hashCode + ((getS3HudiSource() == null) ? 0 : getS3HudiSource().hashCode());
+        hashCode = prime * hashCode + ((getS3HudiCatalogTarget() == null) ? 0 : getS3HudiCatalogTarget().hashCode());
+        hashCode = prime * hashCode + ((getS3HudiDirectTarget() == null) ? 0 : getS3HudiDirectTarget().hashCode());
         return hashCode;
     }
 

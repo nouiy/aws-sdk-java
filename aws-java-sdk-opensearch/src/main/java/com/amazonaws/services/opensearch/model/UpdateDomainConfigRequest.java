@@ -150,10 +150,32 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the results of
-     * validation check without actually applying the change.
+     * a dry run analysis without actually applying the change. A dry run determines what type of deployment the update
+     * will cause.
      * </p>
      */
     private Boolean dryRun;
+    /**
+     * <p>
+     * The type of dry run to perform.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Basic</code> only returns the type of deployment (blue/green or dynamic) that the update will cause.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Verbose</code> runs an additional check to validate the changes you're making. For more information, see <a
+     * href=
+     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes#validation-check"
+     * >Validating a domain update</a>.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String dryRunMode;
 
     /**
      * <p>
@@ -1008,12 +1030,14 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the results of
-     * validation check without actually applying the change.
+     * a dry run analysis without actually applying the change. A dry run determines what type of deployment the update
+     * will cause.
      * </p>
      * 
      * @param dryRun
      *        This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the
-     *        results of validation check without actually applying the change.
+     *        results of a dry run analysis without actually applying the change. A dry run determines what type of
+     *        deployment the update will cause.
      */
 
     public void setDryRun(Boolean dryRun) {
@@ -1023,11 +1047,13 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the results of
-     * validation check without actually applying the change.
+     * a dry run analysis without actually applying the change. A dry run determines what type of deployment the update
+     * will cause.
      * </p>
      * 
      * @return This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the
-     *         results of validation check without actually applying the change.
+     *         results of a dry run analysis without actually applying the change. A dry run determines what type of
+     *         deployment the update will cause.
      */
 
     public Boolean getDryRun() {
@@ -1037,12 +1063,14 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the results of
-     * validation check without actually applying the change.
+     * a dry run analysis without actually applying the change. A dry run determines what type of deployment the update
+     * will cause.
      * </p>
      * 
      * @param dryRun
      *        This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the
-     *        results of validation check without actually applying the change.
+     *        results of a dry run analysis without actually applying the change. A dry run determines what type of
+     *        deployment the update will cause.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1054,15 +1082,193 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the results of
-     * validation check without actually applying the change.
+     * a dry run analysis without actually applying the change. A dry run determines what type of deployment the update
+     * will cause.
      * </p>
      * 
      * @return This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the
-     *         results of validation check without actually applying the change.
+     *         results of a dry run analysis without actually applying the change. A dry run determines what type of
+     *         deployment the update will cause.
      */
 
     public Boolean isDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * <p>
+     * The type of dry run to perform.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Basic</code> only returns the type of deployment (blue/green or dynamic) that the update will cause.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Verbose</code> runs an additional check to validate the changes you're making. For more information, see <a
+     * href=
+     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes#validation-check"
+     * >Validating a domain update</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param dryRunMode
+     *        The type of dry run to perform.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Basic</code> only returns the type of deployment (blue/green or dynamic) that the update will cause.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Verbose</code> runs an additional check to validate the changes you're making. For more information,
+     *        see <a href=
+     *        "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes#validation-check"
+     *        >Validating a domain update</a>.
+     *        </p>
+     *        </li>
+     * @see DryRunMode
+     */
+
+    public void setDryRunMode(String dryRunMode) {
+        this.dryRunMode = dryRunMode;
+    }
+
+    /**
+     * <p>
+     * The type of dry run to perform.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Basic</code> only returns the type of deployment (blue/green or dynamic) that the update will cause.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Verbose</code> runs an additional check to validate the changes you're making. For more information, see <a
+     * href=
+     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes#validation-check"
+     * >Validating a domain update</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The type of dry run to perform.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>Basic</code> only returns the type of deployment (blue/green or dynamic) that the update will
+     *         cause.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Verbose</code> runs an additional check to validate the changes you're making. For more
+     *         information, see <a href=
+     *         "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes#validation-check"
+     *         >Validating a domain update</a>.
+     *         </p>
+     *         </li>
+     * @see DryRunMode
+     */
+
+    public String getDryRunMode() {
+        return this.dryRunMode;
+    }
+
+    /**
+     * <p>
+     * The type of dry run to perform.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Basic</code> only returns the type of deployment (blue/green or dynamic) that the update will cause.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Verbose</code> runs an additional check to validate the changes you're making. For more information, see <a
+     * href=
+     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes#validation-check"
+     * >Validating a domain update</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param dryRunMode
+     *        The type of dry run to perform.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Basic</code> only returns the type of deployment (blue/green or dynamic) that the update will cause.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Verbose</code> runs an additional check to validate the changes you're making. For more information,
+     *        see <a href=
+     *        "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes#validation-check"
+     *        >Validating a domain update</a>.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DryRunMode
+     */
+
+    public UpdateDomainConfigRequest withDryRunMode(String dryRunMode) {
+        setDryRunMode(dryRunMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of dry run to perform.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Basic</code> only returns the type of deployment (blue/green or dynamic) that the update will cause.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Verbose</code> runs an additional check to validate the changes you're making. For more information, see <a
+     * href=
+     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes#validation-check"
+     * >Validating a domain update</a>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param dryRunMode
+     *        The type of dry run to perform.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Basic</code> only returns the type of deployment (blue/green or dynamic) that the update will cause.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Verbose</code> runs an additional check to validate the changes you're making. For more information,
+     *        see <a href=
+     *        "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-configuration-changes#validation-check"
+     *        >Validating a domain update</a>.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DryRunMode
+     */
+
+    public UpdateDomainConfigRequest withDryRunMode(DryRunMode dryRunMode) {
+        this.dryRunMode = dryRunMode.toString();
+        return this;
     }
 
     /**
@@ -1106,7 +1312,9 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
         if (getAutoTuneOptions() != null)
             sb.append("AutoTuneOptions: ").append(getAutoTuneOptions()).append(",");
         if (getDryRun() != null)
-            sb.append("DryRun: ").append(getDryRun());
+            sb.append("DryRun: ").append(getDryRun()).append(",");
+        if (getDryRunMode() != null)
+            sb.append("DryRunMode: ").append(getDryRunMode());
         sb.append("}");
         return sb.toString();
     }
@@ -1181,6 +1389,10 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getDryRun() != null && other.getDryRun().equals(this.getDryRun()) == false)
             return false;
+        if (other.getDryRunMode() == null ^ this.getDryRunMode() == null)
+            return false;
+        if (other.getDryRunMode() != null && other.getDryRunMode().equals(this.getDryRunMode()) == false)
+            return false;
         return true;
     }
 
@@ -1204,6 +1416,7 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getAdvancedSecurityOptions() == null) ? 0 : getAdvancedSecurityOptions().hashCode());
         hashCode = prime * hashCode + ((getAutoTuneOptions() == null) ? 0 : getAutoTuneOptions().hashCode());
         hashCode = prime * hashCode + ((getDryRun() == null) ? 0 : getDryRun().hashCode());
+        hashCode = prime * hashCode + ((getDryRunMode() == null) ? 0 : getDryRunMode().hashCode());
         return hashCode;
     }
 
