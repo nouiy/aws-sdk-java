@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The runtime restore hook failed to complete within the timeout limit (2 seconds).
+ * Lambda couldn't restore the snapshot within the timeout limit.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

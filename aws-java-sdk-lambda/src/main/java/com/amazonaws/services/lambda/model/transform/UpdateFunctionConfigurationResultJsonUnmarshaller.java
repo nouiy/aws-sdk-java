@@ -191,6 +191,10 @@ public class UpdateFunctionConfigurationResultJsonUnmarshaller implements Unmars
                     context.nextToken();
                     updateFunctionConfigurationResult.setSnapStart(SnapStartResponseJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("RuntimeVersionConfig", targetDepth)) {
+                    context.nextToken();
+                    updateFunctionConfigurationResult.setRuntimeVersionConfig(RuntimeVersionConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

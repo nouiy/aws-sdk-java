@@ -18,7 +18,7 @@ import javax.annotation.Generated;
 /**
  * <p>
  * Provides configuration information about a Lambda function <a
- * href="https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">alias</a>.
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-aliases.html">alias</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/CreateAlias" target="_top">AWS API

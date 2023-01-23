@@ -244,6 +244,18 @@ public enum Region {
     AP_Jakarta("ap-southeast-3"),
 
     /**
+     * The Asia Pacific (Melbourne) Region. This region uses Amazon S3 servers
+     * located in Melbourne, Australia.
+     * <p>
+     * When using buckets in this region, set the client endpoint to
+     * <code>s3-ap-southeast-4.amazonaws.com</code> on all requests to these buckets
+     * to reduce any latency experienced after the first hour of creating a
+     * bucket in this region.
+     * </p>
+     */
+    AP_Melbourne("ap-southeast-4"),
+
+    /**
      * The Asia Pacific (Tokyo) Region. This region uses Amazon S3 servers
      * located in Tokyo.
      * <p>

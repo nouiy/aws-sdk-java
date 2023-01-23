@@ -1,3 +1,16 @@
+# __1.12.390__ __2023-01-23__
+## __AWS Lambda__
+  - ### Features
+    - Release Lambda RuntimeManagementConfig, enabling customers to better manage runtime updates to their Lambda functions. This release adds two new APIs, GetRuntimeManagementConfig and PutRuntimeManagementConfig, as well as support on existing Create/Get/Update function APIs.
+
+## __AWS SDK for Java__
+  - ### Features
+    - Adding support for ap-southeast-4 that is MEL_Melbourne region.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - Amazon SageMaker Inference now supports P4de instance types.
+
 # __1.12.389__ __2023-01-20__
 ## __Amazon Elastic Compute Cloud__
   - ### Features

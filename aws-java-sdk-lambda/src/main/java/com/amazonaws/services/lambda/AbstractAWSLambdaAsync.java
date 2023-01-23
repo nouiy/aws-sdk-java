@@ -451,6 +451,19 @@ public class AbstractAWSLambdaAsync extends AbstractAWSLambda implements AWSLamb
     }
 
     @Override
+    public java.util.concurrent.Future<GetRuntimeManagementConfigResult> getRuntimeManagementConfigAsync(GetRuntimeManagementConfigRequest request) {
+
+        return getRuntimeManagementConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRuntimeManagementConfigResult> getRuntimeManagementConfigAsync(GetRuntimeManagementConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetRuntimeManagementConfigRequest, GetRuntimeManagementConfigResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<InvokeResult> invokeAsync(InvokeRequest request) {
 
         return invokeAsync(request, null);
@@ -760,6 +773,19 @@ public class AbstractAWSLambdaAsync extends AbstractAWSLambda implements AWSLamb
     public java.util.concurrent.Future<PutProvisionedConcurrencyConfigResult> putProvisionedConcurrencyConfigAsync(
             PutProvisionedConcurrencyConfigRequest request,
             com.amazonaws.handlers.AsyncHandler<PutProvisionedConcurrencyConfigRequest, PutProvisionedConcurrencyConfigResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutRuntimeManagementConfigResult> putRuntimeManagementConfigAsync(PutRuntimeManagementConfigRequest request) {
+
+        return putRuntimeManagementConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutRuntimeManagementConfigResult> putRuntimeManagementConfigAsync(PutRuntimeManagementConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutRuntimeManagementConfigRequest, PutRuntimeManagementConfigResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

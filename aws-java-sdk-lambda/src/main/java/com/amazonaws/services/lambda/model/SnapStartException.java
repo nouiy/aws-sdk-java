@@ -16,7 +16,9 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The runtime restore hook encountered an error. For more information, check the Amazon CloudWatch logs.
+ * The <code>afterRestore()</code> <a
+ * href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart-runtime-hooks.html">runtime hook</a> encountered an
+ * error. For more information, check the Amazon CloudWatch logs.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

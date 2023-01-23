@@ -96,7 +96,7 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
-     * production traffic replicated from the proudction variant.
+     * production traffic replicated from the production variant.
      * </p>
      */
     private java.util.List<ProductionVariantSummary> shadowProductionVariants;
@@ -667,11 +667,11 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
-     * production traffic replicated from the proudction variant.
+     * production traffic replicated from the production variant.
      * </p>
      * 
      * @return A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
-     *         production traffic replicated from the proudction variant.
+     *         production traffic replicated from the production variant.
      */
 
     public java.util.List<ProductionVariantSummary> getShadowProductionVariants() {
@@ -681,12 +681,12 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
-     * production traffic replicated from the proudction variant.
+     * production traffic replicated from the production variant.
      * </p>
      * 
      * @param shadowProductionVariants
      *        A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
-     *        production traffic replicated from the proudction variant.
+     *        production traffic replicated from the production variant.
      */
 
     public void setShadowProductionVariants(java.util.Collection<ProductionVariantSummary> shadowProductionVariants) {
@@ -701,7 +701,7 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
-     * production traffic replicated from the proudction variant.
+     * production traffic replicated from the production variant.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -711,7 +711,7 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param shadowProductionVariants
      *        A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
-     *        production traffic replicated from the proudction variant.
+     *        production traffic replicated from the production variant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -728,12 +728,12 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
-     * production traffic replicated from the proudction variant.
+     * production traffic replicated from the production variant.
      * </p>
      * 
      * @param shadowProductionVariants
      *        A list of the shadow variants hosted on the endpoint. Each shadow variant is a model in shadow mode with
-     *        production traffic replicated from the proudction variant.
+     *        production traffic replicated from the production variant.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

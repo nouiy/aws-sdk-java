@@ -277,9 +277,9 @@ public interface AWSLambda {
 
     /**
      * <p>
-     * Creates an <a href="https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">alias</a> for a Lambda
-     * function version. Use aliases to provide clients with a function identifier that you can update to invoke a
-     * different version.
+     * Creates an <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-aliases.html">alias</a> for a
+     * Lambda function version. Use aliases to provide clients with a function identifier that you can update to invoke
+     * a different version.
      * </p>
      * <p>
      * You can also map an alias to split invocation requests between two versions. Use the <code>RoutingConfig</code>
@@ -584,7 +584,7 @@ public interface AWSLambda {
     /**
      * <p>
      * Deletes a Lambda function <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">alias</a>.
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-aliases.html">alias</a>.
      * </p>
      * 
      * @param deleteAliasRequest
@@ -864,7 +864,7 @@ public interface AWSLambda {
     /**
      * <p>
      * Returns details about a Lambda function <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">alias</a>.
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-aliases.html">alias</a>.
      * </p>
      * 
      * @param getAliasRequest
@@ -1203,6 +1203,33 @@ public interface AWSLambda {
 
     /**
      * <p>
+     * Retrieves the runtime management configuration for a function's version. If the runtime update mode is
+     * <b>Manual</b>, this includes the ARN of the runtime version and the runtime update mode. If the runtime update
+     * mode is <b>Auto</b> or <b>Function update</b>, this includes the runtime update mode and <code>null</code> is
+     * returned for the ARN. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html">Runtime updates</a>.
+     * </p>
+     * 
+     * @param getRuntimeManagementConfigRequest
+     * @return Result of the GetRuntimeManagementConfig operation returned by the service.
+     * @throws ServiceException
+     *         The Lambda service encountered an internal error.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request does not exist.
+     * @throws InvalidParameterValueException
+     *         One of the parameters in the request is not valid.
+     * @throws TooManyRequestsException
+     *         The request throughput limit was exceeded. For more information, see <a
+     *         href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html#api-requests">Lambda
+     *         quotas</a>.
+     * @sample AWSLambda.GetRuntimeManagementConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetRuntimeManagementConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetRuntimeManagementConfigResult getRuntimeManagementConfig(GetRuntimeManagementConfigRequest getRuntimeManagementConfigRequest);
+
+    /**
+     * <p>
      * Invokes a Lambda function. You can invoke a function synchronously (and wait for the response), or
      * asynchronously. To invoke a function asynchronously, set <code>InvocationType</code> to <code>Event</code>.
      * </p>
@@ -1288,9 +1315,11 @@ public interface AWSLambda {
      * @throws EFSIOException
      *         An error occurred when reading from or writing to a connected file system.
      * @throws SnapStartException
-     *         The runtime restore hook encountered an error. For more information, check the Amazon CloudWatch logs.
+     *         The <code>afterRestore()</code> <a
+     *         href="https://docs.aws.amazon.com/lambda/latest/dg/snapstart-runtime-hooks.html">runtime hook</a>
+     *         encountered an error. For more information, check the Amazon CloudWatch logs.
      * @throws SnapStartTimeoutException
-     *         The runtime restore hook failed to complete within the timeout limit (2 seconds).
+     *         Lambda couldn't restore the snapshot within the timeout limit.
      * @throws SnapStartNotReadyException
      *         Lambda is initializing your function. You can invoke the function when the <a
      *         href="https://docs.aws.amazon.com/lambda/latest/dg/functions-states.html">function state</a> becomes
@@ -1362,8 +1391,8 @@ public interface AWSLambda {
 
     /**
      * <p>
-     * Returns a list of <a href="https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">aliases</a> for
-     * a Lambda function.
+     * Returns a list of <a href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-aliases.html">aliases</a>
+     * for a Lambda function.
      * </p>
      * 
      * @param listAliasesRequest
@@ -1496,7 +1525,7 @@ public interface AWSLambda {
      * <p>
      * The <code>ListFunctions</code> operation returns a subset of the <a>FunctionConfiguration</a> fields. To get the
      * additional fields (State, StateReasonCode, StateReason, LastUpdateStatus, LastUpdateStatusReason,
-     * LastUpdateStatusReasonCode) for a function or version, use <a>GetFunction</a>.
+     * LastUpdateStatusReasonCode, RuntimeVersionConfig) for a function or version, use <a>GetFunction</a>.
      * </p>
      * </note>
      * 
@@ -1874,6 +1903,32 @@ public interface AWSLambda {
 
     /**
      * <p>
+     * Sets the runtime management configuration for a function's version. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html">Runtime updates</a>.
+     * </p>
+     * 
+     * @param putRuntimeManagementConfigRequest
+     * @return Result of the PutRuntimeManagementConfig operation returned by the service.
+     * @throws ServiceException
+     *         The Lambda service encountered an internal error.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request does not exist.
+     * @throws ResourceConflictException
+     *         The resource already exists, or another operation is in progress.
+     * @throws InvalidParameterValueException
+     *         One of the parameters in the request is not valid.
+     * @throws TooManyRequestsException
+     *         The request throughput limit was exceeded. For more information, see <a
+     *         href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html#api-requests">Lambda
+     *         quotas</a>.
+     * @sample AWSLambda.PutRuntimeManagementConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/PutRuntimeManagementConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PutRuntimeManagementConfigResult putRuntimeManagementConfig(PutRuntimeManagementConfigRequest putRuntimeManagementConfigRequest);
+
+    /**
+     * <p>
      * Removes a statement from the permissions policy for a version of an <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html">Lambda layer</a>. For more
      * information, see <a>AddLayerVersionPermission</a>.
@@ -1982,7 +2037,7 @@ public interface AWSLambda {
     /**
      * <p>
      * Updates the configuration of a Lambda function <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">alias</a>.
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/configuration-aliases.html">alias</a>.
      * </p>
      * 
      * @param updateAliasRequest

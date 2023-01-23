@@ -1413,6 +1413,39 @@ public class AWSLambdaAsyncClient extends AWSLambdaClient implements AWSLambdaAs
     }
 
     @Override
+    public java.util.concurrent.Future<GetRuntimeManagementConfigResult> getRuntimeManagementConfigAsync(GetRuntimeManagementConfigRequest request) {
+
+        return getRuntimeManagementConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRuntimeManagementConfigResult> getRuntimeManagementConfigAsync(final GetRuntimeManagementConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetRuntimeManagementConfigRequest, GetRuntimeManagementConfigResult> asyncHandler) {
+        final GetRuntimeManagementConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetRuntimeManagementConfigResult>() {
+            @Override
+            public GetRuntimeManagementConfigResult call() throws Exception {
+                GetRuntimeManagementConfigResult result = null;
+
+                try {
+                    result = executeGetRuntimeManagementConfig(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<InvokeResult> invokeAsync(InvokeRequest request) {
 
         return invokeAsync(request, null);
@@ -2112,6 +2145,39 @@ public class AWSLambdaAsyncClient extends AWSLambdaClient implements AWSLambdaAs
 
                 try {
                     result = executePutProvisionedConcurrencyConfig(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutRuntimeManagementConfigResult> putRuntimeManagementConfigAsync(PutRuntimeManagementConfigRequest request) {
+
+        return putRuntimeManagementConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutRuntimeManagementConfigResult> putRuntimeManagementConfigAsync(final PutRuntimeManagementConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutRuntimeManagementConfigRequest, PutRuntimeManagementConfigResult> asyncHandler) {
+        final PutRuntimeManagementConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutRuntimeManagementConfigResult>() {
+            @Override
+            public PutRuntimeManagementConfigResult call() throws Exception {
+                PutRuntimeManagementConfigResult result = null;
+
+                try {
+                    result = executePutRuntimeManagementConfig(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -85,7 +85,7 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The size, in GB, of the ML storage volume attached to individual inference instance associated with the
-     * production variant. Currenly only Amazon EBS gp2 storage volumes are supported.
+     * production variant. Currently only Amazon EBS gp2 storage volumes are supported.
      * </p>
      */
     private Integer volumeSizeInGB;
@@ -508,12 +508,12 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The size, in GB, of the ML storage volume attached to individual inference instance associated with the
-     * production variant. Currenly only Amazon EBS gp2 storage volumes are supported.
+     * production variant. Currently only Amazon EBS gp2 storage volumes are supported.
      * </p>
      * 
      * @param volumeSizeInGB
      *        The size, in GB, of the ML storage volume attached to individual inference instance associated with the
-     *        production variant. Currenly only Amazon EBS gp2 storage volumes are supported.
+     *        production variant. Currently only Amazon EBS gp2 storage volumes are supported.
      */
 
     public void setVolumeSizeInGB(Integer volumeSizeInGB) {
@@ -523,11 +523,11 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The size, in GB, of the ML storage volume attached to individual inference instance associated with the
-     * production variant. Currenly only Amazon EBS gp2 storage volumes are supported.
+     * production variant. Currently only Amazon EBS gp2 storage volumes are supported.
      * </p>
      * 
      * @return The size, in GB, of the ML storage volume attached to individual inference instance associated with the
-     *         production variant. Currenly only Amazon EBS gp2 storage volumes are supported.
+     *         production variant. Currently only Amazon EBS gp2 storage volumes are supported.
      */
 
     public Integer getVolumeSizeInGB() {
@@ -537,12 +537,12 @@ public class ProductionVariant implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * The size, in GB, of the ML storage volume attached to individual inference instance associated with the
-     * production variant. Currenly only Amazon EBS gp2 storage volumes are supported.
+     * production variant. Currently only Amazon EBS gp2 storage volumes are supported.
      * </p>
      * 
      * @param volumeSizeInGB
      *        The size, in GB, of the ML storage volume attached to individual inference instance associated with the
-     *        production variant. Currenly only Amazon EBS gp2 storage volumes are supported.
+     *        production variant. Currently only Amazon EBS gp2 storage volumes are supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

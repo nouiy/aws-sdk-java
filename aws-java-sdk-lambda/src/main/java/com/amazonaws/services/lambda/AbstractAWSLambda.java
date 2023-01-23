@@ -199,6 +199,11 @@ public class AbstractAWSLambda implements AWSLambda {
     }
 
     @Override
+    public GetRuntimeManagementConfigResult getRuntimeManagementConfig(GetRuntimeManagementConfigRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public InvokeResult invoke(InvokeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -306,6 +311,11 @@ public class AbstractAWSLambda implements AWSLambda {
 
     @Override
     public PutProvisionedConcurrencyConfigResult putProvisionedConcurrencyConfig(PutProvisionedConcurrencyConfigRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutRuntimeManagementConfigResult putRuntimeManagementConfig(PutRuntimeManagementConfigRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

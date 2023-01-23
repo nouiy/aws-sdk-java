@@ -159,7 +159,8 @@ public enum ProductionVariantInstanceType {
     MlR6gd4xlarge("ml.r6gd.4xlarge"),
     MlR6gd8xlarge("ml.r6gd.8xlarge"),
     MlR6gd12xlarge("ml.r6gd.12xlarge"),
-    MlR6gd16xlarge("ml.r6gd.16xlarge");
+    MlR6gd16xlarge("ml.r6gd.16xlarge"),
+    MlP4de24xlarge("ml.p4de.24xlarge");
 
     private String value;
 

@@ -243,6 +243,12 @@ public class GetFunctionConfigurationResult extends com.amazonaws.AmazonWebServi
      * </p>
      */
     private SnapStartResponse snapStart;
+    /**
+     * <p>
+     * The ARN of the runtime and any errors that occured.
+     * </p>
+     */
+    private RuntimeVersionConfig runtimeVersionConfig;
 
     /**
      * <p>
@@ -2041,6 +2047,46 @@ public class GetFunctionConfigurationResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * The ARN of the runtime and any errors that occured.
+     * </p>
+     * 
+     * @param runtimeVersionConfig
+     *        The ARN of the runtime and any errors that occured.
+     */
+
+    public void setRuntimeVersionConfig(RuntimeVersionConfig runtimeVersionConfig) {
+        this.runtimeVersionConfig = runtimeVersionConfig;
+    }
+
+    /**
+     * <p>
+     * The ARN of the runtime and any errors that occured.
+     * </p>
+     * 
+     * @return The ARN of the runtime and any errors that occured.
+     */
+
+    public RuntimeVersionConfig getRuntimeVersionConfig() {
+        return this.runtimeVersionConfig;
+    }
+
+    /**
+     * <p>
+     * The ARN of the runtime and any errors that occured.
+     * </p>
+     * 
+     * @param runtimeVersionConfig
+     *        The ARN of the runtime and any errors that occured.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetFunctionConfigurationResult withRuntimeVersionConfig(RuntimeVersionConfig runtimeVersionConfig) {
+        setRuntimeVersionConfig(runtimeVersionConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2119,7 +2165,9 @@ public class GetFunctionConfigurationResult extends com.amazonaws.AmazonWebServi
         if (getEphemeralStorage() != null)
             sb.append("EphemeralStorage: ").append(getEphemeralStorage()).append(",");
         if (getSnapStart() != null)
-            sb.append("SnapStart: ").append(getSnapStart());
+            sb.append("SnapStart: ").append(getSnapStart()).append(",");
+        if (getRuntimeVersionConfig() != null)
+            sb.append("RuntimeVersionConfig: ").append(getRuntimeVersionConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -2270,6 +2318,10 @@ public class GetFunctionConfigurationResult extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getSnapStart() != null && other.getSnapStart().equals(this.getSnapStart()) == false)
             return false;
+        if (other.getRuntimeVersionConfig() == null ^ this.getRuntimeVersionConfig() == null)
+            return false;
+        if (other.getRuntimeVersionConfig() != null && other.getRuntimeVersionConfig().equals(this.getRuntimeVersionConfig()) == false)
+            return false;
         return true;
     }
 
@@ -2312,6 +2364,7 @@ public class GetFunctionConfigurationResult extends com.amazonaws.AmazonWebServi
         hashCode = prime * hashCode + ((getArchitectures() == null) ? 0 : getArchitectures().hashCode());
         hashCode = prime * hashCode + ((getEphemeralStorage() == null) ? 0 : getEphemeralStorage().hashCode());
         hashCode = prime * hashCode + ((getSnapStart() == null) ? 0 : getSnapStart().hashCode());
+        hashCode = prime * hashCode + ((getRuntimeVersionConfig() == null) ? 0 : getRuntimeVersionConfig().hashCode());
         return hashCode;
     }
 

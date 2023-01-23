@@ -190,6 +190,10 @@ public class CreateFunctionResultJsonUnmarshaller implements Unmarshaller<Create
                     context.nextToken();
                     createFunctionResult.setSnapStart(SnapStartResponseJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("RuntimeVersionConfig", targetDepth)) {
+                    context.nextToken();
+                    createFunctionResult.setRuntimeVersionConfig(RuntimeVersionConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
