@@ -16026,6 +16026,21 @@
       }, {
         "name" : "Hala",
         "value" : "Hala"
+      }, {
+        "name" : "Andres",
+        "value" : "Andres"
+      }, {
+        "name" : "Sergio",
+        "value" : "Sergio"
+      }, {
+        "name" : "Remi",
+        "value" : "Remi"
+      }, {
+        "name" : "Adriano",
+        "value" : "Adriano"
+      }, {
+        "name" : "Thiago",
+        "value" : "Thiago"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.polly.enum.VoiceId",

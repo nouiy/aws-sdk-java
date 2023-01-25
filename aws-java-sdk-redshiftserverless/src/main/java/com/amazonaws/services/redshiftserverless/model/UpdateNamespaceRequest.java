@@ -27,25 +27,29 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The password of the administrator for the first database created in the namespace.
+     * The password of the administrator for the first database created in the namespace. This parameter must be updated
+     * together with <code>adminUsername</code>.
      * </p>
      */
     private String adminUserPassword;
     /**
      * <p>
-     * The username of the administrator for the first database created in the namespace.
+     * The username of the administrator for the first database created in the namespace. This parameter must be updated
+     * together with <code>adminUserPassword</code>.
      * </p>
      */
     private String adminUsername;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role to set as a default in the namespace.
+     * The Amazon Resource Name (ARN) of the IAM role to set as a default in the namespace. This parameter must be
+     * updated together with <code>iamRoles</code>.
      * </p>
      */
     private String defaultIamRoleArn;
     /**
      * <p>
-     * A list of IAM roles to associate with the namespace.
+     * A list of IAM roles to associate with the namespace. This parameter must be updated together with
+     * <code>defaultIamRoleArn</code>.
      * </p>
      */
     private java.util.List<String> iamRoles;
@@ -64,18 +68,20 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
     private java.util.List<String> logExports;
     /**
      * <p>
-     * The name of the namespace.
+     * The name of the namespace to update. You can't update the name of a namespace once it is created.
      * </p>
      */
     private String namespaceName;
 
     /**
      * <p>
-     * The password of the administrator for the first database created in the namespace.
+     * The password of the administrator for the first database created in the namespace. This parameter must be updated
+     * together with <code>adminUsername</code>.
      * </p>
      * 
      * @param adminUserPassword
-     *        The password of the administrator for the first database created in the namespace.
+     *        The password of the administrator for the first database created in the namespace. This parameter must be
+     *        updated together with <code>adminUsername</code>.
      */
 
     public void setAdminUserPassword(String adminUserPassword) {
@@ -84,10 +90,12 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The password of the administrator for the first database created in the namespace.
+     * The password of the administrator for the first database created in the namespace. This parameter must be updated
+     * together with <code>adminUsername</code>.
      * </p>
      * 
-     * @return The password of the administrator for the first database created in the namespace.
+     * @return The password of the administrator for the first database created in the namespace. This parameter must be
+     *         updated together with <code>adminUsername</code>.
      */
 
     public String getAdminUserPassword() {
@@ -96,11 +104,13 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The password of the administrator for the first database created in the namespace.
+     * The password of the administrator for the first database created in the namespace. This parameter must be updated
+     * together with <code>adminUsername</code>.
      * </p>
      * 
      * @param adminUserPassword
-     *        The password of the administrator for the first database created in the namespace.
+     *        The password of the administrator for the first database created in the namespace. This parameter must be
+     *        updated together with <code>adminUsername</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -111,11 +121,13 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The username of the administrator for the first database created in the namespace.
+     * The username of the administrator for the first database created in the namespace. This parameter must be updated
+     * together with <code>adminUserPassword</code>.
      * </p>
      * 
      * @param adminUsername
-     *        The username of the administrator for the first database created in the namespace.
+     *        The username of the administrator for the first database created in the namespace. This parameter must be
+     *        updated together with <code>adminUserPassword</code>.
      */
 
     public void setAdminUsername(String adminUsername) {
@@ -124,10 +136,12 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The username of the administrator for the first database created in the namespace.
+     * The username of the administrator for the first database created in the namespace. This parameter must be updated
+     * together with <code>adminUserPassword</code>.
      * </p>
      * 
-     * @return The username of the administrator for the first database created in the namespace.
+     * @return The username of the administrator for the first database created in the namespace. This parameter must be
+     *         updated together with <code>adminUserPassword</code>.
      */
 
     public String getAdminUsername() {
@@ -136,11 +150,13 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The username of the administrator for the first database created in the namespace.
+     * The username of the administrator for the first database created in the namespace. This parameter must be updated
+     * together with <code>adminUserPassword</code>.
      * </p>
      * 
      * @param adminUsername
-     *        The username of the administrator for the first database created in the namespace.
+     *        The username of the administrator for the first database created in the namespace. This parameter must be
+     *        updated together with <code>adminUserPassword</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -151,11 +167,13 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role to set as a default in the namespace.
+     * The Amazon Resource Name (ARN) of the IAM role to set as a default in the namespace. This parameter must be
+     * updated together with <code>iamRoles</code>.
      * </p>
      * 
      * @param defaultIamRoleArn
-     *        The Amazon Resource Name (ARN) of the IAM role to set as a default in the namespace.
+     *        The Amazon Resource Name (ARN) of the IAM role to set as a default in the namespace. This parameter must
+     *        be updated together with <code>iamRoles</code>.
      */
 
     public void setDefaultIamRoleArn(String defaultIamRoleArn) {
@@ -164,10 +182,12 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role to set as a default in the namespace.
+     * The Amazon Resource Name (ARN) of the IAM role to set as a default in the namespace. This parameter must be
+     * updated together with <code>iamRoles</code>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the IAM role to set as a default in the namespace.
+     * @return The Amazon Resource Name (ARN) of the IAM role to set as a default in the namespace. This parameter must
+     *         be updated together with <code>iamRoles</code>.
      */
 
     public String getDefaultIamRoleArn() {
@@ -176,11 +196,13 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role to set as a default in the namespace.
+     * The Amazon Resource Name (ARN) of the IAM role to set as a default in the namespace. This parameter must be
+     * updated together with <code>iamRoles</code>.
      * </p>
      * 
      * @param defaultIamRoleArn
-     *        The Amazon Resource Name (ARN) of the IAM role to set as a default in the namespace.
+     *        The Amazon Resource Name (ARN) of the IAM role to set as a default in the namespace. This parameter must
+     *        be updated together with <code>iamRoles</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -191,10 +213,12 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A list of IAM roles to associate with the namespace.
+     * A list of IAM roles to associate with the namespace. This parameter must be updated together with
+     * <code>defaultIamRoleArn</code>.
      * </p>
      * 
-     * @return A list of IAM roles to associate with the namespace.
+     * @return A list of IAM roles to associate with the namespace. This parameter must be updated together with
+     *         <code>defaultIamRoleArn</code>.
      */
 
     public java.util.List<String> getIamRoles() {
@@ -203,11 +227,13 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A list of IAM roles to associate with the namespace.
+     * A list of IAM roles to associate with the namespace. This parameter must be updated together with
+     * <code>defaultIamRoleArn</code>.
      * </p>
      * 
      * @param iamRoles
-     *        A list of IAM roles to associate with the namespace.
+     *        A list of IAM roles to associate with the namespace. This parameter must be updated together with
+     *        <code>defaultIamRoleArn</code>.
      */
 
     public void setIamRoles(java.util.Collection<String> iamRoles) {
@@ -221,7 +247,8 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A list of IAM roles to associate with the namespace.
+     * A list of IAM roles to associate with the namespace. This parameter must be updated together with
+     * <code>defaultIamRoleArn</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -230,7 +257,8 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param iamRoles
-     *        A list of IAM roles to associate with the namespace.
+     *        A list of IAM roles to associate with the namespace. This parameter must be updated together with
+     *        <code>defaultIamRoleArn</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -246,11 +274,13 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A list of IAM roles to associate with the namespace.
+     * A list of IAM roles to associate with the namespace. This parameter must be updated together with
+     * <code>defaultIamRoleArn</code>.
      * </p>
      * 
      * @param iamRoles
-     *        A list of IAM roles to associate with the namespace.
+     *        A list of IAM roles to associate with the namespace. This parameter must be updated together with
+     *        <code>defaultIamRoleArn</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -409,11 +439,11 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name of the namespace.
+     * The name of the namespace to update. You can't update the name of a namespace once it is created.
      * </p>
      * 
      * @param namespaceName
-     *        The name of the namespace.
+     *        The name of the namespace to update. You can't update the name of a namespace once it is created.
      */
 
     public void setNamespaceName(String namespaceName) {
@@ -422,10 +452,10 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name of the namespace.
+     * The name of the namespace to update. You can't update the name of a namespace once it is created.
      * </p>
      * 
-     * @return The name of the namespace.
+     * @return The name of the namespace to update. You can't update the name of a namespace once it is created.
      */
 
     public String getNamespaceName() {
@@ -434,11 +464,11 @@ public class UpdateNamespaceRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name of the namespace.
+     * The name of the namespace to update. You can't update the name of a namespace once it is created.
      * </p>
      * 
      * @param namespaceName
-     *        The name of the namespace.
+     *        The name of the namespace to update. You can't update the name of a namespace once it is created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

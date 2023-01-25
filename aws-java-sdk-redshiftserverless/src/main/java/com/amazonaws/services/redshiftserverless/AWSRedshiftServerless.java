@@ -736,7 +736,10 @@ public interface AWSRedshiftServerless {
 
     /**
      * <p>
-     * Restores a table from a snapshot to your Amazon Redshift Serverless instance.
+     * Restores a table from a snapshot to your Amazon Redshift Serverless instance. You can't use this operation to
+     * restore tables with <a
+     * href="https://docs.aws.amazon.com/redshift/latest/dg/t_Sorting_data.html#t_Sorting_data-interleaved">interleaved
+     * sort keys</a>.
      * </p>
      * 
      * @param restoreTableFromSnapshotRequest
@@ -824,7 +827,10 @@ public interface AWSRedshiftServerless {
 
     /**
      * <p>
-     * Updates a namespace with the specified settings.
+     * Updates a namespace with the specified settings. Unless required, you can't update multiple parameters in one
+     * request. For example, you must specify both <code>adminUsername</code> and <code>adminUserPassword</code> to
+     * update either field, but you can't update both <code>kmsKeyId</code> and <code>logExports</code> in a single
+     * request.
      * </p>
      * 
      * @param updateNamespaceRequest
@@ -887,7 +893,9 @@ public interface AWSRedshiftServerless {
 
     /**
      * <p>
-     * Updates a workgroup with the specified configuration settings.
+     * Updates a workgroup with the specified configuration settings. You can't update multiple parameters in one
+     * request. For example, you can update <code>baseCapacity</code> or <code>port</code> in a single request, but you
+     * can't update both in the same request.
      * </p>
      * 
      * @param updateWorkgroupRequest

@@ -33,9 +33,13 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
     private Integer baseCapacity;
     /**
      * <p>
-     * An array of parameters to set for advanced control over a database. The options are <code>datestyle</code>,
-     * <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and
-     * <code>max_query_execution_time</code>.
+     * An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
+     * <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
+     * <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
+     * monitoring metrics that let you define performance boundaries. For more information about query monitoring rules
+     * and available metrics, see <a href=
+     * "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
+     * > Query monitoring metrics for Amazon Redshift Serverless</a>.
      * </p>
      */
     private java.util.List<ConfigParameter> configParameters;
@@ -73,7 +77,7 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
     private java.util.List<String> subnetIds;
     /**
      * <p>
-     * The name of the workgroup to update.
+     * The name of the workgroup to update. You can't update the name of a workgroup once it is created.
      * </p>
      */
     private String workgroupName;
@@ -120,14 +124,22 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An array of parameters to set for advanced control over a database. The options are <code>datestyle</code>,
-     * <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and
-     * <code>max_query_execution_time</code>.
+     * An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
+     * <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
+     * <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
+     * monitoring metrics that let you define performance boundaries. For more information about query monitoring rules
+     * and available metrics, see <a href=
+     * "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
+     * > Query monitoring metrics for Amazon Redshift Serverless</a>.
      * </p>
      * 
-     * @return An array of parameters to set for advanced control over a database. The options are
-     *         <code>datestyle</code>, <code>enable_user_activity_logging</code>, <code>query_group</code>,
-     *         <code>search_path</code>, and <code>max_query_execution_time</code>.
+     * @return An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
+     *         <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
+     *         <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
+     *         monitoring metrics that let you define performance boundaries. For more information about query
+     *         monitoring rules and available metrics, see <a href=
+     *         "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
+     *         > Query monitoring metrics for Amazon Redshift Serverless</a>.
      */
 
     public java.util.List<ConfigParameter> getConfigParameters() {
@@ -136,15 +148,23 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An array of parameters to set for advanced control over a database. The options are <code>datestyle</code>,
-     * <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and
-     * <code>max_query_execution_time</code>.
+     * An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
+     * <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
+     * <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
+     * monitoring metrics that let you define performance boundaries. For more information about query monitoring rules
+     * and available metrics, see <a href=
+     * "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
+     * > Query monitoring metrics for Amazon Redshift Serverless</a>.
      * </p>
      * 
      * @param configParameters
-     *        An array of parameters to set for advanced control over a database. The options are <code>datestyle</code>
-     *        , <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and
-     *        <code>max_query_execution_time</code>.
+     *        An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
+     *        <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
+     *        <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
+     *        monitoring metrics that let you define performance boundaries. For more information about query monitoring
+     *        rules and available metrics, see <a href=
+     *        "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
+     *        > Query monitoring metrics for Amazon Redshift Serverless</a>.
      */
 
     public void setConfigParameters(java.util.Collection<ConfigParameter> configParameters) {
@@ -158,9 +178,13 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An array of parameters to set for advanced control over a database. The options are <code>datestyle</code>,
-     * <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and
-     * <code>max_query_execution_time</code>.
+     * An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
+     * <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
+     * <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
+     * monitoring metrics that let you define performance boundaries. For more information about query monitoring rules
+     * and available metrics, see <a href=
+     * "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
+     * > Query monitoring metrics for Amazon Redshift Serverless</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -169,9 +193,13 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param configParameters
-     *        An array of parameters to set for advanced control over a database. The options are <code>datestyle</code>
-     *        , <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and
-     *        <code>max_query_execution_time</code>.
+     *        An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
+     *        <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
+     *        <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
+     *        monitoring metrics that let you define performance boundaries. For more information about query monitoring
+     *        rules and available metrics, see <a href=
+     *        "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
+     *        > Query monitoring metrics for Amazon Redshift Serverless</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -187,15 +215,23 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * An array of parameters to set for advanced control over a database. The options are <code>datestyle</code>,
-     * <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and
-     * <code>max_query_execution_time</code>.
+     * An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
+     * <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
+     * <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
+     * monitoring metrics that let you define performance boundaries. For more information about query monitoring rules
+     * and available metrics, see <a href=
+     * "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
+     * > Query monitoring metrics for Amazon Redshift Serverless</a>.
      * </p>
      * 
      * @param configParameters
-     *        An array of parameters to set for advanced control over a database. The options are <code>datestyle</code>
-     *        , <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and
-     *        <code>max_query_execution_time</code>.
+     *        An array of parameters to set for advanced control over a database. The options are <code>auto_mv</code>,
+     *        <code>datestyle</code>, <code>enable_case_sensitivity_identifier</code>,
+     *        <code>enable_user_activity_logging</code>, <code>query_group</code>, <code>search_path</code>, and query
+     *        monitoring metrics that let you define performance boundaries. For more information about query monitoring
+     *        rules and available metrics, see <a href=
+     *        "https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless"
+     *        > Query monitoring metrics for Amazon Redshift Serverless</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -504,11 +540,11 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name of the workgroup to update.
+     * The name of the workgroup to update. You can't update the name of a workgroup once it is created.
      * </p>
      * 
      * @param workgroupName
-     *        The name of the workgroup to update.
+     *        The name of the workgroup to update. You can't update the name of a workgroup once it is created.
      */
 
     public void setWorkgroupName(String workgroupName) {
@@ -517,10 +553,10 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name of the workgroup to update.
+     * The name of the workgroup to update. You can't update the name of a workgroup once it is created.
      * </p>
      * 
-     * @return The name of the workgroup to update.
+     * @return The name of the workgroup to update. You can't update the name of a workgroup once it is created.
      */
 
     public String getWorkgroupName() {
@@ -529,11 +565,11 @@ public class UpdateWorkgroupRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name of the workgroup to update.
+     * The name of the workgroup to update. You can't update the name of a workgroup once it is created.
      * </p>
      * 
      * @param workgroupName
-     *        The name of the workgroup to update.
+     *        The name of the workgroup to update. You can't update the name of a workgroup once it is created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

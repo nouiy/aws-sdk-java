@@ -35,6 +35,10 @@ public class RecommendationMetricsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxInvocations").build();
     private static final MarshallingInfo<Integer> MODELLATENCY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelLatency").build();
+    private static final MarshallingInfo<Float> CPUUTILIZATION_BINDING = MarshallingInfo.builder(MarshallingType.FLOAT)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CpuUtilization").build();
+    private static final MarshallingInfo<Float> MEMORYUTILIZATION_BINDING = MarshallingInfo.builder(MarshallingType.FLOAT)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MemoryUtilization").build();
 
     private static final RecommendationMetricsMarshaller instance = new RecommendationMetricsMarshaller();
 
@@ -56,6 +60,8 @@ public class RecommendationMetricsMarshaller {
             protocolMarshaller.marshall(recommendationMetrics.getCostPerInference(), COSTPERINFERENCE_BINDING);
             protocolMarshaller.marshall(recommendationMetrics.getMaxInvocations(), MAXINVOCATIONS_BINDING);
             protocolMarshaller.marshall(recommendationMetrics.getModelLatency(), MODELLATENCY_BINDING);
+            protocolMarshaller.marshall(recommendationMetrics.getCpuUtilization(), CPUUTILIZATION_BINDING);
+            protocolMarshaller.marshall(recommendationMetrics.getMemoryUtilization(), MEMORYUTILIZATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

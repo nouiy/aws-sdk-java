@@ -102,7 +102,9 @@ public enum ResourceType {
     VerifiedAccessPolicy("verified-access-policy"),
     VerifiedAccessTrustProvider("verified-access-trust-provider"),
     VpnConnectionDeviceType("vpn-connection-device-type"),
-    VpcBlockPublicAccessExclusion("vpc-block-public-access-exclusion");
+    VpcBlockPublicAccessExclusion("vpc-block-public-access-exclusion"),
+    IpamResourceDiscovery("ipam-resource-discovery"),
+    IpamResourceDiscoveryAssociation("ipam-resource-discovery-association");
 
     private String value;
 

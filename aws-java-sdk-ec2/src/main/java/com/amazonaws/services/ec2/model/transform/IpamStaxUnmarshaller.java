@@ -110,6 +110,20 @@ public class IpamStaxUnmarshaller implements Unmarshaller<Ipam, StaxUnmarshaller
                     continue;
                 }
 
+                if (context.testExpression("defaultResourceDiscoveryId", targetDepth)) {
+                    ipam.setDefaultResourceDiscoveryId(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("defaultResourceDiscoveryAssociationId", targetDepth)) {
+                    ipam.setDefaultResourceDiscoveryAssociationId(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("resourceDiscoveryAssociationCount", targetDepth)) {
+                    ipam.setResourceDiscoveryAssociationCount(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return ipam;

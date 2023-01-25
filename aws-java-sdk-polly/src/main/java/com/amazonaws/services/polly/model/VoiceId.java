@@ -98,7 +98,12 @@ public enum VoiceId {
     Ida("Ida"),
     Suvi("Suvi"),
     Ola("Ola"),
-    Hala("Hala");
+    Hala("Hala"),
+    Andres("Andres"),
+    Sergio("Sergio"),
+    Remi("Remi"),
+    Adriano("Adriano"),
+    Thiago("Thiago");
 
     private String value;
 

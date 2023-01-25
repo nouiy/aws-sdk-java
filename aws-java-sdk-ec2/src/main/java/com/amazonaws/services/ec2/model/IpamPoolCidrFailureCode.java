@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum IpamPoolCidrFailureCode {
 
-    CidrNotAvailable("cidr-not-available");
+    CidrNotAvailable("cidr-not-available"),
+    LimitExceeded("limit-exceeded");
 
     private String value;
 

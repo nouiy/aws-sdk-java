@@ -47,7 +47,7 @@ public class IpamScope implements Serializable, Cloneable {
     private String ipamScopeId;
     /**
      * <p>
-     * The ARN of the scope.
+     * The Amazon Resource Name (ARN) of the scope.
      * </p>
      */
     private String ipamScopeArn;
@@ -185,11 +185,11 @@ public class IpamScope implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the scope.
+     * The Amazon Resource Name (ARN) of the scope.
      * </p>
      * 
      * @param ipamScopeArn
-     *        The ARN of the scope.
+     *        The Amazon Resource Name (ARN) of the scope.
      */
 
     public void setIpamScopeArn(String ipamScopeArn) {
@@ -198,10 +198,10 @@ public class IpamScope implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the scope.
+     * The Amazon Resource Name (ARN) of the scope.
      * </p>
      * 
-     * @return The ARN of the scope.
+     * @return The Amazon Resource Name (ARN) of the scope.
      */
 
     public String getIpamScopeArn() {
@@ -210,11 +210,11 @@ public class IpamScope implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the scope.
+     * The Amazon Resource Name (ARN) of the scope.
      * </p>
      * 
      * @param ipamScopeArn
-     *        The ARN of the scope.
+     *        The Amazon Resource Name (ARN) of the scope.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

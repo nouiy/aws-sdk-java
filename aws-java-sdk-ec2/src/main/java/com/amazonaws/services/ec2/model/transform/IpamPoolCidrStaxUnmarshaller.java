@@ -57,6 +57,16 @@ public class IpamPoolCidrStaxUnmarshaller implements Unmarshaller<IpamPoolCidr, 
                     ipamPoolCidr.setFailureReason(IpamPoolCidrFailureReasonStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("ipamPoolCidrId", targetDepth)) {
+                    ipamPoolCidr.setIpamPoolCidrId(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("netmaskLength", targetDepth)) {
+                    ipamPoolCidr.setNetmaskLength(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return ipamPoolCidr;

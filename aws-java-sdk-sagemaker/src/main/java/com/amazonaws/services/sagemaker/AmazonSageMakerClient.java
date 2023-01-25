@@ -12673,6 +12673,8 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * 
      * @param listInferenceRecommendationsJobStepsRequest
      * @return Result of the ListInferenceRecommendationsJobSteps operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
      * @sample AmazonSageMaker.ListInferenceRecommendationsJobSteps
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListInferenceRecommendationsJobSteps"
      *      target="_top">AWS API Documentation</a>

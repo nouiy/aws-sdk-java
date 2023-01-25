@@ -78,6 +78,10 @@ public class RecommendationJobContainerConfigJsonUnmarshaller implements Unmarsh
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("DataInputConfig", targetDepth)) {
+                    context.nextToken();
+                    recommendationJobContainerConfig.setDataInputConfig(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

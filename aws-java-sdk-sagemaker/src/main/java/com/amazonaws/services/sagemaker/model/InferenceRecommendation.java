@@ -46,6 +46,12 @@ public class InferenceRecommendation implements Serializable, Cloneable, Structu
      * </p>
      */
     private ModelConfiguration modelConfiguration;
+    /**
+     * <p>
+     * The recommendation ID which uniquely identifies each recommendation.
+     * </p>
+     */
+    private String recommendationId;
 
     /**
      * <p>
@@ -168,6 +174,46 @@ public class InferenceRecommendation implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * The recommendation ID which uniquely identifies each recommendation.
+     * </p>
+     * 
+     * @param recommendationId
+     *        The recommendation ID which uniquely identifies each recommendation.
+     */
+
+    public void setRecommendationId(String recommendationId) {
+        this.recommendationId = recommendationId;
+    }
+
+    /**
+     * <p>
+     * The recommendation ID which uniquely identifies each recommendation.
+     * </p>
+     * 
+     * @return The recommendation ID which uniquely identifies each recommendation.
+     */
+
+    public String getRecommendationId() {
+        return this.recommendationId;
+    }
+
+    /**
+     * <p>
+     * The recommendation ID which uniquely identifies each recommendation.
+     * </p>
+     * 
+     * @param recommendationId
+     *        The recommendation ID which uniquely identifies each recommendation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InferenceRecommendation withRecommendationId(String recommendationId) {
+        setRecommendationId(recommendationId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -184,7 +230,9 @@ public class InferenceRecommendation implements Serializable, Cloneable, Structu
         if (getEndpointConfiguration() != null)
             sb.append("EndpointConfiguration: ").append(getEndpointConfiguration()).append(",");
         if (getModelConfiguration() != null)
-            sb.append("ModelConfiguration: ").append(getModelConfiguration());
+            sb.append("ModelConfiguration: ").append(getModelConfiguration()).append(",");
+        if (getRecommendationId() != null)
+            sb.append("RecommendationId: ").append(getRecommendationId());
         sb.append("}");
         return sb.toString();
     }
@@ -211,6 +259,10 @@ public class InferenceRecommendation implements Serializable, Cloneable, Structu
             return false;
         if (other.getModelConfiguration() != null && other.getModelConfiguration().equals(this.getModelConfiguration()) == false)
             return false;
+        if (other.getRecommendationId() == null ^ this.getRecommendationId() == null)
+            return false;
+        if (other.getRecommendationId() != null && other.getRecommendationId().equals(this.getRecommendationId()) == false)
+            return false;
         return true;
     }
 
@@ -222,6 +274,7 @@ public class InferenceRecommendation implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getMetrics() == null) ? 0 : getMetrics().hashCode());
         hashCode = prime * hashCode + ((getEndpointConfiguration() == null) ? 0 : getEndpointConfiguration().hashCode());
         hashCode = prime * hashCode + ((getModelConfiguration() == null) ? 0 : getModelConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getRecommendationId() == null) ? 0 : getRecommendationId().hashCode());
         return hashCode;
     }
 

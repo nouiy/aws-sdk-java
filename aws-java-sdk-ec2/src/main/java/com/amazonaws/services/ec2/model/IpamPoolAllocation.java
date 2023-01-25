@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * In IPAM, an allocation is a CIDR assignment from an IPAM pool to another resource or IPAM pool.
+ * In IPAM, an allocation is a CIDR assignment from an IPAM pool to another IPAM pool or to a resource.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/IpamPoolAllocation" target="_top">AWS API

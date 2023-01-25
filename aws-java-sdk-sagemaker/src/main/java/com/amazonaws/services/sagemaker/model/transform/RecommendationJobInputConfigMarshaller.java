@@ -46,6 +46,8 @@ public class RecommendationJobInputConfigMarshaller {
             .marshallLocationName("Endpoints").build();
     private static final MarshallingInfo<StructuredPojo> VPCCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VpcConfig").build();
+    private static final MarshallingInfo<String> MODELNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ModelName").build();
 
     private static final RecommendationJobInputConfigMarshaller instance = new RecommendationJobInputConfigMarshaller();
 
@@ -72,6 +74,7 @@ public class RecommendationJobInputConfigMarshaller {
             protocolMarshaller.marshall(recommendationJobInputConfig.getContainerConfig(), CONTAINERCONFIG_BINDING);
             protocolMarshaller.marshall(recommendationJobInputConfig.getEndpoints(), ENDPOINTS_BINDING);
             protocolMarshaller.marshall(recommendationJobInputConfig.getVpcConfig(), VPCCONFIG_BINDING);
+            protocolMarshaller.marshall(recommendationJobInputConfig.getModelName(), MODELNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

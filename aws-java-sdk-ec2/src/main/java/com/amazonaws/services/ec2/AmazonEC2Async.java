@@ -574,8 +574,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Allocate a CIDR from an IPAM pool. In IPAM, an allocation is a CIDR assignment from an IPAM pool to another
-     * resource or IPAM pool. For more information, see <a
+     * Allocate a CIDR from an IPAM pool. In IPAM, an allocation is a CIDR assignment from an IPAM pool to another IPAM
+     * pool or to a resource. For more information, see <a
      * href="https://docs.aws.amazon.com/vpc/latest/ipam/allocate-cidrs-ipam.html">Allocate CIDRs</a> in the <i>Amazon
      * VPC IPAM User Guide</i>.
      * </p>
@@ -590,8 +590,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Allocate a CIDR from an IPAM pool. In IPAM, an allocation is a CIDR assignment from an IPAM pool to another
-     * resource or IPAM pool. For more information, see <a
+     * Allocate a CIDR from an IPAM pool. In IPAM, an allocation is a CIDR assignment from an IPAM pool to another IPAM
+     * pool or to a resource. For more information, see <a
      * href="https://docs.aws.amazon.com/vpc/latest/ipam/allocate-cidrs-ipam.html">Allocate CIDRs</a> in the <i>Amazon
      * VPC IPAM User Guide</i>.
      * </p>
@@ -1155,6 +1155,43 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<AssociateInstanceEventWindowResult> associateInstanceEventWindowAsync(
             AssociateInstanceEventWindowRequest associateInstanceEventWindowRequest,
             com.amazonaws.handlers.AsyncHandler<AssociateInstanceEventWindowRequest, AssociateInstanceEventWindowResult> asyncHandler);
+
+    /**
+     * <p>
+     * Associates an IPAM resource discovery with an Amazon VPC IPAM. A resource discovery is an IPAM component that
+     * enables IPAM Service to manage and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param associateIpamResourceDiscoveryRequest
+     * @return A Java Future containing the result of the AssociateIpamResourceDiscovery operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.AssociateIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateIpamResourceDiscoveryResult> associateIpamResourceDiscoveryAsync(
+            AssociateIpamResourceDiscoveryRequest associateIpamResourceDiscoveryRequest);
+
+    /**
+     * <p>
+     * Associates an IPAM resource discovery with an Amazon VPC IPAM. A resource discovery is an IPAM component that
+     * enables IPAM Service to manage and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param associateIpamResourceDiscoveryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateIpamResourceDiscovery operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.AssociateIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateIpamResourceDiscoveryResult> associateIpamResourceDiscoveryAsync(
+            AssociateIpamResourceDiscoveryRequest associateIpamResourceDiscoveryRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateIpamResourceDiscoveryRequest, AssociateIpamResourceDiscoveryResult> asyncHandler);
 
     /**
      * <p>
@@ -3869,6 +3906,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<CreateIpamPoolResult> createIpamPoolAsync(CreateIpamPoolRequest createIpamPoolRequest,
             com.amazonaws.handlers.AsyncHandler<CreateIpamPoolRequest, CreateIpamPoolResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates an IPAM resource discovery. A resource discovery is an IPAM component that enables IPAM Service to manage
+     * and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param createIpamResourceDiscoveryRequest
+     * @return A Java Future containing the result of the CreateIpamResourceDiscovery operation returned by the service.
+     * @sample AmazonEC2Async.CreateIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIpamResourceDiscoveryResult> createIpamResourceDiscoveryAsync(
+            CreateIpamResourceDiscoveryRequest createIpamResourceDiscoveryRequest);
+
+    /**
+     * <p>
+     * Creates an IPAM resource discovery. A resource discovery is an IPAM component that enables IPAM Service to manage
+     * and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param createIpamResourceDiscoveryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateIpamResourceDiscovery operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.CreateIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateIpamResourceDiscoveryResult> createIpamResourceDiscoveryAsync(
+            CreateIpamResourceDiscoveryRequest createIpamResourceDiscoveryRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateIpamResourceDiscoveryRequest, CreateIpamResourceDiscoveryResult> asyncHandler);
 
     /**
      * <p>
@@ -7622,6 +7694,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<DeleteIpamPoolResult> deleteIpamPoolAsync(DeleteIpamPoolRequest deleteIpamPoolRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteIpamPoolRequest, DeleteIpamPoolResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes an IPAM resource discovery. A resource discovery is an IPAM component that enables IPAM Service to manage
+     * and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param deleteIpamResourceDiscoveryRequest
+     * @return A Java Future containing the result of the DeleteIpamResourceDiscovery operation returned by the service.
+     * @sample AmazonEC2Async.DeleteIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIpamResourceDiscoveryResult> deleteIpamResourceDiscoveryAsync(
+            DeleteIpamResourceDiscoveryRequest deleteIpamResourceDiscoveryRequest);
+
+    /**
+     * <p>
+     * Deletes an IPAM resource discovery. A resource discovery is an IPAM component that enables IPAM Service to manage
+     * and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param deleteIpamResourceDiscoveryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteIpamResourceDiscovery operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DeleteIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteIpamResourceDiscoveryResult> deleteIpamResourceDiscoveryAsync(
+            DeleteIpamResourceDiscoveryRequest deleteIpamResourceDiscoveryRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteIpamResourceDiscoveryRequest, DeleteIpamResourceDiscoveryResult> asyncHandler);
 
     /**
      * <p>
@@ -12658,6 +12765,80 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<DescribeIpamPoolsResult> describeIpamPoolsAsync(DescribeIpamPoolsRequest describeIpamPoolsRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeIpamPoolsRequest, DescribeIpamPoolsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes IPAM resource discoveries. A resource discovery is an IPAM component that enables IPAM Service to
+     * manage and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param describeIpamResourceDiscoveriesRequest
+     * @return A Java Future containing the result of the DescribeIpamResourceDiscoveries operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.DescribeIpamResourceDiscoveries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamResourceDiscoveries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIpamResourceDiscoveriesResult> describeIpamResourceDiscoveriesAsync(
+            DescribeIpamResourceDiscoveriesRequest describeIpamResourceDiscoveriesRequest);
+
+    /**
+     * <p>
+     * Describes IPAM resource discoveries. A resource discovery is an IPAM component that enables IPAM Service to
+     * manage and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param describeIpamResourceDiscoveriesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeIpamResourceDiscoveries operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.DescribeIpamResourceDiscoveries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamResourceDiscoveries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIpamResourceDiscoveriesResult> describeIpamResourceDiscoveriesAsync(
+            DescribeIpamResourceDiscoveriesRequest describeIpamResourceDiscoveriesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeIpamResourceDiscoveriesRequest, DescribeIpamResourceDiscoveriesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes resource discovery association with an Amazon VPC IPAM. An associated resource discovery is a resource
+     * discovery that has been associated with an IPAM..
+     * </p>
+     * 
+     * @param describeIpamResourceDiscoveryAssociationsRequest
+     * @return A Java Future containing the result of the DescribeIpamResourceDiscoveryAssociations operation returned
+     *         by the service.
+     * @sample AmazonEC2Async.DescribeIpamResourceDiscoveryAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamResourceDiscoveryAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIpamResourceDiscoveryAssociationsResult> describeIpamResourceDiscoveryAssociationsAsync(
+            DescribeIpamResourceDiscoveryAssociationsRequest describeIpamResourceDiscoveryAssociationsRequest);
+
+    /**
+     * <p>
+     * Describes resource discovery association with an Amazon VPC IPAM. An associated resource discovery is a resource
+     * discovery that has been associated with an IPAM..
+     * </p>
+     * 
+     * @param describeIpamResourceDiscoveryAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeIpamResourceDiscoveryAssociations operation returned
+     *         by the service.
+     * @sample AmazonEC2AsyncHandler.DescribeIpamResourceDiscoveryAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamResourceDiscoveryAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIpamResourceDiscoveryAssociationsResult> describeIpamResourceDiscoveryAssociationsAsync(
+            DescribeIpamResourceDiscoveryAssociationsRequest describeIpamResourceDiscoveryAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeIpamResourceDiscoveryAssociationsRequest, DescribeIpamResourceDiscoveryAssociationsResult> asyncHandler);
 
     /**
      * <p>
@@ -17862,6 +18043,43 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Disassociates a resource discovery from an Amazon VPC IPAM. A resource discovery is an IPAM component that
+     * enables IPAM Service to manage and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param disassociateIpamResourceDiscoveryRequest
+     * @return A Java Future containing the result of the DisassociateIpamResourceDiscovery operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.DisassociateIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateIpamResourceDiscoveryResult> disassociateIpamResourceDiscoveryAsync(
+            DisassociateIpamResourceDiscoveryRequest disassociateIpamResourceDiscoveryRequest);
+
+    /**
+     * <p>
+     * Disassociates a resource discovery from an Amazon VPC IPAM. A resource discovery is an IPAM component that
+     * enables IPAM Service to manage and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param disassociateIpamResourceDiscoveryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociateIpamResourceDiscovery operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.DisassociateIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateIpamResourceDiscoveryResult> disassociateIpamResourceDiscoveryAsync(
+            DisassociateIpamResourceDiscoveryRequest disassociateIpamResourceDiscoveryRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociateIpamResourceDiscoveryRequest, DisassociateIpamResourceDiscoveryResult> asyncHandler);
+
+    /**
+     * <p>
      * Disassociates a subnet or gateway from a route table.
      * </p>
      * <p>
@@ -19665,6 +19883,82 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Gets IPAM discovered accounts. A discovered account is an Amazon Web Services account that is monitored under a
+     * resource discovery. If you have integrated IPAM with Amazon Web Services Organizations, all accounts in the
+     * organization are discovered accounts. Only the IPAM account can get all discovered accounts in the organization.
+     * </p>
+     * 
+     * @param getIpamDiscoveredAccountsRequest
+     * @return A Java Future containing the result of the GetIpamDiscoveredAccounts operation returned by the service.
+     * @sample AmazonEC2Async.GetIpamDiscoveredAccounts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamDiscoveredAccounts" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetIpamDiscoveredAccountsResult> getIpamDiscoveredAccountsAsync(
+            GetIpamDiscoveredAccountsRequest getIpamDiscoveredAccountsRequest);
+
+    /**
+     * <p>
+     * Gets IPAM discovered accounts. A discovered account is an Amazon Web Services account that is monitored under a
+     * resource discovery. If you have integrated IPAM with Amazon Web Services Organizations, all accounts in the
+     * organization are discovered accounts. Only the IPAM account can get all discovered accounts in the organization.
+     * </p>
+     * 
+     * @param getIpamDiscoveredAccountsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetIpamDiscoveredAccounts operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.GetIpamDiscoveredAccounts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamDiscoveredAccounts" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetIpamDiscoveredAccountsResult> getIpamDiscoveredAccountsAsync(
+            GetIpamDiscoveredAccountsRequest getIpamDiscoveredAccountsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetIpamDiscoveredAccountsRequest, GetIpamDiscoveredAccountsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the resource CIDRs that are monitored as part of a resource discovery. A discovered resource is a
+     * resource CIDR monitored under a resource discovery. The following resources can be discovered: VPCs, Public IPv4
+     * pools, VPC subnets, and Elastic IP addresses.
+     * </p>
+     * 
+     * @param getIpamDiscoveredResourceCidrsRequest
+     * @return A Java Future containing the result of the GetIpamDiscoveredResourceCidrs operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.GetIpamDiscoveredResourceCidrs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamDiscoveredResourceCidrs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetIpamDiscoveredResourceCidrsResult> getIpamDiscoveredResourceCidrsAsync(
+            GetIpamDiscoveredResourceCidrsRequest getIpamDiscoveredResourceCidrsRequest);
+
+    /**
+     * <p>
+     * Returns the resource CIDRs that are monitored as part of a resource discovery. A discovered resource is a
+     * resource CIDR monitored under a resource discovery. The following resources can be discovered: VPCs, Public IPv4
+     * pools, VPC subnets, and Elastic IP addresses.
+     * </p>
+     * 
+     * @param getIpamDiscoveredResourceCidrsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetIpamDiscoveredResourceCidrs operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.GetIpamDiscoveredResourceCidrs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamDiscoveredResourceCidrs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetIpamDiscoveredResourceCidrsResult> getIpamDiscoveredResourceCidrsAsync(
+            GetIpamDiscoveredResourceCidrsRequest getIpamDiscoveredResourceCidrsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetIpamDiscoveredResourceCidrsRequest, GetIpamDiscoveredResourceCidrsResult> asyncHandler);
+
+    /**
+     * <p>
      * Get a list of all the CIDR allocations in an IPAM pool.
      * </p>
      * 
@@ -19727,7 +20021,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Get information about the resources in a scope.
+     * Returns resource CIDRs managed by IPAM in a given scope. If an IPAM is associated with more than one resource
+     * discovery, the resource CIDRs across all of the resource discoveries is returned. A resource discovery is an IPAM
+     * component that enables IPAM Service to manage and monitor resources that belong to the owning account.
      * </p>
      * 
      * @param getIpamResourceCidrsRequest
@@ -19740,7 +20036,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Get information about the resources in a scope.
+     * Returns resource CIDRs managed by IPAM in a given scope. If an IPAM is associated with more than one resource
+     * discovery, the resource CIDRs across all of the resource discoveries is returned. A resource discovery is an IPAM
+     * component that enables IPAM Service to manage and monitor resources that belong to the owning account.
      * </p>
      * 
      * @param getIpamResourceCidrsRequest
@@ -22220,6 +22518,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Modifies a resource discovery. A resource discovery is an IPAM component that enables IPAM Service to manage and
+     * monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param modifyIpamResourceDiscoveryRequest
+     * @return A Java Future containing the result of the ModifyIpamResourceDiscovery operation returned by the service.
+     * @sample AmazonEC2Async.ModifyIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyIpamResourceDiscoveryResult> modifyIpamResourceDiscoveryAsync(
+            ModifyIpamResourceDiscoveryRequest modifyIpamResourceDiscoveryRequest);
+
+    /**
+     * <p>
+     * Modifies a resource discovery. A resource discovery is an IPAM component that enables IPAM Service to manage and
+     * monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param modifyIpamResourceDiscoveryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyIpamResourceDiscovery operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.ModifyIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyIpamResourceDiscoveryResult> modifyIpamResourceDiscoveryAsync(
+            ModifyIpamResourceDiscoveryRequest modifyIpamResourceDiscoveryRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyIpamResourceDiscoveryRequest, ModifyIpamResourceDiscoveryResult> asyncHandler);
+
+    /**
+     * <p>
      * Modify an IPAM scope.
      * </p>
      * 
@@ -24161,10 +24494,10 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Move an BYOIP IPv4 CIDR to IPAM from a public IPv4 pool.
+     * Move a BYOIPv4 CIDR to IPAM from a public IPv4 pool.
      * </p>
      * <p>
-     * If you already have an IPv4 BYOIP CIDR with Amazon Web Services, you can move the CIDR to IPAM from a public IPv4
+     * If you already have a BYOIPv4 CIDR with Amazon Web Services, you can move the CIDR to IPAM from a public IPv4
      * pool. You cannot move an IPv6 CIDR to IPAM. If you are bringing a new IP address to Amazon Web Services for the
      * first time, complete the steps in <a
      * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoip-ipam.html">Tutorial: BYOIP address CIDRs to
@@ -24181,10 +24514,10 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Move an BYOIP IPv4 CIDR to IPAM from a public IPv4 pool.
+     * Move a BYOIPv4 CIDR to IPAM from a public IPv4 pool.
      * </p>
      * <p>
-     * If you already have an IPv4 BYOIP CIDR with Amazon Web Services, you can move the CIDR to IPAM from a public IPv4
+     * If you already have a BYOIPv4 CIDR with Amazon Web Services, you can move the CIDR to IPAM from a public IPv4
      * pool. You cannot move an IPv6 CIDR to IPAM. If you are bringing a new IP address to Amazon Web Services for the
      * first time, complete the steps in <a
      * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoip-ipam.html">Tutorial: BYOIP address CIDRs to

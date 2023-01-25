@@ -32,6 +32,8 @@ public class ModelConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InferenceSpecificationName").build();
     private static final MarshallingInfo<List> ENVIRONMENTPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnvironmentParameters").build();
+    private static final MarshallingInfo<String> COMPILATIONJOBNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CompilationJobName").build();
 
     private static final ModelConfigurationMarshaller instance = new ModelConfigurationMarshaller();
 
@@ -51,6 +53,7 @@ public class ModelConfigurationMarshaller {
         try {
             protocolMarshaller.marshall(modelConfiguration.getInferenceSpecificationName(), INFERENCESPECIFICATIONNAME_BINDING);
             protocolMarshaller.marshall(modelConfiguration.getEnvironmentParameters(), ENVIRONMENTPARAMETERS_BINDING);
+            protocolMarshaller.marshall(modelConfiguration.getCompilationJobName(), COMPILATIONJOBNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

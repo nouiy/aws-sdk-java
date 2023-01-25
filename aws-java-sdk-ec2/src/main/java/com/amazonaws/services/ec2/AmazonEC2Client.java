@@ -975,8 +975,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Allocate a CIDR from an IPAM pool. In IPAM, an allocation is a CIDR assignment from an IPAM pool to another
-     * resource or IPAM pool. For more information, see <a
+     * Allocate a CIDR from an IPAM pool. In IPAM, an allocation is a CIDR assignment from an IPAM pool to another IPAM
+     * pool or to a resource. For more information, see <a
      * href="https://docs.aws.amazon.com/vpc/latest/ipam/allocate-cidrs-ipam.html">Allocate CIDRs</a> in the <i>Amazon
      * VPC IPAM User Guide</i>.
      * </p>
@@ -1656,6 +1656,63 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<AssociateInstanceEventWindowResult> responseHandler = new StaxResponseHandler<AssociateInstanceEventWindowResult>(
                     new AssociateInstanceEventWindowResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Associates an IPAM resource discovery with an Amazon VPC IPAM. A resource discovery is an IPAM component that
+     * enables IPAM Service to manage and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param associateIpamResourceDiscoveryRequest
+     * @return Result of the AssociateIpamResourceDiscovery operation returned by the service.
+     * @sample AmazonEC2.AssociateIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public AssociateIpamResourceDiscoveryResult associateIpamResourceDiscovery(AssociateIpamResourceDiscoveryRequest request) {
+        request = beforeClientExecution(request);
+        return executeAssociateIpamResourceDiscovery(request);
+    }
+
+    @SdkInternalApi
+    final AssociateIpamResourceDiscoveryResult executeAssociateIpamResourceDiscovery(AssociateIpamResourceDiscoveryRequest associateIpamResourceDiscoveryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(associateIpamResourceDiscoveryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AssociateIpamResourceDiscoveryRequest> request = null;
+        Response<AssociateIpamResourceDiscoveryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AssociateIpamResourceDiscoveryRequestMarshaller().marshall(super.beforeMarshalling(associateIpamResourceDiscoveryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AssociateIpamResourceDiscovery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<AssociateIpamResourceDiscoveryResult> responseHandler = new StaxResponseHandler<AssociateIpamResourceDiscoveryResult>(
+                    new AssociateIpamResourceDiscoveryResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -5089,6 +5146,63 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<CreateIpamPoolResult> responseHandler = new StaxResponseHandler<CreateIpamPoolResult>(
                     new CreateIpamPoolResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates an IPAM resource discovery. A resource discovery is an IPAM component that enables IPAM Service to manage
+     * and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param createIpamResourceDiscoveryRequest
+     * @return Result of the CreateIpamResourceDiscovery operation returned by the service.
+     * @sample AmazonEC2.CreateIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateIpamResourceDiscoveryResult createIpamResourceDiscovery(CreateIpamResourceDiscoveryRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateIpamResourceDiscovery(request);
+    }
+
+    @SdkInternalApi
+    final CreateIpamResourceDiscoveryResult executeCreateIpamResourceDiscovery(CreateIpamResourceDiscoveryRequest createIpamResourceDiscoveryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createIpamResourceDiscoveryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateIpamResourceDiscoveryRequest> request = null;
+        Response<CreateIpamResourceDiscoveryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateIpamResourceDiscoveryRequestMarshaller().marshall(super.beforeMarshalling(createIpamResourceDiscoveryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateIpamResourceDiscovery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateIpamResourceDiscoveryResult> responseHandler = new StaxResponseHandler<CreateIpamResourceDiscoveryResult>(
+                    new CreateIpamResourceDiscoveryResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -9921,6 +10035,63 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<DeleteIpamPoolResult> responseHandler = new StaxResponseHandler<DeleteIpamPoolResult>(
                     new DeleteIpamPoolResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes an IPAM resource discovery. A resource discovery is an IPAM component that enables IPAM Service to manage
+     * and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param deleteIpamResourceDiscoveryRequest
+     * @return Result of the DeleteIpamResourceDiscovery operation returned by the service.
+     * @sample AmazonEC2.DeleteIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteIpamResourceDiscoveryResult deleteIpamResourceDiscovery(DeleteIpamResourceDiscoveryRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteIpamResourceDiscovery(request);
+    }
+
+    @SdkInternalApi
+    final DeleteIpamResourceDiscoveryResult executeDeleteIpamResourceDiscovery(DeleteIpamResourceDiscoveryRequest deleteIpamResourceDiscoveryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteIpamResourceDiscoveryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteIpamResourceDiscoveryRequest> request = null;
+        Response<DeleteIpamResourceDiscoveryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteIpamResourceDiscoveryRequestMarshaller().marshall(super.beforeMarshalling(deleteIpamResourceDiscoveryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteIpamResourceDiscovery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteIpamResourceDiscoveryResult> responseHandler = new StaxResponseHandler<DeleteIpamResourceDiscoveryResult>(
+                    new DeleteIpamResourceDiscoveryResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -17125,6 +17296,123 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Describes IPAM resource discoveries. A resource discovery is an IPAM component that enables IPAM Service to
+     * manage and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param describeIpamResourceDiscoveriesRequest
+     * @return Result of the DescribeIpamResourceDiscoveries operation returned by the service.
+     * @sample AmazonEC2.DescribeIpamResourceDiscoveries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamResourceDiscoveries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeIpamResourceDiscoveriesResult describeIpamResourceDiscoveries(DescribeIpamResourceDiscoveriesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeIpamResourceDiscoveries(request);
+    }
+
+    @SdkInternalApi
+    final DescribeIpamResourceDiscoveriesResult executeDescribeIpamResourceDiscoveries(
+            DescribeIpamResourceDiscoveriesRequest describeIpamResourceDiscoveriesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeIpamResourceDiscoveriesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeIpamResourceDiscoveriesRequest> request = null;
+        Response<DescribeIpamResourceDiscoveriesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeIpamResourceDiscoveriesRequestMarshaller().marshall(super.beforeMarshalling(describeIpamResourceDiscoveriesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeIpamResourceDiscoveries");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeIpamResourceDiscoveriesResult> responseHandler = new StaxResponseHandler<DescribeIpamResourceDiscoveriesResult>(
+                    new DescribeIpamResourceDiscoveriesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Describes resource discovery association with an Amazon VPC IPAM. An associated resource discovery is a resource
+     * discovery that has been associated with an IPAM..
+     * </p>
+     * 
+     * @param describeIpamResourceDiscoveryAssociationsRequest
+     * @return Result of the DescribeIpamResourceDiscoveryAssociations operation returned by the service.
+     * @sample AmazonEC2.DescribeIpamResourceDiscoveryAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamResourceDiscoveryAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeIpamResourceDiscoveryAssociationsResult describeIpamResourceDiscoveryAssociations(DescribeIpamResourceDiscoveryAssociationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeIpamResourceDiscoveryAssociations(request);
+    }
+
+    @SdkInternalApi
+    final DescribeIpamResourceDiscoveryAssociationsResult executeDescribeIpamResourceDiscoveryAssociations(
+            DescribeIpamResourceDiscoveryAssociationsRequest describeIpamResourceDiscoveryAssociationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeIpamResourceDiscoveryAssociationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeIpamResourceDiscoveryAssociationsRequest> request = null;
+        Response<DescribeIpamResourceDiscoveryAssociationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeIpamResourceDiscoveryAssociationsRequestMarshaller().marshall(super
+                        .beforeMarshalling(describeIpamResourceDiscoveryAssociationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeIpamResourceDiscoveryAssociations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeIpamResourceDiscoveryAssociationsResult> responseHandler = new StaxResponseHandler<DescribeIpamResourceDiscoveryAssociationsResult>(
+                    new DescribeIpamResourceDiscoveryAssociationsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Get information about your IPAM scopes.
      * </p>
      * 
@@ -24091,6 +24379,64 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Disassociates a resource discovery from an Amazon VPC IPAM. A resource discovery is an IPAM component that
+     * enables IPAM Service to manage and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param disassociateIpamResourceDiscoveryRequest
+     * @return Result of the DisassociateIpamResourceDiscovery operation returned by the service.
+     * @sample AmazonEC2.DisassociateIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DisassociateIpamResourceDiscoveryResult disassociateIpamResourceDiscovery(DisassociateIpamResourceDiscoveryRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisassociateIpamResourceDiscovery(request);
+    }
+
+    @SdkInternalApi
+    final DisassociateIpamResourceDiscoveryResult executeDisassociateIpamResourceDiscovery(
+            DisassociateIpamResourceDiscoveryRequest disassociateIpamResourceDiscoveryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disassociateIpamResourceDiscoveryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisassociateIpamResourceDiscoveryRequest> request = null;
+        Response<DisassociateIpamResourceDiscoveryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisassociateIpamResourceDiscoveryRequestMarshaller().marshall(super.beforeMarshalling(disassociateIpamResourceDiscoveryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisassociateIpamResourceDiscovery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DisassociateIpamResourceDiscoveryResult> responseHandler = new StaxResponseHandler<DisassociateIpamResourceDiscoveryResult>(
+                    new DisassociateIpamResourceDiscoveryResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Disassociates a subnet or gateway from a route table.
      * </p>
      * <p>
@@ -26634,6 +26980,122 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Gets IPAM discovered accounts. A discovered account is an Amazon Web Services account that is monitored under a
+     * resource discovery. If you have integrated IPAM with Amazon Web Services Organizations, all accounts in the
+     * organization are discovered accounts. Only the IPAM account can get all discovered accounts in the organization.
+     * </p>
+     * 
+     * @param getIpamDiscoveredAccountsRequest
+     * @return Result of the GetIpamDiscoveredAccounts operation returned by the service.
+     * @sample AmazonEC2.GetIpamDiscoveredAccounts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamDiscoveredAccounts" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetIpamDiscoveredAccountsResult getIpamDiscoveredAccounts(GetIpamDiscoveredAccountsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetIpamDiscoveredAccounts(request);
+    }
+
+    @SdkInternalApi
+    final GetIpamDiscoveredAccountsResult executeGetIpamDiscoveredAccounts(GetIpamDiscoveredAccountsRequest getIpamDiscoveredAccountsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getIpamDiscoveredAccountsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetIpamDiscoveredAccountsRequest> request = null;
+        Response<GetIpamDiscoveredAccountsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetIpamDiscoveredAccountsRequestMarshaller().marshall(super.beforeMarshalling(getIpamDiscoveredAccountsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetIpamDiscoveredAccounts");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetIpamDiscoveredAccountsResult> responseHandler = new StaxResponseHandler<GetIpamDiscoveredAccountsResult>(
+                    new GetIpamDiscoveredAccountsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns the resource CIDRs that are monitored as part of a resource discovery. A discovered resource is a
+     * resource CIDR monitored under a resource discovery. The following resources can be discovered: VPCs, Public IPv4
+     * pools, VPC subnets, and Elastic IP addresses.
+     * </p>
+     * 
+     * @param getIpamDiscoveredResourceCidrsRequest
+     * @return Result of the GetIpamDiscoveredResourceCidrs operation returned by the service.
+     * @sample AmazonEC2.GetIpamDiscoveredResourceCidrs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamDiscoveredResourceCidrs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetIpamDiscoveredResourceCidrsResult getIpamDiscoveredResourceCidrs(GetIpamDiscoveredResourceCidrsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetIpamDiscoveredResourceCidrs(request);
+    }
+
+    @SdkInternalApi
+    final GetIpamDiscoveredResourceCidrsResult executeGetIpamDiscoveredResourceCidrs(GetIpamDiscoveredResourceCidrsRequest getIpamDiscoveredResourceCidrsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getIpamDiscoveredResourceCidrsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetIpamDiscoveredResourceCidrsRequest> request = null;
+        Response<GetIpamDiscoveredResourceCidrsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetIpamDiscoveredResourceCidrsRequestMarshaller().marshall(super.beforeMarshalling(getIpamDiscoveredResourceCidrsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetIpamDiscoveredResourceCidrs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetIpamDiscoveredResourceCidrsResult> responseHandler = new StaxResponseHandler<GetIpamDiscoveredResourceCidrsResult>(
+                    new GetIpamDiscoveredResourceCidrsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Get a list of all the CIDR allocations in an IPAM pool.
      * </p>
      * 
@@ -26746,7 +27208,9 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Get information about the resources in a scope.
+     * Returns resource CIDRs managed by IPAM in a given scope. If an IPAM is associated with more than one resource
+     * discovery, the resource CIDRs across all of the resource discoveries is returned. A resource discovery is an IPAM
+     * component that enables IPAM Service to manage and monitor resources that belong to the owning account.
      * </p>
      * 
      * @param getIpamResourceCidrsRequest
@@ -30150,6 +30614,63 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Modifies a resource discovery. A resource discovery is an IPAM component that enables IPAM Service to manage and
+     * monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param modifyIpamResourceDiscoveryRequest
+     * @return Result of the ModifyIpamResourceDiscovery operation returned by the service.
+     * @sample AmazonEC2.ModifyIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ModifyIpamResourceDiscoveryResult modifyIpamResourceDiscovery(ModifyIpamResourceDiscoveryRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifyIpamResourceDiscovery(request);
+    }
+
+    @SdkInternalApi
+    final ModifyIpamResourceDiscoveryResult executeModifyIpamResourceDiscovery(ModifyIpamResourceDiscoveryRequest modifyIpamResourceDiscoveryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifyIpamResourceDiscoveryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifyIpamResourceDiscoveryRequest> request = null;
+        Response<ModifyIpamResourceDiscoveryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifyIpamResourceDiscoveryRequestMarshaller().marshall(super.beforeMarshalling(modifyIpamResourceDiscoveryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifyIpamResourceDiscovery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ModifyIpamResourceDiscoveryResult> responseHandler = new StaxResponseHandler<ModifyIpamResourceDiscoveryResult>(
+                    new ModifyIpamResourceDiscoveryResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Modify an IPAM scope.
      * </p>
      * 
@@ -32766,10 +33287,10 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Move an BYOIP IPv4 CIDR to IPAM from a public IPv4 pool.
+     * Move a BYOIPv4 CIDR to IPAM from a public IPv4 pool.
      * </p>
      * <p>
-     * If you already have an IPv4 BYOIP CIDR with Amazon Web Services, you can move the CIDR to IPAM from a public IPv4
+     * If you already have a BYOIPv4 CIDR with Amazon Web Services, you can move the CIDR to IPAM from a public IPv4
      * pool. You cannot move an IPv6 CIDR to IPAM. If you are bringing a new IP address to Amazon Web Services for the
      * first time, complete the steps in <a
      * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoip-ipam.html">Tutorial: BYOIP address CIDRs to

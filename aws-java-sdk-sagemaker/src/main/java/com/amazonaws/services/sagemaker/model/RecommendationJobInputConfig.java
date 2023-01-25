@@ -133,6 +133,12 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
      * </p>
      */
     private RecommendationJobVpcConfig vpcConfig;
+    /**
+     * <p>
+     * The name of the created model.
+     * </p>
+     */
+    private String modelName;
 
     /**
      * <p>
@@ -861,6 +867,46 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The name of the created model.
+     * </p>
+     * 
+     * @param modelName
+     *        The name of the created model.
+     */
+
+    public void setModelName(String modelName) {
+        this.modelName = modelName;
+    }
+
+    /**
+     * <p>
+     * The name of the created model.
+     * </p>
+     * 
+     * @return The name of the created model.
+     */
+
+    public String getModelName() {
+        return this.modelName;
+    }
+
+    /**
+     * <p>
+     * The name of the created model.
+     * </p>
+     * 
+     * @param modelName
+     *        The name of the created model.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommendationJobInputConfig withModelName(String modelName) {
+        setModelName(modelName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -889,7 +935,9 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
         if (getEndpoints() != null)
             sb.append("Endpoints: ").append(getEndpoints()).append(",");
         if (getVpcConfig() != null)
-            sb.append("VpcConfig: ").append(getVpcConfig());
+            sb.append("VpcConfig: ").append(getVpcConfig()).append(",");
+        if (getModelName() != null)
+            sb.append("ModelName: ").append(getModelName());
         sb.append("}");
         return sb.toString();
     }
@@ -940,6 +988,10 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
             return false;
         if (other.getVpcConfig() != null && other.getVpcConfig().equals(this.getVpcConfig()) == false)
             return false;
+        if (other.getModelName() == null ^ this.getModelName() == null)
+            return false;
+        if (other.getModelName() != null && other.getModelName().equals(this.getModelName()) == false)
+            return false;
         return true;
     }
 
@@ -957,6 +1009,7 @@ public class RecommendationJobInputConfig implements Serializable, Cloneable, St
         hashCode = prime * hashCode + ((getContainerConfig() == null) ? 0 : getContainerConfig().hashCode());
         hashCode = prime * hashCode + ((getEndpoints() == null) ? 0 : getEndpoints().hashCode());
         hashCode = prime * hashCode + ((getVpcConfig() == null) ? 0 : getVpcConfig().hashCode());
+        hashCode = prime * hashCode + ((getModelName() == null) ? 0 : getModelName().hashCode());
         return hashCode;
     }
 

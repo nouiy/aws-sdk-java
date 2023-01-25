@@ -52,6 +52,10 @@ public class GetBatchJobExecutionResultJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     getBatchJobExecutionResult.setApplicationId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("batchJobIdentifier", targetDepth)) {
+                    context.nextToken();
+                    getBatchJobExecutionResult.setBatchJobIdentifier(BatchJobIdentifierJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("endTime", targetDepth)) {
                     context.nextToken();
                     getBatchJobExecutionResult.setEndTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
@@ -75,6 +79,10 @@ public class GetBatchJobExecutionResultJsonUnmarshaller implements Unmarshaller<
                 if (context.testExpression("jobUser", targetDepth)) {
                     context.nextToken();
                     getBatchJobExecutionResult.setJobUser(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("returnCode", targetDepth)) {
+                    context.nextToken();
+                    getBatchJobExecutionResult.setReturnCode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("startTime", targetDepth)) {
                     context.nextToken();

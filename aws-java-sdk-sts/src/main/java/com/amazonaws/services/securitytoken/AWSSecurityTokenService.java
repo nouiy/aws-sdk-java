@@ -98,10 +98,10 @@ public interface AWSSecurityTokenService {
 
     /**
      * <p>
-     * Returns a set of temporary security credentials that you can use to access Amazon Web Services resources that you
-     * might not normally have access to. These temporary credentials consist of an access key ID, a secret access key,
-     * and a security token. Typically, you use <code>AssumeRole</code> within your account or for cross-account access.
-     * For a comparison of <code>AssumeRole</code> with other API operations that produce temporary credentials, see <a
+     * Returns a set of temporary security credentials that you can use to access Amazon Web Services resources. These
+     * temporary credentials consist of an access key ID, a secret access key, and a security token. Typically, you use
+     * <code>AssumeRole</code> within your account or for cross-account access. For a comparison of
+     * <code>AssumeRole</code> with other API operations that produce temporary credentials, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html">Requesting Temporary
      * Security Credentials</a> and <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#stsapi_comparison"
@@ -844,12 +844,13 @@ public interface AWSSecurityTokenService {
      * </p>
      * <p>
      * You can use the temporary credentials created by <code>GetFederationToken</code> in any Amazon Web Services
-     * service except the following:
+     * service with the following exceptions:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * You cannot call any IAM operations using the CLI or the Amazon Web Services API.
+     * You cannot call any IAM operations using the CLI or the Amazon Web Services API. This limitation does not apply
+     * to console sessions.
      * </p>
      * </li>
      * <li>
@@ -858,6 +859,9 @@ public interface AWSSecurityTokenService {
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * You can use temporary credentials for single sign-on (SSO) to the console.
+     * </p>
      * <p>
      * You must pass an inline or managed <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">session policy</a>

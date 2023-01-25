@@ -94,7 +94,7 @@ public class IpamResourceCidr implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * For a resources that are VPCs, this is the percentage of IP address space in the VPC that's taken up by subnet
+     * For resources that are VPCs, this is the percentage of IP address space in the VPC that's taken up by subnet
      * CIDRs.
      * </p>
      * </li>
@@ -607,7 +607,7 @@ public class IpamResourceCidr implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * For a resources that are VPCs, this is the percentage of IP address space in the VPC that's taken up by subnet
+     * For resources that are VPCs, this is the percentage of IP address space in the VPC that's taken up by subnet
      * CIDRs.
      * </p>
      * </li>
@@ -633,7 +633,7 @@ public class IpamResourceCidr implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        For a resources that are VPCs, this is the percentage of IP address space in the VPC that's taken up by
+     *        For resources that are VPCs, this is the percentage of IP address space in the VPC that's taken up by
      *        subnet CIDRs.
      *        </p>
      *        </li>
@@ -665,7 +665,7 @@ public class IpamResourceCidr implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * For a resources that are VPCs, this is the percentage of IP address space in the VPC that's taken up by subnet
+     * For resources that are VPCs, this is the percentage of IP address space in the VPC that's taken up by subnet
      * CIDRs.
      * </p>
      * </li>
@@ -690,7 +690,7 @@ public class IpamResourceCidr implements Serializable, Cloneable {
      *         <ul>
      *         <li>
      *         <p>
-     *         For a resources that are VPCs, this is the percentage of IP address space in the VPC that's taken up by
+     *         For resources that are VPCs, this is the percentage of IP address space in the VPC that's taken up by
      *         subnet CIDRs.
      *         </p>
      *         </li>
@@ -722,7 +722,7 @@ public class IpamResourceCidr implements Serializable, Cloneable {
      * <ul>
      * <li>
      * <p>
-     * For a resources that are VPCs, this is the percentage of IP address space in the VPC that's taken up by subnet
+     * For resources that are VPCs, this is the percentage of IP address space in the VPC that's taken up by subnet
      * CIDRs.
      * </p>
      * </li>
@@ -748,7 +748,7 @@ public class IpamResourceCidr implements Serializable, Cloneable {
      *        <ul>
      *        <li>
      *        <p>
-     *        For a resources that are VPCs, this is the percentage of IP address space in the VPC that's taken up by
+     *        For resources that are VPCs, this is the percentage of IP address space in the VPC that's taken up by
      *        subnet CIDRs.
      *        </p>
      *        </li>

@@ -142,6 +142,10 @@ public class CreateIpamPoolRequestMarshaller implements Marshaller<Request<Creat
             request.addParameter("AwsService", StringUtils.fromString(createIpamPoolRequest.getAwsService()));
         }
 
+        if (createIpamPoolRequest.getPublicIpSource() != null) {
+            request.addParameter("PublicIpSource", StringUtils.fromString(createIpamPoolRequest.getPublicIpSource()));
+        }
+
         return request;
     }
 

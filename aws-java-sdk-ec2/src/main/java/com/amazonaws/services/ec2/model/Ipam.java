@@ -43,7 +43,7 @@ public class Ipam implements Serializable, Cloneable {
     private String ipamId;
     /**
      * <p>
-     * The ARN of the IPAM.
+     * The Amazon Resource Name (ARN) of the IPAM.
      * </p>
      */
     private String ipamArn;
@@ -107,6 +107,24 @@ public class Ipam implements Serializable, Cloneable {
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
+    /**
+     * <p>
+     * The IPAM's default resource discovery ID.
+     * </p>
+     */
+    private String defaultResourceDiscoveryId;
+    /**
+     * <p>
+     * The IPAM's default resource discovery association ID.
+     * </p>
+     */
+    private String defaultResourceDiscoveryAssociationId;
+    /**
+     * <p>
+     * The IPAM's resource discovery association count.
+     * </p>
+     */
+    private Integer resourceDiscoveryAssociationCount;
 
     /**
      * <p>
@@ -190,11 +208,11 @@ public class Ipam implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the IPAM.
+     * The Amazon Resource Name (ARN) of the IPAM.
      * </p>
      * 
      * @param ipamArn
-     *        The ARN of the IPAM.
+     *        The Amazon Resource Name (ARN) of the IPAM.
      */
 
     public void setIpamArn(String ipamArn) {
@@ -203,10 +221,10 @@ public class Ipam implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the IPAM.
+     * The Amazon Resource Name (ARN) of the IPAM.
      * </p>
      * 
-     * @return The ARN of the IPAM.
+     * @return The Amazon Resource Name (ARN) of the IPAM.
      */
 
     public String getIpamArn() {
@@ -215,11 +233,11 @@ public class Ipam implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the IPAM.
+     * The Amazon Resource Name (ARN) of the IPAM.
      * </p>
      * 
      * @param ipamArn
-     *        The ARN of the IPAM.
+     *        The Amazon Resource Name (ARN) of the IPAM.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -722,6 +740,126 @@ public class Ipam implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The IPAM's default resource discovery ID.
+     * </p>
+     * 
+     * @param defaultResourceDiscoveryId
+     *        The IPAM's default resource discovery ID.
+     */
+
+    public void setDefaultResourceDiscoveryId(String defaultResourceDiscoveryId) {
+        this.defaultResourceDiscoveryId = defaultResourceDiscoveryId;
+    }
+
+    /**
+     * <p>
+     * The IPAM's default resource discovery ID.
+     * </p>
+     * 
+     * @return The IPAM's default resource discovery ID.
+     */
+
+    public String getDefaultResourceDiscoveryId() {
+        return this.defaultResourceDiscoveryId;
+    }
+
+    /**
+     * <p>
+     * The IPAM's default resource discovery ID.
+     * </p>
+     * 
+     * @param defaultResourceDiscoveryId
+     *        The IPAM's default resource discovery ID.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Ipam withDefaultResourceDiscoveryId(String defaultResourceDiscoveryId) {
+        setDefaultResourceDiscoveryId(defaultResourceDiscoveryId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The IPAM's default resource discovery association ID.
+     * </p>
+     * 
+     * @param defaultResourceDiscoveryAssociationId
+     *        The IPAM's default resource discovery association ID.
+     */
+
+    public void setDefaultResourceDiscoveryAssociationId(String defaultResourceDiscoveryAssociationId) {
+        this.defaultResourceDiscoveryAssociationId = defaultResourceDiscoveryAssociationId;
+    }
+
+    /**
+     * <p>
+     * The IPAM's default resource discovery association ID.
+     * </p>
+     * 
+     * @return The IPAM's default resource discovery association ID.
+     */
+
+    public String getDefaultResourceDiscoveryAssociationId() {
+        return this.defaultResourceDiscoveryAssociationId;
+    }
+
+    /**
+     * <p>
+     * The IPAM's default resource discovery association ID.
+     * </p>
+     * 
+     * @param defaultResourceDiscoveryAssociationId
+     *        The IPAM's default resource discovery association ID.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Ipam withDefaultResourceDiscoveryAssociationId(String defaultResourceDiscoveryAssociationId) {
+        setDefaultResourceDiscoveryAssociationId(defaultResourceDiscoveryAssociationId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The IPAM's resource discovery association count.
+     * </p>
+     * 
+     * @param resourceDiscoveryAssociationCount
+     *        The IPAM's resource discovery association count.
+     */
+
+    public void setResourceDiscoveryAssociationCount(Integer resourceDiscoveryAssociationCount) {
+        this.resourceDiscoveryAssociationCount = resourceDiscoveryAssociationCount;
+    }
+
+    /**
+     * <p>
+     * The IPAM's resource discovery association count.
+     * </p>
+     * 
+     * @return The IPAM's resource discovery association count.
+     */
+
+    public Integer getResourceDiscoveryAssociationCount() {
+        return this.resourceDiscoveryAssociationCount;
+    }
+
+    /**
+     * <p>
+     * The IPAM's resource discovery association count.
+     * </p>
+     * 
+     * @param resourceDiscoveryAssociationCount
+     *        The IPAM's resource discovery association count.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Ipam withResourceDiscoveryAssociationCount(Integer resourceDiscoveryAssociationCount) {
+        setResourceDiscoveryAssociationCount(resourceDiscoveryAssociationCount);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -754,7 +892,13 @@ public class Ipam implements Serializable, Cloneable {
         if (getState() != null)
             sb.append("State: ").append(getState()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getDefaultResourceDiscoveryId() != null)
+            sb.append("DefaultResourceDiscoveryId: ").append(getDefaultResourceDiscoveryId()).append(",");
+        if (getDefaultResourceDiscoveryAssociationId() != null)
+            sb.append("DefaultResourceDiscoveryAssociationId: ").append(getDefaultResourceDiscoveryAssociationId()).append(",");
+        if (getResourceDiscoveryAssociationCount() != null)
+            sb.append("ResourceDiscoveryAssociationCount: ").append(getResourceDiscoveryAssociationCount());
         sb.append("}");
         return sb.toString();
     }
@@ -813,6 +957,20 @@ public class Ipam implements Serializable, Cloneable {
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getDefaultResourceDiscoveryId() == null ^ this.getDefaultResourceDiscoveryId() == null)
+            return false;
+        if (other.getDefaultResourceDiscoveryId() != null && other.getDefaultResourceDiscoveryId().equals(this.getDefaultResourceDiscoveryId()) == false)
+            return false;
+        if (other.getDefaultResourceDiscoveryAssociationId() == null ^ this.getDefaultResourceDiscoveryAssociationId() == null)
+            return false;
+        if (other.getDefaultResourceDiscoveryAssociationId() != null
+                && other.getDefaultResourceDiscoveryAssociationId().equals(this.getDefaultResourceDiscoveryAssociationId()) == false)
+            return false;
+        if (other.getResourceDiscoveryAssociationCount() == null ^ this.getResourceDiscoveryAssociationCount() == null)
+            return false;
+        if (other.getResourceDiscoveryAssociationCount() != null
+                && other.getResourceDiscoveryAssociationCount().equals(this.getResourceDiscoveryAssociationCount()) == false)
+            return false;
         return true;
     }
 
@@ -832,6 +990,9 @@ public class Ipam implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getOperatingRegions() == null) ? 0 : getOperatingRegions().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getDefaultResourceDiscoveryId() == null) ? 0 : getDefaultResourceDiscoveryId().hashCode());
+        hashCode = prime * hashCode + ((getDefaultResourceDiscoveryAssociationId() == null) ? 0 : getDefaultResourceDiscoveryAssociationId().hashCode());
+        hashCode = prime * hashCode + ((getResourceDiscoveryAssociationCount() == null) ? 0 : getResourceDiscoveryAssociationCount().hashCode());
         return hashCode;
     }
 

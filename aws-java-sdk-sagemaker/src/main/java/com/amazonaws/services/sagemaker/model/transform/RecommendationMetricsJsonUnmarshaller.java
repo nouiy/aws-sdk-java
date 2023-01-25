@@ -64,6 +64,14 @@ public class RecommendationMetricsJsonUnmarshaller implements Unmarshaller<Recom
                     context.nextToken();
                     recommendationMetrics.setModelLatency(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("CpuUtilization", targetDepth)) {
+                    context.nextToken();
+                    recommendationMetrics.setCpuUtilization(context.getUnmarshaller(Float.class).unmarshall(context));
+                }
+                if (context.testExpression("MemoryUtilization", targetDepth)) {
+                    context.nextToken();
+                    recommendationMetrics.setMemoryUtilization(context.getUnmarshaller(Float.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

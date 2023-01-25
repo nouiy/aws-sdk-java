@@ -33,6 +33,8 @@ public class InferenceRecommendationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndpointConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> MODELCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelConfiguration").build();
+    private static final MarshallingInfo<String> RECOMMENDATIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RecommendationId").build();
 
     private static final InferenceRecommendationMarshaller instance = new InferenceRecommendationMarshaller();
 
@@ -53,6 +55,7 @@ public class InferenceRecommendationMarshaller {
             protocolMarshaller.marshall(inferenceRecommendation.getMetrics(), METRICS_BINDING);
             protocolMarshaller.marshall(inferenceRecommendation.getEndpointConfiguration(), ENDPOINTCONFIGURATION_BINDING);
             protocolMarshaller.marshall(inferenceRecommendation.getModelConfiguration(), MODELCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(inferenceRecommendation.getRecommendationId(), RECOMMENDATIONID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

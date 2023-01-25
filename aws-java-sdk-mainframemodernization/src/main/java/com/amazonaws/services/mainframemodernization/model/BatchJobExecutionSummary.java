@@ -34,6 +34,8 @@ public class BatchJobExecutionSummary implements Serializable, Cloneable, Struct
      * </p>
      */
     private String applicationId;
+
+    private BatchJobIdentifier batchJobIdentifier;
     /**
      * <p>
      * The timestamp when this batch job execution ended.
@@ -64,6 +66,8 @@ public class BatchJobExecutionSummary implements Serializable, Cloneable, Struct
      * </p>
      */
     private String jobType;
+    /** <p/> */
+    private String returnCode;
     /**
      * <p>
      * The timestamp when a particular batch job execution started.
@@ -114,6 +118,32 @@ public class BatchJobExecutionSummary implements Serializable, Cloneable, Struct
 
     public BatchJobExecutionSummary withApplicationId(String applicationId) {
         setApplicationId(applicationId);
+        return this;
+    }
+
+    /**
+     * @param batchJobIdentifier
+     */
+
+    public void setBatchJobIdentifier(BatchJobIdentifier batchJobIdentifier) {
+        this.batchJobIdentifier = batchJobIdentifier;
+    }
+
+    /**
+     * @return
+     */
+
+    public BatchJobIdentifier getBatchJobIdentifier() {
+        return this.batchJobIdentifier;
+    }
+
+    /**
+     * @param batchJobIdentifier
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchJobExecutionSummary withBatchJobIdentifier(BatchJobIdentifier batchJobIdentifier) {
+        setBatchJobIdentifier(batchJobIdentifier);
         return this;
     }
 
@@ -337,6 +367,38 @@ public class BatchJobExecutionSummary implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p/>
+     * 
+     * @param returnCode
+     */
+
+    public void setReturnCode(String returnCode) {
+        this.returnCode = returnCode;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @return
+     */
+
+    public String getReturnCode() {
+        return this.returnCode;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @param returnCode
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchJobExecutionSummary withReturnCode(String returnCode) {
+        setReturnCode(returnCode);
+        return this;
+    }
+
+    /**
      * <p>
      * The timestamp when a particular batch job execution started.
      * </p>
@@ -449,6 +511,8 @@ public class BatchJobExecutionSummary implements Serializable, Cloneable, Struct
         sb.append("{");
         if (getApplicationId() != null)
             sb.append("ApplicationId: ").append(getApplicationId()).append(",");
+        if (getBatchJobIdentifier() != null)
+            sb.append("BatchJobIdentifier: ").append(getBatchJobIdentifier()).append(",");
         if (getEndTime() != null)
             sb.append("EndTime: ").append(getEndTime()).append(",");
         if (getExecutionId() != null)
@@ -459,6 +523,8 @@ public class BatchJobExecutionSummary implements Serializable, Cloneable, Struct
             sb.append("JobName: ").append(getJobName()).append(",");
         if (getJobType() != null)
             sb.append("JobType: ").append(getJobType()).append(",");
+        if (getReturnCode() != null)
+            sb.append("ReturnCode: ").append(getReturnCode()).append(",");
         if (getStartTime() != null)
             sb.append("StartTime: ").append(getStartTime()).append(",");
         if (getStatus() != null)
@@ -481,6 +547,10 @@ public class BatchJobExecutionSummary implements Serializable, Cloneable, Struct
             return false;
         if (other.getApplicationId() != null && other.getApplicationId().equals(this.getApplicationId()) == false)
             return false;
+        if (other.getBatchJobIdentifier() == null ^ this.getBatchJobIdentifier() == null)
+            return false;
+        if (other.getBatchJobIdentifier() != null && other.getBatchJobIdentifier().equals(this.getBatchJobIdentifier()) == false)
+            return false;
         if (other.getEndTime() == null ^ this.getEndTime() == null)
             return false;
         if (other.getEndTime() != null && other.getEndTime().equals(this.getEndTime()) == false)
@@ -501,6 +571,10 @@ public class BatchJobExecutionSummary implements Serializable, Cloneable, Struct
             return false;
         if (other.getJobType() != null && other.getJobType().equals(this.getJobType()) == false)
             return false;
+        if (other.getReturnCode() == null ^ this.getReturnCode() == null)
+            return false;
+        if (other.getReturnCode() != null && other.getReturnCode().equals(this.getReturnCode()) == false)
+            return false;
         if (other.getStartTime() == null ^ this.getStartTime() == null)
             return false;
         if (other.getStartTime() != null && other.getStartTime().equals(this.getStartTime()) == false)
@@ -518,11 +592,13 @@ public class BatchJobExecutionSummary implements Serializable, Cloneable, Struct
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getApplicationId() == null) ? 0 : getApplicationId().hashCode());
+        hashCode = prime * hashCode + ((getBatchJobIdentifier() == null) ? 0 : getBatchJobIdentifier().hashCode());
         hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         hashCode = prime * hashCode + ((getExecutionId() == null) ? 0 : getExecutionId().hashCode());
         hashCode = prime * hashCode + ((getJobId() == null) ? 0 : getJobId().hashCode());
         hashCode = prime * hashCode + ((getJobName() == null) ? 0 : getJobName().hashCode());
         hashCode = prime * hashCode + ((getJobType() == null) ? 0 : getJobType().hashCode());
+        hashCode = prime * hashCode + ((getReturnCode() == null) ? 0 : getReturnCode().hashCode());
         hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         return hashCode;

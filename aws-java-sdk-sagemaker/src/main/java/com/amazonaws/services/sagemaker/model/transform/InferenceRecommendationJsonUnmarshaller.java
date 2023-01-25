@@ -60,6 +60,10 @@ public class InferenceRecommendationJsonUnmarshaller implements Unmarshaller<Inf
                     context.nextToken();
                     inferenceRecommendation.setModelConfiguration(ModelConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("RecommendationId", targetDepth)) {
+                    context.nextToken();
+                    inferenceRecommendation.setRecommendationId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

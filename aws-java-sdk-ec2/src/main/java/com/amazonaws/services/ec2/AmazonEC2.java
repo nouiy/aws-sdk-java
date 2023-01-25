@@ -351,8 +351,8 @@ public interface AmazonEC2 {
 
     /**
      * <p>
-     * Allocate a CIDR from an IPAM pool. In IPAM, an allocation is a CIDR assignment from an IPAM pool to another
-     * resource or IPAM pool. For more information, see <a
+     * Allocate a CIDR from an IPAM pool. In IPAM, an allocation is a CIDR assignment from an IPAM pool to another IPAM
+     * pool or to a resource. For more information, see <a
      * href="https://docs.aws.amazon.com/vpc/latest/ipam/allocate-cidrs-ipam.html">Allocate CIDRs</a> in the <i>Amazon
      * VPC IPAM User Guide</i>.
      * </p>
@@ -608,6 +608,20 @@ public interface AmazonEC2 {
      *      target="_top">AWS API Documentation</a>
      */
     AssociateInstanceEventWindowResult associateInstanceEventWindow(AssociateInstanceEventWindowRequest associateInstanceEventWindowRequest);
+
+    /**
+     * <p>
+     * Associates an IPAM resource discovery with an Amazon VPC IPAM. A resource discovery is an IPAM component that
+     * enables IPAM Service to manage and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param associateIpamResourceDiscoveryRequest
+     * @return Result of the AssociateIpamResourceDiscovery operation returned by the service.
+     * @sample AmazonEC2.AssociateIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AssociateIpamResourceDiscoveryResult associateIpamResourceDiscovery(AssociateIpamResourceDiscoveryRequest associateIpamResourceDiscoveryRequest);
 
     /**
      * <p>
@@ -1810,6 +1824,20 @@ public interface AmazonEC2 {
      *      Documentation</a>
      */
     CreateIpamPoolResult createIpamPool(CreateIpamPoolRequest createIpamPoolRequest);
+
+    /**
+     * <p>
+     * Creates an IPAM resource discovery. A resource discovery is an IPAM component that enables IPAM Service to manage
+     * and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param createIpamResourceDiscoveryRequest
+     * @return Result of the CreateIpamResourceDiscovery operation returned by the service.
+     * @sample AmazonEC2.CreateIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/CreateIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateIpamResourceDiscoveryResult createIpamResourceDiscovery(CreateIpamResourceDiscoveryRequest createIpamResourceDiscoveryRequest);
 
     /**
      * <p>
@@ -3454,6 +3482,20 @@ public interface AmazonEC2 {
      *      Documentation</a>
      */
     DeleteIpamPoolResult deleteIpamPool(DeleteIpamPoolRequest deleteIpamPoolRequest);
+
+    /**
+     * <p>
+     * Deletes an IPAM resource discovery. A resource discovery is an IPAM component that enables IPAM Service to manage
+     * and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param deleteIpamResourceDiscoveryRequest
+     * @return Result of the DeleteIpamResourceDiscovery operation returned by the service.
+     * @sample AmazonEC2.DeleteIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DeleteIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteIpamResourceDiscoveryResult deleteIpamResourceDiscovery(DeleteIpamResourceDiscoveryRequest deleteIpamResourceDiscoveryRequest);
 
     /**
      * <p>
@@ -5583,6 +5625,35 @@ public interface AmazonEC2 {
      *      Documentation</a>
      */
     DescribeIpamPoolsResult describeIpamPools(DescribeIpamPoolsRequest describeIpamPoolsRequest);
+
+    /**
+     * <p>
+     * Describes IPAM resource discoveries. A resource discovery is an IPAM component that enables IPAM Service to
+     * manage and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param describeIpamResourceDiscoveriesRequest
+     * @return Result of the DescribeIpamResourceDiscoveries operation returned by the service.
+     * @sample AmazonEC2.DescribeIpamResourceDiscoveries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamResourceDiscoveries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeIpamResourceDiscoveriesResult describeIpamResourceDiscoveries(DescribeIpamResourceDiscoveriesRequest describeIpamResourceDiscoveriesRequest);
+
+    /**
+     * <p>
+     * Describes resource discovery association with an Amazon VPC IPAM. An associated resource discovery is a resource
+     * discovery that has been associated with an IPAM..
+     * </p>
+     * 
+     * @param describeIpamResourceDiscoveryAssociationsRequest
+     * @return Result of the DescribeIpamResourceDiscoveryAssociations operation returned by the service.
+     * @sample AmazonEC2.DescribeIpamResourceDiscoveryAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeIpamResourceDiscoveryAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeIpamResourceDiscoveryAssociationsResult describeIpamResourceDiscoveryAssociations(
+            DescribeIpamResourceDiscoveryAssociationsRequest describeIpamResourceDiscoveryAssociationsRequest);
 
     /**
      * <p>
@@ -7794,6 +7865,20 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Disassociates a resource discovery from an Amazon VPC IPAM. A resource discovery is an IPAM component that
+     * enables IPAM Service to manage and monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param disassociateIpamResourceDiscoveryRequest
+     * @return Result of the DisassociateIpamResourceDiscovery operation returned by the service.
+     * @sample AmazonEC2.DisassociateIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DisassociateIpamResourceDiscoveryResult disassociateIpamResourceDiscovery(DisassociateIpamResourceDiscoveryRequest disassociateIpamResourceDiscoveryRequest);
+
+    /**
+     * <p>
      * Disassociates a subnet or gateway from a route table.
      * </p>
      * <p>
@@ -8559,6 +8644,36 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Gets IPAM discovered accounts. A discovered account is an Amazon Web Services account that is monitored under a
+     * resource discovery. If you have integrated IPAM with Amazon Web Services Organizations, all accounts in the
+     * organization are discovered accounts. Only the IPAM account can get all discovered accounts in the organization.
+     * </p>
+     * 
+     * @param getIpamDiscoveredAccountsRequest
+     * @return Result of the GetIpamDiscoveredAccounts operation returned by the service.
+     * @sample AmazonEC2.GetIpamDiscoveredAccounts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamDiscoveredAccounts" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetIpamDiscoveredAccountsResult getIpamDiscoveredAccounts(GetIpamDiscoveredAccountsRequest getIpamDiscoveredAccountsRequest);
+
+    /**
+     * <p>
+     * Returns the resource CIDRs that are monitored as part of a resource discovery. A discovered resource is a
+     * resource CIDR monitored under a resource discovery. The following resources can be discovered: VPCs, Public IPv4
+     * pools, VPC subnets, and Elastic IP addresses.
+     * </p>
+     * 
+     * @param getIpamDiscoveredResourceCidrsRequest
+     * @return Result of the GetIpamDiscoveredResourceCidrs operation returned by the service.
+     * @sample AmazonEC2.GetIpamDiscoveredResourceCidrs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetIpamDiscoveredResourceCidrs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetIpamDiscoveredResourceCidrsResult getIpamDiscoveredResourceCidrs(GetIpamDiscoveredResourceCidrsRequest getIpamDiscoveredResourceCidrsRequest);
+
+    /**
+     * <p>
      * Get a list of all the CIDR allocations in an IPAM pool.
      * </p>
      * 
@@ -8585,7 +8700,9 @@ public interface AmazonEC2 {
 
     /**
      * <p>
-     * Get information about the resources in a scope.
+     * Returns resource CIDRs managed by IPAM in a given scope. If an IPAM is associated with more than one resource
+     * discovery, the resource CIDRs across all of the resource discoveries is returned. A resource discovery is an IPAM
+     * component that enables IPAM Service to manage and monitor resources that belong to the owning account.
      * </p>
      * 
      * @param getIpamResourceCidrsRequest
@@ -9655,6 +9772,20 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Modifies a resource discovery. A resource discovery is an IPAM component that enables IPAM Service to manage and
+     * monitor resources that belong to the owning account.
+     * </p>
+     * 
+     * @param modifyIpamResourceDiscoveryRequest
+     * @return Result of the ModifyIpamResourceDiscovery operation returned by the service.
+     * @sample AmazonEC2.ModifyIpamResourceDiscovery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyIpamResourceDiscovery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ModifyIpamResourceDiscoveryResult modifyIpamResourceDiscovery(ModifyIpamResourceDiscoveryRequest modifyIpamResourceDiscoveryRequest);
+
+    /**
+     * <p>
      * Modify an IPAM scope.
      * </p>
      * 
@@ -10494,10 +10625,10 @@ public interface AmazonEC2 {
 
     /**
      * <p>
-     * Move an BYOIP IPv4 CIDR to IPAM from a public IPv4 pool.
+     * Move a BYOIPv4 CIDR to IPAM from a public IPv4 pool.
      * </p>
      * <p>
-     * If you already have an IPv4 BYOIP CIDR with Amazon Web Services, you can move the CIDR to IPAM from a public IPv4
+     * If you already have a BYOIPv4 CIDR with Amazon Web Services, you can move the CIDR to IPAM from a public IPv4
      * pool. You cannot move an IPv6 CIDR to IPAM. If you are bringing a new IP address to Amazon Web Services for the
      * first time, complete the steps in <a
      * href="https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-byoip-ipam.html">Tutorial: BYOIP address CIDRs to

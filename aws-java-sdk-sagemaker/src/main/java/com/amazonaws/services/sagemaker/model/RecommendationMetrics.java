@@ -52,6 +52,24 @@ public class RecommendationMetrics implements Serializable, Cloneable, Structure
      * </p>
      */
     private Integer modelLatency;
+    /**
+     * <p>
+     * The expected CPU utilization at maximum invocations per minute for the instance.
+     * </p>
+     * <p>
+     * <code>NaN</code> indicates that the value is not available.
+     * </p>
+     */
+    private Float cpuUtilization;
+    /**
+     * <p>
+     * The expected memory utilization at maximum invocations per minute for the instance.
+     * </p>
+     * <p>
+     * <code>NaN</code> indicates that the value is not available.
+     * </p>
+     */
+    private Float memoryUtilization;
 
     /**
      * <p>
@@ -214,6 +232,116 @@ public class RecommendationMetrics implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The expected CPU utilization at maximum invocations per minute for the instance.
+     * </p>
+     * <p>
+     * <code>NaN</code> indicates that the value is not available.
+     * </p>
+     * 
+     * @param cpuUtilization
+     *        The expected CPU utilization at maximum invocations per minute for the instance.</p>
+     *        <p>
+     *        <code>NaN</code> indicates that the value is not available.
+     */
+
+    public void setCpuUtilization(Float cpuUtilization) {
+        this.cpuUtilization = cpuUtilization;
+    }
+
+    /**
+     * <p>
+     * The expected CPU utilization at maximum invocations per minute for the instance.
+     * </p>
+     * <p>
+     * <code>NaN</code> indicates that the value is not available.
+     * </p>
+     * 
+     * @return The expected CPU utilization at maximum invocations per minute for the instance.</p>
+     *         <p>
+     *         <code>NaN</code> indicates that the value is not available.
+     */
+
+    public Float getCpuUtilization() {
+        return this.cpuUtilization;
+    }
+
+    /**
+     * <p>
+     * The expected CPU utilization at maximum invocations per minute for the instance.
+     * </p>
+     * <p>
+     * <code>NaN</code> indicates that the value is not available.
+     * </p>
+     * 
+     * @param cpuUtilization
+     *        The expected CPU utilization at maximum invocations per minute for the instance.</p>
+     *        <p>
+     *        <code>NaN</code> indicates that the value is not available.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommendationMetrics withCpuUtilization(Float cpuUtilization) {
+        setCpuUtilization(cpuUtilization);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The expected memory utilization at maximum invocations per minute for the instance.
+     * </p>
+     * <p>
+     * <code>NaN</code> indicates that the value is not available.
+     * </p>
+     * 
+     * @param memoryUtilization
+     *        The expected memory utilization at maximum invocations per minute for the instance.</p>
+     *        <p>
+     *        <code>NaN</code> indicates that the value is not available.
+     */
+
+    public void setMemoryUtilization(Float memoryUtilization) {
+        this.memoryUtilization = memoryUtilization;
+    }
+
+    /**
+     * <p>
+     * The expected memory utilization at maximum invocations per minute for the instance.
+     * </p>
+     * <p>
+     * <code>NaN</code> indicates that the value is not available.
+     * </p>
+     * 
+     * @return The expected memory utilization at maximum invocations per minute for the instance.</p>
+     *         <p>
+     *         <code>NaN</code> indicates that the value is not available.
+     */
+
+    public Float getMemoryUtilization() {
+        return this.memoryUtilization;
+    }
+
+    /**
+     * <p>
+     * The expected memory utilization at maximum invocations per minute for the instance.
+     * </p>
+     * <p>
+     * <code>NaN</code> indicates that the value is not available.
+     * </p>
+     * 
+     * @param memoryUtilization
+     *        The expected memory utilization at maximum invocations per minute for the instance.</p>
+     *        <p>
+     *        <code>NaN</code> indicates that the value is not available.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommendationMetrics withMemoryUtilization(Float memoryUtilization) {
+        setMemoryUtilization(memoryUtilization);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -232,7 +360,11 @@ public class RecommendationMetrics implements Serializable, Cloneable, Structure
         if (getMaxInvocations() != null)
             sb.append("MaxInvocations: ").append(getMaxInvocations()).append(",");
         if (getModelLatency() != null)
-            sb.append("ModelLatency: ").append(getModelLatency());
+            sb.append("ModelLatency: ").append(getModelLatency()).append(",");
+        if (getCpuUtilization() != null)
+            sb.append("CpuUtilization: ").append(getCpuUtilization()).append(",");
+        if (getMemoryUtilization() != null)
+            sb.append("MemoryUtilization: ").append(getMemoryUtilization());
         sb.append("}");
         return sb.toString();
     }
@@ -263,6 +395,14 @@ public class RecommendationMetrics implements Serializable, Cloneable, Structure
             return false;
         if (other.getModelLatency() != null && other.getModelLatency().equals(this.getModelLatency()) == false)
             return false;
+        if (other.getCpuUtilization() == null ^ this.getCpuUtilization() == null)
+            return false;
+        if (other.getCpuUtilization() != null && other.getCpuUtilization().equals(this.getCpuUtilization()) == false)
+            return false;
+        if (other.getMemoryUtilization() == null ^ this.getMemoryUtilization() == null)
+            return false;
+        if (other.getMemoryUtilization() != null && other.getMemoryUtilization().equals(this.getMemoryUtilization()) == false)
+            return false;
         return true;
     }
 
@@ -275,6 +415,8 @@ public class RecommendationMetrics implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getCostPerInference() == null) ? 0 : getCostPerInference().hashCode());
         hashCode = prime * hashCode + ((getMaxInvocations() == null) ? 0 : getMaxInvocations().hashCode());
         hashCode = prime * hashCode + ((getModelLatency() == null) ? 0 : getModelLatency().hashCode());
+        hashCode = prime * hashCode + ((getCpuUtilization() == null) ? 0 : getCpuUtilization().hashCode());
+        hashCode = prime * hashCode + ((getMemoryUtilization() == null) ? 0 : getMemoryUtilization().hashCode());
         return hashCode;
     }
 

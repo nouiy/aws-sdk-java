@@ -89,6 +89,15 @@ public class RecommendationJobContainerConfig implements Serializable, Cloneable
      * </p>
      */
     private java.util.List<String> supportedInstanceTypes;
+    /**
+     * <p>
+     * Specifies the name and shape of the expected data inputs for your trained model with a JSON dictionary form. This
+     * field is used for optimizing your model using SageMaker Neo. For more information, see <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_InputConfig.html#sagemaker-Type-InputConfig-DataInputConfig"
+     * >DataInputConfig</a>.
+     * </p>
+     */
+    private String dataInputConfig;
 
     /**
      * <p>
@@ -479,6 +488,65 @@ public class RecommendationJobContainerConfig implements Serializable, Cloneable
     }
 
     /**
+     * <p>
+     * Specifies the name and shape of the expected data inputs for your trained model with a JSON dictionary form. This
+     * field is used for optimizing your model using SageMaker Neo. For more information, see <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_InputConfig.html#sagemaker-Type-InputConfig-DataInputConfig"
+     * >DataInputConfig</a>.
+     * </p>
+     * 
+     * @param dataInputConfig
+     *        Specifies the name and shape of the expected data inputs for your trained model with a JSON dictionary
+     *        form. This field is used for optimizing your model using SageMaker Neo. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_InputConfig.html#sagemaker-Type-InputConfig-DataInputConfig"
+     *        >DataInputConfig</a>.
+     */
+
+    public void setDataInputConfig(String dataInputConfig) {
+        this.dataInputConfig = dataInputConfig;
+    }
+
+    /**
+     * <p>
+     * Specifies the name and shape of the expected data inputs for your trained model with a JSON dictionary form. This
+     * field is used for optimizing your model using SageMaker Neo. For more information, see <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_InputConfig.html#sagemaker-Type-InputConfig-DataInputConfig"
+     * >DataInputConfig</a>.
+     * </p>
+     * 
+     * @return Specifies the name and shape of the expected data inputs for your trained model with a JSON dictionary
+     *         form. This field is used for optimizing your model using SageMaker Neo. For more information, see <a
+     *         href=
+     *         "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_InputConfig.html#sagemaker-Type-InputConfig-DataInputConfig"
+     *         >DataInputConfig</a>.
+     */
+
+    public String getDataInputConfig() {
+        return this.dataInputConfig;
+    }
+
+    /**
+     * <p>
+     * Specifies the name and shape of the expected data inputs for your trained model with a JSON dictionary form. This
+     * field is used for optimizing your model using SageMaker Neo. For more information, see <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_InputConfig.html#sagemaker-Type-InputConfig-DataInputConfig"
+     * >DataInputConfig</a>.
+     * </p>
+     * 
+     * @param dataInputConfig
+     *        Specifies the name and shape of the expected data inputs for your trained model with a JSON dictionary
+     *        form. This field is used for optimizing your model using SageMaker Neo. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_InputConfig.html#sagemaker-Type-InputConfig-DataInputConfig"
+     *        >DataInputConfig</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommendationJobContainerConfig withDataInputConfig(String dataInputConfig) {
+        setDataInputConfig(dataInputConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -503,7 +571,9 @@ public class RecommendationJobContainerConfig implements Serializable, Cloneable
         if (getNearestModelName() != null)
             sb.append("NearestModelName: ").append(getNearestModelName()).append(",");
         if (getSupportedInstanceTypes() != null)
-            sb.append("SupportedInstanceTypes: ").append(getSupportedInstanceTypes());
+            sb.append("SupportedInstanceTypes: ").append(getSupportedInstanceTypes()).append(",");
+        if (getDataInputConfig() != null)
+            sb.append("DataInputConfig: ").append(getDataInputConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -546,6 +616,10 @@ public class RecommendationJobContainerConfig implements Serializable, Cloneable
             return false;
         if (other.getSupportedInstanceTypes() != null && other.getSupportedInstanceTypes().equals(this.getSupportedInstanceTypes()) == false)
             return false;
+        if (other.getDataInputConfig() == null ^ this.getDataInputConfig() == null)
+            return false;
+        if (other.getDataInputConfig() != null && other.getDataInputConfig().equals(this.getDataInputConfig()) == false)
+            return false;
         return true;
     }
 
@@ -561,6 +635,7 @@ public class RecommendationJobContainerConfig implements Serializable, Cloneable
         hashCode = prime * hashCode + ((getPayloadConfig() == null) ? 0 : getPayloadConfig().hashCode());
         hashCode = prime * hashCode + ((getNearestModelName() == null) ? 0 : getNearestModelName().hashCode());
         hashCode = prime * hashCode + ((getSupportedInstanceTypes() == null) ? 0 : getSupportedInstanceTypes().hashCode());
+        hashCode = prime * hashCode + ((getDataInputConfig() == null) ? 0 : getDataInputConfig().hashCode());
         return hashCode;
     }
 

@@ -21,6 +21,7 @@ import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.ec2.model.*;
 import com.amazonaws.transform.Marshaller;
 import com.amazonaws.util.StringUtils;
+import com.amazonaws.util.IdempotentUtils;
 
 /**
  * ProvisionIpamPoolCidrRequest Marshaller
@@ -59,6 +60,12 @@ public class ProvisionIpamPoolCidrRequestMarshaller implements Marshaller<Reques
                 request.addParameter("CidrAuthorizationContext.Signature", StringUtils.fromString(cidrAuthorizationContext.getSignature()));
             }
         }
+
+        if (provisionIpamPoolCidrRequest.getNetmaskLength() != null) {
+            request.addParameter("NetmaskLength", StringUtils.fromInteger(provisionIpamPoolCidrRequest.getNetmaskLength()));
+        }
+
+        request.addParameter("ClientToken", IdempotentUtils.resolveString(provisionIpamPoolCidrRequest.getClientToken()));
 
         return request;
     }
