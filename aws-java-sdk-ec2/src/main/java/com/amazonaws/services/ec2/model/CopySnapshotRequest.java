@@ -959,7 +959,7 @@ public class CopySnapshotRequest extends AmazonWebServiceRequest implements Seri
         if (getKmsKeyId() != null)
             sb.append("KmsKeyId: ").append(getKmsKeyId()).append(",");
         if (getPresignedUrl() != null)
-            sb.append("PresignedUrl: ").append(getPresignedUrl()).append(",");
+            sb.append("PresignedUrl: ").append("***Sensitive Data Redacted***").append(",");
         if (getSourceRegion() != null)
             sb.append("SourceRegion: ").append(getSourceRegion()).append(",");
         if (getSourceSnapshotId() != null)

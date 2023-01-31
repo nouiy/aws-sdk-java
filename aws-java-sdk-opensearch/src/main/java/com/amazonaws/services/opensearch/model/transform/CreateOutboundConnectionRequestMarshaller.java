@@ -33,6 +33,8 @@ public class CreateOutboundConnectionRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RemoteDomainInfo").build();
     private static final MarshallingInfo<String> CONNECTIONALIAS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConnectionAlias").build();
+    private static final MarshallingInfo<String> CONNECTIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConnectionMode").build();
 
     private static final CreateOutboundConnectionRequestMarshaller instance = new CreateOutboundConnectionRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class CreateOutboundConnectionRequestMarshaller {
             protocolMarshaller.marshall(createOutboundConnectionRequest.getLocalDomainInfo(), LOCALDOMAININFO_BINDING);
             protocolMarshaller.marshall(createOutboundConnectionRequest.getRemoteDomainInfo(), REMOTEDOMAININFO_BINDING);
             protocolMarshaller.marshall(createOutboundConnectionRequest.getConnectionAlias(), CONNECTIONALIAS_BINDING);
+            protocolMarshaller.marshall(createOutboundConnectionRequest.getConnectionMode(), CONNECTIONMODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

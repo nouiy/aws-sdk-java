@@ -441,6 +441,39 @@ public class AWSGroundStationAsyncClient extends AWSGroundStationClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetAgentConfigurationResult> getAgentConfigurationAsync(GetAgentConfigurationRequest request) {
+
+        return getAgentConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAgentConfigurationResult> getAgentConfigurationAsync(final GetAgentConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAgentConfigurationRequest, GetAgentConfigurationResult> asyncHandler) {
+        final GetAgentConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAgentConfigurationResult>() {
+            @Override
+            public GetAgentConfigurationResult call() throws Exception {
+                GetAgentConfigurationResult result = null;
+
+                try {
+                    result = executeGetAgentConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetConfigResult> getConfigAsync(GetConfigRequest request) {
 
         return getConfigAsync(request, null);
@@ -870,6 +903,39 @@ public class AWSGroundStationAsyncClient extends AWSGroundStationClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<RegisterAgentResult> registerAgentAsync(RegisterAgentRequest request) {
+
+        return registerAgentAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RegisterAgentResult> registerAgentAsync(final RegisterAgentRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RegisterAgentRequest, RegisterAgentResult> asyncHandler) {
+        final RegisterAgentRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RegisterAgentResult>() {
+            @Override
+            public RegisterAgentResult call() throws Exception {
+                RegisterAgentResult result = null;
+
+                try {
+                    result = executeRegisterAgent(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ReserveContactResult> reserveContactAsync(ReserveContactRequest request) {
 
         return reserveContactAsync(request, null);
@@ -953,6 +1019,39 @@ public class AWSGroundStationAsyncClient extends AWSGroundStationClient implemen
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAgentStatusResult> updateAgentStatusAsync(UpdateAgentStatusRequest request) {
+
+        return updateAgentStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAgentStatusResult> updateAgentStatusAsync(final UpdateAgentStatusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateAgentStatusRequest, UpdateAgentStatusResult> asyncHandler) {
+        final UpdateAgentStatusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateAgentStatusResult>() {
+            @Override
+            public UpdateAgentStatusResult call() throws Exception {
+                UpdateAgentStatusResult result = null;
+
+                try {
+                    result = executeUpdateAgentStatus(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

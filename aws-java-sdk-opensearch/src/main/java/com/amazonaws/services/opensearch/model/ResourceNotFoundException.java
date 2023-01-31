@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+ * An exception for accessing or deleting a resource that doesn't exist.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

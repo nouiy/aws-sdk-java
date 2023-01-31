@@ -16,8 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request processing has failed because of an unknown error, exception or failure (the failure is internal to the
- * service) . Gives http status code of 500.
+ * Request processing failed because of an unknown error, exception, or internal failure.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

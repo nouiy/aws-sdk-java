@@ -265,6 +265,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<AssignPrivateNatGatewayAddressResult> assignPrivateNatGatewayAddressAsync(AssignPrivateNatGatewayAddressRequest request) {
+
+        return assignPrivateNatGatewayAddressAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssignPrivateNatGatewayAddressResult> assignPrivateNatGatewayAddressAsync(AssignPrivateNatGatewayAddressRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssignPrivateNatGatewayAddressRequest, AssignPrivateNatGatewayAddressResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<AssociateAddressResult> associateAddressAsync(AssociateAddressRequest request) {
 
         return associateAddressAsync(request, null);
@@ -355,6 +368,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<AssociateIpamResourceDiscoveryResult> associateIpamResourceDiscoveryAsync(AssociateIpamResourceDiscoveryRequest request,
             com.amazonaws.handlers.AsyncHandler<AssociateIpamResourceDiscoveryRequest, AssociateIpamResourceDiscoveryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateNatGatewayAddressResult> associateNatGatewayAddressAsync(AssociateNatGatewayAddressRequest request) {
+
+        return associateNatGatewayAddressAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateNatGatewayAddressResult> associateNatGatewayAddressAsync(AssociateNatGatewayAddressRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssociateNatGatewayAddressRequest, AssociateNatGatewayAddressResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -6405,6 +6431,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateNatGatewayAddressResult> disassociateNatGatewayAddressAsync(DisassociateNatGatewayAddressRequest request) {
+
+        return disassociateNatGatewayAddressAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateNatGatewayAddressResult> disassociateNatGatewayAddressAsync(DisassociateNatGatewayAddressRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisassociateNatGatewayAddressRequest, DisassociateNatGatewayAddressResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DisassociateRouteTableResult> disassociateRouteTableAsync(DisassociateRouteTableRequest request) {
 
         return disassociateRouteTableAsync(request, null);
@@ -9183,6 +9222,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<UnassignPrivateIpAddressesResult> unassignPrivateIpAddressesAsync(UnassignPrivateIpAddressesRequest request,
             com.amazonaws.handlers.AsyncHandler<UnassignPrivateIpAddressesRequest, UnassignPrivateIpAddressesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UnassignPrivateNatGatewayAddressResult> unassignPrivateNatGatewayAddressAsync(
+            UnassignPrivateNatGatewayAddressRequest request) {
+
+        return unassignPrivateNatGatewayAddressAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UnassignPrivateNatGatewayAddressResult> unassignPrivateNatGatewayAddressAsync(
+            UnassignPrivateNatGatewayAddressRequest request,
+            com.amazonaws.handlers.AsyncHandler<UnassignPrivateNatGatewayAddressRequest, UnassignPrivateNatGatewayAddressResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -85,6 +85,14 @@ public class GetMissionProfileResultJsonUnmarshaller implements Unmarshaller<Get
                     context.nextToken();
                     getMissionProfileResult.setRegion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("streamsKmsKey", targetDepth)) {
+                    context.nextToken();
+                    getMissionProfileResult.setStreamsKmsKey(KmsKeyJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("streamsKmsRole", targetDepth)) {
+                    context.nextToken();
+                    getMissionProfileResult.setStreamsKmsRole(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     getMissionProfileResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context

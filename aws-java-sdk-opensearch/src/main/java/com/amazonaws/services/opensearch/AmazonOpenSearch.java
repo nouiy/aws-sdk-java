@@ -63,13 +63,11 @@ public interface AmazonOpenSearch {
      *        Container for the parameters to the <code>AcceptInboundConnection</code> operation.
      * @return Result of the AcceptInboundConnection operation returned by the service.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws LimitExceededException
-     *         An exception for trying to create more than allowed resources or sub-resources. Gives http status code of
-     *         409.
+     *         An exception for trying to create more than the allowed number of resources or sub-resources.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @sample AmazonOpenSearch.AcceptInboundConnection
      */
     AcceptInboundConnectionResult acceptInboundConnection(AcceptInboundConnectionRequest acceptInboundConnectionRequest);
@@ -89,13 +87,11 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws LimitExceededException
-     *         An exception for trying to create more than allowed resources or sub-resources. Gives http status code of
-     *         409.
+     *         An exception for trying to create more than the allowed number of resources or sub-resources.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @sample AmazonOpenSearch.AddTags
      */
     AddTagsResult addTags(AddTagsRequest addTagsRequest);
@@ -113,18 +109,15 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws AccessDeniedException
-     *         An error occurred because user does not have permissions to access the resource. Returns HTTP status code
-     *         403.
+     *         An error occurred because you don't have permissions to access the resource.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws ConflictException
-     *         An error occurred because the client attempts to remove a resource that is currently in use. Returns HTTP
-     *         status code 409.
+     *         An error occurred because the client attempts to remove a resource that's currently in use.
      * @sample AmazonOpenSearch.AssociatePackage
      */
     AssociatePackageResult associatePackage(AssociatePackageRequest associatePackageRequest);
@@ -137,18 +130,15 @@ public interface AmazonOpenSearch {
      * @param authorizeVpcEndpointAccessRequest
      * @return Result of the AuthorizeVpcEndpointAccess operation returned by the service.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @throws LimitExceededException
-     *         An exception for trying to create more than allowed resources or sub-resources. Gives http status code of
-     *         409.
+     *         An exception for trying to create more than the allowed number of resources or sub-resources.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws BaseException
      *         An error occurred while processing the request.
      * @sample AmazonOpenSearch.AuthorizeVpcEndpointAccess
@@ -170,12 +160,11 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.CancelServiceSoftwareUpdate
      */
     CancelServiceSoftwareUpdateResult cancelServiceSoftwareUpdate(CancelServiceSoftwareUpdateRequest cancelServiceSoftwareUpdateRequest);
@@ -192,21 +181,17 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws InvalidTypeException
-     *         An exception for trying to create or access sub-resource that is either invalid or not supported. Gives
-     *         http status code of 409.
+     *         An exception for trying to create or access a sub-resource that's either invalid or not supported.
      * @throws LimitExceededException
-     *         An exception for trying to create more than allowed resources or sub-resources. Gives http status code of
-     *         409.
+     *         An exception for trying to create more than the allowed number of resources or sub-resources.
      * @throws ResourceAlreadyExistsException
-     *         An exception for creating a resource that already exists. Gives http status code of 400.
+     *         An exception for creating a resource that already exists.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.CreateDomain
      */
     CreateDomainResult createDomain(CreateDomainRequest createDomainRequest);
@@ -223,16 +208,13 @@ public interface AmazonOpenSearch {
      *        Container for the parameters to the <code>CreateOutboundConnection</code> operation.
      * @return Result of the CreateOutboundConnection operation returned by the service.
      * @throws LimitExceededException
-     *         An exception for trying to create more than allowed resources or sub-resources. Gives http status code of
-     *         409.
+     *         An exception for trying to create more than the allowed number of resources or sub-resources.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceAlreadyExistsException
-     *         An exception for creating a resource that already exists. Gives http status code of 400.
+     *         An exception for creating a resource that already exists.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @sample AmazonOpenSearch.CreateOutboundConnection
      */
     CreateOutboundConnectionResult createOutboundConnection(CreateOutboundConnectionRequest createOutboundConnectionRequest);
@@ -250,21 +232,17 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws LimitExceededException
-     *         An exception for trying to create more than allowed resources or sub-resources. Gives http status code of
-     *         409.
+     *         An exception for trying to create more than the allowed number of resources or sub-resources.
      * @throws InvalidTypeException
-     *         An exception for trying to create or access sub-resource that is either invalid or not supported. Gives
-     *         http status code of 409.
+     *         An exception for trying to create or access a sub-resource that's either invalid or not supported.
      * @throws ResourceAlreadyExistsException
-     *         An exception for creating a resource that already exists. Gives http status code of 400.
+     *         An exception for creating a resource that already exists.
      * @throws AccessDeniedException
-     *         An error occurred because user does not have permissions to access the resource. Returns HTTP status code
-     *         403.
+     *         An error occurred because you don't have permissions to access the resource.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.CreatePackage
      */
     CreatePackageResult createPackage(CreatePackageRequest createPackageRequest);
@@ -277,19 +255,15 @@ public interface AmazonOpenSearch {
      * @param createVpcEndpointRequest
      * @return Result of the CreateVpcEndpoint operation returned by the service.
      * @throws ConflictException
-     *         An error occurred because the client attempts to remove a resource that is currently in use. Returns HTTP
-     *         status code 409.
+     *         An error occurred because the client attempts to remove a resource that's currently in use.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws LimitExceededException
-     *         An exception for trying to create more than allowed resources or sub-resources. Gives http status code of
-     *         409.
+     *         An exception for trying to create more than the allowed number of resources or sub-resources.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @throws BaseException
      *         An error occurred while processing the request.
      * @sample AmazonOpenSearch.CreateVpcEndpoint
@@ -307,12 +281,11 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.DeleteDomain
      */
     DeleteDomainResult deleteDomain(DeleteDomainRequest deleteDomainRequest);
@@ -329,10 +302,9 @@ public interface AmazonOpenSearch {
      *        Container for the parameters to the <code>DeleteInboundConnection</code> operation.
      * @return Result of the DeleteInboundConnection operation returned by the service.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @sample AmazonOpenSearch.DeleteInboundConnection
      */
     DeleteInboundConnectionResult deleteInboundConnection(DeleteInboundConnectionRequest deleteInboundConnectionRequest);
@@ -349,10 +321,9 @@ public interface AmazonOpenSearch {
      *        Container for the parameters to the <code>DeleteOutboundConnection</code> operation.
      * @return Result of the DeleteOutboundConnection operation returned by the service.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @sample AmazonOpenSearch.DeleteOutboundConnection
      */
     DeleteOutboundConnectionResult deleteOutboundConnection(DeleteOutboundConnectionRequest deleteOutboundConnectionRequest);
@@ -371,18 +342,15 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws AccessDeniedException
-     *         An error occurred because user does not have permissions to access the resource. Returns HTTP status code
-     *         403.
+     *         An error occurred because you don't have permissions to access the resource.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws ConflictException
-     *         An error occurred because the client attempts to remove a resource that is currently in use. Returns HTTP
-     *         status code 409.
+     *         An error occurred because the client attempts to remove a resource that's currently in use.
      * @sample AmazonOpenSearch.DeletePackage
      */
     DeletePackageResult deletePackage(DeletePackageRequest deletePackageRequest);
@@ -395,13 +363,11 @@ public interface AmazonOpenSearch {
      * @param deleteVpcEndpointRequest
      * @return Result of the DeleteVpcEndpoint operation returned by the service.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws BaseException
      *         An error occurred while processing the request.
      * @sample AmazonOpenSearch.DeleteVpcEndpoint
@@ -420,12 +386,11 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.DescribeDomain
      */
     DescribeDomainResult describeDomain(DescribeDomainRequest describeDomainRequest);
@@ -444,12 +409,11 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.DescribeDomainAutoTunes
      */
     DescribeDomainAutoTunesResult describeDomainAutoTunes(DescribeDomainAutoTunesRequest describeDomainAutoTunesRequest);
@@ -468,12 +432,11 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.DescribeDomainChangeProgress
      */
     DescribeDomainChangeProgressResult describeDomainChangeProgress(DescribeDomainChangeProgressRequest describeDomainChangeProgressRequest);
@@ -489,12 +452,11 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.DescribeDomainConfig
      */
     DescribeDomainConfigResult describeDomainConfig(DescribeDomainConfigRequest describeDomainConfigRequest);
@@ -510,10 +472,9 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.DescribeDomains
      */
     DescribeDomainsResult describeDomains(DescribeDomainsRequest describeDomainsRequest);
@@ -531,15 +492,13 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @sample AmazonOpenSearch.DescribeDryRunProgress
      */
     DescribeDryRunProgressResult describeDryRunProgress(DescribeDryRunProgressRequest describeDryRunProgressRequest);
@@ -556,11 +515,9 @@ public interface AmazonOpenSearch {
      *        Container for the parameters to the <code>DescribeInboundConnections</code> operation.
      * @return Result of the DescribeInboundConnections operation returned by the service.
      * @throws InvalidPaginationTokenException
-     *         The request processing has failed because of invalid pagination token provided by customer. Returns an
-     *         HTTP status code of 400.
+     *         The request processing has failed because you provided an invalid pagination token.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @sample AmazonOpenSearch.DescribeInboundConnections
      */
     DescribeInboundConnectionsResult describeInboundConnections(DescribeInboundConnectionsRequest describeInboundConnectionsRequest);
@@ -577,18 +534,15 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws InvalidTypeException
-     *         An exception for trying to create or access sub-resource that is either invalid or not supported. Gives
-     *         http status code of 409.
+     *         An exception for trying to create or access a sub-resource that's either invalid or not supported.
      * @throws LimitExceededException
-     *         An exception for trying to create more than allowed resources or sub-resources. Gives http status code of
-     *         409.
+     *         An exception for trying to create more than the allowed number of resources or sub-resources.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.DescribeInstanceTypeLimits
      */
     DescribeInstanceTypeLimitsResult describeInstanceTypeLimits(DescribeInstanceTypeLimitsRequest describeInstanceTypeLimitsRequest);
@@ -605,11 +559,9 @@ public interface AmazonOpenSearch {
      *        Container for the parameters to the <code>DescribeOutboundConnections</code> operation.
      * @return Result of the DescribeOutboundConnections operation returned by the service.
      * @throws InvalidPaginationTokenException
-     *         The request processing has failed because of invalid pagination token provided by customer. Returns an
-     *         HTTP status code of 400.
+     *         The request processing has failed because you provided an invalid pagination token.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @sample AmazonOpenSearch.DescribeOutboundConnections
      */
     DescribeOutboundConnectionsResult describeOutboundConnections(DescribeOutboundConnectionsRequest describeOutboundConnectionsRequest);
@@ -627,15 +579,13 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws AccessDeniedException
-     *         An error occurred because user does not have permissions to access the resource. Returns HTTP status code
-     *         403.
+     *         An error occurred because you don't have permissions to access the resource.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.DescribePackages
      */
     DescribePackagesResult describePackages(DescribePackagesRequest describePackagesRequest);
@@ -651,15 +601,13 @@ public interface AmazonOpenSearch {
      *        Container for the request parameters to a <code>DescribeReservedInstanceOfferings</code> operation.
      * @return Result of the DescribeReservedInstanceOfferings operation returned by the service.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @sample AmazonOpenSearch.DescribeReservedInstanceOfferings
      */
     DescribeReservedInstanceOfferingsResult describeReservedInstanceOfferings(DescribeReservedInstanceOfferingsRequest describeReservedInstanceOfferingsRequest);
@@ -675,15 +623,13 @@ public interface AmazonOpenSearch {
      *        Container for the request parameters to the <code>DescribeReservedInstances</code> operation.
      * @return Result of the DescribeReservedInstances operation returned by the service.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @sample AmazonOpenSearch.DescribeReservedInstances
      */
     DescribeReservedInstancesResult describeReservedInstances(DescribeReservedInstancesRequest describeReservedInstancesRequest);
@@ -696,13 +642,11 @@ public interface AmazonOpenSearch {
      * @param describeVpcEndpointsRequest
      * @return Result of the DescribeVpcEndpoints operation returned by the service.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @throws BaseException
      *         An error occurred while processing the request.
      * @sample AmazonOpenSearch.DescribeVpcEndpoints
@@ -724,18 +668,15 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws AccessDeniedException
-     *         An error occurred because user does not have permissions to access the resource. Returns HTTP status code
-     *         403.
+     *         An error occurred because you don't have permissions to access the resource.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws ConflictException
-     *         An error occurred because the client attempts to remove a resource that is currently in use. Returns HTTP
-     *         status code 409.
+     *         An error occurred because the client attempts to remove a resource that's currently in use.
      * @sample AmazonOpenSearch.DissociatePackage
      */
     DissociatePackageResult dissociatePackage(DissociatePackageRequest dissociatePackageRequest);
@@ -751,15 +692,13 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @sample AmazonOpenSearch.GetCompatibleVersions
      */
     GetCompatibleVersionsResult getCompatibleVersions(GetCompatibleVersionsRequest getCompatibleVersionsRequest);
@@ -778,15 +717,13 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws AccessDeniedException
-     *         An error occurred because user does not have permissions to access the resource. Returns HTTP status code
-     *         403.
+     *         An error occurred because you don't have permissions to access the resource.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.GetPackageVersionHistory
      */
     GetPackageVersionHistoryResult getPackageVersionHistory(GetPackageVersionHistoryRequest getPackageVersionHistoryRequest);
@@ -802,15 +739,13 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @sample AmazonOpenSearch.GetUpgradeHistory
      */
     GetUpgradeHistoryResult getUpgradeHistory(GetUpgradeHistoryRequest getUpgradeHistoryRequest);
@@ -827,15 +762,13 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @sample AmazonOpenSearch.GetUpgradeStatus
      */
     GetUpgradeStatusResult getUpgradeStatus(GetUpgradeStatusRequest getUpgradeStatusRequest);
@@ -851,7 +784,7 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.ListDomainNames
      */
     ListDomainNamesResult listDomainNames(ListDomainNamesRequest listDomainNamesRequest);
@@ -869,15 +802,13 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws AccessDeniedException
-     *         An error occurred because user does not have permissions to access the resource. Returns HTTP status code
-     *         403.
+     *         An error occurred because you don't have permissions to access the resource.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.ListDomainsForPackage
      */
     ListDomainsForPackageResult listDomainsForPackage(ListDomainsForPackageRequest listDomainsForPackageRequest);
@@ -892,12 +823,11 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.ListInstanceTypeDetails
      */
     ListInstanceTypeDetailsResult listInstanceTypeDetails(ListInstanceTypeDetailsRequest listInstanceTypeDetailsRequest);
@@ -915,15 +845,13 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws AccessDeniedException
-     *         An error occurred because user does not have permissions to access the resource. Returns HTTP status code
-     *         403.
+     *         An error occurred because you don't have permissions to access the resource.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.ListPackagesForDomain
      */
     ListPackagesForDomainResult listPackagesForDomain(ListPackagesForDomainRequest listPackagesForDomainRequest);
@@ -941,12 +869,11 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @sample AmazonOpenSearch.ListTags
      */
     ListTagsResult listTags(ListTagsRequest listTagsRequest);
@@ -962,12 +889,11 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.ListVersions
      */
     ListVersionsResult listVersions(ListVersionsRequest listVersionsRequest);
@@ -981,13 +907,11 @@ public interface AmazonOpenSearch {
      * @param listVpcEndpointAccessRequest
      * @return Result of the ListVpcEndpointAccess operation returned by the service.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws BaseException
      *         An error occurred while processing the request.
      * @sample AmazonOpenSearch.ListVpcEndpointAccess
@@ -1003,11 +927,9 @@ public interface AmazonOpenSearch {
      * @param listVpcEndpointsRequest
      * @return Result of the ListVpcEndpoints operation returned by the service.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @throws BaseException
      *         An error occurred while processing the request.
      * @sample AmazonOpenSearch.ListVpcEndpoints
@@ -1022,13 +944,11 @@ public interface AmazonOpenSearch {
      * @param listVpcEndpointsForDomainRequest
      * @return Result of the ListVpcEndpointsForDomain operation returned by the service.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws BaseException
      *         An error occurred while processing the request.
      * @sample AmazonOpenSearch.ListVpcEndpointsForDomain
@@ -1044,20 +964,17 @@ public interface AmazonOpenSearch {
      *        Container for request parameters to the <code>PurchaseReservedInstanceOffering</code> operation.
      * @return Result of the PurchaseReservedInstanceOffering operation returned by the service.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws ResourceAlreadyExistsException
-     *         An exception for creating a resource that already exists. Gives http status code of 400.
+     *         An exception for creating a resource that already exists.
      * @throws LimitExceededException
-     *         An exception for trying to create more than allowed resources or sub-resources. Gives http status code of
-     *         409.
+     *         An exception for trying to create more than the allowed number of resources or sub-resources.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @sample AmazonOpenSearch.PurchaseReservedInstanceOffering
      */
     PurchaseReservedInstanceOfferingResult purchaseReservedInstanceOffering(PurchaseReservedInstanceOfferingRequest purchaseReservedInstanceOfferingRequest);
@@ -1071,10 +988,9 @@ public interface AmazonOpenSearch {
      *        Container for the request parameters to the <code>RejectInboundConnection</code> operation.
      * @return Result of the RejectInboundConnection operation returned by the service.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @sample AmazonOpenSearch.RejectInboundConnection
      */
     RejectInboundConnectionResult rejectInboundConnection(RejectInboundConnectionRequest rejectInboundConnectionRequest);
@@ -1092,10 +1008,9 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @sample AmazonOpenSearch.RemoveTags
      */
     RemoveTagsResult removeTags(RemoveTagsRequest removeTagsRequest);
@@ -1108,15 +1023,13 @@ public interface AmazonOpenSearch {
      * @param revokeVpcEndpointAccessRequest
      * @return Result of the RevokeVpcEndpointAccess operation returned by the service.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws BaseException
      *         An error occurred while processing the request.
      * @sample AmazonOpenSearch.RevokeVpcEndpointAccess
@@ -1136,12 +1049,11 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.StartServiceSoftwareUpdate
      */
     StartServiceSoftwareUpdateResult startServiceSoftwareUpdate(StartServiceSoftwareUpdateRequest startServiceSoftwareUpdateRequest);
@@ -1157,18 +1069,15 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws InvalidTypeException
-     *         An exception for trying to create or access sub-resource that is either invalid or not supported. Gives
-     *         http status code of 409.
+     *         An exception for trying to create or access a sub-resource that's either invalid or not supported.
      * @throws LimitExceededException
-     *         An exception for trying to create more than allowed resources or sub-resources. Gives http status code of
-     *         409.
+     *         An exception for trying to create more than the allowed number of resources or sub-resources.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.UpdateDomainConfig
      */
     UpdateDomainConfigResult updateDomainConfig(UpdateDomainConfigRequest updateDomainConfigRequest);
@@ -1186,18 +1095,15 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws LimitExceededException
-     *         An exception for trying to create more than allowed resources or sub-resources. Gives http status code of
-     *         409.
+     *         An exception for trying to create more than the allowed number of resources or sub-resources.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws AccessDeniedException
-     *         An error occurred because user does not have permissions to access the resource. Returns HTTP status code
-     *         403.
+     *         An error occurred because you don't have permissions to access the resource.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @sample AmazonOpenSearch.UpdatePackage
      */
     UpdatePackageResult updatePackage(UpdatePackageRequest updatePackageRequest);
@@ -1210,18 +1116,15 @@ public interface AmazonOpenSearch {
      * @param updateVpcEndpointRequest
      * @return Result of the UpdateVpcEndpoint operation returned by the service.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws ConflictException
-     *         An error occurred because the client attempts to remove a resource that is currently in use. Returns HTTP
-     *         status code 409.
+     *         An error occurred because the client attempts to remove a resource that's currently in use.
      * @throws BaseException
      *         An error occurred while processing the request.
      * @sample AmazonOpenSearch.UpdateVpcEndpoint
@@ -1240,17 +1143,15 @@ public interface AmazonOpenSearch {
      * @throws BaseException
      *         An error occurred while processing the request.
      * @throws ResourceNotFoundException
-     *         An exception for accessing or deleting a resource that does not exist. Gives http status code of 400.
+     *         An exception for accessing or deleting a resource that doesn't exist.
      * @throws ResourceAlreadyExistsException
-     *         An exception for creating a resource that already exists. Gives http status code of 400.
+     *         An exception for creating a resource that already exists.
      * @throws DisabledOperationException
-     *         An error occured because the client wanted to access a not supported operation. Gives http status code of
-     *         409.
+     *         An error occured because the client wanted to access an unsupported operation.
      * @throws ValidationException
-     *         An exception for missing / invalid input fields. Gives http status code of 400.
+     *         An exception for missing or invalid input fields.
      * @throws InternalException
-     *         The request processing has failed because of an unknown error, exception or failure (the failure is
-     *         internal to the service) . Gives http status code of 500.
+     *         Request processing failed because of an unknown error, exception, or internal failure.
      * @sample AmazonOpenSearch.UpgradeDomain
      */
     UpgradeDomainResult upgradeDomain(UpgradeDomainRequest upgradeDomainRequest);

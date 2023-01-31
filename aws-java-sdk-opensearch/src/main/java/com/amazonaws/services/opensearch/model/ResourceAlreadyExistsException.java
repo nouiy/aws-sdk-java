@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * An exception for creating a resource that already exists. Gives http status code of 400.
+ * An exception for creating a resource that already exists.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

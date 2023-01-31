@@ -55,6 +55,18 @@ public class OutboundConnection implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private OutboundConnectionStatus connectionStatus;
+    /**
+     * <p>
+     * The connection mode.
+     * </p>
+     */
+    private String connectionMode;
+    /**
+     * <p>
+     * Properties for the outbound connection.
+     * </p>
+     */
+    private ConnectionProperties connectionProperties;
 
     /**
      * <p>
@@ -257,6 +269,105 @@ public class OutboundConnection implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The connection mode.
+     * </p>
+     * 
+     * @param connectionMode
+     *        The connection mode.
+     * @see ConnectionMode
+     */
+
+    public void setConnectionMode(String connectionMode) {
+        this.connectionMode = connectionMode;
+    }
+
+    /**
+     * <p>
+     * The connection mode.
+     * </p>
+     * 
+     * @return The connection mode.
+     * @see ConnectionMode
+     */
+
+    public String getConnectionMode() {
+        return this.connectionMode;
+    }
+
+    /**
+     * <p>
+     * The connection mode.
+     * </p>
+     * 
+     * @param connectionMode
+     *        The connection mode.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConnectionMode
+     */
+
+    public OutboundConnection withConnectionMode(String connectionMode) {
+        setConnectionMode(connectionMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The connection mode.
+     * </p>
+     * 
+     * @param connectionMode
+     *        The connection mode.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConnectionMode
+     */
+
+    public OutboundConnection withConnectionMode(ConnectionMode connectionMode) {
+        this.connectionMode = connectionMode.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Properties for the outbound connection.
+     * </p>
+     * 
+     * @param connectionProperties
+     *        Properties for the outbound connection.
+     */
+
+    public void setConnectionProperties(ConnectionProperties connectionProperties) {
+        this.connectionProperties = connectionProperties;
+    }
+
+    /**
+     * <p>
+     * Properties for the outbound connection.
+     * </p>
+     * 
+     * @return Properties for the outbound connection.
+     */
+
+    public ConnectionProperties getConnectionProperties() {
+        return this.connectionProperties;
+    }
+
+    /**
+     * <p>
+     * Properties for the outbound connection.
+     * </p>
+     * 
+     * @param connectionProperties
+     *        Properties for the outbound connection.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OutboundConnection withConnectionProperties(ConnectionProperties connectionProperties) {
+        setConnectionProperties(connectionProperties);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -277,7 +388,11 @@ public class OutboundConnection implements Serializable, Cloneable, StructuredPo
         if (getConnectionAlias() != null)
             sb.append("ConnectionAlias: ").append(getConnectionAlias()).append(",");
         if (getConnectionStatus() != null)
-            sb.append("ConnectionStatus: ").append(getConnectionStatus());
+            sb.append("ConnectionStatus: ").append(getConnectionStatus()).append(",");
+        if (getConnectionMode() != null)
+            sb.append("ConnectionMode: ").append(getConnectionMode()).append(",");
+        if (getConnectionProperties() != null)
+            sb.append("ConnectionProperties: ").append(getConnectionProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -312,6 +427,14 @@ public class OutboundConnection implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getConnectionStatus() != null && other.getConnectionStatus().equals(this.getConnectionStatus()) == false)
             return false;
+        if (other.getConnectionMode() == null ^ this.getConnectionMode() == null)
+            return false;
+        if (other.getConnectionMode() != null && other.getConnectionMode().equals(this.getConnectionMode()) == false)
+            return false;
+        if (other.getConnectionProperties() == null ^ this.getConnectionProperties() == null)
+            return false;
+        if (other.getConnectionProperties() != null && other.getConnectionProperties().equals(this.getConnectionProperties()) == false)
+            return false;
         return true;
     }
 
@@ -325,6 +448,8 @@ public class OutboundConnection implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getConnectionId() == null) ? 0 : getConnectionId().hashCode());
         hashCode = prime * hashCode + ((getConnectionAlias() == null) ? 0 : getConnectionAlias().hashCode());
         hashCode = prime * hashCode + ((getConnectionStatus() == null) ? 0 : getConnectionStatus().hashCode());
+        hashCode = prime * hashCode + ((getConnectionMode() == null) ? 0 : getConnectionMode().hashCode());
+        hashCode = prime * hashCode + ((getConnectionProperties() == null) ? 0 : getConnectionProperties().hashCode());
         return hashCode;
     }
 

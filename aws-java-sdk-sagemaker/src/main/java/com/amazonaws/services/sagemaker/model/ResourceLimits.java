@@ -40,6 +40,12 @@ public class ResourceLimits implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Integer maxParallelTrainingJobs;
+    /**
+     * <p>
+     * The maximum time in seconds that a training job launched by a hyperparameter tuning job can run.
+     * </p>
+     */
+    private Integer maxRuntimeInSeconds;
 
     /**
      * <p>
@@ -122,6 +128,46 @@ public class ResourceLimits implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The maximum time in seconds that a training job launched by a hyperparameter tuning job can run.
+     * </p>
+     * 
+     * @param maxRuntimeInSeconds
+     *        The maximum time in seconds that a training job launched by a hyperparameter tuning job can run.
+     */
+
+    public void setMaxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
+        this.maxRuntimeInSeconds = maxRuntimeInSeconds;
+    }
+
+    /**
+     * <p>
+     * The maximum time in seconds that a training job launched by a hyperparameter tuning job can run.
+     * </p>
+     * 
+     * @return The maximum time in seconds that a training job launched by a hyperparameter tuning job can run.
+     */
+
+    public Integer getMaxRuntimeInSeconds() {
+        return this.maxRuntimeInSeconds;
+    }
+
+    /**
+     * <p>
+     * The maximum time in seconds that a training job launched by a hyperparameter tuning job can run.
+     * </p>
+     * 
+     * @param maxRuntimeInSeconds
+     *        The maximum time in seconds that a training job launched by a hyperparameter tuning job can run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceLimits withMaxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
+        setMaxRuntimeInSeconds(maxRuntimeInSeconds);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -136,7 +182,9 @@ public class ResourceLimits implements Serializable, Cloneable, StructuredPojo {
         if (getMaxNumberOfTrainingJobs() != null)
             sb.append("MaxNumberOfTrainingJobs: ").append(getMaxNumberOfTrainingJobs()).append(",");
         if (getMaxParallelTrainingJobs() != null)
-            sb.append("MaxParallelTrainingJobs: ").append(getMaxParallelTrainingJobs());
+            sb.append("MaxParallelTrainingJobs: ").append(getMaxParallelTrainingJobs()).append(",");
+        if (getMaxRuntimeInSeconds() != null)
+            sb.append("MaxRuntimeInSeconds: ").append(getMaxRuntimeInSeconds());
         sb.append("}");
         return sb.toString();
     }
@@ -159,6 +207,10 @@ public class ResourceLimits implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getMaxParallelTrainingJobs() != null && other.getMaxParallelTrainingJobs().equals(this.getMaxParallelTrainingJobs()) == false)
             return false;
+        if (other.getMaxRuntimeInSeconds() == null ^ this.getMaxRuntimeInSeconds() == null)
+            return false;
+        if (other.getMaxRuntimeInSeconds() != null && other.getMaxRuntimeInSeconds().equals(this.getMaxRuntimeInSeconds()) == false)
+            return false;
         return true;
     }
 
@@ -169,6 +221,7 @@ public class ResourceLimits implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getMaxNumberOfTrainingJobs() == null) ? 0 : getMaxNumberOfTrainingJobs().hashCode());
         hashCode = prime * hashCode + ((getMaxParallelTrainingJobs() == null) ? 0 : getMaxParallelTrainingJobs().hashCode());
+        hashCode = prime * hashCode + ((getMaxRuntimeInSeconds() == null) ? 0 : getMaxRuntimeInSeconds().hashCode());
         return hashCode;
     }
 

@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The specified channel was not found.
+ * This exception is thrown when CloudTrail cannot find the specified channel.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

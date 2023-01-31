@@ -82,6 +82,19 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<StatusReason> statusReasons;
+    /**
+     * <p>
+     * The unique identifier of a control across standards. Values for this field typically consist of an Amazon Web
+     * Service and a number, such as APIGateway.5.
+     * </p>
+     */
+    private String securityControlId;
+    /**
+     * <p>
+     * The enabled security standards in which a security control is currently enabled.
+     * </p>
+     */
+    private java.util.List<AssociatedStandard> associatedStandards;
 
     /**
      * <p>
@@ -559,6 +572,122 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The unique identifier of a control across standards. Values for this field typically consist of an Amazon Web
+     * Service and a number, such as APIGateway.5.
+     * </p>
+     * 
+     * @param securityControlId
+     *        The unique identifier of a control across standards. Values for this field typically consist of an Amazon
+     *        Web Service and a number, such as APIGateway.5.
+     */
+
+    public void setSecurityControlId(String securityControlId) {
+        this.securityControlId = securityControlId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of a control across standards. Values for this field typically consist of an Amazon Web
+     * Service and a number, such as APIGateway.5.
+     * </p>
+     * 
+     * @return The unique identifier of a control across standards. Values for this field typically consist of an Amazon
+     *         Web Service and a number, such as APIGateway.5.
+     */
+
+    public String getSecurityControlId() {
+        return this.securityControlId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of a control across standards. Values for this field typically consist of an Amazon Web
+     * Service and a number, such as APIGateway.5.
+     * </p>
+     * 
+     * @param securityControlId
+     *        The unique identifier of a control across standards. Values for this field typically consist of an Amazon
+     *        Web Service and a number, such as APIGateway.5.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Compliance withSecurityControlId(String securityControlId) {
+        setSecurityControlId(securityControlId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The enabled security standards in which a security control is currently enabled.
+     * </p>
+     * 
+     * @return The enabled security standards in which a security control is currently enabled.
+     */
+
+    public java.util.List<AssociatedStandard> getAssociatedStandards() {
+        return associatedStandards;
+    }
+
+    /**
+     * <p>
+     * The enabled security standards in which a security control is currently enabled.
+     * </p>
+     * 
+     * @param associatedStandards
+     *        The enabled security standards in which a security control is currently enabled.
+     */
+
+    public void setAssociatedStandards(java.util.Collection<AssociatedStandard> associatedStandards) {
+        if (associatedStandards == null) {
+            this.associatedStandards = null;
+            return;
+        }
+
+        this.associatedStandards = new java.util.ArrayList<AssociatedStandard>(associatedStandards);
+    }
+
+    /**
+     * <p>
+     * The enabled security standards in which a security control is currently enabled.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAssociatedStandards(java.util.Collection)} or {@link #withAssociatedStandards(java.util.Collection)}
+     * if you want to override the existing values.
+     * </p>
+     * 
+     * @param associatedStandards
+     *        The enabled security standards in which a security control is currently enabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Compliance withAssociatedStandards(AssociatedStandard... associatedStandards) {
+        if (this.associatedStandards == null) {
+            setAssociatedStandards(new java.util.ArrayList<AssociatedStandard>(associatedStandards.length));
+        }
+        for (AssociatedStandard ele : associatedStandards) {
+            this.associatedStandards.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The enabled security standards in which a security control is currently enabled.
+     * </p>
+     * 
+     * @param associatedStandards
+     *        The enabled security standards in which a security control is currently enabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Compliance withAssociatedStandards(java.util.Collection<AssociatedStandard> associatedStandards) {
+        setAssociatedStandards(associatedStandards);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -575,7 +704,11 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
         if (getRelatedRequirements() != null)
             sb.append("RelatedRequirements: ").append(getRelatedRequirements()).append(",");
         if (getStatusReasons() != null)
-            sb.append("StatusReasons: ").append(getStatusReasons());
+            sb.append("StatusReasons: ").append(getStatusReasons()).append(",");
+        if (getSecurityControlId() != null)
+            sb.append("SecurityControlId: ").append(getSecurityControlId()).append(",");
+        if (getAssociatedStandards() != null)
+            sb.append("AssociatedStandards: ").append(getAssociatedStandards());
         sb.append("}");
         return sb.toString();
     }
@@ -602,6 +735,14 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getStatusReasons() != null && other.getStatusReasons().equals(this.getStatusReasons()) == false)
             return false;
+        if (other.getSecurityControlId() == null ^ this.getSecurityControlId() == null)
+            return false;
+        if (other.getSecurityControlId() != null && other.getSecurityControlId().equals(this.getSecurityControlId()) == false)
+            return false;
+        if (other.getAssociatedStandards() == null ^ this.getAssociatedStandards() == null)
+            return false;
+        if (other.getAssociatedStandards() != null && other.getAssociatedStandards().equals(this.getAssociatedStandards()) == false)
+            return false;
         return true;
     }
 
@@ -613,6 +754,8 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getRelatedRequirements() == null) ? 0 : getRelatedRequirements().hashCode());
         hashCode = prime * hashCode + ((getStatusReasons() == null) ? 0 : getStatusReasons().hashCode());
+        hashCode = prime * hashCode + ((getSecurityControlId() == null) ? 0 : getSecurityControlId().hashCode());
+        hashCode = prime * hashCode + ((getAssociatedStandards() == null) ? 0 : getAssociatedStandards().hashCode());
         return hashCode;
     }
 

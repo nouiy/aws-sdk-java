@@ -39,6 +39,10 @@ public class CreateMissionProfileRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("minimumViableContactDurationSeconds").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<StructuredPojo> STREAMSKMSKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("streamsKmsKey").build();
+    private static final MarshallingInfo<String> STREAMSKMSROLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("streamsKmsRole").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<String> TRACKINGCONFIGARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -65,6 +69,8 @@ public class CreateMissionProfileRequestMarshaller {
             protocolMarshaller.marshall(createMissionProfileRequest.getDataflowEdges(), DATAFLOWEDGES_BINDING);
             protocolMarshaller.marshall(createMissionProfileRequest.getMinimumViableContactDurationSeconds(), MINIMUMVIABLECONTACTDURATIONSECONDS_BINDING);
             protocolMarshaller.marshall(createMissionProfileRequest.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(createMissionProfileRequest.getStreamsKmsKey(), STREAMSKMSKEY_BINDING);
+            protocolMarshaller.marshall(createMissionProfileRequest.getStreamsKmsRole(), STREAMSKMSROLE_BINDING);
             protocolMarshaller.marshall(createMissionProfileRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createMissionProfileRequest.getTrackingConfigArn(), TRACKINGCONFIGARN_BINDING);
         } catch (Exception e) {

@@ -413,6 +413,37 @@ public interface AWSGroundStationAsync extends AWSGroundStation {
 
     /**
      * <p>
+     * Gets the latest configuration information for a registered agent.
+     * </p>
+     * 
+     * @param getAgentConfigurationRequest
+     * @return A Java Future containing the result of the GetAgentConfiguration operation returned by the service.
+     * @sample AWSGroundStationAsync.GetAgentConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/GetAgentConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAgentConfigurationResult> getAgentConfigurationAsync(GetAgentConfigurationRequest getAgentConfigurationRequest);
+
+    /**
+     * <p>
+     * Gets the latest configuration information for a registered agent.
+     * </p>
+     * 
+     * @param getAgentConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetAgentConfiguration operation returned by the service.
+     * @sample AWSGroundStationAsyncHandler.GetAgentConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/GetAgentConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAgentConfigurationResult> getAgentConfigurationAsync(GetAgentConfigurationRequest getAgentConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetAgentConfigurationRequest, GetAgentConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns <code>Config</code> information.
      * </p>
      * <p>
@@ -832,6 +863,37 @@ public interface AWSGroundStationAsync extends AWSGroundStation {
 
     /**
      * <p>
+     * Registers a new agent with AWS Groundstation.
+     * </p>
+     * 
+     * @param registerAgentRequest
+     * @return A Java Future containing the result of the RegisterAgent operation returned by the service.
+     * @sample AWSGroundStationAsync.RegisterAgent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/RegisterAgent" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<RegisterAgentResult> registerAgentAsync(RegisterAgentRequest registerAgentRequest);
+
+    /**
+     * <p>
+     * Registers a new agent with AWS Groundstation.
+     * </p>
+     * 
+     * @param registerAgentRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RegisterAgent operation returned by the service.
+     * @sample AWSGroundStationAsyncHandler.RegisterAgent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/RegisterAgent" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<RegisterAgentResult> registerAgentAsync(RegisterAgentRequest registerAgentRequest,
+            com.amazonaws.handlers.AsyncHandler<RegisterAgentRequest, RegisterAgentResult> asyncHandler);
+
+    /**
+     * <p>
      * Reserves a contact using specified parameters.
      * </p>
      * 
@@ -922,6 +984,37 @@ public interface AWSGroundStationAsync extends AWSGroundStation {
      */
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Update the status of the agent.
+     * </p>
+     * 
+     * @param updateAgentStatusRequest
+     * @return A Java Future containing the result of the UpdateAgentStatus operation returned by the service.
+     * @sample AWSGroundStationAsync.UpdateAgentStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/UpdateAgentStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAgentStatusResult> updateAgentStatusAsync(UpdateAgentStatusRequest updateAgentStatusRequest);
+
+    /**
+     * <p>
+     * Update the status of the agent.
+     * </p>
+     * 
+     * @param updateAgentStatusRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateAgentStatus operation returned by the service.
+     * @sample AWSGroundStationAsyncHandler.UpdateAgentStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/UpdateAgentStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAgentStatusResult> updateAgentStatusAsync(UpdateAgentStatusRequest updateAgentStatusRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateAgentStatusRequest, UpdateAgentStatusResult> asyncHandler);
 
     /**
      * <p>

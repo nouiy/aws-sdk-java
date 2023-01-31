@@ -99,21 +99,99 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InsufficientDependencyServiceAccessPermissionException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.InsufficientDependencyServiceAccessPermissionExceptionUnmarshaller
-                                            .getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("EventDataStoreMaxLimitExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.EventDataStoreMaxLimitExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("EventDataStoreTerminationProtectedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.EventDataStoreTerminationProtectedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidParameterException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.InvalidParameterExceptionUnmarshaller.getInstance()))
+                            new JsonErrorShapeMetadata().withErrorCode("ResourcePolicyNotValidException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.ResourcePolicyNotValidExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidKmsKeyIdException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.InvalidKmsKeyIdExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidCloudWatchLogsLogGroupArnException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.InvalidCloudWatchLogsLogGroupArnExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidEventDataStoreCategoryException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.InvalidEventDataStoreCategoryExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidSourceException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.InvalidSourceExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("EventDataStoreAlreadyExistsException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.EventDataStoreAlreadyExistsExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("NotOrganizationMasterAccountException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.NotOrganizationMasterAccountExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidLookupAttributesException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.InvalidLookupAttributesExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("CloudTrailInvalidClientTokenIdException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.CloudTrailInvalidClientTokenIdExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("OrganizationsNotInUseException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.OrganizationsNotInUseExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidNextTokenException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.InvalidNextTokenExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidEventSelectorsException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.InvalidEventSelectorsExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ChannelARNInvalidException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.ChannelARNInvalidExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("UnsupportedOperationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.UnsupportedOperationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidEventDataStoreStatusException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.InvalidEventDataStoreStatusExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("AccountNotRegisteredException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.AccountNotRegisteredExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("CloudTrailAccessNotEnabledException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.CloudTrailAccessNotEnabledExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidTrailNameException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.InvalidTrailNameExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidImportSourceException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.InvalidImportSourceExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InsufficientEncryptionPolicyException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.InsufficientEncryptionPolicyExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourcePolicyNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.ResourcePolicyNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("DelegatedAdminAccountLimitExceededException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.DelegatedAdminAccountLimitExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidS3PrefixException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.InvalidS3PrefixExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InsufficientSnsTopicPolicyException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.InsufficientSnsTopicPolicyExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidHomeRegionException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.InvalidHomeRegionExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InsufficientDependencyServiceAccessPermissionException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.InsufficientDependencyServiceAccessPermissionExceptionUnmarshaller
+                                            .getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ChannelAlreadyExistsException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.ChannelAlreadyExistsExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidParameterException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.InvalidParameterExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("EventDataStoreARNInvalidException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.EventDataStoreARNInvalidExceptionUnmarshaller.getInstance()))
@@ -129,15 +207,6 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidQueryStatusException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.InvalidQueryStatusExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidCloudWatchLogsLogGroupArnException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.InvalidCloudWatchLogsLogGroupArnExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidEventDataStoreCategoryException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.InvalidEventDataStoreCategoryExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("EventDataStoreAlreadyExistsException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.EventDataStoreAlreadyExistsExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidEventCategoryException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.InvalidEventCategoryExceptionUnmarshaller.getInstance()))
@@ -163,9 +232,6 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
                             new JsonErrorShapeMetadata().withErrorCode("InvalidSnsTopicNameException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.InvalidSnsTopicNameExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("NotOrganizationMasterAccountException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.NotOrganizationMasterAccountExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("KmsKeyNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.KmsKeyNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -175,20 +241,11 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
                             new JsonErrorShapeMetadata().withErrorCode("OperationNotPermittedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.OperationNotPermittedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidLookupAttributesException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.InvalidLookupAttributesExceptionUnmarshaller.getInstance()))
+                            new JsonErrorShapeMetadata().withErrorCode("ChannelExistsForEDSException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.ChannelExistsForEDSExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccountHasOngoingImportException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.AccountHasOngoingImportExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("CloudTrailInvalidClientTokenIdException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.CloudTrailInvalidClientTokenIdExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("OrganizationsNotInUseException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.OrganizationsNotInUseExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidNextTokenException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.InvalidNextTokenExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceTypeNotSupportedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.ResourceTypeNotSupportedExceptionUnmarshaller.getInstance()))
@@ -211,26 +268,11 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
                             new JsonErrorShapeMetadata().withErrorCode("InvalidQueryStatementException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.InvalidQueryStatementExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidEventSelectorsException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.InvalidEventSelectorsExceptionUnmarshaller.getInstance()))
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceARNNotValidException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.ResourceARNNotValidExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidTimeRangeException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.InvalidTimeRangeExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ChannelARNInvalidException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.ChannelARNInvalidExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("UnsupportedOperationException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.UnsupportedOperationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidEventDataStoreStatusException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.InvalidEventDataStoreStatusExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("AccountNotRegisteredException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.AccountNotRegisteredExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ImportNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.ImportNotFoundExceptionUnmarshaller.getInstance()))
@@ -244,9 +286,6 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
                             new JsonErrorShapeMetadata().withErrorCode("InvalidMaxResultsException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.InvalidMaxResultsExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("CloudTrailAccessNotEnabledException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.CloudTrailAccessNotEnabledExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidS3BucketNameException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.InvalidS3BucketNameExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -256,17 +295,11 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
                             new JsonErrorShapeMetadata().withErrorCode("InactiveQueryException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.InactiveQueryExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidTrailNameException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.InvalidTrailNameExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidImportSourceException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.InvalidImportSourceExceptionUnmarshaller.getInstance()))
+                            new JsonErrorShapeMetadata().withErrorCode("ChannelMaxLimitExceededException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.cloudtrail.model.transform.ChannelMaxLimitExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("EventDataStoreNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.EventDataStoreNotFoundExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InsufficientEncryptionPolicyException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.InsufficientEncryptionPolicyExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidTagParameterException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.InvalidTagParameterExceptionUnmarshaller.getInstance()))
@@ -274,26 +307,17 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
                             new JsonErrorShapeMetadata().withErrorCode("TrailNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.TrailNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("DelegatedAdminAccountLimitExceededException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.DelegatedAdminAccountLimitExceededExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("MaximumNumberOfTrailsExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.MaximumNumberOfTrailsExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("EventDataStoreHasOngoingImportException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.EventDataStoreHasOngoingImportExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidS3PrefixException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.InvalidS3PrefixExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidInsightSelectorsException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.InvalidInsightSelectorsExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidDateRangeException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.InvalidDateRangeExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InsufficientSnsTopicPolicyException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.InsufficientSnsTopicPolicyExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("NotOrganizationManagementAccountException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.NotOrganizationManagementAccountExceptionUnmarshaller.getInstance()))
@@ -306,9 +330,6 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InsufficientS3BucketPolicyException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.InsufficientS3BucketPolicyExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidHomeRegionException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.cloudtrail.model.transform.InvalidHomeRegionExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("TrailAlreadyExistsException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudtrail.model.transform.TrailAlreadyExistsExceptionUnmarshaller.getInstance()))
@@ -518,16 +539,16 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
-     * Adds one or more tags to a trail or event data store, up to a limit of 50. Overwrites an existing tag's value
-     * when a new value is specified for an existing tag key. Tag key names must be unique for a trail; you cannot have
-     * two keys with the same name but different values. If you specify a key without a value, the tag will be created
-     * with the specified key and a value of null. You can tag a trail or event data store that applies to all Amazon
-     * Web Services Regions only from the Region in which the trail or event data store was created (also known as its
-     * home region).
+     * Adds one or more tags to a trail, event data store, or channel, up to a limit of 50. Overwrites an existing tag's
+     * value when a new value is specified for an existing tag key. Tag key names must be unique; you cannot have two
+     * keys with the same name but different values. If you specify a key without a value, the tag will be created with
+     * the specified key and a value of null. You can tag a trail or event data store that applies to all Amazon Web
+     * Services Regions only from the Region in which the trail or event data store was created (also known as its home
+     * region).
      * </p>
      * 
      * @param addTagsRequest
-     *        Specifies the tags to add to a trail or event data store.
+     *        Specifies the tags to add to a trail, event data store, or channel.
      * @return Result of the AddTags operation returned by the service.
      * @throws ResourceNotFoundException
      *         This exception is thrown when the specified resource is not found.
@@ -536,10 +557,23 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws ResourceTypeNotSupportedException
      *         This exception is thrown when the specified resource type is not supported by CloudTrail.
      * @throws TagsLimitExceededException
-     *         The number of tags per trail has exceeded the permitted amount. Currently, the limit is 50.
+     *         The number of tags per trail, event data store, or channel has exceeded the permitted amount. Currently,
+     *         the limit is 50.
      * @throws InvalidTrailNameException
      *         This exception is thrown when the provided trail name is not valid. Trail names must meet the following
      *         requirements:
@@ -578,6 +612,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         The event data store is inactive.
      * @throws EventDataStoreNotFoundException
      *         The specified event data store was not found.
+     * @throws ChannelNotFoundException
+     *         This exception is thrown when CloudTrail cannot find the specified channel.
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
      * @throws OperationNotPermittedException
@@ -594,8 +630,9 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws ConflictException
      *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
-     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource. If this
-     *         exception occurs, wait a few minutes, and then try the operation again.
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @sample AWSCloudTrail.AddTags
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/AddTags" target="_top">AWS API
      *      Documentation</a>
@@ -675,8 +712,9 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws ConflictException
      *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
-     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource. If this
-     *         exception occurs, wait a few minutes, and then try the operation again.
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @sample AWSCloudTrail.CancelQuery
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/CancelQuery" target="_top">AWS API
      *      Documentation</a>
@@ -715,6 +753,88 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
             HttpResponseHandler<AmazonWebServiceResponse<CancelQueryResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CancelQueryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a channel for CloudTrail to ingest events from a partner or external source. After you create a channel,
+     * a CloudTrail Lake event data store can log events from the partner or source that you specify.
+     * </p>
+     * 
+     * @param createChannelRequest
+     * @return Result of the CreateChannel operation returned by the service.
+     * @throws ChannelMaxLimitExceededException
+     *         This exception is thrown when the maximum number of channels limit is exceeded.
+     * @throws InvalidSourceException
+     *         This exception is thrown when the specified value of <code>Source</code> is not valid.
+     * @throws ChannelAlreadyExistsException
+     *         This exception is thrown when the provided channel already exists.
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
+     * @throws InvalidEventDataStoreCategoryException
+     *         This exception is thrown when event categories of specified event data stores are not valid.
+     * @throws InactiveEventDataStoreException
+     *         The event data store is inactive.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws InvalidTagParameterException
+     *         This exception is thrown when the specified tag key or values are not valid. It can also occur if there
+     *         are duplicate tags or too many tags on the resource.
+     * @throws TagsLimitExceededException
+     *         The number of tags per trail, event data store, or channel has exceeded the permitted amount. Currently,
+     *         the limit is 50.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.CreateChannel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/CreateChannel" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateChannelResult createChannel(CreateChannelRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateChannel(request);
+    }
+
+    @SdkInternalApi
+    final CreateChannelResult executeCreateChannel(CreateChannelRequest createChannelRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createChannelRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateChannelRequest> request = null;
+        Response<CreateChannelResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateChannelRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createChannelRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudTrail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateChannel");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateChannelResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateChannelResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -781,8 +901,9 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         This exception is thrown when the requested operation is not supported.
      * @throws ConflictException
      *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
-     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource. If this
-     *         exception occurs, wait a few minutes, and then try the operation again.
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @throws InsufficientEncryptionPolicyException
      *         This exception is thrown when the policy on the S3 bucket or KMS key does not have sufficient permissions
      *         for the operation.
@@ -932,7 +1053,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * @throws TrailNotProvidedException
      *         This exception is no longer in use.
      * @throws TagsLimitExceededException
-     *         The number of tags per trail has exceeded the permitted amount. Currently, the limit is 50.
+     *         The number of tags per trail, event data store, or channel has exceeded the permitted amount. Currently,
+     *         the limit is 50.
      * @throws InvalidParameterCombinationException
      *         This exception is thrown when the combination of parameters provided is not valid.
      * @throws KmsKeyNotFoundException
@@ -990,8 +1112,9 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         in a suspended Amazon Web Services account.
      * @throws ConflictException
      *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
-     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource. If this
-     *         exception occurs, wait a few minutes, and then try the operation again.
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @sample AWSCloudTrail.CreateTrail
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/CreateTrail" target="_top">AWS API
      *      Documentation</a>
@@ -1030,6 +1153,69 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateTrailResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateTrailResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a channel.
+     * </p>
+     * 
+     * @param deleteChannelRequest
+     * @return Result of the DeleteChannel operation returned by the service.
+     * @throws ChannelARNInvalidException
+     *         This exception is thrown when the specified value of <code>ChannelARN</code> is not valid.
+     * @throws ChannelNotFoundException
+     *         This exception is thrown when CloudTrail cannot find the specified channel.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.DeleteChannel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DeleteChannel" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteChannelResult deleteChannel(DeleteChannelRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteChannel(request);
+    }
+
+    @SdkInternalApi
+    final DeleteChannelResult executeDeleteChannel(DeleteChannelRequest deleteChannelRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteChannelRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteChannelRequest> request = null;
+        Response<DeleteChannelResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteChannelRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteChannelRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudTrail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteChannel");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteChannelResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteChannelResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1084,6 +1270,9 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         event data store</a>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
+     * @throws ChannelExistsForEDSException
+     *         This exception is thrown when the specified event data store cannot yet be deleted because it is in use
+     *         by a channel.
      * @throws InsufficientDependencyServiceAccessPermissionException
      *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
      *         one or more required permissions for creating an organization resource in a required service.
@@ -1125,6 +1314,75 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteEventDataStoreResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteEventDataStoreResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes the resource-based policy attached to the CloudTrail channel.
+     * </p>
+     * 
+     * @param deleteResourcePolicyRequest
+     * @return Result of the DeleteResourcePolicy operation returned by the service.
+     * @throws ResourceARNNotValidException
+     *         This exception is thrown when the provided resource does not exist, or the ARN format of the resource is
+     *         not valid. The following is the valid format for a resource ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/MyChannel</code>.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when the specified resource is not found.
+     * @throws ResourcePolicyNotFoundException
+     *         This exception is thrown when the specified resource policy is not found.
+     * @throws ResourceTypeNotSupportedException
+     *         This exception is thrown when the specified resource type is not supported by CloudTrail.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.DeleteResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DeleteResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteResourcePolicyResult deleteResourcePolicy(DeleteResourcePolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteResourcePolicy(request);
+    }
+
+    @SdkInternalApi
+    final DeleteResourcePolicyResult executeDeleteResourcePolicy(DeleteResourcePolicyRequest deleteResourcePolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteResourcePolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteResourcePolicyRequest> request = null;
+        Response<DeleteResourcePolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteResourcePolicyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteResourcePolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudTrail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteResourcePolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteResourcePolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteResourcePolicyResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1182,6 +1440,23 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @throws InvalidHomeRegionException
      *         This exception is thrown when an operation is called on a trail from a region other than the region in
      *         which the trail was created.
@@ -1202,10 +1477,6 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * @throws InsufficientDependencyServiceAccessPermissionException
      *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
      *         one or more required permissions for creating an organization resource in a required service.
-     * @throws ConflictException
-     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
-     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource. If this
-     *         exception occurs, wait a few minutes, and then try the operation again.
      * @sample AWSCloudTrail.DeleteTrail
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DeleteTrail" target="_top">AWS API
      *      Documentation</a>
@@ -1264,7 +1535,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *        that is currently designated as a delegated administrator.
      * @return Result of the DeregisterOrganizationDelegatedAdmin operation returned by the service.
      * @throws AccountNotFoundException
-     *         This exception is thrown when when the specified account is not found or not part of an organization.
+     *         This exception is thrown when the specified account is not found or not part of an organization.
      * @throws AccountNotRegisteredException
      *         This exception is thrown when the specified account is not registered as the CloudTrail delegated
      *         administrator.
@@ -1275,6 +1546,11 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @throws InsufficientDependencyServiceAccessPermissionException
      *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
      *         one or more required permissions for creating an organization resource in a required service.
@@ -1516,10 +1792,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
-     * Returns information about a specific channel. Amazon Web Services services create service-linked channels to get
-     * information about CloudTrail events on your behalf. For more information about service-linked channels, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/viewing-service-linked-channels.html">Viewing
-     * service-linked channels for CloudTrail by using the CLI</a>.
+     * Returns information about a specific channel.
      * </p>
      * 
      * @param getChannelRequest
@@ -1527,7 +1800,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * @throws ChannelARNInvalidException
      *         This exception is thrown when the specified value of <code>ChannelARN</code> is not valid.
      * @throws ChannelNotFoundException
-     *         The specified channel was not found.
+     *         This exception is thrown when CloudTrail cannot find the specified channel.
      * @throws OperationNotPermittedException
      *         This exception is thrown when the requested operation is not permitted.
      * @throws UnsupportedOperationException
@@ -1729,6 +2002,18 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
      * @throws OperationNotPermittedException
@@ -1898,6 +2183,18 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
      * @throws OperationNotPermittedException
@@ -2037,6 +2334,75 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
+     * Retrieves the JSON text of the resource-based policy document attached to the CloudTrail channel.
+     * </p>
+     * 
+     * @param getResourcePolicyRequest
+     * @return Result of the GetResourcePolicy operation returned by the service.
+     * @throws ResourceARNNotValidException
+     *         This exception is thrown when the provided resource does not exist, or the ARN format of the resource is
+     *         not valid. The following is the valid format for a resource ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/MyChannel</code>.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when the specified resource is not found.
+     * @throws ResourcePolicyNotFoundException
+     *         This exception is thrown when the specified resource policy is not found.
+     * @throws ResourceTypeNotSupportedException
+     *         This exception is thrown when the specified resource type is not supported by CloudTrail.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.GetResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/GetResourcePolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetResourcePolicyResult getResourcePolicy(GetResourcePolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetResourcePolicy(request);
+    }
+
+    @SdkInternalApi
+    final GetResourcePolicyResult executeGetResourcePolicy(GetResourcePolicyRequest getResourcePolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getResourcePolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetResourcePolicyRequest> request = null;
+        Response<GetResourcePolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetResourcePolicyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getResourcePolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudTrail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetResourcePolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetResourcePolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetResourcePolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns settings information for a specified trail.
      * </p>
      * 
@@ -2047,6 +2413,18 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws TrailNotFoundException
      *         This exception is thrown when the trail with the given name is not found.
      * @throws InvalidTrailNameException
@@ -2148,6 +2526,18 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws TrailNotFoundException
      *         This exception is thrown when the trail with the given name is not found.
      * @throws InvalidTrailNameException
@@ -2235,11 +2625,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
-     * Lists the channels in the current account, and their source names. Amazon Web Services services create
-     * service-linked channels get information about CloudTrail events on your behalf. For more information about
-     * service-linked channels, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/viewing-service-linked-channels.html">Viewing
-     * service-linked channels for CloudTrail by using the CLI</a>.
+     * Lists the channels in the current account, and their source names.
      * </p>
      * 
      * @param listChannelsRequest
@@ -2660,7 +3046,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
-     * Lists the tags for the trail or event data store in the current region.
+     * Lists the tags for the trail, event data store, or channel in the current region.
      * </p>
      * 
      * @param listTagsRequest
@@ -2673,6 +3059,18 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws ResourceTypeNotSupportedException
      *         This exception is thrown when the specified resource type is not supported by CloudTrail.
      * @throws InvalidTrailNameException
@@ -3083,6 +3481,18 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws InvalidHomeRegionException
      *         This exception is thrown when an operation is called on a trail from a region other than the region in
      *         which the trail was created.
@@ -3233,6 +3643,18 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws InvalidHomeRegionException
      *         This exception is thrown when an operation is called on a trail from a region other than the region in
      *         which the trail was created.
@@ -3314,6 +3736,98 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
+     * Attaches a resource-based permission policy to a CloudTrail channel that is used for an integration with an event
+     * source outside of Amazon Web Services. For more information about resource-based policies, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/security_iam_resource-based-policy-examples.html"
+     * >CloudTrail resource-based policy examples</a> in the <i>CloudTrail User Guide</i>.
+     * </p>
+     * 
+     * @param putResourcePolicyRequest
+     * @return Result of the PutResourcePolicy operation returned by the service.
+     * @throws ResourceARNNotValidException
+     *         This exception is thrown when the provided resource does not exist, or the ARN format of the resource is
+     *         not valid. The following is the valid format for a resource ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/MyChannel</code>.
+     * @throws ResourcePolicyNotValidException
+     *         This exception is thrown when the resouce-based policy has syntax errors, or contains a principal that is
+     *         not valid. </p>
+     *         <p>
+     *         The following are requirements for the resource policy:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Contains only one action: cloudtrail-data:PutAuditEvents
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Contains at least one statement. The policy can have a maximum of 20 statements.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Each statement contains at least one principal. A statement can have a maximum of 50 principals.
+     *         </p>
+     *         </li>
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when the specified resource is not found.
+     * @throws ResourceTypeNotSupportedException
+     *         This exception is thrown when the specified resource type is not supported by CloudTrail.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.PutResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/PutResourcePolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public PutResourcePolicyResult putResourcePolicy(PutResourcePolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executePutResourcePolicy(request);
+    }
+
+    @SdkInternalApi
+    final PutResourcePolicyResult executePutResourcePolicy(PutResourcePolicyRequest putResourcePolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putResourcePolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutResourcePolicyRequest> request = null;
+        Response<PutResourcePolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutResourcePolicyRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(putResourcePolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudTrail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutResourcePolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutResourcePolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new PutResourcePolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Registers an organization’s member account as the CloudTrail delegated administrator.
      * </p>
      * 
@@ -3324,7 +3838,7 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         This exception is thrown when the account is already registered as the CloudTrail delegated
      *         administrator.
      * @throws AccountNotFoundException
-     *         This exception is thrown when when the specified account is not found or not part of an organization.
+     *         This exception is thrown when the specified account is not found or not part of an organization.
      * @throws InsufficientDependencyServiceAccessPermissionException
      *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
      *         one or more required permissions for creating an organization resource in a required service.
@@ -3340,6 +3854,11 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @throws DelegatedAdminAccountLimitExceededException
      *         This exception is thrown when the maximum number of CloudTrail delegated administrators is reached.
      * @throws NotOrganizationManagementAccountException
@@ -3409,11 +3928,11 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
-     * Removes the specified tags from a trail or event data store.
+     * Removes the specified tags from a trail, event data store, or channel.
      * </p>
      * 
      * @param removeTagsRequest
-     *        Specifies the tags to remove from a trail or event data store.
+     *        Specifies the tags to remove from a trail, event data store, or channel.
      * @return Result of the RemoveTags operation returned by the service.
      * @throws ResourceNotFoundException
      *         This exception is thrown when the specified resource is not found.
@@ -3422,6 +3941,18 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws ResourceTypeNotSupportedException
      *         This exception is thrown when the specified resource type is not supported by CloudTrail.
      * @throws InvalidTrailNameException
@@ -3462,6 +3993,8 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         The event data store is inactive.
      * @throws EventDataStoreNotFoundException
      *         The specified event data store was not found.
+     * @throws ChannelNotFoundException
+     *         This exception is thrown when CloudTrail cannot find the specified channel.
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
      * @throws OperationNotPermittedException
@@ -3643,6 +4176,12 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      * <p>
      * When you retry an import, the <code>ImportID</code> parameter is required.
      * </p>
+     * <note>
+     * <p>
+     * If the destination event data store is for an organization, you must use the management account to import trail
+     * events. You cannot use the delegated administrator account for the organization.
+     * </p>
+     * </note>
      * 
      * @param startImportRequest
      * @return Result of the StartImport operation returned by the service.
@@ -3736,6 +4275,23 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @throws TrailNotFoundException
      *         This exception is thrown when the trail with the given name is not found.
      * @throws InvalidTrailNameException
@@ -4039,6 +4595,23 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @throws InvalidHomeRegionException
      *         This exception is thrown when an operation is called on a trail from a region other than the region in
      *         which the trail was created.
@@ -4109,12 +4682,94 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
 
     /**
      * <p>
+     * Updates a channel specified by a required channel ARN or UUID.
+     * </p>
+     * 
+     * @param updateChannelRequest
+     * @return Result of the UpdateChannel operation returned by the service.
+     * @throws ChannelARNInvalidException
+     *         This exception is thrown when the specified value of <code>ChannelARN</code> is not valid.
+     * @throws ChannelNotFoundException
+     *         This exception is thrown when CloudTrail cannot find the specified channel.
+     * @throws ChannelAlreadyExistsException
+     *         This exception is thrown when the provided channel already exists.
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
+     * @throws InvalidEventDataStoreCategoryException
+     *         This exception is thrown when event categories of specified event data stores are not valid.
+     * @throws InactiveEventDataStoreException
+     *         The event data store is inactive.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.UpdateChannel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/UpdateChannel" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateChannelResult updateChannel(UpdateChannelRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateChannel(request);
+    }
+
+    @SdkInternalApi
+    final UpdateChannelResult executeUpdateChannel(UpdateChannelRequest updateChannelRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateChannelRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateChannelRequest> request = null;
+        Response<UpdateChannelResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateChannelRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateChannelRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "CloudTrail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateChannel");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateChannelResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateChannelResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Updates an event data store. The required <code>EventDataStore</code> value is an ARN or the ID portion of the
      * ARN. Other parameters are optional, but at least one optional parameter must be specified, or CloudTrail throws
      * an error. <code>RetentionPeriod</code> is in days, and valid values are integers between 90 and 2557. By default,
-     * <code>TerminationProtection</code> is enabled. <code>AdvancedEventSelectors</code> includes or excludes
-     * management and data events in your event data store; for more information about
-     * <code>AdvancedEventSelectors</code>, see <a>PutEventSelectorsRequest$AdvancedEventSelectors</a>.
+     * <code>TerminationProtection</code> is enabled.
+     * </p>
+     * <p>
+     * For event data stores for CloudTrail events, <code>AdvancedEventSelectors</code> includes or excludes management
+     * and data events in your event data store. For more information about <code>AdvancedEventSelectors</code>, see
+     * <a>PutEventSelectorsRequest$AdvancedEventSelectors</a>.
+     * </p>
+     * <p>
+     * For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services events,
+     * <code>AdvancedEventSelectors</code> includes events of that type in your event data store.
      * </p>
      * 
      * @param updateEventDataStoreRequest
@@ -4357,6 +5012,23 @@ public class AWSCloudTrailClient extends AmazonWebServiceClient implements AWSCl
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @throws InvalidParameterCombinationException
      *         This exception is thrown when the combination of parameters provided is not valid.
      * @throws InvalidHomeRegionException

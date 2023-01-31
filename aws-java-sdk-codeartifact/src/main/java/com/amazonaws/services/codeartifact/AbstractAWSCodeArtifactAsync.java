@@ -106,6 +106,19 @@ public class AbstractAWSCodeArtifactAsync extends AbstractAWSCodeArtifact implem
     }
 
     @Override
+    public java.util.concurrent.Future<DeletePackageResult> deletePackageAsync(DeletePackageRequest request) {
+
+        return deletePackageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePackageResult> deletePackageAsync(DeletePackageRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeletePackageRequest, DeletePackageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeletePackageVersionsResult> deletePackageVersionsAsync(DeletePackageVersionsRequest request) {
 
         return deletePackageVersionsAsync(request, null);

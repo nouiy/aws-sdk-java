@@ -884,12 +884,82 @@ public class AWSCodeArtifactClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
+     * Deletes a package and all associated package versions. A deleted package cannot be restored. To delete one or
+     * more package versions, use the <a
+     * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_DeletePackageVersions.html"
+     * >DeletePackageVersions</a> API.
+     * </p>
+     * 
+     * @param deletePackageRequest
+     * @return Result of the DeletePackage operation returned by the service.
+     * @throws AccessDeniedException
+     *         The operation did not succeed because of an unauthorized access attempt.
+     * @throws ConflictException
+     *         The operation did not succeed because prerequisites are not met.
+     * @throws InternalServerException
+     *         The operation did not succeed because of an error that occurred inside CodeArtifact.
+     * @throws ResourceNotFoundException
+     *         The operation did not succeed because the resource requested is not found in the service.
+     * @throws ThrottlingException
+     *         The operation did not succeed because too many requests are sent to the service.
+     * @throws ValidationException
+     *         The operation did not succeed because a parameter in the request was sent with an invalid value.
+     * @sample AWSCodeArtifact.DeletePackage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/DeletePackage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeletePackageResult deletePackage(DeletePackageRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeletePackage(request);
+    }
+
+    @SdkInternalApi
+    final DeletePackageResult executeDeletePackage(DeletePackageRequest deletePackageRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deletePackageRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeletePackageRequest> request = null;
+        Response<DeletePackageResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeletePackageRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deletePackageRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "codeartifact");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeletePackage");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeletePackageResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeletePackageResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes one or more versions of a package. A deleted package version cannot be restored in your repository. If
      * you want to remove a package version from your repository and be able to restore it later, set its status to
      * <code>Archived</code>. Archived packages cannot be downloaded from a repository and don't show up with list
      * package APIs (for example, <a
      * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_ListPackageVersions.html"
-     * >ListPackageVersions</a>), but you can restore them using <a
+     * >ListackageVersions</a>), but you can restore them using <a
      * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_UpdatePackageVersionsStatus.html"
      * >UpdatePackageVersionsStatus</a>.
      * </p>
@@ -2196,6 +2266,8 @@ public class AWSCodeArtifactClient extends AmazonWebServiceClient implements AWS
      * Returns a list of <a
      * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionSummary.html"
      * >PackageVersionSummary</a> objects for package versions in a repository that match the request parameters.
+     * Package versions of all statuses will be returned by default when calling <code>list-package-versions</code> with
+     * no <code>--status</code> parameter.
      * </p>
      * 
      * @param listPackageVersionsRequest

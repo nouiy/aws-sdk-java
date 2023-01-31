@@ -16,8 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The strategy hyperparameter tuning uses to find the best combination of hyperparameters for your model. Currently,
- * the only supported value is <code>Bayesian</code>.
+ * The strategy hyperparameter tuning uses to find the best combination of hyperparameters for your model.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

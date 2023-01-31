@@ -51,6 +51,12 @@ public class InboundConnection implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private InboundConnectionStatus connectionStatus;
+    /**
+     * <p>
+     * The connection mode.
+     * </p>
+     */
+    private String connectionMode;
 
     /**
      * <p>
@@ -213,6 +219,65 @@ public class InboundConnection implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The connection mode.
+     * </p>
+     * 
+     * @param connectionMode
+     *        The connection mode.
+     * @see ConnectionMode
+     */
+
+    public void setConnectionMode(String connectionMode) {
+        this.connectionMode = connectionMode;
+    }
+
+    /**
+     * <p>
+     * The connection mode.
+     * </p>
+     * 
+     * @return The connection mode.
+     * @see ConnectionMode
+     */
+
+    public String getConnectionMode() {
+        return this.connectionMode;
+    }
+
+    /**
+     * <p>
+     * The connection mode.
+     * </p>
+     * 
+     * @param connectionMode
+     *        The connection mode.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConnectionMode
+     */
+
+    public InboundConnection withConnectionMode(String connectionMode) {
+        setConnectionMode(connectionMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The connection mode.
+     * </p>
+     * 
+     * @param connectionMode
+     *        The connection mode.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConnectionMode
+     */
+
+    public InboundConnection withConnectionMode(ConnectionMode connectionMode) {
+        this.connectionMode = connectionMode.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -231,7 +296,9 @@ public class InboundConnection implements Serializable, Cloneable, StructuredPoj
         if (getConnectionId() != null)
             sb.append("ConnectionId: ").append(getConnectionId()).append(",");
         if (getConnectionStatus() != null)
-            sb.append("ConnectionStatus: ").append(getConnectionStatus());
+            sb.append("ConnectionStatus: ").append(getConnectionStatus()).append(",");
+        if (getConnectionMode() != null)
+            sb.append("ConnectionMode: ").append(getConnectionMode());
         sb.append("}");
         return sb.toString();
     }
@@ -262,6 +329,10 @@ public class InboundConnection implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getConnectionStatus() != null && other.getConnectionStatus().equals(this.getConnectionStatus()) == false)
             return false;
+        if (other.getConnectionMode() == null ^ this.getConnectionMode() == null)
+            return false;
+        if (other.getConnectionMode() != null && other.getConnectionMode().equals(this.getConnectionMode()) == false)
+            return false;
         return true;
     }
 
@@ -274,6 +345,7 @@ public class InboundConnection implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getRemoteDomainInfo() == null) ? 0 : getRemoteDomainInfo().hashCode());
         hashCode = prime * hashCode + ((getConnectionId() == null) ? 0 : getConnectionId().hashCode());
         hashCode = prime * hashCode + ((getConnectionStatus() == null) ? 0 : getConnectionStatus().hashCode());
+        hashCode = prime * hashCode + ((getConnectionMode() == null) ? 0 : getConnectionMode().hashCode());
         return hashCode;
     }
 

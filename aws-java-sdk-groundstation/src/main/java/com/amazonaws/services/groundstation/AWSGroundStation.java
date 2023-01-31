@@ -273,6 +273,25 @@ public interface AWSGroundStation {
 
     /**
      * <p>
+     * Gets the latest configuration information for a registered agent.
+     * </p>
+     * 
+     * @param getAgentConfigurationRequest
+     * @return Result of the GetAgentConfiguration operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more parameters are not valid.
+     * @throws DependencyException
+     *         Dependency encountered an error.
+     * @throws ResourceNotFoundException
+     *         Resource was not found.
+     * @sample AWSGroundStation.GetAgentConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/GetAgentConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetAgentConfigurationResult getAgentConfiguration(GetAgentConfigurationRequest getAgentConfigurationRequest);
+
+    /**
+     * <p>
      * Returns <code>Config</code> information.
      * </p>
      * <p>
@@ -527,6 +546,25 @@ public interface AWSGroundStation {
 
     /**
      * <p>
+     * Registers a new agent with AWS Groundstation.
+     * </p>
+     * 
+     * @param registerAgentRequest
+     * @return Result of the RegisterAgent operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more parameters are not valid.
+     * @throws DependencyException
+     *         Dependency encountered an error.
+     * @throws ResourceNotFoundException
+     *         Resource was not found.
+     * @sample AWSGroundStation.RegisterAgent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/RegisterAgent" target="_top">AWS
+     *      API Documentation</a>
+     */
+    RegisterAgentResult registerAgent(RegisterAgentRequest registerAgentRequest);
+
+    /**
+     * <p>
      * Reserves a contact using specified parameters.
      * </p>
      * 
@@ -581,6 +619,25 @@ public interface AWSGroundStation {
      *      API Documentation</a>
      */
     UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * Update the status of the agent.
+     * </p>
+     * 
+     * @param updateAgentStatusRequest
+     * @return Result of the UpdateAgentStatus operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more parameters are not valid.
+     * @throws DependencyException
+     *         Dependency encountered an error.
+     * @throws ResourceNotFoundException
+     *         Resource was not found.
+     * @sample AWSGroundStation.UpdateAgentStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/UpdateAgentStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateAgentStatusResult updateAgentStatus(UpdateAgentStatusRequest updateAgentStatusRequest);
 
     /**
      * <p>

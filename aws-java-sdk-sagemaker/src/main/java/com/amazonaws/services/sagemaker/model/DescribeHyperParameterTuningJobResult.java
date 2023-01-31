@@ -123,6 +123,16 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
      * </p>
      */
     private String failureReason;
+    /**
+     * <p>
+     * Tuning job completion information returned as the response from a hyperparameter tuning job. This information
+     * tells if your tuning job has or has not converged. It also includes the number of training jobs that have not
+     * improved model performance as evaluated against the objective function.
+     * </p>
+     */
+    private HyperParameterTuningJobCompletionDetails tuningJobCompletionDetails;
+
+    private HyperParameterTuningJobConsumedResources consumedResources;
 
     /**
      * <p>
@@ -828,6 +838,84 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
     }
 
     /**
+     * <p>
+     * Tuning job completion information returned as the response from a hyperparameter tuning job. This information
+     * tells if your tuning job has or has not converged. It also includes the number of training jobs that have not
+     * improved model performance as evaluated against the objective function.
+     * </p>
+     * 
+     * @param tuningJobCompletionDetails
+     *        Tuning job completion information returned as the response from a hyperparameter tuning job. This
+     *        information tells if your tuning job has or has not converged. It also includes the number of training
+     *        jobs that have not improved model performance as evaluated against the objective function.
+     */
+
+    public void setTuningJobCompletionDetails(HyperParameterTuningJobCompletionDetails tuningJobCompletionDetails) {
+        this.tuningJobCompletionDetails = tuningJobCompletionDetails;
+    }
+
+    /**
+     * <p>
+     * Tuning job completion information returned as the response from a hyperparameter tuning job. This information
+     * tells if your tuning job has or has not converged. It also includes the number of training jobs that have not
+     * improved model performance as evaluated against the objective function.
+     * </p>
+     * 
+     * @return Tuning job completion information returned as the response from a hyperparameter tuning job. This
+     *         information tells if your tuning job has or has not converged. It also includes the number of training
+     *         jobs that have not improved model performance as evaluated against the objective function.
+     */
+
+    public HyperParameterTuningJobCompletionDetails getTuningJobCompletionDetails() {
+        return this.tuningJobCompletionDetails;
+    }
+
+    /**
+     * <p>
+     * Tuning job completion information returned as the response from a hyperparameter tuning job. This information
+     * tells if your tuning job has or has not converged. It also includes the number of training jobs that have not
+     * improved model performance as evaluated against the objective function.
+     * </p>
+     * 
+     * @param tuningJobCompletionDetails
+     *        Tuning job completion information returned as the response from a hyperparameter tuning job. This
+     *        information tells if your tuning job has or has not converged. It also includes the number of training
+     *        jobs that have not improved model performance as evaluated against the objective function.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeHyperParameterTuningJobResult withTuningJobCompletionDetails(HyperParameterTuningJobCompletionDetails tuningJobCompletionDetails) {
+        setTuningJobCompletionDetails(tuningJobCompletionDetails);
+        return this;
+    }
+
+    /**
+     * @param consumedResources
+     */
+
+    public void setConsumedResources(HyperParameterTuningJobConsumedResources consumedResources) {
+        this.consumedResources = consumedResources;
+    }
+
+    /**
+     * @return
+     */
+
+    public HyperParameterTuningJobConsumedResources getConsumedResources() {
+        return this.consumedResources;
+    }
+
+    /**
+     * @param consumedResources
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeHyperParameterTuningJobResult withConsumedResources(HyperParameterTuningJobConsumedResources consumedResources) {
+        setConsumedResources(consumedResources);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -868,7 +956,11 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
         if (getWarmStartConfig() != null)
             sb.append("WarmStartConfig: ").append(getWarmStartConfig()).append(",");
         if (getFailureReason() != null)
-            sb.append("FailureReason: ").append(getFailureReason());
+            sb.append("FailureReason: ").append(getFailureReason()).append(",");
+        if (getTuningJobCompletionDetails() != null)
+            sb.append("TuningJobCompletionDetails: ").append(getTuningJobCompletionDetails()).append(",");
+        if (getConsumedResources() != null)
+            sb.append("ConsumedResources: ").append(getConsumedResources());
         sb.append("}");
         return sb.toString();
     }
@@ -945,6 +1037,14 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
             return false;
         if (other.getFailureReason() != null && other.getFailureReason().equals(this.getFailureReason()) == false)
             return false;
+        if (other.getTuningJobCompletionDetails() == null ^ this.getTuningJobCompletionDetails() == null)
+            return false;
+        if (other.getTuningJobCompletionDetails() != null && other.getTuningJobCompletionDetails().equals(this.getTuningJobCompletionDetails()) == false)
+            return false;
+        if (other.getConsumedResources() == null ^ this.getConsumedResources() == null)
+            return false;
+        if (other.getConsumedResources() != null && other.getConsumedResources().equals(this.getConsumedResources()) == false)
+            return false;
         return true;
     }
 
@@ -968,6 +1068,8 @@ public class DescribeHyperParameterTuningJobResult extends com.amazonaws.AmazonW
         hashCode = prime * hashCode + ((getOverallBestTrainingJob() == null) ? 0 : getOverallBestTrainingJob().hashCode());
         hashCode = prime * hashCode + ((getWarmStartConfig() == null) ? 0 : getWarmStartConfig().hashCode());
         hashCode = prime * hashCode + ((getFailureReason() == null) ? 0 : getFailureReason().hashCode());
+        hashCode = prime * hashCode + ((getTuningJobCompletionDetails() == null) ? 0 : getTuningJobCompletionDetails().hashCode());
+        hashCode = prime * hashCode + ((getConsumedResources() == null) ? 0 : getConsumedResources().hashCode());
         return hashCode;
     }
 

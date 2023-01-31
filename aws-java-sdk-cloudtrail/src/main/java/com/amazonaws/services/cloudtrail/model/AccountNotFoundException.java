@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This exception is thrown when when the specified account is not found or not part of an organization.
+ * This exception is thrown when the specified account is not found or not part of an organization.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

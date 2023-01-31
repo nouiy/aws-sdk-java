@@ -30,6 +30,12 @@ public class EndpointDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
+     * An agent endpoint.
+     * </p>
+     */
+    private AwsGroundStationAgentEndpoint awsGroundStationAgentEndpoint;
+    /**
+     * <p>
      * A dataflow endpoint.
      * </p>
      */
@@ -41,6 +47,46 @@ public class EndpointDetails implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private SecurityDetails securityDetails;
+
+    /**
+     * <p>
+     * An agent endpoint.
+     * </p>
+     * 
+     * @param awsGroundStationAgentEndpoint
+     *        An agent endpoint.
+     */
+
+    public void setAwsGroundStationAgentEndpoint(AwsGroundStationAgentEndpoint awsGroundStationAgentEndpoint) {
+        this.awsGroundStationAgentEndpoint = awsGroundStationAgentEndpoint;
+    }
+
+    /**
+     * <p>
+     * An agent endpoint.
+     * </p>
+     * 
+     * @return An agent endpoint.
+     */
+
+    public AwsGroundStationAgentEndpoint getAwsGroundStationAgentEndpoint() {
+        return this.awsGroundStationAgentEndpoint;
+    }
+
+    /**
+     * <p>
+     * An agent endpoint.
+     * </p>
+     * 
+     * @param awsGroundStationAgentEndpoint
+     *        An agent endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EndpointDetails withAwsGroundStationAgentEndpoint(AwsGroundStationAgentEndpoint awsGroundStationAgentEndpoint) {
+        setAwsGroundStationAgentEndpoint(awsGroundStationAgentEndpoint);
+        return this;
+    }
 
     /**
      * <p>
@@ -140,6 +186,8 @@ public class EndpointDetails implements Serializable, Cloneable, StructuredPojo 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getAwsGroundStationAgentEndpoint() != null)
+            sb.append("AwsGroundStationAgentEndpoint: ").append(getAwsGroundStationAgentEndpoint()).append(",");
         if (getEndpoint() != null)
             sb.append("Endpoint: ").append(getEndpoint()).append(",");
         if (getSecurityDetails() != null)
@@ -158,6 +206,11 @@ public class EndpointDetails implements Serializable, Cloneable, StructuredPojo 
         if (obj instanceof EndpointDetails == false)
             return false;
         EndpointDetails other = (EndpointDetails) obj;
+        if (other.getAwsGroundStationAgentEndpoint() == null ^ this.getAwsGroundStationAgentEndpoint() == null)
+            return false;
+        if (other.getAwsGroundStationAgentEndpoint() != null
+                && other.getAwsGroundStationAgentEndpoint().equals(this.getAwsGroundStationAgentEndpoint()) == false)
+            return false;
         if (other.getEndpoint() == null ^ this.getEndpoint() == null)
             return false;
         if (other.getEndpoint() != null && other.getEndpoint().equals(this.getEndpoint()) == false)
@@ -174,6 +227,7 @@ public class EndpointDetails implements Serializable, Cloneable, StructuredPojo 
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getAwsGroundStationAgentEndpoint() == null) ? 0 : getAwsGroundStationAgentEndpoint().hashCode());
         hashCode = prime * hashCode + ((getEndpoint() == null) ? 0 : getEndpoint().hashCode());
         hashCode = prime * hashCode + ((getSecurityDetails() == null) ? 0 : getSecurityDetails().hashCode());
         return hashCode;

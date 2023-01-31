@@ -30,8 +30,18 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A field in an event record on which to filter events to be logged. Supported fields include <code>readOnly</code>, <code>eventCategory</code>, <code>eventSource</code> (for management events), <code>eventName</code>,
-     * <code>resources.type</code>, and <code>resources.ARN</code>.
+     * A field in a CloudTrail event record on which to filter events to be logged. For event data stores for Config
+     * configuration items, Audit Manager evidence, or non-Amazon Web Services events, the field is used only for
+     * selecting events as filtering is not supported.
+     * </p>
+     * <p>
+     * For CloudTrail event records, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
+     * <code>eventSource</code> (for management events), <code>eventName</code>, <code>resources.type</code>, and
+     * <code>resources.ARN</code>.
+     * </p>
+     * <p>
+     * For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services events,
+     * the only supported field is <code>eventCategory</code>.
      * </p>
      * <ul>
      * <li>
@@ -57,16 +67,43 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <b> <code>eventCategory</code> </b> - This is required. It must be set to <code>Equals</code>, and the value must
-     * be <code>Management</code> or <code>Data</code>.
+     * <b> <code>eventCategory</code> </b> - This is required and must be set to <code>Equals</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
-     * <code>Equals</code> operator, and the value can be one of the following:
+     * For Config configuration items, the value must be <code>ConfigurationItem</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For Audit Manager evidence, the value must be <code>Evidence</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For non-Amazon Web Services events, the value must be <code>ActivityAuditLog</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>resources.type</code> </b> - This ﬁeld is required for CloudTrail data events.
+     * <code>resources.type</code> can only use the <code>Equals</code> operator, and the value can be one of the
+     * following:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>AWS::CloudTrail::Channel</code>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>AWS::S3::Object</code>
@@ -115,6 +152,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::Glue::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::FinSpace::Environment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::ExperimentTrialComponent</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::FeatureGroup</code>
      * </p>
      * </li>
      * </ul>
@@ -189,6 +241,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When resources.type equals <code>AWS::CloudTrail::Channel</code>, and the operator is set to <code>Equals</code>
+     * or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -251,6 +314,39 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::FinSpace::Environment</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SageMaker::ExperimentTrialComponent</code>, and the operator
+     * is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:experiment-trial-component/&lt;experiment_trial_component_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SageMaker::FeatureGroup</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
      * </p>
      * </li>
      * </ul>
@@ -304,8 +400,18 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A field in an event record on which to filter events to be logged. Supported fields include <code>readOnly</code>, <code>eventCategory</code>, <code>eventSource</code> (for management events), <code>eventName</code>,
-     * <code>resources.type</code>, and <code>resources.ARN</code>.
+     * A field in a CloudTrail event record on which to filter events to be logged. For event data stores for Config
+     * configuration items, Audit Manager evidence, or non-Amazon Web Services events, the field is used only for
+     * selecting events as filtering is not supported.
+     * </p>
+     * <p>
+     * For CloudTrail event records, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
+     * <code>eventSource</code> (for management events), <code>eventName</code>, <code>resources.type</code>, and
+     * <code>resources.ARN</code>.
+     * </p>
+     * <p>
+     * For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services events,
+     * the only supported field is <code>eventCategory</code>.
      * </p>
      * <ul>
      * <li>
@@ -331,16 +437,43 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <b> <code>eventCategory</code> </b> - This is required. It must be set to <code>Equals</code>, and the value must
-     * be <code>Management</code> or <code>Data</code>.
+     * <b> <code>eventCategory</code> </b> - This is required and must be set to <code>Equals</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
-     * <code>Equals</code> operator, and the value can be one of the following:
+     * For Config configuration items, the value must be <code>ConfigurationItem</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For Audit Manager evidence, the value must be <code>Evidence</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For non-Amazon Web Services events, the value must be <code>ActivityAuditLog</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>resources.type</code> </b> - This ﬁeld is required for CloudTrail data events.
+     * <code>resources.type</code> can only use the <code>Equals</code> operator, and the value can be one of the
+     * following:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>AWS::CloudTrail::Channel</code>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>AWS::S3::Object</code>
@@ -389,6 +522,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::Glue::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::FinSpace::Environment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::ExperimentTrialComponent</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::FeatureGroup</code>
      * </p>
      * </li>
      * </ul>
@@ -463,6 +611,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When resources.type equals <code>AWS::CloudTrail::Channel</code>, and the operator is set to <code>Equals</code>
+     * or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -528,13 +687,55 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::FinSpace::Environment</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SageMaker::ExperimentTrialComponent</code>, and the operator
+     * is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:experiment-trial-component/&lt;experiment_trial_component_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SageMaker::FeatureGroup</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      * 
      * @param field
-     *        A field in an event record on which to filter events to be logged. Supported fields include
-     *        <code>readOnly</code>, <code>eventCategory</code>, <code>eventSource</code> (for management events),
-     *        <code>eventName</code>, <code>resources.type</code>, and <code>resources.ARN</code>. </p>
+     *        A field in a CloudTrail event record on which to filter events to be logged. For event data stores for
+     *        Config configuration items, Audit Manager evidence, or non-Amazon Web Services events, the field is used
+     *        only for selecting events as filtering is not supported. </p>
+     *        <p>
+     *        For CloudTrail event records, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
+     *        <code>eventSource</code> (for management events), <code>eventName</code>, <code>resources.type</code>, and
+     *        <code>resources.ARN</code>.
+     *        </p>
+     *        <p>
+     *        For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services
+     *        events, the only supported field is <code>eventCategory</code>.
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -559,16 +760,43 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>eventCategory</code> </b> - This is required. It must be set to <code>Equals</code>, and the
-     *        value must be <code>Management</code> or <code>Data</code>.
+     *        <b> <code>eventCategory</code> </b> - This is required and must be set to <code>Equals</code>.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
-     *        <code>Equals</code> operator, and the value can be one of the following:
+     *        For Config configuration items, the value must be <code>ConfigurationItem</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For Audit Manager evidence, the value must be <code>Evidence</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For non-Amazon Web Services events, the value must be <code>ActivityAuditLog</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b> <code>resources.type</code> </b> - This ﬁeld is required for CloudTrail data events.
+     *        <code>resources.type</code> can only use the <code>Equals</code> operator, and the value can be one of the
+     *        following:
      *        </p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>AWS::CloudTrail::Channel</code>
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>AWS::S3::Object</code>
@@ -617,6 +845,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::Glue::Table</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::FinSpace::Environment</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SageMaker::ExperimentTrialComponent</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SageMaker::FeatureGroup</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -691,6 +934,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When resources.type equals <code>AWS::CloudTrail::Channel</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
      *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -756,6 +1010,39 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </p>
      *        </li>
      *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::FinSpace::Environment</code>, and the operator is set
+     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SageMaker::ExperimentTrialComponent</code>, and the
+     *        operator is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:experiment-trial-component/&lt;experiment_trial_component_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SageMaker::FeatureGroup</code>, and the operator is set
+     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
      *        </li>
      */
 
@@ -765,8 +1052,18 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A field in an event record on which to filter events to be logged. Supported fields include <code>readOnly</code>, <code>eventCategory</code>, <code>eventSource</code> (for management events), <code>eventName</code>,
-     * <code>resources.type</code>, and <code>resources.ARN</code>.
+     * A field in a CloudTrail event record on which to filter events to be logged. For event data stores for Config
+     * configuration items, Audit Manager evidence, or non-Amazon Web Services events, the field is used only for
+     * selecting events as filtering is not supported.
+     * </p>
+     * <p>
+     * For CloudTrail event records, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
+     * <code>eventSource</code> (for management events), <code>eventName</code>, <code>resources.type</code>, and
+     * <code>resources.ARN</code>.
+     * </p>
+     * <p>
+     * For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services events,
+     * the only supported field is <code>eventCategory</code>.
      * </p>
      * <ul>
      * <li>
@@ -792,16 +1089,43 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <b> <code>eventCategory</code> </b> - This is required. It must be set to <code>Equals</code>, and the value must
-     * be <code>Management</code> or <code>Data</code>.
+     * <b> <code>eventCategory</code> </b> - This is required and must be set to <code>Equals</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
-     * <code>Equals</code> operator, and the value can be one of the following:
+     * For Config configuration items, the value must be <code>ConfigurationItem</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For Audit Manager evidence, the value must be <code>Evidence</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For non-Amazon Web Services events, the value must be <code>ActivityAuditLog</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>resources.type</code> </b> - This ﬁeld is required for CloudTrail data events.
+     * <code>resources.type</code> can only use the <code>Equals</code> operator, and the value can be one of the
+     * following:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>AWS::CloudTrail::Channel</code>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>AWS::S3::Object</code>
@@ -850,6 +1174,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::Glue::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::FinSpace::Environment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::ExperimentTrialComponent</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::FeatureGroup</code>
      * </p>
      * </li>
      * </ul>
@@ -924,6 +1263,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When resources.type equals <code>AWS::CloudTrail::Channel</code>, and the operator is set to <code>Equals</code>
+     * or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -989,12 +1339,54 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::FinSpace::Environment</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SageMaker::ExperimentTrialComponent</code>, and the operator
+     * is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:experiment-trial-component/&lt;experiment_trial_component_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SageMaker::FeatureGroup</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      * 
-     * @return A field in an event record on which to filter events to be logged. Supported fields include
-     *         <code>readOnly</code>, <code>eventCategory</code>, <code>eventSource</code> (for management events),
-     *         <code>eventName</code>, <code>resources.type</code>, and <code>resources.ARN</code>. </p>
+     * @return A field in a CloudTrail event record on which to filter events to be logged. For event data stores for
+     *         Config configuration items, Audit Manager evidence, or non-Amazon Web Services events, the field is used
+     *         only for selecting events as filtering is not supported. </p>
+     *         <p>
+     *         For CloudTrail event records, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
+     *         <code>eventSource</code> (for management events), <code>eventName</code>, <code>resources.type</code>,
+     *         and <code>resources.ARN</code>.
+     *         </p>
+     *         <p>
+     *         For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services
+     *         events, the only supported field is <code>eventCategory</code>.
+     *         </p>
      *         <ul>
      *         <li>
      *         <p>
@@ -1019,16 +1411,43 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         <li>
      *         <p>
-     *         <b> <code>eventCategory</code> </b> - This is required. It must be set to <code>Equals</code>, and the
-     *         value must be <code>Management</code> or <code>Data</code>.
+     *         <b> <code>eventCategory</code> </b> - This is required and must be set to <code>Equals</code>.
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use
-     *         the <code>Equals</code> operator, and the value can be one of the following:
+     *         For Config configuration items, the value must be <code>ConfigurationItem</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For Audit Manager evidence, the value must be <code>Evidence</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For non-Amazon Web Services events, the value must be <code>ActivityAuditLog</code>.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b> <code>resources.type</code> </b> - This ﬁeld is required for CloudTrail data events.
+     *         <code>resources.type</code> can only use the <code>Equals</code> operator, and the value can be one of
+     *         the following:
      *         </p>
      *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>AWS::CloudTrail::Channel</code>
+     *         </p>
+     *         </li>
      *         <li>
      *         <p>
      *         <code>AWS::S3::Object</code>
@@ -1077,6 +1496,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         <li>
      *         <p>
      *         <code>AWS::Glue::Table</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::FinSpace::Environment</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::SageMaker::ExperimentTrialComponent</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::SageMaker::FeatureGroup</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -1151,6 +1585,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </li>
      *         </ul>
      *         <p>
+     *         When resources.type equals <code>AWS::CloudTrail::Channel</code>, and the operator is set to
+     *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
      *         When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
      *         <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *         </p>
@@ -1216,6 +1661,40 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *         </p>
      *         </li>
      *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::FinSpace::Environment</code>, and the operator is set
+     *         to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::SageMaker::ExperimentTrialComponent</code>, and the
+     *         operator is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following
+     *         format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:experiment-trial-component/&lt;experiment_trial_component_name&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         When <code>resources.type</code> equals <code>AWS::SageMaker::FeatureGroup</code>, and the operator is
+     *         set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     *         </p>
+     *         </li>
+     *         </ul>
      *         </li>
      */
 
@@ -1225,8 +1704,18 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A field in an event record on which to filter events to be logged. Supported fields include <code>readOnly</code>, <code>eventCategory</code>, <code>eventSource</code> (for management events), <code>eventName</code>,
-     * <code>resources.type</code>, and <code>resources.ARN</code>.
+     * A field in a CloudTrail event record on which to filter events to be logged. For event data stores for Config
+     * configuration items, Audit Manager evidence, or non-Amazon Web Services events, the field is used only for
+     * selecting events as filtering is not supported.
+     * </p>
+     * <p>
+     * For CloudTrail event records, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
+     * <code>eventSource</code> (for management events), <code>eventName</code>, <code>resources.type</code>, and
+     * <code>resources.ARN</code>.
+     * </p>
+     * <p>
+     * For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services events,
+     * the only supported field is <code>eventCategory</code>.
      * </p>
      * <ul>
      * <li>
@@ -1252,16 +1741,43 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * <li>
      * <p>
-     * <b> <code>eventCategory</code> </b> - This is required. It must be set to <code>Equals</code>, and the value must
-     * be <code>Management</code> or <code>Data</code>.
+     * <b> <code>eventCategory</code> </b> - This is required and must be set to <code>Equals</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
-     * <code>Equals</code> operator, and the value can be one of the following:
+     * For Config configuration items, the value must be <code>ConfigurationItem</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For Audit Manager evidence, the value must be <code>Evidence</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For non-Amazon Web Services events, the value must be <code>ActivityAuditLog</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <b> <code>resources.type</code> </b> - This ﬁeld is required for CloudTrail data events.
+     * <code>resources.type</code> can only use the <code>Equals</code> operator, and the value can be one of the
+     * following:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>AWS::CloudTrail::Channel</code>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>AWS::S3::Object</code>
@@ -1310,6 +1826,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * <li>
      * <p>
      * <code>AWS::Glue::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::FinSpace::Environment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::ExperimentTrialComponent</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::FeatureGroup</code>
      * </p>
      * </li>
      * </ul>
@@ -1384,6 +1915,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </li>
      * </ul>
      * <p>
+     * When resources.type equals <code>AWS::CloudTrail::Channel</code>, and the operator is set to <code>Equals</code>
+     * or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
      * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      * </p>
@@ -1449,13 +1991,55 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::FinSpace::Environment</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SageMaker::ExperimentTrialComponent</code>, and the operator
+     * is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:experiment-trial-component/&lt;experiment_trial_component_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When <code>resources.type</code> equals <code>AWS::SageMaker::FeatureGroup</code>, and the operator is set to
+     * <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
+     * </p>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      * 
      * @param field
-     *        A field in an event record on which to filter events to be logged. Supported fields include
-     *        <code>readOnly</code>, <code>eventCategory</code>, <code>eventSource</code> (for management events),
-     *        <code>eventName</code>, <code>resources.type</code>, and <code>resources.ARN</code>. </p>
+     *        A field in a CloudTrail event record on which to filter events to be logged. For event data stores for
+     *        Config configuration items, Audit Manager evidence, or non-Amazon Web Services events, the field is used
+     *        only for selecting events as filtering is not supported. </p>
+     *        <p>
+     *        For CloudTrail event records, supported fields include <code>readOnly</code>, <code>eventCategory</code>,
+     *        <code>eventSource</code> (for management events), <code>eventName</code>, <code>resources.type</code>, and
+     *        <code>resources.ARN</code>.
+     *        </p>
+     *        <p>
+     *        For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services
+     *        events, the only supported field is <code>eventCategory</code>.
+     *        </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1480,16 +2064,43 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>eventCategory</code> </b> - This is required. It must be set to <code>Equals</code>, and the
-     *        value must be <code>Management</code> or <code>Data</code>.
+     *        <b> <code>eventCategory</code> </b> - This is required and must be set to <code>Equals</code>.
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For CloudTrail event records, the value must be <code>Management</code> or <code>Data</code>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>resources.type</code> </b> - This ﬁeld is required. <code>resources.type</code> can only use the
-     *        <code>Equals</code> operator, and the value can be one of the following:
+     *        For Config configuration items, the value must be <code>ConfigurationItem</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For Audit Manager evidence, the value must be <code>Evidence</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For non-Amazon Web Services events, the value must be <code>ActivityAuditLog</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b> <code>resources.type</code> </b> - This ﬁeld is required for CloudTrail data events.
+     *        <code>resources.type</code> can only use the <code>Equals</code> operator, and the value can be one of the
+     *        following:
      *        </p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>AWS::CloudTrail::Channel</code>
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>AWS::S3::Object</code>
@@ -1538,6 +2149,21 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>AWS::Glue::Table</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::FinSpace::Environment</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SageMaker::ExperimentTrialComponent</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SageMaker::FeatureGroup</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -1612,6 +2238,17 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        </li>
      *        </ul>
      *        <p>
+     *        When resources.type equals <code>AWS::CloudTrail::Channel</code>, and the operator is set to
+     *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:cloudtrail:&lt;region&gt;:&lt;account_ID&gt;:channel/&lt;channel_UUID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
      *        When <code>resources.type</code> equals <code>AWS::S3Outposts::Object</code>, and the operator is set to
      *        <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
      *        </p>
@@ -1674,6 +2311,39 @@ public class AdvancedFieldSelector implements Serializable, Cloneable, Structure
      *        <li>
      *        <p>
      *        <code>arn:&lt;partition&gt;:glue:&lt;region&gt;:&lt;account_ID&gt;:table/&lt;database_name&gt;/&lt;table_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::FinSpace::Environment</code>, and the operator is set
+     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:finspace:&lt;region&gt;:&lt;account_ID&gt;:environment/&lt;environment_ID&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SageMaker::ExperimentTrialComponent</code>, and the
+     *        operator is set to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:experiment-trial-component/&lt;experiment_trial_component_name&gt;</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        When <code>resources.type</code> equals <code>AWS::SageMaker::FeatureGroup</code>, and the operator is set
+     *        to <code>Equals</code> or <code>NotEquals</code>, the ARN must be in the following format:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:sagemaker:&lt;region&gt;:&lt;account_ID&gt;:feature-group/&lt;feature_group_name&gt;</code>
      *        </p>
      *        </li>
      *        </ul>

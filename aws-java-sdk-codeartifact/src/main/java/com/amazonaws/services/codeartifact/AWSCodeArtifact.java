@@ -523,12 +523,40 @@ public interface AWSCodeArtifact {
 
     /**
      * <p>
+     * Deletes a package and all associated package versions. A deleted package cannot be restored. To delete one or
+     * more package versions, use the <a
+     * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_DeletePackageVersions.html"
+     * >DeletePackageVersions</a> API.
+     * </p>
+     * 
+     * @param deletePackageRequest
+     * @return Result of the DeletePackage operation returned by the service.
+     * @throws AccessDeniedException
+     *         The operation did not succeed because of an unauthorized access attempt.
+     * @throws ConflictException
+     *         The operation did not succeed because prerequisites are not met.
+     * @throws InternalServerException
+     *         The operation did not succeed because of an error that occurred inside CodeArtifact.
+     * @throws ResourceNotFoundException
+     *         The operation did not succeed because the resource requested is not found in the service.
+     * @throws ThrottlingException
+     *         The operation did not succeed because too many requests are sent to the service.
+     * @throws ValidationException
+     *         The operation did not succeed because a parameter in the request was sent with an invalid value.
+     * @sample AWSCodeArtifact.DeletePackage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/DeletePackage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeletePackageResult deletePackage(DeletePackageRequest deletePackageRequest);
+
+    /**
+     * <p>
      * Deletes one or more versions of a package. A deleted package version cannot be restored in your repository. If
      * you want to remove a package version from your repository and be able to restore it later, set its status to
      * <code>Archived</code>. Archived packages cannot be downloaded from a repository and don't show up with list
      * package APIs (for example, <a
      * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_ListPackageVersions.html"
-     * >ListPackageVersions</a>), but you can restore them using <a
+     * >ListackageVersions</a>), but you can restore them using <a
      * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_UpdatePackageVersionsStatus.html"
      * >UpdatePackageVersionsStatus</a>.
      * </p>
@@ -1056,6 +1084,8 @@ public interface AWSCodeArtifact {
      * Returns a list of <a
      * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionSummary.html"
      * >PackageVersionSummary</a> objects for package versions in a repository that match the request parameters.
+     * Package versions of all statuses will be returned by default when calling <code>list-package-versions</code> with
+     * no <code>--status</code> parameter.
      * </p>
      * 
      * @param listPackageVersionsRequest

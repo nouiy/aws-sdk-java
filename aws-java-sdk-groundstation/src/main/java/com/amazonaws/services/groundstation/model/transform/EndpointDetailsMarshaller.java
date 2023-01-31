@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class EndpointDetailsMarshaller {
 
+    private static final MarshallingInfo<StructuredPojo> AWSGROUNDSTATIONAGENTENDPOINT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("awsGroundStationAgentEndpoint").build();
     private static final MarshallingInfo<StructuredPojo> ENDPOINT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endpoint").build();
     private static final MarshallingInfo<StructuredPojo> SECURITYDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -48,6 +50,7 @@ public class EndpointDetailsMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(endpointDetails.getAwsGroundStationAgentEndpoint(), AWSGROUNDSTATIONAGENTENDPOINT_BINDING);
             protocolMarshaller.marshall(endpointDetails.getEndpoint(), ENDPOINT_BINDING);
             protocolMarshaller.marshall(endpointDetails.getSecurityDetails(), SECURITYDETAILS_BINDING);
         } catch (Exception e) {

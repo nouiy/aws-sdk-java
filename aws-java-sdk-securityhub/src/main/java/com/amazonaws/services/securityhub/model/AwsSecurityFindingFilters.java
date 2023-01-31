@@ -727,6 +727,22 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * </p>
      */
     private java.util.List<BooleanFilter> sample;
+    /**
+     * <p>
+     * The unique identifier of a control across standards. Values for this field typically consist of an Amazon Web
+     * Service and a number, such as APIGateway.5.
+     * </p>
+     */
+    private java.util.List<StringFilter> complianceSecurityControlId;
+    /**
+     * <p>
+     * The unique identifier of a standard in which a control is enabled. This field consists of the resource portion of
+     * the Amazon Resource Name (ARN) returned for a standard in the <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html">DescribeStandards</a>
+     * API response.
+     * </p>
+     */
+    private java.util.List<StringFilter> complianceAssociatedStandardsId;
 
     /**
      * <p>
@@ -8346,6 +8362,178 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The unique identifier of a control across standards. Values for this field typically consist of an Amazon Web
+     * Service and a number, such as APIGateway.5.
+     * </p>
+     * 
+     * @return The unique identifier of a control across standards. Values for this field typically consist of an Amazon
+     *         Web Service and a number, such as APIGateway.5.
+     */
+
+    public java.util.List<StringFilter> getComplianceSecurityControlId() {
+        return complianceSecurityControlId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of a control across standards. Values for this field typically consist of an Amazon Web
+     * Service and a number, such as APIGateway.5.
+     * </p>
+     * 
+     * @param complianceSecurityControlId
+     *        The unique identifier of a control across standards. Values for this field typically consist of an Amazon
+     *        Web Service and a number, such as APIGateway.5.
+     */
+
+    public void setComplianceSecurityControlId(java.util.Collection<StringFilter> complianceSecurityControlId) {
+        if (complianceSecurityControlId == null) {
+            this.complianceSecurityControlId = null;
+            return;
+        }
+
+        this.complianceSecurityControlId = new java.util.ArrayList<StringFilter>(complianceSecurityControlId);
+    }
+
+    /**
+     * <p>
+     * The unique identifier of a control across standards. Values for this field typically consist of an Amazon Web
+     * Service and a number, such as APIGateway.5.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setComplianceSecurityControlId(java.util.Collection)} or
+     * {@link #withComplianceSecurityControlId(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param complianceSecurityControlId
+     *        The unique identifier of a control across standards. Values for this field typically consist of an Amazon
+     *        Web Service and a number, such as APIGateway.5.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withComplianceSecurityControlId(StringFilter... complianceSecurityControlId) {
+        if (this.complianceSecurityControlId == null) {
+            setComplianceSecurityControlId(new java.util.ArrayList<StringFilter>(complianceSecurityControlId.length));
+        }
+        for (StringFilter ele : complianceSecurityControlId) {
+            this.complianceSecurityControlId.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of a control across standards. Values for this field typically consist of an Amazon Web
+     * Service and a number, such as APIGateway.5.
+     * </p>
+     * 
+     * @param complianceSecurityControlId
+     *        The unique identifier of a control across standards. Values for this field typically consist of an Amazon
+     *        Web Service and a number, such as APIGateway.5.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withComplianceSecurityControlId(java.util.Collection<StringFilter> complianceSecurityControlId) {
+        setComplianceSecurityControlId(complianceSecurityControlId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of a standard in which a control is enabled. This field consists of the resource portion of
+     * the Amazon Resource Name (ARN) returned for a standard in the <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html">DescribeStandards</a>
+     * API response.
+     * </p>
+     * 
+     * @return The unique identifier of a standard in which a control is enabled. This field consists of the resource
+     *         portion of the Amazon Resource Name (ARN) returned for a standard in the <a
+     *         href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html"
+     *         >DescribeStandards</a> API response.
+     */
+
+    public java.util.List<StringFilter> getComplianceAssociatedStandardsId() {
+        return complianceAssociatedStandardsId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of a standard in which a control is enabled. This field consists of the resource portion of
+     * the Amazon Resource Name (ARN) returned for a standard in the <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html">DescribeStandards</a>
+     * API response.
+     * </p>
+     * 
+     * @param complianceAssociatedStandardsId
+     *        The unique identifier of a standard in which a control is enabled. This field consists of the resource
+     *        portion of the Amazon Resource Name (ARN) returned for a standard in the <a
+     *        href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html"
+     *        >DescribeStandards</a> API response.
+     */
+
+    public void setComplianceAssociatedStandardsId(java.util.Collection<StringFilter> complianceAssociatedStandardsId) {
+        if (complianceAssociatedStandardsId == null) {
+            this.complianceAssociatedStandardsId = null;
+            return;
+        }
+
+        this.complianceAssociatedStandardsId = new java.util.ArrayList<StringFilter>(complianceAssociatedStandardsId);
+    }
+
+    /**
+     * <p>
+     * The unique identifier of a standard in which a control is enabled. This field consists of the resource portion of
+     * the Amazon Resource Name (ARN) returned for a standard in the <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html">DescribeStandards</a>
+     * API response.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setComplianceAssociatedStandardsId(java.util.Collection)} or
+     * {@link #withComplianceAssociatedStandardsId(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param complianceAssociatedStandardsId
+     *        The unique identifier of a standard in which a control is enabled. This field consists of the resource
+     *        portion of the Amazon Resource Name (ARN) returned for a standard in the <a
+     *        href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html"
+     *        >DescribeStandards</a> API response.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withComplianceAssociatedStandardsId(StringFilter... complianceAssociatedStandardsId) {
+        if (this.complianceAssociatedStandardsId == null) {
+            setComplianceAssociatedStandardsId(new java.util.ArrayList<StringFilter>(complianceAssociatedStandardsId.length));
+        }
+        for (StringFilter ele : complianceAssociatedStandardsId) {
+            this.complianceAssociatedStandardsId.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unique identifier of a standard in which a control is enabled. This field consists of the resource portion of
+     * the Amazon Resource Name (ARN) returned for a standard in the <a
+     * href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html">DescribeStandards</a>
+     * API response.
+     * </p>
+     * 
+     * @param complianceAssociatedStandardsId
+     *        The unique identifier of a standard in which a control is enabled. This field consists of the resource
+     *        portion of the Amazon Resource Name (ARN) returned for a standard in the <a
+     *        href="https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DescribeStandards.html"
+     *        >DescribeStandards</a> API response.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withComplianceAssociatedStandardsId(java.util.Collection<StringFilter> complianceAssociatedStandardsId) {
+        setComplianceAssociatedStandardsId(complianceAssociatedStandardsId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -8546,7 +8734,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
         if (getFindingProviderFieldsTypes() != null)
             sb.append("FindingProviderFieldsTypes: ").append(getFindingProviderFieldsTypes()).append(",");
         if (getSample() != null)
-            sb.append("Sample: ").append(getSample());
+            sb.append("Sample: ").append(getSample()).append(",");
+        if (getComplianceSecurityControlId() != null)
+            sb.append("ComplianceSecurityControlId: ").append(getComplianceSecurityControlId()).append(",");
+        if (getComplianceAssociatedStandardsId() != null)
+            sb.append("ComplianceAssociatedStandardsId: ").append(getComplianceAssociatedStandardsId());
         sb.append("}");
         return sb.toString();
     }
@@ -8960,6 +9152,15 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
             return false;
         if (other.getSample() != null && other.getSample().equals(this.getSample()) == false)
             return false;
+        if (other.getComplianceSecurityControlId() == null ^ this.getComplianceSecurityControlId() == null)
+            return false;
+        if (other.getComplianceSecurityControlId() != null && other.getComplianceSecurityControlId().equals(this.getComplianceSecurityControlId()) == false)
+            return false;
+        if (other.getComplianceAssociatedStandardsId() == null ^ this.getComplianceAssociatedStandardsId() == null)
+            return false;
+        if (other.getComplianceAssociatedStandardsId() != null
+                && other.getComplianceAssociatedStandardsId().equals(this.getComplianceAssociatedStandardsId()) == false)
+            return false;
         return true;
     }
 
@@ -9065,6 +9266,8 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getFindingProviderFieldsSeverityOriginal() == null) ? 0 : getFindingProviderFieldsSeverityOriginal().hashCode());
         hashCode = prime * hashCode + ((getFindingProviderFieldsTypes() == null) ? 0 : getFindingProviderFieldsTypes().hashCode());
         hashCode = prime * hashCode + ((getSample() == null) ? 0 : getSample().hashCode());
+        hashCode = prime * hashCode + ((getComplianceSecurityControlId() == null) ? 0 : getComplianceSecurityControlId().hashCode());
+        hashCode = prime * hashCode + ((getComplianceAssociatedStandardsId() == null) ? 0 : getComplianceAssociatedStandardsId().hashCode());
         return hashCode;
     }
 

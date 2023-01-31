@@ -33,10 +33,25 @@ public class CreateEventDataStoreRequest extends com.amazonaws.AmazonWebServiceR
     private String name;
     /**
      * <p>
-     * The advanced event selectors to use to select the events for the data store. For more information about how to
-     * use advanced event selectors, see <a href=
+     * The advanced event selectors to use to select the events for the data store. You can configure up to five
+     * advanced event selectors for each event data store.
+     * </p>
+     * <p>
+     * For more information about how to use advanced event selectors to log CloudTrail events, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html#creating-data-event-selectors-advanced"
      * >Log events by using advanced event selectors</a> in the CloudTrail User Guide.
+     * </p>
+     * <p>
+     * For more information about how to use advanced event selectors to include Config configuration items in your
+     * event data store, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-eds-config"
+     * >Create an event data store for Config configuration items</a> in the CloudTrail User Guide.
+     * </p>
+     * <p>
+     * For more information about how to use advanced event selectors to include non-Amazon Web Services events in your
+     * event data store, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-integration"
+     * >Create an integration to log events from outside Amazon Web Services</a> in the CloudTrail User Guide.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<AdvancedEventSelector> advancedEventSelectors;
@@ -159,16 +174,45 @@ public class CreateEventDataStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The advanced event selectors to use to select the events for the data store. For more information about how to
-     * use advanced event selectors, see <a href=
+     * The advanced event selectors to use to select the events for the data store. You can configure up to five
+     * advanced event selectors for each event data store.
+     * </p>
+     * <p>
+     * For more information about how to use advanced event selectors to log CloudTrail events, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html#creating-data-event-selectors-advanced"
      * >Log events by using advanced event selectors</a> in the CloudTrail User Guide.
      * </p>
+     * <p>
+     * For more information about how to use advanced event selectors to include Config configuration items in your
+     * event data store, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-eds-config"
+     * >Create an event data store for Config configuration items</a> in the CloudTrail User Guide.
+     * </p>
+     * <p>
+     * For more information about how to use advanced event selectors to include non-Amazon Web Services events in your
+     * event data store, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-integration"
+     * >Create an integration to log events from outside Amazon Web Services</a> in the CloudTrail User Guide.
+     * </p>
      * 
-     * @return The advanced event selectors to use to select the events for the data store. For more information about
-     *         how to use advanced event selectors, see <a href=
+     * @return The advanced event selectors to use to select the events for the data store. You can configure up to five
+     *         advanced event selectors for each event data store.</p>
+     *         <p>
+     *         For more information about how to use advanced event selectors to log CloudTrail events, see <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html#creating-data-event-selectors-advanced"
      *         >Log events by using advanced event selectors</a> in the CloudTrail User Guide.
+     *         </p>
+     *         <p>
+     *         For more information about how to use advanced event selectors to include Config configuration items in
+     *         your event data store, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-eds-config"
+     *         >Create an event data store for Config configuration items</a> in the CloudTrail User Guide.
+     *         </p>
+     *         <p>
+     *         For more information about how to use advanced event selectors to include non-Amazon Web Services events
+     *         in your event data store, see <a href=
+     *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-integration"
+     *         >Create an integration to log events from outside Amazon Web Services</a> in the CloudTrail User Guide.
      */
 
     public java.util.List<AdvancedEventSelector> getAdvancedEventSelectors() {
@@ -180,17 +224,46 @@ public class CreateEventDataStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The advanced event selectors to use to select the events for the data store. For more information about how to
-     * use advanced event selectors, see <a href=
+     * The advanced event selectors to use to select the events for the data store. You can configure up to five
+     * advanced event selectors for each event data store.
+     * </p>
+     * <p>
+     * For more information about how to use advanced event selectors to log CloudTrail events, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html#creating-data-event-selectors-advanced"
      * >Log events by using advanced event selectors</a> in the CloudTrail User Guide.
      * </p>
+     * <p>
+     * For more information about how to use advanced event selectors to include Config configuration items in your
+     * event data store, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-eds-config"
+     * >Create an event data store for Config configuration items</a> in the CloudTrail User Guide.
+     * </p>
+     * <p>
+     * For more information about how to use advanced event selectors to include non-Amazon Web Services events in your
+     * event data store, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-integration"
+     * >Create an integration to log events from outside Amazon Web Services</a> in the CloudTrail User Guide.
+     * </p>
      * 
      * @param advancedEventSelectors
-     *        The advanced event selectors to use to select the events for the data store. For more information about
-     *        how to use advanced event selectors, see <a href=
+     *        The advanced event selectors to use to select the events for the data store. You can configure up to five
+     *        advanced event selectors for each event data store.</p>
+     *        <p>
+     *        For more information about how to use advanced event selectors to log CloudTrail events, see <a href=
      *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html#creating-data-event-selectors-advanced"
      *        >Log events by using advanced event selectors</a> in the CloudTrail User Guide.
+     *        </p>
+     *        <p>
+     *        For more information about how to use advanced event selectors to include Config configuration items in
+     *        your event data store, see <a href=
+     *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-eds-config"
+     *        >Create an event data store for Config configuration items</a> in the CloudTrail User Guide.
+     *        </p>
+     *        <p>
+     *        For more information about how to use advanced event selectors to include non-Amazon Web Services events
+     *        in your event data store, see <a href=
+     *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-integration"
+     *        >Create an integration to log events from outside Amazon Web Services</a> in the CloudTrail User Guide.
      */
 
     public void setAdvancedEventSelectors(java.util.Collection<AdvancedEventSelector> advancedEventSelectors) {
@@ -204,10 +277,25 @@ public class CreateEventDataStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The advanced event selectors to use to select the events for the data store. For more information about how to
-     * use advanced event selectors, see <a href=
+     * The advanced event selectors to use to select the events for the data store. You can configure up to five
+     * advanced event selectors for each event data store.
+     * </p>
+     * <p>
+     * For more information about how to use advanced event selectors to log CloudTrail events, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html#creating-data-event-selectors-advanced"
      * >Log events by using advanced event selectors</a> in the CloudTrail User Guide.
+     * </p>
+     * <p>
+     * For more information about how to use advanced event selectors to include Config configuration items in your
+     * event data store, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-eds-config"
+     * >Create an event data store for Config configuration items</a> in the CloudTrail User Guide.
+     * </p>
+     * <p>
+     * For more information about how to use advanced event selectors to include non-Amazon Web Services events in your
+     * event data store, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-integration"
+     * >Create an integration to log events from outside Amazon Web Services</a> in the CloudTrail User Guide.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -216,10 +304,24 @@ public class CreateEventDataStoreRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param advancedEventSelectors
-     *        The advanced event selectors to use to select the events for the data store. For more information about
-     *        how to use advanced event selectors, see <a href=
+     *        The advanced event selectors to use to select the events for the data store. You can configure up to five
+     *        advanced event selectors for each event data store.</p>
+     *        <p>
+     *        For more information about how to use advanced event selectors to log CloudTrail events, see <a href=
      *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html#creating-data-event-selectors-advanced"
      *        >Log events by using advanced event selectors</a> in the CloudTrail User Guide.
+     *        </p>
+     *        <p>
+     *        For more information about how to use advanced event selectors to include Config configuration items in
+     *        your event data store, see <a href=
+     *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-eds-config"
+     *        >Create an event data store for Config configuration items</a> in the CloudTrail User Guide.
+     *        </p>
+     *        <p>
+     *        For more information about how to use advanced event selectors to include non-Amazon Web Services events
+     *        in your event data store, see <a href=
+     *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-integration"
+     *        >Create an integration to log events from outside Amazon Web Services</a> in the CloudTrail User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -235,17 +337,46 @@ public class CreateEventDataStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The advanced event selectors to use to select the events for the data store. For more information about how to
-     * use advanced event selectors, see <a href=
+     * The advanced event selectors to use to select the events for the data store. You can configure up to five
+     * advanced event selectors for each event data store.
+     * </p>
+     * <p>
+     * For more information about how to use advanced event selectors to log CloudTrail events, see <a href=
      * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html#creating-data-event-selectors-advanced"
      * >Log events by using advanced event selectors</a> in the CloudTrail User Guide.
      * </p>
+     * <p>
+     * For more information about how to use advanced event selectors to include Config configuration items in your
+     * event data store, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-eds-config"
+     * >Create an event data store for Config configuration items</a> in the CloudTrail User Guide.
+     * </p>
+     * <p>
+     * For more information about how to use advanced event selectors to include non-Amazon Web Services events in your
+     * event data store, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-integration"
+     * >Create an integration to log events from outside Amazon Web Services</a> in the CloudTrail User Guide.
+     * </p>
      * 
      * @param advancedEventSelectors
-     *        The advanced event selectors to use to select the events for the data store. For more information about
-     *        how to use advanced event selectors, see <a href=
+     *        The advanced event selectors to use to select the events for the data store. You can configure up to five
+     *        advanced event selectors for each event data store.</p>
+     *        <p>
+     *        For more information about how to use advanced event selectors to log CloudTrail events, see <a href=
      *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html#creating-data-event-selectors-advanced"
      *        >Log events by using advanced event selectors</a> in the CloudTrail User Guide.
+     *        </p>
+     *        <p>
+     *        For more information about how to use advanced event selectors to include Config configuration items in
+     *        your event data store, see <a href=
+     *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-eds-config"
+     *        >Create an event data store for Config configuration items</a> in the CloudTrail User Guide.
+     *        </p>
+     *        <p>
+     *        For more information about how to use advanced event selectors to include non-Amazon Web Services events
+     *        in your event data store, see <a href=
+     *        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/query-lake-cli.html#lake-cli-create-integration"
+     *        >Create an integration to log events from outside Amazon Web Services</a> in the CloudTrail User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

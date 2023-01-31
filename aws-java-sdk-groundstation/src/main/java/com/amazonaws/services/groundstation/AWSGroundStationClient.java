@@ -837,6 +837,68 @@ public class AWSGroundStationClient extends AmazonWebServiceClient implements AW
 
     /**
      * <p>
+     * Gets the latest configuration information for a registered agent.
+     * </p>
+     * 
+     * @param getAgentConfigurationRequest
+     * @return Result of the GetAgentConfiguration operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more parameters are not valid.
+     * @throws DependencyException
+     *         Dependency encountered an error.
+     * @throws ResourceNotFoundException
+     *         Resource was not found.
+     * @sample AWSGroundStation.GetAgentConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/GetAgentConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetAgentConfigurationResult getAgentConfiguration(GetAgentConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetAgentConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final GetAgentConfigurationResult executeGetAgentConfiguration(GetAgentConfigurationRequest getAgentConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getAgentConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetAgentConfigurationRequest> request = null;
+        Response<GetAgentConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetAgentConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getAgentConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "GroundStation");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetAgentConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetAgentConfigurationResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new GetAgentConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns <code>Config</code> information.
      * </p>
      * <p>
@@ -1641,6 +1703,67 @@ public class AWSGroundStationClient extends AmazonWebServiceClient implements AW
 
     /**
      * <p>
+     * Registers a new agent with AWS Groundstation.
+     * </p>
+     * 
+     * @param registerAgentRequest
+     * @return Result of the RegisterAgent operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more parameters are not valid.
+     * @throws DependencyException
+     *         Dependency encountered an error.
+     * @throws ResourceNotFoundException
+     *         Resource was not found.
+     * @sample AWSGroundStation.RegisterAgent
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/RegisterAgent" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public RegisterAgentResult registerAgent(RegisterAgentRequest request) {
+        request = beforeClientExecution(request);
+        return executeRegisterAgent(request);
+    }
+
+    @SdkInternalApi
+    final RegisterAgentResult executeRegisterAgent(RegisterAgentRequest registerAgentRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(registerAgentRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<RegisterAgentRequest> request = null;
+        Response<RegisterAgentResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new RegisterAgentRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(registerAgentRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "GroundStation");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "RegisterAgent");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<RegisterAgentResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new RegisterAgentResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Reserves a contact using specified parameters.
      * </p>
      * 
@@ -1812,6 +1935,67 @@ public class AWSGroundStationClient extends AmazonWebServiceClient implements AW
 
             HttpResponseHandler<AmazonWebServiceResponse<UntagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UntagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Update the status of the agent.
+     * </p>
+     * 
+     * @param updateAgentStatusRequest
+     * @return Result of the UpdateAgentStatus operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more parameters are not valid.
+     * @throws DependencyException
+     *         Dependency encountered an error.
+     * @throws ResourceNotFoundException
+     *         Resource was not found.
+     * @sample AWSGroundStation.UpdateAgentStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/groundstation-2019-05-23/UpdateAgentStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateAgentStatusResult updateAgentStatus(UpdateAgentStatusRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateAgentStatus(request);
+    }
+
+    @SdkInternalApi
+    final UpdateAgentStatusResult executeUpdateAgentStatus(UpdateAgentStatusRequest updateAgentStatusRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateAgentStatusRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateAgentStatusRequest> request = null;
+        Response<UpdateAgentStatusResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateAgentStatusRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateAgentStatusRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "GroundStation");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateAgentStatus");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateAgentStatusResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateAgentStatusResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

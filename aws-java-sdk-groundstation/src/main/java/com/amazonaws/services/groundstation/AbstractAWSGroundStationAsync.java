@@ -171,6 +171,19 @@ public class AbstractAWSGroundStationAsync extends AbstractAWSGroundStation impl
     }
 
     @Override
+    public java.util.concurrent.Future<GetAgentConfigurationResult> getAgentConfigurationAsync(GetAgentConfigurationRequest request) {
+
+        return getAgentConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAgentConfigurationResult> getAgentConfigurationAsync(GetAgentConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetAgentConfigurationRequest, GetAgentConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetConfigResult> getConfigAsync(GetConfigRequest request) {
 
         return getConfigAsync(request, null);
@@ -340,6 +353,19 @@ public class AbstractAWSGroundStationAsync extends AbstractAWSGroundStation impl
     }
 
     @Override
+    public java.util.concurrent.Future<RegisterAgentResult> registerAgentAsync(RegisterAgentRequest request) {
+
+        return registerAgentAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RegisterAgentResult> registerAgentAsync(RegisterAgentRequest request,
+            com.amazonaws.handlers.AsyncHandler<RegisterAgentRequest, RegisterAgentResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ReserveContactResult> reserveContactAsync(ReserveContactRequest request) {
 
         return reserveContactAsync(request, null);
@@ -374,6 +400,19 @@ public class AbstractAWSGroundStationAsync extends AbstractAWSGroundStation impl
     @Override
     public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAgentStatusResult> updateAgentStatusAsync(UpdateAgentStatusRequest request) {
+
+        return updateAgentStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAgentStatusResult> updateAgentStatusAsync(UpdateAgentStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateAgentStatusRequest, UpdateAgentStatusResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

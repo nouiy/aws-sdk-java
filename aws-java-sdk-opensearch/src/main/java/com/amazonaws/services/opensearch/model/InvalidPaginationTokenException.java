@@ -16,8 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request processing has failed because of invalid pagination token provided by customer. Returns an HTTP status
- * code of 400.
+ * The request processing has failed because you provided an invalid pagination token.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

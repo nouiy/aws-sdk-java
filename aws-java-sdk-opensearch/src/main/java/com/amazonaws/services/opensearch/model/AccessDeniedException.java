@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * An error occurred because user does not have permissions to access the resource. Returns HTTP status code 403.
+ * An error occurred because you don't have permissions to access the resource.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -121,6 +121,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public AssignPrivateNatGatewayAddressResult assignPrivateNatGatewayAddress(AssignPrivateNatGatewayAddressRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public AssociateAddressResult associateAddress(AssociateAddressRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -152,6 +157,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public AssociateIpamResourceDiscoveryResult associateIpamResourceDiscovery(AssociateIpamResourceDiscoveryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public AssociateNatGatewayAddressResult associateNatGatewayAddress(AssociateNatGatewayAddressRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -2223,6 +2233,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DisassociateNatGatewayAddressResult disassociateNatGatewayAddress(DisassociateNatGatewayAddressRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DisassociateRouteTableResult disassociateRouteTable(DisassociateRouteTableRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -3249,6 +3264,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public UnassignPrivateIpAddressesResult unassignPrivateIpAddresses(UnassignPrivateIpAddressesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UnassignPrivateNatGatewayAddressResult unassignPrivateNatGatewayAddress(UnassignPrivateNatGatewayAddressRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

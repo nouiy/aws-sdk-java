@@ -103,7 +103,9 @@ public enum VoiceId {
     Sergio("Sergio"),
     Remi("Remi"),
     Adriano("Adriano"),
-    Thiago("Thiago");
+    Thiago("Thiago"),
+    Ruth("Ruth"),
+    Stephen("Stephen");
 
     private String value;
 

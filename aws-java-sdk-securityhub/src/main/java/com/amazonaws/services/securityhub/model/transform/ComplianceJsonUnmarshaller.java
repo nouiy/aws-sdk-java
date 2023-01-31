@@ -64,6 +64,16 @@ public class ComplianceJsonUnmarshaller implements Unmarshaller<Compliance, Json
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("SecurityControlId", targetDepth)) {
+                    context.nextToken();
+                    compliance.setSecurityControlId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("AssociatedStandards", targetDepth)) {
+                    context.nextToken();
+                    compliance.setAssociatedStandards(new ListUnmarshaller<AssociatedStandard>(AssociatedStandardJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

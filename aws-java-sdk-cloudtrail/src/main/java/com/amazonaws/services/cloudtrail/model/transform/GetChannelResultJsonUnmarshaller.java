@@ -70,6 +70,10 @@ public class GetChannelResultJsonUnmarshaller implements Unmarshaller<GetChannel
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("IngestionStatus", targetDepth)) {
+                    context.nextToken();
+                    getChannelResult.setIngestionStatus(IngestionStatusJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

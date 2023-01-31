@@ -123,6 +123,16 @@ public class HyperParameterTuningJobSearchEntityJsonUnmarshaller implements Unma
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("TuningJobCompletionDetails", targetDepth)) {
+                    context.nextToken();
+                    hyperParameterTuningJobSearchEntity.setTuningJobCompletionDetails(HyperParameterTuningJobCompletionDetailsJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
+                if (context.testExpression("ConsumedResources", targetDepth)) {
+                    context.nextToken();
+                    hyperParameterTuningJobSearchEntity.setConsumedResources(HyperParameterTuningJobConsumedResourcesJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

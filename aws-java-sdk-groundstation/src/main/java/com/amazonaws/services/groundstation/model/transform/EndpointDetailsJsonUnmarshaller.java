@@ -48,6 +48,10 @@ public class EndpointDetailsJsonUnmarshaller implements Unmarshaller<EndpointDet
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("awsGroundStationAgentEndpoint", targetDepth)) {
+                    context.nextToken();
+                    endpointDetails.setAwsGroundStationAgentEndpoint(AwsGroundStationAgentEndpointJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("endpoint", targetDepth)) {
                     context.nextToken();
                     endpointDetails.setEndpoint(DataflowEndpointJsonUnmarshaller.getInstance().unmarshall(context));

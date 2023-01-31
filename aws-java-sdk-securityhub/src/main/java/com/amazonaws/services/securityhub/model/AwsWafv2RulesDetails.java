@@ -20,8 +20,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Provides details about rules in a rule group. A rule identifies web requests that you want to allow, block, or count.
- * Each rule includes one top-level Statement that AWS WAF uses to identify matching web requests, and parameters that
- * govern how AWS WAF handles them.
+ * Each rule includes one top-level Statement that WAF uses to identify matching web requests, and parameters that
+ * govern how WAF handles them.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AwsWafv2RulesDetails" target="_top">AWS

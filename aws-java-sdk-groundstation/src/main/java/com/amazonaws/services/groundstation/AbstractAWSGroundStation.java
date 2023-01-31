@@ -84,6 +84,11 @@ public class AbstractAWSGroundStation implements AWSGroundStation {
     }
 
     @Override
+    public GetAgentConfigurationResult getAgentConfiguration(GetAgentConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetConfigResult getConfig(GetConfigRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -149,6 +154,11 @@ public class AbstractAWSGroundStation implements AWSGroundStation {
     }
 
     @Override
+    public RegisterAgentResult registerAgent(RegisterAgentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ReserveContactResult reserveContact(ReserveContactRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -160,6 +170,11 @@ public class AbstractAWSGroundStation implements AWSGroundStation {
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateAgentStatusResult updateAgentStatus(UpdateAgentStatusRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

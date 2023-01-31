@@ -579,6 +579,39 @@ public class AWSCodeArtifactAsyncClient extends AWSCodeArtifactClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<DeletePackageResult> deletePackageAsync(DeletePackageRequest request) {
+
+        return deletePackageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePackageResult> deletePackageAsync(final DeletePackageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeletePackageRequest, DeletePackageResult> asyncHandler) {
+        final DeletePackageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeletePackageResult>() {
+            @Override
+            public DeletePackageResult call() throws Exception {
+                DeletePackageResult result = null;
+
+                try {
+                    result = executeDeletePackage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeletePackageVersionsResult> deletePackageVersionsAsync(DeletePackageVersionsRequest request) {
 
         return deletePackageVersionsAsync(request, null);

@@ -68,6 +68,14 @@ public class OutboundConnectionJsonUnmarshaller implements Unmarshaller<Outbound
                     context.nextToken();
                     outboundConnection.setConnectionStatus(OutboundConnectionStatusJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ConnectionMode", targetDepth)) {
+                    context.nextToken();
+                    outboundConnection.setConnectionMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ConnectionProperties", targetDepth)) {
+                    context.nextToken();
+                    outboundConnection.setConnectionProperties(ConnectionPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -52,6 +52,14 @@ public class TuningJobCompletionCriteriaJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     tuningJobCompletionCriteria.setTargetObjectiveMetricValue(context.getUnmarshaller(Float.class).unmarshall(context));
                 }
+                if (context.testExpression("BestObjectiveNotImproving", targetDepth)) {
+                    context.nextToken();
+                    tuningJobCompletionCriteria.setBestObjectiveNotImproving(BestObjectiveNotImprovingJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ConvergenceDetected", targetDepth)) {
+                    context.nextToken();
+                    tuningJobCompletionCriteria.setConvergenceDetected(ConvergenceDetectedJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

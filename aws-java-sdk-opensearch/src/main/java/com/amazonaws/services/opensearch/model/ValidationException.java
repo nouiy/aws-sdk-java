@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * An exception for missing / invalid input fields. Gives http status code of 400.
+ * An exception for missing or invalid input fields.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

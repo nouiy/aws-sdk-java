@@ -43,6 +43,12 @@ public class CreateOutboundConnectionRequest extends com.amazonaws.AmazonWebServ
      * </p>
      */
     private String connectionAlias;
+    /**
+     * <p>
+     * The connection mode.
+     * </p>
+     */
+    private String connectionMode;
 
     /**
      * <p>
@@ -165,6 +171,65 @@ public class CreateOutboundConnectionRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The connection mode.
+     * </p>
+     * 
+     * @param connectionMode
+     *        The connection mode.
+     * @see ConnectionMode
+     */
+
+    public void setConnectionMode(String connectionMode) {
+        this.connectionMode = connectionMode;
+    }
+
+    /**
+     * <p>
+     * The connection mode.
+     * </p>
+     * 
+     * @return The connection mode.
+     * @see ConnectionMode
+     */
+
+    public String getConnectionMode() {
+        return this.connectionMode;
+    }
+
+    /**
+     * <p>
+     * The connection mode.
+     * </p>
+     * 
+     * @param connectionMode
+     *        The connection mode.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConnectionMode
+     */
+
+    public CreateOutboundConnectionRequest withConnectionMode(String connectionMode) {
+        setConnectionMode(connectionMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The connection mode.
+     * </p>
+     * 
+     * @param connectionMode
+     *        The connection mode.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ConnectionMode
+     */
+
+    public CreateOutboundConnectionRequest withConnectionMode(ConnectionMode connectionMode) {
+        this.connectionMode = connectionMode.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -181,7 +246,9 @@ public class CreateOutboundConnectionRequest extends com.amazonaws.AmazonWebServ
         if (getRemoteDomainInfo() != null)
             sb.append("RemoteDomainInfo: ").append(getRemoteDomainInfo()).append(",");
         if (getConnectionAlias() != null)
-            sb.append("ConnectionAlias: ").append(getConnectionAlias());
+            sb.append("ConnectionAlias: ").append(getConnectionAlias()).append(",");
+        if (getConnectionMode() != null)
+            sb.append("ConnectionMode: ").append(getConnectionMode());
         sb.append("}");
         return sb.toString();
     }
@@ -208,6 +275,10 @@ public class CreateOutboundConnectionRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getConnectionAlias() != null && other.getConnectionAlias().equals(this.getConnectionAlias()) == false)
             return false;
+        if (other.getConnectionMode() == null ^ this.getConnectionMode() == null)
+            return false;
+        if (other.getConnectionMode() != null && other.getConnectionMode().equals(this.getConnectionMode()) == false)
+            return false;
         return true;
     }
 
@@ -219,6 +290,7 @@ public class CreateOutboundConnectionRequest extends com.amazonaws.AmazonWebServ
         hashCode = prime * hashCode + ((getLocalDomainInfo() == null) ? 0 : getLocalDomainInfo().hashCode());
         hashCode = prime * hashCode + ((getRemoteDomainInfo() == null) ? 0 : getRemoteDomainInfo().hashCode());
         hashCode = prime * hashCode + ((getConnectionAlias() == null) ? 0 : getConnectionAlias().hashCode());
+        hashCode = prime * hashCode + ((getConnectionMode() == null) ? 0 : getConnectionMode().hashCode());
         return hashCode;
     }
 

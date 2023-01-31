@@ -62,6 +62,26 @@ public class NatGatewayAddressStaxUnmarshaller implements Unmarshaller<NatGatewa
                     natGatewayAddress.setPublicIp(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("associationId", targetDepth)) {
+                    natGatewayAddress.setAssociationId(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("isPrimary", targetDepth)) {
+                    natGatewayAddress.setIsPrimary(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("failureMessage", targetDepth)) {
+                    natGatewayAddress.setFailureMessage(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("status", targetDepth)) {
+                    natGatewayAddress.setStatus(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return natGatewayAddress;

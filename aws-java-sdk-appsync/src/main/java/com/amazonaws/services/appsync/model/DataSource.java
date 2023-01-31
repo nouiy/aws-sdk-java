@@ -73,6 +73,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <b>AMAZON_EVENTBRIDGE</b>: The data source is an Amazon EventBridge configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <b>NONE</b>: There is no data source. Use this type when you want to invoke a GraphQL operation without
      * connecting to a data source, such as when you're performing data transformation with resolvers or invoking a
      * subscription from a mutation.
@@ -134,6 +139,12 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private RelationalDatabaseDataSourceConfig relationalDatabaseConfig;
+    /**
+     * <p>
+     * Amazon EventBridge settings.
+     * </p>
+     */
+    private EventBridgeDataSourceConfig eventBridgeConfig;
 
     /**
      * <p>
@@ -282,6 +293,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <b>AMAZON_EVENTBRIDGE</b>: The data source is an Amazon EventBridge configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <b>NONE</b>: There is no data source. Use this type when you want to invoke a GraphQL operation without
      * connecting to a data source, such as when you're performing data transformation with resolvers or invoking a
      * subscription from a mutation.
@@ -320,6 +336,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <b>AMAZON_OPENSEARCH_SERVICE</b>: The data source is an Amazon OpenSearch Service domain.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>AMAZON_EVENTBRIDGE</b>: The data source is an Amazon EventBridge configuration.
      *        </p>
      *        </li>
      *        <li>
@@ -373,6 +394,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <b>AMAZON_EVENTBRIDGE</b>: The data source is an Amazon EventBridge configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <b>NONE</b>: There is no data source. Use this type when you want to invoke a GraphQL operation without
      * connecting to a data source, such as when you're performing data transformation with resolvers or invoking a
      * subscription from a mutation.
@@ -410,6 +436,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <b>AMAZON_OPENSEARCH_SERVICE</b>: The data source is an Amazon OpenSearch Service domain.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>AMAZON_EVENTBRIDGE</b>: The data source is an Amazon EventBridge configuration.
      *         </p>
      *         </li>
      *         <li>
@@ -463,6 +494,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <b>AMAZON_EVENTBRIDGE</b>: The data source is an Amazon EventBridge configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <b>NONE</b>: There is no data source. Use this type when you want to invoke a GraphQL operation without
      * connecting to a data source, such as when you're performing data transformation with resolvers or invoking a
      * subscription from a mutation.
@@ -501,6 +537,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <b>AMAZON_OPENSEARCH_SERVICE</b>: The data source is an Amazon OpenSearch Service domain.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>AMAZON_EVENTBRIDGE</b>: The data source is an Amazon EventBridge configuration.
      *        </p>
      *        </li>
      *        <li>
@@ -556,6 +597,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
+     * <b>AMAZON_EVENTBRIDGE</b>: The data source is an Amazon EventBridge configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <b>NONE</b>: There is no data source. Use this type when you want to invoke a GraphQL operation without
      * connecting to a data source, such as when you're performing data transformation with resolvers or invoking a
      * subscription from a mutation.
@@ -594,6 +640,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <b>AMAZON_OPENSEARCH_SERVICE</b>: The data source is an Amazon OpenSearch Service domain.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>AMAZON_EVENTBRIDGE</b>: The data source is an Amazon EventBridge configuration.
      *        </p>
      *        </li>
      *        <li>
@@ -909,6 +960,46 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Amazon EventBridge settings.
+     * </p>
+     * 
+     * @param eventBridgeConfig
+     *        Amazon EventBridge settings.
+     */
+
+    public void setEventBridgeConfig(EventBridgeDataSourceConfig eventBridgeConfig) {
+        this.eventBridgeConfig = eventBridgeConfig;
+    }
+
+    /**
+     * <p>
+     * Amazon EventBridge settings.
+     * </p>
+     * 
+     * @return Amazon EventBridge settings.
+     */
+
+    public EventBridgeDataSourceConfig getEventBridgeConfig() {
+        return this.eventBridgeConfig;
+    }
+
+    /**
+     * <p>
+     * Amazon EventBridge settings.
+     * </p>
+     * 
+     * @param eventBridgeConfig
+     *        Amazon EventBridge settings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataSource withEventBridgeConfig(EventBridgeDataSourceConfig eventBridgeConfig) {
+        setEventBridgeConfig(eventBridgeConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -941,7 +1032,9 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
         if (getHttpConfig() != null)
             sb.append("HttpConfig: ").append(getHttpConfig()).append(",");
         if (getRelationalDatabaseConfig() != null)
-            sb.append("RelationalDatabaseConfig: ").append(getRelationalDatabaseConfig());
+            sb.append("RelationalDatabaseConfig: ").append(getRelationalDatabaseConfig()).append(",");
+        if (getEventBridgeConfig() != null)
+            sb.append("EventBridgeConfig: ").append(getEventBridgeConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -1000,6 +1093,10 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRelationalDatabaseConfig() != null && other.getRelationalDatabaseConfig().equals(this.getRelationalDatabaseConfig()) == false)
             return false;
+        if (other.getEventBridgeConfig() == null ^ this.getEventBridgeConfig() == null)
+            return false;
+        if (other.getEventBridgeConfig() != null && other.getEventBridgeConfig().equals(this.getEventBridgeConfig()) == false)
+            return false;
         return true;
     }
 
@@ -1019,6 +1116,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getOpenSearchServiceConfig() == null) ? 0 : getOpenSearchServiceConfig().hashCode());
         hashCode = prime * hashCode + ((getHttpConfig() == null) ? 0 : getHttpConfig().hashCode());
         hashCode = prime * hashCode + ((getRelationalDatabaseConfig() == null) ? 0 : getRelationalDatabaseConfig().hashCode());
+        hashCode = prime * hashCode + ((getEventBridgeConfig() == null) ? 0 : getEventBridgeConfig().hashCode());
         return hashCode;
     }
 

@@ -19,9 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Details about a package, including its format, namespace, and name. The <a
- * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_ListPackages.html">ListPackages</a> operation
- * returns a list of <code>PackageSummary</code> objects.
+ * Details about a package, including its format, namespace, and name.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/PackageSummary" target="_top">AWS API

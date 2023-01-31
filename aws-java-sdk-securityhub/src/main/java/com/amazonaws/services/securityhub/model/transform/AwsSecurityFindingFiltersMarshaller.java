@@ -218,6 +218,10 @@ public class AwsSecurityFindingFiltersMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FindingProviderFieldsTypes").build();
     private static final MarshallingInfo<List> SAMPLE_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Sample").build();
+    private static final MarshallingInfo<List> COMPLIANCESECURITYCONTROLID_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ComplianceSecurityControlId").build();
+    private static final MarshallingInfo<List> COMPLIANCEASSOCIATEDSTANDARDSID_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ComplianceAssociatedStandardsId").build();
 
     private static final AwsSecurityFindingFiltersMarshaller instance = new AwsSecurityFindingFiltersMarshaller();
 
@@ -332,6 +336,8 @@ public class AwsSecurityFindingFiltersMarshaller {
             protocolMarshaller.marshall(awsSecurityFindingFilters.getFindingProviderFieldsSeverityOriginal(), FINDINGPROVIDERFIELDSSEVERITYORIGINAL_BINDING);
             protocolMarshaller.marshall(awsSecurityFindingFilters.getFindingProviderFieldsTypes(), FINDINGPROVIDERFIELDSTYPES_BINDING);
             protocolMarshaller.marshall(awsSecurityFindingFilters.getSample(), SAMPLE_BINDING);
+            protocolMarshaller.marshall(awsSecurityFindingFilters.getComplianceSecurityControlId(), COMPLIANCESECURITYCONTROLID_BINDING);
+            protocolMarshaller.marshall(awsSecurityFindingFilters.getComplianceAssociatedStandardsId(), COMPLIANCEASSOCIATEDSTANDARDSID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -26,7 +26,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <note>
  * <p>
  * The total number of allowed data resources is 250. This number can be distributed between 1 and 5 event selectors,
- * but the total cannot exceed 250 across all selectors.
+ * but the total cannot exceed 250 across all selectors for the trail.
  * </p>
  * <p>
  * If you are using advanced event selectors, the maximum total number of values for all conditions, across all advanced
@@ -126,6 +126,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
+     * <code>AWS::CloudTrail::Channel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::S3Outposts::Object</code>
      * </p>
      * </li>
@@ -157,6 +162,21 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>AWS::Glue::Table</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::FinSpace::Environment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::ExperimentTrialComponent</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::FeatureGroup</code>
      * </p>
      * </li>
      * </ul>
@@ -255,6 +275,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
+     * <code>AWS::CloudTrail::Channel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::S3Outposts::Object</code>
      * </p>
      * </li>
@@ -288,6 +313,21 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <code>AWS::Glue::Table</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWS::FinSpace::Environment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::ExperimentTrialComponent</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::FeatureGroup</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param type
@@ -316,6 +356,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        are not valid in basic event selectors. For more information, see <a>AdvancedFieldSelector$Field</a>.
      *        </p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>AWS::CloudTrail::Channel</code>
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>AWS::S3Outposts::Object</code>
@@ -349,6 +394,21 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>AWS::Glue::Table</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::FinSpace::Environment</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SageMaker::ExperimentTrialComponent</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SageMaker::FeatureGroup</code>
      *        </p>
      *        </li>
      */
@@ -387,6 +447,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
+     * <code>AWS::CloudTrail::Channel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::S3Outposts::Object</code>
      * </p>
      * </li>
@@ -420,6 +485,21 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <code>AWS::Glue::Table</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWS::FinSpace::Environment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::ExperimentTrialComponent</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::FeatureGroup</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The resource type in which you want to log data events. You can specify the following <i>basic</i> event
@@ -447,6 +527,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         are not valid in basic event selectors. For more information, see <a>AdvancedFieldSelector$Field</a>.
      *         </p>
      *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>AWS::CloudTrail::Channel</code>
+     *         </p>
+     *         </li>
      *         <li>
      *         <p>
      *         <code>AWS::S3Outposts::Object</code>
@@ -480,6 +565,21 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <code>AWS::Glue::Table</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::FinSpace::Environment</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::SageMaker::ExperimentTrialComponent</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWS::SageMaker::FeatureGroup</code>
      *         </p>
      *         </li>
      */
@@ -518,6 +618,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
+     * <code>AWS::CloudTrail::Channel</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>AWS::S3Outposts::Object</code>
      * </p>
      * </li>
@@ -551,6 +656,21 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      * <code>AWS::Glue::Table</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>AWS::FinSpace::Environment</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::ExperimentTrialComponent</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWS::SageMaker::FeatureGroup</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param type
@@ -579,6 +699,11 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        are not valid in basic event selectors. For more information, see <a>AdvancedFieldSelector$Field</a>.
      *        </p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>AWS::CloudTrail::Channel</code>
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>AWS::S3Outposts::Object</code>
@@ -612,6 +737,21 @@ public class DataResource implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>AWS::Glue::Table</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::FinSpace::Environment</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SageMaker::ExperimentTrialComponent</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWS::SageMaker::FeatureGroup</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

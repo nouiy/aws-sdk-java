@@ -68,6 +68,14 @@ public class CreateOutboundConnectionResultJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     createOutboundConnectionResult.setConnectionId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ConnectionMode", targetDepth)) {
+                    context.nextToken();
+                    createOutboundConnectionResult.setConnectionMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ConnectionProperties", targetDepth)) {
+                    context.nextToken();
+                    createOutboundConnectionResult.setConnectionProperties(ConnectionPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

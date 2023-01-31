@@ -92,6 +92,10 @@ public class DataSourceJsonUnmarshaller implements Unmarshaller<DataSource, Json
                     context.nextToken();
                     dataSource.setRelationalDatabaseConfig(RelationalDatabaseDataSourceConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("eventBridgeConfig", targetDepth)) {
+                    context.nextToken();
+                    dataSource.setEventBridgeConfig(EventBridgeDataSourceConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

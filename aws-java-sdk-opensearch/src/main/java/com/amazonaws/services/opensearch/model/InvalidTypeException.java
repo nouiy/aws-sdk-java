@@ -16,8 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * An exception for trying to create or access sub-resource that is either invalid or not supported. Gives http status
- * code of 409.
+ * An exception for trying to create or access a sub-resource that's either invalid or not supported.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

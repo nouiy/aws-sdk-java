@@ -810,6 +810,40 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<AssignPrivateNatGatewayAddressResult> assignPrivateNatGatewayAddressAsync(AssignPrivateNatGatewayAddressRequest request) {
+
+        return assignPrivateNatGatewayAddressAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssignPrivateNatGatewayAddressResult> assignPrivateNatGatewayAddressAsync(
+            final AssignPrivateNatGatewayAddressRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssignPrivateNatGatewayAddressRequest, AssignPrivateNatGatewayAddressResult> asyncHandler) {
+        final AssignPrivateNatGatewayAddressRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssignPrivateNatGatewayAddressResult>() {
+            @Override
+            public AssignPrivateNatGatewayAddressResult call() throws Exception {
+                AssignPrivateNatGatewayAddressResult result = null;
+
+                try {
+                    result = executeAssignPrivateNatGatewayAddress(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<AssociateAddressResult> associateAddressAsync(AssociateAddressRequest request) {
 
         return associateAddressAsync(request, null);
@@ -1030,6 +1064,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeAssociateIpamResourceDiscovery(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateNatGatewayAddressResult> associateNatGatewayAddressAsync(AssociateNatGatewayAddressRequest request) {
+
+        return associateNatGatewayAddressAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateNatGatewayAddressResult> associateNatGatewayAddressAsync(final AssociateNatGatewayAddressRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociateNatGatewayAddressRequest, AssociateNatGatewayAddressResult> asyncHandler) {
+        final AssociateNatGatewayAddressRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociateNatGatewayAddressResult>() {
+            @Override
+            public AssociateNatGatewayAddressResult call() throws Exception {
+                AssociateNatGatewayAddressResult result = null;
+
+                try {
+                    result = executeAssociateNatGatewayAddress(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -14313,6 +14380,40 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateNatGatewayAddressResult> disassociateNatGatewayAddressAsync(DisassociateNatGatewayAddressRequest request) {
+
+        return disassociateNatGatewayAddressAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateNatGatewayAddressResult> disassociateNatGatewayAddressAsync(
+            final DisassociateNatGatewayAddressRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisassociateNatGatewayAddressRequest, DisassociateNatGatewayAddressResult> asyncHandler) {
+        final DisassociateNatGatewayAddressRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisassociateNatGatewayAddressResult>() {
+            @Override
+            public DisassociateNatGatewayAddressResult call() throws Exception {
+                DisassociateNatGatewayAddressResult result = null;
+
+                try {
+                    result = executeDisassociateNatGatewayAddress(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DisassociateRouteTableResult> disassociateRouteTableAsync(DisassociateRouteTableRequest request) {
 
         return disassociateRouteTableAsync(request, null);
@@ -21090,6 +21191,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeUnassignPrivateIpAddresses(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UnassignPrivateNatGatewayAddressResult> unassignPrivateNatGatewayAddressAsync(
+            UnassignPrivateNatGatewayAddressRequest request) {
+
+        return unassignPrivateNatGatewayAddressAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UnassignPrivateNatGatewayAddressResult> unassignPrivateNatGatewayAddressAsync(
+            final UnassignPrivateNatGatewayAddressRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UnassignPrivateNatGatewayAddressRequest, UnassignPrivateNatGatewayAddressResult> asyncHandler) {
+        final UnassignPrivateNatGatewayAddressRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UnassignPrivateNatGatewayAddressResult>() {
+            @Override
+            public UnassignPrivateNatGatewayAddressResult call() throws Exception {
+                UnassignPrivateNatGatewayAddressResult result = null;
+
+                try {
+                    result = executeUnassignPrivateNatGatewayAddress(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

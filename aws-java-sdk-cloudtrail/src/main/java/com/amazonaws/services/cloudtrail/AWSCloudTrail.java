@@ -117,16 +117,16 @@ public interface AWSCloudTrail {
 
     /**
      * <p>
-     * Adds one or more tags to a trail or event data store, up to a limit of 50. Overwrites an existing tag's value
-     * when a new value is specified for an existing tag key. Tag key names must be unique for a trail; you cannot have
-     * two keys with the same name but different values. If you specify a key without a value, the tag will be created
-     * with the specified key and a value of null. You can tag a trail or event data store that applies to all Amazon
-     * Web Services Regions only from the Region in which the trail or event data store was created (also known as its
-     * home region).
+     * Adds one or more tags to a trail, event data store, or channel, up to a limit of 50. Overwrites an existing tag's
+     * value when a new value is specified for an existing tag key. Tag key names must be unique; you cannot have two
+     * keys with the same name but different values. If you specify a key without a value, the tag will be created with
+     * the specified key and a value of null. You can tag a trail or event data store that applies to all Amazon Web
+     * Services Regions only from the Region in which the trail or event data store was created (also known as its home
+     * region).
      * </p>
      * 
      * @param addTagsRequest
-     *        Specifies the tags to add to a trail or event data store.
+     *        Specifies the tags to add to a trail, event data store, or channel.
      * @return Result of the AddTags operation returned by the service.
      * @throws ResourceNotFoundException
      *         This exception is thrown when the specified resource is not found.
@@ -135,10 +135,23 @@ public interface AWSCloudTrail {
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws ResourceTypeNotSupportedException
      *         This exception is thrown when the specified resource type is not supported by CloudTrail.
      * @throws TagsLimitExceededException
-     *         The number of tags per trail has exceeded the permitted amount. Currently, the limit is 50.
+     *         The number of tags per trail, event data store, or channel has exceeded the permitted amount. Currently,
+     *         the limit is 50.
      * @throws InvalidTrailNameException
      *         This exception is thrown when the provided trail name is not valid. Trail names must meet the following
      *         requirements:
@@ -177,6 +190,8 @@ public interface AWSCloudTrail {
      *         The event data store is inactive.
      * @throws EventDataStoreNotFoundException
      *         The specified event data store was not found.
+     * @throws ChannelNotFoundException
+     *         This exception is thrown when CloudTrail cannot find the specified channel.
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
      * @throws OperationNotPermittedException
@@ -193,8 +208,9 @@ public interface AWSCloudTrail {
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws ConflictException
      *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
-     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource. If this
-     *         exception occurs, wait a few minutes, and then try the operation again.
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @sample AWSCloudTrail.AddTags
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/AddTags" target="_top">AWS API
      *      Documentation</a>
@@ -232,13 +248,54 @@ public interface AWSCloudTrail {
      *         This exception is thrown when the management account does not have a service-linked role.
      * @throws ConflictException
      *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
-     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource. If this
-     *         exception occurs, wait a few minutes, and then try the operation again.
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @sample AWSCloudTrail.CancelQuery
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/CancelQuery" target="_top">AWS API
      *      Documentation</a>
      */
     CancelQueryResult cancelQuery(CancelQueryRequest cancelQueryRequest);
+
+    /**
+     * <p>
+     * Creates a channel for CloudTrail to ingest events from a partner or external source. After you create a channel,
+     * a CloudTrail Lake event data store can log events from the partner or source that you specify.
+     * </p>
+     * 
+     * @param createChannelRequest
+     * @return Result of the CreateChannel operation returned by the service.
+     * @throws ChannelMaxLimitExceededException
+     *         This exception is thrown when the maximum number of channels limit is exceeded.
+     * @throws InvalidSourceException
+     *         This exception is thrown when the specified value of <code>Source</code> is not valid.
+     * @throws ChannelAlreadyExistsException
+     *         This exception is thrown when the provided channel already exists.
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
+     * @throws InvalidEventDataStoreCategoryException
+     *         This exception is thrown when event categories of specified event data stores are not valid.
+     * @throws InactiveEventDataStoreException
+     *         The event data store is inactive.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws InvalidTagParameterException
+     *         This exception is thrown when the specified tag key or values are not valid. It can also occur if there
+     *         are duplicate tags or too many tags on the resource.
+     * @throws TagsLimitExceededException
+     *         The number of tags per trail, event data store, or channel has exceeded the permitted amount. Currently,
+     *         the limit is 50.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.CreateChannel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/CreateChannel" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateChannelResult createChannel(CreateChannelRequest createChannelRequest);
 
     /**
      * <p>
@@ -296,8 +353,9 @@ public interface AWSCloudTrail {
      *         This exception is thrown when the requested operation is not supported.
      * @throws ConflictException
      *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
-     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource. If this
-     *         exception occurs, wait a few minutes, and then try the operation again.
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @throws InsufficientEncryptionPolicyException
      *         This exception is thrown when the policy on the S3 bucket or KMS key does not have sufficient permissions
      *         for the operation.
@@ -405,7 +463,8 @@ public interface AWSCloudTrail {
      * @throws TrailNotProvidedException
      *         This exception is no longer in use.
      * @throws TagsLimitExceededException
-     *         The number of tags per trail has exceeded the permitted amount. Currently, the limit is 50.
+     *         The number of tags per trail, event data store, or channel has exceeded the permitted amount. Currently,
+     *         the limit is 50.
      * @throws InvalidParameterCombinationException
      *         This exception is thrown when the combination of parameters provided is not valid.
      * @throws KmsKeyNotFoundException
@@ -463,13 +522,35 @@ public interface AWSCloudTrail {
      *         in a suspended Amazon Web Services account.
      * @throws ConflictException
      *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
-     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource. If this
-     *         exception occurs, wait a few minutes, and then try the operation again.
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @sample AWSCloudTrail.CreateTrail
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/CreateTrail" target="_top">AWS API
      *      Documentation</a>
      */
     CreateTrailResult createTrail(CreateTrailRequest createTrailRequest);
+
+    /**
+     * <p>
+     * Deletes a channel.
+     * </p>
+     * 
+     * @param deleteChannelRequest
+     * @return Result of the DeleteChannel operation returned by the service.
+     * @throws ChannelARNInvalidException
+     *         This exception is thrown when the specified value of <code>ChannelARN</code> is not valid.
+     * @throws ChannelNotFoundException
+     *         This exception is thrown when CloudTrail cannot find the specified channel.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.DeleteChannel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DeleteChannel" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteChannelResult deleteChannel(DeleteChannelRequest deleteChannelRequest);
 
     /**
      * <p>
@@ -515,6 +596,9 @@ public interface AWSCloudTrail {
      *         event data store</a>.
      * @throws NoManagementAccountSLRExistsException
      *         This exception is thrown when the management account does not have a service-linked role.
+     * @throws ChannelExistsForEDSException
+     *         This exception is thrown when the specified event data store cannot yet be deleted because it is in use
+     *         by a channel.
      * @throws InsufficientDependencyServiceAccessPermissionException
      *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
      *         one or more required permissions for creating an organization resource in a required service.
@@ -523,6 +607,33 @@ public interface AWSCloudTrail {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteEventDataStoreResult deleteEventDataStore(DeleteEventDataStoreRequest deleteEventDataStoreRequest);
+
+    /**
+     * <p>
+     * Deletes the resource-based policy attached to the CloudTrail channel.
+     * </p>
+     * 
+     * @param deleteResourcePolicyRequest
+     * @return Result of the DeleteResourcePolicy operation returned by the service.
+     * @throws ResourceARNNotValidException
+     *         This exception is thrown when the provided resource does not exist, or the ARN format of the resource is
+     *         not valid. The following is the valid format for a resource ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/MyChannel</code>.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when the specified resource is not found.
+     * @throws ResourcePolicyNotFoundException
+     *         This exception is thrown when the specified resource policy is not found.
+     * @throws ResourceTypeNotSupportedException
+     *         This exception is thrown when the specified resource type is not supported by CloudTrail.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.DeleteResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DeleteResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteResourcePolicyResult deleteResourcePolicy(DeleteResourcePolicyRequest deleteResourcePolicyRequest);
 
     /**
      * <p>
@@ -571,6 +682,23 @@ public interface AWSCloudTrail {
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @throws InvalidHomeRegionException
      *         This exception is thrown when an operation is called on a trail from a region other than the region in
      *         which the trail was created.
@@ -591,10 +719,6 @@ public interface AWSCloudTrail {
      * @throws InsufficientDependencyServiceAccessPermissionException
      *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
      *         one or more required permissions for creating an organization resource in a required service.
-     * @throws ConflictException
-     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
-     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource. If this
-     *         exception occurs, wait a few minutes, and then try the operation again.
      * @sample AWSCloudTrail.DeleteTrail
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/DeleteTrail" target="_top">AWS API
      *      Documentation</a>
@@ -611,7 +735,7 @@ public interface AWSCloudTrail {
      *        that is currently designated as a delegated administrator.
      * @return Result of the DeregisterOrganizationDelegatedAdmin operation returned by the service.
      * @throws AccountNotFoundException
-     *         This exception is thrown when when the specified account is not found or not part of an organization.
+     *         This exception is thrown when the specified account is not found or not part of an organization.
      * @throws AccountNotRegisteredException
      *         This exception is thrown when the specified account is not registered as the CloudTrail delegated
      *         administrator.
@@ -622,6 +746,11 @@ public interface AWSCloudTrail {
      *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @throws InsufficientDependencyServiceAccessPermissionException
      *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
      *         one or more required permissions for creating an organization resource in a required service.
@@ -737,10 +866,7 @@ public interface AWSCloudTrail {
 
     /**
      * <p>
-     * Returns information about a specific channel. Amazon Web Services services create service-linked channels to get
-     * information about CloudTrail events on your behalf. For more information about service-linked channels, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/viewing-service-linked-channels.html">Viewing
-     * service-linked channels for CloudTrail by using the CLI</a>.
+     * Returns information about a specific channel.
      * </p>
      * 
      * @param getChannelRequest
@@ -748,7 +874,7 @@ public interface AWSCloudTrail {
      * @throws ChannelARNInvalidException
      *         This exception is thrown when the specified value of <code>ChannelARN</code> is not valid.
      * @throws ChannelNotFoundException
-     *         The specified channel was not found.
+     *         This exception is thrown when CloudTrail cannot find the specified channel.
      * @throws OperationNotPermittedException
      *         This exception is thrown when the requested operation is not permitted.
      * @throws UnsupportedOperationException
@@ -866,6 +992,18 @@ public interface AWSCloudTrail {
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
      * @throws OperationNotPermittedException
@@ -951,6 +1089,18 @@ public interface AWSCloudTrail {
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
      * @throws OperationNotPermittedException
@@ -1006,6 +1156,33 @@ public interface AWSCloudTrail {
 
     /**
      * <p>
+     * Retrieves the JSON text of the resource-based policy document attached to the CloudTrail channel.
+     * </p>
+     * 
+     * @param getResourcePolicyRequest
+     * @return Result of the GetResourcePolicy operation returned by the service.
+     * @throws ResourceARNNotValidException
+     *         This exception is thrown when the provided resource does not exist, or the ARN format of the resource is
+     *         not valid. The following is the valid format for a resource ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/MyChannel</code>.
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when the specified resource is not found.
+     * @throws ResourcePolicyNotFoundException
+     *         This exception is thrown when the specified resource policy is not found.
+     * @throws ResourceTypeNotSupportedException
+     *         This exception is thrown when the specified resource type is not supported by CloudTrail.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.GetResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/GetResourcePolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetResourcePolicyResult getResourcePolicy(GetResourcePolicyRequest getResourcePolicyRequest);
+
+    /**
+     * <p>
      * Returns settings information for a specified trail.
      * </p>
      * 
@@ -1016,6 +1193,18 @@ public interface AWSCloudTrail {
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws TrailNotFoundException
      *         This exception is thrown when the trail with the given name is not found.
      * @throws InvalidTrailNameException
@@ -1075,6 +1264,18 @@ public interface AWSCloudTrail {
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws TrailNotFoundException
      *         This exception is thrown when the trail with the given name is not found.
      * @throws InvalidTrailNameException
@@ -1120,11 +1321,7 @@ public interface AWSCloudTrail {
 
     /**
      * <p>
-     * Lists the channels in the current account, and their source names. Amazon Web Services services create
-     * service-linked channels get information about CloudTrail events on your behalf. For more information about
-     * service-linked channels, see <a
-     * href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/viewing-service-linked-channels.html">Viewing
-     * service-linked channels for CloudTrail by using the CLI</a>.
+     * Lists the channels in the current account, and their source names.
      * </p>
      * 
      * @param listChannelsRequest
@@ -1295,7 +1492,7 @@ public interface AWSCloudTrail {
 
     /**
      * <p>
-     * Lists the tags for the trail or event data store in the current region.
+     * Lists the tags for the trail, event data store, or channel in the current region.
      * </p>
      * 
      * @param listTagsRequest
@@ -1308,6 +1505,18 @@ public interface AWSCloudTrail {
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws ResourceTypeNotSupportedException
      *         This exception is thrown when the specified resource type is not supported by CloudTrail.
      * @throws InvalidTrailNameException
@@ -1594,6 +1803,18 @@ public interface AWSCloudTrail {
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws InvalidHomeRegionException
      *         This exception is thrown when an operation is called on a trail from a region other than the region in
      *         which the trail was created.
@@ -1702,6 +1923,18 @@ public interface AWSCloudTrail {
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws InvalidHomeRegionException
      *         This exception is thrown when an operation is called on a trail from a region other than the region in
      *         which the trail was created.
@@ -1741,6 +1974,56 @@ public interface AWSCloudTrail {
 
     /**
      * <p>
+     * Attaches a resource-based permission policy to a CloudTrail channel that is used for an integration with an event
+     * source outside of Amazon Web Services. For more information about resource-based policies, see <a href=
+     * "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/security_iam_resource-based-policy-examples.html"
+     * >CloudTrail resource-based policy examples</a> in the <i>CloudTrail User Guide</i>.
+     * </p>
+     * 
+     * @param putResourcePolicyRequest
+     * @return Result of the PutResourcePolicy operation returned by the service.
+     * @throws ResourceARNNotValidException
+     *         This exception is thrown when the provided resource does not exist, or the ARN format of the resource is
+     *         not valid. The following is the valid format for a resource ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/MyChannel</code>.
+     * @throws ResourcePolicyNotValidException
+     *         This exception is thrown when the resouce-based policy has syntax errors, or contains a principal that is
+     *         not valid. </p>
+     *         <p>
+     *         The following are requirements for the resource policy:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Contains only one action: cloudtrail-data:PutAuditEvents
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Contains at least one statement. The policy can have a maximum of 20 statements.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Each statement contains at least one principal. A statement can have a maximum of 50 principals.
+     *         </p>
+     *         </li>
+     * @throws ResourceNotFoundException
+     *         This exception is thrown when the specified resource is not found.
+     * @throws ResourceTypeNotSupportedException
+     *         This exception is thrown when the specified resource type is not supported by CloudTrail.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.PutResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/PutResourcePolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    PutResourcePolicyResult putResourcePolicy(PutResourcePolicyRequest putResourcePolicyRequest);
+
+    /**
+     * <p>
      * Registers an organization’s member account as the CloudTrail delegated administrator.
      * </p>
      * 
@@ -1751,7 +2034,7 @@ public interface AWSCloudTrail {
      *         This exception is thrown when the account is already registered as the CloudTrail delegated
      *         administrator.
      * @throws AccountNotFoundException
-     *         This exception is thrown when when the specified account is not found or not part of an organization.
+     *         This exception is thrown when the specified account is not found or not part of an organization.
      * @throws InsufficientDependencyServiceAccessPermissionException
      *         This exception is thrown when the IAM user or role that is used to create the organization resource lacks
      *         one or more required permissions for creating an organization resource in a required service.
@@ -1767,6 +2050,11 @@ public interface AWSCloudTrail {
      *         Trusted Access with Other Amazon Web Services Services</a> and <a href=
      *         "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/creating-an-organizational-trail-prepare.html"
      *         >Prepare For Creating a Trail For Your Organization</a>.
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @throws DelegatedAdminAccountLimitExceededException
      *         This exception is thrown when the maximum number of CloudTrail delegated administrators is reached.
      * @throws NotOrganizationManagementAccountException
@@ -1792,11 +2080,11 @@ public interface AWSCloudTrail {
 
     /**
      * <p>
-     * Removes the specified tags from a trail or event data store.
+     * Removes the specified tags from a trail, event data store, or channel.
      * </p>
      * 
      * @param removeTagsRequest
-     *        Specifies the tags to remove from a trail or event data store.
+     *        Specifies the tags to remove from a trail, event data store, or channel.
      * @return Result of the RemoveTags operation returned by the service.
      * @throws ResourceNotFoundException
      *         This exception is thrown when the specified resource is not found.
@@ -1805,6 +2093,18 @@ public interface AWSCloudTrail {
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
      * @throws ResourceTypeNotSupportedException
      *         This exception is thrown when the specified resource type is not supported by CloudTrail.
      * @throws InvalidTrailNameException
@@ -1845,6 +2145,8 @@ public interface AWSCloudTrail {
      *         The event data store is inactive.
      * @throws EventDataStoreNotFoundException
      *         The specified event data store was not found.
+     * @throws ChannelNotFoundException
+     *         This exception is thrown when CloudTrail cannot find the specified channel.
      * @throws UnsupportedOperationException
      *         This exception is thrown when the requested operation is not supported.
      * @throws OperationNotPermittedException
@@ -1941,6 +2243,12 @@ public interface AWSCloudTrail {
      * <p>
      * When you retry an import, the <code>ImportID</code> parameter is required.
      * </p>
+     * <note>
+     * <p>
+     * If the destination event data store is for an organization, you must use the management account to import trail
+     * events. You cannot use the delegated administrator account for the organization.
+     * </p>
+     * </note>
      * 
      * @param startImportRequest
      * @return Result of the StartImport operation returned by the service.
@@ -1992,6 +2300,23 @@ public interface AWSCloudTrail {
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN:
+     *         <code>arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @throws TrailNotFoundException
      *         This exception is thrown when the trail with the given name is not found.
      * @throws InvalidTrailNameException
@@ -2169,6 +2494,23 @@ public interface AWSCloudTrail {
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @throws InvalidHomeRegionException
      *         This exception is thrown when an operation is called on a trail from a region other than the region in
      *         which the trail was created.
@@ -2197,12 +2539,52 @@ public interface AWSCloudTrail {
 
     /**
      * <p>
+     * Updates a channel specified by a required channel ARN or UUID.
+     * </p>
+     * 
+     * @param updateChannelRequest
+     * @return Result of the UpdateChannel operation returned by the service.
+     * @throws ChannelARNInvalidException
+     *         This exception is thrown when the specified value of <code>ChannelARN</code> is not valid.
+     * @throws ChannelNotFoundException
+     *         This exception is thrown when CloudTrail cannot find the specified channel.
+     * @throws ChannelAlreadyExistsException
+     *         This exception is thrown when the provided channel already exists.
+     * @throws EventDataStoreARNInvalidException
+     *         The specified event data store ARN is not valid or does not map to an event data store in your account.
+     * @throws EventDataStoreNotFoundException
+     *         The specified event data store was not found.
+     * @throws InvalidEventDataStoreCategoryException
+     *         This exception is thrown when event categories of specified event data stores are not valid.
+     * @throws InactiveEventDataStoreException
+     *         The event data store is inactive.
+     * @throws InvalidParameterException
+     *         The request includes a parameter that is not valid.
+     * @throws OperationNotPermittedException
+     *         This exception is thrown when the requested operation is not permitted.
+     * @throws UnsupportedOperationException
+     *         This exception is thrown when the requested operation is not supported.
+     * @sample AWSCloudTrail.UpdateChannel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/UpdateChannel" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateChannelResult updateChannel(UpdateChannelRequest updateChannelRequest);
+
+    /**
+     * <p>
      * Updates an event data store. The required <code>EventDataStore</code> value is an ARN or the ID portion of the
      * ARN. Other parameters are optional, but at least one optional parameter must be specified, or CloudTrail throws
      * an error. <code>RetentionPeriod</code> is in days, and valid values are integers between 90 and 2557. By default,
-     * <code>TerminationProtection</code> is enabled. <code>AdvancedEventSelectors</code> includes or excludes
-     * management and data events in your event data store; for more information about
-     * <code>AdvancedEventSelectors</code>, see <a>PutEventSelectorsRequest$AdvancedEventSelectors</a>.
+     * <code>TerminationProtection</code> is enabled.
+     * </p>
+     * <p>
+     * For event data stores for CloudTrail events, <code>AdvancedEventSelectors</code> includes or excludes management
+     * and data events in your event data store. For more information about <code>AdvancedEventSelectors</code>, see
+     * <a>PutEventSelectorsRequest$AdvancedEventSelectors</a>.
+     * </p>
+     * <p>
+     * For event data stores for Config configuration items, Audit Manager evidence, or non-Amazon Web Services events,
+     * <code>AdvancedEventSelectors</code> includes events of that type in your event data store.
      * </p>
      * 
      * @param updateEventDataStoreRequest
@@ -2403,6 +2785,23 @@ public interface AWSCloudTrail {
      *         the format of a trail ARN.</p>
      *         <p>
      *         <code>arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail</code>
+     *         </p>
+     *         <p>
+     *         This exception is also thrown when you call <code>AddTags</code> or <code>RemoveTags</code> on a trail,
+     *         event data store, or channel with a resource ARN that is not valid.
+     *         </p>
+     *         <p>
+     *         The following is the format of an event data store ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:12345678910:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE</code>
+     *         </p>
+     *         <p>
+     *         The following is the format of a channel ARN: <code>
+     *         arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890</code>
+     * @throws ConflictException
+     *         This exception is thrown when the specified resource is not ready for an operation. This can occur when
+     *         you try to run an operation on a resource before CloudTrail has time to fully load the resource, or
+     *         because another operation is modifying the resource. If this exception occurs, wait a few minutes, and
+     *         then try the operation again.
      * @throws InvalidParameterCombinationException
      *         This exception is thrown when the combination of parameters provided is not valid.
      * @throws InvalidHomeRegionException

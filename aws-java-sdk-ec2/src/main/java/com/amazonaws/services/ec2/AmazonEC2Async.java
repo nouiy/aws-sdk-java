@@ -794,6 +794,45 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Assigns one or more private IPv4 addresses to a private NAT gateway. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-working-with">Work with
+     * NAT gateways</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param assignPrivateNatGatewayAddressRequest
+     * @return A Java Future containing the result of the AssignPrivateNatGatewayAddress operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.AssignPrivateNatGatewayAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssignPrivateNatGatewayAddress"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssignPrivateNatGatewayAddressResult> assignPrivateNatGatewayAddressAsync(
+            AssignPrivateNatGatewayAddressRequest assignPrivateNatGatewayAddressRequest);
+
+    /**
+     * <p>
+     * Assigns one or more private IPv4 addresses to a private NAT gateway. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-working-with">Work with
+     * NAT gateways</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param assignPrivateNatGatewayAddressRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssignPrivateNatGatewayAddress operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.AssignPrivateNatGatewayAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssignPrivateNatGatewayAddress"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssignPrivateNatGatewayAddressResult> assignPrivateNatGatewayAddressAsync(
+            AssignPrivateNatGatewayAddressRequest assignPrivateNatGatewayAddressRequest,
+            com.amazonaws.handlers.AsyncHandler<AssignPrivateNatGatewayAddressRequest, AssignPrivateNatGatewayAddressResult> asyncHandler);
+
+    /**
+     * <p>
      * Associates an Elastic IP address, or carrier IP address (for instances that are in subnets in Wavelength Zones)
      * with an instance or a network interface. Before you can use an Elastic IP address, you must allocate it to your
      * account.
@@ -1192,6 +1231,57 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<AssociateIpamResourceDiscoveryResult> associateIpamResourceDiscoveryAsync(
             AssociateIpamResourceDiscoveryRequest associateIpamResourceDiscoveryRequest,
             com.amazonaws.handlers.AsyncHandler<AssociateIpamResourceDiscoveryRequest, AssociateIpamResourceDiscoveryResult> asyncHandler);
+
+    /**
+     * <p>
+     * Associates Elastic IP addresses (EIPs) and private IPv4 addresses with a public NAT gateway. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-working-with">Work with
+     * NAT gateways</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * <p>
+     * By default, you can associate up to 2 Elastic IP addresses per public NAT gateway. You can increase the limit by
+     * requesting a quota adjustment. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html#vpc-limits-eips">Elastic IP address
+     * quotas</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param associateNatGatewayAddressRequest
+     * @return A Java Future containing the result of the AssociateNatGatewayAddress operation returned by the service.
+     * @sample AmazonEC2Async.AssociateNatGatewayAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateNatGatewayAddress" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateNatGatewayAddressResult> associateNatGatewayAddressAsync(
+            AssociateNatGatewayAddressRequest associateNatGatewayAddressRequest);
+
+    /**
+     * <p>
+     * Associates Elastic IP addresses (EIPs) and private IPv4 addresses with a public NAT gateway. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-working-with">Work with
+     * NAT gateways</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * <p>
+     * By default, you can associate up to 2 Elastic IP addresses per public NAT gateway. You can increase the limit by
+     * requesting a quota adjustment. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html#vpc-limits-eips">Elastic IP address
+     * quotas</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param associateNatGatewayAddressRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateNatGatewayAddress operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.AssociateNatGatewayAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateNatGatewayAddress" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateNatGatewayAddressResult> associateNatGatewayAddressAsync(
+            AssociateNatGatewayAddressRequest associateNatGatewayAddressRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateNatGatewayAddressRequest, AssociateNatGatewayAddressResult> asyncHandler);
 
     /**
      * <p>
@@ -18080,6 +18170,67 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Disassociates secondary Elastic IP addresses (EIPs) from a public NAT gateway. You cannot disassociate your
+     * primary EIP. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-edit-secondary">Edit
+     * secondary IP address associations</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * <p>
+     * While disassociating is in progress, you cannot associate/disassociate additional EIPs while the connections are
+     * being drained. You are, however, allowed to delete the NAT gateway.
+     * </p>
+     * <p>
+     * An EIP will only be released at the end of MaxDrainDurationSeconds. The EIPs stay associated and support the
+     * existing connections but do not support any new connections (new connections are distributed across the remaining
+     * associated EIPs). As the existing connections drain out, the EIPs (and the corresponding private IPs mapped to
+     * them) get released.
+     * </p>
+     * 
+     * @param disassociateNatGatewayAddressRequest
+     * @return A Java Future containing the result of the DisassociateNatGatewayAddress operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.DisassociateNatGatewayAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateNatGatewayAddress"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateNatGatewayAddressResult> disassociateNatGatewayAddressAsync(
+            DisassociateNatGatewayAddressRequest disassociateNatGatewayAddressRequest);
+
+    /**
+     * <p>
+     * Disassociates secondary Elastic IP addresses (EIPs) from a public NAT gateway. You cannot disassociate your
+     * primary EIP. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-edit-secondary">Edit
+     * secondary IP address associations</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * <p>
+     * While disassociating is in progress, you cannot associate/disassociate additional EIPs while the connections are
+     * being drained. You are, however, allowed to delete the NAT gateway.
+     * </p>
+     * <p>
+     * An EIP will only be released at the end of MaxDrainDurationSeconds. The EIPs stay associated and support the
+     * existing connections but do not support any new connections (new connections are distributed across the remaining
+     * associated EIPs). As the existing connections drain out, the EIPs (and the corresponding private IPs mapped to
+     * them) get released.
+     * </p>
+     * 
+     * @param disassociateNatGatewayAddressRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociateNatGatewayAddress operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.DisassociateNatGatewayAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateNatGatewayAddress"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateNatGatewayAddressResult> disassociateNatGatewayAddressAsync(
+            DisassociateNatGatewayAddressRequest disassociateNatGatewayAddressRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociateNatGatewayAddressRequest, DisassociateNatGatewayAddressResult> asyncHandler);
+
+    /**
+     * <p>
      * Disassociates a subnet or gateway from a route table.
      * </p>
      * <p>
@@ -27827,6 +27978,71 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<UnassignPrivateIpAddressesResult> unassignPrivateIpAddressesAsync(
             UnassignPrivateIpAddressesRequest unassignPrivateIpAddressesRequest,
             com.amazonaws.handlers.AsyncHandler<UnassignPrivateIpAddressesRequest, UnassignPrivateIpAddressesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Unassigns secondary private NAT gateway IPv4 addresses from a private NAT gateway. You cannot unassign your
+     * primary private IP. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-edit-secondary">Edit
+     * secondary IP address associations</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * <p>
+     * While unassigning is in progress, you cannot assign/unassign additional IP addresses while the connections are
+     * being drained. You are, however, allowed to delete the NAT gateway.
+     * </p>
+     * <p>
+     * A private IP address will only be released at the end of MaxDrainDurationSeconds. The private IP addresses stay
+     * associated and support the existing connections but do not support any new connections (new connections are
+     * distributed across the remaining assigned private IP address). After the existing connections drain out, the
+     * private IP addresses get released.
+     * </p>
+     * <p/>
+     * <p/>
+     * 
+     * @param unassignPrivateNatGatewayAddressRequest
+     * @return A Java Future containing the result of the UnassignPrivateNatGatewayAddress operation returned by the
+     *         service.
+     * @sample AmazonEC2Async.UnassignPrivateNatGatewayAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/UnassignPrivateNatGatewayAddress"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UnassignPrivateNatGatewayAddressResult> unassignPrivateNatGatewayAddressAsync(
+            UnassignPrivateNatGatewayAddressRequest unassignPrivateNatGatewayAddressRequest);
+
+    /**
+     * <p>
+     * Unassigns secondary private NAT gateway IPv4 addresses from a private NAT gateway. You cannot unassign your
+     * primary private IP. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-edit-secondary">Edit
+     * secondary IP address associations</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * <p>
+     * While unassigning is in progress, you cannot assign/unassign additional IP addresses while the connections are
+     * being drained. You are, however, allowed to delete the NAT gateway.
+     * </p>
+     * <p>
+     * A private IP address will only be released at the end of MaxDrainDurationSeconds. The private IP addresses stay
+     * associated and support the existing connections but do not support any new connections (new connections are
+     * distributed across the remaining assigned private IP address). After the existing connections drain out, the
+     * private IP addresses get released.
+     * </p>
+     * <p/>
+     * <p/>
+     * 
+     * @param unassignPrivateNatGatewayAddressRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UnassignPrivateNatGatewayAddress operation returned by the
+     *         service.
+     * @sample AmazonEC2AsyncHandler.UnassignPrivateNatGatewayAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/UnassignPrivateNatGatewayAddress"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UnassignPrivateNatGatewayAddressResult> unassignPrivateNatGatewayAddressAsync(
+            UnassignPrivateNatGatewayAddressRequest unassignPrivateNatGatewayAddressRequest,
+            com.amazonaws.handlers.AsyncHandler<UnassignPrivateNatGatewayAddressRequest, UnassignPrivateNatGatewayAddressResult> asyncHandler);
 
     /**
      * <p>

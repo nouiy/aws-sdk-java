@@ -56,6 +56,10 @@ public class ResourceLimitsJsonUnmarshaller implements Unmarshaller<ResourceLimi
                     context.nextToken();
                     resourceLimits.setMaxParallelTrainingJobs(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("MaxRuntimeInSeconds", targetDepth)) {
+                    context.nextToken();
+                    resourceLimits.setMaxRuntimeInSeconds(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

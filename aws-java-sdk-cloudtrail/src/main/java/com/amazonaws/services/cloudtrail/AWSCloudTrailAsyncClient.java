@@ -344,6 +344,39 @@ public class AWSCloudTrailAsyncClient extends AWSCloudTrailClient implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<CreateChannelResult> createChannelAsync(CreateChannelRequest request) {
+
+        return createChannelAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateChannelResult> createChannelAsync(final CreateChannelRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateChannelRequest, CreateChannelResult> asyncHandler) {
+        final CreateChannelRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateChannelResult>() {
+            @Override
+            public CreateChannelResult call() throws Exception {
+                CreateChannelResult result = null;
+
+                try {
+                    result = executeCreateChannel(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateEventDataStoreResult> createEventDataStoreAsync(CreateEventDataStoreRequest request) {
 
         return createEventDataStoreAsync(request, null);
@@ -410,6 +443,39 @@ public class AWSCloudTrailAsyncClient extends AWSCloudTrailClient implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteChannelResult> deleteChannelAsync(DeleteChannelRequest request) {
+
+        return deleteChannelAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteChannelResult> deleteChannelAsync(final DeleteChannelRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteChannelRequest, DeleteChannelResult> asyncHandler) {
+        final DeleteChannelRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteChannelResult>() {
+            @Override
+            public DeleteChannelResult call() throws Exception {
+                DeleteChannelResult result = null;
+
+                try {
+                    result = executeDeleteChannel(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteEventDataStoreResult> deleteEventDataStoreAsync(DeleteEventDataStoreRequest request) {
 
         return deleteEventDataStoreAsync(request, null);
@@ -427,6 +493,39 @@ public class AWSCloudTrailAsyncClient extends AWSCloudTrailClient implements AWS
 
                 try {
                     result = executeDeleteEventDataStore(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteResourcePolicyResult> deleteResourcePolicyAsync(DeleteResourcePolicyRequest request) {
+
+        return deleteResourcePolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteResourcePolicyResult> deleteResourcePolicyAsync(final DeleteResourcePolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteResourcePolicyRequest, DeleteResourcePolicyResult> asyncHandler) {
+        final DeleteResourcePolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteResourcePolicyResult>() {
+            @Override
+            public DeleteResourcePolicyResult call() throws Exception {
+                DeleteResourcePolicyResult result = null;
+
+                try {
+                    result = executeDeleteResourcePolicy(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -782,6 +881,39 @@ public class AWSCloudTrailAsyncClient extends AWSCloudTrailClient implements AWS
 
                 try {
                     result = executeGetQueryResults(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetResourcePolicyResult> getResourcePolicyAsync(GetResourcePolicyRequest request) {
+
+        return getResourcePolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetResourcePolicyResult> getResourcePolicyAsync(final GetResourcePolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetResourcePolicyRequest, GetResourcePolicyResult> asyncHandler) {
+        final GetResourcePolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetResourcePolicyResult>() {
+            @Override
+            public GetResourcePolicyResult call() throws Exception {
+                GetResourcePolicyResult result = null;
+
+                try {
+                    result = executeGetResourcePolicy(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1273,6 +1405,39 @@ public class AWSCloudTrailAsyncClient extends AWSCloudTrailClient implements AWS
     }
 
     @Override
+    public java.util.concurrent.Future<PutResourcePolicyResult> putResourcePolicyAsync(PutResourcePolicyRequest request) {
+
+        return putResourcePolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutResourcePolicyResult> putResourcePolicyAsync(final PutResourcePolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutResourcePolicyRequest, PutResourcePolicyResult> asyncHandler) {
+        final PutResourcePolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutResourcePolicyResult>() {
+            @Override
+            public PutResourcePolicyResult call() throws Exception {
+                PutResourcePolicyResult result = null;
+
+                try {
+                    result = executePutResourcePolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<RegisterOrganizationDelegatedAdminResult> registerOrganizationDelegatedAdminAsync(
             RegisterOrganizationDelegatedAdminRequest request) {
 
@@ -1523,6 +1688,39 @@ public class AWSCloudTrailAsyncClient extends AWSCloudTrailClient implements AWS
 
                 try {
                     result = executeStopLogging(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateChannelResult> updateChannelAsync(UpdateChannelRequest request) {
+
+        return updateChannelAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateChannelResult> updateChannelAsync(final UpdateChannelRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateChannelRequest, UpdateChannelResult> asyncHandler) {
+        final UpdateChannelRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateChannelResult>() {
+            @Override
+            public UpdateChannelResult call() throws Exception {
+                UpdateChannelResult result = null;
+
+                try {
+                    result = executeUpdateChannel(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

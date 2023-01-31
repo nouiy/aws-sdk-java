@@ -58,6 +58,11 @@ public class AbstractAWSCodeArtifact implements AWSCodeArtifact {
     }
 
     @Override
+    public DeletePackageResult deletePackage(DeletePackageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeletePackageVersionsResult deletePackageVersions(DeletePackageVersionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

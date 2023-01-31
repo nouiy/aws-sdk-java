@@ -568,12 +568,49 @@ public interface AWSCodeArtifactAsync extends AWSCodeArtifact {
 
     /**
      * <p>
+     * Deletes a package and all associated package versions. A deleted package cannot be restored. To delete one or
+     * more package versions, use the <a
+     * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_DeletePackageVersions.html"
+     * >DeletePackageVersions</a> API.
+     * </p>
+     * 
+     * @param deletePackageRequest
+     * @return A Java Future containing the result of the DeletePackage operation returned by the service.
+     * @sample AWSCodeArtifactAsync.DeletePackage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/DeletePackage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePackageResult> deletePackageAsync(DeletePackageRequest deletePackageRequest);
+
+    /**
+     * <p>
+     * Deletes a package and all associated package versions. A deleted package cannot be restored. To delete one or
+     * more package versions, use the <a
+     * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_DeletePackageVersions.html"
+     * >DeletePackageVersions</a> API.
+     * </p>
+     * 
+     * @param deletePackageRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeletePackage operation returned by the service.
+     * @sample AWSCodeArtifactAsyncHandler.DeletePackage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeartifact-2018-09-22/DeletePackage" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePackageResult> deletePackageAsync(DeletePackageRequest deletePackageRequest,
+            com.amazonaws.handlers.AsyncHandler<DeletePackageRequest, DeletePackageResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes one or more versions of a package. A deleted package version cannot be restored in your repository. If
      * you want to remove a package version from your repository and be able to restore it later, set its status to
      * <code>Archived</code>. Archived packages cannot be downloaded from a repository and don't show up with list
      * package APIs (for example, <a
      * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_ListPackageVersions.html"
-     * >ListPackageVersions</a>), but you can restore them using <a
+     * >ListackageVersions</a>), but you can restore them using <a
      * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_UpdatePackageVersionsStatus.html"
      * >UpdatePackageVersionsStatus</a>.
      * </p>
@@ -593,7 +630,7 @@ public interface AWSCodeArtifactAsync extends AWSCodeArtifact {
      * <code>Archived</code>. Archived packages cannot be downloaded from a repository and don't show up with list
      * package APIs (for example, <a
      * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_ListPackageVersions.html"
-     * >ListPackageVersions</a>), but you can restore them using <a
+     * >ListackageVersions</a>), but you can restore them using <a
      * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_UpdatePackageVersionsStatus.html"
      * >UpdatePackageVersionsStatus</a>.
      * </p>
@@ -1351,6 +1388,8 @@ public interface AWSCodeArtifactAsync extends AWSCodeArtifact {
      * Returns a list of <a
      * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionSummary.html"
      * >PackageVersionSummary</a> objects for package versions in a repository that match the request parameters.
+     * Package versions of all statuses will be returned by default when calling <code>list-package-versions</code> with
+     * no <code>--status</code> parameter.
      * </p>
      * 
      * @param listPackageVersionsRequest
@@ -1366,6 +1405,8 @@ public interface AWSCodeArtifactAsync extends AWSCodeArtifact {
      * Returns a list of <a
      * href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_PackageVersionSummary.html"
      * >PackageVersionSummary</a> objects for package versions in a repository that match the request parameters.
+     * Package versions of all statuses will be returned by default when calling <code>list-package-versions</code> with
+     * no <code>--status</code> parameter.
      * </p>
      * 
      * @param listPackageVersionsRequest

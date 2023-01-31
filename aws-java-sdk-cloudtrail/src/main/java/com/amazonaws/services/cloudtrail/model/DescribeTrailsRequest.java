@@ -55,8 +55,8 @@ public class DescribeTrailsRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If one or more trail names are specified, information is returned only if the names match the names of trails
-     * belonging only to the current region. To return information about a trail in another region, you must specify its
-     * trail ARN.
+     * belonging only to the current region and current account. To return information about a trail in another region,
+     * you must specify its trail ARN.
      * </p>
      * </note>
      */
@@ -98,8 +98,8 @@ public class DescribeTrailsRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If one or more trail names are specified, information is returned only if the names match the names of trails
-     * belonging only to the current region. To return information about a trail in another region, you must specify its
-     * trail ARN.
+     * belonging only to the current region and current account. To return information about a trail in another region,
+     * you must specify its trail ARN.
      * </p>
      * </note>
      * 
@@ -128,8 +128,8 @@ public class DescribeTrailsRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <note>
      *         <p>
      *         If one or more trail names are specified, information is returned only if the names match the names of
-     *         trails belonging only to the current region. To return information about a trail in another region, you
-     *         must specify its trail ARN.
+     *         trails belonging only to the current region and current account. To return information about a trail in
+     *         another region, you must specify its trail ARN.
      *         </p>
      */
 
@@ -167,8 +167,8 @@ public class DescribeTrailsRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If one or more trail names are specified, information is returned only if the names match the names of trails
-     * belonging only to the current region. To return information about a trail in another region, you must specify its
-     * trail ARN.
+     * belonging only to the current region and current account. To return information about a trail in another region,
+     * you must specify its trail ARN.
      * </p>
      * </note>
      * 
@@ -198,8 +198,8 @@ public class DescribeTrailsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <note>
      *        <p>
      *        If one or more trail names are specified, information is returned only if the names match the names of
-     *        trails belonging only to the current region. To return information about a trail in another region, you
-     *        must specify its trail ARN.
+     *        trails belonging only to the current region and current account. To return information about a trail in
+     *        another region, you must specify its trail ARN.
      *        </p>
      */
 
@@ -239,8 +239,8 @@ public class DescribeTrailsRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If one or more trail names are specified, information is returned only if the names match the names of trails
-     * belonging only to the current region. To return information about a trail in another region, you must specify its
-     * trail ARN.
+     * belonging only to the current region and current account. To return information about a trail in another region,
+     * you must specify its trail ARN.
      * </p>
      * </note>
      * <p>
@@ -275,8 +275,8 @@ public class DescribeTrailsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <note>
      *        <p>
      *        If one or more trail names are specified, information is returned only if the names match the names of
-     *        trails belonging only to the current region. To return information about a trail in another region, you
-     *        must specify its trail ARN.
+     *        trails belonging only to the current region and current account. To return information about a trail in
+     *        another region, you must specify its trail ARN.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -318,8 +318,8 @@ public class DescribeTrailsRequest extends com.amazonaws.AmazonWebServiceRequest
      * <note>
      * <p>
      * If one or more trail names are specified, information is returned only if the names match the names of trails
-     * belonging only to the current region. To return information about a trail in another region, you must specify its
-     * trail ARN.
+     * belonging only to the current region and current account. To return information about a trail in another region,
+     * you must specify its trail ARN.
      * </p>
      * </note>
      * 
@@ -349,8 +349,8 @@ public class DescribeTrailsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <note>
      *        <p>
      *        If one or more trail names are specified, information is returned only if the names match the names of
-     *        trails belonging only to the current region. To return information about a trail in another region, you
-     *        must specify its trail ARN.
+     *        trails belonging only to the current region and current account. To return information about a trail in
+     *        another region, you must specify its trail ARN.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

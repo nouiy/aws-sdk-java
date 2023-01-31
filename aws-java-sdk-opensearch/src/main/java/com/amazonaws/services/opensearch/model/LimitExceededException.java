@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * An exception for trying to create more than allowed resources or sub-resources. Gives http status code of 409.
+ * An exception for trying to create more than the allowed number of resources or sub-resources.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

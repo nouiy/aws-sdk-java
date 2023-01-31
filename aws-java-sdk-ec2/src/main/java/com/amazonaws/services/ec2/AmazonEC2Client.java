@@ -1248,6 +1248,64 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Assigns one or more private IPv4 addresses to a private NAT gateway. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-working-with">Work with
+     * NAT gateways</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param assignPrivateNatGatewayAddressRequest
+     * @return Result of the AssignPrivateNatGatewayAddress operation returned by the service.
+     * @sample AmazonEC2.AssignPrivateNatGatewayAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssignPrivateNatGatewayAddress"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public AssignPrivateNatGatewayAddressResult assignPrivateNatGatewayAddress(AssignPrivateNatGatewayAddressRequest request) {
+        request = beforeClientExecution(request);
+        return executeAssignPrivateNatGatewayAddress(request);
+    }
+
+    @SdkInternalApi
+    final AssignPrivateNatGatewayAddressResult executeAssignPrivateNatGatewayAddress(AssignPrivateNatGatewayAddressRequest assignPrivateNatGatewayAddressRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(assignPrivateNatGatewayAddressRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AssignPrivateNatGatewayAddressRequest> request = null;
+        Response<AssignPrivateNatGatewayAddressResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AssignPrivateNatGatewayAddressRequestMarshaller().marshall(super.beforeMarshalling(assignPrivateNatGatewayAddressRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AssignPrivateNatGatewayAddress");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<AssignPrivateNatGatewayAddressResult> responseHandler = new StaxResponseHandler<AssignPrivateNatGatewayAddressResult>(
+                    new AssignPrivateNatGatewayAddressResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Associates an Elastic IP address, or carrier IP address (for instances that are in subnets in Wavelength Zones)
      * with an instance or a network interface. Before you can use an Elastic IP address, you must allocate it to your
      * account.
@@ -1713,6 +1771,71 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<AssociateIpamResourceDiscoveryResult> responseHandler = new StaxResponseHandler<AssociateIpamResourceDiscoveryResult>(
                     new AssociateIpamResourceDiscoveryResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Associates Elastic IP addresses (EIPs) and private IPv4 addresses with a public NAT gateway. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-working-with">Work with
+     * NAT gateways</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * <p>
+     * By default, you can associate up to 2 Elastic IP addresses per public NAT gateway. You can increase the limit by
+     * requesting a quota adjustment. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html#vpc-limits-eips">Elastic IP address
+     * quotas</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * 
+     * @param associateNatGatewayAddressRequest
+     * @return Result of the AssociateNatGatewayAddress operation returned by the service.
+     * @sample AmazonEC2.AssociateNatGatewayAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/AssociateNatGatewayAddress" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public AssociateNatGatewayAddressResult associateNatGatewayAddress(AssociateNatGatewayAddressRequest request) {
+        request = beforeClientExecution(request);
+        return executeAssociateNatGatewayAddress(request);
+    }
+
+    @SdkInternalApi
+    final AssociateNatGatewayAddressResult executeAssociateNatGatewayAddress(AssociateNatGatewayAddressRequest associateNatGatewayAddressRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(associateNatGatewayAddressRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AssociateNatGatewayAddressRequest> request = null;
+        Response<AssociateNatGatewayAddressResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AssociateNatGatewayAddressRequestMarshaller().marshall(super.beforeMarshalling(associateNatGatewayAddressRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AssociateNatGatewayAddress");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<AssociateNatGatewayAddressResult> responseHandler = new StaxResponseHandler<AssociateNatGatewayAddressResult>(
+                    new AssociateNatGatewayAddressResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -24437,6 +24560,75 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Disassociates secondary Elastic IP addresses (EIPs) from a public NAT gateway. You cannot disassociate your
+     * primary EIP. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-edit-secondary">Edit
+     * secondary IP address associations</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * <p>
+     * While disassociating is in progress, you cannot associate/disassociate additional EIPs while the connections are
+     * being drained. You are, however, allowed to delete the NAT gateway.
+     * </p>
+     * <p>
+     * An EIP will only be released at the end of MaxDrainDurationSeconds. The EIPs stay associated and support the
+     * existing connections but do not support any new connections (new connections are distributed across the remaining
+     * associated EIPs). As the existing connections drain out, the EIPs (and the corresponding private IPs mapped to
+     * them) get released.
+     * </p>
+     * 
+     * @param disassociateNatGatewayAddressRequest
+     * @return Result of the DisassociateNatGatewayAddress operation returned by the service.
+     * @sample AmazonEC2.DisassociateNatGatewayAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisassociateNatGatewayAddress"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DisassociateNatGatewayAddressResult disassociateNatGatewayAddress(DisassociateNatGatewayAddressRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisassociateNatGatewayAddress(request);
+    }
+
+    @SdkInternalApi
+    final DisassociateNatGatewayAddressResult executeDisassociateNatGatewayAddress(DisassociateNatGatewayAddressRequest disassociateNatGatewayAddressRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disassociateNatGatewayAddressRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisassociateNatGatewayAddressRequest> request = null;
+        Response<DisassociateNatGatewayAddressResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisassociateNatGatewayAddressRequestMarshaller().marshall(super.beforeMarshalling(disassociateNatGatewayAddressRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisassociateNatGatewayAddress");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DisassociateNatGatewayAddressResult> responseHandler = new StaxResponseHandler<DisassociateNatGatewayAddressResult>(
+                    new DisassociateNatGatewayAddressResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Disassociates a subnet or gateway from a route table.
      * </p>
      * <p>
@@ -37302,6 +37494,78 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<UnassignPrivateIpAddressesResult> responseHandler = new StaxResponseHandler<UnassignPrivateIpAddressesResult>(
                     new UnassignPrivateIpAddressesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Unassigns secondary private NAT gateway IPv4 addresses from a private NAT gateway. You cannot unassign your
+     * primary private IP. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-edit-secondary">Edit
+     * secondary IP address associations</a> in the <i>Amazon Virtual Private Cloud User Guide</i>.
+     * </p>
+     * <p>
+     * While unassigning is in progress, you cannot assign/unassign additional IP addresses while the connections are
+     * being drained. You are, however, allowed to delete the NAT gateway.
+     * </p>
+     * <p>
+     * A private IP address will only be released at the end of MaxDrainDurationSeconds. The private IP addresses stay
+     * associated and support the existing connections but do not support any new connections (new connections are
+     * distributed across the remaining assigned private IP address). After the existing connections drain out, the
+     * private IP addresses get released.
+     * </p>
+     * <p/>
+     * <p/>
+     * 
+     * @param unassignPrivateNatGatewayAddressRequest
+     * @return Result of the UnassignPrivateNatGatewayAddress operation returned by the service.
+     * @sample AmazonEC2.UnassignPrivateNatGatewayAddress
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/UnassignPrivateNatGatewayAddress"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UnassignPrivateNatGatewayAddressResult unassignPrivateNatGatewayAddress(UnassignPrivateNatGatewayAddressRequest request) {
+        request = beforeClientExecution(request);
+        return executeUnassignPrivateNatGatewayAddress(request);
+    }
+
+    @SdkInternalApi
+    final UnassignPrivateNatGatewayAddressResult executeUnassignPrivateNatGatewayAddress(
+            UnassignPrivateNatGatewayAddressRequest unassignPrivateNatGatewayAddressRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(unassignPrivateNatGatewayAddressRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UnassignPrivateNatGatewayAddressRequest> request = null;
+        Response<UnassignPrivateNatGatewayAddressResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UnassignPrivateNatGatewayAddressRequestMarshaller().marshall(super.beforeMarshalling(unassignPrivateNatGatewayAddressRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UnassignPrivateNatGatewayAddress");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<UnassignPrivateNatGatewayAddressResult> responseHandler = new StaxResponseHandler<UnassignPrivateNatGatewayAddressResult>(
+                    new UnassignPrivateNatGatewayAddressResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

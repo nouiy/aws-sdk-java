@@ -16,8 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * An error occurred because the client attempts to remove a resource that is currently in use. Returns HTTP status code
- * 409.
+ * An error occurred because the client attempts to remove a resource that's currently in use.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

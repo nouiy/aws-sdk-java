@@ -30,7 +30,8 @@ public class ListTagsRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Specifies a list of trail and event data store ARNs whose tags will be listed. The list has a limit of 20 ARNs.
+     * Specifies a list of trail, event data store, or channel ARNs whose tags will be listed. The list has a limit of
+     * 20 ARNs.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> resourceIdList;
@@ -43,11 +44,12 @@ public class ListTagsRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Specifies a list of trail and event data store ARNs whose tags will be listed. The list has a limit of 20 ARNs.
+     * Specifies a list of trail, event data store, or channel ARNs whose tags will be listed. The list has a limit of
+     * 20 ARNs.
      * </p>
      * 
-     * @return Specifies a list of trail and event data store ARNs whose tags will be listed. The list has a limit of 20
-     *         ARNs.
+     * @return Specifies a list of trail, event data store, or channel ARNs whose tags will be listed. The list has a
+     *         limit of 20 ARNs.
      */
 
     public java.util.List<String> getResourceIdList() {
@@ -59,12 +61,13 @@ public class ListTagsRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Specifies a list of trail and event data store ARNs whose tags will be listed. The list has a limit of 20 ARNs.
+     * Specifies a list of trail, event data store, or channel ARNs whose tags will be listed. The list has a limit of
+     * 20 ARNs.
      * </p>
      * 
      * @param resourceIdList
-     *        Specifies a list of trail and event data store ARNs whose tags will be listed. The list has a limit of 20
-     *        ARNs.
+     *        Specifies a list of trail, event data store, or channel ARNs whose tags will be listed. The list has a
+     *        limit of 20 ARNs.
      */
 
     public void setResourceIdList(java.util.Collection<String> resourceIdList) {
@@ -78,7 +81,8 @@ public class ListTagsRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Specifies a list of trail and event data store ARNs whose tags will be listed. The list has a limit of 20 ARNs.
+     * Specifies a list of trail, event data store, or channel ARNs whose tags will be listed. The list has a limit of
+     * 20 ARNs.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -87,8 +91,8 @@ public class ListTagsRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * </p>
      * 
      * @param resourceIdList
-     *        Specifies a list of trail and event data store ARNs whose tags will be listed. The list has a limit of 20
-     *        ARNs.
+     *        Specifies a list of trail, event data store, or channel ARNs whose tags will be listed. The list has a
+     *        limit of 20 ARNs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,12 +108,13 @@ public class ListTagsRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * Specifies a list of trail and event data store ARNs whose tags will be listed. The list has a limit of 20 ARNs.
+     * Specifies a list of trail, event data store, or channel ARNs whose tags will be listed. The list has a limit of
+     * 20 ARNs.
      * </p>
      * 
      * @param resourceIdList
-     *        Specifies a list of trail and event data store ARNs whose tags will be listed. The list has a limit of 20
-     *        ARNs.
+     *        Specifies a list of trail, event data store, or channel ARNs whose tags will be listed. The list has a
+     *        limit of 20 ARNs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -97,6 +97,12 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private RelationalDatabaseDataSourceConfig relationalDatabaseConfig;
+    /**
+     * <p>
+     * Amazon EventBridge settings.
+     * </p>
+     */
+    private EventBridgeDataSourceConfig eventBridgeConfig;
 
     /**
      * <p>
@@ -591,6 +597,46 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Amazon EventBridge settings.
+     * </p>
+     * 
+     * @param eventBridgeConfig
+     *        Amazon EventBridge settings.
+     */
+
+    public void setEventBridgeConfig(EventBridgeDataSourceConfig eventBridgeConfig) {
+        this.eventBridgeConfig = eventBridgeConfig;
+    }
+
+    /**
+     * <p>
+     * Amazon EventBridge settings.
+     * </p>
+     * 
+     * @return Amazon EventBridge settings.
+     */
+
+    public EventBridgeDataSourceConfig getEventBridgeConfig() {
+        return this.eventBridgeConfig;
+    }
+
+    /**
+     * <p>
+     * Amazon EventBridge settings.
+     * </p>
+     * 
+     * @param eventBridgeConfig
+     *        Amazon EventBridge settings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDataSourceRequest withEventBridgeConfig(EventBridgeDataSourceConfig eventBridgeConfig) {
+        setEventBridgeConfig(eventBridgeConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -623,7 +669,9 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         if (getHttpConfig() != null)
             sb.append("HttpConfig: ").append(getHttpConfig()).append(",");
         if (getRelationalDatabaseConfig() != null)
-            sb.append("RelationalDatabaseConfig: ").append(getRelationalDatabaseConfig());
+            sb.append("RelationalDatabaseConfig: ").append(getRelationalDatabaseConfig()).append(",");
+        if (getEventBridgeConfig() != null)
+            sb.append("EventBridgeConfig: ").append(getEventBridgeConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -682,6 +730,10 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getRelationalDatabaseConfig() != null && other.getRelationalDatabaseConfig().equals(this.getRelationalDatabaseConfig()) == false)
             return false;
+        if (other.getEventBridgeConfig() == null ^ this.getEventBridgeConfig() == null)
+            return false;
+        if (other.getEventBridgeConfig() != null && other.getEventBridgeConfig().equals(this.getEventBridgeConfig()) == false)
+            return false;
         return true;
     }
 
@@ -701,6 +753,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getOpenSearchServiceConfig() == null) ? 0 : getOpenSearchServiceConfig().hashCode());
         hashCode = prime * hashCode + ((getHttpConfig() == null) ? 0 : getHttpConfig().hashCode());
         hashCode = prime * hashCode + ((getRelationalDatabaseConfig() == null) ? 0 : getRelationalDatabaseConfig().hashCode());
+        hashCode = prime * hashCode + ((getEventBridgeConfig() == null) ? 0 : getEventBridgeConfig().hashCode());
         return hashCode;
     }
 

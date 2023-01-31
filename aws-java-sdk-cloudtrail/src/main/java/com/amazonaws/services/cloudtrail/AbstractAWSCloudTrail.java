@@ -48,6 +48,11 @@ public class AbstractAWSCloudTrail implements AWSCloudTrail {
     }
 
     @Override
+    public CreateChannelResult createChannel(CreateChannelRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateEventDataStoreResult createEventDataStore(CreateEventDataStoreRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -58,7 +63,17 @@ public class AbstractAWSCloudTrail implements AWSCloudTrail {
     }
 
     @Override
+    public DeleteChannelResult deleteChannel(DeleteChannelRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteEventDataStoreResult deleteEventDataStore(DeleteEventDataStoreRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteResourcePolicyResult deleteResourcePolicy(DeleteResourcePolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -114,6 +129,11 @@ public class AbstractAWSCloudTrail implements AWSCloudTrail {
 
     @Override
     public GetQueryResultsResult getQueryResults(GetQueryResultsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetResourcePolicyResult getResourcePolicy(GetResourcePolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -193,6 +213,11 @@ public class AbstractAWSCloudTrail implements AWSCloudTrail {
     }
 
     @Override
+    public PutResourcePolicyResult putResourcePolicy(PutResourcePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public RegisterOrganizationDelegatedAdminResult registerOrganizationDelegatedAdmin(RegisterOrganizationDelegatedAdminRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -229,6 +254,11 @@ public class AbstractAWSCloudTrail implements AWSCloudTrail {
 
     @Override
     public StopLoggingResult stopLogging(StopLoggingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateChannelResult updateChannel(UpdateChannelRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

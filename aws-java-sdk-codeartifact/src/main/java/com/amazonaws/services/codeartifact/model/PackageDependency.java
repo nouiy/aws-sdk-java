@@ -61,36 +61,10 @@ public class PackageDependency implements Serializable, Cloneable, StructuredPoj
     private String packageValue;
     /**
      * <p>
-     * The type of a package dependency. The possible values depend on the package type.
+     * The type of a package dependency. The possible values depend on the package type. Example types are
+     * <code>compile</code>, <code>runtime</code>, and <code>test</code> for Maven packages, and <code>dev</code>,
+     * <code>prod</code>, and <code>optional</code> for npm packages.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * npm: <code>regular</code>, <code>dev</code>, <code>peer</code>, <code>optional</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * maven: <code>optional</code>, <code>parent</code>, <code>compile</code>, <code>runtime</code>, <code>test</code>,
-     * <code>system</code>, <code>provided</code>.
-     * </p>
-     * <note>
-     * <p>
-     * Note that <code>parent</code> is not a regular Maven dependency type; instead this is extracted from the
-     * <code>&lt;parent&gt;</code> element if one is defined in the package version's POM file.
-     * </p>
-     * </note></li>
-     * <li>
-     * <p>
-     * nuget: The <code>dependencyType</code> field is never set for NuGet packages.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * pypi: <code>Requires-Dist</code>
-     * </p>
-     * </li>
-     * </ul>
      */
     private String dependencyType;
     /**
@@ -294,66 +268,15 @@ public class PackageDependency implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of a package dependency. The possible values depend on the package type.
+     * The type of a package dependency. The possible values depend on the package type. Example types are
+     * <code>compile</code>, <code>runtime</code>, and <code>test</code> for Maven packages, and <code>dev</code>,
+     * <code>prod</code>, and <code>optional</code> for npm packages.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * npm: <code>regular</code>, <code>dev</code>, <code>peer</code>, <code>optional</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * maven: <code>optional</code>, <code>parent</code>, <code>compile</code>, <code>runtime</code>, <code>test</code>,
-     * <code>system</code>, <code>provided</code>.
-     * </p>
-     * <note>
-     * <p>
-     * Note that <code>parent</code> is not a regular Maven dependency type; instead this is extracted from the
-     * <code>&lt;parent&gt;</code> element if one is defined in the package version's POM file.
-     * </p>
-     * </note></li>
-     * <li>
-     * <p>
-     * nuget: The <code>dependencyType</code> field is never set for NuGet packages.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * pypi: <code>Requires-Dist</code>
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param dependencyType
-     *        The type of a package dependency. The possible values depend on the package type.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        npm: <code>regular</code>, <code>dev</code>, <code>peer</code>, <code>optional</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        maven: <code>optional</code>, <code>parent</code>, <code>compile</code>, <code>runtime</code>,
-     *        <code>test</code>, <code>system</code>, <code>provided</code>.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        Note that <code>parent</code> is not a regular Maven dependency type; instead this is extracted from the
-     *        <code>&lt;parent&gt;</code> element if one is defined in the package version's POM file.
-     *        </p>
-     *        </note></li>
-     *        <li>
-     *        <p>
-     *        nuget: The <code>dependencyType</code> field is never set for NuGet packages.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        pypi: <code>Requires-Dist</code>
-     *        </p>
-     *        </li>
+     *        The type of a package dependency. The possible values depend on the package type. Example types are
+     *        <code>compile</code>, <code>runtime</code>, and <code>test</code> for Maven packages, and <code>dev</code>
+     *        , <code>prod</code>, and <code>optional</code> for npm packages.
      */
 
     public void setDependencyType(String dependencyType) {
@@ -362,65 +285,14 @@ public class PackageDependency implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of a package dependency. The possible values depend on the package type.
+     * The type of a package dependency. The possible values depend on the package type. Example types are
+     * <code>compile</code>, <code>runtime</code>, and <code>test</code> for Maven packages, and <code>dev</code>,
+     * <code>prod</code>, and <code>optional</code> for npm packages.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * npm: <code>regular</code>, <code>dev</code>, <code>peer</code>, <code>optional</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * maven: <code>optional</code>, <code>parent</code>, <code>compile</code>, <code>runtime</code>, <code>test</code>,
-     * <code>system</code>, <code>provided</code>.
-     * </p>
-     * <note>
-     * <p>
-     * Note that <code>parent</code> is not a regular Maven dependency type; instead this is extracted from the
-     * <code>&lt;parent&gt;</code> element if one is defined in the package version's POM file.
-     * </p>
-     * </note></li>
-     * <li>
-     * <p>
-     * nuget: The <code>dependencyType</code> field is never set for NuGet packages.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * pypi: <code>Requires-Dist</code>
-     * </p>
-     * </li>
-     * </ul>
      * 
-     * @return The type of a package dependency. The possible values depend on the package type.</p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         npm: <code>regular</code>, <code>dev</code>, <code>peer</code>, <code>optional</code>
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         maven: <code>optional</code>, <code>parent</code>, <code>compile</code>, <code>runtime</code>,
-     *         <code>test</code>, <code>system</code>, <code>provided</code>.
-     *         </p>
-     *         <note>
-     *         <p>
-     *         Note that <code>parent</code> is not a regular Maven dependency type; instead this is extracted from the
-     *         <code>&lt;parent&gt;</code> element if one is defined in the package version's POM file.
-     *         </p>
-     *         </note></li>
-     *         <li>
-     *         <p>
-     *         nuget: The <code>dependencyType</code> field is never set for NuGet packages.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         pypi: <code>Requires-Dist</code>
-     *         </p>
-     *         </li>
+     * @return The type of a package dependency. The possible values depend on the package type. Example types are
+     *         <code>compile</code>, <code>runtime</code>, and <code>test</code> for Maven packages, and
+     *         <code>dev</code>, <code>prod</code>, and <code>optional</code> for npm packages.
      */
 
     public String getDependencyType() {
@@ -429,66 +301,15 @@ public class PackageDependency implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The type of a package dependency. The possible values depend on the package type.
+     * The type of a package dependency. The possible values depend on the package type. Example types are
+     * <code>compile</code>, <code>runtime</code>, and <code>test</code> for Maven packages, and <code>dev</code>,
+     * <code>prod</code>, and <code>optional</code> for npm packages.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * npm: <code>regular</code>, <code>dev</code>, <code>peer</code>, <code>optional</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * maven: <code>optional</code>, <code>parent</code>, <code>compile</code>, <code>runtime</code>, <code>test</code>,
-     * <code>system</code>, <code>provided</code>.
-     * </p>
-     * <note>
-     * <p>
-     * Note that <code>parent</code> is not a regular Maven dependency type; instead this is extracted from the
-     * <code>&lt;parent&gt;</code> element if one is defined in the package version's POM file.
-     * </p>
-     * </note></li>
-     * <li>
-     * <p>
-     * nuget: The <code>dependencyType</code> field is never set for NuGet packages.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * pypi: <code>Requires-Dist</code>
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param dependencyType
-     *        The type of a package dependency. The possible values depend on the package type.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        npm: <code>regular</code>, <code>dev</code>, <code>peer</code>, <code>optional</code>
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        maven: <code>optional</code>, <code>parent</code>, <code>compile</code>, <code>runtime</code>,
-     *        <code>test</code>, <code>system</code>, <code>provided</code>.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        Note that <code>parent</code> is not a regular Maven dependency type; instead this is extracted from the
-     *        <code>&lt;parent&gt;</code> element if one is defined in the package version's POM file.
-     *        </p>
-     *        </note></li>
-     *        <li>
-     *        <p>
-     *        nuget: The <code>dependencyType</code> field is never set for NuGet packages.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        pypi: <code>Requires-Dist</code>
-     *        </p>
-     *        </li>
+     *        The type of a package dependency. The possible values depend on the package type. Example types are
+     *        <code>compile</code>, <code>runtime</code>, and <code>test</code> for Maven packages, and <code>dev</code>
+     *        , <code>prod</code>, and <code>optional</code> for npm packages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

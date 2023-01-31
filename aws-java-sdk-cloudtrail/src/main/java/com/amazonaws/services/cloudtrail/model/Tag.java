@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A custom key-value pair associated with a resource such as a CloudTrail trail.
+ * A custom key-value pair associated with a resource such as a CloudTrail trail, event data store, or channel.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-2013-11-01/Tag" target="_top">AWS API
