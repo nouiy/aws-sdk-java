@@ -50,6 +50,8 @@ public class CreateWhatIfForecastRequest extends com.amazonaws.AmazonWebServiceR
      * The replacement time series dataset, which contains the rows that you want to change in the related time series
      * dataset. A replacement time series does not need to contain all rows that are in the baseline related time
      * series. Include only the rows (measure-dimension combinations) that you want to include in the what-if forecast.
+     * </p>
+     * <p>
      * This dataset is merged with the original time series to create a transformed dataset that is used for the what-if
      * analysis.
      * </p>
@@ -242,6 +244,8 @@ public class CreateWhatIfForecastRequest extends com.amazonaws.AmazonWebServiceR
      * The replacement time series dataset, which contains the rows that you want to change in the related time series
      * dataset. A replacement time series does not need to contain all rows that are in the baseline related time
      * series. Include only the rows (measure-dimension combinations) that you want to include in the what-if forecast.
+     * </p>
+     * <p>
      * This dataset is merged with the original time series to create a transformed dataset that is used for the what-if
      * analysis.
      * </p>
@@ -258,8 +262,11 @@ public class CreateWhatIfForecastRequest extends com.amazonaws.AmazonWebServiceR
      *        The replacement time series dataset, which contains the rows that you want to change in the related time
      *        series dataset. A replacement time series does not need to contain all rows that are in the baseline
      *        related time series. Include only the rows (measure-dimension combinations) that you want to include in
-     *        the what-if forecast. This dataset is merged with the original time series to create a transformed dataset
-     *        that is used for the what-if analysis.</p>
+     *        the what-if forecast.</p>
+     *        <p>
+     *        This dataset is merged with the original time series to create a transformed dataset that is used for the
+     *        what-if analysis.
+     *        </p>
      *        <p>
      *        This dataset should contain the items to modify (such as item_id or workforce_type), any relevant
      *        dimensions, the timestamp column, and at least one of the related time series columns. This file should
@@ -278,6 +285,8 @@ public class CreateWhatIfForecastRequest extends com.amazonaws.AmazonWebServiceR
      * The replacement time series dataset, which contains the rows that you want to change in the related time series
      * dataset. A replacement time series does not need to contain all rows that are in the baseline related time
      * series. Include only the rows (measure-dimension combinations) that you want to include in the what-if forecast.
+     * </p>
+     * <p>
      * This dataset is merged with the original time series to create a transformed dataset that is used for the what-if
      * analysis.
      * </p>
@@ -293,8 +302,11 @@ public class CreateWhatIfForecastRequest extends com.amazonaws.AmazonWebServiceR
      * @return The replacement time series dataset, which contains the rows that you want to change in the related time
      *         series dataset. A replacement time series does not need to contain all rows that are in the baseline
      *         related time series. Include only the rows (measure-dimension combinations) that you want to include in
-     *         the what-if forecast. This dataset is merged with the original time series to create a transformed
-     *         dataset that is used for the what-if analysis.</p>
+     *         the what-if forecast.</p>
+     *         <p>
+     *         This dataset is merged with the original time series to create a transformed dataset that is used for the
+     *         what-if analysis.
+     *         </p>
      *         <p>
      *         This dataset should contain the items to modify (such as item_id or workforce_type), any relevant
      *         dimensions, the timestamp column, and at least one of the related time series columns. This file should
@@ -313,6 +325,8 @@ public class CreateWhatIfForecastRequest extends com.amazonaws.AmazonWebServiceR
      * The replacement time series dataset, which contains the rows that you want to change in the related time series
      * dataset. A replacement time series does not need to contain all rows that are in the baseline related time
      * series. Include only the rows (measure-dimension combinations) that you want to include in the what-if forecast.
+     * </p>
+     * <p>
      * This dataset is merged with the original time series to create a transformed dataset that is used for the what-if
      * analysis.
      * </p>
@@ -329,8 +343,11 @@ public class CreateWhatIfForecastRequest extends com.amazonaws.AmazonWebServiceR
      *        The replacement time series dataset, which contains the rows that you want to change in the related time
      *        series dataset. A replacement time series does not need to contain all rows that are in the baseline
      *        related time series. Include only the rows (measure-dimension combinations) that you want to include in
-     *        the what-if forecast. This dataset is merged with the original time series to create a transformed dataset
-     *        that is used for the what-if analysis.</p>
+     *        the what-if forecast.</p>
+     *        <p>
+     *        This dataset is merged with the original time series to create a transformed dataset that is used for the
+     *        what-if analysis.
+     *        </p>
      *        <p>
      *        This dataset should contain the items to modify (such as item_id or workforce_type), any relevant
      *        dimensions, the timestamp column, and at least one of the related time series columns. This file should

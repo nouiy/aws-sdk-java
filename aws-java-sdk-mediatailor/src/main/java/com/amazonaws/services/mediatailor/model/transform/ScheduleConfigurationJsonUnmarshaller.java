@@ -48,6 +48,10 @@ public class ScheduleConfigurationJsonUnmarshaller implements Unmarshaller<Sched
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("ClipRange", targetDepth)) {
+                    context.nextToken();
+                    scheduleConfiguration.setClipRange(ClipRangeJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("Transition", targetDepth)) {
                     context.nextToken();
                     scheduleConfiguration.setTransition(TransitionJsonUnmarshaller.getInstance().unmarshall(context));

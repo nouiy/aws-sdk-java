@@ -30,10 +30,56 @@ public class ScheduleConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
+     * Program clip range configuration.
+     * </p>
+     */
+    private ClipRange clipRange;
+    /**
+     * <p>
      * Program transition configurations.
      * </p>
      */
     private Transition transition;
+
+    /**
+     * <p>
+     * Program clip range configuration.
+     * </p>
+     * 
+     * @param clipRange
+     *        Program clip range configuration.
+     */
+
+    public void setClipRange(ClipRange clipRange) {
+        this.clipRange = clipRange;
+    }
+
+    /**
+     * <p>
+     * Program clip range configuration.
+     * </p>
+     * 
+     * @return Program clip range configuration.
+     */
+
+    public ClipRange getClipRange() {
+        return this.clipRange;
+    }
+
+    /**
+     * <p>
+     * Program clip range configuration.
+     * </p>
+     * 
+     * @param clipRange
+     *        Program clip range configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ScheduleConfiguration withClipRange(ClipRange clipRange) {
+        setClipRange(clipRange);
+        return this;
+    }
 
     /**
      * <p>
@@ -87,6 +133,8 @@ public class ScheduleConfiguration implements Serializable, Cloneable, Structure
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getClipRange() != null)
+            sb.append("ClipRange: ").append(getClipRange()).append(",");
         if (getTransition() != null)
             sb.append("Transition: ").append(getTransition());
         sb.append("}");
@@ -103,6 +151,10 @@ public class ScheduleConfiguration implements Serializable, Cloneable, Structure
         if (obj instanceof ScheduleConfiguration == false)
             return false;
         ScheduleConfiguration other = (ScheduleConfiguration) obj;
+        if (other.getClipRange() == null ^ this.getClipRange() == null)
+            return false;
+        if (other.getClipRange() != null && other.getClipRange().equals(this.getClipRange()) == false)
+            return false;
         if (other.getTransition() == null ^ this.getTransition() == null)
             return false;
         if (other.getTransition() != null && other.getTransition().equals(this.getTransition()) == false)
@@ -115,6 +167,7 @@ public class ScheduleConfiguration implements Serializable, Cloneable, Structure
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getClipRange() == null) ? 0 : getClipRange().hashCode());
         hashCode = prime * hashCode + ((getTransition() == null) ? 0 : getTransition().hashCode());
         return hashCode;
     }

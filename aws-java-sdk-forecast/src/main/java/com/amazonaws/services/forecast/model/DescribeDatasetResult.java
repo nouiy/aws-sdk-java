@@ -67,8 +67,8 @@ public class DescribeDatasetResult extends com.amazonaws.AmazonWebServiceResult<
     private Schema schema;
     /**
      * <p>
-     * The AWS Key Management Service (KMS) key and the AWS Identity and Access Management (IAM) role that Amazon
-     * Forecast can assume to access the key.
+     * The Key Management Service (KMS) key and the Identity and Access Management (IAM) role that Amazon Forecast can
+     * assume to access the key.
      * </p>
      */
     private EncryptionConfig encryptionConfig;
@@ -441,12 +441,12 @@ public class DescribeDatasetResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The AWS Key Management Service (KMS) key and the AWS Identity and Access Management (IAM) role that Amazon
-     * Forecast can assume to access the key.
+     * The Key Management Service (KMS) key and the Identity and Access Management (IAM) role that Amazon Forecast can
+     * assume to access the key.
      * </p>
      * 
      * @param encryptionConfig
-     *        The AWS Key Management Service (KMS) key and the AWS Identity and Access Management (IAM) role that Amazon
+     *        The Key Management Service (KMS) key and the Identity and Access Management (IAM) role that Amazon
      *        Forecast can assume to access the key.
      */
 
@@ -456,12 +456,12 @@ public class DescribeDatasetResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The AWS Key Management Service (KMS) key and the AWS Identity and Access Management (IAM) role that Amazon
-     * Forecast can assume to access the key.
+     * The Key Management Service (KMS) key and the Identity and Access Management (IAM) role that Amazon Forecast can
+     * assume to access the key.
      * </p>
      * 
-     * @return The AWS Key Management Service (KMS) key and the AWS Identity and Access Management (IAM) role that
-     *         Amazon Forecast can assume to access the key.
+     * @return The Key Management Service (KMS) key and the Identity and Access Management (IAM) role that Amazon
+     *         Forecast can assume to access the key.
      */
 
     public EncryptionConfig getEncryptionConfig() {
@@ -470,12 +470,12 @@ public class DescribeDatasetResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The AWS Key Management Service (KMS) key and the AWS Identity and Access Management (IAM) role that Amazon
-     * Forecast can assume to access the key.
+     * The Key Management Service (KMS) key and the Identity and Access Management (IAM) role that Amazon Forecast can
+     * assume to access the key.
      * </p>
      * 
      * @param encryptionConfig
-     *        The AWS Key Management Service (KMS) key and the AWS Identity and Access Management (IAM) role that Amazon
+     *        The Key Management Service (KMS) key and the Identity and Access Management (IAM) role that Amazon
      *        Forecast can assume to access the key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

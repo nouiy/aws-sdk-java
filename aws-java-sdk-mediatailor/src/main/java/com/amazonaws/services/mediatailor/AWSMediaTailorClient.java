@@ -2471,6 +2471,61 @@ public class AWSMediaTailorClient extends AmazonWebServiceClient implements AWSM
 
     /**
      * <p>
+     * Updates a program within a channel.
+     * </p>
+     * 
+     * @param updateProgramRequest
+     * @return Result of the UpdateProgram operation returned by the service.
+     * @sample AWSMediaTailor.UpdateProgram
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/UpdateProgram" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateProgramResult updateProgram(UpdateProgramRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateProgram(request);
+    }
+
+    @SdkInternalApi
+    final UpdateProgramResult executeUpdateProgram(UpdateProgramRequest updateProgramRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateProgramRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateProgramRequest> request = null;
+        Response<UpdateProgramResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateProgramRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateProgramRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "MediaTailor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateProgram");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateProgramResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateProgramResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Updates a source location. A source location is a container for sources. For more information about source
      * locations, see <a
      * href="https://docs.aws.amazon.com/mediatailor/latest/ug/channel-assembly-source-locations.html">Working with

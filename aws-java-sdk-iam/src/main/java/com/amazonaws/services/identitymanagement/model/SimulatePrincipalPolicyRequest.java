@@ -141,6 +141,11 @@ public class SimulatePrincipalPolicyRequest extends com.amazonaws.AmazonWebServi
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
      * (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
+     * <note>
+     * <p>
+     * Simulation of resource-based policies isn't supported for IAM roles.
+     * </p>
+     * </note>
      */
     private com.amazonaws.internal.SdkInternalList<String> resourceArns;
     /**
@@ -177,6 +182,11 @@ public class SimulatePrincipalPolicyRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Simulation of resource-based policies isn't supported for IAM roles.
+     * </p>
+     * </note>
      */
     private String resourcePolicy;
     /**
@@ -1148,6 +1158,11 @@ public class SimulatePrincipalPolicyRequest extends com.amazonaws.AmazonWebServi
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
      * (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
+     * <note>
+     * <p>
+     * Simulation of resource-based policies isn't supported for IAM roles.
+     * </p>
+     * </note>
      * 
      * @return A list of ARNs of Amazon Web Services resources to include in the simulation. If this parameter is not
      *         provided, then the value defaults to <code>*</code> (all resources). Each API in the
@@ -1163,6 +1178,11 @@ public class SimulatePrincipalPolicyRequest extends com.amazonaws.AmazonWebServi
      *         For more information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
      *         (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         Simulation of resource-based policies isn't supported for IAM roles.
+     *         </p>
      */
 
     public java.util.List<String> getResourceArns() {
@@ -1189,6 +1209,11 @@ public class SimulatePrincipalPolicyRequest extends com.amazonaws.AmazonWebServi
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
      * (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
+     * <note>
+     * <p>
+     * Simulation of resource-based policies isn't supported for IAM roles.
+     * </p>
+     * </note>
      * 
      * @param resourceArns
      *        A list of ARNs of Amazon Web Services resources to include in the simulation. If this parameter is not
@@ -1205,6 +1230,11 @@ public class SimulatePrincipalPolicyRequest extends com.amazonaws.AmazonWebServi
      *        For more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
      *        (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Simulation of resource-based policies isn't supported for IAM roles.
+     *        </p>
      */
 
     public void setResourceArns(java.util.Collection<String> resourceArns) {
@@ -1233,6 +1263,11 @@ public class SimulatePrincipalPolicyRequest extends com.amazonaws.AmazonWebServi
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
      * (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
+     * <note>
+     * <p>
+     * Simulation of resource-based policies isn't supported for IAM roles.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResourceArns(java.util.Collection)} or {@link #withResourceArns(java.util.Collection)} if you want to
@@ -1254,6 +1289,11 @@ public class SimulatePrincipalPolicyRequest extends com.amazonaws.AmazonWebServi
      *        For more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
      *        (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Simulation of resource-based policies isn't supported for IAM roles.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1284,6 +1324,11 @@ public class SimulatePrincipalPolicyRequest extends com.amazonaws.AmazonWebServi
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
      * (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
+     * <note>
+     * <p>
+     * Simulation of resource-based policies isn't supported for IAM roles.
+     * </p>
+     * </note>
      * 
      * @param resourceArns
      *        A list of ARNs of Amazon Web Services resources to include in the simulation. If this parameter is not
@@ -1300,6 +1345,11 @@ public class SimulatePrincipalPolicyRequest extends com.amazonaws.AmazonWebServi
      *        For more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
      *        (ARNs)</a> in the <i>Amazon Web Services General Reference</i>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Simulation of resource-based policies isn't supported for IAM roles.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1342,6 +1392,11 @@ public class SimulatePrincipalPolicyRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Simulation of resource-based policies isn't supported for IAM roles.
+     * </p>
+     * </note>
      * 
      * @param resourcePolicy
      *        A resource-based policy to include in the simulation provided as a string. Each resource in the simulation
@@ -1376,6 +1431,11 @@ public class SimulatePrincipalPolicyRequest extends com.amazonaws.AmazonWebServi
      *        <code>\u000D</code>)
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        Simulation of resource-based policies isn't supported for IAM roles.
+     *        </p>
      */
 
     public void setResourcePolicy(String resourcePolicy) {
@@ -1416,6 +1476,11 @@ public class SimulatePrincipalPolicyRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Simulation of resource-based policies isn't supported for IAM roles.
+     * </p>
+     * </note>
      * 
      * @return A resource-based policy to include in the simulation provided as a string. Each resource in the
      *         simulation is treated as if it had this policy attached. You can include only one resource-based policy
@@ -1449,6 +1514,11 @@ public class SimulatePrincipalPolicyRequest extends com.amazonaws.AmazonWebServi
      *         <code>\u000D</code>)
      *         </p>
      *         </li>
+     *         </ul>
+     *         <note>
+     *         <p>
+     *         Simulation of resource-based policies isn't supported for IAM roles.
+     *         </p>
      */
 
     public String getResourcePolicy() {
@@ -1489,6 +1559,11 @@ public class SimulatePrincipalPolicyRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * </li>
      * </ul>
+     * <note>
+     * <p>
+     * Simulation of resource-based policies isn't supported for IAM roles.
+     * </p>
+     * </note>
      * 
      * @param resourcePolicy
      *        A resource-based policy to include in the simulation provided as a string. Each resource in the simulation
@@ -1523,6 +1598,11 @@ public class SimulatePrincipalPolicyRequest extends com.amazonaws.AmazonWebServi
      *        <code>\u000D</code>)
      *        </p>
      *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        Simulation of resource-based policies isn't supported for IAM roles.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

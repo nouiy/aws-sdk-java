@@ -233,6 +233,11 @@ public class AbstractAWSMediaTailor implements AWSMediaTailor {
     }
 
     @Override
+    public UpdateProgramResult updateProgram(UpdateProgramRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateSourceLocationResult updateSourceLocation(UpdateSourceLocationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -563,6 +563,19 @@ public class AbstractAWSMediaTailorAsync extends AbstractAWSMediaTailor implemen
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateProgramResult> updateProgramAsync(UpdateProgramRequest request) {
+
+        return updateProgramAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateProgramResult> updateProgramAsync(UpdateProgramRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateProgramRequest, UpdateProgramResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateSourceLocationResult> updateSourceLocationAsync(UpdateSourceLocationRequest request) {
 
         return updateSourceLocationAsync(request, null);

@@ -33,7 +33,19 @@ public class PutUserPermissionsBoundaryRequest extends com.amazonaws.AmazonWebSe
     private String userName;
     /**
      * <p>
-     * The ARN of the policy that is used to set the permissions boundary for the user.
+     * The ARN of the managed policy that is used to set the permissions boundary for the user.
+     * </p>
+     * <p>
+     * A permissions boundary policy defines the maximum permissions that identity-based policies can grant to an
+     * entity, but does not grant permissions. Permissions boundaries do not define the maximum permissions that a
+     * resource-based policy can grant to an entity. To learn more, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">Permissions boundaries
+     * for IAM entities</a> in the <i>IAM User Guide</i>.
+     * </p>
+     * <p>
+     * For more information about policy types, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policy-types">Policy types
+     * </a> in the <i>IAM User Guide</i>.
      * </p>
      */
     private String permissionsBoundary;
@@ -80,11 +92,34 @@ public class PutUserPermissionsBoundaryRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ARN of the policy that is used to set the permissions boundary for the user.
+     * The ARN of the managed policy that is used to set the permissions boundary for the user.
+     * </p>
+     * <p>
+     * A permissions boundary policy defines the maximum permissions that identity-based policies can grant to an
+     * entity, but does not grant permissions. Permissions boundaries do not define the maximum permissions that a
+     * resource-based policy can grant to an entity. To learn more, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">Permissions boundaries
+     * for IAM entities</a> in the <i>IAM User Guide</i>.
+     * </p>
+     * <p>
+     * For more information about policy types, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policy-types">Policy types
+     * </a> in the <i>IAM User Guide</i>.
      * </p>
      * 
      * @param permissionsBoundary
-     *        The ARN of the policy that is used to set the permissions boundary for the user.
+     *        The ARN of the managed policy that is used to set the permissions boundary for the user.</p>
+     *        <p>
+     *        A permissions boundary policy defines the maximum permissions that identity-based policies can grant to an
+     *        entity, but does not grant permissions. Permissions boundaries do not define the maximum permissions that
+     *        a resource-based policy can grant to an entity. To learn more, see <a
+     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">Permissions
+     *        boundaries for IAM entities</a> in the <i>IAM User Guide</i>.
+     *        </p>
+     *        <p>
+     *        For more information about policy types, see <a
+     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policy-types">Policy
+     *        types </a> in the <i>IAM User Guide</i>.
      */
 
     public void setPermissionsBoundary(String permissionsBoundary) {
@@ -93,10 +128,33 @@ public class PutUserPermissionsBoundaryRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ARN of the policy that is used to set the permissions boundary for the user.
+     * The ARN of the managed policy that is used to set the permissions boundary for the user.
+     * </p>
+     * <p>
+     * A permissions boundary policy defines the maximum permissions that identity-based policies can grant to an
+     * entity, but does not grant permissions. Permissions boundaries do not define the maximum permissions that a
+     * resource-based policy can grant to an entity. To learn more, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">Permissions boundaries
+     * for IAM entities</a> in the <i>IAM User Guide</i>.
+     * </p>
+     * <p>
+     * For more information about policy types, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policy-types">Policy types
+     * </a> in the <i>IAM User Guide</i>.
      * </p>
      * 
-     * @return The ARN of the policy that is used to set the permissions boundary for the user.
+     * @return The ARN of the managed policy that is used to set the permissions boundary for the user.</p>
+     *         <p>
+     *         A permissions boundary policy defines the maximum permissions that identity-based policies can grant to
+     *         an entity, but does not grant permissions. Permissions boundaries do not define the maximum permissions
+     *         that a resource-based policy can grant to an entity. To learn more, see <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">Permissions
+     *         boundaries for IAM entities</a> in the <i>IAM User Guide</i>.
+     *         </p>
+     *         <p>
+     *         For more information about policy types, see <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policy-types">Policy
+     *         types </a> in the <i>IAM User Guide</i>.
      */
 
     public String getPermissionsBoundary() {
@@ -105,11 +163,34 @@ public class PutUserPermissionsBoundaryRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ARN of the policy that is used to set the permissions boundary for the user.
+     * The ARN of the managed policy that is used to set the permissions boundary for the user.
+     * </p>
+     * <p>
+     * A permissions boundary policy defines the maximum permissions that identity-based policies can grant to an
+     * entity, but does not grant permissions. Permissions boundaries do not define the maximum permissions that a
+     * resource-based policy can grant to an entity. To learn more, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">Permissions boundaries
+     * for IAM entities</a> in the <i>IAM User Guide</i>.
+     * </p>
+     * <p>
+     * For more information about policy types, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policy-types">Policy types
+     * </a> in the <i>IAM User Guide</i>.
      * </p>
      * 
      * @param permissionsBoundary
-     *        The ARN of the policy that is used to set the permissions boundary for the user.
+     *        The ARN of the managed policy that is used to set the permissions boundary for the user.</p>
+     *        <p>
+     *        A permissions boundary policy defines the maximum permissions that identity-based policies can grant to an
+     *        entity, but does not grant permissions. Permissions boundaries do not define the maximum permissions that
+     *        a resource-based policy can grant to an entity. To learn more, see <a
+     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html">Permissions
+     *        boundaries for IAM entities</a> in the <i>IAM User Guide</i>.
+     *        </p>
+     *        <p>
+     *        For more information about policy types, see <a
+     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policy-types">Policy
+     *        types </a> in the <i>IAM User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

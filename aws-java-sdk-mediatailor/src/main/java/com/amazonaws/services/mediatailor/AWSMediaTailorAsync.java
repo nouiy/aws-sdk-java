@@ -1430,6 +1430,37 @@ public interface AWSMediaTailorAsync extends AWSMediaTailor {
 
     /**
      * <p>
+     * Updates a program within a channel.
+     * </p>
+     * 
+     * @param updateProgramRequest
+     * @return A Java Future containing the result of the UpdateProgram operation returned by the service.
+     * @sample AWSMediaTailorAsync.UpdateProgram
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/UpdateProgram" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateProgramResult> updateProgramAsync(UpdateProgramRequest updateProgramRequest);
+
+    /**
+     * <p>
+     * Updates a program within a channel.
+     * </p>
+     * 
+     * @param updateProgramRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateProgram operation returned by the service.
+     * @sample AWSMediaTailorAsyncHandler.UpdateProgram
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/UpdateProgram" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateProgramResult> updateProgramAsync(UpdateProgramRequest updateProgramRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateProgramRequest, UpdateProgramResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates a source location. A source location is a container for sources. For more information about source
      * locations, see <a
      * href="https://docs.aws.amazon.com/mediatailor/latest/ug/channel-assembly-source-locations.html">Working with

@@ -113,6 +113,10 @@ public class DescribeDatasetImportJobResultJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     describeDatasetImportJobResult.setFormat(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ImportMode", targetDepth)) {
+                    context.nextToken();
+                    describeDatasetImportJobResult.setImportMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

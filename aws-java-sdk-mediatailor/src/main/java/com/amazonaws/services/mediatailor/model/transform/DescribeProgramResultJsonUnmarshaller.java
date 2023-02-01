@@ -62,9 +62,17 @@ public class DescribeProgramResultJsonUnmarshaller implements Unmarshaller<Descr
                     context.nextToken();
                     describeProgramResult.setChannelName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ClipRange", targetDepth)) {
+                    context.nextToken();
+                    describeProgramResult.setClipRange(ClipRangeJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("CreationTime", targetDepth)) {
                     context.nextToken();
                     describeProgramResult.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("DurationMillis", targetDepth)) {
+                    context.nextToken();
+                    describeProgramResult.setDurationMillis(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
                 if (context.testExpression("LiveSourceName", targetDepth)) {
                     context.nextToken();

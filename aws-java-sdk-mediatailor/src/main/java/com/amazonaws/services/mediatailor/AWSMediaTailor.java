@@ -646,6 +646,19 @@ public interface AWSMediaTailor {
 
     /**
      * <p>
+     * Updates a program within a channel.
+     * </p>
+     * 
+     * @param updateProgramRequest
+     * @return Result of the UpdateProgram operation returned by the service.
+     * @sample AWSMediaTailor.UpdateProgram
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/UpdateProgram" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateProgramResult updateProgram(UpdateProgramRequest updateProgramRequest);
+
+    /**
+     * <p>
      * Updates a source location. A source location is a container for sources. For more information about source
      * locations, see <a
      * href="https://docs.aws.amazon.com/mediatailor/latest/ug/channel-assembly-source-locations.html">Working with

@@ -1438,6 +1438,39 @@ public class AWSMediaTailorAsyncClient extends AWSMediaTailorClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateProgramResult> updateProgramAsync(UpdateProgramRequest request) {
+
+        return updateProgramAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateProgramResult> updateProgramAsync(final UpdateProgramRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateProgramRequest, UpdateProgramResult> asyncHandler) {
+        final UpdateProgramRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateProgramResult>() {
+            @Override
+            public UpdateProgramResult call() throws Exception {
+                UpdateProgramResult result = null;
+
+                try {
+                    result = executeUpdateProgram(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateSourceLocationResult> updateSourceLocationAsync(UpdateSourceLocationRequest request) {
 
         return updateSourceLocationAsync(request, null);
