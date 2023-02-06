@@ -22,7 +22,8 @@ public enum UnlabeledEventsTreatment {
 
     IGNORE("IGNORE"),
     FRAUD("FRAUD"),
-    LEGIT("LEGIT");
+    LEGIT("LEGIT"),
+    AUTO("AUTO");
 
     private String value;
 

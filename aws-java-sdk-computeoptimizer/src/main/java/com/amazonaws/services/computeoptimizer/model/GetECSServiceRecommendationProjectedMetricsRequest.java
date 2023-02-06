@@ -28,7 +28,7 @@ public class GetECSServiceRecommendationProjectedMetricsRequest extends com.amaz
 
     /**
      * <p>
-     * The ARN that identifies the ECS service.
+     * The ARN that identifies the Amazon ECS service.
      * </p>
      * <p>
      * The following is the format of the ARN:
@@ -65,7 +65,7 @@ public class GetECSServiceRecommendationProjectedMetricsRequest extends com.amaz
 
     /**
      * <p>
-     * The ARN that identifies the ECS service.
+     * The ARN that identifies the Amazon ECS service.
      * </p>
      * <p>
      * The following is the format of the ARN:
@@ -75,7 +75,7 @@ public class GetECSServiceRecommendationProjectedMetricsRequest extends com.amaz
      * </p>
      * 
      * @param serviceArn
-     *        The ARN that identifies the ECS service. </p>
+     *        The ARN that identifies the Amazon ECS service. </p>
      *        <p>
      *        The following is the format of the ARN:
      *        </p>
@@ -89,7 +89,7 @@ public class GetECSServiceRecommendationProjectedMetricsRequest extends com.amaz
 
     /**
      * <p>
-     * The ARN that identifies the ECS service.
+     * The ARN that identifies the Amazon ECS service.
      * </p>
      * <p>
      * The following is the format of the ARN:
@@ -98,7 +98,7 @@ public class GetECSServiceRecommendationProjectedMetricsRequest extends com.amaz
      * <code>arn:aws:ecs:region:aws_account_id:service/cluster-name/service-name</code>
      * </p>
      * 
-     * @return The ARN that identifies the ECS service. </p>
+     * @return The ARN that identifies the Amazon ECS service. </p>
      *         <p>
      *         The following is the format of the ARN:
      *         </p>
@@ -112,7 +112,7 @@ public class GetECSServiceRecommendationProjectedMetricsRequest extends com.amaz
 
     /**
      * <p>
-     * The ARN that identifies the ECS service.
+     * The ARN that identifies the Amazon ECS service.
      * </p>
      * <p>
      * The following is the format of the ARN:
@@ -122,7 +122,7 @@ public class GetECSServiceRecommendationProjectedMetricsRequest extends com.amaz
      * </p>
      * 
      * @param serviceArn
-     *        The ARN that identifies the ECS service. </p>
+     *        The ARN that identifies the Amazon ECS service. </p>
      *        <p>
      *        The following is the format of the ARN:
      *        </p>

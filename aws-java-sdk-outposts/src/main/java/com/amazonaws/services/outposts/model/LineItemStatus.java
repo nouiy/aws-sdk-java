@@ -27,7 +27,8 @@ public enum LineItemStatus {
     INSTALLING("INSTALLING"),
     INSTALLED("INSTALLED"),
     ERROR("ERROR"),
-    CANCELLED("CANCELLED");
+    CANCELLED("CANCELLED"),
+    REPLACED("REPLACED");
 
     private String value;
 

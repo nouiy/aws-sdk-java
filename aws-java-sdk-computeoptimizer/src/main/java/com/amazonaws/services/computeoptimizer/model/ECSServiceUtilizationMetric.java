@@ -22,8 +22,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Describes the utilization metric of an Amazon ECS service.
  * </p>
  * <p>
- * To determine the performance difference between your current ECS service and the recommended option, compare the
- * utilization metric data of your service against its projected utilization metric data.
+ * To determine the performance difference between your current Amazon ECS service and the recommended option, compare
+ * the utilization metric data of your service against its projected utilization metric data.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/ECSServiceUtilizationMetric"
@@ -42,12 +42,12 @@ public class ECSServiceUtilizationMetric implements Serializable, Cloneable, Str
      * <ul>
      * <li>
      * <p>
-     * <code>Cpu</code> — The amount of CPU units that are used in the service.
+     * <code>Cpu</code> — The amount of CPU capacity that's used in the service.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Memory</code> — The amount of memory that is used in the service.
+     * <code>Memory</code> — The amount of memory that's used in the service.
      * </p>
      * </li>
      * </ul>
@@ -90,12 +90,12 @@ public class ECSServiceUtilizationMetric implements Serializable, Cloneable, Str
      * <ul>
      * <li>
      * <p>
-     * <code>Cpu</code> — The amount of CPU units that are used in the service.
+     * <code>Cpu</code> — The amount of CPU capacity that's used in the service.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Memory</code> — The amount of memory that is used in the service.
+     * <code>Memory</code> — The amount of memory that's used in the service.
      * </p>
      * </li>
      * </ul>
@@ -108,12 +108,12 @@ public class ECSServiceUtilizationMetric implements Serializable, Cloneable, Str
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>Cpu</code> — The amount of CPU units that are used in the service.
+     *        <code>Cpu</code> — The amount of CPU capacity that's used in the service.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Memory</code> — The amount of memory that is used in the service.
+     *        <code>Memory</code> — The amount of memory that's used in the service.
      *        </p>
      *        </li>
      * @see ECSServiceMetricName
@@ -133,12 +133,12 @@ public class ECSServiceUtilizationMetric implements Serializable, Cloneable, Str
      * <ul>
      * <li>
      * <p>
-     * <code>Cpu</code> — The amount of CPU units that are used in the service.
+     * <code>Cpu</code> — The amount of CPU capacity that's used in the service.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Memory</code> — The amount of memory that is used in the service.
+     * <code>Memory</code> — The amount of memory that's used in the service.
      * </p>
      * </li>
      * </ul>
@@ -150,12 +150,12 @@ public class ECSServiceUtilizationMetric implements Serializable, Cloneable, Str
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>Cpu</code> — The amount of CPU units that are used in the service.
+     *         <code>Cpu</code> — The amount of CPU capacity that's used in the service.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Memory</code> — The amount of memory that is used in the service.
+     *         <code>Memory</code> — The amount of memory that's used in the service.
      *         </p>
      *         </li>
      * @see ECSServiceMetricName
@@ -175,12 +175,12 @@ public class ECSServiceUtilizationMetric implements Serializable, Cloneable, Str
      * <ul>
      * <li>
      * <p>
-     * <code>Cpu</code> — The amount of CPU units that are used in the service.
+     * <code>Cpu</code> — The amount of CPU capacity that's used in the service.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Memory</code> — The amount of memory that is used in the service.
+     * <code>Memory</code> — The amount of memory that's used in the service.
      * </p>
      * </li>
      * </ul>
@@ -193,12 +193,12 @@ public class ECSServiceUtilizationMetric implements Serializable, Cloneable, Str
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>Cpu</code> — The amount of CPU units that are used in the service.
+     *        <code>Cpu</code> — The amount of CPU capacity that's used in the service.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Memory</code> — The amount of memory that is used in the service.
+     *        <code>Memory</code> — The amount of memory that's used in the service.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -220,12 +220,12 @@ public class ECSServiceUtilizationMetric implements Serializable, Cloneable, Str
      * <ul>
      * <li>
      * <p>
-     * <code>Cpu</code> — The amount of CPU units that are used in the service.
+     * <code>Cpu</code> — The amount of CPU capacity that's used in the service.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Memory</code> — The amount of memory that is used in the service.
+     * <code>Memory</code> — The amount of memory that's used in the service.
      * </p>
      * </li>
      * </ul>
@@ -238,12 +238,12 @@ public class ECSServiceUtilizationMetric implements Serializable, Cloneable, Str
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>Cpu</code> — The amount of CPU units that are used in the service.
+     *        <code>Cpu</code> — The amount of CPU capacity that's used in the service.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Memory</code> — The amount of memory that is used in the service.
+     *        <code>Memory</code> — The amount of memory that's used in the service.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

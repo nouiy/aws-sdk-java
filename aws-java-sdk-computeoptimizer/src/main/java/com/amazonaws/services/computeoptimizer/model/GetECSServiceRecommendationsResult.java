@@ -25,13 +25,13 @@ public class GetECSServiceRecommendationsResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The token to advance to the next page of ECS service recommendations.
+     * The token to advance to the next page of Amazon ECS service recommendations.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * An array of objects that describe the ECS service recommendations.
+     * An array of objects that describe the Amazon ECS service recommendations.
      * </p>
      */
     private java.util.List<ECSServiceRecommendation> ecsServiceRecommendations;
@@ -44,11 +44,11 @@ public class GetECSServiceRecommendationsResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The token to advance to the next page of ECS service recommendations.
+     * The token to advance to the next page of Amazon ECS service recommendations.
      * </p>
      * 
      * @param nextToken
-     *        The token to advance to the next page of ECS service recommendations.
+     *        The token to advance to the next page of Amazon ECS service recommendations.
      */
 
     public void setNextToken(String nextToken) {
@@ -57,10 +57,10 @@ public class GetECSServiceRecommendationsResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The token to advance to the next page of ECS service recommendations.
+     * The token to advance to the next page of Amazon ECS service recommendations.
      * </p>
      * 
-     * @return The token to advance to the next page of ECS service recommendations.
+     * @return The token to advance to the next page of Amazon ECS service recommendations.
      */
 
     public String getNextToken() {
@@ -69,11 +69,11 @@ public class GetECSServiceRecommendationsResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The token to advance to the next page of ECS service recommendations.
+     * The token to advance to the next page of Amazon ECS service recommendations.
      * </p>
      * 
      * @param nextToken
-     *        The token to advance to the next page of ECS service recommendations.
+     *        The token to advance to the next page of Amazon ECS service recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,10 +84,10 @@ public class GetECSServiceRecommendationsResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * An array of objects that describe the ECS service recommendations.
+     * An array of objects that describe the Amazon ECS service recommendations.
      * </p>
      * 
-     * @return An array of objects that describe the ECS service recommendations.
+     * @return An array of objects that describe the Amazon ECS service recommendations.
      */
 
     public java.util.List<ECSServiceRecommendation> getEcsServiceRecommendations() {
@@ -96,11 +96,11 @@ public class GetECSServiceRecommendationsResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * An array of objects that describe the ECS service recommendations.
+     * An array of objects that describe the Amazon ECS service recommendations.
      * </p>
      * 
      * @param ecsServiceRecommendations
-     *        An array of objects that describe the ECS service recommendations.
+     *        An array of objects that describe the Amazon ECS service recommendations.
      */
 
     public void setEcsServiceRecommendations(java.util.Collection<ECSServiceRecommendation> ecsServiceRecommendations) {
@@ -114,7 +114,7 @@ public class GetECSServiceRecommendationsResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * An array of objects that describe the ECS service recommendations.
+     * An array of objects that describe the Amazon ECS service recommendations.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -123,7 +123,7 @@ public class GetECSServiceRecommendationsResult extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param ecsServiceRecommendations
-     *        An array of objects that describe the ECS service recommendations.
+     *        An array of objects that describe the Amazon ECS service recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -139,11 +139,11 @@ public class GetECSServiceRecommendationsResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * An array of objects that describe the ECS service recommendations.
+     * An array of objects that describe the Amazon ECS service recommendations.
      * </p>
      * 
      * @param ecsServiceRecommendations
-     *        An array of objects that describe the ECS service recommendations.
+     *        An array of objects that describe the Amazon ECS service recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

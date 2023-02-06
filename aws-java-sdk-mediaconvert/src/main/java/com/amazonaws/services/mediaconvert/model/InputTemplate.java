@@ -78,7 +78,7 @@ public class InputTemplate implements Serializable, Cloneable, StructuredPojo {
     private String filterEnable;
     /**
      * Use Filter strength (FilterStrength) to adjust the magnitude the input filter settings (Deblock and Denoise). The
-     * range is -5 to 5. Default is 0.
+     * range is 0 to 5. Default is 0.
      */
     private Integer filterStrength;
     /**
@@ -674,11 +674,11 @@ public class InputTemplate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * Use Filter strength (FilterStrength) to adjust the magnitude the input filter settings (Deblock and Denoise). The
-     * range is -5 to 5. Default is 0.
+     * range is 0 to 5. Default is 0.
      * 
      * @param filterStrength
      *        Use Filter strength (FilterStrength) to adjust the magnitude the input filter settings (Deblock and
-     *        Denoise). The range is -5 to 5. Default is 0.
+     *        Denoise). The range is 0 to 5. Default is 0.
      */
 
     public void setFilterStrength(Integer filterStrength) {
@@ -687,10 +687,10 @@ public class InputTemplate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * Use Filter strength (FilterStrength) to adjust the magnitude the input filter settings (Deblock and Denoise). The
-     * range is -5 to 5. Default is 0.
+     * range is 0 to 5. Default is 0.
      * 
      * @return Use Filter strength (FilterStrength) to adjust the magnitude the input filter settings (Deblock and
-     *         Denoise). The range is -5 to 5. Default is 0.
+     *         Denoise). The range is 0 to 5. Default is 0.
      */
 
     public Integer getFilterStrength() {
@@ -699,11 +699,11 @@ public class InputTemplate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * Use Filter strength (FilterStrength) to adjust the magnitude the input filter settings (Deblock and Denoise). The
-     * range is -5 to 5. Default is 0.
+     * range is 0 to 5. Default is 0.
      * 
      * @param filterStrength
      *        Use Filter strength (FilterStrength) to adjust the magnitude the input filter settings (Deblock and
-     *        Denoise). The range is -5 to 5. Default is 0.
+     *        Denoise). The range is 0 to 5. Default is 0.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

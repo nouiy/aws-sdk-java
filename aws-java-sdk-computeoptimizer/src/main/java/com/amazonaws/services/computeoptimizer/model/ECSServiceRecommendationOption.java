@@ -30,13 +30,13 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The memory size of the ECS service recommendation option.
+     * The memory size of the Amazon ECS service recommendation option.
      * </p>
      */
     private Integer memory;
     /**
      * <p>
-     * The CPU size of the ECS service recommendation option.
+     * The CPU size of the Amazon ECS service recommendation option.
      * </p>
      */
     private Integer cpu;
@@ -44,24 +44,25 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
     private SavingsOpportunity savingsOpportunity;
     /**
      * <p>
-     * An array of objects that describe the projected utilization metrics of the ECS service recommendation option.
+     * An array of objects that describe the projected utilization metrics of the Amazon ECS service recommendation
+     * option.
      * </p>
      */
     private java.util.List<ECSServiceProjectedUtilizationMetric> projectedUtilizationMetrics;
     /**
      * <p>
-     * The CPU and memory size recommendations for the containers within the task of your ECS service.
+     * The CPU and memory size recommendations for the containers within the task of your Amazon ECS service.
      * </p>
      */
     private java.util.List<ContainerRecommendation> containerRecommendations;
 
     /**
      * <p>
-     * The memory size of the ECS service recommendation option.
+     * The memory size of the Amazon ECS service recommendation option.
      * </p>
      * 
      * @param memory
-     *        The memory size of the ECS service recommendation option.
+     *        The memory size of the Amazon ECS service recommendation option.
      */
 
     public void setMemory(Integer memory) {
@@ -70,10 +71,10 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The memory size of the ECS service recommendation option.
+     * The memory size of the Amazon ECS service recommendation option.
      * </p>
      * 
-     * @return The memory size of the ECS service recommendation option.
+     * @return The memory size of the Amazon ECS service recommendation option.
      */
 
     public Integer getMemory() {
@@ -82,11 +83,11 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The memory size of the ECS service recommendation option.
+     * The memory size of the Amazon ECS service recommendation option.
      * </p>
      * 
      * @param memory
-     *        The memory size of the ECS service recommendation option.
+     *        The memory size of the Amazon ECS service recommendation option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +98,11 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The CPU size of the ECS service recommendation option.
+     * The CPU size of the Amazon ECS service recommendation option.
      * </p>
      * 
      * @param cpu
-     *        The CPU size of the ECS service recommendation option.
+     *        The CPU size of the Amazon ECS service recommendation option.
      */
 
     public void setCpu(Integer cpu) {
@@ -110,10 +111,10 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The CPU size of the ECS service recommendation option.
+     * The CPU size of the Amazon ECS service recommendation option.
      * </p>
      * 
-     * @return The CPU size of the ECS service recommendation option.
+     * @return The CPU size of the Amazon ECS service recommendation option.
      */
 
     public Integer getCpu() {
@@ -122,11 +123,11 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The CPU size of the ECS service recommendation option.
+     * The CPU size of the Amazon ECS service recommendation option.
      * </p>
      * 
      * @param cpu
-     *        The CPU size of the ECS service recommendation option.
+     *        The CPU size of the Amazon ECS service recommendation option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -163,11 +164,12 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * An array of objects that describe the projected utilization metrics of the ECS service recommendation option.
+     * An array of objects that describe the projected utilization metrics of the Amazon ECS service recommendation
+     * option.
      * </p>
      * 
-     * @return An array of objects that describe the projected utilization metrics of the ECS service recommendation
-     *         option.
+     * @return An array of objects that describe the projected utilization metrics of the Amazon ECS service
+     *         recommendation option.
      */
 
     public java.util.List<ECSServiceProjectedUtilizationMetric> getProjectedUtilizationMetrics() {
@@ -176,12 +178,13 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * An array of objects that describe the projected utilization metrics of the ECS service recommendation option.
+     * An array of objects that describe the projected utilization metrics of the Amazon ECS service recommendation
+     * option.
      * </p>
      * 
      * @param projectedUtilizationMetrics
-     *        An array of objects that describe the projected utilization metrics of the ECS service recommendation
-     *        option.
+     *        An array of objects that describe the projected utilization metrics of the Amazon ECS service
+     *        recommendation option.
      */
 
     public void setProjectedUtilizationMetrics(java.util.Collection<ECSServiceProjectedUtilizationMetric> projectedUtilizationMetrics) {
@@ -195,7 +198,8 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * An array of objects that describe the projected utilization metrics of the ECS service recommendation option.
+     * An array of objects that describe the projected utilization metrics of the Amazon ECS service recommendation
+     * option.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -204,8 +208,8 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
      * </p>
      * 
      * @param projectedUtilizationMetrics
-     *        An array of objects that describe the projected utilization metrics of the ECS service recommendation
-     *        option.
+     *        An array of objects that describe the projected utilization metrics of the Amazon ECS service
+     *        recommendation option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -221,12 +225,13 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * An array of objects that describe the projected utilization metrics of the ECS service recommendation option.
+     * An array of objects that describe the projected utilization metrics of the Amazon ECS service recommendation
+     * option.
      * </p>
      * 
      * @param projectedUtilizationMetrics
-     *        An array of objects that describe the projected utilization metrics of the ECS service recommendation
-     *        option.
+     *        An array of objects that describe the projected utilization metrics of the Amazon ECS service
+     *        recommendation option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -237,10 +242,10 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The CPU and memory size recommendations for the containers within the task of your ECS service.
+     * The CPU and memory size recommendations for the containers within the task of your Amazon ECS service.
      * </p>
      * 
-     * @return The CPU and memory size recommendations for the containers within the task of your ECS service.
+     * @return The CPU and memory size recommendations for the containers within the task of your Amazon ECS service.
      */
 
     public java.util.List<ContainerRecommendation> getContainerRecommendations() {
@@ -249,11 +254,11 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The CPU and memory size recommendations for the containers within the task of your ECS service.
+     * The CPU and memory size recommendations for the containers within the task of your Amazon ECS service.
      * </p>
      * 
      * @param containerRecommendations
-     *        The CPU and memory size recommendations for the containers within the task of your ECS service.
+     *        The CPU and memory size recommendations for the containers within the task of your Amazon ECS service.
      */
 
     public void setContainerRecommendations(java.util.Collection<ContainerRecommendation> containerRecommendations) {
@@ -267,7 +272,7 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The CPU and memory size recommendations for the containers within the task of your ECS service.
+     * The CPU and memory size recommendations for the containers within the task of your Amazon ECS service.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -276,7 +281,7 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
      * </p>
      * 
      * @param containerRecommendations
-     *        The CPU and memory size recommendations for the containers within the task of your ECS service.
+     *        The CPU and memory size recommendations for the containers within the task of your Amazon ECS service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -292,11 +297,11 @@ public class ECSServiceRecommendationOption implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The CPU and memory size recommendations for the containers within the task of your ECS service.
+     * The CPU and memory size recommendations for the containers within the task of your Amazon ECS service.
      * </p>
      * 
      * @param containerRecommendations
-     *        The CPU and memory size recommendations for the containers within the task of your ECS service.
+     *        The CPU and memory size recommendations for the containers within the task of your Amazon ECS service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

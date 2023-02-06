@@ -29,6 +29,8 @@ public class TFIModelPerformanceMarshaller {
 
     private static final MarshallingInfo<Float> AUC_BINDING = MarshallingInfo.builder(MarshallingType.FLOAT).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("auc").build();
+    private static final MarshallingInfo<StructuredPojo> UNCERTAINTYRANGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("uncertaintyRange").build();
 
     private static final TFIModelPerformanceMarshaller instance = new TFIModelPerformanceMarshaller();
 
@@ -47,6 +49,7 @@ public class TFIModelPerformanceMarshaller {
 
         try {
             protocolMarshaller.marshall(tFIModelPerformance.getAuc(), AUC_BINDING);
+            protocolMarshaller.marshall(tFIModelPerformance.getUncertaintyRange(), UNCERTAINTYRANGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

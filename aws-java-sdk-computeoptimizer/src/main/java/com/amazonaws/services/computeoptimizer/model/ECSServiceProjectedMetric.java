@@ -22,8 +22,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Describes the projected metrics of an Amazon ECS service recommendation option.
  * </p>
  * <p>
- * To determine the performance difference between your current ECS service and the recommended option, compare the
- * metric data of your service against its projected metric data.
+ * To determine the performance difference between your current Amazon ECS service and the recommended option, compare
+ * the metric data of your service against its projected metric data.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/compute-optimizer-2019-11-01/ECSServiceProjectedMetric"
@@ -42,12 +42,12 @@ public class ECSServiceProjectedMetric implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * <code>CPU</code> — The percentage of allocated compute units that are currently in use on the ECS service tasks.
+     * <code>Cpu</code> — The percentage of allocated compute units that are currently in use on the service tasks.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Memory</code> — The percentage of memory that is currently in use on the ECS service tasks.
+     * <code>Memory</code> — The percentage of memory that's currently in use on the service tasks.
      * </p>
      * </li>
      * </ul>
@@ -82,12 +82,12 @@ public class ECSServiceProjectedMetric implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * <code>CPU</code> — The percentage of allocated compute units that are currently in use on the ECS service tasks.
+     * <code>Cpu</code> — The percentage of allocated compute units that are currently in use on the service tasks.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Memory</code> — The percentage of memory that is currently in use on the ECS service tasks.
+     * <code>Memory</code> — The percentage of memory that's currently in use on the service tasks.
      * </p>
      * </li>
      * </ul>
@@ -100,13 +100,13 @@ public class ECSServiceProjectedMetric implements Serializable, Cloneable, Struc
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CPU</code> — The percentage of allocated compute units that are currently in use on the ECS service
+     *        <code>Cpu</code> — The percentage of allocated compute units that are currently in use on the service
      *        tasks.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Memory</code> — The percentage of memory that is currently in use on the ECS service tasks.
+     *        <code>Memory</code> — The percentage of memory that's currently in use on the service tasks.
      *        </p>
      *        </li>
      * @see ECSServiceMetricName
@@ -126,12 +126,12 @@ public class ECSServiceProjectedMetric implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * <code>CPU</code> — The percentage of allocated compute units that are currently in use on the ECS service tasks.
+     * <code>Cpu</code> — The percentage of allocated compute units that are currently in use on the service tasks.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Memory</code> — The percentage of memory that is currently in use on the ECS service tasks.
+     * <code>Memory</code> — The percentage of memory that's currently in use on the service tasks.
      * </p>
      * </li>
      * </ul>
@@ -143,13 +143,13 @@ public class ECSServiceProjectedMetric implements Serializable, Cloneable, Struc
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>CPU</code> — The percentage of allocated compute units that are currently in use on the ECS service
+     *         <code>Cpu</code> — The percentage of allocated compute units that are currently in use on the service
      *         tasks.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Memory</code> — The percentage of memory that is currently in use on the ECS service tasks.
+     *         <code>Memory</code> — The percentage of memory that's currently in use on the service tasks.
      *         </p>
      *         </li>
      * @see ECSServiceMetricName
@@ -169,12 +169,12 @@ public class ECSServiceProjectedMetric implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * <code>CPU</code> — The percentage of allocated compute units that are currently in use on the ECS service tasks.
+     * <code>Cpu</code> — The percentage of allocated compute units that are currently in use on the service tasks.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Memory</code> — The percentage of memory that is currently in use on the ECS service tasks.
+     * <code>Memory</code> — The percentage of memory that's currently in use on the service tasks.
      * </p>
      * </li>
      * </ul>
@@ -187,13 +187,13 @@ public class ECSServiceProjectedMetric implements Serializable, Cloneable, Struc
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CPU</code> — The percentage of allocated compute units that are currently in use on the ECS service
+     *        <code>Cpu</code> — The percentage of allocated compute units that are currently in use on the service
      *        tasks.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Memory</code> — The percentage of memory that is currently in use on the ECS service tasks.
+     *        <code>Memory</code> — The percentage of memory that's currently in use on the service tasks.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -215,12 +215,12 @@ public class ECSServiceProjectedMetric implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * <code>CPU</code> — The percentage of allocated compute units that are currently in use on the ECS service tasks.
+     * <code>Cpu</code> — The percentage of allocated compute units that are currently in use on the service tasks.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Memory</code> — The percentage of memory that is currently in use on the ECS service tasks.
+     * <code>Memory</code> — The percentage of memory that's currently in use on the service tasks.
      * </p>
      * </li>
      * </ul>
@@ -233,13 +233,13 @@ public class ECSServiceProjectedMetric implements Serializable, Cloneable, Struc
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CPU</code> — The percentage of allocated compute units that are currently in use on the ECS service
+     *        <code>Cpu</code> — The percentage of allocated compute units that are currently in use on the service
      *        tasks.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Memory</code> — The percentage of memory that is currently in use on the ECS service tasks.
+     *        <code>Memory</code> — The percentage of memory that's currently in use on the service tasks.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

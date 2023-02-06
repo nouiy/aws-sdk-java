@@ -74,6 +74,14 @@ public class LineItemJsonUnmarshaller implements Unmarshaller<LineItem, JsonUnma
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("PreviousLineItemId", targetDepth)) {
+                    context.nextToken();
+                    lineItem.setPreviousLineItemId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("PreviousOrderId", targetDepth)) {
+                    context.nextToken();
+                    lineItem.setPreviousOrderId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

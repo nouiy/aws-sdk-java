@@ -27,7 +27,7 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ARN that identifies the ECS service.
+     * The ARN that identifies the Amazon ECS service.
      * </p>
      * <p>
      * The following is the format of the ARN:
@@ -39,13 +39,13 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
     private java.util.List<String> serviceArns;
     /**
      * <p>
-     * The token to advance to the next page of ECS service recommendations.
+     * The token to advance to the next page of Amazon ECS service recommendations.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * The maximum number of ECS service recommendations to return with a single request.
+     * The maximum number of Amazon ECS service recommendations to return with a single request.
      * </p>
      * <p>
      * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
@@ -54,17 +54,17 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
     private Integer maxResults;
     /**
      * <p>
-     * An array of objects to specify a filter that returns a more specific list of ECS service recommendations.
+     * An array of objects to specify a filter that returns a more specific list of Amazon ECS service recommendations.
      * </p>
      */
     private java.util.List<ECSServiceRecommendationFilter> filters;
     /**
      * <p>
-     * Return the ECS service recommendations to the specified Amazon Web Services account IDs.
+     * Return the Amazon ECS service recommendations to the specified Amazon Web Services account IDs.
      * </p>
      * <p>
      * If your account is the management account or the delegated administrator of an organization, use this parameter
-     * to return the ECS service recommendations to specific member accounts.
+     * to return the Amazon ECS service recommendations to specific member accounts.
      * </p>
      * <p>
      * You can only specify one account ID per request.
@@ -74,7 +74,7 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ARN that identifies the ECS service.
+     * The ARN that identifies the Amazon ECS service.
      * </p>
      * <p>
      * The following is the format of the ARN:
@@ -83,7 +83,7 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
      * <code>arn:aws:ecs:region:aws_account_id:service/cluster-name/service-name</code>
      * </p>
      * 
-     * @return The ARN that identifies the ECS service. </p>
+     * @return The ARN that identifies the Amazon ECS service. </p>
      *         <p>
      *         The following is the format of the ARN:
      *         </p>
@@ -97,7 +97,7 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ARN that identifies the ECS service.
+     * The ARN that identifies the Amazon ECS service.
      * </p>
      * <p>
      * The following is the format of the ARN:
@@ -107,7 +107,7 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param serviceArns
-     *        The ARN that identifies the ECS service. </p>
+     *        The ARN that identifies the Amazon ECS service. </p>
      *        <p>
      *        The following is the format of the ARN:
      *        </p>
@@ -126,7 +126,7 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ARN that identifies the ECS service.
+     * The ARN that identifies the Amazon ECS service.
      * </p>
      * <p>
      * The following is the format of the ARN:
@@ -141,7 +141,7 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param serviceArns
-     *        The ARN that identifies the ECS service. </p>
+     *        The ARN that identifies the Amazon ECS service. </p>
      *        <p>
      *        The following is the format of the ARN:
      *        </p>
@@ -162,7 +162,7 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ARN that identifies the ECS service.
+     * The ARN that identifies the Amazon ECS service.
      * </p>
      * <p>
      * The following is the format of the ARN:
@@ -172,7 +172,7 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param serviceArns
-     *        The ARN that identifies the ECS service. </p>
+     *        The ARN that identifies the Amazon ECS service. </p>
      *        <p>
      *        The following is the format of the ARN:
      *        </p>
@@ -188,11 +188,11 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The token to advance to the next page of ECS service recommendations.
+     * The token to advance to the next page of Amazon ECS service recommendations.
      * </p>
      * 
      * @param nextToken
-     *        The token to advance to the next page of ECS service recommendations.
+     *        The token to advance to the next page of Amazon ECS service recommendations.
      */
 
     public void setNextToken(String nextToken) {
@@ -201,10 +201,10 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The token to advance to the next page of ECS service recommendations.
+     * The token to advance to the next page of Amazon ECS service recommendations.
      * </p>
      * 
-     * @return The token to advance to the next page of ECS service recommendations.
+     * @return The token to advance to the next page of Amazon ECS service recommendations.
      */
 
     public String getNextToken() {
@@ -213,11 +213,11 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The token to advance to the next page of ECS service recommendations.
+     * The token to advance to the next page of Amazon ECS service recommendations.
      * </p>
      * 
      * @param nextToken
-     *        The token to advance to the next page of ECS service recommendations.
+     *        The token to advance to the next page of Amazon ECS service recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -228,14 +228,14 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The maximum number of ECS service recommendations to return with a single request.
+     * The maximum number of Amazon ECS service recommendations to return with a single request.
      * </p>
      * <p>
      * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of ECS service recommendations to return with a single request. </p>
+     *        The maximum number of Amazon ECS service recommendations to return with a single request. </p>
      *        <p>
      *        To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      */
@@ -246,13 +246,13 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The maximum number of ECS service recommendations to return with a single request.
+     * The maximum number of Amazon ECS service recommendations to return with a single request.
      * </p>
      * <p>
      * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
-     * @return The maximum number of ECS service recommendations to return with a single request. </p>
+     * @return The maximum number of Amazon ECS service recommendations to return with a single request. </p>
      *         <p>
      *         To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      */
@@ -263,14 +263,14 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The maximum number of ECS service recommendations to return with a single request.
+     * The maximum number of Amazon ECS service recommendations to return with a single request.
      * </p>
      * <p>
      * To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of ECS service recommendations to return with a single request. </p>
+     *        The maximum number of Amazon ECS service recommendations to return with a single request. </p>
      *        <p>
      *        To retrieve the remaining results, make another request with the returned <code>nextToken</code> value.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -283,10 +283,11 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * An array of objects to specify a filter that returns a more specific list of ECS service recommendations.
+     * An array of objects to specify a filter that returns a more specific list of Amazon ECS service recommendations.
      * </p>
      * 
-     * @return An array of objects to specify a filter that returns a more specific list of ECS service recommendations.
+     * @return An array of objects to specify a filter that returns a more specific list of Amazon ECS service
+     *         recommendations.
      */
 
     public java.util.List<ECSServiceRecommendationFilter> getFilters() {
@@ -295,11 +296,12 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * An array of objects to specify a filter that returns a more specific list of ECS service recommendations.
+     * An array of objects to specify a filter that returns a more specific list of Amazon ECS service recommendations.
      * </p>
      * 
      * @param filters
-     *        An array of objects to specify a filter that returns a more specific list of ECS service recommendations.
+     *        An array of objects to specify a filter that returns a more specific list of Amazon ECS service
+     *        recommendations.
      */
 
     public void setFilters(java.util.Collection<ECSServiceRecommendationFilter> filters) {
@@ -313,7 +315,7 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * An array of objects to specify a filter that returns a more specific list of ECS service recommendations.
+     * An array of objects to specify a filter that returns a more specific list of Amazon ECS service recommendations.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -322,7 +324,8 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param filters
-     *        An array of objects to specify a filter that returns a more specific list of ECS service recommendations.
+     *        An array of objects to specify a filter that returns a more specific list of Amazon ECS service
+     *        recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -338,11 +341,12 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * An array of objects to specify a filter that returns a more specific list of ECS service recommendations.
+     * An array of objects to specify a filter that returns a more specific list of Amazon ECS service recommendations.
      * </p>
      * 
      * @param filters
-     *        An array of objects to specify a filter that returns a more specific list of ECS service recommendations.
+     *        An array of objects to specify a filter that returns a more specific list of Amazon ECS service
+     *        recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -353,20 +357,20 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Return the ECS service recommendations to the specified Amazon Web Services account IDs.
+     * Return the Amazon ECS service recommendations to the specified Amazon Web Services account IDs.
      * </p>
      * <p>
      * If your account is the management account or the delegated administrator of an organization, use this parameter
-     * to return the ECS service recommendations to specific member accounts.
+     * to return the Amazon ECS service recommendations to specific member accounts.
      * </p>
      * <p>
      * You can only specify one account ID per request.
      * </p>
      * 
-     * @return Return the ECS service recommendations to the specified Amazon Web Services account IDs. </p>
+     * @return Return the Amazon ECS service recommendations to the specified Amazon Web Services account IDs. </p>
      *         <p>
      *         If your account is the management account or the delegated administrator of an organization, use this
-     *         parameter to return the ECS service recommendations to specific member accounts.
+     *         parameter to return the Amazon ECS service recommendations to specific member accounts.
      *         </p>
      *         <p>
      *         You can only specify one account ID per request.
@@ -378,21 +382,21 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Return the ECS service recommendations to the specified Amazon Web Services account IDs.
+     * Return the Amazon ECS service recommendations to the specified Amazon Web Services account IDs.
      * </p>
      * <p>
      * If your account is the management account or the delegated administrator of an organization, use this parameter
-     * to return the ECS service recommendations to specific member accounts.
+     * to return the Amazon ECS service recommendations to specific member accounts.
      * </p>
      * <p>
      * You can only specify one account ID per request.
      * </p>
      * 
      * @param accountIds
-     *        Return the ECS service recommendations to the specified Amazon Web Services account IDs. </p>
+     *        Return the Amazon ECS service recommendations to the specified Amazon Web Services account IDs. </p>
      *        <p>
      *        If your account is the management account or the delegated administrator of an organization, use this
-     *        parameter to return the ECS service recommendations to specific member accounts.
+     *        parameter to return the Amazon ECS service recommendations to specific member accounts.
      *        </p>
      *        <p>
      *        You can only specify one account ID per request.
@@ -409,11 +413,11 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Return the ECS service recommendations to the specified Amazon Web Services account IDs.
+     * Return the Amazon ECS service recommendations to the specified Amazon Web Services account IDs.
      * </p>
      * <p>
      * If your account is the management account or the delegated administrator of an organization, use this parameter
-     * to return the ECS service recommendations to specific member accounts.
+     * to return the Amazon ECS service recommendations to specific member accounts.
      * </p>
      * <p>
      * You can only specify one account ID per request.
@@ -425,10 +429,10 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param accountIds
-     *        Return the ECS service recommendations to the specified Amazon Web Services account IDs. </p>
+     *        Return the Amazon ECS service recommendations to the specified Amazon Web Services account IDs. </p>
      *        <p>
      *        If your account is the management account or the delegated administrator of an organization, use this
-     *        parameter to return the ECS service recommendations to specific member accounts.
+     *        parameter to return the Amazon ECS service recommendations to specific member accounts.
      *        </p>
      *        <p>
      *        You can only specify one account ID per request.
@@ -447,21 +451,21 @@ public class GetECSServiceRecommendationsRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Return the ECS service recommendations to the specified Amazon Web Services account IDs.
+     * Return the Amazon ECS service recommendations to the specified Amazon Web Services account IDs.
      * </p>
      * <p>
      * If your account is the management account or the delegated administrator of an organization, use this parameter
-     * to return the ECS service recommendations to specific member accounts.
+     * to return the Amazon ECS service recommendations to specific member accounts.
      * </p>
      * <p>
      * You can only specify one account ID per request.
      * </p>
      * 
      * @param accountIds
-     *        Return the ECS service recommendations to the specified Amazon Web Services account IDs. </p>
+     *        Return the Amazon ECS service recommendations to the specified Amazon Web Services account IDs. </p>
      *        <p>
      *        If your account is the management account or the delegated administrator of an organization, use this
-     *        parameter to return the ECS service recommendations to specific member accounts.
+     *        parameter to return the Amazon ECS service recommendations to specific member accounts.
      *        </p>
      *        <p>
      *        You can only specify one account ID per request.

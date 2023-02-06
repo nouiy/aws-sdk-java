@@ -44,6 +44,8 @@ public class OrderMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OrderFulfilledDate").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> PAYMENTTERM_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PaymentTerm").build();
+    private static final MarshallingInfo<String> ORDERTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("OrderType").build();
 
     private static final OrderMarshaller instance = new OrderMarshaller();
 
@@ -69,6 +71,7 @@ public class OrderMarshaller {
             protocolMarshaller.marshall(order.getOrderSubmissionDate(), ORDERSUBMISSIONDATE_BINDING);
             protocolMarshaller.marshall(order.getOrderFulfilledDate(), ORDERFULFILLEDDATE_BINDING);
             protocolMarshaller.marshall(order.getPaymentTerm(), PAYMENTTERM_BINDING);
+            protocolMarshaller.marshall(order.getOrderType(), ORDERTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

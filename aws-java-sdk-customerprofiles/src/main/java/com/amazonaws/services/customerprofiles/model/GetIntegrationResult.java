@@ -77,8 +77,8 @@ public class GetIntegrationResult extends com.amazonaws.AmazonWebServiceResult<c
     private String workflowId;
     /**
      * <p>
-     * Boolean to indicate if the Flow associated with the Integration is created via Appflow console or with
-     * ObjectTypeName equals _unstructured via API/CLI in flowDefinition
+     * Boolean that shows if the Flow that's associated with the Integration is created in Amazon Appflow, or with
+     * ObjectTypeName equals _unstructured via API/CLI in flowDefinition.
      * </p>
      */
     private Boolean isUnstructured;
@@ -488,13 +488,13 @@ public class GetIntegrationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Boolean to indicate if the Flow associated with the Integration is created via Appflow console or with
-     * ObjectTypeName equals _unstructured via API/CLI in flowDefinition
+     * Boolean that shows if the Flow that's associated with the Integration is created in Amazon Appflow, or with
+     * ObjectTypeName equals _unstructured via API/CLI in flowDefinition.
      * </p>
      * 
      * @param isUnstructured
-     *        Boolean to indicate if the Flow associated with the Integration is created via Appflow console or with
-     *        ObjectTypeName equals _unstructured via API/CLI in flowDefinition
+     *        Boolean that shows if the Flow that's associated with the Integration is created in Amazon Appflow, or
+     *        with ObjectTypeName equals _unstructured via API/CLI in flowDefinition.
      */
 
     public void setIsUnstructured(Boolean isUnstructured) {
@@ -503,12 +503,12 @@ public class GetIntegrationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Boolean to indicate if the Flow associated with the Integration is created via Appflow console or with
-     * ObjectTypeName equals _unstructured via API/CLI in flowDefinition
+     * Boolean that shows if the Flow that's associated with the Integration is created in Amazon Appflow, or with
+     * ObjectTypeName equals _unstructured via API/CLI in flowDefinition.
      * </p>
      * 
-     * @return Boolean to indicate if the Flow associated with the Integration is created via Appflow console or with
-     *         ObjectTypeName equals _unstructured via API/CLI in flowDefinition
+     * @return Boolean that shows if the Flow that's associated with the Integration is created in Amazon Appflow, or
+     *         with ObjectTypeName equals _unstructured via API/CLI in flowDefinition.
      */
 
     public Boolean getIsUnstructured() {
@@ -517,13 +517,13 @@ public class GetIntegrationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Boolean to indicate if the Flow associated with the Integration is created via Appflow console or with
-     * ObjectTypeName equals _unstructured via API/CLI in flowDefinition
+     * Boolean that shows if the Flow that's associated with the Integration is created in Amazon Appflow, or with
+     * ObjectTypeName equals _unstructured via API/CLI in flowDefinition.
      * </p>
      * 
      * @param isUnstructured
-     *        Boolean to indicate if the Flow associated with the Integration is created via Appflow console or with
-     *        ObjectTypeName equals _unstructured via API/CLI in flowDefinition
+     *        Boolean that shows if the Flow that's associated with the Integration is created in Amazon Appflow, or
+     *        with ObjectTypeName equals _unstructured via API/CLI in flowDefinition.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -534,12 +534,12 @@ public class GetIntegrationResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Boolean to indicate if the Flow associated with the Integration is created via Appflow console or with
-     * ObjectTypeName equals _unstructured via API/CLI in flowDefinition
+     * Boolean that shows if the Flow that's associated with the Integration is created in Amazon Appflow, or with
+     * ObjectTypeName equals _unstructured via API/CLI in flowDefinition.
      * </p>
      * 
-     * @return Boolean to indicate if the Flow associated with the Integration is created via Appflow console or with
-     *         ObjectTypeName equals _unstructured via API/CLI in flowDefinition
+     * @return Boolean that shows if the Flow that's associated with the Integration is created in Amazon Appflow, or
+     *         with ObjectTypeName equals _unstructured via API/CLI in flowDefinition.
      */
 
     public Boolean isUnstructured() {

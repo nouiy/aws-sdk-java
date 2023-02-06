@@ -143,6 +143,14 @@ public class ProfileJsonUnmarshaller implements Unmarshaller<Profile, JsonUnmars
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("PartyTypeString", targetDepth)) {
+                    context.nextToken();
+                    profile.setPartyTypeString(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("GenderString", targetDepth)) {
+                    context.nextToken();
+                    profile.setGenderString(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

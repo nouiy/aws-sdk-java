@@ -27,7 +27,7 @@ public class ExportECSServiceRecommendationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The Amazon Web Services account IDs for the export ECS service recommendations.
+     * The Amazon Web Services account IDs for the export Amazon ECS service recommendations.
      * </p>
      * <p>
      * If your account is the management account or the delegated administrator of an organization, use this parameter
@@ -48,7 +48,7 @@ public class ExportECSServiceRecommendationsRequest extends com.amazonaws.Amazon
     private java.util.List<String> accountIds;
     /**
      * <p>
-     * An array of objects to specify a filter that exports a more specific set of ECS service recommendations.
+     * An array of objects to specify a filter that exports a more specific set of Amazon ECS service recommendations.
      * </p>
      */
     private java.util.List<ECSServiceRecommendationFilter> filters;
@@ -96,7 +96,7 @@ public class ExportECSServiceRecommendationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The Amazon Web Services account IDs for the export ECS service recommendations.
+     * The Amazon Web Services account IDs for the export Amazon ECS service recommendations.
      * </p>
      * <p>
      * If your account is the management account or the delegated administrator of an organization, use this parameter
@@ -114,7 +114,7 @@ public class ExportECSServiceRecommendationsRequest extends com.amazonaws.Amazon
      * You can specify multiple account IDs per request.
      * </p>
      * 
-     * @return The Amazon Web Services account IDs for the export ECS service recommendations. </p>
+     * @return The Amazon Web Services account IDs for the export Amazon ECS service recommendations. </p>
      *         <p>
      *         If your account is the management account or the delegated administrator of an organization, use this
      *         parameter to specify the member account you want to export recommendations to.
@@ -137,7 +137,7 @@ public class ExportECSServiceRecommendationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The Amazon Web Services account IDs for the export ECS service recommendations.
+     * The Amazon Web Services account IDs for the export Amazon ECS service recommendations.
      * </p>
      * <p>
      * If your account is the management account or the delegated administrator of an organization, use this parameter
@@ -156,7 +156,7 @@ public class ExportECSServiceRecommendationsRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param accountIds
-     *        The Amazon Web Services account IDs for the export ECS service recommendations. </p>
+     *        The Amazon Web Services account IDs for the export Amazon ECS service recommendations. </p>
      *        <p>
      *        If your account is the management account or the delegated administrator of an organization, use this
      *        parameter to specify the member account you want to export recommendations to.
@@ -184,7 +184,7 @@ public class ExportECSServiceRecommendationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The Amazon Web Services account IDs for the export ECS service recommendations.
+     * The Amazon Web Services account IDs for the export Amazon ECS service recommendations.
      * </p>
      * <p>
      * If your account is the management account or the delegated administrator of an organization, use this parameter
@@ -208,7 +208,7 @@ public class ExportECSServiceRecommendationsRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param accountIds
-     *        The Amazon Web Services account IDs for the export ECS service recommendations. </p>
+     *        The Amazon Web Services account IDs for the export Amazon ECS service recommendations. </p>
      *        <p>
      *        If your account is the management account or the delegated administrator of an organization, use this
      *        parameter to specify the member account you want to export recommendations to.
@@ -238,7 +238,7 @@ public class ExportECSServiceRecommendationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The Amazon Web Services account IDs for the export ECS service recommendations.
+     * The Amazon Web Services account IDs for the export Amazon ECS service recommendations.
      * </p>
      * <p>
      * If your account is the management account or the delegated administrator of an organization, use this parameter
@@ -257,7 +257,7 @@ public class ExportECSServiceRecommendationsRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param accountIds
-     *        The Amazon Web Services account IDs for the export ECS service recommendations. </p>
+     *        The Amazon Web Services account IDs for the export Amazon ECS service recommendations. </p>
      *        <p>
      *        If your account is the management account or the delegated administrator of an organization, use this
      *        parameter to specify the member account you want to export recommendations to.
@@ -282,10 +282,11 @@ public class ExportECSServiceRecommendationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * An array of objects to specify a filter that exports a more specific set of ECS service recommendations.
+     * An array of objects to specify a filter that exports a more specific set of Amazon ECS service recommendations.
      * </p>
      * 
-     * @return An array of objects to specify a filter that exports a more specific set of ECS service recommendations.
+     * @return An array of objects to specify a filter that exports a more specific set of Amazon ECS service
+     *         recommendations.
      */
 
     public java.util.List<ECSServiceRecommendationFilter> getFilters() {
@@ -294,11 +295,12 @@ public class ExportECSServiceRecommendationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * An array of objects to specify a filter that exports a more specific set of ECS service recommendations.
+     * An array of objects to specify a filter that exports a more specific set of Amazon ECS service recommendations.
      * </p>
      * 
      * @param filters
-     *        An array of objects to specify a filter that exports a more specific set of ECS service recommendations.
+     *        An array of objects to specify a filter that exports a more specific set of Amazon ECS service
+     *        recommendations.
      */
 
     public void setFilters(java.util.Collection<ECSServiceRecommendationFilter> filters) {
@@ -312,7 +314,7 @@ public class ExportECSServiceRecommendationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * An array of objects to specify a filter that exports a more specific set of ECS service recommendations.
+     * An array of objects to specify a filter that exports a more specific set of Amazon ECS service recommendations.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -321,7 +323,8 @@ public class ExportECSServiceRecommendationsRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param filters
-     *        An array of objects to specify a filter that exports a more specific set of ECS service recommendations.
+     *        An array of objects to specify a filter that exports a more specific set of Amazon ECS service
+     *        recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -337,11 +340,12 @@ public class ExportECSServiceRecommendationsRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * An array of objects to specify a filter that exports a more specific set of ECS service recommendations.
+     * An array of objects to specify a filter that exports a more specific set of Amazon ECS service recommendations.
      * </p>
      * 
      * @param filters
-     *        An array of objects to specify a filter that exports a more specific set of ECS service recommendations.
+     *        An array of objects to specify a filter that exports a more specific set of Amazon ECS service
+     *        recommendations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

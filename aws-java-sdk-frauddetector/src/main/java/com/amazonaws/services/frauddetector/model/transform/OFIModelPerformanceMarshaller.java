@@ -29,6 +29,8 @@ public class OFIModelPerformanceMarshaller {
 
     private static final MarshallingInfo<Float> AUC_BINDING = MarshallingInfo.builder(MarshallingType.FLOAT).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("auc").build();
+    private static final MarshallingInfo<StructuredPojo> UNCERTAINTYRANGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("uncertaintyRange").build();
 
     private static final OFIModelPerformanceMarshaller instance = new OFIModelPerformanceMarshaller();
 
@@ -47,6 +49,7 @@ public class OFIModelPerformanceMarshaller {
 
         try {
             protocolMarshaller.marshall(oFIModelPerformance.getAuc(), AUC_BINDING);
+            protocolMarshaller.marshall(oFIModelPerformance.getUncertaintyRange(), UNCERTAINTYRANGE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

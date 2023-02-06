@@ -30,27 +30,27 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The amount of memory used by the tasks in the ECS service.
+     * The amount of memory used by the tasks in the Amazon ECS service.
      * </p>
      */
     private Integer memory;
     /**
      * <p>
-     * The number of CPU units used by the tasks in the ECS service.
+     * The number of CPU units used by the tasks in the Amazon ECS service.
      * </p>
      */
     private Integer cpu;
     /**
      * <p>
-     * The container configurations within a task of an ECS service.
+     * The container configurations within a task of an Amazon ECS service.
      * </p>
      */
     private java.util.List<ContainerConfiguration> containerConfigurations;
     /**
      * <p>
      * Describes the Auto Scaling configuration methods for an Amazon ECS service. This affects the generated
-     * recommendations. For example, if Auto Scaling is configured on a ECS service’s CPU, then Compute Optimizer
-     * doesn’t generate CPU size recommendations.
+     * recommendations. For example, if Auto Scaling is configured on a service’s CPU, then Compute Optimizer doesn’t
+     * generate CPU size recommendations.
      * </p>
      * <p>
      * The Auto Scaling configuration methods include:
@@ -58,14 +58,14 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <code>TARGET_TRACKING_SCALING_CPU</code> — If the ECS service is configured to use target scaling on CPU, Compute
-     * Optimizer doesn't generate CPU recommendations.
+     * <code>TARGET_TRACKING_SCALING_CPU</code> — If the Amazon ECS service is configured to use target scaling on CPU,
+     * Compute Optimizer doesn't generate CPU recommendations.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the ECS service is configured to use target scaling on memory,
-     * Compute Optimizer doesn't generate memory recommendations.
+     * <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the Amazon ECS service is configured to use target scaling on
+     * memory, Compute Optimizer doesn't generate memory recommendations.
      * </p>
      * </li>
      * </ul>
@@ -81,18 +81,18 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
     private String autoScalingConfiguration;
     /**
      * <p>
-     * The task definition ARN used by the tasks in the ECS service.
+     * The task definition ARN used by the tasks in the Amazon ECS service.
      * </p>
      */
     private String taskDefinitionArn;
 
     /**
      * <p>
-     * The amount of memory used by the tasks in the ECS service.
+     * The amount of memory used by the tasks in the Amazon ECS service.
      * </p>
      * 
      * @param memory
-     *        The amount of memory used by the tasks in the ECS service.
+     *        The amount of memory used by the tasks in the Amazon ECS service.
      */
 
     public void setMemory(Integer memory) {
@@ -101,10 +101,10 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The amount of memory used by the tasks in the ECS service.
+     * The amount of memory used by the tasks in the Amazon ECS service.
      * </p>
      * 
-     * @return The amount of memory used by the tasks in the ECS service.
+     * @return The amount of memory used by the tasks in the Amazon ECS service.
      */
 
     public Integer getMemory() {
@@ -113,11 +113,11 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The amount of memory used by the tasks in the ECS service.
+     * The amount of memory used by the tasks in the Amazon ECS service.
      * </p>
      * 
      * @param memory
-     *        The amount of memory used by the tasks in the ECS service.
+     *        The amount of memory used by the tasks in the Amazon ECS service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -128,11 +128,11 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The number of CPU units used by the tasks in the ECS service.
+     * The number of CPU units used by the tasks in the Amazon ECS service.
      * </p>
      * 
      * @param cpu
-     *        The number of CPU units used by the tasks in the ECS service.
+     *        The number of CPU units used by the tasks in the Amazon ECS service.
      */
 
     public void setCpu(Integer cpu) {
@@ -141,10 +141,10 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The number of CPU units used by the tasks in the ECS service.
+     * The number of CPU units used by the tasks in the Amazon ECS service.
      * </p>
      * 
-     * @return The number of CPU units used by the tasks in the ECS service.
+     * @return The number of CPU units used by the tasks in the Amazon ECS service.
      */
 
     public Integer getCpu() {
@@ -153,11 +153,11 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The number of CPU units used by the tasks in the ECS service.
+     * The number of CPU units used by the tasks in the Amazon ECS service.
      * </p>
      * 
      * @param cpu
-     *        The number of CPU units used by the tasks in the ECS service.
+     *        The number of CPU units used by the tasks in the Amazon ECS service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,10 +168,10 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The container configurations within a task of an ECS service.
+     * The container configurations within a task of an Amazon ECS service.
      * </p>
      * 
-     * @return The container configurations within a task of an ECS service.
+     * @return The container configurations within a task of an Amazon ECS service.
      */
 
     public java.util.List<ContainerConfiguration> getContainerConfigurations() {
@@ -180,11 +180,11 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The container configurations within a task of an ECS service.
+     * The container configurations within a task of an Amazon ECS service.
      * </p>
      * 
      * @param containerConfigurations
-     *        The container configurations within a task of an ECS service.
+     *        The container configurations within a task of an Amazon ECS service.
      */
 
     public void setContainerConfigurations(java.util.Collection<ContainerConfiguration> containerConfigurations) {
@@ -198,7 +198,7 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The container configurations within a task of an ECS service.
+     * The container configurations within a task of an Amazon ECS service.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -207,7 +207,7 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param containerConfigurations
-     *        The container configurations within a task of an ECS service.
+     *        The container configurations within a task of an Amazon ECS service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -223,11 +223,11 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The container configurations within a task of an ECS service.
+     * The container configurations within a task of an Amazon ECS service.
      * </p>
      * 
      * @param containerConfigurations
-     *        The container configurations within a task of an ECS service.
+     *        The container configurations within a task of an Amazon ECS service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -239,8 +239,8 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
     /**
      * <p>
      * Describes the Auto Scaling configuration methods for an Amazon ECS service. This affects the generated
-     * recommendations. For example, if Auto Scaling is configured on a ECS service’s CPU, then Compute Optimizer
-     * doesn’t generate CPU size recommendations.
+     * recommendations. For example, if Auto Scaling is configured on a service’s CPU, then Compute Optimizer doesn’t
+     * generate CPU size recommendations.
      * </p>
      * <p>
      * The Auto Scaling configuration methods include:
@@ -248,14 +248,14 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <code>TARGET_TRACKING_SCALING_CPU</code> — If the ECS service is configured to use target scaling on CPU, Compute
-     * Optimizer doesn't generate CPU recommendations.
+     * <code>TARGET_TRACKING_SCALING_CPU</code> — If the Amazon ECS service is configured to use target scaling on CPU,
+     * Compute Optimizer doesn't generate CPU recommendations.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the ECS service is configured to use target scaling on memory,
-     * Compute Optimizer doesn't generate memory recommendations.
+     * <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the Amazon ECS service is configured to use target scaling on
+     * memory, Compute Optimizer doesn't generate memory recommendations.
      * </p>
      * </li>
      * </ul>
@@ -270,7 +270,7 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
      * 
      * @param autoScalingConfiguration
      *        Describes the Auto Scaling configuration methods for an Amazon ECS service. This affects the generated
-     *        recommendations. For example, if Auto Scaling is configured on a ECS service’s CPU, then Compute Optimizer
+     *        recommendations. For example, if Auto Scaling is configured on a service’s CPU, then Compute Optimizer
      *        doesn’t generate CPU size recommendations. </p>
      *        <p>
      *        The Auto Scaling configuration methods include:
@@ -278,14 +278,14 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>TARGET_TRACKING_SCALING_CPU</code> — If the ECS service is configured to use target scaling on CPU,
-     *        Compute Optimizer doesn't generate CPU recommendations.
+     *        <code>TARGET_TRACKING_SCALING_CPU</code> — If the Amazon ECS service is configured to use target scaling
+     *        on CPU, Compute Optimizer doesn't generate CPU recommendations.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the ECS service is configured to use target scaling on
-     *        memory, Compute Optimizer doesn't generate memory recommendations.
+     *        <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the Amazon ECS service is configured to use target
+     *        scaling on memory, Compute Optimizer doesn't generate memory recommendations.
      *        </p>
      *        </li>
      *        </ul>
@@ -306,8 +306,8 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
     /**
      * <p>
      * Describes the Auto Scaling configuration methods for an Amazon ECS service. This affects the generated
-     * recommendations. For example, if Auto Scaling is configured on a ECS service’s CPU, then Compute Optimizer
-     * doesn’t generate CPU size recommendations.
+     * recommendations. For example, if Auto Scaling is configured on a service’s CPU, then Compute Optimizer doesn’t
+     * generate CPU size recommendations.
      * </p>
      * <p>
      * The Auto Scaling configuration methods include:
@@ -315,14 +315,14 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <code>TARGET_TRACKING_SCALING_CPU</code> — If the ECS service is configured to use target scaling on CPU, Compute
-     * Optimizer doesn't generate CPU recommendations.
+     * <code>TARGET_TRACKING_SCALING_CPU</code> — If the Amazon ECS service is configured to use target scaling on CPU,
+     * Compute Optimizer doesn't generate CPU recommendations.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the ECS service is configured to use target scaling on memory,
-     * Compute Optimizer doesn't generate memory recommendations.
+     * <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the Amazon ECS service is configured to use target scaling on
+     * memory, Compute Optimizer doesn't generate memory recommendations.
      * </p>
      * </li>
      * </ul>
@@ -336,22 +336,22 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @return Describes the Auto Scaling configuration methods for an Amazon ECS service. This affects the generated
-     *         recommendations. For example, if Auto Scaling is configured on a ECS service’s CPU, then Compute
-     *         Optimizer doesn’t generate CPU size recommendations. </p>
+     *         recommendations. For example, if Auto Scaling is configured on a service’s CPU, then Compute Optimizer
+     *         doesn’t generate CPU size recommendations. </p>
      *         <p>
      *         The Auto Scaling configuration methods include:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>TARGET_TRACKING_SCALING_CPU</code> — If the ECS service is configured to use target scaling on CPU,
-     *         Compute Optimizer doesn't generate CPU recommendations.
+     *         <code>TARGET_TRACKING_SCALING_CPU</code> — If the Amazon ECS service is configured to use target scaling
+     *         on CPU, Compute Optimizer doesn't generate CPU recommendations.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the ECS service is configured to use target scaling on
-     *         memory, Compute Optimizer doesn't generate memory recommendations.
+     *         <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the Amazon ECS service is configured to use target
+     *         scaling on memory, Compute Optimizer doesn't generate memory recommendations.
      *         </p>
      *         </li>
      *         </ul>
@@ -372,8 +372,8 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
     /**
      * <p>
      * Describes the Auto Scaling configuration methods for an Amazon ECS service. This affects the generated
-     * recommendations. For example, if Auto Scaling is configured on a ECS service’s CPU, then Compute Optimizer
-     * doesn’t generate CPU size recommendations.
+     * recommendations. For example, if Auto Scaling is configured on a service’s CPU, then Compute Optimizer doesn’t
+     * generate CPU size recommendations.
      * </p>
      * <p>
      * The Auto Scaling configuration methods include:
@@ -381,14 +381,14 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <code>TARGET_TRACKING_SCALING_CPU</code> — If the ECS service is configured to use target scaling on CPU, Compute
-     * Optimizer doesn't generate CPU recommendations.
+     * <code>TARGET_TRACKING_SCALING_CPU</code> — If the Amazon ECS service is configured to use target scaling on CPU,
+     * Compute Optimizer doesn't generate CPU recommendations.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the ECS service is configured to use target scaling on memory,
-     * Compute Optimizer doesn't generate memory recommendations.
+     * <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the Amazon ECS service is configured to use target scaling on
+     * memory, Compute Optimizer doesn't generate memory recommendations.
      * </p>
      * </li>
      * </ul>
@@ -403,7 +403,7 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
      * 
      * @param autoScalingConfiguration
      *        Describes the Auto Scaling configuration methods for an Amazon ECS service. This affects the generated
-     *        recommendations. For example, if Auto Scaling is configured on a ECS service’s CPU, then Compute Optimizer
+     *        recommendations. For example, if Auto Scaling is configured on a service’s CPU, then Compute Optimizer
      *        doesn’t generate CPU size recommendations. </p>
      *        <p>
      *        The Auto Scaling configuration methods include:
@@ -411,14 +411,14 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>TARGET_TRACKING_SCALING_CPU</code> — If the ECS service is configured to use target scaling on CPU,
-     *        Compute Optimizer doesn't generate CPU recommendations.
+     *        <code>TARGET_TRACKING_SCALING_CPU</code> — If the Amazon ECS service is configured to use target scaling
+     *        on CPU, Compute Optimizer doesn't generate CPU recommendations.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the ECS service is configured to use target scaling on
-     *        memory, Compute Optimizer doesn't generate memory recommendations.
+     *        <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the Amazon ECS service is configured to use target
+     *        scaling on memory, Compute Optimizer doesn't generate memory recommendations.
      *        </p>
      *        </li>
      *        </ul>
@@ -441,8 +441,8 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
     /**
      * <p>
      * Describes the Auto Scaling configuration methods for an Amazon ECS service. This affects the generated
-     * recommendations. For example, if Auto Scaling is configured on a ECS service’s CPU, then Compute Optimizer
-     * doesn’t generate CPU size recommendations.
+     * recommendations. For example, if Auto Scaling is configured on a service’s CPU, then Compute Optimizer doesn’t
+     * generate CPU size recommendations.
      * </p>
      * <p>
      * The Auto Scaling configuration methods include:
@@ -450,14 +450,14 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
      * <ul>
      * <li>
      * <p>
-     * <code>TARGET_TRACKING_SCALING_CPU</code> — If the ECS service is configured to use target scaling on CPU, Compute
-     * Optimizer doesn't generate CPU recommendations.
+     * <code>TARGET_TRACKING_SCALING_CPU</code> — If the Amazon ECS service is configured to use target scaling on CPU,
+     * Compute Optimizer doesn't generate CPU recommendations.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the ECS service is configured to use target scaling on memory,
-     * Compute Optimizer doesn't generate memory recommendations.
+     * <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the Amazon ECS service is configured to use target scaling on
+     * memory, Compute Optimizer doesn't generate memory recommendations.
      * </p>
      * </li>
      * </ul>
@@ -472,7 +472,7 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
      * 
      * @param autoScalingConfiguration
      *        Describes the Auto Scaling configuration methods for an Amazon ECS service. This affects the generated
-     *        recommendations. For example, if Auto Scaling is configured on a ECS service’s CPU, then Compute Optimizer
+     *        recommendations. For example, if Auto Scaling is configured on a service’s CPU, then Compute Optimizer
      *        doesn’t generate CPU size recommendations. </p>
      *        <p>
      *        The Auto Scaling configuration methods include:
@@ -480,14 +480,14 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>TARGET_TRACKING_SCALING_CPU</code> — If the ECS service is configured to use target scaling on CPU,
-     *        Compute Optimizer doesn't generate CPU recommendations.
+     *        <code>TARGET_TRACKING_SCALING_CPU</code> — If the Amazon ECS service is configured to use target scaling
+     *        on CPU, Compute Optimizer doesn't generate CPU recommendations.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the ECS service is configured to use target scaling on
-     *        memory, Compute Optimizer doesn't generate memory recommendations.
+     *        <code>TARGET_TRACKING_SCALING_MEMORY</code> — If the Amazon ECS service is configured to use target
+     *        scaling on memory, Compute Optimizer doesn't generate memory recommendations.
      *        </p>
      *        </li>
      *        </ul>
@@ -509,11 +509,11 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The task definition ARN used by the tasks in the ECS service.
+     * The task definition ARN used by the tasks in the Amazon ECS service.
      * </p>
      * 
      * @param taskDefinitionArn
-     *        The task definition ARN used by the tasks in the ECS service.
+     *        The task definition ARN used by the tasks in the Amazon ECS service.
      */
 
     public void setTaskDefinitionArn(String taskDefinitionArn) {
@@ -522,10 +522,10 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The task definition ARN used by the tasks in the ECS service.
+     * The task definition ARN used by the tasks in the Amazon ECS service.
      * </p>
      * 
-     * @return The task definition ARN used by the tasks in the ECS service.
+     * @return The task definition ARN used by the tasks in the Amazon ECS service.
      */
 
     public String getTaskDefinitionArn() {
@@ -534,11 +534,11 @@ public class ServiceConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The task definition ARN used by the tasks in the ECS service.
+     * The task definition ARN used by the tasks in the Amazon ECS service.
      * </p>
      * 
      * @param taskDefinitionArn
-     *        The task definition ARN used by the tasks in the ECS service.
+     *        The task definition ARN used by the tasks in the Amazon ECS service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

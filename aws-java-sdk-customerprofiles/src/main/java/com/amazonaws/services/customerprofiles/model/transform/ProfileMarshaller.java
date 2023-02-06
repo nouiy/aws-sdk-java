@@ -75,6 +75,10 @@ public class ProfileMarshaller {
             .marshallLocationName("Attributes").build();
     private static final MarshallingInfo<List> FOUNDBYITEMS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("FoundByItems").build();
+    private static final MarshallingInfo<String> PARTYTYPESTRING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PartyTypeString").build();
+    private static final MarshallingInfo<String> GENDERSTRING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GenderString").build();
 
     private static final ProfileMarshaller instance = new ProfileMarshaller();
 
@@ -115,6 +119,8 @@ public class ProfileMarshaller {
             protocolMarshaller.marshall(profile.getBillingAddress(), BILLINGADDRESS_BINDING);
             protocolMarshaller.marshall(profile.getAttributes(), ATTRIBUTES_BINDING);
             protocolMarshaller.marshall(profile.getFoundByItems(), FOUNDBYITEMS_BINDING);
+            protocolMarshaller.marshall(profile.getPartyTypeString(), PARTYTYPESTRING_BINDING);
+            protocolMarshaller.marshall(profile.getGenderString(), GENDERSTRING_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

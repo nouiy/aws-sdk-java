@@ -26,7 +26,8 @@ public enum InferredWorkloadType {
     Memcached("Memcached"),
     Nginx("Nginx"),
     PostgreSql("PostgreSql"),
-    Redis("Redis");
+    Redis("Redis"),
+    Kafka("Kafka");
 
     private String value;
 

@@ -22,8 +22,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Describes the projected metrics of an Amazon ECS service recommendation option.
  * </p>
  * <p>
- * To determine the performance difference between your current ECS service and the recommended option, compare the
- * metric data of your service against its projected metric data.
+ * To determine the performance difference between your current Amazon ECS service and the recommended option, compare
+ * the metric data of your service against its projected metric data.
  * </p>
  * 
  * @see <a
@@ -35,13 +35,13 @@ public class ECSServiceRecommendedOptionProjectedMetric implements Serializable,
 
     /**
      * <p>
-     * The recommended CPU size for the ECS service.
+     * The recommended CPU size for the Amazon ECS service.
      * </p>
      */
     private Integer recommendedCpuUnits;
     /**
      * <p>
-     * The recommended memory size for the ECS service.
+     * The recommended memory size for the Amazon ECS service.
      * </p>
      */
     private Integer recommendedMemorySize;
@@ -54,11 +54,11 @@ public class ECSServiceRecommendedOptionProjectedMetric implements Serializable,
 
     /**
      * <p>
-     * The recommended CPU size for the ECS service.
+     * The recommended CPU size for the Amazon ECS service.
      * </p>
      * 
      * @param recommendedCpuUnits
-     *        The recommended CPU size for the ECS service.
+     *        The recommended CPU size for the Amazon ECS service.
      */
 
     public void setRecommendedCpuUnits(Integer recommendedCpuUnits) {
@@ -67,10 +67,10 @@ public class ECSServiceRecommendedOptionProjectedMetric implements Serializable,
 
     /**
      * <p>
-     * The recommended CPU size for the ECS service.
+     * The recommended CPU size for the Amazon ECS service.
      * </p>
      * 
-     * @return The recommended CPU size for the ECS service.
+     * @return The recommended CPU size for the Amazon ECS service.
      */
 
     public Integer getRecommendedCpuUnits() {
@@ -79,11 +79,11 @@ public class ECSServiceRecommendedOptionProjectedMetric implements Serializable,
 
     /**
      * <p>
-     * The recommended CPU size for the ECS service.
+     * The recommended CPU size for the Amazon ECS service.
      * </p>
      * 
      * @param recommendedCpuUnits
-     *        The recommended CPU size for the ECS service.
+     *        The recommended CPU size for the Amazon ECS service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,11 +94,11 @@ public class ECSServiceRecommendedOptionProjectedMetric implements Serializable,
 
     /**
      * <p>
-     * The recommended memory size for the ECS service.
+     * The recommended memory size for the Amazon ECS service.
      * </p>
      * 
      * @param recommendedMemorySize
-     *        The recommended memory size for the ECS service.
+     *        The recommended memory size for the Amazon ECS service.
      */
 
     public void setRecommendedMemorySize(Integer recommendedMemorySize) {
@@ -107,10 +107,10 @@ public class ECSServiceRecommendedOptionProjectedMetric implements Serializable,
 
     /**
      * <p>
-     * The recommended memory size for the ECS service.
+     * The recommended memory size for the Amazon ECS service.
      * </p>
      * 
-     * @return The recommended memory size for the ECS service.
+     * @return The recommended memory size for the Amazon ECS service.
      */
 
     public Integer getRecommendedMemorySize() {
@@ -119,11 +119,11 @@ public class ECSServiceRecommendedOptionProjectedMetric implements Serializable,
 
     /**
      * <p>
-     * The recommended memory size for the ECS service.
+     * The recommended memory size for the Amazon ECS service.
      * </p>
      * 
      * @param recommendedMemorySize
-     *        The recommended memory size for the ECS service.
+     *        The recommended memory size for the Amazon ECS service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

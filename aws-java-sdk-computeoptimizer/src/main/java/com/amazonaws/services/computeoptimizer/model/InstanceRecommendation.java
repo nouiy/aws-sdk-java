@@ -328,6 +328,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <code>Redis</code> - Infers that Redis might be running on the instance.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      */
     private java.util.List<String> inferredWorkloadTypes;
@@ -2845,6 +2850,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <code>Redis</code> - Infers that Redis might be running on the instance.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The applications that might be running on the instance as inferred by Compute Optimizer.</p>
@@ -2885,6 +2895,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *         <li>
      *         <p>
      *         <code>Redis</code> - Infers that Redis might be running on the instance.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Kafka</code> - Infers that Kafka might be running on the instance.
      *         </p>
      *         </li>
      * @see InferredWorkloadType
@@ -2937,6 +2952,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <code>Redis</code> - Infers that Redis might be running on the instance.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param inferredWorkloadTypes
@@ -2978,6 +2998,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <li>
      *        <p>
      *        <code>Redis</code> - Infers that Redis might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Kafka</code> - Infers that Kafka might be running on the instance.
      *        </p>
      *        </li>
      * @see InferredWorkloadType
@@ -3035,6 +3060,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <code>Redis</code> - Infers that Redis might be running on the instance.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -3081,6 +3111,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <li>
      *        <p>
      *        <code>Redis</code> - Infers that Redis might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Kafka</code> - Infers that Kafka might be running on the instance.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -3140,6 +3175,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <code>Redis</code> - Infers that Redis might be running on the instance.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param inferredWorkloadTypes
@@ -3181,6 +3221,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <li>
      *        <p>
      *        <code>Redis</code> - Infers that Redis might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Kafka</code> - Infers that Kafka might be running on the instance.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -3235,6 +3280,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * <code>Redis</code> - Infers that Redis might be running on the instance.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>Kafka</code> - Infers that Kafka might be running on the instance.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param inferredWorkloadTypes
@@ -3276,6 +3326,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      *        <li>
      *        <p>
      *        <code>Redis</code> - Infers that Redis might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Kafka</code> - Infers that Kafka might be running on the instance.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

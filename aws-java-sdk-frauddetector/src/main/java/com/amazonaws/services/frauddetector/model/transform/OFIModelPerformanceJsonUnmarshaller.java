@@ -52,6 +52,10 @@ public class OFIModelPerformanceJsonUnmarshaller implements Unmarshaller<OFIMode
                     context.nextToken();
                     oFIModelPerformance.setAuc(context.getUnmarshaller(Float.class).unmarshall(context));
                 }
+                if (context.testExpression("uncertaintyRange", targetDepth)) {
+                    context.nextToken();
+                    oFIModelPerformance.setUncertaintyRange(UncertaintyRangeJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

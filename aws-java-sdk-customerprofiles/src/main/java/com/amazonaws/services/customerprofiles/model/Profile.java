@@ -195,6 +195,18 @@ public class Profile implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<FoundByKeyValue> foundByItems;
+    /**
+     * <p>
+     * An alternative to PartyType which accepts any string as input.
+     * </p>
+     */
+    private String partyTypeString;
+    /**
+     * <p>
+     * An alternative to Gender which accepts any string as input.
+     * </p>
+     */
+    private String genderString;
 
     /**
      * <p>
@@ -325,7 +337,7 @@ public class Profile implements Serializable, Cloneable, StructuredPojo {
      *        The type of profile used to describe the customer.
      * @see PartyType
      */
-
+    @Deprecated
     public void setPartyType(String partyType) {
         this.partyType = partyType;
     }
@@ -338,7 +350,7 @@ public class Profile implements Serializable, Cloneable, StructuredPojo {
      * @return The type of profile used to describe the customer.
      * @see PartyType
      */
-
+    @Deprecated
     public String getPartyType() {
         return this.partyType;
     }
@@ -353,7 +365,7 @@ public class Profile implements Serializable, Cloneable, StructuredPojo {
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PartyType
      */
-
+    @Deprecated
     public Profile withPartyType(String partyType) {
         setPartyType(partyType);
         return this;
@@ -369,7 +381,7 @@ public class Profile implements Serializable, Cloneable, StructuredPojo {
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PartyType
      */
-
+    @Deprecated
     public Profile withPartyType(PartyType partyType) {
         this.partyType = partyType.toString();
         return this;
@@ -584,7 +596,7 @@ public class Profile implements Serializable, Cloneable, StructuredPojo {
      *        The gender with which the customer identifies.
      * @see Gender
      */
-
+    @Deprecated
     public void setGender(String gender) {
         this.gender = gender;
     }
@@ -597,7 +609,7 @@ public class Profile implements Serializable, Cloneable, StructuredPojo {
      * @return The gender with which the customer identifies.
      * @see Gender
      */
-
+    @Deprecated
     public String getGender() {
         return this.gender;
     }
@@ -612,7 +624,7 @@ public class Profile implements Serializable, Cloneable, StructuredPojo {
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Gender
      */
-
+    @Deprecated
     public Profile withGender(String gender) {
         setGender(gender);
         return this;
@@ -628,7 +640,7 @@ public class Profile implements Serializable, Cloneable, StructuredPojo {
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Gender
      */
-
+    @Deprecated
     public Profile withGender(Gender gender) {
         this.gender = gender.toString();
         return this;
@@ -1446,6 +1458,86 @@ public class Profile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * An alternative to PartyType which accepts any string as input.
+     * </p>
+     * 
+     * @param partyTypeString
+     *        An alternative to PartyType which accepts any string as input.
+     */
+
+    public void setPartyTypeString(String partyTypeString) {
+        this.partyTypeString = partyTypeString;
+    }
+
+    /**
+     * <p>
+     * An alternative to PartyType which accepts any string as input.
+     * </p>
+     * 
+     * @return An alternative to PartyType which accepts any string as input.
+     */
+
+    public String getPartyTypeString() {
+        return this.partyTypeString;
+    }
+
+    /**
+     * <p>
+     * An alternative to PartyType which accepts any string as input.
+     * </p>
+     * 
+     * @param partyTypeString
+     *        An alternative to PartyType which accepts any string as input.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Profile withPartyTypeString(String partyTypeString) {
+        setPartyTypeString(partyTypeString);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An alternative to Gender which accepts any string as input.
+     * </p>
+     * 
+     * @param genderString
+     *        An alternative to Gender which accepts any string as input.
+     */
+
+    public void setGenderString(String genderString) {
+        this.genderString = genderString;
+    }
+
+    /**
+     * <p>
+     * An alternative to Gender which accepts any string as input.
+     * </p>
+     * 
+     * @return An alternative to Gender which accepts any string as input.
+     */
+
+    public String getGenderString() {
+        return this.genderString;
+    }
+
+    /**
+     * <p>
+     * An alternative to Gender which accepts any string as input.
+     * </p>
+     * 
+     * @param genderString
+     *        An alternative to Gender which accepts any string as input.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Profile withGenderString(String genderString) {
+        setGenderString(genderString);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1502,7 +1594,11 @@ public class Profile implements Serializable, Cloneable, StructuredPojo {
         if (getAttributes() != null)
             sb.append("Attributes: ").append(getAttributes()).append(",");
         if (getFoundByItems() != null)
-            sb.append("FoundByItems: ").append(getFoundByItems());
+            sb.append("FoundByItems: ").append(getFoundByItems()).append(",");
+        if (getPartyTypeString() != null)
+            sb.append("PartyTypeString: ").append(getPartyTypeString()).append(",");
+        if (getGenderString() != null)
+            sb.append("GenderString: ").append(getGenderString());
         sb.append("}");
         return sb.toString();
     }
@@ -1609,6 +1705,14 @@ public class Profile implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getFoundByItems() != null && other.getFoundByItems().equals(this.getFoundByItems()) == false)
             return false;
+        if (other.getPartyTypeString() == null ^ this.getPartyTypeString() == null)
+            return false;
+        if (other.getPartyTypeString() != null && other.getPartyTypeString().equals(this.getPartyTypeString()) == false)
+            return false;
+        if (other.getGenderString() == null ^ this.getGenderString() == null)
+            return false;
+        if (other.getGenderString() != null && other.getGenderString().equals(this.getGenderString()) == false)
+            return false;
         return true;
     }
 
@@ -1640,6 +1744,8 @@ public class Profile implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getBillingAddress() == null) ? 0 : getBillingAddress().hashCode());
         hashCode = prime * hashCode + ((getAttributes() == null) ? 0 : getAttributes().hashCode());
         hashCode = prime * hashCode + ((getFoundByItems() == null) ? 0 : getFoundByItems().hashCode());
+        hashCode = prime * hashCode + ((getPartyTypeString() == null) ? 0 : getPartyTypeString().hashCode());
+        hashCode = prime * hashCode + ((getGenderString() == null) ? 0 : getGenderString().hashCode());
         return hashCode;
     }
 

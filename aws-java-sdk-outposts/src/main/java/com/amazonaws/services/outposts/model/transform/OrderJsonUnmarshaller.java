@@ -82,6 +82,10 @@ public class OrderJsonUnmarshaller implements Unmarshaller<Order, JsonUnmarshall
                     context.nextToken();
                     order.setPaymentTerm(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("OrderType", targetDepth)) {
+                    context.nextToken();
+                    order.setOrderType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

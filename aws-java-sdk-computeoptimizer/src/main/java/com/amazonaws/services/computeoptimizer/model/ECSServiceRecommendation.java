@@ -30,7 +30,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the current ECS service.
+     * The Amazon Resource Name (ARN) of the current Amazon ECS service.
      * </p>
      * <p>
      * The following is the format of the ARN:
@@ -42,31 +42,31 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
     private String serviceArn;
     /**
      * <p>
-     * The Amazon Web Services account ID of the ECS service.
+     * The Amazon Web Services account ID of the Amazon ECS service.
      * </p>
      */
     private String accountId;
     /**
      * <p>
-     * The configuration of the current ECS service.
+     * The configuration of the current Amazon ECS service.
      * </p>
      */
     private ServiceConfiguration currentServiceConfiguration;
     /**
      * <p>
-     * An array of objects that describe the utilization metrics of the ECS service.
+     * An array of objects that describe the utilization metrics of the Amazon ECS service.
      * </p>
      */
     private java.util.List<ECSServiceUtilizationMetric> utilizationMetrics;
     /**
      * <p>
-     * The number of days the ECS service utilization metrics were analyzed.
+     * The number of days the Amazon ECS service utilization metrics were analyzed.
      * </p>
      */
     private Double lookbackPeriodInDays;
     /**
      * <p>
-     * The launch type the ECS service is using.
+     * The launch type the Amazon ECS service is using.
      * </p>
      * <note>
      * <p>
@@ -77,35 +77,35 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
     private String launchType;
     /**
      * <p>
-     * The timestamp of when the ECS service recommendation was last generated.
+     * The timestamp of when the Amazon ECS service recommendation was last generated.
      * </p>
      */
     private java.util.Date lastRefreshTimestamp;
     /**
      * <p>
-     * The finding classification of an ECS service.
+     * The finding classification of an Amazon ECS service.
      * </p>
      * <p>
-     * Findings for ECS services include:
+     * Findings for Amazon ECS services include:
      * </p>
      * <ul>
      * <li>
      * <p>
      * <b> <code>Underprovisioned</code> </b> — When Compute Optimizer detects that there’s not enough memory or CPU, an
-     * ECS service is considered under-provisioned. An under-provisioned ECS service might result in poor application
+     * Amazon ECS service is considered under-provisioned. An under-provisioned service might result in poor application
      * performance.
      * </p>
      * </li>
      * <li>
      * <p>
      * <b> <code>Overprovisioned</code> </b> — When Compute Optimizer detects that there’s excessive memory or CPU, an
-     * ECS service is considered over-provisioned. An over-provisioned ECS service might result in additional
+     * Amazon ECS service is considered over-provisioned. An over-provisioned service might result in additional
      * infrastructure costs.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>Optimized</code> </b> — When both the CPU and memory of your ECS service meet the performance
+     * <b> <code>Optimized</code> </b> — When both the CPU and memory of your Amazon ECS service meet the performance
      * requirements of your workload, the service is considered optimized.
      * </p>
      * </li>
@@ -114,36 +114,36 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
     private String finding;
     /**
      * <p>
-     * The reason for the finding classification of an ECS service.
+     * The reason for the finding classification of an Amazon ECS service.
      * </p>
      * <p>
-     * Finding reason codes for ECS services include:
+     * Finding reason codes for Amazon ECS services include:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b> <code>CPUUnderprovisioned</code> </b> — The ECS service CPU configuration can be sized up to enhance the
+     * <b> <code>CPUUnderprovisioned</code> </b> — The service CPU configuration can be sized up to enhance the
      * performance of your workload. This is identified by analyzing the <code>CPUUtilization</code> metric of the
      * current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>CPUOverprovisioned</code> </b> — The ECS service CPU configuration can be sized down while still
-     * meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>CPUUtilization</code> metric of the current service during the look-back period.
+     * <b> <code>CPUOverprovisioned</code> </b> — The service CPU configuration can be sized down while still meeting
+     * the performance requirements of your workload. This is identified by analyzing the <code>CPUUtilization</code>
+     * metric of the current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>MemoryUnderprovisioned</code> </b> — The ECS service memory configuration can be sized up to enhance
-     * the performance of your workload. This is identified by analyzing the <code>MemoryUtilization</code> metric of
-     * the current service during the look-back period.
+     * <b> <code>MemoryUnderprovisioned</code> </b> — The service memory configuration can be sized up to enhance the
+     * performance of your workload. This is identified by analyzing the <code>MemoryUtilization</code> metric of the
+     * current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>MemoryOverprovisioned</code> </b> — The ECS service memory configuration can be sized down while still
+     * <b> <code>MemoryOverprovisioned</code> </b> — The service memory configuration can be sized down while still
      * meeting the performance requirements of your workload. This is identified by analyzing the
      * <code>MemoryUtilization</code> metric of the current service during the look-back period.
      * </p>
@@ -153,21 +153,21 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
     private java.util.List<String> findingReasonCodes;
     /**
      * <p>
-     * An array of objects that describe the recommendation options for the ECS service.
+     * An array of objects that describe the recommendation options for the Amazon ECS service.
      * </p>
      */
     private java.util.List<ECSServiceRecommendationOption> serviceRecommendationOptions;
     /**
      * <p>
-     * The risk of the current ECS service not meeting the performance needs of its workloads. The higher the risk, the
-     * more likely the current service can't meet the performance requirements of its workload.
+     * The risk of the current Amazon ECS service not meeting the performance needs of its workloads. The higher the
+     * risk, the more likely the current service can't meet the performance requirements of its workload.
      * </p>
      */
     private String currentPerformanceRisk;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the current ECS service.
+     * The Amazon Resource Name (ARN) of the current Amazon ECS service.
      * </p>
      * <p>
      * The following is the format of the ARN:
@@ -177,7 +177,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param serviceArn
-     *        The Amazon Resource Name (ARN) of the current ECS service. </p>
+     *        The Amazon Resource Name (ARN) of the current Amazon ECS service. </p>
      *        <p>
      *        The following is the format of the ARN:
      *        </p>
@@ -191,7 +191,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the current ECS service.
+     * The Amazon Resource Name (ARN) of the current Amazon ECS service.
      * </p>
      * <p>
      * The following is the format of the ARN:
@@ -200,7 +200,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
      * <code>arn:aws:ecs:region:aws_account_id:service/cluster-name/service-name</code>
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the current ECS service. </p>
+     * @return The Amazon Resource Name (ARN) of the current Amazon ECS service. </p>
      *         <p>
      *         The following is the format of the ARN:
      *         </p>
@@ -214,7 +214,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the current ECS service.
+     * The Amazon Resource Name (ARN) of the current Amazon ECS service.
      * </p>
      * <p>
      * The following is the format of the ARN:
@@ -224,7 +224,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param serviceArn
-     *        The Amazon Resource Name (ARN) of the current ECS service. </p>
+     *        The Amazon Resource Name (ARN) of the current Amazon ECS service. </p>
      *        <p>
      *        The following is the format of the ARN:
      *        </p>
@@ -240,11 +240,11 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Web Services account ID of the ECS service.
+     * The Amazon Web Services account ID of the Amazon ECS service.
      * </p>
      * 
      * @param accountId
-     *        The Amazon Web Services account ID of the ECS service.
+     *        The Amazon Web Services account ID of the Amazon ECS service.
      */
 
     public void setAccountId(String accountId) {
@@ -253,10 +253,10 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Web Services account ID of the ECS service.
+     * The Amazon Web Services account ID of the Amazon ECS service.
      * </p>
      * 
-     * @return The Amazon Web Services account ID of the ECS service.
+     * @return The Amazon Web Services account ID of the Amazon ECS service.
      */
 
     public String getAccountId() {
@@ -265,11 +265,11 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Web Services account ID of the ECS service.
+     * The Amazon Web Services account ID of the Amazon ECS service.
      * </p>
      * 
      * @param accountId
-     *        The Amazon Web Services account ID of the ECS service.
+     *        The Amazon Web Services account ID of the Amazon ECS service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -280,11 +280,11 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The configuration of the current ECS service.
+     * The configuration of the current Amazon ECS service.
      * </p>
      * 
      * @param currentServiceConfiguration
-     *        The configuration of the current ECS service.
+     *        The configuration of the current Amazon ECS service.
      */
 
     public void setCurrentServiceConfiguration(ServiceConfiguration currentServiceConfiguration) {
@@ -293,10 +293,10 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The configuration of the current ECS service.
+     * The configuration of the current Amazon ECS service.
      * </p>
      * 
-     * @return The configuration of the current ECS service.
+     * @return The configuration of the current Amazon ECS service.
      */
 
     public ServiceConfiguration getCurrentServiceConfiguration() {
@@ -305,11 +305,11 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The configuration of the current ECS service.
+     * The configuration of the current Amazon ECS service.
      * </p>
      * 
      * @param currentServiceConfiguration
-     *        The configuration of the current ECS service.
+     *        The configuration of the current Amazon ECS service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -320,10 +320,10 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of objects that describe the utilization metrics of the ECS service.
+     * An array of objects that describe the utilization metrics of the Amazon ECS service.
      * </p>
      * 
-     * @return An array of objects that describe the utilization metrics of the ECS service.
+     * @return An array of objects that describe the utilization metrics of the Amazon ECS service.
      */
 
     public java.util.List<ECSServiceUtilizationMetric> getUtilizationMetrics() {
@@ -332,11 +332,11 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of objects that describe the utilization metrics of the ECS service.
+     * An array of objects that describe the utilization metrics of the Amazon ECS service.
      * </p>
      * 
      * @param utilizationMetrics
-     *        An array of objects that describe the utilization metrics of the ECS service.
+     *        An array of objects that describe the utilization metrics of the Amazon ECS service.
      */
 
     public void setUtilizationMetrics(java.util.Collection<ECSServiceUtilizationMetric> utilizationMetrics) {
@@ -350,7 +350,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of objects that describe the utilization metrics of the ECS service.
+     * An array of objects that describe the utilization metrics of the Amazon ECS service.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -359,7 +359,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param utilizationMetrics
-     *        An array of objects that describe the utilization metrics of the ECS service.
+     *        An array of objects that describe the utilization metrics of the Amazon ECS service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -375,11 +375,11 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of objects that describe the utilization metrics of the ECS service.
+     * An array of objects that describe the utilization metrics of the Amazon ECS service.
      * </p>
      * 
      * @param utilizationMetrics
-     *        An array of objects that describe the utilization metrics of the ECS service.
+     *        An array of objects that describe the utilization metrics of the Amazon ECS service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -390,11 +390,11 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The number of days the ECS service utilization metrics were analyzed.
+     * The number of days the Amazon ECS service utilization metrics were analyzed.
      * </p>
      * 
      * @param lookbackPeriodInDays
-     *        The number of days the ECS service utilization metrics were analyzed.
+     *        The number of days the Amazon ECS service utilization metrics were analyzed.
      */
 
     public void setLookbackPeriodInDays(Double lookbackPeriodInDays) {
@@ -403,10 +403,10 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The number of days the ECS service utilization metrics were analyzed.
+     * The number of days the Amazon ECS service utilization metrics were analyzed.
      * </p>
      * 
-     * @return The number of days the ECS service utilization metrics were analyzed.
+     * @return The number of days the Amazon ECS service utilization metrics were analyzed.
      */
 
     public Double getLookbackPeriodInDays() {
@@ -415,11 +415,11 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The number of days the ECS service utilization metrics were analyzed.
+     * The number of days the Amazon ECS service utilization metrics were analyzed.
      * </p>
      * 
      * @param lookbackPeriodInDays
-     *        The number of days the ECS service utilization metrics were analyzed.
+     *        The number of days the Amazon ECS service utilization metrics were analyzed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -430,7 +430,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The launch type the ECS service is using.
+     * The launch type the Amazon ECS service is using.
      * </p>
      * <note>
      * <p>
@@ -439,7 +439,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
      * </note>
      * 
      * @param launchType
-     *        The launch type the ECS service is using. </p> <note>
+     *        The launch type the Amazon ECS service is using. </p> <note>
      *        <p>
      *        Compute Optimizer only supports the Fargate launch type.
      *        </p>
@@ -452,7 +452,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The launch type the ECS service is using.
+     * The launch type the Amazon ECS service is using.
      * </p>
      * <note>
      * <p>
@@ -460,7 +460,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
      * </p>
      * </note>
      * 
-     * @return The launch type the ECS service is using. </p> <note>
+     * @return The launch type the Amazon ECS service is using. </p> <note>
      *         <p>
      *         Compute Optimizer only supports the Fargate launch type.
      *         </p>
@@ -473,7 +473,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The launch type the ECS service is using.
+     * The launch type the Amazon ECS service is using.
      * </p>
      * <note>
      * <p>
@@ -482,7 +482,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
      * </note>
      * 
      * @param launchType
-     *        The launch type the ECS service is using. </p> <note>
+     *        The launch type the Amazon ECS service is using. </p> <note>
      *        <p>
      *        Compute Optimizer only supports the Fargate launch type.
      *        </p>
@@ -497,7 +497,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The launch type the ECS service is using.
+     * The launch type the Amazon ECS service is using.
      * </p>
      * <note>
      * <p>
@@ -506,7 +506,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
      * </note>
      * 
      * @param launchType
-     *        The launch type the ECS service is using. </p> <note>
+     *        The launch type the Amazon ECS service is using. </p> <note>
      *        <p>
      *        Compute Optimizer only supports the Fargate launch type.
      *        </p>
@@ -521,11 +521,11 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The timestamp of when the ECS service recommendation was last generated.
+     * The timestamp of when the Amazon ECS service recommendation was last generated.
      * </p>
      * 
      * @param lastRefreshTimestamp
-     *        The timestamp of when the ECS service recommendation was last generated.
+     *        The timestamp of when the Amazon ECS service recommendation was last generated.
      */
 
     public void setLastRefreshTimestamp(java.util.Date lastRefreshTimestamp) {
@@ -534,10 +534,10 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The timestamp of when the ECS service recommendation was last generated.
+     * The timestamp of when the Amazon ECS service recommendation was last generated.
      * </p>
      * 
-     * @return The timestamp of when the ECS service recommendation was last generated.
+     * @return The timestamp of when the Amazon ECS service recommendation was last generated.
      */
 
     public java.util.Date getLastRefreshTimestamp() {
@@ -546,11 +546,11 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The timestamp of when the ECS service recommendation was last generated.
+     * The timestamp of when the Amazon ECS service recommendation was last generated.
      * </p>
      * 
      * @param lastRefreshTimestamp
-     *        The timestamp of when the ECS service recommendation was last generated.
+     *        The timestamp of when the Amazon ECS service recommendation was last generated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -561,58 +561,58 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The finding classification of an ECS service.
+     * The finding classification of an Amazon ECS service.
      * </p>
      * <p>
-     * Findings for ECS services include:
+     * Findings for Amazon ECS services include:
      * </p>
      * <ul>
      * <li>
      * <p>
      * <b> <code>Underprovisioned</code> </b> — When Compute Optimizer detects that there’s not enough memory or CPU, an
-     * ECS service is considered under-provisioned. An under-provisioned ECS service might result in poor application
+     * Amazon ECS service is considered under-provisioned. An under-provisioned service might result in poor application
      * performance.
      * </p>
      * </li>
      * <li>
      * <p>
      * <b> <code>Overprovisioned</code> </b> — When Compute Optimizer detects that there’s excessive memory or CPU, an
-     * ECS service is considered over-provisioned. An over-provisioned ECS service might result in additional
+     * Amazon ECS service is considered over-provisioned. An over-provisioned service might result in additional
      * infrastructure costs.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>Optimized</code> </b> — When both the CPU and memory of your ECS service meet the performance
+     * <b> <code>Optimized</code> </b> — When both the CPU and memory of your Amazon ECS service meet the performance
      * requirements of your workload, the service is considered optimized.
      * </p>
      * </li>
      * </ul>
      * 
      * @param finding
-     *        The finding classification of an ECS service. </p>
+     *        The finding classification of an Amazon ECS service. </p>
      *        <p>
-     *        Findings for ECS services include:
+     *        Findings for Amazon ECS services include:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
      *        <b> <code>Underprovisioned</code> </b> — When Compute Optimizer detects that there’s not enough memory or
-     *        CPU, an ECS service is considered under-provisioned. An under-provisioned ECS service might result in poor
-     *        application performance.
+     *        CPU, an Amazon ECS service is considered under-provisioned. An under-provisioned service might result in
+     *        poor application performance.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <b> <code>Overprovisioned</code> </b> — When Compute Optimizer detects that there’s excessive memory or
-     *        CPU, an ECS service is considered over-provisioned. An over-provisioned ECS service might result in
+     *        CPU, an Amazon ECS service is considered over-provisioned. An over-provisioned service might result in
      *        additional infrastructure costs.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>Optimized</code> </b> — When both the CPU and memory of your ECS service meet the performance
-     *        requirements of your workload, the service is considered optimized.
+     *        <b> <code>Optimized</code> </b> — When both the CPU and memory of your Amazon ECS service meet the
+     *        performance requirements of your workload, the service is considered optimized.
      *        </p>
      *        </li>
      * @see ECSServiceRecommendationFinding
@@ -624,57 +624,57 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The finding classification of an ECS service.
+     * The finding classification of an Amazon ECS service.
      * </p>
      * <p>
-     * Findings for ECS services include:
+     * Findings for Amazon ECS services include:
      * </p>
      * <ul>
      * <li>
      * <p>
      * <b> <code>Underprovisioned</code> </b> — When Compute Optimizer detects that there’s not enough memory or CPU, an
-     * ECS service is considered under-provisioned. An under-provisioned ECS service might result in poor application
+     * Amazon ECS service is considered under-provisioned. An under-provisioned service might result in poor application
      * performance.
      * </p>
      * </li>
      * <li>
      * <p>
      * <b> <code>Overprovisioned</code> </b> — When Compute Optimizer detects that there’s excessive memory or CPU, an
-     * ECS service is considered over-provisioned. An over-provisioned ECS service might result in additional
+     * Amazon ECS service is considered over-provisioned. An over-provisioned service might result in additional
      * infrastructure costs.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>Optimized</code> </b> — When both the CPU and memory of your ECS service meet the performance
+     * <b> <code>Optimized</code> </b> — When both the CPU and memory of your Amazon ECS service meet the performance
      * requirements of your workload, the service is considered optimized.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The finding classification of an ECS service. </p>
+     * @return The finding classification of an Amazon ECS service. </p>
      *         <p>
-     *         Findings for ECS services include:
+     *         Findings for Amazon ECS services include:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
      *         <b> <code>Underprovisioned</code> </b> — When Compute Optimizer detects that there’s not enough memory or
-     *         CPU, an ECS service is considered under-provisioned. An under-provisioned ECS service might result in
+     *         CPU, an Amazon ECS service is considered under-provisioned. An under-provisioned service might result in
      *         poor application performance.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <b> <code>Overprovisioned</code> </b> — When Compute Optimizer detects that there’s excessive memory or
-     *         CPU, an ECS service is considered over-provisioned. An over-provisioned ECS service might result in
+     *         CPU, an Amazon ECS service is considered over-provisioned. An over-provisioned service might result in
      *         additional infrastructure costs.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b> <code>Optimized</code> </b> — When both the CPU and memory of your ECS service meet the performance
-     *         requirements of your workload, the service is considered optimized.
+     *         <b> <code>Optimized</code> </b> — When both the CPU and memory of your Amazon ECS service meet the
+     *         performance requirements of your workload, the service is considered optimized.
      *         </p>
      *         </li>
      * @see ECSServiceRecommendationFinding
@@ -686,58 +686,58 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The finding classification of an ECS service.
+     * The finding classification of an Amazon ECS service.
      * </p>
      * <p>
-     * Findings for ECS services include:
+     * Findings for Amazon ECS services include:
      * </p>
      * <ul>
      * <li>
      * <p>
      * <b> <code>Underprovisioned</code> </b> — When Compute Optimizer detects that there’s not enough memory or CPU, an
-     * ECS service is considered under-provisioned. An under-provisioned ECS service might result in poor application
+     * Amazon ECS service is considered under-provisioned. An under-provisioned service might result in poor application
      * performance.
      * </p>
      * </li>
      * <li>
      * <p>
      * <b> <code>Overprovisioned</code> </b> — When Compute Optimizer detects that there’s excessive memory or CPU, an
-     * ECS service is considered over-provisioned. An over-provisioned ECS service might result in additional
+     * Amazon ECS service is considered over-provisioned. An over-provisioned service might result in additional
      * infrastructure costs.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>Optimized</code> </b> — When both the CPU and memory of your ECS service meet the performance
+     * <b> <code>Optimized</code> </b> — When both the CPU and memory of your Amazon ECS service meet the performance
      * requirements of your workload, the service is considered optimized.
      * </p>
      * </li>
      * </ul>
      * 
      * @param finding
-     *        The finding classification of an ECS service. </p>
+     *        The finding classification of an Amazon ECS service. </p>
      *        <p>
-     *        Findings for ECS services include:
+     *        Findings for Amazon ECS services include:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
      *        <b> <code>Underprovisioned</code> </b> — When Compute Optimizer detects that there’s not enough memory or
-     *        CPU, an ECS service is considered under-provisioned. An under-provisioned ECS service might result in poor
-     *        application performance.
+     *        CPU, an Amazon ECS service is considered under-provisioned. An under-provisioned service might result in
+     *        poor application performance.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <b> <code>Overprovisioned</code> </b> — When Compute Optimizer detects that there’s excessive memory or
-     *        CPU, an ECS service is considered over-provisioned. An over-provisioned ECS service might result in
+     *        CPU, an Amazon ECS service is considered over-provisioned. An over-provisioned service might result in
      *        additional infrastructure costs.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>Optimized</code> </b> — When both the CPU and memory of your ECS service meet the performance
-     *        requirements of your workload, the service is considered optimized.
+     *        <b> <code>Optimized</code> </b> — When both the CPU and memory of your Amazon ECS service meet the
+     *        performance requirements of your workload, the service is considered optimized.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -751,58 +751,58 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The finding classification of an ECS service.
+     * The finding classification of an Amazon ECS service.
      * </p>
      * <p>
-     * Findings for ECS services include:
+     * Findings for Amazon ECS services include:
      * </p>
      * <ul>
      * <li>
      * <p>
      * <b> <code>Underprovisioned</code> </b> — When Compute Optimizer detects that there’s not enough memory or CPU, an
-     * ECS service is considered under-provisioned. An under-provisioned ECS service might result in poor application
+     * Amazon ECS service is considered under-provisioned. An under-provisioned service might result in poor application
      * performance.
      * </p>
      * </li>
      * <li>
      * <p>
      * <b> <code>Overprovisioned</code> </b> — When Compute Optimizer detects that there’s excessive memory or CPU, an
-     * ECS service is considered over-provisioned. An over-provisioned ECS service might result in additional
+     * Amazon ECS service is considered over-provisioned. An over-provisioned service might result in additional
      * infrastructure costs.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>Optimized</code> </b> — When both the CPU and memory of your ECS service meet the performance
+     * <b> <code>Optimized</code> </b> — When both the CPU and memory of your Amazon ECS service meet the performance
      * requirements of your workload, the service is considered optimized.
      * </p>
      * </li>
      * </ul>
      * 
      * @param finding
-     *        The finding classification of an ECS service. </p>
+     *        The finding classification of an Amazon ECS service. </p>
      *        <p>
-     *        Findings for ECS services include:
+     *        Findings for Amazon ECS services include:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
      *        <b> <code>Underprovisioned</code> </b> — When Compute Optimizer detects that there’s not enough memory or
-     *        CPU, an ECS service is considered under-provisioned. An under-provisioned ECS service might result in poor
-     *        application performance.
+     *        CPU, an Amazon ECS service is considered under-provisioned. An under-provisioned service might result in
+     *        poor application performance.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <b> <code>Overprovisioned</code> </b> — When Compute Optimizer detects that there’s excessive memory or
-     *        CPU, an ECS service is considered over-provisioned. An over-provisioned ECS service might result in
+     *        CPU, an Amazon ECS service is considered over-provisioned. An over-provisioned service might result in
      *        additional infrastructure costs.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>Optimized</code> </b> — When both the CPU and memory of your ECS service meet the performance
-     *        requirements of your workload, the service is considered optimized.
+     *        <b> <code>Optimized</code> </b> — When both the CPU and memory of your Amazon ECS service meet the
+     *        performance requirements of your workload, the service is considered optimized.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -816,72 +816,72 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The reason for the finding classification of an ECS service.
+     * The reason for the finding classification of an Amazon ECS service.
      * </p>
      * <p>
-     * Finding reason codes for ECS services include:
+     * Finding reason codes for Amazon ECS services include:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b> <code>CPUUnderprovisioned</code> </b> — The ECS service CPU configuration can be sized up to enhance the
+     * <b> <code>CPUUnderprovisioned</code> </b> — The service CPU configuration can be sized up to enhance the
      * performance of your workload. This is identified by analyzing the <code>CPUUtilization</code> metric of the
      * current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>CPUOverprovisioned</code> </b> — The ECS service CPU configuration can be sized down while still
-     * meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>CPUUtilization</code> metric of the current service during the look-back period.
+     * <b> <code>CPUOverprovisioned</code> </b> — The service CPU configuration can be sized down while still meeting
+     * the performance requirements of your workload. This is identified by analyzing the <code>CPUUtilization</code>
+     * metric of the current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>MemoryUnderprovisioned</code> </b> — The ECS service memory configuration can be sized up to enhance
-     * the performance of your workload. This is identified by analyzing the <code>MemoryUtilization</code> metric of
-     * the current service during the look-back period.
+     * <b> <code>MemoryUnderprovisioned</code> </b> — The service memory configuration can be sized up to enhance the
+     * performance of your workload. This is identified by analyzing the <code>MemoryUtilization</code> metric of the
+     * current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>MemoryOverprovisioned</code> </b> — The ECS service memory configuration can be sized down while still
+     * <b> <code>MemoryOverprovisioned</code> </b> — The service memory configuration can be sized down while still
      * meeting the performance requirements of your workload. This is identified by analyzing the
      * <code>MemoryUtilization</code> metric of the current service during the look-back period.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The reason for the finding classification of an ECS service. </p>
+     * @return The reason for the finding classification of an Amazon ECS service. </p>
      *         <p>
-     *         Finding reason codes for ECS services include:
+     *         Finding reason codes for Amazon ECS services include:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <b> <code>CPUUnderprovisioned</code> </b> — The ECS service CPU configuration can be sized up to enhance
-     *         the performance of your workload. This is identified by analyzing the <code>CPUUtilization</code> metric
-     *         of the current service during the look-back period.
+     *         <b> <code>CPUUnderprovisioned</code> </b> — The service CPU configuration can be sized up to enhance the
+     *         performance of your workload. This is identified by analyzing the <code>CPUUtilization</code> metric of
+     *         the current service during the look-back period.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b> <code>CPUOverprovisioned</code> </b> — The ECS service CPU configuration can be sized down while
-     *         still meeting the performance requirements of your workload. This is identified by analyzing the
+     *         <b> <code>CPUOverprovisioned</code> </b> — The service CPU configuration can be sized down while still
+     *         meeting the performance requirements of your workload. This is identified by analyzing the
      *         <code>CPUUtilization</code> metric of the current service during the look-back period.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b> <code>MemoryUnderprovisioned</code> </b> — The ECS service memory configuration can be sized up to
+     *         <b> <code>MemoryUnderprovisioned</code> </b> — The service memory configuration can be sized up to
      *         enhance the performance of your workload. This is identified by analyzing the
      *         <code>MemoryUtilization</code> metric of the current service during the look-back period.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b> <code>MemoryOverprovisioned</code> </b> — The ECS service memory configuration can be sized down
-     *         while still meeting the performance requirements of your workload. This is identified by analyzing the
+     *         <b> <code>MemoryOverprovisioned</code> </b> — The service memory configuration can be sized down while
+     *         still meeting the performance requirements of your workload. This is identified by analyzing the
      *         <code>MemoryUtilization</code> metric of the current service during the look-back period.
      *         </p>
      *         </li>
@@ -894,36 +894,36 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The reason for the finding classification of an ECS service.
+     * The reason for the finding classification of an Amazon ECS service.
      * </p>
      * <p>
-     * Finding reason codes for ECS services include:
+     * Finding reason codes for Amazon ECS services include:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b> <code>CPUUnderprovisioned</code> </b> — The ECS service CPU configuration can be sized up to enhance the
+     * <b> <code>CPUUnderprovisioned</code> </b> — The service CPU configuration can be sized up to enhance the
      * performance of your workload. This is identified by analyzing the <code>CPUUtilization</code> metric of the
      * current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>CPUOverprovisioned</code> </b> — The ECS service CPU configuration can be sized down while still
-     * meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>CPUUtilization</code> metric of the current service during the look-back period.
+     * <b> <code>CPUOverprovisioned</code> </b> — The service CPU configuration can be sized down while still meeting
+     * the performance requirements of your workload. This is identified by analyzing the <code>CPUUtilization</code>
+     * metric of the current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>MemoryUnderprovisioned</code> </b> — The ECS service memory configuration can be sized up to enhance
-     * the performance of your workload. This is identified by analyzing the <code>MemoryUtilization</code> metric of
-     * the current service during the look-back period.
+     * <b> <code>MemoryUnderprovisioned</code> </b> — The service memory configuration can be sized up to enhance the
+     * performance of your workload. This is identified by analyzing the <code>MemoryUtilization</code> metric of the
+     * current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>MemoryOverprovisioned</code> </b> — The ECS service memory configuration can be sized down while still
+     * <b> <code>MemoryOverprovisioned</code> </b> — The service memory configuration can be sized down while still
      * meeting the performance requirements of your workload. This is identified by analyzing the
      * <code>MemoryUtilization</code> metric of the current service during the look-back period.
      * </p>
@@ -931,35 +931,35 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
      * </ul>
      * 
      * @param findingReasonCodes
-     *        The reason for the finding classification of an ECS service. </p>
+     *        The reason for the finding classification of an Amazon ECS service. </p>
      *        <p>
-     *        Finding reason codes for ECS services include:
+     *        Finding reason codes for Amazon ECS services include:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <b> <code>CPUUnderprovisioned</code> </b> — The ECS service CPU configuration can be sized up to enhance
-     *        the performance of your workload. This is identified by analyzing the <code>CPUUtilization</code> metric
-     *        of the current service during the look-back period.
+     *        <b> <code>CPUUnderprovisioned</code> </b> — The service CPU configuration can be sized up to enhance the
+     *        performance of your workload. This is identified by analyzing the <code>CPUUtilization</code> metric of
+     *        the current service during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>CPUOverprovisioned</code> </b> — The ECS service CPU configuration can be sized down while still
+     *        <b> <code>CPUOverprovisioned</code> </b> — The service CPU configuration can be sized down while still
      *        meeting the performance requirements of your workload. This is identified by analyzing the
      *        <code>CPUUtilization</code> metric of the current service during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>MemoryUnderprovisioned</code> </b> — The ECS service memory configuration can be sized up to
-     *        enhance the performance of your workload. This is identified by analyzing the
-     *        <code>MemoryUtilization</code> metric of the current service during the look-back period.
+     *        <b> <code>MemoryUnderprovisioned</code> </b> — The service memory configuration can be sized up to enhance
+     *        the performance of your workload. This is identified by analyzing the <code>MemoryUtilization</code>
+     *        metric of the current service during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>MemoryOverprovisioned</code> </b> — The ECS service memory configuration can be sized down while
+     *        <b> <code>MemoryOverprovisioned</code> </b> — The service memory configuration can be sized down while
      *        still meeting the performance requirements of your workload. This is identified by analyzing the
      *        <code>MemoryUtilization</code> metric of the current service during the look-back period.
      *        </p>
@@ -978,36 +978,36 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The reason for the finding classification of an ECS service.
+     * The reason for the finding classification of an Amazon ECS service.
      * </p>
      * <p>
-     * Finding reason codes for ECS services include:
+     * Finding reason codes for Amazon ECS services include:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b> <code>CPUUnderprovisioned</code> </b> — The ECS service CPU configuration can be sized up to enhance the
+     * <b> <code>CPUUnderprovisioned</code> </b> — The service CPU configuration can be sized up to enhance the
      * performance of your workload. This is identified by analyzing the <code>CPUUtilization</code> metric of the
      * current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>CPUOverprovisioned</code> </b> — The ECS service CPU configuration can be sized down while still
-     * meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>CPUUtilization</code> metric of the current service during the look-back period.
+     * <b> <code>CPUOverprovisioned</code> </b> — The service CPU configuration can be sized down while still meeting
+     * the performance requirements of your workload. This is identified by analyzing the <code>CPUUtilization</code>
+     * metric of the current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>MemoryUnderprovisioned</code> </b> — The ECS service memory configuration can be sized up to enhance
-     * the performance of your workload. This is identified by analyzing the <code>MemoryUtilization</code> metric of
-     * the current service during the look-back period.
+     * <b> <code>MemoryUnderprovisioned</code> </b> — The service memory configuration can be sized up to enhance the
+     * performance of your workload. This is identified by analyzing the <code>MemoryUtilization</code> metric of the
+     * current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>MemoryOverprovisioned</code> </b> — The ECS service memory configuration can be sized down while still
+     * <b> <code>MemoryOverprovisioned</code> </b> — The service memory configuration can be sized down while still
      * meeting the performance requirements of your workload. This is identified by analyzing the
      * <code>MemoryUtilization</code> metric of the current service during the look-back period.
      * </p>
@@ -1020,35 +1020,35 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param findingReasonCodes
-     *        The reason for the finding classification of an ECS service. </p>
+     *        The reason for the finding classification of an Amazon ECS service. </p>
      *        <p>
-     *        Finding reason codes for ECS services include:
+     *        Finding reason codes for Amazon ECS services include:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <b> <code>CPUUnderprovisioned</code> </b> — The ECS service CPU configuration can be sized up to enhance
-     *        the performance of your workload. This is identified by analyzing the <code>CPUUtilization</code> metric
-     *        of the current service during the look-back period.
+     *        <b> <code>CPUUnderprovisioned</code> </b> — The service CPU configuration can be sized up to enhance the
+     *        performance of your workload. This is identified by analyzing the <code>CPUUtilization</code> metric of
+     *        the current service during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>CPUOverprovisioned</code> </b> — The ECS service CPU configuration can be sized down while still
+     *        <b> <code>CPUOverprovisioned</code> </b> — The service CPU configuration can be sized down while still
      *        meeting the performance requirements of your workload. This is identified by analyzing the
      *        <code>CPUUtilization</code> metric of the current service during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>MemoryUnderprovisioned</code> </b> — The ECS service memory configuration can be sized up to
-     *        enhance the performance of your workload. This is identified by analyzing the
-     *        <code>MemoryUtilization</code> metric of the current service during the look-back period.
+     *        <b> <code>MemoryUnderprovisioned</code> </b> — The service memory configuration can be sized up to enhance
+     *        the performance of your workload. This is identified by analyzing the <code>MemoryUtilization</code>
+     *        metric of the current service during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>MemoryOverprovisioned</code> </b> — The ECS service memory configuration can be sized down while
+     *        <b> <code>MemoryOverprovisioned</code> </b> — The service memory configuration can be sized down while
      *        still meeting the performance requirements of your workload. This is identified by analyzing the
      *        <code>MemoryUtilization</code> metric of the current service during the look-back period.
      *        </p>
@@ -1069,36 +1069,36 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The reason for the finding classification of an ECS service.
+     * The reason for the finding classification of an Amazon ECS service.
      * </p>
      * <p>
-     * Finding reason codes for ECS services include:
+     * Finding reason codes for Amazon ECS services include:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b> <code>CPUUnderprovisioned</code> </b> — The ECS service CPU configuration can be sized up to enhance the
+     * <b> <code>CPUUnderprovisioned</code> </b> — The service CPU configuration can be sized up to enhance the
      * performance of your workload. This is identified by analyzing the <code>CPUUtilization</code> metric of the
      * current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>CPUOverprovisioned</code> </b> — The ECS service CPU configuration can be sized down while still
-     * meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>CPUUtilization</code> metric of the current service during the look-back period.
+     * <b> <code>CPUOverprovisioned</code> </b> — The service CPU configuration can be sized down while still meeting
+     * the performance requirements of your workload. This is identified by analyzing the <code>CPUUtilization</code>
+     * metric of the current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>MemoryUnderprovisioned</code> </b> — The ECS service memory configuration can be sized up to enhance
-     * the performance of your workload. This is identified by analyzing the <code>MemoryUtilization</code> metric of
-     * the current service during the look-back period.
+     * <b> <code>MemoryUnderprovisioned</code> </b> — The service memory configuration can be sized up to enhance the
+     * performance of your workload. This is identified by analyzing the <code>MemoryUtilization</code> metric of the
+     * current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>MemoryOverprovisioned</code> </b> — The ECS service memory configuration can be sized down while still
+     * <b> <code>MemoryOverprovisioned</code> </b> — The service memory configuration can be sized down while still
      * meeting the performance requirements of your workload. This is identified by analyzing the
      * <code>MemoryUtilization</code> metric of the current service during the look-back period.
      * </p>
@@ -1106,35 +1106,35 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
      * </ul>
      * 
      * @param findingReasonCodes
-     *        The reason for the finding classification of an ECS service. </p>
+     *        The reason for the finding classification of an Amazon ECS service. </p>
      *        <p>
-     *        Finding reason codes for ECS services include:
+     *        Finding reason codes for Amazon ECS services include:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <b> <code>CPUUnderprovisioned</code> </b> — The ECS service CPU configuration can be sized up to enhance
-     *        the performance of your workload. This is identified by analyzing the <code>CPUUtilization</code> metric
-     *        of the current service during the look-back period.
+     *        <b> <code>CPUUnderprovisioned</code> </b> — The service CPU configuration can be sized up to enhance the
+     *        performance of your workload. This is identified by analyzing the <code>CPUUtilization</code> metric of
+     *        the current service during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>CPUOverprovisioned</code> </b> — The ECS service CPU configuration can be sized down while still
+     *        <b> <code>CPUOverprovisioned</code> </b> — The service CPU configuration can be sized down while still
      *        meeting the performance requirements of your workload. This is identified by analyzing the
      *        <code>CPUUtilization</code> metric of the current service during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>MemoryUnderprovisioned</code> </b> — The ECS service memory configuration can be sized up to
-     *        enhance the performance of your workload. This is identified by analyzing the
-     *        <code>MemoryUtilization</code> metric of the current service during the look-back period.
+     *        <b> <code>MemoryUnderprovisioned</code> </b> — The service memory configuration can be sized up to enhance
+     *        the performance of your workload. This is identified by analyzing the <code>MemoryUtilization</code>
+     *        metric of the current service during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>MemoryOverprovisioned</code> </b> — The ECS service memory configuration can be sized down while
+     *        <b> <code>MemoryOverprovisioned</code> </b> — The service memory configuration can be sized down while
      *        still meeting the performance requirements of your workload. This is identified by analyzing the
      *        <code>MemoryUtilization</code> metric of the current service during the look-back period.
      *        </p>
@@ -1150,36 +1150,36 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The reason for the finding classification of an ECS service.
+     * The reason for the finding classification of an Amazon ECS service.
      * </p>
      * <p>
-     * Finding reason codes for ECS services include:
+     * Finding reason codes for Amazon ECS services include:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b> <code>CPUUnderprovisioned</code> </b> — The ECS service CPU configuration can be sized up to enhance the
+     * <b> <code>CPUUnderprovisioned</code> </b> — The service CPU configuration can be sized up to enhance the
      * performance of your workload. This is identified by analyzing the <code>CPUUtilization</code> metric of the
      * current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>CPUOverprovisioned</code> </b> — The ECS service CPU configuration can be sized down while still
-     * meeting the performance requirements of your workload. This is identified by analyzing the
-     * <code>CPUUtilization</code> metric of the current service during the look-back period.
+     * <b> <code>CPUOverprovisioned</code> </b> — The service CPU configuration can be sized down while still meeting
+     * the performance requirements of your workload. This is identified by analyzing the <code>CPUUtilization</code>
+     * metric of the current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>MemoryUnderprovisioned</code> </b> — The ECS service memory configuration can be sized up to enhance
-     * the performance of your workload. This is identified by analyzing the <code>MemoryUtilization</code> metric of
-     * the current service during the look-back period.
+     * <b> <code>MemoryUnderprovisioned</code> </b> — The service memory configuration can be sized up to enhance the
+     * performance of your workload. This is identified by analyzing the <code>MemoryUtilization</code> metric of the
+     * current service during the look-back period.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b> <code>MemoryOverprovisioned</code> </b> — The ECS service memory configuration can be sized down while still
+     * <b> <code>MemoryOverprovisioned</code> </b> — The service memory configuration can be sized down while still
      * meeting the performance requirements of your workload. This is identified by analyzing the
      * <code>MemoryUtilization</code> metric of the current service during the look-back period.
      * </p>
@@ -1187,35 +1187,35 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
      * </ul>
      * 
      * @param findingReasonCodes
-     *        The reason for the finding classification of an ECS service. </p>
+     *        The reason for the finding classification of an Amazon ECS service. </p>
      *        <p>
-     *        Finding reason codes for ECS services include:
+     *        Finding reason codes for Amazon ECS services include:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <b> <code>CPUUnderprovisioned</code> </b> — The ECS service CPU configuration can be sized up to enhance
-     *        the performance of your workload. This is identified by analyzing the <code>CPUUtilization</code> metric
-     *        of the current service during the look-back period.
+     *        <b> <code>CPUUnderprovisioned</code> </b> — The service CPU configuration can be sized up to enhance the
+     *        performance of your workload. This is identified by analyzing the <code>CPUUtilization</code> metric of
+     *        the current service during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>CPUOverprovisioned</code> </b> — The ECS service CPU configuration can be sized down while still
+     *        <b> <code>CPUOverprovisioned</code> </b> — The service CPU configuration can be sized down while still
      *        meeting the performance requirements of your workload. This is identified by analyzing the
      *        <code>CPUUtilization</code> metric of the current service during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>MemoryUnderprovisioned</code> </b> — The ECS service memory configuration can be sized up to
-     *        enhance the performance of your workload. This is identified by analyzing the
-     *        <code>MemoryUtilization</code> metric of the current service during the look-back period.
+     *        <b> <code>MemoryUnderprovisioned</code> </b> — The service memory configuration can be sized up to enhance
+     *        the performance of your workload. This is identified by analyzing the <code>MemoryUtilization</code>
+     *        metric of the current service during the look-back period.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b> <code>MemoryOverprovisioned</code> </b> — The ECS service memory configuration can be sized down while
+     *        <b> <code>MemoryOverprovisioned</code> </b> — The service memory configuration can be sized down while
      *        still meeting the performance requirements of your workload. This is identified by analyzing the
      *        <code>MemoryUtilization</code> metric of the current service during the look-back period.
      *        </p>
@@ -1239,10 +1239,10 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of objects that describe the recommendation options for the ECS service.
+     * An array of objects that describe the recommendation options for the Amazon ECS service.
      * </p>
      * 
-     * @return An array of objects that describe the recommendation options for the ECS service.
+     * @return An array of objects that describe the recommendation options for the Amazon ECS service.
      */
 
     public java.util.List<ECSServiceRecommendationOption> getServiceRecommendationOptions() {
@@ -1251,11 +1251,11 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of objects that describe the recommendation options for the ECS service.
+     * An array of objects that describe the recommendation options for the Amazon ECS service.
      * </p>
      * 
      * @param serviceRecommendationOptions
-     *        An array of objects that describe the recommendation options for the ECS service.
+     *        An array of objects that describe the recommendation options for the Amazon ECS service.
      */
 
     public void setServiceRecommendationOptions(java.util.Collection<ECSServiceRecommendationOption> serviceRecommendationOptions) {
@@ -1269,7 +1269,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of objects that describe the recommendation options for the ECS service.
+     * An array of objects that describe the recommendation options for the Amazon ECS service.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1278,7 +1278,7 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param serviceRecommendationOptions
-     *        An array of objects that describe the recommendation options for the ECS service.
+     *        An array of objects that describe the recommendation options for the Amazon ECS service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1294,11 +1294,11 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of objects that describe the recommendation options for the ECS service.
+     * An array of objects that describe the recommendation options for the Amazon ECS service.
      * </p>
      * 
      * @param serviceRecommendationOptions
-     *        An array of objects that describe the recommendation options for the ECS service.
+     *        An array of objects that describe the recommendation options for the Amazon ECS service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1309,13 +1309,13 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The risk of the current ECS service not meeting the performance needs of its workloads. The higher the risk, the
-     * more likely the current service can't meet the performance requirements of its workload.
+     * The risk of the current Amazon ECS service not meeting the performance needs of its workloads. The higher the
+     * risk, the more likely the current service can't meet the performance requirements of its workload.
      * </p>
      * 
      * @param currentPerformanceRisk
-     *        The risk of the current ECS service not meeting the performance needs of its workloads. The higher the
-     *        risk, the more likely the current service can't meet the performance requirements of its workload.
+     *        The risk of the current Amazon ECS service not meeting the performance needs of its workloads. The higher
+     *        the risk, the more likely the current service can't meet the performance requirements of its workload.
      * @see CurrentPerformanceRisk
      */
 
@@ -1325,12 +1325,12 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The risk of the current ECS service not meeting the performance needs of its workloads. The higher the risk, the
-     * more likely the current service can't meet the performance requirements of its workload.
+     * The risk of the current Amazon ECS service not meeting the performance needs of its workloads. The higher the
+     * risk, the more likely the current service can't meet the performance requirements of its workload.
      * </p>
      * 
-     * @return The risk of the current ECS service not meeting the performance needs of its workloads. The higher the
-     *         risk, the more likely the current service can't meet the performance requirements of its workload.
+     * @return The risk of the current Amazon ECS service not meeting the performance needs of its workloads. The higher
+     *         the risk, the more likely the current service can't meet the performance requirements of its workload.
      * @see CurrentPerformanceRisk
      */
 
@@ -1340,13 +1340,13 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The risk of the current ECS service not meeting the performance needs of its workloads. The higher the risk, the
-     * more likely the current service can't meet the performance requirements of its workload.
+     * The risk of the current Amazon ECS service not meeting the performance needs of its workloads. The higher the
+     * risk, the more likely the current service can't meet the performance requirements of its workload.
      * </p>
      * 
      * @param currentPerformanceRisk
-     *        The risk of the current ECS service not meeting the performance needs of its workloads. The higher the
-     *        risk, the more likely the current service can't meet the performance requirements of its workload.
+     *        The risk of the current Amazon ECS service not meeting the performance needs of its workloads. The higher
+     *        the risk, the more likely the current service can't meet the performance requirements of its workload.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CurrentPerformanceRisk
      */
@@ -1358,13 +1358,13 @@ public class ECSServiceRecommendation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The risk of the current ECS service not meeting the performance needs of its workloads. The higher the risk, the
-     * more likely the current service can't meet the performance requirements of its workload.
+     * The risk of the current Amazon ECS service not meeting the performance needs of its workloads. The higher the
+     * risk, the more likely the current service can't meet the performance requirements of its workload.
      * </p>
      * 
      * @param currentPerformanceRisk
-     *        The risk of the current ECS service not meeting the performance needs of its workloads. The higher the
-     *        risk, the more likely the current service can't meet the performance requirements of its workload.
+     *        The risk of the current Amazon ECS service not meeting the performance needs of its workloads. The higher
+     *        the risk, the more likely the current service can't meet the performance requirements of its workload.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CurrentPerformanceRisk
      */

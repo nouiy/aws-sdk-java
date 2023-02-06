@@ -299,7 +299,7 @@ public class CreateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        The type of profile used to describe the customer.
      * @see PartyType
      */
-
+    @Deprecated
     public void setPartyType(String partyType) {
         this.partyType = partyType;
     }
@@ -312,7 +312,7 @@ public class CreateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
      * @return The type of profile used to describe the customer.
      * @see PartyType
      */
-
+    @Deprecated
     public String getPartyType() {
         return this.partyType;
     }
@@ -327,7 +327,7 @@ public class CreateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PartyType
      */
-
+    @Deprecated
     public CreateProfileRequest withPartyType(String partyType) {
         setPartyType(partyType);
         return this;
@@ -343,7 +343,7 @@ public class CreateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PartyType
      */
-
+    @Deprecated
     public CreateProfileRequest withPartyType(PartyType partyType) {
         this.partyType = partyType.toString();
         return this;
@@ -558,7 +558,7 @@ public class CreateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        The gender with which the customer identifies.
      * @see Gender
      */
-
+    @Deprecated
     public void setGender(String gender) {
         this.gender = gender;
     }
@@ -571,7 +571,7 @@ public class CreateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
      * @return The gender with which the customer identifies.
      * @see Gender
      */
-
+    @Deprecated
     public String getGender() {
         return this.gender;
     }
@@ -586,7 +586,7 @@ public class CreateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Gender
      */
-
+    @Deprecated
     public CreateProfileRequest withGender(String gender) {
         setGender(gender);
         return this;
@@ -602,7 +602,7 @@ public class CreateProfileRequest extends com.amazonaws.AmazonWebServiceRequest 
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Gender
      */
-
+    @Deprecated
     public CreateProfileRequest withGender(Gender gender) {
         this.gender = gender.toString();
         return this;
