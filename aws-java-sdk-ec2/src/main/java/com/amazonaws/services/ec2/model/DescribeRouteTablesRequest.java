@@ -158,14 +158,16 @@ public class DescribeRouteTablesRequest extends AmazonWebServiceRequest implemen
     private com.amazonaws.internal.SdkInternalList<String> routeTableIds;
     /**
      * <p>
-     * The token for the next page of results.
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
+     * the previous request.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call
-     * with the returned <code>nextToken</code> value.
+     * The maximum number of items to return for this request. To get the next page of items, make another request with
+     * the token returned in the output. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      */
     private Integer maxResults;
@@ -1270,11 +1272,13 @@ public class DescribeRouteTablesRequest extends AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The token for the next page of results.
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
+     * the previous request.
      * </p>
      * 
      * @param nextToken
-     *        The token for the next page of results.
+     *        The token returned from a previous paginated request. Pagination continues from the end of the items
+     *        returned by the previous request.
      */
 
     public void setNextToken(String nextToken) {
@@ -1283,10 +1287,12 @@ public class DescribeRouteTablesRequest extends AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The token for the next page of results.
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
+     * the previous request.
      * </p>
      * 
-     * @return The token for the next page of results.
+     * @return The token returned from a previous paginated request. Pagination continues from the end of the items
+     *         returned by the previous request.
      */
 
     public String getNextToken() {
@@ -1295,11 +1301,13 @@ public class DescribeRouteTablesRequest extends AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The token for the next page of results.
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
+     * the previous request.
      * </p>
      * 
      * @param nextToken
-     *        The token for the next page of results.
+     *        The token returned from a previous paginated request. Pagination continues from the end of the items
+     *        returned by the previous request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1310,13 +1318,16 @@ public class DescribeRouteTablesRequest extends AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call
-     * with the returned <code>nextToken</code> value.
+     * The maximum number of items to return for this request. To get the next page of items, make another request with
+     * the token returned in the output. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to return with a single call. To retrieve the remaining results, make
-     *        another call with the returned <code>nextToken</code> value.
+     *        The maximum number of items to return for this request. To get the next page of items, make another
+     *        request with the token returned in the output. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination"
+     *        >Pagination</a>.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -1325,12 +1336,15 @@ public class DescribeRouteTablesRequest extends AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call
-     * with the returned <code>nextToken</code> value.
+     * The maximum number of items to return for this request. To get the next page of items, make another request with
+     * the token returned in the output. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      * 
-     * @return The maximum number of results to return with a single call. To retrieve the remaining results, make
-     *         another call with the returned <code>nextToken</code> value.
+     * @return The maximum number of items to return for this request. To get the next page of items, make another
+     *         request with the token returned in the output. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination"
+     *         >Pagination</a>.
      */
 
     public Integer getMaxResults() {
@@ -1339,13 +1353,16 @@ public class DescribeRouteTablesRequest extends AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call
-     * with the returned <code>nextToken</code> value.
+     * The maximum number of items to return for this request. To get the next page of items, make another request with
+     * the token returned in the output. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to return with a single call. To retrieve the remaining results, make
-     *        another call with the returned <code>nextToken</code> value.
+     *        The maximum number of items to return for this request. To get the next page of items, make another
+     *        request with the token returned in the output. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination"
+     *        >Pagination</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

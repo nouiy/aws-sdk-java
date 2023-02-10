@@ -27,7 +27,7 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Identifies an Autopilot job. The name must be unique to your account and is case-insensitive.
+     * Identifies an Autopilot job. The name must be unique to your account and is case insensitive.
      * </p>
      */
     private String autoMLJobName;
@@ -95,11 +95,11 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Identifies an Autopilot job. The name must be unique to your account and is case-insensitive.
+     * Identifies an Autopilot job. The name must be unique to your account and is case insensitive.
      * </p>
      * 
      * @param autoMLJobName
-     *        Identifies an Autopilot job. The name must be unique to your account and is case-insensitive.
+     *        Identifies an Autopilot job. The name must be unique to your account and is case insensitive.
      */
 
     public void setAutoMLJobName(String autoMLJobName) {
@@ -108,10 +108,10 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Identifies an Autopilot job. The name must be unique to your account and is case-insensitive.
+     * Identifies an Autopilot job. The name must be unique to your account and is case insensitive.
      * </p>
      * 
-     * @return Identifies an Autopilot job. The name must be unique to your account and is case-insensitive.
+     * @return Identifies an Autopilot job. The name must be unique to your account and is case insensitive.
      */
 
     public String getAutoMLJobName() {
@@ -120,11 +120,11 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Identifies an Autopilot job. The name must be unique to your account and is case-insensitive.
+     * Identifies an Autopilot job. The name must be unique to your account and is case insensitive.
      * </p>
      * 
      * @param autoMLJobName
-     *        Identifies an Autopilot job. The name must be unique to your account and is case-insensitive.
+     *        Identifies an Autopilot job. The name must be unique to your account and is case insensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

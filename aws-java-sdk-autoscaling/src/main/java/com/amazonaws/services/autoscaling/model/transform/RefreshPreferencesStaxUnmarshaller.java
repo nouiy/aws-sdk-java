@@ -74,6 +74,21 @@ public class RefreshPreferencesStaxUnmarshaller implements Unmarshaller<RefreshP
                     refreshPreferences.setSkipMatching(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("AutoRollback", targetDepth)) {
+                    refreshPreferences.setAutoRollback(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("ScaleInProtectedInstances", targetDepth)) {
+                    refreshPreferences.setScaleInProtectedInstances(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("StandbyInstances", targetDepth)) {
+                    refreshPreferences.setStandbyInstances(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return refreshPreferences;

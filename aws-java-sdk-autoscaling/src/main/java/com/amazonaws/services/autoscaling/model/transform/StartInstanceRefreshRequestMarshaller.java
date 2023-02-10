@@ -601,6 +601,18 @@ public class StartInstanceRefreshRequestMarshaller implements Marshaller<Request
                 if (preferences.getSkipMatching() != null) {
                     request.addParameter("Preferences.SkipMatching", StringUtils.fromBoolean(preferences.getSkipMatching()));
                 }
+
+                if (preferences.getAutoRollback() != null) {
+                    request.addParameter("Preferences.AutoRollback", StringUtils.fromBoolean(preferences.getAutoRollback()));
+                }
+
+                if (preferences.getScaleInProtectedInstances() != null) {
+                    request.addParameter("Preferences.ScaleInProtectedInstances", StringUtils.fromString(preferences.getScaleInProtectedInstances()));
+                }
+
+                if (preferences.getStandbyInstances() != null) {
+                    request.addParameter("Preferences.StandbyInstances", StringUtils.fromString(preferences.getStandbyInstances()));
+                }
             }
         }
 

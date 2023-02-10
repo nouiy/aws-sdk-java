@@ -247,15 +247,17 @@ public class DescribeNetworkInterfacesRequest extends AmazonWebServiceRequest im
     private com.amazonaws.internal.SdkInternalList<String> networkInterfaceIds;
     /**
      * <p>
-     * The token to retrieve the next page of results.
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
+     * the previous request.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * The maximum number of items to return for this request. The request returns a token that you can specify in a
-     * subsequent call to get the next set of results. You cannot specify this parameter and the network interface IDs
-     * parameter in the same request.
+     * The maximum number of items to return for this request. To get the next page of items, make another request with
+     * the token returned in the output. You cannot specify this parameter and the network interface IDs parameter in
+     * the same request. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      */
     private Integer maxResults;
@@ -2052,11 +2054,13 @@ public class DescribeNetworkInterfacesRequest extends AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The token to retrieve the next page of results.
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
+     * the previous request.
      * </p>
      * 
      * @param nextToken
-     *        The token to retrieve the next page of results.
+     *        The token returned from a previous paginated request. Pagination continues from the end of the items
+     *        returned by the previous request.
      */
 
     public void setNextToken(String nextToken) {
@@ -2065,10 +2069,12 @@ public class DescribeNetworkInterfacesRequest extends AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The token to retrieve the next page of results.
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
+     * the previous request.
      * </p>
      * 
-     * @return The token to retrieve the next page of results.
+     * @return The token returned from a previous paginated request. Pagination continues from the end of the items
+     *         returned by the previous request.
      */
 
     public String getNextToken() {
@@ -2077,11 +2083,13 @@ public class DescribeNetworkInterfacesRequest extends AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The token to retrieve the next page of results.
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
+     * the previous request.
      * </p>
      * 
      * @param nextToken
-     *        The token to retrieve the next page of results.
+     *        The token returned from a previous paginated request. Pagination continues from the end of the items
+     *        returned by the previous request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2092,15 +2100,18 @@ public class DescribeNetworkInterfacesRequest extends AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The maximum number of items to return for this request. The request returns a token that you can specify in a
-     * subsequent call to get the next set of results. You cannot specify this parameter and the network interface IDs
-     * parameter in the same request.
+     * The maximum number of items to return for this request. To get the next page of items, make another request with
+     * the token returned in the output. You cannot specify this parameter and the network interface IDs parameter in
+     * the same request. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of items to return for this request. The request returns a token that you can specify
-     *        in a subsequent call to get the next set of results. You cannot specify this parameter and the network
-     *        interface IDs parameter in the same request.
+     *        The maximum number of items to return for this request. To get the next page of items, make another
+     *        request with the token returned in the output. You cannot specify this parameter and the network interface
+     *        IDs parameter in the same request. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination"
+     *        >Pagination</a>.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -2109,14 +2120,17 @@ public class DescribeNetworkInterfacesRequest extends AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The maximum number of items to return for this request. The request returns a token that you can specify in a
-     * subsequent call to get the next set of results. You cannot specify this parameter and the network interface IDs
-     * parameter in the same request.
+     * The maximum number of items to return for this request. To get the next page of items, make another request with
+     * the token returned in the output. You cannot specify this parameter and the network interface IDs parameter in
+     * the same request. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      * 
-     * @return The maximum number of items to return for this request. The request returns a token that you can specify
-     *         in a subsequent call to get the next set of results. You cannot specify this parameter and the network
-     *         interface IDs parameter in the same request.
+     * @return The maximum number of items to return for this request. To get the next page of items, make another
+     *         request with the token returned in the output. You cannot specify this parameter and the network
+     *         interface IDs parameter in the same request. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination"
+     *         >Pagination</a>.
      */
 
     public Integer getMaxResults() {
@@ -2125,15 +2139,18 @@ public class DescribeNetworkInterfacesRequest extends AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The maximum number of items to return for this request. The request returns a token that you can specify in a
-     * subsequent call to get the next set of results. You cannot specify this parameter and the network interface IDs
-     * parameter in the same request.
+     * The maximum number of items to return for this request. To get the next page of items, make another request with
+     * the token returned in the output. You cannot specify this parameter and the network interface IDs parameter in
+     * the same request. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of items to return for this request. The request returns a token that you can specify
-     *        in a subsequent call to get the next set of results. You cannot specify this parameter and the network
-     *        interface IDs parameter in the same request.
+     *        The maximum number of items to return for this request. To get the next page of items, make another
+     *        request with the token returned in the output. You cannot specify this parameter and the network interface
+     *        IDs parameter in the same request. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination"
+     *        >Pagination</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

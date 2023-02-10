@@ -405,8 +405,8 @@ public interface AmazonSageMaker {
      * <p>
      * Creates a <code>Domain</code> used by Amazon SageMaker Studio. A domain consists of an associated Amazon Elastic
      * File System (EFS) volume, a list of authorized users, and a variety of security, application, policy, and Amazon
-     * Virtual Private Cloud (VPC) configurations. An Amazon Web Services account is limited to one domain per region.
-     * Users within a domain can share notebook files and other artifacts with each other.
+     * Virtual Private Cloud (VPC) configurations. Users within a domain can share notebook files and other artifacts
+     * with each other.
      * </p>
      * <p>
      * <b>EFS storage</b>
@@ -575,11 +575,11 @@ public interface AmazonSageMaker {
      * <p>
      * If any of the models hosted at this endpoint get model data from an Amazon S3 location, SageMaker uses Amazon Web
      * Services Security Token Service to download model artifacts from the S3 path you provided. Amazon Web Services
-     * STS is activated in your IAM user account by default. If you previously deactivated Amazon Web Services STS for a
-     * region, you need to reactivate Amazon Web Services STS for that region. For more information, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
-     * Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in the <i>Amazon Web Services Identity
-     * and Access Management User Guide</i>.
+     * STS is activated in your Amazon Web Services account by default. If you previously deactivated Amazon Web
+     * Services STS for a region, you need to reactivate Amazon Web Services STS for that region. For more information,
+     * see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
+     * and Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in the <i>Amazon Web Services
+     * Identity and Access Management User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -783,6 +783,11 @@ public interface AmazonSageMaker {
      * <p>
      * Create a hub.
      * </p>
+     * <note>
+     * <p>
+     * Hub APIs are only callable through SageMaker Studio.
+     * </p>
+     * </note>
      * 
      * @param createHubRequest
      * @return Result of the CreateHub operation returned by the service.
@@ -2102,6 +2107,11 @@ public interface AmazonSageMaker {
      * <p>
      * Delete a hub.
      * </p>
+     * <note>
+     * <p>
+     * Hub APIs are only callable through SageMaker Studio.
+     * </p>
+     * </note>
      * 
      * @param deleteHubRequest
      * @return Result of the DeleteHub operation returned by the service.
@@ -2119,6 +2129,11 @@ public interface AmazonSageMaker {
      * <p>
      * Delete the contents of a hub.
      * </p>
+     * <note>
+     * <p>
+     * Hub APIs are only callable through SageMaker Studio.
+     * </p>
+     * </note>
      * 
      * @param deleteHubContentRequest
      * @return Result of the DeleteHubContent operation returned by the service.
@@ -2903,6 +2918,11 @@ public interface AmazonSageMaker {
      * <p>
      * Describe a hub.
      * </p>
+     * <note>
+     * <p>
+     * Hub APIs are only callable through SageMaker Studio.
+     * </p>
+     * </note>
      * 
      * @param describeHubRequest
      * @return Result of the DescribeHub operation returned by the service.
@@ -2918,6 +2938,11 @@ public interface AmazonSageMaker {
      * <p>
      * Describe the content of a hub.
      * </p>
+     * <note>
+     * <p>
+     * Hub APIs are only callable through SageMaker Studio.
+     * </p>
+     * </note>
      * 
      * @param describeHubContentRequest
      * @return Result of the DescribeHubContent operation returned by the service.
@@ -3583,6 +3608,11 @@ public interface AmazonSageMaker {
      * <p>
      * Import hub content.
      * </p>
+     * <note>
+     * <p>
+     * Hub APIs are only callable through SageMaker Studio.
+     * </p>
+     * </note>
      * 
      * @param importHubContentRequest
      * @return Result of the ImportHubContent operation returned by the service.
@@ -3920,6 +3950,11 @@ public interface AmazonSageMaker {
      * <p>
      * List hub content versions.
      * </p>
+     * <note>
+     * <p>
+     * Hub APIs are only callable through SageMaker Studio.
+     * </p>
+     * </note>
      * 
      * @param listHubContentVersionsRequest
      * @return Result of the ListHubContentVersions operation returned by the service.
@@ -3935,6 +3970,11 @@ public interface AmazonSageMaker {
      * <p>
      * List the contents of a hub.
      * </p>
+     * <note>
+     * <p>
+     * Hub APIs are only callable through SageMaker Studio.
+     * </p>
+     * </note>
      * 
      * @param listHubContentsRequest
      * @return Result of the ListHubContents operation returned by the service.
@@ -3950,6 +3990,11 @@ public interface AmazonSageMaker {
      * <p>
      * List all existing hubs.
      * </p>
+     * <note>
+     * <p>
+     * Hub APIs are only callable through SageMaker Studio.
+     * </p>
+     * </note>
      * 
      * @param listHubsRequest
      * @return Result of the ListHubs operation returned by the service.
@@ -4868,7 +4913,7 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
-     * A method for forcing the termination of a running job.
+     * A method for forcing a running job to shut down.
      * </p>
      * 
      * @param stopAutoMLJobRequest
@@ -5370,6 +5415,11 @@ public interface AmazonSageMaker {
      * <p>
      * Update a hub.
      * </p>
+     * <note>
+     * <p>
+     * Hub APIs are only callable through SageMaker Studio.
+     * </p>
+     * </note>
      * 
      * @param updateHubRequest
      * @return Result of the UpdateHub operation returned by the service.

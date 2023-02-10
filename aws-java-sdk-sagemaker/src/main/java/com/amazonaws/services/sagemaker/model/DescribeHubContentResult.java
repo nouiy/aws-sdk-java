@@ -79,7 +79,8 @@ public class DescribeHubContentResult extends com.amazonaws.AmazonWebServiceResu
     private String hubContentDescription;
     /**
      * <p>
-     * Markdown files associated with the hub content to import.
+     * A string that provides a description of the hub content. This string can include links, tables, and standard
+     * markdown formating.
      * </p>
      */
     private String hubContentMarkdown;
@@ -503,11 +504,13 @@ public class DescribeHubContentResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Markdown files associated with the hub content to import.
+     * A string that provides a description of the hub content. This string can include links, tables, and standard
+     * markdown formating.
      * </p>
      * 
      * @param hubContentMarkdown
-     *        Markdown files associated with the hub content to import.
+     *        A string that provides a description of the hub content. This string can include links, tables, and
+     *        standard markdown formating.
      */
 
     public void setHubContentMarkdown(String hubContentMarkdown) {
@@ -516,10 +519,12 @@ public class DescribeHubContentResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Markdown files associated with the hub content to import.
+     * A string that provides a description of the hub content. This string can include links, tables, and standard
+     * markdown formating.
      * </p>
      * 
-     * @return Markdown files associated with the hub content to import.
+     * @return A string that provides a description of the hub content. This string can include links, tables, and
+     *         standard markdown formating.
      */
 
     public String getHubContentMarkdown() {
@@ -528,11 +533,13 @@ public class DescribeHubContentResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Markdown files associated with the hub content to import.
+     * A string that provides a description of the hub content. This string can include links, tables, and standard
+     * markdown formating.
      * </p>
      * 
      * @param hubContentMarkdown
-     *        Markdown files associated with the hub content to import.
+     *        A string that provides a description of the hub content. This string can include links, tables, and
+     *        standard markdown formating.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

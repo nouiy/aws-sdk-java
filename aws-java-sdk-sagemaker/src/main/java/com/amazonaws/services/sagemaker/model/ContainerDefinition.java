@@ -87,9 +87,9 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * </note>
      * <p>
      * If you provide a value for this parameter, SageMaker uses Amazon Web Services Security Token Service to download
-     * model artifacts from the S3 path you provide. Amazon Web Services STS is activated in your IAM user account by
-     * default. If you previously deactivated Amazon Web Services STS for a region, you need to reactivate Amazon Web
-     * Services STS for that region. For more information, see <a
+     * model artifacts from the S3 path you provide. Amazon Web Services STS is activated in your Amazon Web Services
+     * account by default. If you previously deactivated Amazon Web Services STS for a region, you need to reactivate
+     * Amazon Web Services STS for that region. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
      * Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in the <i>Amazon Web Services Identity
      * and Access Management User Guide</i>.
@@ -442,9 +442,9 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * </note>
      * <p>
      * If you provide a value for this parameter, SageMaker uses Amazon Web Services Security Token Service to download
-     * model artifacts from the S3 path you provide. Amazon Web Services STS is activated in your IAM user account by
-     * default. If you previously deactivated Amazon Web Services STS for a region, you need to reactivate Amazon Web
-     * Services STS for that region. For more information, see <a
+     * model artifacts from the S3 path you provide. Amazon Web Services STS is activated in your Amazon Web Services
+     * account by default. If you previously deactivated Amazon Web Services STS for a region, you need to reactivate
+     * Amazon Web Services STS for that region. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
      * Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in the <i>Amazon Web Services Identity
      * and Access Management User Guide</i>.
@@ -469,9 +469,9 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *        </note>
      *        <p>
      *        If you provide a value for this parameter, SageMaker uses Amazon Web Services Security Token Service to
-     *        download model artifacts from the S3 path you provide. Amazon Web Services STS is activated in your IAM
-     *        user account by default. If you previously deactivated Amazon Web Services STS for a region, you need to
-     *        reactivate Amazon Web Services STS for that region. For more information, see <a
+     *        download model artifacts from the S3 path you provide. Amazon Web Services STS is activated in your Amazon
+     *        Web Services account by default. If you previously deactivated Amazon Web Services STS for a region, you
+     *        need to reactivate Amazon Web Services STS for that region. For more information, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
      *        and Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in the <i>Amazon Web
      *        Services Identity and Access Management User Guide</i>.
@@ -502,9 +502,9 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * </note>
      * <p>
      * If you provide a value for this parameter, SageMaker uses Amazon Web Services Security Token Service to download
-     * model artifacts from the S3 path you provide. Amazon Web Services STS is activated in your IAM user account by
-     * default. If you previously deactivated Amazon Web Services STS for a region, you need to reactivate Amazon Web
-     * Services STS for that region. For more information, see <a
+     * model artifacts from the S3 path you provide. Amazon Web Services STS is activated in your Amazon Web Services
+     * account by default. If you previously deactivated Amazon Web Services STS for a region, you need to reactivate
+     * Amazon Web Services STS for that region. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
      * Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in the <i>Amazon Web Services Identity
      * and Access Management User Guide</i>.
@@ -528,12 +528,13 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *         </note>
      *         <p>
      *         If you provide a value for this parameter, SageMaker uses Amazon Web Services Security Token Service to
-     *         download model artifacts from the S3 path you provide. Amazon Web Services STS is activated in your IAM
-     *         user account by default. If you previously deactivated Amazon Web Services STS for a region, you need to
-     *         reactivate Amazon Web Services STS for that region. For more information, see <a
-     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html"
-     *         >Activating and Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in the
-     *         <i>Amazon Web Services Identity and Access Management User Guide</i>.
+     *         download model artifacts from the S3 path you provide. Amazon Web Services STS is activated in your
+     *         Amazon Web Services account by default. If you previously deactivated Amazon Web Services STS for a
+     *         region, you need to reactivate Amazon Web Services STS for that region. For more information, see <a
+     *         href=
+     *         "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
+     *         Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in the <i>Amazon Web Services
+     *         Identity and Access Management User Guide</i>.
      *         </p>
      *         <important>
      *         <p>
@@ -561,9 +562,9 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      * </note>
      * <p>
      * If you provide a value for this parameter, SageMaker uses Amazon Web Services Security Token Service to download
-     * model artifacts from the S3 path you provide. Amazon Web Services STS is activated in your IAM user account by
-     * default. If you previously deactivated Amazon Web Services STS for a region, you need to reactivate Amazon Web
-     * Services STS for that region. For more information, see <a
+     * model artifacts from the S3 path you provide. Amazon Web Services STS is activated in your Amazon Web Services
+     * account by default. If you previously deactivated Amazon Web Services STS for a region, you need to reactivate
+     * Amazon Web Services STS for that region. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
      * Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in the <i>Amazon Web Services Identity
      * and Access Management User Guide</i>.
@@ -588,9 +589,9 @@ public class ContainerDefinition implements Serializable, Cloneable, StructuredP
      *        </note>
      *        <p>
      *        If you provide a value for this parameter, SageMaker uses Amazon Web Services Security Token Service to
-     *        download model artifacts from the S3 path you provide. Amazon Web Services STS is activated in your IAM
-     *        user account by default. If you previously deactivated Amazon Web Services STS for a region, you need to
-     *        reactivate Amazon Web Services STS for that region. For more information, see <a
+     *        download model artifacts from the S3 path you provide. Amazon Web Services STS is activated in your Amazon
+     *        Web Services account by default. If you previously deactivated Amazon Web Services STS for a region, you
+     *        need to reactivate Amazon Web Services STS for that region. For more information, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating
      *        and Deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in the <i>Amazon Web
      *        Services Identity and Access Management User Guide</i>.

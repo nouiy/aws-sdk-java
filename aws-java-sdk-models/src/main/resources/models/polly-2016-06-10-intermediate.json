@@ -16047,6 +16047,12 @@
       }, {
         "name" : "Stephen",
         "value" : "Stephen"
+      }, {
+        "name" : "Kazuha",
+        "value" : "Kazuha"
+      }, {
+        "name" : "Tomoko",
+        "value" : "Tomoko"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.polly.enum.VoiceId",

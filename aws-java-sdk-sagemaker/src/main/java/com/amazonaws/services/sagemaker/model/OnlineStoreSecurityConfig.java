@@ -95,9 +95,8 @@ public class OnlineStoreSecurityConfig implements Serializable, Cloneable, Struc
      * </li>
      * </ul>
      * <p>
-     * The caller (either IAM user or IAM role) to all DataPlane operations (<code>PutRecord</code>,
-     * <code>GetRecord</code>, <code>DeleteRecord</code>) must have the following permissions to the
-     * <code>KmsKeyId</code>:
+     * The caller (either user or IAM role) to all DataPlane operations (<code>PutRecord</code>, <code>GetRecord</code>,
+     * <code>DeleteRecord</code>) must have the following permissions to the <code>KmsKeyId</code>:
      * </p>
      * <ul>
      * <li>
@@ -176,9 +175,8 @@ public class OnlineStoreSecurityConfig implements Serializable, Cloneable, Struc
      * </li>
      * </ul>
      * <p>
-     * The caller (either IAM user or IAM role) to all DataPlane operations (<code>PutRecord</code>,
-     * <code>GetRecord</code>, <code>DeleteRecord</code>) must have the following permissions to the
-     * <code>KmsKeyId</code>:
+     * The caller (either user or IAM role) to all DataPlane operations (<code>PutRecord</code>, <code>GetRecord</code>,
+     * <code>DeleteRecord</code>) must have the following permissions to the <code>KmsKeyId</code>:
      * </p>
      * <ul>
      * <li>
@@ -253,7 +251,7 @@ public class OnlineStoreSecurityConfig implements Serializable, Cloneable, Struc
      *        </li>
      *        </ul>
      *        <p>
-     *        The caller (either IAM user or IAM role) to all DataPlane operations (<code>PutRecord</code>,
+     *        The caller (either user or IAM role) to all DataPlane operations (<code>PutRecord</code>,
      *        <code>GetRecord</code>, <code>DeleteRecord</code>) must have the following permissions to the
      *        <code>KmsKeyId</code>:
      *        </p>
@@ -336,9 +334,8 @@ public class OnlineStoreSecurityConfig implements Serializable, Cloneable, Struc
      * </li>
      * </ul>
      * <p>
-     * The caller (either IAM user or IAM role) to all DataPlane operations (<code>PutRecord</code>,
-     * <code>GetRecord</code>, <code>DeleteRecord</code>) must have the following permissions to the
-     * <code>KmsKeyId</code>:
+     * The caller (either user or IAM role) to all DataPlane operations (<code>PutRecord</code>, <code>GetRecord</code>,
+     * <code>DeleteRecord</code>) must have the following permissions to the <code>KmsKeyId</code>:
      * </p>
      * <ul>
      * <li>
@@ -412,7 +409,7 @@ public class OnlineStoreSecurityConfig implements Serializable, Cloneable, Struc
      *         </li>
      *         </ul>
      *         <p>
-     *         The caller (either IAM user or IAM role) to all DataPlane operations (<code>PutRecord</code>,
+     *         The caller (either user or IAM role) to all DataPlane operations (<code>PutRecord</code>,
      *         <code>GetRecord</code>, <code>DeleteRecord</code>) must have the following permissions to the
      *         <code>KmsKeyId</code>:
      *         </p>
@@ -495,9 +492,8 @@ public class OnlineStoreSecurityConfig implements Serializable, Cloneable, Struc
      * </li>
      * </ul>
      * <p>
-     * The caller (either IAM user or IAM role) to all DataPlane operations (<code>PutRecord</code>,
-     * <code>GetRecord</code>, <code>DeleteRecord</code>) must have the following permissions to the
-     * <code>KmsKeyId</code>:
+     * The caller (either user or IAM role) to all DataPlane operations (<code>PutRecord</code>, <code>GetRecord</code>,
+     * <code>DeleteRecord</code>) must have the following permissions to the <code>KmsKeyId</code>:
      * </p>
      * <ul>
      * <li>
@@ -572,7 +568,7 @@ public class OnlineStoreSecurityConfig implements Serializable, Cloneable, Struc
      *        </li>
      *        </ul>
      *        <p>
-     *        The caller (either IAM user or IAM role) to all DataPlane operations (<code>PutRecord</code>,
+     *        The caller (either user or IAM role) to all DataPlane operations (<code>PutRecord</code>,
      *        <code>GetRecord</code>, <code>DeleteRecord</code>) must have the following permissions to the
      *        <code>KmsKeyId</code>:
      *        </p>

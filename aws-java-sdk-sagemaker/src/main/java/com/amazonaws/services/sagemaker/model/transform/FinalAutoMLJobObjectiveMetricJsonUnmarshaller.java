@@ -60,6 +60,10 @@ public class FinalAutoMLJobObjectiveMetricJsonUnmarshaller implements Unmarshall
                     context.nextToken();
                     finalAutoMLJobObjectiveMetric.setValue(context.getUnmarshaller(Float.class).unmarshall(context));
                 }
+                if (context.testExpression("StandardMetricName", targetDepth)) {
+                    context.nextToken();
+                    finalAutoMLJobObjectiveMetric.setStandardMetricName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

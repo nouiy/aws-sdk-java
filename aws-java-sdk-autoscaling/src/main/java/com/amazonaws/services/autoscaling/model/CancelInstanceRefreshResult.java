@@ -25,18 +25,21 @@ public class CancelInstanceRefreshResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The instance refresh ID.
+     * The instance refresh ID associated with the request. This is the unique ID assigned to the instance refresh when
+     * it was started.
      * </p>
      */
     private String instanceRefreshId;
 
     /**
      * <p>
-     * The instance refresh ID.
+     * The instance refresh ID associated with the request. This is the unique ID assigned to the instance refresh when
+     * it was started.
      * </p>
      * 
      * @param instanceRefreshId
-     *        The instance refresh ID.
+     *        The instance refresh ID associated with the request. This is the unique ID assigned to the instance
+     *        refresh when it was started.
      */
 
     public void setInstanceRefreshId(String instanceRefreshId) {
@@ -45,10 +48,12 @@ public class CancelInstanceRefreshResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The instance refresh ID.
+     * The instance refresh ID associated with the request. This is the unique ID assigned to the instance refresh when
+     * it was started.
      * </p>
      * 
-     * @return The instance refresh ID.
+     * @return The instance refresh ID associated with the request. This is the unique ID assigned to the instance
+     *         refresh when it was started.
      */
 
     public String getInstanceRefreshId() {
@@ -57,11 +62,13 @@ public class CancelInstanceRefreshResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The instance refresh ID.
+     * The instance refresh ID associated with the request. This is the unique ID assigned to the instance refresh when
+     * it was started.
      * </p>
      * 
      * @param instanceRefreshId
-     *        The instance refresh ID.
+     *        The instance refresh ID associated with the request. This is the unique ID assigned to the instance
+     *        refresh when it was started.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

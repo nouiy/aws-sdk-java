@@ -18,9 +18,7 @@ import javax.annotation.Generated;
 import com.amazonaws.AmazonWebServiceResult;
 
 /**
- * <p>
- * Contains the output of DescribeNetworkInterfaces.
- * </p>
+ * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DescribeNetworkInterfacesResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
@@ -33,8 +31,8 @@ public class DescribeNetworkInterfacesResult extends com.amazonaws.AmazonWebServ
     private com.amazonaws.internal.SdkInternalList<NetworkInterface> networkInterfaces;
     /**
      * <p>
-     * The token to use to retrieve the next page of results. This value is <code>null</code> when there are no more
-     * results to return.
+     * The token to include in another request to get the next page of items. This value is <code>null</code> when there
+     * are no more items to return.
      * </p>
      */
     private String nextToken;
@@ -114,13 +112,13 @@ public class DescribeNetworkInterfacesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The token to use to retrieve the next page of results. This value is <code>null</code> when there are no more
-     * results to return.
+     * The token to include in another request to get the next page of items. This value is <code>null</code> when there
+     * are no more items to return.
      * </p>
      * 
      * @param nextToken
-     *        The token to use to retrieve the next page of results. This value is <code>null</code> when there are no
-     *        more results to return.
+     *        The token to include in another request to get the next page of items. This value is <code>null</code>
+     *        when there are no more items to return.
      */
 
     public void setNextToken(String nextToken) {
@@ -129,12 +127,12 @@ public class DescribeNetworkInterfacesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The token to use to retrieve the next page of results. This value is <code>null</code> when there are no more
-     * results to return.
+     * The token to include in another request to get the next page of items. This value is <code>null</code> when there
+     * are no more items to return.
      * </p>
      * 
-     * @return The token to use to retrieve the next page of results. This value is <code>null</code> when there are no
-     *         more results to return.
+     * @return The token to include in another request to get the next page of items. This value is <code>null</code>
+     *         when there are no more items to return.
      */
 
     public String getNextToken() {
@@ -143,13 +141,13 @@ public class DescribeNetworkInterfacesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The token to use to retrieve the next page of results. This value is <code>null</code> when there are no more
-     * results to return.
+     * The token to include in another request to get the next page of items. This value is <code>null</code> when there
+     * are no more items to return.
      * </p>
      * 
      * @param nextToken
-     *        The token to use to retrieve the next page of results. This value is <code>null</code> when there are no
-     *        more results to return.
+     *        The token to include in another request to get the next page of items. This value is <code>null</code>
+     *        when there are no more items to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

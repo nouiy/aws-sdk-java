@@ -54,6 +54,13 @@ public class CreateRoutingProfileRequest extends com.amazonaws.AmazonWebServiceR
      * The inbound queues associated with the routing profile. If no queue is added, the agent can make only outbound
      * calls.
      * </p>
+     * <p>
+     * The limit of 10 array members applies to the maximum number of <code>RoutingProfileQueueConfig</code> objects
+     * that can be passed during a CreateRoutingProfile API request. It is different from the quota of 50 queues per
+     * routing profile per instance that is listed in <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect
+     * service quotas</a>.
+     * </p>
      */
     private java.util.List<RoutingProfileQueueConfig> queueConfigs;
     /**
@@ -235,9 +242,22 @@ public class CreateRoutingProfileRequest extends com.amazonaws.AmazonWebServiceR
      * The inbound queues associated with the routing profile. If no queue is added, the agent can make only outbound
      * calls.
      * </p>
+     * <p>
+     * The limit of 10 array members applies to the maximum number of <code>RoutingProfileQueueConfig</code> objects
+     * that can be passed during a CreateRoutingProfile API request. It is different from the quota of 50 queues per
+     * routing profile per instance that is listed in <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect
+     * service quotas</a>.
+     * </p>
      * 
      * @return The inbound queues associated with the routing profile. If no queue is added, the agent can make only
-     *         outbound calls.
+     *         outbound calls.</p>
+     *         <p>
+     *         The limit of 10 array members applies to the maximum number of <code>RoutingProfileQueueConfig</code>
+     *         objects that can be passed during a CreateRoutingProfile API request. It is different from the quota of
+     *         50 queues per routing profile per instance that is listed in <a
+     *         href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon
+     *         Connect service quotas</a>.
      */
 
     public java.util.List<RoutingProfileQueueConfig> getQueueConfigs() {
@@ -249,10 +269,23 @@ public class CreateRoutingProfileRequest extends com.amazonaws.AmazonWebServiceR
      * The inbound queues associated with the routing profile. If no queue is added, the agent can make only outbound
      * calls.
      * </p>
+     * <p>
+     * The limit of 10 array members applies to the maximum number of <code>RoutingProfileQueueConfig</code> objects
+     * that can be passed during a CreateRoutingProfile API request. It is different from the quota of 50 queues per
+     * routing profile per instance that is listed in <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect
+     * service quotas</a>.
+     * </p>
      * 
      * @param queueConfigs
      *        The inbound queues associated with the routing profile. If no queue is added, the agent can make only
-     *        outbound calls.
+     *        outbound calls.</p>
+     *        <p>
+     *        The limit of 10 array members applies to the maximum number of <code>RoutingProfileQueueConfig</code>
+     *        objects that can be passed during a CreateRoutingProfile API request. It is different from the quota of 50
+     *        queues per routing profile per instance that is listed in <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon
+     *        Connect service quotas</a>.
      */
 
     public void setQueueConfigs(java.util.Collection<RoutingProfileQueueConfig> queueConfigs) {
@@ -270,6 +303,13 @@ public class CreateRoutingProfileRequest extends com.amazonaws.AmazonWebServiceR
      * calls.
      * </p>
      * <p>
+     * The limit of 10 array members applies to the maximum number of <code>RoutingProfileQueueConfig</code> objects
+     * that can be passed during a CreateRoutingProfile API request. It is different from the quota of 50 queues per
+     * routing profile per instance that is listed in <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect
+     * service quotas</a>.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setQueueConfigs(java.util.Collection)} or {@link #withQueueConfigs(java.util.Collection)} if you want to
      * override the existing values.
@@ -277,7 +317,13 @@ public class CreateRoutingProfileRequest extends com.amazonaws.AmazonWebServiceR
      * 
      * @param queueConfigs
      *        The inbound queues associated with the routing profile. If no queue is added, the agent can make only
-     *        outbound calls.
+     *        outbound calls.</p>
+     *        <p>
+     *        The limit of 10 array members applies to the maximum number of <code>RoutingProfileQueueConfig</code>
+     *        objects that can be passed during a CreateRoutingProfile API request. It is different from the quota of 50
+     *        queues per routing profile per instance that is listed in <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon
+     *        Connect service quotas</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -296,10 +342,23 @@ public class CreateRoutingProfileRequest extends com.amazonaws.AmazonWebServiceR
      * The inbound queues associated with the routing profile. If no queue is added, the agent can make only outbound
      * calls.
      * </p>
+     * <p>
+     * The limit of 10 array members applies to the maximum number of <code>RoutingProfileQueueConfig</code> objects
+     * that can be passed during a CreateRoutingProfile API request. It is different from the quota of 50 queues per
+     * routing profile per instance that is listed in <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect
+     * service quotas</a>.
+     * </p>
      * 
      * @param queueConfigs
      *        The inbound queues associated with the routing profile. If no queue is added, the agent can make only
-     *        outbound calls.
+     *        outbound calls.</p>
+     *        <p>
+     *        The limit of 10 array members applies to the maximum number of <code>RoutingProfileQueueConfig</code>
+     *        objects that can be passed during a CreateRoutingProfile API request. It is different from the quota of 50
+     *        queues per routing profile per instance that is listed in <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon
+     *        Connect service quotas</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

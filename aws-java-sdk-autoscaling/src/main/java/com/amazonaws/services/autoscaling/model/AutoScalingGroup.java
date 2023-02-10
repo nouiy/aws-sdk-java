@@ -238,6 +238,10 @@ public class AutoScalingGroup implements Serializable, Cloneable {
     private Integer defaultInstanceWarmup;
     /**
      * <p>
+     * <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not use
+     * this parameter for production workloads. It is also subject to change.</b>
+     * </p>
+     * <p>
      * The unique identifiers of the traffic sources.
      * </p>
      */
@@ -1921,10 +1925,17 @@ public class AutoScalingGroup implements Serializable, Cloneable {
 
     /**
      * <p>
+     * <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not use
+     * this parameter for production workloads. It is also subject to change.</b>
+     * </p>
+     * <p>
      * The unique identifiers of the traffic sources.
      * </p>
      * 
-     * @return The unique identifiers of the traffic sources.
+     * @return <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not
+     *         use this parameter for production workloads. It is also subject to change.</b> </p>
+     *         <p>
+     *         The unique identifiers of the traffic sources.
      */
 
     public java.util.List<TrafficSourceIdentifier> getTrafficSources() {
@@ -1936,10 +1947,17 @@ public class AutoScalingGroup implements Serializable, Cloneable {
 
     /**
      * <p>
+     * <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not use
+     * this parameter for production workloads. It is also subject to change.</b>
+     * </p>
+     * <p>
      * The unique identifiers of the traffic sources.
      * </p>
      * 
      * @param trafficSources
+     *        <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not
+     *        use this parameter for production workloads. It is also subject to change.</b> </p>
+     *        <p>
      *        The unique identifiers of the traffic sources.
      */
 
@@ -1954,6 +1972,10 @@ public class AutoScalingGroup implements Serializable, Cloneable {
 
     /**
      * <p>
+     * <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not use
+     * this parameter for production workloads. It is also subject to change.</b>
+     * </p>
+     * <p>
      * The unique identifiers of the traffic sources.
      * </p>
      * <p>
@@ -1963,6 +1985,9 @@ public class AutoScalingGroup implements Serializable, Cloneable {
      * </p>
      * 
      * @param trafficSources
+     *        <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not
+     *        use this parameter for production workloads. It is also subject to change.</b> </p>
+     *        <p>
      *        The unique identifiers of the traffic sources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1979,10 +2004,17 @@ public class AutoScalingGroup implements Serializable, Cloneable {
 
     /**
      * <p>
+     * <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not use
+     * this parameter for production workloads. It is also subject to change.</b>
+     * </p>
+     * <p>
      * The unique identifiers of the traffic sources.
      * </p>
      * 
      * @param trafficSources
+     *        <b>Reserved for use with Amazon VPC Lattice, which is in preview release and is subject to change. Do not
+     *        use this parameter for production workloads. It is also subject to change.</b> </p>
+     *        <p>
      *        The unique identifiers of the traffic sources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

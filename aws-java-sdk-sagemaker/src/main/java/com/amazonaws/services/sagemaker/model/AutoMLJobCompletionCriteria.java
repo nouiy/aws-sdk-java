@@ -49,7 +49,7 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
      * If an AutoML job exceeds the maximum runtime, the job is stopped automatically and its processing is ended
      * gracefully. The AutoML job identifies the best model whose training was completed and marks it as the
      * best-performing model. Any unfinished steps of the job, such as automatic one-click Autopilot model deployment,
-     * will not be completed.
+     * are not completed.
      * </p>
      */
     private Integer maxAutoMLJobRuntimeInSeconds;
@@ -148,7 +148,7 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
      * If an AutoML job exceeds the maximum runtime, the job is stopped automatically and its processing is ended
      * gracefully. The AutoML job identifies the best model whose training was completed and marks it as the
      * best-performing model. Any unfinished steps of the job, such as automatic one-click Autopilot model deployment,
-     * will not be completed.
+     * are not completed.
      * </p>
      * 
      * @param maxAutoMLJobRuntimeInSeconds
@@ -157,7 +157,7 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
      *        If an AutoML job exceeds the maximum runtime, the job is stopped automatically and its processing is ended
      *        gracefully. The AutoML job identifies the best model whose training was completed and marks it as the
      *        best-performing model. Any unfinished steps of the job, such as automatic one-click Autopilot model
-     *        deployment, will not be completed.
+     *        deployment, are not completed.
      */
 
     public void setMaxAutoMLJobRuntimeInSeconds(Integer maxAutoMLJobRuntimeInSeconds) {
@@ -172,7 +172,7 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
      * If an AutoML job exceeds the maximum runtime, the job is stopped automatically and its processing is ended
      * gracefully. The AutoML job identifies the best model whose training was completed and marks it as the
      * best-performing model. Any unfinished steps of the job, such as automatic one-click Autopilot model deployment,
-     * will not be completed.
+     * are not completed.
      * </p>
      * 
      * @return The maximum runtime, in seconds, an AutoML job has to complete.</p>
@@ -180,7 +180,7 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
      *         If an AutoML job exceeds the maximum runtime, the job is stopped automatically and its processing is
      *         ended gracefully. The AutoML job identifies the best model whose training was completed and marks it as
      *         the best-performing model. Any unfinished steps of the job, such as automatic one-click Autopilot model
-     *         deployment, will not be completed.
+     *         deployment, are not completed.
      */
 
     public Integer getMaxAutoMLJobRuntimeInSeconds() {
@@ -195,7 +195,7 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
      * If an AutoML job exceeds the maximum runtime, the job is stopped automatically and its processing is ended
      * gracefully. The AutoML job identifies the best model whose training was completed and marks it as the
      * best-performing model. Any unfinished steps of the job, such as automatic one-click Autopilot model deployment,
-     * will not be completed.
+     * are not completed.
      * </p>
      * 
      * @param maxAutoMLJobRuntimeInSeconds
@@ -204,7 +204,7 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
      *        If an AutoML job exceeds the maximum runtime, the job is stopped automatically and its processing is ended
      *        gracefully. The AutoML job identifies the best model whose training was completed and marks it as the
      *        best-performing model. Any unfinished steps of the job, such as automatic one-click Autopilot model
-     *        deployment, will not be completed.
+     *        deployment, are not completed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

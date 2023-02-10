@@ -409,6 +409,11 @@ public class AbstractAmazonAutoScaling implements AmazonAutoScaling {
     }
 
     @Override
+    public RollbackInstanceRefreshResult rollbackInstanceRefresh(RollbackInstanceRefreshRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public SetDesiredCapacityResult setDesiredCapacity(SetDesiredCapacityRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -2133,7 +2133,7 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
         if (getInstanceInitiatedShutdownBehavior() != null)
             sb.append("InstanceInitiatedShutdownBehavior: ").append(getInstanceInitiatedShutdownBehavior()).append(",");
         if (getUserData() != null)
-            sb.append("UserData: ").append(getUserData()).append(",");
+            sb.append("UserData: ").append("***Sensitive Data Redacted***").append(",");
         if (getTagSpecifications() != null)
             sb.append("TagSpecifications: ").append(getTagSpecifications()).append(",");
         if (getElasticGpuSpecifications() != null)

@@ -139,6 +139,8 @@ public enum AutoScalingActions implements Action {
     RecordLifecycleActionHeartbeat("autoscaling:RecordLifecycleActionHeartbeat"),
     /** Action for the ResumeProcesses operation. */
     ResumeProcesses("autoscaling:ResumeProcesses"),
+    /** Action for the RollbackInstanceRefresh operation. */
+    RollbackInstanceRefresh("autoscaling:RollbackInstanceRefresh"),
     /** Action for the SetDesiredCapacity operation. */
     SetDesiredCapacity("autoscaling:SetDesiredCapacity"),
     /** Action for the SetInstanceHealth operation. */

@@ -1174,6 +1174,19 @@ public class AbstractAmazonAutoScalingAsync extends AbstractAmazonAutoScaling im
     }
 
     @Override
+    public java.util.concurrent.Future<RollbackInstanceRefreshResult> rollbackInstanceRefreshAsync(RollbackInstanceRefreshRequest request) {
+
+        return rollbackInstanceRefreshAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RollbackInstanceRefreshResult> rollbackInstanceRefreshAsync(RollbackInstanceRefreshRequest request,
+            com.amazonaws.handlers.AsyncHandler<RollbackInstanceRefreshRequest, RollbackInstanceRefreshResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<SetDesiredCapacityResult> setDesiredCapacityAsync(SetDesiredCapacityRequest request) {
 
         return setDesiredCapacityAsync(request, null);

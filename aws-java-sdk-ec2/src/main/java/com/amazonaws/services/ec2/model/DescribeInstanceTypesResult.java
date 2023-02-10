@@ -33,8 +33,8 @@ public class DescribeInstanceTypesResult extends com.amazonaws.AmazonWebServiceR
     private com.amazonaws.internal.SdkInternalList<InstanceTypeInfo> instanceTypes;
     /**
      * <p>
-     * The token to use to retrieve the next page of results. This value is <code>null</code> when there are no more
-     * results to return.
+     * The token to include in another request to get the next page of items. This value is <code>null</code> when there
+     * are no more items to return.
      * </p>
      */
     private String nextToken;
@@ -130,13 +130,13 @@ public class DescribeInstanceTypesResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The token to use to retrieve the next page of results. This value is <code>null</code> when there are no more
-     * results to return.
+     * The token to include in another request to get the next page of items. This value is <code>null</code> when there
+     * are no more items to return.
      * </p>
      * 
      * @param nextToken
-     *        The token to use to retrieve the next page of results. This value is <code>null</code> when there are no
-     *        more results to return.
+     *        The token to include in another request to get the next page of items. This value is <code>null</code>
+     *        when there are no more items to return.
      */
 
     public void setNextToken(String nextToken) {
@@ -145,12 +145,12 @@ public class DescribeInstanceTypesResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The token to use to retrieve the next page of results. This value is <code>null</code> when there are no more
-     * results to return.
+     * The token to include in another request to get the next page of items. This value is <code>null</code> when there
+     * are no more items to return.
      * </p>
      * 
-     * @return The token to use to retrieve the next page of results. This value is <code>null</code> when there are no
-     *         more results to return.
+     * @return The token to include in another request to get the next page of items. This value is <code>null</code>
+     *         when there are no more items to return.
      */
 
     public String getNextToken() {
@@ -159,13 +159,13 @@ public class DescribeInstanceTypesResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The token to use to retrieve the next page of results. This value is <code>null</code> when there are no more
-     * results to return.
+     * The token to include in another request to get the next page of items. This value is <code>null</code> when there
+     * are no more items to return.
      * </p>
      * 
      * @param nextToken
-     *        The token to use to retrieve the next page of results. This value is <code>null</code> when there are no
-     *        more results to return.
+     *        The token to include in another request to get the next page of items. This value is <code>null</code>
+     *        when there are no more items to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

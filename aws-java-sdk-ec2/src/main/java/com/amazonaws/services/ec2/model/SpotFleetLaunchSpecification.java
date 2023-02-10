@@ -1411,7 +1411,7 @@ public class SpotFleetLaunchSpecification implements Serializable, Cloneable {
         if (getSubnetId() != null)
             sb.append("SubnetId: ").append(getSubnetId()).append(",");
         if (getUserData() != null)
-            sb.append("UserData: ").append(getUserData()).append(",");
+            sb.append("UserData: ").append("***Sensitive Data Redacted***").append(",");
         if (getWeightedCapacity() != null)
             sb.append("WeightedCapacity: ").append(getWeightedCapacity()).append(",");
         if (getTagSpecifications() != null)

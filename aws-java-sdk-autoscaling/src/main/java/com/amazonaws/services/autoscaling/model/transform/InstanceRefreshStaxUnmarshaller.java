@@ -97,6 +97,11 @@ public class InstanceRefreshStaxUnmarshaller implements Unmarshaller<InstanceRef
                     instanceRefresh.setDesiredConfiguration(DesiredConfigurationStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("RollbackDetails", targetDepth)) {
+                    instanceRefresh.setRollbackDetails(RollbackDetailsStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return instanceRefresh;

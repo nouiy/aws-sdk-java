@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request failed because an active instance refresh for the specified Auto Scaling group was not found.
+ * The request failed because an active instance refresh or rollback for the specified Auto Scaling group was not found.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

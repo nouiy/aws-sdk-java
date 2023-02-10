@@ -1010,7 +1010,7 @@ public class LaunchSpecification implements Serializable, Cloneable {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getUserData() != null)
-            sb.append("UserData: ").append(getUserData()).append(",");
+            sb.append("UserData: ").append("***Sensitive Data Redacted***").append(",");
         if (getAddressingType() != null)
             sb.append("AddressingType: ").append(getAddressingType()).append(",");
         if (getBlockDeviceMappings() != null)

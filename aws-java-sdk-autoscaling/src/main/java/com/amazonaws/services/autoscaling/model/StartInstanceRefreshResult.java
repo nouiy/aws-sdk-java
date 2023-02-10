@@ -25,18 +25,18 @@ public class StartInstanceRefreshResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A unique ID for tracking the progress of the request.
+     * A unique ID for tracking the progress of the instance refresh.
      * </p>
      */
     private String instanceRefreshId;
 
     /**
      * <p>
-     * A unique ID for tracking the progress of the request.
+     * A unique ID for tracking the progress of the instance refresh.
      * </p>
      * 
      * @param instanceRefreshId
-     *        A unique ID for tracking the progress of the request.
+     *        A unique ID for tracking the progress of the instance refresh.
      */
 
     public void setInstanceRefreshId(String instanceRefreshId) {
@@ -45,10 +45,10 @@ public class StartInstanceRefreshResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A unique ID for tracking the progress of the request.
+     * A unique ID for tracking the progress of the instance refresh.
      * </p>
      * 
-     * @return A unique ID for tracking the progress of the request.
+     * @return A unique ID for tracking the progress of the instance refresh.
      */
 
     public String getInstanceRefreshId() {
@@ -57,11 +57,11 @@ public class StartInstanceRefreshResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A unique ID for tracking the progress of the request.
+     * A unique ID for tracking the progress of the instance refresh.
      * </p>
      * 
      * @param instanceRefreshId
-     *        A unique ID for tracking the progress of the request.
+     *        A unique ID for tracking the progress of the instance refresh.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

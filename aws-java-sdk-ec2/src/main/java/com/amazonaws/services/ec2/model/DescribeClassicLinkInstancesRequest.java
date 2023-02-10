@@ -74,8 +74,9 @@ public class DescribeClassicLinkInstancesRequest extends AmazonWebServiceRequest
     private com.amazonaws.internal.SdkInternalList<String> instanceIds;
     /**
      * <p>
-     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call
-     * with the returned <code>nextToken</code> value.
+     * The maximum number of items to return for this request. To get the next page of items, make another request with
+     * the token returned in the output. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      * <p>
      * Constraint: If the value is greater than 1000, we return only 1000 items.
@@ -84,7 +85,8 @@ public class DescribeClassicLinkInstancesRequest extends AmazonWebServiceRequest
     private Integer maxResults;
     /**
      * <p>
-     * The token for the next page of results.
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
+     * the previous request.
      * </p>
      */
     private String nextToken;
@@ -505,16 +507,19 @@ public class DescribeClassicLinkInstancesRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call
-     * with the returned <code>nextToken</code> value.
+     * The maximum number of items to return for this request. To get the next page of items, make another request with
+     * the token returned in the output. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      * <p>
      * Constraint: If the value is greater than 1000, we return only 1000 items.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to return with a single call. To retrieve the remaining results, make
-     *        another call with the returned <code>nextToken</code> value.</p>
+     *        The maximum number of items to return for this request. To get the next page of items, make another
+     *        request with the token returned in the output. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination"
+     *        >Pagination</a>.</p>
      *        <p>
      *        Constraint: If the value is greater than 1000, we return only 1000 items.
      */
@@ -525,15 +530,18 @@ public class DescribeClassicLinkInstancesRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call
-     * with the returned <code>nextToken</code> value.
+     * The maximum number of items to return for this request. To get the next page of items, make another request with
+     * the token returned in the output. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      * <p>
      * Constraint: If the value is greater than 1000, we return only 1000 items.
      * </p>
      * 
-     * @return The maximum number of results to return with a single call. To retrieve the remaining results, make
-     *         another call with the returned <code>nextToken</code> value.</p>
+     * @return The maximum number of items to return for this request. To get the next page of items, make another
+     *         request with the token returned in the output. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination"
+     *         >Pagination</a>.</p>
      *         <p>
      *         Constraint: If the value is greater than 1000, we return only 1000 items.
      */
@@ -544,16 +552,19 @@ public class DescribeClassicLinkInstancesRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The maximum number of results to return with a single call. To retrieve the remaining results, make another call
-     * with the returned <code>nextToken</code> value.
+     * The maximum number of items to return for this request. To get the next page of items, make another request with
+     * the token returned in the output. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination">Pagination</a>.
      * </p>
      * <p>
      * Constraint: If the value is greater than 1000, we return only 1000 items.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results to return with a single call. To retrieve the remaining results, make
-     *        another call with the returned <code>nextToken</code> value.</p>
+     *        The maximum number of items to return for this request. To get the next page of items, make another
+     *        request with the token returned in the output. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination"
+     *        >Pagination</a>.</p>
      *        <p>
      *        Constraint: If the value is greater than 1000, we return only 1000 items.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -566,11 +577,13 @@ public class DescribeClassicLinkInstancesRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The token for the next page of results.
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
+     * the previous request.
      * </p>
      * 
      * @param nextToken
-     *        The token for the next page of results.
+     *        The token returned from a previous paginated request. Pagination continues from the end of the items
+     *        returned by the previous request.
      */
 
     public void setNextToken(String nextToken) {
@@ -579,10 +592,12 @@ public class DescribeClassicLinkInstancesRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The token for the next page of results.
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
+     * the previous request.
      * </p>
      * 
-     * @return The token for the next page of results.
+     * @return The token returned from a previous paginated request. Pagination continues from the end of the items
+     *         returned by the previous request.
      */
 
     public String getNextToken() {
@@ -591,11 +606,13 @@ public class DescribeClassicLinkInstancesRequest extends AmazonWebServiceRequest
 
     /**
      * <p>
-     * The token for the next page of results.
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by
+     * the previous request.
      * </p>
      * 
      * @param nextToken
-     *        The token for the next page of results.
+     *        The token returned from a previous paginated request. Pagination continues from the end of the items
+     *        returned by the previous request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

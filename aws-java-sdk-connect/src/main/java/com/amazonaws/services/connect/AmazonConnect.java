@@ -210,7 +210,8 @@ public interface AmazonConnect {
      * This API is in preview release for Amazon Connect and is subject to change.
      * </p>
      * <p>
-     * Allows the specified Amazon Connect instance to access the specified Amazon Lex bot.
+     * Allows the specified Amazon Connect instance to access the specified Amazon Lex V1 bot. This API only supports
+     * the association of Amazon Lex V1 bots.
      * </p>
      * 
      * @param associateLexBotRequest

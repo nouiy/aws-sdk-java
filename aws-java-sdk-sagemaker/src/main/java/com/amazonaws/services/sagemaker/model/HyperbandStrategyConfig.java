@@ -35,8 +35,8 @@ public class HyperbandStrategyConfig implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The minimum number of resources (such as epochs) that can be used by a training job launched by a hyperparameter
-     * tuning job. If the value for <code>MinResource</code> has not been reached, the training job will not be stopped
-     * by <code>Hyperband</code>.
+     * tuning job. If the value for <code>MinResource</code> has not been reached, the training job is not stopped by
+     * <code>Hyperband</code>.
      * </p>
      */
     private Integer minResource;
@@ -94,14 +94,14 @@ public class HyperbandStrategyConfig implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The minimum number of resources (such as epochs) that can be used by a training job launched by a hyperparameter
-     * tuning job. If the value for <code>MinResource</code> has not been reached, the training job will not be stopped
-     * by <code>Hyperband</code>.
+     * tuning job. If the value for <code>MinResource</code> has not been reached, the training job is not stopped by
+     * <code>Hyperband</code>.
      * </p>
      * 
      * @param minResource
      *        The minimum number of resources (such as epochs) that can be used by a training job launched by a
      *        hyperparameter tuning job. If the value for <code>MinResource</code> has not been reached, the training
-     *        job will not be stopped by <code>Hyperband</code>.
+     *        job is not stopped by <code>Hyperband</code>.
      */
 
     public void setMinResource(Integer minResource) {
@@ -111,13 +111,13 @@ public class HyperbandStrategyConfig implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The minimum number of resources (such as epochs) that can be used by a training job launched by a hyperparameter
-     * tuning job. If the value for <code>MinResource</code> has not been reached, the training job will not be stopped
-     * by <code>Hyperband</code>.
+     * tuning job. If the value for <code>MinResource</code> has not been reached, the training job is not stopped by
+     * <code>Hyperband</code>.
      * </p>
      * 
      * @return The minimum number of resources (such as epochs) that can be used by a training job launched by a
      *         hyperparameter tuning job. If the value for <code>MinResource</code> has not been reached, the training
-     *         job will not be stopped by <code>Hyperband</code>.
+     *         job is not stopped by <code>Hyperband</code>.
      */
 
     public Integer getMinResource() {
@@ -127,14 +127,14 @@ public class HyperbandStrategyConfig implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The minimum number of resources (such as epochs) that can be used by a training job launched by a hyperparameter
-     * tuning job. If the value for <code>MinResource</code> has not been reached, the training job will not be stopped
-     * by <code>Hyperband</code>.
+     * tuning job. If the value for <code>MinResource</code> has not been reached, the training job is not stopped by
+     * <code>Hyperband</code>.
      * </p>
      * 
      * @param minResource
      *        The minimum number of resources (such as epochs) that can be used by a training job launched by a
      *        hyperparameter tuning job. If the value for <code>MinResource</code> has not been reached, the training
-     *        job will not be stopped by <code>Hyperband</code>.
+     *        job is not stopped by <code>Hyperband</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

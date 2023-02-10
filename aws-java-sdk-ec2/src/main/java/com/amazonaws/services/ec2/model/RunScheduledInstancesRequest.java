@@ -280,7 +280,7 @@ public class RunScheduledInstancesRequest extends AmazonWebServiceRequest implem
         if (getInstanceCount() != null)
             sb.append("InstanceCount: ").append(getInstanceCount()).append(",");
         if (getLaunchSpecification() != null)
-            sb.append("LaunchSpecification: ").append(getLaunchSpecification()).append(",");
+            sb.append("LaunchSpecification: ").append("***Sensitive Data Redacted***").append(",");
         if (getScheduledInstanceId() != null)
             sb.append("ScheduledInstanceId: ").append(getScheduledInstanceId());
         sb.append("}");

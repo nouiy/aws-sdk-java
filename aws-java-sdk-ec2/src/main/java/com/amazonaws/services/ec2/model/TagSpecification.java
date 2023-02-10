@@ -17,7 +17,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The tags to apply to a resource when the resource is being created.
+ * The tags to apply to a resource when the resource is being created. When you specify a tag, you must specify the
+ * resource type to tag, otherwise the request will fail.
  * </p>
  * <note>
  * <p>

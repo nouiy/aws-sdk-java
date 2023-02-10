@@ -30,18 +30,18 @@ public class HubS3StorageConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon S3 output path for the hub.
+     * The Amazon S3 bucket prefix for hosting hub content.
      * </p>
      */
     private String s3OutputPath;
 
     /**
      * <p>
-     * The Amazon S3 output path for the hub.
+     * The Amazon S3 bucket prefix for hosting hub content.
      * </p>
      * 
      * @param s3OutputPath
-     *        The Amazon S3 output path for the hub.
+     *        The Amazon S3 bucket prefix for hosting hub content.
      */
 
     public void setS3OutputPath(String s3OutputPath) {
@@ -50,10 +50,10 @@ public class HubS3StorageConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon S3 output path for the hub.
+     * The Amazon S3 bucket prefix for hosting hub content.
      * </p>
      * 
-     * @return The Amazon S3 output path for the hub.
+     * @return The Amazon S3 bucket prefix for hosting hub content.
      */
 
     public String getS3OutputPath() {
@@ -62,11 +62,11 @@ public class HubS3StorageConfig implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon S3 output path for the hub.
+     * The Amazon S3 bucket prefix for hosting hub content.
      * </p>
      * 
      * @param s3OutputPath
-     *        The Amazon S3 output path for the hub.
+     *        The Amazon S3 bucket prefix for hosting hub content.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

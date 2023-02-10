@@ -307,24 +307,23 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
     private String desiredCapacityType;
     /**
      * <p>
-     * The amount of time, in seconds, until a newly launched instance can contribute to the Amazon CloudWatch metrics.
-     * This delay lets an instance finish initializing before Amazon EC2 Auto Scaling aggregates instance metrics,
-     * resulting in more reliable usage data. Set this value equal to the amount of time that it takes for resource
-     * consumption to become stable after an instance reaches the <code>InService</code> state. For more information,
-     * see <a
+     * The amount of time, in seconds, until a new instance is considered to have finished initializing and resource
+     * consumption to become stable after it enters the <code>InService</code> state.
+     * </p>
+     * <p>
+     * During an instance refresh, Amazon EC2 Auto Scaling waits for the warm-up period after it replaces an instance
+     * before it moves on to replacing the next instance. Amazon EC2 Auto Scaling also waits for the warm-up period
+     * before aggregating the metrics for new instances with existing instances in the Amazon CloudWatch metrics that
+     * are used for scaling, resulting in more reliable usage data. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-default-instance-warmup.html">Set
      * the default instance warmup for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <important>
      * <p>
-     * To manage your warm-up settings at the group level, we recommend that you set the default instance warmup,
-     * <i>even if its value is set to 0 seconds</i>. This also optimizes the performance of scaling policies that scale
-     * continuously, such as target tracking and step scaling policies.
-     * </p>
-     * <p>
-     * If you need to remove a value that you previously set, include the property but specify <code>-1</code> for the
-     * value. However, we strongly recommend keeping the default instance warmup enabled by specifying a minimum value
-     * of <code>0</code>.
+     * To manage various warm-up settings at the group level, we recommend that you set the default instance warmup,
+     * <i>even if it is set to 0 seconds</i>. To remove a value that you previously set, include the property but
+     * specify <code>-1</code> for the value. However, we strongly recommend keeping the default instance warmup enabled
+     * by specifying a value of <code>0</code> or other nominal value.
      * </p>
      * </important>
      * <p>
@@ -2410,24 +2409,23 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The amount of time, in seconds, until a newly launched instance can contribute to the Amazon CloudWatch metrics.
-     * This delay lets an instance finish initializing before Amazon EC2 Auto Scaling aggregates instance metrics,
-     * resulting in more reliable usage data. Set this value equal to the amount of time that it takes for resource
-     * consumption to become stable after an instance reaches the <code>InService</code> state. For more information,
-     * see <a
+     * The amount of time, in seconds, until a new instance is considered to have finished initializing and resource
+     * consumption to become stable after it enters the <code>InService</code> state.
+     * </p>
+     * <p>
+     * During an instance refresh, Amazon EC2 Auto Scaling waits for the warm-up period after it replaces an instance
+     * before it moves on to replacing the next instance. Amazon EC2 Auto Scaling also waits for the warm-up period
+     * before aggregating the metrics for new instances with existing instances in the Amazon CloudWatch metrics that
+     * are used for scaling, resulting in more reliable usage data. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-default-instance-warmup.html">Set
      * the default instance warmup for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <important>
      * <p>
-     * To manage your warm-up settings at the group level, we recommend that you set the default instance warmup,
-     * <i>even if its value is set to 0 seconds</i>. This also optimizes the performance of scaling policies that scale
-     * continuously, such as target tracking and step scaling policies.
-     * </p>
-     * <p>
-     * If you need to remove a value that you previously set, include the property but specify <code>-1</code> for the
-     * value. However, we strongly recommend keeping the default instance warmup enabled by specifying a minimum value
-     * of <code>0</code>.
+     * To manage various warm-up settings at the group level, we recommend that you set the default instance warmup,
+     * <i>even if it is set to 0 seconds</i>. To remove a value that you previously set, include the property but
+     * specify <code>-1</code> for the value. However, we strongly recommend keeping the default instance warmup enabled
+     * by specifying a value of <code>0</code> or other nominal value.
      * </p>
      * </important>
      * <p>
@@ -2435,23 +2433,24 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param defaultInstanceWarmup
-     *        The amount of time, in seconds, until a newly launched instance can contribute to the Amazon CloudWatch
-     *        metrics. This delay lets an instance finish initializing before Amazon EC2 Auto Scaling aggregates
-     *        instance metrics, resulting in more reliable usage data. Set this value equal to the amount of time that
-     *        it takes for resource consumption to become stable after an instance reaches the <code>InService</code>
-     *        state. For more information, see <a href=
+     *        The amount of time, in seconds, until a new instance is considered to have finished initializing and
+     *        resource consumption to become stable after it enters the <code>InService</code> state. </p>
+     *        <p>
+     *        During an instance refresh, Amazon EC2 Auto Scaling waits for the warm-up period after it replaces an
+     *        instance before it moves on to replacing the next instance. Amazon EC2 Auto Scaling also waits for the
+     *        warm-up period before aggregating the metrics for new instances with existing instances in the Amazon
+     *        CloudWatch metrics that are used for scaling, resulting in more reliable usage data. For more information,
+     *        see <a href=
      *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-default-instance-warmup.html">Set
      *        the default instance warmup for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User
-     *        Guide</i>.</p> <important>
-     *        <p>
-     *        To manage your warm-up settings at the group level, we recommend that you set the default instance warmup,
-     *        <i>even if its value is set to 0 seconds</i>. This also optimizes the performance of scaling policies that
-     *        scale continuously, such as target tracking and step scaling policies.
+     *        Guide</i>.
      *        </p>
+     *        <important>
      *        <p>
-     *        If you need to remove a value that you previously set, include the property but specify <code>-1</code>
-     *        for the value. However, we strongly recommend keeping the default instance warmup enabled by specifying a
-     *        minimum value of <code>0</code>.
+     *        To manage various warm-up settings at the group level, we recommend that you set the default instance
+     *        warmup, <i>even if it is set to 0 seconds</i>. To remove a value that you previously set, include the
+     *        property but specify <code>-1</code> for the value. However, we strongly recommend keeping the default
+     *        instance warmup enabled by specifying a value of <code>0</code> or other nominal value.
      *        </p>
      *        </important>
      *        <p>
@@ -2464,47 +2463,47 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The amount of time, in seconds, until a newly launched instance can contribute to the Amazon CloudWatch metrics.
-     * This delay lets an instance finish initializing before Amazon EC2 Auto Scaling aggregates instance metrics,
-     * resulting in more reliable usage data. Set this value equal to the amount of time that it takes for resource
-     * consumption to become stable after an instance reaches the <code>InService</code> state. For more information,
-     * see <a
+     * The amount of time, in seconds, until a new instance is considered to have finished initializing and resource
+     * consumption to become stable after it enters the <code>InService</code> state.
+     * </p>
+     * <p>
+     * During an instance refresh, Amazon EC2 Auto Scaling waits for the warm-up period after it replaces an instance
+     * before it moves on to replacing the next instance. Amazon EC2 Auto Scaling also waits for the warm-up period
+     * before aggregating the metrics for new instances with existing instances in the Amazon CloudWatch metrics that
+     * are used for scaling, resulting in more reliable usage data. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-default-instance-warmup.html">Set
      * the default instance warmup for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <important>
      * <p>
-     * To manage your warm-up settings at the group level, we recommend that you set the default instance warmup,
-     * <i>even if its value is set to 0 seconds</i>. This also optimizes the performance of scaling policies that scale
-     * continuously, such as target tracking and step scaling policies.
-     * </p>
-     * <p>
-     * If you need to remove a value that you previously set, include the property but specify <code>-1</code> for the
-     * value. However, we strongly recommend keeping the default instance warmup enabled by specifying a minimum value
-     * of <code>0</code>.
+     * To manage various warm-up settings at the group level, we recommend that you set the default instance warmup,
+     * <i>even if it is set to 0 seconds</i>. To remove a value that you previously set, include the property but
+     * specify <code>-1</code> for the value. However, we strongly recommend keeping the default instance warmup enabled
+     * by specifying a value of <code>0</code> or other nominal value.
      * </p>
      * </important>
      * <p>
      * Default: None
      * </p>
      * 
-     * @return The amount of time, in seconds, until a newly launched instance can contribute to the Amazon CloudWatch
-     *         metrics. This delay lets an instance finish initializing before Amazon EC2 Auto Scaling aggregates
-     *         instance metrics, resulting in more reliable usage data. Set this value equal to the amount of time that
-     *         it takes for resource consumption to become stable after an instance reaches the <code>InService</code>
-     *         state. For more information, see <a href=
+     * @return The amount of time, in seconds, until a new instance is considered to have finished initializing and
+     *         resource consumption to become stable after it enters the <code>InService</code> state. </p>
+     *         <p>
+     *         During an instance refresh, Amazon EC2 Auto Scaling waits for the warm-up period after it replaces an
+     *         instance before it moves on to replacing the next instance. Amazon EC2 Auto Scaling also waits for the
+     *         warm-up period before aggregating the metrics for new instances with existing instances in the Amazon
+     *         CloudWatch metrics that are used for scaling, resulting in more reliable usage data. For more
+     *         information, see <a href=
      *         "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-default-instance-warmup.html">Set
      *         the default instance warmup for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User
-     *         Guide</i>.</p> <important>
-     *         <p>
-     *         To manage your warm-up settings at the group level, we recommend that you set the default instance
-     *         warmup, <i>even if its value is set to 0 seconds</i>. This also optimizes the performance of scaling
-     *         policies that scale continuously, such as target tracking and step scaling policies.
+     *         Guide</i>.
      *         </p>
+     *         <important>
      *         <p>
-     *         If you need to remove a value that you previously set, include the property but specify <code>-1</code>
-     *         for the value. However, we strongly recommend keeping the default instance warmup enabled by specifying a
-     *         minimum value of <code>0</code>.
+     *         To manage various warm-up settings at the group level, we recommend that you set the default instance
+     *         warmup, <i>even if it is set to 0 seconds</i>. To remove a value that you previously set, include the
+     *         property but specify <code>-1</code> for the value. However, we strongly recommend keeping the default
+     *         instance warmup enabled by specifying a value of <code>0</code> or other nominal value.
      *         </p>
      *         </important>
      *         <p>
@@ -2517,24 +2516,23 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The amount of time, in seconds, until a newly launched instance can contribute to the Amazon CloudWatch metrics.
-     * This delay lets an instance finish initializing before Amazon EC2 Auto Scaling aggregates instance metrics,
-     * resulting in more reliable usage data. Set this value equal to the amount of time that it takes for resource
-     * consumption to become stable after an instance reaches the <code>InService</code> state. For more information,
-     * see <a
+     * The amount of time, in seconds, until a new instance is considered to have finished initializing and resource
+     * consumption to become stable after it enters the <code>InService</code> state.
+     * </p>
+     * <p>
+     * During an instance refresh, Amazon EC2 Auto Scaling waits for the warm-up period after it replaces an instance
+     * before it moves on to replacing the next instance. Amazon EC2 Auto Scaling also waits for the warm-up period
+     * before aggregating the metrics for new instances with existing instances in the Amazon CloudWatch metrics that
+     * are used for scaling, resulting in more reliable usage data. For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-default-instance-warmup.html">Set
      * the default instance warmup for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * <important>
      * <p>
-     * To manage your warm-up settings at the group level, we recommend that you set the default instance warmup,
-     * <i>even if its value is set to 0 seconds</i>. This also optimizes the performance of scaling policies that scale
-     * continuously, such as target tracking and step scaling policies.
-     * </p>
-     * <p>
-     * If you need to remove a value that you previously set, include the property but specify <code>-1</code> for the
-     * value. However, we strongly recommend keeping the default instance warmup enabled by specifying a minimum value
-     * of <code>0</code>.
+     * To manage various warm-up settings at the group level, we recommend that you set the default instance warmup,
+     * <i>even if it is set to 0 seconds</i>. To remove a value that you previously set, include the property but
+     * specify <code>-1</code> for the value. However, we strongly recommend keeping the default instance warmup enabled
+     * by specifying a value of <code>0</code> or other nominal value.
      * </p>
      * </important>
      * <p>
@@ -2542,23 +2540,24 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param defaultInstanceWarmup
-     *        The amount of time, in seconds, until a newly launched instance can contribute to the Amazon CloudWatch
-     *        metrics. This delay lets an instance finish initializing before Amazon EC2 Auto Scaling aggregates
-     *        instance metrics, resulting in more reliable usage data. Set this value equal to the amount of time that
-     *        it takes for resource consumption to become stable after an instance reaches the <code>InService</code>
-     *        state. For more information, see <a href=
+     *        The amount of time, in seconds, until a new instance is considered to have finished initializing and
+     *        resource consumption to become stable after it enters the <code>InService</code> state. </p>
+     *        <p>
+     *        During an instance refresh, Amazon EC2 Auto Scaling waits for the warm-up period after it replaces an
+     *        instance before it moves on to replacing the next instance. Amazon EC2 Auto Scaling also waits for the
+     *        warm-up period before aggregating the metrics for new instances with existing instances in the Amazon
+     *        CloudWatch metrics that are used for scaling, resulting in more reliable usage data. For more information,
+     *        see <a href=
      *        "https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-default-instance-warmup.html">Set
      *        the default instance warmup for an Auto Scaling group</a> in the <i>Amazon EC2 Auto Scaling User
-     *        Guide</i>.</p> <important>
-     *        <p>
-     *        To manage your warm-up settings at the group level, we recommend that you set the default instance warmup,
-     *        <i>even if its value is set to 0 seconds</i>. This also optimizes the performance of scaling policies that
-     *        scale continuously, such as target tracking and step scaling policies.
+     *        Guide</i>.
      *        </p>
+     *        <important>
      *        <p>
-     *        If you need to remove a value that you previously set, include the property but specify <code>-1</code>
-     *        for the value. However, we strongly recommend keeping the default instance warmup enabled by specifying a
-     *        minimum value of <code>0</code>.
+     *        To manage various warm-up settings at the group level, we recommend that you set the default instance
+     *        warmup, <i>even if it is set to 0 seconds</i>. To remove a value that you previously set, include the
+     *        property but specify <code>-1</code> for the value. However, we strongly recommend keeping the default
+     *        instance warmup enabled by specifying a value of <code>0</code> or other nominal value.
      *        </p>
      *        </important>
      *        <p>

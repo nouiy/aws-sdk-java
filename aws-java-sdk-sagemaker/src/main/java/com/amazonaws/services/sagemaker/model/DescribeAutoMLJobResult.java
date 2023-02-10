@@ -37,7 +37,7 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
     private String autoMLJobArn;
     /**
      * <p>
-     * Returns the input data configuration for the AutoML job..
+     * Returns the input data configuration for the AutoML job.
      * </p>
      */
     private java.util.List<AutoMLChannel> inputDataConfig;
@@ -136,8 +136,8 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
     private AutoMLJobArtifacts autoMLJobArtifacts;
     /**
      * <p>
-     * This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and <code>CompletionCriteria</code>. If
-     * you do not provide these values, they are auto-inferred. If you do provide them, the values used are the ones you
+     * Contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and <code>CompletionCriteria</code>. If you
+     * do not provide these values, they are auto-inferred. If you do provide them, the values used are the ones you
      * provide.
      * </p>
      */
@@ -238,10 +238,10 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Returns the input data configuration for the AutoML job..
+     * Returns the input data configuration for the AutoML job.
      * </p>
      * 
-     * @return Returns the input data configuration for the AutoML job..
+     * @return Returns the input data configuration for the AutoML job.
      */
 
     public java.util.List<AutoMLChannel> getInputDataConfig() {
@@ -250,11 +250,11 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Returns the input data configuration for the AutoML job..
+     * Returns the input data configuration for the AutoML job.
      * </p>
      * 
      * @param inputDataConfig
-     *        Returns the input data configuration for the AutoML job..
+     *        Returns the input data configuration for the AutoML job.
      */
 
     public void setInputDataConfig(java.util.Collection<AutoMLChannel> inputDataConfig) {
@@ -268,7 +268,7 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Returns the input data configuration for the AutoML job..
+     * Returns the input data configuration for the AutoML job.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -277,7 +277,7 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
      * </p>
      * 
      * @param inputDataConfig
-     *        Returns the input data configuration for the AutoML job..
+     *        Returns the input data configuration for the AutoML job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -293,11 +293,11 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Returns the input data configuration for the AutoML job..
+     * Returns the input data configuration for the AutoML job.
      * </p>
      * 
      * @param inputDataConfig
-     *        Returns the input data configuration for the AutoML job..
+     *        Returns the input data configuration for the AutoML job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1025,15 +1025,15 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and <code>CompletionCriteria</code>. If
-     * you do not provide these values, they are auto-inferred. If you do provide them, the values used are the ones you
+     * Contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and <code>CompletionCriteria</code>. If you
+     * do not provide these values, they are auto-inferred. If you do provide them, the values used are the ones you
      * provide.
      * </p>
      * 
      * @param resolvedAttributes
-     *        This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and
-     *        <code>CompletionCriteria</code>. If you do not provide these values, they are auto-inferred. If you do
-     *        provide them, the values used are the ones you provide.
+     *        Contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and <code>CompletionCriteria</code>.
+     *        If you do not provide these values, they are auto-inferred. If you do provide them, the values used are
+     *        the ones you provide.
      */
 
     public void setResolvedAttributes(ResolvedAttributes resolvedAttributes) {
@@ -1042,14 +1042,14 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and <code>CompletionCriteria</code>. If
-     * you do not provide these values, they are auto-inferred. If you do provide them, the values used are the ones you
+     * Contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and <code>CompletionCriteria</code>. If you
+     * do not provide these values, they are auto-inferred. If you do provide them, the values used are the ones you
      * provide.
      * </p>
      * 
-     * @return This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and
-     *         <code>CompletionCriteria</code>. If you do not provide these values, they are auto-inferred. If you do
-     *         provide them, the values used are the ones you provide.
+     * @return Contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and <code>CompletionCriteria</code>.
+     *         If you do not provide these values, they are auto-inferred. If you do provide them, the values used are
+     *         the ones you provide.
      */
 
     public ResolvedAttributes getResolvedAttributes() {
@@ -1058,15 +1058,15 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and <code>CompletionCriteria</code>. If
-     * you do not provide these values, they are auto-inferred. If you do provide them, the values used are the ones you
+     * Contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and <code>CompletionCriteria</code>. If you
+     * do not provide these values, they are auto-inferred. If you do provide them, the values used are the ones you
      * provide.
      * </p>
      * 
      * @param resolvedAttributes
-     *        This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and
-     *        <code>CompletionCriteria</code>. If you do not provide these values, they are auto-inferred. If you do
-     *        provide them, the values used are the ones you provide.
+     *        Contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and <code>CompletionCriteria</code>.
+     *        If you do not provide these values, they are auto-inferred. If you do provide them, the values used are
+     *        the ones you provide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

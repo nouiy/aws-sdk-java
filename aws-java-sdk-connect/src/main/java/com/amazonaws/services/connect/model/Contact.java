@@ -123,6 +123,12 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String relatedContactId;
+    /**
+     * <p>
+     * Information about Amazon Connect Wisdom.
+     * </p>
+     */
+    private WisdomInfo wisdomInfo;
 
     /**
      * <p>
@@ -796,6 +802,46 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Information about Amazon Connect Wisdom.
+     * </p>
+     * 
+     * @param wisdomInfo
+     *        Information about Amazon Connect Wisdom.
+     */
+
+    public void setWisdomInfo(WisdomInfo wisdomInfo) {
+        this.wisdomInfo = wisdomInfo;
+    }
+
+    /**
+     * <p>
+     * Information about Amazon Connect Wisdom.
+     * </p>
+     * 
+     * @return Information about Amazon Connect Wisdom.
+     */
+
+    public WisdomInfo getWisdomInfo() {
+        return this.wisdomInfo;
+    }
+
+    /**
+     * <p>
+     * Information about Amazon Connect Wisdom.
+     * </p>
+     * 
+     * @param wisdomInfo
+     *        Information about Amazon Connect Wisdom.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Contact withWisdomInfo(WisdomInfo wisdomInfo) {
+        setWisdomInfo(wisdomInfo);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -836,7 +882,9 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
         if (getScheduledTimestamp() != null)
             sb.append("ScheduledTimestamp: ").append(getScheduledTimestamp()).append(",");
         if (getRelatedContactId() != null)
-            sb.append("RelatedContactId: ").append(getRelatedContactId());
+            sb.append("RelatedContactId: ").append(getRelatedContactId()).append(",");
+        if (getWisdomInfo() != null)
+            sb.append("WisdomInfo: ").append(getWisdomInfo());
         sb.append("}");
         return sb.toString();
     }
@@ -911,6 +959,10 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRelatedContactId() != null && other.getRelatedContactId().equals(this.getRelatedContactId()) == false)
             return false;
+        if (other.getWisdomInfo() == null ^ this.getWisdomInfo() == null)
+            return false;
+        if (other.getWisdomInfo() != null && other.getWisdomInfo().equals(this.getWisdomInfo()) == false)
+            return false;
         return true;
     }
 
@@ -934,6 +986,7 @@ public class Contact implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getLastUpdateTimestamp() == null) ? 0 : getLastUpdateTimestamp().hashCode());
         hashCode = prime * hashCode + ((getScheduledTimestamp() == null) ? 0 : getScheduledTimestamp().hashCode());
         hashCode = prime * hashCode + ((getRelatedContactId() == null) ? 0 : getRelatedContactId().hashCode());
+        hashCode = prime * hashCode + ((getWisdomInfo() == null) ? 0 : getWisdomInfo().hashCode());
         return hashCode;
     }
 

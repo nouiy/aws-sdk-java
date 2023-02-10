@@ -2555,6 +2555,39 @@ public class AmazonAutoScalingAsyncClient extends AmazonAutoScalingClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<RollbackInstanceRefreshResult> rollbackInstanceRefreshAsync(RollbackInstanceRefreshRequest request) {
+
+        return rollbackInstanceRefreshAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RollbackInstanceRefreshResult> rollbackInstanceRefreshAsync(final RollbackInstanceRefreshRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RollbackInstanceRefreshRequest, RollbackInstanceRefreshResult> asyncHandler) {
+        final RollbackInstanceRefreshRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RollbackInstanceRefreshResult>() {
+            @Override
+            public RollbackInstanceRefreshResult call() throws Exception {
+                RollbackInstanceRefreshResult result = null;
+
+                try {
+                    result = executeRollbackInstanceRefresh(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<SetDesiredCapacityResult> setDesiredCapacityAsync(SetDesiredCapacityRequest request) {
 
         return setDesiredCapacityAsync(request, null);

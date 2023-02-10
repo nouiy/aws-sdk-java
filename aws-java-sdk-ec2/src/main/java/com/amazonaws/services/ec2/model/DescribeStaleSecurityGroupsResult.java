@@ -25,8 +25,8 @@ public class DescribeStaleSecurityGroupsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The token to use when requesting the next set of items. If there are no additional items to return, the string is
-     * empty.
+     * The token to include in another request to get the next page of items. If there are no additional items to
+     * return, the string is empty.
      * </p>
      */
     private String nextToken;
@@ -39,13 +39,13 @@ public class DescribeStaleSecurityGroupsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The token to use when requesting the next set of items. If there are no additional items to return, the string is
-     * empty.
+     * The token to include in another request to get the next page of items. If there are no additional items to
+     * return, the string is empty.
      * </p>
      * 
      * @param nextToken
-     *        The token to use when requesting the next set of items. If there are no additional items to return, the
-     *        string is empty.
+     *        The token to include in another request to get the next page of items. If there are no additional items to
+     *        return, the string is empty.
      */
 
     public void setNextToken(String nextToken) {
@@ -54,12 +54,12 @@ public class DescribeStaleSecurityGroupsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The token to use when requesting the next set of items. If there are no additional items to return, the string is
-     * empty.
+     * The token to include in another request to get the next page of items. If there are no additional items to
+     * return, the string is empty.
      * </p>
      * 
-     * @return The token to use when requesting the next set of items. If there are no additional items to return, the
-     *         string is empty.
+     * @return The token to include in another request to get the next page of items. If there are no additional items
+     *         to return, the string is empty.
      */
 
     public String getNextToken() {
@@ -68,13 +68,13 @@ public class DescribeStaleSecurityGroupsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The token to use when requesting the next set of items. If there are no additional items to return, the string is
-     * empty.
+     * The token to include in another request to get the next page of items. If there are no additional items to
+     * return, the string is empty.
      * </p>
      * 
      * @param nextToken
-     *        The token to use when requesting the next set of items. If there are no additional items to return, the
-     *        string is empty.
+     *        The token to include in another request to get the next page of items. If there are no additional items to
+     *        return, the string is empty.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

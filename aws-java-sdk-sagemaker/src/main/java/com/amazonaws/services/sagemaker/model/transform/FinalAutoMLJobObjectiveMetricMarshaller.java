@@ -33,6 +33,8 @@ public class FinalAutoMLJobObjectiveMetricMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MetricName").build();
     private static final MarshallingInfo<Float> VALUE_BINDING = MarshallingInfo.builder(MarshallingType.FLOAT).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Value").build();
+    private static final MarshallingInfo<String> STANDARDMETRICNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StandardMetricName").build();
 
     private static final FinalAutoMLJobObjectiveMetricMarshaller instance = new FinalAutoMLJobObjectiveMetricMarshaller();
 
@@ -53,6 +55,7 @@ public class FinalAutoMLJobObjectiveMetricMarshaller {
             protocolMarshaller.marshall(finalAutoMLJobObjectiveMetric.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(finalAutoMLJobObjectiveMetric.getMetricName(), METRICNAME_BINDING);
             protocolMarshaller.marshall(finalAutoMLJobObjectiveMetric.getValue(), VALUE_BINDING);
+            protocolMarshaller.marshall(finalAutoMLJobObjectiveMetric.getStandardMetricName(), STANDARDMETRICNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

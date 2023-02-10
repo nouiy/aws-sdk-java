@@ -52,6 +52,13 @@ public class AutoMLCandidateGenerationConfigJsonUnmarshaller implements Unmarsha
                     context.nextToken();
                     autoMLCandidateGenerationConfig.setFeatureSpecificationS3Uri(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("AlgorithmsConfig", targetDepth)) {
+                    context.nextToken();
+                    autoMLCandidateGenerationConfig.setAlgorithmsConfig(new ListUnmarshaller<AutoMLAlgorithmConfig>(AutoMLAlgorithmConfigJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
