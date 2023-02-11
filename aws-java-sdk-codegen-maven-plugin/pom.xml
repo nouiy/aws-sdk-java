@@ -6,7 +6,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.406-SNAPSHOT</version>
+    <version>1.12.405-SNAPSHOT</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-codegen-maven-plugin</artifactId>
@@ -51,7 +51,7 @@
         <artifactId>plexus-utils</artifactId>
         <groupId>org.codehaus.plexus</groupId>
         <optional>false</optional>
-        <version>3.3.0</version>
+        <version>3.5.0</version>
     </dependency>
     <dependency>
         <artifactId>aws-java-sdk-code-generator</artifactId>
