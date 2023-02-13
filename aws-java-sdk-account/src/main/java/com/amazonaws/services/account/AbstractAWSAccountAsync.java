@@ -41,6 +41,32 @@ public class AbstractAWSAccountAsync extends AbstractAWSAccount implements AWSAc
     }
 
     @Override
+    public java.util.concurrent.Future<DisableRegionResult> disableRegionAsync(DisableRegionRequest request) {
+
+        return disableRegionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableRegionResult> disableRegionAsync(DisableRegionRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisableRegionRequest, DisableRegionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableRegionResult> enableRegionAsync(EnableRegionRequest request) {
+
+        return enableRegionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableRegionResult> enableRegionAsync(EnableRegionRequest request,
+            com.amazonaws.handlers.AsyncHandler<EnableRegionRequest, EnableRegionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAlternateContactResult> getAlternateContactAsync(GetAlternateContactRequest request) {
 
         return getAlternateContactAsync(request, null);
@@ -62,6 +88,32 @@ public class AbstractAWSAccountAsync extends AbstractAWSAccount implements AWSAc
     @Override
     public java.util.concurrent.Future<GetContactInformationResult> getContactInformationAsync(GetContactInformationRequest request,
             com.amazonaws.handlers.AsyncHandler<GetContactInformationRequest, GetContactInformationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRegionOptStatusResult> getRegionOptStatusAsync(GetRegionOptStatusRequest request) {
+
+        return getRegionOptStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRegionOptStatusResult> getRegionOptStatusAsync(GetRegionOptStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetRegionOptStatusRequest, GetRegionOptStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRegionsResult> listRegionsAsync(ListRegionsRequest request) {
+
+        return listRegionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRegionsResult> listRegionsAsync(ListRegionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListRegionsRequest, ListRegionsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

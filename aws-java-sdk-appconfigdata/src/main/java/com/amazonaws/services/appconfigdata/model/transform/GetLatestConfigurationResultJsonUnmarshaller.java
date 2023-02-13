@@ -44,6 +44,10 @@ public class GetLatestConfigurationResultJsonUnmarshaller implements Unmarshalle
                 context.setCurrentHeader("Content-Type");
                 getLatestConfigurationResult.setContentType(context.getUnmarshaller(String.class).unmarshall(context));
             }
+            if (context.getHeader("Version-Label") != null) {
+                context.setCurrentHeader("Version-Label");
+                getLatestConfigurationResult.setVersionLabel(context.getUnmarshaller(String.class).unmarshall(context));
+            }
         }
 
         java.io.InputStream is = context.getHttpResponse().getContent();

@@ -955,6 +955,39 @@ public class AmazonSnowballAsyncClient extends AmazonSnowballClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<ListServiceVersionsResult> listServiceVersionsAsync(ListServiceVersionsRequest request) {
+
+        return listServiceVersionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServiceVersionsResult> listServiceVersionsAsync(final ListServiceVersionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListServiceVersionsRequest, ListServiceVersionsResult> asyncHandler) {
+        final ListServiceVersionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListServiceVersionsResult>() {
+            @Override
+            public ListServiceVersionsResult call() throws Exception {
+                ListServiceVersionsResult result = null;
+
+                try {
+                    result = executeListServiceVersions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateClusterResult> updateClusterAsync(UpdateClusterRequest request) {
 
         return updateClusterAsync(request, null);

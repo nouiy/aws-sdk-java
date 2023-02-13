@@ -301,6 +301,19 @@ public class AbstractAmazonSnowballAsync extends AbstractAmazonSnowball implemen
     }
 
     @Override
+    public java.util.concurrent.Future<ListServiceVersionsResult> listServiceVersionsAsync(ListServiceVersionsRequest request) {
+
+        return listServiceVersionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServiceVersionsResult> listServiceVersionsAsync(ListServiceVersionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListServiceVersionsRequest, ListServiceVersionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateClusterResult> updateClusterAsync(UpdateClusterRequest request) {
 
         return updateClusterAsync(request, null);

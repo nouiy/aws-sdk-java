@@ -56,6 +56,10 @@ public class OnDeviceServiceConfigurationJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     onDeviceServiceConfiguration.setTGWOnDeviceService(TGWOnDeviceServiceConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("EKSOnDeviceService", targetDepth)) {
+                    context.nextToken();
+                    onDeviceServiceConfiguration.setEKSOnDeviceService(EKSOnDeviceServiceConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

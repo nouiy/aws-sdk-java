@@ -321,23 +321,6 @@ public interface AmazonSnowball {
      * <p/></li>
      * <li>
      * <p>
-     * Device type: <b>V3_5C</b>
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Capacity: T32
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Description: Snowball Edge Compute Optimized without GPU
-     * </p>
-     * </li>
-     * </ul>
-     * <p/></li>
-     * <li>
-     * <p>
      * Device type: <b>STANDARD</b>
      * </p>
      * <ul>
@@ -742,6 +725,26 @@ public interface AmazonSnowball {
      *      API Documentation</a>
      */
     ListLongTermPricingResult listLongTermPricing(ListLongTermPricingRequest listLongTermPricingRequest);
+
+    /**
+     * <p>
+     * Lists all supported versions for Snow on-device services. Returns an array of <code>ServiceVersion</code> object
+     * containing the supported versions for a particular service.
+     * </p>
+     * 
+     * @param listServiceVersionsRequest
+     * @return Result of the ListServiceVersions operation returned by the service.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> string was altered unexpectedly, and the operation has stopped. Run the
+     *         operation without changing the <code>NextToken</code> string, and try again.
+     * @throws InvalidResourceException
+     *         The specified resource can't be found. Check the information you provided in your last request, and try
+     *         again.
+     * @sample AmazonSnowball.ListServiceVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/ListServiceVersions" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListServiceVersionsResult listServiceVersions(ListServiceVersionsRequest listServiceVersionsRequest);
 
     /**
      * <p>

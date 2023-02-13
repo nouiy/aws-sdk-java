@@ -706,23 +706,6 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      * <p/></li>
      * <li>
      * <p>
-     * Device type: <b>V3_5C</b>
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Capacity: T32
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Description: Snowball Edge Compute Optimized without GPU
-     * </p>
-     * </li>
-     * </ul>
-     * <p/></li>
-     * <li>
-     * <p>
      * Device type: <b>STANDARD</b>
      * </p>
      * <ul>
@@ -1837,6 +1820,68 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
 
             HttpResponseHandler<AmazonWebServiceResponse<ListLongTermPricingResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListLongTermPricingResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists all supported versions for Snow on-device services. Returns an array of <code>ServiceVersion</code> object
+     * containing the supported versions for a particular service.
+     * </p>
+     * 
+     * @param listServiceVersionsRequest
+     * @return Result of the ListServiceVersions operation returned by the service.
+     * @throws InvalidNextTokenException
+     *         The <code>NextToken</code> string was altered unexpectedly, and the operation has stopped. Run the
+     *         operation without changing the <code>NextToken</code> string, and try again.
+     * @throws InvalidResourceException
+     *         The specified resource can't be found. Check the information you provided in your last request, and try
+     *         again.
+     * @sample AmazonSnowball.ListServiceVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/ListServiceVersions" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListServiceVersionsResult listServiceVersions(ListServiceVersionsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListServiceVersions(request);
+    }
+
+    @SdkInternalApi
+    final ListServiceVersionsResult executeListServiceVersions(ListServiceVersionsRequest listServiceVersionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listServiceVersionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListServiceVersionsRequest> request = null;
+        Response<ListServiceVersionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListServiceVersionsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listServiceVersionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Snowball");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListServiceVersions");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListServiceVersionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListServiceVersionsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

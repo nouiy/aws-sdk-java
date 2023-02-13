@@ -33,12 +33,32 @@ public class AbstractAWSAccount implements AWSAccount {
     }
 
     @Override
+    public DisableRegionResult disableRegion(DisableRegionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public EnableRegionResult enableRegion(EnableRegionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetAlternateContactResult getAlternateContact(GetAlternateContactRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public GetContactInformationResult getContactInformation(GetContactInformationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetRegionOptStatusResult getRegionOptStatus(GetRegionOptStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListRegionsResult listRegions(ListRegionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

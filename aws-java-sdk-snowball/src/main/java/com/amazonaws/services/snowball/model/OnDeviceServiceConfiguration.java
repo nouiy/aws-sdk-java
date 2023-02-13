@@ -41,6 +41,12 @@ public class OnDeviceServiceConfiguration implements Serializable, Cloneable, St
      * </p>
      */
     private TGWOnDeviceServiceConfiguration tGWOnDeviceService;
+    /**
+     * <p>
+     * The configuration of EKS Anywhere on the Snow Family device.
+     * </p>
+     */
+    private EKSOnDeviceServiceConfiguration eKSOnDeviceService;
 
     /**
      * <p>
@@ -123,6 +129,46 @@ public class OnDeviceServiceConfiguration implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The configuration of EKS Anywhere on the Snow Family device.
+     * </p>
+     * 
+     * @param eKSOnDeviceService
+     *        The configuration of EKS Anywhere on the Snow Family device.
+     */
+
+    public void setEKSOnDeviceService(EKSOnDeviceServiceConfiguration eKSOnDeviceService) {
+        this.eKSOnDeviceService = eKSOnDeviceService;
+    }
+
+    /**
+     * <p>
+     * The configuration of EKS Anywhere on the Snow Family device.
+     * </p>
+     * 
+     * @return The configuration of EKS Anywhere on the Snow Family device.
+     */
+
+    public EKSOnDeviceServiceConfiguration getEKSOnDeviceService() {
+        return this.eKSOnDeviceService;
+    }
+
+    /**
+     * <p>
+     * The configuration of EKS Anywhere on the Snow Family device.
+     * </p>
+     * 
+     * @param eKSOnDeviceService
+     *        The configuration of EKS Anywhere on the Snow Family device.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OnDeviceServiceConfiguration withEKSOnDeviceService(EKSOnDeviceServiceConfiguration eKSOnDeviceService) {
+        setEKSOnDeviceService(eKSOnDeviceService);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -137,7 +183,9 @@ public class OnDeviceServiceConfiguration implements Serializable, Cloneable, St
         if (getNFSOnDeviceService() != null)
             sb.append("NFSOnDeviceService: ").append(getNFSOnDeviceService()).append(",");
         if (getTGWOnDeviceService() != null)
-            sb.append("TGWOnDeviceService: ").append(getTGWOnDeviceService());
+            sb.append("TGWOnDeviceService: ").append(getTGWOnDeviceService()).append(",");
+        if (getEKSOnDeviceService() != null)
+            sb.append("EKSOnDeviceService: ").append(getEKSOnDeviceService());
         sb.append("}");
         return sb.toString();
     }
@@ -160,6 +208,10 @@ public class OnDeviceServiceConfiguration implements Serializable, Cloneable, St
             return false;
         if (other.getTGWOnDeviceService() != null && other.getTGWOnDeviceService().equals(this.getTGWOnDeviceService()) == false)
             return false;
+        if (other.getEKSOnDeviceService() == null ^ this.getEKSOnDeviceService() == null)
+            return false;
+        if (other.getEKSOnDeviceService() != null && other.getEKSOnDeviceService().equals(this.getEKSOnDeviceService()) == false)
+            return false;
         return true;
     }
 
@@ -170,6 +222,7 @@ public class OnDeviceServiceConfiguration implements Serializable, Cloneable, St
 
         hashCode = prime * hashCode + ((getNFSOnDeviceService() == null) ? 0 : getNFSOnDeviceService().hashCode());
         hashCode = prime * hashCode + ((getTGWOnDeviceService() == null) ? 0 : getTGWOnDeviceService().hashCode());
+        hashCode = prime * hashCode + ((getEKSOnDeviceService() == null) ? 0 : getEKSOnDeviceService().hashCode());
         return hashCode;
     }
 

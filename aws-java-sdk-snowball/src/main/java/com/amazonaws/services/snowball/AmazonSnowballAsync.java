@@ -304,23 +304,6 @@ public interface AmazonSnowballAsync extends AmazonSnowball {
      * <p/></li>
      * <li>
      * <p>
-     * Device type: <b>V3_5C</b>
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Capacity: T32
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Description: Snowball Edge Compute Optimized without GPU
-     * </p>
-     * </li>
-     * </ul>
-     * <p/></li>
-     * <li>
-     * <p>
      * Device type: <b>STANDARD</b>
      * </p>
      * <ul>
@@ -495,23 +478,6 @@ public interface AmazonSnowballAsync extends AmazonSnowball {
      * <li>
      * <p>
      * Description: Snowball Edge Storage Optimized with EC2 Compute
-     * </p>
-     * </li>
-     * </ul>
-     * <p/></li>
-     * <li>
-     * <p>
-     * Device type: <b>V3_5C</b>
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Capacity: T32
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * Description: Snowball Edge Compute Optimized without GPU
      * </p>
      * </li>
      * </ul>
@@ -1176,6 +1142,39 @@ public interface AmazonSnowballAsync extends AmazonSnowball {
      */
     java.util.concurrent.Future<ListLongTermPricingResult> listLongTermPricingAsync(ListLongTermPricingRequest listLongTermPricingRequest,
             com.amazonaws.handlers.AsyncHandler<ListLongTermPricingRequest, ListLongTermPricingResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all supported versions for Snow on-device services. Returns an array of <code>ServiceVersion</code> object
+     * containing the supported versions for a particular service.
+     * </p>
+     * 
+     * @param listServiceVersionsRequest
+     * @return A Java Future containing the result of the ListServiceVersions operation returned by the service.
+     * @sample AmazonSnowballAsync.ListServiceVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/ListServiceVersions" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListServiceVersionsResult> listServiceVersionsAsync(ListServiceVersionsRequest listServiceVersionsRequest);
+
+    /**
+     * <p>
+     * Lists all supported versions for Snow on-device services. Returns an array of <code>ServiceVersion</code> object
+     * containing the supported versions for a particular service.
+     * </p>
+     * 
+     * @param listServiceVersionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListServiceVersions operation returned by the service.
+     * @sample AmazonSnowballAsyncHandler.ListServiceVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/ListServiceVersions" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListServiceVersionsResult> listServiceVersionsAsync(ListServiceVersionsRequest listServiceVersionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListServiceVersionsRequest, ListServiceVersionsResult> asyncHandler);
 
     /**
      * <p>
