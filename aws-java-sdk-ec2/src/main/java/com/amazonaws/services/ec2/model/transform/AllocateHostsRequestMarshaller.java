@@ -107,6 +107,10 @@ public class AllocateHostsRequestMarshaller implements Marshaller<Request<Alloca
             request.addParameter("OutpostArn", StringUtils.fromString(allocateHostsRequest.getOutpostArn()));
         }
 
+        if (allocateHostsRequest.getHostMaintenance() != null) {
+            request.addParameter("HostMaintenance", StringUtils.fromString(allocateHostsRequest.getHostMaintenance()));
+        }
+
         return request;
     }
 

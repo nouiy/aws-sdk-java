@@ -28,7 +28,7 @@ public class DescribeAgentResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the agent.
+     * The ARN of the agent.
      * </p>
      */
     private String agentArn;
@@ -75,11 +75,11 @@ public class DescribeAgentResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the agent.
+     * The ARN of the agent.
      * </p>
      * 
      * @param agentArn
-     *        The Amazon Resource Name (ARN) of the agent.
+     *        The ARN of the agent.
      */
 
     public void setAgentArn(String agentArn) {
@@ -88,10 +88,10 @@ public class DescribeAgentResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the agent.
+     * The ARN of the agent.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the agent.
+     * @return The ARN of the agent.
      */
 
     public String getAgentArn() {
@@ -100,11 +100,11 @@ public class DescribeAgentResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the agent.
+     * The ARN of the agent.
      * </p>
      * 
      * @param agentArn
-     *        The Amazon Resource Name (ARN) of the agent.
+     *        The ARN of the agent.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

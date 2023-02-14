@@ -79,7 +79,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * Some storage classes have specific behaviors that can affect your Amazon S3 storage cost. For detailed
      * information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     * >Considerations when working with Amazon S3 storage classes in DataSync </a>.
+     * >Considerations when working with Amazon S3 storage classes in DataSync</a>.
      * </p>
      */
     private String overwriteMode;
@@ -188,7 +188,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * option can affect your Amazon S3 storage cost. If your task deletes objects, you might incur minimum storage
      * duration charges for certain storage classes. For detailed information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     * >Considerations when working with Amazon S3 storage classes in DataSync </a>.
+     * >Considerations when working with Amazon S3 storage classes in DataSync</a>.
      * </p>
      * <p>
      * Default value: <code>PRESERVE</code>
@@ -199,6 +199,12 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * <code>REMOVE</code>: Delete destination files that aren’t present in the source.
      * </p>
+     * <note>
+     * <p>
+     * If you set this parameter to <code>REMOVE</code>, you can't set <code>TransferMode</code> to <code>ALL</code>.
+     * When you transfer all data, DataSync doesn't scan your destination location and doesn't know what to delete.
+     * </p>
+     * </note>
      */
     private String preserveDeletedFiles;
     /**
@@ -663,7 +669,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * Some storage classes have specific behaviors that can affect your Amazon S3 storage cost. For detailed
      * information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     * >Considerations when working with Amazon S3 storage classes in DataSync </a>.
+     * >Considerations when working with Amazon S3 storage classes in DataSync</a>.
      * </p>
      * 
      * @param overwriteMode
@@ -675,7 +681,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        Some storage classes have specific behaviors that can affect your Amazon S3 storage cost. For detailed
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     *        >Considerations when working with Amazon S3 storage classes in DataSync </a>.
+     *        >Considerations when working with Amazon S3 storage classes in DataSync</a>.
      * @see OverwriteMode
      */
 
@@ -694,7 +700,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * Some storage classes have specific behaviors that can affect your Amazon S3 storage cost. For detailed
      * information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     * >Considerations when working with Amazon S3 storage classes in DataSync </a>.
+     * >Considerations when working with Amazon S3 storage classes in DataSync</a>.
      * </p>
      * 
      * @return Specifies whether data at the destination location should be overwritten or preserved. If set to
@@ -705,7 +711,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *         Some storage classes have specific behaviors that can affect your Amazon S3 storage cost. For detailed
      *         information, see <a href=
      *         "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     *         >Considerations when working with Amazon S3 storage classes in DataSync </a>.
+     *         >Considerations when working with Amazon S3 storage classes in DataSync</a>.
      * @see OverwriteMode
      */
 
@@ -724,7 +730,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * Some storage classes have specific behaviors that can affect your Amazon S3 storage cost. For detailed
      * information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     * >Considerations when working with Amazon S3 storage classes in DataSync </a>.
+     * >Considerations when working with Amazon S3 storage classes in DataSync</a>.
      * </p>
      * 
      * @param overwriteMode
@@ -736,7 +742,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        Some storage classes have specific behaviors that can affect your Amazon S3 storage cost. For detailed
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     *        >Considerations when working with Amazon S3 storage classes in DataSync </a>.
+     *        >Considerations when working with Amazon S3 storage classes in DataSync</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OverwriteMode
      */
@@ -757,7 +763,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * Some storage classes have specific behaviors that can affect your Amazon S3 storage cost. For detailed
      * information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     * >Considerations when working with Amazon S3 storage classes in DataSync </a>.
+     * >Considerations when working with Amazon S3 storage classes in DataSync</a>.
      * </p>
      * 
      * @param overwriteMode
@@ -769,7 +775,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        Some storage classes have specific behaviors that can affect your Amazon S3 storage cost. For detailed
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     *        >Considerations when working with Amazon S3 storage classes in DataSync </a>.
+     *        >Considerations when working with Amazon S3 storage classes in DataSync</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OverwriteMode
      */
@@ -1605,7 +1611,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * option can affect your Amazon S3 storage cost. If your task deletes objects, you might incur minimum storage
      * duration charges for certain storage classes. For detailed information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     * >Considerations when working with Amazon S3 storage classes in DataSync </a>.
+     * >Considerations when working with Amazon S3 storage classes in DataSync</a>.
      * </p>
      * <p>
      * Default value: <code>PRESERVE</code>
@@ -1616,13 +1622,19 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * <code>REMOVE</code>: Delete destination files that aren’t present in the source.
      * </p>
+     * <note>
+     * <p>
+     * If you set this parameter to <code>REMOVE</code>, you can't set <code>TransferMode</code> to <code>ALL</code>.
+     * When you transfer all data, DataSync doesn't scan your destination location and doesn't know what to delete.
+     * </p>
+     * </note>
      * 
      * @param preserveDeletedFiles
      *        Specifies whether files in the destination location that don't exist in the source should be preserved.
      *        This option can affect your Amazon S3 storage cost. If your task deletes objects, you might incur minimum
      *        storage duration charges for certain storage classes. For detailed information, see <a href=
      *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     *        >Considerations when working with Amazon S3 storage classes in DataSync </a>.</p>
+     *        >Considerations when working with Amazon S3 storage classes in DataSync</a>.</p>
      *        <p>
      *        Default value: <code>PRESERVE</code>
      *        </p>
@@ -1631,6 +1643,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <p>
      *        <code>REMOVE</code>: Delete destination files that aren’t present in the source.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        If you set this parameter to <code>REMOVE</code>, you can't set <code>TransferMode</code> to
+     *        <code>ALL</code>. When you transfer all data, DataSync doesn't scan your destination location and doesn't
+     *        know what to delete.
+     *        </p>
      * @see PreserveDeletedFiles
      */
 
@@ -1644,7 +1663,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * option can affect your Amazon S3 storage cost. If your task deletes objects, you might incur minimum storage
      * duration charges for certain storage classes. For detailed information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     * >Considerations when working with Amazon S3 storage classes in DataSync </a>.
+     * >Considerations when working with Amazon S3 storage classes in DataSync</a>.
      * </p>
      * <p>
      * Default value: <code>PRESERVE</code>
@@ -1655,12 +1674,18 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * <code>REMOVE</code>: Delete destination files that aren’t present in the source.
      * </p>
+     * <note>
+     * <p>
+     * If you set this parameter to <code>REMOVE</code>, you can't set <code>TransferMode</code> to <code>ALL</code>.
+     * When you transfer all data, DataSync doesn't scan your destination location and doesn't know what to delete.
+     * </p>
+     * </note>
      * 
      * @return Specifies whether files in the destination location that don't exist in the source should be preserved.
      *         This option can affect your Amazon S3 storage cost. If your task deletes objects, you might incur minimum
      *         storage duration charges for certain storage classes. For detailed information, see <a href=
      *         "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     *         >Considerations when working with Amazon S3 storage classes in DataSync </a>.</p>
+     *         >Considerations when working with Amazon S3 storage classes in DataSync</a>.</p>
      *         <p>
      *         Default value: <code>PRESERVE</code>
      *         </p>
@@ -1669,6 +1694,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *         </p>
      *         <p>
      *         <code>REMOVE</code>: Delete destination files that aren’t present in the source.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         If you set this parameter to <code>REMOVE</code>, you can't set <code>TransferMode</code> to
+     *         <code>ALL</code>. When you transfer all data, DataSync doesn't scan your destination location and doesn't
+     *         know what to delete.
+     *         </p>
      * @see PreserveDeletedFiles
      */
 
@@ -1682,7 +1714,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * option can affect your Amazon S3 storage cost. If your task deletes objects, you might incur minimum storage
      * duration charges for certain storage classes. For detailed information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     * >Considerations when working with Amazon S3 storage classes in DataSync </a>.
+     * >Considerations when working with Amazon S3 storage classes in DataSync</a>.
      * </p>
      * <p>
      * Default value: <code>PRESERVE</code>
@@ -1693,13 +1725,19 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * <code>REMOVE</code>: Delete destination files that aren’t present in the source.
      * </p>
+     * <note>
+     * <p>
+     * If you set this parameter to <code>REMOVE</code>, you can't set <code>TransferMode</code> to <code>ALL</code>.
+     * When you transfer all data, DataSync doesn't scan your destination location and doesn't know what to delete.
+     * </p>
+     * </note>
      * 
      * @param preserveDeletedFiles
      *        Specifies whether files in the destination location that don't exist in the source should be preserved.
      *        This option can affect your Amazon S3 storage cost. If your task deletes objects, you might incur minimum
      *        storage duration charges for certain storage classes. For detailed information, see <a href=
      *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     *        >Considerations when working with Amazon S3 storage classes in DataSync </a>.</p>
+     *        >Considerations when working with Amazon S3 storage classes in DataSync</a>.</p>
      *        <p>
      *        Default value: <code>PRESERVE</code>
      *        </p>
@@ -1708,6 +1746,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <p>
      *        <code>REMOVE</code>: Delete destination files that aren’t present in the source.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        If you set this parameter to <code>REMOVE</code>, you can't set <code>TransferMode</code> to
+     *        <code>ALL</code>. When you transfer all data, DataSync doesn't scan your destination location and doesn't
+     *        know what to delete.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PreserveDeletedFiles
      */
@@ -1723,7 +1768,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * option can affect your Amazon S3 storage cost. If your task deletes objects, you might incur minimum storage
      * duration charges for certain storage classes. For detailed information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     * >Considerations when working with Amazon S3 storage classes in DataSync </a>.
+     * >Considerations when working with Amazon S3 storage classes in DataSync</a>.
      * </p>
      * <p>
      * Default value: <code>PRESERVE</code>
@@ -1734,13 +1779,19 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * <code>REMOVE</code>: Delete destination files that aren’t present in the source.
      * </p>
+     * <note>
+     * <p>
+     * If you set this parameter to <code>REMOVE</code>, you can't set <code>TransferMode</code> to <code>ALL</code>.
+     * When you transfer all data, DataSync doesn't scan your destination location and doesn't know what to delete.
+     * </p>
+     * </note>
      * 
      * @param preserveDeletedFiles
      *        Specifies whether files in the destination location that don't exist in the source should be preserved.
      *        This option can affect your Amazon S3 storage cost. If your task deletes objects, you might incur minimum
      *        storage duration charges for certain storage classes. For detailed information, see <a href=
      *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     *        >Considerations when working with Amazon S3 storage classes in DataSync </a>.</p>
+     *        >Considerations when working with Amazon S3 storage classes in DataSync</a>.</p>
      *        <p>
      *        Default value: <code>PRESERVE</code>
      *        </p>
@@ -1749,6 +1800,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <p>
      *        <code>REMOVE</code>: Delete destination files that aren’t present in the source.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        If you set this parameter to <code>REMOVE</code>, you can't set <code>TransferMode</code> to
+     *        <code>ALL</code>. When you transfer all data, DataSync doesn't scan your destination location and doesn't
+     *        know what to delete.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PreserveDeletedFiles
      */

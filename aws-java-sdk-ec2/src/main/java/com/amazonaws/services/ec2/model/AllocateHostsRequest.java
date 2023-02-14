@@ -107,6 +107,17 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
      * </p>
      */
     private String outpostArn;
+    /**
+     * <p>
+     * Indicates whether to enable or disable host maintenance for the Dedicated Host. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-maintenance.html"> Host maintenance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * <p>
+     * Default: <code>on</code>
+     * </p>
+     */
+    private String hostMaintenance;
 
     /**
      * <p>
@@ -773,6 +784,124 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
     }
 
     /**
+     * <p>
+     * Indicates whether to enable or disable host maintenance for the Dedicated Host. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-maintenance.html"> Host maintenance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * <p>
+     * Default: <code>on</code>
+     * </p>
+     * 
+     * @param hostMaintenance
+     *        Indicates whether to enable or disable host maintenance for the Dedicated Host. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-maintenance.html"> Host
+     *        maintenance</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     *        <p>
+     *        Default: <code>on</code>
+     * @see HostMaintenance
+     */
+
+    public void setHostMaintenance(String hostMaintenance) {
+        this.hostMaintenance = hostMaintenance;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to enable or disable host maintenance for the Dedicated Host. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-maintenance.html"> Host maintenance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * <p>
+     * Default: <code>on</code>
+     * </p>
+     * 
+     * @return Indicates whether to enable or disable host maintenance for the Dedicated Host. For more information, see
+     *         <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-maintenance.html"> Host
+     *         maintenance</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     *         <p>
+     *         Default: <code>on</code>
+     * @see HostMaintenance
+     */
+
+    public String getHostMaintenance() {
+        return this.hostMaintenance;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to enable or disable host maintenance for the Dedicated Host. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-maintenance.html"> Host maintenance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * <p>
+     * Default: <code>on</code>
+     * </p>
+     * 
+     * @param hostMaintenance
+     *        Indicates whether to enable or disable host maintenance for the Dedicated Host. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-maintenance.html"> Host
+     *        maintenance</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     *        <p>
+     *        Default: <code>on</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HostMaintenance
+     */
+
+    public AllocateHostsRequest withHostMaintenance(String hostMaintenance) {
+        setHostMaintenance(hostMaintenance);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to enable or disable host maintenance for the Dedicated Host. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-maintenance.html"> Host maintenance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * <p>
+     * Default: <code>on</code>
+     * </p>
+     * 
+     * @param hostMaintenance
+     *        Indicates whether to enable or disable host maintenance for the Dedicated Host. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-maintenance.html"> Host
+     *        maintenance</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     *        <p>
+     *        Default: <code>on</code>
+     * @see HostMaintenance
+     */
+
+    public void setHostMaintenance(HostMaintenance hostMaintenance) {
+        withHostMaintenance(hostMaintenance);
+    }
+
+    /**
+     * <p>
+     * Indicates whether to enable or disable host maintenance for the Dedicated Host. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-maintenance.html"> Host maintenance</a>
+     * in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * <p>
+     * Default: <code>on</code>
+     * </p>
+     * 
+     * @param hostMaintenance
+     *        Indicates whether to enable or disable host maintenance for the Dedicated Host. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-maintenance.html"> Host
+     *        maintenance</a> in the <i>Amazon EC2 User Guide</i>.</p>
+     *        <p>
+     *        Default: <code>on</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HostMaintenance
+     */
+
+    public AllocateHostsRequest withHostMaintenance(HostMaintenance hostMaintenance) {
+        this.hostMaintenance = hostMaintenance.toString();
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -812,7 +941,9 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
         if (getHostRecovery() != null)
             sb.append("HostRecovery: ").append(getHostRecovery()).append(",");
         if (getOutpostArn() != null)
-            sb.append("OutpostArn: ").append(getOutpostArn());
+            sb.append("OutpostArn: ").append(getOutpostArn()).append(",");
+        if (getHostMaintenance() != null)
+            sb.append("HostMaintenance: ").append(getHostMaintenance());
         sb.append("}");
         return sb.toString();
     }
@@ -863,6 +994,10 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
             return false;
         if (other.getOutpostArn() != null && other.getOutpostArn().equals(this.getOutpostArn()) == false)
             return false;
+        if (other.getHostMaintenance() == null ^ this.getHostMaintenance() == null)
+            return false;
+        if (other.getHostMaintenance() != null && other.getHostMaintenance().equals(this.getHostMaintenance()) == false)
+            return false;
         return true;
     }
 
@@ -880,6 +1015,7 @@ public class AllocateHostsRequest extends AmazonWebServiceRequest implements Ser
         hashCode = prime * hashCode + ((getTagSpecifications() == null) ? 0 : getTagSpecifications().hashCode());
         hashCode = prime * hashCode + ((getHostRecovery() == null) ? 0 : getHostRecovery().hashCode());
         hashCode = prime * hashCode + ((getOutpostArn() == null) ? 0 : getOutpostArn().hashCode());
+        hashCode = prime * hashCode + ((getHostMaintenance() == null) ? 0 : getHostMaintenance().hashCode());
         return hashCode;
     }
 

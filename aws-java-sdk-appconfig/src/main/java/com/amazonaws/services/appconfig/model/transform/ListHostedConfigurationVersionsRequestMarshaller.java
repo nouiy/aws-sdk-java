@@ -35,6 +35,8 @@ public class ListHostedConfigurationVersionsRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("max_results").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("next_token").build();
+    private static final MarshallingInfo<String> VERSIONLABEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("version_label").build();
 
     private static final ListHostedConfigurationVersionsRequestMarshaller instance = new ListHostedConfigurationVersionsRequestMarshaller();
 
@@ -56,6 +58,7 @@ public class ListHostedConfigurationVersionsRequestMarshaller {
             protocolMarshaller.marshall(listHostedConfigurationVersionsRequest.getConfigurationProfileId(), CONFIGURATIONPROFILEID_BINDING);
             protocolMarshaller.marshall(listHostedConfigurationVersionsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listHostedConfigurationVersionsRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listHostedConfigurationVersionsRequest.getVersionLabel(), VERSIONLABEL_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

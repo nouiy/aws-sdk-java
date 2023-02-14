@@ -68,6 +68,10 @@ public class HostedConfigurationVersionSummaryJsonUnmarshaller implements Unmars
                     context.nextToken();
                     hostedConfigurationVersionSummary.setContentType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("VersionLabel", targetDepth)) {
+                    context.nextToken();
+                    hostedConfigurationVersionSummary.setVersionLabel(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

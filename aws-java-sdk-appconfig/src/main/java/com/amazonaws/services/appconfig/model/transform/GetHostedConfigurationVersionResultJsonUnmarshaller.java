@@ -52,6 +52,10 @@ public class GetHostedConfigurationVersionResultJsonUnmarshaller implements Unma
                 context.setCurrentHeader("Content-Type");
                 getHostedConfigurationVersionResult.setContentType(context.getUnmarshaller(String.class).unmarshall(context));
             }
+            if (context.getHeader("VersionLabel") != null) {
+                context.setCurrentHeader("VersionLabel");
+                getHostedConfigurationVersionResult.setVersionLabel(context.getUnmarshaller(String.class).unmarshall(context));
+            }
         }
 
         java.io.InputStream is = context.getHttpResponse().getContent();

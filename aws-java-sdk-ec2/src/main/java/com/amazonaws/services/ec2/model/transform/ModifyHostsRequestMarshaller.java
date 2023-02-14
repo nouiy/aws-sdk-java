@@ -69,6 +69,10 @@ public class ModifyHostsRequestMarshaller implements Marshaller<Request<ModifyHo
             request.addParameter("InstanceFamily", StringUtils.fromString(modifyHostsRequest.getInstanceFamily()));
         }
 
+        if (modifyHostsRequest.getHostMaintenance() != null) {
+            request.addParameter("HostMaintenance", StringUtils.fromString(modifyHostsRequest.getHostMaintenance()));
+        }
+
         return request;
     }
 

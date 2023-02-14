@@ -28,18 +28,18 @@ public class CreateLocationSmbResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the source SMB file system location that is created.
+     * The ARN of the SMB location that you created.
      * </p>
      */
     private String locationArn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the source SMB file system location that is created.
+     * The ARN of the SMB location that you created.
      * </p>
      * 
      * @param locationArn
-     *        The Amazon Resource Name (ARN) of the source SMB file system location that is created.
+     *        The ARN of the SMB location that you created.
      */
 
     public void setLocationArn(String locationArn) {
@@ -48,10 +48,10 @@ public class CreateLocationSmbResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the source SMB file system location that is created.
+     * The ARN of the SMB location that you created.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the source SMB file system location that is created.
+     * @return The ARN of the SMB location that you created.
      */
 
     public String getLocationArn() {
@@ -60,11 +60,11 @@ public class CreateLocationSmbResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the source SMB file system location that is created.
+     * The ARN of the SMB location that you created.
      * </p>
      * 
      * @param locationArn
-     *        The Amazon Resource Name (ARN) of the source SMB file system location that is created.
+     *        The ARN of the SMB location that you created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

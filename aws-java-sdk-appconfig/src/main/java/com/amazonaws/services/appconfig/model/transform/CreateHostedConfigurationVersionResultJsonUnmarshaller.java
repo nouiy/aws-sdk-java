@@ -52,6 +52,10 @@ public class CreateHostedConfigurationVersionResultJsonUnmarshaller implements U
                 context.setCurrentHeader("Content-Type");
                 createHostedConfigurationVersionResult.setContentType(context.getUnmarshaller(String.class).unmarshall(context));
             }
+            if (context.getHeader("VersionLabel") != null) {
+                context.setCurrentHeader("VersionLabel");
+                createHostedConfigurationVersionResult.setVersionLabel(context.getUnmarshaller(String.class).unmarshall(context));
+            }
         }
 
         java.io.InputStream is = context.getHttpResponse().getContent();

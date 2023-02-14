@@ -30,18 +30,18 @@ public class DescribeAgentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the agent to describe.
+     * Specifies the Amazon Resource Name (ARN) of the DataSync agent to describe.
      * </p>
      */
     private String agentArn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the agent to describe.
+     * Specifies the Amazon Resource Name (ARN) of the DataSync agent to describe.
      * </p>
      * 
      * @param agentArn
-     *        The Amazon Resource Name (ARN) of the agent to describe.
+     *        Specifies the Amazon Resource Name (ARN) of the DataSync agent to describe.
      */
 
     public void setAgentArn(String agentArn) {
@@ -50,10 +50,10 @@ public class DescribeAgentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the agent to describe.
+     * Specifies the Amazon Resource Name (ARN) of the DataSync agent to describe.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the agent to describe.
+     * @return Specifies the Amazon Resource Name (ARN) of the DataSync agent to describe.
      */
 
     public String getAgentArn() {
@@ -62,11 +62,11 @@ public class DescribeAgentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the agent to describe.
+     * Specifies the Amazon Resource Name (ARN) of the DataSync agent to describe.
      * </p>
      * 
      * @param agentArn
-     *        The Amazon Resource Name (ARN) of the agent to describe.
+     *        Specifies the Amazon Resource Name (ARN) of the DataSync agent to describe.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

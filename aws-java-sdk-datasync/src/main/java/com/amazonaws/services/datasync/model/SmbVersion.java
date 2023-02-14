@@ -22,7 +22,9 @@ public enum SmbVersion {
 
     AUTOMATIC("AUTOMATIC"),
     SMB2("SMB2"),
-    SMB3("SMB3");
+    SMB3("SMB3"),
+    SMB1("SMB1"),
+    SMB2_0("SMB2_0");
 
     private String value;
 

@@ -51,7 +51,8 @@ public class StartDeploymentRequest extends com.amazonaws.AmazonWebServiceReques
     private String configurationProfileId;
     /**
      * <p>
-     * The configuration version to deploy.
+     * The configuration version to deploy. If deploying an AppConfig hosted configuration version, you can specify
+     * either the version number or version label.
      * </p>
      */
     private String configurationVersion;
@@ -238,11 +239,13 @@ public class StartDeploymentRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The configuration version to deploy.
+     * The configuration version to deploy. If deploying an AppConfig hosted configuration version, you can specify
+     * either the version number or version label.
      * </p>
      * 
      * @param configurationVersion
-     *        The configuration version to deploy.
+     *        The configuration version to deploy. If deploying an AppConfig hosted configuration version, you can
+     *        specify either the version number or version label.
      */
 
     public void setConfigurationVersion(String configurationVersion) {
@@ -251,10 +254,12 @@ public class StartDeploymentRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The configuration version to deploy.
+     * The configuration version to deploy. If deploying an AppConfig hosted configuration version, you can specify
+     * either the version number or version label.
      * </p>
      * 
-     * @return The configuration version to deploy.
+     * @return The configuration version to deploy. If deploying an AppConfig hosted configuration version, you can
+     *         specify either the version number or version label.
      */
 
     public String getConfigurationVersion() {
@@ -263,11 +268,13 @@ public class StartDeploymentRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The configuration version to deploy.
+     * The configuration version to deploy. If deploying an AppConfig hosted configuration version, you can specify
+     * either the version number or version label.
      * </p>
      * 
      * @param configurationVersion
-     *        The configuration version to deploy.
+     *        The configuration version to deploy. If deploying an AppConfig hosted configuration version, you can
+     *        specify either the version number or version label.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
