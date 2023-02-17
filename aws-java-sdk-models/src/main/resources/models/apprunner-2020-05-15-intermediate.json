@@ -38594,6 +38594,9 @@
       }, {
         "name" : "DELETE_SERVICE",
         "value" : "DELETE_SERVICE"
+      }, {
+        "name" : "UPDATE_SERVICE",
+        "value" : "UPDATE_SERVICE"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.apprunner.enum.OperationType",

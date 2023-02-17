@@ -4291,6 +4291,13 @@ public interface AWSGlueAsync extends AWSGlue {
             com.amazonaws.handlers.AsyncHandler<GetTriggersRequest, GetTriggersResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves partition metadata from the Data Catalog that contains unfiltered metadata.
+     * </p>
+     * <p>
+     * For IAM authorization, the public IAM action associated with this API is <code>glue:GetPartition</code>.
+     * </p>
+     * 
      * @param getUnfilteredPartitionMetadataRequest
      * @return A Java Future containing the result of the GetUnfilteredPartitionMetadata operation returned by the
      *         service.
@@ -4302,6 +4309,13 @@ public interface AWSGlueAsync extends AWSGlue {
             GetUnfilteredPartitionMetadataRequest getUnfilteredPartitionMetadataRequest);
 
     /**
+     * <p>
+     * Retrieves partition metadata from the Data Catalog that contains unfiltered metadata.
+     * </p>
+     * <p>
+     * For IAM authorization, the public IAM action associated with this API is <code>glue:GetPartition</code>.
+     * </p>
+     * 
      * @param getUnfilteredPartitionMetadataRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -4318,6 +4332,13 @@ public interface AWSGlueAsync extends AWSGlue {
             com.amazonaws.handlers.AsyncHandler<GetUnfilteredPartitionMetadataRequest, GetUnfilteredPartitionMetadataResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves partition metadata from the Data Catalog that contains unfiltered metadata.
+     * </p>
+     * <p>
+     * For IAM authorization, the public IAM action associated with this API is <code>glue:GetPartitions</code>.
+     * </p>
+     * 
      * @param getUnfilteredPartitionsMetadataRequest
      * @return A Java Future containing the result of the GetUnfilteredPartitionsMetadata operation returned by the
      *         service.
@@ -4329,6 +4350,13 @@ public interface AWSGlueAsync extends AWSGlue {
             GetUnfilteredPartitionsMetadataRequest getUnfilteredPartitionsMetadataRequest);
 
     /**
+     * <p>
+     * Retrieves partition metadata from the Data Catalog that contains unfiltered metadata.
+     * </p>
+     * <p>
+     * For IAM authorization, the public IAM action associated with this API is <code>glue:GetPartitions</code>.
+     * </p>
+     * 
      * @param getUnfilteredPartitionsMetadataRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -4345,6 +4373,13 @@ public interface AWSGlueAsync extends AWSGlue {
             com.amazonaws.handlers.AsyncHandler<GetUnfilteredPartitionsMetadataRequest, GetUnfilteredPartitionsMetadataResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves table metadata from the Data Catalog that contains unfiltered metadata.
+     * </p>
+     * <p>
+     * For IAM authorization, the public IAM action associated with this API is <code>glue:GetTable</code>.
+     * </p>
+     * 
      * @param getUnfilteredTableMetadataRequest
      * @return A Java Future containing the result of the GetUnfilteredTableMetadata operation returned by the service.
      * @sample AWSGlueAsync.GetUnfilteredTableMetadata
@@ -4355,6 +4390,13 @@ public interface AWSGlueAsync extends AWSGlue {
             GetUnfilteredTableMetadataRequest getUnfilteredTableMetadataRequest);
 
     /**
+     * <p>
+     * Retrieves table metadata from the Data Catalog that contains unfiltered metadata.
+     * </p>
+     * <p>
+     * For IAM authorization, the public IAM action associated with this API is <code>glue:GetTable</code>.
+     * </p>
+     * 
      * @param getUnfilteredTableMetadataRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an

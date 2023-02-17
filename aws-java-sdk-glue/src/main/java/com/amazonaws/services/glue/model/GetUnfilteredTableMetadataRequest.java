@@ -25,18 +25,44 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetUnfilteredTableMetadataRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The catalog ID where the table resides.
+     * </p>
+     */
     private String catalogId;
-
+    /**
+     * <p>
+     * (Required) Specifies the name of a database that contains the table.
+     * </p>
+     */
     private String databaseName;
-
+    /**
+     * <p>
+     * (Required) Specifies the name of a table for which you are requesting metadata.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * A structure containing Lake Formation audit context information.
+     * </p>
+     */
     private AuditContext auditContext;
-
+    /**
+     * <p>
+     * (Required) A list of supported permission types.
+     * </p>
+     */
     private java.util.List<String> supportedPermissionTypes;
 
     /**
+     * <p>
+     * The catalog ID where the table resides.
+     * </p>
+     * 
      * @param catalogId
+     *        The catalog ID where the table resides.
      */
 
     public void setCatalogId(String catalogId) {
@@ -44,7 +70,11 @@ public class GetUnfilteredTableMetadataRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * @return
+     * <p>
+     * The catalog ID where the table resides.
+     * </p>
+     * 
+     * @return The catalog ID where the table resides.
      */
 
     public String getCatalogId() {
@@ -52,7 +82,12 @@ public class GetUnfilteredTableMetadataRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The catalog ID where the table resides.
+     * </p>
+     * 
      * @param catalogId
+     *        The catalog ID where the table resides.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -62,7 +97,12 @@ public class GetUnfilteredTableMetadataRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * (Required) Specifies the name of a database that contains the table.
+     * </p>
+     * 
      * @param databaseName
+     *        (Required) Specifies the name of a database that contains the table.
      */
 
     public void setDatabaseName(String databaseName) {
@@ -70,7 +110,11 @@ public class GetUnfilteredTableMetadataRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * @return
+     * <p>
+     * (Required) Specifies the name of a database that contains the table.
+     * </p>
+     * 
+     * @return (Required) Specifies the name of a database that contains the table.
      */
 
     public String getDatabaseName() {
@@ -78,7 +122,12 @@ public class GetUnfilteredTableMetadataRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * (Required) Specifies the name of a database that contains the table.
+     * </p>
+     * 
      * @param databaseName
+     *        (Required) Specifies the name of a database that contains the table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -88,7 +137,12 @@ public class GetUnfilteredTableMetadataRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * (Required) Specifies the name of a table for which you are requesting metadata.
+     * </p>
+     * 
      * @param name
+     *        (Required) Specifies the name of a table for which you are requesting metadata.
      */
 
     public void setName(String name) {
@@ -96,7 +150,11 @@ public class GetUnfilteredTableMetadataRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * @return
+     * <p>
+     * (Required) Specifies the name of a table for which you are requesting metadata.
+     * </p>
+     * 
+     * @return (Required) Specifies the name of a table for which you are requesting metadata.
      */
 
     public String getName() {
@@ -104,7 +162,12 @@ public class GetUnfilteredTableMetadataRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * (Required) Specifies the name of a table for which you are requesting metadata.
+     * </p>
+     * 
      * @param name
+     *        (Required) Specifies the name of a table for which you are requesting metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -114,7 +177,12 @@ public class GetUnfilteredTableMetadataRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * A structure containing Lake Formation audit context information.
+     * </p>
+     * 
      * @param auditContext
+     *        A structure containing Lake Formation audit context information.
      */
 
     public void setAuditContext(AuditContext auditContext) {
@@ -122,7 +190,11 @@ public class GetUnfilteredTableMetadataRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * @return
+     * <p>
+     * A structure containing Lake Formation audit context information.
+     * </p>
+     * 
+     * @return A structure containing Lake Formation audit context information.
      */
 
     public AuditContext getAuditContext() {
@@ -130,7 +202,12 @@ public class GetUnfilteredTableMetadataRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * A structure containing Lake Formation audit context information.
+     * </p>
+     * 
      * @param auditContext
+     *        A structure containing Lake Formation audit context information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -140,7 +217,11 @@ public class GetUnfilteredTableMetadataRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * @return
+     * <p>
+     * (Required) A list of supported permission types.
+     * </p>
+     * 
+     * @return (Required) A list of supported permission types.
      * @see PermissionType
      */
 
@@ -149,7 +230,12 @@ public class GetUnfilteredTableMetadataRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * (Required) A list of supported permission types.
+     * </p>
+     * 
      * @param supportedPermissionTypes
+     *        (Required) A list of supported permission types.
      * @see PermissionType
      */
 
@@ -164,12 +250,16 @@ public class GetUnfilteredTableMetadataRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
+     * (Required) A list of supported permission types.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSupportedPermissionTypes(java.util.Collection)} or
      * {@link #withSupportedPermissionTypes(java.util.Collection)} if you want to override the existing values.
      * </p>
      * 
      * @param supportedPermissionTypes
+     *        (Required) A list of supported permission types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PermissionType
      */
@@ -185,7 +275,12 @@ public class GetUnfilteredTableMetadataRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * (Required) A list of supported permission types.
+     * </p>
+     * 
      * @param supportedPermissionTypes
+     *        (Required) A list of supported permission types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PermissionType
      */
@@ -196,7 +291,12 @@ public class GetUnfilteredTableMetadataRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * (Required) A list of supported permission types.
+     * </p>
+     * 
      * @param supportedPermissionTypes
+     *        (Required) A list of supported permission types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PermissionType
      */

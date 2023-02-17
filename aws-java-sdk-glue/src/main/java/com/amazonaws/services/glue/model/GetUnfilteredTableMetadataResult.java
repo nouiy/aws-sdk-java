@@ -23,16 +23,38 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * A Table object containing the table metadata.
+     * </p>
+     */
     private Table table;
-
+    /**
+     * <p>
+     * A list of column names that the user has been granted access to.
+     * </p>
+     */
     private java.util.List<String> authorizedColumns;
-
+    /**
+     * <p>
+     * A Boolean value that indicates whether the partition location is registered with Lake Formation.
+     * </p>
+     */
     private Boolean isRegisteredWithLakeFormation;
-
+    /**
+     * <p>
+     * A list of column row filters.
+     * </p>
+     */
     private java.util.List<ColumnRowFilter> cellFilters;
 
     /**
+     * <p>
+     * A Table object containing the table metadata.
+     * </p>
+     * 
      * @param table
+     *        A Table object containing the table metadata.
      */
 
     public void setTable(Table table) {
@@ -40,7 +62,11 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * A Table object containing the table metadata.
+     * </p>
+     * 
+     * @return A Table object containing the table metadata.
      */
 
     public Table getTable() {
@@ -48,7 +74,12 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * A Table object containing the table metadata.
+     * </p>
+     * 
      * @param table
+     *        A Table object containing the table metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +89,11 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * A list of column names that the user has been granted access to.
+     * </p>
+     * 
+     * @return A list of column names that the user has been granted access to.
      */
 
     public java.util.List<String> getAuthorizedColumns() {
@@ -66,7 +101,12 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * A list of column names that the user has been granted access to.
+     * </p>
+     * 
      * @param authorizedColumns
+     *        A list of column names that the user has been granted access to.
      */
 
     public void setAuthorizedColumns(java.util.Collection<String> authorizedColumns) {
@@ -80,12 +120,16 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
+     * A list of column names that the user has been granted access to.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setAuthorizedColumns(java.util.Collection)} or {@link #withAuthorizedColumns(java.util.Collection)} if
      * you want to override the existing values.
      * </p>
      * 
      * @param authorizedColumns
+     *        A list of column names that the user has been granted access to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -100,7 +144,12 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * A list of column names that the user has been granted access to.
+     * </p>
+     * 
      * @param authorizedColumns
+     *        A list of column names that the user has been granted access to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -110,7 +159,12 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * A Boolean value that indicates whether the partition location is registered with Lake Formation.
+     * </p>
+     * 
      * @param isRegisteredWithLakeFormation
+     *        A Boolean value that indicates whether the partition location is registered with Lake Formation.
      */
 
     public void setIsRegisteredWithLakeFormation(Boolean isRegisteredWithLakeFormation) {
@@ -118,7 +172,11 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * A Boolean value that indicates whether the partition location is registered with Lake Formation.
+     * </p>
+     * 
+     * @return A Boolean value that indicates whether the partition location is registered with Lake Formation.
      */
 
     public Boolean getIsRegisteredWithLakeFormation() {
@@ -126,7 +184,12 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * A Boolean value that indicates whether the partition location is registered with Lake Formation.
+     * </p>
+     * 
      * @param isRegisteredWithLakeFormation
+     *        A Boolean value that indicates whether the partition location is registered with Lake Formation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -136,7 +199,11 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * A Boolean value that indicates whether the partition location is registered with Lake Formation.
+     * </p>
+     * 
+     * @return A Boolean value that indicates whether the partition location is registered with Lake Formation.
      */
 
     public Boolean isRegisteredWithLakeFormation() {
@@ -144,7 +211,11 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * A list of column row filters.
+     * </p>
+     * 
+     * @return A list of column row filters.
      */
 
     public java.util.List<ColumnRowFilter> getCellFilters() {
@@ -152,7 +223,12 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * A list of column row filters.
+     * </p>
+     * 
      * @param cellFilters
+     *        A list of column row filters.
      */
 
     public void setCellFilters(java.util.Collection<ColumnRowFilter> cellFilters) {
@@ -166,12 +242,16 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
+     * A list of column row filters.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCellFilters(java.util.Collection)} or {@link #withCellFilters(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param cellFilters
+     *        A list of column row filters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -186,7 +266,12 @@ public class GetUnfilteredTableMetadataResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * A list of column row filters.
+     * </p>
+     * 
      * @param cellFilters
+     *        A list of column row filters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

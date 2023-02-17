@@ -1,3 +1,12 @@
+# __1.12.410__ __2023-02-17__
+## __AWS App Runner__
+  - ### Features
+    - This release supports removing MaxSize limit for AutoScalingConfiguration.
+
+## __AWS Glue__
+  - ### Features
+    - Release of Delta Lake Data Lake Format for Glue Studio Service
+
 # __1.12.409__ __2023-02-16__
 ## __AWS WAFV2__
   - ### Features

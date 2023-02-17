@@ -356,7 +356,7 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
     private EvaluateDataQuality evaluateDataQuality;
     /**
      * <p>
-     * Specifies a Hudi data source that is registered in the Glue Data Catalog. The Hudi data source must be stored in
+     * Specifies a Hudi data source that is registered in the Glue Data Catalog. The data source must be stored in
      * Amazon S3.
      * </p>
      */
@@ -387,6 +387,37 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
     private S3HudiDirectTarget s3HudiDirectTarget;
 
     private DirectJDBCSource directJDBCSource;
+    /**
+     * <p>
+     * Specifies a Delta Lake data source that is registered in the Glue Data Catalog. The data source must be stored in
+     * Amazon S3.
+     * </p>
+     */
+    private S3CatalogDeltaSource s3CatalogDeltaSource;
+    /**
+     * <p>
+     * Specifies a Delta Lake data source that is registered in the Glue Data Catalog.
+     * </p>
+     */
+    private CatalogDeltaSource catalogDeltaSource;
+    /**
+     * <p>
+     * Specifies a Delta Lake data source stored in Amazon S3.
+     * </p>
+     */
+    private S3DeltaSource s3DeltaSource;
+    /**
+     * <p>
+     * Specifies a target that writes to a Delta Lake data source in the Glue Data Catalog.
+     * </p>
+     */
+    private S3DeltaCatalogTarget s3DeltaCatalogTarget;
+    /**
+     * <p>
+     * Specifies a target that writes to a Delta Lake data source in Amazon S3.
+     * </p>
+     */
+    private S3DeltaDirectTarget s3DeltaDirectTarget;
 
     /**
      * <p>
@@ -2554,13 +2585,13 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Specifies a Hudi data source that is registered in the Glue Data Catalog. The Hudi data source must be stored in
+     * Specifies a Hudi data source that is registered in the Glue Data Catalog. The data source must be stored in
      * Amazon S3.
      * </p>
      * 
      * @param s3CatalogHudiSource
-     *        Specifies a Hudi data source that is registered in the Glue Data Catalog. The Hudi data source must be
-     *        stored in Amazon S3.
+     *        Specifies a Hudi data source that is registered in the Glue Data Catalog. The data source must be stored
+     *        in Amazon S3.
      */
 
     public void setS3CatalogHudiSource(S3CatalogHudiSource s3CatalogHudiSource) {
@@ -2569,12 +2600,12 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Specifies a Hudi data source that is registered in the Glue Data Catalog. The Hudi data source must be stored in
+     * Specifies a Hudi data source that is registered in the Glue Data Catalog. The data source must be stored in
      * Amazon S3.
      * </p>
      * 
-     * @return Specifies a Hudi data source that is registered in the Glue Data Catalog. The Hudi data source must be
-     *         stored in Amazon S3.
+     * @return Specifies a Hudi data source that is registered in the Glue Data Catalog. The data source must be stored
+     *         in Amazon S3.
      */
 
     public S3CatalogHudiSource getS3CatalogHudiSource() {
@@ -2583,13 +2614,13 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Specifies a Hudi data source that is registered in the Glue Data Catalog. The Hudi data source must be stored in
+     * Specifies a Hudi data source that is registered in the Glue Data Catalog. The data source must be stored in
      * Amazon S3.
      * </p>
      * 
      * @param s3CatalogHudiSource
-     *        Specifies a Hudi data source that is registered in the Glue Data Catalog. The Hudi data source must be
-     *        stored in Amazon S3.
+     *        Specifies a Hudi data source that is registered in the Glue Data Catalog. The data source must be stored
+     *        in Amazon S3.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2785,6 +2816,212 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * Specifies a Delta Lake data source that is registered in the Glue Data Catalog. The data source must be stored in
+     * Amazon S3.
+     * </p>
+     * 
+     * @param s3CatalogDeltaSource
+     *        Specifies a Delta Lake data source that is registered in the Glue Data Catalog. The data source must be
+     *        stored in Amazon S3.
+     */
+
+    public void setS3CatalogDeltaSource(S3CatalogDeltaSource s3CatalogDeltaSource) {
+        this.s3CatalogDeltaSource = s3CatalogDeltaSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a Delta Lake data source that is registered in the Glue Data Catalog. The data source must be stored in
+     * Amazon S3.
+     * </p>
+     * 
+     * @return Specifies a Delta Lake data source that is registered in the Glue Data Catalog. The data source must be
+     *         stored in Amazon S3.
+     */
+
+    public S3CatalogDeltaSource getS3CatalogDeltaSource() {
+        return this.s3CatalogDeltaSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a Delta Lake data source that is registered in the Glue Data Catalog. The data source must be stored in
+     * Amazon S3.
+     * </p>
+     * 
+     * @param s3CatalogDeltaSource
+     *        Specifies a Delta Lake data source that is registered in the Glue Data Catalog. The data source must be
+     *        stored in Amazon S3.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withS3CatalogDeltaSource(S3CatalogDeltaSource s3CatalogDeltaSource) {
+        setS3CatalogDeltaSource(s3CatalogDeltaSource);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies a Delta Lake data source that is registered in the Glue Data Catalog.
+     * </p>
+     * 
+     * @param catalogDeltaSource
+     *        Specifies a Delta Lake data source that is registered in the Glue Data Catalog.
+     */
+
+    public void setCatalogDeltaSource(CatalogDeltaSource catalogDeltaSource) {
+        this.catalogDeltaSource = catalogDeltaSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a Delta Lake data source that is registered in the Glue Data Catalog.
+     * </p>
+     * 
+     * @return Specifies a Delta Lake data source that is registered in the Glue Data Catalog.
+     */
+
+    public CatalogDeltaSource getCatalogDeltaSource() {
+        return this.catalogDeltaSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a Delta Lake data source that is registered in the Glue Data Catalog.
+     * </p>
+     * 
+     * @param catalogDeltaSource
+     *        Specifies a Delta Lake data source that is registered in the Glue Data Catalog.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withCatalogDeltaSource(CatalogDeltaSource catalogDeltaSource) {
+        setCatalogDeltaSource(catalogDeltaSource);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies a Delta Lake data source stored in Amazon S3.
+     * </p>
+     * 
+     * @param s3DeltaSource
+     *        Specifies a Delta Lake data source stored in Amazon S3.
+     */
+
+    public void setS3DeltaSource(S3DeltaSource s3DeltaSource) {
+        this.s3DeltaSource = s3DeltaSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a Delta Lake data source stored in Amazon S3.
+     * </p>
+     * 
+     * @return Specifies a Delta Lake data source stored in Amazon S3.
+     */
+
+    public S3DeltaSource getS3DeltaSource() {
+        return this.s3DeltaSource;
+    }
+
+    /**
+     * <p>
+     * Specifies a Delta Lake data source stored in Amazon S3.
+     * </p>
+     * 
+     * @param s3DeltaSource
+     *        Specifies a Delta Lake data source stored in Amazon S3.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withS3DeltaSource(S3DeltaSource s3DeltaSource) {
+        setS3DeltaSource(s3DeltaSource);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a Delta Lake data source in the Glue Data Catalog.
+     * </p>
+     * 
+     * @param s3DeltaCatalogTarget
+     *        Specifies a target that writes to a Delta Lake data source in the Glue Data Catalog.
+     */
+
+    public void setS3DeltaCatalogTarget(S3DeltaCatalogTarget s3DeltaCatalogTarget) {
+        this.s3DeltaCatalogTarget = s3DeltaCatalogTarget;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a Delta Lake data source in the Glue Data Catalog.
+     * </p>
+     * 
+     * @return Specifies a target that writes to a Delta Lake data source in the Glue Data Catalog.
+     */
+
+    public S3DeltaCatalogTarget getS3DeltaCatalogTarget() {
+        return this.s3DeltaCatalogTarget;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a Delta Lake data source in the Glue Data Catalog.
+     * </p>
+     * 
+     * @param s3DeltaCatalogTarget
+     *        Specifies a target that writes to a Delta Lake data source in the Glue Data Catalog.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withS3DeltaCatalogTarget(S3DeltaCatalogTarget s3DeltaCatalogTarget) {
+        setS3DeltaCatalogTarget(s3DeltaCatalogTarget);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a Delta Lake data source in Amazon S3.
+     * </p>
+     * 
+     * @param s3DeltaDirectTarget
+     *        Specifies a target that writes to a Delta Lake data source in Amazon S3.
+     */
+
+    public void setS3DeltaDirectTarget(S3DeltaDirectTarget s3DeltaDirectTarget) {
+        this.s3DeltaDirectTarget = s3DeltaDirectTarget;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a Delta Lake data source in Amazon S3.
+     * </p>
+     * 
+     * @return Specifies a target that writes to a Delta Lake data source in Amazon S3.
+     */
+
+    public S3DeltaDirectTarget getS3DeltaDirectTarget() {
+        return this.s3DeltaDirectTarget;
+    }
+
+    /**
+     * <p>
+     * Specifies a target that writes to a Delta Lake data source in Amazon S3.
+     * </p>
+     * 
+     * @param s3DeltaDirectTarget
+     *        Specifies a target that writes to a Delta Lake data source in Amazon S3.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CodeGenConfigurationNode withS3DeltaDirectTarget(S3DeltaDirectTarget s3DeltaDirectTarget) {
+        setS3DeltaDirectTarget(s3DeltaDirectTarget);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2911,7 +3148,17 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
         if (getS3HudiDirectTarget() != null)
             sb.append("S3HudiDirectTarget: ").append(getS3HudiDirectTarget()).append(",");
         if (getDirectJDBCSource() != null)
-            sb.append("DirectJDBCSource: ").append(getDirectJDBCSource());
+            sb.append("DirectJDBCSource: ").append(getDirectJDBCSource()).append(",");
+        if (getS3CatalogDeltaSource() != null)
+            sb.append("S3CatalogDeltaSource: ").append(getS3CatalogDeltaSource()).append(",");
+        if (getCatalogDeltaSource() != null)
+            sb.append("CatalogDeltaSource: ").append(getCatalogDeltaSource()).append(",");
+        if (getS3DeltaSource() != null)
+            sb.append("S3DeltaSource: ").append(getS3DeltaSource()).append(",");
+        if (getS3DeltaCatalogTarget() != null)
+            sb.append("S3DeltaCatalogTarget: ").append(getS3DeltaCatalogTarget()).append(",");
+        if (getS3DeltaDirectTarget() != null)
+            sb.append("S3DeltaDirectTarget: ").append(getS3DeltaDirectTarget());
         sb.append("}");
         return sb.toString();
     }
@@ -3160,6 +3407,26 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
             return false;
         if (other.getDirectJDBCSource() != null && other.getDirectJDBCSource().equals(this.getDirectJDBCSource()) == false)
             return false;
+        if (other.getS3CatalogDeltaSource() == null ^ this.getS3CatalogDeltaSource() == null)
+            return false;
+        if (other.getS3CatalogDeltaSource() != null && other.getS3CatalogDeltaSource().equals(this.getS3CatalogDeltaSource()) == false)
+            return false;
+        if (other.getCatalogDeltaSource() == null ^ this.getCatalogDeltaSource() == null)
+            return false;
+        if (other.getCatalogDeltaSource() != null && other.getCatalogDeltaSource().equals(this.getCatalogDeltaSource()) == false)
+            return false;
+        if (other.getS3DeltaSource() == null ^ this.getS3DeltaSource() == null)
+            return false;
+        if (other.getS3DeltaSource() != null && other.getS3DeltaSource().equals(this.getS3DeltaSource()) == false)
+            return false;
+        if (other.getS3DeltaCatalogTarget() == null ^ this.getS3DeltaCatalogTarget() == null)
+            return false;
+        if (other.getS3DeltaCatalogTarget() != null && other.getS3DeltaCatalogTarget().equals(this.getS3DeltaCatalogTarget()) == false)
+            return false;
+        if (other.getS3DeltaDirectTarget() == null ^ this.getS3DeltaDirectTarget() == null)
+            return false;
+        if (other.getS3DeltaDirectTarget() != null && other.getS3DeltaDirectTarget().equals(this.getS3DeltaDirectTarget()) == false)
+            return false;
         return true;
     }
 
@@ -3226,6 +3493,11 @@ public class CodeGenConfigurationNode implements Serializable, Cloneable, Struct
         hashCode = prime * hashCode + ((getS3HudiCatalogTarget() == null) ? 0 : getS3HudiCatalogTarget().hashCode());
         hashCode = prime * hashCode + ((getS3HudiDirectTarget() == null) ? 0 : getS3HudiDirectTarget().hashCode());
         hashCode = prime * hashCode + ((getDirectJDBCSource() == null) ? 0 : getDirectJDBCSource().hashCode());
+        hashCode = prime * hashCode + ((getS3CatalogDeltaSource() == null) ? 0 : getS3CatalogDeltaSource().hashCode());
+        hashCode = prime * hashCode + ((getCatalogDeltaSource() == null) ? 0 : getCatalogDeltaSource().hashCode());
+        hashCode = prime * hashCode + ((getS3DeltaSource() == null) ? 0 : getS3DeltaSource().hashCode());
+        hashCode = prime * hashCode + ((getS3DeltaCatalogTarget() == null) ? 0 : getS3DeltaCatalogTarget().hashCode());
+        hashCode = prime * hashCode + ((getS3DeltaDirectTarget() == null) ? 0 : getS3DeltaDirectTarget().hashCode());
         return hashCode;
     }
 

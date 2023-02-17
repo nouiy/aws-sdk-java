@@ -282,6 +282,26 @@ public class CodeGenConfigurationNodeJsonUnmarshaller implements Unmarshaller<Co
                     context.nextToken();
                     codeGenConfigurationNode.setDirectJDBCSource(DirectJDBCSourceJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("S3CatalogDeltaSource", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setS3CatalogDeltaSource(S3CatalogDeltaSourceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("CatalogDeltaSource", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setCatalogDeltaSource(CatalogDeltaSourceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("S3DeltaSource", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setS3DeltaSource(S3DeltaSourceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("S3DeltaCatalogTarget", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setS3DeltaCatalogTarget(S3DeltaCatalogTargetJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("S3DeltaDirectTarget", targetDepth)) {
+                    context.nextToken();
+                    codeGenConfigurationNode.setS3DeltaDirectTarget(S3DeltaDirectTargetJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

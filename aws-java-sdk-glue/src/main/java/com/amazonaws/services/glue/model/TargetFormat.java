@@ -25,7 +25,8 @@ public enum TargetFormat {
     Avro("avro"),
     Orc("orc"),
     Parquet("parquet"),
-    Hudi("hudi");
+    Hudi("hudi"),
+    Delta("delta");
 
     private String value;
 

@@ -25,20 +25,50 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The catalog ID where the partition resides.
+     * </p>
+     */
     private String catalogId;
-
+    /**
+     * <p>
+     * (Required) Specifies the name of a database that contains the partition.
+     * </p>
+     */
     private String databaseName;
-
+    /**
+     * <p>
+     * (Required) Specifies the name of a table that contains the partition.
+     * </p>
+     */
     private String tableName;
-
+    /**
+     * <p>
+     * (Required) A list of partition key values.
+     * </p>
+     */
     private java.util.List<String> partitionValues;
-
+    /**
+     * <p>
+     * A structure containing Lake Formation audit context information.
+     * </p>
+     */
     private AuditContext auditContext;
-
+    /**
+     * <p>
+     * (Required) A list of supported permission types.
+     * </p>
+     */
     private java.util.List<String> supportedPermissionTypes;
 
     /**
+     * <p>
+     * The catalog ID where the partition resides.
+     * </p>
+     * 
      * @param catalogId
+     *        The catalog ID where the partition resides.
      */
 
     public void setCatalogId(String catalogId) {
@@ -46,7 +76,11 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
-     * @return
+     * <p>
+     * The catalog ID where the partition resides.
+     * </p>
+     * 
+     * @return The catalog ID where the partition resides.
      */
 
     public String getCatalogId() {
@@ -54,7 +88,12 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
+     * <p>
+     * The catalog ID where the partition resides.
+     * </p>
+     * 
      * @param catalogId
+     *        The catalog ID where the partition resides.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -64,7 +103,12 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
+     * <p>
+     * (Required) Specifies the name of a database that contains the partition.
+     * </p>
+     * 
      * @param databaseName
+     *        (Required) Specifies the name of a database that contains the partition.
      */
 
     public void setDatabaseName(String databaseName) {
@@ -72,7 +116,11 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
-     * @return
+     * <p>
+     * (Required) Specifies the name of a database that contains the partition.
+     * </p>
+     * 
+     * @return (Required) Specifies the name of a database that contains the partition.
      */
 
     public String getDatabaseName() {
@@ -80,7 +128,12 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
+     * <p>
+     * (Required) Specifies the name of a database that contains the partition.
+     * </p>
+     * 
      * @param databaseName
+     *        (Required) Specifies the name of a database that contains the partition.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,7 +143,12 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
+     * <p>
+     * (Required) Specifies the name of a table that contains the partition.
+     * </p>
+     * 
      * @param tableName
+     *        (Required) Specifies the name of a table that contains the partition.
      */
 
     public void setTableName(String tableName) {
@@ -98,7 +156,11 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
-     * @return
+     * <p>
+     * (Required) Specifies the name of a table that contains the partition.
+     * </p>
+     * 
+     * @return (Required) Specifies the name of a table that contains the partition.
      */
 
     public String getTableName() {
@@ -106,7 +168,12 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
+     * <p>
+     * (Required) Specifies the name of a table that contains the partition.
+     * </p>
+     * 
      * @param tableName
+     *        (Required) Specifies the name of a table that contains the partition.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -116,7 +183,11 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
-     * @return
+     * <p>
+     * (Required) A list of partition key values.
+     * </p>
+     * 
+     * @return (Required) A list of partition key values.
      */
 
     public java.util.List<String> getPartitionValues() {
@@ -124,7 +195,12 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
+     * <p>
+     * (Required) A list of partition key values.
+     * </p>
+     * 
      * @param partitionValues
+     *        (Required) A list of partition key values.
      */
 
     public void setPartitionValues(java.util.Collection<String> partitionValues) {
@@ -138,12 +214,16 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
+     * (Required) A list of partition key values.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setPartitionValues(java.util.Collection)} or {@link #withPartitionValues(java.util.Collection)} if you
      * want to override the existing values.
      * </p>
      * 
      * @param partitionValues
+     *        (Required) A list of partition key values.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -158,7 +238,12 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
+     * <p>
+     * (Required) A list of partition key values.
+     * </p>
+     * 
      * @param partitionValues
+     *        (Required) A list of partition key values.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,7 +253,12 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
+     * <p>
+     * A structure containing Lake Formation audit context information.
+     * </p>
+     * 
      * @param auditContext
+     *        A structure containing Lake Formation audit context information.
      */
 
     public void setAuditContext(AuditContext auditContext) {
@@ -176,7 +266,11 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
-     * @return
+     * <p>
+     * A structure containing Lake Formation audit context information.
+     * </p>
+     * 
+     * @return A structure containing Lake Formation audit context information.
      */
 
     public AuditContext getAuditContext() {
@@ -184,7 +278,12 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
+     * <p>
+     * A structure containing Lake Formation audit context information.
+     * </p>
+     * 
      * @param auditContext
+     *        A structure containing Lake Formation audit context information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -194,7 +293,11 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
-     * @return
+     * <p>
+     * (Required) A list of supported permission types.
+     * </p>
+     * 
+     * @return (Required) A list of supported permission types.
      * @see PermissionType
      */
 
@@ -203,7 +306,12 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
+     * <p>
+     * (Required) A list of supported permission types.
+     * </p>
+     * 
      * @param supportedPermissionTypes
+     *        (Required) A list of supported permission types.
      * @see PermissionType
      */
 
@@ -218,12 +326,16 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
+     * (Required) A list of supported permission types.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSupportedPermissionTypes(java.util.Collection)} or
      * {@link #withSupportedPermissionTypes(java.util.Collection)} if you want to override the existing values.
      * </p>
      * 
      * @param supportedPermissionTypes
+     *        (Required) A list of supported permission types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PermissionType
      */
@@ -239,7 +351,12 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
+     * <p>
+     * (Required) A list of supported permission types.
+     * </p>
+     * 
      * @param supportedPermissionTypes
+     *        (Required) A list of supported permission types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PermissionType
      */
@@ -250,7 +367,12 @@ public class GetUnfilteredPartitionMetadataRequest extends com.amazonaws.AmazonW
     }
 
     /**
+     * <p>
+     * (Required) A list of supported permission types.
+     * </p>
+     * 
      * @param supportedPermissionTypes
+     *        (Required) A list of supported permission types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PermissionType
      */

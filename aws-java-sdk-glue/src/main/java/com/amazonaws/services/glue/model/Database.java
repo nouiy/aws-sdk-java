@@ -61,7 +61,8 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date createTime;
     /**
      * <p>
-     * Creates a set of default permissions on the table for principals.
+     * Creates a set of default permissions on the table for principals. Used by Lake Formation. Not used in the normal
+     * course of Glue operations.
      * </p>
      */
     private java.util.List<PrincipalPermissions> createTableDefaultPermissions;
@@ -308,10 +309,12 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Creates a set of default permissions on the table for principals.
+     * Creates a set of default permissions on the table for principals. Used by Lake Formation. Not used in the normal
+     * course of Glue operations.
      * </p>
      * 
-     * @return Creates a set of default permissions on the table for principals.
+     * @return Creates a set of default permissions on the table for principals. Used by Lake Formation. Not used in the
+     *         normal course of Glue operations.
      */
 
     public java.util.List<PrincipalPermissions> getCreateTableDefaultPermissions() {
@@ -320,11 +323,13 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Creates a set of default permissions on the table for principals.
+     * Creates a set of default permissions on the table for principals. Used by Lake Formation. Not used in the normal
+     * course of Glue operations.
      * </p>
      * 
      * @param createTableDefaultPermissions
-     *        Creates a set of default permissions on the table for principals.
+     *        Creates a set of default permissions on the table for principals. Used by Lake Formation. Not used in the
+     *        normal course of Glue operations.
      */
 
     public void setCreateTableDefaultPermissions(java.util.Collection<PrincipalPermissions> createTableDefaultPermissions) {
@@ -338,7 +343,8 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Creates a set of default permissions on the table for principals.
+     * Creates a set of default permissions on the table for principals. Used by Lake Formation. Not used in the normal
+     * course of Glue operations.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -347,7 +353,8 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param createTableDefaultPermissions
-     *        Creates a set of default permissions on the table for principals.
+     *        Creates a set of default permissions on the table for principals. Used by Lake Formation. Not used in the
+     *        normal course of Glue operations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -363,11 +370,13 @@ public class Database implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Creates a set of default permissions on the table for principals.
+     * Creates a set of default permissions on the table for principals. Used by Lake Formation. Not used in the normal
+     * course of Glue operations.
      * </p>
      * 
      * @param createTableDefaultPermissions
-     *        Creates a set of default permissions on the table for principals.
+     *        Creates a set of default permissions on the table for principals. Used by Lake Formation. Not used in the
+     *        normal course of Glue operations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

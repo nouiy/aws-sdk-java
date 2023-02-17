@@ -8313,6 +8313,13 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
     }
 
     /**
+     * <p>
+     * Retrieves partition metadata from the Data Catalog that contains unfiltered metadata.
+     * </p>
+     * <p>
+     * For IAM authorization, the public IAM action associated with this API is <code>glue:GetPartition</code>.
+     * </p>
+     * 
      * @param getUnfilteredPartitionMetadataRequest
      * @return Result of the GetUnfilteredPartitionMetadata operation returned by the service.
      * @throws EntityNotFoundException
@@ -8377,6 +8384,13 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
     }
 
     /**
+     * <p>
+     * Retrieves partition metadata from the Data Catalog that contains unfiltered metadata.
+     * </p>
+     * <p>
+     * For IAM authorization, the public IAM action associated with this API is <code>glue:GetPartitions</code>.
+     * </p>
+     * 
      * @param getUnfilteredPartitionsMetadataRequest
      * @return Result of the GetUnfilteredPartitionsMetadata operation returned by the service.
      * @throws EntityNotFoundException
@@ -8442,6 +8456,13 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
     }
 
     /**
+     * <p>
+     * Retrieves table metadata from the Data Catalog that contains unfiltered metadata.
+     * </p>
+     * <p>
+     * For IAM authorization, the public IAM action associated with this API is <code>glue:GetTable</code>.
+     * </p>
+     * 
      * @param getUnfilteredTableMetadataRequest
      * @return Result of the GetUnfilteredTableMetadata operation returned by the service.
      * @throws EntityNotFoundException
