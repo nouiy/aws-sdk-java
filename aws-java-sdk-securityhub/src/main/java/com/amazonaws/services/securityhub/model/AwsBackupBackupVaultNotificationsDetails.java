@@ -59,7 +59,7 @@ public class AwsBackupBackupVaultNotificationsDetails implements Serializable, C
     private java.util.List<String> backupVaultEvents;
     /**
      * <p>
-     * An ARN that uniquely identifies the Amazon SNS topic for a backup vault’s events.
+     * The Amazon Resource Name (ARN) that uniquely identifies the Amazon SNS topic for a backup vault's events.
      * </p>
      */
     private String snsTopicArn;
@@ -316,11 +316,11 @@ public class AwsBackupBackupVaultNotificationsDetails implements Serializable, C
 
     /**
      * <p>
-     * An ARN that uniquely identifies the Amazon SNS topic for a backup vault’s events.
+     * The Amazon Resource Name (ARN) that uniquely identifies the Amazon SNS topic for a backup vault's events.
      * </p>
      * 
      * @param snsTopicArn
-     *        An ARN that uniquely identifies the Amazon SNS topic for a backup vault’s events.
+     *        The Amazon Resource Name (ARN) that uniquely identifies the Amazon SNS topic for a backup vault's events.
      */
 
     public void setSnsTopicArn(String snsTopicArn) {
@@ -329,10 +329,10 @@ public class AwsBackupBackupVaultNotificationsDetails implements Serializable, C
 
     /**
      * <p>
-     * An ARN that uniquely identifies the Amazon SNS topic for a backup vault’s events.
+     * The Amazon Resource Name (ARN) that uniquely identifies the Amazon SNS topic for a backup vault's events.
      * </p>
      * 
-     * @return An ARN that uniquely identifies the Amazon SNS topic for a backup vault’s events.
+     * @return The Amazon Resource Name (ARN) that uniquely identifies the Amazon SNS topic for a backup vault's events.
      */
 
     public String getSnsTopicArn() {
@@ -341,11 +341,11 @@ public class AwsBackupBackupVaultNotificationsDetails implements Serializable, C
 
     /**
      * <p>
-     * An ARN that uniquely identifies the Amazon SNS topic for a backup vault’s events.
+     * The Amazon Resource Name (ARN) that uniquely identifies the Amazon SNS topic for a backup vault's events.
      * </p>
      * 
      * @param snsTopicArn
-     *        An ARN that uniquely identifies the Amazon SNS topic for a backup vault’s events.
+     *        The Amazon Resource Name (ARN) that uniquely identifies the Amazon SNS topic for a backup vault's events.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

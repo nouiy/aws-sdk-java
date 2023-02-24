@@ -54,6 +54,8 @@ public class StartTaskContactRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TaskTemplateId").build();
     private static final MarshallingInfo<String> QUICKCONNECTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("QuickConnectId").build();
+    private static final MarshallingInfo<String> RELATEDCONTACTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RelatedContactId").build();
 
     private static final StartTaskContactRequestMarshaller instance = new StartTaskContactRequestMarshaller();
 
@@ -82,6 +84,7 @@ public class StartTaskContactRequestMarshaller {
             protocolMarshaller.marshall(startTaskContactRequest.getScheduledTime(), SCHEDULEDTIME_BINDING);
             protocolMarshaller.marshall(startTaskContactRequest.getTaskTemplateId(), TASKTEMPLATEID_BINDING);
             protocolMarshaller.marshall(startTaskContactRequest.getQuickConnectId(), QUICKCONNECTID_BINDING);
+            protocolMarshaller.marshall(startTaskContactRequest.getRelatedContactId(), RELATEDCONTACTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

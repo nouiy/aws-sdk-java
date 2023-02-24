@@ -27,14 +27,12 @@ import com.amazonaws.services.connectcases.model.*;
  * </p>
  * <p>
  * <p>
- * Welcome to the Amazon Connect Cases API Reference. This guide provides information about the Amazon Connect Cases
- * API, which you can use to create, update, get, and list Cases domains, fields, field options, layouts, templates,
- * cases, related items, and tags.
+ * With Amazon Connect Cases, your agents can track and manage customer issues that require multiple interactions,
+ * follow-up tasks, and teams in your contact center. A case represents a customer issue. It records the issue, the
+ * steps and interactions taken to resolve the issue, and the outcome. For more information, see <a
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/cases.html">Amazon Connect Cases</a> in the <i>Amazon
+ * Connect Administrator Guide</i>.
  * </p>
- * 
- * <pre>
- * <code> &lt;p&gt;For more information about Amazon Connect Cases, see &lt;a href=&quot;https://docs.aws.amazon.com/connect/latest/adminguide/cases.html&quot;&gt;Amazon Connect Cases&lt;/a&gt; in the &lt;i&gt;Amazon Connect Administrator Guide&lt;/i&gt;. &lt;/p&gt; </code>
- * </pre>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AmazonConnectCases {
@@ -106,9 +104,12 @@ public interface AmazonConnectCases {
      * </p>
      * <note>
      * <p>
-     * <code>customer_id</code> is a required field when creating a case.
+     * The following fields are required when creating a case:
      * </p>
-     * </note>
+     * 
+     * <pre>
+     * <code> &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;customer_id&lt;/code&gt; - You must provide the full customer profile ARN in this format: &lt;code&gt;arn:aws:profile:your AWS Region:your AWS account ID:domains/profiles domain name/profiles/profile ID&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;title&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/note&gt; </code>
+     * </pre>
      * 
      * @param createCaseRequest
      * @return Result of the CreateCase operation returned by the service.
@@ -142,7 +143,10 @@ public interface AmazonConnectCases {
      * <p>
      * This will not associate your connect instance to Cases domain. Instead, use the Amazon Connect <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateIntegrationAssociation.html"
-     * >CreateIntegrationAssociation</a> API.
+     * >CreateIntegrationAssociation</a> API. You need specific IAM permissions to successfully associate the Cases
+     * domain. For more information, see <a href=
+     * "https://docs.aws.amazon.com/connect/latest/adminguide/required-permissions-iam-cases.html#onboard-cases-iam"
+     * >Onboard to Cases</a>.
      * </p>
      * </important>
      * 
@@ -324,6 +328,34 @@ public interface AmazonConnectCases {
      *      API Documentation</a>
      */
     CreateTemplateResult createTemplate(CreateTemplateRequest createTemplateRequest);
+
+    /**
+     * <p>
+     * Deletes a domain.
+     * </p>
+     * 
+     * @param deleteDomainRequest
+     * @return Result of the DeleteDomain operation returned by the service.
+     * @throws InternalServerException
+     *         We couldn't process your request because of an issue with the server. Try again later.
+     * @throws ResourceNotFoundException
+     *         We couldn't find the requested resource. Check that your resources exists and were created in the same
+     *         Amazon Web Services Region as your request, and try your request again.
+     * @throws ValidationException
+     *         The request isn't valid. Check the syntax and try again.
+     * @throws ThrottlingException
+     *         The rate has been exceeded for this API. Please try again after a few minutes.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ConflictException
+     *         The requested operation would cause a conflict with the current state of a service resource associated
+     *         with the request. Resolve the conflict before retrying this request. See the accompanying error message
+     *         for details.
+     * @sample AmazonConnectCases.DeleteDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connectcases-2022-10-03/DeleteDomain" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteDomainResult deleteDomain(DeleteDomainRequest deleteDomainRequest);
 
     /**
      * <p>
@@ -640,6 +672,13 @@ public interface AmazonConnectCases {
      * Searches for cases within their associated Cases domain. Search results are returned as a paginated list of
      * abridged case documents.
      * </p>
+     * <note>
+     * <p>
+     * For <code>customer_id</code> you must provide the full customer profile ARN in this format:
+     * <code> arn:aws:profile:your AWS Region:your AWS account ID:domains/profiles domain name/profiles/profile ID</code>
+     * .
+     * </p>
+     * </note>
      * 
      * @param searchCasesRequest
      * @return Result of the SearchCases operation returned by the service.

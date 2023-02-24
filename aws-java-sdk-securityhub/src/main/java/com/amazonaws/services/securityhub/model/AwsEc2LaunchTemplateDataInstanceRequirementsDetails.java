@@ -135,7 +135,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails implements Seri
     private AwsEc2LaunchTemplateDataInstanceRequirementsNetworkInterfaceCountDetails networkInterfaceCount;
     /**
      * <p>
-     * The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand Instance,
+     * The price protection threshold for On-Demand Instances. This is the maximum you'll pay for an On-Demand Instance,
      * expressed as a percentage above the least expensive current generation M, C, or R instance type with your
      * specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types
      * priced above your threshold.
@@ -156,7 +156,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails implements Seri
     private Boolean requireHibernateSupport;
     /**
      * <p>
-     * The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed
+     * The price protection threshold for Spot Instances. This is the maximum you'll pay for a Spot Instance, expressed
      * as a percentage above the least expensive current generation M, C, or R instance type with your specified
      * attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types priced above
      * your threshold.
@@ -1088,7 +1088,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails implements Seri
 
     /**
      * <p>
-     * The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand Instance,
+     * The price protection threshold for On-Demand Instances. This is the maximum you'll pay for an On-Demand Instance,
      * expressed as a percentage above the least expensive current generation M, C, or R instance type with your
      * specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types
      * priced above your threshold.
@@ -1101,7 +1101,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails implements Seri
      * </p>
      * 
      * @param onDemandMaxPricePercentageOverLowestPrice
-     *        The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand
+     *        The price protection threshold for On-Demand Instances. This is the maximum you'll pay for an On-Demand
      *        Instance, expressed as a percentage above the least expensive current generation M, C, or R instance type
      *        with your specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes
      *        instance types priced above your threshold.</p>
@@ -1118,7 +1118,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails implements Seri
 
     /**
      * <p>
-     * The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand Instance,
+     * The price protection threshold for On-Demand Instances. This is the maximum you'll pay for an On-Demand Instance,
      * expressed as a percentage above the least expensive current generation M, C, or R instance type with your
      * specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types
      * priced above your threshold.
@@ -1130,7 +1130,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails implements Seri
      * A high value, such as <code>999999</code>, turns off price protection.
      * </p>
      * 
-     * @return The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand
+     * @return The price protection threshold for On-Demand Instances. This is the maximum you'll pay for an On-Demand
      *         Instance, expressed as a percentage above the least expensive current generation M, C, or R instance type
      *         with your specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes
      *         instance types priced above your threshold.</p>
@@ -1147,7 +1147,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails implements Seri
 
     /**
      * <p>
-     * The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand Instance,
+     * The price protection threshold for On-Demand Instances. This is the maximum you'll pay for an On-Demand Instance,
      * expressed as a percentage above the least expensive current generation M, C, or R instance type with your
      * specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types
      * priced above your threshold.
@@ -1160,7 +1160,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails implements Seri
      * </p>
      * 
      * @param onDemandMaxPricePercentageOverLowestPrice
-     *        The price protection threshold for On-Demand Instances. This is the maximum you’ll pay for an On-Demand
+     *        The price protection threshold for On-Demand Instances. This is the maximum you'll pay for an On-Demand
      *        Instance, expressed as a percentage above the least expensive current generation M, C, or R instance type
      *        with your specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes
      *        instance types priced above your threshold.</p>
@@ -1231,7 +1231,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails implements Seri
 
     /**
      * <p>
-     * The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed
+     * The price protection threshold for Spot Instances. This is the maximum you'll pay for a Spot Instance, expressed
      * as a percentage above the least expensive current generation M, C, or R instance type with your specified
      * attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types priced above
      * your threshold.
@@ -1244,7 +1244,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails implements Seri
      * </p>
      * 
      * @param spotMaxPricePercentageOverLowestPrice
-     *        The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance,
+     *        The price protection threshold for Spot Instances. This is the maximum you'll pay for a Spot Instance,
      *        expressed as a percentage above the least expensive current generation M, C, or R instance type with your
      *        specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance
      *        types priced above your threshold. </p>
@@ -1261,7 +1261,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails implements Seri
 
     /**
      * <p>
-     * The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed
+     * The price protection threshold for Spot Instances. This is the maximum you'll pay for a Spot Instance, expressed
      * as a percentage above the least expensive current generation M, C, or R instance type with your specified
      * attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types priced above
      * your threshold.
@@ -1273,7 +1273,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails implements Seri
      * A high value, such as <code>999999</code>, turns off price protection.
      * </p>
      * 
-     * @return The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance,
+     * @return The price protection threshold for Spot Instances. This is the maximum you'll pay for a Spot Instance,
      *         expressed as a percentage above the least expensive current generation M, C, or R instance type with your
      *         specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance
      *         types priced above your threshold. </p>
@@ -1290,7 +1290,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails implements Seri
 
     /**
      * <p>
-     * The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed
+     * The price protection threshold for Spot Instances. This is the maximum you'll pay for a Spot Instance, expressed
      * as a percentage above the least expensive current generation M, C, or R instance type with your specified
      * attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance types priced above
      * your threshold.
@@ -1303,7 +1303,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsDetails implements Seri
      * </p>
      * 
      * @param spotMaxPricePercentageOverLowestPrice
-     *        The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance,
+     *        The price protection threshold for Spot Instances. This is the maximum you'll pay for a Spot Instance,
      *        expressed as a percentage above the least expensive current generation M, C, or R instance type with your
      *        specified attributes. When Amazon EC2 selects instance types with your attributes, it excludes instance
      *        types priced above your threshold. </p>

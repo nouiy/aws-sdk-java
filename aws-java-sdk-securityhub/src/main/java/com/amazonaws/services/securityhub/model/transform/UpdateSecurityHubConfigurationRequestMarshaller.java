@@ -29,6 +29,8 @@ public class UpdateSecurityHubConfigurationRequestMarshaller {
 
     private static final MarshallingInfo<Boolean> AUTOENABLECONTROLS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AutoEnableControls").build();
+    private static final MarshallingInfo<String> CONTROLFINDINGGENERATOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ControlFindingGenerator").build();
 
     private static final UpdateSecurityHubConfigurationRequestMarshaller instance = new UpdateSecurityHubConfigurationRequestMarshaller();
 
@@ -47,6 +49,7 @@ public class UpdateSecurityHubConfigurationRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(updateSecurityHubConfigurationRequest.getAutoEnableControls(), AUTOENABLECONTROLS_BINDING);
+            protocolMarshaller.marshall(updateSecurityHubConfigurationRequest.getControlFindingGenerator(), CONTROLFINDINGGENERATOR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

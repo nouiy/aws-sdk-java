@@ -31,14 +31,13 @@ import com.amazonaws.services.securityhub.model.*;
  * security standards. Security Hub collects security data from Amazon Web Services accounts, services, and integrated
  * third-party products and helps you analyze security trends in your environment to identify the highest priority
  * security issues. For more information about Security Hub, see the <a
- * href="https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html"> <i>Security HubUser
- * Guide</i> </a>.
+ * href="https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html">Security HubUser Guide</a>.
  * </p>
  * <p>
  * When you use operations in the Security Hub API, the requests are executed only in the Amazon Web Services Region
  * that is currently active or in the specific Amazon Web Services Region that you specify in your request. Any
  * configuration or settings change that results from the operation is applied only to that Region. To make the same
- * change in other Regions, execute the same command for each Region to apply the change to.
+ * change in other Regions, run the same command for each Region in which you want to apply the change.
  * </p>
  * <p>
  * For example, if your Region is set to <code>us-west-2</code>, when you use <code>CreateMembers</code> to add a member
@@ -52,7 +51,7 @@ import com.amazonaws.services.securityhub.model.*;
  * <ul>
  * <li>
  * <p>
- * <code>BatchEnableStandards</code> - <code>RateLimit</code> of 1 request per second, <code>BurstLimit</code> of 1
+ * <code>BatchEnableStandards</code> - <code>RateLimit</code> of 1 request per second. <code>BurstLimit</code> of 1
  * request per second.
  * </p>
  * </li>
@@ -76,7 +75,7 @@ import com.amazonaws.services.securityhub.model.*;
  * </li>
  * <li>
  * <p>
- * <code>UpdateStandardsControl</code> - <code>RateLimit</code> of 1 request per second, <code>BurstLimit</code> of 5
+ * <code>UpdateStandardsControl</code> - <code>RateLimit</code> of 1 request per second. <code>BurstLimit</code> of 5
  * requests per second.
  * </p>
  * </li>
@@ -294,6 +293,76 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
      */
     java.util.concurrent.Future<BatchEnableStandardsResult> batchEnableStandardsAsync(BatchEnableStandardsRequest batchEnableStandardsRequest,
             com.amazonaws.handlers.AsyncHandler<BatchEnableStandardsRequest, BatchEnableStandardsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides details about a batch of security controls for the current Amazon Web Services account and Amazon Web
+     * Services Region.
+     * </p>
+     * 
+     * @param batchGetSecurityControlsRequest
+     * @return A Java Future containing the result of the BatchGetSecurityControls operation returned by the service.
+     * @sample AWSSecurityHubAsync.BatchGetSecurityControls
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchGetSecurityControls"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetSecurityControlsResult> batchGetSecurityControlsAsync(BatchGetSecurityControlsRequest batchGetSecurityControlsRequest);
+
+    /**
+     * <p>
+     * Provides details about a batch of security controls for the current Amazon Web Services account and Amazon Web
+     * Services Region.
+     * </p>
+     * 
+     * @param batchGetSecurityControlsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchGetSecurityControls operation returned by the service.
+     * @sample AWSSecurityHubAsyncHandler.BatchGetSecurityControls
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchGetSecurityControls"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetSecurityControlsResult> batchGetSecurityControlsAsync(BatchGetSecurityControlsRequest batchGetSecurityControlsRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchGetSecurityControlsRequest, BatchGetSecurityControlsResult> asyncHandler);
+
+    /**
+     * <p>
+     * For a batch of security controls and standards, identifies whether each control is currently enabled or disabled
+     * in a standard.
+     * </p>
+     * 
+     * @param batchGetStandardsControlAssociationsRequest
+     * @return A Java Future containing the result of the BatchGetStandardsControlAssociations operation returned by the
+     *         service.
+     * @sample AWSSecurityHubAsync.BatchGetStandardsControlAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchGetStandardsControlAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetStandardsControlAssociationsResult> batchGetStandardsControlAssociationsAsync(
+            BatchGetStandardsControlAssociationsRequest batchGetStandardsControlAssociationsRequest);
+
+    /**
+     * <p>
+     * For a batch of security controls and standards, identifies whether each control is currently enabled or disabled
+     * in a standard.
+     * </p>
+     * 
+     * @param batchGetStandardsControlAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchGetStandardsControlAssociations operation returned by the
+     *         service.
+     * @sample AWSSecurityHubAsyncHandler.BatchGetStandardsControlAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchGetStandardsControlAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetStandardsControlAssociationsResult> batchGetStandardsControlAssociationsAsync(
+            BatchGetStandardsControlAssociationsRequest batchGetStandardsControlAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchGetStandardsControlAssociationsRequest, BatchGetStandardsControlAssociationsResult> asyncHandler);
 
     /**
      * <p>
@@ -648,6 +717,45 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
      */
     java.util.concurrent.Future<BatchUpdateFindingsResult> batchUpdateFindingsAsync(BatchUpdateFindingsRequest batchUpdateFindingsRequest,
             com.amazonaws.handlers.AsyncHandler<BatchUpdateFindingsRequest, BatchUpdateFindingsResult> asyncHandler);
+
+    /**
+     * <p>
+     * For a batch of security controls and standards, this operation updates the enablement status of a control in a
+     * standard.
+     * </p>
+     * 
+     * @param batchUpdateStandardsControlAssociationsRequest
+     * @return A Java Future containing the result of the BatchUpdateStandardsControlAssociations operation returned by
+     *         the service.
+     * @sample AWSSecurityHubAsync.BatchUpdateStandardsControlAssociations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchUpdateStandardsControlAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchUpdateStandardsControlAssociationsResult> batchUpdateStandardsControlAssociationsAsync(
+            BatchUpdateStandardsControlAssociationsRequest batchUpdateStandardsControlAssociationsRequest);
+
+    /**
+     * <p>
+     * For a batch of security controls and standards, this operation updates the enablement status of a control in a
+     * standard.
+     * </p>
+     * 
+     * @param batchUpdateStandardsControlAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchUpdateStandardsControlAssociations operation returned by
+     *         the service.
+     * @sample AWSSecurityHubAsyncHandler.BatchUpdateStandardsControlAssociations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchUpdateStandardsControlAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<BatchUpdateStandardsControlAssociationsResult> batchUpdateStandardsControlAssociationsAsync(
+            BatchUpdateStandardsControlAssociationsRequest batchUpdateStandardsControlAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchUpdateStandardsControlAssociationsRequest, BatchUpdateStandardsControlAssociationsResult> asyncHandler);
 
     /**
      * <p>
@@ -2402,6 +2510,76 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
     java.util.concurrent.Future<ListOrganizationAdminAccountsResult> listOrganizationAdminAccountsAsync(
             ListOrganizationAdminAccountsRequest listOrganizationAdminAccountsRequest,
             com.amazonaws.handlers.AsyncHandler<ListOrganizationAdminAccountsRequest, ListOrganizationAdminAccountsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all of the security controls that apply to a specified standard.
+     * </p>
+     * 
+     * @param listSecurityControlDefinitionsRequest
+     * @return A Java Future containing the result of the ListSecurityControlDefinitions operation returned by the
+     *         service.
+     * @sample AWSSecurityHubAsync.ListSecurityControlDefinitions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListSecurityControlDefinitions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSecurityControlDefinitionsResult> listSecurityControlDefinitionsAsync(
+            ListSecurityControlDefinitionsRequest listSecurityControlDefinitionsRequest);
+
+    /**
+     * <p>
+     * Lists all of the security controls that apply to a specified standard.
+     * </p>
+     * 
+     * @param listSecurityControlDefinitionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListSecurityControlDefinitions operation returned by the
+     *         service.
+     * @sample AWSSecurityHubAsyncHandler.ListSecurityControlDefinitions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListSecurityControlDefinitions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSecurityControlDefinitionsResult> listSecurityControlDefinitionsAsync(
+            ListSecurityControlDefinitionsRequest listSecurityControlDefinitionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListSecurityControlDefinitionsRequest, ListSecurityControlDefinitionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Specifies whether a control is currently enabled or disabled in each enabled standard in the calling account.
+     * </p>
+     * 
+     * @param listStandardsControlAssociationsRequest
+     * @return A Java Future containing the result of the ListStandardsControlAssociations operation returned by the
+     *         service.
+     * @sample AWSSecurityHubAsync.ListStandardsControlAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListStandardsControlAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListStandardsControlAssociationsResult> listStandardsControlAssociationsAsync(
+            ListStandardsControlAssociationsRequest listStandardsControlAssociationsRequest);
+
+    /**
+     * <p>
+     * Specifies whether a control is currently enabled or disabled in each enabled standard in the calling account.
+     * </p>
+     * 
+     * @param listStandardsControlAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListStandardsControlAssociations operation returned by the
+     *         service.
+     * @sample AWSSecurityHubAsyncHandler.ListStandardsControlAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListStandardsControlAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListStandardsControlAssociationsResult> listStandardsControlAssociationsAsync(
+            ListStandardsControlAssociationsRequest listStandardsControlAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListStandardsControlAssociationsRequest, ListStandardsControlAssociationsResult> asyncHandler);
 
     /**
      * <p>

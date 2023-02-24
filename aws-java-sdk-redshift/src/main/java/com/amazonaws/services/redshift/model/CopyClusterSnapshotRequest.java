@@ -45,7 +45,8 @@ public class CopyClusterSnapshotRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The identifier of the cluster the source snapshot was created from. This parameter is required if your IAM user
-     * has a policy containing a snapshot resource element that specifies anything other than * for the cluster name.
+     * or role has a policy containing a snapshot resource element that specifies anything other than * for the cluster
+     * name.
      * </p>
      * <p>
      * Constraints:
@@ -209,7 +210,8 @@ public class CopyClusterSnapshotRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The identifier of the cluster the source snapshot was created from. This parameter is required if your IAM user
-     * has a policy containing a snapshot resource element that specifies anything other than * for the cluster name.
+     * or role has a policy containing a snapshot resource element that specifies anything other than * for the cluster
+     * name.
      * </p>
      * <p>
      * Constraints:
@@ -224,8 +226,8 @@ public class CopyClusterSnapshotRequest extends com.amazonaws.AmazonWebServiceRe
      * 
      * @param sourceSnapshotClusterIdentifier
      *        The identifier of the cluster the source snapshot was created from. This parameter is required if your IAM
-     *        user has a policy containing a snapshot resource element that specifies anything other than * for the
-     *        cluster name.</p>
+     *        user or role has a policy containing a snapshot resource element that specifies anything other than * for
+     *        the cluster name.</p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -244,7 +246,8 @@ public class CopyClusterSnapshotRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The identifier of the cluster the source snapshot was created from. This parameter is required if your IAM user
-     * has a policy containing a snapshot resource element that specifies anything other than * for the cluster name.
+     * or role has a policy containing a snapshot resource element that specifies anything other than * for the cluster
+     * name.
      * </p>
      * <p>
      * Constraints:
@@ -258,8 +261,8 @@ public class CopyClusterSnapshotRequest extends com.amazonaws.AmazonWebServiceRe
      * </ul>
      * 
      * @return The identifier of the cluster the source snapshot was created from. This parameter is required if your
-     *         IAM user has a policy containing a snapshot resource element that specifies anything other than * for the
-     *         cluster name.</p>
+     *         IAM user or role has a policy containing a snapshot resource element that specifies anything other than *
+     *         for the cluster name.</p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -278,7 +281,8 @@ public class CopyClusterSnapshotRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The identifier of the cluster the source snapshot was created from. This parameter is required if your IAM user
-     * has a policy containing a snapshot resource element that specifies anything other than * for the cluster name.
+     * or role has a policy containing a snapshot resource element that specifies anything other than * for the cluster
+     * name.
      * </p>
      * <p>
      * Constraints:
@@ -293,8 +297,8 @@ public class CopyClusterSnapshotRequest extends com.amazonaws.AmazonWebServiceRe
      * 
      * @param sourceSnapshotClusterIdentifier
      *        The identifier of the cluster the source snapshot was created from. This parameter is required if your IAM
-     *        user has a policy containing a snapshot resource element that specifies anything other than * for the
-     *        cluster name.</p>
+     *        user or role has a policy containing a snapshot resource element that specifies anything other than * for
+     *        the cluster name.</p>
      *        <p>
      *        Constraints:
      *        </p>

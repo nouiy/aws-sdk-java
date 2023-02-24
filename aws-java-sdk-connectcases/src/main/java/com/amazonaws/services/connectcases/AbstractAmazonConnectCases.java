@@ -68,6 +68,11 @@ public class AbstractAmazonConnectCases implements AmazonConnectCases {
     }
 
     @Override
+    public DeleteDomainResult deleteDomain(DeleteDomainRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetCaseResult getCase(GetCaseRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -32,14 +32,13 @@ import com.amazonaws.services.securityhub.model.*;
  * security standards. Security Hub collects security data from Amazon Web Services accounts, services, and integrated
  * third-party products and helps you analyze security trends in your environment to identify the highest priority
  * security issues. For more information about Security Hub, see the <a
- * href="https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html"> <i>Security HubUser
- * Guide</i> </a>.
+ * href="https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html">Security HubUser Guide</a>.
  * </p>
  * <p>
  * When you use operations in the Security Hub API, the requests are executed only in the Amazon Web Services Region
  * that is currently active or in the specific Amazon Web Services Region that you specify in your request. Any
  * configuration or settings change that results from the operation is applied only to that Region. To make the same
- * change in other Regions, execute the same command for each Region to apply the change to.
+ * change in other Regions, run the same command for each Region in which you want to apply the change.
  * </p>
  * <p>
  * For example, if your Region is set to <code>us-west-2</code>, when you use <code>CreateMembers</code> to add a member
@@ -53,7 +52,7 @@ import com.amazonaws.services.securityhub.model.*;
  * <ul>
  * <li>
  * <p>
- * <code>BatchEnableStandards</code> - <code>RateLimit</code> of 1 request per second, <code>BurstLimit</code> of 1
+ * <code>BatchEnableStandards</code> - <code>RateLimit</code> of 1 request per second. <code>BurstLimit</code> of 1
  * request per second.
  * </p>
  * </li>
@@ -77,7 +76,7 @@ import com.amazonaws.services.securityhub.model.*;
  * </li>
  * <li>
  * <p>
- * <code>UpdateStandardsControl</code> - <code>RateLimit</code> of 1 request per second, <code>BurstLimit</code> of 5
+ * <code>UpdateStandardsControl</code> - <code>RateLimit</code> of 1 request per second. <code>BurstLimit</code> of 5
  * requests per second.
  * </p>
  * </li>
@@ -229,6 +228,53 @@ public interface AWSSecurityHub {
      *      target="_top">AWS API Documentation</a>
      */
     BatchEnableStandardsResult batchEnableStandards(BatchEnableStandardsRequest batchEnableStandardsRequest);
+
+    /**
+     * <p>
+     * Provides details about a batch of security controls for the current Amazon Web Services account and Amazon Web
+     * Services Region.
+     * </p>
+     * 
+     * @param batchGetSecurityControlsRequest
+     * @return Result of the BatchGetSecurityControls operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @sample AWSSecurityHub.BatchGetSecurityControls
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchGetSecurityControls"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchGetSecurityControlsResult batchGetSecurityControls(BatchGetSecurityControlsRequest batchGetSecurityControlsRequest);
+
+    /**
+     * <p>
+     * For a batch of security controls and standards, identifies whether each control is currently enabled or disabled
+     * in a standard.
+     * </p>
+     * 
+     * @param batchGetStandardsControlAssociationsRequest
+     * @return Result of the BatchGetStandardsControlAssociations operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @sample AWSSecurityHub.BatchGetStandardsControlAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchGetStandardsControlAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchGetStandardsControlAssociationsResult batchGetStandardsControlAssociations(
+            BatchGetStandardsControlAssociationsRequest batchGetStandardsControlAssociationsRequest);
 
     /**
      * <p>
@@ -419,6 +465,31 @@ public interface AWSSecurityHub {
      *      target="_top">AWS API Documentation</a>
      */
     BatchUpdateFindingsResult batchUpdateFindings(BatchUpdateFindingsRequest batchUpdateFindingsRequest);
+
+    /**
+     * <p>
+     * For a batch of security controls and standards, this operation updates the enablement status of a control in a
+     * standard.
+     * </p>
+     * 
+     * @param batchUpdateStandardsControlAssociationsRequest
+     * @return Result of the BatchUpdateStandardsControlAssociations operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @sample AWSSecurityHub.BatchUpdateStandardsControlAssociations
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchUpdateStandardsControlAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchUpdateStandardsControlAssociationsResult batchUpdateStandardsControlAssociations(
+            BatchUpdateStandardsControlAssociationsRequest batchUpdateStandardsControlAssociationsRequest);
 
     /**
      * <p>
@@ -1579,6 +1650,50 @@ public interface AWSSecurityHub {
      *      target="_top">AWS API Documentation</a>
      */
     ListOrganizationAdminAccountsResult listOrganizationAdminAccounts(ListOrganizationAdminAccountsRequest listOrganizationAdminAccountsRequest);
+
+    /**
+     * <p>
+     * Lists all of the security controls that apply to a specified standard.
+     * </p>
+     * 
+     * @param listSecurityControlDefinitionsRequest
+     * @return Result of the ListSecurityControlDefinitions operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @sample AWSSecurityHub.ListSecurityControlDefinitions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListSecurityControlDefinitions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListSecurityControlDefinitionsResult listSecurityControlDefinitions(ListSecurityControlDefinitionsRequest listSecurityControlDefinitionsRequest);
+
+    /**
+     * <p>
+     * Specifies whether a control is currently enabled or disabled in each enabled standard in the calling account.
+     * </p>
+     * 
+     * @param listStandardsControlAssociationsRequest
+     * @return Result of the ListStandardsControlAssociations operation returned by the service.
+     * @throws InternalException
+     *         Internal server error.
+     * @throws LimitExceededException
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
+     * @throws InvalidAccessException
+     *         The account doesn't have permission to perform this action.
+     * @throws InvalidInputException
+     *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
+     * @sample AWSSecurityHub.ListStandardsControlAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListStandardsControlAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListStandardsControlAssociationsResult listStandardsControlAssociations(ListStandardsControlAssociationsRequest listStandardsControlAssociationsRequest);
 
     /**
      * <p>

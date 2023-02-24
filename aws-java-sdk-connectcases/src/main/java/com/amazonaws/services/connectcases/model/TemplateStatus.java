@@ -15,9 +15,7 @@ package com.amazonaws.services.connectcases.model;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * Status of a template
- * </p>
+ * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum TemplateStatus {

@@ -33,6 +33,8 @@ public class EnableSecurityHubRequestMarshaller {
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<Boolean> ENABLEDEFAULTSTANDARDS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnableDefaultStandards").build();
+    private static final MarshallingInfo<String> CONTROLFINDINGGENERATOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ControlFindingGenerator").build();
 
     private static final EnableSecurityHubRequestMarshaller instance = new EnableSecurityHubRequestMarshaller();
 
@@ -52,6 +54,7 @@ public class EnableSecurityHubRequestMarshaller {
         try {
             protocolMarshaller.marshall(enableSecurityHubRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(enableSecurityHubRequest.getEnableDefaultStandards(), ENABLEDEFAULTSTANDARDS_BINDING);
+            protocolMarshaller.marshall(enableSecurityHubRequest.getControlFindingGenerator(), CONTROLFINDINGGENERATOR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

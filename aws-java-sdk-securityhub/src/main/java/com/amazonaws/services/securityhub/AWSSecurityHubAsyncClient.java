@@ -31,14 +31,13 @@ import java.util.concurrent.ExecutorService;
  * security standards. Security Hub collects security data from Amazon Web Services accounts, services, and integrated
  * third-party products and helps you analyze security trends in your environment to identify the highest priority
  * security issues. For more information about Security Hub, see the <a
- * href="https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html"> <i>Security HubUser
- * Guide</i> </a>.
+ * href="https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html">Security HubUser Guide</a>.
  * </p>
  * <p>
  * When you use operations in the Security Hub API, the requests are executed only in the Amazon Web Services Region
  * that is currently active or in the specific Amazon Web Services Region that you specify in your request. Any
  * configuration or settings change that results from the operation is applied only to that Region. To make the same
- * change in other Regions, execute the same command for each Region to apply the change to.
+ * change in other Regions, run the same command for each Region in which you want to apply the change.
  * </p>
  * <p>
  * For example, if your Region is set to <code>us-west-2</code>, when you use <code>CreateMembers</code> to add a member
@@ -52,7 +51,7 @@ import java.util.concurrent.ExecutorService;
  * <ul>
  * <li>
  * <p>
- * <code>BatchEnableStandards</code> - <code>RateLimit</code> of 1 request per second, <code>BurstLimit</code> of 1
+ * <code>BatchEnableStandards</code> - <code>RateLimit</code> of 1 request per second. <code>BurstLimit</code> of 1
  * request per second.
  * </p>
  * </li>
@@ -76,7 +75,7 @@ import java.util.concurrent.ExecutorService;
  * </li>
  * <li>
  * <p>
- * <code>UpdateStandardsControl</code> - <code>RateLimit</code> of 1 request per second, <code>BurstLimit</code> of 5
+ * <code>UpdateStandardsControl</code> - <code>RateLimit</code> of 1 request per second. <code>BurstLimit</code> of 5
  * requests per second.
  * </p>
  * </li>
@@ -268,6 +267,74 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetSecurityControlsResult> batchGetSecurityControlsAsync(BatchGetSecurityControlsRequest request) {
+
+        return batchGetSecurityControlsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetSecurityControlsResult> batchGetSecurityControlsAsync(final BatchGetSecurityControlsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchGetSecurityControlsRequest, BatchGetSecurityControlsResult> asyncHandler) {
+        final BatchGetSecurityControlsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchGetSecurityControlsResult>() {
+            @Override
+            public BatchGetSecurityControlsResult call() throws Exception {
+                BatchGetSecurityControlsResult result = null;
+
+                try {
+                    result = executeBatchGetSecurityControls(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetStandardsControlAssociationsResult> batchGetStandardsControlAssociationsAsync(
+            BatchGetStandardsControlAssociationsRequest request) {
+
+        return batchGetStandardsControlAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetStandardsControlAssociationsResult> batchGetStandardsControlAssociationsAsync(
+            final BatchGetStandardsControlAssociationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchGetStandardsControlAssociationsRequest, BatchGetStandardsControlAssociationsResult> asyncHandler) {
+        final BatchGetStandardsControlAssociationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchGetStandardsControlAssociationsResult>() {
+            @Override
+            public BatchGetStandardsControlAssociationsResult call() throws Exception {
+                BatchGetStandardsControlAssociationsResult result = null;
+
+                try {
+                    result = executeBatchGetStandardsControlAssociations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchImportFindingsResult> batchImportFindingsAsync(BatchImportFindingsRequest request) {
 
         return batchImportFindingsAsync(request, null);
@@ -318,6 +385,41 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
 
                 try {
                     result = executeBatchUpdateFindings(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchUpdateStandardsControlAssociationsResult> batchUpdateStandardsControlAssociationsAsync(
+            BatchUpdateStandardsControlAssociationsRequest request) {
+
+        return batchUpdateStandardsControlAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchUpdateStandardsControlAssociationsResult> batchUpdateStandardsControlAssociationsAsync(
+            final BatchUpdateStandardsControlAssociationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchUpdateStandardsControlAssociationsRequest, BatchUpdateStandardsControlAssociationsResult> asyncHandler) {
+        final BatchUpdateStandardsControlAssociationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchUpdateStandardsControlAssociationsResult>() {
+            @Override
+            public BatchUpdateStandardsControlAssociationsResult call() throws Exception {
+                BatchUpdateStandardsControlAssociationsResult result = null;
+
+                try {
+                    result = executeBatchUpdateStandardsControlAssociations(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1654,6 +1756,75 @@ public class AWSSecurityHubAsyncClient extends AWSSecurityHubClient implements A
 
                 try {
                     result = executeListOrganizationAdminAccounts(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSecurityControlDefinitionsResult> listSecurityControlDefinitionsAsync(ListSecurityControlDefinitionsRequest request) {
+
+        return listSecurityControlDefinitionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSecurityControlDefinitionsResult> listSecurityControlDefinitionsAsync(
+            final ListSecurityControlDefinitionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListSecurityControlDefinitionsRequest, ListSecurityControlDefinitionsResult> asyncHandler) {
+        final ListSecurityControlDefinitionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListSecurityControlDefinitionsResult>() {
+            @Override
+            public ListSecurityControlDefinitionsResult call() throws Exception {
+                ListSecurityControlDefinitionsResult result = null;
+
+                try {
+                    result = executeListSecurityControlDefinitions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStandardsControlAssociationsResult> listStandardsControlAssociationsAsync(
+            ListStandardsControlAssociationsRequest request) {
+
+        return listStandardsControlAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStandardsControlAssociationsResult> listStandardsControlAssociationsAsync(
+            final ListStandardsControlAssociationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListStandardsControlAssociationsRequest, ListStandardsControlAssociationsResult> asyncHandler) {
+        final ListStandardsControlAssociationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListStandardsControlAssociationsResult>() {
+            @Override
+            public ListStandardsControlAssociationsResult call() throws Exception {
+                ListStandardsControlAssociationsResult result = null;
+
+                try {
+                    result = executeListStandardsControlAssociations(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

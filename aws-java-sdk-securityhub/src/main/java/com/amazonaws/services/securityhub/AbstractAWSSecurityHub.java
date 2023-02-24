@@ -49,12 +49,27 @@ public class AbstractAWSSecurityHub implements AWSSecurityHub {
     }
 
     @Override
+    public BatchGetSecurityControlsResult batchGetSecurityControls(BatchGetSecurityControlsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public BatchGetStandardsControlAssociationsResult batchGetStandardsControlAssociations(BatchGetStandardsControlAssociationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public BatchImportFindingsResult batchImportFindings(BatchImportFindingsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public BatchUpdateFindingsResult batchUpdateFindings(BatchUpdateFindingsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public BatchUpdateStandardsControlAssociationsResult batchUpdateStandardsControlAssociations(BatchUpdateStandardsControlAssociationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -257,6 +272,16 @@ public class AbstractAWSSecurityHub implements AWSSecurityHub {
 
     @Override
     public ListOrganizationAdminAccountsResult listOrganizationAdminAccounts(ListOrganizationAdminAccountsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListSecurityControlDefinitionsResult listSecurityControlDefinitions(ListSecurityControlDefinitionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListStandardsControlAssociationsResult listStandardsControlAssociations(ListStandardsControlAssociationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

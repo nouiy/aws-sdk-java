@@ -25,18 +25,18 @@ public class CreateActionTargetResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The ARN for the custom action target.
+     * The Amazon Resource Name (ARN) for the custom action target.
      * </p>
      */
     private String actionTargetArn;
 
     /**
      * <p>
-     * The ARN for the custom action target.
+     * The Amazon Resource Name (ARN) for the custom action target.
      * </p>
      * 
      * @param actionTargetArn
-     *        The ARN for the custom action target.
+     *        The Amazon Resource Name (ARN) for the custom action target.
      */
 
     public void setActionTargetArn(String actionTargetArn) {
@@ -45,10 +45,10 @@ public class CreateActionTargetResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The ARN for the custom action target.
+     * The Amazon Resource Name (ARN) for the custom action target.
      * </p>
      * 
-     * @return The ARN for the custom action target.
+     * @return The Amazon Resource Name (ARN) for the custom action target.
      */
 
     public String getActionTargetArn() {
@@ -57,11 +57,11 @@ public class CreateActionTargetResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The ARN for the custom action target.
+     * The Amazon Resource Name (ARN) for the custom action target.
      * </p>
      * 
      * @param actionTargetArn
-     *        The ARN for the custom action target.
+     *        The Amazon Resource Name (ARN) for the custom action target.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

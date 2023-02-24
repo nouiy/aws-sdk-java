@@ -18,14 +18,13 @@
  * security standards. Security Hub collects security data from Amazon Web Services accounts, services, and integrated
  * third-party products and helps you analyze security trends in your environment to identify the highest priority
  * security issues. For more information about Security Hub, see the <a
- * href="https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html"> <i>Security HubUser
- * Guide</i> </a>.
+ * href="https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html">Security HubUser Guide</a>.
  * </p>
  * <p>
  * When you use operations in the Security Hub API, the requests are executed only in the Amazon Web Services Region
  * that is currently active or in the specific Amazon Web Services Region that you specify in your request. Any
  * configuration or settings change that results from the operation is applied only to that Region. To make the same
- * change in other Regions, execute the same command for each Region to apply the change to.
+ * change in other Regions, run the same command for each Region in which you want to apply the change.
  * </p>
  * <p>
  * For example, if your Region is set to <code>us-west-2</code>, when you use <code>CreateMembers</code> to add a member
@@ -39,7 +38,7 @@
  * <ul>
  * <li>
  * <p>
- * <code>BatchEnableStandards</code> - <code>RateLimit</code> of 1 request per second, <code>BurstLimit</code> of 1
+ * <code>BatchEnableStandards</code> - <code>RateLimit</code> of 1 request per second. <code>BurstLimit</code> of 1
  * request per second.
  * </p>
  * </li>
@@ -63,7 +62,7 @@
  * </li>
  * <li>
  * <p>
- * <code>UpdateStandardsControl</code> - <code>RateLimit</code> of 1 request per second, <code>BurstLimit</code> of 5
+ * <code>UpdateStandardsControl</code> - <code>RateLimit</code> of 1 request per second. <code>BurstLimit</code> of 5
  * requests per second.
  * </p>
  * </li>

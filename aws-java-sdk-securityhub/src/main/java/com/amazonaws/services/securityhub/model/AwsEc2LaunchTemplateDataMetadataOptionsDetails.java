@@ -32,7 +32,7 @@ public class AwsEc2LaunchTemplateDataMetadataOptionsDetails implements Serializa
     /**
      * <p>
      * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
-     * state is enabled, and you won’t be able to access your instance metadata.
+     * state is enabled, and you won't be able to access your instance metadata.
      * </p>
      */
     private String httpEndpoint;
@@ -69,12 +69,12 @@ public class AwsEc2LaunchTemplateDataMetadataOptionsDetails implements Serializa
     /**
      * <p>
      * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
-     * state is enabled, and you won’t be able to access your instance metadata.
+     * state is enabled, and you won't be able to access your instance metadata.
      * </p>
      * 
      * @param httpEndpoint
      *        Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
-     *        default state is enabled, and you won’t be able to access your instance metadata.
+     *        default state is enabled, and you won't be able to access your instance metadata.
      */
 
     public void setHttpEndpoint(String httpEndpoint) {
@@ -84,11 +84,11 @@ public class AwsEc2LaunchTemplateDataMetadataOptionsDetails implements Serializa
     /**
      * <p>
      * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
-     * state is enabled, and you won’t be able to access your instance metadata.
+     * state is enabled, and you won't be able to access your instance metadata.
      * </p>
      * 
      * @return Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
-     *         default state is enabled, and you won’t be able to access your instance metadata.
+     *         default state is enabled, and you won't be able to access your instance metadata.
      */
 
     public String getHttpEndpoint() {
@@ -98,12 +98,12 @@ public class AwsEc2LaunchTemplateDataMetadataOptionsDetails implements Serializa
     /**
      * <p>
      * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
-     * state is enabled, and you won’t be able to access your instance metadata.
+     * state is enabled, and you won't be able to access your instance metadata.
      * </p>
      * 
      * @param httpEndpoint
      *        Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
-     *        default state is enabled, and you won’t be able to access your instance metadata.
+     *        default state is enabled, and you won't be able to access your instance metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

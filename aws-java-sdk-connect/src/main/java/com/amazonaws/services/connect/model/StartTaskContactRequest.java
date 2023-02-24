@@ -109,6 +109,13 @@ public class StartTaskContactRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private String quickConnectId;
+    /**
+     * <p>
+     * The contactId that is <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/tasks.html#linked-tasks">related</a> to this contact.
+     * </p>
+     */
+    private String relatedContactId;
 
     /**
      * <p>
@@ -709,6 +716,55 @@ public class StartTaskContactRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The contactId that is <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/tasks.html#linked-tasks">related</a> to this contact.
+     * </p>
+     * 
+     * @param relatedContactId
+     *        The contactId that is <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/tasks.html#linked-tasks">related</a> to this
+     *        contact.
+     */
+
+    public void setRelatedContactId(String relatedContactId) {
+        this.relatedContactId = relatedContactId;
+    }
+
+    /**
+     * <p>
+     * The contactId that is <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/tasks.html#linked-tasks">related</a> to this contact.
+     * </p>
+     * 
+     * @return The contactId that is <a
+     *         href="https://docs.aws.amazon.com/connect/latest/adminguide/tasks.html#linked-tasks">related</a> to this
+     *         contact.
+     */
+
+    public String getRelatedContactId() {
+        return this.relatedContactId;
+    }
+
+    /**
+     * <p>
+     * The contactId that is <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/tasks.html#linked-tasks">related</a> to this contact.
+     * </p>
+     * 
+     * @param relatedContactId
+     *        The contactId that is <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/tasks.html#linked-tasks">related</a> to this
+     *        contact.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartTaskContactRequest withRelatedContactId(String relatedContactId) {
+        setRelatedContactId(relatedContactId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -741,7 +797,9 @@ public class StartTaskContactRequest extends com.amazonaws.AmazonWebServiceReque
         if (getTaskTemplateId() != null)
             sb.append("TaskTemplateId: ").append(getTaskTemplateId()).append(",");
         if (getQuickConnectId() != null)
-            sb.append("QuickConnectId: ").append(getQuickConnectId());
+            sb.append("QuickConnectId: ").append(getQuickConnectId()).append(",");
+        if (getRelatedContactId() != null)
+            sb.append("RelatedContactId: ").append(getRelatedContactId());
         sb.append("}");
         return sb.toString();
     }
@@ -800,6 +858,10 @@ public class StartTaskContactRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getQuickConnectId() != null && other.getQuickConnectId().equals(this.getQuickConnectId()) == false)
             return false;
+        if (other.getRelatedContactId() == null ^ this.getRelatedContactId() == null)
+            return false;
+        if (other.getRelatedContactId() != null && other.getRelatedContactId().equals(this.getRelatedContactId()) == false)
+            return false;
         return true;
     }
 
@@ -819,6 +881,7 @@ public class StartTaskContactRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getScheduledTime() == null) ? 0 : getScheduledTime().hashCode());
         hashCode = prime * hashCode + ((getTaskTemplateId() == null) ? 0 : getTaskTemplateId().hashCode());
         hashCode = prime * hashCode + ((getQuickConnectId() == null) ? 0 : getQuickConnectId().hashCode());
+        hashCode = prime * hashCode + ((getRelatedContactId() == null) ? 0 : getRelatedContactId().hashCode());
         return hashCode;
     }
 
