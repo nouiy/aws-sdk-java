@@ -60,6 +60,12 @@ public class SchedulingConfigJsonUnmarshaller implements Unmarshaller<Scheduling
                     context.nextToken();
                     schedulingConfig.setEndBehavior(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("maintenanceWindows", targetDepth)) {
+                    context.nextToken();
+                    schedulingConfig.setMaintenanceWindows(new ListUnmarshaller<MaintenanceWindow>(MaintenanceWindowJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

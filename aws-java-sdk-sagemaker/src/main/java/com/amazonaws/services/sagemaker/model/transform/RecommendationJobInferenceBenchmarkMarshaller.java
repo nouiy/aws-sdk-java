@@ -35,6 +35,8 @@ public class RecommendationJobInferenceBenchmarkMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelConfiguration").build();
     private static final MarshallingInfo<String> FAILUREREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FailureReason").build();
+    private static final MarshallingInfo<StructuredPojo> ENDPOINTMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndpointMetrics").build();
 
     private static final RecommendationJobInferenceBenchmarkMarshaller instance = new RecommendationJobInferenceBenchmarkMarshaller();
 
@@ -56,6 +58,7 @@ public class RecommendationJobInferenceBenchmarkMarshaller {
             protocolMarshaller.marshall(recommendationJobInferenceBenchmark.getEndpointConfiguration(), ENDPOINTCONFIGURATION_BINDING);
             protocolMarshaller.marshall(recommendationJobInferenceBenchmark.getModelConfiguration(), MODELCONFIGURATION_BINDING);
             protocolMarshaller.marshall(recommendationJobInferenceBenchmark.getFailureReason(), FAILUREREASON_BINDING);
+            protocolMarshaller.marshall(recommendationJobInferenceBenchmark.getEndpointMetrics(), ENDPOINTMETRICS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

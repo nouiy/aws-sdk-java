@@ -92,6 +92,12 @@ public class DescribeJobTemplateResultJsonUnmarshaller implements Unmarshaller<D
                     context.nextToken();
                     describeJobTemplateResult.setJobExecutionsRetryConfig(JobExecutionsRetryConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("maintenanceWindows", targetDepth)) {
+                    context.nextToken();
+                    describeJobTemplateResult.setMaintenanceWindows(new ListUnmarshaller<MaintenanceWindow>(MaintenanceWindowJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

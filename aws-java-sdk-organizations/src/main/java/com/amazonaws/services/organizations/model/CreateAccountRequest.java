@@ -151,7 +151,7 @@ public class CreateAccountRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account, then the
+     * If any one of the tags is not valid or if you exceed the maximum allowed number of tags for an account, then the
      * entire request fails and the account is not created.
      * </p>
      * </note>
@@ -945,7 +945,7 @@ public class CreateAccountRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account, then the
+     * If any one of the tags is not valid or if you exceed the maximum allowed number of tags for an account, then the
      * entire request fails and the account is not created.
      * </p>
      * </note>
@@ -956,7 +956,7 @@ public class CreateAccountRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
      *         resources</a> in the Organizations User Guide.</p> <note>
      *         <p>
-     *         If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account,
+     *         If any one of the tags is not valid or if you exceed the maximum allowed number of tags for an account,
      *         then the entire request fails and the account is not created.
      *         </p>
      */
@@ -975,7 +975,7 @@ public class CreateAccountRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account, then the
+     * If any one of the tags is not valid or if you exceed the maximum allowed number of tags for an account, then the
      * entire request fails and the account is not created.
      * </p>
      * </note>
@@ -987,8 +987,8 @@ public class CreateAccountRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
      *        resources</a> in the Organizations User Guide.</p> <note>
      *        <p>
-     *        If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account, then
-     *        the entire request fails and the account is not created.
+     *        If any one of the tags is not valid or if you exceed the maximum allowed number of tags for an account,
+     *        then the entire request fails and the account is not created.
      *        </p>
      */
 
@@ -1011,7 +1011,7 @@ public class CreateAccountRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account, then the
+     * If any one of the tags is not valid or if you exceed the maximum allowed number of tags for an account, then the
      * entire request fails and the account is not created.
      * </p>
      * </note>
@@ -1028,8 +1028,8 @@ public class CreateAccountRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
      *        resources</a> in the Organizations User Guide.</p> <note>
      *        <p>
-     *        If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account, then
-     *        the entire request fails and the account is not created.
+     *        If any one of the tags is not valid or if you exceed the maximum allowed number of tags for an account,
+     *        then the entire request fails and the account is not created.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1054,7 +1054,7 @@ public class CreateAccountRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * <note>
      * <p>
-     * If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account, then the
+     * If any one of the tags is not valid or if you exceed the maximum allowed number of tags for an account, then the
      * entire request fails and the account is not created.
      * </p>
      * </note>
@@ -1066,8 +1066,8 @@ public class CreateAccountRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
      *        resources</a> in the Organizations User Guide.</p> <note>
      *        <p>
-     *        If any one of the tags is invalid or if you exceed the maximum allowed number of tags for an account, then
-     *        the entire request fails and the account is not created.
+     *        If any one of the tags is not valid or if you exceed the maximum allowed number of tags for an account,
+     *        then the entire request fails and the account is not created.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

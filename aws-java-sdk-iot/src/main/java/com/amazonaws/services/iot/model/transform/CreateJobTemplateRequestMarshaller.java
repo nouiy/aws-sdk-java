@@ -50,6 +50,8 @@ public class CreateJobTemplateRequestMarshaller {
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<StructuredPojo> JOBEXECUTIONSRETRYCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("jobExecutionsRetryConfig").build();
+    private static final MarshallingInfo<List> MAINTENANCEWINDOWS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maintenanceWindows").build();
 
     private static final CreateJobTemplateRequestMarshaller instance = new CreateJobTemplateRequestMarshaller();
 
@@ -78,6 +80,7 @@ public class CreateJobTemplateRequestMarshaller {
             protocolMarshaller.marshall(createJobTemplateRequest.getTimeoutConfig(), TIMEOUTCONFIG_BINDING);
             protocolMarshaller.marshall(createJobTemplateRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createJobTemplateRequest.getJobExecutionsRetryConfig(), JOBEXECUTIONSRETRYCONFIG_BINDING);
+            protocolMarshaller.marshall(createJobTemplateRequest.getMaintenanceWindows(), MAINTENANCEWINDOWS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -30,7 +30,8 @@ public class SchedulingConfig implements Serializable, Cloneable, StructuredPojo
      * <p>
      * The time a job will begin rollout of the job document to all devices in the target group for a job. The
      * <code>startTime</code> can be scheduled up to a year in advance and must be scheduled a minimum of thirty minutes
-     * from the current time.
+     * from the current time. The date and time format for the <code>startTime</code> is YYYY-MM-DD for the date and
+     * HH:MM for the time.
      * </p>
      */
     private String startTime;
@@ -40,7 +41,8 @@ public class SchedulingConfig implements Serializable, Cloneable, StructuredPojo
      * <code>endTime</code> must take place no later than two years from the current time and be scheduled a minimum of
      * thirty minutes from the current time. The minimum duration between <code>startTime</code> and
      * <code>endTime</code> is thirty minutes. The maximum duration between <code>startTime</code> and
-     * <code>endTime</code> is two years.
+     * <code>endTime</code> is two years. The date and time format for the <code>endTime</code> is YYYY-MM-DD for the
+     * date and HH:MM for the time.
      * </p>
      */
     private String endTime;
@@ -51,18 +53,28 @@ public class SchedulingConfig implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private String endBehavior;
+    /**
+     * <p>
+     * An optional configuration within the <code>SchedulingConfig</code> to setup a recurring maintenance window with a
+     * predetermined start time and duration for the rollout of a job document to all devices in a target group for a
+     * job.
+     * </p>
+     */
+    private java.util.List<MaintenanceWindow> maintenanceWindows;
 
     /**
      * <p>
      * The time a job will begin rollout of the job document to all devices in the target group for a job. The
      * <code>startTime</code> can be scheduled up to a year in advance and must be scheduled a minimum of thirty minutes
-     * from the current time.
+     * from the current time. The date and time format for the <code>startTime</code> is YYYY-MM-DD for the date and
+     * HH:MM for the time.
      * </p>
      * 
      * @param startTime
      *        The time a job will begin rollout of the job document to all devices in the target group for a job. The
      *        <code>startTime</code> can be scheduled up to a year in advance and must be scheduled a minimum of thirty
-     *        minutes from the current time.
+     *        minutes from the current time. The date and time format for the <code>startTime</code> is YYYY-MM-DD for
+     *        the date and HH:MM for the time.
      */
 
     public void setStartTime(String startTime) {
@@ -73,12 +85,14 @@ public class SchedulingConfig implements Serializable, Cloneable, StructuredPojo
      * <p>
      * The time a job will begin rollout of the job document to all devices in the target group for a job. The
      * <code>startTime</code> can be scheduled up to a year in advance and must be scheduled a minimum of thirty minutes
-     * from the current time.
+     * from the current time. The date and time format for the <code>startTime</code> is YYYY-MM-DD for the date and
+     * HH:MM for the time.
      * </p>
      * 
      * @return The time a job will begin rollout of the job document to all devices in the target group for a job. The
      *         <code>startTime</code> can be scheduled up to a year in advance and must be scheduled a minimum of thirty
-     *         minutes from the current time.
+     *         minutes from the current time. The date and time format for the <code>startTime</code> is YYYY-MM-DD for
+     *         the date and HH:MM for the time.
      */
 
     public String getStartTime() {
@@ -89,13 +103,15 @@ public class SchedulingConfig implements Serializable, Cloneable, StructuredPojo
      * <p>
      * The time a job will begin rollout of the job document to all devices in the target group for a job. The
      * <code>startTime</code> can be scheduled up to a year in advance and must be scheduled a minimum of thirty minutes
-     * from the current time.
+     * from the current time. The date and time format for the <code>startTime</code> is YYYY-MM-DD for the date and
+     * HH:MM for the time.
      * </p>
      * 
      * @param startTime
      *        The time a job will begin rollout of the job document to all devices in the target group for a job. The
      *        <code>startTime</code> can be scheduled up to a year in advance and must be scheduled a minimum of thirty
-     *        minutes from the current time.
+     *        minutes from the current time. The date and time format for the <code>startTime</code> is YYYY-MM-DD for
+     *        the date and HH:MM for the time.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -110,7 +126,8 @@ public class SchedulingConfig implements Serializable, Cloneable, StructuredPojo
      * <code>endTime</code> must take place no later than two years from the current time and be scheduled a minimum of
      * thirty minutes from the current time. The minimum duration between <code>startTime</code> and
      * <code>endTime</code> is thirty minutes. The maximum duration between <code>startTime</code> and
-     * <code>endTime</code> is two years.
+     * <code>endTime</code> is two years. The date and time format for the <code>endTime</code> is YYYY-MM-DD for the
+     * date and HH:MM for the time.
      * </p>
      * 
      * @param endTime
@@ -118,7 +135,8 @@ public class SchedulingConfig implements Serializable, Cloneable, StructuredPojo
      *        <code>endTime</code> must take place no later than two years from the current time and be scheduled a
      *        minimum of thirty minutes from the current time. The minimum duration between <code>startTime</code> and
      *        <code>endTime</code> is thirty minutes. The maximum duration between <code>startTime</code> and
-     *        <code>endTime</code> is two years.
+     *        <code>endTime</code> is two years. The date and time format for the <code>endTime</code> is YYYY-MM-DD for
+     *        the date and HH:MM for the time.
      */
 
     public void setEndTime(String endTime) {
@@ -131,14 +149,16 @@ public class SchedulingConfig implements Serializable, Cloneable, StructuredPojo
      * <code>endTime</code> must take place no later than two years from the current time and be scheduled a minimum of
      * thirty minutes from the current time. The minimum duration between <code>startTime</code> and
      * <code>endTime</code> is thirty minutes. The maximum duration between <code>startTime</code> and
-     * <code>endTime</code> is two years.
+     * <code>endTime</code> is two years. The date and time format for the <code>endTime</code> is YYYY-MM-DD for the
+     * date and HH:MM for the time.
      * </p>
      * 
      * @return The time a job will stop rollout of the job document to all devices in the target group for a job. The
      *         <code>endTime</code> must take place no later than two years from the current time and be scheduled a
      *         minimum of thirty minutes from the current time. The minimum duration between <code>startTime</code> and
      *         <code>endTime</code> is thirty minutes. The maximum duration between <code>startTime</code> and
-     *         <code>endTime</code> is two years.
+     *         <code>endTime</code> is two years. The date and time format for the <code>endTime</code> is YYYY-MM-DD
+     *         for the date and HH:MM for the time.
      */
 
     public String getEndTime() {
@@ -151,7 +171,8 @@ public class SchedulingConfig implements Serializable, Cloneable, StructuredPojo
      * <code>endTime</code> must take place no later than two years from the current time and be scheduled a minimum of
      * thirty minutes from the current time. The minimum duration between <code>startTime</code> and
      * <code>endTime</code> is thirty minutes. The maximum duration between <code>startTime</code> and
-     * <code>endTime</code> is two years.
+     * <code>endTime</code> is two years. The date and time format for the <code>endTime</code> is YYYY-MM-DD for the
+     * date and HH:MM for the time.
      * </p>
      * 
      * @param endTime
@@ -159,7 +180,8 @@ public class SchedulingConfig implements Serializable, Cloneable, StructuredPojo
      *        <code>endTime</code> must take place no later than two years from the current time and be scheduled a
      *        minimum of thirty minutes from the current time. The minimum duration between <code>startTime</code> and
      *        <code>endTime</code> is thirty minutes. The maximum duration between <code>startTime</code> and
-     *        <code>endTime</code> is two years.
+     *        <code>endTime</code> is two years. The date and time format for the <code>endTime</code> is YYYY-MM-DD for
+     *        the date and HH:MM for the time.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -240,6 +262,92 @@ public class SchedulingConfig implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * An optional configuration within the <code>SchedulingConfig</code> to setup a recurring maintenance window with a
+     * predetermined start time and duration for the rollout of a job document to all devices in a target group for a
+     * job.
+     * </p>
+     * 
+     * @return An optional configuration within the <code>SchedulingConfig</code> to setup a recurring maintenance
+     *         window with a predetermined start time and duration for the rollout of a job document to all devices in a
+     *         target group for a job.
+     */
+
+    public java.util.List<MaintenanceWindow> getMaintenanceWindows() {
+        return maintenanceWindows;
+    }
+
+    /**
+     * <p>
+     * An optional configuration within the <code>SchedulingConfig</code> to setup a recurring maintenance window with a
+     * predetermined start time and duration for the rollout of a job document to all devices in a target group for a
+     * job.
+     * </p>
+     * 
+     * @param maintenanceWindows
+     *        An optional configuration within the <code>SchedulingConfig</code> to setup a recurring maintenance window
+     *        with a predetermined start time and duration for the rollout of a job document to all devices in a target
+     *        group for a job.
+     */
+
+    public void setMaintenanceWindows(java.util.Collection<MaintenanceWindow> maintenanceWindows) {
+        if (maintenanceWindows == null) {
+            this.maintenanceWindows = null;
+            return;
+        }
+
+        this.maintenanceWindows = new java.util.ArrayList<MaintenanceWindow>(maintenanceWindows);
+    }
+
+    /**
+     * <p>
+     * An optional configuration within the <code>SchedulingConfig</code> to setup a recurring maintenance window with a
+     * predetermined start time and duration for the rollout of a job document to all devices in a target group for a
+     * job.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setMaintenanceWindows(java.util.Collection)} or {@link #withMaintenanceWindows(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param maintenanceWindows
+     *        An optional configuration within the <code>SchedulingConfig</code> to setup a recurring maintenance window
+     *        with a predetermined start time and duration for the rollout of a job document to all devices in a target
+     *        group for a job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SchedulingConfig withMaintenanceWindows(MaintenanceWindow... maintenanceWindows) {
+        if (this.maintenanceWindows == null) {
+            setMaintenanceWindows(new java.util.ArrayList<MaintenanceWindow>(maintenanceWindows.length));
+        }
+        for (MaintenanceWindow ele : maintenanceWindows) {
+            this.maintenanceWindows.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An optional configuration within the <code>SchedulingConfig</code> to setup a recurring maintenance window with a
+     * predetermined start time and duration for the rollout of a job document to all devices in a target group for a
+     * job.
+     * </p>
+     * 
+     * @param maintenanceWindows
+     *        An optional configuration within the <code>SchedulingConfig</code> to setup a recurring maintenance window
+     *        with a predetermined start time and duration for the rollout of a job document to all devices in a target
+     *        group for a job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SchedulingConfig withMaintenanceWindows(java.util.Collection<MaintenanceWindow> maintenanceWindows) {
+        setMaintenanceWindows(maintenanceWindows);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -256,7 +364,9 @@ public class SchedulingConfig implements Serializable, Cloneable, StructuredPojo
         if (getEndTime() != null)
             sb.append("EndTime: ").append(getEndTime()).append(",");
         if (getEndBehavior() != null)
-            sb.append("EndBehavior: ").append(getEndBehavior());
+            sb.append("EndBehavior: ").append(getEndBehavior()).append(",");
+        if (getMaintenanceWindows() != null)
+            sb.append("MaintenanceWindows: ").append(getMaintenanceWindows());
         sb.append("}");
         return sb.toString();
     }
@@ -283,6 +393,10 @@ public class SchedulingConfig implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getEndBehavior() != null && other.getEndBehavior().equals(this.getEndBehavior()) == false)
             return false;
+        if (other.getMaintenanceWindows() == null ^ this.getMaintenanceWindows() == null)
+            return false;
+        if (other.getMaintenanceWindows() != null && other.getMaintenanceWindows().equals(this.getMaintenanceWindows()) == false)
+            return false;
         return true;
     }
 
@@ -294,6 +408,7 @@ public class SchedulingConfig implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         hashCode = prime * hashCode + ((getEndBehavior() == null) ? 0 : getEndBehavior().hashCode());
+        hashCode = prime * hashCode + ((getMaintenanceWindows() == null) ? 0 : getMaintenanceWindows().hashCode());
         return hashCode;
     }
 

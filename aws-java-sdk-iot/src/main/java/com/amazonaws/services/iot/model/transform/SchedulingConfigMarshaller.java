@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.iot.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +34,8 @@ public class SchedulingConfigMarshaller {
             .marshallLocationName("endTime").build();
     private static final MarshallingInfo<String> ENDBEHAVIOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endBehavior").build();
+    private static final MarshallingInfo<List> MAINTENANCEWINDOWS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maintenanceWindows").build();
 
     private static final SchedulingConfigMarshaller instance = new SchedulingConfigMarshaller();
 
@@ -53,6 +56,7 @@ public class SchedulingConfigMarshaller {
             protocolMarshaller.marshall(schedulingConfig.getStartTime(), STARTTIME_BINDING);
             protocolMarshaller.marshall(schedulingConfig.getEndTime(), ENDTIME_BINDING);
             protocolMarshaller.marshall(schedulingConfig.getEndBehavior(), ENDBEHAVIOR_BINDING);
+            protocolMarshaller.marshall(schedulingConfig.getMaintenanceWindows(), MAINTENANCEWINDOWS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

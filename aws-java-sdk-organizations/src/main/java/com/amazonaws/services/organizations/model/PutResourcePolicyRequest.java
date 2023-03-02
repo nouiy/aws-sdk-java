@@ -36,8 +36,8 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
     private String content;
     /**
      * <p>
-     * Updates the list of tags that you want to attach to the newly-created resource policy. For each tag in the list,
-     * you must specify both a tag key and a value. You can set the value to an empty string, but you can't set it to
+     * A list of tags that you want to attach to the newly created resource policy. For each tag in the list, you must
+     * specify both a tag key and a value. You can set the value to an empty string, but you can't set it to
      * <code>null</code>. For more information about tagging, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
      * resources</a> in the Organizations User Guide.
@@ -45,7 +45,7 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      * <note>
      * <p>
      * Calls with tags apply to the initial creation of the resource policy, otherwise an exception is thrown. If any
-     * one of the tags is invalid or if you exceed the allowed number of tags for the resource policy, then the entire
+     * one of the tags is not valid or if you exceed the allowed number of tags for the resource policy, then the entire
      * request fails and the resource policy is not created.
      * </p>
      * </note>
@@ -112,8 +112,8 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Updates the list of tags that you want to attach to the newly-created resource policy. For each tag in the list,
-     * you must specify both a tag key and a value. You can set the value to an empty string, but you can't set it to
+     * A list of tags that you want to attach to the newly created resource policy. For each tag in the list, you must
+     * specify both a tag key and a value. You can set the value to an empty string, but you can't set it to
      * <code>null</code>. For more information about tagging, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
      * resources</a> in the Organizations User Guide.
@@ -121,19 +121,19 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      * <note>
      * <p>
      * Calls with tags apply to the initial creation of the resource policy, otherwise an exception is thrown. If any
-     * one of the tags is invalid or if you exceed the allowed number of tags for the resource policy, then the entire
+     * one of the tags is not valid or if you exceed the allowed number of tags for the resource policy, then the entire
      * request fails and the resource policy is not created.
      * </p>
      * </note>
      * 
-     * @return Updates the list of tags that you want to attach to the newly-created resource policy. For each tag in
-     *         the list, you must specify both a tag key and a value. You can set the value to an empty string, but you
-     *         can't set it to <code>null</code>. For more information about tagging, see <a
+     * @return A list of tags that you want to attach to the newly created resource policy. For each tag in the list,
+     *         you must specify both a tag key and a value. You can set the value to an empty string, but you can't set
+     *         it to <code>null</code>. For more information about tagging, see <a
      *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
      *         resources</a> in the Organizations User Guide.</p> <note>
      *         <p>
      *         Calls with tags apply to the initial creation of the resource policy, otherwise an exception is thrown.
-     *         If any one of the tags is invalid or if you exceed the allowed number of tags for the resource policy,
+     *         If any one of the tags is not valid or if you exceed the allowed number of tags for the resource policy,
      *         then the entire request fails and the resource policy is not created.
      *         </p>
      */
@@ -144,8 +144,8 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Updates the list of tags that you want to attach to the newly-created resource policy. For each tag in the list,
-     * you must specify both a tag key and a value. You can set the value to an empty string, but you can't set it to
+     * A list of tags that you want to attach to the newly created resource policy. For each tag in the list, you must
+     * specify both a tag key and a value. You can set the value to an empty string, but you can't set it to
      * <code>null</code>. For more information about tagging, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
      * resources</a> in the Organizations User Guide.
@@ -153,20 +153,20 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      * <note>
      * <p>
      * Calls with tags apply to the initial creation of the resource policy, otherwise an exception is thrown. If any
-     * one of the tags is invalid or if you exceed the allowed number of tags for the resource policy, then the entire
+     * one of the tags is not valid or if you exceed the allowed number of tags for the resource policy, then the entire
      * request fails and the resource policy is not created.
      * </p>
      * </note>
      * 
      * @param tags
-     *        Updates the list of tags that you want to attach to the newly-created resource policy. For each tag in the
-     *        list, you must specify both a tag key and a value. You can set the value to an empty string, but you can't
-     *        set it to <code>null</code>. For more information about tagging, see <a
+     *        A list of tags that you want to attach to the newly created resource policy. For each tag in the list, you
+     *        must specify both a tag key and a value. You can set the value to an empty string, but you can't set it to
+     *        <code>null</code>. For more information about tagging, see <a
      *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
      *        resources</a> in the Organizations User Guide.</p> <note>
      *        <p>
      *        Calls with tags apply to the initial creation of the resource policy, otherwise an exception is thrown. If
-     *        any one of the tags is invalid or if you exceed the allowed number of tags for the resource policy, then
+     *        any one of the tags is not valid or if you exceed the allowed number of tags for the resource policy, then
      *        the entire request fails and the resource policy is not created.
      *        </p>
      */
@@ -182,8 +182,8 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Updates the list of tags that you want to attach to the newly-created resource policy. For each tag in the list,
-     * you must specify both a tag key and a value. You can set the value to an empty string, but you can't set it to
+     * A list of tags that you want to attach to the newly created resource policy. For each tag in the list, you must
+     * specify both a tag key and a value. You can set the value to an empty string, but you can't set it to
      * <code>null</code>. For more information about tagging, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
      * resources</a> in the Organizations User Guide.
@@ -191,7 +191,7 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      * <note>
      * <p>
      * Calls with tags apply to the initial creation of the resource policy, otherwise an exception is thrown. If any
-     * one of the tags is invalid or if you exceed the allowed number of tags for the resource policy, then the entire
+     * one of the tags is not valid or if you exceed the allowed number of tags for the resource policy, then the entire
      * request fails and the resource policy is not created.
      * </p>
      * </note>
@@ -202,14 +202,14 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param tags
-     *        Updates the list of tags that you want to attach to the newly-created resource policy. For each tag in the
-     *        list, you must specify both a tag key and a value. You can set the value to an empty string, but you can't
-     *        set it to <code>null</code>. For more information about tagging, see <a
+     *        A list of tags that you want to attach to the newly created resource policy. For each tag in the list, you
+     *        must specify both a tag key and a value. You can set the value to an empty string, but you can't set it to
+     *        <code>null</code>. For more information about tagging, see <a
      *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
      *        resources</a> in the Organizations User Guide.</p> <note>
      *        <p>
      *        Calls with tags apply to the initial creation of the resource policy, otherwise an exception is thrown. If
-     *        any one of the tags is invalid or if you exceed the allowed number of tags for the resource policy, then
+     *        any one of the tags is not valid or if you exceed the allowed number of tags for the resource policy, then
      *        the entire request fails and the resource policy is not created.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -227,8 +227,8 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Updates the list of tags that you want to attach to the newly-created resource policy. For each tag in the list,
-     * you must specify both a tag key and a value. You can set the value to an empty string, but you can't set it to
+     * A list of tags that you want to attach to the newly created resource policy. For each tag in the list, you must
+     * specify both a tag key and a value. You can set the value to an empty string, but you can't set it to
      * <code>null</code>. For more information about tagging, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
      * resources</a> in the Organizations User Guide.
@@ -236,20 +236,20 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
      * <note>
      * <p>
      * Calls with tags apply to the initial creation of the resource policy, otherwise an exception is thrown. If any
-     * one of the tags is invalid or if you exceed the allowed number of tags for the resource policy, then the entire
+     * one of the tags is not valid or if you exceed the allowed number of tags for the resource policy, then the entire
      * request fails and the resource policy is not created.
      * </p>
      * </note>
      * 
      * @param tags
-     *        Updates the list of tags that you want to attach to the newly-created resource policy. For each tag in the
-     *        list, you must specify both a tag key and a value. You can set the value to an empty string, but you can't
-     *        set it to <code>null</code>. For more information about tagging, see <a
+     *        A list of tags that you want to attach to the newly created resource policy. For each tag in the list, you
+     *        must specify both a tag key and a value. You can set the value to an empty string, but you can't set it to
+     *        <code>null</code>. For more information about tagging, see <a
      *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_tagging.html">Tagging Organizations
      *        resources</a> in the Organizations User Guide.</p> <note>
      *        <p>
      *        Calls with tags apply to the initial creation of the resource policy, otherwise an exception is thrown. If
-     *        any one of the tags is invalid or if you exceed the allowed number of tags for the resource policy, then
+     *        any one of the tags is not valid or if you exceed the allowed number of tags for the resource policy, then
      *        the entire request fails and the resource policy is not created.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.

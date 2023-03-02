@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * A returned array object for the <code>Steps</code> response field in the <a
- * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_InferenceRecommendationsJobStep.html"
+ * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListInferenceRecommendationsJobSteps.html"
  * >ListInferenceRecommendationsJobSteps</a> API command.
  * </p>
  * 

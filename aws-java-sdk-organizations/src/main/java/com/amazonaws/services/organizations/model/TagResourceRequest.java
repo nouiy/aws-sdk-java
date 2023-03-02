@@ -68,7 +68,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <note>
      * <p>
-     * If any one of the tags is invalid or if you exceed the maximum allowed number of tags for a resource, then the
+     * If any one of the tags is not valid or if you exceed the maximum allowed number of tags for a resource, then the
      * entire request fails.
      * </p>
      * </note>
@@ -287,7 +287,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <note>
      * <p>
-     * If any one of the tags is invalid or if you exceed the maximum allowed number of tags for a resource, then the
+     * If any one of the tags is not valid or if you exceed the maximum allowed number of tags for a resource, then the
      * entire request fails.
      * </p>
      * </note>
@@ -299,7 +299,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         </p>
      *         <note>
      *         <p>
-     *         If any one of the tags is invalid or if you exceed the maximum allowed number of tags for a resource,
+     *         If any one of the tags is not valid or if you exceed the maximum allowed number of tags for a resource,
      *         then the entire request fails.
      *         </p>
      */
@@ -318,7 +318,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <note>
      * <p>
-     * If any one of the tags is invalid or if you exceed the maximum allowed number of tags for a resource, then the
+     * If any one of the tags is not valid or if you exceed the maximum allowed number of tags for a resource, then the
      * entire request fails.
      * </p>
      * </note>
@@ -331,8 +331,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </p>
      *        <note>
      *        <p>
-     *        If any one of the tags is invalid or if you exceed the maximum allowed number of tags for a resource, then
-     *        the entire request fails.
+     *        If any one of the tags is not valid or if you exceed the maximum allowed number of tags for a resource,
+     *        then the entire request fails.
      *        </p>
      */
 
@@ -355,7 +355,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <note>
      * <p>
-     * If any one of the tags is invalid or if you exceed the maximum allowed number of tags for a resource, then the
+     * If any one of the tags is not valid or if you exceed the maximum allowed number of tags for a resource, then the
      * entire request fails.
      * </p>
      * </note>
@@ -373,8 +373,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </p>
      *        <note>
      *        <p>
-     *        If any one of the tags is invalid or if you exceed the maximum allowed number of tags for a resource, then
-     *        the entire request fails.
+     *        If any one of the tags is not valid or if you exceed the maximum allowed number of tags for a resource,
+     *        then the entire request fails.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -399,7 +399,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <note>
      * <p>
-     * If any one of the tags is invalid or if you exceed the maximum allowed number of tags for a resource, then the
+     * If any one of the tags is not valid or if you exceed the maximum allowed number of tags for a resource, then the
      * entire request fails.
      * </p>
      * </note>
@@ -412,8 +412,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </p>
      *        <note>
      *        <p>
-     *        If any one of the tags is invalid or if you exceed the maximum allowed number of tags for a resource, then
-     *        the entire request fails.
+     *        If any one of the tags is not valid or if you exceed the maximum allowed number of tags for a resource,
+     *        then the entire request fails.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

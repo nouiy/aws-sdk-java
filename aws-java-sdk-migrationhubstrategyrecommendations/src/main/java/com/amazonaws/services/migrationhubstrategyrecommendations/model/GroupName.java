@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum GroupName {
 
-    ExternalId("ExternalId");
+    ExternalId("ExternalId"),
+    ExternalSourceType("ExternalSourceType");
 
     private String value;
 

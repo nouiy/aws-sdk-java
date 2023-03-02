@@ -143,6 +143,12 @@ public class JobJsonUnmarshaller implements Unmarshaller<Job, JsonUnmarshallerCo
                     context.nextToken();
                     job.setSchedulingConfig(SchedulingConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("scheduledJobRollouts", targetDepth)) {
+                    context.nextToken();
+                    job.setScheduledJobRollouts(new ListUnmarshaller<ScheduledJobRollout>(ScheduledJobRolloutJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -86,6 +86,13 @@ public class CreateJobTemplateRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private JobExecutionsRetryConfig jobExecutionsRetryConfig;
+    /**
+     * <p>
+     * Allows you to configure an optional maintenance window for the rollout of a job document to all devices in the
+     * target group for a job.
+     * </p>
+     */
+    private java.util.List<MaintenanceWindow> maintenanceWindows;
 
     /**
      * <p>
@@ -596,6 +603,84 @@ public class CreateJobTemplateRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * Allows you to configure an optional maintenance window for the rollout of a job document to all devices in the
+     * target group for a job.
+     * </p>
+     * 
+     * @return Allows you to configure an optional maintenance window for the rollout of a job document to all devices
+     *         in the target group for a job.
+     */
+
+    public java.util.List<MaintenanceWindow> getMaintenanceWindows() {
+        return maintenanceWindows;
+    }
+
+    /**
+     * <p>
+     * Allows you to configure an optional maintenance window for the rollout of a job document to all devices in the
+     * target group for a job.
+     * </p>
+     * 
+     * @param maintenanceWindows
+     *        Allows you to configure an optional maintenance window for the rollout of a job document to all devices in
+     *        the target group for a job.
+     */
+
+    public void setMaintenanceWindows(java.util.Collection<MaintenanceWindow> maintenanceWindows) {
+        if (maintenanceWindows == null) {
+            this.maintenanceWindows = null;
+            return;
+        }
+
+        this.maintenanceWindows = new java.util.ArrayList<MaintenanceWindow>(maintenanceWindows);
+    }
+
+    /**
+     * <p>
+     * Allows you to configure an optional maintenance window for the rollout of a job document to all devices in the
+     * target group for a job.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setMaintenanceWindows(java.util.Collection)} or {@link #withMaintenanceWindows(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param maintenanceWindows
+     *        Allows you to configure an optional maintenance window for the rollout of a job document to all devices in
+     *        the target group for a job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateJobTemplateRequest withMaintenanceWindows(MaintenanceWindow... maintenanceWindows) {
+        if (this.maintenanceWindows == null) {
+            setMaintenanceWindows(new java.util.ArrayList<MaintenanceWindow>(maintenanceWindows.length));
+        }
+        for (MaintenanceWindow ele : maintenanceWindows) {
+            this.maintenanceWindows.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Allows you to configure an optional maintenance window for the rollout of a job document to all devices in the
+     * target group for a job.
+     * </p>
+     * 
+     * @param maintenanceWindows
+     *        Allows you to configure an optional maintenance window for the rollout of a job document to all devices in
+     *        the target group for a job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateJobTemplateRequest withMaintenanceWindows(java.util.Collection<MaintenanceWindow> maintenanceWindows) {
+        setMaintenanceWindows(maintenanceWindows);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -628,7 +713,9 @@ public class CreateJobTemplateRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getJobExecutionsRetryConfig() != null)
-            sb.append("JobExecutionsRetryConfig: ").append(getJobExecutionsRetryConfig());
+            sb.append("JobExecutionsRetryConfig: ").append(getJobExecutionsRetryConfig()).append(",");
+        if (getMaintenanceWindows() != null)
+            sb.append("MaintenanceWindows: ").append(getMaintenanceWindows());
         sb.append("}");
         return sb.toString();
     }
@@ -687,6 +774,10 @@ public class CreateJobTemplateRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getJobExecutionsRetryConfig() != null && other.getJobExecutionsRetryConfig().equals(this.getJobExecutionsRetryConfig()) == false)
             return false;
+        if (other.getMaintenanceWindows() == null ^ this.getMaintenanceWindows() == null)
+            return false;
+        if (other.getMaintenanceWindows() != null && other.getMaintenanceWindows().equals(this.getMaintenanceWindows()) == false)
+            return false;
         return true;
     }
 
@@ -706,6 +797,7 @@ public class CreateJobTemplateRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getTimeoutConfig() == null) ? 0 : getTimeoutConfig().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getJobExecutionsRetryConfig() == null) ? 0 : getJobExecutionsRetryConfig().hashCode());
+        hashCode = prime * hashCode + ((getMaintenanceWindows() == null) ? 0 : getMaintenanceWindows().hashCode());
         return hashCode;
     }
 

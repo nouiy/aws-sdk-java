@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum DataSourceType {
 
     ApplicationDiscoveryService("ApplicationDiscoveryService"),
-    MPA("MPA");
+    MPA("MPA"),
+    Import("Import");
 
     private String value;
 

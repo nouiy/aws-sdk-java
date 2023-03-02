@@ -1220,7 +1220,7 @@ public interface AmazonSageMaker {
     /**
      * <p>
      * Creates a schedule that regularly starts Amazon SageMaker Processing Jobs to monitor the data captured for an
-     * Amazon SageMaker Endoint.
+     * Amazon SageMaker Endpoint.
      * </p>
      * 
      * @param createMonitoringScheduleRequest
@@ -3591,8 +3591,8 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
-     * An auto-complete API for the search functionality in the Amazon SageMaker console. It returns suggestions of
-     * possible matches for the property name to use in <code>Search</code> queries. Provides suggestions for
+     * An auto-complete API for the search functionality in the SageMaker console. It returns suggestions of possible
+     * matches for the property name to use in <code>Search</code> queries. Provides suggestions for
      * <code>HyperParameters</code>, <code>Tags</code>, and <code>Metrics</code>.
      * </p>
      * 
@@ -4767,13 +4767,20 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
-     * Finds Amazon SageMaker resources that match a search query. Matching resources are returned as a list of
+     * Finds SageMaker resources that match a search query. Matching resources are returned as a list of
      * <code>SearchRecord</code> objects in the response. You can sort the search results by any resource property in a
      * ascending or descending order.
      * </p>
      * <p>
      * You can query against the following value types: numeric, text, Boolean, and timestamp.
      * </p>
+     * <note>
+     * <p>
+     * The Search API may provide access to otherwise restricted data. See <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/api-permissions-reference.html">Amazon SageMaker API
+     * Permissions: Actions, Permissions, and Resources Reference</a> for more information.
+     * </p>
+     * </note>
      * 
      * @param searchRequest
      * @return Result of the Search operation returned by the service.

@@ -27,7 +27,7 @@ public class SearchRequest extends com.amazonaws.AmazonWebServiceRequest impleme
 
     /**
      * <p>
-     * The name of the Amazon SageMaker resource to search for.
+     * The name of the SageMaker resource to search for.
      * </p>
      */
     private String resource;
@@ -71,11 +71,11 @@ public class SearchRequest extends com.amazonaws.AmazonWebServiceRequest impleme
 
     /**
      * <p>
-     * The name of the Amazon SageMaker resource to search for.
+     * The name of the SageMaker resource to search for.
      * </p>
      * 
      * @param resource
-     *        The name of the Amazon SageMaker resource to search for.
+     *        The name of the SageMaker resource to search for.
      * @see ResourceType
      */
 
@@ -85,10 +85,10 @@ public class SearchRequest extends com.amazonaws.AmazonWebServiceRequest impleme
 
     /**
      * <p>
-     * The name of the Amazon SageMaker resource to search for.
+     * The name of the SageMaker resource to search for.
      * </p>
      * 
-     * @return The name of the Amazon SageMaker resource to search for.
+     * @return The name of the SageMaker resource to search for.
      * @see ResourceType
      */
 
@@ -98,11 +98,11 @@ public class SearchRequest extends com.amazonaws.AmazonWebServiceRequest impleme
 
     /**
      * <p>
-     * The name of the Amazon SageMaker resource to search for.
+     * The name of the SageMaker resource to search for.
      * </p>
      * 
      * @param resource
-     *        The name of the Amazon SageMaker resource to search for.
+     *        The name of the SageMaker resource to search for.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -114,11 +114,11 @@ public class SearchRequest extends com.amazonaws.AmazonWebServiceRequest impleme
 
     /**
      * <p>
-     * The name of the Amazon SageMaker resource to search for.
+     * The name of the SageMaker resource to search for.
      * </p>
      * 
      * @param resource
-     *        The name of the Amazon SageMaker resource to search for.
+     *        The name of the SageMaker resource to search for.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */

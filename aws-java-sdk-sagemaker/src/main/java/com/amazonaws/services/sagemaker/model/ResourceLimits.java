@@ -42,7 +42,7 @@ public class ResourceLimits implements Serializable, Cloneable, StructuredPojo {
     private Integer maxParallelTrainingJobs;
     /**
      * <p>
-     * The maximum time in seconds that a training job launched by a hyperparameter tuning job can run.
+     * The maximum time in seconds that a hyperparameter tuning job can run.
      * </p>
      */
     private Integer maxRuntimeInSeconds;
@@ -129,11 +129,11 @@ public class ResourceLimits implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The maximum time in seconds that a training job launched by a hyperparameter tuning job can run.
+     * The maximum time in seconds that a hyperparameter tuning job can run.
      * </p>
      * 
      * @param maxRuntimeInSeconds
-     *        The maximum time in seconds that a training job launched by a hyperparameter tuning job can run.
+     *        The maximum time in seconds that a hyperparameter tuning job can run.
      */
 
     public void setMaxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
@@ -142,10 +142,10 @@ public class ResourceLimits implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The maximum time in seconds that a training job launched by a hyperparameter tuning job can run.
+     * The maximum time in seconds that a hyperparameter tuning job can run.
      * </p>
      * 
-     * @return The maximum time in seconds that a training job launched by a hyperparameter tuning job can run.
+     * @return The maximum time in seconds that a hyperparameter tuning job can run.
      */
 
     public Integer getMaxRuntimeInSeconds() {
@@ -154,11 +154,11 @@ public class ResourceLimits implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The maximum time in seconds that a training job launched by a hyperparameter tuning job can run.
+     * The maximum time in seconds that a hyperparameter tuning job can run.
      * </p>
      * 
      * @param maxRuntimeInSeconds
-     *        The maximum time in seconds that a training job launched by a hyperparameter tuning job can run.
+     *        The maximum time in seconds that a hyperparameter tuning job can run.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

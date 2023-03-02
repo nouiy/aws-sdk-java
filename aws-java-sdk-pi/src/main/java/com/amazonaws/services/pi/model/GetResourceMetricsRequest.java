@@ -137,6 +137,13 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private String nextToken;
+    /**
+     * <p>
+     * The returned timestamp which is the start or end time of the time periods. The default value is
+     * <code>END_TIME</code>.
+     * </p>
+     */
+    private String periodAlignment;
 
     /**
      * <p>
@@ -912,6 +919,73 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * The returned timestamp which is the start or end time of the time periods. The default value is
+     * <code>END_TIME</code>.
+     * </p>
+     * 
+     * @param periodAlignment
+     *        The returned timestamp which is the start or end time of the time periods. The default value is
+     *        <code>END_TIME</code>.
+     * @see PeriodAlignment
+     */
+
+    public void setPeriodAlignment(String periodAlignment) {
+        this.periodAlignment = periodAlignment;
+    }
+
+    /**
+     * <p>
+     * The returned timestamp which is the start or end time of the time periods. The default value is
+     * <code>END_TIME</code>.
+     * </p>
+     * 
+     * @return The returned timestamp which is the start or end time of the time periods. The default value is
+     *         <code>END_TIME</code>.
+     * @see PeriodAlignment
+     */
+
+    public String getPeriodAlignment() {
+        return this.periodAlignment;
+    }
+
+    /**
+     * <p>
+     * The returned timestamp which is the start or end time of the time periods. The default value is
+     * <code>END_TIME</code>.
+     * </p>
+     * 
+     * @param periodAlignment
+     *        The returned timestamp which is the start or end time of the time periods. The default value is
+     *        <code>END_TIME</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PeriodAlignment
+     */
+
+    public GetResourceMetricsRequest withPeriodAlignment(String periodAlignment) {
+        setPeriodAlignment(periodAlignment);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The returned timestamp which is the start or end time of the time periods. The default value is
+     * <code>END_TIME</code>.
+     * </p>
+     * 
+     * @param periodAlignment
+     *        The returned timestamp which is the start or end time of the time periods. The default value is
+     *        <code>END_TIME</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see PeriodAlignment
+     */
+
+    public GetResourceMetricsRequest withPeriodAlignment(PeriodAlignment periodAlignment) {
+        this.periodAlignment = periodAlignment.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -938,7 +1012,9 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getPeriodAlignment() != null)
+            sb.append("PeriodAlignment: ").append(getPeriodAlignment());
         sb.append("}");
         return sb.toString();
     }
@@ -985,6 +1061,10 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getPeriodAlignment() == null ^ this.getPeriodAlignment() == null)
+            return false;
+        if (other.getPeriodAlignment() != null && other.getPeriodAlignment().equals(this.getPeriodAlignment()) == false)
+            return false;
         return true;
     }
 
@@ -1001,6 +1081,7 @@ public class GetResourceMetricsRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getPeriodInSeconds() == null) ? 0 : getPeriodInSeconds().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getPeriodAlignment() == null) ? 0 : getPeriodAlignment().hashCode());
         return hashCode;
     }
 

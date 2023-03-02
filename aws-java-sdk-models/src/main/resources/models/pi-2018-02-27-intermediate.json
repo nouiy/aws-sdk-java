@@ -9726,6 +9726,75 @@
           "variableSetterType" : "String"
         },
         "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "PeriodAlignment",
+        "c2jShape" : "PeriodAlignment",
+        "deprecated" : false,
+        "documentation" : "<p>The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : "PeriodAlignment",
+        "fluentSetterDocumentation" : "/**<p>The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.</p>\n@param periodAlignment The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.\n@return Returns a reference to this object so that method calls can be chained together.\n@see PeriodAlignment*/",
+        "fluentSetterMethodName" : "withPeriodAlignment",
+        "getterDocumentation" : "/**<p>The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.</p>\n@return The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.\n@see PeriodAlignment*/",
+        "getterMethodName" : "getPeriodAlignment",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "PeriodAlignment",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "PeriodAlignment",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "PeriodAlignment",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.</p>\n@param periodAlignment The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.\n@see PeriodAlignment*/",
+        "setterMethodName" : "setPeriodAlignment",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "periodAlignment",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.</p>\n@param periodAlignment The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.\n@return Returns a reference to this object so that method calls can be chained together.\n@see PeriodAlignment*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "periodAlignment",
+          "variableType" : "String",
+          "documentation" : "<p>The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
       } ],
       "membersAsMap" : {
         "EndTime" : {
@@ -10157,6 +10226,76 @@
             "variableName" : "nextToken",
             "variableType" : "String",
             "documentation" : "<p>An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the token, up to the value specified by <code>MaxRecords</code>.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "PeriodAlignment" : {
+          "c2jName" : "PeriodAlignment",
+          "c2jShape" : "PeriodAlignment",
+          "deprecated" : false,
+          "documentation" : "<p>The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : "PeriodAlignment",
+          "fluentSetterDocumentation" : "/**<p>The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.</p>\n@param periodAlignment The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.\n@return Returns a reference to this object so that method calls can be chained together.\n@see PeriodAlignment*/",
+          "fluentSetterMethodName" : "withPeriodAlignment",
+          "getterDocumentation" : "/**<p>The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.</p>\n@return The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.\n@see PeriodAlignment*/",
+          "getterMethodName" : "getPeriodAlignment",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "PeriodAlignment",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "PeriodAlignment",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "PeriodAlignment",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.</p>\n@param periodAlignment The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.\n@see PeriodAlignment*/",
+          "setterMethodName" : "setPeriodAlignment",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "periodAlignment",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.</p>\n@param periodAlignment The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.\n@return Returns a reference to this object so that method calls can be chained together.\n@see PeriodAlignment*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "periodAlignment",
+            "variableType" : "String",
+            "documentation" : "<p>The returned timestamp which is the start or end time of the time periods. The default value is <code>END_TIME</code>.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -15838,6 +15977,56 @@
         "documentation" : null,
         "simpleType" : "NotAuthorizedException",
         "variableSetterType" : "NotAuthorizedException"
+      },
+      "wrapper" : false
+    },
+    "PeriodAlignment" : {
+      "c2jName" : "PeriodAlignment",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "",
+      "endpointDiscoveryMembers" : null,
+      "enums" : [ {
+        "name" : "END_TIME",
+        "value" : "END_TIME"
+      }, {
+        "name" : "START_TIME",
+        "value" : "START_TIME"
+      } ],
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.pi.enum.PeriodAlignment",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : null,
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.pi.enum",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "PeriodAlignment",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : {
+        "flattened" : false,
+        "resultWrapper" : null
+      },
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "PeriodAlignment",
+        "variableName" : "periodAlignment",
+        "variableType" : "PeriodAlignment",
+        "documentation" : null,
+        "simpleType" : "PeriodAlignment",
+        "variableSetterType" : "PeriodAlignment"
       },
       "wrapper" : false
     },

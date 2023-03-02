@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientConstructors", "ClientMutationMethods", "EnumSetterOverload" ],
+    "deprecatedSuppressions" : [ "ClientMutationMethods", "EnumSetterOverload", "ClientConstructors" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -538,7 +538,7 @@
       "asyncReturnType" : "UpdatePipeResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Update an existing pipe. When you call <code>UpdatePipe</code>, only the fields that are included in the request are changed, the rest are unchanged. The exception to this is if you modify any Amazon Web Services-service specific fields in the <code>SourceParameters</code>, <code>EnrichmentParameters</code>, or <code>TargetParameters</code> objects. The fields in these objects are updated atomically as one and override existing values. This is by design and means that if you don't specify an optional field in one of these Parameters objects, that field will be set to its system-default value after the update.</p> <pre><code> &lt;p&gt;For more information about pipes, see &lt;a href=&quot;https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes.html&quot;&gt; Amazon EventBridge Pipes&lt;/a&gt; in the Amazon EventBridge User Guide.&lt;/p&gt; </code></pre>",
+      "documentation" : "<p>Update an existing pipe. When you call <code>UpdatePipe</code>, only the fields that are included in the request are changed, the rest are unchanged. The exception to this is if you modify any Amazon Web Services-service specific fields in the <code>SourceParameters</code>, <code>EnrichmentParameters</code>, or <code>TargetParameters</code> objects. The fields in these objects are updated atomically as one and override existing values. This is by design and means that if you don't specify an optional field in one of these Parameters objects, that field will be set to its system-default value after the update.</p> <p>For more information about pipes, see <a href=\"https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes.html\"> Amazon EventBridge Pipes</a> in the Amazon EventBridge User Guide.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -23120,7 +23120,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "BatchSize",
-        "c2jShape" : "LimitMax1000",
+        "c2jShape" : "LimitMax10000",
         "deprecated" : false,
         "documentation" : "<p>The maximum number of records to include in each batch.</p>",
         "endpointDiscoveryId" : false,
@@ -23674,7 +23674,7 @@
       "membersAsMap" : {
         "BatchSize" : {
           "c2jName" : "BatchSize",
-          "c2jShape" : "LimitMax1000",
+          "c2jShape" : "LimitMax10000",
           "deprecated" : false,
           "documentation" : "<p>The maximum number of records to include in each batch.</p>",
           "endpointDiscoveryId" : false,
@@ -50368,7 +50368,7 @@
       "marshaller" : null,
       "members" : [ {
         "c2jName" : "BatchSize",
-        "c2jShape" : "LimitMax1000",
+        "c2jShape" : "LimitMax10000",
         "deprecated" : false,
         "documentation" : "<p>The maximum number of records to include in each batch.</p>",
         "endpointDiscoveryId" : false,
@@ -50853,7 +50853,7 @@
       "membersAsMap" : {
         "BatchSize" : {
           "c2jName" : "BatchSize",
-          "c2jShape" : "LimitMax1000",
+          "c2jShape" : "LimitMax10000",
           "deprecated" : false,
           "documentation" : "<p>The maximum number of records to include in each batch.</p>",
           "endpointDiscoveryId" : false,

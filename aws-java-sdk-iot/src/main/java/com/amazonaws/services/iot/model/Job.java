@@ -197,6 +197,12 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private SchedulingConfig schedulingConfig;
+    /**
+     * <p>
+     * Displays the next seven maintenance window occurrences and their start times.
+     * </p>
+     */
+    private java.util.List<ScheduledJobRollout> scheduledJobRollouts;
 
     /**
      * <p>
@@ -1461,6 +1467,76 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Displays the next seven maintenance window occurrences and their start times.
+     * </p>
+     * 
+     * @return Displays the next seven maintenance window occurrences and their start times.
+     */
+
+    public java.util.List<ScheduledJobRollout> getScheduledJobRollouts() {
+        return scheduledJobRollouts;
+    }
+
+    /**
+     * <p>
+     * Displays the next seven maintenance window occurrences and their start times.
+     * </p>
+     * 
+     * @param scheduledJobRollouts
+     *        Displays the next seven maintenance window occurrences and their start times.
+     */
+
+    public void setScheduledJobRollouts(java.util.Collection<ScheduledJobRollout> scheduledJobRollouts) {
+        if (scheduledJobRollouts == null) {
+            this.scheduledJobRollouts = null;
+            return;
+        }
+
+        this.scheduledJobRollouts = new java.util.ArrayList<ScheduledJobRollout>(scheduledJobRollouts);
+    }
+
+    /**
+     * <p>
+     * Displays the next seven maintenance window occurrences and their start times.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setScheduledJobRollouts(java.util.Collection)} or {@link #withScheduledJobRollouts(java.util.Collection)}
+     * if you want to override the existing values.
+     * </p>
+     * 
+     * @param scheduledJobRollouts
+     *        Displays the next seven maintenance window occurrences and their start times.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Job withScheduledJobRollouts(ScheduledJobRollout... scheduledJobRollouts) {
+        if (this.scheduledJobRollouts == null) {
+            setScheduledJobRollouts(new java.util.ArrayList<ScheduledJobRollout>(scheduledJobRollouts.length));
+        }
+        for (ScheduledJobRollout ele : scheduledJobRollouts) {
+            this.scheduledJobRollouts.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Displays the next seven maintenance window occurrences and their start times.
+     * </p>
+     * 
+     * @param scheduledJobRollouts
+     *        Displays the next seven maintenance window occurrences and their start times.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Job withScheduledJobRollouts(java.util.Collection<ScheduledJobRollout> scheduledJobRollouts) {
+        setScheduledJobRollouts(scheduledJobRollouts);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1517,7 +1593,9 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
         if (getIsConcurrent() != null)
             sb.append("IsConcurrent: ").append(getIsConcurrent()).append(",");
         if (getSchedulingConfig() != null)
-            sb.append("SchedulingConfig: ").append(getSchedulingConfig());
+            sb.append("SchedulingConfig: ").append(getSchedulingConfig()).append(",");
+        if (getScheduledJobRollouts() != null)
+            sb.append("ScheduledJobRollouts: ").append(getScheduledJobRollouts());
         sb.append("}");
         return sb.toString();
     }
@@ -1624,6 +1702,10 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSchedulingConfig() != null && other.getSchedulingConfig().equals(this.getSchedulingConfig()) == false)
             return false;
+        if (other.getScheduledJobRollouts() == null ^ this.getScheduledJobRollouts() == null)
+            return false;
+        if (other.getScheduledJobRollouts() != null && other.getScheduledJobRollouts().equals(this.getScheduledJobRollouts()) == false)
+            return false;
         return true;
     }
 
@@ -1655,6 +1737,7 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getDocumentParameters() == null) ? 0 : getDocumentParameters().hashCode());
         hashCode = prime * hashCode + ((getIsConcurrent() == null) ? 0 : getIsConcurrent().hashCode());
         hashCode = prime * hashCode + ((getSchedulingConfig() == null) ? 0 : getSchedulingConfig().hashCode());
+        hashCode = prime * hashCode + ((getScheduledJobRollouts() == null) ? 0 : getScheduledJobRollouts().hashCode());
         return hashCode;
     }
 

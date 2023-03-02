@@ -167,8 +167,11 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
     private String task;
     /**
      * <p>
-     * The Amazon Simple Storage Service (Amazon S3) path where the sample payload are stored. This path must point to a
-     * single gzip compressed tar archive (.tar.gz suffix).
+     * The Amazon Simple Storage Service (Amazon S3) path where the sample payload is stored. This path must point to a
+     * single gzip compressed tar archive (.tar.gz suffix). This archive can hold multiple files that are all equally
+     * used in the load test. Each file in the archive must satisfy the size constraints of the <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html#API_runtime_InvokeEndpoint_RequestSyntax"
+     * >InvokeEndpoint</a> call.
      * </p>
      */
     private String samplePayloadUrl;
@@ -1195,13 +1198,20 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Simple Storage Service (Amazon S3) path where the sample payload are stored. This path must point to a
-     * single gzip compressed tar archive (.tar.gz suffix).
+     * The Amazon Simple Storage Service (Amazon S3) path where the sample payload is stored. This path must point to a
+     * single gzip compressed tar archive (.tar.gz suffix). This archive can hold multiple files that are all equally
+     * used in the load test. Each file in the archive must satisfy the size constraints of the <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html#API_runtime_InvokeEndpoint_RequestSyntax"
+     * >InvokeEndpoint</a> call.
      * </p>
      * 
      * @param samplePayloadUrl
-     *        The Amazon Simple Storage Service (Amazon S3) path where the sample payload are stored. This path must
-     *        point to a single gzip compressed tar archive (.tar.gz suffix).
+     *        The Amazon Simple Storage Service (Amazon S3) path where the sample payload is stored. This path must
+     *        point to a single gzip compressed tar archive (.tar.gz suffix). This archive can hold multiple files that
+     *        are all equally used in the load test. Each file in the archive must satisfy the size constraints of the
+     *        <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html#API_runtime_InvokeEndpoint_RequestSyntax"
+     *        >InvokeEndpoint</a> call.
      */
 
     public void setSamplePayloadUrl(String samplePayloadUrl) {
@@ -1210,12 +1220,19 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Simple Storage Service (Amazon S3) path where the sample payload are stored. This path must point to a
-     * single gzip compressed tar archive (.tar.gz suffix).
+     * The Amazon Simple Storage Service (Amazon S3) path where the sample payload is stored. This path must point to a
+     * single gzip compressed tar archive (.tar.gz suffix). This archive can hold multiple files that are all equally
+     * used in the load test. Each file in the archive must satisfy the size constraints of the <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html#API_runtime_InvokeEndpoint_RequestSyntax"
+     * >InvokeEndpoint</a> call.
      * </p>
      * 
-     * @return The Amazon Simple Storage Service (Amazon S3) path where the sample payload are stored. This path must
-     *         point to a single gzip compressed tar archive (.tar.gz suffix).
+     * @return The Amazon Simple Storage Service (Amazon S3) path where the sample payload is stored. This path must
+     *         point to a single gzip compressed tar archive (.tar.gz suffix). This archive can hold multiple files that
+     *         are all equally used in the load test. Each file in the archive must satisfy the size constraints of the
+     *         <a href=
+     *         "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html#API_runtime_InvokeEndpoint_RequestSyntax"
+     *         >InvokeEndpoint</a> call.
      */
 
     public String getSamplePayloadUrl() {
@@ -1224,13 +1241,20 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Simple Storage Service (Amazon S3) path where the sample payload are stored. This path must point to a
-     * single gzip compressed tar archive (.tar.gz suffix).
+     * The Amazon Simple Storage Service (Amazon S3) path where the sample payload is stored. This path must point to a
+     * single gzip compressed tar archive (.tar.gz suffix). This archive can hold multiple files that are all equally
+     * used in the load test. Each file in the archive must satisfy the size constraints of the <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html#API_runtime_InvokeEndpoint_RequestSyntax"
+     * >InvokeEndpoint</a> call.
      * </p>
      * 
      * @param samplePayloadUrl
-     *        The Amazon Simple Storage Service (Amazon S3) path where the sample payload are stored. This path must
-     *        point to a single gzip compressed tar archive (.tar.gz suffix).
+     *        The Amazon Simple Storage Service (Amazon S3) path where the sample payload is stored. This path must
+     *        point to a single gzip compressed tar archive (.tar.gz suffix). This archive can hold multiple files that
+     *        are all equally used in the load test. Each file in the archive must satisfy the size constraints of the
+     *        <a href=
+     *        "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html#API_runtime_InvokeEndpoint_RequestSyntax"
+     *        >InvokeEndpoint</a> call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

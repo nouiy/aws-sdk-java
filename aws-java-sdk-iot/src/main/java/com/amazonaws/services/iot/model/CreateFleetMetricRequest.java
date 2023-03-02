@@ -70,9 +70,9 @@ public class CreateFleetMetricRequest extends com.amazonaws.AmazonWebServiceRequ
     private String indexName;
     /**
      * <p>
-     * Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a href=
-     * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html"
-     * >CW metric</a>. Default to null.
+     * Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">CW metric</a>.
+     * Default to null.
      * </p>
      */
     private String unit;
@@ -408,16 +408,15 @@ public class CreateFleetMetricRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a href=
-     * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html"
-     * >CW metric</a>. Default to null.
+     * Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">CW metric</a>.
+     * Default to null.
      * </p>
      * 
      * @param unit
      *        Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a
-     *        href=
-     *        "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html"
-     *        >CW metric</a>. Default to null.
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">CW
+     *        metric</a>. Default to null.
      * @see FleetMetricUnit
      */
 
@@ -427,15 +426,14 @@ public class CreateFleetMetricRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a href=
-     * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html"
-     * >CW metric</a>. Default to null.
+     * Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">CW metric</a>.
+     * Default to null.
      * </p>
      * 
      * @return Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a
-     *         href=
-     *         "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html"
-     *         >CW metric</a>. Default to null.
+     *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">CW
+     *         metric</a>. Default to null.
      * @see FleetMetricUnit
      */
 
@@ -445,16 +443,15 @@ public class CreateFleetMetricRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a href=
-     * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html"
-     * >CW metric</a>. Default to null.
+     * Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">CW metric</a>.
+     * Default to null.
      * </p>
      * 
      * @param unit
      *        Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a
-     *        href=
-     *        "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html"
-     *        >CW metric</a>. Default to null.
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">CW
+     *        metric</a>. Default to null.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FleetMetricUnit
      */
@@ -466,16 +463,15 @@ public class CreateFleetMetricRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a href=
-     * "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html"
-     * >CW metric</a>. Default to null.
+     * Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">CW metric</a>.
+     * Default to null.
      * </p>
      * 
      * @param unit
      *        Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a
-     *        href=
-     *        "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html"
-     *        >CW metric</a>. Default to null.
+     *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">CW
+     *        metric</a>. Default to null.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FleetMetricUnit
      */

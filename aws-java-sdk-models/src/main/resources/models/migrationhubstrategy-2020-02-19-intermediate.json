@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientMutationMethods", "EnumSetterOverload", "ClientConstructors" ],
+    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientMutationMethods", "ClientConstructors" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -15463,6 +15463,9 @@
       }, {
         "name" : "MPA",
         "value" : "MPA"
+      }, {
+        "name" : "Import",
+        "value" : "Import"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.migrationhubstrategyrecommendations.enum.DataSourceType",
@@ -24401,6 +24404,9 @@
       "enums" : [ {
         "name" : "ExternalId",
         "value" : "ExternalId"
+      }, {
+        "name" : "ExternalSourceType",
+        "value" : "ExternalSourceType"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.migrationhubstrategyrecommendations.enum.GroupName",
