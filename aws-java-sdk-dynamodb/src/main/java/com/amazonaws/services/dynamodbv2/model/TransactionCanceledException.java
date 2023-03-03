@@ -234,8 +234,7 @@ import javax.annotation.Generated;
  * </p>
  * <note>
  * <p>
- * This message is returned when when writes get throttled on an On-Demand GSI as DynamoDB is automatically scaling the
- * GSI.
+ * This message is returned when writes get throttled on an On-Demand GSI as DynamoDB is automatically scaling the GSI.
  * </p>
  * </note></li>
  * </ul>

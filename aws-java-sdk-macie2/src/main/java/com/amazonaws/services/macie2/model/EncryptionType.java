@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The type of server-side encryption that's used to encrypt an S3 object or objects in an S3 bucket. Possible values
- * are:
+ * The server-side encryption algorithm that was used to encrypt an S3 object or is used by default to encrypt objects
+ * that are added to an S3 bucket. Possible values are:
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

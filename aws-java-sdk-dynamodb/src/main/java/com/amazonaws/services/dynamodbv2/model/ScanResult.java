@@ -81,8 +81,8 @@ public class ScanResult extends com.amazonaws.AmazonWebServiceResult<com.amazona
      * The capacity units consumed by the <code>Scan</code> operation. The data returned includes the total provisioned
      * throughput consumed, along with statistics for the table and any indexes involved in the operation.
      * <code>ConsumedCapacity</code> is only returned if the <code>ReturnConsumedCapacity</code> parameter was
-     * specified. For more information, see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughputIntro.html"
+     * specified. For more information, see <a href=
+     * "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughput.html#ItemSizeCalculations.Reads"
      * >Provisioned Throughput</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      * </p>
      */
@@ -466,8 +466,8 @@ public class ScanResult extends com.amazonaws.AmazonWebServiceResult<com.amazona
      * The capacity units consumed by the <code>Scan</code> operation. The data returned includes the total provisioned
      * throughput consumed, along with statistics for the table and any indexes involved in the operation.
      * <code>ConsumedCapacity</code> is only returned if the <code>ReturnConsumedCapacity</code> parameter was
-     * specified. For more information, see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughputIntro.html"
+     * specified. For more information, see <a href=
+     * "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughput.html#ItemSizeCalculations.Reads"
      * >Provisioned Throughput</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      * </p>
      * 
@@ -475,8 +475,8 @@ public class ScanResult extends com.amazonaws.AmazonWebServiceResult<com.amazona
      *        The capacity units consumed by the <code>Scan</code> operation. The data returned includes the total
      *        provisioned throughput consumed, along with statistics for the table and any indexes involved in the
      *        operation. <code>ConsumedCapacity</code> is only returned if the <code>ReturnConsumedCapacity</code>
-     *        parameter was specified. For more information, see <a
-     *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughputIntro.html"
+     *        parameter was specified. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughput.html#ItemSizeCalculations.Reads"
      *        >Provisioned Throughput</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      */
 
@@ -489,16 +489,16 @@ public class ScanResult extends com.amazonaws.AmazonWebServiceResult<com.amazona
      * The capacity units consumed by the <code>Scan</code> operation. The data returned includes the total provisioned
      * throughput consumed, along with statistics for the table and any indexes involved in the operation.
      * <code>ConsumedCapacity</code> is only returned if the <code>ReturnConsumedCapacity</code> parameter was
-     * specified. For more information, see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughputIntro.html"
+     * specified. For more information, see <a href=
+     * "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughput.html#ItemSizeCalculations.Reads"
      * >Provisioned Throughput</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      * </p>
      * 
      * @return The capacity units consumed by the <code>Scan</code> operation. The data returned includes the total
      *         provisioned throughput consumed, along with statistics for the table and any indexes involved in the
      *         operation. <code>ConsumedCapacity</code> is only returned if the <code>ReturnConsumedCapacity</code>
-     *         parameter was specified. For more information, see <a
-     *         href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughputIntro.html"
+     *         parameter was specified. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughput.html#ItemSizeCalculations.Reads"
      *         >Provisioned Throughput</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      */
 
@@ -511,8 +511,8 @@ public class ScanResult extends com.amazonaws.AmazonWebServiceResult<com.amazona
      * The capacity units consumed by the <code>Scan</code> operation. The data returned includes the total provisioned
      * throughput consumed, along with statistics for the table and any indexes involved in the operation.
      * <code>ConsumedCapacity</code> is only returned if the <code>ReturnConsumedCapacity</code> parameter was
-     * specified. For more information, see <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughputIntro.html"
+     * specified. For more information, see <a href=
+     * "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughput.html#ItemSizeCalculations.Reads"
      * >Provisioned Throughput</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      * </p>
      * 
@@ -520,8 +520,8 @@ public class ScanResult extends com.amazonaws.AmazonWebServiceResult<com.amazona
      *        The capacity units consumed by the <code>Scan</code> operation. The data returned includes the total
      *        provisioned throughput consumed, along with statistics for the table and any indexes involved in the
      *        operation. <code>ConsumedCapacity</code> is only returned if the <code>ReturnConsumedCapacity</code>
-     *        parameter was specified. For more information, see <a
-     *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughputIntro.html"
+     *        parameter was specified. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughput.html#ItemSizeCalculations.Reads"
      *        >Provisioned Throughput</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

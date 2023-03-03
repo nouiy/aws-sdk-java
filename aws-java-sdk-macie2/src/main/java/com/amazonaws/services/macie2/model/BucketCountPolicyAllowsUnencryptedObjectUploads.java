@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Provides information about the number of S3 buckets whose bucket policies do or don't require server-side encryption
- * of objects when objects are uploaded to the buckets.
+ * of objects when objects are added to the buckets.
  * </p>
  * 
  * @see <a

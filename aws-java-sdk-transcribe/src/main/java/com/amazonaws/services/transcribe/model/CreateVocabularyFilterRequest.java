@@ -96,6 +96,22 @@ public class CreateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of an IAM role that has permissions to access the Amazon S3 bucket that contains
+     * your input files (in this case, your custom vocabulary filter). If the role that you specify doesn’t have the
+     * appropriate permissions to access the specified Amazon S3 location, your request fails.
+     * </p>
+     * <p>
+     * IAM role ARNs have the format <code>arn:partition:iam::account:role/role-name-with-path</code>. For example:
+     * <code>arn:aws:iam::111122223333:role/Admin</code>.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns">IAM ARNs</a>.
+     * </p>
+     */
+    private String dataAccessRoleArn;
 
     /**
      * <p>
@@ -665,6 +681,109 @@ public class CreateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of an IAM role that has permissions to access the Amazon S3 bucket that contains
+     * your input files (in this case, your custom vocabulary filter). If the role that you specify doesn’t have the
+     * appropriate permissions to access the specified Amazon S3 location, your request fails.
+     * </p>
+     * <p>
+     * IAM role ARNs have the format <code>arn:partition:iam::account:role/role-name-with-path</code>. For example:
+     * <code>arn:aws:iam::111122223333:role/Admin</code>.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns">IAM ARNs</a>.
+     * </p>
+     * 
+     * @param dataAccessRoleArn
+     *        The Amazon Resource Name (ARN) of an IAM role that has permissions to access the Amazon S3 bucket that
+     *        contains your input files (in this case, your custom vocabulary filter). If the role that you specify
+     *        doesn’t have the appropriate permissions to access the specified Amazon S3 location, your request
+     *        fails.</p>
+     *        <p>
+     *        IAM role ARNs have the format <code>arn:partition:iam::account:role/role-name-with-path</code>. For
+     *        example: <code>arn:aws:iam::111122223333:role/Admin</code>.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns">IAM
+     *        ARNs</a>.
+     */
+
+    public void setDataAccessRoleArn(String dataAccessRoleArn) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of an IAM role that has permissions to access the Amazon S3 bucket that contains
+     * your input files (in this case, your custom vocabulary filter). If the role that you specify doesn’t have the
+     * appropriate permissions to access the specified Amazon S3 location, your request fails.
+     * </p>
+     * <p>
+     * IAM role ARNs have the format <code>arn:partition:iam::account:role/role-name-with-path</code>. For example:
+     * <code>arn:aws:iam::111122223333:role/Admin</code>.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns">IAM ARNs</a>.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of an IAM role that has permissions to access the Amazon S3 bucket that
+     *         contains your input files (in this case, your custom vocabulary filter). If the role that you specify
+     *         doesn’t have the appropriate permissions to access the specified Amazon S3 location, your request
+     *         fails.</p>
+     *         <p>
+     *         IAM role ARNs have the format <code>arn:partition:iam::account:role/role-name-with-path</code>. For
+     *         example: <code>arn:aws:iam::111122223333:role/Admin</code>.
+     *         </p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns">IAM
+     *         ARNs</a>.
+     */
+
+    public String getDataAccessRoleArn() {
+        return this.dataAccessRoleArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of an IAM role that has permissions to access the Amazon S3 bucket that contains
+     * your input files (in this case, your custom vocabulary filter). If the role that you specify doesn’t have the
+     * appropriate permissions to access the specified Amazon S3 location, your request fails.
+     * </p>
+     * <p>
+     * IAM role ARNs have the format <code>arn:partition:iam::account:role/role-name-with-path</code>. For example:
+     * <code>arn:aws:iam::111122223333:role/Admin</code>.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns">IAM ARNs</a>.
+     * </p>
+     * 
+     * @param dataAccessRoleArn
+     *        The Amazon Resource Name (ARN) of an IAM role that has permissions to access the Amazon S3 bucket that
+     *        contains your input files (in this case, your custom vocabulary filter). If the role that you specify
+     *        doesn’t have the appropriate permissions to access the specified Amazon S3 location, your request
+     *        fails.</p>
+     *        <p>
+     *        IAM role ARNs have the format <code>arn:partition:iam::account:role/role-name-with-path</code>. For
+     *        example: <code>arn:aws:iam::111122223333:role/Admin</code>.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-arns">IAM
+     *        ARNs</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateVocabularyFilterRequest withDataAccessRoleArn(String dataAccessRoleArn) {
+        setDataAccessRoleArn(dataAccessRoleArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -685,7 +804,9 @@ public class CreateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
         if (getVocabularyFilterFileUri() != null)
             sb.append("VocabularyFilterFileUri: ").append(getVocabularyFilterFileUri()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getDataAccessRoleArn() != null)
+            sb.append("DataAccessRoleArn: ").append(getDataAccessRoleArn());
         sb.append("}");
         return sb.toString();
     }
@@ -720,6 +841,10 @@ public class CreateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getDataAccessRoleArn() == null ^ this.getDataAccessRoleArn() == null)
+            return false;
+        if (other.getDataAccessRoleArn() != null && other.getDataAccessRoleArn().equals(this.getDataAccessRoleArn()) == false)
+            return false;
         return true;
     }
 
@@ -733,6 +858,7 @@ public class CreateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getWords() == null) ? 0 : getWords().hashCode());
         hashCode = prime * hashCode + ((getVocabularyFilterFileUri() == null) ? 0 : getVocabularyFilterFileUri().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getDataAccessRoleArn() == null) ? 0 : getDataAccessRoleArn().hashCode());
         return hashCode;
     }
 

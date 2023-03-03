@@ -34,9 +34,11 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
      * Specify the color space you want for this output. The service supports conversion between HDR formats, between
      * SDR formats, from SDR to HDR, and from HDR to SDR. SDR to HDR conversion doesn't upgrade the dynamic range. The
      * converted video has an HDR format, but visually appears the same as an unconverted output. HDR to SDR conversion
-     * uses Elemental tone mapping technology to approximate the outcome of manually regrading from HDR to SDR. Select
-     * Force P3D65 (SDR) to set the output color space metadata to the following: * Color primaries: Display P3 *
-     * Transfer characteristics: SMPTE 428M * Matrix coefficients: BT.709
+     * uses tone mapping to approximate the outcome of manually regrading from HDR to SDR. When you specify an output
+     * color space, MediaConvert uses the following color space metadata, which includes color primaries, transfer
+     * characteristics, and matrix coefficients: HDR 10: BT.2020, PQ, BT.2020 non-constant HLG 2020: BT.2020, HLG,
+     * BT.2020 non-constant P3DCI (Theater): DCIP3, SMPTE 428M, BT.709 P3D65 (SDR): Display P3, sRGB, BT.709 P3D65
+     * (HDR): Display P3, PQ, BT.709
      */
     private String colorSpaceConversion;
     /** Contrast level. */
@@ -162,18 +164,21 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
      * Specify the color space you want for this output. The service supports conversion between HDR formats, between
      * SDR formats, from SDR to HDR, and from HDR to SDR. SDR to HDR conversion doesn't upgrade the dynamic range. The
      * converted video has an HDR format, but visually appears the same as an unconverted output. HDR to SDR conversion
-     * uses Elemental tone mapping technology to approximate the outcome of manually regrading from HDR to SDR. Select
-     * Force P3D65 (SDR) to set the output color space metadata to the following: * Color primaries: Display P3 *
-     * Transfer characteristics: SMPTE 428M * Matrix coefficients: BT.709
+     * uses tone mapping to approximate the outcome of manually regrading from HDR to SDR. When you specify an output
+     * color space, MediaConvert uses the following color space metadata, which includes color primaries, transfer
+     * characteristics, and matrix coefficients: HDR 10: BT.2020, PQ, BT.2020 non-constant HLG 2020: BT.2020, HLG,
+     * BT.2020 non-constant P3DCI (Theater): DCIP3, SMPTE 428M, BT.709 P3D65 (SDR): Display P3, sRGB, BT.709 P3D65
+     * (HDR): Display P3, PQ, BT.709
      * 
      * @param colorSpaceConversion
      *        Specify the color space you want for this output. The service supports conversion between HDR formats,
      *        between SDR formats, from SDR to HDR, and from HDR to SDR. SDR to HDR conversion doesn't upgrade the
      *        dynamic range. The converted video has an HDR format, but visually appears the same as an unconverted
-     *        output. HDR to SDR conversion uses Elemental tone mapping technology to approximate the outcome of
-     *        manually regrading from HDR to SDR. Select Force P3D65 (SDR) to set the output color space metadata to the
-     *        following: * Color primaries: Display P3 * Transfer characteristics: SMPTE 428M * Matrix coefficients:
-     *        BT.709
+     *        output. HDR to SDR conversion uses tone mapping to approximate the outcome of manually regrading from HDR
+     *        to SDR. When you specify an output color space, MediaConvert uses the following color space metadata,
+     *        which includes color primaries, transfer characteristics, and matrix coefficients: HDR 10: BT.2020, PQ,
+     *        BT.2020 non-constant HLG 2020: BT.2020, HLG, BT.2020 non-constant P3DCI (Theater): DCIP3, SMPTE 428M,
+     *        BT.709 P3D65 (SDR): Display P3, sRGB, BT.709 P3D65 (HDR): Display P3, PQ, BT.709
      * @see ColorSpaceConversion
      */
 
@@ -185,17 +190,20 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
      * Specify the color space you want for this output. The service supports conversion between HDR formats, between
      * SDR formats, from SDR to HDR, and from HDR to SDR. SDR to HDR conversion doesn't upgrade the dynamic range. The
      * converted video has an HDR format, but visually appears the same as an unconverted output. HDR to SDR conversion
-     * uses Elemental tone mapping technology to approximate the outcome of manually regrading from HDR to SDR. Select
-     * Force P3D65 (SDR) to set the output color space metadata to the following: * Color primaries: Display P3 *
-     * Transfer characteristics: SMPTE 428M * Matrix coefficients: BT.709
+     * uses tone mapping to approximate the outcome of manually regrading from HDR to SDR. When you specify an output
+     * color space, MediaConvert uses the following color space metadata, which includes color primaries, transfer
+     * characteristics, and matrix coefficients: HDR 10: BT.2020, PQ, BT.2020 non-constant HLG 2020: BT.2020, HLG,
+     * BT.2020 non-constant P3DCI (Theater): DCIP3, SMPTE 428M, BT.709 P3D65 (SDR): Display P3, sRGB, BT.709 P3D65
+     * (HDR): Display P3, PQ, BT.709
      * 
      * @return Specify the color space you want for this output. The service supports conversion between HDR formats,
      *         between SDR formats, from SDR to HDR, and from HDR to SDR. SDR to HDR conversion doesn't upgrade the
      *         dynamic range. The converted video has an HDR format, but visually appears the same as an unconverted
-     *         output. HDR to SDR conversion uses Elemental tone mapping technology to approximate the outcome of
-     *         manually regrading from HDR to SDR. Select Force P3D65 (SDR) to set the output color space metadata to
-     *         the following: * Color primaries: Display P3 * Transfer characteristics: SMPTE 428M * Matrix
-     *         coefficients: BT.709
+     *         output. HDR to SDR conversion uses tone mapping to approximate the outcome of manually regrading from HDR
+     *         to SDR. When you specify an output color space, MediaConvert uses the following color space metadata,
+     *         which includes color primaries, transfer characteristics, and matrix coefficients: HDR 10: BT.2020, PQ,
+     *         BT.2020 non-constant HLG 2020: BT.2020, HLG, BT.2020 non-constant P3DCI (Theater): DCIP3, SMPTE 428M,
+     *         BT.709 P3D65 (SDR): Display P3, sRGB, BT.709 P3D65 (HDR): Display P3, PQ, BT.709
      * @see ColorSpaceConversion
      */
 
@@ -207,18 +215,21 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
      * Specify the color space you want for this output. The service supports conversion between HDR formats, between
      * SDR formats, from SDR to HDR, and from HDR to SDR. SDR to HDR conversion doesn't upgrade the dynamic range. The
      * converted video has an HDR format, but visually appears the same as an unconverted output. HDR to SDR conversion
-     * uses Elemental tone mapping technology to approximate the outcome of manually regrading from HDR to SDR. Select
-     * Force P3D65 (SDR) to set the output color space metadata to the following: * Color primaries: Display P3 *
-     * Transfer characteristics: SMPTE 428M * Matrix coefficients: BT.709
+     * uses tone mapping to approximate the outcome of manually regrading from HDR to SDR. When you specify an output
+     * color space, MediaConvert uses the following color space metadata, which includes color primaries, transfer
+     * characteristics, and matrix coefficients: HDR 10: BT.2020, PQ, BT.2020 non-constant HLG 2020: BT.2020, HLG,
+     * BT.2020 non-constant P3DCI (Theater): DCIP3, SMPTE 428M, BT.709 P3D65 (SDR): Display P3, sRGB, BT.709 P3D65
+     * (HDR): Display P3, PQ, BT.709
      * 
      * @param colorSpaceConversion
      *        Specify the color space you want for this output. The service supports conversion between HDR formats,
      *        between SDR formats, from SDR to HDR, and from HDR to SDR. SDR to HDR conversion doesn't upgrade the
      *        dynamic range. The converted video has an HDR format, but visually appears the same as an unconverted
-     *        output. HDR to SDR conversion uses Elemental tone mapping technology to approximate the outcome of
-     *        manually regrading from HDR to SDR. Select Force P3D65 (SDR) to set the output color space metadata to the
-     *        following: * Color primaries: Display P3 * Transfer characteristics: SMPTE 428M * Matrix coefficients:
-     *        BT.709
+     *        output. HDR to SDR conversion uses tone mapping to approximate the outcome of manually regrading from HDR
+     *        to SDR. When you specify an output color space, MediaConvert uses the following color space metadata,
+     *        which includes color primaries, transfer characteristics, and matrix coefficients: HDR 10: BT.2020, PQ,
+     *        BT.2020 non-constant HLG 2020: BT.2020, HLG, BT.2020 non-constant P3DCI (Theater): DCIP3, SMPTE 428M,
+     *        BT.709 P3D65 (SDR): Display P3, sRGB, BT.709 P3D65 (HDR): Display P3, PQ, BT.709
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ColorSpaceConversion
      */
@@ -232,18 +243,21 @@ public class ColorCorrector implements Serializable, Cloneable, StructuredPojo {
      * Specify the color space you want for this output. The service supports conversion between HDR formats, between
      * SDR formats, from SDR to HDR, and from HDR to SDR. SDR to HDR conversion doesn't upgrade the dynamic range. The
      * converted video has an HDR format, but visually appears the same as an unconverted output. HDR to SDR conversion
-     * uses Elemental tone mapping technology to approximate the outcome of manually regrading from HDR to SDR. Select
-     * Force P3D65 (SDR) to set the output color space metadata to the following: * Color primaries: Display P3 *
-     * Transfer characteristics: SMPTE 428M * Matrix coefficients: BT.709
+     * uses tone mapping to approximate the outcome of manually regrading from HDR to SDR. When you specify an output
+     * color space, MediaConvert uses the following color space metadata, which includes color primaries, transfer
+     * characteristics, and matrix coefficients: HDR 10: BT.2020, PQ, BT.2020 non-constant HLG 2020: BT.2020, HLG,
+     * BT.2020 non-constant P3DCI (Theater): DCIP3, SMPTE 428M, BT.709 P3D65 (SDR): Display P3, sRGB, BT.709 P3D65
+     * (HDR): Display P3, PQ, BT.709
      * 
      * @param colorSpaceConversion
      *        Specify the color space you want for this output. The service supports conversion between HDR formats,
      *        between SDR formats, from SDR to HDR, and from HDR to SDR. SDR to HDR conversion doesn't upgrade the
      *        dynamic range. The converted video has an HDR format, but visually appears the same as an unconverted
-     *        output. HDR to SDR conversion uses Elemental tone mapping technology to approximate the outcome of
-     *        manually regrading from HDR to SDR. Select Force P3D65 (SDR) to set the output color space metadata to the
-     *        following: * Color primaries: Display P3 * Transfer characteristics: SMPTE 428M * Matrix coefficients:
-     *        BT.709
+     *        output. HDR to SDR conversion uses tone mapping to approximate the outcome of manually regrading from HDR
+     *        to SDR. When you specify an output color space, MediaConvert uses the following color space metadata,
+     *        which includes color primaries, transfer characteristics, and matrix coefficients: HDR 10: BT.2020, PQ,
+     *        BT.2020 non-constant HLG 2020: BT.2020, HLG, BT.2020 non-constant P3DCI (Theater): DCIP3, SMPTE 428M,
+     *        BT.709 P3D65 (SDR): Display P3, sRGB, BT.709 P3D65 (HDR): Display P3, PQ, BT.709
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ColorSpaceConversion
      */

@@ -47,7 +47,7 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies whether the bucket policy for the bucket requires server-side encryption of objects when objects are
-     * uploaded to the bucket. Possible values are:
+     * added to the bucket. Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -194,8 +194,7 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
     private Integer sensitivityScore;
     /**
      * <p>
-     * Specifies whether the bucket encrypts new objects by default and, if so, the type of server-side encryption
-     * that's used.
+     * The default server-side encryption settings for the bucket.
      * </p>
      */
     private BucketServerSideEncryption serverSideEncryption;
@@ -207,8 +206,9 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: an Amazon
-     * Web Services account that isn't part of your Amazon Macie organization, a CloudFront OAI, or a CloudFront OAC.
+     * EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: a
+     * CloudFront OAI, a CloudFront OAC, or an Amazon Web Services account that isn't part of your Amazon Macie
+     * organization.
      * </p>
      * </li>
      * <li>
@@ -327,7 +327,7 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies whether the bucket policy for the bucket requires server-side encryption of objects when objects are
-     * uploaded to the bucket. Possible values are:
+     * added to the bucket. Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -356,7 +356,7 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param allowsUnencryptedObjectUploads
      *        Specifies whether the bucket policy for the bucket requires server-side encryption of objects when objects
-     *        are uploaded to the bucket. Possible values are:</p>
+     *        are added to the bucket. Possible values are:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -391,7 +391,7 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies whether the bucket policy for the bucket requires server-side encryption of objects when objects are
-     * uploaded to the bucket. Possible values are:
+     * added to the bucket. Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -419,7 +419,7 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @return Specifies whether the bucket policy for the bucket requires server-side encryption of objects when
-     *         objects are uploaded to the bucket. Possible values are:</p>
+     *         objects are added to the bucket. Possible values are:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -454,7 +454,7 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies whether the bucket policy for the bucket requires server-side encryption of objects when objects are
-     * uploaded to the bucket. Possible values are:
+     * added to the bucket. Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -483,7 +483,7 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param allowsUnencryptedObjectUploads
      *        Specifies whether the bucket policy for the bucket requires server-side encryption of objects when objects
-     *        are uploaded to the bucket. Possible values are:</p>
+     *        are added to the bucket. Possible values are:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -520,7 +520,7 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies whether the bucket policy for the bucket requires server-side encryption of objects when objects are
-     * uploaded to the bucket. Possible values are:
+     * added to the bucket. Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -549,7 +549,7 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param allowsUnencryptedObjectUploads
      *        Specifies whether the bucket policy for the bucket requires server-side encryption of objects when objects
-     *        are uploaded to the bucket. Possible values are:</p>
+     *        are added to the bucket. Possible values are:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1376,13 +1376,11 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the bucket encrypts new objects by default and, if so, the type of server-side encryption
-     * that's used.
+     * The default server-side encryption settings for the bucket.
      * </p>
      * 
      * @param serverSideEncryption
-     *        Specifies whether the bucket encrypts new objects by default and, if so, the type of server-side
-     *        encryption that's used.
+     *        The default server-side encryption settings for the bucket.
      */
 
     public void setServerSideEncryption(BucketServerSideEncryption serverSideEncryption) {
@@ -1391,12 +1389,10 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the bucket encrypts new objects by default and, if so, the type of server-side encryption
-     * that's used.
+     * The default server-side encryption settings for the bucket.
      * </p>
      * 
-     * @return Specifies whether the bucket encrypts new objects by default and, if so, the type of server-side
-     *         encryption that's used.
+     * @return The default server-side encryption settings for the bucket.
      */
 
     public BucketServerSideEncryption getServerSideEncryption() {
@@ -1405,13 +1401,11 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the bucket encrypts new objects by default and, if so, the type of server-side encryption
-     * that's used.
+     * The default server-side encryption settings for the bucket.
      * </p>
      * 
      * @param serverSideEncryption
-     *        Specifies whether the bucket encrypts new objects by default and, if so, the type of server-side
-     *        encryption that's used.
+     *        The default server-side encryption settings for the bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1428,8 +1422,9 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: an Amazon
-     * Web Services account that isn't part of your Amazon Macie organization, a CloudFront OAI, or a CloudFront OAC.
+     * EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: a
+     * CloudFront OAI, a CloudFront OAC, or an Amazon Web Services account that isn't part of your Amazon Macie
+     * organization.
      * </p>
      * </li>
      * <li>
@@ -1461,9 +1456,9 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: an
-     *        Amazon Web Services account that isn't part of your Amazon Macie organization, a CloudFront OAI, or a
-     *        CloudFront OAC.
+     *        EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: a
+     *        CloudFront OAI, a CloudFront OAC, or an Amazon Web Services account that isn't part of your Amazon Macie
+     *        organization.
      *        </p>
      *        </li>
      *        <li>
@@ -1502,8 +1497,9 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: an Amazon
-     * Web Services account that isn't part of your Amazon Macie organization, a CloudFront OAI, or a CloudFront OAC.
+     * EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: a
+     * CloudFront OAI, a CloudFront OAC, or an Amazon Web Services account that isn't part of your Amazon Macie
+     * organization.
      * </p>
      * </li>
      * <li>
@@ -1534,9 +1530,9 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: an
-     *         Amazon Web Services account that isn't part of your Amazon Macie organization, a CloudFront OAI, or a
-     *         CloudFront OAC.
+     *         EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: a
+     *         CloudFront OAI, a CloudFront OAC, or an Amazon Web Services account that isn't part of your Amazon Macie
+     *         organization.
      *         </p>
      *         </li>
      *         <li>
@@ -1575,8 +1571,9 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: an Amazon
-     * Web Services account that isn't part of your Amazon Macie organization, a CloudFront OAI, or a CloudFront OAC.
+     * EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: a
+     * CloudFront OAI, a CloudFront OAC, or an Amazon Web Services account that isn't part of your Amazon Macie
+     * organization.
      * </p>
      * </li>
      * <li>
@@ -1608,9 +1605,9 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: an
-     *        Amazon Web Services account that isn't part of your Amazon Macie organization, a CloudFront OAI, or a
-     *        CloudFront OAC.
+     *        EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: a
+     *        CloudFront OAI, a CloudFront OAC, or an Amazon Web Services account that isn't part of your Amazon Macie
+     *        organization.
      *        </p>
      *        </li>
      *        <li>
@@ -1651,8 +1648,9 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: an Amazon
-     * Web Services account that isn't part of your Amazon Macie organization, a CloudFront OAI, or a CloudFront OAC.
+     * EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: a
+     * CloudFront OAI, a CloudFront OAC, or an Amazon Web Services account that isn't part of your Amazon Macie
+     * organization.
      * </p>
      * </li>
      * <li>
@@ -1684,9 +1682,9 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: an
-     *        Amazon Web Services account that isn't part of your Amazon Macie organization, a CloudFront OAI, or a
-     *        CloudFront OAC.
+     *        EXTERNAL - The bucket is shared with one or more of the following or any combination of the following: a
+     *        CloudFront OAI, a CloudFront OAC, or an Amazon Web Services account that isn't part of your Amazon Macie
+     *        organization.
      *        </p>
      *        </li>
      *        <li>

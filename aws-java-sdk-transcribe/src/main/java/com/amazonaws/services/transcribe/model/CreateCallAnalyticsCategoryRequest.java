@@ -47,18 +47,18 @@ public class CreateCallAnalyticsCategoryRequest extends com.amazonaws.AmazonWebS
     private java.util.List<Rule> rules;
     /**
      * <p>
-     * Choose whether you want to create a streaming or a batch category for your Call Analytics transcription.
+     * Choose whether you want to create a real-time or a post-call category for your Call Analytics transcription.
      * </p>
      * <p>
-     * Specifying <code>POST_CALL</code> assigns your category to batch transcriptions; categories with this input type
-     * cannot be applied to streaming (real-time) transcriptions.
+     * Specifying <code>POST_CALL</code> assigns your category to post-call transcriptions; categories with this input
+     * type cannot be applied to streaming (real-time) transcriptions.
      * </p>
      * <p>
      * Specifying <code>REAL_TIME</code> assigns your category to streaming transcriptions; categories with this input
-     * type cannot be applied to batch (post-call) transcriptions.
+     * type cannot be applied to post-call transcriptions.
      * </p>
      * <p>
-     * If you do not include <code>InputType</code>, your category is created as a batch category by default.
+     * If you do not include <code>InputType</code>, your category is created as a post-call category by default.
      * </p>
      */
     private String inputType;
@@ -229,33 +229,33 @@ public class CreateCallAnalyticsCategoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Choose whether you want to create a streaming or a batch category for your Call Analytics transcription.
+     * Choose whether you want to create a real-time or a post-call category for your Call Analytics transcription.
      * </p>
      * <p>
-     * Specifying <code>POST_CALL</code> assigns your category to batch transcriptions; categories with this input type
-     * cannot be applied to streaming (real-time) transcriptions.
+     * Specifying <code>POST_CALL</code> assigns your category to post-call transcriptions; categories with this input
+     * type cannot be applied to streaming (real-time) transcriptions.
      * </p>
      * <p>
      * Specifying <code>REAL_TIME</code> assigns your category to streaming transcriptions; categories with this input
-     * type cannot be applied to batch (post-call) transcriptions.
+     * type cannot be applied to post-call transcriptions.
      * </p>
      * <p>
-     * If you do not include <code>InputType</code>, your category is created as a batch category by default.
+     * If you do not include <code>InputType</code>, your category is created as a post-call category by default.
      * </p>
      * 
      * @param inputType
-     *        Choose whether you want to create a streaming or a batch category for your Call Analytics
+     *        Choose whether you want to create a real-time or a post-call category for your Call Analytics
      *        transcription.</p>
      *        <p>
-     *        Specifying <code>POST_CALL</code> assigns your category to batch transcriptions; categories with this
+     *        Specifying <code>POST_CALL</code> assigns your category to post-call transcriptions; categories with this
      *        input type cannot be applied to streaming (real-time) transcriptions.
      *        </p>
      *        <p>
      *        Specifying <code>REAL_TIME</code> assigns your category to streaming transcriptions; categories with this
-     *        input type cannot be applied to batch (post-call) transcriptions.
+     *        input type cannot be applied to post-call transcriptions.
      *        </p>
      *        <p>
-     *        If you do not include <code>InputType</code>, your category is created as a batch category by default.
+     *        If you do not include <code>InputType</code>, your category is created as a post-call category by default.
      * @see InputType
      */
 
@@ -265,32 +265,33 @@ public class CreateCallAnalyticsCategoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Choose whether you want to create a streaming or a batch category for your Call Analytics transcription.
+     * Choose whether you want to create a real-time or a post-call category for your Call Analytics transcription.
      * </p>
      * <p>
-     * Specifying <code>POST_CALL</code> assigns your category to batch transcriptions; categories with this input type
-     * cannot be applied to streaming (real-time) transcriptions.
+     * Specifying <code>POST_CALL</code> assigns your category to post-call transcriptions; categories with this input
+     * type cannot be applied to streaming (real-time) transcriptions.
      * </p>
      * <p>
      * Specifying <code>REAL_TIME</code> assigns your category to streaming transcriptions; categories with this input
-     * type cannot be applied to batch (post-call) transcriptions.
+     * type cannot be applied to post-call transcriptions.
      * </p>
      * <p>
-     * If you do not include <code>InputType</code>, your category is created as a batch category by default.
+     * If you do not include <code>InputType</code>, your category is created as a post-call category by default.
      * </p>
      * 
-     * @return Choose whether you want to create a streaming or a batch category for your Call Analytics
+     * @return Choose whether you want to create a real-time or a post-call category for your Call Analytics
      *         transcription.</p>
      *         <p>
-     *         Specifying <code>POST_CALL</code> assigns your category to batch transcriptions; categories with this
+     *         Specifying <code>POST_CALL</code> assigns your category to post-call transcriptions; categories with this
      *         input type cannot be applied to streaming (real-time) transcriptions.
      *         </p>
      *         <p>
      *         Specifying <code>REAL_TIME</code> assigns your category to streaming transcriptions; categories with this
-     *         input type cannot be applied to batch (post-call) transcriptions.
+     *         input type cannot be applied to post-call transcriptions.
      *         </p>
      *         <p>
-     *         If you do not include <code>InputType</code>, your category is created as a batch category by default.
+     *         If you do not include <code>InputType</code>, your category is created as a post-call category by
+     *         default.
      * @see InputType
      */
 
@@ -300,33 +301,33 @@ public class CreateCallAnalyticsCategoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Choose whether you want to create a streaming or a batch category for your Call Analytics transcription.
+     * Choose whether you want to create a real-time or a post-call category for your Call Analytics transcription.
      * </p>
      * <p>
-     * Specifying <code>POST_CALL</code> assigns your category to batch transcriptions; categories with this input type
-     * cannot be applied to streaming (real-time) transcriptions.
+     * Specifying <code>POST_CALL</code> assigns your category to post-call transcriptions; categories with this input
+     * type cannot be applied to streaming (real-time) transcriptions.
      * </p>
      * <p>
      * Specifying <code>REAL_TIME</code> assigns your category to streaming transcriptions; categories with this input
-     * type cannot be applied to batch (post-call) transcriptions.
+     * type cannot be applied to post-call transcriptions.
      * </p>
      * <p>
-     * If you do not include <code>InputType</code>, your category is created as a batch category by default.
+     * If you do not include <code>InputType</code>, your category is created as a post-call category by default.
      * </p>
      * 
      * @param inputType
-     *        Choose whether you want to create a streaming or a batch category for your Call Analytics
+     *        Choose whether you want to create a real-time or a post-call category for your Call Analytics
      *        transcription.</p>
      *        <p>
-     *        Specifying <code>POST_CALL</code> assigns your category to batch transcriptions; categories with this
+     *        Specifying <code>POST_CALL</code> assigns your category to post-call transcriptions; categories with this
      *        input type cannot be applied to streaming (real-time) transcriptions.
      *        </p>
      *        <p>
      *        Specifying <code>REAL_TIME</code> assigns your category to streaming transcriptions; categories with this
-     *        input type cannot be applied to batch (post-call) transcriptions.
+     *        input type cannot be applied to post-call transcriptions.
      *        </p>
      *        <p>
-     *        If you do not include <code>InputType</code>, your category is created as a batch category by default.
+     *        If you do not include <code>InputType</code>, your category is created as a post-call category by default.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InputType
      */
@@ -338,33 +339,33 @@ public class CreateCallAnalyticsCategoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Choose whether you want to create a streaming or a batch category for your Call Analytics transcription.
+     * Choose whether you want to create a real-time or a post-call category for your Call Analytics transcription.
      * </p>
      * <p>
-     * Specifying <code>POST_CALL</code> assigns your category to batch transcriptions; categories with this input type
-     * cannot be applied to streaming (real-time) transcriptions.
+     * Specifying <code>POST_CALL</code> assigns your category to post-call transcriptions; categories with this input
+     * type cannot be applied to streaming (real-time) transcriptions.
      * </p>
      * <p>
      * Specifying <code>REAL_TIME</code> assigns your category to streaming transcriptions; categories with this input
-     * type cannot be applied to batch (post-call) transcriptions.
+     * type cannot be applied to post-call transcriptions.
      * </p>
      * <p>
-     * If you do not include <code>InputType</code>, your category is created as a batch category by default.
+     * If you do not include <code>InputType</code>, your category is created as a post-call category by default.
      * </p>
      * 
      * @param inputType
-     *        Choose whether you want to create a streaming or a batch category for your Call Analytics
+     *        Choose whether you want to create a real-time or a post-call category for your Call Analytics
      *        transcription.</p>
      *        <p>
-     *        Specifying <code>POST_CALL</code> assigns your category to batch transcriptions; categories with this
+     *        Specifying <code>POST_CALL</code> assigns your category to post-call transcriptions; categories with this
      *        input type cannot be applied to streaming (real-time) transcriptions.
      *        </p>
      *        <p>
      *        Specifying <code>REAL_TIME</code> assigns your category to streaming transcriptions; categories with this
-     *        input type cannot be applied to batch (post-call) transcriptions.
+     *        input type cannot be applied to post-call transcriptions.
      *        </p>
      *        <p>
-     *        If you do not include <code>InputType</code>, your category is created as a batch category by default.
+     *        If you do not include <code>InputType</code>, your category is created as a post-call category by default.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InputType
      */

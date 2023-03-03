@@ -215,7 +215,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * <code>OutputLocation</code> parameter.
      * </p>
      * <p>
-     * Note that the user making the request must have permission to use the specified KMS key.
+     * Note that the role making the request must have permission to use the specified KMS key.
      * </p>
      */
     private String outputEncryptionKMSKeyId;
@@ -1353,7 +1353,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * <code>OutputLocation</code> parameter.
      * </p>
      * <p>
-     * Note that the user making the request must have permission to use the specified KMS key.
+     * Note that the role making the request must have permission to use the specified KMS key.
      * </p>
      * 
      * @param outputEncryptionKMSKeyId
@@ -1412,7 +1412,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *        <code>OutputLocation</code> parameter.
      *        </p>
      *        <p>
-     *        Note that the user making the request must have permission to use the specified KMS key.
+     *        Note that the role making the request must have permission to use the specified KMS key.
      */
 
     public void setOutputEncryptionKMSKeyId(String outputEncryptionKMSKeyId) {
@@ -1475,7 +1475,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * <code>OutputLocation</code> parameter.
      * </p>
      * <p>
-     * Note that the user making the request must have permission to use the specified KMS key.
+     * Note that the role making the request must have permission to use the specified KMS key.
      * </p>
      * 
      * @return The KMS key you want to use to encrypt your transcription output.</p>
@@ -1533,7 +1533,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *         <code>OutputLocation</code> parameter.
      *         </p>
      *         <p>
-     *         Note that the user making the request must have permission to use the specified KMS key.
+     *         Note that the role making the request must have permission to use the specified KMS key.
      */
 
     public String getOutputEncryptionKMSKeyId() {
@@ -1596,7 +1596,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * <code>OutputLocation</code> parameter.
      * </p>
      * <p>
-     * Note that the user making the request must have permission to use the specified KMS key.
+     * Note that the role making the request must have permission to use the specified KMS key.
      * </p>
      * 
      * @param outputEncryptionKMSKeyId
@@ -1655,7 +1655,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *        <code>OutputLocation</code> parameter.
      *        </p>
      *        <p>
-     *        Note that the user making the request must have permission to use the specified KMS key.
+     *        Note that the role making the request must have permission to use the specified KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

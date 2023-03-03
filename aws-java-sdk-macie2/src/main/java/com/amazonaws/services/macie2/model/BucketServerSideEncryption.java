@@ -34,15 +34,15 @@ public class BucketServerSideEncryption implements Serializable, Cloneable, Stru
     /**
      * <p>
      * The Amazon Resource Name (ARN) or unique identifier (key ID) for the KMS key that's used by default to encrypt
-     * objects that are added to the bucket. This value is null if the bucket uses an Amazon S3 managed key to encrypt
-     * new objects or the bucket doesn't encrypt new objects by default.
+     * objects that are added to the bucket. This value is null if the bucket is configured to use an Amazon S3 managed
+     * key to encrypt new objects.
      * </p>
      */
     private String kmsMasterKeyId;
     /**
      * <p>
-     * The type of server-side encryption that's used by default when storing new objects in the bucket. Possible values
-     * are:
+     * The server-side encryption algorithm that's used by default to encrypt objects that are added to the bucket.
+     * Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -58,7 +58,7 @@ public class BucketServerSideEncryption implements Serializable, Cloneable, Stru
      * </li>
      * <li>
      * <p>
-     * NONE - New objects aren't encrypted by default. Default encryption is disabled for the bucket.
+     * NONE - The bucket's default encryption settings don't specify server-side encryption behavior for new objects.
      * </p>
      * </li>
      * </ul>
@@ -68,14 +68,14 @@ public class BucketServerSideEncryption implements Serializable, Cloneable, Stru
     /**
      * <p>
      * The Amazon Resource Name (ARN) or unique identifier (key ID) for the KMS key that's used by default to encrypt
-     * objects that are added to the bucket. This value is null if the bucket uses an Amazon S3 managed key to encrypt
-     * new objects or the bucket doesn't encrypt new objects by default.
+     * objects that are added to the bucket. This value is null if the bucket is configured to use an Amazon S3 managed
+     * key to encrypt new objects.
      * </p>
      * 
      * @param kmsMasterKeyId
      *        The Amazon Resource Name (ARN) or unique identifier (key ID) for the KMS key that's used by default to
-     *        encrypt objects that are added to the bucket. This value is null if the bucket uses an Amazon S3 managed
-     *        key to encrypt new objects or the bucket doesn't encrypt new objects by default.
+     *        encrypt objects that are added to the bucket. This value is null if the bucket is configured to use an
+     *        Amazon S3 managed key to encrypt new objects.
      */
 
     public void setKmsMasterKeyId(String kmsMasterKeyId) {
@@ -85,13 +85,13 @@ public class BucketServerSideEncryption implements Serializable, Cloneable, Stru
     /**
      * <p>
      * The Amazon Resource Name (ARN) or unique identifier (key ID) for the KMS key that's used by default to encrypt
-     * objects that are added to the bucket. This value is null if the bucket uses an Amazon S3 managed key to encrypt
-     * new objects or the bucket doesn't encrypt new objects by default.
+     * objects that are added to the bucket. This value is null if the bucket is configured to use an Amazon S3 managed
+     * key to encrypt new objects.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) or unique identifier (key ID) for the KMS key that's used by default to
-     *         encrypt objects that are added to the bucket. This value is null if the bucket uses an Amazon S3 managed
-     *         key to encrypt new objects or the bucket doesn't encrypt new objects by default.
+     *         encrypt objects that are added to the bucket. This value is null if the bucket is configured to use an
+     *         Amazon S3 managed key to encrypt new objects.
      */
 
     public String getKmsMasterKeyId() {
@@ -101,14 +101,14 @@ public class BucketServerSideEncryption implements Serializable, Cloneable, Stru
     /**
      * <p>
      * The Amazon Resource Name (ARN) or unique identifier (key ID) for the KMS key that's used by default to encrypt
-     * objects that are added to the bucket. This value is null if the bucket uses an Amazon S3 managed key to encrypt
-     * new objects or the bucket doesn't encrypt new objects by default.
+     * objects that are added to the bucket. This value is null if the bucket is configured to use an Amazon S3 managed
+     * key to encrypt new objects.
      * </p>
      * 
      * @param kmsMasterKeyId
      *        The Amazon Resource Name (ARN) or unique identifier (key ID) for the KMS key that's used by default to
-     *        encrypt objects that are added to the bucket. This value is null if the bucket uses an Amazon S3 managed
-     *        key to encrypt new objects or the bucket doesn't encrypt new objects by default.
+     *        encrypt objects that are added to the bucket. This value is null if the bucket is configured to use an
+     *        Amazon S3 managed key to encrypt new objects.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -119,8 +119,8 @@ public class BucketServerSideEncryption implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The type of server-side encryption that's used by default when storing new objects in the bucket. Possible values
-     * are:
+     * The server-side encryption algorithm that's used by default to encrypt objects that are added to the bucket.
+     * Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -136,14 +136,14 @@ public class BucketServerSideEncryption implements Serializable, Cloneable, Stru
      * </li>
      * <li>
      * <p>
-     * NONE - New objects aren't encrypted by default. Default encryption is disabled for the bucket.
+     * NONE - The bucket's default encryption settings don't specify server-side encryption behavior for new objects.
      * </p>
      * </li>
      * </ul>
      * 
      * @param type
-     *        The type of server-side encryption that's used by default when storing new objects in the bucket. Possible
-     *        values are:</p>
+     *        The server-side encryption algorithm that's used by default to encrypt objects that are added to the
+     *        bucket. Possible values are:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -158,7 +158,8 @@ public class BucketServerSideEncryption implements Serializable, Cloneable, Stru
      *        </li>
      *        <li>
      *        <p>
-     *        NONE - New objects aren't encrypted by default. Default encryption is disabled for the bucket.
+     *        NONE - The bucket's default encryption settings don't specify server-side encryption behavior for new
+     *        objects.
      *        </p>
      *        </li>
      * @see Type
@@ -170,8 +171,8 @@ public class BucketServerSideEncryption implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The type of server-side encryption that's used by default when storing new objects in the bucket. Possible values
-     * are:
+     * The server-side encryption algorithm that's used by default to encrypt objects that are added to the bucket.
+     * Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -187,13 +188,13 @@ public class BucketServerSideEncryption implements Serializable, Cloneable, Stru
      * </li>
      * <li>
      * <p>
-     * NONE - New objects aren't encrypted by default. Default encryption is disabled for the bucket.
+     * NONE - The bucket's default encryption settings don't specify server-side encryption behavior for new objects.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The type of server-side encryption that's used by default when storing new objects in the bucket.
-     *         Possible values are:</p>
+     * @return The server-side encryption algorithm that's used by default to encrypt objects that are added to the
+     *         bucket. Possible values are:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -208,7 +209,8 @@ public class BucketServerSideEncryption implements Serializable, Cloneable, Stru
      *         </li>
      *         <li>
      *         <p>
-     *         NONE - New objects aren't encrypted by default. Default encryption is disabled for the bucket.
+     *         NONE - The bucket's default encryption settings don't specify server-side encryption behavior for new
+     *         objects.
      *         </p>
      *         </li>
      * @see Type
@@ -220,8 +222,8 @@ public class BucketServerSideEncryption implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The type of server-side encryption that's used by default when storing new objects in the bucket. Possible values
-     * are:
+     * The server-side encryption algorithm that's used by default to encrypt objects that are added to the bucket.
+     * Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -237,14 +239,14 @@ public class BucketServerSideEncryption implements Serializable, Cloneable, Stru
      * </li>
      * <li>
      * <p>
-     * NONE - New objects aren't encrypted by default. Default encryption is disabled for the bucket.
+     * NONE - The bucket's default encryption settings don't specify server-side encryption behavior for new objects.
      * </p>
      * </li>
      * </ul>
      * 
      * @param type
-     *        The type of server-side encryption that's used by default when storing new objects in the bucket. Possible
-     *        values are:</p>
+     *        The server-side encryption algorithm that's used by default to encrypt objects that are added to the
+     *        bucket. Possible values are:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -259,7 +261,8 @@ public class BucketServerSideEncryption implements Serializable, Cloneable, Stru
      *        </li>
      *        <li>
      *        <p>
-     *        NONE - New objects aren't encrypted by default. Default encryption is disabled for the bucket.
+     *        NONE - The bucket's default encryption settings don't specify server-side encryption behavior for new
+     *        objects.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -273,8 +276,8 @@ public class BucketServerSideEncryption implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The type of server-side encryption that's used by default when storing new objects in the bucket. Possible values
-     * are:
+     * The server-side encryption algorithm that's used by default to encrypt objects that are added to the bucket.
+     * Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -290,14 +293,14 @@ public class BucketServerSideEncryption implements Serializable, Cloneable, Stru
      * </li>
      * <li>
      * <p>
-     * NONE - New objects aren't encrypted by default. Default encryption is disabled for the bucket.
+     * NONE - The bucket's default encryption settings don't specify server-side encryption behavior for new objects.
      * </p>
      * </li>
      * </ul>
      * 
      * @param type
-     *        The type of server-side encryption that's used by default when storing new objects in the bucket. Possible
-     *        values are:</p>
+     *        The server-side encryption algorithm that's used by default to encrypt objects that are added to the
+     *        bucket. Possible values are:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -312,7 +315,8 @@ public class BucketServerSideEncryption implements Serializable, Cloneable, Stru
      *        </li>
      *        <li>
      *        <p>
-     *        NONE - New objects aren't encrypted by default. Default encryption is disabled for the bucket.
+     *        NONE - The bucket's default encryption settings don't specify server-side encryption behavior for new
+     *        objects.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

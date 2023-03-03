@@ -64,7 +64,9 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      * </li>
      * <li>
      * <p>
-     * <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves.
+     * <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves. Note that
+     * this uses the same quantity of read capacity units as getting the items, and is subject to the same item size
+     * calculations.
      * </p>
      * </li>
      * <li>
@@ -571,7 +573,9 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      * </li>
      * <li>
      * <p>
-     * <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves.
+     * <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves. Note that
+     * this uses the same quantity of read capacity units as getting the items, and is subject to the same item size
+     * calculations.
      * </p>
      * </li>
      * <li>
@@ -628,7 +632,9 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      *        </li>
      *        <li>
      *        <p>
-     *        <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves.
+     *        <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves. Note
+     *        that this uses the same quantity of read capacity units as getting the items, and is subject to the same
+     *        item size calculations.
      *        </p>
      *        </li>
      *        <li>
@@ -692,7 +698,9 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      * </li>
      * <li>
      * <p>
-     * <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves.
+     * <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves. Note that
+     * this uses the same quantity of read capacity units as getting the items, and is subject to the same item size
+     * calculations.
      * </p>
      * </li>
      * <li>
@@ -749,6 +757,8 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      *         <li>
      *         <p>
      *         <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves.
+     *         Note that this uses the same quantity of read capacity units as getting the items, and is subject to the
+     *         same item size calculations.
      *         </p>
      *         </li>
      *         <li>
@@ -812,7 +822,9 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      * </li>
      * <li>
      * <p>
-     * <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves.
+     * <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves. Note that
+     * this uses the same quantity of read capacity units as getting the items, and is subject to the same item size
+     * calculations.
      * </p>
      * </li>
      * <li>
@@ -869,7 +881,9 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      *        </li>
      *        <li>
      *        <p>
-     *        <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves.
+     *        <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves. Note
+     *        that this uses the same quantity of read capacity units as getting the items, and is subject to the same
+     *        item size calculations.
      *        </p>
      *        </li>
      *        <li>
@@ -935,7 +949,9 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      * </li>
      * <li>
      * <p>
-     * <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves.
+     * <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves. Note that
+     * this uses the same quantity of read capacity units as getting the items, and is subject to the same item size
+     * calculations.
      * </p>
      * </li>
      * <li>
@@ -992,7 +1008,9 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      *        </li>
      *        <li>
      *        <p>
-     *        <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves.
+     *        <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves. Note
+     *        that this uses the same quantity of read capacity units as getting the items, and is subject to the same
+     *        item size calculations.
      *        </p>
      *        </li>
      *        <li>
@@ -1056,7 +1074,9 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      * </li>
      * <li>
      * <p>
-     * <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves.
+     * <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves. Note that
+     * this uses the same quantity of read capacity units as getting the items, and is subject to the same item size
+     * calculations.
      * </p>
      * </li>
      * <li>
@@ -1113,7 +1133,9 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
      *        </li>
      *        <li>
      *        <p>
-     *        <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves.
+     *        <code>COUNT</code> - Returns the number of matching items, rather than the matching items themselves. Note
+     *        that this uses the same quantity of read capacity units as getting the items, and is subject to the same
+     *        item size calculations.
      *        </p>
      *        </li>
      *        <li>

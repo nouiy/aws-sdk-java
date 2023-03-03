@@ -34,8 +34,8 @@ public class BucketCountBySharedAccessType implements Serializable, Cloneable, S
     /**
      * <p>
      * The total number of buckets that are shared with one or more of the following or any combination of the
-     * following: an Amazon Web Services account that isn't in the same Amazon Macie organization, an Amazon CloudFront
-     * OAI, or a CloudFront OAC.
+     * following: an Amazon CloudFront OAI, a CloudFront OAC, or an Amazon Web Services account that isn't in the same
+     * Amazon Macie organization.
      * </p>
      */
     private Long external;
@@ -65,14 +65,14 @@ public class BucketCountBySharedAccessType implements Serializable, Cloneable, S
     /**
      * <p>
      * The total number of buckets that are shared with one or more of the following or any combination of the
-     * following: an Amazon Web Services account that isn't in the same Amazon Macie organization, an Amazon CloudFront
-     * OAI, or a CloudFront OAC.
+     * following: an Amazon CloudFront OAI, a CloudFront OAC, or an Amazon Web Services account that isn't in the same
+     * Amazon Macie organization.
      * </p>
      * 
      * @param external
      *        The total number of buckets that are shared with one or more of the following or any combination of the
-     *        following: an Amazon Web Services account that isn't in the same Amazon Macie organization, an Amazon
-     *        CloudFront OAI, or a CloudFront OAC.
+     *        following: an Amazon CloudFront OAI, a CloudFront OAC, or an Amazon Web Services account that isn't in the
+     *        same Amazon Macie organization.
      */
 
     public void setExternal(Long external) {
@@ -82,13 +82,13 @@ public class BucketCountBySharedAccessType implements Serializable, Cloneable, S
     /**
      * <p>
      * The total number of buckets that are shared with one or more of the following or any combination of the
-     * following: an Amazon Web Services account that isn't in the same Amazon Macie organization, an Amazon CloudFront
-     * OAI, or a CloudFront OAC.
+     * following: an Amazon CloudFront OAI, a CloudFront OAC, or an Amazon Web Services account that isn't in the same
+     * Amazon Macie organization.
      * </p>
      * 
      * @return The total number of buckets that are shared with one or more of the following or any combination of the
-     *         following: an Amazon Web Services account that isn't in the same Amazon Macie organization, an Amazon
-     *         CloudFront OAI, or a CloudFront OAC.
+     *         following: an Amazon CloudFront OAI, a CloudFront OAC, or an Amazon Web Services account that isn't in
+     *         the same Amazon Macie organization.
      */
 
     public Long getExternal() {
@@ -98,14 +98,14 @@ public class BucketCountBySharedAccessType implements Serializable, Cloneable, S
     /**
      * <p>
      * The total number of buckets that are shared with one or more of the following or any combination of the
-     * following: an Amazon Web Services account that isn't in the same Amazon Macie organization, an Amazon CloudFront
-     * OAI, or a CloudFront OAC.
+     * following: an Amazon CloudFront OAI, a CloudFront OAC, or an Amazon Web Services account that isn't in the same
+     * Amazon Macie organization.
      * </p>
      * 
      * @param external
      *        The total number of buckets that are shared with one or more of the following or any combination of the
-     *        following: an Amazon Web Services account that isn't in the same Amazon Macie organization, an Amazon
-     *        CloudFront OAI, or a CloudFront OAC.
+     *        following: an Amazon CloudFront OAI, a CloudFront OAC, or an Amazon Web Services account that isn't in the
+     *        same Amazon Macie organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

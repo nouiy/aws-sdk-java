@@ -31,7 +31,7 @@ public class S3Bucket implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies whether the bucket policy for the bucket requires server-side encryption of objects when objects are
-     * uploaded to the bucket. Possible values are:
+     * added to the bucket. Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -75,7 +75,7 @@ public class S3Bucket implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date createdAt;
     /**
      * <p>
-     * The type of server-side encryption that's used by default to encrypt objects in the bucket.
+     * The default server-side encryption settings for the bucket.
      * </p>
      */
     private ServerSideEncryption defaultServerSideEncryption;
@@ -107,7 +107,7 @@ public class S3Bucket implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies whether the bucket policy for the bucket requires server-side encryption of objects when objects are
-     * uploaded to the bucket. Possible values are:
+     * added to the bucket. Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -136,7 +136,7 @@ public class S3Bucket implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param allowsUnencryptedObjectUploads
      *        Specifies whether the bucket policy for the bucket requires server-side encryption of objects when objects
-     *        are uploaded to the bucket. Possible values are:</p>
+     *        are added to the bucket. Possible values are:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -171,7 +171,7 @@ public class S3Bucket implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies whether the bucket policy for the bucket requires server-side encryption of objects when objects are
-     * uploaded to the bucket. Possible values are:
+     * added to the bucket. Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -199,7 +199,7 @@ public class S3Bucket implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @return Specifies whether the bucket policy for the bucket requires server-side encryption of objects when
-     *         objects are uploaded to the bucket. Possible values are:</p>
+     *         objects are added to the bucket. Possible values are:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -234,7 +234,7 @@ public class S3Bucket implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies whether the bucket policy for the bucket requires server-side encryption of objects when objects are
-     * uploaded to the bucket. Possible values are:
+     * added to the bucket. Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -263,7 +263,7 @@ public class S3Bucket implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param allowsUnencryptedObjectUploads
      *        Specifies whether the bucket policy for the bucket requires server-side encryption of objects when objects
-     *        are uploaded to the bucket. Possible values are:</p>
+     *        are added to the bucket. Possible values are:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -300,7 +300,7 @@ public class S3Bucket implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies whether the bucket policy for the bucket requires server-side encryption of objects when objects are
-     * uploaded to the bucket. Possible values are:
+     * added to the bucket. Possible values are:
      * </p>
      * <ul>
      * <li>
@@ -329,7 +329,7 @@ public class S3Bucket implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param allowsUnencryptedObjectUploads
      *        Specifies whether the bucket policy for the bucket requires server-side encryption of objects when objects
-     *        are uploaded to the bucket. Possible values are:</p>
+     *        are added to the bucket. Possible values are:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -457,11 +457,11 @@ public class S3Bucket implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of server-side encryption that's used by default to encrypt objects in the bucket.
+     * The default server-side encryption settings for the bucket.
      * </p>
      * 
      * @param defaultServerSideEncryption
-     *        The type of server-side encryption that's used by default to encrypt objects in the bucket.
+     *        The default server-side encryption settings for the bucket.
      */
 
     public void setDefaultServerSideEncryption(ServerSideEncryption defaultServerSideEncryption) {
@@ -470,10 +470,10 @@ public class S3Bucket implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of server-side encryption that's used by default to encrypt objects in the bucket.
+     * The default server-side encryption settings for the bucket.
      * </p>
      * 
-     * @return The type of server-side encryption that's used by default to encrypt objects in the bucket.
+     * @return The default server-side encryption settings for the bucket.
      */
 
     public ServerSideEncryption getDefaultServerSideEncryption() {
@@ -482,11 +482,11 @@ public class S3Bucket implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of server-side encryption that's used by default to encrypt objects in the bucket.
+     * The default server-side encryption settings for the bucket.
      * </p>
      * 
      * @param defaultServerSideEncryption
-     *        The type of server-side encryption that's used by default to encrypt objects in the bucket.
+     *        The default server-side encryption settings for the bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

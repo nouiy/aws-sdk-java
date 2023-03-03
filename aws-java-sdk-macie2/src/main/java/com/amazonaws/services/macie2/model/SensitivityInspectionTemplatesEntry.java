@@ -31,24 +31,24 @@ public class SensitivityInspectionTemplatesEntry implements Serializable, Clonea
 
     /**
      * <p>
-     * The unique identifier for the sensitivity inspection template for the account.
+     * The unique identifier for the sensitivity inspection template.
      * </p>
      */
     private String id;
     /**
      * <p>
-     * The name of the sensitivity inspection template for the account: automated-sensitive-data-discovery.
+     * The name of the sensitivity inspection template: automated-sensitive-data-discovery.
      * </p>
      */
     private String name;
 
     /**
      * <p>
-     * The unique identifier for the sensitivity inspection template for the account.
+     * The unique identifier for the sensitivity inspection template.
      * </p>
      * 
      * @param id
-     *        The unique identifier for the sensitivity inspection template for the account.
+     *        The unique identifier for the sensitivity inspection template.
      */
 
     public void setId(String id) {
@@ -57,10 +57,10 @@ public class SensitivityInspectionTemplatesEntry implements Serializable, Clonea
 
     /**
      * <p>
-     * The unique identifier for the sensitivity inspection template for the account.
+     * The unique identifier for the sensitivity inspection template.
      * </p>
      * 
-     * @return The unique identifier for the sensitivity inspection template for the account.
+     * @return The unique identifier for the sensitivity inspection template.
      */
 
     public String getId() {
@@ -69,11 +69,11 @@ public class SensitivityInspectionTemplatesEntry implements Serializable, Clonea
 
     /**
      * <p>
-     * The unique identifier for the sensitivity inspection template for the account.
+     * The unique identifier for the sensitivity inspection template.
      * </p>
      * 
      * @param id
-     *        The unique identifier for the sensitivity inspection template for the account.
+     *        The unique identifier for the sensitivity inspection template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,11 +84,11 @@ public class SensitivityInspectionTemplatesEntry implements Serializable, Clonea
 
     /**
      * <p>
-     * The name of the sensitivity inspection template for the account: automated-sensitive-data-discovery.
+     * The name of the sensitivity inspection template: automated-sensitive-data-discovery.
      * </p>
      * 
      * @param name
-     *        The name of the sensitivity inspection template for the account: automated-sensitive-data-discovery.
+     *        The name of the sensitivity inspection template: automated-sensitive-data-discovery.
      */
 
     public void setName(String name) {
@@ -97,10 +97,10 @@ public class SensitivityInspectionTemplatesEntry implements Serializable, Clonea
 
     /**
      * <p>
-     * The name of the sensitivity inspection template for the account: automated-sensitive-data-discovery.
+     * The name of the sensitivity inspection template: automated-sensitive-data-discovery.
      * </p>
      * 
-     * @return The name of the sensitivity inspection template for the account: automated-sensitive-data-discovery.
+     * @return The name of the sensitivity inspection template: automated-sensitive-data-discovery.
      */
 
     public String getName() {
@@ -109,11 +109,11 @@ public class SensitivityInspectionTemplatesEntry implements Serializable, Clonea
 
     /**
      * <p>
-     * The name of the sensitivity inspection template for the account: automated-sensitive-data-discovery.
+     * The name of the sensitivity inspection template: automated-sensitive-data-discovery.
      * </p>
      * 
      * @param name
-     *        The name of the sensitivity inspection template for the account: automated-sensitive-data-discovery.
+     *        The name of the sensitivity inspection template: automated-sensitive-data-discovery.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

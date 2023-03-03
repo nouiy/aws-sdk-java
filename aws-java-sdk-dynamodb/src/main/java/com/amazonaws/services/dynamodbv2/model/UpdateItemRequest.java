@@ -73,7 +73,7 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * Use <code>ReturnValues</code> if you want to get the item attributes as they appear before or after they are
-     * updated. For <code>UpdateItem</code>, the valid values are:
+     * successfully updated. For <code>UpdateItem</code>, the valid values are:
      * </p>
      * <ul>
      * <li>
@@ -423,7 +423,7 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        >AttributeUpdates</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      * @param returnValues
      *        Use <code>ReturnValues</code> if you want to get the item attributes as they appear before or after they
-     *        are updated. For <code>UpdateItem</code>, the valid values are:
+     *        are successfully updated. For <code>UpdateItem</code>, the valid values are:
      *        </p>
      *        <ul>
      *        <li>
@@ -491,7 +491,7 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        >AttributeUpdates</a> in the <i>Amazon DynamoDB Developer Guide</i>.
      * @param returnValues
      *        Use <code>ReturnValues</code> if you want to get the item attributes as they appear before or after they
-     *        are updated. For <code>UpdateItem</code>, the valid values are:
+     *        are successfully updated. For <code>UpdateItem</code>, the valid values are:
      *        </p>
      *        <ul>
      *        <li>
@@ -945,7 +945,7 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * Use <code>ReturnValues</code> if you want to get the item attributes as they appear before or after they are
-     * updated. For <code>UpdateItem</code>, the valid values are:
+     * successfully updated. For <code>UpdateItem</code>, the valid values are:
      * </p>
      * <ul>
      * <li>
@@ -986,7 +986,7 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * 
      * @param returnValues
      *        Use <code>ReturnValues</code> if you want to get the item attributes as they appear before or after they
-     *        are updated. For <code>UpdateItem</code>, the valid values are:</p>
+     *        are successfully updated. For <code>UpdateItem</code>, the valid values are:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1035,7 +1035,7 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * Use <code>ReturnValues</code> if you want to get the item attributes as they appear before or after they are
-     * updated. For <code>UpdateItem</code>, the valid values are:
+     * successfully updated. For <code>UpdateItem</code>, the valid values are:
      * </p>
      * <ul>
      * <li>
@@ -1075,7 +1075,7 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      * 
      * @return Use <code>ReturnValues</code> if you want to get the item attributes as they appear before or after they
-     *         are updated. For <code>UpdateItem</code>, the valid values are:</p>
+     *         are successfully updated. For <code>UpdateItem</code>, the valid values are:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -1124,7 +1124,7 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * Use <code>ReturnValues</code> if you want to get the item attributes as they appear before or after they are
-     * updated. For <code>UpdateItem</code>, the valid values are:
+     * successfully updated. For <code>UpdateItem</code>, the valid values are:
      * </p>
      * <ul>
      * <li>
@@ -1165,7 +1165,7 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * 
      * @param returnValues
      *        Use <code>ReturnValues</code> if you want to get the item attributes as they appear before or after they
-     *        are updated. For <code>UpdateItem</code>, the valid values are:</p>
+     *        are successfully updated. For <code>UpdateItem</code>, the valid values are:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1216,7 +1216,7 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * Use <code>ReturnValues</code> if you want to get the item attributes as they appear before or after they are
-     * updated. For <code>UpdateItem</code>, the valid values are:
+     * successfully updated. For <code>UpdateItem</code>, the valid values are:
      * </p>
      * <ul>
      * <li>
@@ -1257,7 +1257,7 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * 
      * @param returnValues
      *        Use <code>ReturnValues</code> if you want to get the item attributes as they appear before or after they
-     *        are updated. For <code>UpdateItem</code>, the valid values are:</p>
+     *        are successfully updated. For <code>UpdateItem</code>, the valid values are:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1306,7 +1306,7 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * Use <code>ReturnValues</code> if you want to get the item attributes as they appear before or after they are
-     * updated. For <code>UpdateItem</code>, the valid values are:
+     * successfully updated. For <code>UpdateItem</code>, the valid values are:
      * </p>
      * <ul>
      * <li>
@@ -1347,7 +1347,7 @@ public class UpdateItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * 
      * @param returnValues
      *        Use <code>ReturnValues</code> if you want to get the item attributes as they appear before or after they
-     *        are updated. For <code>UpdateItem</code>, the valid values are:</p>
+     *        are successfully updated. For <code>UpdateItem</code>, the valid values are:</p>
      *        <ul>
      *        <li>
      *        <p>

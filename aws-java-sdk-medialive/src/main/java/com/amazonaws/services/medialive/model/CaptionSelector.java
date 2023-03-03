@@ -18,7 +18,7 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * Output groups for this Live Event. Output groups contain information about where streams should be distributed.
+ * Caption Selector
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/CaptionSelector" target="_top">AWS API
  *      Documentation</a>

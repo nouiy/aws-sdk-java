@@ -56,6 +56,10 @@ public class NielsenNaesIiNwJsonUnmarshaller implements Unmarshaller<NielsenNaes
                     context.nextToken();
                     nielsenNaesIiNw.setSid(context.getUnmarshaller(Double.class).unmarshall(context));
                 }
+                if (context.testExpression("timezone", targetDepth)) {
+                    context.nextToken();
+                    nielsenNaesIiNw.setTimezone(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

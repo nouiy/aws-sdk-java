@@ -148,9 +148,17 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
     private String virtualizationType;
     /**
      * <p>
-     * The boot mode of the AMI. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
-     * Guide</i>.
+     * The boot mode of the AMI. A value of <code>uefi-preferred</code> indicates that the AMI supports both UEFI and
+     * Legacy BIOS.
+     * </p>
+     * <note>
+     * <p>
+     * The operating system contained in the AMI must be configured to support the specified boot mode.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private String bootMode;
@@ -1129,15 +1137,29 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
 
     /**
      * <p>
-     * The boot mode of the AMI. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
-     * Guide</i>.
+     * The boot mode of the AMI. A value of <code>uefi-preferred</code> indicates that the AMI supports both UEFI and
+     * Legacy BIOS.
+     * </p>
+     * <note>
+     * <p>
+     * The operating system contained in the AMI must be configured to support the specified boot mode.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param bootMode
-     *        The boot mode of the AMI. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon
-     *        EC2 User Guide</i>.
+     *        The boot mode of the AMI. A value of <code>uefi-preferred</code> indicates that the AMI supports both UEFI
+     *        and Legacy BIOS.</p> <note>
+     *        <p>
+     *        The operating system contained in the AMI must be configured to support the specified boot mode.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     *        modes</a> in the <i>Amazon EC2 User Guide</i>.
      * @see BootModeValues
      */
 
@@ -1147,12 +1169,27 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
 
     /**
      * <p>
-     * The boot mode of the AMI. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
-     * Guide</i>.
+     * The boot mode of the AMI. A value of <code>uefi-preferred</code> indicates that the AMI supports both UEFI and
+     * Legacy BIOS.
+     * </p>
+     * <note>
+     * <p>
+     * The operating system contained in the AMI must be configured to support the specified boot mode.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
-     * @return The boot mode of the AMI. For more information, see <a
+     * @return The boot mode of the AMI. A value of <code>uefi-preferred</code> indicates that the AMI supports both
+     *         UEFI and Legacy BIOS.</p> <note>
+     *         <p>
+     *         The operating system contained in the AMI must be configured to support the specified boot mode.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon
      *         EC2 User Guide</i>.
      * @see BootModeValues
@@ -1164,15 +1201,29 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
 
     /**
      * <p>
-     * The boot mode of the AMI. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
-     * Guide</i>.
+     * The boot mode of the AMI. A value of <code>uefi-preferred</code> indicates that the AMI supports both UEFI and
+     * Legacy BIOS.
+     * </p>
+     * <note>
+     * <p>
+     * The operating system contained in the AMI must be configured to support the specified boot mode.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param bootMode
-     *        The boot mode of the AMI. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon
-     *        EC2 User Guide</i>.
+     *        The boot mode of the AMI. A value of <code>uefi-preferred</code> indicates that the AMI supports both UEFI
+     *        and Legacy BIOS.</p> <note>
+     *        <p>
+     *        The operating system contained in the AMI must be configured to support the specified boot mode.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     *        modes</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BootModeValues
      */
@@ -1184,15 +1235,29 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
 
     /**
      * <p>
-     * The boot mode of the AMI. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
-     * Guide</i>.
+     * The boot mode of the AMI. A value of <code>uefi-preferred</code> indicates that the AMI supports both UEFI and
+     * Legacy BIOS.
+     * </p>
+     * <note>
+     * <p>
+     * The operating system contained in the AMI must be configured to support the specified boot mode.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param bootMode
-     *        The boot mode of the AMI. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon
-     *        EC2 User Guide</i>.
+     *        The boot mode of the AMI. A value of <code>uefi-preferred</code> indicates that the AMI supports both UEFI
+     *        and Legacy BIOS.</p> <note>
+     *        <p>
+     *        The operating system contained in the AMI must be configured to support the specified boot mode.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     *        modes</a> in the <i>Amazon EC2 User Guide</i>.
      * @see BootModeValues
      */
 
@@ -1202,15 +1267,29 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
 
     /**
      * <p>
-     * The boot mode of the AMI. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
-     * Guide</i>.
+     * The boot mode of the AMI. A value of <code>uefi-preferred</code> indicates that the AMI supports both UEFI and
+     * Legacy BIOS.
+     * </p>
+     * <note>
+     * <p>
+     * The operating system contained in the AMI must be configured to support the specified boot mode.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param bootMode
-     *        The boot mode of the AMI. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon
-     *        EC2 User Guide</i>.
+     *        The boot mode of the AMI. A value of <code>uefi-preferred</code> indicates that the AMI supports both UEFI
+     *        and Legacy BIOS.</p> <note>
+     *        <p>
+     *        The operating system contained in the AMI must be configured to support the specified boot mode.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     *        modes</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BootModeValues
      */

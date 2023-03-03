@@ -131,8 +131,8 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <note>
      * <p>
      * This property only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version
-     * 2019.11.21</a> of global tables.
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
+     * (Current)</a> of global tables.
      * </p>
      * </note>
      */
@@ -942,8 +942,8 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <note>
      * <p>
      * This property only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version
-     * 2019.11.21</a> of global tables.
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
+     * (Current)</a> of global tables.
      * </p>
      * </note>
      * 
@@ -951,7 +951,7 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         <p>
      *         This property only applies to <a
      *         href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version
-     *         2019.11.21</a> of global tables.
+     *         2019.11.21 (Current)</a> of global tables.
      *         </p>
      */
 
@@ -966,8 +966,8 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <note>
      * <p>
      * This property only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version
-     * 2019.11.21</a> of global tables.
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
+     * (Current)</a> of global tables.
      * </p>
      * </note>
      * 
@@ -976,7 +976,7 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        This property only applies to <a
      *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version
-     *        2019.11.21</a> of global tables.
+     *        2019.11.21 (Current)</a> of global tables.
      *        </p>
      */
 
@@ -996,8 +996,8 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <note>
      * <p>
      * This property only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version
-     * 2019.11.21</a> of global tables.
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
+     * (Current)</a> of global tables.
      * </p>
      * </note>
      * <p>
@@ -1011,7 +1011,7 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        This property only applies to <a
      *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version
-     *        2019.11.21</a> of global tables.
+     *        2019.11.21 (Current)</a> of global tables.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1033,8 +1033,8 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <note>
      * <p>
      * This property only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version
-     * 2019.11.21</a> of global tables.
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
+     * (Current)</a> of global tables.
      * </p>
      * </note>
      * 
@@ -1043,7 +1043,7 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        This property only applies to <a
      *        href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version
-     *        2019.11.21</a> of global tables.
+     *        2019.11.21 (Current)</a> of global tables.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

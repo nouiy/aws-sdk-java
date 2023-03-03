@@ -15,11 +15,10 @@ package com.amazonaws.services.mediaconvert.model;
 import javax.annotation.Generated;
 
 /**
- * Specify the strength of the Bandwidth reduction filter. For most workflows, we recommend that you choose Auto. Your
- * output bandwidth will be reduced by at least 8 percent with no perceptual decrease in video quality. If your output
- * bandwidth isn't constrained, set Filter strength to Low or Medium. Low results in minimal to no impact in perceptual
- * quality. For more bandwidth reduction, choose High. The filter helps equalize quality between all scenes and
- * increases video softness. We recommend that you choose High for low bitrate outputs.
+ * Specify the strength of the Bandwidth reduction filter. For most workflows, we recommend that you choose Auto to
+ * reduce the bandwidth of your output with little to no perceptual decrease in video quality. For high quality and high
+ * bitrate outputs, choose Low. For the most bandwidth reduction, choose High. We recommend that you choose High for low
+ * bitrate outputs. Note that High may incur a slight increase in the softness of your output.
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum BandwidthReductionFilterStrength {

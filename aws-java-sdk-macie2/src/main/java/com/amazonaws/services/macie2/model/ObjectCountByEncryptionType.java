@@ -52,7 +52,7 @@ public class ObjectCountByEncryptionType implements Serializable, Cloneable, Str
     private Long s3Managed;
     /**
      * <p>
-     * The total number of objects that aren't encrypted or use client-side encryption.
+     * The total number of objects that use client-side encryption or aren't encrypted.
      * </p>
      */
     private Long unencrypted;
@@ -204,11 +204,11 @@ public class ObjectCountByEncryptionType implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The total number of objects that aren't encrypted or use client-side encryption.
+     * The total number of objects that use client-side encryption or aren't encrypted.
      * </p>
      * 
      * @param unencrypted
-     *        The total number of objects that aren't encrypted or use client-side encryption.
+     *        The total number of objects that use client-side encryption or aren't encrypted.
      */
 
     public void setUnencrypted(Long unencrypted) {
@@ -217,10 +217,10 @@ public class ObjectCountByEncryptionType implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The total number of objects that aren't encrypted or use client-side encryption.
+     * The total number of objects that use client-side encryption or aren't encrypted.
      * </p>
      * 
-     * @return The total number of objects that aren't encrypted or use client-side encryption.
+     * @return The total number of objects that use client-side encryption or aren't encrypted.
      */
 
     public Long getUnencrypted() {
@@ -229,11 +229,11 @@ public class ObjectCountByEncryptionType implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The total number of objects that aren't encrypted or use client-side encryption.
+     * The total number of objects that use client-side encryption or aren't encrypted.
      * </p>
      * 
      * @param unencrypted
-     *        The total number of objects that aren't encrypted or use client-side encryption.
+     *        The total number of objects that use client-side encryption or aren't encrypted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

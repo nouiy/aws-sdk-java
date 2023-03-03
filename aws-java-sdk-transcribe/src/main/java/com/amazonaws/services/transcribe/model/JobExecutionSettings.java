@@ -43,9 +43,6 @@ public class JobExecutionSettings implements Serializable, Cloneable, Structured
      * <code>LimitExceededException</code> error.
      * </p>
      * <p>
-     * Note that job queuing is enabled by default for Call Analytics jobs.
-     * </p>
-     * <p>
      * If you include <code>AllowDeferredExecution</code> in your request, you must also include
      * <code>DataAccessRoleArn</code>.
      * </p>
@@ -78,9 +75,6 @@ public class JobExecutionSettings implements Serializable, Cloneable, Structured
      * <code>LimitExceededException</code> error.
      * </p>
      * <p>
-     * Note that job queuing is enabled by default for Call Analytics jobs.
-     * </p>
-     * <p>
      * If you include <code>AllowDeferredExecution</code> in your request, you must also include
      * <code>DataAccessRoleArn</code>.
      * </p>
@@ -91,9 +85,6 @@ public class JobExecutionSettings implements Serializable, Cloneable, Structured
      *        a queue until the number of jobs falls below the concurrent request limit. If
      *        <code>AllowDeferredExecution</code> is set to <code>false</code> and the number of transcription job
      *        requests exceed the concurrent request limit, you get a <code>LimitExceededException</code> error.</p>
-     *        <p>
-     *        Note that job queuing is enabled by default for Call Analytics jobs.
-     *        </p>
      *        <p>
      *        If you include <code>AllowDeferredExecution</code> in your request, you must also include
      *        <code>DataAccessRoleArn</code>.
@@ -112,9 +103,6 @@ public class JobExecutionSettings implements Serializable, Cloneable, Structured
      * <code>LimitExceededException</code> error.
      * </p>
      * <p>
-     * Note that job queuing is enabled by default for Call Analytics jobs.
-     * </p>
-     * <p>
      * If you include <code>AllowDeferredExecution</code> in your request, you must also include
      * <code>DataAccessRoleArn</code>.
      * </p>
@@ -124,9 +112,6 @@ public class JobExecutionSettings implements Serializable, Cloneable, Structured
      *         a queue until the number of jobs falls below the concurrent request limit. If
      *         <code>AllowDeferredExecution</code> is set to <code>false</code> and the number of transcription job
      *         requests exceed the concurrent request limit, you get a <code>LimitExceededException</code> error.</p>
-     *         <p>
-     *         Note that job queuing is enabled by default for Call Analytics jobs.
-     *         </p>
      *         <p>
      *         If you include <code>AllowDeferredExecution</code> in your request, you must also include
      *         <code>DataAccessRoleArn</code>.
@@ -145,9 +130,6 @@ public class JobExecutionSettings implements Serializable, Cloneable, Structured
      * <code>LimitExceededException</code> error.
      * </p>
      * <p>
-     * Note that job queuing is enabled by default for Call Analytics jobs.
-     * </p>
-     * <p>
      * If you include <code>AllowDeferredExecution</code> in your request, you must also include
      * <code>DataAccessRoleArn</code>.
      * </p>
@@ -158,9 +140,6 @@ public class JobExecutionSettings implements Serializable, Cloneable, Structured
      *        a queue until the number of jobs falls below the concurrent request limit. If
      *        <code>AllowDeferredExecution</code> is set to <code>false</code> and the number of transcription job
      *        requests exceed the concurrent request limit, you get a <code>LimitExceededException</code> error.</p>
-     *        <p>
-     *        Note that job queuing is enabled by default for Call Analytics jobs.
-     *        </p>
      *        <p>
      *        If you include <code>AllowDeferredExecution</code> in your request, you must also include
      *        <code>DataAccessRoleArn</code>.
@@ -181,9 +160,6 @@ public class JobExecutionSettings implements Serializable, Cloneable, Structured
      * <code>LimitExceededException</code> error.
      * </p>
      * <p>
-     * Note that job queuing is enabled by default for Call Analytics jobs.
-     * </p>
-     * <p>
      * If you include <code>AllowDeferredExecution</code> in your request, you must also include
      * <code>DataAccessRoleArn</code>.
      * </p>
@@ -193,9 +169,6 @@ public class JobExecutionSettings implements Serializable, Cloneable, Structured
      *         a queue until the number of jobs falls below the concurrent request limit. If
      *         <code>AllowDeferredExecution</code> is set to <code>false</code> and the number of transcription job
      *         requests exceed the concurrent request limit, you get a <code>LimitExceededException</code> error.</p>
-     *         <p>
-     *         Note that job queuing is enabled by default for Call Analytics jobs.
-     *         </p>
      *         <p>
      *         If you include <code>AllowDeferredExecution</code> in your request, you must also include
      *         <code>DataAccessRoleArn</code>.

@@ -38,15 +38,15 @@ public class GetBucketStatisticsResult extends com.amazonaws.AmazonWebServiceRes
     private BucketCountByEffectivePermission bucketCountByEffectivePermission;
     /**
      * <p>
-     * The total number of buckets that use certain types of server-side encryption to encrypt new objects by default.
-     * This object also reports the total number of buckets that don't encrypt new objects by default.
+     * The total number of buckets whose settings do or don't specify default server-side encryption behavior for
+     * objects that are added to the buckets.
      * </p>
      */
     private BucketCountByEncryptionType bucketCountByEncryptionType;
     /**
      * <p>
      * The total number of buckets whose bucket policies do or don't require server-side encryption of objects when
-     * objects are uploaded to the buckets.
+     * objects are added to the buckets.
      * </p>
      */
     private BucketCountPolicyAllowsUnencryptedObjectUploads bucketCountByObjectEncryptionRequirement;
@@ -220,13 +220,13 @@ public class GetBucketStatisticsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The total number of buckets that use certain types of server-side encryption to encrypt new objects by default.
-     * This object also reports the total number of buckets that don't encrypt new objects by default.
+     * The total number of buckets whose settings do or don't specify default server-side encryption behavior for
+     * objects that are added to the buckets.
      * </p>
      * 
      * @param bucketCountByEncryptionType
-     *        The total number of buckets that use certain types of server-side encryption to encrypt new objects by
-     *        default. This object also reports the total number of buckets that don't encrypt new objects by default.
+     *        The total number of buckets whose settings do or don't specify default server-side encryption behavior for
+     *        objects that are added to the buckets.
      */
 
     public void setBucketCountByEncryptionType(BucketCountByEncryptionType bucketCountByEncryptionType) {
@@ -235,12 +235,12 @@ public class GetBucketStatisticsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The total number of buckets that use certain types of server-side encryption to encrypt new objects by default.
-     * This object also reports the total number of buckets that don't encrypt new objects by default.
+     * The total number of buckets whose settings do or don't specify default server-side encryption behavior for
+     * objects that are added to the buckets.
      * </p>
      * 
-     * @return The total number of buckets that use certain types of server-side encryption to encrypt new objects by
-     *         default. This object also reports the total number of buckets that don't encrypt new objects by default.
+     * @return The total number of buckets whose settings do or don't specify default server-side encryption behavior
+     *         for objects that are added to the buckets.
      */
 
     public BucketCountByEncryptionType getBucketCountByEncryptionType() {
@@ -249,13 +249,13 @@ public class GetBucketStatisticsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The total number of buckets that use certain types of server-side encryption to encrypt new objects by default.
-     * This object also reports the total number of buckets that don't encrypt new objects by default.
+     * The total number of buckets whose settings do or don't specify default server-side encryption behavior for
+     * objects that are added to the buckets.
      * </p>
      * 
      * @param bucketCountByEncryptionType
-     *        The total number of buckets that use certain types of server-side encryption to encrypt new objects by
-     *        default. This object also reports the total number of buckets that don't encrypt new objects by default.
+     *        The total number of buckets whose settings do or don't specify default server-side encryption behavior for
+     *        objects that are added to the buckets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -267,12 +267,12 @@ public class GetBucketStatisticsResult extends com.amazonaws.AmazonWebServiceRes
     /**
      * <p>
      * The total number of buckets whose bucket policies do or don't require server-side encryption of objects when
-     * objects are uploaded to the buckets.
+     * objects are added to the buckets.
      * </p>
      * 
      * @param bucketCountByObjectEncryptionRequirement
      *        The total number of buckets whose bucket policies do or don't require server-side encryption of objects
-     *        when objects are uploaded to the buckets.
+     *        when objects are added to the buckets.
      */
 
     public void setBucketCountByObjectEncryptionRequirement(BucketCountPolicyAllowsUnencryptedObjectUploads bucketCountByObjectEncryptionRequirement) {
@@ -282,11 +282,11 @@ public class GetBucketStatisticsResult extends com.amazonaws.AmazonWebServiceRes
     /**
      * <p>
      * The total number of buckets whose bucket policies do or don't require server-side encryption of objects when
-     * objects are uploaded to the buckets.
+     * objects are added to the buckets.
      * </p>
      * 
      * @return The total number of buckets whose bucket policies do or don't require server-side encryption of objects
-     *         when objects are uploaded to the buckets.
+     *         when objects are added to the buckets.
      */
 
     public BucketCountPolicyAllowsUnencryptedObjectUploads getBucketCountByObjectEncryptionRequirement() {
@@ -296,12 +296,12 @@ public class GetBucketStatisticsResult extends com.amazonaws.AmazonWebServiceRes
     /**
      * <p>
      * The total number of buckets whose bucket policies do or don't require server-side encryption of objects when
-     * objects are uploaded to the buckets.
+     * objects are added to the buckets.
      * </p>
      * 
      * @param bucketCountByObjectEncryptionRequirement
      *        The total number of buckets whose bucket policies do or don't require server-side encryption of objects
-     *        when objects are uploaded to the buckets.
+     *        when objects are added to the buckets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

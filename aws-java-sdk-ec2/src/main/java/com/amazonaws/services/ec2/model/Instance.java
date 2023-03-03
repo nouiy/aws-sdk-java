@@ -328,9 +328,18 @@ public class Instance implements Serializable, Cloneable {
     private EnclaveOptions enclaveOptions;
     /**
      * <p>
-     * The boot mode of the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
-     * Guide</i>.
+     * The boot mode that was specified by the AMI. If the value is <code>uefi-preferred</code>, the AMI supports both
+     * UEFI and Legacy BIOS. The <code>currentInstanceBootMode</code> parameter is the boot mode that is used to boot
+     * the instance at launch or start.
+     * </p>
+     * <note>
+     * <p>
+     * The operating system contained in the AMI must be configured to support the specified boot mode.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private String bootMode;
@@ -382,6 +391,14 @@ public class Instance implements Serializable, Cloneable {
      * </p>
      */
     private InstanceMaintenanceOptions maintenanceOptions;
+    /**
+     * <p>
+     * The boot mode that is used to boot the instance at launch or start. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
+     * Guide</i>.
+     * </p>
+     */
+    private String currentInstanceBootMode;
 
     /**
      * <p>
@@ -2928,15 +2945,31 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The boot mode of the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
-     * Guide</i>.
+     * The boot mode that was specified by the AMI. If the value is <code>uefi-preferred</code>, the AMI supports both
+     * UEFI and Legacy BIOS. The <code>currentInstanceBootMode</code> parameter is the boot mode that is used to boot
+     * the instance at launch or start.
+     * </p>
+     * <note>
+     * <p>
+     * The operating system contained in the AMI must be configured to support the specified boot mode.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param bootMode
-     *        The boot mode of the instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon
-     *        EC2 User Guide</i>.
+     *        The boot mode that was specified by the AMI. If the value is <code>uefi-preferred</code>, the AMI supports
+     *        both UEFI and Legacy BIOS. The <code>currentInstanceBootMode</code> parameter is the boot mode that is
+     *        used to boot the instance at launch or start.</p> <note>
+     *        <p>
+     *        The operating system contained in the AMI must be configured to support the specified boot mode.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     *        modes</a> in the <i>Amazon EC2 User Guide</i>.
      * @see BootModeValues
      */
 
@@ -2946,12 +2979,29 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The boot mode of the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
-     * Guide</i>.
+     * The boot mode that was specified by the AMI. If the value is <code>uefi-preferred</code>, the AMI supports both
+     * UEFI and Legacy BIOS. The <code>currentInstanceBootMode</code> parameter is the boot mode that is used to boot
+     * the instance at launch or start.
+     * </p>
+     * <note>
+     * <p>
+     * The operating system contained in the AMI must be configured to support the specified boot mode.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
-     * @return The boot mode of the instance. For more information, see <a
+     * @return The boot mode that was specified by the AMI. If the value is <code>uefi-preferred</code>, the AMI
+     *         supports both UEFI and Legacy BIOS. The <code>currentInstanceBootMode</code> parameter is the boot mode
+     *         that is used to boot the instance at launch or start.</p> <note>
+     *         <p>
+     *         The operating system contained in the AMI must be configured to support the specified boot mode.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon
      *         EC2 User Guide</i>.
      * @see BootModeValues
@@ -2963,15 +3013,31 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The boot mode of the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
-     * Guide</i>.
+     * The boot mode that was specified by the AMI. If the value is <code>uefi-preferred</code>, the AMI supports both
+     * UEFI and Legacy BIOS. The <code>currentInstanceBootMode</code> parameter is the boot mode that is used to boot
+     * the instance at launch or start.
+     * </p>
+     * <note>
+     * <p>
+     * The operating system contained in the AMI must be configured to support the specified boot mode.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param bootMode
-     *        The boot mode of the instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon
-     *        EC2 User Guide</i>.
+     *        The boot mode that was specified by the AMI. If the value is <code>uefi-preferred</code>, the AMI supports
+     *        both UEFI and Legacy BIOS. The <code>currentInstanceBootMode</code> parameter is the boot mode that is
+     *        used to boot the instance at launch or start.</p> <note>
+     *        <p>
+     *        The operating system contained in the AMI must be configured to support the specified boot mode.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     *        modes</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BootModeValues
      */
@@ -2983,15 +3049,31 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The boot mode of the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
-     * Guide</i>.
+     * The boot mode that was specified by the AMI. If the value is <code>uefi-preferred</code>, the AMI supports both
+     * UEFI and Legacy BIOS. The <code>currentInstanceBootMode</code> parameter is the boot mode that is used to boot
+     * the instance at launch or start.
+     * </p>
+     * <note>
+     * <p>
+     * The operating system contained in the AMI must be configured to support the specified boot mode.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param bootMode
-     *        The boot mode of the instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon
-     *        EC2 User Guide</i>.
+     *        The boot mode that was specified by the AMI. If the value is <code>uefi-preferred</code>, the AMI supports
+     *        both UEFI and Legacy BIOS. The <code>currentInstanceBootMode</code> parameter is the boot mode that is
+     *        used to boot the instance at launch or start.</p> <note>
+     *        <p>
+     *        The operating system contained in the AMI must be configured to support the specified boot mode.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     *        modes</a> in the <i>Amazon EC2 User Guide</i>.
      * @see BootModeValues
      */
 
@@ -3001,15 +3083,31 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The boot mode of the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
-     * Guide</i>.
+     * The boot mode that was specified by the AMI. If the value is <code>uefi-preferred</code>, the AMI supports both
+     * UEFI and Legacy BIOS. The <code>currentInstanceBootMode</code> parameter is the boot mode that is used to boot
+     * the instance at launch or start.
+     * </p>
+     * <note>
+     * <p>
+     * The operating system contained in the AMI must be configured to support the specified boot mode.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     * modes</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param bootMode
-     *        The boot mode of the instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon
-     *        EC2 User Guide</i>.
+     *        The boot mode that was specified by the AMI. If the value is <code>uefi-preferred</code>, the AMI supports
+     *        both UEFI and Legacy BIOS. The <code>currentInstanceBootMode</code> parameter is the boot mode that is
+     *        used to boot the instance at launch or start.</p> <note>
+     *        <p>
+     *        The operating system contained in the AMI must be configured to support the specified boot mode.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot
+     *        modes</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BootModeValues
      */
@@ -3336,6 +3434,99 @@ public class Instance implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The boot mode that is used to boot the instance at launch or start. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param currentInstanceBootMode
+     *        The boot mode that is used to boot the instance at launch or start. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon
+     *        EC2 User Guide</i>.
+     * @see InstanceBootModeValues
+     */
+
+    public void setCurrentInstanceBootMode(String currentInstanceBootMode) {
+        this.currentInstanceBootMode = currentInstanceBootMode;
+    }
+
+    /**
+     * <p>
+     * The boot mode that is used to boot the instance at launch or start. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
+     * Guide</i>.
+     * </p>
+     * 
+     * @return The boot mode that is used to boot the instance at launch or start. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon
+     *         EC2 User Guide</i>.
+     * @see InstanceBootModeValues
+     */
+
+    public String getCurrentInstanceBootMode() {
+        return this.currentInstanceBootMode;
+    }
+
+    /**
+     * <p>
+     * The boot mode that is used to boot the instance at launch or start. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param currentInstanceBootMode
+     *        The boot mode that is used to boot the instance at launch or start. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon
+     *        EC2 User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InstanceBootModeValues
+     */
+
+    public Instance withCurrentInstanceBootMode(String currentInstanceBootMode) {
+        setCurrentInstanceBootMode(currentInstanceBootMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The boot mode that is used to boot the instance at launch or start. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param currentInstanceBootMode
+     *        The boot mode that is used to boot the instance at launch or start. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon
+     *        EC2 User Guide</i>.
+     * @see InstanceBootModeValues
+     */
+
+    public void setCurrentInstanceBootMode(InstanceBootModeValues currentInstanceBootMode) {
+        withCurrentInstanceBootMode(currentInstanceBootMode);
+    }
+
+    /**
+     * <p>
+     * The boot mode that is used to boot the instance at launch or start. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param currentInstanceBootMode
+     *        The boot mode that is used to boot the instance at launch or start. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon
+     *        EC2 User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InstanceBootModeValues
+     */
+
+    public Instance withCurrentInstanceBootMode(InstanceBootModeValues currentInstanceBootMode) {
+        this.currentInstanceBootMode = currentInstanceBootMode.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3458,7 +3649,9 @@ public class Instance implements Serializable, Cloneable {
         if (getTpmSupport() != null)
             sb.append("TpmSupport: ").append(getTpmSupport()).append(",");
         if (getMaintenanceOptions() != null)
-            sb.append("MaintenanceOptions: ").append(getMaintenanceOptions());
+            sb.append("MaintenanceOptions: ").append(getMaintenanceOptions()).append(",");
+        if (getCurrentInstanceBootMode() != null)
+            sb.append("CurrentInstanceBootMode: ").append(getCurrentInstanceBootMode());
         sb.append("}");
         return sb.toString();
     }
@@ -3699,6 +3892,10 @@ public class Instance implements Serializable, Cloneable {
             return false;
         if (other.getMaintenanceOptions() != null && other.getMaintenanceOptions().equals(this.getMaintenanceOptions()) == false)
             return false;
+        if (other.getCurrentInstanceBootMode() == null ^ this.getCurrentInstanceBootMode() == null)
+            return false;
+        if (other.getCurrentInstanceBootMode() != null && other.getCurrentInstanceBootMode().equals(this.getCurrentInstanceBootMode()) == false)
+            return false;
         return true;
     }
 
@@ -3763,6 +3960,7 @@ public class Instance implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getIpv6Address() == null) ? 0 : getIpv6Address().hashCode());
         hashCode = prime * hashCode + ((getTpmSupport() == null) ? 0 : getTpmSupport().hashCode());
         hashCode = prime * hashCode + ((getMaintenanceOptions() == null) ? 0 : getMaintenanceOptions().hashCode());
+        hashCode = prime * hashCode + ((getCurrentInstanceBootMode() == null) ? 0 : getCurrentInstanceBootMode().hashCode());
         return hashCode;
     }
 

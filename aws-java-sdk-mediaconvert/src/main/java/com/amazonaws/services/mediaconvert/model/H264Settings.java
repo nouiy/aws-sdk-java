@@ -40,8 +40,8 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
      * The Bandwidth reduction filter increases the video quality of your output relative to its bitrate. Use to lower
      * the bitrate of your constant quality QVBR output, with little or no perceptual decrease in quality. Or, use to
      * increase the video quality of outputs with other rate control modes relative to the bitrate that you specify.
-     * Bandwidth reduction increases further when your input is low quality or noisy.Outputs that use this feature incur
-     * pro-tier pricing.When you include Bandwidth reduction filter, you cannot include the Noise reducer preprocessor.
+     * Bandwidth reduction increases further when your input is low quality or noisy. Outputs that use this feature incur
+     * pro-tier pricing. When you include Bandwidth reduction filter, you cannot include the Noise reducer preprocessor.
      */
     private BandwidthReductionFilter bandwidthReductionFilter;
     /**
@@ -435,15 +435,15 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
      * The Bandwidth reduction filter increases the video quality of your output relative to its bitrate. Use to lower
      * the bitrate of your constant quality QVBR output, with little or no perceptual decrease in quality. Or, use to
      * increase the video quality of outputs with other rate control modes relative to the bitrate that you specify.
-     * Bandwidth reduction increases further when your input is low quality or noisy.Outputs that use this feature incur
-     * pro-tier pricing.When you include Bandwidth reduction filter, you cannot include the Noise reducer preprocessor.
+     * Bandwidth reduction increases further when your input is low quality or noisy. Outputs that use this feature incur
+     * pro-tier pricing. When you include Bandwidth reduction filter, you cannot include the Noise reducer preprocessor.
      * 
      * @param bandwidthReductionFilter
      *        The Bandwidth reduction filter increases the video quality of your output relative to its bitrate. Use to
      *        lower the bitrate of your constant quality QVBR output, with little or no perceptual decrease in quality.
      *        Or, use to increase the video quality of outputs with other rate control modes relative to the bitrate
-     *        that you specify. Bandwidth reduction increases further when your input is low quality or noisy.Outputs
-     *        that use this feature incur pro-tier pricing.When you include Bandwidth reduction filter, you cannot
+     *        that you specify. Bandwidth reduction increases further when your input is low quality or noisy. Outputs
+     *        that use this feature incur pro-tier pricing. When you include Bandwidth reduction filter, you cannot
      *        include the Noise reducer preprocessor.
      */
 
@@ -455,14 +455,14 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
      * The Bandwidth reduction filter increases the video quality of your output relative to its bitrate. Use to lower
      * the bitrate of your constant quality QVBR output, with little or no perceptual decrease in quality. Or, use to
      * increase the video quality of outputs with other rate control modes relative to the bitrate that you specify.
-     * Bandwidth reduction increases further when your input is low quality or noisy.Outputs that use this feature incur
-     * pro-tier pricing.When you include Bandwidth reduction filter, you cannot include the Noise reducer preprocessor.
+     * Bandwidth reduction increases further when your input is low quality or noisy. Outputs that use this feature incur
+     * pro-tier pricing. When you include Bandwidth reduction filter, you cannot include the Noise reducer preprocessor.
      * 
      * @return The Bandwidth reduction filter increases the video quality of your output relative to its bitrate. Use to
      *         lower the bitrate of your constant quality QVBR output, with little or no perceptual decrease in quality.
      *         Or, use to increase the video quality of outputs with other rate control modes relative to the bitrate
-     *         that you specify. Bandwidth reduction increases further when your input is low quality or noisy.Outputs
-     *         that use this feature incur pro-tier pricing.When you include Bandwidth reduction filter, you cannot
+     *         that you specify. Bandwidth reduction increases further when your input is low quality or noisy. Outputs
+     *         that use this feature incur pro-tier pricing. When you include Bandwidth reduction filter, you cannot
      *         include the Noise reducer preprocessor.
      */
 
@@ -474,15 +474,15 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
      * The Bandwidth reduction filter increases the video quality of your output relative to its bitrate. Use to lower
      * the bitrate of your constant quality QVBR output, with little or no perceptual decrease in quality. Or, use to
      * increase the video quality of outputs with other rate control modes relative to the bitrate that you specify.
-     * Bandwidth reduction increases further when your input is low quality or noisy.Outputs that use this feature incur
-     * pro-tier pricing.When you include Bandwidth reduction filter, you cannot include the Noise reducer preprocessor.
+     * Bandwidth reduction increases further when your input is low quality or noisy. Outputs that use this feature incur
+     * pro-tier pricing. When you include Bandwidth reduction filter, you cannot include the Noise reducer preprocessor.
      * 
      * @param bandwidthReductionFilter
      *        The Bandwidth reduction filter increases the video quality of your output relative to its bitrate. Use to
      *        lower the bitrate of your constant quality QVBR output, with little or no perceptual decrease in quality.
      *        Or, use to increase the video quality of outputs with other rate control modes relative to the bitrate
-     *        that you specify. Bandwidth reduction increases further when your input is low quality or noisy.Outputs
-     *        that use this feature incur pro-tier pricing.When you include Bandwidth reduction filter, you cannot
+     *        that you specify. Bandwidth reduction increases further when your input is low quality or noisy. Outputs
+     *        that use this feature incur pro-tier pricing. When you include Bandwidth reduction filter, you cannot
      *        include the Noise reducer preprocessor.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

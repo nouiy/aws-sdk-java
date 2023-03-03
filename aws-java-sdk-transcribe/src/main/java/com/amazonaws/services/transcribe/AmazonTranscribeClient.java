@@ -169,10 +169,11 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
      * categories cannot be applied retroactively.
      * </p>
      * <p>
-     * When creating a new category, you can use the <code>InputType</code> parameter to label the category as a batch
-     * category (<code>POST_CALL</code>) or a streaming category (<code>REAL_TIME</code>). Batch categories can only be
-     * applied to batch transcriptions and streaming categories can only be applied to streaming transcriptions. If you
-     * do not include <code>InputType</code>, your category is created as a batch category by default.
+     * When creating a new category, you can use the <code>InputType</code> parameter to label the category as a
+     * <code>POST_CALL</code> or a <code>REAL_TIME</code> category. <code>POST_CALL</code> categories can only be
+     * applied to post-call transcriptions and <code>REAL_TIME</code> categories can only be applied to real-time
+     * transcriptions. If you do not include <code>InputType</code>, your category is created as a
+     * <code>POST_CALL</code> category by default.
      * </p>
      * <p>
      * Call Analytics categories are composed of rules. For each category, you must create between 1 and 20 rules. Rules
@@ -183,10 +184,10 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
      * </p>
      * <p>
      * To learn more about Call Analytics categories, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/tca-categories-batch.html">Creating categories for batch
-     * transcriptions</a> and <a
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/tca-categories-batch.html">Creating categories for
+     * post-call transcriptions</a> and <a
      * href="https://docs.aws.amazon.com/transcribe/latest/dg/tca-categories-stream.html">Creating categories for
-     * streaming transcriptions</a>.
+     * real-time transcriptions</a>.
      * </p>
      * 
      * @param createCallAnalyticsCategoryRequest
@@ -351,10 +352,10 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
      * Creates a new custom medical vocabulary.
      * </p>
      * <p>
-     * Before creating a new custom medical vocabulary, you must first upload a text file that contains your new
-     * entries, phrases, and terms into an Amazon S3 bucket. Note that this differs from , where you can include a list
-     * of terms within your request using the <code>Phrases</code> flag; <code>CreateMedicalVocabulary</code> does not
-     * support the <code>Phrases</code> flag.
+     * Before creating a new custom medical vocabulary, you must first upload a text file that contains your vocabulary
+     * table into an Amazon S3 bucket. Note that this differs from , where you can include a list of terms within your
+     * request using the <code>Phrases</code> flag; <code>CreateMedicalVocabulary</code> does not support the
+     * <code>Phrases</code> flag and only accepts vocabularies in table format.
      * </p>
      * <p>
      * Each language has a character set that contains all allowed characters for that specific language. If you use
@@ -2386,14 +2387,17 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
      * If you want to apply categories to your Call Analytics job, you must create them before submitting your job
      * request. Categories cannot be retroactively applied to a job. To create a new category, use the operation. To
      * learn more about Call Analytics categories, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/tca-categories-batch.html">Creating categories for batch
-     * transcriptions</a> and <a
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/tca-categories-batch.html">Creating categories for
+     * post-call transcriptions</a> and <a
      * href="https://docs.aws.amazon.com/transcribe/latest/dg/tca-categories-stream.html">Creating categories for
-     * streaming transcriptions</a>.
+     * real-time transcriptions</a>.
      * </p>
      * <p>
      * To make a <code>StartCallAnalyticsJob</code> request, you must first upload your media file into an Amazon S3
      * bucket; you can then specify the Amazon S3 location of the file using the <code>Media</code> parameter.
+     * </p>
+     * <p>
+     * Note that job queuing is enabled by default for Call Analytics jobs.
      * </p>
      * <p>
      * You must include the following parameters in your <code>StartCallAnalyticsJob</code> request:

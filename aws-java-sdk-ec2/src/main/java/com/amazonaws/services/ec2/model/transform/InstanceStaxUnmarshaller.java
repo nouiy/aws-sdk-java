@@ -365,6 +365,11 @@ public class InstanceStaxUnmarshaller implements Unmarshaller<Instance, StaxUnma
                     instance.setMaintenanceOptions(InstanceMaintenanceOptionsStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("currentInstanceBootMode", targetDepth)) {
+                    instance.setCurrentInstanceBootMode(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return instance;

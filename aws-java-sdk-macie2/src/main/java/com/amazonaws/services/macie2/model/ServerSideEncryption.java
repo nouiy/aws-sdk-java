@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides information about the server-side encryption settings for an S3 bucket or S3 object.
+ * Provides information about the default server-side encryption settings for an S3 bucket or the encryption settings
+ * for an S3 object.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/ServerSideEncryption" target="_top">AWS API
@@ -31,7 +32,8 @@ public class ServerSideEncryption implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The server-side encryption algorithm that's used when storing data in the bucket or object. If default encryption
-     * is disabled for the bucket or the object isn't encrypted using server-side encryption, this value is NONE.
+     * settings aren't configured for the bucket or the object isn't encrypted using server-side encryption, this value
+     * is NONE.
      * </p>
      */
     private String encryptionType;
@@ -46,13 +48,14 @@ public class ServerSideEncryption implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The server-side encryption algorithm that's used when storing data in the bucket or object. If default encryption
-     * is disabled for the bucket or the object isn't encrypted using server-side encryption, this value is NONE.
+     * settings aren't configured for the bucket or the object isn't encrypted using server-side encryption, this value
+     * is NONE.
      * </p>
      * 
      * @param encryptionType
      *        The server-side encryption algorithm that's used when storing data in the bucket or object. If default
-     *        encryption is disabled for the bucket or the object isn't encrypted using server-side encryption, this
-     *        value is NONE.
+     *        encryption settings aren't configured for the bucket or the object isn't encrypted using server-side
+     *        encryption, this value is NONE.
      * @see EncryptionType
      */
 
@@ -63,12 +66,13 @@ public class ServerSideEncryption implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The server-side encryption algorithm that's used when storing data in the bucket or object. If default encryption
-     * is disabled for the bucket or the object isn't encrypted using server-side encryption, this value is NONE.
+     * settings aren't configured for the bucket or the object isn't encrypted using server-side encryption, this value
+     * is NONE.
      * </p>
      * 
      * @return The server-side encryption algorithm that's used when storing data in the bucket or object. If default
-     *         encryption is disabled for the bucket or the object isn't encrypted using server-side encryption, this
-     *         value is NONE.
+     *         encryption settings aren't configured for the bucket or the object isn't encrypted using server-side
+     *         encryption, this value is NONE.
      * @see EncryptionType
      */
 
@@ -79,13 +83,14 @@ public class ServerSideEncryption implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The server-side encryption algorithm that's used when storing data in the bucket or object. If default encryption
-     * is disabled for the bucket or the object isn't encrypted using server-side encryption, this value is NONE.
+     * settings aren't configured for the bucket or the object isn't encrypted using server-side encryption, this value
+     * is NONE.
      * </p>
      * 
      * @param encryptionType
      *        The server-side encryption algorithm that's used when storing data in the bucket or object. If default
-     *        encryption is disabled for the bucket or the object isn't encrypted using server-side encryption, this
-     *        value is NONE.
+     *        encryption settings aren't configured for the bucket or the object isn't encrypted using server-side
+     *        encryption, this value is NONE.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionType
      */
@@ -98,13 +103,14 @@ public class ServerSideEncryption implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The server-side encryption algorithm that's used when storing data in the bucket or object. If default encryption
-     * is disabled for the bucket or the object isn't encrypted using server-side encryption, this value is NONE.
+     * settings aren't configured for the bucket or the object isn't encrypted using server-side encryption, this value
+     * is NONE.
      * </p>
      * 
      * @param encryptionType
      *        The server-side encryption algorithm that's used when storing data in the bucket or object. If default
-     *        encryption is disabled for the bucket or the object isn't encrypted using server-side encryption, this
-     *        value is NONE.
+     *        encryption settings aren't configured for the bucket or the object isn't encrypted using server-side
+     *        encryption, this value is NONE.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionType
      */

@@ -48,7 +48,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </ul>
  * <p>
  * See <a href="https://docs.aws.amazon.com/transcribe/latest/dg/tca-categories-batch.html#tca-rules-batch">Rule
- * criteria for batch categories</a> for usage examples.
+ * criteria for post-call categories</a> for usage examples.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/InterruptionFilter" target="_top">AWS API

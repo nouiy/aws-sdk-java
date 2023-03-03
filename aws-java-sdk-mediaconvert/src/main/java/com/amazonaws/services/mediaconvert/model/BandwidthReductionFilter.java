@@ -21,8 +21,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * The Bandwidth reduction filter increases the video quality of your output relative to its bitrate. Use to lower the
  * bitrate of your constant quality QVBR output, with little or no perceptual decrease in quality. Or, use to increase
  * the video quality of outputs with other rate control modes relative to the bitrate that you specify. Bandwidth
- * reduction increases further when your input is low quality or noisy.Outputs that use this feature incur pro-tier
- * pricing.When you include Bandwidth reduction filter, you cannot include the Noise reducer preprocessor.
+ * reduction increases further when your input is low quality or noisy. Outputs that use this feature incur pro-tier
+ * pricing. When you include Bandwidth reduction filter, you cannot include the Noise reducer preprocessor.
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/BandwidthReductionFilter"
  *      target="_top">AWS API Documentation</a>
@@ -38,11 +38,10 @@ public class BandwidthReductionFilter implements Serializable, Cloneable, Struct
      */
     private String sharpening;
     /**
-     * Specify the strength of the Bandwidth reduction filter. For most workflows, we recommend that you choose Auto.
-     * Your output bandwidth will be reduced by at least 8 percent with no perceptual decrease in video quality. If your
-     * output bandwidth isn't constrained, set Filter strength to Low or Medium. Low results in minimal to no impact in
-     * perceptual quality. For more bandwidth reduction, choose High. The filter helps equalize quality between all
-     * scenes and increases video softness. We recommend that you choose High for low bitrate outputs.
+     * Specify the strength of the Bandwidth reduction filter. For most workflows, we recommend that you choose Auto to
+     * reduce the bandwidth of your output with little to no perceptual decrease in video quality. For high quality and
+     * high bitrate outputs, choose Low. For the most bandwidth reduction, choose High. We recommend that you choose High
+     * for low bitrate outputs. Note that High may incur a slight increase in the softness of your output.
      */
     private String strength;
 
@@ -122,19 +121,17 @@ public class BandwidthReductionFilter implements Serializable, Cloneable, Struct
     }
 
     /**
-     * Specify the strength of the Bandwidth reduction filter. For most workflows, we recommend that you choose Auto.
-     * Your output bandwidth will be reduced by at least 8 percent with no perceptual decrease in video quality. If your
-     * output bandwidth isn't constrained, set Filter strength to Low or Medium. Low results in minimal to no impact in
-     * perceptual quality. For more bandwidth reduction, choose High. The filter helps equalize quality between all
-     * scenes and increases video softness. We recommend that you choose High for low bitrate outputs.
+     * Specify the strength of the Bandwidth reduction filter. For most workflows, we recommend that you choose Auto to
+     * reduce the bandwidth of your output with little to no perceptual decrease in video quality. For high quality and
+     * high bitrate outputs, choose Low. For the most bandwidth reduction, choose High. We recommend that you choose High
+     * for low bitrate outputs. Note that High may incur a slight increase in the softness of your output.
      * 
      * @param strength
      *        Specify the strength of the Bandwidth reduction filter. For most workflows, we recommend that you choose
-     *        Auto. Your output bandwidth will be reduced by at least 8 percent with no perceptual decrease in video
-     *        quality. If your output bandwidth isn't constrained, set Filter strength to Low or Medium. Low results in
-     *        minimal to no impact in perceptual quality. For more bandwidth reduction, choose High. The filter helps
-     *        equalize quality between all scenes and increases video softness. We recommend that you choose High for
-     *        low bitrate outputs.
+     *        Auto to reduce the bandwidth of your output with little to no perceptual decrease in video quality. For
+     *        high quality and high bitrate outputs, choose Low. For the most bandwidth reduction, choose High. We
+     *        recommend that you choose High for low bitrate outputs. Note that High may incur a slight increase in the
+     *        softness of your output.
      * @see BandwidthReductionFilterStrength
      */
 
@@ -143,18 +140,16 @@ public class BandwidthReductionFilter implements Serializable, Cloneable, Struct
     }
 
     /**
-     * Specify the strength of the Bandwidth reduction filter. For most workflows, we recommend that you choose Auto.
-     * Your output bandwidth will be reduced by at least 8 percent with no perceptual decrease in video quality. If your
-     * output bandwidth isn't constrained, set Filter strength to Low or Medium. Low results in minimal to no impact in
-     * perceptual quality. For more bandwidth reduction, choose High. The filter helps equalize quality between all
-     * scenes and increases video softness. We recommend that you choose High for low bitrate outputs.
+     * Specify the strength of the Bandwidth reduction filter. For most workflows, we recommend that you choose Auto to
+     * reduce the bandwidth of your output with little to no perceptual decrease in video quality. For high quality and
+     * high bitrate outputs, choose Low. For the most bandwidth reduction, choose High. We recommend that you choose High
+     * for low bitrate outputs. Note that High may incur a slight increase in the softness of your output.
      * 
      * @return Specify the strength of the Bandwidth reduction filter. For most workflows, we recommend that you choose
-     *         Auto. Your output bandwidth will be reduced by at least 8 percent with no perceptual decrease in video
-     *         quality. If your output bandwidth isn't constrained, set Filter strength to Low or Medium. Low results in
-     *         minimal to no impact in perceptual quality. For more bandwidth reduction, choose High. The filter helps
-     *         equalize quality between all scenes and increases video softness. We recommend that you choose High for
-     *         low bitrate outputs.
+     *         Auto to reduce the bandwidth of your output with little to no perceptual decrease in video quality. For
+     *         high quality and high bitrate outputs, choose Low. For the most bandwidth reduction, choose High. We
+     *         recommend that you choose High for low bitrate outputs. Note that High may incur a slight increase in the
+     *         softness of your output.
      * @see BandwidthReductionFilterStrength
      */
 
@@ -163,19 +158,17 @@ public class BandwidthReductionFilter implements Serializable, Cloneable, Struct
     }
 
     /**
-     * Specify the strength of the Bandwidth reduction filter. For most workflows, we recommend that you choose Auto.
-     * Your output bandwidth will be reduced by at least 8 percent with no perceptual decrease in video quality. If your
-     * output bandwidth isn't constrained, set Filter strength to Low or Medium. Low results in minimal to no impact in
-     * perceptual quality. For more bandwidth reduction, choose High. The filter helps equalize quality between all
-     * scenes and increases video softness. We recommend that you choose High for low bitrate outputs.
+     * Specify the strength of the Bandwidth reduction filter. For most workflows, we recommend that you choose Auto to
+     * reduce the bandwidth of your output with little to no perceptual decrease in video quality. For high quality and
+     * high bitrate outputs, choose Low. For the most bandwidth reduction, choose High. We recommend that you choose High
+     * for low bitrate outputs. Note that High may incur a slight increase in the softness of your output.
      * 
      * @param strength
      *        Specify the strength of the Bandwidth reduction filter. For most workflows, we recommend that you choose
-     *        Auto. Your output bandwidth will be reduced by at least 8 percent with no perceptual decrease in video
-     *        quality. If your output bandwidth isn't constrained, set Filter strength to Low or Medium. Low results in
-     *        minimal to no impact in perceptual quality. For more bandwidth reduction, choose High. The filter helps
-     *        equalize quality between all scenes and increases video softness. We recommend that you choose High for
-     *        low bitrate outputs.
+     *        Auto to reduce the bandwidth of your output with little to no perceptual decrease in video quality. For
+     *        high quality and high bitrate outputs, choose Low. For the most bandwidth reduction, choose High. We
+     *        recommend that you choose High for low bitrate outputs. Note that High may incur a slight increase in the
+     *        softness of your output.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BandwidthReductionFilterStrength
      */
@@ -186,19 +179,17 @@ public class BandwidthReductionFilter implements Serializable, Cloneable, Struct
     }
 
     /**
-     * Specify the strength of the Bandwidth reduction filter. For most workflows, we recommend that you choose Auto.
-     * Your output bandwidth will be reduced by at least 8 percent with no perceptual decrease in video quality. If your
-     * output bandwidth isn't constrained, set Filter strength to Low or Medium. Low results in minimal to no impact in
-     * perceptual quality. For more bandwidth reduction, choose High. The filter helps equalize quality between all
-     * scenes and increases video softness. We recommend that you choose High for low bitrate outputs.
+     * Specify the strength of the Bandwidth reduction filter. For most workflows, we recommend that you choose Auto to
+     * reduce the bandwidth of your output with little to no perceptual decrease in video quality. For high quality and
+     * high bitrate outputs, choose Low. For the most bandwidth reduction, choose High. We recommend that you choose High
+     * for low bitrate outputs. Note that High may incur a slight increase in the softness of your output.
      * 
      * @param strength
      *        Specify the strength of the Bandwidth reduction filter. For most workflows, we recommend that you choose
-     *        Auto. Your output bandwidth will be reduced by at least 8 percent with no perceptual decrease in video
-     *        quality. If your output bandwidth isn't constrained, set Filter strength to Low or Medium. Low results in
-     *        minimal to no impact in perceptual quality. For more bandwidth reduction, choose High. The filter helps
-     *        equalize quality between all scenes and increases video softness. We recommend that you choose High for
-     *        low bitrate outputs.
+     *        Auto to reduce the bandwidth of your output with little to no perceptual decrease in video quality. For
+     *        high quality and high bitrate outputs, choose Low. For the most bandwidth reduction, choose High. We
+     *        recommend that you choose High for low bitrate outputs. Note that High may incur a slight increase in the
+     *        softness of your output.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BandwidthReductionFilterStrength
      */

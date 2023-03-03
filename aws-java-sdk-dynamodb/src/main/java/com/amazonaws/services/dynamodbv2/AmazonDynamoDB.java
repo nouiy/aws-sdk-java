@@ -478,13 +478,21 @@ public interface AmazonDynamoDB {
      * Creates a global table from an existing table. A global table creates a replication relationship between two or
      * more DynamoDB tables with the same table name in the provided Regions.
      * </p>
-     * <note>
+     * <important>
      * <p>
      * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version
-     * 2017.11.29</a> of global tables.
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version 2017.11.29
+     * (Legacy)</a> of global tables. We recommend using <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
+     * (Current)</a> when creating new global tables, as it provides greater flexibility, higher efficiency and consumes
+     * less write capacity than 2017.11.29 (Legacy). To determine which version you are using, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
+     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
+     * 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * global tables</a>.
      * </p>
-     * </note>
+     * </important>
      * <p>
      * If you want to add a new replica table to a global table, each of the following conditions must be true:
      * </p>
@@ -761,7 +769,13 @@ public interface AmazonDynamoDB {
      * does not exist, DynamoDB returns a <code>ResourceNotFoundException</code>. If table is already in the
      * <code>DELETING</code> state, no error is returned.
      * </p>
-     * <note>
+     * <important>
+     * <p>
+     * This operation only applies to <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
+     * (Current)</a> of global tables.
+     * </p>
+     * </important> <note>
      * <p>
      * DynamoDB might continue to accept data read and write operations, such as <code>GetItem</code> and
      * <code>PutItem</code>, on a table in the <code>DELETING</code> state until the table deletion is complete.
@@ -873,7 +887,7 @@ public interface AmazonDynamoDB {
 
     /**
      * <p>
-     * Returns information about contributor insights, for a given table or global secondary index.
+     * Returns information about contributor insights for a given table or global secondary index.
      * </p>
      * 
      * @param describeContributorInsightsRequest
@@ -891,7 +905,10 @@ public interface AmazonDynamoDB {
 
     /**
      * <p>
-     * Returns the regional endpoint information.
+     * Returns the regional endpoint information. This action must be included in your VPC endpoint policies, or access
+     * to the DescribeEndpoints API will be denied. For more information on policy permissions, please see <a href=
+     * "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/inter-network-traffic-privacy.html#inter-network-traffic-DescribeEndpoints"
+     * >Internetwork traffic privacy</a>.
      * </p>
      * 
      * @param describeEndpointsRequest
@@ -941,17 +958,21 @@ public interface AmazonDynamoDB {
      * <p>
      * Returns information about the specified global table.
      * </p>
-     * <note>
+     * <important>
      * <p>
      * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version
-     * 2017.11.29</a> of global tables. If you are using global tables <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version
-     * 2019.11.21</a> you can use <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_DescribeTable.html">DescribeTable</a>
-     * instead.
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version 2017.11.29
+     * (Legacy)</a> of global tables. We recommend using <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
+     * (Current)</a> when creating new global tables, as it provides greater flexibility, higher efficiency and consumes
+     * less write capacity than 2017.11.29 (Legacy). To determine which version you are using, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
+     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
+     * 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * global tables</a>.
      * </p>
-     * </note>
+     * </important>
      * 
      * @param describeGlobalTableRequest
      * @return Result of the DescribeGlobalTable operation returned by the service.
@@ -969,13 +990,21 @@ public interface AmazonDynamoDB {
      * <p>
      * Describes Region-specific settings for a global table.
      * </p>
-     * <note>
+     * <important>
      * <p>
      * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version
-     * 2017.11.29</a> of global tables.
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version 2017.11.29
+     * (Legacy)</a> of global tables. We recommend using <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
+     * (Current)</a> when creating new global tables, as it provides greater flexibility, higher efficiency and consumes
+     * less write capacity than 2017.11.29 (Legacy). To determine which version you are using, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
+     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
+     * 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * global tables</a>.
      * </p>
-     * </note>
+     * </important>
      * 
      * @param describeGlobalTableSettingsRequest
      * @return Result of the DescribeGlobalTableSettings operation returned by the service.
@@ -1132,7 +1161,13 @@ public interface AmazonDynamoDB {
      * Returns information about the table, including the current status of the table, when it was created, the primary
      * key schema, and any indexes on the table.
      * </p>
-     * <note>
+     * <important>
+     * <p>
+     * This operation only applies to <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
+     * (Current)</a> of global tables.
+     * </p>
+     * </important> <note>
      * <p>
      * If you issue a <code>DescribeTable</code> request immediately after a <code>CreateTable</code> request, DynamoDB
      * might return a <code>ResourceNotFoundException</code>. This is because <code>DescribeTable</code> uses an
@@ -1166,13 +1201,13 @@ public interface AmazonDynamoDB {
      * <p>
      * Describes auto scaling settings across replicas of the global table at once.
      * </p>
-     * <note>
+     * <important>
      * <p>
      * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version
-     * 2019.11.21</a> of global tables.
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
+     * (Current)</a> of global tables.
      * </p>
-     * </note>
+     * </important>
      * 
      * @param describeTableReplicaAutoScalingRequest
      * @return Result of the DescribeTableReplicaAutoScaling operation returned by the service.
@@ -1300,7 +1335,8 @@ public interface AmazonDynamoDB {
      * <p>
      * A single <code>SELECT</code> statement response can return up to the maximum number of items (if using the Limit
      * parameter) or a maximum of 1 MB of data (and then apply any filtering to the results using <code>WHERE</code>
-     * clause). If <code>LastEvaluatedKey</code> is present in the response, you need to paginate the result set.
+     * clause). If <code>LastEvaluatedKey</code> is present in the response, you need to paginate the result set. If
+     * <code>NextToken</code> is present, you need to paginate the result set and include <code>NextToken</code>.
      * </p>
      * 
      * @param executeStatementRequest
@@ -1575,7 +1611,7 @@ public interface AmazonDynamoDB {
      *         </p>
      *         <note>
      *         <p>
-     *         This message is returned when when writes get throttled on an On-Demand GSI as DynamoDB is automatically
+     *         This message is returned when writes get throttled on an On-Demand GSI as DynamoDB is automatically
      *         scaling the GSI.
      *         </p>
      *         </note></li>
@@ -1653,7 +1689,87 @@ public interface AmazonDynamoDB {
      *         </ul>
      *         </li>
      * @throws TransactionInProgressException
-     *         The transaction with the given request token is already in progress.
+     *         The transaction with the given request token is already in progress.</p>
+     *         <p>
+     *         Recommended Settings
+     *         </p>
+     *         <note>
+     *         <p>
+     *         This is a general recommendation for handling the <code>TransactionInProgressException</code>. These
+     *         settings help ensure that the client retries will trigger completion of the ongoing <code>
+     *         TransactWriteItems</code> request.
+     *         </p>
+     *         </note>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Set <code>clientExecutionTimeout</code> to a value that allows at least one retry to be processed after 5
+     *         seconds have elapsed since the first attempt for the <code>TransactWriteItems</code> operation.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Set <code>socketTimeout</code> to a value a little lower than the <code>requestTimeout</code> setting.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>requestTimeout</code> should be set based on the time taken for the individual retries of a single
+     *         HTTP request for your use case, but setting it to 1 second or higher should work well to reduce chances
+     *         of retries and <code>TransactionInProgressException</code> errors.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Use exponential backoff when retrying and tune backoff if needed.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Assuming <a href=
+     *         "https://github.com/aws/aws-sdk-java/blob/fd409dee8ae23fb8953e0bb4dbde65536a7e0514/aws-java-sdk-core/src/main/java/com/amazonaws/retry/PredefinedRetryPolicies.java#L97"
+     *         >default retry policy</a>, example timeout settings based on the guidelines above are as follows:
+     *         </p>
+     *         <p>
+     *         Example timeline:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         0-1000 first attempt
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         1000-1500 first sleep/delay (default retry policy uses 500 ms as base delay for 4xx errors)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         1500-2500 second attempt
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         2500-3500 second sleep/delay (500 * 2, exponential backoff)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         3500-4500 third attempt
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         4500-6500 third sleep/delay (500 * 2^2)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         6500-7500 fourth attempt (this can trigger inline recovery since 5 seconds have elapsed since the first
+     *         attempt reached TC)
+     *         </p>
+     *         </li>
      * @throws IdempotentParameterMismatchException
      *         DynamoDB rejected the request because you retried a request with a different payload but with an
      *         idempotent token that was already used.
@@ -1884,13 +2000,21 @@ public interface AmazonDynamoDB {
      * <p>
      * Lists all global tables that have a replica in the specified Region.
      * </p>
-     * <note>
+     * <important>
      * <p>
      * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version
-     * 2017.11.29</a> of global tables.
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version 2017.11.29
+     * (Legacy)</a> of global tables. We recommend using <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
+     * (Current)</a> when creating new global tables, as it provides greater flexibility, higher efficiency and consumes
+     * less write capacity than 2017.11.29 (Legacy). To determine which version you are using, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
+     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
+     * 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * global tables</a>.
      * </p>
-     * </note>
+     * </important>
      * 
      * @param listGlobalTablesRequest
      * @return Result of the ListGlobalTables operation returned by the service.
@@ -2519,7 +2643,7 @@ public interface AmazonDynamoDB {
      * </li>
      * <li>
      * <p>
-     * The aggregate size of the items in the transaction cannot exceed 4 MB.
+     * The aggregate size of the items in the transaction exceeded 4 MB.
      * </p>
      * </li>
      * </ul>
@@ -2749,7 +2873,7 @@ public interface AmazonDynamoDB {
      *         </p>
      *         <note>
      *         <p>
-     *         This message is returned when when writes get throttled on an On-Demand GSI as DynamoDB is automatically
+     *         This message is returned when writes get throttled on an On-Demand GSI as DynamoDB is automatically
      *         scaling the GSI.
      *         </p>
      *         </note></li>
@@ -3152,7 +3276,7 @@ public interface AmazonDynamoDB {
      *         </p>
      *         <note>
      *         <p>
-     *         This message is returned when when writes get throttled on an On-Demand GSI as DynamoDB is automatically
+     *         This message is returned when writes get throttled on an On-Demand GSI as DynamoDB is automatically
      *         scaling the GSI.
      *         </p>
      *         </note></li>
@@ -3230,7 +3354,87 @@ public interface AmazonDynamoDB {
      *         </ul>
      *         </li>
      * @throws TransactionInProgressException
-     *         The transaction with the given request token is already in progress.
+     *         The transaction with the given request token is already in progress.</p>
+     *         <p>
+     *         Recommended Settings
+     *         </p>
+     *         <note>
+     *         <p>
+     *         This is a general recommendation for handling the <code>TransactionInProgressException</code>. These
+     *         settings help ensure that the client retries will trigger completion of the ongoing <code>
+     *         TransactWriteItems</code> request.
+     *         </p>
+     *         </note>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Set <code>clientExecutionTimeout</code> to a value that allows at least one retry to be processed after 5
+     *         seconds have elapsed since the first attempt for the <code>TransactWriteItems</code> operation.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Set <code>socketTimeout</code> to a value a little lower than the <code>requestTimeout</code> setting.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>requestTimeout</code> should be set based on the time taken for the individual retries of a single
+     *         HTTP request for your use case, but setting it to 1 second or higher should work well to reduce chances
+     *         of retries and <code>TransactionInProgressException</code> errors.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Use exponential backoff when retrying and tune backoff if needed.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Assuming <a href=
+     *         "https://github.com/aws/aws-sdk-java/blob/fd409dee8ae23fb8953e0bb4dbde65536a7e0514/aws-java-sdk-core/src/main/java/com/amazonaws/retry/PredefinedRetryPolicies.java#L97"
+     *         >default retry policy</a>, example timeout settings based on the guidelines above are as follows:
+     *         </p>
+     *         <p>
+     *         Example timeline:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         0-1000 first attempt
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         1000-1500 first sleep/delay (default retry policy uses 500 ms as base delay for 4xx errors)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         1500-2500 second attempt
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         2500-3500 second sleep/delay (500 * 2, exponential backoff)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         3500-4500 third attempt
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         4500-6500 third sleep/delay (500 * 2^2)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         6500-7500 fourth attempt (this can trigger inline recovery since 5 seconds have elapsed since the first
+     *         attempt reached TC)
+     *         </p>
+     *         </li>
      * @throws IdempotentParameterMismatchException
      *         DynamoDB rejected the request because you retried a request with a different payload but with an
      *         idempotent token that was already used.
@@ -3356,7 +3560,30 @@ public interface AmazonDynamoDB {
      * this operation. Any replica to be added must be empty, have the same name as the global table, have the same key
      * schema, have DynamoDB Streams enabled, and have the same provisioned and maximum write capacity units.
      * </p>
-     * <note>
+     * <important>
+     * <p>
+     * This operation only applies to <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version 2017.11.29
+     * (Legacy)</a> of global tables. We recommend using <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
+     * (Current)</a> when creating new global tables, as it provides greater flexibility, higher efficiency and consumes
+     * less write capacity than 2017.11.29 (Legacy). To determine which version you are using, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
+     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
+     * 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * global tables</a>.
+     * </p>
+     * </important> <note>
+     * <p>
+     * This operation only applies to <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version
+     * 2017.11.29</a> of global tables. If you are using global tables <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version
+     * 2019.11.21</a> you can use <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_DescribeTable.html">DescribeTable</a>
+     * instead.
+     * </p>
      * <p>
      * Although you can use <code>UpdateGlobalTable</code> to add replicas and remove replicas in a single request, for
      * simplicity we recommend that you issue separate requests for adding or removing replicas.
@@ -3406,6 +3633,21 @@ public interface AmazonDynamoDB {
      * <p>
      * Updates settings for a global table.
      * </p>
+     * <important>
+     * <p>
+     * This operation only applies to <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">Version 2017.11.29
+     * (Legacy)</a> of global tables. We recommend using <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
+     * (Current)</a> when creating new global tables, as it provides greater flexibility, higher efficiency and consumes
+     * less write capacity than 2017.11.29 (Legacy). To determine which version you are using, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.DetermineVersion.html"
+     * >Determining the version</a>. To update existing global tables from version 2017.11.29 (Legacy) to version
+     * 2019.11.21 (Current), see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/V2globaltables_upgrade.html"> Updating
+     * global tables</a>.
+     * </p>
+     * </important>
      * 
      * @param updateGlobalTableSettingsRequest
      * @return Result of the UpdateGlobalTableSettings operation returned by the service.
@@ -3507,6 +3749,13 @@ public interface AmazonDynamoDB {
      * Modifies the provisioned throughput settings, global secondary indexes, or DynamoDB Streams settings for a given
      * table.
      * </p>
+     * <important>
+     * <p>
+     * This operation only applies to <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
+     * (Current)</a> of global tables.
+     * </p>
+     * </important>
      * <p>
      * You can only perform one of the following operations at once:
      * </p>
@@ -3581,13 +3830,13 @@ public interface AmazonDynamoDB {
      * <p>
      * Updates auto scaling settings on your global tables at once.
      * </p>
-     * <note>
+     * <important>
      * <p>
      * This operation only applies to <a
-     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version
-     * 2019.11.21</a> of global tables.
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">Version 2019.11.21
+     * (Current)</a> of global tables.
      * </p>
-     * </note>
+     * </important>
      * 
      * @param updateTableReplicaAutoScalingRequest
      * @return Result of the UpdateTableReplicaAutoScaling operation returned by the service.

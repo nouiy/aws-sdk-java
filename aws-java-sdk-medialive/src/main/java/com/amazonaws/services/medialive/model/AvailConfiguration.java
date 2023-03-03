@@ -26,14 +26,22 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AvailConfiguration implements Serializable, Cloneable, StructuredPojo {
 
-    /** Ad avail settings. */
+    /**
+     * Controls how SCTE-35 messages create cues. Splice Insert mode treats all segmentation signals traditionally. With
+     * Time Signal APOS mode only Time Signal Placement Opportunity and Break messages create segment breaks. With ESAM
+     * mode, signals are forwarded to an ESAM server for possible update.
+     */
     private AvailSettings availSettings;
 
     /**
-     * Ad avail settings.
+     * Controls how SCTE-35 messages create cues. Splice Insert mode treats all segmentation signals traditionally. With
+     * Time Signal APOS mode only Time Signal Placement Opportunity and Break messages create segment breaks. With ESAM
+     * mode, signals are forwarded to an ESAM server for possible update.
      * 
      * @param availSettings
-     *        Ad avail settings.
+     *        Controls how SCTE-35 messages create cues. Splice Insert mode treats all segmentation signals
+     *        traditionally. With Time Signal APOS mode only Time Signal Placement Opportunity and Break messages create
+     *        segment breaks. With ESAM mode, signals are forwarded to an ESAM server for possible update.
      */
 
     public void setAvailSettings(AvailSettings availSettings) {
@@ -41,9 +49,13 @@ public class AvailConfiguration implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Ad avail settings.
+     * Controls how SCTE-35 messages create cues. Splice Insert mode treats all segmentation signals traditionally. With
+     * Time Signal APOS mode only Time Signal Placement Opportunity and Break messages create segment breaks. With ESAM
+     * mode, signals are forwarded to an ESAM server for possible update.
      * 
-     * @return Ad avail settings.
+     * @return Controls how SCTE-35 messages create cues. Splice Insert mode treats all segmentation signals
+     *         traditionally. With Time Signal APOS mode only Time Signal Placement Opportunity and Break messages
+     *         create segment breaks. With ESAM mode, signals are forwarded to an ESAM server for possible update.
      */
 
     public AvailSettings getAvailSettings() {
@@ -51,10 +63,14 @@ public class AvailConfiguration implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * Ad avail settings.
+     * Controls how SCTE-35 messages create cues. Splice Insert mode treats all segmentation signals traditionally. With
+     * Time Signal APOS mode only Time Signal Placement Opportunity and Break messages create segment breaks. With ESAM
+     * mode, signals are forwarded to an ESAM server for possible update.
      * 
      * @param availSettings
-     *        Ad avail settings.
+     *        Controls how SCTE-35 messages create cues. Splice Insert mode treats all segmentation signals
+     *        traditionally. With Time Signal APOS mode only Time Signal Placement Opportunity and Break messages create
+     *        segment breaks. With ESAM mode, signals are forwarded to an ESAM server for possible update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

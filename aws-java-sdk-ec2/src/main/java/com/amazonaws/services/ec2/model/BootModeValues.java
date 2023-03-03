@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum BootModeValues {
 
     LegacyBios("legacy-bios"),
-    Uefi("uefi");
+    Uefi("uefi"),
+    UefiPreferred("uefi-preferred");
 
     private String value;
 

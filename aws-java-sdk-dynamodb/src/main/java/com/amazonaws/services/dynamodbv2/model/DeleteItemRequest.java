@@ -40,7 +40,7 @@ public class DeleteItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * delete.
      * </p>
      * <p>
-     * For the primary key, you must provide all of the attributes. For example, with a simple primary key, you only
+     * For the primary key, you must provide all of the key attributes. For example, with a simple primary key, you only
      * need to provide a value for the partition key. For a composite primary key, you must provide values for both the
      * partition key and the sort key.
      * </p>
@@ -254,9 +254,9 @@ public class DeleteItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        A map of attribute names to <code>AttributeValue</code> objects, representing the primary key of the item
      *        to delete.</p>
      *        <p>
-     *        For the primary key, you must provide all of the attributes. For example, with a simple primary key, you
-     *        only need to provide a value for the partition key. For a composite primary key, you must provide values
-     *        for both the partition key and the sort key.
+     *        For the primary key, you must provide all of the key attributes. For example, with a simple primary key,
+     *        you only need to provide a value for the partition key. For a composite primary key, you must provide
+     *        values for both the partition key and the sort key.
      */
     public DeleteItemRequest(String tableName, java.util.Map<String, AttributeValue> key) {
         setTableName(tableName);
@@ -273,9 +273,9 @@ public class DeleteItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        A map of attribute names to <code>AttributeValue</code> objects, representing the primary key of the item
      *        to delete.</p>
      *        <p>
-     *        For the primary key, you must provide all of the attributes. For example, with a simple primary key, you
-     *        only need to provide a value for the partition key. For a composite primary key, you must provide values
-     *        for both the partition key and the sort key.
+     *        For the primary key, you must provide all of the key attributes. For example, with a simple primary key,
+     *        you only need to provide a value for the partition key. For a composite primary key, you must provide
+     *        values for both the partition key and the sort key.
      * @param returnValues
      *        Use <code>ReturnValues</code> if you want to get the item attributes as they appeared before they were
      *        deleted. For <code>DeleteItem</code>, the valid values are:
@@ -320,9 +320,9 @@ public class DeleteItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        A map of attribute names to <code>AttributeValue</code> objects, representing the primary key of the item
      *        to delete.</p>
      *        <p>
-     *        For the primary key, you must provide all of the attributes. For example, with a simple primary key, you
-     *        only need to provide a value for the partition key. For a composite primary key, you must provide values
-     *        for both the partition key and the sort key.
+     *        For the primary key, you must provide all of the key attributes. For example, with a simple primary key,
+     *        you only need to provide a value for the partition key. For a composite primary key, you must provide
+     *        values for both the partition key and the sort key.
      * @param returnValues
      *        Use <code>ReturnValues</code> if you want to get the item attributes as they appeared before they were
      *        deleted. For <code>DeleteItem</code>, the valid values are:
@@ -403,7 +403,7 @@ public class DeleteItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * delete.
      * </p>
      * <p>
-     * For the primary key, you must provide all of the attributes. For example, with a simple primary key, you only
+     * For the primary key, you must provide all of the key attributes. For example, with a simple primary key, you only
      * need to provide a value for the partition key. For a composite primary key, you must provide values for both the
      * partition key and the sort key.
      * </p>
@@ -411,9 +411,9 @@ public class DeleteItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * @return A map of attribute names to <code>AttributeValue</code> objects, representing the primary key of the item
      *         to delete.</p>
      *         <p>
-     *         For the primary key, you must provide all of the attributes. For example, with a simple primary key, you
-     *         only need to provide a value for the partition key. For a composite primary key, you must provide values
-     *         for both the partition key and the sort key.
+     *         For the primary key, you must provide all of the key attributes. For example, with a simple primary key,
+     *         you only need to provide a value for the partition key. For a composite primary key, you must provide
+     *         values for both the partition key and the sort key.
      */
 
     public java.util.Map<String, AttributeValue> getKey() {
@@ -426,7 +426,7 @@ public class DeleteItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * delete.
      * </p>
      * <p>
-     * For the primary key, you must provide all of the attributes. For example, with a simple primary key, you only
+     * For the primary key, you must provide all of the key attributes. For example, with a simple primary key, you only
      * need to provide a value for the partition key. For a composite primary key, you must provide values for both the
      * partition key and the sort key.
      * </p>
@@ -435,9 +435,9 @@ public class DeleteItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        A map of attribute names to <code>AttributeValue</code> objects, representing the primary key of the item
      *        to delete.</p>
      *        <p>
-     *        For the primary key, you must provide all of the attributes. For example, with a simple primary key, you
-     *        only need to provide a value for the partition key. For a composite primary key, you must provide values
-     *        for both the partition key and the sort key.
+     *        For the primary key, you must provide all of the key attributes. For example, with a simple primary key,
+     *        you only need to provide a value for the partition key. For a composite primary key, you must provide
+     *        values for both the partition key and the sort key.
      */
 
     public void setKey(java.util.Map<String, AttributeValue> key) {
@@ -450,7 +450,7 @@ public class DeleteItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * delete.
      * </p>
      * <p>
-     * For the primary key, you must provide all of the attributes. For example, with a simple primary key, you only
+     * For the primary key, you must provide all of the key attributes. For example, with a simple primary key, you only
      * need to provide a value for the partition key. For a composite primary key, you must provide values for both the
      * partition key and the sort key.
      * </p>
@@ -459,9 +459,9 @@ public class DeleteItemRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        A map of attribute names to <code>AttributeValue</code> objects, representing the primary key of the item
      *        to delete.</p>
      *        <p>
-     *        For the primary key, you must provide all of the attributes. For example, with a simple primary key, you
-     *        only need to provide a value for the partition key. For a composite primary key, you must provide values
-     *        for both the partition key and the sort key.
+     *        For the primary key, you must provide all of the key attributes. For example, with a simple primary key,
+     *        you only need to provide a value for the partition key. For a composite primary key, you must provide
+     *        values for both the partition key and the sort key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

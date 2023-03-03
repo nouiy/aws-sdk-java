@@ -18,7 +18,8 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * Scte35 Splice Insert
+ * Typical configuration that applies breaks on splice inserts in addition to time signal placement opportunities,
+ * breaks, and advertisements.
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/medialive-2017-10-14/Scte35SpliceInsert" target="_top">AWS API
  *      Documentation</a>
