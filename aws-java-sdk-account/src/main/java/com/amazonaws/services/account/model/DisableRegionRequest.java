@@ -56,9 +56,9 @@ public class DisableRegionRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * Specifies the Region-code for a given Region name (for example, <code>af-south-1</code>). When you disable a
-     * Region, AWS performs actions to deactivate that Region in your account, such as destroying IAM resources in the
-     * Region. This process takes a few minutes for most accounts, but this can take several hours. You cannot enable
-     * the Region until the disabling process is fully completed.
+     * Region, Amazon Web Services performs actions to deactivate that Region in your account, such as destroying IAM
+     * resources in the Region. This process takes a few minutes for most accounts, but this can take several hours. You
+     * cannot enable the Region until the disabling process is fully completed.
      * </p>
      */
     private String regionName;
@@ -235,16 +235,16 @@ public class DisableRegionRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * Specifies the Region-code for a given Region name (for example, <code>af-south-1</code>). When you disable a
-     * Region, AWS performs actions to deactivate that Region in your account, such as destroying IAM resources in the
-     * Region. This process takes a few minutes for most accounts, but this can take several hours. You cannot enable
-     * the Region until the disabling process is fully completed.
+     * Region, Amazon Web Services performs actions to deactivate that Region in your account, such as destroying IAM
+     * resources in the Region. This process takes a few minutes for most accounts, but this can take several hours. You
+     * cannot enable the Region until the disabling process is fully completed.
      * </p>
      * 
      * @param regionName
      *        Specifies the Region-code for a given Region name (for example, <code>af-south-1</code>). When you disable
-     *        a Region, AWS performs actions to deactivate that Region in your account, such as destroying IAM resources
-     *        in the Region. This process takes a few minutes for most accounts, but this can take several hours. You
-     *        cannot enable the Region until the disabling process is fully completed.
+     *        a Region, Amazon Web Services performs actions to deactivate that Region in your account, such as
+     *        destroying IAM resources in the Region. This process takes a few minutes for most accounts, but this can
+     *        take several hours. You cannot enable the Region until the disabling process is fully completed.
      */
 
     public void setRegionName(String regionName) {
@@ -254,15 +254,15 @@ public class DisableRegionRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * Specifies the Region-code for a given Region name (for example, <code>af-south-1</code>). When you disable a
-     * Region, AWS performs actions to deactivate that Region in your account, such as destroying IAM resources in the
-     * Region. This process takes a few minutes for most accounts, but this can take several hours. You cannot enable
-     * the Region until the disabling process is fully completed.
+     * Region, Amazon Web Services performs actions to deactivate that Region in your account, such as destroying IAM
+     * resources in the Region. This process takes a few minutes for most accounts, but this can take several hours. You
+     * cannot enable the Region until the disabling process is fully completed.
      * </p>
      * 
      * @return Specifies the Region-code for a given Region name (for example, <code>af-south-1</code>). When you
-     *         disable a Region, AWS performs actions to deactivate that Region in your account, such as destroying IAM
-     *         resources in the Region. This process takes a few minutes for most accounts, but this can take several
-     *         hours. You cannot enable the Region until the disabling process is fully completed.
+     *         disable a Region, Amazon Web Services performs actions to deactivate that Region in your account, such as
+     *         destroying IAM resources in the Region. This process takes a few minutes for most accounts, but this can
+     *         take several hours. You cannot enable the Region until the disabling process is fully completed.
      */
 
     public String getRegionName() {
@@ -272,16 +272,16 @@ public class DisableRegionRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * Specifies the Region-code for a given Region name (for example, <code>af-south-1</code>). When you disable a
-     * Region, AWS performs actions to deactivate that Region in your account, such as destroying IAM resources in the
-     * Region. This process takes a few minutes for most accounts, but this can take several hours. You cannot enable
-     * the Region until the disabling process is fully completed.
+     * Region, Amazon Web Services performs actions to deactivate that Region in your account, such as destroying IAM
+     * resources in the Region. This process takes a few minutes for most accounts, but this can take several hours. You
+     * cannot enable the Region until the disabling process is fully completed.
      * </p>
      * 
      * @param regionName
      *        Specifies the Region-code for a given Region name (for example, <code>af-south-1</code>). When you disable
-     *        a Region, AWS performs actions to deactivate that Region in your account, such as destroying IAM resources
-     *        in the Region. This process takes a few minutes for most accounts, but this can take several hours. You
-     *        cannot enable the Region until the disabling process is fully completed.
+     *        a Region, Amazon Web Services performs actions to deactivate that Region in your account, such as
+     *        destroying IAM resources in the Region. This process takes a few minutes for most accounts, but this can
+     *        take several hours. You cannot enable the Region until the disabling process is fully completed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

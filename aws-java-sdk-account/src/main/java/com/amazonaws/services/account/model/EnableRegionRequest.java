@@ -56,10 +56,10 @@ public class EnableRegionRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * Specifies the Region-code for a given Region name (for example, <code>af-south-1</code>). When you enable a
-     * Region, AWS performs actions to prepare your account in that Region, such as distributing your IAM resources to
-     * the Region. This process takes a few minutes for most accounts, but it can take several hours. You cannot use the
-     * Region until this process is complete. Furthermore, you cannot disable the Region until the enabling process is
-     * fully completed.
+     * Region, Amazon Web Services performs actions to prepare your account in that Region, such as distributing your
+     * IAM resources to the Region. This process takes a few minutes for most accounts, but it can take several hours.
+     * You cannot use the Region until this process is complete. Furthermore, you cannot disable the Region until the
+     * enabling process is fully completed.
      * </p>
      */
     private String regionName;
@@ -236,18 +236,18 @@ public class EnableRegionRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * Specifies the Region-code for a given Region name (for example, <code>af-south-1</code>). When you enable a
-     * Region, AWS performs actions to prepare your account in that Region, such as distributing your IAM resources to
-     * the Region. This process takes a few minutes for most accounts, but it can take several hours. You cannot use the
-     * Region until this process is complete. Furthermore, you cannot disable the Region until the enabling process is
-     * fully completed.
+     * Region, Amazon Web Services performs actions to prepare your account in that Region, such as distributing your
+     * IAM resources to the Region. This process takes a few minutes for most accounts, but it can take several hours.
+     * You cannot use the Region until this process is complete. Furthermore, you cannot disable the Region until the
+     * enabling process is fully completed.
      * </p>
      * 
      * @param regionName
      *        Specifies the Region-code for a given Region name (for example, <code>af-south-1</code>). When you enable
-     *        a Region, AWS performs actions to prepare your account in that Region, such as distributing your IAM
-     *        resources to the Region. This process takes a few minutes for most accounts, but it can take several
-     *        hours. You cannot use the Region until this process is complete. Furthermore, you cannot disable the
-     *        Region until the enabling process is fully completed.
+     *        a Region, Amazon Web Services performs actions to prepare your account in that Region, such as
+     *        distributing your IAM resources to the Region. This process takes a few minutes for most accounts, but it
+     *        can take several hours. You cannot use the Region until this process is complete. Furthermore, you cannot
+     *        disable the Region until the enabling process is fully completed.
      */
 
     public void setRegionName(String regionName) {
@@ -257,17 +257,17 @@ public class EnableRegionRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * Specifies the Region-code for a given Region name (for example, <code>af-south-1</code>). When you enable a
-     * Region, AWS performs actions to prepare your account in that Region, such as distributing your IAM resources to
-     * the Region. This process takes a few minutes for most accounts, but it can take several hours. You cannot use the
-     * Region until this process is complete. Furthermore, you cannot disable the Region until the enabling process is
-     * fully completed.
+     * Region, Amazon Web Services performs actions to prepare your account in that Region, such as distributing your
+     * IAM resources to the Region. This process takes a few minutes for most accounts, but it can take several hours.
+     * You cannot use the Region until this process is complete. Furthermore, you cannot disable the Region until the
+     * enabling process is fully completed.
      * </p>
      * 
      * @return Specifies the Region-code for a given Region name (for example, <code>af-south-1</code>). When you enable
-     *         a Region, AWS performs actions to prepare your account in that Region, such as distributing your IAM
-     *         resources to the Region. This process takes a few minutes for most accounts, but it can take several
-     *         hours. You cannot use the Region until this process is complete. Furthermore, you cannot disable the
-     *         Region until the enabling process is fully completed.
+     *         a Region, Amazon Web Services performs actions to prepare your account in that Region, such as
+     *         distributing your IAM resources to the Region. This process takes a few minutes for most accounts, but it
+     *         can take several hours. You cannot use the Region until this process is complete. Furthermore, you cannot
+     *         disable the Region until the enabling process is fully completed.
      */
 
     public String getRegionName() {
@@ -277,18 +277,18 @@ public class EnableRegionRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * Specifies the Region-code for a given Region name (for example, <code>af-south-1</code>). When you enable a
-     * Region, AWS performs actions to prepare your account in that Region, such as distributing your IAM resources to
-     * the Region. This process takes a few minutes for most accounts, but it can take several hours. You cannot use the
-     * Region until this process is complete. Furthermore, you cannot disable the Region until the enabling process is
-     * fully completed.
+     * Region, Amazon Web Services performs actions to prepare your account in that Region, such as distributing your
+     * IAM resources to the Region. This process takes a few minutes for most accounts, but it can take several hours.
+     * You cannot use the Region until this process is complete. Furthermore, you cannot disable the Region until the
+     * enabling process is fully completed.
      * </p>
      * 
      * @param regionName
      *        Specifies the Region-code for a given Region name (for example, <code>af-south-1</code>). When you enable
-     *        a Region, AWS performs actions to prepare your account in that Region, such as distributing your IAM
-     *        resources to the Region. This process takes a few minutes for most accounts, but it can take several
-     *        hours. You cannot use the Region until this process is complete. Furthermore, you cannot disable the
-     *        Region until the enabling process is fully completed.
+     *        a Region, Amazon Web Services performs actions to prepare your account in that Region, such as
+     *        distributing your IAM resources to the Region. This process takes a few minutes for most accounts, but it
+     *        can take several hours. You cannot use the Region until this process is complete. Furthermore, you cannot
+     *        disable the Region until the enabling process is fully completed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

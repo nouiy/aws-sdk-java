@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The input failed to meet the constraints specified by the AWS service in a specified field.
+ * The input failed to meet the constraints specified by the Amazon Web Services service in a specified field.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/account-2021-02-01/ValidationExceptionField" target="_top">AWS
