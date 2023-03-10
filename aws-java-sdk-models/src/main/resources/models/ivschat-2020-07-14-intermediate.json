@@ -834,6 +834,10 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p/>",
+        "httpStatusCode" : 409
+      }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p/>",
         "httpStatusCode" : 403

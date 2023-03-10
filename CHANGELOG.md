@@ -1,3 +1,12 @@
+# __1.12.425__ __2023-03-10__
+## __AWS Secrets Manager__
+  - ### Features
+    - The type definitions of SecretString and SecretBinary now have a minimum length of 1 in the model to match the exception thrown when you pass in empty values.
+
+## __Amazon Interactive Video Service Chat__
+  - ### Features
+    - This release adds a new exception returned when calling AWS IVS chat UpdateLoggingConfiguration. Now UpdateLoggingConfiguration can return ConflictException when invalid updates are made in sequence to Logging Configurations.
+
 # __1.12.424__ __2023-03-09__
 ## __AWS Cloud Map__
   - ### Features

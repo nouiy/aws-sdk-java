@@ -589,6 +589,7 @@ public interface Amazonivschat {
      * 
      * @param updateLoggingConfigurationRequest
      * @return Result of the UpdateLoggingConfiguration operation returned by the service.
+     * @throws ConflictException
      * @throws AccessDeniedException
      * @throws ResourceNotFoundException
      * @throws PendingVerificationException

@@ -1335,6 +1335,7 @@ public class AmazonivschatClient extends AmazonWebServiceClient implements Amazo
      * 
      * @param updateLoggingConfigurationRequest
      * @return Result of the UpdateLoggingConfiguration operation returned by the service.
+     * @throws ConflictException
      * @throws AccessDeniedException
      * @throws ResourceNotFoundException
      * @throws PendingVerificationException
