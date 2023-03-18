@@ -58,6 +58,12 @@ public class ListBillingGroupsFilterJsonUnmarshaller implements Unmarshaller<Lis
                     context.nextToken();
                     listBillingGroupsFilter.setPricingPlan(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Statuses", targetDepth)) {
+                    context.nextToken();
+                    listBillingGroupsFilter.setStatuses(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

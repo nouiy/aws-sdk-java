@@ -659,6 +659,13 @@ public class S3Settings implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String expectedBucketOwner;
+    /**
+     * <p>
+     * When true, allows Glue to catalog your S3 bucket. Creating an Glue catalog lets you use Athena to query your
+     * data.
+     * </p>
+     */
+    private Boolean glueCatalogGeneration;
 
     /**
      * <p>
@@ -5695,6 +5702,66 @@ public class S3Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * When true, allows Glue to catalog your S3 bucket. Creating an Glue catalog lets you use Athena to query your
+     * data.
+     * </p>
+     * 
+     * @param glueCatalogGeneration
+     *        When true, allows Glue to catalog your S3 bucket. Creating an Glue catalog lets you use Athena to query
+     *        your data.
+     */
+
+    public void setGlueCatalogGeneration(Boolean glueCatalogGeneration) {
+        this.glueCatalogGeneration = glueCatalogGeneration;
+    }
+
+    /**
+     * <p>
+     * When true, allows Glue to catalog your S3 bucket. Creating an Glue catalog lets you use Athena to query your
+     * data.
+     * </p>
+     * 
+     * @return When true, allows Glue to catalog your S3 bucket. Creating an Glue catalog lets you use Athena to query
+     *         your data.
+     */
+
+    public Boolean getGlueCatalogGeneration() {
+        return this.glueCatalogGeneration;
+    }
+
+    /**
+     * <p>
+     * When true, allows Glue to catalog your S3 bucket. Creating an Glue catalog lets you use Athena to query your
+     * data.
+     * </p>
+     * 
+     * @param glueCatalogGeneration
+     *        When true, allows Glue to catalog your S3 bucket. Creating an Glue catalog lets you use Athena to query
+     *        your data.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3Settings withGlueCatalogGeneration(Boolean glueCatalogGeneration) {
+        setGlueCatalogGeneration(glueCatalogGeneration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * When true, allows Glue to catalog your S3 bucket. Creating an Glue catalog lets you use Athena to query your
+     * data.
+     * </p>
+     * 
+     * @return When true, allows Glue to catalog your S3 bucket. Creating an Glue catalog lets you use Athena to query
+     *         your data.
+     */
+
+    public Boolean isGlueCatalogGeneration() {
+        return this.glueCatalogGeneration;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -5785,7 +5852,9 @@ public class S3Settings implements Serializable, Cloneable, StructuredPojo {
         if (getAddTrailingPaddingCharacter() != null)
             sb.append("AddTrailingPaddingCharacter: ").append(getAddTrailingPaddingCharacter()).append(",");
         if (getExpectedBucketOwner() != null)
-            sb.append("ExpectedBucketOwner: ").append(getExpectedBucketOwner());
+            sb.append("ExpectedBucketOwner: ").append(getExpectedBucketOwner()).append(",");
+        if (getGlueCatalogGeneration() != null)
+            sb.append("GlueCatalogGeneration: ").append(getGlueCatalogGeneration());
         sb.append("}");
         return sb.toString();
     }
@@ -5962,6 +6031,10 @@ public class S3Settings implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getExpectedBucketOwner() != null && other.getExpectedBucketOwner().equals(this.getExpectedBucketOwner()) == false)
             return false;
+        if (other.getGlueCatalogGeneration() == null ^ this.getGlueCatalogGeneration() == null)
+            return false;
+        if (other.getGlueCatalogGeneration() != null && other.getGlueCatalogGeneration().equals(this.getGlueCatalogGeneration()) == false)
+            return false;
         return true;
     }
 
@@ -6010,6 +6083,7 @@ public class S3Settings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getDatePartitionTimezone() == null) ? 0 : getDatePartitionTimezone().hashCode());
         hashCode = prime * hashCode + ((getAddTrailingPaddingCharacter() == null) ? 0 : getAddTrailingPaddingCharacter().hashCode());
         hashCode = prime * hashCode + ((getExpectedBucketOwner() == null) ? 0 : getExpectedBucketOwner().hashCode());
+        hashCode = prime * hashCode + ((getGlueCatalogGeneration() == null) ? 0 : getGlueCatalogGeneration().hashCode());
         return hashCode;
     }
 

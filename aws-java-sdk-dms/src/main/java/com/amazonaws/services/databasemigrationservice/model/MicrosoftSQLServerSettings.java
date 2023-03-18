@@ -161,6 +161,18 @@ public class MicrosoftSQLServerSettings implements Serializable, Cloneable, Stru
      * </p>
      */
     private Boolean trimSpaceInChar;
+    /**
+     * <p>
+     * Indicates the mode used to fetch CDC data.
+     * </p>
+     */
+    private String tlogAccessMode;
+    /**
+     * <p>
+     * Forces LOB lookup on inline LOB.
+     * </p>
+     */
+    private Boolean forceLobLookup;
 
     /**
      * <p>
@@ -1144,6 +1156,117 @@ public class MicrosoftSQLServerSettings implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * Indicates the mode used to fetch CDC data.
+     * </p>
+     * 
+     * @param tlogAccessMode
+     *        Indicates the mode used to fetch CDC data.
+     * @see TlogAccessMode
+     */
+
+    public void setTlogAccessMode(String tlogAccessMode) {
+        this.tlogAccessMode = tlogAccessMode;
+    }
+
+    /**
+     * <p>
+     * Indicates the mode used to fetch CDC data.
+     * </p>
+     * 
+     * @return Indicates the mode used to fetch CDC data.
+     * @see TlogAccessMode
+     */
+
+    public String getTlogAccessMode() {
+        return this.tlogAccessMode;
+    }
+
+    /**
+     * <p>
+     * Indicates the mode used to fetch CDC data.
+     * </p>
+     * 
+     * @param tlogAccessMode
+     *        Indicates the mode used to fetch CDC data.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TlogAccessMode
+     */
+
+    public MicrosoftSQLServerSettings withTlogAccessMode(String tlogAccessMode) {
+        setTlogAccessMode(tlogAccessMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates the mode used to fetch CDC data.
+     * </p>
+     * 
+     * @param tlogAccessMode
+     *        Indicates the mode used to fetch CDC data.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TlogAccessMode
+     */
+
+    public MicrosoftSQLServerSettings withTlogAccessMode(TlogAccessMode tlogAccessMode) {
+        this.tlogAccessMode = tlogAccessMode.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Forces LOB lookup on inline LOB.
+     * </p>
+     * 
+     * @param forceLobLookup
+     *        Forces LOB lookup on inline LOB.
+     */
+
+    public void setForceLobLookup(Boolean forceLobLookup) {
+        this.forceLobLookup = forceLobLookup;
+    }
+
+    /**
+     * <p>
+     * Forces LOB lookup on inline LOB.
+     * </p>
+     * 
+     * @return Forces LOB lookup on inline LOB.
+     */
+
+    public Boolean getForceLobLookup() {
+        return this.forceLobLookup;
+    }
+
+    /**
+     * <p>
+     * Forces LOB lookup on inline LOB.
+     * </p>
+     * 
+     * @param forceLobLookup
+     *        Forces LOB lookup on inline LOB.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MicrosoftSQLServerSettings withForceLobLookup(Boolean forceLobLookup) {
+        setForceLobLookup(forceLobLookup);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Forces LOB lookup on inline LOB.
+     * </p>
+     * 
+     * @return Forces LOB lookup on inline LOB.
+     */
+
+    public Boolean isForceLobLookup() {
+        return this.forceLobLookup;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1184,7 +1307,11 @@ public class MicrosoftSQLServerSettings implements Serializable, Cloneable, Stru
         if (getSecretsManagerSecretId() != null)
             sb.append("SecretsManagerSecretId: ").append(getSecretsManagerSecretId()).append(",");
         if (getTrimSpaceInChar() != null)
-            sb.append("TrimSpaceInChar: ").append(getTrimSpaceInChar());
+            sb.append("TrimSpaceInChar: ").append(getTrimSpaceInChar()).append(",");
+        if (getTlogAccessMode() != null)
+            sb.append("TlogAccessMode: ").append(getTlogAccessMode()).append(",");
+        if (getForceLobLookup() != null)
+            sb.append("ForceLobLookup: ").append(getForceLobLookup());
         sb.append("}");
         return sb.toString();
     }
@@ -1259,6 +1386,14 @@ public class MicrosoftSQLServerSettings implements Serializable, Cloneable, Stru
             return false;
         if (other.getTrimSpaceInChar() != null && other.getTrimSpaceInChar().equals(this.getTrimSpaceInChar()) == false)
             return false;
+        if (other.getTlogAccessMode() == null ^ this.getTlogAccessMode() == null)
+            return false;
+        if (other.getTlogAccessMode() != null && other.getTlogAccessMode().equals(this.getTlogAccessMode()) == false)
+            return false;
+        if (other.getForceLobLookup() == null ^ this.getForceLobLookup() == null)
+            return false;
+        if (other.getForceLobLookup() != null && other.getForceLobLookup().equals(this.getForceLobLookup()) == false)
+            return false;
         return true;
     }
 
@@ -1282,6 +1417,8 @@ public class MicrosoftSQLServerSettings implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getSecretsManagerAccessRoleArn() == null) ? 0 : getSecretsManagerAccessRoleArn().hashCode());
         hashCode = prime * hashCode + ((getSecretsManagerSecretId() == null) ? 0 : getSecretsManagerSecretId().hashCode());
         hashCode = prime * hashCode + ((getTrimSpaceInChar() == null) ? 0 : getTrimSpaceInChar().hashCode());
+        hashCode = prime * hashCode + ((getTlogAccessMode() == null) ? 0 : getTlogAccessMode().hashCode());
+        hashCode = prime * hashCode + ((getForceLobLookup() == null) ? 0 : getForceLobLookup().hashCode());
         return hashCode;
     }
 

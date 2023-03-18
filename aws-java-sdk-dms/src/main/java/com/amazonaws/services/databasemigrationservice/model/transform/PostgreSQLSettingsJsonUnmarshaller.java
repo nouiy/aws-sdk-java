@@ -124,6 +124,10 @@ public class PostgreSQLSettingsJsonUnmarshaller implements Unmarshaller<PostgreS
                     context.nextToken();
                     postgreSQLSettings.setTrimSpaceInChar(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("MapBooleanAsBoolean", targetDepth)) {
+                    context.nextToken();
+                    postgreSQLSettings.setMapBooleanAsBoolean(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

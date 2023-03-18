@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The specified <code>ResultToken</code> is invalid.
+ * The specified <code>ResultToken</code> is not valid.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

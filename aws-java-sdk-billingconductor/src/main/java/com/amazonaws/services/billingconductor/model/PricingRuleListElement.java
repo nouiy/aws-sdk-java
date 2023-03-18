@@ -102,6 +102,32 @@ public class PricingRuleListElement implements Serializable, Cloneable, Structur
      * </p>
      */
     private Tiering tiering;
+    /**
+     * <p>
+     * Usage type is the unit that each service uses to measure the usage of a specific type of resource.
+     * </p>
+     * <p>
+     * If the <code>Scope</code> attribute is set to <code>SKU</code>, this attribute indicates which usage type the
+     * <code>PricingRule</code> is modifying. For example, <code>USW2-BoxUsage:m2.2xlarge</code> describes an
+     * <code> M2 High Memory Double Extra Large</code> instance in the US West (Oregon) Region.
+     * 
+     * <pre>
+     * <code>&lt;/p&gt; </code>
+     * </pre>
+     */
+    private String usageType;
+    /**
+     * <p>
+     * Operation is the specific Amazon Web Services action covered by this line item. This describes the specific usage
+     * of the line item.
+     * </p>
+     * <p>
+     * If the <code>Scope</code> attribute is set to <code>SKU</code>, this attribute indicates which operation the
+     * <code>PricingRule</code> is modifying. For example, a value of <code>RunInstances:0202</code> indicates the
+     * operation of running an Amazon EC2 instance.
+     * </p>
+     */
+    private String operation;
 
     /**
      * <p>
@@ -634,6 +660,165 @@ public class PricingRuleListElement implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * Usage type is the unit that each service uses to measure the usage of a specific type of resource.
+     * </p>
+     * <p>
+     * If the <code>Scope</code> attribute is set to <code>SKU</code>, this attribute indicates which usage type the
+     * <code>PricingRule</code> is modifying. For example, <code>USW2-BoxUsage:m2.2xlarge</code> describes an
+     * <code> M2 High Memory Double Extra Large</code> instance in the US West (Oregon) Region.
+     * 
+     * <pre>
+     * <code>&lt;/p&gt; </code>
+     * </pre>
+     * 
+     * @param usageType
+     *        Usage type is the unit that each service uses to measure the usage of a specific type of resource.
+     *        </p>
+     *        <p>
+     *        If the <code>Scope</code> attribute is set to <code>SKU</code>, this attribute indicates which usage type
+     *        the <code>PricingRule</code> is modifying. For example, <code>USW2-BoxUsage:m2.2xlarge</code> describes an
+     *        <code> M2 High Memory Double Extra Large</code> instance in the US West (Oregon) Region.
+     * 
+     * <pre><code>&lt;/p&gt; </code>
+     */
+
+    public void setUsageType(String usageType) {
+        this.usageType = usageType;
+    }
+
+    /**
+     * <p>
+     * Usage type is the unit that each service uses to measure the usage of a specific type of resource.
+     * </p>
+     * <p>
+     * If the <code>Scope</code> attribute is set to <code>SKU</code>, this attribute indicates which usage type the
+     * <code>PricingRule</code> is modifying. For example, <code>USW2-BoxUsage:m2.2xlarge</code> describes an
+     * <code> M2 High Memory Double Extra Large</code> instance in the US West (Oregon) Region.
+     * 
+     * <pre>
+     * <code>&lt;/p&gt; </code>
+     * </pre>
+     * 
+     * @return Usage type is the unit that each service uses to measure the usage of a specific type of resource.
+     *         </p>
+     *         <p>
+     *         If the <code>Scope</code> attribute is set to <code>SKU</code>, this attribute indicates which usage type
+     *         the <code>PricingRule</code> is modifying. For example, <code>USW2-BoxUsage:m2.2xlarge</code> describes
+     *         an<code> M2 High Memory Double Extra Large</code> instance in the US West (Oregon) Region.
+     * 
+     * <pre><code>&lt;/p&gt; </code>
+     */
+
+    public String getUsageType() {
+        return this.usageType;
+    }
+
+    /**
+     * <p>
+     * Usage type is the unit that each service uses to measure the usage of a specific type of resource.
+     * </p>
+     * <p>
+     * If the <code>Scope</code> attribute is set to <code>SKU</code>, this attribute indicates which usage type the
+     * <code>PricingRule</code> is modifying. For example, <code>USW2-BoxUsage:m2.2xlarge</code> describes an
+     * <code> M2 High Memory Double Extra Large</code> instance in the US West (Oregon) Region.
+     * 
+     * <pre>
+     * <code>&lt;/p&gt; </code>
+     * </pre>
+     * 
+     * @param usageType
+     *        Usage type is the unit that each service uses to measure the usage of a specific type of resource.
+     *        </p>
+     *        <p>
+     *        If the <code>Scope</code> attribute is set to <code>SKU</code>, this attribute indicates which usage type
+     *        the <code>PricingRule</code> is modifying. For example, <code>USW2-BoxUsage:m2.2xlarge</code> describes an
+     *        <code> M2 High Memory Double Extra Large</code> instance in the US West (Oregon) Region.
+     * 
+     *        <pre>
+     * <code>&lt;/p&gt; </code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PricingRuleListElement withUsageType(String usageType) {
+        setUsageType(usageType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Operation is the specific Amazon Web Services action covered by this line item. This describes the specific usage
+     * of the line item.
+     * </p>
+     * <p>
+     * If the <code>Scope</code> attribute is set to <code>SKU</code>, this attribute indicates which operation the
+     * <code>PricingRule</code> is modifying. For example, a value of <code>RunInstances:0202</code> indicates the
+     * operation of running an Amazon EC2 instance.
+     * </p>
+     * 
+     * @param operation
+     *        Operation is the specific Amazon Web Services action covered by this line item. This describes the
+     *        specific usage of the line item.</p>
+     *        <p>
+     *        If the <code>Scope</code> attribute is set to <code>SKU</code>, this attribute indicates which operation
+     *        the <code>PricingRule</code> is modifying. For example, a value of <code>RunInstances:0202</code>
+     *        indicates the operation of running an Amazon EC2 instance.
+     */
+
+    public void setOperation(String operation) {
+        this.operation = operation;
+    }
+
+    /**
+     * <p>
+     * Operation is the specific Amazon Web Services action covered by this line item. This describes the specific usage
+     * of the line item.
+     * </p>
+     * <p>
+     * If the <code>Scope</code> attribute is set to <code>SKU</code>, this attribute indicates which operation the
+     * <code>PricingRule</code> is modifying. For example, a value of <code>RunInstances:0202</code> indicates the
+     * operation of running an Amazon EC2 instance.
+     * </p>
+     * 
+     * @return Operation is the specific Amazon Web Services action covered by this line item. This describes the
+     *         specific usage of the line item.</p>
+     *         <p>
+     *         If the <code>Scope</code> attribute is set to <code>SKU</code>, this attribute indicates which operation
+     *         the <code>PricingRule</code> is modifying. For example, a value of <code>RunInstances:0202</code>
+     *         indicates the operation of running an Amazon EC2 instance.
+     */
+
+    public String getOperation() {
+        return this.operation;
+    }
+
+    /**
+     * <p>
+     * Operation is the specific Amazon Web Services action covered by this line item. This describes the specific usage
+     * of the line item.
+     * </p>
+     * <p>
+     * If the <code>Scope</code> attribute is set to <code>SKU</code>, this attribute indicates which operation the
+     * <code>PricingRule</code> is modifying. For example, a value of <code>RunInstances:0202</code> indicates the
+     * operation of running an Amazon EC2 instance.
+     * </p>
+     * 
+     * @param operation
+     *        Operation is the specific Amazon Web Services action covered by this line item. This describes the
+     *        specific usage of the line item.</p>
+     *        <p>
+     *        If the <code>Scope</code> attribute is set to <code>SKU</code>, this attribute indicates which operation
+     *        the <code>PricingRule</code> is modifying. For example, a value of <code>RunInstances:0202</code>
+     *        indicates the operation of running an Amazon EC2 instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PricingRuleListElement withOperation(String operation) {
+        setOperation(operation);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -668,7 +853,11 @@ public class PricingRuleListElement implements Serializable, Cloneable, Structur
         if (getBillingEntity() != null)
             sb.append("BillingEntity: ").append(getBillingEntity()).append(",");
         if (getTiering() != null)
-            sb.append("Tiering: ").append(getTiering());
+            sb.append("Tiering: ").append(getTiering()).append(",");
+        if (getUsageType() != null)
+            sb.append("UsageType: ").append(getUsageType()).append(",");
+        if (getOperation() != null)
+            sb.append("Operation: ").append(getOperation());
         sb.append("}");
         return sb.toString();
     }
@@ -731,6 +920,14 @@ public class PricingRuleListElement implements Serializable, Cloneable, Structur
             return false;
         if (other.getTiering() != null && other.getTiering().equals(this.getTiering()) == false)
             return false;
+        if (other.getUsageType() == null ^ this.getUsageType() == null)
+            return false;
+        if (other.getUsageType() != null && other.getUsageType().equals(this.getUsageType()) == false)
+            return false;
+        if (other.getOperation() == null ^ this.getOperation() == null)
+            return false;
+        if (other.getOperation() != null && other.getOperation().equals(this.getOperation()) == false)
+            return false;
         return true;
     }
 
@@ -751,6 +948,8 @@ public class PricingRuleListElement implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getBillingEntity() == null) ? 0 : getBillingEntity().hashCode());
         hashCode = prime * hashCode + ((getTiering() == null) ? 0 : getTiering().hashCode());
+        hashCode = prime * hashCode + ((getUsageType() == null) ? 0 : getUsageType().hashCode());
+        hashCode = prime * hashCode + ((getOperation() == null) ? 0 : getOperation().hashCode());
         return hashCode;
     }
 

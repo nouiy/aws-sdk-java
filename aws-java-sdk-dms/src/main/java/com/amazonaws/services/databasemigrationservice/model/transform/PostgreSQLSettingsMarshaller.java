@@ -65,6 +65,8 @@ public class PostgreSQLSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecretsManagerSecretId").build();
     private static final MarshallingInfo<Boolean> TRIMSPACEINCHAR_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TrimSpaceInChar").build();
+    private static final MarshallingInfo<Boolean> MAPBOOLEANASBOOLEAN_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MapBooleanAsBoolean").build();
 
     private static final PostgreSQLSettingsMarshaller instance = new PostgreSQLSettingsMarshaller();
 
@@ -101,6 +103,7 @@ public class PostgreSQLSettingsMarshaller {
             protocolMarshaller.marshall(postgreSQLSettings.getSecretsManagerAccessRoleArn(), SECRETSMANAGERACCESSROLEARN_BINDING);
             protocolMarshaller.marshall(postgreSQLSettings.getSecretsManagerSecretId(), SECRETSMANAGERSECRETID_BINDING);
             protocolMarshaller.marshall(postgreSQLSettings.getTrimSpaceInChar(), TRIMSPACEINCHAR_BINDING);
+            protocolMarshaller.marshall(postgreSQLSettings.getMapBooleanAsBoolean(), MAPBOOLEANASBOOLEAN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

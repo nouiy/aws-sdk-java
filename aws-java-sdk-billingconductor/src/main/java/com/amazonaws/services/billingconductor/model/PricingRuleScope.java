@@ -22,7 +22,8 @@ public enum PricingRuleScope {
 
     GLOBAL("GLOBAL"),
     SERVICE("SERVICE"),
-    BILLING_ENTITY("BILLING_ENTITY");
+    BILLING_ENTITY("BILLING_ENTITY"),
+    SKU("SKU");
 
     private String value;
 

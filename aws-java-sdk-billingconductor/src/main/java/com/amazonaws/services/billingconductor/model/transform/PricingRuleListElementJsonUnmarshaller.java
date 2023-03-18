@@ -96,6 +96,14 @@ public class PricingRuleListElementJsonUnmarshaller implements Unmarshaller<Pric
                     context.nextToken();
                     pricingRuleListElement.setTiering(TieringJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("UsageType", targetDepth)) {
+                    context.nextToken();
+                    pricingRuleListElement.setUsageType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Operation", targetDepth)) {
+                    context.nextToken();
+                    pricingRuleListElement.setOperation(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

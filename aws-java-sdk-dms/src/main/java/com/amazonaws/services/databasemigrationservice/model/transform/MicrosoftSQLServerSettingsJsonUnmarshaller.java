@@ -108,6 +108,14 @@ public class MicrosoftSQLServerSettingsJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     microsoftSQLServerSettings.setTrimSpaceInChar(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("TlogAccessMode", targetDepth)) {
+                    context.nextToken();
+                    microsoftSQLServerSettings.setTlogAccessMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("ForceLobLookup", targetDepth)) {
+                    context.nextToken();
+                    microsoftSQLServerSettings.setForceLobLookup(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

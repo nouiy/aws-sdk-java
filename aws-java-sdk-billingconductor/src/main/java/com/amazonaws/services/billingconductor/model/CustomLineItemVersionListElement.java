@@ -90,6 +90,18 @@ public class CustomLineItemVersionListElement implements Serializable, Cloneable
      * </p>
      */
     private String endBillingPeriod;
+    /**
+     * <p>
+     * A list of custom line item Amazon Resource Names (ARNs) to retrieve information.
+     * </p>
+     */
+    private String arn;
+    /**
+     * <p>
+     * The inclusive start time.
+     * </p>
+     */
+    private Long startTime;
 
     /**
      * <p>
@@ -537,6 +549,86 @@ public class CustomLineItemVersionListElement implements Serializable, Cloneable
     }
 
     /**
+     * <p>
+     * A list of custom line item Amazon Resource Names (ARNs) to retrieve information.
+     * </p>
+     * 
+     * @param arn
+     *        A list of custom line item Amazon Resource Names (ARNs) to retrieve information.
+     */
+
+    public void setArn(String arn) {
+        this.arn = arn;
+    }
+
+    /**
+     * <p>
+     * A list of custom line item Amazon Resource Names (ARNs) to retrieve information.
+     * </p>
+     * 
+     * @return A list of custom line item Amazon Resource Names (ARNs) to retrieve information.
+     */
+
+    public String getArn() {
+        return this.arn;
+    }
+
+    /**
+     * <p>
+     * A list of custom line item Amazon Resource Names (ARNs) to retrieve information.
+     * </p>
+     * 
+     * @param arn
+     *        A list of custom line item Amazon Resource Names (ARNs) to retrieve information.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CustomLineItemVersionListElement withArn(String arn) {
+        setArn(arn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The inclusive start time.
+     * </p>
+     * 
+     * @param startTime
+     *        The inclusive start time.
+     */
+
+    public void setStartTime(Long startTime) {
+        this.startTime = startTime;
+    }
+
+    /**
+     * <p>
+     * The inclusive start time.
+     * </p>
+     * 
+     * @return The inclusive start time.
+     */
+
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    /**
+     * <p>
+     * The inclusive start time.
+     * </p>
+     * 
+     * @param startTime
+     *        The inclusive start time.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CustomLineItemVersionListElement withStartTime(Long startTime) {
+        setStartTime(startTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -569,7 +661,11 @@ public class CustomLineItemVersionListElement implements Serializable, Cloneable
         if (getStartBillingPeriod() != null)
             sb.append("StartBillingPeriod: ").append(getStartBillingPeriod()).append(",");
         if (getEndBillingPeriod() != null)
-            sb.append("EndBillingPeriod: ").append(getEndBillingPeriod());
+            sb.append("EndBillingPeriod: ").append(getEndBillingPeriod()).append(",");
+        if (getArn() != null)
+            sb.append("Arn: ").append(getArn()).append(",");
+        if (getStartTime() != null)
+            sb.append("StartTime: ").append(getStartTime());
         sb.append("}");
         return sb.toString();
     }
@@ -628,6 +724,14 @@ public class CustomLineItemVersionListElement implements Serializable, Cloneable
             return false;
         if (other.getEndBillingPeriod() != null && other.getEndBillingPeriod().equals(this.getEndBillingPeriod()) == false)
             return false;
+        if (other.getArn() == null ^ this.getArn() == null)
+            return false;
+        if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
+            return false;
+        if (other.getStartTime() == null ^ this.getStartTime() == null)
+            return false;
+        if (other.getStartTime() != null && other.getStartTime().equals(this.getStartTime()) == false)
+            return false;
         return true;
     }
 
@@ -647,6 +751,8 @@ public class CustomLineItemVersionListElement implements Serializable, Cloneable
         hashCode = prime * hashCode + ((getAssociationSize() == null) ? 0 : getAssociationSize().hashCode());
         hashCode = prime * hashCode + ((getStartBillingPeriod() == null) ? 0 : getStartBillingPeriod().hashCode());
         hashCode = prime * hashCode + ((getEndBillingPeriod() == null) ? 0 : getEndBillingPeriod().hashCode());
+        hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
+        hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         return hashCode;
     }
 

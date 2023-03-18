@@ -68,8 +68,8 @@ public class ListConformancePackComplianceScoresRequest extends com.amazonaws.Am
     private Integer limit;
     /**
      * <p>
-     * The <code>nextToken</code> string in a prior request that you can use to get the paginated response for next set
-     * of conformance pack compliance scores.
+     * The <code>nextToken</code> string in a prior request that you can use to get the paginated response for the next
+     * set of conformance pack compliance scores.
      * </p>
      */
     private String nextToken;
@@ -406,13 +406,13 @@ public class ListConformancePackComplianceScoresRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The <code>nextToken</code> string in a prior request that you can use to get the paginated response for next set
-     * of conformance pack compliance scores.
+     * The <code>nextToken</code> string in a prior request that you can use to get the paginated response for the next
+     * set of conformance pack compliance scores.
      * </p>
      * 
      * @param nextToken
      *        The <code>nextToken</code> string in a prior request that you can use to get the paginated response for
-     *        next set of conformance pack compliance scores.
+     *        the next set of conformance pack compliance scores.
      */
 
     public void setNextToken(String nextToken) {
@@ -421,12 +421,12 @@ public class ListConformancePackComplianceScoresRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The <code>nextToken</code> string in a prior request that you can use to get the paginated response for next set
-     * of conformance pack compliance scores.
+     * The <code>nextToken</code> string in a prior request that you can use to get the paginated response for the next
+     * set of conformance pack compliance scores.
      * </p>
      * 
      * @return The <code>nextToken</code> string in a prior request that you can use to get the paginated response for
-     *         next set of conformance pack compliance scores.
+     *         the next set of conformance pack compliance scores.
      */
 
     public String getNextToken() {
@@ -435,13 +435,13 @@ public class ListConformancePackComplianceScoresRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The <code>nextToken</code> string in a prior request that you can use to get the paginated response for next set
-     * of conformance pack compliance scores.
+     * The <code>nextToken</code> string in a prior request that you can use to get the paginated response for the next
+     * set of conformance pack compliance scores.
      * </p>
      * 
      * @param nextToken
      *        The <code>nextToken</code> string in a prior request that you can use to get the paginated response for
-     *        next set of conformance pack compliance scores.
+     *        the next set of conformance pack compliance scores.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

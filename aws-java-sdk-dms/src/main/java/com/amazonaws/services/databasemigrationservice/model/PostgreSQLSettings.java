@@ -214,6 +214,13 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private Boolean trimSpaceInChar;
+    /**
+     * <p>
+     * When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans as
+     * <code>varchar(5)</code>.
+     * </p>
+     */
+    private Boolean mapBooleanAsBoolean;
 
     /**
      * <p>
@@ -1480,6 +1487,66 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans as
+     * <code>varchar(5)</code>.
+     * </p>
+     * 
+     * @param mapBooleanAsBoolean
+     *        When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans
+     *        as <code>varchar(5)</code>.
+     */
+
+    public void setMapBooleanAsBoolean(Boolean mapBooleanAsBoolean) {
+        this.mapBooleanAsBoolean = mapBooleanAsBoolean;
+    }
+
+    /**
+     * <p>
+     * When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans as
+     * <code>varchar(5)</code>.
+     * </p>
+     * 
+     * @return When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans
+     *         as <code>varchar(5)</code>.
+     */
+
+    public Boolean getMapBooleanAsBoolean() {
+        return this.mapBooleanAsBoolean;
+    }
+
+    /**
+     * <p>
+     * When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans as
+     * <code>varchar(5)</code>.
+     * </p>
+     * 
+     * @param mapBooleanAsBoolean
+     *        When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans
+     *        as <code>varchar(5)</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PostgreSQLSettings withMapBooleanAsBoolean(Boolean mapBooleanAsBoolean) {
+        setMapBooleanAsBoolean(mapBooleanAsBoolean);
+        return this;
+    }
+
+    /**
+     * <p>
+     * When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans as
+     * <code>varchar(5)</code>.
+     * </p>
+     * 
+     * @return When true, lets PostgreSQL migrate the boolean type as boolean. By default, PostgreSQL migrates booleans
+     *         as <code>varchar(5)</code>.
+     */
+
+    public Boolean isMapBooleanAsBoolean() {
+        return this.mapBooleanAsBoolean;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1528,7 +1595,9 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
         if (getSecretsManagerSecretId() != null)
             sb.append("SecretsManagerSecretId: ").append(getSecretsManagerSecretId()).append(",");
         if (getTrimSpaceInChar() != null)
-            sb.append("TrimSpaceInChar: ").append(getTrimSpaceInChar());
+            sb.append("TrimSpaceInChar: ").append(getTrimSpaceInChar()).append(",");
+        if (getMapBooleanAsBoolean() != null)
+            sb.append("MapBooleanAsBoolean: ").append(getMapBooleanAsBoolean());
         sb.append("}");
         return sb.toString();
     }
@@ -1619,6 +1688,10 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getTrimSpaceInChar() != null && other.getTrimSpaceInChar().equals(this.getTrimSpaceInChar()) == false)
             return false;
+        if (other.getMapBooleanAsBoolean() == null ^ this.getMapBooleanAsBoolean() == null)
+            return false;
+        if (other.getMapBooleanAsBoolean() != null && other.getMapBooleanAsBoolean().equals(this.getMapBooleanAsBoolean()) == false)
+            return false;
         return true;
     }
 
@@ -1646,6 +1719,7 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getSecretsManagerAccessRoleArn() == null) ? 0 : getSecretsManagerAccessRoleArn().hashCode());
         hashCode = prime * hashCode + ((getSecretsManagerSecretId() == null) ? 0 : getSecretsManagerSecretId().hashCode());
         hashCode = prime * hashCode + ((getTrimSpaceInChar() == null) ? 0 : getTrimSpaceInChar().hashCode());
+        hashCode = prime * hashCode + ((getMapBooleanAsBoolean() == null) ? 0 : getMapBooleanAsBoolean().hashCode());
         return hashCode;
     }
 

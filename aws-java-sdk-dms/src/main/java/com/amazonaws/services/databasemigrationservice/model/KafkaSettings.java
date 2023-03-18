@@ -162,6 +162,14 @@ public class KafkaSettings implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Boolean noHexPrefix;
+    /**
+     * <p>
+     * For SASL/SSL authentication, DMS supports the <code>SCRAM-SHA-512</code> mechanism by default. DMS versions 3.5.0
+     * and later also support the <code>PLAIN</code> mechanism. To use the <code>PLAIN</code> mechanism, set this
+     * parameter to <code>PLAIN.</code>
+     * </p>
+     */
+    private String saslMechanism;
 
     /**
      * <p>
@@ -1199,6 +1207,81 @@ public class KafkaSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * For SASL/SSL authentication, DMS supports the <code>SCRAM-SHA-512</code> mechanism by default. DMS versions 3.5.0
+     * and later also support the <code>PLAIN</code> mechanism. To use the <code>PLAIN</code> mechanism, set this
+     * parameter to <code>PLAIN.</code>
+     * </p>
+     * 
+     * @param saslMechanism
+     *        For SASL/SSL authentication, DMS supports the <code>SCRAM-SHA-512</code> mechanism by default. DMS
+     *        versions 3.5.0 and later also support the <code>PLAIN</code> mechanism. To use the <code>PLAIN</code>
+     *        mechanism, set this parameter to <code>PLAIN.</code>
+     * @see KafkaSaslMechanism
+     */
+
+    public void setSaslMechanism(String saslMechanism) {
+        this.saslMechanism = saslMechanism;
+    }
+
+    /**
+     * <p>
+     * For SASL/SSL authentication, DMS supports the <code>SCRAM-SHA-512</code> mechanism by default. DMS versions 3.5.0
+     * and later also support the <code>PLAIN</code> mechanism. To use the <code>PLAIN</code> mechanism, set this
+     * parameter to <code>PLAIN.</code>
+     * </p>
+     * 
+     * @return For SASL/SSL authentication, DMS supports the <code>SCRAM-SHA-512</code> mechanism by default. DMS
+     *         versions 3.5.0 and later also support the <code>PLAIN</code> mechanism. To use the <code>PLAIN</code>
+     *         mechanism, set this parameter to <code>PLAIN.</code>
+     * @see KafkaSaslMechanism
+     */
+
+    public String getSaslMechanism() {
+        return this.saslMechanism;
+    }
+
+    /**
+     * <p>
+     * For SASL/SSL authentication, DMS supports the <code>SCRAM-SHA-512</code> mechanism by default. DMS versions 3.5.0
+     * and later also support the <code>PLAIN</code> mechanism. To use the <code>PLAIN</code> mechanism, set this
+     * parameter to <code>PLAIN.</code>
+     * </p>
+     * 
+     * @param saslMechanism
+     *        For SASL/SSL authentication, DMS supports the <code>SCRAM-SHA-512</code> mechanism by default. DMS
+     *        versions 3.5.0 and later also support the <code>PLAIN</code> mechanism. To use the <code>PLAIN</code>
+     *        mechanism, set this parameter to <code>PLAIN.</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KafkaSaslMechanism
+     */
+
+    public KafkaSettings withSaslMechanism(String saslMechanism) {
+        setSaslMechanism(saslMechanism);
+        return this;
+    }
+
+    /**
+     * <p>
+     * For SASL/SSL authentication, DMS supports the <code>SCRAM-SHA-512</code> mechanism by default. DMS versions 3.5.0
+     * and later also support the <code>PLAIN</code> mechanism. To use the <code>PLAIN</code> mechanism, set this
+     * parameter to <code>PLAIN.</code>
+     * </p>
+     * 
+     * @param saslMechanism
+     *        For SASL/SSL authentication, DMS supports the <code>SCRAM-SHA-512</code> mechanism by default. DMS
+     *        versions 3.5.0 and later also support the <code>PLAIN</code> mechanism. To use the <code>PLAIN</code>
+     *        mechanism, set this parameter to <code>PLAIN.</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KafkaSaslMechanism
+     */
+
+    public KafkaSettings withSaslMechanism(KafkaSaslMechanism saslMechanism) {
+        this.saslMechanism = saslMechanism.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1245,7 +1328,9 @@ public class KafkaSettings implements Serializable, Cloneable, StructuredPojo {
         if (getSaslPassword() != null)
             sb.append("SaslPassword: ").append("***Sensitive Data Redacted***").append(",");
         if (getNoHexPrefix() != null)
-            sb.append("NoHexPrefix: ").append(getNoHexPrefix());
+            sb.append("NoHexPrefix: ").append(getNoHexPrefix()).append(",");
+        if (getSaslMechanism() != null)
+            sb.append("SaslMechanism: ").append(getSaslMechanism());
         sb.append("}");
         return sb.toString();
     }
@@ -1332,6 +1417,10 @@ public class KafkaSettings implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getNoHexPrefix() != null && other.getNoHexPrefix().equals(this.getNoHexPrefix()) == false)
             return false;
+        if (other.getSaslMechanism() == null ^ this.getSaslMechanism() == null)
+            return false;
+        if (other.getSaslMechanism() != null && other.getSaslMechanism().equals(this.getSaslMechanism()) == false)
+            return false;
         return true;
     }
 
@@ -1358,6 +1447,7 @@ public class KafkaSettings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getSaslUsername() == null) ? 0 : getSaslUsername().hashCode());
         hashCode = prime * hashCode + ((getSaslPassword() == null) ? 0 : getSaslPassword().hashCode());
         hashCode = prime * hashCode + ((getNoHexPrefix() == null) ? 0 : getNoHexPrefix().hashCode());
+        hashCode = prime * hashCode + ((getSaslMechanism() == null) ? 0 : getSaslMechanism().hashCode());
         return hashCode;
     }
 

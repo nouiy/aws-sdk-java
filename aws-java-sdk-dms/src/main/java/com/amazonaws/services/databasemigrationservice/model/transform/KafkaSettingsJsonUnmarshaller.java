@@ -120,6 +120,10 @@ public class KafkaSettingsJsonUnmarshaller implements Unmarshaller<KafkaSettings
                     context.nextToken();
                     kafkaSettings.setNoHexPrefix(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("SaslMechanism", targetDepth)) {
+                    context.nextToken();
+                    kafkaSettings.setSaslMechanism(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

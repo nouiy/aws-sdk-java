@@ -168,6 +168,10 @@ public class RedshiftSettingsJsonUnmarshaller implements Unmarshaller<RedshiftSe
                     context.nextToken();
                     redshiftSettings.setSecretsManagerSecretId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("MapBooleanAsBoolean", targetDepth)) {
+                    context.nextToken();
+                    redshiftSettings.setMapBooleanAsBoolean(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

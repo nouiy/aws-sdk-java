@@ -436,6 +436,12 @@ public class OracleSettings implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Boolean trimSpaceInChar;
+    /**
+     * <p>
+     * When true, converts timestamps with the <code>timezone</code> datatype to their UTC value.
+     * </p>
+     */
+    private Boolean convertTimestampWithZoneToUTC;
 
     /**
      * <p>
@@ -3396,6 +3402,58 @@ public class OracleSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * When true, converts timestamps with the <code>timezone</code> datatype to their UTC value.
+     * </p>
+     * 
+     * @param convertTimestampWithZoneToUTC
+     *        When true, converts timestamps with the <code>timezone</code> datatype to their UTC value.
+     */
+
+    public void setConvertTimestampWithZoneToUTC(Boolean convertTimestampWithZoneToUTC) {
+        this.convertTimestampWithZoneToUTC = convertTimestampWithZoneToUTC;
+    }
+
+    /**
+     * <p>
+     * When true, converts timestamps with the <code>timezone</code> datatype to their UTC value.
+     * </p>
+     * 
+     * @return When true, converts timestamps with the <code>timezone</code> datatype to their UTC value.
+     */
+
+    public Boolean getConvertTimestampWithZoneToUTC() {
+        return this.convertTimestampWithZoneToUTC;
+    }
+
+    /**
+     * <p>
+     * When true, converts timestamps with the <code>timezone</code> datatype to their UTC value.
+     * </p>
+     * 
+     * @param convertTimestampWithZoneToUTC
+     *        When true, converts timestamps with the <code>timezone</code> datatype to their UTC value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OracleSettings withConvertTimestampWithZoneToUTC(Boolean convertTimestampWithZoneToUTC) {
+        setConvertTimestampWithZoneToUTC(convertTimestampWithZoneToUTC);
+        return this;
+    }
+
+    /**
+     * <p>
+     * When true, converts timestamps with the <code>timezone</code> datatype to their UTC value.
+     * </p>
+     * 
+     * @return When true, converts timestamps with the <code>timezone</code> datatype to their UTC value.
+     */
+
+    public Boolean isConvertTimestampWithZoneToUTC() {
+        return this.convertTimestampWithZoneToUTC;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3488,7 +3546,9 @@ public class OracleSettings implements Serializable, Cloneable, StructuredPojo {
         if (getSecretsManagerOracleAsmSecretId() != null)
             sb.append("SecretsManagerOracleAsmSecretId: ").append(getSecretsManagerOracleAsmSecretId()).append(",");
         if (getTrimSpaceInChar() != null)
-            sb.append("TrimSpaceInChar: ").append(getTrimSpaceInChar());
+            sb.append("TrimSpaceInChar: ").append(getTrimSpaceInChar()).append(",");
+        if (getConvertTimestampWithZoneToUTC() != null)
+            sb.append("ConvertTimestampWithZoneToUTC: ").append(getConvertTimestampWithZoneToUTC());
         sb.append("}");
         return sb.toString();
     }
@@ -3670,6 +3730,11 @@ public class OracleSettings implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTrimSpaceInChar() != null && other.getTrimSpaceInChar().equals(this.getTrimSpaceInChar()) == false)
             return false;
+        if (other.getConvertTimestampWithZoneToUTC() == null ^ this.getConvertTimestampWithZoneToUTC() == null)
+            return false;
+        if (other.getConvertTimestampWithZoneToUTC() != null
+                && other.getConvertTimestampWithZoneToUTC().equals(this.getConvertTimestampWithZoneToUTC()) == false)
+            return false;
         return true;
     }
 
@@ -3719,6 +3784,7 @@ public class OracleSettings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getSecretsManagerOracleAsmAccessRoleArn() == null) ? 0 : getSecretsManagerOracleAsmAccessRoleArn().hashCode());
         hashCode = prime * hashCode + ((getSecretsManagerOracleAsmSecretId() == null) ? 0 : getSecretsManagerOracleAsmSecretId().hashCode());
         hashCode = prime * hashCode + ((getTrimSpaceInChar() == null) ? 0 : getTrimSpaceInChar().hashCode());
+        hashCode = prime * hashCode + ((getConvertTimestampWithZoneToUTC() == null) ? 0 : getConvertTimestampWithZoneToUTC().hashCode());
         return hashCode;
     }
 

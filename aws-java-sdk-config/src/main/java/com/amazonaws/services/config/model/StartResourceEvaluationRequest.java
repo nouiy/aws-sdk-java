@@ -39,7 +39,7 @@ public class StartResourceEvaluationRequest extends com.amazonaws.AmazonWebServi
     private EvaluationContext evaluationContext;
     /**
      * <p>
-     * The mode of an evaluation. The valid value for this API is <code>Proactive</code>.
+     * The mode of an evaluation. The valid values for this API are <code>DETECTIVE</code> and <code>PROACTIVE</code>.
      * </p>
      */
     private String evaluationMode;
@@ -148,11 +148,12 @@ public class StartResourceEvaluationRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The mode of an evaluation. The valid value for this API is <code>Proactive</code>.
+     * The mode of an evaluation. The valid values for this API are <code>DETECTIVE</code> and <code>PROACTIVE</code>.
      * </p>
      * 
      * @param evaluationMode
-     *        The mode of an evaluation. The valid value for this API is <code>Proactive</code>.
+     *        The mode of an evaluation. The valid values for this API are <code>DETECTIVE</code> and
+     *        <code>PROACTIVE</code>.
      * @see EvaluationMode
      */
 
@@ -162,10 +163,11 @@ public class StartResourceEvaluationRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The mode of an evaluation. The valid value for this API is <code>Proactive</code>.
+     * The mode of an evaluation. The valid values for this API are <code>DETECTIVE</code> and <code>PROACTIVE</code>.
      * </p>
      * 
-     * @return The mode of an evaluation. The valid value for this API is <code>Proactive</code>.
+     * @return The mode of an evaluation. The valid values for this API are <code>DETECTIVE</code> and
+     *         <code>PROACTIVE</code>.
      * @see EvaluationMode
      */
 
@@ -175,11 +177,12 @@ public class StartResourceEvaluationRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The mode of an evaluation. The valid value for this API is <code>Proactive</code>.
+     * The mode of an evaluation. The valid values for this API are <code>DETECTIVE</code> and <code>PROACTIVE</code>.
      * </p>
      * 
      * @param evaluationMode
-     *        The mode of an evaluation. The valid value for this API is <code>Proactive</code>.
+     *        The mode of an evaluation. The valid values for this API are <code>DETECTIVE</code> and
+     *        <code>PROACTIVE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EvaluationMode
      */
@@ -191,11 +194,12 @@ public class StartResourceEvaluationRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The mode of an evaluation. The valid value for this API is <code>Proactive</code>.
+     * The mode of an evaluation. The valid values for this API are <code>DETECTIVE</code> and <code>PROACTIVE</code>.
      * </p>
      * 
      * @param evaluationMode
-     *        The mode of an evaluation. The valid value for this API is <code>Proactive</code>.
+     *        The mode of an evaluation. The valid values for this API are <code>DETECTIVE</code> and
+     *        <code>PROACTIVE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EvaluationMode
      */

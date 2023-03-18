@@ -39,9 +39,6 @@ public class ConformancePackRuleCompliance implements Serializable, Cloneable, S
      * <p>
      * Compliance of the Config rule.
      * </p>
-     * <p>
-     * The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code>.
-     * </p>
      */
     private String complianceType;
     /**
@@ -96,15 +93,9 @@ public class ConformancePackRuleCompliance implements Serializable, Cloneable, S
      * <p>
      * Compliance of the Config rule.
      * </p>
-     * <p>
-     * The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code>.
-     * </p>
      * 
      * @param complianceType
-     *        Compliance of the Config rule.</p>
-     *        <p>
-     *        The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and
-     *        <code>INSUFFICIENT_DATA</code>.
+     *        Compliance of the Config rule.
      * @see ConformancePackComplianceType
      */
 
@@ -116,14 +107,8 @@ public class ConformancePackRuleCompliance implements Serializable, Cloneable, S
      * <p>
      * Compliance of the Config rule.
      * </p>
-     * <p>
-     * The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code>.
-     * </p>
      * 
-     * @return Compliance of the Config rule.</p>
-     *         <p>
-     *         The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and
-     *         <code>INSUFFICIENT_DATA</code>.
+     * @return Compliance of the Config rule.
      * @see ConformancePackComplianceType
      */
 
@@ -135,15 +120,9 @@ public class ConformancePackRuleCompliance implements Serializable, Cloneable, S
      * <p>
      * Compliance of the Config rule.
      * </p>
-     * <p>
-     * The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code>.
-     * </p>
      * 
      * @param complianceType
-     *        Compliance of the Config rule.</p>
-     *        <p>
-     *        The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and
-     *        <code>INSUFFICIENT_DATA</code>.
+     *        Compliance of the Config rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ConformancePackComplianceType
      */
@@ -157,15 +136,9 @@ public class ConformancePackRuleCompliance implements Serializable, Cloneable, S
      * <p>
      * Compliance of the Config rule.
      * </p>
-     * <p>
-     * The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and <code>INSUFFICIENT_DATA</code>.
-     * </p>
      * 
      * @param complianceType
-     *        Compliance of the Config rule.</p>
-     *        <p>
-     *        The allowed values are <code>COMPLIANT</code>, <code>NON_COMPLIANT</code>, and
-     *        <code>INSUFFICIENT_DATA</code>.
+     *        Compliance of the Config rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ConformancePackComplianceType
      */

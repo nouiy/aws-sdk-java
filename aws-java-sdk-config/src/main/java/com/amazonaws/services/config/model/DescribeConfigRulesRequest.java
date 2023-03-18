@@ -42,7 +42,10 @@ public class DescribeConfigRulesRequest extends com.amazonaws.AmazonWebServiceRe
     private String nextToken;
     /**
      * <p>
-     * Returns a list of Detecive or Proactive Config rules. By default, this API returns an unfiltered list.
+     * Returns a list of Detective or Proactive Config rules. By default, this API returns an unfiltered list. For more
+     * information on Detective or Proactive Config rules, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html"> <b>Evaluation
+     * Mode</b> </a> in the Config Developer Guide.
      * </p>
      */
     private DescribeConfigRulesFilters filters;
@@ -176,11 +179,17 @@ public class DescribeConfigRulesRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Returns a list of Detecive or Proactive Config rules. By default, this API returns an unfiltered list.
+     * Returns a list of Detective or Proactive Config rules. By default, this API returns an unfiltered list. For more
+     * information on Detective or Proactive Config rules, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html"> <b>Evaluation
+     * Mode</b> </a> in the Config Developer Guide.
      * </p>
      * 
      * @param filters
-     *        Returns a list of Detecive or Proactive Config rules. By default, this API returns an unfiltered list.
+     *        Returns a list of Detective or Proactive Config rules. By default, this API returns an unfiltered list.
+     *        For more information on Detective or Proactive Config rules, see <a
+     *        href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html"> <b>Evaluation
+     *        Mode</b> </a> in the Config Developer Guide.
      */
 
     public void setFilters(DescribeConfigRulesFilters filters) {
@@ -189,10 +198,16 @@ public class DescribeConfigRulesRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Returns a list of Detecive or Proactive Config rules. By default, this API returns an unfiltered list.
+     * Returns a list of Detective or Proactive Config rules. By default, this API returns an unfiltered list. For more
+     * information on Detective or Proactive Config rules, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html"> <b>Evaluation
+     * Mode</b> </a> in the Config Developer Guide.
      * </p>
      * 
-     * @return Returns a list of Detecive or Proactive Config rules. By default, this API returns an unfiltered list.
+     * @return Returns a list of Detective or Proactive Config rules. By default, this API returns an unfiltered list.
+     *         For more information on Detective or Proactive Config rules, see <a
+     *         href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html"> <b>Evaluation
+     *         Mode</b> </a> in the Config Developer Guide.
      */
 
     public DescribeConfigRulesFilters getFilters() {
@@ -201,11 +216,17 @@ public class DescribeConfigRulesRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Returns a list of Detecive or Proactive Config rules. By default, this API returns an unfiltered list.
+     * Returns a list of Detective or Proactive Config rules. By default, this API returns an unfiltered list. For more
+     * information on Detective or Proactive Config rules, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html"> <b>Evaluation
+     * Mode</b> </a> in the Config Developer Guide.
      * </p>
      * 
      * @param filters
-     *        Returns a list of Detecive or Proactive Config rules. By default, this API returns an unfiltered list.
+     *        Returns a list of Detective or Proactive Config rules. By default, this API returns an unfiltered list.
+     *        For more information on Detective or Proactive Config rules, see <a
+     *        href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html"> <b>Evaluation
+     *        Mode</b> </a> in the Config Developer Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

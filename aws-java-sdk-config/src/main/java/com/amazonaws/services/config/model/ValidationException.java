@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The requested action is invalid.
+ * The requested action is not valid.
  * </p>
  * <p>
  * For PutStoredQuery, you will see this exception if there are missing required fields or if the input value fails the

@@ -57,6 +57,10 @@ public class MicrosoftSQLServerSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecretsManagerSecretId").build();
     private static final MarshallingInfo<Boolean> TRIMSPACEINCHAR_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TrimSpaceInChar").build();
+    private static final MarshallingInfo<String> TLOGACCESSMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TlogAccessMode").build();
+    private static final MarshallingInfo<Boolean> FORCELOBLOOKUP_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ForceLobLookup").build();
 
     private static final MicrosoftSQLServerSettingsMarshaller instance = new MicrosoftSQLServerSettingsMarshaller();
 
@@ -89,6 +93,8 @@ public class MicrosoftSQLServerSettingsMarshaller {
             protocolMarshaller.marshall(microsoftSQLServerSettings.getSecretsManagerAccessRoleArn(), SECRETSMANAGERACCESSROLEARN_BINDING);
             protocolMarshaller.marshall(microsoftSQLServerSettings.getSecretsManagerSecretId(), SECRETSMANAGERSECRETID_BINDING);
             protocolMarshaller.marshall(microsoftSQLServerSettings.getTrimSpaceInChar(), TRIMSPACEINCHAR_BINDING);
+            protocolMarshaller.marshall(microsoftSQLServerSettings.getTlogAccessMode(), TLOGACCESSMODE_BINDING);
+            protocolMarshaller.marshall(microsoftSQLServerSettings.getForceLobLookup(), FORCELOBLOOKUP_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

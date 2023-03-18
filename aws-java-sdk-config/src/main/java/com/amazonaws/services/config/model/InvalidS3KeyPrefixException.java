@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The specified Amazon S3 key prefix is invalid.
+ * The specified Amazon S3 key prefix is not valid.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

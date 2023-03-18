@@ -19,6 +19,7 @@ import com.amazonaws.annotation.SdkInternalApi;
 import com.amazonaws.util.DateUtils;
 import com.amazonaws.util.json.Jackson;
 import com.fasterxml.jackson.databind.JsonNode;
+import java.util.Random;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -33,6 +34,8 @@ import java.util.Date;
 abstract class BaseCredentialsFetcher {
 
     private static final Log LOG = LogFactory.getLog(BaseCredentialsFetcher.class);
+
+    private static final Random JITTER = new Random();
 
     /**
      * The threshold after the last attempt to load credentials (in
@@ -57,6 +60,8 @@ abstract class BaseCredentialsFetcher {
     /** The name of the Json Object that contains the token.*/
     private static final String TOKEN = "Token";
 
+    private final SdkClock clock;
+
     /**
      * Whether expired credentials can be returned if the credential service is down or returns expired credentials
      */
@@ -68,10 +73,14 @@ abstract class BaseCredentialsFetcher {
     /** The expiration for the current instance profile credentials */
     private volatile Date credentialsExpiration;
 
+    /** The time at which we will refresh the credentials because they are about to expire */
+    private volatile Date credentialExpirationRefreshTime;
+
     /** The time of the last attempt to check for new credentials */
     protected volatile Date lastInstanceProfileCheck;
 
-    protected BaseCredentialsFetcher(boolean allowExpiredCredentials) {
+    protected BaseCredentialsFetcher(SdkClock clock, boolean allowExpiredCredentials) {
+        this.clock = clock;
         this.allowExpiredCredentials = allowExpiredCredentials;
     }
 
@@ -80,7 +89,7 @@ abstract class BaseCredentialsFetcher {
             fetchCredentials();
         if (expired()) {
             throw new SdkClientException(
-                    "The credentials received have been expired");
+                "The credentials received have been expired");
         }
         return credentials;
     }
@@ -90,17 +99,23 @@ abstract class BaseCredentialsFetcher {
      * if the last attempt to refresh credentials is beyond the refresh threshold.
      */
     boolean needsToLoadCredentials() {
-        if (credentials == null) return true;
+        return credentials == null || isExpiring() || noRecentInstanceProfileCheck();
+    }
 
-        if (credentialsExpiration != null) {
-            if (isWithinExpirationThreshold()) return true;
-        }
+    /**
+     * Returns true if the credential expiration refresh time is in the past.
+     */
+    private boolean isExpiring() {
+        return credentialExpirationRefreshTime != null &&
+               credentialExpirationRefreshTime.getTime() <= clock.currentTimeMillis();
+    }
 
-        if (lastInstanceProfileCheck != null) {
-            if (isPastRefreshThreshold()) return true;
-        }
-
-        return false;
+    /**
+     * Returns true if it has been REFRESH_THRESHOLD millis since we last refreshed the credentials from IMDS.
+     */
+    private boolean noRecentInstanceProfileCheck() {
+        return lastInstanceProfileCheck != null &&
+               lastInstanceProfileCheck.getTime() + REFRESH_THRESHOLD <= clock.currentTimeMillis();
     }
 
     /**
@@ -134,10 +149,10 @@ abstract class BaseCredentialsFetcher {
 
             if (null != token) {
                 credentials = new BasicSessionCredentials(accessKey.asText(),
-                        secretKey.asText(), token.asText());
+                                                          secretKey.asText(), token.asText());
             } else {
                 credentials = new BasicAWSCredentials(accessKey.asText(),
-                        secretKey.asText());
+                                                      secretKey.asText());
             }
 
             JsonNode expirationJsonNode = node.get("Expiration");
@@ -152,6 +167,9 @@ abstract class BaseCredentialsFetcher {
 
                 try {
                     credentialsExpiration = DateUtils.parseISO8601Date(expiration);
+                    credentialExpirationRefreshTime = new Date(credentialsExpiration.getTime() - EXPIRATION_THRESHOLD);
+
+                    LOG.debug("Successfully retrieved credentials from IMDS with expiration " + expiration);
                 } catch(Exception ex) {
                     handleError("Unable to parse credentials expiration date from Amazon EC2 instance", ex);
                 }
@@ -159,24 +177,21 @@ abstract class BaseCredentialsFetcher {
         } catch (Exception e) {
             handleError("Unable to load credentials from service endpoint", e);
         } finally {
-            if (allowExpiredCredentials && credentials != null && credentialsExpiration != null && needsToLoadCredentials()) {
-                long now = System.currentTimeMillis();
-                long fifteenSecondsBeforeExpiration = credentialsExpiration.getTime() - 15 * 1000;
-                long fiveMinutesFromNow = now + 5 * 60 * 1000;
+            if (allowExpiredCredentials && credentials != null && isExpiring()) {
+                // Try again in 50-70 seconds
+                long now = clock.currentTimeMillis();
+                long waitUntilNextRefresh = 50 * 1000 + JITTER.nextInt(20 * 1000 + 1);
+                long nextRefreshTime = now + waitUntilNextRefresh;
 
-                if (fifteenSecondsBeforeExpiration > now) {
-                    // We're close to expiring, but we're not actually expired, yet.
-
-                    // Try again in 15 minutes OR 15 seconds before expiration, whatever comes first.
-                    long fifteenMinutesFromNow = now + 15 * 60 * 1000;
-                    long nextRefreshTime = Math.min(fifteenMinutesFromNow, fifteenSecondsBeforeExpiration);
-                    this.credentialsExpiration = new Date(nextRefreshTime + EXPIRATION_THRESHOLD);
-                } else {
-                    // We're expired, wait 5 minutes before trying again.
+                // Log if our next refresh will be after the credentials have expired. We want to treat the credentials as
+                // expiring a little earlier than the actual expiration time, since the request may take a few seconds.
+                long effectiveExpiration = credentialsExpiration.getTime() - 15 * 1000;
+                if (nextRefreshTime > effectiveExpiration) {
                     LOG.warn("Credential expiration has been extended due to a credential service availability " +
-                             "issue. A refresh of these credentials will be attempted again in 5 minutes.");
-                    this.credentialsExpiration = new Date(fiveMinutesFromNow + EXPIRATION_THRESHOLD);
+                             "issue. A refresh of these credentials will be attempted again in " + waitUntilNextRefresh + " ms.");
                 }
+
+                this.credentialExpirationRefreshTime = new Date(nextRefreshTime);
             }
         }
     }
@@ -210,23 +225,6 @@ abstract class BaseCredentialsFetcher {
         credentials = null;
     }
 
-    /**
-     * Returns true if the current credentials are within the expiration
-     * threshold, and therefore, should be refreshed.
-     */
-    private boolean isWithinExpirationThreshold() {
-        return (credentialsExpiration.getTime() - System.currentTimeMillis()) < EXPIRATION_THRESHOLD;
-    }
-
-    /**
-     * Returns true if the last attempt to refresh credentials is beyond the
-     * refresh threshold, and therefore the credentials should attempt to be
-     * refreshed.
-     */
-    private boolean isPastRefreshThreshold() {
-        return (System.currentTimeMillis() - lastInstanceProfileCheck.getTime()) > REFRESH_THRESHOLD;
-    }
-
     private boolean expired() {
         if (allowExpiredCredentials) {
             return false;
@@ -236,7 +234,7 @@ abstract class BaseCredentialsFetcher {
             return false;
         }
 
-        if (credentialsExpiration.getTime() > System.currentTimeMillis()) {
+        if (credentialsExpiration.getTime() > clock.currentTimeMillis()) {
             return false;
         }
 

@@ -32,6 +32,8 @@ public class ListBillingGroupsFilterMarshaller {
             .marshallLocationName("Arns").build();
     private static final MarshallingInfo<String> PRICINGPLAN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PricingPlan").build();
+    private static final MarshallingInfo<List> STATUSES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Statuses").build();
 
     private static final ListBillingGroupsFilterMarshaller instance = new ListBillingGroupsFilterMarshaller();
 
@@ -51,6 +53,7 @@ public class ListBillingGroupsFilterMarshaller {
         try {
             protocolMarshaller.marshall(listBillingGroupsFilter.getArns(), ARNS_BINDING);
             protocolMarshaller.marshall(listBillingGroupsFilter.getPricingPlan(), PRICINGPLAN_BINDING);
+            protocolMarshaller.marshall(listBillingGroupsFilter.getStatuses(), STATUSES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

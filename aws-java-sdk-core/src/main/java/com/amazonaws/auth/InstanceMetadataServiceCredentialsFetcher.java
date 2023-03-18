@@ -33,13 +33,13 @@ final class InstanceMetadataServiceCredentialsFetcher extends BaseCredentialsFet
     private final EC2ResourceFetcher resourceFetcher;
 
     InstanceMetadataServiceCredentialsFetcher() {
-        super(true);
+        super(SdkClock.STANDARD, true);
         this.resourceFetcher = InstanceMetadataServiceResourceFetcher.getInstance();
     }
 
     @SdkTestInternalApi
-    InstanceMetadataServiceCredentialsFetcher(EC2ResourceFetcher resourceFetcher) {
-        super(true);
+    InstanceMetadataServiceCredentialsFetcher(SdkClock clock, EC2ResourceFetcher resourceFetcher) {
+        super(clock, true);
         this.resourceFetcher = resourceFetcher;
     }
 

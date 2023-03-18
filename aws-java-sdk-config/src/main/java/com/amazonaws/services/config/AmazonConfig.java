@@ -136,7 +136,7 @@ public interface AmazonConfig {
      * @param batchGetAggregateResourceConfigRequest
      * @return Result of the BatchGetAggregateResourceConfig operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -177,7 +177,7 @@ public interface AmazonConfig {
      * @param batchGetResourceConfigRequest
      * @return Result of the BatchGetResourceConfig operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -202,7 +202,8 @@ public interface AmazonConfig {
      * @param deleteAggregationAuthorizationRequest
      * @return Result of the DeleteAggregationAuthorization operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @sample AmazonConfig.DeleteAggregationAuthorization
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeleteAggregationAuthorization"
      *      target="_top">AWS API Documentation</a>
@@ -225,8 +226,8 @@ public interface AmazonConfig {
      * @param deleteConfigRuleRequest
      * @return Result of the DeleteConfigRule operation returned by the service.
      * @throws NoSuchConfigRuleException
-     *         The Config rule in the request is invalid. Verify that the rule is an Config Custom Policy rule, that the
-     *         rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Process Check rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @throws ResourceInUseException
      *         You see this exception in the following cases: </p>
      *         <ul>
@@ -414,8 +415,8 @@ public interface AmazonConfig {
      * @param deleteEvaluationResultsRequest
      * @return Result of the DeleteEvaluationResults operation returned by the service.
      * @throws NoSuchConfigRuleException
-     *         The Config rule in the request is invalid. Verify that the rule is an Config Custom Policy rule, that the
-     *         rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Process Check rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @throws ResourceInUseException
      *         You see this exception in the following cases: </p>
      *         <ul>
@@ -484,7 +485,7 @@ public interface AmazonConfig {
      * @param deleteOrganizationConfigRuleRequest
      * @return Result of the DeleteOrganizationConfigRule operation returned by the service.
      * @throws NoSuchOrganizationConfigRuleException
-     *         The Config rule in the request is invalid. Verify that the rule is an organization Config Custom Policy
+     *         The Config rule in the request is not valid. Verify that the rule is an organization Config Process Check
      *         rule, that the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying
      *         again.
      * @throws ResourceInUseException
@@ -688,7 +689,8 @@ public interface AmazonConfig {
      * @param deletePendingAggregationRequestRequest
      * @return Result of the DeletePendingAggregationRequest operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @sample AmazonConfig.DeletePendingAggregationRequest
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeletePendingAggregationRequest"
      *      target="_top">AWS API Documentation</a>
@@ -747,7 +749,8 @@ public interface AmazonConfig {
      *         </ul>
      *         </li>
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @sample AmazonConfig.DeleteRemediationConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeleteRemediationConfiguration"
      *      target="_top">AWS API Documentation</a>
@@ -785,7 +788,7 @@ public interface AmazonConfig {
      * @param deleteResourceConfigRequest
      * @return Result of the DeleteResourceConfig operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -809,7 +812,8 @@ public interface AmazonConfig {
      * @param deleteRetentionConfigurationRequest
      * @return Result of the DeleteRetentionConfiguration operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws NoSuchRetentionConfigurationException
      *         You have specified a retention configuration that does not exist.
      * @sample AmazonConfig.DeleteRetentionConfiguration
@@ -826,7 +830,7 @@ public interface AmazonConfig {
      * @param deleteStoredQueryRequest
      * @return Result of the DeleteStoredQuery operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -897,7 +901,7 @@ public interface AmazonConfig {
      * @param describeAggregateComplianceByConfigRulesRequest
      * @return Result of the DescribeAggregateComplianceByConfigRules operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -908,7 +912,7 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws NoSuchConfigurationAggregatorException
      *         You have specified a configuration aggregator that does not exist.
@@ -935,7 +939,7 @@ public interface AmazonConfig {
      * @param describeAggregateComplianceByConformancePacksRequest
      * @return Result of the DescribeAggregateComplianceByConformancePacks operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -946,7 +950,7 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws NoSuchConfigurationAggregatorException
      *         You have specified a configuration aggregator that does not exist.
@@ -966,9 +970,10 @@ public interface AmazonConfig {
      * @param describeAggregationAuthorizationsRequest
      * @return Result of the DescribeAggregationAuthorizations operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
@@ -1017,12 +1022,13 @@ public interface AmazonConfig {
      * @param describeComplianceByConfigRuleRequest
      * @return Result of the DescribeComplianceByConfigRule operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws NoSuchConfigRuleException
-     *         The Config rule in the request is invalid. Verify that the rule is an Config Custom Policy rule, that the
-     *         rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Process Check rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @sample AmazonConfig.DescribeComplianceByConfigRule
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeComplianceByConfigRule"
@@ -1077,9 +1083,10 @@ public interface AmazonConfig {
      * @param describeComplianceByResourceRequest
      * @return Result of the DescribeComplianceByResource operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @sample AmazonConfig.DescribeComplianceByResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeComplianceByResource"
@@ -1104,12 +1111,13 @@ public interface AmazonConfig {
      * @param describeConfigRuleEvaluationStatusRequest
      * @return Result of the DescribeConfigRuleEvaluationStatus operation returned by the service.
      * @throws NoSuchConfigRuleException
-     *         The Config rule in the request is invalid. Verify that the rule is an Config Custom Policy rule, that the
-     *         rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Process Check rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @sample AmazonConfig.DescribeConfigRuleEvaluationStatus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeConfigRuleEvaluationStatus"
@@ -1133,13 +1141,14 @@ public interface AmazonConfig {
      * @param describeConfigRulesRequest
      * @return Result of the DescribeConfigRules operation returned by the service.
      * @throws NoSuchConfigRuleException
-     *         The Config rule in the request is invalid. Verify that the rule is an Config Custom Policy rule, that the
-     *         rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Process Check rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @sample AmazonConfig.DescribeConfigRules
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeConfigRules" target="_top">AWS API
      *      Documentation</a>
@@ -1163,11 +1172,12 @@ public interface AmazonConfig {
      * @param describeConfigurationAggregatorSourcesStatusRequest
      * @return Result of the DescribeConfigurationAggregatorSourcesStatus operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws NoSuchConfigurationAggregatorException
      *         You have specified a configuration aggregator that does not exist.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
@@ -1188,11 +1198,12 @@ public interface AmazonConfig {
      * @param describeConfigurationAggregatorsRequest
      * @return Result of the DescribeConfigurationAggregators operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws NoSuchConfigurationAggregatorException
      *         You have specified a configuration aggregator that does not exist.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
@@ -1204,12 +1215,14 @@ public interface AmazonConfig {
 
     /**
      * <p>
-     * Returns the current status of the specified configuration recorder. If a configuration recorder is not specified,
-     * this action returns the status of all configuration recorders associated with the account.
+     * Returns the current status of the specified configuration recorder as well as the status of the last recording
+     * event for the recorder. If a configuration recorder is not specified, this action returns the status of all
+     * configuration recorders associated with the account.
      * </p>
      * <note>
      * <p>
-     * Currently, you can specify only one configuration recorder per region in your account.
+     * Currently, you can specify only one configuration recorder per region in your account. For a detailed status of
+     * recording events over time, add your Config events to Amazon CloudWatch metrics and use CloudWatch metrics.
      * </p>
      * </note>
      * 
@@ -1276,10 +1289,11 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws NoSuchConfigRuleInConformancePackException
      *         Config rule that you passed in the filter does not exist.
      * @throws NoSuchConformancePackException
@@ -1305,10 +1319,11 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @sample AmazonConfig.DescribeConformancePackStatus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeConformancePackStatus"
      *      target="_top">AWS API Documentation</a>
@@ -1327,10 +1342,11 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @sample AmazonConfig.DescribeConformancePacks
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeConformancePacks"
      *      target="_top">AWS API Documentation</a>
@@ -1414,13 +1430,13 @@ public interface AmazonConfig {
      * @param describeOrganizationConfigRuleStatusesRequest
      * @return Result of the DescribeOrganizationConfigRuleStatuses operation returned by the service.
      * @throws NoSuchOrganizationConfigRuleException
-     *         The Config rule in the request is invalid. Verify that the rule is an organization Config Custom Policy
+     *         The Config rule in the request is not valid. Verify that the rule is an organization Config Process Check
      *         rule, that the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying
      *         again.
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws OrganizationAccessDeniedException
      *         For <code>PutConfigurationAggregator</code> API, you can see this exception for the following
@@ -1494,11 +1510,11 @@ public interface AmazonConfig {
      * @param describeOrganizationConfigRulesRequest
      * @return Result of the DescribeOrganizationConfigRules operation returned by the service.
      * @throws NoSuchOrganizationConfigRuleException
-     *         The Config rule in the request is invalid. Verify that the rule is an organization Config Custom Policy
+     *         The Config rule in the request is not valid. Verify that the rule is an organization Config Process Check
      *         rule, that the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying
      *         again.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
@@ -1569,7 +1585,7 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws OrganizationAccessDeniedException
      *         For <code>PutConfigurationAggregator</code> API, you can see this exception for the following reasons:
@@ -1649,7 +1665,7 @@ public interface AmazonConfig {
      *         For DeleteOrganizationConformancePack, you tried to delete an organization conformance pack that does not
      *         exist.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
@@ -1703,9 +1719,10 @@ public interface AmazonConfig {
      * @param describePendingAggregationRequestsRequest
      * @return Result of the DescribePendingAggregationRequests operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
@@ -1752,10 +1769,11 @@ public interface AmazonConfig {
      * @param describeRemediationExceptionsRequest
      * @return Result of the DescribeRemediationExceptions operation returned by the service.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @sample AmazonConfig.DescribeRemediationExceptions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeRemediationExceptions"
      *      target="_top">AWS API Documentation</a>
@@ -1774,10 +1792,11 @@ public interface AmazonConfig {
      * @throws NoSuchRemediationConfigurationException
      *         You specified an Config rule without a remediation configuration.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @sample AmazonConfig.DescribeRemediationExecutionStatus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeRemediationExecutionStatus"
      *      target="_top">AWS API Documentation</a>
@@ -1799,11 +1818,12 @@ public interface AmazonConfig {
      * @param describeRetentionConfigurationsRequest
      * @return Result of the DescribeRetentionConfigurations operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws NoSuchRetentionConfigurationException
      *         You have specified a retention configuration that does not exist.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @sample AmazonConfig.DescribeRetentionConfigurations
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DescribeRetentionConfigurations"
@@ -1827,7 +1847,7 @@ public interface AmazonConfig {
      * @param getAggregateComplianceDetailsByConfigRuleRequest
      * @return Result of the GetAggregateComplianceDetailsByConfigRule operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -1838,7 +1858,7 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws NoSuchConfigurationAggregatorException
      *         You have specified a configuration aggregator that does not exist.
@@ -1863,7 +1883,7 @@ public interface AmazonConfig {
      * @param getAggregateConfigRuleComplianceSummaryRequest
      * @return Result of the GetAggregateConfigRuleComplianceSummary operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -1874,7 +1894,7 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws NoSuchConfigurationAggregatorException
      *         You have specified a configuration aggregator that does not exist.
@@ -1901,7 +1921,7 @@ public interface AmazonConfig {
      * @param getAggregateConformancePackComplianceSummaryRequest
      * @return Result of the GetAggregateConformancePackComplianceSummary operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -1912,7 +1932,7 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws NoSuchConfigurationAggregatorException
      *         You have specified a configuration aggregator that does not exist.
@@ -1938,7 +1958,7 @@ public interface AmazonConfig {
      * @param getAggregateDiscoveredResourceCountsRequest
      * @return Result of the GetAggregateDiscoveredResourceCounts operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -1949,7 +1969,7 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws NoSuchConfigurationAggregatorException
      *         You have specified a configuration aggregator that does not exist.
@@ -1968,7 +1988,7 @@ public interface AmazonConfig {
      * @param getAggregateResourceConfigRequest
      * @return Result of the GetAggregateResourceConfig operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -1998,13 +2018,14 @@ public interface AmazonConfig {
      * @param getComplianceDetailsByConfigRuleRequest
      * @return Result of the GetComplianceDetailsByConfigRule operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws NoSuchConfigRuleException
-     *         The Config rule in the request is invalid. Verify that the rule is an Config Custom Policy rule, that the
-     *         rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Process Check rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @sample AmazonConfig.GetComplianceDetailsByConfigRule
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetComplianceDetailsByConfigRule"
      *      target="_top">AWS API Documentation</a>
@@ -2021,7 +2042,8 @@ public interface AmazonConfig {
      * @param getComplianceDetailsByResourceRequest
      * @return Result of the GetComplianceDetailsByResource operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @sample AmazonConfig.GetComplianceDetailsByResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetComplianceDetailsByResource"
      *      target="_top">AWS API Documentation</a>
@@ -2057,7 +2079,8 @@ public interface AmazonConfig {
      * @param getComplianceSummaryByResourceTypeRequest
      * @return Result of the GetComplianceSummaryByResourceType operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @sample AmazonConfig.GetComplianceSummaryByResourceType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetComplianceSummaryByResourceType"
      *      target="_top">AWS API Documentation</a>
@@ -2083,14 +2106,15 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws NoSuchConformancePackException
      *         You specified one or more conformance packs that do not exist.
      * @throws NoSuchConfigRuleInConformancePackException
      *         Config rule that you passed in the filter does not exist.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @sample AmazonConfig.GetConformancePackComplianceDetails
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetConformancePackComplianceDetails"
      *      target="_top">AWS API Documentation</a>
@@ -2111,7 +2135,7 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @sample AmazonConfig.GetConformancePackComplianceSummary
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetConformancePackComplianceSummary"
@@ -2128,8 +2152,8 @@ public interface AmazonConfig {
      * @param getCustomRulePolicyRequest
      * @return Result of the GetCustomRulePolicy operation returned by the service.
      * @throws NoSuchConfigRuleException
-     *         The Config rule in the request is invalid. Verify that the rule is an Config Custom Policy rule, that the
-     *         rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Process Check rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @sample AmazonConfig.GetCustomRulePolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetCustomRulePolicy" target="_top">AWS API
      *      Documentation</a>
@@ -2212,7 +2236,7 @@ public interface AmazonConfig {
      * @param getDiscoveredResourceCountsRequest
      * @return Result of the GetDiscoveredResourceCounts operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -2223,7 +2247,7 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @sample AmazonConfig.GetDiscoveredResourceCounts
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/GetDiscoveredResourceCounts"
@@ -2239,13 +2263,13 @@ public interface AmazonConfig {
      * @param getOrganizationConfigRuleDetailedStatusRequest
      * @return Result of the GetOrganizationConfigRuleDetailedStatus operation returned by the service.
      * @throws NoSuchOrganizationConfigRuleException
-     *         The Config rule in the request is invalid. Verify that the rule is an organization Config Custom Policy
+     *         The Config rule in the request is not valid. Verify that the rule is an organization Config Process Check
      *         rule, that the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying
      *         again.
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws OrganizationAccessDeniedException
      *         For <code>PutConfigurationAggregator</code> API, you can see this exception for the following
@@ -2304,7 +2328,7 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws OrganizationAccessDeniedException
      *         For <code>PutConfigurationAggregator</code> API, you can see this exception for the following reasons:
@@ -2357,7 +2381,7 @@ public interface AmazonConfig {
      * @param getOrganizationCustomRulePolicyRequest
      * @return Result of the GetOrganizationCustomRulePolicy operation returned by the service.
      * @throws NoSuchOrganizationConfigRuleException
-     *         The Config rule in the request is invalid. Verify that the rule is an organization Config Custom Policy
+     *         The Config rule in the request is not valid. Verify that the rule is an organization Config Process Check
      *         rule, that the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying
      *         again.
      * @throws OrganizationAccessDeniedException
@@ -2426,7 +2450,7 @@ public interface AmazonConfig {
      *        The input for the <a>GetResourceConfigHistory</a> action.
      * @return Result of the GetResourceConfigHistory operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -2435,11 +2459,11 @@ public interface AmazonConfig {
      *         For GetStoredQuery, ListStoredQuery, and DeleteStoredQuery you will see this exception if there are
      *         missing required fields or if the input value fails the validation.
      * @throws InvalidTimeRangeException
-     *         The specified time range is invalid. The earlier time is not chronologically before the later time.
+     *         The specified time range is not valid. The earlier time is not chronologically before the later time.
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws NoAvailableConfigurationRecorderException
      *         There are no configuration recorders available to provide the role needed to describe your resources.
@@ -2459,6 +2483,16 @@ public interface AmazonConfig {
      * were evaluated, the evaluation mode that was run, and whether the resource details comply with the configuration
      * of the proactive rules.
      * </p>
+     * <note>
+     * <p>
+     * To see additional information about the evaluation result, such as which rule flagged a resource as
+     * NON_COMPLIANT, use the <a
+     * href="https://docs.aws.amazon.com/config/latest/APIReference/API_GetComplianceDetailsByResource.html"
+     * >GetComplianceDetailsByResource</a> API. For more information, see the <a href=
+     * "https://docs.aws.amazon.com/config/latest/APIReference/API_GetResourceEvaluationSummary.html#API_GetResourceEvaluationSummary_Examples"
+     * >Examples</a> section.
+     * </p>
+     * </note>
      * 
      * @param getResourceEvaluationSummaryRequest
      * @return Result of the GetResourceEvaluationSummary operation returned by the service.
@@ -2478,7 +2512,7 @@ public interface AmazonConfig {
      * @param getStoredQueryRequest
      * @return Result of the GetStoredQuery operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -2510,7 +2544,7 @@ public interface AmazonConfig {
      * @param listAggregateDiscoveredResourcesRequest
      * @return Result of the ListAggregateDiscoveredResources operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -2521,7 +2555,7 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws NoSuchConfigurationAggregatorException
      *         You have specified a configuration aggregator that does not exist.
@@ -2548,11 +2582,12 @@ public interface AmazonConfig {
      * @param listConformancePackComplianceScoresRequest
      * @return Result of the ListConformancePackComplianceScores operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @sample AmazonConfig.ListConformancePackComplianceScores
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ListConformancePackComplianceScores"
@@ -2582,7 +2617,7 @@ public interface AmazonConfig {
      * @param listDiscoveredResourcesRequest
      * @return Result of the ListDiscoveredResources operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -2593,7 +2628,7 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws NoAvailableConfigurationRecorderException
      *         There are no configuration recorders available to provide the role needed to describe your resources.
@@ -2612,12 +2647,13 @@ public interface AmazonConfig {
      * @param listResourceEvaluationsRequest
      * @return Result of the ListResourceEvaluations operation returned by the service.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws InvalidTimeRangeException
-     *         The specified time range is invalid. The earlier time is not chronologically before the later time.
+     *         The specified time range is not valid. The earlier time is not chronologically before the later time.
      * @sample AmazonConfig.ListResourceEvaluations
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ListResourceEvaluations" target="_top">AWS
      *      API Documentation</a>
@@ -2633,7 +2669,7 @@ public interface AmazonConfig {
      * @param listStoredQueriesRequest
      * @return Result of the ListStoredQueries operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -2642,7 +2678,7 @@ public interface AmazonConfig {
      *         For GetStoredQuery, ListStoredQuery, and DeleteStoredQuery you will see this exception if there are
      *         missing required fields or if the input value fails the validation.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @sample AmazonConfig.ListStoredQueries
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ListStoredQueries" target="_top">AWS API
@@ -2660,7 +2696,7 @@ public interface AmazonConfig {
      * @throws ResourceNotFoundException
      *         You have specified a resource that does not exist.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -2671,7 +2707,7 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @sample AmazonConfig.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ListTagsForResource" target="_top">AWS API
@@ -2683,11 +2719,20 @@ public interface AmazonConfig {
      * <p>
      * Authorizes the aggregator account and region to collect data from the source account and region.
      * </p>
+     * <note>
+     * <p>
+     * <code>PutAggregationAuthorization</code> is an idempotent API. Subsequent requests won’t create a duplicate
+     * resource if one was already created. If a following request has different <code>tags</code> values, Config will
+     * ignore these differences and treat it as an idempotent request of the previous. In this case, <code>tags</code>
+     * will not be updated, even if they are different.
+     * </p>
+     * </note>
      * 
      * @param putAggregationAuthorizationRequest
      * @return Result of the PutAggregationAuthorization operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @sample AmazonConfig.PutAggregationAuthorization
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutAggregationAuthorization"
      *      target="_top">AWS API Documentation</a>
@@ -2702,29 +2747,35 @@ public interface AmazonConfig {
      * the <i>Config Developer Guide</i>.
      * </p>
      * <p>
-     * There are two types of rules: Config Custom Rules and Config Managed Rules. You can use
-     * <code>PutConfigRule</code> to create both Config custom rules and Config managed rules.
+     * There are two types of rules: <i>Config Managed Rules</i> and <i>Config Custom Rules</i>. You can use
+     * <code>PutConfigRule</code> to create both Config Managed Rules and Config Custom Rules.
      * </p>
      * <p>
-     * Custom rules are rules that you can create using either Guard or Lambda functions. Guard (<a
-     * href="https://github.com/aws-cloudformation/cloudformation-guard">Guard GitHub Repository</a>) is a
-     * policy-as-code language that allows you to write policies that are enforced by Config Custom Policy rules. Lambda
-     * uses custom code that you upload to evaluate a custom rule. If you are adding a new Custom Lambda rule, you first
-     * need to create an Lambda function that the rule invokes to evaluate your resources. When you use
-     * <code>PutConfigRule</code> to add a Custom Lambda rule to Config, you must specify the Amazon Resource Name (ARN)
-     * that Lambda assigns to the function. You specify the ARN in the <code>SourceIdentifier</code> key. This key is
-     * part of the <code>Source</code> object, which is part of the <code>ConfigRule</code> object.
-     * </p>
-     * <p>
-     * Managed rules are predefined, customizable rules created by Config. For a list of managed rules, see <a
+     * Config Managed Rules are predefined, customizable rules created by Config. For a list of managed rules, see <a
      * href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of Config
      * Managed Rules</a>. If you are adding an Config managed rule, you must specify the rule's identifier for the
      * <code>SourceIdentifier</code> key.
      * </p>
      * <p>
-     * For any new rule that you add, specify the <code>ConfigRuleName</code> in the <code>ConfigRule</code> object. Do
-     * not specify the <code>ConfigRuleArn</code> or the <code>ConfigRuleId</code>. These values are generated by Config
-     * for new rules.
+     * Config Custom Rules are rules that you create from scratch. There are two ways to create Config custom rules:
+     * with Lambda functions (<a href=
+     * "https://docs.aws.amazon.com/config/latest/developerguide/gettingstarted-concepts.html#gettingstarted-concepts-function"
+     * > Lambda Developer Guide</a>) and with Guard (<a
+     * href="https://github.com/aws-cloudformation/cloudformation-guard">Guard GitHub Repository</a>), a policy-as-code
+     * language. Config custom rules created with Lambda are called <i>Config Custom Lambda Rules</i> and Config custom
+     * rules created with Guard are called <i>Config Custom Policy Rules</i>.
+     * </p>
+     * <p>
+     * If you are adding a new Config Custom Lambda rule, you first need to create an Lambda function that the rule
+     * invokes to evaluate your resources. When you use <code>PutConfigRule</code> to add a Custom Lambda rule to
+     * Config, you must specify the Amazon Resource Name (ARN) that Lambda assigns to the function. You specify the ARN
+     * in the <code>SourceIdentifier</code> key. This key is part of the <code>Source</code> object, which is part of
+     * the <code>ConfigRule</code> object.
+     * </p>
+     * <p>
+     * For any new Config rule that you add, specify the <code>ConfigRuleName</code> in the <code>ConfigRule</code>
+     * object. Do not specify the <code>ConfigRuleArn</code> or the <code>ConfigRuleId</code>. These values are
+     * generated by Config for new rules.
      * </p>
      * <p>
      * If you are updating a rule that you added previously, you can specify the rule by <code>ConfigRuleName</code>,
@@ -2733,14 +2784,23 @@ public interface AmazonConfig {
      * </p>
      * <p>
      * For more information about developing and using Config rules, see <a
-     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html">Evaluating Amazon Web
-     * Services resource Configurations with Config</a> in the <i>Config Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config.html">Evaluating Resources with
+     * Config Rules</a> in the <i>Config Developer Guide</i>.
      * </p>
+     * <note>
+     * <p>
+     * <code>PutConfigRule</code> is an idempotent API. Subsequent requests won’t create a duplicate resource if one was
+     * already created. If a following request has different <code>tags</code> values, Config will ignore these
+     * differences and treat it as an idempotent request of the previous. In this case, <code>tags</code> will not be
+     * updated, even if they are different.
+     * </p>
+     * </note>
      * 
      * @param putConfigRuleRequest
      * @return Result of the PutConfigRule operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws MaxNumberOfConfigRulesExceededException
      *         Failed to add the Config rule because the account already contains the maximum number of 150 rules.
      *         Consider deleting any deactivated rules before you add new rules.
@@ -2862,12 +2922,20 @@ public interface AmazonConfig {
      * "https://docs.aws.amazon.com/config/latest/developerguide/set-up-aggregator-cli.html#register-a-delegated-administrator-cli"
      * >Register a Delegated Administrator</a> in the <i>Config developer guide</i>.
      * </p>
+     * </note> <note>
+     * <p>
+     * <code>PutConfigurationAggregator</code> is an idempotent API. Subsequent requests won’t create a duplicate
+     * resource if one was already created. If a following request has different <code>tags</code> values, Config will
+     * ignore these differences and treat it as an idempotent request of the previous. In this case, <code>tags</code>
+     * will not be updated, even if they are different.
+     * </p>
      * </note>
      * 
      * @param putConfigurationAggregatorRequest
      * @return Result of the PutConfigurationAggregator operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws LimitExceededException
      *         For <code>StartConfigRulesEvaluation</code> API, this exception is thrown if an evaluation is in progress
      *         or if you call the <a>StartConfigRulesEvaluation</a> API more than once per minute.</p>
@@ -2949,8 +3017,8 @@ public interface AmazonConfig {
      * @throws InvalidRoleException
      *         You have provided a null or empty role ARN.
      * @throws InvalidRecordingGroupException
-     *         Config throws an exception if the recording group does not contain a valid list of resource types.
-     *         Invalid values might also be incorrectly formatted.
+     *         Config throws an exception if the recording group does not contain a valid list of resource types. Values
+     *         that are not valid might also be incorrectly formatted.
      * @sample AmazonConfig.PutConfigurationRecorder
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutConfigurationRecorder"
      *      target="_top">AWS API Documentation</a>
@@ -3017,7 +3085,7 @@ public interface AmazonConfig {
      *         </ul>
      *         </li>
      * @throws ConformancePackTemplateValidationException
-     *         You have specified a template that is invalid or supported.
+     *         You have specified a template that is not valid or supported.
      * @throws ResourceInUseException
      *         You see this exception in the following cases: </p>
      *         <ul>
@@ -3063,7 +3131,8 @@ public interface AmazonConfig {
      *         </p>
      *         </li>
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws MaxNumberOfConformancePacksExceededException
      *         You have reached the limit of the number of conformance packs you can create in an account. For more
      *         information, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/configlimits.html">
@@ -3103,13 +3172,13 @@ public interface AmazonConfig {
      *         There are no configuration recorders available to provide the role needed to describe your resources.
      *         Create a configuration recorder.
      * @throws InvalidDeliveryChannelNameException
-     *         The specified delivery channel name is invalid.
+     *         The specified delivery channel name is not valid.
      * @throws NoSuchBucketException
      *         The specified Amazon S3 bucket does not exist.
      * @throws InvalidS3KeyPrefixException
-     *         The specified Amazon S3 key prefix is invalid.
+     *         The specified Amazon S3 key prefix is not valid.
      * @throws InvalidS3KmsKeyArnException
-     *         The specified Amazon KMS Key ARN is invalid.
+     *         The specified Amazon KMS Key ARN is not valid.
      * @throws InvalidSNSTopicARNException
      *         The specified Amazon SNS topic does not exist.
      * @throws InsufficientDeliveryPolicyException
@@ -3129,12 +3198,13 @@ public interface AmazonConfig {
      * @param putEvaluationsRequest
      * @return Result of the PutEvaluations operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws InvalidResultTokenException
-     *         The specified <code>ResultToken</code> is invalid.
+     *         The specified <code>ResultToken</code> is not valid.
      * @throws NoSuchConfigRuleException
-     *         The Config rule in the request is invalid. Verify that the rule is an Config Custom Policy rule, that the
-     *         rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Process Check rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @sample AmazonConfig.PutEvaluations
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutEvaluations" target="_top">AWS API
      *      Documentation</a>
@@ -3150,10 +3220,11 @@ public interface AmazonConfig {
      * @param putExternalEvaluationRequest
      * @return Result of the PutExternalEvaluation operation returned by the service.
      * @throws NoSuchConfigRuleException
-     *         The Config rule in the request is invalid. Verify that the rule is an Config Custom Policy rule, that the
-     *         rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Process Check rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @sample AmazonConfig.PutExternalEvaluation
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutExternalEvaluation" target="_top">AWS
      *      API Documentation</a>
@@ -3185,24 +3256,30 @@ public interface AmazonConfig {
      * <code>config-multiaccountsetup.amazonaws.com</code>.
      * </p>
      * <p>
-     * There are two types of rules: Config Custom Rules and Config Managed Rules. You can use
-     * <code>PutOrganizationConfigRule</code> to create both Config custom rules and Config managed rules.
+     * There are two types of rules: <i>Config Managed Rules</i> and <i>Config Custom Rules</i>. You can use
+     * <code>PutOrganizationConfigRule</code> to create both Config Managed Rules and Config Custom Rules.
      * </p>
      * <p>
-     * Custom rules are rules that you can create using either Guard or Lambda functions. Guard (<a
-     * href="https://github.com/aws-cloudformation/cloudformation-guard">Guard GitHub Repository</a>) is a
-     * policy-as-code language that allows you to write policies that are enforced by Config Custom Policy rules. Lambda
-     * uses custom code that you upload to evaluate a custom rule. If you are adding a new Custom Lambda rule, you first
-     * need to create an Lambda function in the management account or a delegated administrator that the rule invokes to
-     * evaluate your resources. You also need to create an IAM role in the managed account that can be assumed by the
-     * Lambda function. When you use <code>PutOrganizationConfigRule</code> to add a Custom Lambda rule to Config, you
-     * must specify the Amazon Resource Name (ARN) that Lambda assigns to the function.
-     * </p>
-     * <p>
-     * Managed rules are predefined, customizable rules created by Config. For a list of managed rules, see <a
+     * Config Managed Rules are predefined, customizable rules created by Config. For a list of managed rules, see <a
      * href="https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html">List of Config
      * Managed Rules</a>. If you are adding an Config managed rule, you must specify the rule's identifier for the
      * <code>RuleIdentifier</code> key.
+     * </p>
+     * <p>
+     * Config Custom Rules are rules that you create from scratch. There are two ways to create Config custom rules:
+     * with Lambda functions (<a href=
+     * "https://docs.aws.amazon.com/config/latest/developerguide/gettingstarted-concepts.html#gettingstarted-concepts-function"
+     * > Lambda Developer Guide</a>) and with Guard (<a
+     * href="https://github.com/aws-cloudformation/cloudformation-guard">Guard GitHub Repository</a>), a policy-as-code
+     * language. Config custom rules created with Lambda are called <i>Config Custom Lambda Rules</i> and Config custom
+     * rules created with Guard are called <i>Config Custom Policy Rules</i>.
+     * </p>
+     * <p>
+     * If you are adding a new Config Custom Lambda rule, you first need to create an Lambda function in the management
+     * account or a delegated administrator that the rule invokes to evaluate your resources. You also need to create an
+     * IAM role in the managed account that can be assumed by the Lambda function. When you use
+     * <code>PutOrganizationConfigRule</code> to add a Custom Lambda rule to Config, you must specify the Amazon
+     * Resource Name (ARN) that Lambda assigns to the function.
      * </p>
      * <note>
      * <p>
@@ -3267,9 +3344,10 @@ public interface AmazonConfig {
      *         </p>
      *         </li>
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -3449,7 +3527,7 @@ public interface AmazonConfig {
      *         </p>
      *         </li>
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -3533,7 +3611,7 @@ public interface AmazonConfig {
      *         </ul>
      *         </li>
      * @throws OrganizationConformancePackTemplateValidationException
-     *         You have specified a template that is invalid or supported.
+     *         You have specified a template that is not valid or supported.
      * @throws OrganizationAllFeaturesNotEnabledException
      *         Config resource cannot be created because your organization does not have all features enabled.
      * @throws NoAvailableOrganizationException
@@ -3615,7 +3693,8 @@ public interface AmazonConfig {
      *         </ul>
      *         </li>
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @sample AmazonConfig.PutRemediationConfigurations
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PutRemediationConfigurations"
      *      target="_top">AWS API Documentation</a>
@@ -3624,24 +3703,39 @@ public interface AmazonConfig {
 
     /**
      * <p>
-     * A remediation exception is when a specific resource is no longer considered for auto-remediation. This API adds a
-     * new exception or updates an existing exception for a specific resource with a specific Config rule.
+     * A remediation exception is when a specified resource is no longer considered for auto-remediation. This API adds
+     * a new exception or updates an existing exception for a specified resource with a specified Config rule.
      * </p>
      * <note>
      * <p>
-     * Config generates a remediation exception when a problem occurs executing a remediation action to a specific
+     * Config generates a remediation exception when a problem occurs running a remediation action for a specified
      * resource. Remediation exceptions blocks auto-remediation until the exception is cleared.
      * </p>
      * </note> <note>
      * <p>
-     * To place an exception on an Amazon Web Services resource, ensure remediation is set as manual remediation.
+     * When placing an exception on an Amazon Web Services resource, it is recommended that remediation is set as manual
+     * remediation until the given Config rule for the specified resource evaluates the resource as
+     * <code>NON_COMPLIANT</code>. Once the resource has been evaluated as <code>NON_COMPLIANT</code>, you can add
+     * remediation exceptions and change the remediation type back from Manual to Auto if you want to use
+     * auto-remediation. Otherwise, using auto-remediation before a <code>NON_COMPLIANT</code> evaluation result can
+     * delete resources before the exception is applied.
+     * </p>
+     * </note> <note>
+     * <p>
+     * Placing an exception can only be performed on resources that are <code>NON_COMPLIANT</code>. If you use this API
+     * for <code>COMPLIANT</code> resources or resources that are <code>NOT_APPLICABLE</code>, a remediation exception
+     * will not be generated. For more information on the conditions that initiate the possible Config evaluation
+     * results, see <a
+     * href="https://docs.aws.amazon.com/config/latest/developerguide/config-concepts.html#aws-config-rules">Concepts |
+     * Config Rules</a> in the Config Developer Guide.
      * </p>
      * </note>
      * 
      * @param putRemediationExceptionsRequest
      * @return Result of the PutRemediationExceptions operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws InsufficientPermissionsException
      *         Indicates one of the following errors:</p>
      *         <ul>
@@ -3710,7 +3804,7 @@ public interface AmazonConfig {
      * @param putResourceConfigRequest
      * @return Result of the PutResourceConfig operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -3787,7 +3881,8 @@ public interface AmazonConfig {
      * @param putRetentionConfigurationRequest
      * @return Result of the PutRetentionConfiguration operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws MaxNumberOfRetentionConfigurationsExceededException
      *         Failed to add the retention configuration because a retention configuration with that name already
      *         exists.
@@ -3803,11 +3898,19 @@ public interface AmazonConfig {
      * Amazon Web Services account and a single Amazon Web Services Region. You can create upto 300 queries in a single
      * Amazon Web Services account and a single Amazon Web Services Region.
      * </p>
+     * <note>
+     * <p>
+     * <code>PutStoredQuery</code> is an idempotent API. Subsequent requests won’t create a duplicate resource if one
+     * was already created. If a following request has different <code>tags</code> values, Config will ignore these
+     * differences and treat it as an idempotent request of the previous. In this case, <code>tags</code> will not be
+     * updated, even if they are different.
+     * </p>
+     * </note>
      * 
      * @param putStoredQueryRequest
      * @return Result of the PutStoredQuery operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -3862,7 +3965,7 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @sample AmazonConfig.SelectAggregateResourceConfig
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/SelectAggregateResourceConfig"
@@ -3888,7 +3991,7 @@ public interface AmazonConfig {
      * @throws InvalidLimitException
      *         The specified limit is outside the allowable range.
      * @throws InvalidNextTokenException
-     *         The specified next token is invalid. Specify the <code>nextToken</code> string that was returned in the
+     *         The specified next token is not valid. Specify the <code>nextToken</code> string that was returned in the
      *         previous response to get the next page of results.
      * @sample AmazonConfig.SelectResourceConfig
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/SelectResourceConfig" target="_top">AWS
@@ -3952,8 +4055,8 @@ public interface AmazonConfig {
      * @param startConfigRulesEvaluationRequest
      * @return Result of the StartConfigRulesEvaluation operation returned by the service.
      * @throws NoSuchConfigRuleException
-     *         The Config rule in the request is invalid. Verify that the rule is an Config Custom Policy rule, that the
-     *         rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
+     *         The Config rule in the request is not valid. Verify that the rule is an Config Process Check rule, that
+     *         the rule name is correct, and that valid Amazon Resouce Names (ARNs) are used before trying again.
      * @throws LimitExceededException
      *         For <code>StartConfigRulesEvaluation</code> API, this exception is thrown if an evaluation is in progress
      *         or if you call the <a>StartConfigRulesEvaluation</a> API more than once per minute.</p>
@@ -4006,7 +4109,8 @@ public interface AmazonConfig {
      *         </p>
      *         </li>
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @sample AmazonConfig.StartConfigRulesEvaluation
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/StartConfigRulesEvaluation"
      *      target="_top">AWS API Documentation</a>
@@ -4048,7 +4152,8 @@ public interface AmazonConfig {
      * @param startRemediationExecutionRequest
      * @return Result of the StartRemediationExecution operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws InsufficientPermissionsException
      *         Indicates one of the following errors:</p>
      *         <ul>
@@ -4107,12 +4212,27 @@ public interface AmazonConfig {
      * <p>
      * Ensure you have the <code>cloudformation:DescribeType</code> role setup to validate the resource type schema.
      * </p>
+     * <p>
+     * You can find the <a
+     * href="https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html">Resource type
+     * schema</a> in "<i>Amazon Web Services public extensions</i>" within the CloudFormation registry or with the
+     * following CLI commmand:
+     * <code>aws cloudformation describe-type --type-name "AWS::S3::Bucket" --type RESOURCE</code>.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-view">Managing
+     * extensions through the CloudFormation registry</a> and <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">Amazon
+     * Web Services resource and property types reference</a> in the CloudFormation User Guide.
+     * </p>
      * </note>
      * 
      * @param startResourceEvaluationRequest
      * @return Result of the StartResourceEvaluation operation returned by the service.
      * @throws InvalidParameterValueException
-     *         One or more of the specified parameters are invalid. Verify that your parameters are valid and try again.
+     *         One or more of the specified parameters are not valid. Verify that your parameters are valid and try
+     *         again.
      * @throws IdempotentParameterMismatchException
      *         Using the same client token with one or more different parameters. Specify a new client token with the
      *         parameter changes and try again.
@@ -4142,14 +4262,15 @@ public interface AmazonConfig {
     /**
      * <p>
      * Associates the specified tags to a resource with the specified resourceArn. If existing tags on a resource are
-     * not specified in the request parameters, they are not changed. When a resource is deleted, the tags associated
-     * with that resource are deleted as well.
+     * not specified in the request parameters, they are not changed. If existing tags are specified, however, then
+     * their values will be updated. When a resource is deleted, the tags associated with that resource are deleted as
+     * well.
      * </p>
      * 
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.
@@ -4177,7 +4298,7 @@ public interface AmazonConfig {
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
      * @throws ValidationException
-     *         The requested action is invalid.</p>
+     *         The requested action is not valid.</p>
      *         <p>
      *         For PutStoredQuery, you will see this exception if there are missing required fields or if the input
      *         value fails the validation, or if you are trying to create more than 300 queries.

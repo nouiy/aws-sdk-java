@@ -35,7 +35,8 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The IDs of only those resources that you want Config to list in the response. If you do not specify this
-     * parameter, Config lists all resources of the specified type that it has discovered.
+     * parameter, Config lists all resources of the specified type that it has discovered. You can list a minimum of 1
+     * resourceID and a maximum of 20 resourceIds.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> resourceIds;
@@ -144,11 +145,13 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The IDs of only those resources that you want Config to list in the response. If you do not specify this
-     * parameter, Config lists all resources of the specified type that it has discovered.
+     * parameter, Config lists all resources of the specified type that it has discovered. You can list a minimum of 1
+     * resourceID and a maximum of 20 resourceIds.
      * </p>
      * 
      * @return The IDs of only those resources that you want Config to list in the response. If you do not specify this
-     *         parameter, Config lists all resources of the specified type that it has discovered.
+     *         parameter, Config lists all resources of the specified type that it has discovered. You can list a
+     *         minimum of 1 resourceID and a maximum of 20 resourceIds.
      */
 
     public java.util.List<String> getResourceIds() {
@@ -161,12 +164,14 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The IDs of only those resources that you want Config to list in the response. If you do not specify this
-     * parameter, Config lists all resources of the specified type that it has discovered.
+     * parameter, Config lists all resources of the specified type that it has discovered. You can list a minimum of 1
+     * resourceID and a maximum of 20 resourceIds.
      * </p>
      * 
      * @param resourceIds
      *        The IDs of only those resources that you want Config to list in the response. If you do not specify this
-     *        parameter, Config lists all resources of the specified type that it has discovered.
+     *        parameter, Config lists all resources of the specified type that it has discovered. You can list a minimum
+     *        of 1 resourceID and a maximum of 20 resourceIds.
      */
 
     public void setResourceIds(java.util.Collection<String> resourceIds) {
@@ -181,7 +186,8 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The IDs of only those resources that you want Config to list in the response. If you do not specify this
-     * parameter, Config lists all resources of the specified type that it has discovered.
+     * parameter, Config lists all resources of the specified type that it has discovered. You can list a minimum of 1
+     * resourceID and a maximum of 20 resourceIds.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -191,7 +197,8 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
      * 
      * @param resourceIds
      *        The IDs of only those resources that you want Config to list in the response. If you do not specify this
-     *        parameter, Config lists all resources of the specified type that it has discovered.
+     *        parameter, Config lists all resources of the specified type that it has discovered. You can list a minimum
+     *        of 1 resourceID and a maximum of 20 resourceIds.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -208,12 +215,14 @@ public class ListDiscoveredResourcesRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The IDs of only those resources that you want Config to list in the response. If you do not specify this
-     * parameter, Config lists all resources of the specified type that it has discovered.
+     * parameter, Config lists all resources of the specified type that it has discovered. You can list a minimum of 1
+     * resourceID and a maximum of 20 resourceIds.
      * </p>
      * 
      * @param resourceIds
      *        The IDs of only those resources that you want Config to list in the response. If you do not specify this
-     *        parameter, Config lists all resources of the specified type that it has discovered.
+     *        parameter, Config lists all resources of the specified type that it has discovered. You can list a minimum
+     *        of 1 resourceID and a maximum of 20 resourceIds.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

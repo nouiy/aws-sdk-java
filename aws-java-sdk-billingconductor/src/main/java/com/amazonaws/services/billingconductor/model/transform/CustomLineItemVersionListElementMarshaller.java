@@ -49,6 +49,10 @@ public class CustomLineItemVersionListElementMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StartBillingPeriod").build();
     private static final MarshallingInfo<String> ENDBILLINGPERIOD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndBillingPeriod").build();
+    private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Arn").build();
+    private static final MarshallingInfo<Long> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("StartTime").build();
 
     private static final CustomLineItemVersionListElementMarshaller instance = new CustomLineItemVersionListElementMarshaller();
 
@@ -77,6 +81,8 @@ public class CustomLineItemVersionListElementMarshaller {
             protocolMarshaller.marshall(customLineItemVersionListElement.getAssociationSize(), ASSOCIATIONSIZE_BINDING);
             protocolMarshaller.marshall(customLineItemVersionListElement.getStartBillingPeriod(), STARTBILLINGPERIOD_BINDING);
             protocolMarshaller.marshall(customLineItemVersionListElement.getEndBillingPeriod(), ENDBILLINGPERIOD_BINDING);
+            protocolMarshaller.marshall(customLineItemVersionListElement.getArn(), ARN_BINDING);
+            protocolMarshaller.marshall(customLineItemVersionListElement.getStartTime(), STARTTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
