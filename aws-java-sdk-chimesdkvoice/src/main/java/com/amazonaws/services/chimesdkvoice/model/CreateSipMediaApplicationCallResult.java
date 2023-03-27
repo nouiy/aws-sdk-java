@@ -24,10 +24,20 @@ import javax.annotation.Generated;
 public class CreateSipMediaApplicationCallResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable,
         Cloneable {
 
+    /**
+     * <p>
+     * The actual call.
+     * </p>
+     */
     private SipMediaApplicationCall sipMediaApplicationCall;
 
     /**
+     * <p>
+     * The actual call.
+     * </p>
+     * 
      * @param sipMediaApplicationCall
+     *        The actual call.
      */
 
     public void setSipMediaApplicationCall(SipMediaApplicationCall sipMediaApplicationCall) {
@@ -35,7 +45,11 @@ public class CreateSipMediaApplicationCallResult extends com.amazonaws.AmazonWeb
     }
 
     /**
-     * @return
+     * <p>
+     * The actual call.
+     * </p>
+     * 
+     * @return The actual call.
      */
 
     public SipMediaApplicationCall getSipMediaApplicationCall() {
@@ -43,7 +57,12 @@ public class CreateSipMediaApplicationCallResult extends com.amazonaws.AmazonWeb
     }
 
     /**
+     * <p>
+     * The actual call.
+     * </p>
+     * 
      * @param sipMediaApplicationCall
+     *        The actual call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

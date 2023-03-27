@@ -27,7 +27,7 @@ public class OptOutSpeakerRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier of the domain containing the speaker.
+     * The identifier of the domain that contains the speaker.
      * </p>
      */
     private String domainId;
@@ -40,11 +40,11 @@ public class OptOutSpeakerRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier of the domain containing the speaker.
+     * The identifier of the domain that contains the speaker.
      * </p>
      * 
      * @param domainId
-     *        The identifier of the domain containing the speaker.
+     *        The identifier of the domain that contains the speaker.
      */
 
     public void setDomainId(String domainId) {
@@ -53,10 +53,10 @@ public class OptOutSpeakerRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier of the domain containing the speaker.
+     * The identifier of the domain that contains the speaker.
      * </p>
      * 
-     * @return The identifier of the domain containing the speaker.
+     * @return The identifier of the domain that contains the speaker.
      */
 
     public String getDomainId() {
@@ -65,11 +65,11 @@ public class OptOutSpeakerRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier of the domain containing the speaker.
+     * The identifier of the domain that contains the speaker.
      * </p>
      * 
      * @param domainId
-     *        The identifier of the domain containing the speaker.
+     *        The identifier of the domain that contains the speaker.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

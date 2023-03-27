@@ -75,6 +75,12 @@ public class CreateWirelessDeviceRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private String positioning;
+    /**
+     * <p>
+     * The device configuration information to use to create the Sidewalk device.
+     * </p>
+     */
+    private SidewalkCreateWirelessDevice sidewalk;
 
     /**
      * <p>
@@ -477,6 +483,46 @@ public class CreateWirelessDeviceRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The device configuration information to use to create the Sidewalk device.
+     * </p>
+     * 
+     * @param sidewalk
+     *        The device configuration information to use to create the Sidewalk device.
+     */
+
+    public void setSidewalk(SidewalkCreateWirelessDevice sidewalk) {
+        this.sidewalk = sidewalk;
+    }
+
+    /**
+     * <p>
+     * The device configuration information to use to create the Sidewalk device.
+     * </p>
+     * 
+     * @return The device configuration information to use to create the Sidewalk device.
+     */
+
+    public SidewalkCreateWirelessDevice getSidewalk() {
+        return this.sidewalk;
+    }
+
+    /**
+     * <p>
+     * The device configuration information to use to create the Sidewalk device.
+     * </p>
+     * 
+     * @param sidewalk
+     *        The device configuration information to use to create the Sidewalk device.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateWirelessDeviceRequest withSidewalk(SidewalkCreateWirelessDevice sidewalk) {
+        setSidewalk(sidewalk);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -503,7 +549,9 @@ public class CreateWirelessDeviceRequest extends com.amazonaws.AmazonWebServiceR
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getPositioning() != null)
-            sb.append("Positioning: ").append(getPositioning());
+            sb.append("Positioning: ").append(getPositioning()).append(",");
+        if (getSidewalk() != null)
+            sb.append("Sidewalk: ").append(getSidewalk());
         sb.append("}");
         return sb.toString();
     }
@@ -550,6 +598,10 @@ public class CreateWirelessDeviceRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getPositioning() != null && other.getPositioning().equals(this.getPositioning()) == false)
             return false;
+        if (other.getSidewalk() == null ^ this.getSidewalk() == null)
+            return false;
+        if (other.getSidewalk() != null && other.getSidewalk().equals(this.getSidewalk()) == false)
+            return false;
         return true;
     }
 
@@ -566,6 +618,7 @@ public class CreateWirelessDeviceRequest extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getLoRaWAN() == null) ? 0 : getLoRaWAN().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getPositioning() == null) ? 0 : getPositioning().hashCode());
+        hashCode = prime * hashCode + ((getSidewalk() == null) ? 0 : getSidewalk().hashCode());
         return hashCode;
     }
 

@@ -27,7 +27,7 @@ public class DescribeFraudsterRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the domain containing the fraudster.
+     * The identifier of the domain that contains the fraudster.
      * </p>
      */
     private String domainId;
@@ -40,11 +40,11 @@ public class DescribeFraudsterRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the domain containing the fraudster.
+     * The identifier of the domain that contains the fraudster.
      * </p>
      * 
      * @param domainId
-     *        The identifier of the domain containing the fraudster.
+     *        The identifier of the domain that contains the fraudster.
      */
 
     public void setDomainId(String domainId) {
@@ -53,10 +53,10 @@ public class DescribeFraudsterRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the domain containing the fraudster.
+     * The identifier of the domain that contains the fraudster.
      * </p>
      * 
-     * @return The identifier of the domain containing the fraudster.
+     * @return The identifier of the domain that contains the fraudster.
      */
 
     public String getDomainId() {
@@ -65,11 +65,11 @@ public class DescribeFraudsterRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The identifier of the domain containing the fraudster.
+     * The identifier of the domain that contains the fraudster.
      * </p>
      * 
      * @param domainId
-     *        The identifier of the domain containing the fraudster.
+     *        The identifier of the domain that contains the fraudster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

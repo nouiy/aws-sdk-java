@@ -81,6 +81,10 @@ public class GetAttributeGroupResultJsonUnmarshaller implements Unmarshaller<Get
                     getAttributeGroupResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
                 }
+                if (context.testExpression("createdBy", targetDepth)) {
+                    context.nextToken();
+                    getAttributeGroupResult.setCreatedBy(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -18,6 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The details of a SIP rule, including name, triggers, and target applications. An AWS account can have multiple SIP
+ * rules.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/SipRule" target="_top">AWS API
  *      Documentation</a>
@@ -25,24 +29,63 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class SipRule implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * A SIP rule's ID.
+     * </p>
+     */
     private String sipRuleId;
-
+    /**
+     * <p>
+     * A SIP rule's name.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * Indicates whether the SIP rule is enabled or disabled. You must disable a rule before you can delete it.
+     * </p>
+     */
     private Boolean disabled;
-
+    /**
+     * <p>
+     * The type of trigger set for a SIP rule, either a phone number or a URI request host name.
+     * </p>
+     */
     private String triggerType;
-
+    /**
+     * <p>
+     * The value set for a SIP rule's trigger type. Either a phone number or a URI hostname.
+     * </p>
+     */
     private String triggerValue;
-
+    /**
+     * <p>
+     * The target SIP media application and other details, such as priority and AWS Region, to be specified in the SIP
+     * rule. Only one SIP rule per AWS Region can be provided.
+     * </p>
+     */
     private java.util.List<SipRuleTargetApplication> targetApplications;
-
+    /**
+     * <p>
+     * The time at which the SIP rule was created, in ISO 8601 format.
+     * </p>
+     */
     private java.util.Date createdTimestamp;
-
+    /**
+     * <p>
+     * The time at which the SIP rule was updated, in ISO 8601 format.
+     * </p>
+     */
     private java.util.Date updatedTimestamp;
 
     /**
+     * <p>
+     * A SIP rule's ID.
+     * </p>
+     * 
      * @param sipRuleId
+     *        A SIP rule's ID.
      */
 
     public void setSipRuleId(String sipRuleId) {
@@ -50,7 +93,11 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * A SIP rule's ID.
+     * </p>
+     * 
+     * @return A SIP rule's ID.
      */
 
     public String getSipRuleId() {
@@ -58,7 +105,12 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A SIP rule's ID.
+     * </p>
+     * 
      * @param sipRuleId
+     *        A SIP rule's ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -68,7 +120,12 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A SIP rule's name.
+     * </p>
+     * 
      * @param name
+     *        A SIP rule's name.
      */
 
     public void setName(String name) {
@@ -76,7 +133,11 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * A SIP rule's name.
+     * </p>
+     * 
+     * @return A SIP rule's name.
      */
 
     public String getName() {
@@ -84,7 +145,12 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A SIP rule's name.
+     * </p>
+     * 
      * @param name
+     *        A SIP rule's name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,7 +160,12 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Indicates whether the SIP rule is enabled or disabled. You must disable a rule before you can delete it.
+     * </p>
+     * 
      * @param disabled
+     *        Indicates whether the SIP rule is enabled or disabled. You must disable a rule before you can delete it.
      */
 
     public void setDisabled(Boolean disabled) {
@@ -102,7 +173,11 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Indicates whether the SIP rule is enabled or disabled. You must disable a rule before you can delete it.
+     * </p>
+     * 
+     * @return Indicates whether the SIP rule is enabled or disabled. You must disable a rule before you can delete it.
      */
 
     public Boolean getDisabled() {
@@ -110,7 +185,12 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Indicates whether the SIP rule is enabled or disabled. You must disable a rule before you can delete it.
+     * </p>
+     * 
      * @param disabled
+     *        Indicates whether the SIP rule is enabled or disabled. You must disable a rule before you can delete it.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -120,7 +200,11 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Indicates whether the SIP rule is enabled or disabled. You must disable a rule before you can delete it.
+     * </p>
+     * 
+     * @return Indicates whether the SIP rule is enabled or disabled. You must disable a rule before you can delete it.
      */
 
     public Boolean isDisabled() {
@@ -128,7 +212,12 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The type of trigger set for a SIP rule, either a phone number or a URI request host name.
+     * </p>
+     * 
      * @param triggerType
+     *        The type of trigger set for a SIP rule, either a phone number or a URI request host name.
      * @see SipRuleTriggerType
      */
 
@@ -137,7 +226,11 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The type of trigger set for a SIP rule, either a phone number or a URI request host name.
+     * </p>
+     * 
+     * @return The type of trigger set for a SIP rule, either a phone number or a URI request host name.
      * @see SipRuleTriggerType
      */
 
@@ -146,7 +239,12 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The type of trigger set for a SIP rule, either a phone number or a URI request host name.
+     * </p>
+     * 
      * @param triggerType
+     *        The type of trigger set for a SIP rule, either a phone number or a URI request host name.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SipRuleTriggerType
      */
@@ -157,7 +255,12 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The type of trigger set for a SIP rule, either a phone number or a URI request host name.
+     * </p>
+     * 
      * @param triggerType
+     *        The type of trigger set for a SIP rule, either a phone number or a URI request host name.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SipRuleTriggerType
      */
@@ -168,7 +271,12 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The value set for a SIP rule's trigger type. Either a phone number or a URI hostname.
+     * </p>
+     * 
      * @param triggerValue
+     *        The value set for a SIP rule's trigger type. Either a phone number or a URI hostname.
      */
 
     public void setTriggerValue(String triggerValue) {
@@ -176,7 +284,11 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The value set for a SIP rule's trigger type. Either a phone number or a URI hostname.
+     * </p>
+     * 
+     * @return The value set for a SIP rule's trigger type. Either a phone number or a URI hostname.
      */
 
     public String getTriggerValue() {
@@ -184,7 +296,12 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The value set for a SIP rule's trigger type. Either a phone number or a URI hostname.
+     * </p>
+     * 
      * @param triggerValue
+     *        The value set for a SIP rule's trigger type. Either a phone number or a URI hostname.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -194,7 +311,13 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The target SIP media application and other details, such as priority and AWS Region, to be specified in the SIP
+     * rule. Only one SIP rule per AWS Region can be provided.
+     * </p>
+     * 
+     * @return The target SIP media application and other details, such as priority and AWS Region, to be specified in
+     *         the SIP rule. Only one SIP rule per AWS Region can be provided.
      */
 
     public java.util.List<SipRuleTargetApplication> getTargetApplications() {
@@ -202,7 +325,14 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The target SIP media application and other details, such as priority and AWS Region, to be specified in the SIP
+     * rule. Only one SIP rule per AWS Region can be provided.
+     * </p>
+     * 
      * @param targetApplications
+     *        The target SIP media application and other details, such as priority and AWS Region, to be specified in
+     *        the SIP rule. Only one SIP rule per AWS Region can be provided.
      */
 
     public void setTargetApplications(java.util.Collection<SipRuleTargetApplication> targetApplications) {
@@ -216,12 +346,18 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The target SIP media application and other details, such as priority and AWS Region, to be specified in the SIP
+     * rule. Only one SIP rule per AWS Region can be provided.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTargetApplications(java.util.Collection)} or {@link #withTargetApplications(java.util.Collection)} if
      * you want to override the existing values.
      * </p>
      * 
      * @param targetApplications
+     *        The target SIP media application and other details, such as priority and AWS Region, to be specified in
+     *        the SIP rule. Only one SIP rule per AWS Region can be provided.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -236,7 +372,14 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The target SIP media application and other details, such as priority and AWS Region, to be specified in the SIP
+     * rule. Only one SIP rule per AWS Region can be provided.
+     * </p>
+     * 
      * @param targetApplications
+     *        The target SIP media application and other details, such as priority and AWS Region, to be specified in
+     *        the SIP rule. Only one SIP rule per AWS Region can be provided.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -246,7 +389,12 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The time at which the SIP rule was created, in ISO 8601 format.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The time at which the SIP rule was created, in ISO 8601 format.
      */
 
     public void setCreatedTimestamp(java.util.Date createdTimestamp) {
@@ -254,7 +402,11 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the SIP rule was created, in ISO 8601 format.
+     * </p>
+     * 
+     * @return The time at which the SIP rule was created, in ISO 8601 format.
      */
 
     public java.util.Date getCreatedTimestamp() {
@@ -262,7 +414,12 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The time at which the SIP rule was created, in ISO 8601 format.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The time at which the SIP rule was created, in ISO 8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -272,7 +429,12 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The time at which the SIP rule was updated, in ISO 8601 format.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The time at which the SIP rule was updated, in ISO 8601 format.
      */
 
     public void setUpdatedTimestamp(java.util.Date updatedTimestamp) {
@@ -280,7 +442,11 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the SIP rule was updated, in ISO 8601 format.
+     * </p>
+     * 
+     * @return The time at which the SIP rule was updated, in ISO 8601 format.
      */
 
     public java.util.Date getUpdatedTimestamp() {
@@ -288,7 +454,12 @@ public class SipRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The time at which the SIP rule was updated, in ISO 8601 format.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The time at which the SIP rule was updated, in ISO 8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

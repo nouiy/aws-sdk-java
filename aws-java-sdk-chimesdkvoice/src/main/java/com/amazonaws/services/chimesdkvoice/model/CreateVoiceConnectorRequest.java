@@ -25,14 +25,32 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The name of the Voice Connector.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * The AWS Region in which the Amazon Chime SDK Voice Connector is created. Default value: <code>us-east-1</code> .
+     * </p>
+     */
     private String awsRegion;
-
+    /**
+     * <p>
+     * Enables or disables encryption for the Voice Connector.
+     * </p>
+     */
     private Boolean requireEncryption;
 
     /**
+     * <p>
+     * The name of the Voice Connector.
+     * </p>
+     * 
      * @param name
+     *        The name of the Voice Connector.
      */
 
     public void setName(String name) {
@@ -40,7 +58,11 @@ public class CreateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the Voice Connector.
+     * </p>
+     * 
+     * @return The name of the Voice Connector.
      */
 
     public String getName() {
@@ -48,7 +70,12 @@ public class CreateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The name of the Voice Connector.
+     * </p>
+     * 
      * @param name
+     *        The name of the Voice Connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +85,13 @@ public class CreateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The AWS Region in which the Amazon Chime SDK Voice Connector is created. Default value: <code>us-east-1</code> .
+     * </p>
+     * 
      * @param awsRegion
+     *        The AWS Region in which the Amazon Chime SDK Voice Connector is created. Default value:
+     *        <code>us-east-1</code> .
      * @see VoiceConnectorAwsRegion
      */
 
@@ -67,7 +100,12 @@ public class CreateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * @return
+     * <p>
+     * The AWS Region in which the Amazon Chime SDK Voice Connector is created. Default value: <code>us-east-1</code> .
+     * </p>
+     * 
+     * @return The AWS Region in which the Amazon Chime SDK Voice Connector is created. Default value:
+     *         <code>us-east-1</code> .
      * @see VoiceConnectorAwsRegion
      */
 
@@ -76,7 +114,13 @@ public class CreateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The AWS Region in which the Amazon Chime SDK Voice Connector is created. Default value: <code>us-east-1</code> .
+     * </p>
+     * 
      * @param awsRegion
+     *        The AWS Region in which the Amazon Chime SDK Voice Connector is created. Default value:
+     *        <code>us-east-1</code> .
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VoiceConnectorAwsRegion
      */
@@ -87,7 +131,13 @@ public class CreateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The AWS Region in which the Amazon Chime SDK Voice Connector is created. Default value: <code>us-east-1</code> .
+     * </p>
+     * 
      * @param awsRegion
+     *        The AWS Region in which the Amazon Chime SDK Voice Connector is created. Default value:
+     *        <code>us-east-1</code> .
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VoiceConnectorAwsRegion
      */
@@ -98,7 +148,12 @@ public class CreateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * Enables or disables encryption for the Voice Connector.
+     * </p>
+     * 
      * @param requireEncryption
+     *        Enables or disables encryption for the Voice Connector.
      */
 
     public void setRequireEncryption(Boolean requireEncryption) {
@@ -106,7 +161,11 @@ public class CreateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * @return
+     * <p>
+     * Enables or disables encryption for the Voice Connector.
+     * </p>
+     * 
+     * @return Enables or disables encryption for the Voice Connector.
      */
 
     public Boolean getRequireEncryption() {
@@ -114,7 +173,12 @@ public class CreateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * Enables or disables encryption for the Voice Connector.
+     * </p>
+     * 
      * @param requireEncryption
+     *        Enables or disables encryption for the Voice Connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -124,7 +188,11 @@ public class CreateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * @return
+     * <p>
+     * Enables or disables encryption for the Voice Connector.
+     * </p>
+     * 
+     * @return Enables or disables encryption for the Voice Connector.
      */
 
     public Boolean isRequireEncryption() {

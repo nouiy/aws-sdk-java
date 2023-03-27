@@ -25,10 +25,19 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class BatchDeletePhoneNumberRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * List of phone number IDs.
+     * </p>
+     */
     private java.util.List<String> phoneNumberIds;
 
     /**
-     * @return
+     * <p>
+     * List of phone number IDs.
+     * </p>
+     * 
+     * @return List of phone number IDs.
      */
 
     public java.util.List<String> getPhoneNumberIds() {
@@ -36,7 +45,12 @@ public class BatchDeletePhoneNumberRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * List of phone number IDs.
+     * </p>
+     * 
      * @param phoneNumberIds
+     *        List of phone number IDs.
      */
 
     public void setPhoneNumberIds(java.util.Collection<String> phoneNumberIds) {
@@ -50,12 +64,16 @@ public class BatchDeletePhoneNumberRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
+     * List of phone number IDs.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setPhoneNumberIds(java.util.Collection)} or {@link #withPhoneNumberIds(java.util.Collection)} if you want
      * to override the existing values.
      * </p>
      * 
      * @param phoneNumberIds
+     *        List of phone number IDs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +88,12 @@ public class BatchDeletePhoneNumberRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * List of phone number IDs.
+     * </p>
+     * 
      * @param phoneNumberIds
+     *        List of phone number IDs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

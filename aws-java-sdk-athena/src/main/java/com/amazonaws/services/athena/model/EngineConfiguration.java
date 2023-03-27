@@ -51,9 +51,9 @@ public class EngineConfiguration implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * Contains additional notebook engine <code>MAP&lt;string, string&gt;</code> parameter mappings in the form of
-     * key-value pairs. To specify an Amazon S3 URI that the Jupyter server will download and serve, specify a value for
-     * the <a>StartSessionRequest$NotebookVersion</a> field, and then add a key named <code>NotebookFileURI</code> to
-     * <code>AdditionalConfigs</code> that has value of the Amazon S3 URI.
+     * key-value pairs. To specify an Athena notebook that the Jupyter server will download and serve, specify a value
+     * for the <a>StartSessionRequest$NotebookVersion</a> field, and then add a key named <code>NotebookId</code> to
+     * <code>AdditionalConfigs</code> that has the value of the Athena notebook ID.
      * </p>
      */
     private java.util.Map<String, String> additionalConfigs;
@@ -193,15 +193,15 @@ public class EngineConfiguration implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * Contains additional notebook engine <code>MAP&lt;string, string&gt;</code> parameter mappings in the form of
-     * key-value pairs. To specify an Amazon S3 URI that the Jupyter server will download and serve, specify a value for
-     * the <a>StartSessionRequest$NotebookVersion</a> field, and then add a key named <code>NotebookFileURI</code> to
-     * <code>AdditionalConfigs</code> that has value of the Amazon S3 URI.
+     * key-value pairs. To specify an Athena notebook that the Jupyter server will download and serve, specify a value
+     * for the <a>StartSessionRequest$NotebookVersion</a> field, and then add a key named <code>NotebookId</code> to
+     * <code>AdditionalConfigs</code> that has the value of the Athena notebook ID.
      * </p>
      * 
      * @return Contains additional notebook engine <code>MAP&lt;string, string&gt;</code> parameter mappings in the form
-     *         of key-value pairs. To specify an Amazon S3 URI that the Jupyter server will download and serve, specify
-     *         a value for the <a>StartSessionRequest$NotebookVersion</a> field, and then add a key named
-     *         <code>NotebookFileURI</code> to <code>AdditionalConfigs</code> that has value of the Amazon S3 URI.
+     *         of key-value pairs. To specify an Athena notebook that the Jupyter server will download and serve,
+     *         specify a value for the <a>StartSessionRequest$NotebookVersion</a> field, and then add a key named
+     *         <code>NotebookId</code> to <code>AdditionalConfigs</code> that has the value of the Athena notebook ID.
      */
 
     public java.util.Map<String, String> getAdditionalConfigs() {
@@ -211,16 +211,16 @@ public class EngineConfiguration implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * Contains additional notebook engine <code>MAP&lt;string, string&gt;</code> parameter mappings in the form of
-     * key-value pairs. To specify an Amazon S3 URI that the Jupyter server will download and serve, specify a value for
-     * the <a>StartSessionRequest$NotebookVersion</a> field, and then add a key named <code>NotebookFileURI</code> to
-     * <code>AdditionalConfigs</code> that has value of the Amazon S3 URI.
+     * key-value pairs. To specify an Athena notebook that the Jupyter server will download and serve, specify a value
+     * for the <a>StartSessionRequest$NotebookVersion</a> field, and then add a key named <code>NotebookId</code> to
+     * <code>AdditionalConfigs</code> that has the value of the Athena notebook ID.
      * </p>
      * 
      * @param additionalConfigs
      *        Contains additional notebook engine <code>MAP&lt;string, string&gt;</code> parameter mappings in the form
-     *        of key-value pairs. To specify an Amazon S3 URI that the Jupyter server will download and serve, specify a
-     *        value for the <a>StartSessionRequest$NotebookVersion</a> field, and then add a key named
-     *        <code>NotebookFileURI</code> to <code>AdditionalConfigs</code> that has value of the Amazon S3 URI.
+     *        of key-value pairs. To specify an Athena notebook that the Jupyter server will download and serve, specify
+     *        a value for the <a>StartSessionRequest$NotebookVersion</a> field, and then add a key named
+     *        <code>NotebookId</code> to <code>AdditionalConfigs</code> that has the value of the Athena notebook ID.
      */
 
     public void setAdditionalConfigs(java.util.Map<String, String> additionalConfigs) {
@@ -230,16 +230,16 @@ public class EngineConfiguration implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * Contains additional notebook engine <code>MAP&lt;string, string&gt;</code> parameter mappings in the form of
-     * key-value pairs. To specify an Amazon S3 URI that the Jupyter server will download and serve, specify a value for
-     * the <a>StartSessionRequest$NotebookVersion</a> field, and then add a key named <code>NotebookFileURI</code> to
-     * <code>AdditionalConfigs</code> that has value of the Amazon S3 URI.
+     * key-value pairs. To specify an Athena notebook that the Jupyter server will download and serve, specify a value
+     * for the <a>StartSessionRequest$NotebookVersion</a> field, and then add a key named <code>NotebookId</code> to
+     * <code>AdditionalConfigs</code> that has the value of the Athena notebook ID.
      * </p>
      * 
      * @param additionalConfigs
      *        Contains additional notebook engine <code>MAP&lt;string, string&gt;</code> parameter mappings in the form
-     *        of key-value pairs. To specify an Amazon S3 URI that the Jupyter server will download and serve, specify a
-     *        value for the <a>StartSessionRequest$NotebookVersion</a> field, and then add a key named
-     *        <code>NotebookFileURI</code> to <code>AdditionalConfigs</code> that has value of the Amazon S3 URI.
+     *        of key-value pairs. To specify an Athena notebook that the Jupyter server will download and serve, specify
+     *        a value for the <a>StartSessionRequest$NotebookVersion</a> field, and then add a key named
+     *        <code>NotebookId</code> to <code>AdditionalConfigs</code> that has the value of the Athena notebook ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

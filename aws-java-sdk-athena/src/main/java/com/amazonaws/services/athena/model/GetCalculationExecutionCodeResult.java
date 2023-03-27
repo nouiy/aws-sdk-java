@@ -25,18 +25,18 @@ public class GetCalculationExecutionCodeResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A pre-signed URL to the code that executed the calculation.
+     * The unencrypted code that was executed for the calculation.
      * </p>
      */
     private String codeBlock;
 
     /**
      * <p>
-     * A pre-signed URL to the code that executed the calculation.
+     * The unencrypted code that was executed for the calculation.
      * </p>
      * 
      * @param codeBlock
-     *        A pre-signed URL to the code that executed the calculation.
+     *        The unencrypted code that was executed for the calculation.
      */
 
     public void setCodeBlock(String codeBlock) {
@@ -45,10 +45,10 @@ public class GetCalculationExecutionCodeResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A pre-signed URL to the code that executed the calculation.
+     * The unencrypted code that was executed for the calculation.
      * </p>
      * 
-     * @return A pre-signed URL to the code that executed the calculation.
+     * @return The unencrypted code that was executed for the calculation.
      */
 
     public String getCodeBlock() {
@@ -57,11 +57,11 @@ public class GetCalculationExecutionCodeResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A pre-signed URL to the code that executed the calculation.
+     * The unencrypted code that was executed for the calculation.
      * </p>
      * 
      * @param codeBlock
-     *        A pre-signed URL to the code that executed the calculation.
+     *        The unencrypted code that was executed for the calculation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

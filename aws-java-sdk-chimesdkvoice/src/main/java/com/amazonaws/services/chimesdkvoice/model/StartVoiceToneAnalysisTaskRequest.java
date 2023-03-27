@@ -25,16 +25,38 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class StartVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     */
     private String voiceConnectorId;
-
+    /**
+     * <p>
+     * The transaction ID.
+     * </p>
+     */
     private String transactionId;
-
+    /**
+     * <p>
+     * The language code.
+     * </p>
+     */
     private String languageCode;
-
+    /**
+     * <p>
+     * The unique identifier for the client request. Use a different token for different voice tone analysis tasks.
+     * </p>
+     */
     private String clientRequestToken;
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      */
 
     public void setVoiceConnectorId(String voiceConnectorId) {
@@ -42,7 +64,11 @@ public class StartVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
+     * @return The Voice Connector ID.
      */
 
     public String getVoiceConnectorId() {
@@ -50,7 +76,12 @@ public class StartVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -60,7 +91,12 @@ public class StartVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The transaction ID.
+     * </p>
+     * 
      * @param transactionId
+     *        The transaction ID.
      */
 
     public void setTransactionId(String transactionId) {
@@ -68,7 +104,11 @@ public class StartVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * @return
+     * <p>
+     * The transaction ID.
+     * </p>
+     * 
+     * @return The transaction ID.
      */
 
     public String getTransactionId() {
@@ -76,7 +116,12 @@ public class StartVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The transaction ID.
+     * </p>
+     * 
      * @param transactionId
+     *        The transaction ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,7 +131,12 @@ public class StartVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The language code.
+     * </p>
+     * 
      * @param languageCode
+     *        The language code.
      * @see LanguageCode
      */
 
@@ -95,7 +145,11 @@ public class StartVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * @return
+     * <p>
+     * The language code.
+     * </p>
+     * 
+     * @return The language code.
      * @see LanguageCode
      */
 
@@ -104,7 +158,12 @@ public class StartVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The language code.
+     * </p>
+     * 
      * @param languageCode
+     *        The language code.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -115,7 +174,12 @@ public class StartVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The language code.
+     * </p>
+     * 
      * @param languageCode
+     *        The language code.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -126,7 +190,13 @@ public class StartVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The unique identifier for the client request. Use a different token for different voice tone analysis tasks.
+     * </p>
+     * 
      * @param clientRequestToken
+     *        The unique identifier for the client request. Use a different token for different voice tone analysis
+     *        tasks.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -134,7 +204,12 @@ public class StartVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier for the client request. Use a different token for different voice tone analysis tasks.
+     * </p>
+     * 
+     * @return The unique identifier for the client request. Use a different token for different voice tone analysis
+     *         tasks.
      */
 
     public String getClientRequestToken() {
@@ -142,7 +217,13 @@ public class StartVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The unique identifier for the client request. Use a different token for different voice tone analysis tasks.
+     * </p>
+     * 
      * @param clientRequestToken
+     *        The unique identifier for the client request. Use a different token for different voice tone analysis
+     *        tasks.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

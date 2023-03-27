@@ -25,12 +25,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     */
     private String voiceConnectorId;
-
+    /**
+     * <p>
+     * The ID of the speaker search task.
+     * </p>
+     */
     private String speakerSearchTaskId;
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      */
 
     public void setVoiceConnectorId(String voiceConnectorId) {
@@ -38,7 +52,11 @@ public class GetSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
+     * @return The Voice Connector ID.
      */
 
     public String getVoiceConnectorId() {
@@ -46,7 +64,12 @@ public class GetSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +79,12 @@ public class GetSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The ID of the speaker search task.
+     * </p>
+     * 
      * @param speakerSearchTaskId
+     *        The ID of the speaker search task.
      */
 
     public void setSpeakerSearchTaskId(String speakerSearchTaskId) {
@@ -64,7 +92,11 @@ public class GetSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the speaker search task.
+     * </p>
+     * 
+     * @return The ID of the speaker search task.
      */
 
     public String getSpeakerSearchTaskId() {
@@ -72,7 +104,12 @@ public class GetSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The ID of the speaker search task.
+     * </p>
+     * 
      * @param speakerSearchTaskId
+     *        The ID of the speaker search task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

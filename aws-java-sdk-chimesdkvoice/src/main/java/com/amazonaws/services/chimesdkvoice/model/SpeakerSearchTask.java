@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * A representation of an asynchronous request to perform speaker search analysis on a Voice Connector call.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/SpeakerSearchTask" target="_top">AWS
  *      API Documentation</a>
@@ -25,24 +28,63 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The speaker search task ID.
+     * </p>
+     */
     private String speakerSearchTaskId;
-
+    /**
+     * <p>
+     * The status of the speaker search task, <code>IN_QUEUE</code>, <code>IN_PROGRESS</code>,
+     * <code>PARTIAL_SUCCESS</code>, <code>SUCCEEDED</code>, <code>FAILED</code>, or <code>STOPPED</code>.
+     * </p>
+     */
     private String speakerSearchTaskStatus;
-
+    /**
+     * <p>
+     * The call details of a speaker search task.
+     * </p>
+     */
     private CallDetails callDetails;
-
+    /**
+     * <p>
+     * The details of a speaker search task.
+     * </p>
+     */
     private SpeakerSearchDetails speakerSearchDetails;
-
+    /**
+     * <p>
+     * The time at which a speaker search task was created.
+     * </p>
+     */
     private java.util.Date createdTimestamp;
-
+    /**
+     * <p>
+     * The time at which a speaker search task was updated.
+     * </p>
+     */
     private java.util.Date updatedTimestamp;
-
+    /**
+     * <p>
+     * The time at which the speaker search task began.
+     * </p>
+     */
     private java.util.Date startedTimestamp;
-
+    /**
+     * <p>
+     * A detailed message about the status of a speaker search.
+     * </p>
+     */
     private String statusMessage;
 
     /**
+     * <p>
+     * The speaker search task ID.
+     * </p>
+     * 
      * @param speakerSearchTaskId
+     *        The speaker search task ID.
      */
 
     public void setSpeakerSearchTaskId(String speakerSearchTaskId) {
@@ -50,7 +92,11 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The speaker search task ID.
+     * </p>
+     * 
+     * @return The speaker search task ID.
      */
 
     public String getSpeakerSearchTaskId() {
@@ -58,7 +104,12 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The speaker search task ID.
+     * </p>
+     * 
      * @param speakerSearchTaskId
+     *        The speaker search task ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -68,7 +119,14 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The status of the speaker search task, <code>IN_QUEUE</code>, <code>IN_PROGRESS</code>,
+     * <code>PARTIAL_SUCCESS</code>, <code>SUCCEEDED</code>, <code>FAILED</code>, or <code>STOPPED</code>.
+     * </p>
+     * 
      * @param speakerSearchTaskStatus
+     *        The status of the speaker search task, <code>IN_QUEUE</code>, <code>IN_PROGRESS</code>,
+     *        <code>PARTIAL_SUCCESS</code>, <code>SUCCEEDED</code>, <code>FAILED</code>, or <code>STOPPED</code>.
      */
 
     public void setSpeakerSearchTaskStatus(String speakerSearchTaskStatus) {
@@ -76,7 +134,13 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the speaker search task, <code>IN_QUEUE</code>, <code>IN_PROGRESS</code>,
+     * <code>PARTIAL_SUCCESS</code>, <code>SUCCEEDED</code>, <code>FAILED</code>, or <code>STOPPED</code>.
+     * </p>
+     * 
+     * @return The status of the speaker search task, <code>IN_QUEUE</code>, <code>IN_PROGRESS</code>,
+     *         <code>PARTIAL_SUCCESS</code>, <code>SUCCEEDED</code>, <code>FAILED</code>, or <code>STOPPED</code>.
      */
 
     public String getSpeakerSearchTaskStatus() {
@@ -84,7 +148,14 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The status of the speaker search task, <code>IN_QUEUE</code>, <code>IN_PROGRESS</code>,
+     * <code>PARTIAL_SUCCESS</code>, <code>SUCCEEDED</code>, <code>FAILED</code>, or <code>STOPPED</code>.
+     * </p>
+     * 
      * @param speakerSearchTaskStatus
+     *        The status of the speaker search task, <code>IN_QUEUE</code>, <code>IN_PROGRESS</code>,
+     *        <code>PARTIAL_SUCCESS</code>, <code>SUCCEEDED</code>, <code>FAILED</code>, or <code>STOPPED</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,7 +165,12 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The call details of a speaker search task.
+     * </p>
+     * 
      * @param callDetails
+     *        The call details of a speaker search task.
      */
 
     public void setCallDetails(CallDetails callDetails) {
@@ -102,7 +178,11 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The call details of a speaker search task.
+     * </p>
+     * 
+     * @return The call details of a speaker search task.
      */
 
     public CallDetails getCallDetails() {
@@ -110,7 +190,12 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The call details of a speaker search task.
+     * </p>
+     * 
      * @param callDetails
+     *        The call details of a speaker search task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -120,7 +205,12 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The details of a speaker search task.
+     * </p>
+     * 
      * @param speakerSearchDetails
+     *        The details of a speaker search task.
      */
 
     public void setSpeakerSearchDetails(SpeakerSearchDetails speakerSearchDetails) {
@@ -128,7 +218,11 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The details of a speaker search task.
+     * </p>
+     * 
+     * @return The details of a speaker search task.
      */
 
     public SpeakerSearchDetails getSpeakerSearchDetails() {
@@ -136,7 +230,12 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The details of a speaker search task.
+     * </p>
+     * 
      * @param speakerSearchDetails
+     *        The details of a speaker search task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -146,7 +245,12 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The time at which a speaker search task was created.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The time at which a speaker search task was created.
      */
 
     public void setCreatedTimestamp(java.util.Date createdTimestamp) {
@@ -154,7 +258,11 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which a speaker search task was created.
+     * </p>
+     * 
+     * @return The time at which a speaker search task was created.
      */
 
     public java.util.Date getCreatedTimestamp() {
@@ -162,7 +270,12 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The time at which a speaker search task was created.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The time at which a speaker search task was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -172,7 +285,12 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The time at which a speaker search task was updated.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The time at which a speaker search task was updated.
      */
 
     public void setUpdatedTimestamp(java.util.Date updatedTimestamp) {
@@ -180,7 +298,11 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which a speaker search task was updated.
+     * </p>
+     * 
+     * @return The time at which a speaker search task was updated.
      */
 
     public java.util.Date getUpdatedTimestamp() {
@@ -188,7 +310,12 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The time at which a speaker search task was updated.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The time at which a speaker search task was updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -198,7 +325,12 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The time at which the speaker search task began.
+     * </p>
+     * 
      * @param startedTimestamp
+     *        The time at which the speaker search task began.
      */
 
     public void setStartedTimestamp(java.util.Date startedTimestamp) {
@@ -206,7 +338,11 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the speaker search task began.
+     * </p>
+     * 
+     * @return The time at which the speaker search task began.
      */
 
     public java.util.Date getStartedTimestamp() {
@@ -214,7 +350,12 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The time at which the speaker search task began.
+     * </p>
+     * 
      * @param startedTimestamp
+     *        The time at which the speaker search task began.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -224,7 +365,12 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * A detailed message about the status of a speaker search.
+     * </p>
+     * 
      * @param statusMessage
+     *        A detailed message about the status of a speaker search.
      */
 
     public void setStatusMessage(String statusMessage) {
@@ -232,7 +378,11 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * A detailed message about the status of a speaker search.
+     * </p>
+     * 
+     * @return A detailed message about the status of a speaker search.
      */
 
     public String getStatusMessage() {
@@ -240,7 +390,12 @@ public class SpeakerSearchTask implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * A detailed message about the status of a speaker search.
+     * </p>
+     * 
      * @param statusMessage
+     *        A detailed message about the status of a speaker search.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

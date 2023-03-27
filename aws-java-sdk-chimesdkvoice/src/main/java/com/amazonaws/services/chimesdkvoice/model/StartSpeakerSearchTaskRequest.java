@@ -25,16 +25,38 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class StartSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     */
     private String voiceConnectorId;
-
+    /**
+     * <p>
+     * The transaction ID of the call being analyzed.
+     * </p>
+     */
     private String transactionId;
-
+    /**
+     * <p>
+     * The ID of the voice profile domain that will store the voice profile.
+     * </p>
+     */
     private String voiceProfileDomainId;
-
+    /**
+     * <p>
+     * The unique identifier for the client request. Use a different token for different speaker search tasks.
+     * </p>
+     */
     private String clientRequestToken;
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      */
 
     public void setVoiceConnectorId(String voiceConnectorId) {
@@ -42,7 +64,11 @@ public class StartSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
+     * @return The Voice Connector ID.
      */
 
     public String getVoiceConnectorId() {
@@ -50,7 +76,12 @@ public class StartSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -60,7 +91,12 @@ public class StartSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The transaction ID of the call being analyzed.
+     * </p>
+     * 
      * @param transactionId
+     *        The transaction ID of the call being analyzed.
      */
 
     public void setTransactionId(String transactionId) {
@@ -68,7 +104,11 @@ public class StartSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * @return
+     * <p>
+     * The transaction ID of the call being analyzed.
+     * </p>
+     * 
+     * @return The transaction ID of the call being analyzed.
      */
 
     public String getTransactionId() {
@@ -76,7 +116,12 @@ public class StartSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The transaction ID of the call being analyzed.
+     * </p>
+     * 
      * @param transactionId
+     *        The transaction ID of the call being analyzed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,7 +131,12 @@ public class StartSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The ID of the voice profile domain that will store the voice profile.
+     * </p>
+     * 
      * @param voiceProfileDomainId
+     *        The ID of the voice profile domain that will store the voice profile.
      */
 
     public void setVoiceProfileDomainId(String voiceProfileDomainId) {
@@ -94,7 +144,11 @@ public class StartSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the voice profile domain that will store the voice profile.
+     * </p>
+     * 
+     * @return The ID of the voice profile domain that will store the voice profile.
      */
 
     public String getVoiceProfileDomainId() {
@@ -102,7 +156,12 @@ public class StartSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The ID of the voice profile domain that will store the voice profile.
+     * </p>
+     * 
      * @param voiceProfileDomainId
+     *        The ID of the voice profile domain that will store the voice profile.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,7 +171,12 @@ public class StartSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The unique identifier for the client request. Use a different token for different speaker search tasks.
+     * </p>
+     * 
      * @param clientRequestToken
+     *        The unique identifier for the client request. Use a different token for different speaker search tasks.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -120,7 +184,11 @@ public class StartSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier for the client request. Use a different token for different speaker search tasks.
+     * </p>
+     * 
+     * @return The unique identifier for the client request. Use a different token for different speaker search tasks.
      */
 
     public String getClientRequestToken() {
@@ -128,7 +196,12 @@ public class StartSpeakerSearchTaskRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The unique identifier for the client request. Use a different token for different speaker search tasks.
+     * </p>
+     * 
      * @param clientRequestToken
+     *        The unique identifier for the client request. Use a different token for different speaker search tasks.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

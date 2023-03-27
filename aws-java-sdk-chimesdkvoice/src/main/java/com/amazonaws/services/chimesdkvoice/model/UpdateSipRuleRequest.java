@@ -25,16 +25,38 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The SIP rule ID.
+     * </p>
+     */
     private String sipRuleId;
-
+    /**
+     * <p>
+     * The new name for the specified SIP rule.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * The new value that indicates whether the rule is disabled.
+     * </p>
+     */
     private Boolean disabled;
-
+    /**
+     * <p>
+     * The new list of target applications.
+     * </p>
+     */
     private java.util.List<SipRuleTargetApplication> targetApplications;
 
     /**
+     * <p>
+     * The SIP rule ID.
+     * </p>
+     * 
      * @param sipRuleId
+     *        The SIP rule ID.
      */
 
     public void setSipRuleId(String sipRuleId) {
@@ -42,7 +64,11 @@ public class UpdateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * @return
+     * <p>
+     * The SIP rule ID.
+     * </p>
+     * 
+     * @return The SIP rule ID.
      */
 
     public String getSipRuleId() {
@@ -50,7 +76,12 @@ public class UpdateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The SIP rule ID.
+     * </p>
+     * 
      * @param sipRuleId
+     *        The SIP rule ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -60,7 +91,12 @@ public class UpdateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The new name for the specified SIP rule.
+     * </p>
+     * 
      * @param name
+     *        The new name for the specified SIP rule.
      */
 
     public void setName(String name) {
@@ -68,7 +104,11 @@ public class UpdateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * @return
+     * <p>
+     * The new name for the specified SIP rule.
+     * </p>
+     * 
+     * @return The new name for the specified SIP rule.
      */
 
     public String getName() {
@@ -76,7 +116,12 @@ public class UpdateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The new name for the specified SIP rule.
+     * </p>
+     * 
      * @param name
+     *        The new name for the specified SIP rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,7 +131,12 @@ public class UpdateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The new value that indicates whether the rule is disabled.
+     * </p>
+     * 
      * @param disabled
+     *        The new value that indicates whether the rule is disabled.
      */
 
     public void setDisabled(Boolean disabled) {
@@ -94,7 +144,11 @@ public class UpdateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * @return
+     * <p>
+     * The new value that indicates whether the rule is disabled.
+     * </p>
+     * 
+     * @return The new value that indicates whether the rule is disabled.
      */
 
     public Boolean getDisabled() {
@@ -102,7 +156,12 @@ public class UpdateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The new value that indicates whether the rule is disabled.
+     * </p>
+     * 
      * @param disabled
+     *        The new value that indicates whether the rule is disabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,7 +171,11 @@ public class UpdateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * @return
+     * <p>
+     * The new value that indicates whether the rule is disabled.
+     * </p>
+     * 
+     * @return The new value that indicates whether the rule is disabled.
      */
 
     public Boolean isDisabled() {
@@ -120,7 +183,11 @@ public class UpdateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * @return
+     * <p>
+     * The new list of target applications.
+     * </p>
+     * 
+     * @return The new list of target applications.
      */
 
     public java.util.List<SipRuleTargetApplication> getTargetApplications() {
@@ -128,7 +195,12 @@ public class UpdateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The new list of target applications.
+     * </p>
+     * 
      * @param targetApplications
+     *        The new list of target applications.
      */
 
     public void setTargetApplications(java.util.Collection<SipRuleTargetApplication> targetApplications) {
@@ -142,12 +214,16 @@ public class UpdateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
+     * The new list of target applications.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTargetApplications(java.util.Collection)} or {@link #withTargetApplications(java.util.Collection)} if
      * you want to override the existing values.
      * </p>
      * 
      * @param targetApplications
+     *        The new list of target applications.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -162,7 +238,12 @@ public class UpdateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The new list of target applications.
+     * </p>
+     * 
      * @param targetApplications
+     *        The new list of target applications.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

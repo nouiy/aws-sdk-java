@@ -23,10 +23,19 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The tags in the list.
+     * </p>
+     */
     private java.util.List<Tag> tags;
 
     /**
-     * @return
+     * <p>
+     * The tags in the list.
+     * </p>
+     * 
+     * @return The tags in the list.
      */
 
     public java.util.List<Tag> getTags() {
@@ -34,7 +43,12 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * The tags in the list.
+     * </p>
+     * 
      * @param tags
+     *        The tags in the list.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -48,12 +62,16 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
+     * The tags in the list.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
      * existing values.
      * </p>
      * 
      * @param tags
+     *        The tags in the list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -68,7 +86,12 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * The tags in the list.
+     * </p>
+     * 
      * @param tags
+     *        The tags in the list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

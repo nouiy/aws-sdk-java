@@ -47,6 +47,8 @@ public class CreateWirelessDeviceRequestMarshaller {
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<String> POSITIONING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Positioning").build();
+    private static final MarshallingInfo<StructuredPojo> SIDEWALK_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Sidewalk").build();
 
     private static final CreateWirelessDeviceRequestMarshaller instance = new CreateWirelessDeviceRequestMarshaller();
 
@@ -72,6 +74,7 @@ public class CreateWirelessDeviceRequestMarshaller {
             protocolMarshaller.marshall(createWirelessDeviceRequest.getLoRaWAN(), LORAWAN_BINDING);
             protocolMarshaller.marshall(createWirelessDeviceRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createWirelessDeviceRequest.getPositioning(), POSITIONING_BINDING);
+            protocolMarshaller.marshall(createWirelessDeviceRequest.getSidewalk(), SIDEWALK_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

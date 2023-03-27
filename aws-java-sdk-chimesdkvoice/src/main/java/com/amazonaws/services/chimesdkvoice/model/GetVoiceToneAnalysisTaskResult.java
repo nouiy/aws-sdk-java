@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetVoiceToneAnalysisTaskResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The details of the voice tone analysis task.
+     * </p>
+     */
     private VoiceToneAnalysisTask voiceToneAnalysisTask;
 
     /**
+     * <p>
+     * The details of the voice tone analysis task.
+     * </p>
+     * 
      * @param voiceToneAnalysisTask
+     *        The details of the voice tone analysis task.
      */
 
     public void setVoiceToneAnalysisTask(VoiceToneAnalysisTask voiceToneAnalysisTask) {
@@ -34,7 +44,11 @@ public class GetVoiceToneAnalysisTaskResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * @return
+     * <p>
+     * The details of the voice tone analysis task.
+     * </p>
+     * 
+     * @return The details of the voice tone analysis task.
      */
 
     public VoiceToneAnalysisTask getVoiceToneAnalysisTask() {
@@ -42,7 +56,12 @@ public class GetVoiceToneAnalysisTaskResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * The details of the voice tone analysis task.
+     * </p>
+     * 
      * @param voiceToneAnalysisTask
+     *        The details of the voice tone analysis task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

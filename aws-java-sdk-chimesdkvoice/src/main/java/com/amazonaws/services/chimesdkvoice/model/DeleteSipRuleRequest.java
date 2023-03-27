@@ -25,10 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeleteSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The SIP rule ID.
+     * </p>
+     */
     private String sipRuleId;
 
     /**
+     * <p>
+     * The SIP rule ID.
+     * </p>
+     * 
      * @param sipRuleId
+     *        The SIP rule ID.
      */
 
     public void setSipRuleId(String sipRuleId) {
@@ -36,7 +46,11 @@ public class DeleteSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * @return
+     * <p>
+     * The SIP rule ID.
+     * </p>
+     * 
+     * @return The SIP rule ID.
      */
 
     public String getSipRuleId() {
@@ -44,7 +58,12 @@ public class DeleteSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The SIP rule ID.
+     * </p>
+     * 
      * @param sipRuleId
+     *        The SIP rule ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

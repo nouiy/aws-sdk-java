@@ -25,12 +25,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreatePhoneNumberOrderRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The phone number product type.
+     * </p>
+     */
     private String productType;
-
+    /**
+     * <p>
+     * List of phone numbers, in E.164 format.
+     * </p>
+     */
     private java.util.List<String> e164PhoneNumbers;
 
     /**
+     * <p>
+     * The phone number product type.
+     * </p>
+     * 
      * @param productType
+     *        The phone number product type.
      * @see PhoneNumberProductType
      */
 
@@ -39,7 +53,11 @@ public class CreatePhoneNumberOrderRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number product type.
+     * </p>
+     * 
+     * @return The phone number product type.
      * @see PhoneNumberProductType
      */
 
@@ -48,7 +66,12 @@ public class CreatePhoneNumberOrderRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The phone number product type.
+     * </p>
+     * 
      * @param productType
+     *        The phone number product type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberProductType
      */
@@ -59,7 +82,12 @@ public class CreatePhoneNumberOrderRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The phone number product type.
+     * </p>
+     * 
      * @param productType
+     *        The phone number product type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberProductType
      */
@@ -70,7 +98,11 @@ public class CreatePhoneNumberOrderRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * @return
+     * <p>
+     * List of phone numbers, in E.164 format.
+     * </p>
+     * 
+     * @return List of phone numbers, in E.164 format.
      */
 
     public java.util.List<String> getE164PhoneNumbers() {
@@ -78,7 +110,12 @@ public class CreatePhoneNumberOrderRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * List of phone numbers, in E.164 format.
+     * </p>
+     * 
      * @param e164PhoneNumbers
+     *        List of phone numbers, in E.164 format.
      */
 
     public void setE164PhoneNumbers(java.util.Collection<String> e164PhoneNumbers) {
@@ -92,12 +129,16 @@ public class CreatePhoneNumberOrderRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
+     * List of phone numbers, in E.164 format.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setE164PhoneNumbers(java.util.Collection)} or {@link #withE164PhoneNumbers(java.util.Collection)} if you
      * want to override the existing values.
      * </p>
      * 
      * @param e164PhoneNumbers
+     *        List of phone numbers, in E.164 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -112,7 +153,12 @@ public class CreatePhoneNumberOrderRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * List of phone numbers, in E.164 format.
+     * </p>
+     * 
      * @param e164PhoneNumbers
+     *        List of phone numbers, in E.164 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

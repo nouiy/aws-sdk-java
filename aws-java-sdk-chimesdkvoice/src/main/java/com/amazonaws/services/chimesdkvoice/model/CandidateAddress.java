@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * A suggested address.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/CandidateAddress" target="_top">AWS
  *      API Documentation</a>
@@ -25,22 +28,56 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CandidateAddress implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The street information of the candidate address.
+     * </p>
+     */
     private String streetInfo;
-
+    /**
+     * <p>
+     * The numeric portion of the candidate address.
+     * </p>
+     */
     private String streetNumber;
-
+    /**
+     * <p>
+     * The city of the candidate address.
+     * </p>
+     */
     private String city;
-
+    /**
+     * <p>
+     * The state of the candidate address.
+     * </p>
+     */
     private String state;
-
+    /**
+     * <p>
+     * The postal code of the candidate address.
+     * </p>
+     */
     private String postalCode;
-
+    /**
+     * <p>
+     * The zip + 4 or postal code +4 of the candidate address.
+     * </p>
+     */
     private String postalCodePlus4;
-
+    /**
+     * <p>
+     * The country of the candidate address.
+     * </p>
+     */
     private String country;
 
     /**
+     * <p>
+     * The street information of the candidate address.
+     * </p>
+     * 
      * @param streetInfo
+     *        The street information of the candidate address.
      */
 
     public void setStreetInfo(String streetInfo) {
@@ -48,7 +85,11 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The street information of the candidate address.
+     * </p>
+     * 
+     * @return The street information of the candidate address.
      */
 
     public String getStreetInfo() {
@@ -56,7 +97,12 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The street information of the candidate address.
+     * </p>
+     * 
      * @param streetInfo
+     *        The street information of the candidate address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -66,7 +112,12 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The numeric portion of the candidate address.
+     * </p>
+     * 
      * @param streetNumber
+     *        The numeric portion of the candidate address.
      */
 
     public void setStreetNumber(String streetNumber) {
@@ -74,7 +125,11 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The numeric portion of the candidate address.
+     * </p>
+     * 
+     * @return The numeric portion of the candidate address.
      */
 
     public String getStreetNumber() {
@@ -82,7 +137,12 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The numeric portion of the candidate address.
+     * </p>
+     * 
      * @param streetNumber
+     *        The numeric portion of the candidate address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,7 +152,12 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The city of the candidate address.
+     * </p>
+     * 
      * @param city
+     *        The city of the candidate address.
      */
 
     public void setCity(String city) {
@@ -100,7 +165,11 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The city of the candidate address.
+     * </p>
+     * 
+     * @return The city of the candidate address.
      */
 
     public String getCity() {
@@ -108,7 +177,12 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The city of the candidate address.
+     * </p>
+     * 
      * @param city
+     *        The city of the candidate address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -118,7 +192,12 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The state of the candidate address.
+     * </p>
+     * 
      * @param state
+     *        The state of the candidate address.
      */
 
     public void setState(String state) {
@@ -126,7 +205,11 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The state of the candidate address.
+     * </p>
+     * 
+     * @return The state of the candidate address.
      */
 
     public String getState() {
@@ -134,7 +217,12 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The state of the candidate address.
+     * </p>
+     * 
      * @param state
+     *        The state of the candidate address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -144,7 +232,12 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The postal code of the candidate address.
+     * </p>
+     * 
      * @param postalCode
+     *        The postal code of the candidate address.
      */
 
     public void setPostalCode(String postalCode) {
@@ -152,7 +245,11 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The postal code of the candidate address.
+     * </p>
+     * 
+     * @return The postal code of the candidate address.
      */
 
     public String getPostalCode() {
@@ -160,7 +257,12 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The postal code of the candidate address.
+     * </p>
+     * 
      * @param postalCode
+     *        The postal code of the candidate address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -170,7 +272,12 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The zip + 4 or postal code +4 of the candidate address.
+     * </p>
+     * 
      * @param postalCodePlus4
+     *        The zip + 4 or postal code +4 of the candidate address.
      */
 
     public void setPostalCodePlus4(String postalCodePlus4) {
@@ -178,7 +285,11 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The zip + 4 or postal code +4 of the candidate address.
+     * </p>
+     * 
+     * @return The zip + 4 or postal code +4 of the candidate address.
      */
 
     public String getPostalCodePlus4() {
@@ -186,7 +297,12 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The zip + 4 or postal code +4 of the candidate address.
+     * </p>
+     * 
      * @param postalCodePlus4
+     *        The zip + 4 or postal code +4 of the candidate address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -196,7 +312,12 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The country of the candidate address.
+     * </p>
+     * 
      * @param country
+     *        The country of the candidate address.
      */
 
     public void setCountry(String country) {
@@ -204,7 +325,11 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The country of the candidate address.
+     * </p>
+     * 
+     * @return The country of the candidate address.
      */
 
     public String getCountry() {
@@ -212,7 +337,12 @@ public class CandidateAddress implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The country of the candidate address.
+     * </p>
+     * 
      * @param country
+     *        The country of the candidate address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The Alexa Skill configuration of a SIP media application.
+ * </p>
  * 
  * @see <a
  *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/SipMediaApplicationAlexaSkillConfiguration"
@@ -26,12 +29,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class SipMediaApplicationAlexaSkillConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The status of the Alexa Skill configuration.
+     * </p>
+     */
     private String alexaSkillStatus;
-
+    /**
+     * <p>
+     * The ID of the Alexa Skill configuration.
+     * </p>
+     */
     private java.util.List<String> alexaSkillIds;
 
     /**
+     * <p>
+     * The status of the Alexa Skill configuration.
+     * </p>
+     * 
      * @param alexaSkillStatus
+     *        The status of the Alexa Skill configuration.
      * @see AlexaSkillStatus
      */
 
@@ -40,7 +57,11 @@ public class SipMediaApplicationAlexaSkillConfiguration implements Serializable,
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the Alexa Skill configuration.
+     * </p>
+     * 
+     * @return The status of the Alexa Skill configuration.
      * @see AlexaSkillStatus
      */
 
@@ -49,7 +70,12 @@ public class SipMediaApplicationAlexaSkillConfiguration implements Serializable,
     }
 
     /**
+     * <p>
+     * The status of the Alexa Skill configuration.
+     * </p>
+     * 
      * @param alexaSkillStatus
+     *        The status of the Alexa Skill configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AlexaSkillStatus
      */
@@ -60,7 +86,12 @@ public class SipMediaApplicationAlexaSkillConfiguration implements Serializable,
     }
 
     /**
+     * <p>
+     * The status of the Alexa Skill configuration.
+     * </p>
+     * 
      * @param alexaSkillStatus
+     *        The status of the Alexa Skill configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AlexaSkillStatus
      */
@@ -71,7 +102,11 @@ public class SipMediaApplicationAlexaSkillConfiguration implements Serializable,
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the Alexa Skill configuration.
+     * </p>
+     * 
+     * @return The ID of the Alexa Skill configuration.
      */
 
     public java.util.List<String> getAlexaSkillIds() {
@@ -79,7 +114,12 @@ public class SipMediaApplicationAlexaSkillConfiguration implements Serializable,
     }
 
     /**
+     * <p>
+     * The ID of the Alexa Skill configuration.
+     * </p>
+     * 
      * @param alexaSkillIds
+     *        The ID of the Alexa Skill configuration.
      */
 
     public void setAlexaSkillIds(java.util.Collection<String> alexaSkillIds) {
@@ -93,12 +133,16 @@ public class SipMediaApplicationAlexaSkillConfiguration implements Serializable,
 
     /**
      * <p>
+     * The ID of the Alexa Skill configuration.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setAlexaSkillIds(java.util.Collection)} or {@link #withAlexaSkillIds(java.util.Collection)} if you want
      * to override the existing values.
      * </p>
      * 
      * @param alexaSkillIds
+     *        The ID of the Alexa Skill configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -113,7 +157,12 @@ public class SipMediaApplicationAlexaSkillConfiguration implements Serializable,
     }
 
     /**
+     * <p>
+     * The ID of the Alexa Skill configuration.
+     * </p>
+     * 
      * @param alexaSkillIds
+     *        The ID of the Alexa Skill configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

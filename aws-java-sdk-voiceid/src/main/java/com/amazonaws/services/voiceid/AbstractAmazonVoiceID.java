@@ -28,7 +28,17 @@ public class AbstractAmazonVoiceID implements AmazonVoiceID {
     }
 
     @Override
+    public AssociateFraudsterResult associateFraudster(AssociateFraudsterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateDomainResult createDomain(CreateDomainRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateWatchlistResult createWatchlist(CreateWatchlistRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -44,6 +54,11 @@ public class AbstractAmazonVoiceID implements AmazonVoiceID {
 
     @Override
     public DeleteSpeakerResult deleteSpeaker(DeleteSpeakerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteWatchlistResult deleteWatchlist(DeleteWatchlistRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -73,6 +88,16 @@ public class AbstractAmazonVoiceID implements AmazonVoiceID {
     }
 
     @Override
+    public DescribeWatchlistResult describeWatchlist(DescribeWatchlistRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DisassociateFraudsterResult disassociateFraudster(DisassociateFraudsterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public EvaluateSessionResult evaluateSession(EvaluateSessionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -88,6 +113,11 @@ public class AbstractAmazonVoiceID implements AmazonVoiceID {
     }
 
     @Override
+    public ListFraudstersResult listFraudsters(ListFraudstersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListSpeakerEnrollmentJobsResult listSpeakerEnrollmentJobs(ListSpeakerEnrollmentJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -99,6 +129,11 @@ public class AbstractAmazonVoiceID implements AmazonVoiceID {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListWatchlistsResult listWatchlists(ListWatchlistsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -129,6 +164,11 @@ public class AbstractAmazonVoiceID implements AmazonVoiceID {
 
     @Override
     public UpdateDomainResult updateDomain(UpdateDomainRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateWatchlistResult updateWatchlist(UpdateWatchlistRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

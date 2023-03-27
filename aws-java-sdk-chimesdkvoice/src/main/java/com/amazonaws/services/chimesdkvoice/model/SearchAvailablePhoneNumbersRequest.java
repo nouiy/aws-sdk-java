@@ -25,24 +25,63 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified area code.
+     * </p>
+     */
     private String areaCode;
-
+    /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified city.
+     * </p>
+     */
     private String city;
-
+    /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified country.
+     * </p>
+     */
     private String country;
-
+    /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified state.
+     * </p>
+     */
     private String state;
-
+    /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified toll-free prefix.
+     * </p>
+     */
     private String tollFreePrefix;
-
+    /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified phone number type, either <b>local</b>
+     * or <b>toll-free</b>.
+     * </p>
+     */
     private String phoneNumberType;
-
+    /**
+     * <p>
+     * The maximum number of results to return.
+     * </p>
+     */
     private Integer maxResults;
-
+    /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified area code.
+     * </p>
+     * 
      * @param areaCode
+     *        Confines a search to just the phone numbers associated with the specified area code.
      */
 
     public void setAreaCode(String areaCode) {
@@ -50,7 +89,11 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * @return
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified area code.
+     * </p>
+     * 
+     * @return Confines a search to just the phone numbers associated with the specified area code.
      */
 
     public String getAreaCode() {
@@ -58,7 +101,12 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified area code.
+     * </p>
+     * 
      * @param areaCode
+     *        Confines a search to just the phone numbers associated with the specified area code.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -68,7 +116,12 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified city.
+     * </p>
+     * 
      * @param city
+     *        Confines a search to just the phone numbers associated with the specified city.
      */
 
     public void setCity(String city) {
@@ -76,7 +129,11 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * @return
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified city.
+     * </p>
+     * 
+     * @return Confines a search to just the phone numbers associated with the specified city.
      */
 
     public String getCity() {
@@ -84,7 +141,12 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified city.
+     * </p>
+     * 
      * @param city
+     *        Confines a search to just the phone numbers associated with the specified city.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,7 +156,12 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified country.
+     * </p>
+     * 
      * @param country
+     *        Confines a search to just the phone numbers associated with the specified country.
      */
 
     public void setCountry(String country) {
@@ -102,7 +169,11 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * @return
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified country.
+     * </p>
+     * 
+     * @return Confines a search to just the phone numbers associated with the specified country.
      */
 
     public String getCountry() {
@@ -110,7 +181,12 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified country.
+     * </p>
+     * 
      * @param country
+     *        Confines a search to just the phone numbers associated with the specified country.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -120,7 +196,12 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified state.
+     * </p>
+     * 
      * @param state
+     *        Confines a search to just the phone numbers associated with the specified state.
      */
 
     public void setState(String state) {
@@ -128,7 +209,11 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * @return
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified state.
+     * </p>
+     * 
+     * @return Confines a search to just the phone numbers associated with the specified state.
      */
 
     public String getState() {
@@ -136,7 +221,12 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified state.
+     * </p>
+     * 
      * @param state
+     *        Confines a search to just the phone numbers associated with the specified state.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -146,7 +236,12 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified toll-free prefix.
+     * </p>
+     * 
      * @param tollFreePrefix
+     *        Confines a search to just the phone numbers associated with the specified toll-free prefix.
      */
 
     public void setTollFreePrefix(String tollFreePrefix) {
@@ -154,7 +249,11 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * @return
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified toll-free prefix.
+     * </p>
+     * 
+     * @return Confines a search to just the phone numbers associated with the specified toll-free prefix.
      */
 
     public String getTollFreePrefix() {
@@ -162,7 +261,12 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified toll-free prefix.
+     * </p>
+     * 
      * @param tollFreePrefix
+     *        Confines a search to just the phone numbers associated with the specified toll-free prefix.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -172,7 +276,14 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified phone number type, either <b>local</b>
+     * or <b>toll-free</b>.
+     * </p>
+     * 
      * @param phoneNumberType
+     *        Confines a search to just the phone numbers associated with the specified phone number type, either
+     *        <b>local</b> or <b>toll-free</b>.
      * @see PhoneNumberType
      */
 
@@ -181,7 +292,13 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * @return
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified phone number type, either <b>local</b>
+     * or <b>toll-free</b>.
+     * </p>
+     * 
+     * @return Confines a search to just the phone numbers associated with the specified phone number type, either
+     *         <b>local</b> or <b>toll-free</b>.
      * @see PhoneNumberType
      */
 
@@ -190,7 +307,14 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified phone number type, either <b>local</b>
+     * or <b>toll-free</b>.
+     * </p>
+     * 
      * @param phoneNumberType
+     *        Confines a search to just the phone numbers associated with the specified phone number type, either
+     *        <b>local</b> or <b>toll-free</b>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberType
      */
@@ -201,7 +325,14 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * Confines a search to just the phone numbers associated with the specified phone number type, either <b>local</b>
+     * or <b>toll-free</b>.
+     * </p>
+     * 
      * @param phoneNumberType
+     *        Confines a search to just the phone numbers associated with the specified phone number type, either
+     *        <b>local</b> or <b>toll-free</b>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberType
      */
@@ -212,7 +343,12 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * The maximum number of results to return.
+     * </p>
+     * 
      * @param maxResults
+     *        The maximum number of results to return.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -220,7 +356,11 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * @return
+     * <p>
+     * The maximum number of results to return.
+     * </p>
+     * 
+     * @return The maximum number of results to return.
      */
 
     public Integer getMaxResults() {
@@ -228,7 +368,12 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * The maximum number of results to return.
+     * </p>
+     * 
      * @param maxResults
+     *        The maximum number of results to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -238,7 +383,12 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -246,7 +396,11 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * @return
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
+     * @return The token used to return the next page of results.
      */
 
     public String getNextToken() {
@@ -254,7 +408,12 @@ public class SearchAvailablePhoneNumbersRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

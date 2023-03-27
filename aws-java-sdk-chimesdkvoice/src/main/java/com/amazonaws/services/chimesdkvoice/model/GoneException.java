@@ -15,7 +15,9 @@ package com.amazonaws.services.chimesdkvoice.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p>
+ * Access to the target resource is no longer available at the origin server. This condition is likely to be permanent.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GoneException extends com.amazonaws.services.chimesdkvoice.model.AmazonChimeSDKVoiceException {

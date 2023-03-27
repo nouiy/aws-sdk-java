@@ -105,6 +105,12 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private AwsS3BucketBucketVersioningConfiguration bucketVersioningConfiguration;
+    /**
+     * <p>
+     * Specifies which rule Amazon S3 applies by default to every new object placed in the specified bucket.
+     * </p>
+     */
+    private AwsS3BucketObjectLockConfiguration objectLockConfiguration;
 
     /**
      * <p>
@@ -617,6 +623,46 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Specifies which rule Amazon S3 applies by default to every new object placed in the specified bucket.
+     * </p>
+     * 
+     * @param objectLockConfiguration
+     *        Specifies which rule Amazon S3 applies by default to every new object placed in the specified bucket.
+     */
+
+    public void setObjectLockConfiguration(AwsS3BucketObjectLockConfiguration objectLockConfiguration) {
+        this.objectLockConfiguration = objectLockConfiguration;
+    }
+
+    /**
+     * <p>
+     * Specifies which rule Amazon S3 applies by default to every new object placed in the specified bucket.
+     * </p>
+     * 
+     * @return Specifies which rule Amazon S3 applies by default to every new object placed in the specified bucket.
+     */
+
+    public AwsS3BucketObjectLockConfiguration getObjectLockConfiguration() {
+        return this.objectLockConfiguration;
+    }
+
+    /**
+     * <p>
+     * Specifies which rule Amazon S3 applies by default to every new object placed in the specified bucket.
+     * </p>
+     * 
+     * @param objectLockConfiguration
+     *        Specifies which rule Amazon S3 applies by default to every new object placed in the specified bucket.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsS3BucketDetails withObjectLockConfiguration(AwsS3BucketObjectLockConfiguration objectLockConfiguration) {
+        setObjectLockConfiguration(objectLockConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -651,7 +697,9 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
         if (getBucketNotificationConfiguration() != null)
             sb.append("BucketNotificationConfiguration: ").append(getBucketNotificationConfiguration()).append(",");
         if (getBucketVersioningConfiguration() != null)
-            sb.append("BucketVersioningConfiguration: ").append(getBucketVersioningConfiguration());
+            sb.append("BucketVersioningConfiguration: ").append(getBucketVersioningConfiguration()).append(",");
+        if (getObjectLockConfiguration() != null)
+            sb.append("ObjectLockConfiguration: ").append(getObjectLockConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -718,6 +766,10 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
         if (other.getBucketVersioningConfiguration() != null
                 && other.getBucketVersioningConfiguration().equals(this.getBucketVersioningConfiguration()) == false)
             return false;
+        if (other.getObjectLockConfiguration() == null ^ this.getObjectLockConfiguration() == null)
+            return false;
+        if (other.getObjectLockConfiguration() != null && other.getObjectLockConfiguration().equals(this.getObjectLockConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -738,6 +790,7 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getBucketWebsiteConfiguration() == null) ? 0 : getBucketWebsiteConfiguration().hashCode());
         hashCode = prime * hashCode + ((getBucketNotificationConfiguration() == null) ? 0 : getBucketNotificationConfiguration().hashCode());
         hashCode = prime * hashCode + ((getBucketVersioningConfiguration() == null) ? 0 : getBucketVersioningConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getObjectLockConfiguration() == null) ? 0 : getObjectLockConfiguration().hashCode());
         return hashCode;
     }
 

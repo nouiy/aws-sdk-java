@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The phone number's country.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/PhoneNumberCountry" target="_top">AWS
  *      API Documentation</a>
@@ -25,12 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PhoneNumberCountry implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The phone number country code. Format: ISO 3166-1 alpha-2.
+     * </p>
+     */
     private String countryCode;
-
+    /**
+     * <p>
+     * The supported phone number types.
+     * </p>
+     */
     private java.util.List<String> supportedPhoneNumberTypes;
 
     /**
+     * <p>
+     * The phone number country code. Format: ISO 3166-1 alpha-2.
+     * </p>
+     * 
      * @param countryCode
+     *        The phone number country code. Format: ISO 3166-1 alpha-2.
      */
 
     public void setCountryCode(String countryCode) {
@@ -38,7 +55,11 @@ public class PhoneNumberCountry implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number country code. Format: ISO 3166-1 alpha-2.
+     * </p>
+     * 
+     * @return The phone number country code. Format: ISO 3166-1 alpha-2.
      */
 
     public String getCountryCode() {
@@ -46,7 +67,12 @@ public class PhoneNumberCountry implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The phone number country code. Format: ISO 3166-1 alpha-2.
+     * </p>
+     * 
      * @param countryCode
+     *        The phone number country code. Format: ISO 3166-1 alpha-2.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +82,11 @@ public class PhoneNumberCountry implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The supported phone number types.
+     * </p>
+     * 
+     * @return The supported phone number types.
      * @see PhoneNumberType
      */
 
@@ -65,7 +95,12 @@ public class PhoneNumberCountry implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The supported phone number types.
+     * </p>
+     * 
      * @param supportedPhoneNumberTypes
+     *        The supported phone number types.
      * @see PhoneNumberType
      */
 
@@ -80,12 +115,16 @@ public class PhoneNumberCountry implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
+     * The supported phone number types.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSupportedPhoneNumberTypes(java.util.Collection)} or
      * {@link #withSupportedPhoneNumberTypes(java.util.Collection)} if you want to override the existing values.
      * </p>
      * 
      * @param supportedPhoneNumberTypes
+     *        The supported phone number types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberType
      */
@@ -101,7 +140,12 @@ public class PhoneNumberCountry implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The supported phone number types.
+     * </p>
+     * 
      * @param supportedPhoneNumberTypes
+     *        The supported phone number types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberType
      */
@@ -112,7 +156,12 @@ public class PhoneNumberCountry implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The supported phone number types.
+     * </p>
+     * 
      * @param supportedPhoneNumberTypes
+     *        The supported phone number types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberType
      */

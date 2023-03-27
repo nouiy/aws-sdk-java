@@ -13,8 +13,8 @@
 
 /**
  * <p>
- * Amazon Connect Voice ID provides real-time caller authentication and fraud screening. This guide describes the APIs
- * used for this service.
+ * Amazon Connect Voice ID provides real-time caller authentication and fraud risk detection, which make voice
+ * interactions in contact centers more secure and efficient.
  * </p>
  */
 package com.amazonaws.services.voiceid;

@@ -24,10 +24,20 @@ import javax.annotation.Generated;
 public class GetVoiceConnectorTerminationHealthResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable,
         Cloneable {
 
+    /**
+     * <p>
+     * The termination health details.
+     * </p>
+     */
     private TerminationHealth terminationHealth;
 
     /**
+     * <p>
+     * The termination health details.
+     * </p>
+     * 
      * @param terminationHealth
+     *        The termination health details.
      */
 
     public void setTerminationHealth(TerminationHealth terminationHealth) {
@@ -35,7 +45,11 @@ public class GetVoiceConnectorTerminationHealthResult extends com.amazonaws.Amaz
     }
 
     /**
-     * @return
+     * <p>
+     * The termination health details.
+     * </p>
+     * 
+     * @return The termination health details.
      */
 
     public TerminationHealth getTerminationHealth() {
@@ -43,7 +57,12 @@ public class GetVoiceConnectorTerminationHealthResult extends com.amazonaws.Amaz
     }
 
     /**
+     * <p>
+     * The termination health details.
+     * </p>
+     * 
      * @param terminationHealth
+     *        The termination health details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

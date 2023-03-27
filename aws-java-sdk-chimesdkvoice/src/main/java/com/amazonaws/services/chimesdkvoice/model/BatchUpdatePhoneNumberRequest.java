@@ -25,10 +25,19 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class BatchUpdatePhoneNumberRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Lists the phone numbers in the update request.
+     * </p>
+     */
     private java.util.List<UpdatePhoneNumberRequestItem> updatePhoneNumberRequestItems;
 
     /**
-     * @return
+     * <p>
+     * Lists the phone numbers in the update request.
+     * </p>
+     * 
+     * @return Lists the phone numbers in the update request.
      */
 
     public java.util.List<UpdatePhoneNumberRequestItem> getUpdatePhoneNumberRequestItems() {
@@ -36,7 +45,12 @@ public class BatchUpdatePhoneNumberRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * Lists the phone numbers in the update request.
+     * </p>
+     * 
      * @param updatePhoneNumberRequestItems
+     *        Lists the phone numbers in the update request.
      */
 
     public void setUpdatePhoneNumberRequestItems(java.util.Collection<UpdatePhoneNumberRequestItem> updatePhoneNumberRequestItems) {
@@ -50,12 +64,16 @@ public class BatchUpdatePhoneNumberRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
+     * Lists the phone numbers in the update request.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setUpdatePhoneNumberRequestItems(java.util.Collection)} or
      * {@link #withUpdatePhoneNumberRequestItems(java.util.Collection)} if you want to override the existing values.
      * </p>
      * 
      * @param updatePhoneNumberRequestItems
+     *        Lists the phone numbers in the update request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +88,12 @@ public class BatchUpdatePhoneNumberRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * Lists the phone numbers in the update request.
+     * </p>
+     * 
      * @param updatePhoneNumberRequestItems
+     *        Lists the phone numbers in the update request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

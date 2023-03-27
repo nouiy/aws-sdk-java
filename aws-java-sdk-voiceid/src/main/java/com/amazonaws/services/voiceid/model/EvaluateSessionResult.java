@@ -31,7 +31,7 @@ public class EvaluateSessionResult extends com.amazonaws.AmazonWebServiceResult<
     private AuthenticationResult authenticationResult;
     /**
      * <p>
-     * The identifier of the domain containing the session.
+     * The identifier of the domain that contains the session.
      * </p>
      */
     private String domainId;
@@ -111,11 +111,11 @@ public class EvaluateSessionResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The identifier of the domain containing the session.
+     * The identifier of the domain that contains the session.
      * </p>
      * 
      * @param domainId
-     *        The identifier of the domain containing the session.
+     *        The identifier of the domain that contains the session.
      */
 
     public void setDomainId(String domainId) {
@@ -124,10 +124,10 @@ public class EvaluateSessionResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The identifier of the domain containing the session.
+     * The identifier of the domain that contains the session.
      * </p>
      * 
-     * @return The identifier of the domain containing the session.
+     * @return The identifier of the domain that contains the session.
      */
 
     public String getDomainId() {
@@ -136,11 +136,11 @@ public class EvaluateSessionResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The identifier of the domain containing the session.
+     * The identifier of the domain that contains the session.
      * </p>
      * 
      * @param domainId
-     *        The identifier of the domain containing the session.
+     *        The identifier of the domain that contains the session.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

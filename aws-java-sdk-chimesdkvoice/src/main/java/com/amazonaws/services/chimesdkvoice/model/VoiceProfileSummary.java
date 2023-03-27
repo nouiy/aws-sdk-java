@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * A high-level summary of a voice profile.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/VoiceProfileSummary"
  *      target="_top">AWS API Documentation</a>
@@ -25,20 +28,51 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class VoiceProfileSummary implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ID of the voice profile in a voice profile summary.
+     * </p>
+     */
     private String voiceProfileId;
-
+    /**
+     * <p>
+     * The ARN of the voice profile in a voice profile summary.
+     * </p>
+     */
     private String voiceProfileArn;
-
+    /**
+     * <p>
+     * The ID of the voice profile domain in a voice profile summary.
+     * </p>
+     */
     private String voiceProfileDomainId;
-
+    /**
+     * <p>
+     * The time at which a voice profile summary was created.
+     * </p>
+     */
     private java.util.Date createdTimestamp;
-
+    /**
+     * <p>
+     * The time at which a voice profile summary was last updated.
+     * </p>
+     */
     private java.util.Date updatedTimestamp;
-
+    /**
+     * <p>
+     * Extends the life of the voice profile. You can use <code>UpdateVoiceProfile</code> to refresh an existing voice
+     * profile's voice print and extend the life of the summary.
+     * </p>
+     */
     private java.util.Date expirationTimestamp;
 
     /**
+     * <p>
+     * The ID of the voice profile in a voice profile summary.
+     * </p>
+     * 
      * @param voiceProfileId
+     *        The ID of the voice profile in a voice profile summary.
      */
 
     public void setVoiceProfileId(String voiceProfileId) {
@@ -46,7 +80,11 @@ public class VoiceProfileSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the voice profile in a voice profile summary.
+     * </p>
+     * 
+     * @return The ID of the voice profile in a voice profile summary.
      */
 
     public String getVoiceProfileId() {
@@ -54,7 +92,12 @@ public class VoiceProfileSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The ID of the voice profile in a voice profile summary.
+     * </p>
+     * 
      * @param voiceProfileId
+     *        The ID of the voice profile in a voice profile summary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -64,7 +107,12 @@ public class VoiceProfileSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The ARN of the voice profile in a voice profile summary.
+     * </p>
+     * 
      * @param voiceProfileArn
+     *        The ARN of the voice profile in a voice profile summary.
      */
 
     public void setVoiceProfileArn(String voiceProfileArn) {
@@ -72,7 +120,11 @@ public class VoiceProfileSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the voice profile in a voice profile summary.
+     * </p>
+     * 
+     * @return The ARN of the voice profile in a voice profile summary.
      */
 
     public String getVoiceProfileArn() {
@@ -80,7 +132,12 @@ public class VoiceProfileSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The ARN of the voice profile in a voice profile summary.
+     * </p>
+     * 
      * @param voiceProfileArn
+     *        The ARN of the voice profile in a voice profile summary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,7 +147,12 @@ public class VoiceProfileSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The ID of the voice profile domain in a voice profile summary.
+     * </p>
+     * 
      * @param voiceProfileDomainId
+     *        The ID of the voice profile domain in a voice profile summary.
      */
 
     public void setVoiceProfileDomainId(String voiceProfileDomainId) {
@@ -98,7 +160,11 @@ public class VoiceProfileSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the voice profile domain in a voice profile summary.
+     * </p>
+     * 
+     * @return The ID of the voice profile domain in a voice profile summary.
      */
 
     public String getVoiceProfileDomainId() {
@@ -106,7 +172,12 @@ public class VoiceProfileSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The ID of the voice profile domain in a voice profile summary.
+     * </p>
+     * 
      * @param voiceProfileDomainId
+     *        The ID of the voice profile domain in a voice profile summary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -116,7 +187,12 @@ public class VoiceProfileSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The time at which a voice profile summary was created.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The time at which a voice profile summary was created.
      */
 
     public void setCreatedTimestamp(java.util.Date createdTimestamp) {
@@ -124,7 +200,11 @@ public class VoiceProfileSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which a voice profile summary was created.
+     * </p>
+     * 
+     * @return The time at which a voice profile summary was created.
      */
 
     public java.util.Date getCreatedTimestamp() {
@@ -132,7 +212,12 @@ public class VoiceProfileSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The time at which a voice profile summary was created.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The time at which a voice profile summary was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,7 +227,12 @@ public class VoiceProfileSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The time at which a voice profile summary was last updated.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The time at which a voice profile summary was last updated.
      */
 
     public void setUpdatedTimestamp(java.util.Date updatedTimestamp) {
@@ -150,7 +240,11 @@ public class VoiceProfileSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which a voice profile summary was last updated.
+     * </p>
+     * 
+     * @return The time at which a voice profile summary was last updated.
      */
 
     public java.util.Date getUpdatedTimestamp() {
@@ -158,7 +252,12 @@ public class VoiceProfileSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The time at which a voice profile summary was last updated.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The time at which a voice profile summary was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,7 +267,14 @@ public class VoiceProfileSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * Extends the life of the voice profile. You can use <code>UpdateVoiceProfile</code> to refresh an existing voice
+     * profile's voice print and extend the life of the summary.
+     * </p>
+     * 
      * @param expirationTimestamp
+     *        Extends the life of the voice profile. You can use <code>UpdateVoiceProfile</code> to refresh an existing
+     *        voice profile's voice print and extend the life of the summary.
      */
 
     public void setExpirationTimestamp(java.util.Date expirationTimestamp) {
@@ -176,7 +282,13 @@ public class VoiceProfileSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * Extends the life of the voice profile. You can use <code>UpdateVoiceProfile</code> to refresh an existing voice
+     * profile's voice print and extend the life of the summary.
+     * </p>
+     * 
+     * @return Extends the life of the voice profile. You can use <code>UpdateVoiceProfile</code> to refresh an existing
+     *         voice profile's voice print and extend the life of the summary.
      */
 
     public java.util.Date getExpirationTimestamp() {
@@ -184,7 +296,14 @@ public class VoiceProfileSummary implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * Extends the life of the voice profile. You can use <code>UpdateVoiceProfile</code> to refresh an existing voice
+     * profile's voice print and extend the life of the summary.
+     * </p>
+     * 
      * @param expirationTimestamp
+     *        Extends the life of the voice profile. You can use <code>UpdateVoiceProfile</code> to refresh an existing
+     *        voice profile's voice print and extend the life of the summary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -81,17 +81,27 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The total duration of the newly started chat session. If not specified, the chat session duration defaults to 25
-     * hour. The minumum configurable time is 60 minutes. The maximum configurable time is 10,080 minutes (7 days).
+     * hour. The minimum configurable time is 60 minutes. The maximum configurable time is 10,080 minutes (7 days).
      * </p>
      */
     private Integer chatDurationInMinutes;
     /**
      * <p>
-     * The supported chat message content types. Content types must always contain <code>text/plain</code>. You can then
-     * put any other supported type in the list. For example, all the following lists are valid because they contain
-     * <code>text/plain</code>: <code>[text/plain, text/markdown, application/json]</code>,
-     * <code>[text/markdown, text/plain]</code>, <code>[text/plain, application/json]</code>.
+     * The supported chat message content types. Supported types are <code>text/plain</code>, <code>text/markdown</code>, <code>application/json</code>, <code>application/vnd.amazonaws.connect.message.interactive</code>, and
+     * <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      * </p>
+     * <p>
+     * Content types must always contain <code>text/plain</code>. You can then put any other supported type in the list.
+     * For example, all the following lists are valid because they contain <code>text/plain</code>:
+     * <code>[text/plain, text/markdown, application/json]</code>, <code>[text/markdown, text/plain]</code>,
+     * <code>[text/plain, application/json, application/vnd.amazonaws.connect.message.interactive.response]</code>.
+     * </p>
+     * <note>
+     * <p>
+     * The type <code>application/vnd.amazonaws.connect.message.interactive</code> is required to use the <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/show-view-block.html">Show view</a> flow block.
+     * </p>
+     * </note>
      */
     private java.util.List<String> supportedMessagingContentTypes;
     /**
@@ -102,6 +112,17 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private PersistentChat persistentChat;
+    /**
+     * <p>
+     * The unique identifier for an Amazon Connect contact. This identifier is related to the chat starting.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot provide data for both RelatedContactId and PersistentChat.
+     * </p>
+     * </note>
+     */
+    private String relatedContactId;
 
     /**
      * <p>
@@ -470,12 +491,12 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The total duration of the newly started chat session. If not specified, the chat session duration defaults to 25
-     * hour. The minumum configurable time is 60 minutes. The maximum configurable time is 10,080 minutes (7 days).
+     * hour. The minimum configurable time is 60 minutes. The maximum configurable time is 10,080 minutes (7 days).
      * </p>
      * 
      * @param chatDurationInMinutes
      *        The total duration of the newly started chat session. If not specified, the chat session duration defaults
-     *        to 25 hour. The minumum configurable time is 60 minutes. The maximum configurable time is 10,080 minutes
+     *        to 25 hour. The minimum configurable time is 60 minutes. The maximum configurable time is 10,080 minutes
      *        (7 days).
      */
 
@@ -486,11 +507,11 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The total duration of the newly started chat session. If not specified, the chat session duration defaults to 25
-     * hour. The minumum configurable time is 60 minutes. The maximum configurable time is 10,080 minutes (7 days).
+     * hour. The minimum configurable time is 60 minutes. The maximum configurable time is 10,080 minutes (7 days).
      * </p>
      * 
      * @return The total duration of the newly started chat session. If not specified, the chat session duration
-     *         defaults to 25 hour. The minumum configurable time is 60 minutes. The maximum configurable time is 10,080
+     *         defaults to 25 hour. The minimum configurable time is 60 minutes. The maximum configurable time is 10,080
      *         minutes (7 days).
      */
 
@@ -501,12 +522,12 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The total duration of the newly started chat session. If not specified, the chat session duration defaults to 25
-     * hour. The minumum configurable time is 60 minutes. The maximum configurable time is 10,080 minutes (7 days).
+     * hour. The minimum configurable time is 60 minutes. The maximum configurable time is 10,080 minutes (7 days).
      * </p>
      * 
      * @param chatDurationInMinutes
      *        The total duration of the newly started chat session. If not specified, the chat session duration defaults
-     *        to 25 hour. The minumum configurable time is 60 minutes. The maximum configurable time is 10,080 minutes
+     *        to 25 hour. The minimum configurable time is 60 minutes. The maximum configurable time is 10,080 minutes
      *        (7 days).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -518,16 +539,39 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The supported chat message content types. Content types must always contain <code>text/plain</code>. You can then
-     * put any other supported type in the list. For example, all the following lists are valid because they contain
-     * <code>text/plain</code>: <code>[text/plain, text/markdown, application/json]</code>,
-     * <code>[text/markdown, text/plain]</code>, <code>[text/plain, application/json]</code>.
+     * The supported chat message content types. Supported types are <code>text/plain</code>, <code>text/markdown</code>, <code>application/json</code>, <code>application/vnd.amazonaws.connect.message.interactive</code>, and
+     * <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      * </p>
+     * <p>
+     * Content types must always contain <code>text/plain</code>. You can then put any other supported type in the list.
+     * For example, all the following lists are valid because they contain <code>text/plain</code>:
+     * <code>[text/plain, text/markdown, application/json]</code>, <code>[text/markdown, text/plain]</code>,
+     * <code>[text/plain, application/json, application/vnd.amazonaws.connect.message.interactive.response]</code>.
+     * </p>
+     * <note>
+     * <p>
+     * The type <code>application/vnd.amazonaws.connect.message.interactive</code> is required to use the <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/show-view-block.html">Show view</a> flow block.
+     * </p>
+     * </note>
      * 
-     * @return The supported chat message content types. Content types must always contain <code>text/plain</code>. You
-     *         can then put any other supported type in the list. For example, all the following lists are valid because
-     *         they contain <code>text/plain</code>: <code>[text/plain, text/markdown, application/json]</code>,
-     *         <code>[text/markdown, text/plain]</code>, <code>[text/plain, application/json]</code>.
+     * @return The supported chat message content types. Supported types are <code>text/plain</code>,
+     *         <code>text/markdown</code>, <code>application/json</code>,
+     *         <code>application/vnd.amazonaws.connect.message.interactive</code>, and
+     *         <code>application/vnd.amazonaws.connect.message.interactive.response</code>. </p>
+     *         <p>
+     *         Content types must always contain <code>text/plain</code>. You can then put any other supported type in
+     *         the list. For example, all the following lists are valid because they contain <code>text/plain</code>:
+     *         <code>[text/plain, text/markdown, application/json]</code>, <code>[text/markdown, text/plain]</code>,
+     *         <code>[text/plain, application/json, application/vnd.amazonaws.connect.message.interactive.response]</code>
+     *         .
+     *         </p>
+     *         <note>
+     *         <p>
+     *         The type <code>application/vnd.amazonaws.connect.message.interactive</code> is required to use the <a
+     *         href="https://docs.aws.amazon.com/connect/latest/adminguide/show-view-block.html">Show view</a> flow
+     *         block.
+     *         </p>
      */
 
     public java.util.List<String> getSupportedMessagingContentTypes() {
@@ -536,17 +580,40 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The supported chat message content types. Content types must always contain <code>text/plain</code>. You can then
-     * put any other supported type in the list. For example, all the following lists are valid because they contain
-     * <code>text/plain</code>: <code>[text/plain, text/markdown, application/json]</code>,
-     * <code>[text/markdown, text/plain]</code>, <code>[text/plain, application/json]</code>.
+     * The supported chat message content types. Supported types are <code>text/plain</code>, <code>text/markdown</code>, <code>application/json</code>, <code>application/vnd.amazonaws.connect.message.interactive</code>, and
+     * <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      * </p>
+     * <p>
+     * Content types must always contain <code>text/plain</code>. You can then put any other supported type in the list.
+     * For example, all the following lists are valid because they contain <code>text/plain</code>:
+     * <code>[text/plain, text/markdown, application/json]</code>, <code>[text/markdown, text/plain]</code>,
+     * <code>[text/plain, application/json, application/vnd.amazonaws.connect.message.interactive.response]</code>.
+     * </p>
+     * <note>
+     * <p>
+     * The type <code>application/vnd.amazonaws.connect.message.interactive</code> is required to use the <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/show-view-block.html">Show view</a> flow block.
+     * </p>
+     * </note>
      * 
      * @param supportedMessagingContentTypes
-     *        The supported chat message content types. Content types must always contain <code>text/plain</code>. You
-     *        can then put any other supported type in the list. For example, all the following lists are valid because
-     *        they contain <code>text/plain</code>: <code>[text/plain, text/markdown, application/json]</code>,
-     *        <code>[text/markdown, text/plain]</code>, <code>[text/plain, application/json]</code>.
+     *        The supported chat message content types. Supported types are <code>text/plain</code>,
+     *        <code>text/markdown</code>, <code>application/json</code>,
+     *        <code>application/vnd.amazonaws.connect.message.interactive</code>, and
+     *        <code>application/vnd.amazonaws.connect.message.interactive.response</code>. </p>
+     *        <p>
+     *        Content types must always contain <code>text/plain</code>. You can then put any other supported type in
+     *        the list. For example, all the following lists are valid because they contain <code>text/plain</code>:
+     *        <code>[text/plain, text/markdown, application/json]</code>, <code>[text/markdown, text/plain]</code>,
+     *        <code>[text/plain, application/json, application/vnd.amazonaws.connect.message.interactive.response]</code>
+     *        .
+     *        </p>
+     *        <note>
+     *        <p>
+     *        The type <code>application/vnd.amazonaws.connect.message.interactive</code> is required to use the <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/show-view-block.html">Show view</a> flow
+     *        block.
+     *        </p>
      */
 
     public void setSupportedMessagingContentTypes(java.util.Collection<String> supportedMessagingContentTypes) {
@@ -560,11 +627,21 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The supported chat message content types. Content types must always contain <code>text/plain</code>. You can then
-     * put any other supported type in the list. For example, all the following lists are valid because they contain
-     * <code>text/plain</code>: <code>[text/plain, text/markdown, application/json]</code>,
-     * <code>[text/markdown, text/plain]</code>, <code>[text/plain, application/json]</code>.
+     * The supported chat message content types. Supported types are <code>text/plain</code>, <code>text/markdown</code>, <code>application/json</code>, <code>application/vnd.amazonaws.connect.message.interactive</code>, and
+     * <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      * </p>
+     * <p>
+     * Content types must always contain <code>text/plain</code>. You can then put any other supported type in the list.
+     * For example, all the following lists are valid because they contain <code>text/plain</code>:
+     * <code>[text/plain, text/markdown, application/json]</code>, <code>[text/markdown, text/plain]</code>,
+     * <code>[text/plain, application/json, application/vnd.amazonaws.connect.message.interactive.response]</code>.
+     * </p>
+     * <note>
+     * <p>
+     * The type <code>application/vnd.amazonaws.connect.message.interactive</code> is required to use the <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/show-view-block.html">Show view</a> flow block.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSupportedMessagingContentTypes(java.util.Collection)} or
@@ -572,10 +649,23 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param supportedMessagingContentTypes
-     *        The supported chat message content types. Content types must always contain <code>text/plain</code>. You
-     *        can then put any other supported type in the list. For example, all the following lists are valid because
-     *        they contain <code>text/plain</code>: <code>[text/plain, text/markdown, application/json]</code>,
-     *        <code>[text/markdown, text/plain]</code>, <code>[text/plain, application/json]</code>.
+     *        The supported chat message content types. Supported types are <code>text/plain</code>,
+     *        <code>text/markdown</code>, <code>application/json</code>,
+     *        <code>application/vnd.amazonaws.connect.message.interactive</code>, and
+     *        <code>application/vnd.amazonaws.connect.message.interactive.response</code>. </p>
+     *        <p>
+     *        Content types must always contain <code>text/plain</code>. You can then put any other supported type in
+     *        the list. For example, all the following lists are valid because they contain <code>text/plain</code>:
+     *        <code>[text/plain, text/markdown, application/json]</code>, <code>[text/markdown, text/plain]</code>,
+     *        <code>[text/plain, application/json, application/vnd.amazonaws.connect.message.interactive.response]</code>
+     *        .
+     *        </p>
+     *        <note>
+     *        <p>
+     *        The type <code>application/vnd.amazonaws.connect.message.interactive</code> is required to use the <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/show-view-block.html">Show view</a> flow
+     *        block.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -591,17 +681,40 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The supported chat message content types. Content types must always contain <code>text/plain</code>. You can then
-     * put any other supported type in the list. For example, all the following lists are valid because they contain
-     * <code>text/plain</code>: <code>[text/plain, text/markdown, application/json]</code>,
-     * <code>[text/markdown, text/plain]</code>, <code>[text/plain, application/json]</code>.
+     * The supported chat message content types. Supported types are <code>text/plain</code>, <code>text/markdown</code>, <code>application/json</code>, <code>application/vnd.amazonaws.connect.message.interactive</code>, and
+     * <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      * </p>
+     * <p>
+     * Content types must always contain <code>text/plain</code>. You can then put any other supported type in the list.
+     * For example, all the following lists are valid because they contain <code>text/plain</code>:
+     * <code>[text/plain, text/markdown, application/json]</code>, <code>[text/markdown, text/plain]</code>,
+     * <code>[text/plain, application/json, application/vnd.amazonaws.connect.message.interactive.response]</code>.
+     * </p>
+     * <note>
+     * <p>
+     * The type <code>application/vnd.amazonaws.connect.message.interactive</code> is required to use the <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/show-view-block.html">Show view</a> flow block.
+     * </p>
+     * </note>
      * 
      * @param supportedMessagingContentTypes
-     *        The supported chat message content types. Content types must always contain <code>text/plain</code>. You
-     *        can then put any other supported type in the list. For example, all the following lists are valid because
-     *        they contain <code>text/plain</code>: <code>[text/plain, text/markdown, application/json]</code>,
-     *        <code>[text/markdown, text/plain]</code>, <code>[text/plain, application/json]</code>.
+     *        The supported chat message content types. Supported types are <code>text/plain</code>,
+     *        <code>text/markdown</code>, <code>application/json</code>,
+     *        <code>application/vnd.amazonaws.connect.message.interactive</code>, and
+     *        <code>application/vnd.amazonaws.connect.message.interactive.response</code>. </p>
+     *        <p>
+     *        Content types must always contain <code>text/plain</code>. You can then put any other supported type in
+     *        the list. For example, all the following lists are valid because they contain <code>text/plain</code>:
+     *        <code>[text/plain, text/markdown, application/json]</code>, <code>[text/markdown, text/plain]</code>,
+     *        <code>[text/plain, application/json, application/vnd.amazonaws.connect.message.interactive.response]</code>
+     *        .
+     *        </p>
+     *        <note>
+     *        <p>
+     *        The type <code>application/vnd.amazonaws.connect.message.interactive</code> is required to use the <a
+     *        href="https://docs.aws.amazon.com/connect/latest/adminguide/show-view-block.html">Show view</a> flow
+     *        block.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -666,6 +779,73 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The unique identifier for an Amazon Connect contact. This identifier is related to the chat starting.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot provide data for both RelatedContactId and PersistentChat.
+     * </p>
+     * </note>
+     * 
+     * @param relatedContactId
+     *        The unique identifier for an Amazon Connect contact. This identifier is related to the chat starting.</p>
+     *        <note>
+     *        <p>
+     *        You cannot provide data for both RelatedContactId and PersistentChat.
+     *        </p>
+     */
+
+    public void setRelatedContactId(String relatedContactId) {
+        this.relatedContactId = relatedContactId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier for an Amazon Connect contact. This identifier is related to the chat starting.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot provide data for both RelatedContactId and PersistentChat.
+     * </p>
+     * </note>
+     * 
+     * @return The unique identifier for an Amazon Connect contact. This identifier is related to the chat starting.</p>
+     *         <note>
+     *         <p>
+     *         You cannot provide data for both RelatedContactId and PersistentChat.
+     *         </p>
+     */
+
+    public String getRelatedContactId() {
+        return this.relatedContactId;
+    }
+
+    /**
+     * <p>
+     * The unique identifier for an Amazon Connect contact. This identifier is related to the chat starting.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot provide data for both RelatedContactId and PersistentChat.
+     * </p>
+     * </note>
+     * 
+     * @param relatedContactId
+     *        The unique identifier for an Amazon Connect contact. This identifier is related to the chat starting.</p>
+     *        <note>
+     *        <p>
+     *        You cannot provide data for both RelatedContactId and PersistentChat.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartChatContactRequest withRelatedContactId(String relatedContactId) {
+        setRelatedContactId(relatedContactId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -694,7 +874,9 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
         if (getSupportedMessagingContentTypes() != null)
             sb.append("SupportedMessagingContentTypes: ").append(getSupportedMessagingContentTypes()).append(",");
         if (getPersistentChat() != null)
-            sb.append("PersistentChat: ").append(getPersistentChat());
+            sb.append("PersistentChat: ").append(getPersistentChat()).append(",");
+        if (getRelatedContactId() != null)
+            sb.append("RelatedContactId: ").append(getRelatedContactId());
         sb.append("}");
         return sb.toString();
     }
@@ -746,6 +928,10 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getPersistentChat() != null && other.getPersistentChat().equals(this.getPersistentChat()) == false)
             return false;
+        if (other.getRelatedContactId() == null ^ this.getRelatedContactId() == null)
+            return false;
+        if (other.getRelatedContactId() != null && other.getRelatedContactId().equals(this.getRelatedContactId()) == false)
+            return false;
         return true;
     }
 
@@ -763,6 +949,7 @@ public class StartChatContactRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getChatDurationInMinutes() == null) ? 0 : getChatDurationInMinutes().hashCode());
         hashCode = prime * hashCode + ((getSupportedMessagingContentTypes() == null) ? 0 : getSupportedMessagingContentTypes().hashCode());
         hashCode = prime * hashCode + ((getPersistentChat() == null) ? 0 : getPersistentChat().hashCode());
+        hashCode = prime * hashCode + ((getRelatedContactId() == null) ? 0 : getRelatedContactId().hashCode());
         return hashCode;
     }
 

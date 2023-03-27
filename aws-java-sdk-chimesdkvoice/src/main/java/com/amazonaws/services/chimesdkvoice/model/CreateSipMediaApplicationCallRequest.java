@@ -25,18 +25,46 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The phone number that a user calls from. This is a phone number in your Amazon Chime SDK phone number inventory.
+     * </p>
+     */
     private String fromPhoneNumber;
-
+    /**
+     * <p>
+     * The phone number that the service should call.
+     * </p>
+     */
     private String toPhoneNumber;
-
+    /**
+     * <p>
+     * The ID of the SIP media application.
+     * </p>
+     */
     private String sipMediaApplicationId;
-
+    /**
+     * <p>
+     * The SIP headers added to an outbound call leg.
+     * </p>
+     */
     private java.util.Map<String, String> sipHeaders;
-
+    /**
+     * <p>
+     * Context passed to a CreateSipMediaApplication API call. For example, you could pass key-value pairs such as:
+     * <code>"FirstName": "John", "LastName": "Doe"</code>
+     * </p>
+     */
     private java.util.Map<String, String> argumentsMap;
 
     /**
+     * <p>
+     * The phone number that a user calls from. This is a phone number in your Amazon Chime SDK phone number inventory.
+     * </p>
+     * 
      * @param fromPhoneNumber
+     *        The phone number that a user calls from. This is a phone number in your Amazon Chime SDK phone number
+     *        inventory.
      */
 
     public void setFromPhoneNumber(String fromPhoneNumber) {
@@ -44,7 +72,12 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number that a user calls from. This is a phone number in your Amazon Chime SDK phone number inventory.
+     * </p>
+     * 
+     * @return The phone number that a user calls from. This is a phone number in your Amazon Chime SDK phone number
+     *         inventory.
      */
 
     public String getFromPhoneNumber() {
@@ -52,7 +85,13 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * The phone number that a user calls from. This is a phone number in your Amazon Chime SDK phone number inventory.
+     * </p>
+     * 
      * @param fromPhoneNumber
+     *        The phone number that a user calls from. This is a phone number in your Amazon Chime SDK phone number
+     *        inventory.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -62,7 +101,12 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * The phone number that the service should call.
+     * </p>
+     * 
      * @param toPhoneNumber
+     *        The phone number that the service should call.
      */
 
     public void setToPhoneNumber(String toPhoneNumber) {
@@ -70,7 +114,11 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number that the service should call.
+     * </p>
+     * 
+     * @return The phone number that the service should call.
      */
 
     public String getToPhoneNumber() {
@@ -78,7 +126,12 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * The phone number that the service should call.
+     * </p>
+     * 
      * @param toPhoneNumber
+     *        The phone number that the service should call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -88,7 +141,12 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * The ID of the SIP media application.
+     * </p>
+     * 
      * @param sipMediaApplicationId
+     *        The ID of the SIP media application.
      */
 
     public void setSipMediaApplicationId(String sipMediaApplicationId) {
@@ -96,7 +154,11 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the SIP media application.
+     * </p>
+     * 
+     * @return The ID of the SIP media application.
      */
 
     public String getSipMediaApplicationId() {
@@ -104,7 +166,12 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * The ID of the SIP media application.
+     * </p>
+     * 
      * @param sipMediaApplicationId
+     *        The ID of the SIP media application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -114,7 +181,11 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
-     * @return
+     * <p>
+     * The SIP headers added to an outbound call leg.
+     * </p>
+     * 
+     * @return The SIP headers added to an outbound call leg.
      */
 
     public java.util.Map<String, String> getSipHeaders() {
@@ -122,7 +193,12 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * The SIP headers added to an outbound call leg.
+     * </p>
+     * 
      * @param sipHeaders
+     *        The SIP headers added to an outbound call leg.
      */
 
     public void setSipHeaders(java.util.Map<String, String> sipHeaders) {
@@ -130,7 +206,12 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * The SIP headers added to an outbound call leg.
+     * </p>
+     * 
      * @param sipHeaders
+     *        The SIP headers added to an outbound call leg.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,7 +249,13 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
-     * @return
+     * <p>
+     * Context passed to a CreateSipMediaApplication API call. For example, you could pass key-value pairs such as:
+     * <code>"FirstName": "John", "LastName": "Doe"</code>
+     * </p>
+     * 
+     * @return Context passed to a CreateSipMediaApplication API call. For example, you could pass key-value pairs such
+     *         as: <code>"FirstName": "John", "LastName": "Doe"</code>
      */
 
     public java.util.Map<String, String> getArgumentsMap() {
@@ -176,7 +263,14 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * Context passed to a CreateSipMediaApplication API call. For example, you could pass key-value pairs such as:
+     * <code>"FirstName": "John", "LastName": "Doe"</code>
+     * </p>
+     * 
      * @param argumentsMap
+     *        Context passed to a CreateSipMediaApplication API call. For example, you could pass key-value pairs such
+     *        as: <code>"FirstName": "John", "LastName": "Doe"</code>
      */
 
     public void setArgumentsMap(java.util.Map<String, String> argumentsMap) {
@@ -184,7 +278,14 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * Context passed to a CreateSipMediaApplication API call. For example, you could pass key-value pairs such as:
+     * <code>"FirstName": "John", "LastName": "Doe"</code>
+     * </p>
+     * 
      * @param argumentsMap
+     *        Context passed to a CreateSipMediaApplication API call. For example, you could pass key-value pairs such
+     *        as: <code>"FirstName": "John", "LastName": "Doe"</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

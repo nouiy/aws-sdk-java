@@ -158,6 +158,11 @@ public class AbstractAWSIoTWireless implements AWSIoTWireless {
     }
 
     @Override
+    public DeleteWirelessDeviceImportTaskResult deleteWirelessDeviceImportTask(DeleteWirelessDeviceImportTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteWirelessGatewayResult deleteWirelessGateway(DeleteWirelessGatewayRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -169,6 +174,11 @@ public class AbstractAWSIoTWireless implements AWSIoTWireless {
 
     @Override
     public DeleteWirelessGatewayTaskDefinitionResult deleteWirelessGatewayTaskDefinition(DeleteWirelessGatewayTaskDefinitionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeregisterWirelessDeviceResult deregisterWirelessDevice(DeregisterWirelessDeviceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -301,6 +311,11 @@ public class AbstractAWSIoTWireless implements AWSIoTWireless {
     }
 
     @Override
+    public GetWirelessDeviceImportTaskResult getWirelessDeviceImportTask(GetWirelessDeviceImportTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetWirelessDeviceStatisticsResult getWirelessDeviceStatistics(GetWirelessDeviceStatisticsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -342,6 +357,11 @@ public class AbstractAWSIoTWireless implements AWSIoTWireless {
 
     @Override
     public ListDeviceProfilesResult listDeviceProfiles(ListDeviceProfilesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListDevicesForWirelessDeviceImportTaskResult listDevicesForWirelessDeviceImportTask(ListDevicesForWirelessDeviceImportTaskRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -393,6 +413,11 @@ public class AbstractAWSIoTWireless implements AWSIoTWireless {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListWirelessDeviceImportTasksResult listWirelessDeviceImportTasks(ListWirelessDeviceImportTasksRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -465,6 +490,16 @@ public class AbstractAWSIoTWireless implements AWSIoTWireless {
     }
 
     @Override
+    public StartSingleWirelessDeviceImportTaskResult startSingleWirelessDeviceImportTask(StartSingleWirelessDeviceImportTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartWirelessDeviceImportTaskResult startWirelessDeviceImportTask(StartWirelessDeviceImportTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public TagResourceResult tagResource(TagResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -532,6 +567,11 @@ public class AbstractAWSIoTWireless implements AWSIoTWireless {
 
     @Override
     public UpdateWirelessDeviceResult updateWirelessDevice(UpdateWirelessDeviceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateWirelessDeviceImportTaskResult updateWirelessDeviceImportTask(UpdateWirelessDeviceImportTaskRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

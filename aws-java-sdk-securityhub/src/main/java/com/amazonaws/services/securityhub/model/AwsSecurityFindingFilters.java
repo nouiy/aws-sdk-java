@@ -320,7 +320,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
     private java.util.List<NumberFilter> processPid;
     /**
      * <p>
-     * The parent process ID.
+     * The parent process ID. This field accepts positive integers between <code>O</code> and <code>2147483647</code>.
      * </p>
      */
     private java.util.List<NumberFilter> processParentPid;
@@ -3951,10 +3951,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The parent process ID.
+     * The parent process ID. This field accepts positive integers between <code>O</code> and <code>2147483647</code>.
      * </p>
      * 
-     * @return The parent process ID.
+     * @return The parent process ID. This field accepts positive integers between <code>O</code> and
+     *         <code>2147483647</code>.
      */
 
     public java.util.List<NumberFilter> getProcessParentPid() {
@@ -3963,11 +3964,12 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The parent process ID.
+     * The parent process ID. This field accepts positive integers between <code>O</code> and <code>2147483647</code>.
      * </p>
      * 
      * @param processParentPid
-     *        The parent process ID.
+     *        The parent process ID. This field accepts positive integers between <code>O</code> and
+     *        <code>2147483647</code>.
      */
 
     public void setProcessParentPid(java.util.Collection<NumberFilter> processParentPid) {
@@ -3981,7 +3983,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The parent process ID.
+     * The parent process ID. This field accepts positive integers between <code>O</code> and <code>2147483647</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -3990,7 +3992,8 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * </p>
      * 
      * @param processParentPid
-     *        The parent process ID.
+     *        The parent process ID. This field accepts positive integers between <code>O</code> and
+     *        <code>2147483647</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4006,11 +4009,12 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The parent process ID.
+     * The parent process ID. This field accepts positive integers between <code>O</code> and <code>2147483647</code>.
      * </p>
      * 
      * @param processParentPid
-     *        The parent process ID.
+     *        The parent process ID. This field accepts positive integers between <code>O</code> and
+     *        <code>2147483647</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

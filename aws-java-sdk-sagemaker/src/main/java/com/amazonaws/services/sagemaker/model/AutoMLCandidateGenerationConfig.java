@@ -101,7 +101,9 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      * </li>
      * </ul>
      * <p>
-     * For the list of all algorithms per training mode, see .
+     * For the list of all algorithms per training mode, see
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html"> AutoMLAlgorithmConfig</a> </code>
+     * .
      * </p>
      * <p>
      * For more information on each algorithm, see the <a href=
@@ -391,7 +393,9 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      * </li>
      * </ul>
      * <p>
-     * For the list of all algorithms per training mode, see .
+     * For the list of all algorithms per training mode, see
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html"> AutoMLAlgorithmConfig</a> </code>
+     * .
      * </p>
      * <p>
      * For more information on each algorithm, see the <a href=
@@ -430,7 +434,9 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      *         </li>
      *         </ul>
      *         <p>
-     *         For the list of all algorithms per training mode, see .
+     *         For the list of all algorithms per training mode, see
+     *         <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html"> AutoMLAlgorithmConfig</a> </code>
+     *         .
      *         </p>
      *         <p>
      *         For more information on each algorithm, see the <a href=
@@ -475,7 +481,9 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      * </li>
      * </ul>
      * <p>
-     * For the list of all algorithms per training mode, see .
+     * For the list of all algorithms per training mode, see
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html"> AutoMLAlgorithmConfig</a> </code>
+     * .
      * </p>
      * <p>
      * For more information on each algorithm, see the <a href=
@@ -515,7 +523,9 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      *        </li>
      *        </ul>
      *        <p>
-     *        For the list of all algorithms per training mode, see .
+     *        For the list of all algorithms per training mode, see
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html"> AutoMLAlgorithmConfig</a> </code>
+     *        .
      *        </p>
      *        <p>
      *        For more information on each algorithm, see the <a href=
@@ -565,7 +575,9 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      * </li>
      * </ul>
      * <p>
-     * For the list of all algorithms per training mode, see .
+     * For the list of all algorithms per training mode, see
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html"> AutoMLAlgorithmConfig</a> </code>
+     * .
      * </p>
      * <p>
      * For more information on each algorithm, see the <a href=
@@ -610,7 +622,9 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      *        </li>
      *        </ul>
      *        <p>
-     *        For the list of all algorithms per training mode, see .
+     *        For the list of all algorithms per training mode, see
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html"> AutoMLAlgorithmConfig</a> </code>
+     *        .
      *        </p>
      *        <p>
      *        For more information on each algorithm, see the <a href=
@@ -662,7 +676,9 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      * </li>
      * </ul>
      * <p>
-     * For the list of all algorithms per training mode, see .
+     * For the list of all algorithms per training mode, see
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html"> AutoMLAlgorithmConfig</a> </code>
+     * .
      * </p>
      * <p>
      * For more information on each algorithm, see the <a href=
@@ -702,7 +718,9 @@ public class AutoMLCandidateGenerationConfig implements Serializable, Cloneable,
      *        </li>
      *        </ul>
      *        <p>
-     *        For the list of all algorithms per training mode, see .
+     *        For the list of all algorithms per training mode, see
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLAlgorithmConfig.html"> AutoMLAlgorithmConfig</a> </code>
+     *        .
      *        </p>
      *        <p>
      *        For more information on each algorithm, see the <a href=

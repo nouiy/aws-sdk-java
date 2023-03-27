@@ -52,6 +52,10 @@ public class FraudDetectionConfigurationJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     fraudDetectionConfiguration.setRiskThreshold(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("WatchlistId", targetDepth)) {
+                    context.nextToken();
+                    fraudDetectionConfiguration.setWatchlistId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

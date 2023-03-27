@@ -15,7 +15,9 @@ package com.amazonaws.services.chimesdkvoice.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p>
+ * The requested resource couldn't be found.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class NotFoundException extends com.amazonaws.services.chimesdkvoice.model.AmazonChimeSDKVoiceException {

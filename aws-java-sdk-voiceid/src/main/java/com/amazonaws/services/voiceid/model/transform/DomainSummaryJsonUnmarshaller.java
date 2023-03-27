@@ -84,6 +84,10 @@ public class DomainSummaryJsonUnmarshaller implements Unmarshaller<DomainSummary
                     context.nextToken();
                     domainSummary.setUpdatedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("WatchlistDetails", targetDepth)) {
+                    context.nextToken();
+                    domainSummary.setWatchlistDetails(WatchlistDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

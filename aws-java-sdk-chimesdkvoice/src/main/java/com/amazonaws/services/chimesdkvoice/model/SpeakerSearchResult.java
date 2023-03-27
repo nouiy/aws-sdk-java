@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The result of a speaker search analysis.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/SpeakerSearchResult"
  *      target="_top">AWS API Documentation</a>
@@ -25,12 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class SpeakerSearchResult implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The confidence score in the speaker search analysis.
+     * </p>
+     */
     private Float confidenceScore;
-
+    /**
+     * <p>
+     * The voice profile ID.
+     * </p>
+     */
     private String voiceProfileId;
 
     /**
+     * <p>
+     * The confidence score in the speaker search analysis.
+     * </p>
+     * 
      * @param confidenceScore
+     *        The confidence score in the speaker search analysis.
      */
 
     public void setConfidenceScore(Float confidenceScore) {
@@ -38,7 +55,11 @@ public class SpeakerSearchResult implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The confidence score in the speaker search analysis.
+     * </p>
+     * 
+     * @return The confidence score in the speaker search analysis.
      */
 
     public Float getConfidenceScore() {
@@ -46,7 +67,12 @@ public class SpeakerSearchResult implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The confidence score in the speaker search analysis.
+     * </p>
+     * 
      * @param confidenceScore
+     *        The confidence score in the speaker search analysis.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +82,12 @@ public class SpeakerSearchResult implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The voice profile ID.
+     * </p>
+     * 
      * @param voiceProfileId
+     *        The voice profile ID.
      */
 
     public void setVoiceProfileId(String voiceProfileId) {
@@ -64,7 +95,11 @@ public class SpeakerSearchResult implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The voice profile ID.
+     * </p>
+     * 
+     * @return The voice profile ID.
      */
 
     public String getVoiceProfileId() {
@@ -72,7 +107,12 @@ public class SpeakerSearchResult implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The voice profile ID.
+     * </p>
+     * 
      * @param voiceProfileId
+     *        The voice profile ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

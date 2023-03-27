@@ -23,12 +23,25 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListSipMediaApplicationsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The list of SIP media applications and application details.
+     * </p>
+     */
     private java.util.List<SipMediaApplication> sipMediaApplications;
-
+    /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * @return
+     * <p>
+     * The list of SIP media applications and application details.
+     * </p>
+     * 
+     * @return The list of SIP media applications and application details.
      */
 
     public java.util.List<SipMediaApplication> getSipMediaApplications() {
@@ -36,7 +49,12 @@ public class ListSipMediaApplicationsResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * The list of SIP media applications and application details.
+     * </p>
+     * 
      * @param sipMediaApplications
+     *        The list of SIP media applications and application details.
      */
 
     public void setSipMediaApplications(java.util.Collection<SipMediaApplication> sipMediaApplications) {
@@ -50,12 +68,16 @@ public class ListSipMediaApplicationsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
+     * The list of SIP media applications and application details.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSipMediaApplications(java.util.Collection)} or {@link #withSipMediaApplications(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param sipMediaApplications
+     *        The list of SIP media applications and application details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +92,12 @@ public class ListSipMediaApplicationsResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * The list of SIP media applications and application details.
+     * </p>
+     * 
      * @param sipMediaApplications
+     *        The list of SIP media applications and application details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,7 +107,12 @@ public class ListSipMediaApplicationsResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -88,7 +120,11 @@ public class ListSipMediaApplicationsResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * @return
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
+     * @return The token used to return the next page of results.
      */
 
     public String getNextToken() {
@@ -96,7 +132,12 @@ public class ListSipMediaApplicationsResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,10 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeleteVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The voice profile domain ID.
+     * </p>
+     */
     private String voiceProfileDomainId;
 
     /**
+     * <p>
+     * The voice profile domain ID.
+     * </p>
+     * 
      * @param voiceProfileDomainId
+     *        The voice profile domain ID.
      */
 
     public void setVoiceProfileDomainId(String voiceProfileDomainId) {
@@ -36,7 +46,11 @@ public class DeleteVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * The voice profile domain ID.
+     * </p>
+     * 
+     * @return The voice profile domain ID.
      */
 
     public String getVoiceProfileDomainId() {
@@ -44,7 +58,12 @@ public class DeleteVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The voice profile domain ID.
+     * </p>
+     * 
      * @param voiceProfileDomainId
+     *        The voice profile domain ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The logging configuration of a SIP media application.
+ * </p>
  * 
  * @see <a
  *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/SipMediaApplicationLoggingConfiguration"
@@ -26,10 +29,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class SipMediaApplicationLoggingConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Enables message logging for the specified SIP media application.
+     * </p>
+     */
     private Boolean enableSipMediaApplicationMessageLogs;
 
     /**
+     * <p>
+     * Enables message logging for the specified SIP media application.
+     * </p>
+     * 
      * @param enableSipMediaApplicationMessageLogs
+     *        Enables message logging for the specified SIP media application.
      */
 
     public void setEnableSipMediaApplicationMessageLogs(Boolean enableSipMediaApplicationMessageLogs) {
@@ -37,7 +50,11 @@ public class SipMediaApplicationLoggingConfiguration implements Serializable, Cl
     }
 
     /**
-     * @return
+     * <p>
+     * Enables message logging for the specified SIP media application.
+     * </p>
+     * 
+     * @return Enables message logging for the specified SIP media application.
      */
 
     public Boolean getEnableSipMediaApplicationMessageLogs() {
@@ -45,7 +62,12 @@ public class SipMediaApplicationLoggingConfiguration implements Serializable, Cl
     }
 
     /**
+     * <p>
+     * Enables message logging for the specified SIP media application.
+     * </p>
+     * 
      * @param enableSipMediaApplicationMessageLogs
+     *        Enables message logging for the specified SIP media application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -55,7 +77,11 @@ public class SipMediaApplicationLoggingConfiguration implements Serializable, Cl
     }
 
     /**
-     * @return
+     * <p>
+     * Enables message logging for the specified SIP media application.
+     * </p>
+     * 
+     * @return Enables message logging for the specified SIP media application.
      */
 
     public Boolean isEnableSipMediaApplicationMessageLogs() {

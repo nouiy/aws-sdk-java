@@ -15,7 +15,9 @@ package com.amazonaws.services.chimesdkvoice.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p>
+ * The client isn't authorized to request a resource.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UnauthorizedClientException extends com.amazonaws.services.chimesdkvoice.model.AmazonChimeSDKVoiceException {

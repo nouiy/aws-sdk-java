@@ -23,12 +23,25 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListVoiceProfilesResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The list of voice profiles.
+     * </p>
+     */
     private java.util.List<VoiceProfileSummary> voiceProfiles;
-
+    /**
+     * <p>
+     * The token used to retrieve the next page of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * @return
+     * <p>
+     * The list of voice profiles.
+     * </p>
+     * 
+     * @return The list of voice profiles.
      */
 
     public java.util.List<VoiceProfileSummary> getVoiceProfiles() {
@@ -36,7 +49,12 @@ public class ListVoiceProfilesResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * The list of voice profiles.
+     * </p>
+     * 
      * @param voiceProfiles
+     *        The list of voice profiles.
      */
 
     public void setVoiceProfiles(java.util.Collection<VoiceProfileSummary> voiceProfiles) {
@@ -50,12 +68,16 @@ public class ListVoiceProfilesResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
+     * The list of voice profiles.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setVoiceProfiles(java.util.Collection)} or {@link #withVoiceProfiles(java.util.Collection)} if you want
      * to override the existing values.
      * </p>
      * 
      * @param voiceProfiles
+     *        The list of voice profiles.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +92,12 @@ public class ListVoiceProfilesResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * The list of voice profiles.
+     * </p>
+     * 
      * @param voiceProfiles
+     *        The list of voice profiles.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,7 +107,12 @@ public class ListVoiceProfilesResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * The token used to retrieve the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to retrieve the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -88,7 +120,11 @@ public class ListVoiceProfilesResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
-     * @return
+     * <p>
+     * The token used to retrieve the next page of results.
+     * </p>
+     * 
+     * @return The token used to retrieve the next page of results.
      */
 
     public String getNextToken() {
@@ -96,7 +132,12 @@ public class ListVoiceProfilesResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p>
+     * The token used to retrieve the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to retrieve the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

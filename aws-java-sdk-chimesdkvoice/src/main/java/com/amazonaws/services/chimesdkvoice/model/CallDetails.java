@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The details of an Amazon Chime SDK Voice Connector call.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/CallDetails" target="_top">AWS API
  *      Documentation</a>
@@ -25,14 +28,32 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CallDetails implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     */
     private String voiceConnectorId;
-
+    /**
+     * <p>
+     * The transaction ID of a Voice Connector call.
+     * </p>
+     */
     private String transactionId;
-
+    /**
+     * <p>
+     * Identifies a person as the caller or the callee.
+     * </p>
+     */
     private Boolean isCaller;
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      */
 
     public void setVoiceConnectorId(String voiceConnectorId) {
@@ -40,7 +61,11 @@ public class CallDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
+     * @return The Voice Connector ID.
      */
 
     public String getVoiceConnectorId() {
@@ -48,7 +73,12 @@ public class CallDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +88,12 @@ public class CallDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The transaction ID of a Voice Connector call.
+     * </p>
+     * 
      * @param transactionId
+     *        The transaction ID of a Voice Connector call.
      */
 
     public void setTransactionId(String transactionId) {
@@ -66,7 +101,11 @@ public class CallDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The transaction ID of a Voice Connector call.
+     * </p>
+     * 
+     * @return The transaction ID of a Voice Connector call.
      */
 
     public String getTransactionId() {
@@ -74,7 +113,12 @@ public class CallDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The transaction ID of a Voice Connector call.
+     * </p>
+     * 
      * @param transactionId
+     *        The transaction ID of a Voice Connector call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,7 +128,12 @@ public class CallDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Identifies a person as the caller or the callee.
+     * </p>
+     * 
      * @param isCaller
+     *        Identifies a person as the caller or the callee.
      */
 
     public void setIsCaller(Boolean isCaller) {
@@ -92,7 +141,11 @@ public class CallDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Identifies a person as the caller or the callee.
+     * </p>
+     * 
+     * @return Identifies a person as the caller or the callee.
      */
 
     public Boolean getIsCaller() {
@@ -100,7 +153,12 @@ public class CallDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Identifies a person as the caller or the callee.
+     * </p>
+     * 
      * @param isCaller
+     *        Identifies a person as the caller or the callee.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -110,7 +168,11 @@ public class CallDetails implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Identifies a person as the caller or the callee.
+     * </p>
+     * 
+     * @return Identifies a person as the caller or the callee.
      */
 
     public Boolean isCaller() {

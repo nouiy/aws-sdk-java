@@ -51,10 +51,10 @@ public class QueryExecution implements Serializable, Cloneable, StructuredPojo {
     private String statementType;
     /**
      * <p>
-     * The location in Amazon S3 where query results were stored and the encryption option, if any, used for query
-     * results. These are known as "client-side settings". If workgroup settings override client-side settings, then the
-     * query uses the location for the query results and the encryption configuration that are specified for the
-     * workgroup.
+     * The location in Amazon S3 where query and calculation results are stored and the encryption option, if any, used
+     * for query results. These are known as "client-side settings". If workgroup settings override client-side
+     * settings, then the query uses the location for the query results and the encryption configuration that are
+     * specified for the workgroup.
      * </p>
      */
     private ResultConfiguration resultConfiguration;
@@ -275,17 +275,17 @@ public class QueryExecution implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The location in Amazon S3 where query results were stored and the encryption option, if any, used for query
-     * results. These are known as "client-side settings". If workgroup settings override client-side settings, then the
-     * query uses the location for the query results and the encryption configuration that are specified for the
-     * workgroup.
+     * The location in Amazon S3 where query and calculation results are stored and the encryption option, if any, used
+     * for query results. These are known as "client-side settings". If workgroup settings override client-side
+     * settings, then the query uses the location for the query results and the encryption configuration that are
+     * specified for the workgroup.
      * </p>
      * 
      * @param resultConfiguration
-     *        The location in Amazon S3 where query results were stored and the encryption option, if any, used for
-     *        query results. These are known as "client-side settings". If workgroup settings override client-side
-     *        settings, then the query uses the location for the query results and the encryption configuration that are
-     *        specified for the workgroup.
+     *        The location in Amazon S3 where query and calculation results are stored and the encryption option, if
+     *        any, used for query results. These are known as "client-side settings". If workgroup settings override
+     *        client-side settings, then the query uses the location for the query results and the encryption
+     *        configuration that are specified for the workgroup.
      */
 
     public void setResultConfiguration(ResultConfiguration resultConfiguration) {
@@ -294,16 +294,16 @@ public class QueryExecution implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The location in Amazon S3 where query results were stored and the encryption option, if any, used for query
-     * results. These are known as "client-side settings". If workgroup settings override client-side settings, then the
-     * query uses the location for the query results and the encryption configuration that are specified for the
-     * workgroup.
+     * The location in Amazon S3 where query and calculation results are stored and the encryption option, if any, used
+     * for query results. These are known as "client-side settings". If workgroup settings override client-side
+     * settings, then the query uses the location for the query results and the encryption configuration that are
+     * specified for the workgroup.
      * </p>
      * 
-     * @return The location in Amazon S3 where query results were stored and the encryption option, if any, used for
-     *         query results. These are known as "client-side settings". If workgroup settings override client-side
-     *         settings, then the query uses the location for the query results and the encryption configuration that
-     *         are specified for the workgroup.
+     * @return The location in Amazon S3 where query and calculation results are stored and the encryption option, if
+     *         any, used for query results. These are known as "client-side settings". If workgroup settings override
+     *         client-side settings, then the query uses the location for the query results and the encryption
+     *         configuration that are specified for the workgroup.
      */
 
     public ResultConfiguration getResultConfiguration() {
@@ -312,17 +312,17 @@ public class QueryExecution implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The location in Amazon S3 where query results were stored and the encryption option, if any, used for query
-     * results. These are known as "client-side settings". If workgroup settings override client-side settings, then the
-     * query uses the location for the query results and the encryption configuration that are specified for the
-     * workgroup.
+     * The location in Amazon S3 where query and calculation results are stored and the encryption option, if any, used
+     * for query results. These are known as "client-side settings". If workgroup settings override client-side
+     * settings, then the query uses the location for the query results and the encryption configuration that are
+     * specified for the workgroup.
      * </p>
      * 
      * @param resultConfiguration
-     *        The location in Amazon S3 where query results were stored and the encryption option, if any, used for
-     *        query results. These are known as "client-side settings". If workgroup settings override client-side
-     *        settings, then the query uses the location for the query results and the encryption configuration that are
-     *        specified for the workgroup.
+     *        The location in Amazon S3 where query and calculation results are stored and the encryption option, if
+     *        any, used for query results. These are known as "client-side settings". If workgroup settings override
+     *        client-side settings, then the query uses the location for the query results and the encryption
+     *        configuration that are specified for the workgroup.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

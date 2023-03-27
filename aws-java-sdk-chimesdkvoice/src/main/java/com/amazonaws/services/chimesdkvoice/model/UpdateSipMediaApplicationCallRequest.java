@@ -25,14 +25,33 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The ID of the SIP media application handling the call.
+     * </p>
+     */
     private String sipMediaApplicationId;
-
+    /**
+     * <p>
+     * The ID of the call transaction.
+     * </p>
+     */
     private String transactionId;
-
+    /**
+     * <p>
+     * Arguments made available to the Lambda function as part of the <code>CALL_UPDATE_REQUESTED</code> event. Can
+     * contain 0-20 key-value pairs.
+     * </p>
+     */
     private java.util.Map<String, String> arguments;
 
     /**
+     * <p>
+     * The ID of the SIP media application handling the call.
+     * </p>
+     * 
      * @param sipMediaApplicationId
+     *        The ID of the SIP media application handling the call.
      */
 
     public void setSipMediaApplicationId(String sipMediaApplicationId) {
@@ -40,7 +59,11 @@ public class UpdateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the SIP media application handling the call.
+     * </p>
+     * 
+     * @return The ID of the SIP media application handling the call.
      */
 
     public String getSipMediaApplicationId() {
@@ -48,7 +71,12 @@ public class UpdateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * The ID of the SIP media application handling the call.
+     * </p>
+     * 
      * @param sipMediaApplicationId
+     *        The ID of the SIP media application handling the call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +86,12 @@ public class UpdateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * The ID of the call transaction.
+     * </p>
+     * 
      * @param transactionId
+     *        The ID of the call transaction.
      */
 
     public void setTransactionId(String transactionId) {
@@ -66,7 +99,11 @@ public class UpdateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the call transaction.
+     * </p>
+     * 
+     * @return The ID of the call transaction.
      */
 
     public String getTransactionId() {
@@ -74,7 +111,12 @@ public class UpdateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * The ID of the call transaction.
+     * </p>
+     * 
      * @param transactionId
+     *        The ID of the call transaction.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,7 +126,13 @@ public class UpdateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
-     * @return
+     * <p>
+     * Arguments made available to the Lambda function as part of the <code>CALL_UPDATE_REQUESTED</code> event. Can
+     * contain 0-20 key-value pairs.
+     * </p>
+     * 
+     * @return Arguments made available to the Lambda function as part of the <code>CALL_UPDATE_REQUESTED</code> event.
+     *         Can contain 0-20 key-value pairs.
      */
 
     public java.util.Map<String, String> getArguments() {
@@ -92,7 +140,14 @@ public class UpdateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * Arguments made available to the Lambda function as part of the <code>CALL_UPDATE_REQUESTED</code> event. Can
+     * contain 0-20 key-value pairs.
+     * </p>
+     * 
      * @param arguments
+     *        Arguments made available to the Lambda function as part of the <code>CALL_UPDATE_REQUESTED</code> event.
+     *        Can contain 0-20 key-value pairs.
      */
 
     public void setArguments(java.util.Map<String, String> arguments) {
@@ -100,7 +155,14 @@ public class UpdateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * Arguments made available to the Lambda function as part of the <code>CALL_UPDATE_REQUESTED</code> event. Can
+     * contain 0-20 key-value pairs.
+     * </p>
+     * 
      * @param arguments
+     *        Arguments made available to the Lambda function as part of the <code>CALL_UPDATE_REQUESTED</code> event.
+     *        Can contain 0-20 key-value pairs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

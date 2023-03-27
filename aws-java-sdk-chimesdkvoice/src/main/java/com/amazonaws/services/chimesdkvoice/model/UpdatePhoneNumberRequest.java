@@ -25,14 +25,32 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdatePhoneNumberRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The phone number ID.
+     * </p>
+     */
     private String phoneNumberId;
-
+    /**
+     * <p>
+     * The product type.
+     * </p>
+     */
     private String productType;
-
+    /**
+     * <p>
+     * The outbound calling name associated with the phone number.
+     * </p>
+     */
     private String callingName;
 
     /**
+     * <p>
+     * The phone number ID.
+     * </p>
+     * 
      * @param phoneNumberId
+     *        The phone number ID.
      */
 
     public void setPhoneNumberId(String phoneNumberId) {
@@ -40,7 +58,11 @@ public class UpdatePhoneNumberRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number ID.
+     * </p>
+     * 
+     * @return The phone number ID.
      */
 
     public String getPhoneNumberId() {
@@ -48,7 +70,12 @@ public class UpdatePhoneNumberRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The phone number ID.
+     * </p>
+     * 
      * @param phoneNumberId
+     *        The phone number ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +85,12 @@ public class UpdatePhoneNumberRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The product type.
+     * </p>
+     * 
      * @param productType
+     *        The product type.
      * @see PhoneNumberProductType
      */
 
@@ -67,7 +99,11 @@ public class UpdatePhoneNumberRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * @return
+     * <p>
+     * The product type.
+     * </p>
+     * 
+     * @return The product type.
      * @see PhoneNumberProductType
      */
 
@@ -76,7 +112,12 @@ public class UpdatePhoneNumberRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The product type.
+     * </p>
+     * 
      * @param productType
+     *        The product type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberProductType
      */
@@ -87,7 +128,12 @@ public class UpdatePhoneNumberRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The product type.
+     * </p>
+     * 
      * @param productType
+     *        The product type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberProductType
      */
@@ -98,7 +144,12 @@ public class UpdatePhoneNumberRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The outbound calling name associated with the phone number.
+     * </p>
+     * 
      * @param callingName
+     *        The outbound calling name associated with the phone number.
      */
 
     public void setCallingName(String callingName) {
@@ -106,7 +157,11 @@ public class UpdatePhoneNumberRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * @return
+     * <p>
+     * The outbound calling name associated with the phone number.
+     * </p>
+     * 
+     * @return The outbound calling name associated with the phone number.
      */
 
     public String getCallingName() {
@@ -114,7 +169,12 @@ public class UpdatePhoneNumberRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The outbound calling name associated with the phone number.
+     * </p>
+     * 
      * @param callingName
+     *        The outbound calling name associated with the phone number.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

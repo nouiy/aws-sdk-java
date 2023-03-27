@@ -25,14 +25,32 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateSipMediaApplicationRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The AWS Region assigned to the SIP media application.
+     * </p>
+     */
     private String awsRegion;
-
+    /**
+     * <p>
+     * The SIP media application's name.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * List of endpoints (Lambda ARNs) specified for the SIP media application.
+     * </p>
+     */
     private java.util.List<SipMediaApplicationEndpoint> endpoints;
 
     /**
+     * <p>
+     * The AWS Region assigned to the SIP media application.
+     * </p>
+     * 
      * @param awsRegion
+     *        The AWS Region assigned to the SIP media application.
      */
 
     public void setAwsRegion(String awsRegion) {
@@ -40,7 +58,11 @@ public class CreateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * The AWS Region assigned to the SIP media application.
+     * </p>
+     * 
+     * @return The AWS Region assigned to the SIP media application.
      */
 
     public String getAwsRegion() {
@@ -48,7 +70,12 @@ public class CreateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The AWS Region assigned to the SIP media application.
+     * </p>
+     * 
      * @param awsRegion
+     *        The AWS Region assigned to the SIP media application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +85,12 @@ public class CreateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The SIP media application's name.
+     * </p>
+     * 
      * @param name
+     *        The SIP media application's name.
      */
 
     public void setName(String name) {
@@ -66,7 +98,11 @@ public class CreateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * The SIP media application's name.
+     * </p>
+     * 
+     * @return The SIP media application's name.
      */
 
     public String getName() {
@@ -74,7 +110,12 @@ public class CreateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The SIP media application's name.
+     * </p>
+     * 
      * @param name
+     *        The SIP media application's name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,7 +125,11 @@ public class CreateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * List of endpoints (Lambda ARNs) specified for the SIP media application.
+     * </p>
+     * 
+     * @return List of endpoints (Lambda ARNs) specified for the SIP media application.
      */
 
     public java.util.List<SipMediaApplicationEndpoint> getEndpoints() {
@@ -92,7 +137,12 @@ public class CreateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * List of endpoints (Lambda ARNs) specified for the SIP media application.
+     * </p>
+     * 
      * @param endpoints
+     *        List of endpoints (Lambda ARNs) specified for the SIP media application.
      */
 
     public void setEndpoints(java.util.Collection<SipMediaApplicationEndpoint> endpoints) {
@@ -106,12 +156,16 @@ public class CreateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
+     * List of endpoints (Lambda ARNs) specified for the SIP media application.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setEndpoints(java.util.Collection)} or {@link #withEndpoints(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param endpoints
+     *        List of endpoints (Lambda ARNs) specified for the SIP media application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,7 +180,12 @@ public class CreateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * List of endpoints (Lambda ARNs) specified for the SIP media application.
+     * </p>
+     * 
      * @param endpoints
+     *        List of endpoints (Lambda ARNs) specified for the SIP media application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

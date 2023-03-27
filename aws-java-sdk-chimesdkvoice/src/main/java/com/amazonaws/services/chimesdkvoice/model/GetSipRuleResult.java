@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetSipRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The SIP rule details.
+     * </p>
+     */
     private SipRule sipRule;
 
     /**
+     * <p>
+     * The SIP rule details.
+     * </p>
+     * 
      * @param sipRule
+     *        The SIP rule details.
      */
 
     public void setSipRule(SipRule sipRule) {
@@ -34,7 +44,11 @@ public class GetSipRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
     }
 
     /**
-     * @return
+     * <p>
+     * The SIP rule details.
+     * </p>
+     * 
+     * @return The SIP rule details.
      */
 
     public SipRule getSipRule() {
@@ -42,7 +56,12 @@ public class GetSipRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
     }
 
     /**
+     * <p>
+     * The SIP rule details.
+     * </p>
+     * 
      * @param sipRule
+     *        The SIP rule details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

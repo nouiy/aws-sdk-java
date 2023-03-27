@@ -15,7 +15,9 @@ package com.amazonaws.services.chimesdkvoice.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p>
+ * A well-formed request couldn't be followed due to semantic errors.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UnprocessableEntityException extends com.amazonaws.services.chimesdkvoice.model.AmazonChimeSDKVoiceException {

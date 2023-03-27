@@ -15,7 +15,9 @@ package com.amazonaws.services.chimesdkvoice.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p>
+ * The input parameters don't match the service's restrictions.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class BadRequestException extends com.amazonaws.services.chimesdkvoice.model.AmazonChimeSDKVoiceException {

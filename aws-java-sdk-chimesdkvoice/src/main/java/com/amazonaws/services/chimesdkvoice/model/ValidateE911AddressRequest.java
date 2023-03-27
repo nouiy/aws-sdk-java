@@ -25,22 +25,56 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The AWS account ID.
+     * </p>
+     */
     private String awsAccountId;
-
+    /**
+     * <p>
+     * The address street number, such as <code>200</code> or <code>2121</code>.
+     * </p>
+     */
     private String streetNumber;
-
+    /**
+     * <p>
+     * The address street information, such as <code>8th Avenue</code>.
+     * </p>
+     */
     private String streetInfo;
-
+    /**
+     * <p>
+     * The address city, such as <code>Portland</code>.
+     * </p>
+     */
     private String city;
-
+    /**
+     * <p>
+     * The address state, such as <code>ME</code>.
+     * </p>
+     */
     private String state;
-
+    /**
+     * <p>
+     * The country in the address being validated.
+     * </p>
+     */
     private String country;
-
+    /**
+     * <p>
+     * The dress postal code, such <code>04352</code>.
+     * </p>
+     */
     private String postalCode;
 
     /**
+     * <p>
+     * The AWS account ID.
+     * </p>
+     * 
      * @param awsAccountId
+     *        The AWS account ID.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -48,7 +82,11 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * The AWS account ID.
+     * </p>
+     * 
+     * @return The AWS account ID.
      */
 
     public String getAwsAccountId() {
@@ -56,7 +94,12 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The AWS account ID.
+     * </p>
+     * 
      * @param awsAccountId
+     *        The AWS account ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -66,7 +109,12 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The address street number, such as <code>200</code> or <code>2121</code>.
+     * </p>
+     * 
      * @param streetNumber
+     *        The address street number, such as <code>200</code> or <code>2121</code>.
      */
 
     public void setStreetNumber(String streetNumber) {
@@ -74,7 +122,11 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * The address street number, such as <code>200</code> or <code>2121</code>.
+     * </p>
+     * 
+     * @return The address street number, such as <code>200</code> or <code>2121</code>.
      */
 
     public String getStreetNumber() {
@@ -82,7 +134,12 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The address street number, such as <code>200</code> or <code>2121</code>.
+     * </p>
+     * 
      * @param streetNumber
+     *        The address street number, such as <code>200</code> or <code>2121</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,7 +149,12 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The address street information, such as <code>8th Avenue</code>.
+     * </p>
+     * 
      * @param streetInfo
+     *        The address street information, such as <code>8th Avenue</code>.
      */
 
     public void setStreetInfo(String streetInfo) {
@@ -100,7 +162,11 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * The address street information, such as <code>8th Avenue</code>.
+     * </p>
+     * 
+     * @return The address street information, such as <code>8th Avenue</code>.
      */
 
     public String getStreetInfo() {
@@ -108,7 +174,12 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The address street information, such as <code>8th Avenue</code>.
+     * </p>
+     * 
      * @param streetInfo
+     *        The address street information, such as <code>8th Avenue</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -118,7 +189,12 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The address city, such as <code>Portland</code>.
+     * </p>
+     * 
      * @param city
+     *        The address city, such as <code>Portland</code>.
      */
 
     public void setCity(String city) {
@@ -126,7 +202,11 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * The address city, such as <code>Portland</code>.
+     * </p>
+     * 
+     * @return The address city, such as <code>Portland</code>.
      */
 
     public String getCity() {
@@ -134,7 +214,12 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The address city, such as <code>Portland</code>.
+     * </p>
+     * 
      * @param city
+     *        The address city, such as <code>Portland</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -144,7 +229,12 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The address state, such as <code>ME</code>.
+     * </p>
+     * 
      * @param state
+     *        The address state, such as <code>ME</code>.
      */
 
     public void setState(String state) {
@@ -152,7 +242,11 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * The address state, such as <code>ME</code>.
+     * </p>
+     * 
+     * @return The address state, such as <code>ME</code>.
      */
 
     public String getState() {
@@ -160,7 +254,12 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The address state, such as <code>ME</code>.
+     * </p>
+     * 
      * @param state
+     *        The address state, such as <code>ME</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -170,7 +269,12 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The country in the address being validated.
+     * </p>
+     * 
      * @param country
+     *        The country in the address being validated.
      */
 
     public void setCountry(String country) {
@@ -178,7 +282,11 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * The country in the address being validated.
+     * </p>
+     * 
+     * @return The country in the address being validated.
      */
 
     public String getCountry() {
@@ -186,7 +294,12 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The country in the address being validated.
+     * </p>
+     * 
      * @param country
+     *        The country in the address being validated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -196,7 +309,12 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The dress postal code, such <code>04352</code>.
+     * </p>
+     * 
      * @param postalCode
+     *        The dress postal code, such <code>04352</code>.
      */
 
     public void setPostalCode(String postalCode) {
@@ -204,7 +322,11 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * The dress postal code, such <code>04352</code>.
+     * </p>
+     * 
+     * @return The dress postal code, such <code>04352</code>.
      */
 
     public String getPostalCode() {
@@ -212,7 +334,12 @@ public class ValidateE911AddressRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The dress postal code, such <code>04352</code>.
+     * </p>
+     * 
      * @param postalCode
+     *        The dress postal code, such <code>04352</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -106,6 +106,12 @@ public class AwsEc2InstanceDetails implements Serializable, Cloneable, Structure
      * </p>
      */
     private AwsEc2InstanceMetadataOptions metadataOptions;
+    /**
+     * <p>
+     * Describes the type of monitoring that’s turned on for an instance.
+     * </p>
+     */
+    private AwsEc2InstanceMonitoringDetails monitoring;
 
     /**
      * <p>
@@ -716,6 +722,46 @@ public class AwsEc2InstanceDetails implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * Describes the type of monitoring that’s turned on for an instance.
+     * </p>
+     * 
+     * @param monitoring
+     *        Describes the type of monitoring that’s turned on for an instance.
+     */
+
+    public void setMonitoring(AwsEc2InstanceMonitoringDetails monitoring) {
+        this.monitoring = monitoring;
+    }
+
+    /**
+     * <p>
+     * Describes the type of monitoring that’s turned on for an instance.
+     * </p>
+     * 
+     * @return Describes the type of monitoring that’s turned on for an instance.
+     */
+
+    public AwsEc2InstanceMonitoringDetails getMonitoring() {
+        return this.monitoring;
+    }
+
+    /**
+     * <p>
+     * Describes the type of monitoring that’s turned on for an instance.
+     * </p>
+     * 
+     * @param monitoring
+     *        Describes the type of monitoring that’s turned on for an instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsEc2InstanceDetails withMonitoring(AwsEc2InstanceMonitoringDetails monitoring) {
+        setMonitoring(monitoring);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -750,7 +796,9 @@ public class AwsEc2InstanceDetails implements Serializable, Cloneable, Structure
         if (getVirtualizationType() != null)
             sb.append("VirtualizationType: ").append(getVirtualizationType()).append(",");
         if (getMetadataOptions() != null)
-            sb.append("MetadataOptions: ").append(getMetadataOptions());
+            sb.append("MetadataOptions: ").append(getMetadataOptions()).append(",");
+        if (getMonitoring() != null)
+            sb.append("Monitoring: ").append(getMonitoring());
         sb.append("}");
         return sb.toString();
     }
@@ -813,6 +861,10 @@ public class AwsEc2InstanceDetails implements Serializable, Cloneable, Structure
             return false;
         if (other.getMetadataOptions() != null && other.getMetadataOptions().equals(this.getMetadataOptions()) == false)
             return false;
+        if (other.getMonitoring() == null ^ this.getMonitoring() == null)
+            return false;
+        if (other.getMonitoring() != null && other.getMonitoring().equals(this.getMonitoring()) == false)
+            return false;
         return true;
     }
 
@@ -833,6 +885,7 @@ public class AwsEc2InstanceDetails implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getNetworkInterfaces() == null) ? 0 : getNetworkInterfaces().hashCode());
         hashCode = prime * hashCode + ((getVirtualizationType() == null) ? 0 : getVirtualizationType().hashCode());
         hashCode = prime * hashCode + ((getMetadataOptions() == null) ? 0 : getMetadataOptions().hashCode());
+        hashCode = prime * hashCode + ((getMonitoring() == null) ? 0 : getMonitoring().hashCode());
         return hashCode;
     }
 

@@ -23,10 +23,22 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class BatchDeletePhoneNumberResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * If the action fails for one or more of the phone numbers in the request, a list of the phone numbers is returned,
+     * along with error codes and error messages.
+     * </p>
+     */
     private java.util.List<PhoneNumberError> phoneNumberErrors;
 
     /**
-     * @return
+     * <p>
+     * If the action fails for one or more of the phone numbers in the request, a list of the phone numbers is returned,
+     * along with error codes and error messages.
+     * </p>
+     * 
+     * @return If the action fails for one or more of the phone numbers in the request, a list of the phone numbers is
+     *         returned, along with error codes and error messages.
      */
 
     public java.util.List<PhoneNumberError> getPhoneNumberErrors() {
@@ -34,7 +46,14 @@ public class BatchDeletePhoneNumberResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * If the action fails for one or more of the phone numbers in the request, a list of the phone numbers is returned,
+     * along with error codes and error messages.
+     * </p>
+     * 
      * @param phoneNumberErrors
+     *        If the action fails for one or more of the phone numbers in the request, a list of the phone numbers is
+     *        returned, along with error codes and error messages.
      */
 
     public void setPhoneNumberErrors(java.util.Collection<PhoneNumberError> phoneNumberErrors) {
@@ -48,12 +67,18 @@ public class BatchDeletePhoneNumberResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
+     * If the action fails for one or more of the phone numbers in the request, a list of the phone numbers is returned,
+     * along with error codes and error messages.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setPhoneNumberErrors(java.util.Collection)} or {@link #withPhoneNumberErrors(java.util.Collection)} if
      * you want to override the existing values.
      * </p>
      * 
      * @param phoneNumberErrors
+     *        If the action fails for one or more of the phone numbers in the request, a list of the phone numbers is
+     *        returned, along with error codes and error messages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -68,7 +93,14 @@ public class BatchDeletePhoneNumberResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * If the action fails for one or more of the phone numbers in the request, a list of the phone numbers is returned,
+     * along with error codes and error messages.
+     * </p>
+     * 
      * @param phoneNumberErrors
+     *        If the action fails for one or more of the phone numbers in the request, a list of the phone numbers is
+     *        returned, along with error codes and error messages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

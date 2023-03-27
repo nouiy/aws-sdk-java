@@ -18,6 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The phone number associations, such as an Amazon Chime SDK account ID, user ID, Voice Connector ID, or Voice
+ * Connector group ID.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/PhoneNumberAssociation"
  *      target="_top">AWS API Documentation</a>
@@ -25,14 +29,33 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PhoneNumberAssociation implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Contains the ID for the entity specified in Name.
+     * </p>
+     */
     private String value;
-
+    /**
+     * <p>
+     * Defines the association with an Amazon Chime SDK account ID, user ID, Voice Connector ID, or Voice Connector
+     * group ID.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * The timestamp of the phone number association, in ISO 8601 format.
+     * </p>
+     */
     private java.util.Date associatedTimestamp;
 
     /**
+     * <p>
+     * Contains the ID for the entity specified in Name.
+     * </p>
+     * 
      * @param value
+     *        Contains the ID for the entity specified in Name.
      */
 
     public void setValue(String value) {
@@ -40,7 +63,11 @@ public class PhoneNumberAssociation implements Serializable, Cloneable, Structur
     }
 
     /**
-     * @return
+     * <p>
+     * Contains the ID for the entity specified in Name.
+     * </p>
+     * 
+     * @return Contains the ID for the entity specified in Name.
      */
 
     public String getValue() {
@@ -48,7 +75,12 @@ public class PhoneNumberAssociation implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * Contains the ID for the entity specified in Name.
+     * </p>
+     * 
      * @param value
+     *        Contains the ID for the entity specified in Name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +90,14 @@ public class PhoneNumberAssociation implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * Defines the association with an Amazon Chime SDK account ID, user ID, Voice Connector ID, or Voice Connector
+     * group ID.
+     * </p>
+     * 
      * @param name
+     *        Defines the association with an Amazon Chime SDK account ID, user ID, Voice Connector ID, or Voice
+     *        Connector group ID.
      * @see PhoneNumberAssociationName
      */
 
@@ -67,7 +106,13 @@ public class PhoneNumberAssociation implements Serializable, Cloneable, Structur
     }
 
     /**
-     * @return
+     * <p>
+     * Defines the association with an Amazon Chime SDK account ID, user ID, Voice Connector ID, or Voice Connector
+     * group ID.
+     * </p>
+     * 
+     * @return Defines the association with an Amazon Chime SDK account ID, user ID, Voice Connector ID, or Voice
+     *         Connector group ID.
      * @see PhoneNumberAssociationName
      */
 
@@ -76,7 +121,14 @@ public class PhoneNumberAssociation implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * Defines the association with an Amazon Chime SDK account ID, user ID, Voice Connector ID, or Voice Connector
+     * group ID.
+     * </p>
+     * 
      * @param name
+     *        Defines the association with an Amazon Chime SDK account ID, user ID, Voice Connector ID, or Voice
+     *        Connector group ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberAssociationName
      */
@@ -87,7 +139,14 @@ public class PhoneNumberAssociation implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * Defines the association with an Amazon Chime SDK account ID, user ID, Voice Connector ID, or Voice Connector
+     * group ID.
+     * </p>
+     * 
      * @param name
+     *        Defines the association with an Amazon Chime SDK account ID, user ID, Voice Connector ID, or Voice
+     *        Connector group ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberAssociationName
      */
@@ -98,7 +157,12 @@ public class PhoneNumberAssociation implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The timestamp of the phone number association, in ISO 8601 format.
+     * </p>
+     * 
      * @param associatedTimestamp
+     *        The timestamp of the phone number association, in ISO 8601 format.
      */
 
     public void setAssociatedTimestamp(java.util.Date associatedTimestamp) {
@@ -106,7 +170,11 @@ public class PhoneNumberAssociation implements Serializable, Cloneable, Structur
     }
 
     /**
-     * @return
+     * <p>
+     * The timestamp of the phone number association, in ISO 8601 format.
+     * </p>
+     * 
+     * @return The timestamp of the phone number association, in ISO 8601 format.
      */
 
     public java.util.Date getAssociatedTimestamp() {
@@ -114,7 +182,12 @@ public class PhoneNumberAssociation implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The timestamp of the phone number association, in ISO 8601 format.
+     * </p>
+     * 
      * @param associatedTimestamp
+     *        The timestamp of the phone number association, in ISO 8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

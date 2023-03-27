@@ -546,6 +546,13 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     private AwsWafv2WebAclDetails awsWafv2WebAcl;
 
     private AwsWafv2RuleGroupDetails awsWafv2RuleGroup;
+    /**
+     * <p>
+     * Provides details about a route table. A route table contains a set of rules, called routes, that determine where
+     * to direct network traffic from your subnet or gateway.
+     * </p>
+     */
+    private AwsEc2RouteTableDetails awsEc2RouteTable;
 
     /**
      * <p>
@@ -3981,6 +3988,52 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Provides details about a route table. A route table contains a set of rules, called routes, that determine where
+     * to direct network traffic from your subnet or gateway.
+     * </p>
+     * 
+     * @param awsEc2RouteTable
+     *        Provides details about a route table. A route table contains a set of rules, called routes, that determine
+     *        where to direct network traffic from your subnet or gateway.
+     */
+
+    public void setAwsEc2RouteTable(AwsEc2RouteTableDetails awsEc2RouteTable) {
+        this.awsEc2RouteTable = awsEc2RouteTable;
+    }
+
+    /**
+     * <p>
+     * Provides details about a route table. A route table contains a set of rules, called routes, that determine where
+     * to direct network traffic from your subnet or gateway.
+     * </p>
+     * 
+     * @return Provides details about a route table. A route table contains a set of rules, called routes, that
+     *         determine where to direct network traffic from your subnet or gateway.
+     */
+
+    public AwsEc2RouteTableDetails getAwsEc2RouteTable() {
+        return this.awsEc2RouteTable;
+    }
+
+    /**
+     * <p>
+     * Provides details about a route table. A route table contains a set of rules, called routes, that determine where
+     * to direct network traffic from your subnet or gateway.
+     * </p>
+     * 
+     * @param awsEc2RouteTable
+     *        Provides details about a route table. A route table contains a set of rules, called routes, that determine
+     *        where to direct network traffic from your subnet or gateway.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsEc2RouteTable(AwsEc2RouteTableDetails awsEc2RouteTable) {
+        setAwsEc2RouteTable(awsEc2RouteTable);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -4157,7 +4210,9 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         if (getAwsWafv2WebAcl() != null)
             sb.append("AwsWafv2WebAcl: ").append(getAwsWafv2WebAcl()).append(",");
         if (getAwsWafv2RuleGroup() != null)
-            sb.append("AwsWafv2RuleGroup: ").append(getAwsWafv2RuleGroup());
+            sb.append("AwsWafv2RuleGroup: ").append(getAwsWafv2RuleGroup()).append(",");
+        if (getAwsEc2RouteTable() != null)
+            sb.append("AwsEc2RouteTable: ").append(getAwsEc2RouteTable());
         sb.append("}");
         return sb.toString();
     }
@@ -4510,6 +4565,10 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getAwsWafv2RuleGroup() != null && other.getAwsWafv2RuleGroup().equals(this.getAwsWafv2RuleGroup()) == false)
             return false;
+        if (other.getAwsEc2RouteTable() == null ^ this.getAwsEc2RouteTable() == null)
+            return false;
+        if (other.getAwsEc2RouteTable() != null && other.getAwsEc2RouteTable().equals(this.getAwsEc2RouteTable()) == false)
+            return false;
         return true;
     }
 
@@ -4601,6 +4660,7 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getAwsSageMakerNotebookInstance() == null) ? 0 : getAwsSageMakerNotebookInstance().hashCode());
         hashCode = prime * hashCode + ((getAwsWafv2WebAcl() == null) ? 0 : getAwsWafv2WebAcl().hashCode());
         hashCode = prime * hashCode + ((getAwsWafv2RuleGroup() == null) ? 0 : getAwsWafv2RuleGroup().hashCode());
+        hashCode = prime * hashCode + ((getAwsEc2RouteTable() == null) ? 0 : getAwsEc2RouteTable().hashCode());
         return hashCode;
     }
 

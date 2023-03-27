@@ -45,8 +45,10 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
     private EngineConfiguration engineConfiguration;
     /**
      * <p>
-     * The notebook version. This value is required only when requesting that a notebook server be started for the
-     * session. The only valid notebook version is <code>Jupyter1.0</code>.
+     * The notebook version. This value is supplied automatically for notebook sessions in the Athena console and is not
+     * required for programmatic session access. The only valid notebook version is
+     * <code>Athena notebook version 1</code>. If you specify a value for <code>NotebookVersion</code>, you must also
+     * specify a value for <code>NotebookId</code>. See <a>EngineConfiguration$AdditionalConfigs</a>.
      * </p>
      */
     private String notebookVersion;
@@ -194,13 +196,17 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The notebook version. This value is required only when requesting that a notebook server be started for the
-     * session. The only valid notebook version is <code>Jupyter1.0</code>.
+     * The notebook version. This value is supplied automatically for notebook sessions in the Athena console and is not
+     * required for programmatic session access. The only valid notebook version is
+     * <code>Athena notebook version 1</code>. If you specify a value for <code>NotebookVersion</code>, you must also
+     * specify a value for <code>NotebookId</code>. See <a>EngineConfiguration$AdditionalConfigs</a>.
      * </p>
      * 
      * @param notebookVersion
-     *        The notebook version. This value is required only when requesting that a notebook server be started for
-     *        the session. The only valid notebook version is <code>Jupyter1.0</code>.
+     *        The notebook version. This value is supplied automatically for notebook sessions in the Athena console and
+     *        is not required for programmatic session access. The only valid notebook version is
+     *        <code>Athena notebook version 1</code>. If you specify a value for <code>NotebookVersion</code>, you must
+     *        also specify a value for <code>NotebookId</code>. See <a>EngineConfiguration$AdditionalConfigs</a>.
      */
 
     public void setNotebookVersion(String notebookVersion) {
@@ -209,12 +215,16 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The notebook version. This value is required only when requesting that a notebook server be started for the
-     * session. The only valid notebook version is <code>Jupyter1.0</code>.
+     * The notebook version. This value is supplied automatically for notebook sessions in the Athena console and is not
+     * required for programmatic session access. The only valid notebook version is
+     * <code>Athena notebook version 1</code>. If you specify a value for <code>NotebookVersion</code>, you must also
+     * specify a value for <code>NotebookId</code>. See <a>EngineConfiguration$AdditionalConfigs</a>.
      * </p>
      * 
-     * @return The notebook version. This value is required only when requesting that a notebook server be started for
-     *         the session. The only valid notebook version is <code>Jupyter1.0</code>.
+     * @return The notebook version. This value is supplied automatically for notebook sessions in the Athena console
+     *         and is not required for programmatic session access. The only valid notebook version is
+     *         <code>Athena notebook version 1</code>. If you specify a value for <code>NotebookVersion</code>, you must
+     *         also specify a value for <code>NotebookId</code>. See <a>EngineConfiguration$AdditionalConfigs</a>.
      */
 
     public String getNotebookVersion() {
@@ -223,13 +233,17 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The notebook version. This value is required only when requesting that a notebook server be started for the
-     * session. The only valid notebook version is <code>Jupyter1.0</code>.
+     * The notebook version. This value is supplied automatically for notebook sessions in the Athena console and is not
+     * required for programmatic session access. The only valid notebook version is
+     * <code>Athena notebook version 1</code>. If you specify a value for <code>NotebookVersion</code>, you must also
+     * specify a value for <code>NotebookId</code>. See <a>EngineConfiguration$AdditionalConfigs</a>.
      * </p>
      * 
      * @param notebookVersion
-     *        The notebook version. This value is required only when requesting that a notebook server be started for
-     *        the session. The only valid notebook version is <code>Jupyter1.0</code>.
+     *        The notebook version. This value is supplied automatically for notebook sessions in the Athena console and
+     *        is not required for programmatic session access. The only valid notebook version is
+     *        <code>Athena notebook version 1</code>. If you specify a value for <code>NotebookVersion</code>, you must
+     *        also specify a value for <code>NotebookId</code>. See <a>EngineConfiguration$AdditionalConfigs</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

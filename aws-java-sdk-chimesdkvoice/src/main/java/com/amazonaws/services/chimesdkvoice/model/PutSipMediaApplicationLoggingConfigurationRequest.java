@@ -26,12 +26,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PutSipMediaApplicationLoggingConfigurationRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The SIP media application ID.
+     * </p>
+     */
     private String sipMediaApplicationId;
-
+    /**
+     * <p>
+     * The logging configuration for the specified SIP media application.
+     * </p>
+     */
     private SipMediaApplicationLoggingConfiguration sipMediaApplicationLoggingConfiguration;
 
     /**
+     * <p>
+     * The SIP media application ID.
+     * </p>
+     * 
      * @param sipMediaApplicationId
+     *        The SIP media application ID.
      */
 
     public void setSipMediaApplicationId(String sipMediaApplicationId) {
@@ -39,7 +53,11 @@ public class PutSipMediaApplicationLoggingConfigurationRequest extends com.amazo
     }
 
     /**
-     * @return
+     * <p>
+     * The SIP media application ID.
+     * </p>
+     * 
+     * @return The SIP media application ID.
      */
 
     public String getSipMediaApplicationId() {
@@ -47,7 +65,12 @@ public class PutSipMediaApplicationLoggingConfigurationRequest extends com.amazo
     }
 
     /**
+     * <p>
+     * The SIP media application ID.
+     * </p>
+     * 
      * @param sipMediaApplicationId
+     *        The SIP media application ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -57,7 +80,12 @@ public class PutSipMediaApplicationLoggingConfigurationRequest extends com.amazo
     }
 
     /**
+     * <p>
+     * The logging configuration for the specified SIP media application.
+     * </p>
+     * 
      * @param sipMediaApplicationLoggingConfiguration
+     *        The logging configuration for the specified SIP media application.
      */
 
     public void setSipMediaApplicationLoggingConfiguration(SipMediaApplicationLoggingConfiguration sipMediaApplicationLoggingConfiguration) {
@@ -65,7 +93,11 @@ public class PutSipMediaApplicationLoggingConfigurationRequest extends com.amazo
     }
 
     /**
-     * @return
+     * <p>
+     * The logging configuration for the specified SIP media application.
+     * </p>
+     * 
+     * @return The logging configuration for the specified SIP media application.
      */
 
     public SipMediaApplicationLoggingConfiguration getSipMediaApplicationLoggingConfiguration() {
@@ -73,7 +105,12 @@ public class PutSipMediaApplicationLoggingConfigurationRequest extends com.amazo
     }
 
     /**
+     * <p>
+     * The logging configuration for the specified SIP media application.
+     * </p>
+     * 
      * @param sipMediaApplicationLoggingConfiguration
+     *        The logging configuration for the specified SIP media application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

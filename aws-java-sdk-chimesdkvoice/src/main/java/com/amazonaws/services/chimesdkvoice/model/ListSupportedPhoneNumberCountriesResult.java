@@ -24,10 +24,19 @@ import javax.annotation.Generated;
 public class ListSupportedPhoneNumberCountriesResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable,
         Cloneable {
 
+    /**
+     * <p>
+     * The supported phone number countries.
+     * </p>
+     */
     private java.util.List<PhoneNumberCountry> phoneNumberCountries;
 
     /**
-     * @return
+     * <p>
+     * The supported phone number countries.
+     * </p>
+     * 
+     * @return The supported phone number countries.
      */
 
     public java.util.List<PhoneNumberCountry> getPhoneNumberCountries() {
@@ -35,7 +44,12 @@ public class ListSupportedPhoneNumberCountriesResult extends com.amazonaws.Amazo
     }
 
     /**
+     * <p>
+     * The supported phone number countries.
+     * </p>
+     * 
      * @param phoneNumberCountries
+     *        The supported phone number countries.
      */
 
     public void setPhoneNumberCountries(java.util.Collection<PhoneNumberCountry> phoneNumberCountries) {
@@ -49,12 +63,16 @@ public class ListSupportedPhoneNumberCountriesResult extends com.amazonaws.Amazo
 
     /**
      * <p>
+     * The supported phone number countries.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setPhoneNumberCountries(java.util.Collection)} or {@link #withPhoneNumberCountries(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param phoneNumberCountries
+     *        The supported phone number countries.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -69,7 +87,12 @@ public class ListSupportedPhoneNumberCountriesResult extends com.amazonaws.Amazo
     }
 
     /**
+     * <p>
+     * The supported phone number countries.
+     * </p>
+     * 
      * @param phoneNumberCountries
+     *        The supported phone number countries.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

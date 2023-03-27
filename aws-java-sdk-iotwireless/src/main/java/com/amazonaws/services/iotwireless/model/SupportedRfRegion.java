@@ -25,7 +25,16 @@ public enum SupportedRfRegion {
     EU868("EU868"),
     US915("US915"),
     AU915("AU915"),
-    AS9231("AS923-1");
+    AS9231("AS923-1"),
+    AS9232("AS923-2"),
+    AS9233("AS923-3"),
+    AS9234("AS923-4"),
+    EU433("EU433"),
+    CN470("CN470"),
+    CN779("CN779"),
+    RU864("RU864"),
+    KR920("KR920"),
+    IN865("IN865");
 
     private String value;
 

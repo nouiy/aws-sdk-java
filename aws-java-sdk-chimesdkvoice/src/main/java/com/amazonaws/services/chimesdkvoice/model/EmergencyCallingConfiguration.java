@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The emergency calling configuration details associated with an Amazon Chime SDK Voice Connector.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/EmergencyCallingConfiguration"
  *      target="_top">AWS API Documentation</a>
@@ -25,10 +28,19 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class EmergencyCallingConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The Dialed Number Identification Service (DNIS) emergency calling configuration details.
+     * </p>
+     */
     private java.util.List<DNISEmergencyCallingConfiguration> dNIS;
 
     /**
-     * @return
+     * <p>
+     * The Dialed Number Identification Service (DNIS) emergency calling configuration details.
+     * </p>
+     * 
+     * @return The Dialed Number Identification Service (DNIS) emergency calling configuration details.
      */
 
     public java.util.List<DNISEmergencyCallingConfiguration> getDNIS() {
@@ -36,7 +48,12 @@ public class EmergencyCallingConfiguration implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * The Dialed Number Identification Service (DNIS) emergency calling configuration details.
+     * </p>
+     * 
      * @param dNIS
+     *        The Dialed Number Identification Service (DNIS) emergency calling configuration details.
      */
 
     public void setDNIS(java.util.Collection<DNISEmergencyCallingConfiguration> dNIS) {
@@ -50,12 +67,16 @@ public class EmergencyCallingConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
+     * The Dialed Number Identification Service (DNIS) emergency calling configuration details.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setDNIS(java.util.Collection)} or {@link #withDNIS(java.util.Collection)} if you want to override the
      * existing values.
      * </p>
      * 
      * @param dNIS
+     *        The Dialed Number Identification Service (DNIS) emergency calling configuration details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +91,12 @@ public class EmergencyCallingConfiguration implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * The Dialed Number Identification Service (DNIS) emergency calling configuration details.
+     * </p>
+     * 
      * @param dNIS
+     *        The Dialed Number Identification Service (DNIS) emergency calling configuration details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

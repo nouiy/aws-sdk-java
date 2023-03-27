@@ -18,6 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * For Amazon Chime SDK Voice Connector groups, the Amazon Chime SDK Voice Connectors to which you route inbound calls.
+ * Includes priority configuration settings. Limit: 3 VoiceConnectorItems per Voice Connector group.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/VoiceConnectorItem" target="_top">AWS
  *      API Documentation</a>
@@ -25,12 +29,28 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class VoiceConnectorItem implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     */
     private String voiceConnectorId;
-
+    /**
+     * <p>
+     * The priority setting of a Voice Connector item. Calls are routed to hosts in priority order, with 1 as the
+     * highest priority. When hosts have equal priority, the system distributes calls among them based on their relative
+     * weight.
+     * </p>
+     */
     private Integer priority;
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      */
 
     public void setVoiceConnectorId(String voiceConnectorId) {
@@ -38,7 +58,11 @@ public class VoiceConnectorItem implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
+     * @return The Voice Connector ID.
      */
 
     public String getVoiceConnectorId() {
@@ -46,7 +70,12 @@ public class VoiceConnectorItem implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +85,16 @@ public class VoiceConnectorItem implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The priority setting of a Voice Connector item. Calls are routed to hosts in priority order, with 1 as the
+     * highest priority. When hosts have equal priority, the system distributes calls among them based on their relative
+     * weight.
+     * </p>
+     * 
      * @param priority
+     *        The priority setting of a Voice Connector item. Calls are routed to hosts in priority order, with 1 as the
+     *        highest priority. When hosts have equal priority, the system distributes calls among them based on their
+     *        relative weight.
      */
 
     public void setPriority(Integer priority) {
@@ -64,7 +102,15 @@ public class VoiceConnectorItem implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The priority setting of a Voice Connector item. Calls are routed to hosts in priority order, with 1 as the
+     * highest priority. When hosts have equal priority, the system distributes calls among them based on their relative
+     * weight.
+     * </p>
+     * 
+     * @return The priority setting of a Voice Connector item. Calls are routed to hosts in priority order, with 1 as
+     *         the highest priority. When hosts have equal priority, the system distributes calls among them based on
+     *         their relative weight.
      */
 
     public Integer getPriority() {
@@ -72,7 +118,16 @@ public class VoiceConnectorItem implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The priority setting of a Voice Connector item. Calls are routed to hosts in priority order, with 1 as the
+     * highest priority. When hosts have equal priority, the system distributes calls among them based on their relative
+     * weight.
+     * </p>
+     * 
      * @param priority
+     *        The priority setting of a Voice Connector item. Calls are routed to hosts in priority order, with 1 as the
+     *        highest priority. When hosts have equal priority, the system distributes calls among them based on their
+     *        relative weight.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

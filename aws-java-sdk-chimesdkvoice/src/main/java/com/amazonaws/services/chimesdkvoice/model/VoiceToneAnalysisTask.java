@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * A representation of an asynchronous request to perform voice tone analysis on a Voice Connector call.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/VoiceToneAnalysisTask"
  *      target="_top">AWS API Documentation</a>
@@ -25,22 +28,57 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class VoiceToneAnalysisTask implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ID of the voice tone analysis task.
+     * </p>
+     */
     private String voiceToneAnalysisTaskId;
-
+    /**
+     * <p>
+     * The status of a voice tone analysis task, <code>IN_QUEUE</code>, <code>IN_PROGRESS</code>,
+     * <code>PARTIAL_SUCCESS</code>, <code>SUCCEEDED</code>, <code>FAILED</code>, or <code>STOPPED</code>.
+     * </p>
+     */
     private String voiceToneAnalysisTaskStatus;
-
+    /**
+     * <p>
+     * The call details of a voice tone analysis task.
+     * </p>
+     */
     private CallDetails callDetails;
-
+    /**
+     * <p>
+     * The time at which a voice tone analysis task was created.
+     * </p>
+     */
     private java.util.Date createdTimestamp;
-
+    /**
+     * <p>
+     * The time at which a voice tone analysis task was updated.
+     * </p>
+     */
     private java.util.Date updatedTimestamp;
-
+    /**
+     * <p>
+     * The time at which a voice tone analysis task started.
+     * </p>
+     */
     private java.util.Date startedTimestamp;
-
+    /**
+     * <p>
+     * The status of a voice tone analysis task.
+     * </p>
+     */
     private String statusMessage;
 
     /**
+     * <p>
+     * The ID of the voice tone analysis task.
+     * </p>
+     * 
      * @param voiceToneAnalysisTaskId
+     *        The ID of the voice tone analysis task.
      */
 
     public void setVoiceToneAnalysisTaskId(String voiceToneAnalysisTaskId) {
@@ -48,7 +86,11 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the voice tone analysis task.
+     * </p>
+     * 
+     * @return The ID of the voice tone analysis task.
      */
 
     public String getVoiceToneAnalysisTaskId() {
@@ -56,7 +98,12 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The ID of the voice tone analysis task.
+     * </p>
+     * 
      * @param voiceToneAnalysisTaskId
+     *        The ID of the voice tone analysis task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -66,7 +113,14 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The status of a voice tone analysis task, <code>IN_QUEUE</code>, <code>IN_PROGRESS</code>,
+     * <code>PARTIAL_SUCCESS</code>, <code>SUCCEEDED</code>, <code>FAILED</code>, or <code>STOPPED</code>.
+     * </p>
+     * 
      * @param voiceToneAnalysisTaskStatus
+     *        The status of a voice tone analysis task, <code>IN_QUEUE</code>, <code>IN_PROGRESS</code>,
+     *        <code>PARTIAL_SUCCESS</code>, <code>SUCCEEDED</code>, <code>FAILED</code>, or <code>STOPPED</code>.
      */
 
     public void setVoiceToneAnalysisTaskStatus(String voiceToneAnalysisTaskStatus) {
@@ -74,7 +128,13 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @return
+     * <p>
+     * The status of a voice tone analysis task, <code>IN_QUEUE</code>, <code>IN_PROGRESS</code>,
+     * <code>PARTIAL_SUCCESS</code>, <code>SUCCEEDED</code>, <code>FAILED</code>, or <code>STOPPED</code>.
+     * </p>
+     * 
+     * @return The status of a voice tone analysis task, <code>IN_QUEUE</code>, <code>IN_PROGRESS</code>,
+     *         <code>PARTIAL_SUCCESS</code>, <code>SUCCEEDED</code>, <code>FAILED</code>, or <code>STOPPED</code>.
      */
 
     public String getVoiceToneAnalysisTaskStatus() {
@@ -82,7 +142,14 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The status of a voice tone analysis task, <code>IN_QUEUE</code>, <code>IN_PROGRESS</code>,
+     * <code>PARTIAL_SUCCESS</code>, <code>SUCCEEDED</code>, <code>FAILED</code>, or <code>STOPPED</code>.
+     * </p>
+     * 
      * @param voiceToneAnalysisTaskStatus
+     *        The status of a voice tone analysis task, <code>IN_QUEUE</code>, <code>IN_PROGRESS</code>,
+     *        <code>PARTIAL_SUCCESS</code>, <code>SUCCEEDED</code>, <code>FAILED</code>, or <code>STOPPED</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,7 +159,12 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The call details of a voice tone analysis task.
+     * </p>
+     * 
      * @param callDetails
+     *        The call details of a voice tone analysis task.
      */
 
     public void setCallDetails(CallDetails callDetails) {
@@ -100,7 +172,11 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @return
+     * <p>
+     * The call details of a voice tone analysis task.
+     * </p>
+     * 
+     * @return The call details of a voice tone analysis task.
      */
 
     public CallDetails getCallDetails() {
@@ -108,7 +184,12 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The call details of a voice tone analysis task.
+     * </p>
+     * 
      * @param callDetails
+     *        The call details of a voice tone analysis task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -118,7 +199,12 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The time at which a voice tone analysis task was created.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The time at which a voice tone analysis task was created.
      */
 
     public void setCreatedTimestamp(java.util.Date createdTimestamp) {
@@ -126,7 +212,11 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which a voice tone analysis task was created.
+     * </p>
+     * 
+     * @return The time at which a voice tone analysis task was created.
      */
 
     public java.util.Date getCreatedTimestamp() {
@@ -134,7 +224,12 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The time at which a voice tone analysis task was created.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The time at which a voice tone analysis task was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -144,7 +239,12 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The time at which a voice tone analysis task was updated.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The time at which a voice tone analysis task was updated.
      */
 
     public void setUpdatedTimestamp(java.util.Date updatedTimestamp) {
@@ -152,7 +252,11 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which a voice tone analysis task was updated.
+     * </p>
+     * 
+     * @return The time at which a voice tone analysis task was updated.
      */
 
     public java.util.Date getUpdatedTimestamp() {
@@ -160,7 +264,12 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The time at which a voice tone analysis task was updated.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The time at which a voice tone analysis task was updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -170,7 +279,12 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The time at which a voice tone analysis task started.
+     * </p>
+     * 
      * @param startedTimestamp
+     *        The time at which a voice tone analysis task started.
      */
 
     public void setStartedTimestamp(java.util.Date startedTimestamp) {
@@ -178,7 +292,11 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which a voice tone analysis task started.
+     * </p>
+     * 
+     * @return The time at which a voice tone analysis task started.
      */
 
     public java.util.Date getStartedTimestamp() {
@@ -186,7 +304,12 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The time at which a voice tone analysis task started.
+     * </p>
+     * 
      * @param startedTimestamp
+     *        The time at which a voice tone analysis task started.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -196,7 +319,12 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The status of a voice tone analysis task.
+     * </p>
+     * 
      * @param statusMessage
+     *        The status of a voice tone analysis task.
      */
 
     public void setStatusMessage(String statusMessage) {
@@ -204,7 +332,11 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @return
+     * <p>
+     * The status of a voice tone analysis task.
+     * </p>
+     * 
+     * @return The status of a voice tone analysis task.
      */
 
     public String getStatusMessage() {
@@ -212,7 +344,12 @@ public class VoiceToneAnalysisTask implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The status of a voice tone analysis task.
+     * </p>
+     * 
      * @param statusMessage
+     *        The status of a voice tone analysis task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

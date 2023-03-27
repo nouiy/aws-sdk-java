@@ -27,18 +27,18 @@ public class GetApplicationRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The name or ID of the application.
+     * The name, ID, or ARN of the application.
      * </p>
      */
     private String application;
 
     /**
      * <p>
-     * The name or ID of the application.
+     * The name, ID, or ARN of the application.
      * </p>
      * 
      * @param application
-     *        The name or ID of the application.
+     *        The name, ID, or ARN of the application.
      */
 
     public void setApplication(String application) {
@@ -47,10 +47,10 @@ public class GetApplicationRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The name or ID of the application.
+     * The name, ID, or ARN of the application.
      * </p>
      * 
-     * @return The name or ID of the application.
+     * @return The name, ID, or ARN of the application.
      */
 
     public String getApplication() {
@@ -59,11 +59,11 @@ public class GetApplicationRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The name or ID of the application.
+     * The name, ID, or ARN of the application.
      * </p>
      * 
      * @param application
-     *        The name or ID of the application.
+     *        The name, ID, or ARN of the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

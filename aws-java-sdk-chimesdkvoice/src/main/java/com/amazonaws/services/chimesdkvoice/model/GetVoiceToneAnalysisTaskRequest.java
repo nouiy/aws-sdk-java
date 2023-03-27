@@ -25,14 +25,32 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     */
     private String voiceConnectorId;
-
+    /**
+     * <p>
+     * The ID of the voice tone anlysis task.
+     * </p>
+     */
     private String voiceToneAnalysisTaskId;
-
+    /**
+     * <p>
+     * Specifies whether the voice being analyzed is the caller (originator) or the callee (responder).
+     * </p>
+     */
     private Boolean isCaller;
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      */
 
     public void setVoiceConnectorId(String voiceConnectorId) {
@@ -40,7 +58,11 @@ public class GetVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
+     * @return The Voice Connector ID.
      */
 
     public String getVoiceConnectorId() {
@@ -48,7 +70,12 @@ public class GetVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +85,12 @@ public class GetVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The ID of the voice tone anlysis task.
+     * </p>
+     * 
      * @param voiceToneAnalysisTaskId
+     *        The ID of the voice tone anlysis task.
      */
 
     public void setVoiceToneAnalysisTaskId(String voiceToneAnalysisTaskId) {
@@ -66,7 +98,11 @@ public class GetVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the voice tone anlysis task.
+     * </p>
+     * 
+     * @return The ID of the voice tone anlysis task.
      */
 
     public String getVoiceToneAnalysisTaskId() {
@@ -74,7 +110,12 @@ public class GetVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The ID of the voice tone anlysis task.
+     * </p>
+     * 
      * @param voiceToneAnalysisTaskId
+     *        The ID of the voice tone anlysis task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,7 +125,12 @@ public class GetVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * Specifies whether the voice being analyzed is the caller (originator) or the callee (responder).
+     * </p>
+     * 
      * @param isCaller
+     *        Specifies whether the voice being analyzed is the caller (originator) or the callee (responder).
      */
 
     public void setIsCaller(Boolean isCaller) {
@@ -92,7 +138,11 @@ public class GetVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies whether the voice being analyzed is the caller (originator) or the callee (responder).
+     * </p>
+     * 
+     * @return Specifies whether the voice being analyzed is the caller (originator) or the callee (responder).
      */
 
     public Boolean getIsCaller() {
@@ -100,7 +150,12 @@ public class GetVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * Specifies whether the voice being analyzed is the caller (originator) or the callee (responder).
+     * </p>
+     * 
      * @param isCaller
+     *        Specifies whether the voice being analyzed is the caller (originator) or the callee (responder).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -110,7 +165,11 @@ public class GetVoiceToneAnalysisTaskRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * Specifies whether the voice being analyzed is the caller (originator) or the callee (responder).
+     * </p>
+     * 
+     * @return Specifies whether the voice being analyzed is the caller (originator) or the callee (responder).
      */
 
     public Boolean isCaller() {

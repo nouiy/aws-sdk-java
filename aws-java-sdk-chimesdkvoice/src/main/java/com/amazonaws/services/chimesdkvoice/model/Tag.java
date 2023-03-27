@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * Describes a tag applied to a resource.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/Tag" target="_top">AWS API
  *      Documentation</a>
@@ -25,12 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Tag implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The tag's key.
+     * </p>
+     */
     private String key;
-
+    /**
+     * <p>
+     * The tag's value.
+     * </p>
+     */
     private String value;
 
     /**
+     * <p>
+     * The tag's key.
+     * </p>
+     * 
      * @param key
+     *        The tag's key.
      */
 
     public void setKey(String key) {
@@ -38,7 +55,11 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The tag's key.
+     * </p>
+     * 
+     * @return The tag's key.
      */
 
     public String getKey() {
@@ -46,7 +67,12 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The tag's key.
+     * </p>
+     * 
      * @param key
+     *        The tag's key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +82,12 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The tag's value.
+     * </p>
+     * 
      * @param value
+     *        The tag's value.
      */
 
     public void setValue(String value) {
@@ -64,7 +95,11 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The tag's value.
+     * </p>
+     * 
+     * @return The tag's value.
      */
 
     public String getValue() {
@@ -72,7 +107,12 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The tag's value.
+     * </p>
+     * 
      * @param value
+     *        The tag's value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

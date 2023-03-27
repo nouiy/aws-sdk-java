@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The configuration for a call analytics task.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/MediaInsightsConfiguration"
  *      target="_top">AWS API Documentation</a>
@@ -25,12 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class MediaInsightsConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Denotes the configration as enabled or disabled.
+     * </p>
+     */
     private Boolean disabled;
-
+    /**
+     * <p>
+     * The configuration's ARN.
+     * </p>
+     */
     private String configurationArn;
 
     /**
+     * <p>
+     * Denotes the configration as enabled or disabled.
+     * </p>
+     * 
      * @param disabled
+     *        Denotes the configration as enabled or disabled.
      */
 
     public void setDisabled(Boolean disabled) {
@@ -38,7 +55,11 @@ public class MediaInsightsConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
-     * @return
+     * <p>
+     * Denotes the configration as enabled or disabled.
+     * </p>
+     * 
+     * @return Denotes the configration as enabled or disabled.
      */
 
     public Boolean getDisabled() {
@@ -46,7 +67,12 @@ public class MediaInsightsConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * Denotes the configration as enabled or disabled.
+     * </p>
+     * 
      * @param disabled
+     *        Denotes the configration as enabled or disabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +82,11 @@ public class MediaInsightsConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
-     * @return
+     * <p>
+     * Denotes the configration as enabled or disabled.
+     * </p>
+     * 
+     * @return Denotes the configration as enabled or disabled.
      */
 
     public Boolean isDisabled() {
@@ -64,7 +94,12 @@ public class MediaInsightsConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * The configuration's ARN.
+     * </p>
+     * 
      * @param configurationArn
+     *        The configuration's ARN.
      */
 
     public void setConfigurationArn(String configurationArn) {
@@ -72,7 +107,11 @@ public class MediaInsightsConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
-     * @return
+     * <p>
+     * The configuration's ARN.
+     * </p>
+     * 
+     * @return The configuration's ARN.
      */
 
     public String getConfigurationArn() {
@@ -80,7 +119,12 @@ public class MediaInsightsConfiguration implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * The configuration's ARN.
+     * </p>
+     * 
      * @param configurationArn
+     *        The configuration's ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

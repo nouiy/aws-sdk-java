@@ -25,10 +25,20 @@ import javax.annotation.Generated;
 public class GetSipMediaApplicationAlexaSkillConfigurationResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements
         Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Returns the Alexa Skill configuration.
+     * </p>
+     */
     private SipMediaApplicationAlexaSkillConfiguration sipMediaApplicationAlexaSkillConfiguration;
 
     /**
+     * <p>
+     * Returns the Alexa Skill configuration.
+     * </p>
+     * 
      * @param sipMediaApplicationAlexaSkillConfiguration
+     *        Returns the Alexa Skill configuration.
      */
 
     public void setSipMediaApplicationAlexaSkillConfiguration(SipMediaApplicationAlexaSkillConfiguration sipMediaApplicationAlexaSkillConfiguration) {
@@ -36,7 +46,11 @@ public class GetSipMediaApplicationAlexaSkillConfigurationResult extends com.ama
     }
 
     /**
-     * @return
+     * <p>
+     * Returns the Alexa Skill configuration.
+     * </p>
+     * 
+     * @return Returns the Alexa Skill configuration.
      */
 
     public SipMediaApplicationAlexaSkillConfiguration getSipMediaApplicationAlexaSkillConfiguration() {
@@ -44,7 +58,12 @@ public class GetSipMediaApplicationAlexaSkillConfigurationResult extends com.ama
     }
 
     /**
+     * <p>
+     * Returns the Alexa Skill configuration.
+     * </p>
+     * 
      * @param sipMediaApplicationAlexaSkillConfiguration
+     *        Returns the Alexa Skill configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

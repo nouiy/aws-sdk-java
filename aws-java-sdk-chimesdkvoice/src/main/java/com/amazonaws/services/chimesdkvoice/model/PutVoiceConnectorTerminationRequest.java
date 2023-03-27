@@ -25,12 +25,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PutVoiceConnectorTerminationRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     */
     private String voiceConnectorId;
-
+    /**
+     * <p>
+     * The termination settings to be updated.
+     * </p>
+     */
     private Termination termination;
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      */
 
     public void setVoiceConnectorId(String voiceConnectorId) {
@@ -38,7 +52,11 @@ public class PutVoiceConnectorTerminationRequest extends com.amazonaws.AmazonWeb
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
+     * @return The Voice Connector ID.
      */
 
     public String getVoiceConnectorId() {
@@ -46,7 +64,12 @@ public class PutVoiceConnectorTerminationRequest extends com.amazonaws.AmazonWeb
     }
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +79,12 @@ public class PutVoiceConnectorTerminationRequest extends com.amazonaws.AmazonWeb
     }
 
     /**
+     * <p>
+     * The termination settings to be updated.
+     * </p>
+     * 
      * @param termination
+     *        The termination settings to be updated.
      */
 
     public void setTermination(Termination termination) {
@@ -64,7 +92,11 @@ public class PutVoiceConnectorTerminationRequest extends com.amazonaws.AmazonWeb
     }
 
     /**
-     * @return
+     * <p>
+     * The termination settings to be updated.
+     * </p>
+     * 
+     * @return The termination settings to be updated.
      */
 
     public Termination getTermination() {
@@ -72,7 +104,12 @@ public class PutVoiceConnectorTerminationRequest extends com.amazonaws.AmazonWeb
     }
 
     /**
+     * <p>
+     * The termination settings to be updated.
+     * </p>
+     * 
      * @param termination
+     *        The termination settings to be updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

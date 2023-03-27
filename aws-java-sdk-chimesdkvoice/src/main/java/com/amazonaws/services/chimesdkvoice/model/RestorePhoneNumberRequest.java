@@ -25,10 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RestorePhoneNumberRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The ID of the phone number being restored.
+     * </p>
+     */
     private String phoneNumberId;
 
     /**
+     * <p>
+     * The ID of the phone number being restored.
+     * </p>
+     * 
      * @param phoneNumberId
+     *        The ID of the phone number being restored.
      */
 
     public void setPhoneNumberId(String phoneNumberId) {
@@ -36,7 +46,11 @@ public class RestorePhoneNumberRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the phone number being restored.
+     * </p>
+     * 
+     * @return The ID of the phone number being restored.
      */
 
     public String getPhoneNumberId() {
@@ -44,7 +58,12 @@ public class RestorePhoneNumberRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * The ID of the phone number being restored.
+     * </p>
+     * 
      * @param phoneNumberId
+     *        The ID of the phone number being restored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

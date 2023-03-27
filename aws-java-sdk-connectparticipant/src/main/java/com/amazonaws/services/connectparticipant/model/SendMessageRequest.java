@@ -27,8 +27,8 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>, and
-     * <code>application/json</code>.
+     * The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>,
+     * <code>application/json</code>, and <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      * </p>
      */
     private String contentType;
@@ -46,6 +46,12 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <li>
      * <p>
      * For <code>application/json</code>, the Length Constraints are Minimum of 1, Maximum of 12000.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>application/vnd.amazonaws.connect.message.interactive.response</code>, the Length Constraints are
+     * Minimum of 1, Maximum of 12288.
      * </p>
      * </li>
      * </ul>
@@ -69,13 +75,14 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>, and
-     * <code>application/json</code>.
+     * The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>,
+     * <code>application/json</code>, and <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      * </p>
      * 
      * @param contentType
-     *        The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>, and
-     *        <code>application/json</code>.
+     *        The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>,
+     *        <code>application/json</code>, and
+     *        <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      */
 
     public void setContentType(String contentType) {
@@ -84,12 +91,13 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>, and
-     * <code>application/json</code>.
+     * The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>,
+     * <code>application/json</code>, and <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      * </p>
      * 
-     * @return The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>, and
-     *         <code>application/json</code>.
+     * @return The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>,
+     *         <code>application/json</code>, and
+     *         <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      */
 
     public String getContentType() {
@@ -98,13 +106,14 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>, and
-     * <code>application/json</code>.
+     * The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>,
+     * <code>application/json</code>, and <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      * </p>
      * 
      * @param contentType
-     *        The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>, and
-     *        <code>application/json</code>.
+     *        The type of the content. Supported types are <code>text/plain</code>, <code>text/markdown</code>,
+     *        <code>application/json</code>, and
+     *        <code>application/vnd.amazonaws.connect.message.interactive.response</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,6 +138,12 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      * For <code>application/json</code>, the Length Constraints are Minimum of 1, Maximum of 12000.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For <code>application/vnd.amazonaws.connect.message.interactive.response</code>, the Length Constraints are
+     * Minimum of 1, Maximum of 12288.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param content
@@ -143,6 +158,12 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        For <code>application/json</code>, the Length Constraints are Minimum of 1, Maximum of 12000.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>application/vnd.amazonaws.connect.message.interactive.response</code>, the Length Constraints
+     *        are Minimum of 1, Maximum of 12288.
      *        </p>
      *        </li>
      */
@@ -167,6 +188,12 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      * For <code>application/json</code>, the Length Constraints are Minimum of 1, Maximum of 12000.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For <code>application/vnd.amazonaws.connect.message.interactive.response</code>, the Length Constraints are
+     * Minimum of 1, Maximum of 12288.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The content of the message. </p>
@@ -180,6 +207,12 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         <li>
      *         <p>
      *         For <code>application/json</code>, the Length Constraints are Minimum of 1, Maximum of 12000.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For <code>application/vnd.amazonaws.connect.message.interactive.response</code>, the Length Constraints
+     *         are Minimum of 1, Maximum of 12288.
      *         </p>
      *         </li>
      */
@@ -204,6 +237,12 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      * For <code>application/json</code>, the Length Constraints are Minimum of 1, Maximum of 12000.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For <code>application/vnd.amazonaws.connect.message.interactive.response</code>, the Length Constraints are
+     * Minimum of 1, Maximum of 12288.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param content
@@ -218,6 +257,12 @@ public class SendMessageRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <li>
      *        <p>
      *        For <code>application/json</code>, the Length Constraints are Minimum of 1, Maximum of 12000.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>application/vnd.amazonaws.connect.message.interactive.response</code>, the Length Constraints
+     *        are Minimum of 1, Maximum of 12288.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

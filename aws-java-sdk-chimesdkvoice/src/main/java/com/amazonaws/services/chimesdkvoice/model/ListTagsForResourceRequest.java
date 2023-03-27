@@ -25,10 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The resource ARN.
+     * </p>
+     */
     private String resourceARN;
 
     /**
+     * <p>
+     * The resource ARN.
+     * </p>
+     * 
      * @param resourceARN
+     *        The resource ARN.
      */
 
     public void setResourceARN(String resourceARN) {
@@ -36,7 +46,11 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * @return
+     * <p>
+     * The resource ARN.
+     * </p>
+     * 
+     * @return The resource ARN.
      */
 
     public String getResourceARN() {
@@ -44,7 +58,12 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The resource ARN.
+     * </p>
+     * 
      * @param resourceARN
+     *        The resource ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

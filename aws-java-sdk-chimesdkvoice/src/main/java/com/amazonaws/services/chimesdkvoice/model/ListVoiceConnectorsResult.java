@@ -23,12 +23,25 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListVoiceConnectorsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The details of the Voice Connectors.
+     * </p>
+     */
     private java.util.List<VoiceConnector> voiceConnectors;
-
+    /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * @return
+     * <p>
+     * The details of the Voice Connectors.
+     * </p>
+     * 
+     * @return The details of the Voice Connectors.
      */
 
     public java.util.List<VoiceConnector> getVoiceConnectors() {
@@ -36,7 +49,12 @@ public class ListVoiceConnectorsResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * The details of the Voice Connectors.
+     * </p>
+     * 
      * @param voiceConnectors
+     *        The details of the Voice Connectors.
      */
 
     public void setVoiceConnectors(java.util.Collection<VoiceConnector> voiceConnectors) {
@@ -50,12 +68,16 @@ public class ListVoiceConnectorsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
+     * The details of the Voice Connectors.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setVoiceConnectors(java.util.Collection)} or {@link #withVoiceConnectors(java.util.Collection)} if you
      * want to override the existing values.
      * </p>
      * 
      * @param voiceConnectors
+     *        The details of the Voice Connectors.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +92,12 @@ public class ListVoiceConnectorsResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * The details of the Voice Connectors.
+     * </p>
+     * 
      * @param voiceConnectors
+     *        The details of the Voice Connectors.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,7 +107,12 @@ public class ListVoiceConnectorsResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -88,7 +120,11 @@ public class ListVoiceConnectorsResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * @return
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
+     * @return The token used to return the next page of results.
      */
 
     public String getNextToken() {
@@ -96,7 +132,12 @@ public class ListVoiceConnectorsResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

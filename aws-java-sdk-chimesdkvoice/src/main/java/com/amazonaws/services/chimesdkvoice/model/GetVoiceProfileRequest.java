@@ -25,10 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetVoiceProfileRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The voice profile ID.
+     * </p>
+     */
     private String voiceProfileId;
 
     /**
+     * <p>
+     * The voice profile ID.
+     * </p>
+     * 
      * @param voiceProfileId
+     *        The voice profile ID.
      */
 
     public void setVoiceProfileId(String voiceProfileId) {
@@ -36,7 +46,11 @@ public class GetVoiceProfileRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
-     * @return
+     * <p>
+     * The voice profile ID.
+     * </p>
+     * 
+     * @return The voice profile ID.
      */
 
     public String getVoiceProfileId() {
@@ -44,7 +58,12 @@ public class GetVoiceProfileRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * The voice profile ID.
+     * </p>
+     * 
      * @param voiceProfileId
+     *        The voice profile ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

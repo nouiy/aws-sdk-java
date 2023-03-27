@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetVoiceConnectorTerminationResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The termination setting details.
+     * </p>
+     */
     private Termination termination;
 
     /**
+     * <p>
+     * The termination setting details.
+     * </p>
+     * 
      * @param termination
+     *        The termination setting details.
      */
 
     public void setTermination(Termination termination) {
@@ -34,7 +44,11 @@ public class GetVoiceConnectorTerminationResult extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * @return
+     * <p>
+     * The termination setting details.
+     * </p>
+     * 
+     * @return The termination setting details.
      */
 
     public Termination getTermination() {
@@ -42,7 +56,12 @@ public class GetVoiceConnectorTerminationResult extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * The termination setting details.
+     * </p>
+     * 
      * @param termination
+     *        The termination setting details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

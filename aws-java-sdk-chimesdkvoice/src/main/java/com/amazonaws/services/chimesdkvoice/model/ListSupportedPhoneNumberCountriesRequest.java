@@ -25,10 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListSupportedPhoneNumberCountriesRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The phone number product type.
+     * </p>
+     */
     private String productType;
 
     /**
+     * <p>
+     * The phone number product type.
+     * </p>
+     * 
      * @param productType
+     *        The phone number product type.
      * @see PhoneNumberProductType
      */
 
@@ -37,7 +47,11 @@ public class ListSupportedPhoneNumberCountriesRequest extends com.amazonaws.Amaz
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number product type.
+     * </p>
+     * 
+     * @return The phone number product type.
      * @see PhoneNumberProductType
      */
 
@@ -46,7 +60,12 @@ public class ListSupportedPhoneNumberCountriesRequest extends com.amazonaws.Amaz
     }
 
     /**
+     * <p>
+     * The phone number product type.
+     * </p>
+     * 
      * @param productType
+     *        The phone number product type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberProductType
      */
@@ -57,7 +76,12 @@ public class ListSupportedPhoneNumberCountriesRequest extends com.amazonaws.Amaz
     }
 
     /**
+     * <p>
+     * The phone number product type.
+     * </p>
+     * 
      * @param productType
+     *        The phone number product type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberProductType
      */

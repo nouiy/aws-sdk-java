@@ -60,6 +60,12 @@ public class FraudsterJsonUnmarshaller implements Unmarshaller<Fraudster, JsonUn
                     context.nextToken();
                     fraudster.setGeneratedFraudsterId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("WatchlistIds", targetDepth)) {
+                    context.nextToken();
+                    fraudster.setWatchlistIds(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

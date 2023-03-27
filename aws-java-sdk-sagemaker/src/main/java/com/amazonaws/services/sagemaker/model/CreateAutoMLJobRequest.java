@@ -34,8 +34,10 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * An array of channel objects that describes the input data and its location. Each channel is a named input source.
-     * Similar to <code>InputDataConfig</code> supported by . Format(s) supported: CSV, Parquet. A minimum of 500 rows
-     * is required for the training dataset. There is not a minimum number of rows required for the validation dataset.
+     * Similar to <code>InputDataConfig</code> supported by
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html">HyperParameterTrainingJobDefinition</a> </code>
+     * . Format(s) supported: CSV, Parquet. A minimum of 500 rows is required for the training dataset. There is not a
+     * minimum number of rows required for the validation dataset.
      * </p>
      */
     private java.util.List<AutoMLChannel> inputDataConfig;
@@ -48,17 +50,19 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
     private AutoMLOutputDataConfig outputDataConfig;
     /**
      * <p>
-     * Defines the type of supervised learning problem available for the candidates. For more information, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html">
-     * Amazon SageMaker Autopilot problem types and algorithm support</a>.
+     * Defines the type of supervised learning problem available for the candidates. For more information, see <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types">
+     * Amazon SageMaker Autopilot problem types</a>.
      * </p>
      */
     private String problemType;
     /**
      * <p>
      * Defines the objective metric used to measure the predictive quality of an AutoML job. You provide an
-     * <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it. For , only
-     * <code>Accuracy</code> is supported.
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">AutoMLJobObjective$MetricName</a> </code>
+     * and Autopilot infers whether to minimize or maximize it. For
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a> </code>
+     * , only <code>Accuracy</code> is supported.
      * </p>
      */
     private AutoMLJobObjective autoMLJobObjective;
@@ -140,14 +144,17 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * An array of channel objects that describes the input data and its location. Each channel is a named input source.
-     * Similar to <code>InputDataConfig</code> supported by . Format(s) supported: CSV, Parquet. A minimum of 500 rows
-     * is required for the training dataset. There is not a minimum number of rows required for the validation dataset.
+     * Similar to <code>InputDataConfig</code> supported by
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html">HyperParameterTrainingJobDefinition</a> </code>
+     * . Format(s) supported: CSV, Parquet. A minimum of 500 rows is required for the training dataset. There is not a
+     * minimum number of rows required for the validation dataset.
      * </p>
      * 
      * @return An array of channel objects that describes the input data and its location. Each channel is a named input
-     *         source. Similar to <code>InputDataConfig</code> supported by . Format(s) supported: CSV, Parquet. A
-     *         minimum of 500 rows is required for the training dataset. There is not a minimum number of rows required
-     *         for the validation dataset.
+     *         source. Similar to <code>InputDataConfig</code> supported by
+     *         <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html">HyperParameterTrainingJobDefinition</a> </code>
+     *         . Format(s) supported: CSV, Parquet. A minimum of 500 rows is required for the training dataset. There is
+     *         not a minimum number of rows required for the validation dataset.
      */
 
     public java.util.List<AutoMLChannel> getInputDataConfig() {
@@ -157,15 +164,18 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * An array of channel objects that describes the input data and its location. Each channel is a named input source.
-     * Similar to <code>InputDataConfig</code> supported by . Format(s) supported: CSV, Parquet. A minimum of 500 rows
-     * is required for the training dataset. There is not a minimum number of rows required for the validation dataset.
+     * Similar to <code>InputDataConfig</code> supported by
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html">HyperParameterTrainingJobDefinition</a> </code>
+     * . Format(s) supported: CSV, Parquet. A minimum of 500 rows is required for the training dataset. There is not a
+     * minimum number of rows required for the validation dataset.
      * </p>
      * 
      * @param inputDataConfig
      *        An array of channel objects that describes the input data and its location. Each channel is a named input
-     *        source. Similar to <code>InputDataConfig</code> supported by . Format(s) supported: CSV, Parquet. A
-     *        minimum of 500 rows is required for the training dataset. There is not a minimum number of rows required
-     *        for the validation dataset.
+     *        source. Similar to <code>InputDataConfig</code> supported by
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html">HyperParameterTrainingJobDefinition</a> </code>
+     *        . Format(s) supported: CSV, Parquet. A minimum of 500 rows is required for the training dataset. There is
+     *        not a minimum number of rows required for the validation dataset.
      */
 
     public void setInputDataConfig(java.util.Collection<AutoMLChannel> inputDataConfig) {
@@ -180,8 +190,10 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * An array of channel objects that describes the input data and its location. Each channel is a named input source.
-     * Similar to <code>InputDataConfig</code> supported by . Format(s) supported: CSV, Parquet. A minimum of 500 rows
-     * is required for the training dataset. There is not a minimum number of rows required for the validation dataset.
+     * Similar to <code>InputDataConfig</code> supported by
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html">HyperParameterTrainingJobDefinition</a> </code>
+     * . Format(s) supported: CSV, Parquet. A minimum of 500 rows is required for the training dataset. There is not a
+     * minimum number of rows required for the validation dataset.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -191,9 +203,10 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param inputDataConfig
      *        An array of channel objects that describes the input data and its location. Each channel is a named input
-     *        source. Similar to <code>InputDataConfig</code> supported by . Format(s) supported: CSV, Parquet. A
-     *        minimum of 500 rows is required for the training dataset. There is not a minimum number of rows required
-     *        for the validation dataset.
+     *        source. Similar to <code>InputDataConfig</code> supported by
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html">HyperParameterTrainingJobDefinition</a> </code>
+     *        . Format(s) supported: CSV, Parquet. A minimum of 500 rows is required for the training dataset. There is
+     *        not a minimum number of rows required for the validation dataset.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -210,15 +223,18 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * An array of channel objects that describes the input data and its location. Each channel is a named input source.
-     * Similar to <code>InputDataConfig</code> supported by . Format(s) supported: CSV, Parquet. A minimum of 500 rows
-     * is required for the training dataset. There is not a minimum number of rows required for the validation dataset.
+     * Similar to <code>InputDataConfig</code> supported by
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html">HyperParameterTrainingJobDefinition</a> </code>
+     * . Format(s) supported: CSV, Parquet. A minimum of 500 rows is required for the training dataset. There is not a
+     * minimum number of rows required for the validation dataset.
      * </p>
      * 
      * @param inputDataConfig
      *        An array of channel objects that describes the input data and its location. Each channel is a named input
-     *        source. Similar to <code>InputDataConfig</code> supported by . Format(s) supported: CSV, Parquet. A
-     *        minimum of 500 rows is required for the training dataset. There is not a minimum number of rows required
-     *        for the validation dataset.
+     *        source. Similar to <code>InputDataConfig</code> supported by
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_HyperParameterTrainingJobDefinition.html">HyperParameterTrainingJobDefinition</a> </code>
+     *        . Format(s) supported: CSV, Parquet. A minimum of 500 rows is required for the training dataset. There is
+     *        not a minimum number of rows required for the validation dataset.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -275,16 +291,16 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Defines the type of supervised learning problem available for the candidates. For more information, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html">
-     * Amazon SageMaker Autopilot problem types and algorithm support</a>.
+     * Defines the type of supervised learning problem available for the candidates. For more information, see <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types">
+     * Amazon SageMaker Autopilot problem types</a>.
      * </p>
      * 
      * @param problemType
      *        Defines the type of supervised learning problem available for the candidates. For more information, see <a
      *        href=
-     *        "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html">
-     *        Amazon SageMaker Autopilot problem types and algorithm support</a>.
+     *        "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types"
+     *        > Amazon SageMaker Autopilot problem types</a>.
      * @see ProblemType
      */
 
@@ -294,15 +310,15 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Defines the type of supervised learning problem available for the candidates. For more information, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html">
-     * Amazon SageMaker Autopilot problem types and algorithm support</a>.
+     * Defines the type of supervised learning problem available for the candidates. For more information, see <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types">
+     * Amazon SageMaker Autopilot problem types</a>.
      * </p>
      * 
      * @return Defines the type of supervised learning problem available for the candidates. For more information, see
      *         <a href=
-     *         "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html"
-     *         > Amazon SageMaker Autopilot problem types and algorithm support</a>.
+     *         "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types"
+     *         > Amazon SageMaker Autopilot problem types</a>.
      * @see ProblemType
      */
 
@@ -312,16 +328,16 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Defines the type of supervised learning problem available for the candidates. For more information, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html">
-     * Amazon SageMaker Autopilot problem types and algorithm support</a>.
+     * Defines the type of supervised learning problem available for the candidates. For more information, see <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types">
+     * Amazon SageMaker Autopilot problem types</a>.
      * </p>
      * 
      * @param problemType
      *        Defines the type of supervised learning problem available for the candidates. For more information, see <a
      *        href=
-     *        "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html">
-     *        Amazon SageMaker Autopilot problem types and algorithm support</a>.
+     *        "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types"
+     *        > Amazon SageMaker Autopilot problem types</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ProblemType
      */
@@ -333,16 +349,16 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Defines the type of supervised learning problem available for the candidates. For more information, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html">
-     * Amazon SageMaker Autopilot problem types and algorithm support</a>.
+     * Defines the type of supervised learning problem available for the candidates. For more information, see <a href=
+     * "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types">
+     * Amazon SageMaker Autopilot problem types</a>.
      * </p>
      * 
      * @param problemType
      *        Defines the type of supervised learning problem available for the candidates. For more information, see <a
      *        href=
-     *        "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html">
-     *        Amazon SageMaker Autopilot problem types and algorithm support</a>.
+     *        "https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-datasets-problem-types.html#autopilot-problem-types"
+     *        > Amazon SageMaker Autopilot problem types</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ProblemType
      */
@@ -355,14 +371,18 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Defines the objective metric used to measure the predictive quality of an AutoML job. You provide an
-     * <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it. For , only
-     * <code>Accuracy</code> is supported.
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">AutoMLJobObjective$MetricName</a> </code>
+     * and Autopilot infers whether to minimize or maximize it. For
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a> </code>
+     * , only <code>Accuracy</code> is supported.
      * </p>
      * 
      * @param autoMLJobObjective
      *        Defines the objective metric used to measure the predictive quality of an AutoML job. You provide an
-     *        <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it. For , only
-     *        <code>Accuracy</code> is supported.
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">AutoMLJobObjective$MetricName</a> </code>
+     *        and Autopilot infers whether to minimize or maximize it. For
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a> </code>
+     *        , only <code>Accuracy</code> is supported.
      */
 
     public void setAutoMLJobObjective(AutoMLJobObjective autoMLJobObjective) {
@@ -372,13 +392,17 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Defines the objective metric used to measure the predictive quality of an AutoML job. You provide an
-     * <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it. For , only
-     * <code>Accuracy</code> is supported.
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">AutoMLJobObjective$MetricName</a> </code>
+     * and Autopilot infers whether to minimize or maximize it. For
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a> </code>
+     * , only <code>Accuracy</code> is supported.
      * </p>
      * 
      * @return Defines the objective metric used to measure the predictive quality of an AutoML job. You provide an
-     *         <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it. For , only
-     *         <code>Accuracy</code> is supported.
+     *         <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">AutoMLJobObjective$MetricName</a> </code>
+     *         and Autopilot infers whether to minimize or maximize it. For
+     *         <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a> </code>
+     *         , only <code>Accuracy</code> is supported.
      */
 
     public AutoMLJobObjective getAutoMLJobObjective() {
@@ -388,14 +412,18 @@ public class CreateAutoMLJobRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Defines the objective metric used to measure the predictive quality of an AutoML job. You provide an
-     * <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it. For , only
-     * <code>Accuracy</code> is supported.
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">AutoMLJobObjective$MetricName</a> </code>
+     * and Autopilot infers whether to minimize or maximize it. For
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a> </code>
+     * , only <code>Accuracy</code> is supported.
      * </p>
      * 
      * @param autoMLJobObjective
      *        Defines the objective metric used to measure the predictive quality of an AutoML job. You provide an
-     *        <a>AutoMLJobObjective$MetricName</a> and Autopilot infers whether to minimize or maximize it. For , only
-     *        <code>Accuracy</code> is supported.
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AutoMLJobObjective.html">AutoMLJobObjective$MetricName</a> </code>
+     *        and Autopilot infers whether to minimize or maximize it. For
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAutoMLJobV2.html">CreateAutoMLJobV2</a> </code>
+     *        , only <code>Accuracy</code> is supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

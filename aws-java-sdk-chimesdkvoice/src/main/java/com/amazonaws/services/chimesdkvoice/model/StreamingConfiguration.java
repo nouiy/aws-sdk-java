@@ -18,6 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The streaming configuration associated with an Amazon Chime SDK Voice Connector. Specifies whether media streaming is
+ * enabled for sending to Amazon Kinesis, and shows the retention period for the Amazon Kinesis data, in hours.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StreamingConfiguration"
  *      target="_top">AWS API Documentation</a>
@@ -25,16 +29,38 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class StreamingConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The amount of time, in hours, to the Kinesis data.
+     * </p>
+     */
     private Integer dataRetentionInHours;
-
+    /**
+     * <p>
+     * When true, streaming to Kinesis is off.
+     * </p>
+     */
     private Boolean disabled;
-
+    /**
+     * <p>
+     * The streaming notification targets.
+     * </p>
+     */
     private java.util.List<StreamingNotificationTarget> streamingNotificationTargets;
-
+    /**
+     * <p>
+     * The call analytics configuration.
+     * </p>
+     */
     private MediaInsightsConfiguration mediaInsightsConfiguration;
 
     /**
+     * <p>
+     * The amount of time, in hours, to the Kinesis data.
+     * </p>
+     * 
      * @param dataRetentionInHours
+     *        The amount of time, in hours, to the Kinesis data.
      */
 
     public void setDataRetentionInHours(Integer dataRetentionInHours) {
@@ -42,7 +68,11 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
-     * @return
+     * <p>
+     * The amount of time, in hours, to the Kinesis data.
+     * </p>
+     * 
+     * @return The amount of time, in hours, to the Kinesis data.
      */
 
     public Integer getDataRetentionInHours() {
@@ -50,7 +80,12 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The amount of time, in hours, to the Kinesis data.
+     * </p>
+     * 
      * @param dataRetentionInHours
+     *        The amount of time, in hours, to the Kinesis data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -60,7 +95,12 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * When true, streaming to Kinesis is off.
+     * </p>
+     * 
      * @param disabled
+     *        When true, streaming to Kinesis is off.
      */
 
     public void setDisabled(Boolean disabled) {
@@ -68,7 +108,11 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
-     * @return
+     * <p>
+     * When true, streaming to Kinesis is off.
+     * </p>
+     * 
+     * @return When true, streaming to Kinesis is off.
      */
 
     public Boolean getDisabled() {
@@ -76,7 +120,12 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * When true, streaming to Kinesis is off.
+     * </p>
+     * 
      * @param disabled
+     *        When true, streaming to Kinesis is off.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,7 +135,11 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
-     * @return
+     * <p>
+     * When true, streaming to Kinesis is off.
+     * </p>
+     * 
+     * @return When true, streaming to Kinesis is off.
      */
 
     public Boolean isDisabled() {
@@ -94,7 +147,11 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
-     * @return
+     * <p>
+     * The streaming notification targets.
+     * </p>
+     * 
+     * @return The streaming notification targets.
      */
 
     public java.util.List<StreamingNotificationTarget> getStreamingNotificationTargets() {
@@ -102,7 +159,12 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The streaming notification targets.
+     * </p>
+     * 
      * @param streamingNotificationTargets
+     *        The streaming notification targets.
      */
 
     public void setStreamingNotificationTargets(java.util.Collection<StreamingNotificationTarget> streamingNotificationTargets) {
@@ -116,12 +178,16 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
 
     /**
      * <p>
+     * The streaming notification targets.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setStreamingNotificationTargets(java.util.Collection)} or
      * {@link #withStreamingNotificationTargets(java.util.Collection)} if you want to override the existing values.
      * </p>
      * 
      * @param streamingNotificationTargets
+     *        The streaming notification targets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -136,7 +202,12 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The streaming notification targets.
+     * </p>
+     * 
      * @param streamingNotificationTargets
+     *        The streaming notification targets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -146,7 +217,12 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The call analytics configuration.
+     * </p>
+     * 
      * @param mediaInsightsConfiguration
+     *        The call analytics configuration.
      */
 
     public void setMediaInsightsConfiguration(MediaInsightsConfiguration mediaInsightsConfiguration) {
@@ -154,7 +230,11 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
-     * @return
+     * <p>
+     * The call analytics configuration.
+     * </p>
+     * 
+     * @return The call analytics configuration.
      */
 
     public MediaInsightsConfiguration getMediaInsightsConfiguration() {
@@ -162,7 +242,12 @@ public class StreamingConfiguration implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The call analytics configuration.
+     * </p>
+     * 
      * @param mediaInsightsConfiguration
+     *        The call analytics configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,12 +25,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The ARN of the resource being tagged.
+     * </p>
+     */
     private String resourceARN;
-
+    /**
+     * <p>
+     * A list of the tags being added to the resource.
+     * </p>
+     */
     private java.util.List<Tag> tags;
 
     /**
+     * <p>
+     * The ARN of the resource being tagged.
+     * </p>
+     * 
      * @param resourceARN
+     *        The ARN of the resource being tagged.
      */
 
     public void setResourceARN(String resourceARN) {
@@ -38,7 +52,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the resource being tagged.
+     * </p>
+     * 
+     * @return The ARN of the resource being tagged.
      */
 
     public String getResourceARN() {
@@ -46,7 +64,12 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The ARN of the resource being tagged.
+     * </p>
+     * 
      * @param resourceARN
+     *        The ARN of the resource being tagged.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +79,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * @return
+     * <p>
+     * A list of the tags being added to the resource.
+     * </p>
+     * 
+     * @return A list of the tags being added to the resource.
      */
 
     public java.util.List<Tag> getTags() {
@@ -64,7 +91,12 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * A list of the tags being added to the resource.
+     * </p>
+     * 
      * @param tags
+     *        A list of the tags being added to the resource.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -78,12 +110,16 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
+     * A list of the tags being added to the resource.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
      * existing values.
      * </p>
      * 
      * @param tags
+     *        A list of the tags being added to the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,7 +134,12 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * A list of the tags being added to the resource.
+     * </p>
+     * 
      * @param tags
+     *        A list of the tags being added to the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

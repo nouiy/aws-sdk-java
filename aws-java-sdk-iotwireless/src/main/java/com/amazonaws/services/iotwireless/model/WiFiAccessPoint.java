@@ -36,7 +36,7 @@ public class WiFiAccessPoint implements Serializable, Cloneable, StructuredPojo 
     private String macAddress;
     /**
      * <p>
-     * Recived signal strength of the WLAN measurement data.
+     * Received signal strength (dBm) of the WLAN measurement data.
      * </p>
      */
     private Integer rss;
@@ -83,11 +83,11 @@ public class WiFiAccessPoint implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Recived signal strength of the WLAN measurement data.
+     * Received signal strength (dBm) of the WLAN measurement data.
      * </p>
      * 
      * @param rss
-     *        Recived signal strength of the WLAN measurement data.
+     *        Received signal strength (dBm) of the WLAN measurement data.
      */
 
     public void setRss(Integer rss) {
@@ -96,10 +96,10 @@ public class WiFiAccessPoint implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Recived signal strength of the WLAN measurement data.
+     * Received signal strength (dBm) of the WLAN measurement data.
      * </p>
      * 
-     * @return Recived signal strength of the WLAN measurement data.
+     * @return Received signal strength (dBm) of the WLAN measurement data.
      */
 
     public Integer getRss() {
@@ -108,11 +108,11 @@ public class WiFiAccessPoint implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Recived signal strength of the WLAN measurement data.
+     * Received signal strength (dBm) of the WLAN measurement data.
      * </p>
      * 
      * @param rss
-     *        Recived signal strength of the WLAN measurement data.
+     *        Received signal strength (dBm) of the WLAN measurement data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

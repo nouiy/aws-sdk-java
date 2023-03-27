@@ -25,10 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateVoiceProfileRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The ID of the speaker search task.
+     * </p>
+     */
     private String speakerSearchTaskId;
 
     /**
+     * <p>
+     * The ID of the speaker search task.
+     * </p>
+     * 
      * @param speakerSearchTaskId
+     *        The ID of the speaker search task.
      */
 
     public void setSpeakerSearchTaskId(String speakerSearchTaskId) {
@@ -36,7 +46,11 @@ public class CreateVoiceProfileRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the speaker search task.
+     * </p>
+     * 
+     * @return The ID of the speaker search task.
      */
 
     public String getSpeakerSearchTaskId() {
@@ -44,7 +58,12 @@ public class CreateVoiceProfileRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * The ID of the speaker search task.
+     * </p>
+     * 
      * @param speakerSearchTaskId
+     *        The ID of the speaker search task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

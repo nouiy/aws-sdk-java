@@ -12,7 +12,11 @@
  */
 
 /**
- * 
+ * <p>
+ * The Amazon Chime SDK telephony APIs in this section enable developers to create PSTN calling solutions that use
+ * Amazon Chime SDK Voice Connectors, and Amazon Chime SDK SIP media applications. Developers can also order and manage
+ * phone numbers, create and manage Voice Connectors and SIP media applications, and run voice analytics.
+ * </p>
  */
 package com.amazonaws.services.chimesdkvoice;
 

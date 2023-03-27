@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The Amazon Chime SDK Voice Connector configuration, including outbound host name and encryption settings.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/VoiceConnector" target="_top">AWS API
  *      Documentation</a>
@@ -25,24 +28,62 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The Voice Connector's ID.
+     * </p>
+     */
     private String voiceConnectorId;
-
+    /**
+     * <p>
+     * The AWS Region in which the Voice Connector is created. Default: us-east-1.
+     * </p>
+     */
     private String awsRegion;
-
+    /**
+     * <p>
+     * The Voice Connector's name.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * The outbound host name for the Voice Connector.
+     * </p>
+     */
     private String outboundHostName;
-
+    /**
+     * <p>
+     * Enables or disables encryption for the Voice Connector.
+     * </p>
+     */
     private Boolean requireEncryption;
-
+    /**
+     * <p>
+     * The Voice Connector's creation timestamp, in ISO 8601 format.
+     * </p>
+     */
     private java.util.Date createdTimestamp;
-
+    /**
+     * <p>
+     * The Voice Connector's updated timestamp, in ISO 8601 format.
+     * </p>
+     */
     private java.util.Date updatedTimestamp;
-
+    /**
+     * <p>
+     * The ARN of the Voice Connector.
+     * </p>
+     */
     private String voiceConnectorArn;
 
     /**
+     * <p>
+     * The Voice Connector's ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector's ID.
      */
 
     public void setVoiceConnectorId(String voiceConnectorId) {
@@ -50,7 +91,11 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector's ID.
+     * </p>
+     * 
+     * @return The Voice Connector's ID.
      */
 
     public String getVoiceConnectorId() {
@@ -58,7 +103,12 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Voice Connector's ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector's ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -68,7 +118,12 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The AWS Region in which the Voice Connector is created. Default: us-east-1.
+     * </p>
+     * 
      * @param awsRegion
+     *        The AWS Region in which the Voice Connector is created. Default: us-east-1.
      * @see VoiceConnectorAwsRegion
      */
 
@@ -77,7 +132,11 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The AWS Region in which the Voice Connector is created. Default: us-east-1.
+     * </p>
+     * 
+     * @return The AWS Region in which the Voice Connector is created. Default: us-east-1.
      * @see VoiceConnectorAwsRegion
      */
 
@@ -86,7 +145,12 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The AWS Region in which the Voice Connector is created. Default: us-east-1.
+     * </p>
+     * 
      * @param awsRegion
+     *        The AWS Region in which the Voice Connector is created. Default: us-east-1.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VoiceConnectorAwsRegion
      */
@@ -97,7 +161,12 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The AWS Region in which the Voice Connector is created. Default: us-east-1.
+     * </p>
+     * 
      * @param awsRegion
+     *        The AWS Region in which the Voice Connector is created. Default: us-east-1.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VoiceConnectorAwsRegion
      */
@@ -108,7 +177,12 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Voice Connector's name.
+     * </p>
+     * 
      * @param name
+     *        The Voice Connector's name.
      */
 
     public void setName(String name) {
@@ -116,7 +190,11 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector's name.
+     * </p>
+     * 
+     * @return The Voice Connector's name.
      */
 
     public String getName() {
@@ -124,7 +202,12 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Voice Connector's name.
+     * </p>
+     * 
      * @param name
+     *        The Voice Connector's name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -134,7 +217,12 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The outbound host name for the Voice Connector.
+     * </p>
+     * 
      * @param outboundHostName
+     *        The outbound host name for the Voice Connector.
      */
 
     public void setOutboundHostName(String outboundHostName) {
@@ -142,7 +230,11 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The outbound host name for the Voice Connector.
+     * </p>
+     * 
+     * @return The outbound host name for the Voice Connector.
      */
 
     public String getOutboundHostName() {
@@ -150,7 +242,12 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The outbound host name for the Voice Connector.
+     * </p>
+     * 
      * @param outboundHostName
+     *        The outbound host name for the Voice Connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -160,7 +257,12 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Enables or disables encryption for the Voice Connector.
+     * </p>
+     * 
      * @param requireEncryption
+     *        Enables or disables encryption for the Voice Connector.
      */
 
     public void setRequireEncryption(Boolean requireEncryption) {
@@ -168,7 +270,11 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Enables or disables encryption for the Voice Connector.
+     * </p>
+     * 
+     * @return Enables or disables encryption for the Voice Connector.
      */
 
     public Boolean getRequireEncryption() {
@@ -176,7 +282,12 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Enables or disables encryption for the Voice Connector.
+     * </p>
+     * 
      * @param requireEncryption
+     *        Enables or disables encryption for the Voice Connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -186,7 +297,11 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Enables or disables encryption for the Voice Connector.
+     * </p>
+     * 
+     * @return Enables or disables encryption for the Voice Connector.
      */
 
     public Boolean isRequireEncryption() {
@@ -194,7 +309,12 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Voice Connector's creation timestamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The Voice Connector's creation timestamp, in ISO 8601 format.
      */
 
     public void setCreatedTimestamp(java.util.Date createdTimestamp) {
@@ -202,7 +322,11 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector's creation timestamp, in ISO 8601 format.
+     * </p>
+     * 
+     * @return The Voice Connector's creation timestamp, in ISO 8601 format.
      */
 
     public java.util.Date getCreatedTimestamp() {
@@ -210,7 +334,12 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Voice Connector's creation timestamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The Voice Connector's creation timestamp, in ISO 8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -220,7 +349,12 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Voice Connector's updated timestamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The Voice Connector's updated timestamp, in ISO 8601 format.
      */
 
     public void setUpdatedTimestamp(java.util.Date updatedTimestamp) {
@@ -228,7 +362,11 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector's updated timestamp, in ISO 8601 format.
+     * </p>
+     * 
+     * @return The Voice Connector's updated timestamp, in ISO 8601 format.
      */
 
     public java.util.Date getUpdatedTimestamp() {
@@ -236,7 +374,12 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Voice Connector's updated timestamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The Voice Connector's updated timestamp, in ISO 8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -246,7 +389,12 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The ARN of the Voice Connector.
+     * </p>
+     * 
      * @param voiceConnectorArn
+     *        The ARN of the Voice Connector.
      */
 
     public void setVoiceConnectorArn(String voiceConnectorArn) {
@@ -254,7 +402,11 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the Voice Connector.
+     * </p>
+     * 
+     * @return The ARN of the Voice Connector.
      */
 
     public String getVoiceConnectorArn() {
@@ -262,7 +414,12 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The ARN of the Voice Connector.
+     * </p>
+     * 
      * @param voiceConnectorArn
+     *        The ARN of the Voice Connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

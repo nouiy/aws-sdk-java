@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * A <code>Call</code> instance for a SIP media application.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/SipMediaApplicationCall"
  *      target="_top">AWS API Documentation</a>
@@ -25,10 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class SipMediaApplicationCall implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The call's transaction ID.
+     * </p>
+     */
     private String transactionId;
 
     /**
+     * <p>
+     * The call's transaction ID.
+     * </p>
+     * 
      * @param transactionId
+     *        The call's transaction ID.
      */
 
     public void setTransactionId(String transactionId) {
@@ -36,7 +49,11 @@ public class SipMediaApplicationCall implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * The call's transaction ID.
+     * </p>
+     * 
+     * @return The call's transaction ID.
      */
 
     public String getTransactionId() {
@@ -44,7 +61,12 @@ public class SipMediaApplicationCall implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * The call's transaction ID.
+     * </p>
+     * 
      * @param transactionId
+     *        The call's transaction ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

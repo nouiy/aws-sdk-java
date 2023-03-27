@@ -663,7 +663,10 @@ public interface AWSSecurityHub {
      * Declines invitations to become a member account.
      * </p>
      * <p>
-     * This operation is only used by accounts that are not part of an organization. Organization accounts do not
+     * A prospective member account uses this operation to decline an invitation to become a member.
+     * </p>
+     * <p>
+     * This operation is only called by member accounts that aren't part of an organization. Organization accounts don't
      * receive invitations.
      * </p>
      * 
@@ -767,8 +770,12 @@ public interface AWSSecurityHub {
      * Deletes invitations received by the Amazon Web Services account to become a member account.
      * </p>
      * <p>
-     * This operation is only used by accounts that are not part of an organization. Organization accounts do not
-     * receive invitations.
+     * A Security Hub administrator account can use this operation to delete invitations sent to one or more member
+     * accounts.
+     * </p>
+     * <p>
+     * This operation is only used to delete invitations that are sent to member accounts that aren't part of an
+     * organization. Organization accounts don't receive invitations.
      * </p>
      * 
      * @param deleteInvitationsRequest

@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The combination of a voice print and caller ID.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/VoiceProfile" target="_top">AWS API
  *      Documentation</a>
@@ -25,20 +28,51 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ID of the voice profile.
+     * </p>
+     */
     private String voiceProfileId;
-
+    /**
+     * <p>
+     * The ARN of the voice profile.
+     * </p>
+     */
     private String voiceProfileArn;
-
+    /**
+     * <p>
+     * The ID of the domain that contains the voice profile.
+     * </p>
+     */
     private String voiceProfileDomainId;
-
+    /**
+     * <p>
+     * The time at which the voice profile was created and enrolled.
+     * </p>
+     */
     private java.util.Date createdTimestamp;
-
+    /**
+     * <p>
+     * The time at which the voice profile was last updated.
+     * </p>
+     */
     private java.util.Date updatedTimestamp;
-
+    /**
+     * <p>
+     * The time at which a voice profile expires unless you re-enroll the caller via the <code>UpdateVoiceProfile</code>
+     * API.
+     * </p>
+     */
     private java.util.Date expirationTimestamp;
 
     /**
+     * <p>
+     * The ID of the voice profile.
+     * </p>
+     * 
      * @param voiceProfileId
+     *        The ID of the voice profile.
      */
 
     public void setVoiceProfileId(String voiceProfileId) {
@@ -46,7 +80,11 @@ public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the voice profile.
+     * </p>
+     * 
+     * @return The ID of the voice profile.
      */
 
     public String getVoiceProfileId() {
@@ -54,7 +92,12 @@ public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The ID of the voice profile.
+     * </p>
+     * 
      * @param voiceProfileId
+     *        The ID of the voice profile.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -64,7 +107,12 @@ public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The ARN of the voice profile.
+     * </p>
+     * 
      * @param voiceProfileArn
+     *        The ARN of the voice profile.
      */
 
     public void setVoiceProfileArn(String voiceProfileArn) {
@@ -72,7 +120,11 @@ public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the voice profile.
+     * </p>
+     * 
+     * @return The ARN of the voice profile.
      */
 
     public String getVoiceProfileArn() {
@@ -80,7 +132,12 @@ public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The ARN of the voice profile.
+     * </p>
+     * 
      * @param voiceProfileArn
+     *        The ARN of the voice profile.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,7 +147,12 @@ public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The ID of the domain that contains the voice profile.
+     * </p>
+     * 
      * @param voiceProfileDomainId
+     *        The ID of the domain that contains the voice profile.
      */
 
     public void setVoiceProfileDomainId(String voiceProfileDomainId) {
@@ -98,7 +160,11 @@ public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the domain that contains the voice profile.
+     * </p>
+     * 
+     * @return The ID of the domain that contains the voice profile.
      */
 
     public String getVoiceProfileDomainId() {
@@ -106,7 +172,12 @@ public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The ID of the domain that contains the voice profile.
+     * </p>
+     * 
      * @param voiceProfileDomainId
+     *        The ID of the domain that contains the voice profile.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -116,7 +187,12 @@ public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The time at which the voice profile was created and enrolled.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The time at which the voice profile was created and enrolled.
      */
 
     public void setCreatedTimestamp(java.util.Date createdTimestamp) {
@@ -124,7 +200,11 @@ public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the voice profile was created and enrolled.
+     * </p>
+     * 
+     * @return The time at which the voice profile was created and enrolled.
      */
 
     public java.util.Date getCreatedTimestamp() {
@@ -132,7 +212,12 @@ public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The time at which the voice profile was created and enrolled.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The time at which the voice profile was created and enrolled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,7 +227,12 @@ public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The time at which the voice profile was last updated.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The time at which the voice profile was last updated.
      */
 
     public void setUpdatedTimestamp(java.util.Date updatedTimestamp) {
@@ -150,7 +240,11 @@ public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the voice profile was last updated.
+     * </p>
+     * 
+     * @return The time at which the voice profile was last updated.
      */
 
     public java.util.Date getUpdatedTimestamp() {
@@ -158,7 +252,12 @@ public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The time at which the voice profile was last updated.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The time at which the voice profile was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,7 +267,14 @@ public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The time at which a voice profile expires unless you re-enroll the caller via the <code>UpdateVoiceProfile</code>
+     * API.
+     * </p>
+     * 
      * @param expirationTimestamp
+     *        The time at which a voice profile expires unless you re-enroll the caller via the
+     *        <code>UpdateVoiceProfile</code> API.
      */
 
     public void setExpirationTimestamp(java.util.Date expirationTimestamp) {
@@ -176,7 +282,13 @@ public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which a voice profile expires unless you re-enroll the caller via the <code>UpdateVoiceProfile</code>
+     * API.
+     * </p>
+     * 
+     * @return The time at which a voice profile expires unless you re-enroll the caller via the
+     *         <code>UpdateVoiceProfile</code> API.
      */
 
     public java.util.Date getExpirationTimestamp() {
@@ -184,7 +296,14 @@ public class VoiceProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The time at which a voice profile expires unless you re-enroll the caller via the <code>UpdateVoiceProfile</code>
+     * API.
+     * </p>
+     * 
      * @param expirationTimestamp
+     *        The time at which a voice profile expires unless you re-enroll the caller via the
+     *        <code>UpdateVoiceProfile</code> API.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

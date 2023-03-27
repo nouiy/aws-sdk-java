@@ -27,7 +27,7 @@ public class UpdateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A brief description of the domain.
+     * A brief description about this domain.
      * </p>
      */
     private String description;
@@ -55,11 +55,11 @@ public class UpdateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A brief description of the domain.
+     * A brief description about this domain.
      * </p>
      * 
      * @param description
-     *        A brief description of the domain.
+     *        A brief description about this domain.
      */
 
     public void setDescription(String description) {
@@ -68,10 +68,10 @@ public class UpdateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A brief description of the domain.
+     * A brief description about this domain.
      * </p>
      * 
-     * @return A brief description of the domain.
+     * @return A brief description about this domain.
      */
 
     public String getDescription() {
@@ -80,11 +80,11 @@ public class UpdateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A brief description of the domain.
+     * A brief description about this domain.
      * </p>
      * 
      * @param description
-     *        A brief description of the domain.
+     *        A brief description about this domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

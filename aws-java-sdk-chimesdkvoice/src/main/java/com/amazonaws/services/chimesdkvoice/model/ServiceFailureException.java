@@ -15,7 +15,9 @@ package com.amazonaws.services.chimesdkvoice.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p>
+ * The service encountered an unexpected error.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ServiceFailureException extends com.amazonaws.services.chimesdkvoice.model.AmazonChimeSDKVoiceException {

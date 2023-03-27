@@ -25,12 +25,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateVoiceProfileRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The profile ID.
+     * </p>
+     */
     private String voiceProfileId;
-
+    /**
+     * <p>
+     * The ID of the speaker search task.
+     * </p>
+     */
     private String speakerSearchTaskId;
 
     /**
+     * <p>
+     * The profile ID.
+     * </p>
+     * 
      * @param voiceProfileId
+     *        The profile ID.
      */
 
     public void setVoiceProfileId(String voiceProfileId) {
@@ -38,7 +52,11 @@ public class UpdateVoiceProfileRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
-     * @return
+     * <p>
+     * The profile ID.
+     * </p>
+     * 
+     * @return The profile ID.
      */
 
     public String getVoiceProfileId() {
@@ -46,7 +64,12 @@ public class UpdateVoiceProfileRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * The profile ID.
+     * </p>
+     * 
      * @param voiceProfileId
+     *        The profile ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +79,12 @@ public class UpdateVoiceProfileRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * The ID of the speaker search task.
+     * </p>
+     * 
      * @param speakerSearchTaskId
+     *        The ID of the speaker search task.
      */
 
     public void setSpeakerSearchTaskId(String speakerSearchTaskId) {
@@ -64,7 +92,11 @@ public class UpdateVoiceProfileRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the speaker search task.
+     * </p>
+     * 
+     * @return The ID of the speaker search task.
      */
 
     public String getSpeakerSearchTaskId() {
@@ -72,7 +104,12 @@ public class UpdateVoiceProfileRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * The ID of the speaker search task.
+     * </p>
+     * 
      * @param speakerSearchTaskId
+     *        The ID of the speaker search task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

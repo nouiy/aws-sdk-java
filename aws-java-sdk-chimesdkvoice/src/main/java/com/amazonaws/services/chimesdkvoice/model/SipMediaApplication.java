@@ -18,6 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The details of the SIP media application, including name and endpoints. An AWS account can have multiple SIP media
+ * applications.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/SipMediaApplication"
  *      target="_top">AWS API Documentation</a>
@@ -25,20 +29,50 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class SipMediaApplication implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * A SIP media application's ID.
+     * </p>
+     */
     private String sipMediaApplicationId;
-
+    /**
+     * <p>
+     * The AWS Region in which the SIP media application is created.
+     * </p>
+     */
     private String awsRegion;
-
+    /**
+     * <p>
+     * The SIP media application's name.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * List of endpoints for SIP media application. Currently, only one endpoint per SIP media application is permitted.
+     * </p>
+     */
     private java.util.List<SipMediaApplicationEndpoint> endpoints;
-
+    /**
+     * <p>
+     * The SIP media application creation timestamp, in ISO 8601 format.
+     * </p>
+     */
     private java.util.Date createdTimestamp;
-
+    /**
+     * <p>
+     * The time at which the SIP media application was updated.
+     * </p>
+     */
     private java.util.Date updatedTimestamp;
 
     /**
+     * <p>
+     * A SIP media application's ID.
+     * </p>
+     * 
      * @param sipMediaApplicationId
+     *        A SIP media application's ID.
      */
 
     public void setSipMediaApplicationId(String sipMediaApplicationId) {
@@ -46,7 +80,11 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * A SIP media application's ID.
+     * </p>
+     * 
+     * @return A SIP media application's ID.
      */
 
     public String getSipMediaApplicationId() {
@@ -54,7 +92,12 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * A SIP media application's ID.
+     * </p>
+     * 
      * @param sipMediaApplicationId
+     *        A SIP media application's ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -64,7 +107,12 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The AWS Region in which the SIP media application is created.
+     * </p>
+     * 
      * @param awsRegion
+     *        The AWS Region in which the SIP media application is created.
      */
 
     public void setAwsRegion(String awsRegion) {
@@ -72,7 +120,11 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The AWS Region in which the SIP media application is created.
+     * </p>
+     * 
+     * @return The AWS Region in which the SIP media application is created.
      */
 
     public String getAwsRegion() {
@@ -80,7 +132,12 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The AWS Region in which the SIP media application is created.
+     * </p>
+     * 
      * @param awsRegion
+     *        The AWS Region in which the SIP media application is created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,7 +147,12 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The SIP media application's name.
+     * </p>
+     * 
      * @param name
+     *        The SIP media application's name.
      */
 
     public void setName(String name) {
@@ -98,7 +160,11 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The SIP media application's name.
+     * </p>
+     * 
+     * @return The SIP media application's name.
      */
 
     public String getName() {
@@ -106,7 +172,12 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The SIP media application's name.
+     * </p>
+     * 
      * @param name
+     *        The SIP media application's name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -116,7 +187,12 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * List of endpoints for SIP media application. Currently, only one endpoint per SIP media application is permitted.
+     * </p>
+     * 
+     * @return List of endpoints for SIP media application. Currently, only one endpoint per SIP media application is
+     *         permitted.
      */
 
     public java.util.List<SipMediaApplicationEndpoint> getEndpoints() {
@@ -124,7 +200,13 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * List of endpoints for SIP media application. Currently, only one endpoint per SIP media application is permitted.
+     * </p>
+     * 
      * @param endpoints
+     *        List of endpoints for SIP media application. Currently, only one endpoint per SIP media application is
+     *        permitted.
      */
 
     public void setEndpoints(java.util.Collection<SipMediaApplicationEndpoint> endpoints) {
@@ -138,12 +220,17 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
+     * List of endpoints for SIP media application. Currently, only one endpoint per SIP media application is permitted.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setEndpoints(java.util.Collection)} or {@link #withEndpoints(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param endpoints
+     *        List of endpoints for SIP media application. Currently, only one endpoint per SIP media application is
+     *        permitted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -158,7 +245,13 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * List of endpoints for SIP media application. Currently, only one endpoint per SIP media application is permitted.
+     * </p>
+     * 
      * @param endpoints
+     *        List of endpoints for SIP media application. Currently, only one endpoint per SIP media application is
+     *        permitted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,7 +261,12 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The SIP media application creation timestamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The SIP media application creation timestamp, in ISO 8601 format.
      */
 
     public void setCreatedTimestamp(java.util.Date createdTimestamp) {
@@ -176,7 +274,11 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The SIP media application creation timestamp, in ISO 8601 format.
+     * </p>
+     * 
+     * @return The SIP media application creation timestamp, in ISO 8601 format.
      */
 
     public java.util.Date getCreatedTimestamp() {
@@ -184,7 +286,12 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The SIP media application creation timestamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The SIP media application creation timestamp, in ISO 8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -194,7 +301,12 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The time at which the SIP media application was updated.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The time at which the SIP media application was updated.
      */
 
     public void setUpdatedTimestamp(java.util.Date updatedTimestamp) {
@@ -202,7 +314,11 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the SIP media application was updated.
+     * </p>
+     * 
+     * @return The time at which the SIP media application was updated.
      */
 
     public java.util.Date getUpdatedTimestamp() {
@@ -210,7 +326,12 @@ public class SipMediaApplication implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The time at which the SIP media application was updated.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The time at which the SIP media application was updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

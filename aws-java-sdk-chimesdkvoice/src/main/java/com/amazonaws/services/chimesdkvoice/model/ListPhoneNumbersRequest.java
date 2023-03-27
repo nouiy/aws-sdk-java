@@ -25,20 +25,50 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The status of your organization's phone numbers.
+     * </p>
+     */
     private String status;
-
+    /**
+     * <p>
+     * The phone number product types.
+     * </p>
+     */
     private String productType;
-
+    /**
+     * <p>
+     * The filter to limit the number of results.
+     * </p>
+     */
     private String filterName;
-
+    /**
+     * <p>
+     * The filter value.
+     * </p>
+     */
     private String filterValue;
-
+    /**
+     * <p>
+     * The maximum number of results to return in a single call.
+     * </p>
+     */
     private Integer maxResults;
-
+    /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
+     * <p>
+     * The status of your organization's phone numbers.
+     * </p>
+     * 
      * @param status
+     *        The status of your organization's phone numbers.
      */
 
     public void setStatus(String status) {
@@ -46,7 +76,11 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * The status of your organization's phone numbers.
+     * </p>
+     * 
+     * @return The status of your organization's phone numbers.
      */
 
     public String getStatus() {
@@ -54,7 +88,12 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The status of your organization's phone numbers.
+     * </p>
+     * 
      * @param status
+     *        The status of your organization's phone numbers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -64,7 +103,12 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The phone number product types.
+     * </p>
+     * 
      * @param productType
+     *        The phone number product types.
      * @see PhoneNumberProductType
      */
 
@@ -73,7 +117,11 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number product types.
+     * </p>
+     * 
+     * @return The phone number product types.
      * @see PhoneNumberProductType
      */
 
@@ -82,7 +130,12 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The phone number product types.
+     * </p>
+     * 
      * @param productType
+     *        The phone number product types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberProductType
      */
@@ -93,7 +146,12 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The phone number product types.
+     * </p>
+     * 
      * @param productType
+     *        The phone number product types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberProductType
      */
@@ -104,7 +162,12 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The filter to limit the number of results.
+     * </p>
+     * 
      * @param filterName
+     *        The filter to limit the number of results.
      * @see PhoneNumberAssociationName
      */
 
@@ -113,7 +176,11 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * The filter to limit the number of results.
+     * </p>
+     * 
+     * @return The filter to limit the number of results.
      * @see PhoneNumberAssociationName
      */
 
@@ -122,7 +189,12 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The filter to limit the number of results.
+     * </p>
+     * 
      * @param filterName
+     *        The filter to limit the number of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberAssociationName
      */
@@ -133,7 +205,12 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The filter to limit the number of results.
+     * </p>
+     * 
      * @param filterName
+     *        The filter to limit the number of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberAssociationName
      */
@@ -144,7 +221,12 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The filter value.
+     * </p>
+     * 
      * @param filterValue
+     *        The filter value.
      */
 
     public void setFilterValue(String filterValue) {
@@ -152,7 +234,11 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * The filter value.
+     * </p>
+     * 
+     * @return The filter value.
      */
 
     public String getFilterValue() {
@@ -160,7 +246,12 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The filter value.
+     * </p>
+     * 
      * @param filterValue
+     *        The filter value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -170,7 +261,12 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The maximum number of results to return in a single call.
+     * </p>
+     * 
      * @param maxResults
+     *        The maximum number of results to return in a single call.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -178,7 +274,11 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * The maximum number of results to return in a single call.
+     * </p>
+     * 
+     * @return The maximum number of results to return in a single call.
      */
 
     public Integer getMaxResults() {
@@ -186,7 +286,12 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The maximum number of results to return in a single call.
+     * </p>
+     * 
      * @param maxResults
+     *        The maximum number of results to return in a single call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -196,7 +301,12 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -204,7 +314,11 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * @return
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
+     * @return The token used to return the next page of results.
      */
 
     public String getNextToken() {
@@ -212,7 +326,12 @@ public class ListPhoneNumbersRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -23,12 +23,26 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetPhoneNumberSettingsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The default outbound calling name for the account.
+     * </p>
+     */
     private String callingName;
-
+    /**
+     * <p>
+     * The updated outbound calling name timestamp, in ISO 8601 format.
+     * </p>
+     */
     private java.util.Date callingNameUpdatedTimestamp;
 
     /**
+     * <p>
+     * The default outbound calling name for the account.
+     * </p>
+     * 
      * @param callingName
+     *        The default outbound calling name for the account.
      */
 
     public void setCallingName(String callingName) {
@@ -36,7 +50,11 @@ public class GetPhoneNumberSettingsResult extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * @return
+     * <p>
+     * The default outbound calling name for the account.
+     * </p>
+     * 
+     * @return The default outbound calling name for the account.
      */
 
     public String getCallingName() {
@@ -44,7 +62,12 @@ public class GetPhoneNumberSettingsResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * The default outbound calling name for the account.
+     * </p>
+     * 
      * @param callingName
+     *        The default outbound calling name for the account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -54,7 +77,12 @@ public class GetPhoneNumberSettingsResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * The updated outbound calling name timestamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param callingNameUpdatedTimestamp
+     *        The updated outbound calling name timestamp, in ISO 8601 format.
      */
 
     public void setCallingNameUpdatedTimestamp(java.util.Date callingNameUpdatedTimestamp) {
@@ -62,7 +90,11 @@ public class GetPhoneNumberSettingsResult extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * @return
+     * <p>
+     * The updated outbound calling name timestamp, in ISO 8601 format.
+     * </p>
+     * 
+     * @return The updated outbound calling name timestamp, in ISO 8601 format.
      */
 
     public java.util.Date getCallingNameUpdatedTimestamp() {
@@ -70,7 +102,12 @@ public class GetPhoneNumberSettingsResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * The updated outbound calling name timestamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param callingNameUpdatedTimestamp
+     *        The updated outbound calling name timestamp, in ISO 8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

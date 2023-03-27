@@ -26,12 +26,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DisassociatePhoneNumbersFromVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The Voice Connector group ID.
+     * </p>
+     */
     private String voiceConnectorGroupId;
-
+    /**
+     * <p>
+     * The list of phone numbers, in E.164 format.
+     * </p>
+     */
     private java.util.List<String> e164PhoneNumbers;
 
     /**
+     * <p>
+     * The Voice Connector group ID.
+     * </p>
+     * 
      * @param voiceConnectorGroupId
+     *        The Voice Connector group ID.
      */
 
     public void setVoiceConnectorGroupId(String voiceConnectorGroupId) {
@@ -39,7 +53,11 @@ public class DisassociatePhoneNumbersFromVoiceConnectorGroupRequest extends com.
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector group ID.
+     * </p>
+     * 
+     * @return The Voice Connector group ID.
      */
 
     public String getVoiceConnectorGroupId() {
@@ -47,7 +65,12 @@ public class DisassociatePhoneNumbersFromVoiceConnectorGroupRequest extends com.
     }
 
     /**
+     * <p>
+     * The Voice Connector group ID.
+     * </p>
+     * 
      * @param voiceConnectorGroupId
+     *        The Voice Connector group ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -57,7 +80,11 @@ public class DisassociatePhoneNumbersFromVoiceConnectorGroupRequest extends com.
     }
 
     /**
-     * @return
+     * <p>
+     * The list of phone numbers, in E.164 format.
+     * </p>
+     * 
+     * @return The list of phone numbers, in E.164 format.
      */
 
     public java.util.List<String> getE164PhoneNumbers() {
@@ -65,7 +92,12 @@ public class DisassociatePhoneNumbersFromVoiceConnectorGroupRequest extends com.
     }
 
     /**
+     * <p>
+     * The list of phone numbers, in E.164 format.
+     * </p>
+     * 
      * @param e164PhoneNumbers
+     *        The list of phone numbers, in E.164 format.
      */
 
     public void setE164PhoneNumbers(java.util.Collection<String> e164PhoneNumbers) {
@@ -79,12 +111,16 @@ public class DisassociatePhoneNumbersFromVoiceConnectorGroupRequest extends com.
 
     /**
      * <p>
+     * The list of phone numbers, in E.164 format.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setE164PhoneNumbers(java.util.Collection)} or {@link #withE164PhoneNumbers(java.util.Collection)} if you
      * want to override the existing values.
      * </p>
      * 
      * @param e164PhoneNumbers
+     *        The list of phone numbers, in E.164 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -99,7 +135,12 @@ public class DisassociatePhoneNumbersFromVoiceConnectorGroupRequest extends com.
     }
 
     /**
+     * <p>
+     * The list of phone numbers, in E.164 format.
+     * </p>
+     * 
      * @param e164PhoneNumbers
+     *        The list of phone numbers, in E.164 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

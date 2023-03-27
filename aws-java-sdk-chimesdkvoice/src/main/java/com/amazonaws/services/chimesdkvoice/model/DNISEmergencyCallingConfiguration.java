@@ -18,6 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The Dialed Number Identification Service (DNIS) emergency calling configuration details associated with an Amazon
+ * Chime SDK Voice Connector's emergency calling configuration.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/DNISEmergencyCallingConfiguration"
  *      target="_top">AWS API Documentation</a>
@@ -25,14 +29,32 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DNISEmergencyCallingConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The DNIS phone number that you route emergency calls to, in E.164 format.
+     * </p>
+     */
     private String emergencyPhoneNumber;
-
+    /**
+     * <p>
+     * The DNIS phone number for routing test emergency calls to, in E.164 format.
+     * </p>
+     */
     private String testPhoneNumber;
-
+    /**
+     * <p>
+     * The country from which emergency calls are allowed, in ISO 3166-1 alpha-2 format.
+     * </p>
+     */
     private String callingCountry;
 
     /**
+     * <p>
+     * The DNIS phone number that you route emergency calls to, in E.164 format.
+     * </p>
+     * 
      * @param emergencyPhoneNumber
+     *        The DNIS phone number that you route emergency calls to, in E.164 format.
      */
 
     public void setEmergencyPhoneNumber(String emergencyPhoneNumber) {
@@ -40,7 +62,11 @@ public class DNISEmergencyCallingConfiguration implements Serializable, Cloneabl
     }
 
     /**
-     * @return
+     * <p>
+     * The DNIS phone number that you route emergency calls to, in E.164 format.
+     * </p>
+     * 
+     * @return The DNIS phone number that you route emergency calls to, in E.164 format.
      */
 
     public String getEmergencyPhoneNumber() {
@@ -48,7 +74,12 @@ public class DNISEmergencyCallingConfiguration implements Serializable, Cloneabl
     }
 
     /**
+     * <p>
+     * The DNIS phone number that you route emergency calls to, in E.164 format.
+     * </p>
+     * 
      * @param emergencyPhoneNumber
+     *        The DNIS phone number that you route emergency calls to, in E.164 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +89,12 @@ public class DNISEmergencyCallingConfiguration implements Serializable, Cloneabl
     }
 
     /**
+     * <p>
+     * The DNIS phone number for routing test emergency calls to, in E.164 format.
+     * </p>
+     * 
      * @param testPhoneNumber
+     *        The DNIS phone number for routing test emergency calls to, in E.164 format.
      */
 
     public void setTestPhoneNumber(String testPhoneNumber) {
@@ -66,7 +102,11 @@ public class DNISEmergencyCallingConfiguration implements Serializable, Cloneabl
     }
 
     /**
-     * @return
+     * <p>
+     * The DNIS phone number for routing test emergency calls to, in E.164 format.
+     * </p>
+     * 
+     * @return The DNIS phone number for routing test emergency calls to, in E.164 format.
      */
 
     public String getTestPhoneNumber() {
@@ -74,7 +114,12 @@ public class DNISEmergencyCallingConfiguration implements Serializable, Cloneabl
     }
 
     /**
+     * <p>
+     * The DNIS phone number for routing test emergency calls to, in E.164 format.
+     * </p>
+     * 
      * @param testPhoneNumber
+     *        The DNIS phone number for routing test emergency calls to, in E.164 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,7 +129,12 @@ public class DNISEmergencyCallingConfiguration implements Serializable, Cloneabl
     }
 
     /**
+     * <p>
+     * The country from which emergency calls are allowed, in ISO 3166-1 alpha-2 format.
+     * </p>
+     * 
      * @param callingCountry
+     *        The country from which emergency calls are allowed, in ISO 3166-1 alpha-2 format.
      */
 
     public void setCallingCountry(String callingCountry) {
@@ -92,7 +142,11 @@ public class DNISEmergencyCallingConfiguration implements Serializable, Cloneabl
     }
 
     /**
-     * @return
+     * <p>
+     * The country from which emergency calls are allowed, in ISO 3166-1 alpha-2 format.
+     * </p>
+     * 
+     * @return The country from which emergency calls are allowed, in ISO 3166-1 alpha-2 format.
      */
 
     public String getCallingCountry() {
@@ -100,7 +154,12 @@ public class DNISEmergencyCallingConfiguration implements Serializable, Cloneabl
     }
 
     /**
+     * <p>
+     * The country from which emergency calls are allowed, in ISO 3166-1 alpha-2 format.
+     * </p>
+     * 
      * @param callingCountry
+     *        The country from which emergency calls are allowed, in ISO 3166-1 alpha-2 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

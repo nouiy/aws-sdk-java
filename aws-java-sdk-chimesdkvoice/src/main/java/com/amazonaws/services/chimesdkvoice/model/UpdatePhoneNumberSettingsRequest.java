@@ -25,10 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdatePhoneNumberSettingsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The default outbound calling name for the account.
+     * </p>
+     */
     private String callingName;
 
     /**
+     * <p>
+     * The default outbound calling name for the account.
+     * </p>
+     * 
      * @param callingName
+     *        The default outbound calling name for the account.
      */
 
     public void setCallingName(String callingName) {
@@ -36,7 +46,11 @@ public class UpdatePhoneNumberSettingsRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * The default outbound calling name for the account.
+     * </p>
+     * 
+     * @return The default outbound calling name for the account.
      */
 
     public String getCallingName() {
@@ -44,7 +58,12 @@ public class UpdatePhoneNumberSettingsRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The default outbound calling name for the account.
+     * </p>
+     * 
      * @param callingName
+     *        The default outbound calling name for the account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

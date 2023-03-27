@@ -26,14 +26,34 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AssociatePhoneNumbersWithVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The Amazon Chime SDK Voice Connector group ID.
+     * </p>
+     */
     private String voiceConnectorGroupId;
-
+    /**
+     * <p>
+     * List of phone numbers, in E.164 format.
+     * </p>
+     */
     private java.util.List<String> e164PhoneNumbers;
-
+    /**
+     * <p>
+     * If true, associates the provided phone numbers with the provided Amazon Chime SDK Voice Connector Group and
+     * removes any previously existing associations. If false, does not associate any phone numbers that have previously
+     * existing associations.
+     * </p>
+     */
     private Boolean forceAssociate;
 
     /**
+     * <p>
+     * The Amazon Chime SDK Voice Connector group ID.
+     * </p>
+     * 
      * @param voiceConnectorGroupId
+     *        The Amazon Chime SDK Voice Connector group ID.
      */
 
     public void setVoiceConnectorGroupId(String voiceConnectorGroupId) {
@@ -41,7 +61,11 @@ public class AssociatePhoneNumbersWithVoiceConnectorGroupRequest extends com.ama
     }
 
     /**
-     * @return
+     * <p>
+     * The Amazon Chime SDK Voice Connector group ID.
+     * </p>
+     * 
+     * @return The Amazon Chime SDK Voice Connector group ID.
      */
 
     public String getVoiceConnectorGroupId() {
@@ -49,7 +73,12 @@ public class AssociatePhoneNumbersWithVoiceConnectorGroupRequest extends com.ama
     }
 
     /**
+     * <p>
+     * The Amazon Chime SDK Voice Connector group ID.
+     * </p>
+     * 
      * @param voiceConnectorGroupId
+     *        The Amazon Chime SDK Voice Connector group ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -59,7 +88,11 @@ public class AssociatePhoneNumbersWithVoiceConnectorGroupRequest extends com.ama
     }
 
     /**
-     * @return
+     * <p>
+     * List of phone numbers, in E.164 format.
+     * </p>
+     * 
+     * @return List of phone numbers, in E.164 format.
      */
 
     public java.util.List<String> getE164PhoneNumbers() {
@@ -67,7 +100,12 @@ public class AssociatePhoneNumbersWithVoiceConnectorGroupRequest extends com.ama
     }
 
     /**
+     * <p>
+     * List of phone numbers, in E.164 format.
+     * </p>
+     * 
      * @param e164PhoneNumbers
+     *        List of phone numbers, in E.164 format.
      */
 
     public void setE164PhoneNumbers(java.util.Collection<String> e164PhoneNumbers) {
@@ -81,12 +119,16 @@ public class AssociatePhoneNumbersWithVoiceConnectorGroupRequest extends com.ama
 
     /**
      * <p>
+     * List of phone numbers, in E.164 format.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setE164PhoneNumbers(java.util.Collection)} or {@link #withE164PhoneNumbers(java.util.Collection)} if you
      * want to override the existing values.
      * </p>
      * 
      * @param e164PhoneNumbers
+     *        List of phone numbers, in E.164 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,7 +143,12 @@ public class AssociatePhoneNumbersWithVoiceConnectorGroupRequest extends com.ama
     }
 
     /**
+     * <p>
+     * List of phone numbers, in E.164 format.
+     * </p>
+     * 
      * @param e164PhoneNumbers
+     *        List of phone numbers, in E.164 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -111,7 +158,16 @@ public class AssociatePhoneNumbersWithVoiceConnectorGroupRequest extends com.ama
     }
 
     /**
+     * <p>
+     * If true, associates the provided phone numbers with the provided Amazon Chime SDK Voice Connector Group and
+     * removes any previously existing associations. If false, does not associate any phone numbers that have previously
+     * existing associations.
+     * </p>
+     * 
      * @param forceAssociate
+     *        If true, associates the provided phone numbers with the provided Amazon Chime SDK Voice Connector Group
+     *        and removes any previously existing associations. If false, does not associate any phone numbers that have
+     *        previously existing associations.
      */
 
     public void setForceAssociate(Boolean forceAssociate) {
@@ -119,7 +175,15 @@ public class AssociatePhoneNumbersWithVoiceConnectorGroupRequest extends com.ama
     }
 
     /**
-     * @return
+     * <p>
+     * If true, associates the provided phone numbers with the provided Amazon Chime SDK Voice Connector Group and
+     * removes any previously existing associations. If false, does not associate any phone numbers that have previously
+     * existing associations.
+     * </p>
+     * 
+     * @return If true, associates the provided phone numbers with the provided Amazon Chime SDK Voice Connector Group
+     *         and removes any previously existing associations. If false, does not associate any phone numbers that
+     *         have previously existing associations.
      */
 
     public Boolean getForceAssociate() {
@@ -127,7 +191,16 @@ public class AssociatePhoneNumbersWithVoiceConnectorGroupRequest extends com.ama
     }
 
     /**
+     * <p>
+     * If true, associates the provided phone numbers with the provided Amazon Chime SDK Voice Connector Group and
+     * removes any previously existing associations. If false, does not associate any phone numbers that have previously
+     * existing associations.
+     * </p>
+     * 
      * @param forceAssociate
+     *        If true, associates the provided phone numbers with the provided Amazon Chime SDK Voice Connector Group
+     *        and removes any previously existing associations. If false, does not associate any phone numbers that have
+     *        previously existing associations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -137,7 +210,15 @@ public class AssociatePhoneNumbersWithVoiceConnectorGroupRequest extends com.ama
     }
 
     /**
-     * @return
+     * <p>
+     * If true, associates the provided phone numbers with the provided Amazon Chime SDK Voice Connector Group and
+     * removes any previously existing associations. If false, does not associate any phone numbers that have previously
+     * existing associations.
+     * </p>
+     * 
+     * @return If true, associates the provided phone numbers with the provided Amazon Chime SDK Voice Connector Group
+     *         and removes any previously existing associations. If false, does not associate any phone numbers that
+     *         have previously existing associations.
      */
 
     public Boolean isForceAssociate() {

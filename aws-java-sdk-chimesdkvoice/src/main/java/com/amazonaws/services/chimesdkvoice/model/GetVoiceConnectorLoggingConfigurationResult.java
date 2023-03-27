@@ -25,10 +25,20 @@ import javax.annotation.Generated;
 public class GetVoiceConnectorLoggingConfigurationResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable,
         Cloneable {
 
+    /**
+     * <p>
+     * The logging configuration details .
+     * </p>
+     */
     private LoggingConfiguration loggingConfiguration;
 
     /**
+     * <p>
+     * The logging configuration details .
+     * </p>
+     * 
      * @param loggingConfiguration
+     *        The logging configuration details .
      */
 
     public void setLoggingConfiguration(LoggingConfiguration loggingConfiguration) {
@@ -36,7 +46,11 @@ public class GetVoiceConnectorLoggingConfigurationResult extends com.amazonaws.A
     }
 
     /**
-     * @return
+     * <p>
+     * The logging configuration details .
+     * </p>
+     * 
+     * @return The logging configuration details .
      */
 
     public LoggingConfiguration getLoggingConfiguration() {
@@ -44,7 +58,12 @@ public class GetVoiceConnectorLoggingConfigurationResult extends com.amazonaws.A
     }
 
     /**
+     * <p>
+     * The logging configuration details .
+     * </p>
+     * 
      * @param loggingConfiguration
+     *        The logging configuration details .
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

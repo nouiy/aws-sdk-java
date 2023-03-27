@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The proxy configuration for an Amazon Chime SDK Voice Connector.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/Proxy" target="_top">AWS API
  *      Documentation</a>
@@ -25,16 +28,38 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Proxy implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The default number of minutes allowed for proxy sessions.
+     * </p>
+     */
     private Integer defaultSessionExpiryMinutes;
-
+    /**
+     * <p>
+     * When true, stops proxy sessions from being created on the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     */
     private Boolean disabled;
-
+    /**
+     * <p>
+     * The phone number to route calls to after a proxy session expires.
+     * </p>
+     */
     private String fallBackPhoneNumber;
-
+    /**
+     * <p>
+     * The countries for proxy phone numbers to be selected from.
+     * </p>
+     */
     private java.util.List<String> phoneNumberCountries;
 
     /**
+     * <p>
+     * The default number of minutes allowed for proxy sessions.
+     * </p>
+     * 
      * @param defaultSessionExpiryMinutes
+     *        The default number of minutes allowed for proxy sessions.
      */
 
     public void setDefaultSessionExpiryMinutes(Integer defaultSessionExpiryMinutes) {
@@ -42,7 +67,11 @@ public class Proxy implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The default number of minutes allowed for proxy sessions.
+     * </p>
+     * 
+     * @return The default number of minutes allowed for proxy sessions.
      */
 
     public Integer getDefaultSessionExpiryMinutes() {
@@ -50,7 +79,12 @@ public class Proxy implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The default number of minutes allowed for proxy sessions.
+     * </p>
+     * 
      * @param defaultSessionExpiryMinutes
+     *        The default number of minutes allowed for proxy sessions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -60,7 +94,12 @@ public class Proxy implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * When true, stops proxy sessions from being created on the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param disabled
+     *        When true, stops proxy sessions from being created on the specified Amazon Chime SDK Voice Connector.
      */
 
     public void setDisabled(Boolean disabled) {
@@ -68,7 +107,11 @@ public class Proxy implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * When true, stops proxy sessions from being created on the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
+     * @return When true, stops proxy sessions from being created on the specified Amazon Chime SDK Voice Connector.
      */
 
     public Boolean getDisabled() {
@@ -76,7 +119,12 @@ public class Proxy implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * When true, stops proxy sessions from being created on the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param disabled
+     *        When true, stops proxy sessions from being created on the specified Amazon Chime SDK Voice Connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,7 +134,11 @@ public class Proxy implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * When true, stops proxy sessions from being created on the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
+     * @return When true, stops proxy sessions from being created on the specified Amazon Chime SDK Voice Connector.
      */
 
     public Boolean isDisabled() {
@@ -94,7 +146,12 @@ public class Proxy implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number to route calls to after a proxy session expires.
+     * </p>
+     * 
      * @param fallBackPhoneNumber
+     *        The phone number to route calls to after a proxy session expires.
      */
 
     public void setFallBackPhoneNumber(String fallBackPhoneNumber) {
@@ -102,7 +159,11 @@ public class Proxy implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number to route calls to after a proxy session expires.
+     * </p>
+     * 
+     * @return The phone number to route calls to after a proxy session expires.
      */
 
     public String getFallBackPhoneNumber() {
@@ -110,7 +171,12 @@ public class Proxy implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number to route calls to after a proxy session expires.
+     * </p>
+     * 
      * @param fallBackPhoneNumber
+     *        The phone number to route calls to after a proxy session expires.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -120,7 +186,11 @@ public class Proxy implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The countries for proxy phone numbers to be selected from.
+     * </p>
+     * 
+     * @return The countries for proxy phone numbers to be selected from.
      */
 
     public java.util.List<String> getPhoneNumberCountries() {
@@ -128,7 +198,12 @@ public class Proxy implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The countries for proxy phone numbers to be selected from.
+     * </p>
+     * 
      * @param phoneNumberCountries
+     *        The countries for proxy phone numbers to be selected from.
      */
 
     public void setPhoneNumberCountries(java.util.Collection<String> phoneNumberCountries) {
@@ -142,12 +217,16 @@ public class Proxy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The countries for proxy phone numbers to be selected from.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setPhoneNumberCountries(java.util.Collection)} or {@link #withPhoneNumberCountries(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param phoneNumberCountries
+     *        The countries for proxy phone numbers to be selected from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -162,7 +241,12 @@ public class Proxy implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The countries for proxy phone numbers to be selected from.
+     * </p>
+     * 
      * @param phoneNumberCountries
+     *        The countries for proxy phone numbers to be selected from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,7 +27,7 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The name or ID of the application that will be updated.
+     * The name, ID, or ARN of the application that will be updated.
      * </p>
      */
     private String application;
@@ -48,11 +48,11 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The name or ID of the application that will be updated.
+     * The name, ID, or ARN of the application that will be updated.
      * </p>
      * 
      * @param application
-     *        The name or ID of the application that will be updated.
+     *        The name, ID, or ARN of the application that will be updated.
      */
 
     public void setApplication(String application) {
@@ -61,10 +61,10 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The name or ID of the application that will be updated.
+     * The name, ID, or ARN of the application that will be updated.
      * </p>
      * 
-     * @return The name or ID of the application that will be updated.
+     * @return The name, ID, or ARN of the application that will be updated.
      */
 
     public String getApplication() {
@@ -73,11 +73,11 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The name or ID of the application that will be updated.
+     * The name, ID, or ARN of the application that will be updated.
      * </p>
      * 
      * @param application
-     *        The name or ID of the application that will be updated.
+     *        The name, ID, or ARN of the application that will be updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

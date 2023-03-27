@@ -25,10 +25,19 @@ import javax.annotation.Generated;
 public class ListVoiceConnectorTerminationCredentialsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements
         Serializable, Cloneable {
 
+    /**
+     * <p>
+     * A list of user names.
+     * </p>
+     */
     private java.util.List<String> usernames;
 
     /**
-     * @return
+     * <p>
+     * A list of user names.
+     * </p>
+     * 
+     * @return A list of user names.
      */
 
     public java.util.List<String> getUsernames() {
@@ -36,7 +45,12 @@ public class ListVoiceConnectorTerminationCredentialsResult extends com.amazonaw
     }
 
     /**
+     * <p>
+     * A list of user names.
+     * </p>
+     * 
      * @param usernames
+     *        A list of user names.
      */
 
     public void setUsernames(java.util.Collection<String> usernames) {
@@ -50,12 +64,16 @@ public class ListVoiceConnectorTerminationCredentialsResult extends com.amazonaw
 
     /**
      * <p>
+     * A list of user names.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setUsernames(java.util.Collection)} or {@link #withUsernames(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param usernames
+     *        A list of user names.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +88,12 @@ public class ListVoiceConnectorTerminationCredentialsResult extends com.amazonaw
     }
 
     /**
+     * <p>
+     * A list of user names.
+     * </p>
+     * 
      * @param usernames
+     *        A list of user names.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

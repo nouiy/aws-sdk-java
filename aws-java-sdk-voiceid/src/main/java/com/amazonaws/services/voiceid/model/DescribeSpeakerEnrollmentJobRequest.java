@@ -27,7 +27,7 @@ public class DescribeSpeakerEnrollmentJobRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The identifier of the domain containing the speaker enrollment job.
+     * The identifier of the domain that contains the speaker enrollment job.
      * </p>
      */
     private String domainId;
@@ -40,11 +40,11 @@ public class DescribeSpeakerEnrollmentJobRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The identifier of the domain containing the speaker enrollment job.
+     * The identifier of the domain that contains the speaker enrollment job.
      * </p>
      * 
      * @param domainId
-     *        The identifier of the domain containing the speaker enrollment job.
+     *        The identifier of the domain that contains the speaker enrollment job.
      */
 
     public void setDomainId(String domainId) {
@@ -53,10 +53,10 @@ public class DescribeSpeakerEnrollmentJobRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The identifier of the domain containing the speaker enrollment job.
+     * The identifier of the domain that contains the speaker enrollment job.
      * </p>
      * 
-     * @return The identifier of the domain containing the speaker enrollment job.
+     * @return The identifier of the domain that contains the speaker enrollment job.
      */
 
     public String getDomainId() {
@@ -65,11 +65,11 @@ public class DescribeSpeakerEnrollmentJobRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The identifier of the domain containing the speaker enrollment job.
+     * The identifier of the domain that contains the speaker enrollment job.
      * </p>
      * 
      * @param domainId
-     *        The identifier of the domain containing the speaker enrollment job.
+     *        The identifier of the domain that contains the speaker enrollment job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

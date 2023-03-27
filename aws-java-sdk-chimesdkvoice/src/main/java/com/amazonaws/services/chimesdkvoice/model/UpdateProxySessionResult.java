@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateProxySessionResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The updated proxy session details.
+     * </p>
+     */
     private ProxySession proxySession;
 
     /**
+     * <p>
+     * The updated proxy session details.
+     * </p>
+     * 
      * @param proxySession
+     *        The updated proxy session details.
      */
 
     public void setProxySession(ProxySession proxySession) {
@@ -34,7 +44,11 @@ public class UpdateProxySessionResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * @return
+     * <p>
+     * The updated proxy session details.
+     * </p>
+     * 
+     * @return The updated proxy session details.
      */
 
     public ProxySession getProxySession() {
@@ -42,7 +56,12 @@ public class UpdateProxySessionResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
+     * <p>
+     * The updated proxy session details.
+     * </p>
+     * 
      * @param proxySession
+     *        The updated proxy session details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

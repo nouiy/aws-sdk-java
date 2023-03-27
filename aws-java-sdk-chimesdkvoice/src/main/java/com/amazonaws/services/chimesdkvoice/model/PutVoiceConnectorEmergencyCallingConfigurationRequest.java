@@ -26,12 +26,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PutVoiceConnectorEmergencyCallingConfigurationRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     */
     private String voiceConnectorId;
-
+    /**
+     * <p>
+     * The configuration being updated.
+     * </p>
+     */
     private EmergencyCallingConfiguration emergencyCallingConfiguration;
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      */
 
     public void setVoiceConnectorId(String voiceConnectorId) {
@@ -39,7 +53,11 @@ public class PutVoiceConnectorEmergencyCallingConfigurationRequest extends com.a
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
+     * @return The Voice Connector ID.
      */
 
     public String getVoiceConnectorId() {
@@ -47,7 +65,12 @@ public class PutVoiceConnectorEmergencyCallingConfigurationRequest extends com.a
     }
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -57,7 +80,12 @@ public class PutVoiceConnectorEmergencyCallingConfigurationRequest extends com.a
     }
 
     /**
+     * <p>
+     * The configuration being updated.
+     * </p>
+     * 
      * @param emergencyCallingConfiguration
+     *        The configuration being updated.
      */
 
     public void setEmergencyCallingConfiguration(EmergencyCallingConfiguration emergencyCallingConfiguration) {
@@ -65,7 +93,11 @@ public class PutVoiceConnectorEmergencyCallingConfigurationRequest extends com.a
     }
 
     /**
-     * @return
+     * <p>
+     * The configuration being updated.
+     * </p>
+     * 
+     * @return The configuration being updated.
      */
 
     public EmergencyCallingConfiguration getEmergencyCallingConfiguration() {
@@ -73,7 +105,12 @@ public class PutVoiceConnectorEmergencyCallingConfigurationRequest extends com.a
     }
 
     /**
+     * <p>
+     * The configuration being updated.
+     * </p>
+     * 
      * @param emergencyCallingConfiguration
+     *        The configuration being updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

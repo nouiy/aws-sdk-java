@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The details of a speaker search task.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/SpeakerSearchDetails"
  *      target="_top">AWS API Documentation</a>
@@ -25,12 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class SpeakerSearchDetails implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The result value in the speaker search details.
+     * </p>
+     */
     private java.util.List<SpeakerSearchResult> results;
-
+    /**
+     * <p>
+     * The status of a voice print generation operation, <code>VoiceprintGenerationSuccess</code> or
+     * <code>VoiceprintGenerationFailure</code>..
+     * </p>
+     */
     private String voiceprintGenerationStatus;
 
     /**
-     * @return
+     * <p>
+     * The result value in the speaker search details.
+     * </p>
+     * 
+     * @return The result value in the speaker search details.
      */
 
     public java.util.List<SpeakerSearchResult> getResults() {
@@ -38,7 +55,12 @@ public class SpeakerSearchDetails implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The result value in the speaker search details.
+     * </p>
+     * 
      * @param results
+     *        The result value in the speaker search details.
      */
 
     public void setResults(java.util.Collection<SpeakerSearchResult> results) {
@@ -52,12 +74,16 @@ public class SpeakerSearchDetails implements Serializable, Cloneable, Structured
 
     /**
      * <p>
+     * The result value in the speaker search details.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setResults(java.util.Collection)} or {@link #withResults(java.util.Collection)} if you want to override
      * the existing values.
      * </p>
      * 
      * @param results
+     *        The result value in the speaker search details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -72,7 +98,12 @@ public class SpeakerSearchDetails implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The result value in the speaker search details.
+     * </p>
+     * 
      * @param results
+     *        The result value in the speaker search details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -82,7 +113,14 @@ public class SpeakerSearchDetails implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The status of a voice print generation operation, <code>VoiceprintGenerationSuccess</code> or
+     * <code>VoiceprintGenerationFailure</code>..
+     * </p>
+     * 
      * @param voiceprintGenerationStatus
+     *        The status of a voice print generation operation, <code>VoiceprintGenerationSuccess</code> or
+     *        <code>VoiceprintGenerationFailure</code>..
      */
 
     public void setVoiceprintGenerationStatus(String voiceprintGenerationStatus) {
@@ -90,7 +128,13 @@ public class SpeakerSearchDetails implements Serializable, Cloneable, Structured
     }
 
     /**
-     * @return
+     * <p>
+     * The status of a voice print generation operation, <code>VoiceprintGenerationSuccess</code> or
+     * <code>VoiceprintGenerationFailure</code>..
+     * </p>
+     * 
+     * @return The status of a voice print generation operation, <code>VoiceprintGenerationSuccess</code> or
+     *         <code>VoiceprintGenerationFailure</code>..
      */
 
     public String getVoiceprintGenerationStatus() {
@@ -98,7 +142,14 @@ public class SpeakerSearchDetails implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The status of a voice print generation operation, <code>VoiceprintGenerationSuccess</code> or
+     * <code>VoiceprintGenerationFailure</code>..
+     * </p>
+     * 
      * @param voiceprintGenerationStatus
+     *        The status of a voice print generation operation, <code>VoiceprintGenerationSuccess</code> or
+     *        <code>VoiceprintGenerationFailure</code>..
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

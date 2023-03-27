@@ -29,6 +29,8 @@ public class FraudDetectionConfigurationMarshaller {
 
     private static final MarshallingInfo<Integer> RISKTHRESHOLD_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RiskThreshold").build();
+    private static final MarshallingInfo<String> WATCHLISTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WatchlistId").build();
 
     private static final FraudDetectionConfigurationMarshaller instance = new FraudDetectionConfigurationMarshaller();
 
@@ -47,6 +49,7 @@ public class FraudDetectionConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(fraudDetectionConfiguration.getRiskThreshold(), RISKTHRESHOLD_BINDING);
+            protocolMarshaller.marshall(fraudDetectionConfiguration.getWatchlistId(), WATCHLISTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

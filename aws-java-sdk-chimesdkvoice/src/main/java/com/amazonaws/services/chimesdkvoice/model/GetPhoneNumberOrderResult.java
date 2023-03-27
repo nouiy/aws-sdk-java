@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetPhoneNumberOrderResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The phone number order details.
+     * </p>
+     */
     private PhoneNumberOrder phoneNumberOrder;
 
     /**
+     * <p>
+     * The phone number order details.
+     * </p>
+     * 
      * @param phoneNumberOrder
+     *        The phone number order details.
      */
 
     public void setPhoneNumberOrder(PhoneNumberOrder phoneNumberOrder) {
@@ -34,7 +44,11 @@ public class GetPhoneNumberOrderResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number order details.
+     * </p>
+     * 
+     * @return The phone number order details.
      */
 
     public PhoneNumberOrder getPhoneNumberOrder() {
@@ -42,7 +56,12 @@ public class GetPhoneNumberOrderResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * The phone number order details.
+     * </p>
+     * 
      * @param phoneNumberOrder
+     *        The phone number order details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

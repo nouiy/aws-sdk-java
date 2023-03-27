@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The SIP credentials used to authenticate requests to an Amazon Chime SDK Voice Connector.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/Credential" target="_top">AWS API
  *      Documentation</a>
@@ -25,12 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Credential implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The RFC2617 compliant user name associated with the SIP credentials, in US-ASCII format.
+     * </p>
+     */
     private String username;
-
+    /**
+     * <p>
+     * The RFC2617 compliant password associated with the SIP credentials, in US-ASCII format.
+     * </p>
+     */
     private String password;
 
     /**
+     * <p>
+     * The RFC2617 compliant user name associated with the SIP credentials, in US-ASCII format.
+     * </p>
+     * 
      * @param username
+     *        The RFC2617 compliant user name associated with the SIP credentials, in US-ASCII format.
      */
 
     public void setUsername(String username) {
@@ -38,7 +55,11 @@ public class Credential implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The RFC2617 compliant user name associated with the SIP credentials, in US-ASCII format.
+     * </p>
+     * 
+     * @return The RFC2617 compliant user name associated with the SIP credentials, in US-ASCII format.
      */
 
     public String getUsername() {
@@ -46,7 +67,12 @@ public class Credential implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The RFC2617 compliant user name associated with the SIP credentials, in US-ASCII format.
+     * </p>
+     * 
      * @param username
+     *        The RFC2617 compliant user name associated with the SIP credentials, in US-ASCII format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +82,12 @@ public class Credential implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The RFC2617 compliant password associated with the SIP credentials, in US-ASCII format.
+     * </p>
+     * 
      * @param password
+     *        The RFC2617 compliant password associated with the SIP credentials, in US-ASCII format.
      */
 
     public void setPassword(String password) {
@@ -64,7 +95,11 @@ public class Credential implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The RFC2617 compliant password associated with the SIP credentials, in US-ASCII format.
+     * </p>
+     * 
+     * @return The RFC2617 compliant password associated with the SIP credentials, in US-ASCII format.
      */
 
     public String getPassword() {
@@ -72,7 +107,12 @@ public class Credential implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The RFC2617 compliant password associated with the SIP credentials, in US-ASCII format.
+     * </p>
+     * 
      * @param password
+     *        The RFC2617 compliant password associated with the SIP credentials, in US-ASCII format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

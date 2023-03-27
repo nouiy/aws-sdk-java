@@ -30,7 +30,7 @@ public class ApplicationDPUSizes implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The name of the supported application runtime (for example, <code>Jupyter 1.0</code>).
+     * The name of the supported application runtime (for example, <code>Athena notebook version 1</code>).
      * </p>
      */
     private String applicationRuntimeId;
@@ -43,11 +43,11 @@ public class ApplicationDPUSizes implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The name of the supported application runtime (for example, <code>Jupyter 1.0</code>).
+     * The name of the supported application runtime (for example, <code>Athena notebook version 1</code>).
      * </p>
      * 
      * @param applicationRuntimeId
-     *        The name of the supported application runtime (for example, <code>Jupyter 1.0</code>).
+     *        The name of the supported application runtime (for example, <code>Athena notebook version 1</code>).
      */
 
     public void setApplicationRuntimeId(String applicationRuntimeId) {
@@ -56,10 +56,10 @@ public class ApplicationDPUSizes implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The name of the supported application runtime (for example, <code>Jupyter 1.0</code>).
+     * The name of the supported application runtime (for example, <code>Athena notebook version 1</code>).
      * </p>
      * 
-     * @return The name of the supported application runtime (for example, <code>Jupyter 1.0</code>).
+     * @return The name of the supported application runtime (for example, <code>Athena notebook version 1</code>).
      */
 
     public String getApplicationRuntimeId() {
@@ -68,11 +68,11 @@ public class ApplicationDPUSizes implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The name of the supported application runtime (for example, <code>Jupyter 1.0</code>).
+     * The name of the supported application runtime (for example, <code>Athena notebook version 1</code>).
      * </p>
      * 
      * @param applicationRuntimeId
-     *        The name of the supported application runtime (for example, <code>Jupyter 1.0</code>).
+     *        The name of the supported application runtime (for example, <code>Athena notebook version 1</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

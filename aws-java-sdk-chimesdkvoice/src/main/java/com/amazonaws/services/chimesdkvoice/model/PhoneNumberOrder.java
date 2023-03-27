@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The details of an Amazon Chime SDK phone number order.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/PhoneNumberOrder" target="_top">AWS
  *      API Documentation</a>
@@ -25,22 +28,56 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ID of the phone order.
+     * </p>
+     */
     private String phoneNumberOrderId;
-
+    /**
+     * <p>
+     * The phone number order product type.
+     * </p>
+     */
     private String productType;
-
+    /**
+     * <p>
+     * The status of the phone number order.
+     * </p>
+     */
     private String status;
-
+    /**
+     * <p>
+     * The type of phone number being ordered, local or toll-free.
+     * </p>
+     */
     private String orderType;
-
+    /**
+     * <p>
+     * The ordered phone number details, such as the phone number in E.164 format and the phone number status.
+     * </p>
+     */
     private java.util.List<OrderedPhoneNumber> orderedPhoneNumbers;
-
+    /**
+     * <p>
+     * The phone number order creation time stamp, in ISO 8601 format.
+     * </p>
+     */
     private java.util.Date createdTimestamp;
-
+    /**
+     * <p>
+     * The updated phone number order time stamp, in ISO 8601 format.
+     * </p>
+     */
     private java.util.Date updatedTimestamp;
 
     /**
+     * <p>
+     * The ID of the phone order.
+     * </p>
+     * 
      * @param phoneNumberOrderId
+     *        The ID of the phone order.
      */
 
     public void setPhoneNumberOrderId(String phoneNumberOrderId) {
@@ -48,7 +85,11 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the phone order.
+     * </p>
+     * 
+     * @return The ID of the phone order.
      */
 
     public String getPhoneNumberOrderId() {
@@ -56,7 +97,12 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The ID of the phone order.
+     * </p>
+     * 
      * @param phoneNumberOrderId
+     *        The ID of the phone order.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -66,7 +112,12 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The phone number order product type.
+     * </p>
+     * 
      * @param productType
+     *        The phone number order product type.
      * @see PhoneNumberProductType
      */
 
@@ -75,7 +126,11 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number order product type.
+     * </p>
+     * 
+     * @return The phone number order product type.
      * @see PhoneNumberProductType
      */
 
@@ -84,7 +139,12 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The phone number order product type.
+     * </p>
+     * 
      * @param productType
+     *        The phone number order product type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberProductType
      */
@@ -95,7 +155,12 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The phone number order product type.
+     * </p>
+     * 
      * @param productType
+     *        The phone number order product type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberProductType
      */
@@ -106,7 +171,12 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The status of the phone number order.
+     * </p>
+     * 
      * @param status
+     *        The status of the phone number order.
      * @see PhoneNumberOrderStatus
      */
 
@@ -115,7 +185,11 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the phone number order.
+     * </p>
+     * 
+     * @return The status of the phone number order.
      * @see PhoneNumberOrderStatus
      */
 
@@ -124,7 +198,12 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The status of the phone number order.
+     * </p>
+     * 
      * @param status
+     *        The status of the phone number order.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberOrderStatus
      */
@@ -135,7 +214,12 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The status of the phone number order.
+     * </p>
+     * 
      * @param status
+     *        The status of the phone number order.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberOrderStatus
      */
@@ -146,7 +230,12 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The type of phone number being ordered, local or toll-free.
+     * </p>
+     * 
      * @param orderType
+     *        The type of phone number being ordered, local or toll-free.
      * @see PhoneNumberOrderType
      */
 
@@ -155,7 +244,11 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The type of phone number being ordered, local or toll-free.
+     * </p>
+     * 
+     * @return The type of phone number being ordered, local or toll-free.
      * @see PhoneNumberOrderType
      */
 
@@ -164,7 +257,12 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The type of phone number being ordered, local or toll-free.
+     * </p>
+     * 
      * @param orderType
+     *        The type of phone number being ordered, local or toll-free.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberOrderType
      */
@@ -175,7 +273,12 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The type of phone number being ordered, local or toll-free.
+     * </p>
+     * 
      * @param orderType
+     *        The type of phone number being ordered, local or toll-free.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberOrderType
      */
@@ -186,7 +289,11 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The ordered phone number details, such as the phone number in E.164 format and the phone number status.
+     * </p>
+     * 
+     * @return The ordered phone number details, such as the phone number in E.164 format and the phone number status.
      */
 
     public java.util.List<OrderedPhoneNumber> getOrderedPhoneNumbers() {
@@ -194,7 +301,12 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The ordered phone number details, such as the phone number in E.164 format and the phone number status.
+     * </p>
+     * 
      * @param orderedPhoneNumbers
+     *        The ordered phone number details, such as the phone number in E.164 format and the phone number status.
      */
 
     public void setOrderedPhoneNumbers(java.util.Collection<OrderedPhoneNumber> orderedPhoneNumbers) {
@@ -208,12 +320,16 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
+     * The ordered phone number details, such as the phone number in E.164 format and the phone number status.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setOrderedPhoneNumbers(java.util.Collection)} or {@link #withOrderedPhoneNumbers(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param orderedPhoneNumbers
+     *        The ordered phone number details, such as the phone number in E.164 format and the phone number status.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -228,7 +344,12 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The ordered phone number details, such as the phone number in E.164 format and the phone number status.
+     * </p>
+     * 
      * @param orderedPhoneNumbers
+     *        The ordered phone number details, such as the phone number in E.164 format and the phone number status.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -238,7 +359,12 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The phone number order creation time stamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The phone number order creation time stamp, in ISO 8601 format.
      */
 
     public void setCreatedTimestamp(java.util.Date createdTimestamp) {
@@ -246,7 +372,11 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number order creation time stamp, in ISO 8601 format.
+     * </p>
+     * 
+     * @return The phone number order creation time stamp, in ISO 8601 format.
      */
 
     public java.util.Date getCreatedTimestamp() {
@@ -254,7 +384,12 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The phone number order creation time stamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The phone number order creation time stamp, in ISO 8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -264,7 +399,12 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The updated phone number order time stamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The updated phone number order time stamp, in ISO 8601 format.
      */
 
     public void setUpdatedTimestamp(java.util.Date updatedTimestamp) {
@@ -272,7 +412,11 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The updated phone number order time stamp, in ISO 8601 format.
+     * </p>
+     * 
+     * @return The updated phone number order time stamp, in ISO 8601 format.
      */
 
     public java.util.Date getUpdatedTimestamp() {
@@ -280,7 +424,12 @@ public class PhoneNumberOrder implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The updated phone number order time stamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The updated phone number order time stamp, in ISO 8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

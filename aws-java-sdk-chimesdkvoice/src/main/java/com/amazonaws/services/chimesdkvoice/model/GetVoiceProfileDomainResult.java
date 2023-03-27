@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetVoiceProfileDomainResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The details of the voice profile domain.
+     * </p>
+     */
     private VoiceProfileDomain voiceProfileDomain;
 
     /**
+     * <p>
+     * The details of the voice profile domain.
+     * </p>
+     * 
      * @param voiceProfileDomain
+     *        The details of the voice profile domain.
      */
 
     public void setVoiceProfileDomain(VoiceProfileDomain voiceProfileDomain) {
@@ -34,7 +44,11 @@ public class GetVoiceProfileDomainResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * @return
+     * <p>
+     * The details of the voice profile domain.
+     * </p>
+     * 
+     * @return The details of the voice profile domain.
      */
 
     public VoiceProfileDomain getVoiceProfileDomain() {
@@ -42,7 +56,12 @@ public class GetVoiceProfileDomainResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The details of the voice profile domain.
+     * </p>
+     * 
      * @param voiceProfileDomain
+     *        The details of the voice profile domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

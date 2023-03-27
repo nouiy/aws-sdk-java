@@ -23,12 +23,25 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListPhoneNumberOrdersResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The phone number order details.
+     * </p>
+     */
     private java.util.List<PhoneNumberOrder> phoneNumberOrders;
-
+    /**
+     * <p>
+     * The token used to retrieve the next page of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * @return
+     * <p>
+     * The phone number order details.
+     * </p>
+     * 
+     * @return The phone number order details.
      */
 
     public java.util.List<PhoneNumberOrder> getPhoneNumberOrders() {
@@ -36,7 +49,12 @@ public class ListPhoneNumberOrdersResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The phone number order details.
+     * </p>
+     * 
      * @param phoneNumberOrders
+     *        The phone number order details.
      */
 
     public void setPhoneNumberOrders(java.util.Collection<PhoneNumberOrder> phoneNumberOrders) {
@@ -50,12 +68,16 @@ public class ListPhoneNumberOrdersResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
+     * The phone number order details.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setPhoneNumberOrders(java.util.Collection)} or {@link #withPhoneNumberOrders(java.util.Collection)} if
      * you want to override the existing values.
      * </p>
      * 
      * @param phoneNumberOrders
+     *        The phone number order details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +92,12 @@ public class ListPhoneNumberOrdersResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The phone number order details.
+     * </p>
+     * 
      * @param phoneNumberOrders
+     *        The phone number order details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,7 +107,12 @@ public class ListPhoneNumberOrdersResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The token used to retrieve the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to retrieve the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -88,7 +120,11 @@ public class ListPhoneNumberOrdersResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * @return
+     * <p>
+     * The token used to retrieve the next page of results.
+     * </p>
+     * 
+     * @return The token used to retrieve the next page of results.
      */
 
     public String getNextToken() {
@@ -96,7 +132,12 @@ public class ListPhoneNumberOrdersResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The token used to retrieve the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to retrieve the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,14 +25,32 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListVoiceProfilesRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The ID of the voice profile domain.
+     * </p>
+     */
     private String voiceProfileDomainId;
-
+    /**
+     * <p>
+     * The token used to retrieve the next page of results.
+     * </p>
+     */
     private String nextToken;
-
+    /**
+     * <p>
+     * The maximum number of results in the request.
+     * </p>
+     */
     private Integer maxResults;
 
     /**
+     * <p>
+     * The ID of the voice profile domain.
+     * </p>
+     * 
      * @param voiceProfileDomainId
+     *        The ID of the voice profile domain.
      */
 
     public void setVoiceProfileDomainId(String voiceProfileDomainId) {
@@ -40,7 +58,11 @@ public class ListVoiceProfilesRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the voice profile domain.
+     * </p>
+     * 
+     * @return The ID of the voice profile domain.
      */
 
     public String getVoiceProfileDomainId() {
@@ -48,7 +70,12 @@ public class ListVoiceProfilesRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The ID of the voice profile domain.
+     * </p>
+     * 
      * @param voiceProfileDomainId
+     *        The ID of the voice profile domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +85,12 @@ public class ListVoiceProfilesRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The token used to retrieve the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to retrieve the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -66,7 +98,11 @@ public class ListVoiceProfilesRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * @return
+     * <p>
+     * The token used to retrieve the next page of results.
+     * </p>
+     * 
+     * @return The token used to retrieve the next page of results.
      */
 
     public String getNextToken() {
@@ -74,7 +110,12 @@ public class ListVoiceProfilesRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The token used to retrieve the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to retrieve the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,7 +125,12 @@ public class ListVoiceProfilesRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The maximum number of results in the request.
+     * </p>
+     * 
      * @param maxResults
+     *        The maximum number of results in the request.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -92,7 +138,11 @@ public class ListVoiceProfilesRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
-     * @return
+     * <p>
+     * The maximum number of results in the request.
+     * </p>
+     * 
+     * @return The maximum number of results in the request.
      */
 
     public Integer getMaxResults() {
@@ -100,7 +150,12 @@ public class ListVoiceProfilesRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * The maximum number of results in the request.
+     * </p>
+     * 
      * @param maxResults
+     *        The maximum number of results in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

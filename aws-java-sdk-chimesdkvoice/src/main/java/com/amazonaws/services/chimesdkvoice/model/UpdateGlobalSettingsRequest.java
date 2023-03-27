@@ -25,10 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateGlobalSettingsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The Voice Connector settings.
+     * </p>
+     */
     private VoiceConnectorSettings voiceConnector;
 
     /**
+     * <p>
+     * The Voice Connector settings.
+     * </p>
+     * 
      * @param voiceConnector
+     *        The Voice Connector settings.
      */
 
     public void setVoiceConnector(VoiceConnectorSettings voiceConnector) {
@@ -36,7 +46,11 @@ public class UpdateGlobalSettingsRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector settings.
+     * </p>
+     * 
+     * @return The Voice Connector settings.
      */
 
     public VoiceConnectorSettings getVoiceConnector() {
@@ -44,7 +58,12 @@ public class UpdateGlobalSettingsRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The Voice Connector settings.
+     * </p>
+     * 
      * @param voiceConnector
+     *        The Voice Connector settings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

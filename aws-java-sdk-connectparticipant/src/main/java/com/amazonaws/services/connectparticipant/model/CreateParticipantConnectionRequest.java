@@ -45,7 +45,8 @@ public class CreateParticipantConnectionRequest extends com.amazonaws.AmazonWebS
     private String participantToken;
     /**
      * <p>
-     * Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     * Amazon Connect Participant is used to mark the participant as connected for customer participant in message
+     * streaming, as well as for agent or manager participant in non-streaming chats.
      * </p>
      */
     private Boolean connectParticipant;
@@ -227,11 +228,13 @@ public class CreateParticipantConnectionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     * Amazon Connect Participant is used to mark the participant as connected for customer participant in message
+     * streaming, as well as for agent or manager participant in non-streaming chats.
      * </p>
      * 
      * @param connectParticipant
-     *        Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     *        Amazon Connect Participant is used to mark the participant as connected for customer participant in
+     *        message streaming, as well as for agent or manager participant in non-streaming chats.
      */
 
     public void setConnectParticipant(Boolean connectParticipant) {
@@ -240,10 +243,12 @@ public class CreateParticipantConnectionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     * Amazon Connect Participant is used to mark the participant as connected for customer participant in message
+     * streaming, as well as for agent or manager participant in non-streaming chats.
      * </p>
      * 
-     * @return Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     * @return Amazon Connect Participant is used to mark the participant as connected for customer participant in
+     *         message streaming, as well as for agent or manager participant in non-streaming chats.
      */
 
     public Boolean getConnectParticipant() {
@@ -252,11 +257,13 @@ public class CreateParticipantConnectionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     * Amazon Connect Participant is used to mark the participant as connected for customer participant in message
+     * streaming, as well as for agent or manager participant in non-streaming chats.
      * </p>
      * 
      * @param connectParticipant
-     *        Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     *        Amazon Connect Participant is used to mark the participant as connected for customer participant in
+     *        message streaming, as well as for agent or manager participant in non-streaming chats.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -267,10 +274,12 @@ public class CreateParticipantConnectionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     * Amazon Connect Participant is used to mark the participant as connected for customer participant in message
+     * streaming, as well as for agent or manager participant in non-streaming chats.
      * </p>
      * 
-     * @return Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     * @return Amazon Connect Participant is used to mark the participant as connected for customer participant in
+     *         message streaming, as well as for agent or manager participant in non-streaming chats.
      */
 
     public Boolean isConnectParticipant() {

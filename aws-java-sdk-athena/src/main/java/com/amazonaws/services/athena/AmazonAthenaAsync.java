@@ -311,7 +311,10 @@ public interface AmazonAthenaAsync extends AmazonAthena {
     /**
      * <p>
      * Gets an authentication token and the URL at which the notebook can be accessed. During programmatic access,
-     * <code>CreatePresignedNotebookUrl</code> must be called every 10 minutes to refresh the authentication token.
+     * <code>CreatePresignedNotebookUrl</code> must be called every 10 minutes to refresh the authentication token. For
+     * information about granting programmatic access, see <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/setting-up.html#setting-up-grant-programmatic-access">Grant
+     * programmatic access</a>.
      * </p>
      * 
      * @param createPresignedNotebookUrlRequest
@@ -326,7 +329,10 @@ public interface AmazonAthenaAsync extends AmazonAthena {
     /**
      * <p>
      * Gets an authentication token and the URL at which the notebook can be accessed. During programmatic access,
-     * <code>CreatePresignedNotebookUrl</code> must be called every 10 minutes to refresh the authentication token.
+     * <code>CreatePresignedNotebookUrl</code> must be called every 10 minutes to refresh the authentication token. For
+     * information about granting programmatic access, see <a
+     * href="https://docs.aws.amazon.com/athena/latest/ug/setting-up.html#setting-up-grant-programmatic-access">Grant
+     * programmatic access</a>.
      * </p>
      * 
      * @param createPresignedNotebookUrlRequest
@@ -345,10 +351,8 @@ public interface AmazonAthenaAsync extends AmazonAthena {
 
     /**
      * <p>
-     * Creates a workgroup with the specified name. Only one of <code>Configurations</code> or
-     * <code>Configuration</code> can be specified; <code>Configurations</code> for a workgroup with multi engine
-     * support (for example, an Apache Spark enabled workgroup) or <code>Configuration</code> for an Athena SQL
-     * workgroup.
+     * Creates a workgroup with the specified name. A workgroup can be an Apache Spark enabled workgroup or an Athena
+     * SQL workgroup.
      * </p>
      * 
      * @param createWorkGroupRequest
@@ -361,10 +365,8 @@ public interface AmazonAthenaAsync extends AmazonAthena {
 
     /**
      * <p>
-     * Creates a workgroup with the specified name. Only one of <code>Configurations</code> or
-     * <code>Configuration</code> can be specified; <code>Configurations</code> for a workgroup with multi engine
-     * support (for example, an Apache Spark enabled workgroup) or <code>Configuration</code> for an Athena SQL
-     * workgroup.
+     * Creates a workgroup with the specified name. A workgroup can be an Apache Spark enabled workgroup or an Athena
+     * SQL workgroup.
      * </p>
      * 
      * @param createWorkGroupRequest
@@ -609,7 +611,7 @@ public interface AmazonAthenaAsync extends AmazonAthena {
 
     /**
      * <p>
-     * Retrieves a pre-signed URL to a copy of the code that was executed for the calculation.
+     * Retrieves the unencrypted code that was executed for the calculation.
      * </p>
      * 
      * @param getCalculationExecutionCodeRequest
@@ -623,7 +625,7 @@ public interface AmazonAthenaAsync extends AmazonAthena {
 
     /**
      * <p>
-     * Retrieves a pre-signed URL to a copy of the code that was executed for the calculation.
+     * Retrieves the unencrypted code that was executed for the calculation.
      * </p>
      * 
      * @param getCalculationExecutionCodeRequest
@@ -869,9 +871,9 @@ public interface AmazonAthenaAsync extends AmazonAthena {
      * <p>
      * Streams the results of a single query execution specified by <code>QueryExecutionId</code> from the Athena query
      * results location in Amazon S3. For more information, see <a
-     * href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Query Results</a> in the <i>Amazon Athena User
-     * Guide</i>. This request does not execute the query but returns results. Use <a>StartQueryExecution</a> to run a
-     * query.
+     * href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working with query results, recent queries, and
+     * output files</a> in the <i>Amazon Athena User Guide</i>. This request does not execute the query but returns
+     * results. Use <a>StartQueryExecution</a> to run a query.
      * </p>
      * <p>
      * To stream query results successfully, the IAM principal with permission to call <code>GetQueryResults</code> also
@@ -898,9 +900,9 @@ public interface AmazonAthenaAsync extends AmazonAthena {
      * <p>
      * Streams the results of a single query execution specified by <code>QueryExecutionId</code> from the Athena query
      * results location in Amazon S3. For more information, see <a
-     * href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Query Results</a> in the <i>Amazon Athena User
-     * Guide</i>. This request does not execute the query but returns results. Use <a>StartQueryExecution</a> to run a
-     * query.
+     * href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working with query results, recent queries, and
+     * output files</a> in the <i>Amazon Athena User Guide</i>. This request does not execute the query but returns
+     * results. Use <a>StartQueryExecution</a> to run a query.
      * </p>
      * <p>
      * To stream query results successfully, the IAM principal with permission to call <code>GetQueryResults</code> also
@@ -1128,7 +1130,8 @@ public interface AmazonAthenaAsync extends AmazonAthena {
 
     /**
      * <p>
-     * Returns the supported DPU sizes for the supported application runtimes (for example, <code>Jupyter 1.0</code>).
+     * Returns the supported DPU sizes for the supported application runtimes (for example,
+     * <code>Athena notebook version 1</code>).
      * </p>
      * 
      * @param listApplicationDPUSizesRequest
@@ -1141,7 +1144,8 @@ public interface AmazonAthenaAsync extends AmazonAthena {
 
     /**
      * <p>
-     * Returns the supported DPU sizes for the supported application runtimes (for example, <code>Jupyter 1.0</code>).
+     * Returns the supported DPU sizes for the supported application runtimes (for example,
+     * <code>Athena notebook version 1</code>).
      * </p>
      * 
      * @param listApplicationDPUSizesRequest
@@ -1299,8 +1303,8 @@ public interface AmazonAthenaAsync extends AmazonAthena {
 
     /**
      * <p>
-     * Lists, in descending order, the executors that have been submitted to a session. Newer executors are listed
-     * first; older executors are listed later. The result can be optionally filtered by state.
+     * Lists, in descending order, the executors that joined a session. Newer executors are listed first; older
+     * executors are listed later. The result can be optionally filtered by state.
      * </p>
      * 
      * @param listExecutorsRequest
@@ -1313,8 +1317,8 @@ public interface AmazonAthenaAsync extends AmazonAthena {
 
     /**
      * <p>
-     * Lists, in descending order, the executors that have been submitted to a session. Newer executors are listed
-     * first; older executors are listed later. The result can be optionally filtered by state.
+     * Lists, in descending order, the executors that joined a session. Newer executors are listed first; older
+     * executors are listed later. The result can be optionally filtered by state.
      * </p>
      * 
      * @param listExecutorsRequest
@@ -1646,7 +1650,7 @@ public interface AmazonAthenaAsync extends AmazonAthena {
     /**
      * <p>
      * Submits calculations for execution within a session. You can supply the code to run as an inline code block
-     * within the request or as an Amazon S3 URL.
+     * within the request.
      * </p>
      * 
      * @param startCalculationExecutionRequest
@@ -1661,7 +1665,7 @@ public interface AmazonAthenaAsync extends AmazonAthena {
     /**
      * <p>
      * Submits calculations for execution within a session. You can supply the code to run as an inline code block
-     * within the request or as an Amazon S3 URL.
+     * within the request.
      * </p>
      * 
      * @param startCalculationExecutionRequest
@@ -1847,11 +1851,11 @@ public interface AmazonAthenaAsync extends AmazonAthena {
      * define. For example, you can use tags to categorize Athena workgroups or data catalogs by purpose, owner, or
      * environment. Use a consistent set of tag keys to make it easier to search and filter workgroups or data catalogs
      * in your account. For best practices, see <a
-     * href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">Tagging Best Practices</a>. Tag
-     * keys can be from 1 to 128 UTF-8 Unicode characters, and tag values can be from 0 to 256 UTF-8 Unicode characters.
-     * Tags can use letters and numbers representable in UTF-8, and the following characters: + - = . _ : / @. Tag keys
-     * and values are case-sensitive. Tag keys must be unique per resource. If you specify more than one tag, separate
-     * them by commas.
+     * href="https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/tagging-best-practices.html">Tagging
+     * Best Practices</a>. Tag keys can be from 1 to 128 UTF-8 Unicode characters, and tag values can be from 0 to 256
+     * UTF-8 Unicode characters. Tags can use letters and numbers representable in UTF-8, and the following characters:
+     * + - = . _ : / @. Tag keys and values are case-sensitive. Tag keys must be unique per resource. If you specify
+     * more than one tag, separate them by commas.
      * </p>
      * 
      * @param tagResourceRequest
@@ -1869,11 +1873,11 @@ public interface AmazonAthenaAsync extends AmazonAthena {
      * define. For example, you can use tags to categorize Athena workgroups or data catalogs by purpose, owner, or
      * environment. Use a consistent set of tag keys to make it easier to search and filter workgroups or data catalogs
      * in your account. For best practices, see <a
-     * href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">Tagging Best Practices</a>. Tag
-     * keys can be from 1 to 128 UTF-8 Unicode characters, and tag values can be from 0 to 256 UTF-8 Unicode characters.
-     * Tags can use letters and numbers representable in UTF-8, and the following characters: + - = . _ : / @. Tag keys
-     * and values are case-sensitive. Tag keys must be unique per resource. If you specify more than one tag, separate
-     * them by commas.
+     * href="https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/tagging-best-practices.html">Tagging
+     * Best Practices</a>. Tag keys can be from 1 to 128 UTF-8 Unicode characters, and tag values can be from 0 to 256
+     * UTF-8 Unicode characters. Tags can use letters and numbers representable in UTF-8, and the following characters:
+     * + - = . _ : / @. Tag keys and values are case-sensitive. Tag keys must be unique per resource. If you specify
+     * more than one tag, separate them by commas.
      * </p>
      * 
      * @param tagResourceRequest
@@ -2114,10 +2118,8 @@ public interface AmazonAthenaAsync extends AmazonAthena {
 
     /**
      * <p>
-     * Updates the workgroup with the specified name. The workgroup's name cannot be changed. Only one of
-     * <code>ConfigurationsUpdates</code> or <code>ConfigurationUpdates</code> can be specified;
-     * <code>ConfigurationsUpdates</code> for a workgroup with multi engine support (for example, an Apache Spark
-     * enabled workgroup) or <code>ConfigurationUpdates</code> for an Athena SQL workgroup.
+     * Updates the workgroup with the specified name. The workgroup's name cannot be changed. Only
+     * <code>ConfigurationUpdates</code> can be specified.
      * </p>
      * 
      * @param updateWorkGroupRequest
@@ -2130,10 +2132,8 @@ public interface AmazonAthenaAsync extends AmazonAthena {
 
     /**
      * <p>
-     * Updates the workgroup with the specified name. The workgroup's name cannot be changed. Only one of
-     * <code>ConfigurationsUpdates</code> or <code>ConfigurationUpdates</code> can be specified;
-     * <code>ConfigurationsUpdates</code> for a workgroup with multi engine support (for example, an Apache Spark
-     * enabled workgroup) or <code>ConfigurationUpdates</code> for an Athena SQL workgroup.
+     * Updates the workgroup with the specified name. The workgroup's name cannot be changed. Only
+     * <code>ConfigurationUpdates</code> can be specified.
      * </p>
      * 
      * @param updateWorkGroupRequest

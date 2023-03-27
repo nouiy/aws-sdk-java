@@ -705,6 +705,31 @@ public interface AWSIoTWireless {
 
     /**
      * <p>
+     * Delete an import task.
+     * </p>
+     * 
+     * @param deleteWirelessDeviceImportTaskRequest
+     * @return Result of the DeleteWirelessDeviceImportTask operation returned by the service.
+     * @throws ValidationException
+     *         The input did not meet the specified constraints.
+     * @throws AccessDeniedException
+     *         User does not have permission to perform this action.
+     * @throws ResourceNotFoundException
+     *         Resource does not exist.
+     * @throws InternalServerException
+     *         An unexpected error occurred while processing a request.
+     * @throws ConflictException
+     *         Adding, updating, or deleting the resource can cause an inconsistent state.
+     * @throws ThrottlingException
+     *         The request was denied because it exceeded the allowed API request rate.
+     * @sample AWSIoTWireless.DeleteWirelessDeviceImportTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/DeleteWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteWirelessDeviceImportTaskResult deleteWirelessDeviceImportTask(DeleteWirelessDeviceImportTaskRequest deleteWirelessDeviceImportTaskRequest);
+
+    /**
+     * <p>
      * Deletes a wireless gateway.
      * </p>
      * 
@@ -773,6 +798,27 @@ public interface AWSIoTWireless {
      */
     DeleteWirelessGatewayTaskDefinitionResult deleteWirelessGatewayTaskDefinition(
             DeleteWirelessGatewayTaskDefinitionRequest deleteWirelessGatewayTaskDefinitionRequest);
+
+    /**
+     * <p>
+     * Deregister a wireless device from AWS IoT Wireless.
+     * </p>
+     * 
+     * @param deregisterWirelessDeviceRequest
+     * @return Result of the DeregisterWirelessDevice operation returned by the service.
+     * @throws ValidationException
+     *         The input did not meet the specified constraints.
+     * @throws ResourceNotFoundException
+     *         Resource does not exist.
+     * @throws InternalServerException
+     *         An unexpected error occurred while processing a request.
+     * @throws ThrottlingException
+     *         The request was denied because it exceeded the allowed API request rate.
+     * @sample AWSIoTWireless.DeregisterWirelessDevice
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/DeregisterWirelessDevice"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeregisterWirelessDeviceResult deregisterWirelessDevice(DeregisterWirelessDeviceRequest deregisterWirelessDeviceRequest);
 
     /**
      * <p>
@@ -1383,6 +1429,31 @@ public interface AWSIoTWireless {
 
     /**
      * <p>
+     * Get information about an import task and count of device onboarding summary information for the import task.
+     * </p>
+     * 
+     * @param getWirelessDeviceImportTaskRequest
+     * @return Result of the GetWirelessDeviceImportTask operation returned by the service.
+     * @throws ValidationException
+     *         The input did not meet the specified constraints.
+     * @throws AccessDeniedException
+     *         User does not have permission to perform this action.
+     * @throws ResourceNotFoundException
+     *         Resource does not exist.
+     * @throws InternalServerException
+     *         An unexpected error occurred while processing a request.
+     * @throws ConflictException
+     *         Adding, updating, or deleting the resource can cause an inconsistent state.
+     * @throws ThrottlingException
+     *         The request was denied because it exceeded the allowed API request rate.
+     * @sample AWSIoTWireless.GetWirelessDeviceImportTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/GetWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetWirelessDeviceImportTaskResult getWirelessDeviceImportTask(GetWirelessDeviceImportTaskRequest getWirelessDeviceImportTaskRequest);
+
+    /**
+     * <p>
      * Gets operating information about a wireless device.
      * </p>
      * 
@@ -1585,6 +1656,33 @@ public interface AWSIoTWireless {
      *      API Documentation</a>
      */
     ListDeviceProfilesResult listDeviceProfiles(ListDeviceProfilesRequest listDeviceProfilesRequest);
+
+    /**
+     * <p>
+     * List the Sidewalk devices in an import task and their onboarding status.
+     * </p>
+     * 
+     * @param listDevicesForWirelessDeviceImportTaskRequest
+     * @return Result of the ListDevicesForWirelessDeviceImportTask operation returned by the service.
+     * @throws ValidationException
+     *         The input did not meet the specified constraints.
+     * @throws AccessDeniedException
+     *         User does not have permission to perform this action.
+     * @throws ResourceNotFoundException
+     *         Resource does not exist.
+     * @throws InternalServerException
+     *         An unexpected error occurred while processing a request.
+     * @throws ConflictException
+     *         Adding, updating, or deleting the resource can cause an inconsistent state.
+     * @throws ThrottlingException
+     *         The request was denied because it exceeded the allowed API request rate.
+     * @sample AWSIoTWireless.ListDevicesForWirelessDeviceImportTask
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/ListDevicesForWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListDevicesForWirelessDeviceImportTaskResult listDevicesForWirelessDeviceImportTask(
+            ListDevicesForWirelessDeviceImportTaskRequest listDevicesForWirelessDeviceImportTaskRequest);
 
     /**
      * <p>
@@ -1809,6 +1907,31 @@ public interface AWSIoTWireless {
      *      target="_top">AWS API Documentation</a>
      */
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * List wireless devices that have been added to an import task.
+     * </p>
+     * 
+     * @param listWirelessDeviceImportTasksRequest
+     * @return Result of the ListWirelessDeviceImportTasks operation returned by the service.
+     * @throws ValidationException
+     *         The input did not meet the specified constraints.
+     * @throws AccessDeniedException
+     *         User does not have permission to perform this action.
+     * @throws ResourceNotFoundException
+     *         Resource does not exist.
+     * @throws InternalServerException
+     *         An unexpected error occurred while processing a request.
+     * @throws ConflictException
+     *         Adding, updating, or deleting the resource can cause an inconsistent state.
+     * @throws ThrottlingException
+     *         The request was denied because it exceeded the allowed API request rate.
+     * @sample AWSIoTWireless.ListWirelessDeviceImportTasks
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/ListWirelessDeviceImportTasks"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListWirelessDeviceImportTasksResult listWirelessDeviceImportTasks(ListWirelessDeviceImportTasksRequest listWirelessDeviceImportTasksRequest);
 
     /**
      * <p>
@@ -2121,6 +2244,57 @@ public interface AWSIoTWireless {
      *      target="_top">AWS API Documentation</a>
      */
     StartMulticastGroupSessionResult startMulticastGroupSession(StartMulticastGroupSessionRequest startMulticastGroupSessionRequest);
+
+    /**
+     * <p>
+     * Start import task for a single wireless device.
+     * </p>
+     * 
+     * @param startSingleWirelessDeviceImportTaskRequest
+     * @return Result of the StartSingleWirelessDeviceImportTask operation returned by the service.
+     * @throws ValidationException
+     *         The input did not meet the specified constraints.
+     * @throws AccessDeniedException
+     *         User does not have permission to perform this action.
+     * @throws ResourceNotFoundException
+     *         Resource does not exist.
+     * @throws InternalServerException
+     *         An unexpected error occurred while processing a request.
+     * @throws ConflictException
+     *         Adding, updating, or deleting the resource can cause an inconsistent state.
+     * @throws ThrottlingException
+     *         The request was denied because it exceeded the allowed API request rate.
+     * @sample AWSIoTWireless.StartSingleWirelessDeviceImportTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/StartSingleWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartSingleWirelessDeviceImportTaskResult startSingleWirelessDeviceImportTask(
+            StartSingleWirelessDeviceImportTaskRequest startSingleWirelessDeviceImportTaskRequest);
+
+    /**
+     * <p>
+     * Start import task for provisioning Sidewalk devices in bulk using an S3 CSV file.
+     * </p>
+     * 
+     * @param startWirelessDeviceImportTaskRequest
+     * @return Result of the StartWirelessDeviceImportTask operation returned by the service.
+     * @throws ValidationException
+     *         The input did not meet the specified constraints.
+     * @throws AccessDeniedException
+     *         User does not have permission to perform this action.
+     * @throws ResourceNotFoundException
+     *         Resource does not exist.
+     * @throws InternalServerException
+     *         An unexpected error occurred while processing a request.
+     * @throws ConflictException
+     *         Adding, updating, or deleting the resource can cause an inconsistent state.
+     * @throws ThrottlingException
+     *         The request was denied because it exceeded the allowed API request rate.
+     * @sample AWSIoTWireless.StartWirelessDeviceImportTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/StartWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartWirelessDeviceImportTaskResult startWirelessDeviceImportTask(StartWirelessDeviceImportTaskRequest startWirelessDeviceImportTaskRequest);
 
     /**
      * <p>
@@ -2461,6 +2635,31 @@ public interface AWSIoTWireless {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateWirelessDeviceResult updateWirelessDevice(UpdateWirelessDeviceRequest updateWirelessDeviceRequest);
+
+    /**
+     * <p>
+     * Update an import task to add more devices to the task.
+     * </p>
+     * 
+     * @param updateWirelessDeviceImportTaskRequest
+     * @return Result of the UpdateWirelessDeviceImportTask operation returned by the service.
+     * @throws ValidationException
+     *         The input did not meet the specified constraints.
+     * @throws AccessDeniedException
+     *         User does not have permission to perform this action.
+     * @throws ResourceNotFoundException
+     *         Resource does not exist.
+     * @throws InternalServerException
+     *         An unexpected error occurred while processing a request.
+     * @throws ConflictException
+     *         Adding, updating, or deleting the resource can cause an inconsistent state.
+     * @throws ThrottlingException
+     *         The request was denied because it exceeded the allowed API request rate.
+     * @sample AWSIoTWireless.UpdateWirelessDeviceImportTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/UpdateWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateWirelessDeviceImportTaskResult updateWirelessDeviceImportTask(UpdateWirelessDeviceImportTaskRequest updateWirelessDeviceImportTaskRequest);
 
     /**
      * <p>

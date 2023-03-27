@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetVoiceConnectorOriginationResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The origination setting details.
+     * </p>
+     */
     private Origination origination;
 
     /**
+     * <p>
+     * The origination setting details.
+     * </p>
+     * 
      * @param origination
+     *        The origination setting details.
      */
 
     public void setOrigination(Origination origination) {
@@ -34,7 +44,11 @@ public class GetVoiceConnectorOriginationResult extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * @return
+     * <p>
+     * The origination setting details.
+     * </p>
+     * 
+     * @return The origination setting details.
      */
 
     public Origination getOrigination() {
@@ -42,7 +56,12 @@ public class GetVoiceConnectorOriginationResult extends com.amazonaws.AmazonWebS
     }
 
     /**
+     * <p>
+     * The origination setting details.
+     * </p>
+     * 
      * @param origination
+     *        The origination setting details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

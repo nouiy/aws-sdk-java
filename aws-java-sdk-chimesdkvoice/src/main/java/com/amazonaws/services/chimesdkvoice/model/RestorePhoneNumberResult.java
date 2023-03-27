@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RestorePhoneNumberResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The restored phone number.
+     * </p>
+     */
     private PhoneNumber phoneNumber;
 
     /**
+     * <p>
+     * The restored phone number.
+     * </p>
+     * 
      * @param phoneNumber
+     *        The restored phone number.
      */
 
     public void setPhoneNumber(PhoneNumber phoneNumber) {
@@ -34,7 +44,11 @@ public class RestorePhoneNumberResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * @return
+     * <p>
+     * The restored phone number.
+     * </p>
+     * 
+     * @return The restored phone number.
      */
 
     public PhoneNumber getPhoneNumber() {
@@ -42,7 +56,12 @@ public class RestorePhoneNumberResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
+     * <p>
+     * The restored phone number.
+     * </p>
+     * 
      * @param phoneNumber
+     *        The restored phone number.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

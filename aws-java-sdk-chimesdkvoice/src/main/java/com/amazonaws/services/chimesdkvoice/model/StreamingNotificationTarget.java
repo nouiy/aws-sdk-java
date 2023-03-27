@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The target recipient for a streaming configuration notification.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/StreamingNotificationTarget"
  *      target="_top">AWS API Documentation</a>
@@ -25,10 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class StreamingNotificationTarget implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The streaming notification target.
+     * </p>
+     */
     private String notificationTarget;
 
     /**
+     * <p>
+     * The streaming notification target.
+     * </p>
+     * 
      * @param notificationTarget
+     *        The streaming notification target.
      * @see NotificationTarget
      */
 
@@ -37,7 +50,11 @@ public class StreamingNotificationTarget implements Serializable, Cloneable, Str
     }
 
     /**
-     * @return
+     * <p>
+     * The streaming notification target.
+     * </p>
+     * 
+     * @return The streaming notification target.
      * @see NotificationTarget
      */
 
@@ -46,7 +63,12 @@ public class StreamingNotificationTarget implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * The streaming notification target.
+     * </p>
+     * 
      * @param notificationTarget
+     *        The streaming notification target.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see NotificationTarget
      */
@@ -57,7 +79,12 @@ public class StreamingNotificationTarget implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * The streaming notification target.
+     * </p>
+     * 
      * @param notificationTarget
+     *        The streaming notification target.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see NotificationTarget
      */

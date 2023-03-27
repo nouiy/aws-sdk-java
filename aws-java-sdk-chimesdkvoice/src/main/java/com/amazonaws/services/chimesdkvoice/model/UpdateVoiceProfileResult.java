@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateVoiceProfileResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The updated voice profile settings.
+     * </p>
+     */
     private VoiceProfile voiceProfile;
 
     /**
+     * <p>
+     * The updated voice profile settings.
+     * </p>
+     * 
      * @param voiceProfile
+     *        The updated voice profile settings.
      */
 
     public void setVoiceProfile(VoiceProfile voiceProfile) {
@@ -34,7 +44,11 @@ public class UpdateVoiceProfileResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
-     * @return
+     * <p>
+     * The updated voice profile settings.
+     * </p>
+     * 
+     * @return The updated voice profile settings.
      */
 
     public VoiceProfile getVoiceProfile() {
@@ -42,7 +56,12 @@ public class UpdateVoiceProfileResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
+     * <p>
+     * The updated voice profile settings.
+     * </p>
+     * 
      * @param voiceProfile
+     *        The updated voice profile settings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

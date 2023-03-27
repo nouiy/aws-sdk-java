@@ -64,6 +64,10 @@ public class GetDeviceProfileResultJsonUnmarshaller implements Unmarshaller<GetD
                     context.nextToken();
                     getDeviceProfileResult.setLoRaWAN(LoRaWANDeviceProfileJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Sidewalk", targetDepth)) {
+                    context.nextToken();
+                    getDeviceProfileResult.setSidewalk(SidewalkGetDeviceProfileJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

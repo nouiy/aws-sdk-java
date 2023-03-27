@@ -24,11 +24,21 @@ import com.amazonaws.services.chimesdkvoice.model.*;
  * <b>Note:</b> Do not directly implement this interface, new methods are added to it regularly. Extend from
  * {@link com.amazonaws.services.chimesdkvoice.AbstractAmazonChimeSDKVoiceAsync} instead.
  * </p>
+ * <p>
+ * <p>
+ * The Amazon Chime SDK telephony APIs in this section enable developers to create PSTN calling solutions that use
+ * Amazon Chime SDK Voice Connectors, and Amazon Chime SDK SIP media applications. Developers can also order and manage
+ * phone numbers, create and manage Voice Connectors and SIP media applications, and run voice analytics.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
 
     /**
+     * <p>
+     * Associates phone numbers with the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param associatePhoneNumbersWithVoiceConnectorRequest
      * @return A Java Future containing the result of the AssociatePhoneNumbersWithVoiceConnector operation returned by
      *         the service.
@@ -41,6 +51,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             AssociatePhoneNumbersWithVoiceConnectorRequest associatePhoneNumbersWithVoiceConnectorRequest);
 
     /**
+     * <p>
+     * Associates phone numbers with the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param associatePhoneNumbersWithVoiceConnectorRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -58,6 +72,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<AssociatePhoneNumbersWithVoiceConnectorRequest, AssociatePhoneNumbersWithVoiceConnectorResult> asyncHandler);
 
     /**
+     * <p>
+     * Associates phone numbers with the specified Amazon Chime SDK Voice Connector group.
+     * </p>
+     * 
      * @param associatePhoneNumbersWithVoiceConnectorGroupRequest
      * @return A Java Future containing the result of the AssociatePhoneNumbersWithVoiceConnectorGroup operation
      *         returned by the service.
@@ -70,6 +88,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             AssociatePhoneNumbersWithVoiceConnectorGroupRequest associatePhoneNumbersWithVoiceConnectorGroupRequest);
 
     /**
+     * <p>
+     * Associates phone numbers with the specified Amazon Chime SDK Voice Connector group.
+     * </p>
+     * 
      * @param associatePhoneNumbersWithVoiceConnectorGroupRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -87,6 +109,14 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<AssociatePhoneNumbersWithVoiceConnectorGroupRequest, AssociatePhoneNumbersWithVoiceConnectorGroupResult> asyncHandler);
 
     /**
+     * <p>
+     * Moves phone numbers into the <b>Deletion queue</b>. Phone numbers must be disassociated from any users or Amazon
+     * Chime SDK Voice Connectors before they can be deleted.
+     * </p>
+     * <p>
+     * Phone numbers remain in the <b>Deletion queue</b> for 7 days before they are deleted permanently.
+     * </p>
+     * 
      * @param batchDeletePhoneNumberRequest
      * @return A Java Future containing the result of the BatchDeletePhoneNumber operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.BatchDeletePhoneNumber
@@ -96,6 +126,14 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<BatchDeletePhoneNumberResult> batchDeletePhoneNumberAsync(BatchDeletePhoneNumberRequest batchDeletePhoneNumberRequest);
 
     /**
+     * <p>
+     * Moves phone numbers into the <b>Deletion queue</b>. Phone numbers must be disassociated from any users or Amazon
+     * Chime SDK Voice Connectors before they can be deleted.
+     * </p>
+     * <p>
+     * Phone numbers remain in the <b>Deletion queue</b> for 7 days before they are deleted permanently.
+     * </p>
+     * 
      * @param batchDeletePhoneNumberRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -110,6 +148,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<BatchDeletePhoneNumberRequest, BatchDeletePhoneNumberResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates one or more phone numbers.
+     * </p>
+     * 
      * @param batchUpdatePhoneNumberRequest
      * @return A Java Future containing the result of the BatchUpdatePhoneNumber operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.BatchUpdatePhoneNumber
@@ -119,6 +161,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<BatchUpdatePhoneNumberResult> batchUpdatePhoneNumberAsync(BatchUpdatePhoneNumberRequest batchUpdatePhoneNumberRequest);
 
     /**
+     * <p>
+     * Updates one or more phone numbers.
+     * </p>
+     * 
      * @param batchUpdatePhoneNumberRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -133,6 +179,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<BatchUpdatePhoneNumberRequest, BatchUpdatePhoneNumberResult> asyncHandler);
 
     /**
+     * <p>
+     * Creates an order for phone numbers to be provisioned. For numbers outside the U.S., you must use the Amazon Chime
+     * SDK SIP media application dial-in product type.
+     * </p>
+     * 
      * @param createPhoneNumberOrderRequest
      * @return A Java Future containing the result of the CreatePhoneNumberOrder operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.CreatePhoneNumberOrder
@@ -142,6 +193,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<CreatePhoneNumberOrderResult> createPhoneNumberOrderAsync(CreatePhoneNumberOrderRequest createPhoneNumberOrderRequest);
 
     /**
+     * <p>
+     * Creates an order for phone numbers to be provisioned. For numbers outside the U.S., you must use the Amazon Chime
+     * SDK SIP media application dial-in product type.
+     * </p>
+     * 
      * @param createPhoneNumberOrderRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -156,6 +212,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<CreatePhoneNumberOrderRequest, CreatePhoneNumberOrderResult> asyncHandler);
 
     /**
+     * <p>
+     * Creates a proxy session for the specified Amazon Chime SDK Voice Connector for the specified participant phone
+     * numbers.
+     * </p>
+     * 
      * @param createProxySessionRequest
      * @return A Java Future containing the result of the CreateProxySession operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.CreateProxySession
@@ -165,6 +226,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<CreateProxySessionResult> createProxySessionAsync(CreateProxySessionRequest createProxySessionRequest);
 
     /**
+     * <p>
+     * Creates a proxy session for the specified Amazon Chime SDK Voice Connector for the specified participant phone
+     * numbers.
+     * </p>
+     * 
      * @param createProxySessionRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -179,6 +245,12 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<CreateProxySessionRequest, CreateProxySessionResult> asyncHandler);
 
     /**
+     * <p>
+     * Creates a SIP media application. For more information about SIP media applications, see <a
+     * href="https://docs.aws.amazon.com/chime-sdk/latest/ag/manage-sip-applications.html">Managing SIP media
+     * applications and rules</a> in the <i>Amazon Chime SDK Administrator Guide</i>.
+     * </p>
+     * 
      * @param createSipMediaApplicationRequest
      * @return A Java Future containing the result of the CreateSipMediaApplication operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.CreateSipMediaApplication
@@ -189,6 +261,12 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             CreateSipMediaApplicationRequest createSipMediaApplicationRequest);
 
     /**
+     * <p>
+     * Creates a SIP media application. For more information about SIP media applications, see <a
+     * href="https://docs.aws.amazon.com/chime-sdk/latest/ag/manage-sip-applications.html">Managing SIP media
+     * applications and rules</a> in the <i>Amazon Chime SDK Administrator Guide</i>.
+     * </p>
+     * 
      * @param createSipMediaApplicationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -204,6 +282,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<CreateSipMediaApplicationRequest, CreateSipMediaApplicationResult> asyncHandler);
 
     /**
+     * <p>
+     * Creates an outbound call to a phone number from the phone number specified in the request, and it invokes the
+     * endpoint of the specified <code>sipMediaApplicationId</code>.
+     * </p>
+     * 
      * @param createSipMediaApplicationCallRequest
      * @return A Java Future containing the result of the CreateSipMediaApplicationCall operation returned by the
      *         service.
@@ -215,6 +298,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             CreateSipMediaApplicationCallRequest createSipMediaApplicationCallRequest);
 
     /**
+     * <p>
+     * Creates an outbound call to a phone number from the phone number specified in the request, and it invokes the
+     * endpoint of the specified <code>sipMediaApplicationId</code>.
+     * </p>
+     * 
      * @param createSipMediaApplicationCallRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -231,6 +319,13 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<CreateSipMediaApplicationCallRequest, CreateSipMediaApplicationCallResult> asyncHandler);
 
     /**
+     * <p>
+     * Creates a SIP rule, which can be used to run a SIP media application as a target for a specific trigger type. For
+     * more information about SIP rules, see <a
+     * href="https://docs.aws.amazon.com/chime-sdk/latest/ag/manage-sip-applications.html">Managing SIP media
+     * applications and rules</a> in the <i>Amazon Chime SDK Administrator Guide</i>.
+     * </p>
+     * 
      * @param createSipRuleRequest
      * @return A Java Future containing the result of the CreateSipRule operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.CreateSipRule
@@ -240,6 +335,13 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<CreateSipRuleResult> createSipRuleAsync(CreateSipRuleRequest createSipRuleRequest);
 
     /**
+     * <p>
+     * Creates a SIP rule, which can be used to run a SIP media application as a target for a specific trigger type. For
+     * more information about SIP rules, see <a
+     * href="https://docs.aws.amazon.com/chime-sdk/latest/ag/manage-sip-applications.html">Managing SIP media
+     * applications and rules</a> in the <i>Amazon Chime SDK Administrator Guide</i>.
+     * </p>
+     * 
      * @param createSipRuleRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -254,6 +356,12 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<CreateSipRuleRequest, CreateSipRuleResult> asyncHandler);
 
     /**
+     * <p>
+     * Creates an Amazon Chime SDK Voice Connector. For more information about Voice Connectors, see <a
+     * href="https://docs.aws.amazon.com/chime-sdk/latest/ag/voice-connector-groups.html">Managing Amazon Chime SDK
+     * Voice Connector groups</a> in the <i>Amazon Chime SDK Administrator Guide</i>.
+     * </p>
+     * 
      * @param createVoiceConnectorRequest
      * @return A Java Future containing the result of the CreateVoiceConnector operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.CreateVoiceConnector
@@ -263,6 +371,12 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<CreateVoiceConnectorResult> createVoiceConnectorAsync(CreateVoiceConnectorRequest createVoiceConnectorRequest);
 
     /**
+     * <p>
+     * Creates an Amazon Chime SDK Voice Connector. For more information about Voice Connectors, see <a
+     * href="https://docs.aws.amazon.com/chime-sdk/latest/ag/voice-connector-groups.html">Managing Amazon Chime SDK
+     * Voice Connector groups</a> in the <i>Amazon Chime SDK Administrator Guide</i>.
+     * </p>
+     * 
      * @param createVoiceConnectorRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -277,6 +391,16 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<CreateVoiceConnectorRequest, CreateVoiceConnectorResult> asyncHandler);
 
     /**
+     * <p>
+     * Creates an Amazon Chime SDK Voice Connector group under the administrator's AWS account. You can associate Amazon
+     * Chime SDK Voice Connectors with the Voice Connector group by including <code>VoiceConnectorItems</code> in the
+     * request.
+     * </p>
+     * <p>
+     * You can include Voice Connectors from different AWS Regions in your group. This creates a fault tolerant
+     * mechanism for fallback in case of availability events.
+     * </p>
+     * 
      * @param createVoiceConnectorGroupRequest
      * @return A Java Future containing the result of the CreateVoiceConnectorGroup operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.CreateVoiceConnectorGroup
@@ -287,6 +411,16 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             CreateVoiceConnectorGroupRequest createVoiceConnectorGroupRequest);
 
     /**
+     * <p>
+     * Creates an Amazon Chime SDK Voice Connector group under the administrator's AWS account. You can associate Amazon
+     * Chime SDK Voice Connectors with the Voice Connector group by including <code>VoiceConnectorItems</code> in the
+     * request.
+     * </p>
+     * <p>
+     * You can include Voice Connectors from different AWS Regions in your group. This creates a fault tolerant
+     * mechanism for fallback in case of availability events.
+     * </p>
+     * 
      * @param createVoiceConnectorGroupRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -302,6 +436,22 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<CreateVoiceConnectorGroupRequest, CreateVoiceConnectorGroupResult> asyncHandler);
 
     /**
+     * <p>
+     * Creates a voice profile, which consists of an enrolled user and their latest voice print.
+     * </p>
+     * <important>
+     * <p>
+     * Before creating any voice profiles, you must provide all notices and obtain all consents from the speaker as
+     * required under applicable privacy and biometrics laws, and as required under the <a
+     * href="https://aws.amazon.com/service-terms/">AWS service terms</a> for the Amazon Chime SDK.
+     * </p>
+     * </important>
+     * <p>
+     * For more information about voice profiles and voice analytics, see <a
+     * href="https://docs.aws.amazon.com/chime-sdk/latest/dg/pstn-voice-analytics.html">Using Amazon Chime SDK Voice
+     * Analytics</a> in the <i>Amazon Chime SDK Developer Guide</i>.
+     * </p>
+     * 
      * @param createVoiceProfileRequest
      * @return A Java Future containing the result of the CreateVoiceProfile operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.CreateVoiceProfile
@@ -311,6 +461,22 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<CreateVoiceProfileResult> createVoiceProfileAsync(CreateVoiceProfileRequest createVoiceProfileRequest);
 
     /**
+     * <p>
+     * Creates a voice profile, which consists of an enrolled user and their latest voice print.
+     * </p>
+     * <important>
+     * <p>
+     * Before creating any voice profiles, you must provide all notices and obtain all consents from the speaker as
+     * required under applicable privacy and biometrics laws, and as required under the <a
+     * href="https://aws.amazon.com/service-terms/">AWS service terms</a> for the Amazon Chime SDK.
+     * </p>
+     * </important>
+     * <p>
+     * For more information about voice profiles and voice analytics, see <a
+     * href="https://docs.aws.amazon.com/chime-sdk/latest/dg/pstn-voice-analytics.html">Using Amazon Chime SDK Voice
+     * Analytics</a> in the <i>Amazon Chime SDK Developer Guide</i>.
+     * </p>
+     * 
      * @param createVoiceProfileRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -325,6 +491,23 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<CreateVoiceProfileRequest, CreateVoiceProfileResult> asyncHandler);
 
     /**
+     * <p>
+     * Creates a voice profile domain, a collection of voice profiles, their voice prints, and encrypted enrollment
+     * audio.
+     * </p>
+     * <important>
+     * <p>
+     * Before creating any voice profiles, you must provide all notices and obtain all consents from the speaker as
+     * required under applicable privacy and biometrics laws, and as required under the <a
+     * href="https://aws.amazon.com/service-terms/">AWS service terms</a> for the Amazon Chime SDK.
+     * </p>
+     * </important>
+     * <p>
+     * For more information about voice profile domains, see <a
+     * href="https://docs.aws.amazon.com/chime-sdk/latest/dg/pstn-voice-analytics.html">Using Amazon Chime SDK Voice
+     * Analytics</a> in the <i>Amazon Chime SDK Developer Guide</i>.
+     * </p>
+     * 
      * @param createVoiceProfileDomainRequest
      * @return A Java Future containing the result of the CreateVoiceProfileDomain operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.CreateVoiceProfileDomain
@@ -334,6 +517,23 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<CreateVoiceProfileDomainResult> createVoiceProfileDomainAsync(CreateVoiceProfileDomainRequest createVoiceProfileDomainRequest);
 
     /**
+     * <p>
+     * Creates a voice profile domain, a collection of voice profiles, their voice prints, and encrypted enrollment
+     * audio.
+     * </p>
+     * <important>
+     * <p>
+     * Before creating any voice profiles, you must provide all notices and obtain all consents from the speaker as
+     * required under applicable privacy and biometrics laws, and as required under the <a
+     * href="https://aws.amazon.com/service-terms/">AWS service terms</a> for the Amazon Chime SDK.
+     * </p>
+     * </important>
+     * <p>
+     * For more information about voice profile domains, see <a
+     * href="https://docs.aws.amazon.com/chime-sdk/latest/dg/pstn-voice-analytics.html">Using Amazon Chime SDK Voice
+     * Analytics</a> in the <i>Amazon Chime SDK Developer Guide</i>.
+     * </p>
+     * 
      * @param createVoiceProfileDomainRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -348,6 +548,14 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<CreateVoiceProfileDomainRequest, CreateVoiceProfileDomainResult> asyncHandler);
 
     /**
+     * <p>
+     * Moves the specified phone number into the <b>Deletion queue</b>. A phone number must be disassociated from any
+     * users or Amazon Chime SDK Voice Connectors before it can be deleted.
+     * </p>
+     * <p>
+     * Deleted phone numbers remain in the <b>Deletion queue</b> queue for 7 days before they are deleted permanently.
+     * </p>
+     * 
      * @param deletePhoneNumberRequest
      * @return A Java Future containing the result of the DeletePhoneNumber operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.DeletePhoneNumber
@@ -357,6 +565,14 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<DeletePhoneNumberResult> deletePhoneNumberAsync(DeletePhoneNumberRequest deletePhoneNumberRequest);
 
     /**
+     * <p>
+     * Moves the specified phone number into the <b>Deletion queue</b>. A phone number must be disassociated from any
+     * users or Amazon Chime SDK Voice Connectors before it can be deleted.
+     * </p>
+     * <p>
+     * Deleted phone numbers remain in the <b>Deletion queue</b> queue for 7 days before they are deleted permanently.
+     * </p>
+     * 
      * @param deletePhoneNumberRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -371,6 +587,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<DeletePhoneNumberRequest, DeletePhoneNumberResult> asyncHandler);
 
     /**
+     * <p>
+     * Deletes the specified proxy session from the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param deleteProxySessionRequest
      * @return A Java Future containing the result of the DeleteProxySession operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.DeleteProxySession
@@ -380,6 +600,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<DeleteProxySessionResult> deleteProxySessionAsync(DeleteProxySessionRequest deleteProxySessionRequest);
 
     /**
+     * <p>
+     * Deletes the specified proxy session from the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param deleteProxySessionRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -394,6 +618,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<DeleteProxySessionRequest, DeleteProxySessionResult> asyncHandler);
 
     /**
+     * <p>
+     * Deletes a SIP media application.
+     * </p>
+     * 
      * @param deleteSipMediaApplicationRequest
      * @return A Java Future containing the result of the DeleteSipMediaApplication operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.DeleteSipMediaApplication
@@ -404,6 +632,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             DeleteSipMediaApplicationRequest deleteSipMediaApplicationRequest);
 
     /**
+     * <p>
+     * Deletes a SIP media application.
+     * </p>
+     * 
      * @param deleteSipMediaApplicationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -419,6 +651,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<DeleteSipMediaApplicationRequest, DeleteSipMediaApplicationResult> asyncHandler);
 
     /**
+     * <p>
+     * Deletes a SIP rule.
+     * </p>
+     * 
      * @param deleteSipRuleRequest
      * @return A Java Future containing the result of the DeleteSipRule operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.DeleteSipRule
@@ -428,6 +664,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<DeleteSipRuleResult> deleteSipRuleAsync(DeleteSipRuleRequest deleteSipRuleRequest);
 
     /**
+     * <p>
+     * Deletes a SIP rule.
+     * </p>
+     * 
      * @param deleteSipRuleRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -442,6 +682,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<DeleteSipRuleRequest, DeleteSipRuleResult> asyncHandler);
 
     /**
+     * <p>
+     * Deletes an Amazon Chime SDK Voice Connector. Any phone numbers associated with the Amazon Chime SDK Voice
+     * Connector must be disassociated from it before it can be deleted.
+     * </p>
+     * 
      * @param deleteVoiceConnectorRequest
      * @return A Java Future containing the result of the DeleteVoiceConnector operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.DeleteVoiceConnector
@@ -451,6 +696,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<DeleteVoiceConnectorResult> deleteVoiceConnectorAsync(DeleteVoiceConnectorRequest deleteVoiceConnectorRequest);
 
     /**
+     * <p>
+     * Deletes an Amazon Chime SDK Voice Connector. Any phone numbers associated with the Amazon Chime SDK Voice
+     * Connector must be disassociated from it before it can be deleted.
+     * </p>
+     * 
      * @param deleteVoiceConnectorRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -465,6 +715,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<DeleteVoiceConnectorRequest, DeleteVoiceConnectorResult> asyncHandler);
 
     /**
+     * <p>
+     * Deletes the emergency calling details from the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param deleteVoiceConnectorEmergencyCallingConfigurationRequest
      * @return A Java Future containing the result of the DeleteVoiceConnectorEmergencyCallingConfiguration operation
      *         returned by the service.
@@ -477,6 +731,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             DeleteVoiceConnectorEmergencyCallingConfigurationRequest deleteVoiceConnectorEmergencyCallingConfigurationRequest);
 
     /**
+     * <p>
+     * Deletes the emergency calling details from the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param deleteVoiceConnectorEmergencyCallingConfigurationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -494,6 +752,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<DeleteVoiceConnectorEmergencyCallingConfigurationRequest, DeleteVoiceConnectorEmergencyCallingConfigurationResult> asyncHandler);
 
     /**
+     * <p>
+     * Deletes an Amazon Chime SDK Voice Connector group. Any <code>VoiceConnectorItems</code> and phone numbers
+     * associated with the group must be removed before it can be deleted.
+     * </p>
+     * 
      * @param deleteVoiceConnectorGroupRequest
      * @return A Java Future containing the result of the DeleteVoiceConnectorGroup operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.DeleteVoiceConnectorGroup
@@ -504,6 +767,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             DeleteVoiceConnectorGroupRequest deleteVoiceConnectorGroupRequest);
 
     /**
+     * <p>
+     * Deletes an Amazon Chime SDK Voice Connector group. Any <code>VoiceConnectorItems</code> and phone numbers
+     * associated with the group must be removed before it can be deleted.
+     * </p>
+     * 
      * @param deleteVoiceConnectorGroupRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -519,6 +787,16 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<DeleteVoiceConnectorGroupRequest, DeleteVoiceConnectorGroupResult> asyncHandler);
 
     /**
+     * <p>
+     * Deletes the origination settings for the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * <note>
+     * <p>
+     * If emergency calling is configured for the Voice Connector, it must be deleted prior to deleting the origination
+     * settings.
+     * </p>
+     * </note>
+     * 
      * @param deleteVoiceConnectorOriginationRequest
      * @return A Java Future containing the result of the DeleteVoiceConnectorOrigination operation returned by the
      *         service.
@@ -530,6 +808,16 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             DeleteVoiceConnectorOriginationRequest deleteVoiceConnectorOriginationRequest);
 
     /**
+     * <p>
+     * Deletes the origination settings for the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * <note>
+     * <p>
+     * If emergency calling is configured for the Voice Connector, it must be deleted prior to deleting the origination
+     * settings.
+     * </p>
+     * </note>
+     * 
      * @param deleteVoiceConnectorOriginationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -546,6 +834,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<DeleteVoiceConnectorOriginationRequest, DeleteVoiceConnectorOriginationResult> asyncHandler);
 
     /**
+     * <p>
+     * Deletes the proxy configuration from the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param deleteVoiceConnectorProxyRequest
      * @return A Java Future containing the result of the DeleteVoiceConnectorProxy operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.DeleteVoiceConnectorProxy
@@ -556,6 +848,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             DeleteVoiceConnectorProxyRequest deleteVoiceConnectorProxyRequest);
 
     /**
+     * <p>
+     * Deletes the proxy configuration from the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param deleteVoiceConnectorProxyRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -571,6 +867,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<DeleteVoiceConnectorProxyRequest, DeleteVoiceConnectorProxyResult> asyncHandler);
 
     /**
+     * <p>
+     * Deletes a Voice Connector's streaming configuration.
+     * </p>
+     * 
      * @param deleteVoiceConnectorStreamingConfigurationRequest
      * @return A Java Future containing the result of the DeleteVoiceConnectorStreamingConfiguration operation returned
      *         by the service.
@@ -583,6 +883,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             DeleteVoiceConnectorStreamingConfigurationRequest deleteVoiceConnectorStreamingConfigurationRequest);
 
     /**
+     * <p>
+     * Deletes a Voice Connector's streaming configuration.
+     * </p>
+     * 
      * @param deleteVoiceConnectorStreamingConfigurationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -600,6 +904,16 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<DeleteVoiceConnectorStreamingConfigurationRequest, DeleteVoiceConnectorStreamingConfigurationResult> asyncHandler);
 
     /**
+     * <p>
+     * Deletes the termination settings for the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * <note>
+     * <p>
+     * If emergency calling is configured for the Voice Connector, it must be deleted prior to deleting the termination
+     * settings.
+     * </p>
+     * </note>
+     * 
      * @param deleteVoiceConnectorTerminationRequest
      * @return A Java Future containing the result of the DeleteVoiceConnectorTermination operation returned by the
      *         service.
@@ -611,6 +925,16 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             DeleteVoiceConnectorTerminationRequest deleteVoiceConnectorTerminationRequest);
 
     /**
+     * <p>
+     * Deletes the termination settings for the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * <note>
+     * <p>
+     * If emergency calling is configured for the Voice Connector, it must be deleted prior to deleting the termination
+     * settings.
+     * </p>
+     * </note>
+     * 
      * @param deleteVoiceConnectorTerminationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -627,6 +951,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<DeleteVoiceConnectorTerminationRequest, DeleteVoiceConnectorTerminationResult> asyncHandler);
 
     /**
+     * <p>
+     * Deletes the specified SIP credentials used by your equipment to authenticate during call termination.
+     * </p>
+     * 
      * @param deleteVoiceConnectorTerminationCredentialsRequest
      * @return A Java Future containing the result of the DeleteVoiceConnectorTerminationCredentials operation returned
      *         by the service.
@@ -639,6 +967,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             DeleteVoiceConnectorTerminationCredentialsRequest deleteVoiceConnectorTerminationCredentialsRequest);
 
     /**
+     * <p>
+     * Deletes the specified SIP credentials used by your equipment to authenticate during call termination.
+     * </p>
+     * 
      * @param deleteVoiceConnectorTerminationCredentialsRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -656,6 +988,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<DeleteVoiceConnectorTerminationCredentialsRequest, DeleteVoiceConnectorTerminationCredentialsResult> asyncHandler);
 
     /**
+     * <p>
+     * Deletes a voice profile, including its voice print and enrollment data. WARNING: This action is not reversible.
+     * </p>
+     * 
      * @param deleteVoiceProfileRequest
      * @return A Java Future containing the result of the DeleteVoiceProfile operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.DeleteVoiceProfile
@@ -665,6 +1001,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<DeleteVoiceProfileResult> deleteVoiceProfileAsync(DeleteVoiceProfileRequest deleteVoiceProfileRequest);
 
     /**
+     * <p>
+     * Deletes a voice profile, including its voice print and enrollment data. WARNING: This action is not reversible.
+     * </p>
+     * 
      * @param deleteVoiceProfileRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -679,6 +1019,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<DeleteVoiceProfileRequest, DeleteVoiceProfileResult> asyncHandler);
 
     /**
+     * <p>
+     * Deletes all voice profiles in the domain. WARNING: This action is not reversible.
+     * </p>
+     * 
      * @param deleteVoiceProfileDomainRequest
      * @return A Java Future containing the result of the DeleteVoiceProfileDomain operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.DeleteVoiceProfileDomain
@@ -688,6 +1032,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<DeleteVoiceProfileDomainResult> deleteVoiceProfileDomainAsync(DeleteVoiceProfileDomainRequest deleteVoiceProfileDomainRequest);
 
     /**
+     * <p>
+     * Deletes all voice profiles in the domain. WARNING: This action is not reversible.
+     * </p>
+     * 
      * @param deleteVoiceProfileDomainRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -702,6 +1050,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<DeleteVoiceProfileDomainRequest, DeleteVoiceProfileDomainResult> asyncHandler);
 
     /**
+     * <p>
+     * Disassociates the specified phone numbers from the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param disassociatePhoneNumbersFromVoiceConnectorRequest
      * @return A Java Future containing the result of the DisassociatePhoneNumbersFromVoiceConnector operation returned
      *         by the service.
@@ -714,6 +1066,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             DisassociatePhoneNumbersFromVoiceConnectorRequest disassociatePhoneNumbersFromVoiceConnectorRequest);
 
     /**
+     * <p>
+     * Disassociates the specified phone numbers from the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param disassociatePhoneNumbersFromVoiceConnectorRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -731,6 +1087,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<DisassociatePhoneNumbersFromVoiceConnectorRequest, DisassociatePhoneNumbersFromVoiceConnectorResult> asyncHandler);
 
     /**
+     * <p>
+     * Disassociates the specified phone numbers from the specified Amazon Chime SDK Voice Connector group.
+     * </p>
+     * 
      * @param disassociatePhoneNumbersFromVoiceConnectorGroupRequest
      * @return A Java Future containing the result of the DisassociatePhoneNumbersFromVoiceConnectorGroup operation
      *         returned by the service.
@@ -743,6 +1103,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             DisassociatePhoneNumbersFromVoiceConnectorGroupRequest disassociatePhoneNumbersFromVoiceConnectorGroupRequest);
 
     /**
+     * <p>
+     * Disassociates the specified phone numbers from the specified Amazon Chime SDK Voice Connector group.
+     * </p>
+     * 
      * @param disassociatePhoneNumbersFromVoiceConnectorGroupRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -760,6 +1124,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<DisassociatePhoneNumbersFromVoiceConnectorGroupRequest, DisassociatePhoneNumbersFromVoiceConnectorGroupResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the global settings for the Amazon Chime SDK Voice Connectors in an AWS account.
+     * </p>
+     * 
      * @param getGlobalSettingsRequest
      * @return A Java Future containing the result of the GetGlobalSettings operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.GetGlobalSettings
@@ -769,6 +1137,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<GetGlobalSettingsResult> getGlobalSettingsAsync(GetGlobalSettingsRequest getGlobalSettingsRequest);
 
     /**
+     * <p>
+     * Retrieves the global settings for the Amazon Chime SDK Voice Connectors in an AWS account.
+     * </p>
+     * 
      * @param getGlobalSettingsRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -783,6 +1155,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetGlobalSettingsRequest, GetGlobalSettingsResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves details for the specified phone number ID, such as associations, capabilities, and product type.
+     * </p>
+     * 
      * @param getPhoneNumberRequest
      * @return A Java Future containing the result of the GetPhoneNumber operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.GetPhoneNumber
@@ -792,6 +1168,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<GetPhoneNumberResult> getPhoneNumberAsync(GetPhoneNumberRequest getPhoneNumberRequest);
 
     /**
+     * <p>
+     * Retrieves details for the specified phone number ID, such as associations, capabilities, and product type.
+     * </p>
+     * 
      * @param getPhoneNumberRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -806,6 +1186,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetPhoneNumberRequest, GetPhoneNumberResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves details for the specified phone number order, such as the order creation timestamp, phone numbers in
+     * E.164 format, product type, and order status.
+     * </p>
+     * 
      * @param getPhoneNumberOrderRequest
      * @return A Java Future containing the result of the GetPhoneNumberOrder operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.GetPhoneNumberOrder
@@ -815,6 +1200,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<GetPhoneNumberOrderResult> getPhoneNumberOrderAsync(GetPhoneNumberOrderRequest getPhoneNumberOrderRequest);
 
     /**
+     * <p>
+     * Retrieves details for the specified phone number order, such as the order creation timestamp, phone numbers in
+     * E.164 format, product type, and order status.
+     * </p>
+     * 
      * @param getPhoneNumberOrderRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -829,6 +1219,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetPhoneNumberOrderRequest, GetPhoneNumberOrderResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the phone number settings for the administrator's AWS account, such as the default outbound calling
+     * name.
+     * </p>
+     * 
      * @param getPhoneNumberSettingsRequest
      * @return A Java Future containing the result of the GetPhoneNumberSettings operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.GetPhoneNumberSettings
@@ -838,6 +1233,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<GetPhoneNumberSettingsResult> getPhoneNumberSettingsAsync(GetPhoneNumberSettingsRequest getPhoneNumberSettingsRequest);
 
     /**
+     * <p>
+     * Retrieves the phone number settings for the administrator's AWS account, such as the default outbound calling
+     * name.
+     * </p>
+     * 
      * @param getPhoneNumberSettingsRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -852,6 +1252,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetPhoneNumberSettingsRequest, GetPhoneNumberSettingsResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the specified proxy session details for the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param getProxySessionRequest
      * @return A Java Future containing the result of the GetProxySession operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.GetProxySession
@@ -861,6 +1265,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<GetProxySessionResult> getProxySessionAsync(GetProxySessionRequest getProxySessionRequest);
 
     /**
+     * <p>
+     * Retrieves the specified proxy session details for the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param getProxySessionRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -875,6 +1283,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetProxySessionRequest, GetProxySessionResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the information for a SIP media application, including name, AWS Region, and endpoints.
+     * </p>
+     * 
      * @param getSipMediaApplicationRequest
      * @return A Java Future containing the result of the GetSipMediaApplication operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.GetSipMediaApplication
@@ -884,6 +1296,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<GetSipMediaApplicationResult> getSipMediaApplicationAsync(GetSipMediaApplicationRequest getSipMediaApplicationRequest);
 
     /**
+     * <p>
+     * Retrieves the information for a SIP media application, including name, AWS Region, and endpoints.
+     * </p>
+     * 
      * @param getSipMediaApplicationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -898,6 +1314,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetSipMediaApplicationRequest, GetSipMediaApplicationResult> asyncHandler);
 
     /**
+     * <p>
+     * Gets the Alexa Skill configuration for the SIP media application.
+     * </p>
+     * 
      * @param getSipMediaApplicationAlexaSkillConfigurationRequest
      * @return A Java Future containing the result of the GetSipMediaApplicationAlexaSkillConfiguration operation
      *         returned by the service.
@@ -910,6 +1330,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             GetSipMediaApplicationAlexaSkillConfigurationRequest getSipMediaApplicationAlexaSkillConfigurationRequest);
 
     /**
+     * <p>
+     * Gets the Alexa Skill configuration for the SIP media application.
+     * </p>
+     * 
      * @param getSipMediaApplicationAlexaSkillConfigurationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -927,6 +1351,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetSipMediaApplicationAlexaSkillConfigurationRequest, GetSipMediaApplicationAlexaSkillConfigurationResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the logging configuration for the specified SIP media application.
+     * </p>
+     * 
      * @param getSipMediaApplicationLoggingConfigurationRequest
      * @return A Java Future containing the result of the GetSipMediaApplicationLoggingConfiguration operation returned
      *         by the service.
@@ -939,6 +1367,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             GetSipMediaApplicationLoggingConfigurationRequest getSipMediaApplicationLoggingConfigurationRequest);
 
     /**
+     * <p>
+     * Retrieves the logging configuration for the specified SIP media application.
+     * </p>
+     * 
      * @param getSipMediaApplicationLoggingConfigurationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -956,6 +1388,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetSipMediaApplicationLoggingConfigurationRequest, GetSipMediaApplicationLoggingConfigurationResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the details of a SIP rule, such as the rule ID, name, triggers, and target endpoints.
+     * </p>
+     * 
      * @param getSipRuleRequest
      * @return A Java Future containing the result of the GetSipRule operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.GetSipRule
@@ -965,6 +1401,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<GetSipRuleResult> getSipRuleAsync(GetSipRuleRequest getSipRuleRequest);
 
     /**
+     * <p>
+     * Retrieves the details of a SIP rule, such as the rule ID, name, triggers, and target endpoints.
+     * </p>
+     * 
      * @param getSipRuleRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -979,6 +1419,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetSipRuleRequest, GetSipRuleResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the details of the specified speaker search task.
+     * </p>
+     * 
      * @param getSpeakerSearchTaskRequest
      * @return A Java Future containing the result of the GetSpeakerSearchTask operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.GetSpeakerSearchTask
@@ -988,6 +1432,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<GetSpeakerSearchTaskResult> getSpeakerSearchTaskAsync(GetSpeakerSearchTaskRequest getSpeakerSearchTaskRequest);
 
     /**
+     * <p>
+     * Retrieves the details of the specified speaker search task.
+     * </p>
+     * 
      * @param getSpeakerSearchTaskRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1002,6 +1450,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetSpeakerSearchTaskRequest, GetSpeakerSearchTaskResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves details for the specified Amazon Chime SDK Voice Connector, such as timestamps,name, outbound host, and
+     * encryption requirements.
+     * </p>
+     * 
      * @param getVoiceConnectorRequest
      * @return A Java Future containing the result of the GetVoiceConnector operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.GetVoiceConnector
@@ -1011,6 +1464,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<GetVoiceConnectorResult> getVoiceConnectorAsync(GetVoiceConnectorRequest getVoiceConnectorRequest);
 
     /**
+     * <p>
+     * Retrieves details for the specified Amazon Chime SDK Voice Connector, such as timestamps,name, outbound host, and
+     * encryption requirements.
+     * </p>
+     * 
      * @param getVoiceConnectorRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1025,6 +1483,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetVoiceConnectorRequest, GetVoiceConnectorResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the emergency calling configuration details for the specified Voice Connector.
+     * </p>
+     * 
      * @param getVoiceConnectorEmergencyCallingConfigurationRequest
      * @return A Java Future containing the result of the GetVoiceConnectorEmergencyCallingConfiguration operation
      *         returned by the service.
@@ -1037,6 +1499,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             GetVoiceConnectorEmergencyCallingConfigurationRequest getVoiceConnectorEmergencyCallingConfigurationRequest);
 
     /**
+     * <p>
+     * Retrieves the emergency calling configuration details for the specified Voice Connector.
+     * </p>
+     * 
      * @param getVoiceConnectorEmergencyCallingConfigurationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1054,6 +1520,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetVoiceConnectorEmergencyCallingConfigurationRequest, GetVoiceConnectorEmergencyCallingConfigurationResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves details for the specified Amazon Chime SDK Voice Connector group, such as timestamps,name, and
+     * associated <code>VoiceConnectorItems</code>.
+     * </p>
+     * 
      * @param getVoiceConnectorGroupRequest
      * @return A Java Future containing the result of the GetVoiceConnectorGroup operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.GetVoiceConnectorGroup
@@ -1063,6 +1534,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<GetVoiceConnectorGroupResult> getVoiceConnectorGroupAsync(GetVoiceConnectorGroupRequest getVoiceConnectorGroupRequest);
 
     /**
+     * <p>
+     * Retrieves details for the specified Amazon Chime SDK Voice Connector group, such as timestamps,name, and
+     * associated <code>VoiceConnectorItems</code>.
+     * </p>
+     * 
      * @param getVoiceConnectorGroupRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1077,6 +1553,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetVoiceConnectorGroupRequest, GetVoiceConnectorGroupResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the logging configuration settings for the specified Voice Connector. Shows whether SIP message logs
+     * are enabled for sending to Amazon CloudWatch Logs.
+     * </p>
+     * 
      * @param getVoiceConnectorLoggingConfigurationRequest
      * @return A Java Future containing the result of the GetVoiceConnectorLoggingConfiguration operation returned by
      *         the service.
@@ -1089,6 +1570,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             GetVoiceConnectorLoggingConfigurationRequest getVoiceConnectorLoggingConfigurationRequest);
 
     /**
+     * <p>
+     * Retrieves the logging configuration settings for the specified Voice Connector. Shows whether SIP message logs
+     * are enabled for sending to Amazon CloudWatch Logs.
+     * </p>
+     * 
      * @param getVoiceConnectorLoggingConfigurationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1106,6 +1592,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetVoiceConnectorLoggingConfigurationRequest, GetVoiceConnectorLoggingConfigurationResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the origination settings for the specified Voice Connector.
+     * </p>
+     * 
      * @param getVoiceConnectorOriginationRequest
      * @return A Java Future containing the result of the GetVoiceConnectorOrigination operation returned by the
      *         service.
@@ -1117,6 +1607,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             GetVoiceConnectorOriginationRequest getVoiceConnectorOriginationRequest);
 
     /**
+     * <p>
+     * Retrieves the origination settings for the specified Voice Connector.
+     * </p>
+     * 
      * @param getVoiceConnectorOriginationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1133,6 +1627,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetVoiceConnectorOriginationRequest, GetVoiceConnectorOriginationResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the proxy configuration details for the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param getVoiceConnectorProxyRequest
      * @return A Java Future containing the result of the GetVoiceConnectorProxy operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.GetVoiceConnectorProxy
@@ -1142,6 +1640,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<GetVoiceConnectorProxyResult> getVoiceConnectorProxyAsync(GetVoiceConnectorProxyRequest getVoiceConnectorProxyRequest);
 
     /**
+     * <p>
+     * Retrieves the proxy configuration details for the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param getVoiceConnectorProxyRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1156,6 +1658,12 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetVoiceConnectorProxyRequest, GetVoiceConnectorProxyResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the streaming configuration details for the specified Amazon Chime SDK Voice Connector. Shows whether
+     * media streaming is enabled for sending to Amazon Kinesis. It also shows the retention period, in hours, for the
+     * Amazon Kinesis data.
+     * </p>
+     * 
      * @param getVoiceConnectorStreamingConfigurationRequest
      * @return A Java Future containing the result of the GetVoiceConnectorStreamingConfiguration operation returned by
      *         the service.
@@ -1168,6 +1676,12 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             GetVoiceConnectorStreamingConfigurationRequest getVoiceConnectorStreamingConfigurationRequest);
 
     /**
+     * <p>
+     * Retrieves the streaming configuration details for the specified Amazon Chime SDK Voice Connector. Shows whether
+     * media streaming is enabled for sending to Amazon Kinesis. It also shows the retention period, in hours, for the
+     * Amazon Kinesis data.
+     * </p>
+     * 
      * @param getVoiceConnectorStreamingConfigurationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1185,6 +1699,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetVoiceConnectorStreamingConfigurationRequest, GetVoiceConnectorStreamingConfigurationResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the termination setting details for the specified Voice Connector.
+     * </p>
+     * 
      * @param getVoiceConnectorTerminationRequest
      * @return A Java Future containing the result of the GetVoiceConnectorTermination operation returned by the
      *         service.
@@ -1196,6 +1714,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             GetVoiceConnectorTerminationRequest getVoiceConnectorTerminationRequest);
 
     /**
+     * <p>
+     * Retrieves the termination setting details for the specified Voice Connector.
+     * </p>
+     * 
      * @param getVoiceConnectorTerminationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1212,6 +1734,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetVoiceConnectorTerminationRequest, GetVoiceConnectorTerminationResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves information about the last time a <code>SIP OPTIONS</code> ping was received from your SIP
+     * infrastructure for the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param getVoiceConnectorTerminationHealthRequest
      * @return A Java Future containing the result of the GetVoiceConnectorTerminationHealth operation returned by the
      *         service.
@@ -1224,6 +1751,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             GetVoiceConnectorTerminationHealthRequest getVoiceConnectorTerminationHealthRequest);
 
     /**
+     * <p>
+     * Retrieves information about the last time a <code>SIP OPTIONS</code> ping was received from your SIP
+     * infrastructure for the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param getVoiceConnectorTerminationHealthRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1241,6 +1773,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetVoiceConnectorTerminationHealthRequest, GetVoiceConnectorTerminationHealthResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the details of the specified voice profile.
+     * </p>
+     * 
      * @param getVoiceProfileRequest
      * @return A Java Future containing the result of the GetVoiceProfile operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.GetVoiceProfile
@@ -1250,6 +1786,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<GetVoiceProfileResult> getVoiceProfileAsync(GetVoiceProfileRequest getVoiceProfileRequest);
 
     /**
+     * <p>
+     * Retrieves the details of the specified voice profile.
+     * </p>
+     * 
      * @param getVoiceProfileRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1264,6 +1804,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetVoiceProfileRequest, GetVoiceProfileResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the details of the specified voice profile domain.
+     * </p>
+     * 
      * @param getVoiceProfileDomainRequest
      * @return A Java Future containing the result of the GetVoiceProfileDomain operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.GetVoiceProfileDomain
@@ -1273,6 +1817,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<GetVoiceProfileDomainResult> getVoiceProfileDomainAsync(GetVoiceProfileDomainRequest getVoiceProfileDomainRequest);
 
     /**
+     * <p>
+     * Retrieves the details of the specified voice profile domain.
+     * </p>
+     * 
      * @param getVoiceProfileDomainRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1287,6 +1835,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetVoiceProfileDomainRequest, GetVoiceProfileDomainResult> asyncHandler);
 
     /**
+     * <p>
+     * Retrieves the details of a voice tone analysis task.
+     * </p>
+     * 
      * @param getVoiceToneAnalysisTaskRequest
      * @return A Java Future containing the result of the GetVoiceToneAnalysisTask operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.GetVoiceToneAnalysisTask
@@ -1296,6 +1848,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<GetVoiceToneAnalysisTaskResult> getVoiceToneAnalysisTaskAsync(GetVoiceToneAnalysisTaskRequest getVoiceToneAnalysisTaskRequest);
 
     /**
+     * <p>
+     * Retrieves the details of a voice tone analysis task.
+     * </p>
+     * 
      * @param getVoiceToneAnalysisTaskRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1310,6 +1866,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<GetVoiceToneAnalysisTaskRequest, GetVoiceToneAnalysisTaskResult> asyncHandler);
 
     /**
+     * <p>
+     * Lists the available AWS Regions in which you can create an Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param listAvailableVoiceConnectorRegionsRequest
      * @return A Java Future containing the result of the ListAvailableVoiceConnectorRegions operation returned by the
      *         service.
@@ -1322,6 +1882,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             ListAvailableVoiceConnectorRegionsRequest listAvailableVoiceConnectorRegionsRequest);
 
     /**
+     * <p>
+     * Lists the available AWS Regions in which you can create an Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param listAvailableVoiceConnectorRegionsRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1339,6 +1903,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<ListAvailableVoiceConnectorRegionsRequest, ListAvailableVoiceConnectorRegionsResult> asyncHandler);
 
     /**
+     * <p>
+     * Lists the phone numbers for an administrator's Amazon Chime SDK account.
+     * </p>
+     * 
      * @param listPhoneNumberOrdersRequest
      * @return A Java Future containing the result of the ListPhoneNumberOrders operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.ListPhoneNumberOrders
@@ -1348,6 +1916,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<ListPhoneNumberOrdersResult> listPhoneNumberOrdersAsync(ListPhoneNumberOrdersRequest listPhoneNumberOrdersRequest);
 
     /**
+     * <p>
+     * Lists the phone numbers for an administrator's Amazon Chime SDK account.
+     * </p>
+     * 
      * @param listPhoneNumberOrdersRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1362,6 +1934,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<ListPhoneNumberOrdersRequest, ListPhoneNumberOrdersResult> asyncHandler);
 
     /**
+     * <p>
+     * Lists the phone numbers for the specified Amazon Chime SDK account, Amazon Chime SDK user, Amazon Chime SDK Voice
+     * Connector, or Amazon Chime SDK Voice Connector group.
+     * </p>
+     * 
      * @param listPhoneNumbersRequest
      * @return A Java Future containing the result of the ListPhoneNumbers operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.ListPhoneNumbers
@@ -1371,6 +1948,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<ListPhoneNumbersResult> listPhoneNumbersAsync(ListPhoneNumbersRequest listPhoneNumbersRequest);
 
     /**
+     * <p>
+     * Lists the phone numbers for the specified Amazon Chime SDK account, Amazon Chime SDK user, Amazon Chime SDK Voice
+     * Connector, or Amazon Chime SDK Voice Connector group.
+     * </p>
+     * 
      * @param listPhoneNumbersRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1385,6 +1967,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<ListPhoneNumbersRequest, ListPhoneNumbersResult> asyncHandler);
 
     /**
+     * <p>
+     * Lists the proxy sessions for the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param listProxySessionsRequest
      * @return A Java Future containing the result of the ListProxySessions operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.ListProxySessions
@@ -1394,6 +1980,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<ListProxySessionsResult> listProxySessionsAsync(ListProxySessionsRequest listProxySessionsRequest);
 
     /**
+     * <p>
+     * Lists the proxy sessions for the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param listProxySessionsRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1408,6 +1998,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<ListProxySessionsRequest, ListProxySessionsResult> asyncHandler);
 
     /**
+     * <p>
+     * Lists the SIP media applications under the administrator's AWS account.
+     * </p>
+     * 
      * @param listSipMediaApplicationsRequest
      * @return A Java Future containing the result of the ListSipMediaApplications operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.ListSipMediaApplications
@@ -1417,6 +2011,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<ListSipMediaApplicationsResult> listSipMediaApplicationsAsync(ListSipMediaApplicationsRequest listSipMediaApplicationsRequest);
 
     /**
+     * <p>
+     * Lists the SIP media applications under the administrator's AWS account.
+     * </p>
+     * 
      * @param listSipMediaApplicationsRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1431,6 +2029,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<ListSipMediaApplicationsRequest, ListSipMediaApplicationsResult> asyncHandler);
 
     /**
+     * <p>
+     * Lists the SIP rules under the administrator's AWS account.
+     * </p>
+     * 
      * @param listSipRulesRequest
      * @return A Java Future containing the result of the ListSipRules operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.ListSipRules
@@ -1440,6 +2042,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<ListSipRulesResult> listSipRulesAsync(ListSipRulesRequest listSipRulesRequest);
 
     /**
+     * <p>
+     * Lists the SIP rules under the administrator's AWS account.
+     * </p>
+     * 
      * @param listSipRulesRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1454,6 +2060,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<ListSipRulesRequest, ListSipRulesResult> asyncHandler);
 
     /**
+     * <p>
+     * Lists the countries that you can order phone numbers from.
+     * </p>
+     * 
      * @param listSupportedPhoneNumberCountriesRequest
      * @return A Java Future containing the result of the ListSupportedPhoneNumberCountries operation returned by the
      *         service.
@@ -1466,6 +2076,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             ListSupportedPhoneNumberCountriesRequest listSupportedPhoneNumberCountriesRequest);
 
     /**
+     * <p>
+     * Lists the countries that you can order phone numbers from.
+     * </p>
+     * 
      * @param listSupportedPhoneNumberCountriesRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1483,6 +2097,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<ListSupportedPhoneNumberCountriesRequest, ListSupportedPhoneNumberCountriesResult> asyncHandler);
 
     /**
+     * <p>
+     * Returns a list of the tags in a given resource.
+     * </p>
+     * 
      * @param listTagsForResourceRequest
      * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.ListTagsForResource
@@ -1492,6 +2110,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest);
 
     /**
+     * <p>
+     * Returns a list of the tags in a given resource.
+     * </p>
+     * 
      * @param listTagsForResourceRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1506,6 +2128,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
 
     /**
+     * <p>
+     * Lists the Amazon Chime SDK Voice Connector groups in the administrator's AWS account.
+     * </p>
+     * 
      * @param listVoiceConnectorGroupsRequest
      * @return A Java Future containing the result of the ListVoiceConnectorGroups operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.ListVoiceConnectorGroups
@@ -1515,6 +2141,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<ListVoiceConnectorGroupsResult> listVoiceConnectorGroupsAsync(ListVoiceConnectorGroupsRequest listVoiceConnectorGroupsRequest);
 
     /**
+     * <p>
+     * Lists the Amazon Chime SDK Voice Connector groups in the administrator's AWS account.
+     * </p>
+     * 
      * @param listVoiceConnectorGroupsRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1529,6 +2159,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<ListVoiceConnectorGroupsRequest, ListVoiceConnectorGroupsResult> asyncHandler);
 
     /**
+     * <p>
+     * Lists the SIP credentials for the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param listVoiceConnectorTerminationCredentialsRequest
      * @return A Java Future containing the result of the ListVoiceConnectorTerminationCredentials operation returned by
      *         the service.
@@ -1541,6 +2175,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             ListVoiceConnectorTerminationCredentialsRequest listVoiceConnectorTerminationCredentialsRequest);
 
     /**
+     * <p>
+     * Lists the SIP credentials for the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param listVoiceConnectorTerminationCredentialsRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1558,6 +2196,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<ListVoiceConnectorTerminationCredentialsRequest, ListVoiceConnectorTerminationCredentialsResult> asyncHandler);
 
     /**
+     * <p>
+     * Lists the Amazon Chime SDK Voice Connectors in the administrators AWS account.
+     * </p>
+     * 
      * @param listVoiceConnectorsRequest
      * @return A Java Future containing the result of the ListVoiceConnectors operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.ListVoiceConnectors
@@ -1567,6 +2209,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<ListVoiceConnectorsResult> listVoiceConnectorsAsync(ListVoiceConnectorsRequest listVoiceConnectorsRequest);
 
     /**
+     * <p>
+     * Lists the Amazon Chime SDK Voice Connectors in the administrators AWS account.
+     * </p>
+     * 
      * @param listVoiceConnectorsRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1581,6 +2227,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<ListVoiceConnectorsRequest, ListVoiceConnectorsResult> asyncHandler);
 
     /**
+     * <p>
+     * Lists the specified voice profile domains in the administrator's AWS account.
+     * </p>
+     * 
      * @param listVoiceProfileDomainsRequest
      * @return A Java Future containing the result of the ListVoiceProfileDomains operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.ListVoiceProfileDomains
@@ -1590,6 +2240,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<ListVoiceProfileDomainsResult> listVoiceProfileDomainsAsync(ListVoiceProfileDomainsRequest listVoiceProfileDomainsRequest);
 
     /**
+     * <p>
+     * Lists the specified voice profile domains in the administrator's AWS account.
+     * </p>
+     * 
      * @param listVoiceProfileDomainsRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1604,6 +2258,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<ListVoiceProfileDomainsRequest, ListVoiceProfileDomainsResult> asyncHandler);
 
     /**
+     * <p>
+     * Lists the voice profiles in a voice profile domain.
+     * </p>
+     * 
      * @param listVoiceProfilesRequest
      * @return A Java Future containing the result of the ListVoiceProfiles operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.ListVoiceProfiles
@@ -1613,6 +2271,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<ListVoiceProfilesResult> listVoiceProfilesAsync(ListVoiceProfilesRequest listVoiceProfilesRequest);
 
     /**
+     * <p>
+     * Lists the voice profiles in a voice profile domain.
+     * </p>
+     * 
      * @param listVoiceProfilesRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1627,6 +2289,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<ListVoiceProfilesRequest, ListVoiceProfilesResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates the Alexa Skill configuration for the SIP media application.
+     * </p>
+     * 
      * @param putSipMediaApplicationAlexaSkillConfigurationRequest
      * @return A Java Future containing the result of the PutSipMediaApplicationAlexaSkillConfiguration operation
      *         returned by the service.
@@ -1639,6 +2305,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             PutSipMediaApplicationAlexaSkillConfigurationRequest putSipMediaApplicationAlexaSkillConfigurationRequest);
 
     /**
+     * <p>
+     * Updates the Alexa Skill configuration for the SIP media application.
+     * </p>
+     * 
      * @param putSipMediaApplicationAlexaSkillConfigurationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1656,6 +2326,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<PutSipMediaApplicationAlexaSkillConfigurationRequest, PutSipMediaApplicationAlexaSkillConfigurationResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates the logging configuration for the specified SIP media application.
+     * </p>
+     * 
      * @param putSipMediaApplicationLoggingConfigurationRequest
      * @return A Java Future containing the result of the PutSipMediaApplicationLoggingConfiguration operation returned
      *         by the service.
@@ -1668,6 +2342,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             PutSipMediaApplicationLoggingConfigurationRequest putSipMediaApplicationLoggingConfigurationRequest);
 
     /**
+     * <p>
+     * Updates the logging configuration for the specified SIP media application.
+     * </p>
+     * 
      * @param putSipMediaApplicationLoggingConfigurationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1685,6 +2363,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<PutSipMediaApplicationLoggingConfigurationRequest, PutSipMediaApplicationLoggingConfigurationResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates a Voice Connector's emergency calling configuration.
+     * </p>
+     * 
      * @param putVoiceConnectorEmergencyCallingConfigurationRequest
      * @return A Java Future containing the result of the PutVoiceConnectorEmergencyCallingConfiguration operation
      *         returned by the service.
@@ -1697,6 +2379,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             PutVoiceConnectorEmergencyCallingConfigurationRequest putVoiceConnectorEmergencyCallingConfigurationRequest);
 
     /**
+     * <p>
+     * Updates a Voice Connector's emergency calling configuration.
+     * </p>
+     * 
      * @param putVoiceConnectorEmergencyCallingConfigurationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1714,6 +2400,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<PutVoiceConnectorEmergencyCallingConfigurationRequest, PutVoiceConnectorEmergencyCallingConfigurationResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates a Voice Connector's logging configuration.
+     * </p>
+     * 
      * @param putVoiceConnectorLoggingConfigurationRequest
      * @return A Java Future containing the result of the PutVoiceConnectorLoggingConfiguration operation returned by
      *         the service.
@@ -1726,6 +2416,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             PutVoiceConnectorLoggingConfigurationRequest putVoiceConnectorLoggingConfigurationRequest);
 
     /**
+     * <p>
+     * Updates a Voice Connector's logging configuration.
+     * </p>
+     * 
      * @param putVoiceConnectorLoggingConfigurationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1743,6 +2437,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<PutVoiceConnectorLoggingConfigurationRequest, PutVoiceConnectorLoggingConfigurationResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates a Voice Connector's origination settings.
+     * </p>
+     * 
      * @param putVoiceConnectorOriginationRequest
      * @return A Java Future containing the result of the PutVoiceConnectorOrigination operation returned by the
      *         service.
@@ -1754,6 +2452,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             PutVoiceConnectorOriginationRequest putVoiceConnectorOriginationRequest);
 
     /**
+     * <p>
+     * Updates a Voice Connector's origination settings.
+     * </p>
+     * 
      * @param putVoiceConnectorOriginationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1770,6 +2472,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<PutVoiceConnectorOriginationRequest, PutVoiceConnectorOriginationResult> asyncHandler);
 
     /**
+     * <p>
+     * Puts the specified proxy configuration to the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param putVoiceConnectorProxyRequest
      * @return A Java Future containing the result of the PutVoiceConnectorProxy operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.PutVoiceConnectorProxy
@@ -1779,6 +2485,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<PutVoiceConnectorProxyResult> putVoiceConnectorProxyAsync(PutVoiceConnectorProxyRequest putVoiceConnectorProxyRequest);
 
     /**
+     * <p>
+     * Puts the specified proxy configuration to the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param putVoiceConnectorProxyRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1793,6 +2503,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<PutVoiceConnectorProxyRequest, PutVoiceConnectorProxyResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates a Voice Connector's streaming configuration settings.
+     * </p>
+     * 
      * @param putVoiceConnectorStreamingConfigurationRequest
      * @return A Java Future containing the result of the PutVoiceConnectorStreamingConfiguration operation returned by
      *         the service.
@@ -1805,6 +2519,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             PutVoiceConnectorStreamingConfigurationRequest putVoiceConnectorStreamingConfigurationRequest);
 
     /**
+     * <p>
+     * Updates a Voice Connector's streaming configuration settings.
+     * </p>
+     * 
      * @param putVoiceConnectorStreamingConfigurationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1822,6 +2540,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<PutVoiceConnectorStreamingConfigurationRequest, PutVoiceConnectorStreamingConfigurationResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates a Voice Connector's termination settings.
+     * </p>
+     * 
      * @param putVoiceConnectorTerminationRequest
      * @return A Java Future containing the result of the PutVoiceConnectorTermination operation returned by the
      *         service.
@@ -1833,6 +2555,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             PutVoiceConnectorTerminationRequest putVoiceConnectorTerminationRequest);
 
     /**
+     * <p>
+     * Updates a Voice Connector's termination settings.
+     * </p>
+     * 
      * @param putVoiceConnectorTerminationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1849,6 +2575,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<PutVoiceConnectorTerminationRequest, PutVoiceConnectorTerminationResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates a Voice Connector's termination credentials.
+     * </p>
+     * 
      * @param putVoiceConnectorTerminationCredentialsRequest
      * @return A Java Future containing the result of the PutVoiceConnectorTerminationCredentials operation returned by
      *         the service.
@@ -1861,6 +2591,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             PutVoiceConnectorTerminationCredentialsRequest putVoiceConnectorTerminationCredentialsRequest);
 
     /**
+     * <p>
+     * Updates a Voice Connector's termination credentials.
+     * </p>
+     * 
      * @param putVoiceConnectorTerminationCredentialsRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1878,6 +2612,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<PutVoiceConnectorTerminationCredentialsRequest, PutVoiceConnectorTerminationCredentialsResult> asyncHandler);
 
     /**
+     * <p>
+     * Restores a deleted phone number.
+     * </p>
+     * 
      * @param restorePhoneNumberRequest
      * @return A Java Future containing the result of the RestorePhoneNumber operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.RestorePhoneNumber
@@ -1887,6 +2625,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<RestorePhoneNumberResult> restorePhoneNumberAsync(RestorePhoneNumberRequest restorePhoneNumberRequest);
 
     /**
+     * <p>
+     * Restores a deleted phone number.
+     * </p>
+     * 
      * @param restorePhoneNumberRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1901,6 +2643,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<RestorePhoneNumberRequest, RestorePhoneNumberResult> asyncHandler);
 
     /**
+     * <p>
+     * Searches the provisioned phone numbers in an organization.
+     * </p>
+     * 
      * @param searchAvailablePhoneNumbersRequest
      * @return A Java Future containing the result of the SearchAvailablePhoneNumbers operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.SearchAvailablePhoneNumbers
@@ -1911,6 +2657,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             SearchAvailablePhoneNumbersRequest searchAvailablePhoneNumbersRequest);
 
     /**
+     * <p>
+     * Searches the provisioned phone numbers in an organization.
+     * </p>
+     * 
      * @param searchAvailablePhoneNumbersRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1926,6 +2676,17 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<SearchAvailablePhoneNumbersRequest, SearchAvailablePhoneNumbersResult> asyncHandler);
 
     /**
+     * <p>
+     * Starts a speaker search task.
+     * </p>
+     * <important>
+     * <p>
+     * Before starting any speaker search tasks, you must provide all notices and obtain all consents from the speaker
+     * as required under applicable privacy and biometrics laws, and as required under the <a
+     * href="https://aws.amazon.com/service-terms/">AWS service terms</a> for the Amazon Chime SDK.
+     * </p>
+     * </important>
+     * 
      * @param startSpeakerSearchTaskRequest
      * @return A Java Future containing the result of the StartSpeakerSearchTask operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.StartSpeakerSearchTask
@@ -1935,6 +2696,17 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<StartSpeakerSearchTaskResult> startSpeakerSearchTaskAsync(StartSpeakerSearchTaskRequest startSpeakerSearchTaskRequest);
 
     /**
+     * <p>
+     * Starts a speaker search task.
+     * </p>
+     * <important>
+     * <p>
+     * Before starting any speaker search tasks, you must provide all notices and obtain all consents from the speaker
+     * as required under applicable privacy and biometrics laws, and as required under the <a
+     * href="https://aws.amazon.com/service-terms/">AWS service terms</a> for the Amazon Chime SDK.
+     * </p>
+     * </important>
+     * 
      * @param startSpeakerSearchTaskRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1949,6 +2721,19 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<StartSpeakerSearchTaskRequest, StartSpeakerSearchTaskResult> asyncHandler);
 
     /**
+     * <p>
+     * Starts a voice tone analysis task. For more information about voice tone analysis, see <a
+     * href="https://docs.aws.amazon.com/chime-sdk/latest/dg/pstn-voice-analytics.html">Using Amazon Chime SDK voice
+     * analytics</a> in the <i>Amazon Chime SDK Developer Guide</i>.
+     * </p>
+     * <important>
+     * <p>
+     * Before starting any voice tone analysis tasks, you must provide all notices and obtain all consents from the
+     * speaker as required under applicable privacy and biometrics laws, and as required under the <a
+     * href="https://aws.amazon.com/service-terms/">AWS service terms</a> for the Amazon Chime SDK.
+     * </p>
+     * </important>
+     * 
      * @param startVoiceToneAnalysisTaskRequest
      * @return A Java Future containing the result of the StartVoiceToneAnalysisTask operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.StartVoiceToneAnalysisTask
@@ -1959,6 +2744,19 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             StartVoiceToneAnalysisTaskRequest startVoiceToneAnalysisTaskRequest);
 
     /**
+     * <p>
+     * Starts a voice tone analysis task. For more information about voice tone analysis, see <a
+     * href="https://docs.aws.amazon.com/chime-sdk/latest/dg/pstn-voice-analytics.html">Using Amazon Chime SDK voice
+     * analytics</a> in the <i>Amazon Chime SDK Developer Guide</i>.
+     * </p>
+     * <important>
+     * <p>
+     * Before starting any voice tone analysis tasks, you must provide all notices and obtain all consents from the
+     * speaker as required under applicable privacy and biometrics laws, and as required under the <a
+     * href="https://aws.amazon.com/service-terms/">AWS service terms</a> for the Amazon Chime SDK.
+     * </p>
+     * </important>
+     * 
      * @param startVoiceToneAnalysisTaskRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1974,6 +2772,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<StartVoiceToneAnalysisTaskRequest, StartVoiceToneAnalysisTaskResult> asyncHandler);
 
     /**
+     * <p>
+     * Stops a speaker search task.
+     * </p>
+     * 
      * @param stopSpeakerSearchTaskRequest
      * @return A Java Future containing the result of the StopSpeakerSearchTask operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.StopSpeakerSearchTask
@@ -1983,6 +2785,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<StopSpeakerSearchTaskResult> stopSpeakerSearchTaskAsync(StopSpeakerSearchTaskRequest stopSpeakerSearchTaskRequest);
 
     /**
+     * <p>
+     * Stops a speaker search task.
+     * </p>
+     * 
      * @param stopSpeakerSearchTaskRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -1997,6 +2803,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<StopSpeakerSearchTaskRequest, StopSpeakerSearchTaskResult> asyncHandler);
 
     /**
+     * <p>
+     * Stops a voice tone analysis task.
+     * </p>
+     * 
      * @param stopVoiceToneAnalysisTaskRequest
      * @return A Java Future containing the result of the StopVoiceToneAnalysisTask operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.StopVoiceToneAnalysisTask
@@ -2007,6 +2817,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             StopVoiceToneAnalysisTaskRequest stopVoiceToneAnalysisTaskRequest);
 
     /**
+     * <p>
+     * Stops a voice tone analysis task.
+     * </p>
+     * 
      * @param stopVoiceToneAnalysisTaskRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -2022,6 +2836,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<StopVoiceToneAnalysisTaskRequest, StopVoiceToneAnalysisTaskResult> asyncHandler);
 
     /**
+     * <p>
+     * Adds a tag to the specified resource.
+     * </p>
+     * 
      * @param tagResourceRequest
      * @return A Java Future containing the result of the TagResource operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.TagResource
@@ -2031,6 +2849,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest);
 
     /**
+     * <p>
+     * Adds a tag to the specified resource.
+     * </p>
+     * 
      * @param tagResourceRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -2045,6 +2867,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler);
 
     /**
+     * <p>
+     * Removes tags from a resource.
+     * </p>
+     * 
      * @param untagResourceRequest
      * @return A Java Future containing the result of the UntagResource operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.UntagResource
@@ -2054,6 +2880,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest);
 
     /**
+     * <p>
+     * Removes tags from a resource.
+     * </p>
+     * 
      * @param untagResourceRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -2068,6 +2898,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates global settings for the Amazon Chime SDK Voice Connectors in an AWS account.
+     * </p>
+     * 
      * @param updateGlobalSettingsRequest
      * @return A Java Future containing the result of the UpdateGlobalSettings operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.UpdateGlobalSettings
@@ -2077,6 +2911,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<UpdateGlobalSettingsResult> updateGlobalSettingsAsync(UpdateGlobalSettingsRequest updateGlobalSettingsRequest);
 
     /**
+     * <p>
+     * Updates global settings for the Amazon Chime SDK Voice Connectors in an AWS account.
+     * </p>
+     * 
      * @param updateGlobalSettingsRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -2091,6 +2929,19 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<UpdateGlobalSettingsRequest, UpdateGlobalSettingsResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates phone number details, such as product type or calling name, for the specified phone number ID. You can
+     * update one phone number detail at a time. For example, you can update either the product type or the calling name
+     * in one action.
+     * </p>
+     * <p>
+     * For numbers outside the U.S., you must use the Amazon Chime SDK SIP Media Application Dial-In product type.
+     * </p>
+     * <p>
+     * Updates to outbound calling names can take 72 hours to complete. Pending updates to outbound calling names must
+     * be complete before you can request another update.
+     * </p>
+     * 
      * @param updatePhoneNumberRequest
      * @return A Java Future containing the result of the UpdatePhoneNumber operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.UpdatePhoneNumber
@@ -2100,6 +2951,19 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<UpdatePhoneNumberResult> updatePhoneNumberAsync(UpdatePhoneNumberRequest updatePhoneNumberRequest);
 
     /**
+     * <p>
+     * Updates phone number details, such as product type or calling name, for the specified phone number ID. You can
+     * update one phone number detail at a time. For example, you can update either the product type or the calling name
+     * in one action.
+     * </p>
+     * <p>
+     * For numbers outside the U.S., you must use the Amazon Chime SDK SIP Media Application Dial-In product type.
+     * </p>
+     * <p>
+     * Updates to outbound calling names can take 72 hours to complete. Pending updates to outbound calling names must
+     * be complete before you can request another update.
+     * </p>
+     * 
      * @param updatePhoneNumberRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -2114,6 +2978,12 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<UpdatePhoneNumberRequest, UpdatePhoneNumberResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates the phone number settings for the administrator's AWS account, such as the default outbound calling name.
+     * You can update the default outbound calling name once every seven days. Outbound calling names can take up to 72
+     * hours to update.
+     * </p>
+     * 
      * @param updatePhoneNumberSettingsRequest
      * @return A Java Future containing the result of the UpdatePhoneNumberSettings operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.UpdatePhoneNumberSettings
@@ -2124,6 +2994,12 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             UpdatePhoneNumberSettingsRequest updatePhoneNumberSettingsRequest);
 
     /**
+     * <p>
+     * Updates the phone number settings for the administrator's AWS account, such as the default outbound calling name.
+     * You can update the default outbound calling name once every seven days. Outbound calling names can take up to 72
+     * hours to update.
+     * </p>
+     * 
      * @param updatePhoneNumberSettingsRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -2139,6 +3015,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<UpdatePhoneNumberSettingsRequest, UpdatePhoneNumberSettingsResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates the specified proxy session details, such as voice or SMS capabilities.
+     * </p>
+     * 
      * @param updateProxySessionRequest
      * @return A Java Future containing the result of the UpdateProxySession operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.UpdateProxySession
@@ -2148,6 +3028,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<UpdateProxySessionResult> updateProxySessionAsync(UpdateProxySessionRequest updateProxySessionRequest);
 
     /**
+     * <p>
+     * Updates the specified proxy session details, such as voice or SMS capabilities.
+     * </p>
+     * 
      * @param updateProxySessionRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -2162,6 +3046,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<UpdateProxySessionRequest, UpdateProxySessionResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates the details of the specified SIP media application.
+     * </p>
+     * 
      * @param updateSipMediaApplicationRequest
      * @return A Java Future containing the result of the UpdateSipMediaApplication operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.UpdateSipMediaApplication
@@ -2172,6 +3060,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             UpdateSipMediaApplicationRequest updateSipMediaApplicationRequest);
 
     /**
+     * <p>
+     * Updates the details of the specified SIP media application.
+     * </p>
+     * 
      * @param updateSipMediaApplicationRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -2187,6 +3079,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<UpdateSipMediaApplicationRequest, UpdateSipMediaApplicationResult> asyncHandler);
 
     /**
+     * <p>
+     * Invokes the AWS Lambda function associated with the SIP media application and transaction ID in an update
+     * request. The Lambda function can then return a new set of actions.
+     * </p>
+     * 
      * @param updateSipMediaApplicationCallRequest
      * @return A Java Future containing the result of the UpdateSipMediaApplicationCall operation returned by the
      *         service.
@@ -2198,6 +3095,11 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             UpdateSipMediaApplicationCallRequest updateSipMediaApplicationCallRequest);
 
     /**
+     * <p>
+     * Invokes the AWS Lambda function associated with the SIP media application and transaction ID in an update
+     * request. The Lambda function can then return a new set of actions.
+     * </p>
+     * 
      * @param updateSipMediaApplicationCallRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -2214,6 +3116,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<UpdateSipMediaApplicationCallRequest, UpdateSipMediaApplicationCallResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates the details of the specified SIP rule.
+     * </p>
+     * 
      * @param updateSipRuleRequest
      * @return A Java Future containing the result of the UpdateSipRule operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.UpdateSipRule
@@ -2223,6 +3129,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<UpdateSipRuleResult> updateSipRuleAsync(UpdateSipRuleRequest updateSipRuleRequest);
 
     /**
+     * <p>
+     * Updates the details of the specified SIP rule.
+     * </p>
+     * 
      * @param updateSipRuleRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -2237,6 +3147,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<UpdateSipRuleRequest, UpdateSipRuleResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates the details for the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param updateVoiceConnectorRequest
      * @return A Java Future containing the result of the UpdateVoiceConnector operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.UpdateVoiceConnector
@@ -2246,6 +3160,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<UpdateVoiceConnectorResult> updateVoiceConnectorAsync(UpdateVoiceConnectorRequest updateVoiceConnectorRequest);
 
     /**
+     * <p>
+     * Updates the details for the specified Amazon Chime SDK Voice Connector.
+     * </p>
+     * 
      * @param updateVoiceConnectorRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -2260,6 +3178,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<UpdateVoiceConnectorRequest, UpdateVoiceConnectorResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates the settings for the specified Amazon Chime SDK Voice Connector group.
+     * </p>
+     * 
      * @param updateVoiceConnectorGroupRequest
      * @return A Java Future containing the result of the UpdateVoiceConnectorGroup operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.UpdateVoiceConnectorGroup
@@ -2270,6 +3192,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             UpdateVoiceConnectorGroupRequest updateVoiceConnectorGroupRequest);
 
     /**
+     * <p>
+     * Updates the settings for the specified Amazon Chime SDK Voice Connector group.
+     * </p>
+     * 
      * @param updateVoiceConnectorGroupRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -2285,6 +3211,23 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<UpdateVoiceConnectorGroupRequest, UpdateVoiceConnectorGroupResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates the specified voice profile’s voice print and refreshes its expiration timestamp.
+     * </p>
+     * <important>
+     * <p>
+     * As a condition of using this feature, you acknowledge that the collection, use, storage, and retention of your
+     * caller’s biometric identifiers and biometric information (“biometric data”) in the form of a digital voiceprint
+     * requires the caller’s informed consent via a written release. Such consent is required under various state laws,
+     * including biometrics laws in Illinois, Texas, Washington and other state privacy laws.
+     * </p>
+     * <p>
+     * You must provide a written release to each caller through a process that clearly reflects each caller’s informed
+     * consent before using Amazon Chime SDK Voice Insights service, as required under the terms of your agreement with
+     * AWS governing your use of the service.
+     * </p>
+     * </important>
+     * 
      * @param updateVoiceProfileRequest
      * @return A Java Future containing the result of the UpdateVoiceProfile operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.UpdateVoiceProfile
@@ -2294,6 +3237,23 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<UpdateVoiceProfileResult> updateVoiceProfileAsync(UpdateVoiceProfileRequest updateVoiceProfileRequest);
 
     /**
+     * <p>
+     * Updates the specified voice profile’s voice print and refreshes its expiration timestamp.
+     * </p>
+     * <important>
+     * <p>
+     * As a condition of using this feature, you acknowledge that the collection, use, storage, and retention of your
+     * caller’s biometric identifiers and biometric information (“biometric data”) in the form of a digital voiceprint
+     * requires the caller’s informed consent via a written release. Such consent is required under various state laws,
+     * including biometrics laws in Illinois, Texas, Washington and other state privacy laws.
+     * </p>
+     * <p>
+     * You must provide a written release to each caller through a process that clearly reflects each caller’s informed
+     * consent before using Amazon Chime SDK Voice Insights service, as required under the terms of your agreement with
+     * AWS governing your use of the service.
+     * </p>
+     * </important>
+     * 
      * @param updateVoiceProfileRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -2308,6 +3268,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<UpdateVoiceProfileRequest, UpdateVoiceProfileResult> asyncHandler);
 
     /**
+     * <p>
+     * Updates the settings for the specified voice profile domain.
+     * </p>
+     * 
      * @param updateVoiceProfileDomainRequest
      * @return A Java Future containing the result of the UpdateVoiceProfileDomain operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.UpdateVoiceProfileDomain
@@ -2317,6 +3281,10 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<UpdateVoiceProfileDomainResult> updateVoiceProfileDomainAsync(UpdateVoiceProfileDomainRequest updateVoiceProfileDomainRequest);
 
     /**
+     * <p>
+     * Updates the settings for the specified voice profile domain.
+     * </p>
+     * 
      * @param updateVoiceProfileDomainRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
@@ -2331,6 +3299,12 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
             com.amazonaws.handlers.AsyncHandler<UpdateVoiceProfileDomainRequest, UpdateVoiceProfileDomainResult> asyncHandler);
 
     /**
+     * <p>
+     * Validates an address to be used for 911 calls made with Amazon Chime SDK Voice Connectors. You can use validated
+     * addresses in a Presence Information Data Format Location Object file that you include in SIP requests. That helps
+     * ensure that addresses are routed to the appropriate Public Safety Answering Point.
+     * </p>
+     * 
      * @param validateE911AddressRequest
      * @return A Java Future containing the result of the ValidateE911Address operation returned by the service.
      * @sample AmazonChimeSDKVoiceAsync.ValidateE911Address
@@ -2340,6 +3314,12 @@ public interface AmazonChimeSDKVoiceAsync extends AmazonChimeSDKVoice {
     java.util.concurrent.Future<ValidateE911AddressResult> validateE911AddressAsync(ValidateE911AddressRequest validateE911AddressRequest);
 
     /**
+     * <p>
+     * Validates an address to be used for 911 calls made with Amazon Chime SDK Voice Connectors. You can use validated
+     * addresses in a Presence Information Data Format Location Object file that you include in SIP requests. That helps
+     * ensure that addresses are routed to the appropriate Public Safety Answering Point.
+     * </p>
+     * 
      * @param validateE911AddressRequest
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an

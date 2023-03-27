@@ -51,6 +51,12 @@ public class CreateDeviceProfileRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String clientRequestToken;
+    /**
+     * <p>
+     * The Sidewalk-related information for creating the Sidewalk device profile.
+     * </p>
+     */
+    private SidewalkCreateDeviceProfile sidewalk;
 
     /**
      * <p>
@@ -255,6 +261,46 @@ public class CreateDeviceProfileRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The Sidewalk-related information for creating the Sidewalk device profile.
+     * </p>
+     * 
+     * @param sidewalk
+     *        The Sidewalk-related information for creating the Sidewalk device profile.
+     */
+
+    public void setSidewalk(SidewalkCreateDeviceProfile sidewalk) {
+        this.sidewalk = sidewalk;
+    }
+
+    /**
+     * <p>
+     * The Sidewalk-related information for creating the Sidewalk device profile.
+     * </p>
+     * 
+     * @return The Sidewalk-related information for creating the Sidewalk device profile.
+     */
+
+    public SidewalkCreateDeviceProfile getSidewalk() {
+        return this.sidewalk;
+    }
+
+    /**
+     * <p>
+     * The Sidewalk-related information for creating the Sidewalk device profile.
+     * </p>
+     * 
+     * @param sidewalk
+     *        The Sidewalk-related information for creating the Sidewalk device profile.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDeviceProfileRequest withSidewalk(SidewalkCreateDeviceProfile sidewalk) {
+        setSidewalk(sidewalk);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -273,7 +319,9 @@ public class CreateDeviceProfileRequest extends com.amazonaws.AmazonWebServiceRe
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getClientRequestToken() != null)
-            sb.append("ClientRequestToken: ").append(getClientRequestToken());
+            sb.append("ClientRequestToken: ").append(getClientRequestToken()).append(",");
+        if (getSidewalk() != null)
+            sb.append("Sidewalk: ").append(getSidewalk());
         sb.append("}");
         return sb.toString();
     }
@@ -304,6 +352,10 @@ public class CreateDeviceProfileRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getClientRequestToken() != null && other.getClientRequestToken().equals(this.getClientRequestToken()) == false)
             return false;
+        if (other.getSidewalk() == null ^ this.getSidewalk() == null)
+            return false;
+        if (other.getSidewalk() != null && other.getSidewalk().equals(this.getSidewalk()) == false)
+            return false;
         return true;
     }
 
@@ -316,6 +368,7 @@ public class CreateDeviceProfileRequest extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getLoRaWAN() == null) ? 0 : getLoRaWAN().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
+        hashCode = prime * hashCode + ((getSidewalk() == null) ? 0 : getSidewalk().hashCode());
         return hashCode;
     }
 

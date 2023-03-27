@@ -25,12 +25,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The name of the Voice Connector group.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * Lists the Voice Connectors that inbound calls are routed to.
+     * </p>
+     */
     private java.util.List<VoiceConnectorItem> voiceConnectorItems;
 
     /**
+     * <p>
+     * The name of the Voice Connector group.
+     * </p>
+     * 
      * @param name
+     *        The name of the Voice Connector group.
      */
 
     public void setName(String name) {
@@ -38,7 +52,11 @@ public class CreateVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the Voice Connector group.
+     * </p>
+     * 
+     * @return The name of the Voice Connector group.
      */
 
     public String getName() {
@@ -46,7 +64,12 @@ public class CreateVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The name of the Voice Connector group.
+     * </p>
+     * 
      * @param name
+     *        The name of the Voice Connector group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +79,11 @@ public class CreateVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * Lists the Voice Connectors that inbound calls are routed to.
+     * </p>
+     * 
+     * @return Lists the Voice Connectors that inbound calls are routed to.
      */
 
     public java.util.List<VoiceConnectorItem> getVoiceConnectorItems() {
@@ -64,7 +91,12 @@ public class CreateVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * Lists the Voice Connectors that inbound calls are routed to.
+     * </p>
+     * 
      * @param voiceConnectorItems
+     *        Lists the Voice Connectors that inbound calls are routed to.
      */
 
     public void setVoiceConnectorItems(java.util.Collection<VoiceConnectorItem> voiceConnectorItems) {
@@ -78,12 +110,16 @@ public class CreateVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
+     * Lists the Voice Connectors that inbound calls are routed to.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setVoiceConnectorItems(java.util.Collection)} or {@link #withVoiceConnectorItems(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param voiceConnectorItems
+     *        Lists the Voice Connectors that inbound calls are routed to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,7 +134,12 @@ public class CreateVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * Lists the Voice Connectors that inbound calls are routed to.
+     * </p>
+     * 
      * @param voiceConnectorItems
+     *        Lists the Voice Connectors that inbound calls are routed to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

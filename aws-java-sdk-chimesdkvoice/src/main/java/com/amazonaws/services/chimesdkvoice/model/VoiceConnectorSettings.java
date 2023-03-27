@@ -18,6 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The Amazon Chime SDK Voice Connector settings. Includes any Amazon S3 buckets designated for storing call detail
+ * records.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/VoiceConnectorSettings"
  *      target="_top">AWS API Documentation</a>
@@ -25,10 +29,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class VoiceConnectorSettings implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The S3 bucket that stores the Voice Connector's call detail records.
+     * </p>
+     */
     private String cdrBucket;
 
     /**
+     * <p>
+     * The S3 bucket that stores the Voice Connector's call detail records.
+     * </p>
+     * 
      * @param cdrBucket
+     *        The S3 bucket that stores the Voice Connector's call detail records.
      */
 
     public void setCdrBucket(String cdrBucket) {
@@ -36,7 +50,11 @@ public class VoiceConnectorSettings implements Serializable, Cloneable, Structur
     }
 
     /**
-     * @return
+     * <p>
+     * The S3 bucket that stores the Voice Connector's call detail records.
+     * </p>
+     * 
+     * @return The S3 bucket that stores the Voice Connector's call detail records.
      */
 
     public String getCdrBucket() {
@@ -44,7 +62,12 @@ public class VoiceConnectorSettings implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The S3 bucket that stores the Voice Connector's call detail records.
+     * </p>
+     * 
      * @param cdrBucket
+     *        The S3 bucket that stores the Voice Connector's call detail records.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

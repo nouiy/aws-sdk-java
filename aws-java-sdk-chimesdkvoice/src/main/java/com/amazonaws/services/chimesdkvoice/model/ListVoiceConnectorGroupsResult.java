@@ -23,12 +23,25 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListVoiceConnectorGroupsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The details of the Voice Connector groups.
+     * </p>
+     */
     private java.util.List<VoiceConnectorGroup> voiceConnectorGroups;
-
+    /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * @return
+     * <p>
+     * The details of the Voice Connector groups.
+     * </p>
+     * 
+     * @return The details of the Voice Connector groups.
      */
 
     public java.util.List<VoiceConnectorGroup> getVoiceConnectorGroups() {
@@ -36,7 +49,12 @@ public class ListVoiceConnectorGroupsResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * The details of the Voice Connector groups.
+     * </p>
+     * 
      * @param voiceConnectorGroups
+     *        The details of the Voice Connector groups.
      */
 
     public void setVoiceConnectorGroups(java.util.Collection<VoiceConnectorGroup> voiceConnectorGroups) {
@@ -50,12 +68,16 @@ public class ListVoiceConnectorGroupsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
+     * The details of the Voice Connector groups.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setVoiceConnectorGroups(java.util.Collection)} or {@link #withVoiceConnectorGroups(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param voiceConnectorGroups
+     *        The details of the Voice Connector groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +92,12 @@ public class ListVoiceConnectorGroupsResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * The details of the Voice Connector groups.
+     * </p>
+     * 
      * @param voiceConnectorGroups
+     *        The details of the Voice Connector groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,7 +107,12 @@ public class ListVoiceConnectorGroupsResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -88,7 +120,11 @@ public class ListVoiceConnectorGroupsResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
-     * @return
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
+     * @return The token used to return the next page of results.
      */
 
     public String getNextToken() {
@@ -96,7 +132,12 @@ public class ListVoiceConnectorGroupsResult extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

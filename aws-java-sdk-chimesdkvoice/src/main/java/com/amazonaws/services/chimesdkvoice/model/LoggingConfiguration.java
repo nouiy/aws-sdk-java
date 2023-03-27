@@ -18,6 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The logging configuration associated with an Amazon Chime SDK Voice Connector. Specifies whether SIP message logs can
+ * be sent to Amazon CloudWatch Logs.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/LoggingConfiguration"
  *      target="_top">AWS API Documentation</a>
@@ -25,12 +29,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class LoggingConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Boolean that enables sending SIP message logs to Amazon CloudWatch logs.
+     * </p>
+     */
     private Boolean enableSIPLogs;
-
+    /**
+     * <p>
+     * Enables or disables media metrics logging.
+     * </p>
+     */
     private Boolean enableMediaMetricLogs;
 
     /**
+     * <p>
+     * Boolean that enables sending SIP message logs to Amazon CloudWatch logs.
+     * </p>
+     * 
      * @param enableSIPLogs
+     *        Boolean that enables sending SIP message logs to Amazon CloudWatch logs.
      */
 
     public void setEnableSIPLogs(Boolean enableSIPLogs) {
@@ -38,7 +56,11 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
-     * @return
+     * <p>
+     * Boolean that enables sending SIP message logs to Amazon CloudWatch logs.
+     * </p>
+     * 
+     * @return Boolean that enables sending SIP message logs to Amazon CloudWatch logs.
      */
 
     public Boolean getEnableSIPLogs() {
@@ -46,7 +68,12 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * Boolean that enables sending SIP message logs to Amazon CloudWatch logs.
+     * </p>
+     * 
      * @param enableSIPLogs
+     *        Boolean that enables sending SIP message logs to Amazon CloudWatch logs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +83,11 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
-     * @return
+     * <p>
+     * Boolean that enables sending SIP message logs to Amazon CloudWatch logs.
+     * </p>
+     * 
+     * @return Boolean that enables sending SIP message logs to Amazon CloudWatch logs.
      */
 
     public Boolean isEnableSIPLogs() {
@@ -64,7 +95,12 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * Enables or disables media metrics logging.
+     * </p>
+     * 
      * @param enableMediaMetricLogs
+     *        Enables or disables media metrics logging.
      */
 
     public void setEnableMediaMetricLogs(Boolean enableMediaMetricLogs) {
@@ -72,7 +108,11 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
-     * @return
+     * <p>
+     * Enables or disables media metrics logging.
+     * </p>
+     * 
+     * @return Enables or disables media metrics logging.
      */
 
     public Boolean getEnableMediaMetricLogs() {
@@ -80,7 +120,12 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * Enables or disables media metrics logging.
+     * </p>
+     * 
      * @param enableMediaMetricLogs
+     *        Enables or disables media metrics logging.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,7 +135,11 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
-     * @return
+     * <p>
+     * Enables or disables media metrics logging.
+     * </p>
+     * 
+     * @return Enables or disables media metrics logging.
      */
 
     public Boolean isEnableMediaMetricLogs() {

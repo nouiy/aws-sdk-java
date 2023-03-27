@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * A collection of voice profiles.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/VoiceProfileDomain" target="_top">AWS
  *      API Documentation</a>
@@ -25,22 +28,56 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ID of the voice profile domain.
+     * </p>
+     */
     private String voiceProfileDomainId;
-
+    /**
+     * <p>
+     * The voice profile domain's Amazon Resource Number (ARN).
+     * </p>
+     */
     private String voiceProfileDomainArn;
-
+    /**
+     * <p>
+     * The name of the voice profile domain.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * The description of the voice profile domain.
+     * </p>
+     */
     private String description;
-
+    /**
+     * <p>
+     * A structure that contains the configuration settings for server-side encryption.
+     * </p>
+     */
     private ServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
-
+    /**
+     * <p>
+     * The time at which the voice profile domain was created.
+     * </p>
+     */
     private java.util.Date createdTimestamp;
-
+    /**
+     * <p>
+     * The time at which the voice profile was last updated.
+     * </p>
+     */
     private java.util.Date updatedTimestamp;
 
     /**
+     * <p>
+     * The ID of the voice profile domain.
+     * </p>
+     * 
      * @param voiceProfileDomainId
+     *        The ID of the voice profile domain.
      */
 
     public void setVoiceProfileDomainId(String voiceProfileDomainId) {
@@ -48,7 +85,11 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the voice profile domain.
+     * </p>
+     * 
+     * @return The ID of the voice profile domain.
      */
 
     public String getVoiceProfileDomainId() {
@@ -56,7 +97,12 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The ID of the voice profile domain.
+     * </p>
+     * 
      * @param voiceProfileDomainId
+     *        The ID of the voice profile domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -66,7 +112,12 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The voice profile domain's Amazon Resource Number (ARN).
+     * </p>
+     * 
      * @param voiceProfileDomainArn
+     *        The voice profile domain's Amazon Resource Number (ARN).
      */
 
     public void setVoiceProfileDomainArn(String voiceProfileDomainArn) {
@@ -74,7 +125,11 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The voice profile domain's Amazon Resource Number (ARN).
+     * </p>
+     * 
+     * @return The voice profile domain's Amazon Resource Number (ARN).
      */
 
     public String getVoiceProfileDomainArn() {
@@ -82,7 +137,12 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The voice profile domain's Amazon Resource Number (ARN).
+     * </p>
+     * 
      * @param voiceProfileDomainArn
+     *        The voice profile domain's Amazon Resource Number (ARN).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,7 +152,12 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The name of the voice profile domain.
+     * </p>
+     * 
      * @param name
+     *        The name of the voice profile domain.
      */
 
     public void setName(String name) {
@@ -100,7 +165,11 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the voice profile domain.
+     * </p>
+     * 
+     * @return The name of the voice profile domain.
      */
 
     public String getName() {
@@ -108,7 +177,12 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The name of the voice profile domain.
+     * </p>
+     * 
      * @param name
+     *        The name of the voice profile domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -118,7 +192,12 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The description of the voice profile domain.
+     * </p>
+     * 
      * @param description
+     *        The description of the voice profile domain.
      */
 
     public void setDescription(String description) {
@@ -126,7 +205,11 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The description of the voice profile domain.
+     * </p>
+     * 
+     * @return The description of the voice profile domain.
      */
 
     public String getDescription() {
@@ -134,7 +217,12 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The description of the voice profile domain.
+     * </p>
+     * 
      * @param description
+     *        The description of the voice profile domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -144,7 +232,12 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * A structure that contains the configuration settings for server-side encryption.
+     * </p>
+     * 
      * @param serverSideEncryptionConfiguration
+     *        A structure that contains the configuration settings for server-side encryption.
      */
 
     public void setServerSideEncryptionConfiguration(ServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
@@ -152,7 +245,11 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * A structure that contains the configuration settings for server-side encryption.
+     * </p>
+     * 
+     * @return A structure that contains the configuration settings for server-side encryption.
      */
 
     public ServerSideEncryptionConfiguration getServerSideEncryptionConfiguration() {
@@ -160,7 +257,12 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * A structure that contains the configuration settings for server-side encryption.
+     * </p>
+     * 
      * @param serverSideEncryptionConfiguration
+     *        A structure that contains the configuration settings for server-side encryption.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -170,7 +272,12 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The time at which the voice profile domain was created.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The time at which the voice profile domain was created.
      */
 
     public void setCreatedTimestamp(java.util.Date createdTimestamp) {
@@ -178,7 +285,11 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the voice profile domain was created.
+     * </p>
+     * 
+     * @return The time at which the voice profile domain was created.
      */
 
     public java.util.Date getCreatedTimestamp() {
@@ -186,7 +297,12 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The time at which the voice profile domain was created.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The time at which the voice profile domain was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -196,7 +312,12 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The time at which the voice profile was last updated.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The time at which the voice profile was last updated.
      */
 
     public void setUpdatedTimestamp(java.util.Date updatedTimestamp) {
@@ -204,7 +325,11 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the voice profile was last updated.
+     * </p>
+     * 
+     * @return The time at which the voice profile was last updated.
      */
 
     public java.util.Date getUpdatedTimestamp() {
@@ -212,7 +337,12 @@ public class VoiceProfileDomain implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The time at which the voice profile was last updated.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The time at which the voice profile was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -18,6 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The phone number ID, product type, or calling name fields to update, used with the <a>BatchUpdatePhoneNumber</a> and
+ * <a>UpdatePhoneNumber</a> actions.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/UpdatePhoneNumberRequestItem"
  *      target="_top">AWS API Documentation</a>
@@ -25,14 +29,32 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdatePhoneNumberRequestItem implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The phone number ID to update.
+     * </p>
+     */
     private String phoneNumberId;
-
+    /**
+     * <p>
+     * The product type to update.
+     * </p>
+     */
     private String productType;
-
+    /**
+     * <p>
+     * The outbound calling name to update.
+     * </p>
+     */
     private String callingName;
 
     /**
+     * <p>
+     * The phone number ID to update.
+     * </p>
+     * 
      * @param phoneNumberId
+     *        The phone number ID to update.
      */
 
     public void setPhoneNumberId(String phoneNumberId) {
@@ -40,7 +62,11 @@ public class UpdatePhoneNumberRequestItem implements Serializable, Cloneable, St
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number ID to update.
+     * </p>
+     * 
+     * @return The phone number ID to update.
      */
 
     public String getPhoneNumberId() {
@@ -48,7 +74,12 @@ public class UpdatePhoneNumberRequestItem implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The phone number ID to update.
+     * </p>
+     * 
      * @param phoneNumberId
+     *        The phone number ID to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +89,12 @@ public class UpdatePhoneNumberRequestItem implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The product type to update.
+     * </p>
+     * 
      * @param productType
+     *        The product type to update.
      * @see PhoneNumberProductType
      */
 
@@ -67,7 +103,11 @@ public class UpdatePhoneNumberRequestItem implements Serializable, Cloneable, St
     }
 
     /**
-     * @return
+     * <p>
+     * The product type to update.
+     * </p>
+     * 
+     * @return The product type to update.
      * @see PhoneNumberProductType
      */
 
@@ -76,7 +116,12 @@ public class UpdatePhoneNumberRequestItem implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The product type to update.
+     * </p>
+     * 
      * @param productType
+     *        The product type to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberProductType
      */
@@ -87,7 +132,12 @@ public class UpdatePhoneNumberRequestItem implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The product type to update.
+     * </p>
+     * 
      * @param productType
+     *        The product type to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberProductType
      */
@@ -98,7 +148,12 @@ public class UpdatePhoneNumberRequestItem implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The outbound calling name to update.
+     * </p>
+     * 
      * @param callingName
+     *        The outbound calling name to update.
      */
 
     public void setCallingName(String callingName) {
@@ -106,7 +161,11 @@ public class UpdatePhoneNumberRequestItem implements Serializable, Cloneable, St
     }
 
     /**
-     * @return
+     * <p>
+     * The outbound calling name to update.
+     * </p>
+     * 
+     * @return The outbound calling name to update.
      */
 
     public String getCallingName() {
@@ -114,7 +173,12 @@ public class UpdatePhoneNumberRequestItem implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The outbound calling name to update.
+     * </p>
+     * 
      * @param callingName
+     *        The outbound calling name to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

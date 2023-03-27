@@ -66,6 +66,24 @@ public class SidewalkDeviceJsonUnmarshaller implements Unmarshaller<SidewalkDevi
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("PrivateKeys", targetDepth)) {
+                    context.nextToken();
+                    sidewalkDevice.setPrivateKeys(new ListUnmarshaller<CertificateList>(CertificateListJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("DeviceProfileId", targetDepth)) {
+                    context.nextToken();
+                    sidewalkDevice.setDeviceProfileId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CertificateId", targetDepth)) {
+                    context.nextToken();
+                    sidewalkDevice.setCertificateId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Status", targetDepth)) {
+                    context.nextToken();
+                    sidewalkDevice.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

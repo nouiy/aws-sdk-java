@@ -15,7 +15,9 @@ package com.amazonaws.services.chimesdkvoice.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p>
+ * The request exceeds the resource limit.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ResourceLimitExceededException extends com.amazonaws.services.chimesdkvoice.model.AmazonChimeSDKVoiceException {

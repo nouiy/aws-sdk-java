@@ -23,10 +23,19 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class BatchUpdatePhoneNumberResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * A list of failed phone numbers and their error messages.
+     * </p>
+     */
     private java.util.List<PhoneNumberError> phoneNumberErrors;
 
     /**
-     * @return
+     * <p>
+     * A list of failed phone numbers and their error messages.
+     * </p>
+     * 
+     * @return A list of failed phone numbers and their error messages.
      */
 
     public java.util.List<PhoneNumberError> getPhoneNumberErrors() {
@@ -34,7 +43,12 @@ public class BatchUpdatePhoneNumberResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * A list of failed phone numbers and their error messages.
+     * </p>
+     * 
      * @param phoneNumberErrors
+     *        A list of failed phone numbers and their error messages.
      */
 
     public void setPhoneNumberErrors(java.util.Collection<PhoneNumberError> phoneNumberErrors) {
@@ -48,12 +62,16 @@ public class BatchUpdatePhoneNumberResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
+     * A list of failed phone numbers and their error messages.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setPhoneNumberErrors(java.util.Collection)} or {@link #withPhoneNumberErrors(java.util.Collection)} if
      * you want to override the existing values.
      * </p>
      * 
      * @param phoneNumberErrors
+     *        A list of failed phone numbers and their error messages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -68,7 +86,12 @@ public class BatchUpdatePhoneNumberResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * A list of failed phone numbers and their error messages.
+     * </p>
+     * 
      * @param phoneNumberErrors
+     *        A list of failed phone numbers and their error messages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -40,7 +40,11 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
     /**
      * <p>
      * The maximum time, in seconds, that each training job executed inside hyperparameter tuning is allowed to run as
-     * part of a hyperparameter tuning job. For more information, see the used by the action.
+     * part of a hyperparameter tuning job. For more information, see the
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StoppingCondition.html">StoppingCondition</a> </code>
+     * used by the
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateHyperParameterTuningJob.html">CreateHyperParameterTuningJob</a> </code>
+     * action.
      * </p>
      * <p>
      * For V2 jobs (jobs created by calling <code>CreateAutoMLJobV2</code>), this field controls the runtime of the job
@@ -119,7 +123,11 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
     /**
      * <p>
      * The maximum time, in seconds, that each training job executed inside hyperparameter tuning is allowed to run as
-     * part of a hyperparameter tuning job. For more information, see the used by the action.
+     * part of a hyperparameter tuning job. For more information, see the
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StoppingCondition.html">StoppingCondition</a> </code>
+     * used by the
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateHyperParameterTuningJob.html">CreateHyperParameterTuningJob</a> </code>
+     * action.
      * </p>
      * <p>
      * For V2 jobs (jobs created by calling <code>CreateAutoMLJobV2</code>), this field controls the runtime of the job
@@ -128,7 +136,11 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
      * 
      * @param maxRuntimePerTrainingJobInSeconds
      *        The maximum time, in seconds, that each training job executed inside hyperparameter tuning is allowed to
-     *        run as part of a hyperparameter tuning job. For more information, see the used by the action.</p>
+     *        run as part of a hyperparameter tuning job. For more information, see the
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StoppingCondition.html">StoppingCondition</a> </code>
+     *        used by the
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateHyperParameterTuningJob.html">CreateHyperParameterTuningJob</a> </code>
+     *        action.</p>
      *        <p>
      *        For V2 jobs (jobs created by calling <code>CreateAutoMLJobV2</code>), this field controls the runtime of
      *        the job candidate.
@@ -141,7 +153,11 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
     /**
      * <p>
      * The maximum time, in seconds, that each training job executed inside hyperparameter tuning is allowed to run as
-     * part of a hyperparameter tuning job. For more information, see the used by the action.
+     * part of a hyperparameter tuning job. For more information, see the
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StoppingCondition.html">StoppingCondition</a> </code>
+     * used by the
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateHyperParameterTuningJob.html">CreateHyperParameterTuningJob</a> </code>
+     * action.
      * </p>
      * <p>
      * For V2 jobs (jobs created by calling <code>CreateAutoMLJobV2</code>), this field controls the runtime of the job
@@ -149,7 +165,11 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
      * </p>
      * 
      * @return The maximum time, in seconds, that each training job executed inside hyperparameter tuning is allowed to
-     *         run as part of a hyperparameter tuning job. For more information, see the used by the action.</p>
+     *         run as part of a hyperparameter tuning job. For more information, see the
+     *         <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StoppingCondition.html">StoppingCondition</a> </code>
+     *         used by the
+     *         <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateHyperParameterTuningJob.html">CreateHyperParameterTuningJob</a> </code>
+     *         action.</p>
      *         <p>
      *         For V2 jobs (jobs created by calling <code>CreateAutoMLJobV2</code>), this field controls the runtime of
      *         the job candidate.
@@ -162,7 +182,11 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
     /**
      * <p>
      * The maximum time, in seconds, that each training job executed inside hyperparameter tuning is allowed to run as
-     * part of a hyperparameter tuning job. For more information, see the used by the action.
+     * part of a hyperparameter tuning job. For more information, see the
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StoppingCondition.html">StoppingCondition</a> </code>
+     * used by the
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateHyperParameterTuningJob.html">CreateHyperParameterTuningJob</a> </code>
+     * action.
      * </p>
      * <p>
      * For V2 jobs (jobs created by calling <code>CreateAutoMLJobV2</code>), this field controls the runtime of the job
@@ -171,7 +195,11 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
      * 
      * @param maxRuntimePerTrainingJobInSeconds
      *        The maximum time, in seconds, that each training job executed inside hyperparameter tuning is allowed to
-     *        run as part of a hyperparameter tuning job. For more information, see the used by the action.</p>
+     *        run as part of a hyperparameter tuning job. For more information, see the
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StoppingCondition.html">StoppingCondition</a> </code>
+     *        used by the
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateHyperParameterTuningJob.html">CreateHyperParameterTuningJob</a> </code>
+     *        action.</p>
      *        <p>
      *        For V2 jobs (jobs created by calling <code>CreateAutoMLJobV2</code>), this field controls the runtime of
      *        the job candidate.

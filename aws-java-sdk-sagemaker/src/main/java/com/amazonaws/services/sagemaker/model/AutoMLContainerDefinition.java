@@ -20,7 +20,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * A list of container definitions that describe the different containers that make up an AutoML candidate. For more
- * information, see .
+ * information, see
+ * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+ * .
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/AutoMLContainerDefinition"
@@ -31,30 +33,40 @@ public class AutoMLContainerDefinition implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see .
+     * The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     * .
      * </p>
      */
     private String image;
     /**
      * <p>
-     * The location of the model artifacts. For more information, see .
+     * The location of the model artifacts. For more information, see
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     * .
      * </p>
      */
     private String modelDataUrl;
     /**
      * <p>
-     * The environment variables to set in the container. For more information, see .
+     * The environment variables to set in the container. For more information, see
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     * .
      * </p>
      */
     private java.util.Map<String, String> environment;
 
     /**
      * <p>
-     * The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see .
+     * The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     * .
      * </p>
      * 
      * @param image
-     *        The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see .
+     *        The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     *        .
      */
 
     public void setImage(String image) {
@@ -63,10 +75,14 @@ public class AutoMLContainerDefinition implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see .
+     * The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     * .
      * </p>
      * 
-     * @return The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see .
+     * @return The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see
+     *         <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     *         .
      */
 
     public String getImage() {
@@ -75,11 +91,15 @@ public class AutoMLContainerDefinition implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see .
+     * The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     * .
      * </p>
      * 
      * @param image
-     *        The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see .
+     *        The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     *        .
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,11 +110,15 @@ public class AutoMLContainerDefinition implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The location of the model artifacts. For more information, see .
+     * The location of the model artifacts. For more information, see
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     * .
      * </p>
      * 
      * @param modelDataUrl
-     *        The location of the model artifacts. For more information, see .
+     *        The location of the model artifacts. For more information, see
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     *        .
      */
 
     public void setModelDataUrl(String modelDataUrl) {
@@ -103,10 +127,14 @@ public class AutoMLContainerDefinition implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The location of the model artifacts. For more information, see .
+     * The location of the model artifacts. For more information, see
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     * .
      * </p>
      * 
-     * @return The location of the model artifacts. For more information, see .
+     * @return The location of the model artifacts. For more information, see
+     *         <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     *         .
      */
 
     public String getModelDataUrl() {
@@ -115,11 +143,15 @@ public class AutoMLContainerDefinition implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The location of the model artifacts. For more information, see .
+     * The location of the model artifacts. For more information, see
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     * .
      * </p>
      * 
      * @param modelDataUrl
-     *        The location of the model artifacts. For more information, see .
+     *        The location of the model artifacts. For more information, see
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     *        .
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -130,10 +162,14 @@ public class AutoMLContainerDefinition implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The environment variables to set in the container. For more information, see .
+     * The environment variables to set in the container. For more information, see
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     * .
      * </p>
      * 
-     * @return The environment variables to set in the container. For more information, see .
+     * @return The environment variables to set in the container. For more information, see
+     *         <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     *         .
      */
 
     public java.util.Map<String, String> getEnvironment() {
@@ -142,11 +178,15 @@ public class AutoMLContainerDefinition implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The environment variables to set in the container. For more information, see .
+     * The environment variables to set in the container. For more information, see
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     * .
      * </p>
      * 
      * @param environment
-     *        The environment variables to set in the container. For more information, see .
+     *        The environment variables to set in the container. For more information, see
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     *        .
      */
 
     public void setEnvironment(java.util.Map<String, String> environment) {
@@ -155,11 +195,15 @@ public class AutoMLContainerDefinition implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The environment variables to set in the container. For more information, see .
+     * The environment variables to set in the container. For more information, see
+     * <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     * .
      * </p>
      * 
      * @param environment
-     *        The environment variables to set in the container. For more information, see .
+     *        The environment variables to set in the container. For more information, see
+     *        <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>
+     *        .
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -45,7 +45,7 @@ public class UpdateNotebookRequest extends com.amazonaws.AmazonWebServiceRequest
     private String type;
     /**
      * <p>
-     * The ID of the session in which the notebook will be updated.
+     * The active notebook session ID. Required if the notebook has an active session.
      * </p>
      */
     private String sessionId;
@@ -205,11 +205,11 @@ public class UpdateNotebookRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the session in which the notebook will be updated.
+     * The active notebook session ID. Required if the notebook has an active session.
      * </p>
      * 
      * @param sessionId
-     *        The ID of the session in which the notebook will be updated.
+     *        The active notebook session ID. Required if the notebook has an active session.
      */
 
     public void setSessionId(String sessionId) {
@@ -218,10 +218,10 @@ public class UpdateNotebookRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the session in which the notebook will be updated.
+     * The active notebook session ID. Required if the notebook has an active session.
      * </p>
      * 
-     * @return The ID of the session in which the notebook will be updated.
+     * @return The active notebook session ID. Required if the notebook has an active session.
      */
 
     public String getSessionId() {
@@ -230,11 +230,11 @@ public class UpdateNotebookRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the session in which the notebook will be updated.
+     * The active notebook session ID. Required if the notebook has an active session.
      * </p>
      * 
      * @param sessionId
-     *        The ID of the session in which the notebook will be updated.
+     *        The active notebook session ID. Required if the notebook has an active session.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

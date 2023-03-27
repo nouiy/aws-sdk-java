@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * A phone number used to call an Amazon Chime SDK Voice Connector.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/PhoneNumber" target="_top">AWS API
  *      Documentation</a>
@@ -25,36 +28,98 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The phone number's ID.
+     * </p>
+     */
     private String phoneNumberId;
-
+    /**
+     * <p>
+     * The phone number, in E.164 format.
+     * </p>
+     */
     private String e164PhoneNumber;
-
+    /**
+     * <p>
+     * The phone number's country. Format: ISO 3166-1 alpha-2.
+     * </p>
+     */
     private String country;
-
+    /**
+     * <p>
+     * The phone number's type.
+     * </p>
+     */
     private String type;
-
+    /**
+     * <p>
+     * The phone number's product type.
+     * </p>
+     */
     private String productType;
-
+    /**
+     * <p>
+     * The phone number's status.
+     * </p>
+     */
     private String status;
-
+    /**
+     * <p>
+     * The phone number's capabilities.
+     * </p>
+     */
     private PhoneNumberCapabilities capabilities;
-
+    /**
+     * <p>
+     * The phone number's associations.
+     * </p>
+     */
     private java.util.List<PhoneNumberAssociation> associations;
-
+    /**
+     * <p>
+     * The outbound calling name associated with the phone number.
+     * </p>
+     */
     private String callingName;
-
+    /**
+     * <p>
+     * The outbound calling name status.
+     * </p>
+     */
     private String callingNameStatus;
-
+    /**
+     * <p>
+     * The phone number creation timestamp, in ISO 8601 format.
+     * </p>
+     */
     private java.util.Date createdTimestamp;
-
+    /**
+     * <p>
+     * The updated phone number timestamp, in ISO 8601 format.
+     * </p>
+     */
     private java.util.Date updatedTimestamp;
-
+    /**
+     * <p>
+     * The deleted phone number timestamp, in ISO 8601 format.
+     * </p>
+     */
     private java.util.Date deletionTimestamp;
-
+    /**
+     * <p>
+     * The phone number's order ID.
+     * </p>
+     */
     private String orderId;
 
     /**
+     * <p>
+     * The phone number's ID.
+     * </p>
+     * 
      * @param phoneNumberId
+     *        The phone number's ID.
      */
 
     public void setPhoneNumberId(String phoneNumberId) {
@@ -62,7 +127,11 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number's ID.
+     * </p>
+     * 
+     * @return The phone number's ID.
      */
 
     public String getPhoneNumberId() {
@@ -70,7 +139,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's ID.
+     * </p>
+     * 
      * @param phoneNumberId
+     *        The phone number's ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,7 +154,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number, in E.164 format.
+     * </p>
+     * 
      * @param e164PhoneNumber
+     *        The phone number, in E.164 format.
      */
 
     public void setE164PhoneNumber(String e164PhoneNumber) {
@@ -88,7 +167,11 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number, in E.164 format.
+     * </p>
+     * 
+     * @return The phone number, in E.164 format.
      */
 
     public String getE164PhoneNumber() {
@@ -96,7 +179,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number, in E.164 format.
+     * </p>
+     * 
      * @param e164PhoneNumber
+     *        The phone number, in E.164 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -106,7 +194,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's country. Format: ISO 3166-1 alpha-2.
+     * </p>
+     * 
      * @param country
+     *        The phone number's country. Format: ISO 3166-1 alpha-2.
      */
 
     public void setCountry(String country) {
@@ -114,7 +207,11 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number's country. Format: ISO 3166-1 alpha-2.
+     * </p>
+     * 
+     * @return The phone number's country. Format: ISO 3166-1 alpha-2.
      */
 
     public String getCountry() {
@@ -122,7 +219,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's country. Format: ISO 3166-1 alpha-2.
+     * </p>
+     * 
      * @param country
+     *        The phone number's country. Format: ISO 3166-1 alpha-2.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -132,7 +234,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's type.
+     * </p>
+     * 
      * @param type
+     *        The phone number's type.
      * @see PhoneNumberType
      */
 
@@ -141,7 +248,11 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number's type.
+     * </p>
+     * 
+     * @return The phone number's type.
      * @see PhoneNumberType
      */
 
@@ -150,7 +261,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's type.
+     * </p>
+     * 
      * @param type
+     *        The phone number's type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberType
      */
@@ -161,7 +277,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's type.
+     * </p>
+     * 
      * @param type
+     *        The phone number's type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberType
      */
@@ -172,7 +293,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's product type.
+     * </p>
+     * 
      * @param productType
+     *        The phone number's product type.
      * @see PhoneNumberProductType
      */
 
@@ -181,7 +307,11 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number's product type.
+     * </p>
+     * 
+     * @return The phone number's product type.
      * @see PhoneNumberProductType
      */
 
@@ -190,7 +320,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's product type.
+     * </p>
+     * 
      * @param productType
+     *        The phone number's product type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberProductType
      */
@@ -201,7 +336,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's product type.
+     * </p>
+     * 
      * @param productType
+     *        The phone number's product type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberProductType
      */
@@ -212,7 +352,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's status.
+     * </p>
+     * 
      * @param status
+     *        The phone number's status.
      * @see PhoneNumberStatus
      */
 
@@ -221,7 +366,11 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number's status.
+     * </p>
+     * 
+     * @return The phone number's status.
      * @see PhoneNumberStatus
      */
 
@@ -230,7 +379,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's status.
+     * </p>
+     * 
      * @param status
+     *        The phone number's status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberStatus
      */
@@ -241,7 +395,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's status.
+     * </p>
+     * 
      * @param status
+     *        The phone number's status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PhoneNumberStatus
      */
@@ -252,7 +411,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's capabilities.
+     * </p>
+     * 
      * @param capabilities
+     *        The phone number's capabilities.
      */
 
     public void setCapabilities(PhoneNumberCapabilities capabilities) {
@@ -260,7 +424,11 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number's capabilities.
+     * </p>
+     * 
+     * @return The phone number's capabilities.
      */
 
     public PhoneNumberCapabilities getCapabilities() {
@@ -268,7 +436,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's capabilities.
+     * </p>
+     * 
      * @param capabilities
+     *        The phone number's capabilities.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -278,7 +451,11 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number's associations.
+     * </p>
+     * 
+     * @return The phone number's associations.
      */
 
     public java.util.List<PhoneNumberAssociation> getAssociations() {
@@ -286,7 +463,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's associations.
+     * </p>
+     * 
      * @param associations
+     *        The phone number's associations.
      */
 
     public void setAssociations(java.util.Collection<PhoneNumberAssociation> associations) {
@@ -300,12 +482,16 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The phone number's associations.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setAssociations(java.util.Collection)} or {@link #withAssociations(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param associations
+     *        The phone number's associations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -320,7 +506,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's associations.
+     * </p>
+     * 
      * @param associations
+     *        The phone number's associations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -330,7 +521,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The outbound calling name associated with the phone number.
+     * </p>
+     * 
      * @param callingName
+     *        The outbound calling name associated with the phone number.
      */
 
     public void setCallingName(String callingName) {
@@ -338,7 +534,11 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The outbound calling name associated with the phone number.
+     * </p>
+     * 
+     * @return The outbound calling name associated with the phone number.
      */
 
     public String getCallingName() {
@@ -346,7 +546,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The outbound calling name associated with the phone number.
+     * </p>
+     * 
      * @param callingName
+     *        The outbound calling name associated with the phone number.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -356,7 +561,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The outbound calling name status.
+     * </p>
+     * 
      * @param callingNameStatus
+     *        The outbound calling name status.
      * @see CallingNameStatus
      */
 
@@ -365,7 +575,11 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The outbound calling name status.
+     * </p>
+     * 
+     * @return The outbound calling name status.
      * @see CallingNameStatus
      */
 
@@ -374,7 +588,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The outbound calling name status.
+     * </p>
+     * 
      * @param callingNameStatus
+     *        The outbound calling name status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CallingNameStatus
      */
@@ -385,7 +604,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The outbound calling name status.
+     * </p>
+     * 
      * @param callingNameStatus
+     *        The outbound calling name status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CallingNameStatus
      */
@@ -396,7 +620,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number creation timestamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The phone number creation timestamp, in ISO 8601 format.
      */
 
     public void setCreatedTimestamp(java.util.Date createdTimestamp) {
@@ -404,7 +633,11 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number creation timestamp, in ISO 8601 format.
+     * </p>
+     * 
+     * @return The phone number creation timestamp, in ISO 8601 format.
      */
 
     public java.util.Date getCreatedTimestamp() {
@@ -412,7 +645,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number creation timestamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The phone number creation timestamp, in ISO 8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -422,7 +660,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The updated phone number timestamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The updated phone number timestamp, in ISO 8601 format.
      */
 
     public void setUpdatedTimestamp(java.util.Date updatedTimestamp) {
@@ -430,7 +673,11 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The updated phone number timestamp, in ISO 8601 format.
+     * </p>
+     * 
+     * @return The updated phone number timestamp, in ISO 8601 format.
      */
 
     public java.util.Date getUpdatedTimestamp() {
@@ -438,7 +685,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The updated phone number timestamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The updated phone number timestamp, in ISO 8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -448,7 +700,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The deleted phone number timestamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param deletionTimestamp
+     *        The deleted phone number timestamp, in ISO 8601 format.
      */
 
     public void setDeletionTimestamp(java.util.Date deletionTimestamp) {
@@ -456,7 +713,11 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The deleted phone number timestamp, in ISO 8601 format.
+     * </p>
+     * 
+     * @return The deleted phone number timestamp, in ISO 8601 format.
      */
 
     public java.util.Date getDeletionTimestamp() {
@@ -464,7 +725,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The deleted phone number timestamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param deletionTimestamp
+     *        The deleted phone number timestamp, in ISO 8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -474,7 +740,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's order ID.
+     * </p>
+     * 
      * @param orderId
+     *        The phone number's order ID.
      */
 
     public void setOrderId(String orderId) {
@@ -482,7 +753,11 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number's order ID.
+     * </p>
+     * 
+     * @return The phone number's order ID.
      */
 
     public String getOrderId() {
@@ -490,7 +765,12 @@ public class PhoneNumber implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The phone number's order ID.
+     * </p>
+     * 
      * @param orderId
+     *        The phone number's order ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -15,7 +15,9 @@ package com.amazonaws.services.chimesdkvoice.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p>
+ * The client is permanently forbidden from making the request.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ForbiddenException extends com.amazonaws.services.chimesdkvoice.model.AmazonChimeSDKVoiceException {

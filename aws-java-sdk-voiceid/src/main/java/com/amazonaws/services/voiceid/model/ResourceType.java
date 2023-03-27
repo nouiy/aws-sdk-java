@@ -25,7 +25,8 @@ public enum ResourceType {
     DOMAIN("DOMAIN"),
     FRAUDSTER("FRAUDSTER"),
     SESSION("SESSION"),
-    SPEAKER("SPEAKER");
+    SPEAKER("SPEAKER"),
+    WATCHLIST("WATCHLIST");
 
     private String value;
 

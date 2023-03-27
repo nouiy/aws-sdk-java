@@ -25,14 +25,32 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     */
     private String voiceConnectorGroupId;
-
+    /**
+     * <p>
+     * The name of the Voice Connector group.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * The <code>VoiceConnectorItems</code> to associate with the Voice Connector group.
+     * </p>
+     */
     private java.util.List<VoiceConnectorItem> voiceConnectorItems;
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorGroupId
+     *        The Voice Connector ID.
      */
 
     public void setVoiceConnectorGroupId(String voiceConnectorGroupId) {
@@ -40,7 +58,11 @@ public class UpdateVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
+     * @return The Voice Connector ID.
      */
 
     public String getVoiceConnectorGroupId() {
@@ -48,7 +70,12 @@ public class UpdateVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorGroupId
+     *        The Voice Connector ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +85,12 @@ public class UpdateVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The name of the Voice Connector group.
+     * </p>
+     * 
      * @param name
+     *        The name of the Voice Connector group.
      */
 
     public void setName(String name) {
@@ -66,7 +98,11 @@ public class UpdateVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the Voice Connector group.
+     * </p>
+     * 
+     * @return The name of the Voice Connector group.
      */
 
     public String getName() {
@@ -74,7 +110,12 @@ public class UpdateVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The name of the Voice Connector group.
+     * </p>
+     * 
      * @param name
+     *        The name of the Voice Connector group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,7 +125,11 @@ public class UpdateVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * The <code>VoiceConnectorItems</code> to associate with the Voice Connector group.
+     * </p>
+     * 
+     * @return The <code>VoiceConnectorItems</code> to associate with the Voice Connector group.
      */
 
     public java.util.List<VoiceConnectorItem> getVoiceConnectorItems() {
@@ -92,7 +137,12 @@ public class UpdateVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The <code>VoiceConnectorItems</code> to associate with the Voice Connector group.
+     * </p>
+     * 
      * @param voiceConnectorItems
+     *        The <code>VoiceConnectorItems</code> to associate with the Voice Connector group.
      */
 
     public void setVoiceConnectorItems(java.util.Collection<VoiceConnectorItem> voiceConnectorItems) {
@@ -106,12 +156,16 @@ public class UpdateVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
+     * The <code>VoiceConnectorItems</code> to associate with the Voice Connector group.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setVoiceConnectorItems(java.util.Collection)} or {@link #withVoiceConnectorItems(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param voiceConnectorItems
+     *        The <code>VoiceConnectorItems</code> to associate with the Voice Connector group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,7 +180,12 @@ public class UpdateVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The <code>VoiceConnectorItems</code> to associate with the Voice Connector group.
+     * </p>
+     * 
      * @param voiceConnectorItems
+     *        The <code>VoiceConnectorItems</code> to associate with the Voice Connector group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -903,6 +903,41 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
 
     /**
      * <p>
+     * Delete an import task.
+     * </p>
+     * 
+     * @param deleteWirelessDeviceImportTaskRequest
+     * @return A Java Future containing the result of the DeleteWirelessDeviceImportTask operation returned by the
+     *         service.
+     * @sample AWSIoTWirelessAsync.DeleteWirelessDeviceImportTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/DeleteWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteWirelessDeviceImportTaskResult> deleteWirelessDeviceImportTaskAsync(
+            DeleteWirelessDeviceImportTaskRequest deleteWirelessDeviceImportTaskRequest);
+
+    /**
+     * <p>
+     * Delete an import task.
+     * </p>
+     * 
+     * @param deleteWirelessDeviceImportTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteWirelessDeviceImportTask operation returned by the
+     *         service.
+     * @sample AWSIoTWirelessAsyncHandler.DeleteWirelessDeviceImportTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/DeleteWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteWirelessDeviceImportTaskResult> deleteWirelessDeviceImportTaskAsync(
+            DeleteWirelessDeviceImportTaskRequest deleteWirelessDeviceImportTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteWirelessDeviceImportTaskRequest, DeleteWirelessDeviceImportTaskResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a wireless gateway.
      * </p>
      * 
@@ -1001,6 +1036,37 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
     java.util.concurrent.Future<DeleteWirelessGatewayTaskDefinitionResult> deleteWirelessGatewayTaskDefinitionAsync(
             DeleteWirelessGatewayTaskDefinitionRequest deleteWirelessGatewayTaskDefinitionRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteWirelessGatewayTaskDefinitionRequest, DeleteWirelessGatewayTaskDefinitionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deregister a wireless device from AWS IoT Wireless.
+     * </p>
+     * 
+     * @param deregisterWirelessDeviceRequest
+     * @return A Java Future containing the result of the DeregisterWirelessDevice operation returned by the service.
+     * @sample AWSIoTWirelessAsync.DeregisterWirelessDevice
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/DeregisterWirelessDevice"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeregisterWirelessDeviceResult> deregisterWirelessDeviceAsync(DeregisterWirelessDeviceRequest deregisterWirelessDeviceRequest);
+
+    /**
+     * <p>
+     * Deregister a wireless device from AWS IoT Wireless.
+     * </p>
+     * 
+     * @param deregisterWirelessDeviceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeregisterWirelessDevice operation returned by the service.
+     * @sample AWSIoTWirelessAsyncHandler.DeregisterWirelessDevice
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/DeregisterWirelessDevice"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeregisterWirelessDeviceResult> deregisterWirelessDeviceAsync(DeregisterWirelessDeviceRequest deregisterWirelessDeviceRequest,
+            com.amazonaws.handlers.AsyncHandler<DeregisterWirelessDeviceRequest, DeregisterWirelessDeviceResult> asyncHandler);
 
     /**
      * <p>
@@ -1877,6 +1943,39 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
 
     /**
      * <p>
+     * Get information about an import task and count of device onboarding summary information for the import task.
+     * </p>
+     * 
+     * @param getWirelessDeviceImportTaskRequest
+     * @return A Java Future containing the result of the GetWirelessDeviceImportTask operation returned by the service.
+     * @sample AWSIoTWirelessAsync.GetWirelessDeviceImportTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/GetWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetWirelessDeviceImportTaskResult> getWirelessDeviceImportTaskAsync(
+            GetWirelessDeviceImportTaskRequest getWirelessDeviceImportTaskRequest);
+
+    /**
+     * <p>
+     * Get information about an import task and count of device onboarding summary information for the import task.
+     * </p>
+     * 
+     * @param getWirelessDeviceImportTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetWirelessDeviceImportTask operation returned by the service.
+     * @sample AWSIoTWirelessAsyncHandler.GetWirelessDeviceImportTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/GetWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetWirelessDeviceImportTaskResult> getWirelessDeviceImportTaskAsync(
+            GetWirelessDeviceImportTaskRequest getWirelessDeviceImportTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<GetWirelessDeviceImportTaskRequest, GetWirelessDeviceImportTaskResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets operating information about a wireless device.
      * </p>
      * 
@@ -2173,6 +2272,43 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
      */
     java.util.concurrent.Future<ListDeviceProfilesResult> listDeviceProfilesAsync(ListDeviceProfilesRequest listDeviceProfilesRequest,
             com.amazonaws.handlers.AsyncHandler<ListDeviceProfilesRequest, ListDeviceProfilesResult> asyncHandler);
+
+    /**
+     * <p>
+     * List the Sidewalk devices in an import task and their onboarding status.
+     * </p>
+     * 
+     * @param listDevicesForWirelessDeviceImportTaskRequest
+     * @return A Java Future containing the result of the ListDevicesForWirelessDeviceImportTask operation returned by
+     *         the service.
+     * @sample AWSIoTWirelessAsync.ListDevicesForWirelessDeviceImportTask
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/ListDevicesForWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListDevicesForWirelessDeviceImportTaskResult> listDevicesForWirelessDeviceImportTaskAsync(
+            ListDevicesForWirelessDeviceImportTaskRequest listDevicesForWirelessDeviceImportTaskRequest);
+
+    /**
+     * <p>
+     * List the Sidewalk devices in an import task and their onboarding status.
+     * </p>
+     * 
+     * @param listDevicesForWirelessDeviceImportTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListDevicesForWirelessDeviceImportTask operation returned by
+     *         the service.
+     * @sample AWSIoTWirelessAsyncHandler.ListDevicesForWirelessDeviceImportTask
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/ListDevicesForWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListDevicesForWirelessDeviceImportTaskResult> listDevicesForWirelessDeviceImportTaskAsync(
+            ListDevicesForWirelessDeviceImportTaskRequest listDevicesForWirelessDeviceImportTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<ListDevicesForWirelessDeviceImportTaskRequest, ListDevicesForWirelessDeviceImportTaskResult> asyncHandler);
 
     /**
      * <p>
@@ -2509,6 +2645,41 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * List wireless devices that have been added to an import task.
+     * </p>
+     * 
+     * @param listWirelessDeviceImportTasksRequest
+     * @return A Java Future containing the result of the ListWirelessDeviceImportTasks operation returned by the
+     *         service.
+     * @sample AWSIoTWirelessAsync.ListWirelessDeviceImportTasks
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/ListWirelessDeviceImportTasks"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListWirelessDeviceImportTasksResult> listWirelessDeviceImportTasksAsync(
+            ListWirelessDeviceImportTasksRequest listWirelessDeviceImportTasksRequest);
+
+    /**
+     * <p>
+     * List wireless devices that have been added to an import task.
+     * </p>
+     * 
+     * @param listWirelessDeviceImportTasksRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListWirelessDeviceImportTasks operation returned by the
+     *         service.
+     * @sample AWSIoTWirelessAsyncHandler.ListWirelessDeviceImportTasks
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/ListWirelessDeviceImportTasks"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListWirelessDeviceImportTasksResult> listWirelessDeviceImportTasksAsync(
+            ListWirelessDeviceImportTasksRequest listWirelessDeviceImportTasksRequest,
+            com.amazonaws.handlers.AsyncHandler<ListWirelessDeviceImportTasksRequest, ListWirelessDeviceImportTasksResult> asyncHandler);
 
     /**
      * <p>
@@ -2952,6 +3123,76 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
     java.util.concurrent.Future<StartMulticastGroupSessionResult> startMulticastGroupSessionAsync(
             StartMulticastGroupSessionRequest startMulticastGroupSessionRequest,
             com.amazonaws.handlers.AsyncHandler<StartMulticastGroupSessionRequest, StartMulticastGroupSessionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Start import task for a single wireless device.
+     * </p>
+     * 
+     * @param startSingleWirelessDeviceImportTaskRequest
+     * @return A Java Future containing the result of the StartSingleWirelessDeviceImportTask operation returned by the
+     *         service.
+     * @sample AWSIoTWirelessAsync.StartSingleWirelessDeviceImportTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/StartSingleWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartSingleWirelessDeviceImportTaskResult> startSingleWirelessDeviceImportTaskAsync(
+            StartSingleWirelessDeviceImportTaskRequest startSingleWirelessDeviceImportTaskRequest);
+
+    /**
+     * <p>
+     * Start import task for a single wireless device.
+     * </p>
+     * 
+     * @param startSingleWirelessDeviceImportTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartSingleWirelessDeviceImportTask operation returned by the
+     *         service.
+     * @sample AWSIoTWirelessAsyncHandler.StartSingleWirelessDeviceImportTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/StartSingleWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartSingleWirelessDeviceImportTaskResult> startSingleWirelessDeviceImportTaskAsync(
+            StartSingleWirelessDeviceImportTaskRequest startSingleWirelessDeviceImportTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<StartSingleWirelessDeviceImportTaskRequest, StartSingleWirelessDeviceImportTaskResult> asyncHandler);
+
+    /**
+     * <p>
+     * Start import task for provisioning Sidewalk devices in bulk using an S3 CSV file.
+     * </p>
+     * 
+     * @param startWirelessDeviceImportTaskRequest
+     * @return A Java Future containing the result of the StartWirelessDeviceImportTask operation returned by the
+     *         service.
+     * @sample AWSIoTWirelessAsync.StartWirelessDeviceImportTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/StartWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartWirelessDeviceImportTaskResult> startWirelessDeviceImportTaskAsync(
+            StartWirelessDeviceImportTaskRequest startWirelessDeviceImportTaskRequest);
+
+    /**
+     * <p>
+     * Start import task for provisioning Sidewalk devices in bulk using an S3 CSV file.
+     * </p>
+     * 
+     * @param startWirelessDeviceImportTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartWirelessDeviceImportTask operation returned by the
+     *         service.
+     * @sample AWSIoTWirelessAsyncHandler.StartWirelessDeviceImportTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/StartWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartWirelessDeviceImportTaskResult> startWirelessDeviceImportTaskAsync(
+            StartWirelessDeviceImportTaskRequest startWirelessDeviceImportTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<StartWirelessDeviceImportTaskRequest, StartWirelessDeviceImportTaskResult> asyncHandler);
 
     /**
      * <p>
@@ -3426,6 +3667,41 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
      */
     java.util.concurrent.Future<UpdateWirelessDeviceResult> updateWirelessDeviceAsync(UpdateWirelessDeviceRequest updateWirelessDeviceRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateWirelessDeviceRequest, UpdateWirelessDeviceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Update an import task to add more devices to the task.
+     * </p>
+     * 
+     * @param updateWirelessDeviceImportTaskRequest
+     * @return A Java Future containing the result of the UpdateWirelessDeviceImportTask operation returned by the
+     *         service.
+     * @sample AWSIoTWirelessAsync.UpdateWirelessDeviceImportTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/UpdateWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateWirelessDeviceImportTaskResult> updateWirelessDeviceImportTaskAsync(
+            UpdateWirelessDeviceImportTaskRequest updateWirelessDeviceImportTaskRequest);
+
+    /**
+     * <p>
+     * Update an import task to add more devices to the task.
+     * </p>
+     * 
+     * @param updateWirelessDeviceImportTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateWirelessDeviceImportTask operation returned by the
+     *         service.
+     * @sample AWSIoTWirelessAsyncHandler.UpdateWirelessDeviceImportTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/UpdateWirelessDeviceImportTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateWirelessDeviceImportTaskResult> updateWirelessDeviceImportTaskAsync(
+            UpdateWirelessDeviceImportTaskRequest updateWirelessDeviceImportTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateWirelessDeviceImportTaskRequest, UpdateWirelessDeviceImportTaskResult> asyncHandler);
 
     /**
      * <p>

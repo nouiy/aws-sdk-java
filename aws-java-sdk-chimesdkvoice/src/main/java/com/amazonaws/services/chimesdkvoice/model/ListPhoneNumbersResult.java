@@ -23,12 +23,25 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListPhoneNumbersResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The phone number details.
+     * </p>
+     */
     private java.util.List<PhoneNumber> phoneNumbers;
-
+    /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * @return
+     * <p>
+     * The phone number details.
+     * </p>
+     * 
+     * @return The phone number details.
      */
 
     public java.util.List<PhoneNumber> getPhoneNumbers() {
@@ -36,7 +49,12 @@ public class ListPhoneNumbersResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * The phone number details.
+     * </p>
+     * 
      * @param phoneNumbers
+     *        The phone number details.
      */
 
     public void setPhoneNumbers(java.util.Collection<PhoneNumber> phoneNumbers) {
@@ -50,12 +68,16 @@ public class ListPhoneNumbersResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
+     * The phone number details.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setPhoneNumbers(java.util.Collection)} or {@link #withPhoneNumbers(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param phoneNumbers
+     *        The phone number details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +92,12 @@ public class ListPhoneNumbersResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * The phone number details.
+     * </p>
+     * 
      * @param phoneNumbers
+     *        The phone number details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,7 +107,12 @@ public class ListPhoneNumbersResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -88,7 +120,11 @@ public class ListPhoneNumbersResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
-     * @return
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
+     * @return The token used to return the next page of results.
      */
 
     public String getNextToken() {
@@ -96,7 +132,12 @@ public class ListPhoneNumbersResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

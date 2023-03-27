@@ -25,10 +25,20 @@ import javax.annotation.Generated;
 public class GetVoiceConnectorEmergencyCallingConfigurationResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements
         Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The details of the emergency calling configuration.
+     * </p>
+     */
     private EmergencyCallingConfiguration emergencyCallingConfiguration;
 
     /**
+     * <p>
+     * The details of the emergency calling configuration.
+     * </p>
+     * 
      * @param emergencyCallingConfiguration
+     *        The details of the emergency calling configuration.
      */
 
     public void setEmergencyCallingConfiguration(EmergencyCallingConfiguration emergencyCallingConfiguration) {
@@ -36,7 +46,11 @@ public class GetVoiceConnectorEmergencyCallingConfigurationResult extends com.am
     }
 
     /**
-     * @return
+     * <p>
+     * The details of the emergency calling configuration.
+     * </p>
+     * 
+     * @return The details of the emergency calling configuration.
      */
 
     public EmergencyCallingConfiguration getEmergencyCallingConfiguration() {
@@ -44,7 +58,12 @@ public class GetVoiceConnectorEmergencyCallingConfigurationResult extends com.am
     }
 
     /**
+     * <p>
+     * The details of the emergency calling configuration.
+     * </p>
+     * 
      * @param emergencyCallingConfiguration
+     *        The details of the emergency calling configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -24,10 +24,19 @@ import javax.annotation.Generated;
 public class ListAvailableVoiceConnectorRegionsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable,
         Cloneable {
 
+    /**
+     * <p>
+     * The list of AWS Regions.
+     * </p>
+     */
     private java.util.List<String> voiceConnectorRegions;
 
     /**
-     * @return
+     * <p>
+     * The list of AWS Regions.
+     * </p>
+     * 
+     * @return The list of AWS Regions.
      * @see VoiceConnectorAwsRegion
      */
 
@@ -36,7 +45,12 @@ public class ListAvailableVoiceConnectorRegionsResult extends com.amazonaws.Amaz
     }
 
     /**
+     * <p>
+     * The list of AWS Regions.
+     * </p>
+     * 
      * @param voiceConnectorRegions
+     *        The list of AWS Regions.
      * @see VoiceConnectorAwsRegion
      */
 
@@ -51,12 +65,16 @@ public class ListAvailableVoiceConnectorRegionsResult extends com.amazonaws.Amaz
 
     /**
      * <p>
+     * The list of AWS Regions.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setVoiceConnectorRegions(java.util.Collection)} or
      * {@link #withVoiceConnectorRegions(java.util.Collection)} if you want to override the existing values.
      * </p>
      * 
      * @param voiceConnectorRegions
+     *        The list of AWS Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VoiceConnectorAwsRegion
      */
@@ -72,7 +90,12 @@ public class ListAvailableVoiceConnectorRegionsResult extends com.amazonaws.Amaz
     }
 
     /**
+     * <p>
+     * The list of AWS Regions.
+     * </p>
+     * 
      * @param voiceConnectorRegions
+     *        The list of AWS Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VoiceConnectorAwsRegion
      */
@@ -83,7 +106,12 @@ public class ListAvailableVoiceConnectorRegionsResult extends com.amazonaws.Amaz
     }
 
     /**
+     * <p>
+     * The list of AWS Regions.
+     * </p>
+     * 
      * @param voiceConnectorRegions
+     *        The list of AWS Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VoiceConnectorAwsRegion
      */

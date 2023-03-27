@@ -103,6 +103,10 @@ public class AwsEc2InstanceDetailsJsonUnmarshaller implements Unmarshaller<AwsEc
                     context.nextToken();
                     awsEc2InstanceDetails.setMetadataOptions(AwsEc2InstanceMetadataOptionsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Monitoring", targetDepth)) {
+                    context.nextToken();
+                    awsEc2InstanceDetails.setMonitoring(AwsEc2InstanceMonitoringDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

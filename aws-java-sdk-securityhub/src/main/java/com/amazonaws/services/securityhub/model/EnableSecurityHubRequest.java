@@ -52,7 +52,7 @@ public class EnableSecurityHubRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The value for this field in a member account matches the value in the administrator account. For accounts that
      * aren't part of an organization, the default value of this field is <code>SECURITY_CONTROL</code> if you enabled
-     * Security Hub on or after February 9, 2023.
+     * Security Hub on or after February 23, 2023.
      * </p>
      */
     private String controlFindingGenerator;
@@ -208,7 +208,7 @@ public class EnableSecurityHubRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The value for this field in a member account matches the value in the administrator account. For accounts that
      * aren't part of an organization, the default value of this field is <code>SECURITY_CONTROL</code> if you enabled
-     * Security Hub on or after February 9, 2023.
+     * Security Hub on or after February 23, 2023.
      * </p>
      * 
      * @param controlFindingGenerator
@@ -223,7 +223,7 @@ public class EnableSecurityHubRequest extends com.amazonaws.AmazonWebServiceRequ
      *        <p>
      *        The value for this field in a member account matches the value in the administrator account. For accounts
      *        that aren't part of an organization, the default value of this field is <code>SECURITY_CONTROL</code> if
-     *        you enabled Security Hub on or after February 9, 2023.
+     *        you enabled Security Hub on or after February 23, 2023.
      * @see ControlFindingGenerator
      */
 
@@ -244,7 +244,7 @@ public class EnableSecurityHubRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The value for this field in a member account matches the value in the administrator account. For accounts that
      * aren't part of an organization, the default value of this field is <code>SECURITY_CONTROL</code> if you enabled
-     * Security Hub on or after February 9, 2023.
+     * Security Hub on or after February 23, 2023.
      * </p>
      * 
      * @return This field, used when enabling Security Hub, specifies whether the calling account has consolidated
@@ -258,7 +258,7 @@ public class EnableSecurityHubRequest extends com.amazonaws.AmazonWebServiceRequ
      *         <p>
      *         The value for this field in a member account matches the value in the administrator account. For accounts
      *         that aren't part of an organization, the default value of this field is <code>SECURITY_CONTROL</code> if
-     *         you enabled Security Hub on or after February 9, 2023.
+     *         you enabled Security Hub on or after February 23, 2023.
      * @see ControlFindingGenerator
      */
 
@@ -279,7 +279,7 @@ public class EnableSecurityHubRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The value for this field in a member account matches the value in the administrator account. For accounts that
      * aren't part of an organization, the default value of this field is <code>SECURITY_CONTROL</code> if you enabled
-     * Security Hub on or after February 9, 2023.
+     * Security Hub on or after February 23, 2023.
      * </p>
      * 
      * @param controlFindingGenerator
@@ -294,7 +294,7 @@ public class EnableSecurityHubRequest extends com.amazonaws.AmazonWebServiceRequ
      *        <p>
      *        The value for this field in a member account matches the value in the administrator account. For accounts
      *        that aren't part of an organization, the default value of this field is <code>SECURITY_CONTROL</code> if
-     *        you enabled Security Hub on or after February 9, 2023.
+     *        you enabled Security Hub on or after February 23, 2023.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlFindingGenerator
      */
@@ -317,7 +317,7 @@ public class EnableSecurityHubRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The value for this field in a member account matches the value in the administrator account. For accounts that
      * aren't part of an organization, the default value of this field is <code>SECURITY_CONTROL</code> if you enabled
-     * Security Hub on or after February 9, 2023.
+     * Security Hub on or after February 23, 2023.
      * </p>
      * 
      * @param controlFindingGenerator
@@ -332,7 +332,7 @@ public class EnableSecurityHubRequest extends com.amazonaws.AmazonWebServiceRequ
      *        <p>
      *        The value for this field in a member account matches the value in the administrator account. For accounts
      *        that aren't part of an organization, the default value of this field is <code>SECURITY_CONTROL</code> if
-     *        you enabled Security Hub on or after February 9, 2023.
+     *        you enabled Security Hub on or after February 23, 2023.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlFindingGenerator
      */

@@ -26,12 +26,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PutVoiceConnectorStreamingConfigurationRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     */
     private String voiceConnectorId;
-
+    /**
+     * <p>
+     * The streaming settings being updated.
+     * </p>
+     */
     private StreamingConfiguration streamingConfiguration;
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      */
 
     public void setVoiceConnectorId(String voiceConnectorId) {
@@ -39,7 +53,11 @@ public class PutVoiceConnectorStreamingConfigurationRequest extends com.amazonaw
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
+     * @return The Voice Connector ID.
      */
 
     public String getVoiceConnectorId() {
@@ -47,7 +65,12 @@ public class PutVoiceConnectorStreamingConfigurationRequest extends com.amazonaw
     }
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -57,7 +80,12 @@ public class PutVoiceConnectorStreamingConfigurationRequest extends com.amazonaw
     }
 
     /**
+     * <p>
+     * The streaming settings being updated.
+     * </p>
+     * 
      * @param streamingConfiguration
+     *        The streaming settings being updated.
      */
 
     public void setStreamingConfiguration(StreamingConfiguration streamingConfiguration) {
@@ -65,7 +93,11 @@ public class PutVoiceConnectorStreamingConfigurationRequest extends com.amazonaw
     }
 
     /**
-     * @return
+     * <p>
+     * The streaming settings being updated.
+     * </p>
+     * 
+     * @return The streaming settings being updated.
      */
 
     public StreamingConfiguration getStreamingConfiguration() {
@@ -73,7 +105,12 @@ public class PutVoiceConnectorStreamingConfigurationRequest extends com.amazonaw
     }
 
     /**
+     * <p>
+     * The streaming settings being updated.
+     * </p>
+     * 
      * @param streamingConfiguration
+     *        The streaming settings being updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -18,6 +18,11 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The Amazon Chime SDK Voice Connector group configuration, including associated Voice Connectors. You can include
+ * Voice Connectors from different AWS Regions in a group. This creates a fault tolerant mechanism for fallback in case
+ * of availability events.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/VoiceConnectorGroup"
  *      target="_top">AWS API Documentation</a>
@@ -25,20 +30,50 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ID of a Voice Connector group.
+     * </p>
+     */
     private String voiceConnectorGroupId;
-
+    /**
+     * <p>
+     * The name of a Voice Connector group.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * The Voice Connectors to which you route inbound calls.
+     * </p>
+     */
     private java.util.List<VoiceConnectorItem> voiceConnectorItems;
-
+    /**
+     * <p>
+     * The Voice Connector group's creation time stamp, in ISO 8601 format.
+     * </p>
+     */
     private java.util.Date createdTimestamp;
-
+    /**
+     * <p>
+     * The Voice Connector group's creation time stamp, in ISO 8601 format.
+     * </p>
+     */
     private java.util.Date updatedTimestamp;
-
+    /**
+     * <p>
+     * The ARN of the Voice Connector group.
+     * </p>
+     */
     private String voiceConnectorGroupArn;
 
     /**
+     * <p>
+     * The ID of a Voice Connector group.
+     * </p>
+     * 
      * @param voiceConnectorGroupId
+     *        The ID of a Voice Connector group.
      */
 
     public void setVoiceConnectorGroupId(String voiceConnectorGroupId) {
@@ -46,7 +81,11 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of a Voice Connector group.
+     * </p>
+     * 
+     * @return The ID of a Voice Connector group.
      */
 
     public String getVoiceConnectorGroupId() {
@@ -54,7 +93,12 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The ID of a Voice Connector group.
+     * </p>
+     * 
      * @param voiceConnectorGroupId
+     *        The ID of a Voice Connector group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -64,7 +108,12 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The name of a Voice Connector group.
+     * </p>
+     * 
      * @param name
+     *        The name of a Voice Connector group.
      */
 
     public void setName(String name) {
@@ -72,7 +121,11 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The name of a Voice Connector group.
+     * </p>
+     * 
+     * @return The name of a Voice Connector group.
      */
 
     public String getName() {
@@ -80,7 +133,12 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The name of a Voice Connector group.
+     * </p>
+     * 
      * @param name
+     *        The name of a Voice Connector group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,7 +148,11 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connectors to which you route inbound calls.
+     * </p>
+     * 
+     * @return The Voice Connectors to which you route inbound calls.
      */
 
     public java.util.List<VoiceConnectorItem> getVoiceConnectorItems() {
@@ -98,7 +160,12 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The Voice Connectors to which you route inbound calls.
+     * </p>
+     * 
      * @param voiceConnectorItems
+     *        The Voice Connectors to which you route inbound calls.
      */
 
     public void setVoiceConnectorItems(java.util.Collection<VoiceConnectorItem> voiceConnectorItems) {
@@ -112,12 +179,16 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
+     * The Voice Connectors to which you route inbound calls.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setVoiceConnectorItems(java.util.Collection)} or {@link #withVoiceConnectorItems(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param voiceConnectorItems
+     *        The Voice Connectors to which you route inbound calls.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -132,7 +203,12 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The Voice Connectors to which you route inbound calls.
+     * </p>
+     * 
      * @param voiceConnectorItems
+     *        The Voice Connectors to which you route inbound calls.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,7 +218,12 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The Voice Connector group's creation time stamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The Voice Connector group's creation time stamp, in ISO 8601 format.
      */
 
     public void setCreatedTimestamp(java.util.Date createdTimestamp) {
@@ -150,7 +231,11 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector group's creation time stamp, in ISO 8601 format.
+     * </p>
+     * 
+     * @return The Voice Connector group's creation time stamp, in ISO 8601 format.
      */
 
     public java.util.Date getCreatedTimestamp() {
@@ -158,7 +243,12 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The Voice Connector group's creation time stamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The Voice Connector group's creation time stamp, in ISO 8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,7 +258,12 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The Voice Connector group's creation time stamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The Voice Connector group's creation time stamp, in ISO 8601 format.
      */
 
     public void setUpdatedTimestamp(java.util.Date updatedTimestamp) {
@@ -176,7 +271,11 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector group's creation time stamp, in ISO 8601 format.
+     * </p>
+     * 
+     * @return The Voice Connector group's creation time stamp, in ISO 8601 format.
      */
 
     public java.util.Date getUpdatedTimestamp() {
@@ -184,7 +283,12 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The Voice Connector group's creation time stamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The Voice Connector group's creation time stamp, in ISO 8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -194,7 +298,12 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The ARN of the Voice Connector group.
+     * </p>
+     * 
      * @param voiceConnectorGroupArn
+     *        The ARN of the Voice Connector group.
      */
 
     public void setVoiceConnectorGroupArn(String voiceConnectorGroupArn) {
@@ -202,7 +311,11 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the Voice Connector group.
+     * </p>
+     * 
+     * @return The ARN of the Voice Connector group.
      */
 
     public String getVoiceConnectorGroupArn() {
@@ -210,7 +323,12 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The ARN of the Voice Connector group.
+     * </p>
+     * 
      * @param voiceConnectorGroupArn
+     *        The ARN of the Voice Connector group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

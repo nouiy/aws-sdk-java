@@ -48,7 +48,7 @@ public class ProcessDetails implements Serializable, Cloneable, StructuredPojo {
     private Integer pid;
     /**
      * <p>
-     * The parent process ID.
+     * The parent process ID. This field accepts positive integers between <code>O</code> and <code>2147483647</code>.
      * </p>
      */
     private Integer parentPid;
@@ -197,11 +197,12 @@ public class ProcessDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The parent process ID.
+     * The parent process ID. This field accepts positive integers between <code>O</code> and <code>2147483647</code>.
      * </p>
      * 
      * @param parentPid
-     *        The parent process ID.
+     *        The parent process ID. This field accepts positive integers between <code>O</code> and
+     *        <code>2147483647</code>.
      */
 
     public void setParentPid(Integer parentPid) {
@@ -210,10 +211,11 @@ public class ProcessDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The parent process ID.
+     * The parent process ID. This field accepts positive integers between <code>O</code> and <code>2147483647</code>.
      * </p>
      * 
-     * @return The parent process ID.
+     * @return The parent process ID. This field accepts positive integers between <code>O</code> and
+     *         <code>2147483647</code>.
      */
 
     public Integer getParentPid() {
@@ -222,11 +224,12 @@ public class ProcessDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The parent process ID.
+     * The parent process ID. This field accepts positive integers between <code>O</code> and <code>2147483647</code>.
      * </p>
      * 
      * @param parentPid
-     *        The parent process ID.
+     *        The parent process ID. This field accepts positive integers between <code>O</code> and
+     *        <code>2147483647</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

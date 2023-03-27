@@ -25,14 +25,32 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     */
     private String voiceConnectorId;
-
+    /**
+     * <p>
+     * The name of the Voice Connector.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * When enabled, requires encryption for the Voice Connector.
+     * </p>
+     */
     private Boolean requireEncryption;
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      */
 
     public void setVoiceConnectorId(String voiceConnectorId) {
@@ -40,7 +58,11 @@ public class UpdateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
+     * @return The Voice Connector ID.
      */
 
     public String getVoiceConnectorId() {
@@ -48,7 +70,12 @@ public class UpdateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +85,12 @@ public class UpdateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The name of the Voice Connector.
+     * </p>
+     * 
      * @param name
+     *        The name of the Voice Connector.
      */
 
     public void setName(String name) {
@@ -66,7 +98,11 @@ public class UpdateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the Voice Connector.
+     * </p>
+     * 
+     * @return The name of the Voice Connector.
      */
 
     public String getName() {
@@ -74,7 +110,12 @@ public class UpdateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The name of the Voice Connector.
+     * </p>
+     * 
      * @param name
+     *        The name of the Voice Connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,7 +125,12 @@ public class UpdateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * When enabled, requires encryption for the Voice Connector.
+     * </p>
+     * 
      * @param requireEncryption
+     *        When enabled, requires encryption for the Voice Connector.
      */
 
     public void setRequireEncryption(Boolean requireEncryption) {
@@ -92,7 +138,11 @@ public class UpdateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * @return
+     * <p>
+     * When enabled, requires encryption for the Voice Connector.
+     * </p>
+     * 
+     * @return When enabled, requires encryption for the Voice Connector.
      */
 
     public Boolean getRequireEncryption() {
@@ -100,7 +150,12 @@ public class UpdateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * When enabled, requires encryption for the Voice Connector.
+     * </p>
+     * 
      * @param requireEncryption
+     *        When enabled, requires encryption for the Voice Connector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -110,7 +165,11 @@ public class UpdateVoiceConnectorRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
-     * @return
+     * <p>
+     * When enabled, requires encryption for the Voice Connector.
+     * </p>
+     * 
+     * @return When enabled, requires encryption for the Voice Connector.
      */
 
     public Boolean isRequireEncryption() {

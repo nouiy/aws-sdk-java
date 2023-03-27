@@ -26,12 +26,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PutVoiceConnectorTerminationCredentialsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     */
     private String voiceConnectorId;
-
+    /**
+     * <p>
+     * The termination credentials being updated.
+     * </p>
+     */
     private java.util.List<Credential> credentials;
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      */
 
     public void setVoiceConnectorId(String voiceConnectorId) {
@@ -39,7 +53,11 @@ public class PutVoiceConnectorTerminationCredentialsRequest extends com.amazonaw
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
+     * @return The Voice Connector ID.
      */
 
     public String getVoiceConnectorId() {
@@ -47,7 +65,12 @@ public class PutVoiceConnectorTerminationCredentialsRequest extends com.amazonaw
     }
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -57,7 +80,11 @@ public class PutVoiceConnectorTerminationCredentialsRequest extends com.amazonaw
     }
 
     /**
-     * @return
+     * <p>
+     * The termination credentials being updated.
+     * </p>
+     * 
+     * @return The termination credentials being updated.
      */
 
     public java.util.List<Credential> getCredentials() {
@@ -65,7 +92,12 @@ public class PutVoiceConnectorTerminationCredentialsRequest extends com.amazonaw
     }
 
     /**
+     * <p>
+     * The termination credentials being updated.
+     * </p>
+     * 
      * @param credentials
+     *        The termination credentials being updated.
      */
 
     public void setCredentials(java.util.Collection<Credential> credentials) {
@@ -79,12 +111,16 @@ public class PutVoiceConnectorTerminationCredentialsRequest extends com.amazonaw
 
     /**
      * <p>
+     * The termination credentials being updated.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCredentials(java.util.Collection)} or {@link #withCredentials(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param credentials
+     *        The termination credentials being updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -99,7 +135,12 @@ public class PutVoiceConnectorTerminationCredentialsRequest extends com.amazonaw
     }
 
     /**
+     * <p>
+     * The termination credentials being updated.
+     * </p>
+     * 
      * @param credentials
+     *        The termination credentials being updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

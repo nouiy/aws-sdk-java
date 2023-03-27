@@ -25,10 +25,20 @@ import javax.annotation.Generated;
 public class PutVoiceConnectorStreamingConfigurationResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements
         Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The updated streaming settings.
+     * </p>
+     */
     private StreamingConfiguration streamingConfiguration;
 
     /**
+     * <p>
+     * The updated streaming settings.
+     * </p>
+     * 
      * @param streamingConfiguration
+     *        The updated streaming settings.
      */
 
     public void setStreamingConfiguration(StreamingConfiguration streamingConfiguration) {
@@ -36,7 +46,11 @@ public class PutVoiceConnectorStreamingConfigurationResult extends com.amazonaws
     }
 
     /**
-     * @return
+     * <p>
+     * The updated streaming settings.
+     * </p>
+     * 
+     * @return The updated streaming settings.
      */
 
     public StreamingConfiguration getStreamingConfiguration() {
@@ -44,7 +58,12 @@ public class PutVoiceConnectorStreamingConfigurationResult extends com.amazonaws
     }
 
     /**
+     * <p>
+     * The updated streaming settings.
+     * </p>
+     * 
      * @param streamingConfiguration
+     *        The updated streaming settings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

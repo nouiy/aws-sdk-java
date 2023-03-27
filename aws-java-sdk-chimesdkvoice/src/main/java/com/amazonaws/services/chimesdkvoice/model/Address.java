@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * A validated address.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/Address" target="_top">AWS API
  *      Documentation</a>
@@ -25,28 +28,74 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Address implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The address street, such as <code>8th Avenue</code>.
+     * </p>
+     */
     private String streetName;
-
+    /**
+     * <p>
+     * The address suffix, such as the <code>N</code> in <code>8th Avenue N</code>.
+     * </p>
+     */
     private String streetSuffix;
-
+    /**
+     * <p>
+     * An address suffix location, such as the <code>S. Unit A</code> in <code>Central Park S. Unit A</code>.
+     * </p>
+     */
     private String postDirectional;
-
+    /**
+     * <p>
+     * An address prefix location, such as the <code>N</code> in <code>N. Third St.</code>
+     * </p>
+     */
     private String preDirectional;
-
+    /**
+     * <p>
+     * The numeric portion of an address.
+     * </p>
+     */
     private String streetNumber;
-
+    /**
+     * <p>
+     * The city of an address.
+     * </p>
+     */
     private String city;
-
+    /**
+     * <p>
+     * The state of an address.
+     * </p>
+     */
     private String state;
-
+    /**
+     * <p>
+     * The postal code of an address.
+     * </p>
+     */
     private String postalCode;
-
+    /**
+     * <p>
+     * The zip + 4 or postal code + 4 of an address.
+     * </p>
+     */
     private String postalCodePlus4;
-
+    /**
+     * <p>
+     * The country of an address.
+     * </p>
+     */
     private String country;
 
     /**
+     * <p>
+     * The address street, such as <code>8th Avenue</code>.
+     * </p>
+     * 
      * @param streetName
+     *        The address street, such as <code>8th Avenue</code>.
      */
 
     public void setStreetName(String streetName) {
@@ -54,7 +103,11 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The address street, such as <code>8th Avenue</code>.
+     * </p>
+     * 
+     * @return The address street, such as <code>8th Avenue</code>.
      */
 
     public String getStreetName() {
@@ -62,7 +115,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The address street, such as <code>8th Avenue</code>.
+     * </p>
+     * 
      * @param streetName
+     *        The address street, such as <code>8th Avenue</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -72,7 +130,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The address suffix, such as the <code>N</code> in <code>8th Avenue N</code>.
+     * </p>
+     * 
      * @param streetSuffix
+     *        The address suffix, such as the <code>N</code> in <code>8th Avenue N</code>.
      */
 
     public void setStreetSuffix(String streetSuffix) {
@@ -80,7 +143,11 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The address suffix, such as the <code>N</code> in <code>8th Avenue N</code>.
+     * </p>
+     * 
+     * @return The address suffix, such as the <code>N</code> in <code>8th Avenue N</code>.
      */
 
     public String getStreetSuffix() {
@@ -88,7 +155,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The address suffix, such as the <code>N</code> in <code>8th Avenue N</code>.
+     * </p>
+     * 
      * @param streetSuffix
+     *        The address suffix, such as the <code>N</code> in <code>8th Avenue N</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,7 +170,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * An address suffix location, such as the <code>S. Unit A</code> in <code>Central Park S. Unit A</code>.
+     * </p>
+     * 
      * @param postDirectional
+     *        An address suffix location, such as the <code>S. Unit A</code> in <code>Central Park S. Unit A</code>.
      */
 
     public void setPostDirectional(String postDirectional) {
@@ -106,7 +183,11 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * An address suffix location, such as the <code>S. Unit A</code> in <code>Central Park S. Unit A</code>.
+     * </p>
+     * 
+     * @return An address suffix location, such as the <code>S. Unit A</code> in <code>Central Park S. Unit A</code>.
      */
 
     public String getPostDirectional() {
@@ -114,7 +195,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * An address suffix location, such as the <code>S. Unit A</code> in <code>Central Park S. Unit A</code>.
+     * </p>
+     * 
      * @param postDirectional
+     *        An address suffix location, such as the <code>S. Unit A</code> in <code>Central Park S. Unit A</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -124,7 +210,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * An address prefix location, such as the <code>N</code> in <code>N. Third St.</code>
+     * </p>
+     * 
      * @param preDirectional
+     *        An address prefix location, such as the <code>N</code> in <code>N. Third St.</code>
      */
 
     public void setPreDirectional(String preDirectional) {
@@ -132,7 +223,11 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * An address prefix location, such as the <code>N</code> in <code>N. Third St.</code>
+     * </p>
+     * 
+     * @return An address prefix location, such as the <code>N</code> in <code>N. Third St.</code>
      */
 
     public String getPreDirectional() {
@@ -140,7 +235,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * An address prefix location, such as the <code>N</code> in <code>N. Third St.</code>
+     * </p>
+     * 
      * @param preDirectional
+     *        An address prefix location, such as the <code>N</code> in <code>N. Third St.</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -150,7 +250,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The numeric portion of an address.
+     * </p>
+     * 
      * @param streetNumber
+     *        The numeric portion of an address.
      */
 
     public void setStreetNumber(String streetNumber) {
@@ -158,7 +263,11 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The numeric portion of an address.
+     * </p>
+     * 
+     * @return The numeric portion of an address.
      */
 
     public String getStreetNumber() {
@@ -166,7 +275,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The numeric portion of an address.
+     * </p>
+     * 
      * @param streetNumber
+     *        The numeric portion of an address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -176,7 +290,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The city of an address.
+     * </p>
+     * 
      * @param city
+     *        The city of an address.
      */
 
     public void setCity(String city) {
@@ -184,7 +303,11 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The city of an address.
+     * </p>
+     * 
+     * @return The city of an address.
      */
 
     public String getCity() {
@@ -192,7 +315,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The city of an address.
+     * </p>
+     * 
      * @param city
+     *        The city of an address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -202,7 +330,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The state of an address.
+     * </p>
+     * 
      * @param state
+     *        The state of an address.
      */
 
     public void setState(String state) {
@@ -210,7 +343,11 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The state of an address.
+     * </p>
+     * 
+     * @return The state of an address.
      */
 
     public String getState() {
@@ -218,7 +355,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The state of an address.
+     * </p>
+     * 
      * @param state
+     *        The state of an address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -228,7 +370,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The postal code of an address.
+     * </p>
+     * 
      * @param postalCode
+     *        The postal code of an address.
      */
 
     public void setPostalCode(String postalCode) {
@@ -236,7 +383,11 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The postal code of an address.
+     * </p>
+     * 
+     * @return The postal code of an address.
      */
 
     public String getPostalCode() {
@@ -244,7 +395,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The postal code of an address.
+     * </p>
+     * 
      * @param postalCode
+     *        The postal code of an address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -254,7 +410,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The zip + 4 or postal code + 4 of an address.
+     * </p>
+     * 
      * @param postalCodePlus4
+     *        The zip + 4 or postal code + 4 of an address.
      */
 
     public void setPostalCodePlus4(String postalCodePlus4) {
@@ -262,7 +423,11 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The zip + 4 or postal code + 4 of an address.
+     * </p>
+     * 
+     * @return The zip + 4 or postal code + 4 of an address.
      */
 
     public String getPostalCodePlus4() {
@@ -270,7 +435,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The zip + 4 or postal code + 4 of an address.
+     * </p>
+     * 
      * @param postalCodePlus4
+     *        The zip + 4 or postal code + 4 of an address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -280,7 +450,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The country of an address.
+     * </p>
+     * 
      * @param country
+     *        The country of an address.
      */
 
     public void setCountry(String country) {
@@ -288,7 +463,11 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The country of an address.
+     * </p>
+     * 
+     * @return The country of an address.
      */
 
     public String getCountry() {
@@ -296,7 +475,12 @@ public class Address implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The country of an address.
+     * </p>
+     * 
      * @param country
+     *        The country of an address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

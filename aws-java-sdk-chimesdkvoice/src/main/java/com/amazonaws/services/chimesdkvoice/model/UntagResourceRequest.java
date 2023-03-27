@@ -25,12 +25,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The ARN of the resource having its tags removed.
+     * </p>
+     */
     private String resourceARN;
-
+    /**
+     * <p>
+     * The keys of the tags being removed from the resource.
+     * </p>
+     */
     private java.util.List<String> tagKeys;
 
     /**
+     * <p>
+     * The ARN of the resource having its tags removed.
+     * </p>
+     * 
      * @param resourceARN
+     *        The ARN of the resource having its tags removed.
      */
 
     public void setResourceARN(String resourceARN) {
@@ -38,7 +52,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the resource having its tags removed.
+     * </p>
+     * 
+     * @return The ARN of the resource having its tags removed.
      */
 
     public String getResourceARN() {
@@ -46,7 +64,12 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The ARN of the resource having its tags removed.
+     * </p>
+     * 
      * @param resourceARN
+     *        The ARN of the resource having its tags removed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +79,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * @return
+     * <p>
+     * The keys of the tags being removed from the resource.
+     * </p>
+     * 
+     * @return The keys of the tags being removed from the resource.
      */
 
     public java.util.List<String> getTagKeys() {
@@ -64,7 +91,12 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The keys of the tags being removed from the resource.
+     * </p>
+     * 
      * @param tagKeys
+     *        The keys of the tags being removed from the resource.
      */
 
     public void setTagKeys(java.util.Collection<String> tagKeys) {
@@ -78,12 +110,16 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
+     * The keys of the tags being removed from the resource.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTagKeys(java.util.Collection)} or {@link #withTagKeys(java.util.Collection)} if you want to override
      * the existing values.
      * </p>
      * 
      * @param tagKeys
+     *        The keys of the tags being removed from the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,7 +134,12 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The keys of the tags being removed from the resource.
+     * </p>
+     * 
      * @param tagKeys
+     *        The keys of the tags being removed from the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

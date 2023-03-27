@@ -195,6 +195,8 @@ public class ResourceDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsWafv2WebAcl").build();
     private static final MarshallingInfo<StructuredPojo> AWSWAFV2RULEGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsWafv2RuleGroup").build();
+    private static final MarshallingInfo<StructuredPojo> AWSEC2ROUTETABLE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsEc2RouteTable").build();
 
     private static final ResourceDetailsMarshaller instance = new ResourceDetailsMarshaller();
 
@@ -295,6 +297,7 @@ public class ResourceDetailsMarshaller {
             protocolMarshaller.marshall(resourceDetails.getAwsSageMakerNotebookInstance(), AWSSAGEMAKERNOTEBOOKINSTANCE_BINDING);
             protocolMarshaller.marshall(resourceDetails.getAwsWafv2WebAcl(), AWSWAFV2WEBACL_BINDING);
             protocolMarshaller.marshall(resourceDetails.getAwsWafv2RuleGroup(), AWSWAFV2RULEGROUP_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsEc2RouteTable(), AWSEC2ROUTETABLE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

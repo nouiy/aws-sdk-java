@@ -23,12 +23,25 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListVoiceProfileDomainsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The list of voice profile domains.
+     * </p>
+     */
     private java.util.List<VoiceProfileDomainSummary> voiceProfileDomains;
-
+    /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * @return
+     * <p>
+     * The list of voice profile domains.
+     * </p>
+     * 
+     * @return The list of voice profile domains.
      */
 
     public java.util.List<VoiceProfileDomainSummary> getVoiceProfileDomains() {
@@ -36,7 +49,12 @@ public class ListVoiceProfileDomainsResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The list of voice profile domains.
+     * </p>
+     * 
      * @param voiceProfileDomains
+     *        The list of voice profile domains.
      */
 
     public void setVoiceProfileDomains(java.util.Collection<VoiceProfileDomainSummary> voiceProfileDomains) {
@@ -50,12 +68,16 @@ public class ListVoiceProfileDomainsResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
+     * The list of voice profile domains.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setVoiceProfileDomains(java.util.Collection)} or {@link #withVoiceProfileDomains(java.util.Collection)}
      * if you want to override the existing values.
      * </p>
      * 
      * @param voiceProfileDomains
+     *        The list of voice profile domains.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +92,12 @@ public class ListVoiceProfileDomainsResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The list of voice profile domains.
+     * </p>
+     * 
      * @param voiceProfileDomains
+     *        The list of voice profile domains.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,7 +107,12 @@ public class ListVoiceProfileDomainsResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -88,7 +120,11 @@ public class ListVoiceProfileDomainsResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * @return
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
+     * @return The token used to return the next page of results.
      */
 
     public String getNextToken() {
@@ -96,7 +132,12 @@ public class ListVoiceProfileDomainsResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

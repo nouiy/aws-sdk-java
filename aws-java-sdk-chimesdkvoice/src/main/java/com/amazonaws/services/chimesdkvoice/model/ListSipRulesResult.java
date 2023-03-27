@@ -23,12 +23,25 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListSipRulesResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The list of SIP rules and details.
+     * </p>
+     */
     private java.util.List<SipRule> sipRules;
-
+    /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * @return
+     * <p>
+     * The list of SIP rules and details.
+     * </p>
+     * 
+     * @return The list of SIP rules and details.
      */
 
     public java.util.List<SipRule> getSipRules() {
@@ -36,7 +49,12 @@ public class ListSipRulesResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * The list of SIP rules and details.
+     * </p>
+     * 
      * @param sipRules
+     *        The list of SIP rules and details.
      */
 
     public void setSipRules(java.util.Collection<SipRule> sipRules) {
@@ -50,12 +68,16 @@ public class ListSipRulesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
+     * The list of SIP rules and details.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSipRules(java.util.Collection)} or {@link #withSipRules(java.util.Collection)} if you want to override
      * the existing values.
      * </p>
      * 
      * @param sipRules
+     *        The list of SIP rules and details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +92,12 @@ public class ListSipRulesResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * The list of SIP rules and details.
+     * </p>
+     * 
      * @param sipRules
+     *        The list of SIP rules and details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,7 +107,12 @@ public class ListSipRulesResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -88,7 +120,11 @@ public class ListSipRulesResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
-     * @return
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
+     * @return The token used to return the next page of results.
      */
 
     public String getNextToken() {
@@ -96,7 +132,12 @@ public class ListSipRulesResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -26,12 +26,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeleteVoiceConnectorTerminationCredentialsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     */
     private String voiceConnectorId;
-
+    /**
+     * <p>
+     * The RFC2617 compliant username associated with the SIP credentials, in US-ASCII format.
+     * </p>
+     */
     private java.util.List<String> usernames;
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      */
 
     public void setVoiceConnectorId(String voiceConnectorId) {
@@ -39,7 +53,11 @@ public class DeleteVoiceConnectorTerminationCredentialsRequest extends com.amazo
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
+     * @return The Voice Connector ID.
      */
 
     public String getVoiceConnectorId() {
@@ -47,7 +65,12 @@ public class DeleteVoiceConnectorTerminationCredentialsRequest extends com.amazo
     }
 
     /**
+     * <p>
+     * The Voice Connector ID.
+     * </p>
+     * 
      * @param voiceConnectorId
+     *        The Voice Connector ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -57,7 +80,11 @@ public class DeleteVoiceConnectorTerminationCredentialsRequest extends com.amazo
     }
 
     /**
-     * @return
+     * <p>
+     * The RFC2617 compliant username associated with the SIP credentials, in US-ASCII format.
+     * </p>
+     * 
+     * @return The RFC2617 compliant username associated with the SIP credentials, in US-ASCII format.
      */
 
     public java.util.List<String> getUsernames() {
@@ -65,7 +92,12 @@ public class DeleteVoiceConnectorTerminationCredentialsRequest extends com.amazo
     }
 
     /**
+     * <p>
+     * The RFC2617 compliant username associated with the SIP credentials, in US-ASCII format.
+     * </p>
+     * 
      * @param usernames
+     *        The RFC2617 compliant username associated with the SIP credentials, in US-ASCII format.
      */
 
     public void setUsernames(java.util.Collection<String> usernames) {
@@ -79,12 +111,16 @@ public class DeleteVoiceConnectorTerminationCredentialsRequest extends com.amazo
 
     /**
      * <p>
+     * The RFC2617 compliant username associated with the SIP credentials, in US-ASCII format.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setUsernames(java.util.Collection)} or {@link #withUsernames(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param usernames
+     *        The RFC2617 compliant username associated with the SIP credentials, in US-ASCII format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -99,7 +135,12 @@ public class DeleteVoiceConnectorTerminationCredentialsRequest extends com.amazo
     }
 
     /**
+     * <p>
+     * The RFC2617 compliant username associated with the SIP credentials, in US-ASCII format.
+     * </p>
+     * 
      * @param usernames
+     *        The RFC2617 compliant username associated with the SIP credentials, in US-ASCII format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,7 +27,7 @@ public class UpdateAttributeGroupRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The name or ID of the attribute group that holds the attributes to describe the application.
+     * The name, ID, or ARN of the attribute group that holds the attributes to describe the application.
      * </p>
      */
     private String attributeGroup;
@@ -55,11 +55,11 @@ public class UpdateAttributeGroupRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The name or ID of the attribute group that holds the attributes to describe the application.
+     * The name, ID, or ARN of the attribute group that holds the attributes to describe the application.
      * </p>
      * 
      * @param attributeGroup
-     *        The name or ID of the attribute group that holds the attributes to describe the application.
+     *        The name, ID, or ARN of the attribute group that holds the attributes to describe the application.
      */
 
     public void setAttributeGroup(String attributeGroup) {
@@ -68,10 +68,10 @@ public class UpdateAttributeGroupRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The name or ID of the attribute group that holds the attributes to describe the application.
+     * The name, ID, or ARN of the attribute group that holds the attributes to describe the application.
      * </p>
      * 
-     * @return The name or ID of the attribute group that holds the attributes to describe the application.
+     * @return The name, ID, or ARN of the attribute group that holds the attributes to describe the application.
      */
 
     public String getAttributeGroup() {
@@ -80,11 +80,11 @@ public class UpdateAttributeGroupRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The name or ID of the attribute group that holds the attributes to describe the application.
+     * The name, ID, or ARN of the attribute group that holds the attributes to describe the application.
      * </p>
      * 
      * @param attributeGroup
-     *        The name or ID of the attribute group that holds the attributes to describe the application.
+     *        The name, ID, or ARN of the attribute group that holds the attributes to describe the application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,18 +25,44 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The name of the voice profile domain.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * A description of the voice profile domain.
+     * </p>
+     */
     private String description;
-
+    /**
+     * <p>
+     * The server-side encryption configuration for the request.
+     * </p>
+     */
     private ServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
-
+    /**
+     * <p>
+     * The unique identifier for the client request. Use a different token for different domain creation requests.
+     * </p>
+     */
     private String clientRequestToken;
-
+    /**
+     * <p>
+     * The tags assigned to the domain.
+     * </p>
+     */
     private java.util.List<Tag> tags;
 
     /**
+     * <p>
+     * The name of the voice profile domain.
+     * </p>
+     * 
      * @param name
+     *        The name of the voice profile domain.
      */
 
     public void setName(String name) {
@@ -44,7 +70,11 @@ public class CreateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the voice profile domain.
+     * </p>
+     * 
+     * @return The name of the voice profile domain.
      */
 
     public String getName() {
@@ -52,7 +82,12 @@ public class CreateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The name of the voice profile domain.
+     * </p>
+     * 
      * @param name
+     *        The name of the voice profile domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -62,7 +97,12 @@ public class CreateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * A description of the voice profile domain.
+     * </p>
+     * 
      * @param description
+     *        A description of the voice profile domain.
      */
 
     public void setDescription(String description) {
@@ -70,7 +110,11 @@ public class CreateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * A description of the voice profile domain.
+     * </p>
+     * 
+     * @return A description of the voice profile domain.
      */
 
     public String getDescription() {
@@ -78,7 +122,12 @@ public class CreateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * A description of the voice profile domain.
+     * </p>
+     * 
      * @param description
+     *        A description of the voice profile domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -88,7 +137,12 @@ public class CreateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The server-side encryption configuration for the request.
+     * </p>
+     * 
      * @param serverSideEncryptionConfiguration
+     *        The server-side encryption configuration for the request.
      */
 
     public void setServerSideEncryptionConfiguration(ServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
@@ -96,7 +150,11 @@ public class CreateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * The server-side encryption configuration for the request.
+     * </p>
+     * 
+     * @return The server-side encryption configuration for the request.
      */
 
     public ServerSideEncryptionConfiguration getServerSideEncryptionConfiguration() {
@@ -104,7 +162,12 @@ public class CreateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The server-side encryption configuration for the request.
+     * </p>
+     * 
      * @param serverSideEncryptionConfiguration
+     *        The server-side encryption configuration for the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -114,7 +177,13 @@ public class CreateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The unique identifier for the client request. Use a different token for different domain creation requests.
+     * </p>
+     * 
      * @param clientRequestToken
+     *        The unique identifier for the client request. Use a different token for different domain creation
+     *        requests.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -122,7 +191,12 @@ public class CreateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * The unique identifier for the client request. Use a different token for different domain creation requests.
+     * </p>
+     * 
+     * @return The unique identifier for the client request. Use a different token for different domain creation
+     *         requests.
      */
 
     public String getClientRequestToken() {
@@ -130,7 +204,13 @@ public class CreateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The unique identifier for the client request. Use a different token for different domain creation requests.
+     * </p>
+     * 
      * @param clientRequestToken
+     *        The unique identifier for the client request. Use a different token for different domain creation
+     *        requests.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -140,7 +220,11 @@ public class CreateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * The tags assigned to the domain.
+     * </p>
+     * 
+     * @return The tags assigned to the domain.
      */
 
     public java.util.List<Tag> getTags() {
@@ -148,7 +232,12 @@ public class CreateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The tags assigned to the domain.
+     * </p>
+     * 
      * @param tags
+     *        The tags assigned to the domain.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -162,12 +251,16 @@ public class CreateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
+     * The tags assigned to the domain.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
      * existing values.
      * </p>
      * 
      * @param tags
+     *        The tags assigned to the domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -182,7 +275,12 @@ public class CreateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The tags assigned to the domain.
+     * </p>
+     * 
      * @param tags
+     *        The tags assigned to the domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

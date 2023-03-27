@@ -25,14 +25,32 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateSipMediaApplicationRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The SIP media application ID.
+     * </p>
+     */
     private String sipMediaApplicationId;
-
+    /**
+     * <p>
+     * The new name for the specified SIP media application.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * The new set of endpoints for the specified SIP media application.
+     * </p>
+     */
     private java.util.List<SipMediaApplicationEndpoint> endpoints;
 
     /**
+     * <p>
+     * The SIP media application ID.
+     * </p>
+     * 
      * @param sipMediaApplicationId
+     *        The SIP media application ID.
      */
 
     public void setSipMediaApplicationId(String sipMediaApplicationId) {
@@ -40,7 +58,11 @@ public class UpdateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * The SIP media application ID.
+     * </p>
+     * 
+     * @return The SIP media application ID.
      */
 
     public String getSipMediaApplicationId() {
@@ -48,7 +70,12 @@ public class UpdateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The SIP media application ID.
+     * </p>
+     * 
      * @param sipMediaApplicationId
+     *        The SIP media application ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +85,12 @@ public class UpdateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The new name for the specified SIP media application.
+     * </p>
+     * 
      * @param name
+     *        The new name for the specified SIP media application.
      */
 
     public void setName(String name) {
@@ -66,7 +98,11 @@ public class UpdateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * The new name for the specified SIP media application.
+     * </p>
+     * 
+     * @return The new name for the specified SIP media application.
      */
 
     public String getName() {
@@ -74,7 +110,12 @@ public class UpdateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The new name for the specified SIP media application.
+     * </p>
+     * 
      * @param name
+     *        The new name for the specified SIP media application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,7 +125,11 @@ public class UpdateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * The new set of endpoints for the specified SIP media application.
+     * </p>
+     * 
+     * @return The new set of endpoints for the specified SIP media application.
      */
 
     public java.util.List<SipMediaApplicationEndpoint> getEndpoints() {
@@ -92,7 +137,12 @@ public class UpdateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The new set of endpoints for the specified SIP media application.
+     * </p>
+     * 
      * @param endpoints
+     *        The new set of endpoints for the specified SIP media application.
      */
 
     public void setEndpoints(java.util.Collection<SipMediaApplicationEndpoint> endpoints) {
@@ -106,12 +156,16 @@ public class UpdateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
+     * The new set of endpoints for the specified SIP media application.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setEndpoints(java.util.Collection)} or {@link #withEndpoints(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param endpoints
+     *        The new set of endpoints for the specified SIP media application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,7 +180,12 @@ public class UpdateSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The new set of endpoints for the specified SIP media application.
+     * </p>
+     * 
      * @param endpoints
+     *        The new set of endpoints for the specified SIP media application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -18,6 +18,15 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * Origination routes define call distribution properties for your SIP hosts to receive inbound calls using an Amazon
+ * Chime SDK Voice Connector. Limit: Ten origination routes for each Voice Connector.
+ * </p>
+ * <note>
+ * <p>
+ * The parameters listed below are not required, but you must use at least one.
+ * </p>
+ * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/OriginationRoute" target="_top">AWS
  *      API Documentation</a>
@@ -25,18 +34,47 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class OriginationRoute implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The FQDN or IP address to contact for origination traffic.
+     * </p>
+     */
     private String host;
-
+    /**
+     * <p>
+     * The designated origination route port. Defaults to 5060.
+     * </p>
+     */
     private Integer port;
-
+    /**
+     * <p>
+     * The protocol to use for the origination route. Encryption-enabled Amazon Chime SDK Voice Connectors use TCP
+     * protocol by default.
+     * </p>
+     */
     private String protocol;
-
+    /**
+     * <p>
+     * The priority associated with the host, with 1 being the highest priority. Higher priority hosts are attempted
+     * first.
+     * </p>
+     */
     private Integer priority;
-
+    /**
+     * <p>
+     * The weight assigned to an origination route. When hosts have equal priority, calls are distributed between them
+     * based on their relative weights.
+     * </p>
+     */
     private Integer weight;
 
     /**
+     * <p>
+     * The FQDN or IP address to contact for origination traffic.
+     * </p>
+     * 
      * @param host
+     *        The FQDN or IP address to contact for origination traffic.
      */
 
     public void setHost(String host) {
@@ -44,7 +82,11 @@ public class OriginationRoute implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The FQDN or IP address to contact for origination traffic.
+     * </p>
+     * 
+     * @return The FQDN or IP address to contact for origination traffic.
      */
 
     public String getHost() {
@@ -52,7 +94,12 @@ public class OriginationRoute implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The FQDN or IP address to contact for origination traffic.
+     * </p>
+     * 
      * @param host
+     *        The FQDN or IP address to contact for origination traffic.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -62,7 +109,12 @@ public class OriginationRoute implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The designated origination route port. Defaults to 5060.
+     * </p>
+     * 
      * @param port
+     *        The designated origination route port. Defaults to 5060.
      */
 
     public void setPort(Integer port) {
@@ -70,7 +122,11 @@ public class OriginationRoute implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The designated origination route port. Defaults to 5060.
+     * </p>
+     * 
+     * @return The designated origination route port. Defaults to 5060.
      */
 
     public Integer getPort() {
@@ -78,7 +134,12 @@ public class OriginationRoute implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The designated origination route port. Defaults to 5060.
+     * </p>
+     * 
      * @param port
+     *        The designated origination route port. Defaults to 5060.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -88,7 +149,14 @@ public class OriginationRoute implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The protocol to use for the origination route. Encryption-enabled Amazon Chime SDK Voice Connectors use TCP
+     * protocol by default.
+     * </p>
+     * 
      * @param protocol
+     *        The protocol to use for the origination route. Encryption-enabled Amazon Chime SDK Voice Connectors use
+     *        TCP protocol by default.
      * @see OriginationRouteProtocol
      */
 
@@ -97,7 +165,13 @@ public class OriginationRoute implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The protocol to use for the origination route. Encryption-enabled Amazon Chime SDK Voice Connectors use TCP
+     * protocol by default.
+     * </p>
+     * 
+     * @return The protocol to use for the origination route. Encryption-enabled Amazon Chime SDK Voice Connectors use
+     *         TCP protocol by default.
      * @see OriginationRouteProtocol
      */
 
@@ -106,7 +180,14 @@ public class OriginationRoute implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The protocol to use for the origination route. Encryption-enabled Amazon Chime SDK Voice Connectors use TCP
+     * protocol by default.
+     * </p>
+     * 
      * @param protocol
+     *        The protocol to use for the origination route. Encryption-enabled Amazon Chime SDK Voice Connectors use
+     *        TCP protocol by default.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OriginationRouteProtocol
      */
@@ -117,7 +198,14 @@ public class OriginationRoute implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The protocol to use for the origination route. Encryption-enabled Amazon Chime SDK Voice Connectors use TCP
+     * protocol by default.
+     * </p>
+     * 
      * @param protocol
+     *        The protocol to use for the origination route. Encryption-enabled Amazon Chime SDK Voice Connectors use
+     *        TCP protocol by default.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OriginationRouteProtocol
      */
@@ -128,7 +216,14 @@ public class OriginationRoute implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The priority associated with the host, with 1 being the highest priority. Higher priority hosts are attempted
+     * first.
+     * </p>
+     * 
      * @param priority
+     *        The priority associated with the host, with 1 being the highest priority. Higher priority hosts are
+     *        attempted first.
      */
 
     public void setPriority(Integer priority) {
@@ -136,7 +231,13 @@ public class OriginationRoute implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The priority associated with the host, with 1 being the highest priority. Higher priority hosts are attempted
+     * first.
+     * </p>
+     * 
+     * @return The priority associated with the host, with 1 being the highest priority. Higher priority hosts are
+     *         attempted first.
      */
 
     public Integer getPriority() {
@@ -144,7 +245,14 @@ public class OriginationRoute implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The priority associated with the host, with 1 being the highest priority. Higher priority hosts are attempted
+     * first.
+     * </p>
+     * 
      * @param priority
+     *        The priority associated with the host, with 1 being the highest priority. Higher priority hosts are
+     *        attempted first.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -154,7 +262,14 @@ public class OriginationRoute implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The weight assigned to an origination route. When hosts have equal priority, calls are distributed between them
+     * based on their relative weights.
+     * </p>
+     * 
      * @param weight
+     *        The weight assigned to an origination route. When hosts have equal priority, calls are distributed between
+     *        them based on their relative weights.
      */
 
     public void setWeight(Integer weight) {
@@ -162,7 +277,13 @@ public class OriginationRoute implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The weight assigned to an origination route. When hosts have equal priority, calls are distributed between them
+     * based on their relative weights.
+     * </p>
+     * 
+     * @return The weight assigned to an origination route. When hosts have equal priority, calls are distributed
+     *         between them based on their relative weights.
      */
 
     public Integer getWeight() {
@@ -170,7 +291,14 @@ public class OriginationRoute implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The weight assigned to an origination route. When hosts have equal priority, calls are distributed between them
+     * based on their relative weights.
+     * </p>
+     * 
      * @param weight
+     *        The weight assigned to an origination route. When hosts have equal priority, calls are distributed between
+     *        them based on their relative weights.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

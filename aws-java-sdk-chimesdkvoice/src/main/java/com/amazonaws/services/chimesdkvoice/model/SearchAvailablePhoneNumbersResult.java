@@ -23,12 +23,25 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class SearchAvailablePhoneNumbersResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Confines a search to just the phone numbers in the E.164 format.
+     * </p>
+     */
     private java.util.List<String> e164PhoneNumbers;
-
+    /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     */
     private String nextToken;
 
     /**
-     * @return
+     * <p>
+     * Confines a search to just the phone numbers in the E.164 format.
+     * </p>
+     * 
+     * @return Confines a search to just the phone numbers in the E.164 format.
      */
 
     public java.util.List<String> getE164PhoneNumbers() {
@@ -36,7 +49,12 @@ public class SearchAvailablePhoneNumbersResult extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * Confines a search to just the phone numbers in the E.164 format.
+     * </p>
+     * 
      * @param e164PhoneNumbers
+     *        Confines a search to just the phone numbers in the E.164 format.
      */
 
     public void setE164PhoneNumbers(java.util.Collection<String> e164PhoneNumbers) {
@@ -50,12 +68,16 @@ public class SearchAvailablePhoneNumbersResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
+     * Confines a search to just the phone numbers in the E.164 format.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setE164PhoneNumbers(java.util.Collection)} or {@link #withE164PhoneNumbers(java.util.Collection)} if you
      * want to override the existing values.
      * </p>
      * 
      * @param e164PhoneNumbers
+     *        Confines a search to just the phone numbers in the E.164 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -70,7 +92,12 @@ public class SearchAvailablePhoneNumbersResult extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * Confines a search to just the phone numbers in the E.164 format.
+     * </p>
+     * 
      * @param e164PhoneNumbers
+     *        Confines a search to just the phone numbers in the E.164 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,7 +107,12 @@ public class SearchAvailablePhoneNumbersResult extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -88,7 +120,11 @@ public class SearchAvailablePhoneNumbersResult extends com.amazonaws.AmazonWebSe
     }
 
     /**
-     * @return
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
+     * @return The token used to return the next page of results.
      */
 
     public String getNextToken() {
@@ -96,7 +132,12 @@ public class SearchAvailablePhoneNumbersResult extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

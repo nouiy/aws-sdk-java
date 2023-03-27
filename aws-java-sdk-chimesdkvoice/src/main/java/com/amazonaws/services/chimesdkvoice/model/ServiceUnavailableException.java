@@ -15,7 +15,9 @@ package com.amazonaws.services.chimesdkvoice.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p>
+ * The service is currently unavailable.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ServiceUnavailableException extends com.amazonaws.services.chimesdkvoice.model.AmazonChimeSDKVoiceException {

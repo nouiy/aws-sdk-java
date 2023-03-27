@@ -18,6 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The phone number capabilities for Amazon Chime SDK phone numbers, such as enabled inbound and outbound calling, and
+ * text messaging.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/PhoneNumberCapabilities"
  *      target="_top">AWS API Documentation</a>
@@ -25,20 +29,50 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PhoneNumberCapabilities implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Allows or denies inbound calling for the specified phone number.
+     * </p>
+     */
     private Boolean inboundCall;
-
+    /**
+     * <p>
+     * Allows or denies outbound calling for the specified phone number.
+     * </p>
+     */
     private Boolean outboundCall;
-
+    /**
+     * <p>
+     * Allows or denies inbound SMS messaging for the specified phone number.
+     * </p>
+     */
     private Boolean inboundSMS;
-
+    /**
+     * <p>
+     * Allows or denies outbound SMS messaging for the specified phone number.
+     * </p>
+     */
     private Boolean outboundSMS;
-
+    /**
+     * <p>
+     * Allows or denies inbound MMS messaging for the specified phone number.
+     * </p>
+     */
     private Boolean inboundMMS;
-
+    /**
+     * <p>
+     * Allows or denies inbound MMS messaging for the specified phone number.
+     * </p>
+     */
     private Boolean outboundMMS;
 
     /**
+     * <p>
+     * Allows or denies inbound calling for the specified phone number.
+     * </p>
+     * 
      * @param inboundCall
+     *        Allows or denies inbound calling for the specified phone number.
      */
 
     public void setInboundCall(Boolean inboundCall) {
@@ -46,7 +80,11 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * Allows or denies inbound calling for the specified phone number.
+     * </p>
+     * 
+     * @return Allows or denies inbound calling for the specified phone number.
      */
 
     public Boolean getInboundCall() {
@@ -54,7 +92,12 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Allows or denies inbound calling for the specified phone number.
+     * </p>
+     * 
      * @param inboundCall
+     *        Allows or denies inbound calling for the specified phone number.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -64,7 +107,11 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * Allows or denies inbound calling for the specified phone number.
+     * </p>
+     * 
+     * @return Allows or denies inbound calling for the specified phone number.
      */
 
     public Boolean isInboundCall() {
@@ -72,7 +119,12 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Allows or denies outbound calling for the specified phone number.
+     * </p>
+     * 
      * @param outboundCall
+     *        Allows or denies outbound calling for the specified phone number.
      */
 
     public void setOutboundCall(Boolean outboundCall) {
@@ -80,7 +132,11 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * Allows or denies outbound calling for the specified phone number.
+     * </p>
+     * 
+     * @return Allows or denies outbound calling for the specified phone number.
      */
 
     public Boolean getOutboundCall() {
@@ -88,7 +144,12 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Allows or denies outbound calling for the specified phone number.
+     * </p>
+     * 
      * @param outboundCall
+     *        Allows or denies outbound calling for the specified phone number.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,7 +159,11 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * Allows or denies outbound calling for the specified phone number.
+     * </p>
+     * 
+     * @return Allows or denies outbound calling for the specified phone number.
      */
 
     public Boolean isOutboundCall() {
@@ -106,7 +171,12 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Allows or denies inbound SMS messaging for the specified phone number.
+     * </p>
+     * 
      * @param inboundSMS
+     *        Allows or denies inbound SMS messaging for the specified phone number.
      */
 
     public void setInboundSMS(Boolean inboundSMS) {
@@ -114,7 +184,11 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * Allows or denies inbound SMS messaging for the specified phone number.
+     * </p>
+     * 
+     * @return Allows or denies inbound SMS messaging for the specified phone number.
      */
 
     public Boolean getInboundSMS() {
@@ -122,7 +196,12 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Allows or denies inbound SMS messaging for the specified phone number.
+     * </p>
+     * 
      * @param inboundSMS
+     *        Allows or denies inbound SMS messaging for the specified phone number.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -132,7 +211,11 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * Allows or denies inbound SMS messaging for the specified phone number.
+     * </p>
+     * 
+     * @return Allows or denies inbound SMS messaging for the specified phone number.
      */
 
     public Boolean isInboundSMS() {
@@ -140,7 +223,12 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Allows or denies outbound SMS messaging for the specified phone number.
+     * </p>
+     * 
      * @param outboundSMS
+     *        Allows or denies outbound SMS messaging for the specified phone number.
      */
 
     public void setOutboundSMS(Boolean outboundSMS) {
@@ -148,7 +236,11 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * Allows or denies outbound SMS messaging for the specified phone number.
+     * </p>
+     * 
+     * @return Allows or denies outbound SMS messaging for the specified phone number.
      */
 
     public Boolean getOutboundSMS() {
@@ -156,7 +248,12 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Allows or denies outbound SMS messaging for the specified phone number.
+     * </p>
+     * 
      * @param outboundSMS
+     *        Allows or denies outbound SMS messaging for the specified phone number.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -166,7 +263,11 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * Allows or denies outbound SMS messaging for the specified phone number.
+     * </p>
+     * 
+     * @return Allows or denies outbound SMS messaging for the specified phone number.
      */
 
     public Boolean isOutboundSMS() {
@@ -174,7 +275,12 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Allows or denies inbound MMS messaging for the specified phone number.
+     * </p>
+     * 
      * @param inboundMMS
+     *        Allows or denies inbound MMS messaging for the specified phone number.
      */
 
     public void setInboundMMS(Boolean inboundMMS) {
@@ -182,7 +288,11 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * Allows or denies inbound MMS messaging for the specified phone number.
+     * </p>
+     * 
+     * @return Allows or denies inbound MMS messaging for the specified phone number.
      */
 
     public Boolean getInboundMMS() {
@@ -190,7 +300,12 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Allows or denies inbound MMS messaging for the specified phone number.
+     * </p>
+     * 
      * @param inboundMMS
+     *        Allows or denies inbound MMS messaging for the specified phone number.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -200,7 +315,11 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * Allows or denies inbound MMS messaging for the specified phone number.
+     * </p>
+     * 
+     * @return Allows or denies inbound MMS messaging for the specified phone number.
      */
 
     public Boolean isInboundMMS() {
@@ -208,7 +327,12 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Allows or denies inbound MMS messaging for the specified phone number.
+     * </p>
+     * 
      * @param outboundMMS
+     *        Allows or denies inbound MMS messaging for the specified phone number.
      */
 
     public void setOutboundMMS(Boolean outboundMMS) {
@@ -216,7 +340,11 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * Allows or denies inbound MMS messaging for the specified phone number.
+     * </p>
+     * 
+     * @return Allows or denies inbound MMS messaging for the specified phone number.
      */
 
     public Boolean getOutboundMMS() {
@@ -224,7 +352,12 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Allows or denies inbound MMS messaging for the specified phone number.
+     * </p>
+     * 
      * @param outboundMMS
+     *        Allows or denies inbound MMS messaging for the specified phone number.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -234,7 +367,11 @@ public class PhoneNumberCapabilities implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * Allows or denies inbound MMS messaging for the specified phone number.
+     * </p>
+     * 
+     * @return Allows or denies inbound MMS messaging for the specified phone number.
      */
 
     public Boolean isOutboundMMS() {

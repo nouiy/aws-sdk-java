@@ -25,18 +25,18 @@ public class ImportNotebookResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ID of the notebook to import.
+     * The ID assigned to the imported notebook.
      * </p>
      */
     private String notebookId;
 
     /**
      * <p>
-     * The ID of the notebook to import.
+     * The ID assigned to the imported notebook.
      * </p>
      * 
      * @param notebookId
-     *        The ID of the notebook to import.
+     *        The ID assigned to the imported notebook.
      */
 
     public void setNotebookId(String notebookId) {
@@ -45,10 +45,10 @@ public class ImportNotebookResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ID of the notebook to import.
+     * The ID assigned to the imported notebook.
      * </p>
      * 
-     * @return The ID of the notebook to import.
+     * @return The ID assigned to the imported notebook.
      */
 
     public String getNotebookId() {
@@ -57,11 +57,11 @@ public class ImportNotebookResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ID of the notebook to import.
+     * The ID assigned to the imported notebook.
      * </p>
      * 
      * @param notebookId
-     *        The ID of the notebook to import.
+     *        The ID assigned to the imported notebook.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

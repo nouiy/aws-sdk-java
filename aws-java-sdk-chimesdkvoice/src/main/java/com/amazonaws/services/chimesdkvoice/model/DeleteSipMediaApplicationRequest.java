@@ -25,10 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeleteSipMediaApplicationRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The SIP media application ID.
+     * </p>
+     */
     private String sipMediaApplicationId;
 
     /**
+     * <p>
+     * The SIP media application ID.
+     * </p>
+     * 
      * @param sipMediaApplicationId
+     *        The SIP media application ID.
      */
 
     public void setSipMediaApplicationId(String sipMediaApplicationId) {
@@ -36,7 +46,11 @@ public class DeleteSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * The SIP media application ID.
+     * </p>
+     * 
+     * @return The SIP media application ID.
      */
 
     public String getSipMediaApplicationId() {
@@ -44,7 +58,12 @@ public class DeleteSipMediaApplicationRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The SIP media application ID.
+     * </p>
+     * 
      * @param sipMediaApplicationId
+     *        The SIP media application ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,18 +27,18 @@ public class DescribeDomainRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the domain you are describing.
+     * The identifier of the domain that you are describing.
      * </p>
      */
     private String domainId;
 
     /**
      * <p>
-     * The identifier of the domain you are describing.
+     * The identifier of the domain that you are describing.
      * </p>
      * 
      * @param domainId
-     *        The identifier of the domain you are describing.
+     *        The identifier of the domain that you are describing.
      */
 
     public void setDomainId(String domainId) {
@@ -47,10 +47,10 @@ public class DescribeDomainRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the domain you are describing.
+     * The identifier of the domain that you are describing.
      * </p>
      * 
-     * @return The identifier of the domain you are describing.
+     * @return The identifier of the domain that you are describing.
      */
 
     public String getDomainId() {
@@ -59,11 +59,11 @@ public class DescribeDomainRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the domain you are describing.
+     * The identifier of the domain that you are describing.
      * </p>
      * 
      * @param domainId
-     *        The identifier of the domain you are describing.
+     *        The identifier of the domain that you are describing.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

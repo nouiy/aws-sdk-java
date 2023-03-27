@@ -25,10 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The Voice Connector group ID.
+     * </p>
+     */
     private String voiceConnectorGroupId;
 
     /**
+     * <p>
+     * The Voice Connector group ID.
+     * </p>
+     * 
      * @param voiceConnectorGroupId
+     *        The Voice Connector group ID.
      */
 
     public void setVoiceConnectorGroupId(String voiceConnectorGroupId) {
@@ -36,7 +46,11 @@ public class GetVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector group ID.
+     * </p>
+     * 
+     * @return The Voice Connector group ID.
      */
 
     public String getVoiceConnectorGroupId() {
@@ -44,7 +58,12 @@ public class GetVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The Voice Connector group ID.
+     * </p>
+     * 
      * @param voiceConnectorGroupId
+     *        The Voice Connector group ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

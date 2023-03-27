@@ -33,12 +33,13 @@ public class CreateWorkGroupRequest extends com.amazonaws.AmazonWebServiceReques
     private String name;
     /**
      * <p>
-     * Contains configuration information for creating an Athena SQL workgroup, which includes the location in Amazon S3
-     * where query results are stored, the encryption configuration, if any, used for encrypting query results, whether
-     * the Amazon CloudWatch Metrics are enabled for the workgroup, the limit for the amount of bytes scanned (cutoff)
-     * per query, if it is specified, and whether workgroup's settings (specified with
-     * <code>EnforceWorkGroupConfiguration</code>) in the <code>WorkGroupConfiguration</code> override client-side
-     * settings. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
+     * Contains configuration information for creating an Athena SQL workgroup or Spark enabled Athena workgroup. Athena
+     * SQL workgroup configuration includes the location in Amazon S3 where query and calculation results are stored,
+     * the encryption configuration, if any, used for encrypting query results, whether the Amazon CloudWatch Metrics
+     * are enabled for the workgroup, the limit for the amount of bytes scanned (cutoff) per query, if it is specified,
+     * and whether workgroup's settings (specified with <code>EnforceWorkGroupConfiguration</code>) in the
+     * <code>WorkGroupConfiguration</code> override client-side settings. See
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
      * </p>
      */
     private WorkGroupConfiguration configuration;
@@ -97,19 +98,21 @@ public class CreateWorkGroupRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Contains configuration information for creating an Athena SQL workgroup, which includes the location in Amazon S3
-     * where query results are stored, the encryption configuration, if any, used for encrypting query results, whether
-     * the Amazon CloudWatch Metrics are enabled for the workgroup, the limit for the amount of bytes scanned (cutoff)
-     * per query, if it is specified, and whether workgroup's settings (specified with
-     * <code>EnforceWorkGroupConfiguration</code>) in the <code>WorkGroupConfiguration</code> override client-side
-     * settings. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
+     * Contains configuration information for creating an Athena SQL workgroup or Spark enabled Athena workgroup. Athena
+     * SQL workgroup configuration includes the location in Amazon S3 where query and calculation results are stored,
+     * the encryption configuration, if any, used for encrypting query results, whether the Amazon CloudWatch Metrics
+     * are enabled for the workgroup, the limit for the amount of bytes scanned (cutoff) per query, if it is specified,
+     * and whether workgroup's settings (specified with <code>EnforceWorkGroupConfiguration</code>) in the
+     * <code>WorkGroupConfiguration</code> override client-side settings. See
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
      * </p>
      * 
      * @param configuration
-     *        Contains configuration information for creating an Athena SQL workgroup, which includes the location in
-     *        Amazon S3 where query results are stored, the encryption configuration, if any, used for encrypting query
-     *        results, whether the Amazon CloudWatch Metrics are enabled for the workgroup, the limit for the amount of
-     *        bytes scanned (cutoff) per query, if it is specified, and whether workgroup's settings (specified with
+     *        Contains configuration information for creating an Athena SQL workgroup or Spark enabled Athena workgroup.
+     *        Athena SQL workgroup configuration includes the location in Amazon S3 where query and calculation results
+     *        are stored, the encryption configuration, if any, used for encrypting query results, whether the Amazon
+     *        CloudWatch Metrics are enabled for the workgroup, the limit for the amount of bytes scanned (cutoff) per
+     *        query, if it is specified, and whether workgroup's settings (specified with
      *        <code>EnforceWorkGroupConfiguration</code>) in the <code>WorkGroupConfiguration</code> override
      *        client-side settings. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
      */
@@ -120,18 +123,20 @@ public class CreateWorkGroupRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Contains configuration information for creating an Athena SQL workgroup, which includes the location in Amazon S3
-     * where query results are stored, the encryption configuration, if any, used for encrypting query results, whether
-     * the Amazon CloudWatch Metrics are enabled for the workgroup, the limit for the amount of bytes scanned (cutoff)
-     * per query, if it is specified, and whether workgroup's settings (specified with
-     * <code>EnforceWorkGroupConfiguration</code>) in the <code>WorkGroupConfiguration</code> override client-side
-     * settings. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
+     * Contains configuration information for creating an Athena SQL workgroup or Spark enabled Athena workgroup. Athena
+     * SQL workgroup configuration includes the location in Amazon S3 where query and calculation results are stored,
+     * the encryption configuration, if any, used for encrypting query results, whether the Amazon CloudWatch Metrics
+     * are enabled for the workgroup, the limit for the amount of bytes scanned (cutoff) per query, if it is specified,
+     * and whether workgroup's settings (specified with <code>EnforceWorkGroupConfiguration</code>) in the
+     * <code>WorkGroupConfiguration</code> override client-side settings. See
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
      * </p>
      * 
-     * @return Contains configuration information for creating an Athena SQL workgroup, which includes the location in
-     *         Amazon S3 where query results are stored, the encryption configuration, if any, used for encrypting query
-     *         results, whether the Amazon CloudWatch Metrics are enabled for the workgroup, the limit for the amount of
-     *         bytes scanned (cutoff) per query, if it is specified, and whether workgroup's settings (specified with
+     * @return Contains configuration information for creating an Athena SQL workgroup or Spark enabled Athena
+     *         workgroup. Athena SQL workgroup configuration includes the location in Amazon S3 where query and
+     *         calculation results are stored, the encryption configuration, if any, used for encrypting query results,
+     *         whether the Amazon CloudWatch Metrics are enabled for the workgroup, the limit for the amount of bytes
+     *         scanned (cutoff) per query, if it is specified, and whether workgroup's settings (specified with
      *         <code>EnforceWorkGroupConfiguration</code>) in the <code>WorkGroupConfiguration</code> override
      *         client-side settings. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
      */
@@ -142,19 +147,21 @@ public class CreateWorkGroupRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Contains configuration information for creating an Athena SQL workgroup, which includes the location in Amazon S3
-     * where query results are stored, the encryption configuration, if any, used for encrypting query results, whether
-     * the Amazon CloudWatch Metrics are enabled for the workgroup, the limit for the amount of bytes scanned (cutoff)
-     * per query, if it is specified, and whether workgroup's settings (specified with
-     * <code>EnforceWorkGroupConfiguration</code>) in the <code>WorkGroupConfiguration</code> override client-side
-     * settings. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
+     * Contains configuration information for creating an Athena SQL workgroup or Spark enabled Athena workgroup. Athena
+     * SQL workgroup configuration includes the location in Amazon S3 where query and calculation results are stored,
+     * the encryption configuration, if any, used for encrypting query results, whether the Amazon CloudWatch Metrics
+     * are enabled for the workgroup, the limit for the amount of bytes scanned (cutoff) per query, if it is specified,
+     * and whether workgroup's settings (specified with <code>EnforceWorkGroupConfiguration</code>) in the
+     * <code>WorkGroupConfiguration</code> override client-side settings. See
+     * <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
      * </p>
      * 
      * @param configuration
-     *        Contains configuration information for creating an Athena SQL workgroup, which includes the location in
-     *        Amazon S3 where query results are stored, the encryption configuration, if any, used for encrypting query
-     *        results, whether the Amazon CloudWatch Metrics are enabled for the workgroup, the limit for the amount of
-     *        bytes scanned (cutoff) per query, if it is specified, and whether workgroup's settings (specified with
+     *        Contains configuration information for creating an Athena SQL workgroup or Spark enabled Athena workgroup.
+     *        Athena SQL workgroup configuration includes the location in Amazon S3 where query and calculation results
+     *        are stored, the encryption configuration, if any, used for encrypting query results, whether the Amazon
+     *        CloudWatch Metrics are enabled for the workgroup, the limit for the amount of bytes scanned (cutoff) per
+     *        query, if it is specified, and whether workgroup's settings (specified with
      *        <code>EnforceWorkGroupConfiguration</code>) in the <code>WorkGroupConfiguration</code> override
      *        client-side settings. See <a>WorkGroupConfiguration$EnforceWorkGroupConfiguration</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

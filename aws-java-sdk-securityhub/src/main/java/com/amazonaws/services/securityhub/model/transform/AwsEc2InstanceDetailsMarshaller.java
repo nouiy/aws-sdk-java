@@ -52,6 +52,8 @@ public class AwsEc2InstanceDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VirtualizationType").build();
     private static final MarshallingInfo<StructuredPojo> METADATAOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MetadataOptions").build();
+    private static final MarshallingInfo<StructuredPojo> MONITORING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Monitoring").build();
 
     private static final AwsEc2InstanceDetailsMarshaller instance = new AwsEc2InstanceDetailsMarshaller();
 
@@ -81,6 +83,7 @@ public class AwsEc2InstanceDetailsMarshaller {
             protocolMarshaller.marshall(awsEc2InstanceDetails.getNetworkInterfaces(), NETWORKINTERFACES_BINDING);
             protocolMarshaller.marshall(awsEc2InstanceDetails.getVirtualizationType(), VIRTUALIZATIONTYPE_BINDING);
             protocolMarshaller.marshall(awsEc2InstanceDetails.getMetadataOptions(), METADATAOPTIONS_BINDING);
+            protocolMarshaller.marshall(awsEc2InstanceDetails.getMonitoring(), MONITORING_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

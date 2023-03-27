@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * A phone number for which an order has been placed.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/OrderedPhoneNumber" target="_top">AWS
  *      API Documentation</a>
@@ -25,12 +28,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class OrderedPhoneNumber implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The phone number, in E.164 format.
+     * </p>
+     */
     private String e164PhoneNumber;
-
+    /**
+     * <p>
+     * The phone number status.
+     * </p>
+     */
     private String status;
 
     /**
+     * <p>
+     * The phone number, in E.164 format.
+     * </p>
+     * 
      * @param e164PhoneNumber
+     *        The phone number, in E.164 format.
      */
 
     public void setE164PhoneNumber(String e164PhoneNumber) {
@@ -38,7 +55,11 @@ public class OrderedPhoneNumber implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number, in E.164 format.
+     * </p>
+     * 
+     * @return The phone number, in E.164 format.
      */
 
     public String getE164PhoneNumber() {
@@ -46,7 +67,12 @@ public class OrderedPhoneNumber implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The phone number, in E.164 format.
+     * </p>
+     * 
      * @param e164PhoneNumber
+     *        The phone number, in E.164 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +82,12 @@ public class OrderedPhoneNumber implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The phone number status.
+     * </p>
+     * 
      * @param status
+     *        The phone number status.
      * @see OrderedPhoneNumberStatus
      */
 
@@ -65,7 +96,11 @@ public class OrderedPhoneNumber implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number status.
+     * </p>
+     * 
+     * @return The phone number status.
      * @see OrderedPhoneNumberStatus
      */
 
@@ -74,7 +109,12 @@ public class OrderedPhoneNumber implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The phone number status.
+     * </p>
+     * 
      * @param status
+     *        The phone number status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OrderedPhoneNumberStatus
      */
@@ -85,7 +125,12 @@ public class OrderedPhoneNumber implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The phone number status.
+     * </p>
+     * 
      * @param status
+     *        The phone number status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OrderedPhoneNumberStatus
      */

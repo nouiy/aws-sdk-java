@@ -25,18 +25,50 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The name of the SIP rule.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * The type of trigger assigned to the SIP rule in <code>TriggerValue</code>, currently
+     * <code>RequestUriHostname</code> or <code>ToPhoneNumber</code>.
+     * </p>
+     */
     private String triggerType;
-
+    /**
+     * <p>
+     * If <code>TriggerType</code> is <code>RequestUriHostname</code>, the value can be the outbound host name of a
+     * Voice Connector. If <code>TriggerType</code> is <code>ToPhoneNumber</code>, the value can be a customer-owned
+     * phone number in the E164 format. The <code>SipMediaApplication</code> specified in the <code>SipRule</code> is
+     * triggered if the request URI in an incoming SIP request matches the <code>RequestUriHostname</code>, or if the
+     * <code>To</code> header in the incoming SIP request matches the <code>ToPhoneNumber</code> value.
+     * </p>
+     */
     private String triggerValue;
-
+    /**
+     * <p>
+     * Disables or enables a SIP rule. You must disable SIP rules before you can delete them.
+     * </p>
+     */
     private Boolean disabled;
-
+    /**
+     * <p>
+     * List of SIP media applications, with priority and AWS Region. Only one SIP application per AWS Region can be
+     * used.
+     * </p>
+     */
     private java.util.List<SipRuleTargetApplication> targetApplications;
 
     /**
+     * <p>
+     * The name of the SIP rule.
+     * </p>
+     * 
      * @param name
+     *        The name of the SIP rule.
      */
 
     public void setName(String name) {
@@ -44,7 +76,11 @@ public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the SIP rule.
+     * </p>
+     * 
+     * @return The name of the SIP rule.
      */
 
     public String getName() {
@@ -52,7 +88,12 @@ public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The name of the SIP rule.
+     * </p>
+     * 
      * @param name
+     *        The name of the SIP rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -62,7 +103,14 @@ public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The type of trigger assigned to the SIP rule in <code>TriggerValue</code>, currently
+     * <code>RequestUriHostname</code> or <code>ToPhoneNumber</code>.
+     * </p>
+     * 
      * @param triggerType
+     *        The type of trigger assigned to the SIP rule in <code>TriggerValue</code>, currently
+     *        <code>RequestUriHostname</code> or <code>ToPhoneNumber</code>.
      * @see SipRuleTriggerType
      */
 
@@ -71,7 +119,13 @@ public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * @return
+     * <p>
+     * The type of trigger assigned to the SIP rule in <code>TriggerValue</code>, currently
+     * <code>RequestUriHostname</code> or <code>ToPhoneNumber</code>.
+     * </p>
+     * 
+     * @return The type of trigger assigned to the SIP rule in <code>TriggerValue</code>, currently
+     *         <code>RequestUriHostname</code> or <code>ToPhoneNumber</code>.
      * @see SipRuleTriggerType
      */
 
@@ -80,7 +134,14 @@ public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The type of trigger assigned to the SIP rule in <code>TriggerValue</code>, currently
+     * <code>RequestUriHostname</code> or <code>ToPhoneNumber</code>.
+     * </p>
+     * 
      * @param triggerType
+     *        The type of trigger assigned to the SIP rule in <code>TriggerValue</code>, currently
+     *        <code>RequestUriHostname</code> or <code>ToPhoneNumber</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SipRuleTriggerType
      */
@@ -91,7 +152,14 @@ public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The type of trigger assigned to the SIP rule in <code>TriggerValue</code>, currently
+     * <code>RequestUriHostname</code> or <code>ToPhoneNumber</code>.
+     * </p>
+     * 
      * @param triggerType
+     *        The type of trigger assigned to the SIP rule in <code>TriggerValue</code>, currently
+     *        <code>RequestUriHostname</code> or <code>ToPhoneNumber</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SipRuleTriggerType
      */
@@ -102,7 +170,21 @@ public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * If <code>TriggerType</code> is <code>RequestUriHostname</code>, the value can be the outbound host name of a
+     * Voice Connector. If <code>TriggerType</code> is <code>ToPhoneNumber</code>, the value can be a customer-owned
+     * phone number in the E164 format. The <code>SipMediaApplication</code> specified in the <code>SipRule</code> is
+     * triggered if the request URI in an incoming SIP request matches the <code>RequestUriHostname</code>, or if the
+     * <code>To</code> header in the incoming SIP request matches the <code>ToPhoneNumber</code> value.
+     * </p>
+     * 
      * @param triggerValue
+     *        If <code>TriggerType</code> is <code>RequestUriHostname</code>, the value can be the outbound host name of
+     *        a Voice Connector. If <code>TriggerType</code> is <code>ToPhoneNumber</code>, the value can be a
+     *        customer-owned phone number in the E164 format. The <code>SipMediaApplication</code> specified in the
+     *        <code>SipRule</code> is triggered if the request URI in an incoming SIP request matches the
+     *        <code>RequestUriHostname</code>, or if the <code>To</code> header in the incoming SIP request matches the
+     *        <code>ToPhoneNumber</code> value.
      */
 
     public void setTriggerValue(String triggerValue) {
@@ -110,7 +192,20 @@ public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * @return
+     * <p>
+     * If <code>TriggerType</code> is <code>RequestUriHostname</code>, the value can be the outbound host name of a
+     * Voice Connector. If <code>TriggerType</code> is <code>ToPhoneNumber</code>, the value can be a customer-owned
+     * phone number in the E164 format. The <code>SipMediaApplication</code> specified in the <code>SipRule</code> is
+     * triggered if the request URI in an incoming SIP request matches the <code>RequestUriHostname</code>, or if the
+     * <code>To</code> header in the incoming SIP request matches the <code>ToPhoneNumber</code> value.
+     * </p>
+     * 
+     * @return If <code>TriggerType</code> is <code>RequestUriHostname</code>, the value can be the outbound host name
+     *         of a Voice Connector. If <code>TriggerType</code> is <code>ToPhoneNumber</code>, the value can be a
+     *         customer-owned phone number in the E164 format. The <code>SipMediaApplication</code> specified in the
+     *         <code>SipRule</code> is triggered if the request URI in an incoming SIP request matches the
+     *         <code>RequestUriHostname</code>, or if the <code>To</code> header in the incoming SIP request matches the
+     *         <code>ToPhoneNumber</code> value.
      */
 
     public String getTriggerValue() {
@@ -118,7 +213,21 @@ public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * If <code>TriggerType</code> is <code>RequestUriHostname</code>, the value can be the outbound host name of a
+     * Voice Connector. If <code>TriggerType</code> is <code>ToPhoneNumber</code>, the value can be a customer-owned
+     * phone number in the E164 format. The <code>SipMediaApplication</code> specified in the <code>SipRule</code> is
+     * triggered if the request URI in an incoming SIP request matches the <code>RequestUriHostname</code>, or if the
+     * <code>To</code> header in the incoming SIP request matches the <code>ToPhoneNumber</code> value.
+     * </p>
+     * 
      * @param triggerValue
+     *        If <code>TriggerType</code> is <code>RequestUriHostname</code>, the value can be the outbound host name of
+     *        a Voice Connector. If <code>TriggerType</code> is <code>ToPhoneNumber</code>, the value can be a
+     *        customer-owned phone number in the E164 format. The <code>SipMediaApplication</code> specified in the
+     *        <code>SipRule</code> is triggered if the request URI in an incoming SIP request matches the
+     *        <code>RequestUriHostname</code>, or if the <code>To</code> header in the incoming SIP request matches the
+     *        <code>ToPhoneNumber</code> value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -128,7 +237,12 @@ public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * Disables or enables a SIP rule. You must disable SIP rules before you can delete them.
+     * </p>
+     * 
      * @param disabled
+     *        Disables or enables a SIP rule. You must disable SIP rules before you can delete them.
      */
 
     public void setDisabled(Boolean disabled) {
@@ -136,7 +250,11 @@ public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * @return
+     * <p>
+     * Disables or enables a SIP rule. You must disable SIP rules before you can delete them.
+     * </p>
+     * 
+     * @return Disables or enables a SIP rule. You must disable SIP rules before you can delete them.
      */
 
     public Boolean getDisabled() {
@@ -144,7 +262,12 @@ public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * Disables or enables a SIP rule. You must disable SIP rules before you can delete them.
+     * </p>
+     * 
      * @param disabled
+     *        Disables or enables a SIP rule. You must disable SIP rules before you can delete them.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -154,7 +277,11 @@ public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * @return
+     * <p>
+     * Disables or enables a SIP rule. You must disable SIP rules before you can delete them.
+     * </p>
+     * 
+     * @return Disables or enables a SIP rule. You must disable SIP rules before you can delete them.
      */
 
     public Boolean isDisabled() {
@@ -162,7 +289,13 @@ public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * @return
+     * <p>
+     * List of SIP media applications, with priority and AWS Region. Only one SIP application per AWS Region can be
+     * used.
+     * </p>
+     * 
+     * @return List of SIP media applications, with priority and AWS Region. Only one SIP application per AWS Region can
+     *         be used.
      */
 
     public java.util.List<SipRuleTargetApplication> getTargetApplications() {
@@ -170,7 +303,14 @@ public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * List of SIP media applications, with priority and AWS Region. Only one SIP application per AWS Region can be
+     * used.
+     * </p>
+     * 
      * @param targetApplications
+     *        List of SIP media applications, with priority and AWS Region. Only one SIP application per AWS Region can
+     *        be used.
      */
 
     public void setTargetApplications(java.util.Collection<SipRuleTargetApplication> targetApplications) {
@@ -184,12 +324,18 @@ public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
+     * List of SIP media applications, with priority and AWS Region. Only one SIP application per AWS Region can be
+     * used.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setTargetApplications(java.util.Collection)} or {@link #withTargetApplications(java.util.Collection)} if
      * you want to override the existing values.
      * </p>
      * 
      * @param targetApplications
+     *        List of SIP media applications, with priority and AWS Region. Only one SIP application per AWS Region can
+     *        be used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -204,7 +350,14 @@ public class CreateSipRuleRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * List of SIP media applications, with priority and AWS Region. Only one SIP application per AWS Region can be
+     * used.
+     * </p>
+     * 
      * @param targetApplications
+     *        List of SIP media applications, with priority and AWS Region. Only one SIP application per AWS Region can
+     *        be used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

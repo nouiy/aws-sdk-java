@@ -25,14 +25,32 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class UpdateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The domain ID.
+     * </p>
+     */
     private String voiceProfileDomainId;
-
+    /**
+     * <p>
+     * The name of the voice profile domain.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * The description of the voice profile domain.
+     * </p>
+     */
     private String description;
 
     /**
+     * <p>
+     * The domain ID.
+     * </p>
+     * 
      * @param voiceProfileDomainId
+     *        The domain ID.
      */
 
     public void setVoiceProfileDomainId(String voiceProfileDomainId) {
@@ -40,7 +58,11 @@ public class UpdateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * The domain ID.
+     * </p>
+     * 
+     * @return The domain ID.
      */
 
     public String getVoiceProfileDomainId() {
@@ -48,7 +70,12 @@ public class UpdateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The domain ID.
+     * </p>
+     * 
      * @param voiceProfileDomainId
+     *        The domain ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +85,12 @@ public class UpdateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The name of the voice profile domain.
+     * </p>
+     * 
      * @param name
+     *        The name of the voice profile domain.
      */
 
     public void setName(String name) {
@@ -66,7 +98,11 @@ public class UpdateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the voice profile domain.
+     * </p>
+     * 
+     * @return The name of the voice profile domain.
      */
 
     public String getName() {
@@ -74,7 +110,12 @@ public class UpdateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The name of the voice profile domain.
+     * </p>
+     * 
      * @param name
+     *        The name of the voice profile domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,7 +125,12 @@ public class UpdateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The description of the voice profile domain.
+     * </p>
+     * 
      * @param description
+     *        The description of the voice profile domain.
      */
 
     public void setDescription(String description) {
@@ -92,7 +138,11 @@ public class UpdateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * The description of the voice profile domain.
+     * </p>
+     * 
+     * @return The description of the voice profile domain.
      */
 
     public String getDescription() {
@@ -100,7 +150,12 @@ public class UpdateVoiceProfileDomainRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The description of the voice profile domain.
+     * </p>
+     * 
      * @param description
+     *        The description of the voice profile domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

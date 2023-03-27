@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetVoiceConnectorGroupResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The details of the Voice Connector group.
+     * </p>
+     */
     private VoiceConnectorGroup voiceConnectorGroup;
 
     /**
+     * <p>
+     * The details of the Voice Connector group.
+     * </p>
+     * 
      * @param voiceConnectorGroup
+     *        The details of the Voice Connector group.
      */
 
     public void setVoiceConnectorGroup(VoiceConnectorGroup voiceConnectorGroup) {
@@ -34,7 +44,11 @@ public class GetVoiceConnectorGroupResult extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * @return
+     * <p>
+     * The details of the Voice Connector group.
+     * </p>
+     * 
+     * @return The details of the Voice Connector group.
      */
 
     public VoiceConnectorGroup getVoiceConnectorGroup() {
@@ -42,7 +56,12 @@ public class GetVoiceConnectorGroupResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * The details of the Voice Connector group.
+     * </p>
+     * 
      * @param voiceConnectorGroup
+     *        The details of the Voice Connector group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

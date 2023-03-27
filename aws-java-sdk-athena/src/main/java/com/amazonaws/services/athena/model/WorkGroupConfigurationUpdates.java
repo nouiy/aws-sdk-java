@@ -20,9 +20,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * The configuration information that will be updated for this workgroup, which includes the location in Amazon S3 where
- * query results are stored, the encryption option, if any, used for query results, whether the Amazon CloudWatch
- * Metrics are enabled for the workgroup, whether the workgroup settings override the client-side settings, and the data
- * usage limit for the amount of bytes scanned per query, if it is specified.
+ * query and calculation results are stored, the encryption option, if any, used for query results, whether the Amazon
+ * CloudWatch Metrics are enabled for the workgroup, whether the workgroup settings override the client-side settings,
+ * and the data usage limit for the amount of bytes scanned per query, if it is specified.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/WorkGroupConfigurationUpdates"
@@ -105,6 +105,20 @@ public class WorkGroupConfigurationUpdates implements Serializable, Cloneable, S
     private String executionRole;
 
     private CustomerContentEncryptionConfiguration customerContentEncryptionConfiguration;
+    /**
+     * <p>
+     * Enforces a minimal level of encryption for the workgroup for query and calculation results that are written to
+     * Amazon S3. When enabled, workgroup users can set encryption only to the minimum level set by the administrator or
+     * higher when they submit queries. This setting does not apply to Spark-enabled workgroups.
+     * </p>
+     * <p>
+     * The <code>EnforceWorkGroupConfiguration</code> setting takes precedence over the
+     * <code>EnableMinimumEncryptionConfiguration</code> flag. This means that if
+     * <code>EnforceWorkGroupConfiguration</code> is true, the <code>EnableMinimumEncryptionConfiguration</code> flag is
+     * ignored, and the workgroup configuration for encryption is used.
+     * </p>
+     */
+    private Boolean enableMinimumEncryptionConfiguration;
 
     /**
      * <p>
@@ -687,6 +701,122 @@ public class WorkGroupConfigurationUpdates implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * Enforces a minimal level of encryption for the workgroup for query and calculation results that are written to
+     * Amazon S3. When enabled, workgroup users can set encryption only to the minimum level set by the administrator or
+     * higher when they submit queries. This setting does not apply to Spark-enabled workgroups.
+     * </p>
+     * <p>
+     * The <code>EnforceWorkGroupConfiguration</code> setting takes precedence over the
+     * <code>EnableMinimumEncryptionConfiguration</code> flag. This means that if
+     * <code>EnforceWorkGroupConfiguration</code> is true, the <code>EnableMinimumEncryptionConfiguration</code> flag is
+     * ignored, and the workgroup configuration for encryption is used.
+     * </p>
+     * 
+     * @param enableMinimumEncryptionConfiguration
+     *        Enforces a minimal level of encryption for the workgroup for query and calculation results that are
+     *        written to Amazon S3. When enabled, workgroup users can set encryption only to the minimum level set by
+     *        the administrator or higher when they submit queries. This setting does not apply to Spark-enabled
+     *        workgroups.</p>
+     *        <p>
+     *        The <code>EnforceWorkGroupConfiguration</code> setting takes precedence over the
+     *        <code>EnableMinimumEncryptionConfiguration</code> flag. This means that if
+     *        <code>EnforceWorkGroupConfiguration</code> is true, the <code>EnableMinimumEncryptionConfiguration</code>
+     *        flag is ignored, and the workgroup configuration for encryption is used.
+     */
+
+    public void setEnableMinimumEncryptionConfiguration(Boolean enableMinimumEncryptionConfiguration) {
+        this.enableMinimumEncryptionConfiguration = enableMinimumEncryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Enforces a minimal level of encryption for the workgroup for query and calculation results that are written to
+     * Amazon S3. When enabled, workgroup users can set encryption only to the minimum level set by the administrator or
+     * higher when they submit queries. This setting does not apply to Spark-enabled workgroups.
+     * </p>
+     * <p>
+     * The <code>EnforceWorkGroupConfiguration</code> setting takes precedence over the
+     * <code>EnableMinimumEncryptionConfiguration</code> flag. This means that if
+     * <code>EnforceWorkGroupConfiguration</code> is true, the <code>EnableMinimumEncryptionConfiguration</code> flag is
+     * ignored, and the workgroup configuration for encryption is used.
+     * </p>
+     * 
+     * @return Enforces a minimal level of encryption for the workgroup for query and calculation results that are
+     *         written to Amazon S3. When enabled, workgroup users can set encryption only to the minimum level set by
+     *         the administrator or higher when they submit queries. This setting does not apply to Spark-enabled
+     *         workgroups.</p>
+     *         <p>
+     *         The <code>EnforceWorkGroupConfiguration</code> setting takes precedence over the
+     *         <code>EnableMinimumEncryptionConfiguration</code> flag. This means that if
+     *         <code>EnforceWorkGroupConfiguration</code> is true, the <code>EnableMinimumEncryptionConfiguration</code>
+     *         flag is ignored, and the workgroup configuration for encryption is used.
+     */
+
+    public Boolean getEnableMinimumEncryptionConfiguration() {
+        return this.enableMinimumEncryptionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Enforces a minimal level of encryption for the workgroup for query and calculation results that are written to
+     * Amazon S3. When enabled, workgroup users can set encryption only to the minimum level set by the administrator or
+     * higher when they submit queries. This setting does not apply to Spark-enabled workgroups.
+     * </p>
+     * <p>
+     * The <code>EnforceWorkGroupConfiguration</code> setting takes precedence over the
+     * <code>EnableMinimumEncryptionConfiguration</code> flag. This means that if
+     * <code>EnforceWorkGroupConfiguration</code> is true, the <code>EnableMinimumEncryptionConfiguration</code> flag is
+     * ignored, and the workgroup configuration for encryption is used.
+     * </p>
+     * 
+     * @param enableMinimumEncryptionConfiguration
+     *        Enforces a minimal level of encryption for the workgroup for query and calculation results that are
+     *        written to Amazon S3. When enabled, workgroup users can set encryption only to the minimum level set by
+     *        the administrator or higher when they submit queries. This setting does not apply to Spark-enabled
+     *        workgroups.</p>
+     *        <p>
+     *        The <code>EnforceWorkGroupConfiguration</code> setting takes precedence over the
+     *        <code>EnableMinimumEncryptionConfiguration</code> flag. This means that if
+     *        <code>EnforceWorkGroupConfiguration</code> is true, the <code>EnableMinimumEncryptionConfiguration</code>
+     *        flag is ignored, and the workgroup configuration for encryption is used.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkGroupConfigurationUpdates withEnableMinimumEncryptionConfiguration(Boolean enableMinimumEncryptionConfiguration) {
+        setEnableMinimumEncryptionConfiguration(enableMinimumEncryptionConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Enforces a minimal level of encryption for the workgroup for query and calculation results that are written to
+     * Amazon S3. When enabled, workgroup users can set encryption only to the minimum level set by the administrator or
+     * higher when they submit queries. This setting does not apply to Spark-enabled workgroups.
+     * </p>
+     * <p>
+     * The <code>EnforceWorkGroupConfiguration</code> setting takes precedence over the
+     * <code>EnableMinimumEncryptionConfiguration</code> flag. This means that if
+     * <code>EnforceWorkGroupConfiguration</code> is true, the <code>EnableMinimumEncryptionConfiguration</code> flag is
+     * ignored, and the workgroup configuration for encryption is used.
+     * </p>
+     * 
+     * @return Enforces a minimal level of encryption for the workgroup for query and calculation results that are
+     *         written to Amazon S3. When enabled, workgroup users can set encryption only to the minimum level set by
+     *         the administrator or higher when they submit queries. This setting does not apply to Spark-enabled
+     *         workgroups.</p>
+     *         <p>
+     *         The <code>EnforceWorkGroupConfiguration</code> setting takes precedence over the
+     *         <code>EnableMinimumEncryptionConfiguration</code> flag. This means that if
+     *         <code>EnforceWorkGroupConfiguration</code> is true, the <code>EnableMinimumEncryptionConfiguration</code>
+     *         flag is ignored, and the workgroup configuration for encryption is used.
+     */
+
+    public Boolean isEnableMinimumEncryptionConfiguration() {
+        return this.enableMinimumEncryptionConfiguration;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -719,7 +849,9 @@ public class WorkGroupConfigurationUpdates implements Serializable, Cloneable, S
         if (getExecutionRole() != null)
             sb.append("ExecutionRole: ").append(getExecutionRole()).append(",");
         if (getCustomerContentEncryptionConfiguration() != null)
-            sb.append("CustomerContentEncryptionConfiguration: ").append(getCustomerContentEncryptionConfiguration());
+            sb.append("CustomerContentEncryptionConfiguration: ").append(getCustomerContentEncryptionConfiguration()).append(",");
+        if (getEnableMinimumEncryptionConfiguration() != null)
+            sb.append("EnableMinimumEncryptionConfiguration: ").append(getEnableMinimumEncryptionConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -783,6 +915,11 @@ public class WorkGroupConfigurationUpdates implements Serializable, Cloneable, S
         if (other.getCustomerContentEncryptionConfiguration() != null
                 && other.getCustomerContentEncryptionConfiguration().equals(this.getCustomerContentEncryptionConfiguration()) == false)
             return false;
+        if (other.getEnableMinimumEncryptionConfiguration() == null ^ this.getEnableMinimumEncryptionConfiguration() == null)
+            return false;
+        if (other.getEnableMinimumEncryptionConfiguration() != null
+                && other.getEnableMinimumEncryptionConfiguration().equals(this.getEnableMinimumEncryptionConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -803,6 +940,7 @@ public class WorkGroupConfigurationUpdates implements Serializable, Cloneable, S
         hashCode = prime * hashCode + ((getAdditionalConfiguration() == null) ? 0 : getAdditionalConfiguration().hashCode());
         hashCode = prime * hashCode + ((getExecutionRole() == null) ? 0 : getExecutionRole().hashCode());
         hashCode = prime * hashCode + ((getCustomerContentEncryptionConfiguration() == null) ? 0 : getCustomerContentEncryptionConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getEnableMinimumEncryptionConfiguration() == null) ? 0 : getEnableMinimumEncryptionConfiguration().hashCode());
         return hashCode;
     }
 

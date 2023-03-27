@@ -15,7 +15,9 @@ package com.amazonaws.services.chimesdkvoice.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p>
+ * The number of customer requests exceeds the request rate limit.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ThrottledClientException extends com.amazonaws.services.chimesdkvoice.model.AmazonChimeSDKVoiceException {

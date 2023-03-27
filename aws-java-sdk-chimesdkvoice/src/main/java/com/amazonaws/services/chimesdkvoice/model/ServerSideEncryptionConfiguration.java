@@ -18,6 +18,14 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * A structure that contains the configuration settings for server-side encryption.
+ * </p>
+ * <note>
+ * <p>
+ * We only support symmetric keys. Do not use asymmetric or HMAC keys, or KMS aliases.
+ * </p>
+ * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/ServerSideEncryptionConfiguration"
  *      target="_top">AWS API Documentation</a>
@@ -25,10 +33,23 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ServerSideEncryptionConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ARN of the KMS key used to encrypt the enrollment data in a voice profile domain. Asymmetric customer managed
+     * keys are not supported.
+     * </p>
+     */
     private String kmsKeyArn;
 
     /**
+     * <p>
+     * The ARN of the KMS key used to encrypt the enrollment data in a voice profile domain. Asymmetric customer managed
+     * keys are not supported.
+     * </p>
+     * 
      * @param kmsKeyArn
+     *        The ARN of the KMS key used to encrypt the enrollment data in a voice profile domain. Asymmetric customer
+     *        managed keys are not supported.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -36,7 +57,13 @@ public class ServerSideEncryptionConfiguration implements Serializable, Cloneabl
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of the KMS key used to encrypt the enrollment data in a voice profile domain. Asymmetric customer managed
+     * keys are not supported.
+     * </p>
+     * 
+     * @return The ARN of the KMS key used to encrypt the enrollment data in a voice profile domain. Asymmetric customer
+     *         managed keys are not supported.
      */
 
     public String getKmsKeyArn() {
@@ -44,7 +71,14 @@ public class ServerSideEncryptionConfiguration implements Serializable, Cloneabl
     }
 
     /**
+     * <p>
+     * The ARN of the KMS key used to encrypt the enrollment data in a voice profile domain. Asymmetric customer managed
+     * keys are not supported.
+     * </p>
+     * 
      * @param kmsKeyArn
+     *        The ARN of the KMS key used to encrypt the enrollment data in a voice profile domain. Asymmetric customer
+     *        managed keys are not supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

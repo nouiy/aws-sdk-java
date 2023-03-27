@@ -18,6 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * If a phone number action fails for one or more of the phone numbers in a request, a list of the failed phone numbers
+ * is returned, along with error codes and error messages.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/PhoneNumberError" target="_top">AWS
  *      API Documentation</a>
@@ -25,14 +29,32 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PhoneNumberError implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The phone number ID for which the action failed.
+     * </p>
+     */
     private String phoneNumberId;
-
+    /**
+     * <p>
+     * The error code.
+     * </p>
+     */
     private String errorCode;
-
+    /**
+     * <p>
+     * The error message.
+     * </p>
+     */
     private String errorMessage;
 
     /**
+     * <p>
+     * The phone number ID for which the action failed.
+     * </p>
+     * 
      * @param phoneNumberId
+     *        The phone number ID for which the action failed.
      */
 
     public void setPhoneNumberId(String phoneNumberId) {
@@ -40,7 +62,11 @@ public class PhoneNumberError implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The phone number ID for which the action failed.
+     * </p>
+     * 
+     * @return The phone number ID for which the action failed.
      */
 
     public String getPhoneNumberId() {
@@ -48,7 +74,12 @@ public class PhoneNumberError implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The phone number ID for which the action failed.
+     * </p>
+     * 
      * @param phoneNumberId
+     *        The phone number ID for which the action failed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +89,12 @@ public class PhoneNumberError implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The error code.
+     * </p>
+     * 
      * @param errorCode
+     *        The error code.
      * @see ErrorCode
      */
 
@@ -67,7 +103,11 @@ public class PhoneNumberError implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The error code.
+     * </p>
+     * 
+     * @return The error code.
      * @see ErrorCode
      */
 
@@ -76,7 +116,12 @@ public class PhoneNumberError implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The error code.
+     * </p>
+     * 
      * @param errorCode
+     *        The error code.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ErrorCode
      */
@@ -87,7 +132,12 @@ public class PhoneNumberError implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The error code.
+     * </p>
+     * 
      * @param errorCode
+     *        The error code.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ErrorCode
      */
@@ -98,7 +148,12 @@ public class PhoneNumberError implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The error message.
+     * </p>
+     * 
      * @param errorMessage
+     *        The error message.
      */
 
     public void setErrorMessage(String errorMessage) {
@@ -106,7 +161,11 @@ public class PhoneNumberError implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * The error message.
+     * </p>
+     * 
+     * @return The error message.
      */
 
     public String getErrorMessage() {
@@ -114,7 +173,12 @@ public class PhoneNumberError implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The error message.
+     * </p>
+     * 
      * @param errorMessage
+     *        The error message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

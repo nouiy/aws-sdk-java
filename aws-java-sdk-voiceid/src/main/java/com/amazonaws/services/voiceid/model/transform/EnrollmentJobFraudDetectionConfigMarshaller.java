@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.voiceid.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +32,8 @@ public class EnrollmentJobFraudDetectionConfigMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FraudDetectionAction").build();
     private static final MarshallingInfo<Integer> RISKTHRESHOLD_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RiskThreshold").build();
+    private static final MarshallingInfo<List> WATCHLISTIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("WatchlistIds").build();
 
     private static final EnrollmentJobFraudDetectionConfigMarshaller instance = new EnrollmentJobFraudDetectionConfigMarshaller();
 
@@ -50,6 +53,7 @@ public class EnrollmentJobFraudDetectionConfigMarshaller {
         try {
             protocolMarshaller.marshall(enrollmentJobFraudDetectionConfig.getFraudDetectionAction(), FRAUDDETECTIONACTION_BINDING);
             protocolMarshaller.marshall(enrollmentJobFraudDetectionConfig.getRiskThreshold(), RISKTHRESHOLD_BINDING);
+            protocolMarshaller.marshall(enrollmentJobFraudDetectionConfig.getWatchlistIds(), WATCHLISTIDS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

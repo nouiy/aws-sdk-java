@@ -29,6 +29,8 @@ public class HlsId3SegmentTaggingScheduleActionSettingsMarshaller {
 
     private static final MarshallingInfo<String> TAG_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tag").build();
+    private static final MarshallingInfo<String> ID3_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("id3").build();
 
     private static final HlsId3SegmentTaggingScheduleActionSettingsMarshaller instance = new HlsId3SegmentTaggingScheduleActionSettingsMarshaller();
 
@@ -47,6 +49,7 @@ public class HlsId3SegmentTaggingScheduleActionSettingsMarshaller {
 
         try {
             protocolMarshaller.marshall(hlsId3SegmentTaggingScheduleActionSettings.getTag(), TAG_BINDING);
+            protocolMarshaller.marshall(hlsId3SegmentTaggingScheduleActionSettings.getId3(), ID3_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

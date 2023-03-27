@@ -18,6 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * A target SIP media application and other details, such as priority and AWS Region, to be specified in the SIP rule.
+ * Only one SIP rule per AWS Region can be provided.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/SipRuleTargetApplication"
  *      target="_top">AWS API Documentation</a>
@@ -25,14 +29,32 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class SipRuleTargetApplication implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ID of a rule's target SIP media application.
+     * </p>
+     */
     private String sipMediaApplicationId;
-
+    /**
+     * <p>
+     * The priority setting of a rule's target SIP media application.
+     * </p>
+     */
     private Integer priority;
-
+    /**
+     * <p>
+     * The AWS Region of a rule's target SIP media application.
+     * </p>
+     */
     private String awsRegion;
 
     /**
+     * <p>
+     * The ID of a rule's target SIP media application.
+     * </p>
+     * 
      * @param sipMediaApplicationId
+     *        The ID of a rule's target SIP media application.
      */
 
     public void setSipMediaApplicationId(String sipMediaApplicationId) {
@@ -40,7 +62,11 @@ public class SipRuleTargetApplication implements Serializable, Cloneable, Struct
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of a rule's target SIP media application.
+     * </p>
+     * 
+     * @return The ID of a rule's target SIP media application.
      */
 
     public String getSipMediaApplicationId() {
@@ -48,7 +74,12 @@ public class SipRuleTargetApplication implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * The ID of a rule's target SIP media application.
+     * </p>
+     * 
      * @param sipMediaApplicationId
+     *        The ID of a rule's target SIP media application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +89,12 @@ public class SipRuleTargetApplication implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * The priority setting of a rule's target SIP media application.
+     * </p>
+     * 
      * @param priority
+     *        The priority setting of a rule's target SIP media application.
      */
 
     public void setPriority(Integer priority) {
@@ -66,7 +102,11 @@ public class SipRuleTargetApplication implements Serializable, Cloneable, Struct
     }
 
     /**
-     * @return
+     * <p>
+     * The priority setting of a rule's target SIP media application.
+     * </p>
+     * 
+     * @return The priority setting of a rule's target SIP media application.
      */
 
     public Integer getPriority() {
@@ -74,7 +114,12 @@ public class SipRuleTargetApplication implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * The priority setting of a rule's target SIP media application.
+     * </p>
+     * 
      * @param priority
+     *        The priority setting of a rule's target SIP media application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,7 +129,12 @@ public class SipRuleTargetApplication implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * The AWS Region of a rule's target SIP media application.
+     * </p>
+     * 
      * @param awsRegion
+     *        The AWS Region of a rule's target SIP media application.
      */
 
     public void setAwsRegion(String awsRegion) {
@@ -92,7 +142,11 @@ public class SipRuleTargetApplication implements Serializable, Cloneable, Struct
     }
 
     /**
-     * @return
+     * <p>
+     * The AWS Region of a rule's target SIP media application.
+     * </p>
+     * 
+     * @return The AWS Region of a rule's target SIP media application.
      */
 
     public String getAwsRegion() {
@@ -100,7 +154,12 @@ public class SipRuleTargetApplication implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * The AWS Region of a rule's target SIP media application.
+     * </p>
+     * 
      * @param awsRegion
+     *        The AWS Region of a rule's target SIP media application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

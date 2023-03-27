@@ -49,6 +49,8 @@ public class WorkGroupConfigurationUpdatesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExecutionRole").build();
     private static final MarshallingInfo<StructuredPojo> CUSTOMERCONTENTENCRYPTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomerContentEncryptionConfiguration").build();
+    private static final MarshallingInfo<Boolean> ENABLEMINIMUMENCRYPTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnableMinimumEncryptionConfiguration").build();
 
     private static final WorkGroupConfigurationUpdatesMarshaller instance = new WorkGroupConfigurationUpdatesMarshaller();
 
@@ -79,6 +81,7 @@ public class WorkGroupConfigurationUpdatesMarshaller {
             protocolMarshaller.marshall(workGroupConfigurationUpdates.getExecutionRole(), EXECUTIONROLE_BINDING);
             protocolMarshaller.marshall(workGroupConfigurationUpdates.getCustomerContentEncryptionConfiguration(),
                     CUSTOMERCONTENTENCRYPTIONCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(workGroupConfigurationUpdates.getEnableMinimumEncryptionConfiguration(), ENABLEMINIMUMENCRYPTIONCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

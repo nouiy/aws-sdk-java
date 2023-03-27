@@ -25,10 +25,20 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DeleteVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The Voice Connector Group ID.
+     * </p>
+     */
     private String voiceConnectorGroupId;
 
     /**
+     * <p>
+     * The Voice Connector Group ID.
+     * </p>
+     * 
      * @param voiceConnectorGroupId
+     *        The Voice Connector Group ID.
      */
 
     public void setVoiceConnectorGroupId(String voiceConnectorGroupId) {
@@ -36,7 +46,11 @@ public class DeleteVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
-     * @return
+     * <p>
+     * The Voice Connector Group ID.
+     * </p>
+     * 
+     * @return The Voice Connector Group ID.
      */
 
     public String getVoiceConnectorGroupId() {
@@ -44,7 +58,12 @@ public class DeleteVoiceConnectorGroupRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The Voice Connector Group ID.
+     * </p>
+     * 
      * @param voiceConnectorGroupId
+     *        The Voice Connector Group ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

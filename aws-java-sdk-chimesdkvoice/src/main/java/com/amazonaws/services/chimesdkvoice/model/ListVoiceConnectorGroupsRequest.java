@@ -25,12 +25,26 @@ import com.amazonaws.AmazonWebServiceRequest;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListVoiceConnectorGroupsRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     */
     private String nextToken;
-
+    /**
+     * <p>
+     * The maximum number of results to return in a single call.
+     * </p>
+     */
     private Integer maxResults;
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -38,7 +52,11 @@ public class ListVoiceConnectorGroupsRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
+     * @return The token used to return the next page of results.
      */
 
     public String getNextToken() {
@@ -46,7 +64,12 @@ public class ListVoiceConnectorGroupsRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The token used to return the next page of results.
+     * </p>
+     * 
      * @param nextToken
+     *        The token used to return the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +79,12 @@ public class ListVoiceConnectorGroupsRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The maximum number of results to return in a single call.
+     * </p>
+     * 
      * @param maxResults
+     *        The maximum number of results to return in a single call.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -64,7 +92,11 @@ public class ListVoiceConnectorGroupsRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
-     * @return
+     * <p>
+     * The maximum number of results to return in a single call.
+     * </p>
+     * 
+     * @return The maximum number of results to return in a single call.
      */
 
     public Integer getMaxResults() {
@@ -72,7 +104,12 @@ public class ListVoiceConnectorGroupsRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The maximum number of results to return in a single call.
+     * </p>
+     * 
      * @param maxResults
+     *        The maximum number of results to return in a single call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

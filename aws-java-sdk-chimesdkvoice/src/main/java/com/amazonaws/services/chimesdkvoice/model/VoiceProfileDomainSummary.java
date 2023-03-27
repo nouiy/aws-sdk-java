@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * A high-level overview of a voice profile domain.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/VoiceProfileDomainSummary"
  *      target="_top">AWS API Documentation</a>
@@ -25,20 +28,50 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class VoiceProfileDomainSummary implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The ID of the voice profile domain summary.
+     * </p>
+     */
     private String voiceProfileDomainId;
-
+    /**
+     * <p>
+     * The ARN of a voice profile in a voice profile domain summary.
+     * </p>
+     */
     private String voiceProfileDomainArn;
-
+    /**
+     * <p>
+     * The name of the voice profile domain summary.
+     * </p>
+     */
     private String name;
-
+    /**
+     * <p>
+     * Describes the voice profile domain summary.
+     * </p>
+     */
     private String description;
-
+    /**
+     * <p>
+     * The time at which the voice profile domain summary was created.
+     * </p>
+     */
     private java.util.Date createdTimestamp;
-
+    /**
+     * <p>
+     * The time at which the voice profile domain summary was last updated.
+     * </p>
+     */
     private java.util.Date updatedTimestamp;
 
     /**
+     * <p>
+     * The ID of the voice profile domain summary.
+     * </p>
+     * 
      * @param voiceProfileDomainId
+     *        The ID of the voice profile domain summary.
      */
 
     public void setVoiceProfileDomainId(String voiceProfileDomainId) {
@@ -46,7 +79,11 @@ public class VoiceProfileDomainSummary implements Serializable, Cloneable, Struc
     }
 
     /**
-     * @return
+     * <p>
+     * The ID of the voice profile domain summary.
+     * </p>
+     * 
+     * @return The ID of the voice profile domain summary.
      */
 
     public String getVoiceProfileDomainId() {
@@ -54,7 +91,12 @@ public class VoiceProfileDomainSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The ID of the voice profile domain summary.
+     * </p>
+     * 
      * @param voiceProfileDomainId
+     *        The ID of the voice profile domain summary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -64,7 +106,12 @@ public class VoiceProfileDomainSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The ARN of a voice profile in a voice profile domain summary.
+     * </p>
+     * 
      * @param voiceProfileDomainArn
+     *        The ARN of a voice profile in a voice profile domain summary.
      */
 
     public void setVoiceProfileDomainArn(String voiceProfileDomainArn) {
@@ -72,7 +119,11 @@ public class VoiceProfileDomainSummary implements Serializable, Cloneable, Struc
     }
 
     /**
-     * @return
+     * <p>
+     * The ARN of a voice profile in a voice profile domain summary.
+     * </p>
+     * 
+     * @return The ARN of a voice profile in a voice profile domain summary.
      */
 
     public String getVoiceProfileDomainArn() {
@@ -80,7 +131,12 @@ public class VoiceProfileDomainSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The ARN of a voice profile in a voice profile domain summary.
+     * </p>
+     * 
      * @param voiceProfileDomainArn
+     *        The ARN of a voice profile in a voice profile domain summary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,7 +146,12 @@ public class VoiceProfileDomainSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The name of the voice profile domain summary.
+     * </p>
+     * 
      * @param name
+     *        The name of the voice profile domain summary.
      */
 
     public void setName(String name) {
@@ -98,7 +159,11 @@ public class VoiceProfileDomainSummary implements Serializable, Cloneable, Struc
     }
 
     /**
-     * @return
+     * <p>
+     * The name of the voice profile domain summary.
+     * </p>
+     * 
+     * @return The name of the voice profile domain summary.
      */
 
     public String getName() {
@@ -106,7 +171,12 @@ public class VoiceProfileDomainSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The name of the voice profile domain summary.
+     * </p>
+     * 
      * @param name
+     *        The name of the voice profile domain summary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -116,7 +186,12 @@ public class VoiceProfileDomainSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * Describes the voice profile domain summary.
+     * </p>
+     * 
      * @param description
+     *        Describes the voice profile domain summary.
      */
 
     public void setDescription(String description) {
@@ -124,7 +199,11 @@ public class VoiceProfileDomainSummary implements Serializable, Cloneable, Struc
     }
 
     /**
-     * @return
+     * <p>
+     * Describes the voice profile domain summary.
+     * </p>
+     * 
+     * @return Describes the voice profile domain summary.
      */
 
     public String getDescription() {
@@ -132,7 +211,12 @@ public class VoiceProfileDomainSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * Describes the voice profile domain summary.
+     * </p>
+     * 
      * @param description
+     *        Describes the voice profile domain summary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,7 +226,12 @@ public class VoiceProfileDomainSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The time at which the voice profile domain summary was created.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The time at which the voice profile domain summary was created.
      */
 
     public void setCreatedTimestamp(java.util.Date createdTimestamp) {
@@ -150,7 +239,11 @@ public class VoiceProfileDomainSummary implements Serializable, Cloneable, Struc
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the voice profile domain summary was created.
+     * </p>
+     * 
+     * @return The time at which the voice profile domain summary was created.
      */
 
     public java.util.Date getCreatedTimestamp() {
@@ -158,7 +251,12 @@ public class VoiceProfileDomainSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The time at which the voice profile domain summary was created.
+     * </p>
+     * 
      * @param createdTimestamp
+     *        The time at which the voice profile domain summary was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,7 +266,12 @@ public class VoiceProfileDomainSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The time at which the voice profile domain summary was last updated.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The time at which the voice profile domain summary was last updated.
      */
 
     public void setUpdatedTimestamp(java.util.Date updatedTimestamp) {
@@ -176,7 +279,11 @@ public class VoiceProfileDomainSummary implements Serializable, Cloneable, Struc
     }
 
     /**
-     * @return
+     * <p>
+     * The time at which the voice profile domain summary was last updated.
+     * </p>
+     * 
+     * @return The time at which the voice profile domain summary was last updated.
      */
 
     public java.util.Date getUpdatedTimestamp() {
@@ -184,7 +291,12 @@ public class VoiceProfileDomainSummary implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The time at which the voice profile domain summary was last updated.
+     * </p>
+     * 
      * @param updatedTimestamp
+     *        The time at which the voice profile domain summary was last updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -18,6 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * The termination health details, including the source IP address and timestamp of the last successful
+ * <code>SIP OPTIONS</code> message from your SIP infrastructure.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-voice-2022-08-03/TerminationHealth" target="_top">AWS
  *      API Documentation</a>
@@ -25,12 +29,26 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class TerminationHealth implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The timestamp, in ISO 8601 format.
+     * </p>
+     */
     private java.util.Date timestamp;
-
+    /**
+     * <p>
+     * The source IP address.
+     * </p>
+     */
     private String source;
 
     /**
+     * <p>
+     * The timestamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param timestamp
+     *        The timestamp, in ISO 8601 format.
      */
 
     public void setTimestamp(java.util.Date timestamp) {
@@ -38,7 +56,11 @@ public class TerminationHealth implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The timestamp, in ISO 8601 format.
+     * </p>
+     * 
+     * @return The timestamp, in ISO 8601 format.
      */
 
     public java.util.Date getTimestamp() {
@@ -46,7 +68,12 @@ public class TerminationHealth implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The timestamp, in ISO 8601 format.
+     * </p>
+     * 
      * @param timestamp
+     *        The timestamp, in ISO 8601 format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +83,12 @@ public class TerminationHealth implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The source IP address.
+     * </p>
+     * 
      * @param source
+     *        The source IP address.
      */
 
     public void setSource(String source) {
@@ -64,7 +96,11 @@ public class TerminationHealth implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * @return
+     * <p>
+     * The source IP address.
+     * </p>
+     * 
+     * @return The source IP address.
      */
 
     public String getSource() {
@@ -72,7 +108,12 @@ public class TerminationHealth implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The source IP address.
+     * </p>
+     * 
      * @param source
+     *        The source IP address.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

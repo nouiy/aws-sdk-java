@@ -23,10 +23,20 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class StartSpeakerSearchTaskResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * The details of the speaker search task.
+     * </p>
+     */
     private SpeakerSearchTask speakerSearchTask;
 
     /**
+     * <p>
+     * The details of the speaker search task.
+     * </p>
+     * 
      * @param speakerSearchTask
+     *        The details of the speaker search task.
      */
 
     public void setSpeakerSearchTask(SpeakerSearchTask speakerSearchTask) {
@@ -34,7 +44,11 @@ public class StartSpeakerSearchTaskResult extends com.amazonaws.AmazonWebService
     }
 
     /**
-     * @return
+     * <p>
+     * The details of the speaker search task.
+     * </p>
+     * 
+     * @return The details of the speaker search task.
      */
 
     public SpeakerSearchTask getSpeakerSearchTask() {
@@ -42,7 +56,12 @@ public class StartSpeakerSearchTaskResult extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * The details of the speaker search task.
+     * </p>
+     * 
      * @param speakerSearchTask
+     *        The details of the speaker search task.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
