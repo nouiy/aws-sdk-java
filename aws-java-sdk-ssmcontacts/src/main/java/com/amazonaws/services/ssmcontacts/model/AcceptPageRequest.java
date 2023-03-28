@@ -51,7 +51,7 @@ public class AcceptPageRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String note;
     /**
      * <p>
-     * The accept code is a 6-digit code used to acknowledge the page.
+     * A 6-digit code used to acknowledge the page.
      * </p>
      */
     private String acceptCode;
@@ -251,11 +251,11 @@ public class AcceptPageRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The accept code is a 6-digit code used to acknowledge the page.
+     * A 6-digit code used to acknowledge the page.
      * </p>
      * 
      * @param acceptCode
-     *        The accept code is a 6-digit code used to acknowledge the page.
+     *        A 6-digit code used to acknowledge the page.
      */
 
     public void setAcceptCode(String acceptCode) {
@@ -264,10 +264,10 @@ public class AcceptPageRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The accept code is a 6-digit code used to acknowledge the page.
+     * A 6-digit code used to acknowledge the page.
      * </p>
      * 
-     * @return The accept code is a 6-digit code used to acknowledge the page.
+     * @return A 6-digit code used to acknowledge the page.
      */
 
     public String getAcceptCode() {
@@ -276,11 +276,11 @@ public class AcceptPageRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The accept code is a 6-digit code used to acknowledge the page.
+     * A 6-digit code used to acknowledge the page.
      * </p>
      * 
      * @param acceptCode
-     *        The accept code is a 6-digit code used to acknowledge the page.
+     *        A 6-digit code used to acknowledge the page.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

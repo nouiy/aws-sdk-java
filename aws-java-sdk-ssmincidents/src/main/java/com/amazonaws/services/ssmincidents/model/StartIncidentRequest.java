@@ -70,8 +70,8 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
     private Integer impact;
     /**
      * <p>
-     * Add related items to the incident for other responders to use. Related items are AWS resources, external links,
-     * or files uploaded to an Amazon S3 bucket.
+     * Add related items to the incident for other responders to use. Related items are Amazon Web Services resources,
+     * external links, or files uploaded to an Amazon S3 bucket.
      * </p>
      */
     private java.util.List<RelatedItem> relatedItems;
@@ -366,12 +366,12 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Add related items to the incident for other responders to use. Related items are AWS resources, external links,
-     * or files uploaded to an Amazon S3 bucket.
+     * Add related items to the incident for other responders to use. Related items are Amazon Web Services resources,
+     * external links, or files uploaded to an Amazon S3 bucket.
      * </p>
      * 
-     * @return Add related items to the incident for other responders to use. Related items are AWS resources, external
-     *         links, or files uploaded to an Amazon S3 bucket.
+     * @return Add related items to the incident for other responders to use. Related items are Amazon Web Services
+     *         resources, external links, or files uploaded to an Amazon S3 bucket.
      */
 
     public java.util.List<RelatedItem> getRelatedItems() {
@@ -380,13 +380,13 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Add related items to the incident for other responders to use. Related items are AWS resources, external links,
-     * or files uploaded to an Amazon S3 bucket.
+     * Add related items to the incident for other responders to use. Related items are Amazon Web Services resources,
+     * external links, or files uploaded to an Amazon S3 bucket.
      * </p>
      * 
      * @param relatedItems
-     *        Add related items to the incident for other responders to use. Related items are AWS resources, external
-     *        links, or files uploaded to an Amazon S3 bucket.
+     *        Add related items to the incident for other responders to use. Related items are Amazon Web Services
+     *        resources, external links, or files uploaded to an Amazon S3 bucket.
      */
 
     public void setRelatedItems(java.util.Collection<RelatedItem> relatedItems) {
@@ -400,8 +400,8 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Add related items to the incident for other responders to use. Related items are AWS resources, external links,
-     * or files uploaded to an Amazon S3 bucket.
+     * Add related items to the incident for other responders to use. Related items are Amazon Web Services resources,
+     * external links, or files uploaded to an Amazon S3 bucket.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -410,8 +410,8 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param relatedItems
-     *        Add related items to the incident for other responders to use. Related items are AWS resources, external
-     *        links, or files uploaded to an Amazon S3 bucket.
+     *        Add related items to the incident for other responders to use. Related items are Amazon Web Services
+     *        resources, external links, or files uploaded to an Amazon S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -427,13 +427,13 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Add related items to the incident for other responders to use. Related items are AWS resources, external links,
-     * or files uploaded to an Amazon S3 bucket.
+     * Add related items to the incident for other responders to use. Related items are Amazon Web Services resources,
+     * external links, or files uploaded to an Amazon S3 bucket.
      * </p>
      * 
      * @param relatedItems
-     *        Add related items to the incident for other responders to use. Related items are AWS resources, external
-     *        links, or files uploaded to an Amazon S3 bucket.
+     *        Add related items to the incident for other responders to use. Related items are Amazon Web Services
+     *        resources, external links, or files uploaded to an Amazon S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

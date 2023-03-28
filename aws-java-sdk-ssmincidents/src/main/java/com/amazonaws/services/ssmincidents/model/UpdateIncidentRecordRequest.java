@@ -39,14 +39,14 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
     private ChatChannel chatChannel;
     /**
      * <p>
-     * A token that ensures that the operation is called only once with the specified details.
+     * A token that ensures that a client calls the operation only once with the specified details.
      * </p>
      */
     private String clientToken;
     /**
      * <p>
-     * Defines the impact of the incident to customers and applications. Providing an impact overwrites the impact
-     * provided by the response plan.
+     * Defines the impact of the incident to customers and applications. If you provide an impact for an incident, it
+     * overwrites the impact provided by the response plan.
      * </p>
      * <p class="title">
      * <b>Possible impacts:</b>
@@ -82,7 +82,7 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
     private Integer impact;
     /**
      * <p>
-     * The Amazon SNS targets that are notified when updates are made to an incident.
+     * The Amazon SNS targets that Incident Manager notifies when a client updates an incident.
      * </p>
      * <p>
      * Using multiple SNS topics creates redundancy in the event that a Region is down during the incident.
@@ -91,7 +91,7 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
     private java.util.List<NotificationTargetItem> notificationTargets;
     /**
      * <p>
-     * The status of the incident. An incident can be <code>Open</code> or <code>Resolved</code>.
+     * The status of the incident. Possible statuses are <code>Open</code> or <code>Resolved</code>.
      * </p>
      */
     private String status;
@@ -190,11 +190,11 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A token that ensures that the operation is called only once with the specified details.
+     * A token that ensures that a client calls the operation only once with the specified details.
      * </p>
      * 
      * @param clientToken
-     *        A token that ensures that the operation is called only once with the specified details.
+     *        A token that ensures that a client calls the operation only once with the specified details.
      */
 
     public void setClientToken(String clientToken) {
@@ -203,10 +203,10 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A token that ensures that the operation is called only once with the specified details.
+     * A token that ensures that a client calls the operation only once with the specified details.
      * </p>
      * 
-     * @return A token that ensures that the operation is called only once with the specified details.
+     * @return A token that ensures that a client calls the operation only once with the specified details.
      */
 
     public String getClientToken() {
@@ -215,11 +215,11 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A token that ensures that the operation is called only once with the specified details.
+     * A token that ensures that a client calls the operation only once with the specified details.
      * </p>
      * 
      * @param clientToken
-     *        A token that ensures that the operation is called only once with the specified details.
+     *        A token that ensures that a client calls the operation only once with the specified details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -230,8 +230,8 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Defines the impact of the incident to customers and applications. Providing an impact overwrites the impact
-     * provided by the response plan.
+     * Defines the impact of the incident to customers and applications. If you provide an impact for an incident, it
+     * overwrites the impact provided by the response plan.
      * </p>
      * <p class="title">
      * <b>Possible impacts:</b>
@@ -265,8 +265,8 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
      * </ul>
      * 
      * @param impact
-     *        Defines the impact of the incident to customers and applications. Providing an impact overwrites the
-     *        impact provided by the response plan.</p>
+     *        Defines the impact of the incident to customers and applications. If you provide an impact for an
+     *        incident, it overwrites the impact provided by the response plan.</p>
      *        <p class="title">
      *        <b>Possible impacts:</b>
      *        </p>
@@ -305,8 +305,8 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Defines the impact of the incident to customers and applications. Providing an impact overwrites the impact
-     * provided by the response plan.
+     * Defines the impact of the incident to customers and applications. If you provide an impact for an incident, it
+     * overwrites the impact provided by the response plan.
      * </p>
      * <p class="title">
      * <b>Possible impacts:</b>
@@ -339,8 +339,8 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * </ul>
      * 
-     * @return Defines the impact of the incident to customers and applications. Providing an impact overwrites the
-     *         impact provided by the response plan.</p>
+     * @return Defines the impact of the incident to customers and applications. If you provide an impact for an
+     *         incident, it overwrites the impact provided by the response plan.</p>
      *         <p class="title">
      *         <b>Possible impacts:</b>
      *         </p>
@@ -379,8 +379,8 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Defines the impact of the incident to customers and applications. Providing an impact overwrites the impact
-     * provided by the response plan.
+     * Defines the impact of the incident to customers and applications. If you provide an impact for an incident, it
+     * overwrites the impact provided by the response plan.
      * </p>
      * <p class="title">
      * <b>Possible impacts:</b>
@@ -414,8 +414,8 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
      * </ul>
      * 
      * @param impact
-     *        Defines the impact of the incident to customers and applications. Providing an impact overwrites the
-     *        impact provided by the response plan.</p>
+     *        Defines the impact of the incident to customers and applications. If you provide an impact for an
+     *        incident, it overwrites the impact provided by the response plan.</p>
      *        <p class="title">
      *        <b>Possible impacts:</b>
      *        </p>
@@ -456,13 +456,13 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon SNS targets that are notified when updates are made to an incident.
+     * The Amazon SNS targets that Incident Manager notifies when a client updates an incident.
      * </p>
      * <p>
      * Using multiple SNS topics creates redundancy in the event that a Region is down during the incident.
      * </p>
      * 
-     * @return The Amazon SNS targets that are notified when updates are made to an incident.</p>
+     * @return The Amazon SNS targets that Incident Manager notifies when a client updates an incident.</p>
      *         <p>
      *         Using multiple SNS topics creates redundancy in the event that a Region is down during the incident.
      */
@@ -473,14 +473,14 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon SNS targets that are notified when updates are made to an incident.
+     * The Amazon SNS targets that Incident Manager notifies when a client updates an incident.
      * </p>
      * <p>
      * Using multiple SNS topics creates redundancy in the event that a Region is down during the incident.
      * </p>
      * 
      * @param notificationTargets
-     *        The Amazon SNS targets that are notified when updates are made to an incident.</p>
+     *        The Amazon SNS targets that Incident Manager notifies when a client updates an incident.</p>
      *        <p>
      *        Using multiple SNS topics creates redundancy in the event that a Region is down during the incident.
      */
@@ -496,7 +496,7 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon SNS targets that are notified when updates are made to an incident.
+     * The Amazon SNS targets that Incident Manager notifies when a client updates an incident.
      * </p>
      * <p>
      * Using multiple SNS topics creates redundancy in the event that a Region is down during the incident.
@@ -508,7 +508,7 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param notificationTargets
-     *        The Amazon SNS targets that are notified when updates are made to an incident.</p>
+     *        The Amazon SNS targets that Incident Manager notifies when a client updates an incident.</p>
      *        <p>
      *        Using multiple SNS topics creates redundancy in the event that a Region is down during the incident.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -526,14 +526,14 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon SNS targets that are notified when updates are made to an incident.
+     * The Amazon SNS targets that Incident Manager notifies when a client updates an incident.
      * </p>
      * <p>
      * Using multiple SNS topics creates redundancy in the event that a Region is down during the incident.
      * </p>
      * 
      * @param notificationTargets
-     *        The Amazon SNS targets that are notified when updates are made to an incident.</p>
+     *        The Amazon SNS targets that Incident Manager notifies when a client updates an incident.</p>
      *        <p>
      *        Using multiple SNS topics creates redundancy in the event that a Region is down during the incident.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -546,11 +546,11 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The status of the incident. An incident can be <code>Open</code> or <code>Resolved</code>.
+     * The status of the incident. Possible statuses are <code>Open</code> or <code>Resolved</code>.
      * </p>
      * 
      * @param status
-     *        The status of the incident. An incident can be <code>Open</code> or <code>Resolved</code>.
+     *        The status of the incident. Possible statuses are <code>Open</code> or <code>Resolved</code>.
      * @see IncidentRecordStatus
      */
 
@@ -560,10 +560,10 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The status of the incident. An incident can be <code>Open</code> or <code>Resolved</code>.
+     * The status of the incident. Possible statuses are <code>Open</code> or <code>Resolved</code>.
      * </p>
      * 
-     * @return The status of the incident. An incident can be <code>Open</code> or <code>Resolved</code>.
+     * @return The status of the incident. Possible statuses are <code>Open</code> or <code>Resolved</code>.
      * @see IncidentRecordStatus
      */
 
@@ -573,11 +573,11 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The status of the incident. An incident can be <code>Open</code> or <code>Resolved</code>.
+     * The status of the incident. Possible statuses are <code>Open</code> or <code>Resolved</code>.
      * </p>
      * 
      * @param status
-     *        The status of the incident. An incident can be <code>Open</code> or <code>Resolved</code>.
+     *        The status of the incident. Possible statuses are <code>Open</code> or <code>Resolved</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IncidentRecordStatus
      */
@@ -589,11 +589,11 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The status of the incident. An incident can be <code>Open</code> or <code>Resolved</code>.
+     * The status of the incident. Possible statuses are <code>Open</code> or <code>Resolved</code>.
      * </p>
      * 
      * @param status
-     *        The status of the incident. An incident can be <code>Open</code> or <code>Resolved</code>.
+     *        The status of the incident. Possible statuses are <code>Open</code> or <code>Resolved</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IncidentRecordStatus
      */

@@ -27,7 +27,7 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Filters the timeline events based on the provided conditional values. You can filter timeline events using the
+     * Filters the timeline events based on the provided conditional values. You can filter timeline events with the
      * following keys:
      * </p>
      * <ul>
@@ -86,7 +86,7 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
     private String nextToken;
     /**
      * <p>
-     * Sort by the specified key value pair.
+     * Sort timeline events by the specified key value pair.
      * </p>
      */
     private String sortBy;
@@ -99,7 +99,7 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Filters the timeline events based on the provided conditional values. You can filter timeline events using the
+     * Filters the timeline events based on the provided conditional values. You can filter timeline events with the
      * following keys:
      * </p>
      * <ul>
@@ -137,8 +137,8 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * </ul>
      * 
-     * @return Filters the timeline events based on the provided conditional values. You can filter timeline events
-     *         using the following keys:</p>
+     * @return Filters the timeline events based on the provided conditional values. You can filter timeline events with
+     *         the following keys:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -180,7 +180,7 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Filters the timeline events based on the provided conditional values. You can filter timeline events using the
+     * Filters the timeline events based on the provided conditional values. You can filter timeline events with the
      * following keys:
      * </p>
      * <ul>
@@ -219,7 +219,7 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
      * </ul>
      * 
      * @param filters
-     *        Filters the timeline events based on the provided conditional values. You can filter timeline events using
+     *        Filters the timeline events based on the provided conditional values. You can filter timeline events with
      *        the following keys:</p>
      *        <ul>
      *        <li>
@@ -267,7 +267,7 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Filters the timeline events based on the provided conditional values. You can filter timeline events using the
+     * Filters the timeline events based on the provided conditional values. You can filter timeline events with the
      * following keys:
      * </p>
      * <ul>
@@ -311,7 +311,7 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param filters
-     *        Filters the timeline events based on the provided conditional values. You can filter timeline events using
+     *        Filters the timeline events based on the provided conditional values. You can filter timeline events with
      *        the following keys:</p>
      *        <ul>
      *        <li>
@@ -361,7 +361,7 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Filters the timeline events based on the provided conditional values. You can filter timeline events using the
+     * Filters the timeline events based on the provided conditional values. You can filter timeline events with the
      * following keys:
      * </p>
      * <ul>
@@ -400,7 +400,7 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
      * </ul>
      * 
      * @param filters
-     *        Filters the timeline events based on the provided conditional values. You can filter timeline events using
+     *        Filters the timeline events based on the provided conditional values. You can filter timeline events with
      *        the following keys:</p>
      *        <ul>
      *        <li>
@@ -565,11 +565,11 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Sort by the specified key value pair.
+     * Sort timeline events by the specified key value pair.
      * </p>
      * 
      * @param sortBy
-     *        Sort by the specified key value pair.
+     *        Sort timeline events by the specified key value pair.
      * @see TimelineEventSort
      */
 
@@ -579,10 +579,10 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Sort by the specified key value pair.
+     * Sort timeline events by the specified key value pair.
      * </p>
      * 
-     * @return Sort by the specified key value pair.
+     * @return Sort timeline events by the specified key value pair.
      * @see TimelineEventSort
      */
 
@@ -592,11 +592,11 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Sort by the specified key value pair.
+     * Sort timeline events by the specified key value pair.
      * </p>
      * 
      * @param sortBy
-     *        Sort by the specified key value pair.
+     *        Sort timeline events by the specified key value pair.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TimelineEventSort
      */
@@ -608,11 +608,11 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Sort by the specified key value pair.
+     * Sort timeline events by the specified key value pair.
      * </p>
      * 
      * @param sortBy
-     *        Sort by the specified key value pair.
+     *        Sort timeline events by the specified key value pair.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TimelineEventSort
      */

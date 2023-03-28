@@ -27,7 +27,7 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token ensuring that the operation is called only once with the specified details.
+     * A token that ensures that a client calls the operation only once with the specified details.
      * </p>
      */
     private String clientToken;
@@ -39,22 +39,22 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
     private String eventData;
     /**
      * <p>
-     * The ID of the event you are updating. You can find this by using <code>ListTimelineEvents</code>.
+     * The ID of the event to update. You can use <code>ListTimelineEvents</code> to find an event's ID.
      * </p>
      */
     private String eventId;
     /**
      * <p>
-     * Updates all existing references in a <code>TimelineEvent</code>. A reference can be an Amazon Web Services
-     * resource involved in the incident or in some way associated with it. When you specify a reference, you enter the
-     * Amazon Resource Name (ARN) of the resource. You can also specify a related item. As an example, you could specify
-     * the ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the resource. You could also
-     * specify a Amazon CloudWatch metric for that table. The metric is the related item.
+     * Updates all existing references in a <code>TimelineEvent</code>. A reference is an Amazon Web Services resource
+     * involved or associated with the incident. To specify a reference, enter its Amazon Resource Name (ARN). You can
+     * also specify a related item associated with that resource. For example, to specify an Amazon DynamoDB (DynamoDB)
+     * table as a resource, use its ARN. You can also specify an Amazon CloudWatch metric associated with the DynamoDB
+     * table as a related item.
      * </p>
      * <important>
      * <p>
      * This update action overrides all existing references. If you want to keep existing references, you must specify
-     * them in the call. If you don't, this action removes them and enters only new references.
+     * them in the call. If you don't, this action removes any existing references and enters only new references.
      * </p>
      * </important>
      */
@@ -67,7 +67,7 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
     private java.util.Date eventTime;
     /**
      * <p>
-     * The type of the event. You can update events of type <code>Custom Event</code>.
+     * The type of event. You can update events of type <code>Custom Event</code>.
      * </p>
      */
     private String eventType;
@@ -80,11 +80,11 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token ensuring that the operation is called only once with the specified details.
+     * A token that ensures that a client calls the operation only once with the specified details.
      * </p>
      * 
      * @param clientToken
-     *        A token ensuring that the operation is called only once with the specified details.
+     *        A token that ensures that a client calls the operation only once with the specified details.
      */
 
     public void setClientToken(String clientToken) {
@@ -93,10 +93,10 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token ensuring that the operation is called only once with the specified details.
+     * A token that ensures that a client calls the operation only once with the specified details.
      * </p>
      * 
-     * @return A token ensuring that the operation is called only once with the specified details.
+     * @return A token that ensures that a client calls the operation only once with the specified details.
      */
 
     public String getClientToken() {
@@ -105,11 +105,11 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token ensuring that the operation is called only once with the specified details.
+     * A token that ensures that a client calls the operation only once with the specified details.
      * </p>
      * 
      * @param clientToken
-     *        A token ensuring that the operation is called only once with the specified details.
+     *        A token that ensures that a client calls the operation only once with the specified details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -160,11 +160,11 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ID of the event you are updating. You can find this by using <code>ListTimelineEvents</code>.
+     * The ID of the event to update. You can use <code>ListTimelineEvents</code> to find an event's ID.
      * </p>
      * 
      * @param eventId
-     *        The ID of the event you are updating. You can find this by using <code>ListTimelineEvents</code>.
+     *        The ID of the event to update. You can use <code>ListTimelineEvents</code> to find an event's ID.
      */
 
     public void setEventId(String eventId) {
@@ -173,10 +173,10 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ID of the event you are updating. You can find this by using <code>ListTimelineEvents</code>.
+     * The ID of the event to update. You can use <code>ListTimelineEvents</code> to find an event's ID.
      * </p>
      * 
-     * @return The ID of the event you are updating. You can find this by using <code>ListTimelineEvents</code>.
+     * @return The ID of the event to update. You can use <code>ListTimelineEvents</code> to find an event's ID.
      */
 
     public String getEventId() {
@@ -185,11 +185,11 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ID of the event you are updating. You can find this by using <code>ListTimelineEvents</code>.
+     * The ID of the event to update. You can use <code>ListTimelineEvents</code> to find an event's ID.
      * </p>
      * 
      * @param eventId
-     *        The ID of the event you are updating. You can find this by using <code>ListTimelineEvents</code>.
+     *        The ID of the event to update. You can use <code>ListTimelineEvents</code> to find an event's ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -200,28 +200,28 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Updates all existing references in a <code>TimelineEvent</code>. A reference can be an Amazon Web Services
-     * resource involved in the incident or in some way associated with it. When you specify a reference, you enter the
-     * Amazon Resource Name (ARN) of the resource. You can also specify a related item. As an example, you could specify
-     * the ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the resource. You could also
-     * specify a Amazon CloudWatch metric for that table. The metric is the related item.
+     * Updates all existing references in a <code>TimelineEvent</code>. A reference is an Amazon Web Services resource
+     * involved or associated with the incident. To specify a reference, enter its Amazon Resource Name (ARN). You can
+     * also specify a related item associated with that resource. For example, to specify an Amazon DynamoDB (DynamoDB)
+     * table as a resource, use its ARN. You can also specify an Amazon CloudWatch metric associated with the DynamoDB
+     * table as a related item.
      * </p>
      * <important>
      * <p>
      * This update action overrides all existing references. If you want to keep existing references, you must specify
-     * them in the call. If you don't, this action removes them and enters only new references.
+     * them in the call. If you don't, this action removes any existing references and enters only new references.
      * </p>
      * </important>
      * 
-     * @return Updates all existing references in a <code>TimelineEvent</code>. A reference can be an Amazon Web
-     *         Services resource involved in the incident or in some way associated with it. When you specify a
-     *         reference, you enter the Amazon Resource Name (ARN) of the resource. You can also specify a related item.
-     *         As an example, you could specify the ARN of an Amazon DynamoDB (DynamoDB) table. The table for this
-     *         example is the resource. You could also specify a Amazon CloudWatch metric for that table. The metric is
-     *         the related item.</p> <important>
+     * @return Updates all existing references in a <code>TimelineEvent</code>. A reference is an Amazon Web Services
+     *         resource involved or associated with the incident. To specify a reference, enter its Amazon Resource Name
+     *         (ARN). You can also specify a related item associated with that resource. For example, to specify an
+     *         Amazon DynamoDB (DynamoDB) table as a resource, use its ARN. You can also specify an Amazon CloudWatch
+     *         metric associated with the DynamoDB table as a related item.</p> <important>
      *         <p>
      *         This update action overrides all existing references. If you want to keep existing references, you must
-     *         specify them in the call. If you don't, this action removes them and enters only new references.
+     *         specify them in the call. If you don't, this action removes any existing references and enters only new
+     *         references.
      *         </p>
      */
 
@@ -231,29 +231,29 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Updates all existing references in a <code>TimelineEvent</code>. A reference can be an Amazon Web Services
-     * resource involved in the incident or in some way associated with it. When you specify a reference, you enter the
-     * Amazon Resource Name (ARN) of the resource. You can also specify a related item. As an example, you could specify
-     * the ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the resource. You could also
-     * specify a Amazon CloudWatch metric for that table. The metric is the related item.
+     * Updates all existing references in a <code>TimelineEvent</code>. A reference is an Amazon Web Services resource
+     * involved or associated with the incident. To specify a reference, enter its Amazon Resource Name (ARN). You can
+     * also specify a related item associated with that resource. For example, to specify an Amazon DynamoDB (DynamoDB)
+     * table as a resource, use its ARN. You can also specify an Amazon CloudWatch metric associated with the DynamoDB
+     * table as a related item.
      * </p>
      * <important>
      * <p>
      * This update action overrides all existing references. If you want to keep existing references, you must specify
-     * them in the call. If you don't, this action removes them and enters only new references.
+     * them in the call. If you don't, this action removes any existing references and enters only new references.
      * </p>
      * </important>
      * 
      * @param eventReferences
-     *        Updates all existing references in a <code>TimelineEvent</code>. A reference can be an Amazon Web Services
-     *        resource involved in the incident or in some way associated with it. When you specify a reference, you
-     *        enter the Amazon Resource Name (ARN) of the resource. You can also specify a related item. As an example,
-     *        you could specify the ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the
-     *        resource. You could also specify a Amazon CloudWatch metric for that table. The metric is the related
-     *        item.</p> <important>
+     *        Updates all existing references in a <code>TimelineEvent</code>. A reference is an Amazon Web Services
+     *        resource involved or associated with the incident. To specify a reference, enter its Amazon Resource Name
+     *        (ARN). You can also specify a related item associated with that resource. For example, to specify an
+     *        Amazon DynamoDB (DynamoDB) table as a resource, use its ARN. You can also specify an Amazon CloudWatch
+     *        metric associated with the DynamoDB table as a related item.</p> <important>
      *        <p>
      *        This update action overrides all existing references. If you want to keep existing references, you must
-     *        specify them in the call. If you don't, this action removes them and enters only new references.
+     *        specify them in the call. If you don't, this action removes any existing references and enters only new
+     *        references.
      *        </p>
      */
 
@@ -268,16 +268,16 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Updates all existing references in a <code>TimelineEvent</code>. A reference can be an Amazon Web Services
-     * resource involved in the incident or in some way associated with it. When you specify a reference, you enter the
-     * Amazon Resource Name (ARN) of the resource. You can also specify a related item. As an example, you could specify
-     * the ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the resource. You could also
-     * specify a Amazon CloudWatch metric for that table. The metric is the related item.
+     * Updates all existing references in a <code>TimelineEvent</code>. A reference is an Amazon Web Services resource
+     * involved or associated with the incident. To specify a reference, enter its Amazon Resource Name (ARN). You can
+     * also specify a related item associated with that resource. For example, to specify an Amazon DynamoDB (DynamoDB)
+     * table as a resource, use its ARN. You can also specify an Amazon CloudWatch metric associated with the DynamoDB
+     * table as a related item.
      * </p>
      * <important>
      * <p>
      * This update action overrides all existing references. If you want to keep existing references, you must specify
-     * them in the call. If you don't, this action removes them and enters only new references.
+     * them in the call. If you don't, this action removes any existing references and enters only new references.
      * </p>
      * </important>
      * <p>
@@ -287,15 +287,15 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param eventReferences
-     *        Updates all existing references in a <code>TimelineEvent</code>. A reference can be an Amazon Web Services
-     *        resource involved in the incident or in some way associated with it. When you specify a reference, you
-     *        enter the Amazon Resource Name (ARN) of the resource. You can also specify a related item. As an example,
-     *        you could specify the ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the
-     *        resource. You could also specify a Amazon CloudWatch metric for that table. The metric is the related
-     *        item.</p> <important>
+     *        Updates all existing references in a <code>TimelineEvent</code>. A reference is an Amazon Web Services
+     *        resource involved or associated with the incident. To specify a reference, enter its Amazon Resource Name
+     *        (ARN). You can also specify a related item associated with that resource. For example, to specify an
+     *        Amazon DynamoDB (DynamoDB) table as a resource, use its ARN. You can also specify an Amazon CloudWatch
+     *        metric associated with the DynamoDB table as a related item.</p> <important>
      *        <p>
      *        This update action overrides all existing references. If you want to keep existing references, you must
-     *        specify them in the call. If you don't, this action removes them and enters only new references.
+     *        specify them in the call. If you don't, this action removes any existing references and enters only new
+     *        references.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -312,29 +312,29 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Updates all existing references in a <code>TimelineEvent</code>. A reference can be an Amazon Web Services
-     * resource involved in the incident or in some way associated with it. When you specify a reference, you enter the
-     * Amazon Resource Name (ARN) of the resource. You can also specify a related item. As an example, you could specify
-     * the ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the resource. You could also
-     * specify a Amazon CloudWatch metric for that table. The metric is the related item.
+     * Updates all existing references in a <code>TimelineEvent</code>. A reference is an Amazon Web Services resource
+     * involved or associated with the incident. To specify a reference, enter its Amazon Resource Name (ARN). You can
+     * also specify a related item associated with that resource. For example, to specify an Amazon DynamoDB (DynamoDB)
+     * table as a resource, use its ARN. You can also specify an Amazon CloudWatch metric associated with the DynamoDB
+     * table as a related item.
      * </p>
      * <important>
      * <p>
      * This update action overrides all existing references. If you want to keep existing references, you must specify
-     * them in the call. If you don't, this action removes them and enters only new references.
+     * them in the call. If you don't, this action removes any existing references and enters only new references.
      * </p>
      * </important>
      * 
      * @param eventReferences
-     *        Updates all existing references in a <code>TimelineEvent</code>. A reference can be an Amazon Web Services
-     *        resource involved in the incident or in some way associated with it. When you specify a reference, you
-     *        enter the Amazon Resource Name (ARN) of the resource. You can also specify a related item. As an example,
-     *        you could specify the ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the
-     *        resource. You could also specify a Amazon CloudWatch metric for that table. The metric is the related
-     *        item.</p> <important>
+     *        Updates all existing references in a <code>TimelineEvent</code>. A reference is an Amazon Web Services
+     *        resource involved or associated with the incident. To specify a reference, enter its Amazon Resource Name
+     *        (ARN). You can also specify a related item associated with that resource. For example, to specify an
+     *        Amazon DynamoDB (DynamoDB) table as a resource, use its ARN. You can also specify an Amazon CloudWatch
+     *        metric associated with the DynamoDB table as a related item.</p> <important>
      *        <p>
      *        This update action overrides all existing references. If you want to keep existing references, you must
-     *        specify them in the call. If you don't, this action removes them and enters only new references.
+     *        specify them in the call. If you don't, this action removes any existing references and enters only new
+     *        references.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -386,11 +386,11 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The type of the event. You can update events of type <code>Custom Event</code>.
+     * The type of event. You can update events of type <code>Custom Event</code>.
      * </p>
      * 
      * @param eventType
-     *        The type of the event. You can update events of type <code>Custom Event</code>.
+     *        The type of event. You can update events of type <code>Custom Event</code>.
      */
 
     public void setEventType(String eventType) {
@@ -399,10 +399,10 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The type of the event. You can update events of type <code>Custom Event</code>.
+     * The type of event. You can update events of type <code>Custom Event</code>.
      * </p>
      * 
-     * @return The type of the event. You can update events of type <code>Custom Event</code>.
+     * @return The type of event. You can update events of type <code>Custom Event</code>.
      */
 
     public String getEventType() {
@@ -411,11 +411,11 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The type of the event. You can update events of type <code>Custom Event</code>.
+     * The type of event. You can update events of type <code>Custom Event</code>.
      * </p>
      * 
      * @param eventType
-     *        The type of the event. You can update events of type <code>Custom Event</code>.
+     *        The type of event. You can update events of type <code>Custom Event</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

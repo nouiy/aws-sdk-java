@@ -27,7 +27,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Filters the list of incident records through which you are searching. You can filter on the following keys:
+     * Filters the list of incident records you want to search through. You can filter on the following keys:
      * </p>
      * <ul>
      * <li>
@@ -52,7 +52,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * Note the following when deciding how to use Filters:
+     * Note the following when when you use Filters:
      * </p>
      * <ul>
      * <li>
@@ -90,7 +90,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Filters the list of incident records through which you are searching. You can filter on the following keys:
+     * Filters the list of incident records you want to search through. You can filter on the following keys:
      * </p>
      * <ul>
      * <li>
@@ -115,7 +115,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * Note the following when deciding how to use Filters:
+     * Note the following when when you use Filters:
      * </p>
      * <ul>
      * <li>
@@ -137,7 +137,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * 
-     * @return Filters the list of incident records through which you are searching. You can filter on the following
+     * @return Filters the list of incident records you want to search through. You can filter on the following
      *         keys:</p>
      *         <ul>
      *         <li>
@@ -162,7 +162,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      *         </li>
      *         </ul>
      *         <p>
-     *         Note the following when deciding how to use Filters:
+     *         Note the following when when you use Filters:
      *         </p>
      *         <ul>
      *         <li>
@@ -190,7 +190,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Filters the list of incident records through which you are searching. You can filter on the following keys:
+     * Filters the list of incident records you want to search through. You can filter on the following keys:
      * </p>
      * <ul>
      * <li>
@@ -215,7 +215,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * Note the following when deciding how to use Filters:
+     * Note the following when when you use Filters:
      * </p>
      * <ul>
      * <li>
@@ -238,8 +238,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      * </ul>
      * 
      * @param filters
-     *        Filters the list of incident records through which you are searching. You can filter on the following
-     *        keys:</p>
+     *        Filters the list of incident records you want to search through. You can filter on the following keys:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -263,7 +262,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        </ul>
      *        <p>
-     *        Note the following when deciding how to use Filters:
+     *        Note the following when when you use Filters:
      *        </p>
      *        <ul>
      *        <li>
@@ -296,7 +295,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Filters the list of incident records through which you are searching. You can filter on the following keys:
+     * Filters the list of incident records you want to search through. You can filter on the following keys:
      * </p>
      * <ul>
      * <li>
@@ -321,7 +320,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * Note the following when deciding how to use Filters:
+     * Note the following when when you use Filters:
      * </p>
      * <ul>
      * <li>
@@ -349,8 +348,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param filters
-     *        Filters the list of incident records through which you are searching. You can filter on the following
-     *        keys:</p>
+     *        Filters the list of incident records you want to search through. You can filter on the following keys:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -374,7 +372,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        </ul>
      *        <p>
-     *        Note the following when deciding how to use Filters:
+     *        Note the following when when you use Filters:
      *        </p>
      *        <ul>
      *        <li>
@@ -409,7 +407,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Filters the list of incident records through which you are searching. You can filter on the following keys:
+     * Filters the list of incident records you want to search through. You can filter on the following keys:
      * </p>
      * <ul>
      * <li>
@@ -434,7 +432,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * Note the following when deciding how to use Filters:
+     * Note the following when when you use Filters:
      * </p>
      * <ul>
      * <li>
@@ -457,8 +455,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      * </ul>
      * 
      * @param filters
-     *        Filters the list of incident records through which you are searching. You can filter on the following
-     *        keys:</p>
+     *        Filters the list of incident records you want to search through. You can filter on the following keys:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -482,7 +479,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        </ul>
      *        <p>
-     *        Note the following when deciding how to use Filters:
+     *        Note the following when when you use Filters:
      *        </p>
      *        <ul>
      *        <li>

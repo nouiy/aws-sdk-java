@@ -1,3 +1,16 @@
+# __1.12.437__ __2023-03-28__
+## __AWS IoT Data Plane__
+  - ### Features
+    - Add endpoint ruleset support for cn-north-1.
+
+## __AWS Systems Manager Incident Manager__
+  - ### Features
+    - Increased maximum length of "TriggerDetails.rawData" to 10K characters and "IncidentSummary" to 8K characters.
+
+## __AWS Systems Manager Incident Manager Contacts__
+  - ### Features
+    - This release adds 12 new APIs as part of Oncall Schedule feature release, adds support for a new contact type: ONCALL_SCHEDULE. Check public documentation for AWS ssm-contacts for more information
+
 # __1.12.436__ __2023-03-27__
 ## __AWS Elemental MediaLive__
   - ### Features

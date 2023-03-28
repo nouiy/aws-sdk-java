@@ -27,7 +27,7 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token that ensures that a client calls the action only once with the specified details.
      * </p>
      */
     private String clientToken;
@@ -39,11 +39,11 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
     private String eventData;
     /**
      * <p>
-     * Adds one or more references to the <code>TimelineEvent</code>. A reference can be an Amazon Web Services resource
-     * involved in the incident or in some way associated with it. When you specify a reference, you enter the Amazon
-     * Resource Name (ARN) of the resource. You can also specify a related item. As an example, you could specify the
-     * ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the resource. You could also specify a
-     * Amazon CloudWatch metric for that table. The metric is the related item.
+     * Adds one or more references to the <code>TimelineEvent</code>. A reference is an Amazon Web Services resource
+     * involved or associated with the incident. To specify a reference, enter its Amazon Resource Name (ARN). You can
+     * also specify a related item associated with a resource. For example, to specify an Amazon DynamoDB (DynamoDB)
+     * table as a resource, use the table's ARN. You can also specify an Amazon CloudWatch metric associated with the
+     * DynamoDB table as a related item.
      * </p>
      */
     private java.util.List<EventReference> eventReferences;
@@ -55,24 +55,24 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
     private java.util.Date eventTime;
     /**
      * <p>
-     * The type of the event. You can create timeline events of type <code>Custom Event</code>.
+     * The type of event. You can create timeline events of type <code>Custom Event</code>.
      * </p>
      */
     private String eventType;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident record to which the event will be added.
+     * The Amazon Resource Name (ARN) of the incident record that the action adds the incident to.
      * </p>
      */
     private String incidentRecordArn;
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token that ensures that a client calls the action only once with the specified details.
      * </p>
      * 
      * @param clientToken
-     *        A token ensuring that the action is called only once with the specified details.
+     *        A token that ensures that a client calls the action only once with the specified details.
      */
 
     public void setClientToken(String clientToken) {
@@ -81,10 +81,10 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token that ensures that a client calls the action only once with the specified details.
      * </p>
      * 
-     * @return A token ensuring that the action is called only once with the specified details.
+     * @return A token that ensures that a client calls the action only once with the specified details.
      */
 
     public String getClientToken() {
@@ -93,11 +93,11 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token that ensures that a client calls the action only once with the specified details.
      * </p>
      * 
      * @param clientToken
-     *        A token ensuring that the action is called only once with the specified details.
+     *        A token that ensures that a client calls the action only once with the specified details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -148,19 +148,18 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Adds one or more references to the <code>TimelineEvent</code>. A reference can be an Amazon Web Services resource
-     * involved in the incident or in some way associated with it. When you specify a reference, you enter the Amazon
-     * Resource Name (ARN) of the resource. You can also specify a related item. As an example, you could specify the
-     * ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the resource. You could also specify a
-     * Amazon CloudWatch metric for that table. The metric is the related item.
+     * Adds one or more references to the <code>TimelineEvent</code>. A reference is an Amazon Web Services resource
+     * involved or associated with the incident. To specify a reference, enter its Amazon Resource Name (ARN). You can
+     * also specify a related item associated with a resource. For example, to specify an Amazon DynamoDB (DynamoDB)
+     * table as a resource, use the table's ARN. You can also specify an Amazon CloudWatch metric associated with the
+     * DynamoDB table as a related item.
      * </p>
      * 
-     * @return Adds one or more references to the <code>TimelineEvent</code>. A reference can be an Amazon Web Services
-     *         resource involved in the incident or in some way associated with it. When you specify a reference, you
-     *         enter the Amazon Resource Name (ARN) of the resource. You can also specify a related item. As an example,
-     *         you could specify the ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the
-     *         resource. You could also specify a Amazon CloudWatch metric for that table. The metric is the related
-     *         item.
+     * @return Adds one or more references to the <code>TimelineEvent</code>. A reference is an Amazon Web Services
+     *         resource involved or associated with the incident. To specify a reference, enter its Amazon Resource Name
+     *         (ARN). You can also specify a related item associated with a resource. For example, to specify an Amazon
+     *         DynamoDB (DynamoDB) table as a resource, use the table's ARN. You can also specify an Amazon CloudWatch
+     *         metric associated with the DynamoDB table as a related item.
      */
 
     public java.util.List<EventReference> getEventReferences() {
@@ -169,20 +168,19 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Adds one or more references to the <code>TimelineEvent</code>. A reference can be an Amazon Web Services resource
-     * involved in the incident or in some way associated with it. When you specify a reference, you enter the Amazon
-     * Resource Name (ARN) of the resource. You can also specify a related item. As an example, you could specify the
-     * ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the resource. You could also specify a
-     * Amazon CloudWatch metric for that table. The metric is the related item.
+     * Adds one or more references to the <code>TimelineEvent</code>. A reference is an Amazon Web Services resource
+     * involved or associated with the incident. To specify a reference, enter its Amazon Resource Name (ARN). You can
+     * also specify a related item associated with a resource. For example, to specify an Amazon DynamoDB (DynamoDB)
+     * table as a resource, use the table's ARN. You can also specify an Amazon CloudWatch metric associated with the
+     * DynamoDB table as a related item.
      * </p>
      * 
      * @param eventReferences
-     *        Adds one or more references to the <code>TimelineEvent</code>. A reference can be an Amazon Web Services
-     *        resource involved in the incident or in some way associated with it. When you specify a reference, you
-     *        enter the Amazon Resource Name (ARN) of the resource. You can also specify a related item. As an example,
-     *        you could specify the ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the
-     *        resource. You could also specify a Amazon CloudWatch metric for that table. The metric is the related
-     *        item.
+     *        Adds one or more references to the <code>TimelineEvent</code>. A reference is an Amazon Web Services
+     *        resource involved or associated with the incident. To specify a reference, enter its Amazon Resource Name
+     *        (ARN). You can also specify a related item associated with a resource. For example, to specify an Amazon
+     *        DynamoDB (DynamoDB) table as a resource, use the table's ARN. You can also specify an Amazon CloudWatch
+     *        metric associated with the DynamoDB table as a related item.
      */
 
     public void setEventReferences(java.util.Collection<EventReference> eventReferences) {
@@ -196,11 +194,11 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Adds one or more references to the <code>TimelineEvent</code>. A reference can be an Amazon Web Services resource
-     * involved in the incident or in some way associated with it. When you specify a reference, you enter the Amazon
-     * Resource Name (ARN) of the resource. You can also specify a related item. As an example, you could specify the
-     * ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the resource. You could also specify a
-     * Amazon CloudWatch metric for that table. The metric is the related item.
+     * Adds one or more references to the <code>TimelineEvent</code>. A reference is an Amazon Web Services resource
+     * involved or associated with the incident. To specify a reference, enter its Amazon Resource Name (ARN). You can
+     * also specify a related item associated with a resource. For example, to specify an Amazon DynamoDB (DynamoDB)
+     * table as a resource, use the table's ARN. You can also specify an Amazon CloudWatch metric associated with the
+     * DynamoDB table as a related item.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -209,12 +207,11 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param eventReferences
-     *        Adds one or more references to the <code>TimelineEvent</code>. A reference can be an Amazon Web Services
-     *        resource involved in the incident or in some way associated with it. When you specify a reference, you
-     *        enter the Amazon Resource Name (ARN) of the resource. You can also specify a related item. As an example,
-     *        you could specify the ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the
-     *        resource. You could also specify a Amazon CloudWatch metric for that table. The metric is the related
-     *        item.
+     *        Adds one or more references to the <code>TimelineEvent</code>. A reference is an Amazon Web Services
+     *        resource involved or associated with the incident. To specify a reference, enter its Amazon Resource Name
+     *        (ARN). You can also specify a related item associated with a resource. For example, to specify an Amazon
+     *        DynamoDB (DynamoDB) table as a resource, use the table's ARN. You can also specify an Amazon CloudWatch
+     *        metric associated with the DynamoDB table as a related item.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -230,20 +227,19 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Adds one or more references to the <code>TimelineEvent</code>. A reference can be an Amazon Web Services resource
-     * involved in the incident or in some way associated with it. When you specify a reference, you enter the Amazon
-     * Resource Name (ARN) of the resource. You can also specify a related item. As an example, you could specify the
-     * ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the resource. You could also specify a
-     * Amazon CloudWatch metric for that table. The metric is the related item.
+     * Adds one or more references to the <code>TimelineEvent</code>. A reference is an Amazon Web Services resource
+     * involved or associated with the incident. To specify a reference, enter its Amazon Resource Name (ARN). You can
+     * also specify a related item associated with a resource. For example, to specify an Amazon DynamoDB (DynamoDB)
+     * table as a resource, use the table's ARN. You can also specify an Amazon CloudWatch metric associated with the
+     * DynamoDB table as a related item.
      * </p>
      * 
      * @param eventReferences
-     *        Adds one or more references to the <code>TimelineEvent</code>. A reference can be an Amazon Web Services
-     *        resource involved in the incident or in some way associated with it. When you specify a reference, you
-     *        enter the Amazon Resource Name (ARN) of the resource. You can also specify a related item. As an example,
-     *        you could specify the ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the
-     *        resource. You could also specify a Amazon CloudWatch metric for that table. The metric is the related
-     *        item.
+     *        Adds one or more references to the <code>TimelineEvent</code>. A reference is an Amazon Web Services
+     *        resource involved or associated with the incident. To specify a reference, enter its Amazon Resource Name
+     *        (ARN). You can also specify a related item associated with a resource. For example, to specify an Amazon
+     *        DynamoDB (DynamoDB) table as a resource, use the table's ARN. You can also specify an Amazon CloudWatch
+     *        metric associated with the DynamoDB table as a related item.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -294,11 +290,11 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The type of the event. You can create timeline events of type <code>Custom Event</code>.
+     * The type of event. You can create timeline events of type <code>Custom Event</code>.
      * </p>
      * 
      * @param eventType
-     *        The type of the event. You can create timeline events of type <code>Custom Event</code>.
+     *        The type of event. You can create timeline events of type <code>Custom Event</code>.
      */
 
     public void setEventType(String eventType) {
@@ -307,10 +303,10 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The type of the event. You can create timeline events of type <code>Custom Event</code>.
+     * The type of event. You can create timeline events of type <code>Custom Event</code>.
      * </p>
      * 
-     * @return The type of the event. You can create timeline events of type <code>Custom Event</code>.
+     * @return The type of event. You can create timeline events of type <code>Custom Event</code>.
      */
 
     public String getEventType() {
@@ -319,11 +315,11 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The type of the event. You can create timeline events of type <code>Custom Event</code>.
+     * The type of event. You can create timeline events of type <code>Custom Event</code>.
      * </p>
      * 
      * @param eventType
-     *        The type of the event. You can create timeline events of type <code>Custom Event</code>.
+     *        The type of event. You can create timeline events of type <code>Custom Event</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -334,11 +330,11 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident record to which the event will be added.
+     * The Amazon Resource Name (ARN) of the incident record that the action adds the incident to.
      * </p>
      * 
      * @param incidentRecordArn
-     *        The Amazon Resource Name (ARN) of the incident record to which the event will be added.
+     *        The Amazon Resource Name (ARN) of the incident record that the action adds the incident to.
      */
 
     public void setIncidentRecordArn(String incidentRecordArn) {
@@ -347,10 +343,10 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident record to which the event will be added.
+     * The Amazon Resource Name (ARN) of the incident record that the action adds the incident to.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the incident record to which the event will be added.
+     * @return The Amazon Resource Name (ARN) of the incident record that the action adds the incident to.
      */
 
     public String getIncidentRecordArn() {
@@ -359,11 +355,11 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident record to which the event will be added.
+     * The Amazon Resource Name (ARN) of the incident record that the action adds the incident to.
      * </p>
      * 
      * @param incidentRecordArn
-     *        The Amazon Resource Name (ARN) of the incident record to which the event will be added.
+     *        The Amazon Resource Name (ARN) of the incident record that the action adds the incident to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum ContactType {
 
     PERSONAL("PERSONAL"),
-    ESCALATION("ESCALATION");
+    ESCALATION("ESCALATION"),
+    ONCALL_SCHEDULE("ONCALL_SCHEDULE");
 
     private String value;
 
