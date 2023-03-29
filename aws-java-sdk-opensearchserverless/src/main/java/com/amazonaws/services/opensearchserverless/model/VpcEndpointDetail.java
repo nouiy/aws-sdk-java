@@ -67,7 +67,7 @@ public class VpcEndpointDetail implements Serializable, Cloneable, StructuredPoj
     private java.util.List<String> subnetIds;
     /**
      * <p>
-     * The ID of the VPC from which you access OpenSearch Serverless
+     * The ID of the VPC from which you access OpenSearch Serverless.
      * </p>
      */
     private String vpcId;
@@ -401,11 +401,11 @@ public class VpcEndpointDetail implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ID of the VPC from which you access OpenSearch Serverless
+     * The ID of the VPC from which you access OpenSearch Serverless.
      * </p>
      * 
      * @param vpcId
-     *        The ID of the VPC from which you access OpenSearch Serverless
+     *        The ID of the VPC from which you access OpenSearch Serverless.
      */
 
     public void setVpcId(String vpcId) {
@@ -414,10 +414,10 @@ public class VpcEndpointDetail implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ID of the VPC from which you access OpenSearch Serverless
+     * The ID of the VPC from which you access OpenSearch Serverless.
      * </p>
      * 
-     * @return The ID of the VPC from which you access OpenSearch Serverless
+     * @return The ID of the VPC from which you access OpenSearch Serverless.
      */
 
     public String getVpcId() {
@@ -426,11 +426,11 @@ public class VpcEndpointDetail implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ID of the VPC from which you access OpenSearch Serverless
+     * The ID of the VPC from which you access OpenSearch Serverless.
      * </p>
      * 
      * @param vpcId
-     *        The ID of the VPC from which you access OpenSearch Serverless
+     *        The ID of the VPC from which you access OpenSearch Serverless.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

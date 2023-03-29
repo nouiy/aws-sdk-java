@@ -969,9 +969,8 @@ public interface AWSOpenSearchServerlessAsync extends AWSOpenSearchServerless {
     /**
      * <p>
      * Update the OpenSearch Serverless settings for the current Amazon Web Services account. For more information, see
-     * <a href=
-     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html#serverless-scaling"
-     * >Autoscaling</a>.
+     * <a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-scaling.html">Managing
+     * capacity limits for Amazon OpenSearch Serverless</a>.
      * </p>
      * 
      * @param updateAccountSettingsRequest
@@ -985,9 +984,8 @@ public interface AWSOpenSearchServerlessAsync extends AWSOpenSearchServerless {
     /**
      * <p>
      * Update the OpenSearch Serverless settings for the current Amazon Web Services account. For more information, see
-     * <a href=
-     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html#serverless-scaling"
-     * >Autoscaling</a>.
+     * <a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-scaling.html">Managing
+     * capacity limits for Amazon OpenSearch Serverless</a>.
      * </p>
      * 
      * @param updateAccountSettingsRequest

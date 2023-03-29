@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * When creating a collection, thrown when a collection with the same name already exists or is being created. When
- * deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+ * When creating a resource, thrown when a resource with the same name already exists or is being created. When deleting
+ * a resource, thrown when the resource is not in the ACTIVE or FAILED state.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -249,6 +249,10 @@ public class CreateDBInstanceReadReplicaRequestMarshaller implements
             request.addParameter("AllocatedStorage", StringUtils.fromInteger(createDBInstanceReadReplicaRequest.getAllocatedStorage()));
         }
 
+        if (createDBInstanceReadReplicaRequest.getSourceDBClusterIdentifier() != null) {
+            request.addParameter("SourceDBClusterIdentifier", StringUtils.fromString(createDBInstanceReadReplicaRequest.getSourceDBClusterIdentifier()));
+        }
+
         if (createDBInstanceReadReplicaRequest.getSourceRegion() != null) {
             request.addParameter("SourceRegion", StringUtils.fromString(createDBInstanceReadReplicaRequest.getSourceRegion()));
         }

@@ -89,6 +89,9 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.opensearchserverless.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.opensearchserverless.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -100,6 +103,9 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.opensearchserverless.model.transform.ValidationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("OcuLimitExceededException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.opensearchserverless.model.transform.OcuLimitExceededExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.opensearchserverless.model.AWSOpenSearchServerlessException.class));
 
     public static AWSOpenSearchServerlessClientBuilder builder() {
@@ -287,10 +293,12 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * @throws InternalServerException
      *         Thrown when an error internal to the service occurs while processing a request.
      * @throws ConflictException
-     *         When creating a collection, thrown when a collection with the same name already exists or is being
-     *         created. When deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+     *         When creating a resource, thrown when a resource with the same name already exists or is being created.
+     *         When deleting a resource, thrown when the resource is not in the ACTIVE or FAILED state.
      * @throws ValidationException
      *         Thrown when the HTTP request contains invalid input or is missing required input.
+     * @throws ServiceQuotaExceededException
+     *         Thrown when you attempt to create more resources than the service allows based on service quotas.
      * @sample AWSOpenSearchServerless.CreateAccessPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/opensearchserverless-2021-11-01/CreateAccessPolicy"
      *      target="_top">AWS API Documentation</a>
@@ -348,13 +356,17 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * 
      * @param createCollectionRequest
      * @return Result of the CreateCollection operation returned by the service.
+     * @throws OcuLimitExceededException
+     *         OCU Limit Exceeded for service limits
      * @throws InternalServerException
      *         Thrown when an error internal to the service occurs while processing a request.
      * @throws ConflictException
-     *         When creating a collection, thrown when a collection with the same name already exists or is being
-     *         created. When deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+     *         When creating a resource, thrown when a resource with the same name already exists or is being created.
+     *         When deleting a resource, thrown when the resource is not in the ACTIVE or FAILED state.
      * @throws ValidationException
      *         Thrown when the HTTP request contains invalid input or is missing required input.
+     * @throws ServiceQuotaExceededException
+     *         Thrown when you attempt to create more resources than the service allows based on service quotas.
      * @sample AWSOpenSearchServerless.CreateCollection
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/opensearchserverless-2021-11-01/CreateCollection"
      *      target="_top">AWS API Documentation</a>
@@ -415,10 +427,12 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * @throws InternalServerException
      *         Thrown when an error internal to the service occurs while processing a request.
      * @throws ConflictException
-     *         When creating a collection, thrown when a collection with the same name already exists or is being
-     *         created. When deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+     *         When creating a resource, thrown when a resource with the same name already exists or is being created.
+     *         When deleting a resource, thrown when the resource is not in the ACTIVE or FAILED state.
      * @throws ValidationException
      *         Thrown when the HTTP request contains invalid input or is missing required input.
+     * @throws ServiceQuotaExceededException
+     *         Thrown when you attempt to create more resources than the service allows based on service quotas.
      * @sample AWSOpenSearchServerless.CreateSecurityConfig
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/opensearchserverless-2021-11-01/CreateSecurityConfig"
      *      target="_top">AWS API Documentation</a>
@@ -483,10 +497,12 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * @throws InternalServerException
      *         Thrown when an error internal to the service occurs while processing a request.
      * @throws ConflictException
-     *         When creating a collection, thrown when a collection with the same name already exists or is being
-     *         created. When deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+     *         When creating a resource, thrown when a resource with the same name already exists or is being created.
+     *         When deleting a resource, thrown when the resource is not in the ACTIVE or FAILED state.
      * @throws ValidationException
      *         Thrown when the HTTP request contains invalid input or is missing required input.
+     * @throws ServiceQuotaExceededException
+     *         Thrown when you attempt to create more resources than the service allows based on service quotas.
      * @sample AWSOpenSearchServerless.CreateSecurityPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/opensearchserverless-2021-11-01/CreateSecurityPolicy"
      *      target="_top">AWS API Documentation</a>
@@ -547,10 +563,12 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * @throws InternalServerException
      *         Thrown when an error internal to the service occurs while processing a request.
      * @throws ConflictException
-     *         When creating a collection, thrown when a collection with the same name already exists or is being
-     *         created. When deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+     *         When creating a resource, thrown when a resource with the same name already exists or is being created.
+     *         When deleting a resource, thrown when the resource is not in the ACTIVE or FAILED state.
      * @throws ValidationException
      *         Thrown when the HTTP request contains invalid input or is missing required input.
+     * @throws ServiceQuotaExceededException
+     *         Thrown when you attempt to create more resources than the service allows based on service quotas.
      * @sample AWSOpenSearchServerless.CreateVpcEndpoint
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/opensearchserverless-2021-11-01/CreateVpcEndpoint"
      *      target="_top">AWS API Documentation</a>
@@ -613,8 +631,8 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * @throws ResourceNotFoundException
      *         Thrown when accessing or deleting a resource that does not exist.
      * @throws ConflictException
-     *         When creating a collection, thrown when a collection with the same name already exists or is being
-     *         created. When deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+     *         When creating a resource, thrown when a resource with the same name already exists or is being created.
+     *         When deleting a resource, thrown when the resource is not in the ACTIVE or FAILED state.
      * @throws ValidationException
      *         Thrown when the HTTP request contains invalid input or is missing required input.
      * @sample AWSOpenSearchServerless.DeleteAccessPolicy
@@ -679,8 +697,8 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * @throws ResourceNotFoundException
      *         Thrown when accessing or deleting a resource that does not exist.
      * @throws ConflictException
-     *         When creating a collection, thrown when a collection with the same name already exists or is being
-     *         created. When deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+     *         When creating a resource, thrown when a resource with the same name already exists or is being created.
+     *         When deleting a resource, thrown when the resource is not in the ACTIVE or FAILED state.
      * @throws ValidationException
      *         Thrown when the HTTP request contains invalid input or is missing required input.
      * @sample AWSOpenSearchServerless.DeleteCollection
@@ -745,8 +763,8 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * @throws ResourceNotFoundException
      *         Thrown when accessing or deleting a resource that does not exist.
      * @throws ConflictException
-     *         When creating a collection, thrown when a collection with the same name already exists or is being
-     *         created. When deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+     *         When creating a resource, thrown when a resource with the same name already exists or is being created.
+     *         When deleting a resource, thrown when the resource is not in the ACTIVE or FAILED state.
      * @throws ValidationException
      *         Thrown when the HTTP request contains invalid input or is missing required input.
      * @sample AWSOpenSearchServerless.DeleteSecurityConfig
@@ -809,8 +827,8 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * @throws ResourceNotFoundException
      *         Thrown when accessing or deleting a resource that does not exist.
      * @throws ConflictException
-     *         When creating a collection, thrown when a collection with the same name already exists or is being
-     *         created. When deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+     *         When creating a resource, thrown when a resource with the same name already exists or is being created.
+     *         When deleting a resource, thrown when the resource is not in the ACTIVE or FAILED state.
      * @throws ValidationException
      *         Thrown when the HTTP request contains invalid input or is missing required input.
      * @sample AWSOpenSearchServerless.DeleteSecurityPolicy
@@ -875,8 +893,8 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * @throws ResourceNotFoundException
      *         Thrown when accessing or deleting a resource that does not exist.
      * @throws ConflictException
-     *         When creating a collection, thrown when a collection with the same name already exists or is being
-     *         created. When deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+     *         When creating a resource, thrown when a resource with the same name already exists or is being created.
+     *         When deleting a resource, thrown when the resource is not in the ACTIVE or FAILED state.
      * @throws ValidationException
      *         Thrown when the HTTP request contains invalid input or is missing required input.
      * @sample AWSOpenSearchServerless.DeleteVpcEndpoint
@@ -1619,10 +1637,12 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * @throws ResourceNotFoundException
      *         Thrown when accessing or deleting a resource that does not exist.
      * @throws ConflictException
-     *         When creating a collection, thrown when a collection with the same name already exists or is being
-     *         created. When deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+     *         When creating a resource, thrown when a resource with the same name already exists or is being created.
+     *         When deleting a resource, thrown when the resource is not in the ACTIVE or FAILED state.
      * @throws ValidationException
      *         Thrown when the HTTP request contains invalid input or is missing required input.
+     * @throws ServiceQuotaExceededException
+     *         Thrown when you attempt to create more resources than the service allows based on service quotas.
      * @sample AWSOpenSearchServerless.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/opensearchserverless-2021-11-01/TagResource"
      *      target="_top">AWS API Documentation</a>
@@ -1685,8 +1705,8 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * @throws ResourceNotFoundException
      *         Thrown when accessing or deleting a resource that does not exist.
      * @throws ConflictException
-     *         When creating a collection, thrown when a collection with the same name already exists or is being
-     *         created. When deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+     *         When creating a resource, thrown when a resource with the same name already exists or is being created.
+     *         When deleting a resource, thrown when the resource is not in the ACTIVE or FAILED state.
      * @throws ValidationException
      *         Thrown when the HTTP request contains invalid input or is missing required input.
      * @sample AWSOpenSearchServerless.UntagResource
@@ -1751,8 +1771,8 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * @throws ResourceNotFoundException
      *         Thrown when accessing or deleting a resource that does not exist.
      * @throws ConflictException
-     *         When creating a collection, thrown when a collection with the same name already exists or is being
-     *         created. When deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+     *         When creating a resource, thrown when a resource with the same name already exists or is being created.
+     *         When deleting a resource, thrown when the resource is not in the ACTIVE or FAILED state.
      * @throws ValidationException
      *         Thrown when the HTTP request contains invalid input or is missing required input.
      * @sample AWSOpenSearchServerless.UpdateAccessPolicy
@@ -1806,9 +1826,8 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
     /**
      * <p>
      * Update the OpenSearch Serverless settings for the current Amazon Web Services account. For more information, see
-     * <a href=
-     * "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html#serverless-scaling"
-     * >Autoscaling</a>.
+     * <a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-scaling.html">Managing
+     * capacity limits for Amazon OpenSearch Serverless</a>.
      * </p>
      * 
      * @param updateAccountSettingsRequest
@@ -1876,8 +1895,8 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * @throws InternalServerException
      *         Thrown when an error internal to the service occurs while processing a request.
      * @throws ConflictException
-     *         When creating a collection, thrown when a collection with the same name already exists or is being
-     *         created. When deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+     *         When creating a resource, thrown when a resource with the same name already exists or is being created.
+     *         When deleting a resource, thrown when the resource is not in the ACTIVE or FAILED state.
      * @throws ValidationException
      *         Thrown when the HTTP request contains invalid input or is missing required input.
      * @sample AWSOpenSearchServerless.UpdateCollection
@@ -1942,8 +1961,8 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * @throws ResourceNotFoundException
      *         Thrown when accessing or deleting a resource that does not exist.
      * @throws ConflictException
-     *         When creating a collection, thrown when a collection with the same name already exists or is being
-     *         created. When deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+     *         When creating a resource, thrown when a resource with the same name already exists or is being created.
+     *         When deleting a resource, thrown when the resource is not in the ACTIVE or FAILED state.
      * @throws ValidationException
      *         Thrown when the HTTP request contains invalid input or is missing required input.
      * @sample AWSOpenSearchServerless.UpdateSecurityConfig
@@ -2010,10 +2029,12 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * @throws ResourceNotFoundException
      *         Thrown when accessing or deleting a resource that does not exist.
      * @throws ConflictException
-     *         When creating a collection, thrown when a collection with the same name already exists or is being
-     *         created. When deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+     *         When creating a resource, thrown when a resource with the same name already exists or is being created.
+     *         When deleting a resource, thrown when the resource is not in the ACTIVE or FAILED state.
      * @throws ValidationException
      *         Thrown when the HTTP request contains invalid input or is missing required input.
+     * @throws ServiceQuotaExceededException
+     *         Thrown when you attempt to create more resources than the service allows based on service quotas.
      * @sample AWSOpenSearchServerless.UpdateSecurityPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/opensearchserverless-2021-11-01/UpdateSecurityPolicy"
      *      target="_top">AWS API Documentation</a>
@@ -2074,8 +2095,8 @@ public class AWSOpenSearchServerlessClient extends AmazonWebServiceClient implem
      * @throws InternalServerException
      *         Thrown when an error internal to the service occurs while processing a request.
      * @throws ConflictException
-     *         When creating a collection, thrown when a collection with the same name already exists or is being
-     *         created. When deleting a collection, thrown when the collection is not in the ACTIVE or FAILED state.
+     *         When creating a resource, thrown when a resource with the same name already exists or is being created.
+     *         When deleting a resource, thrown when the resource is not in the ACTIVE or FAILED state.
      * @throws ValidationException
      *         Thrown when the HTTP request contains invalid input or is missing required input.
      * @sample AWSOpenSearchServerless.UpdateVpcEndpoint

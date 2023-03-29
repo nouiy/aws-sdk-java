@@ -42,7 +42,7 @@ public class ListAccessPoliciesRequest extends com.amazonaws.AmazonWebServiceReq
     private String nextToken;
     /**
      * <p>
-     * Resource filters (can be collection or indexes) that policies can apply to.
+     * Resource filters (can be collections or indexes) that policies can apply to.
      * </p>
      */
     private java.util.List<String> resource;
@@ -153,10 +153,10 @@ public class ListAccessPoliciesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Resource filters (can be collection or indexes) that policies can apply to.
+     * Resource filters (can be collections or indexes) that policies can apply to.
      * </p>
      * 
-     * @return Resource filters (can be collection or indexes) that policies can apply to.
+     * @return Resource filters (can be collections or indexes) that policies can apply to.
      */
 
     public java.util.List<String> getResource() {
@@ -165,11 +165,11 @@ public class ListAccessPoliciesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Resource filters (can be collection or indexes) that policies can apply to.
+     * Resource filters (can be collections or indexes) that policies can apply to.
      * </p>
      * 
      * @param resource
-     *        Resource filters (can be collection or indexes) that policies can apply to.
+     *        Resource filters (can be collections or indexes) that policies can apply to.
      */
 
     public void setResource(java.util.Collection<String> resource) {
@@ -183,7 +183,7 @@ public class ListAccessPoliciesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Resource filters (can be collection or indexes) that policies can apply to.
+     * Resource filters (can be collections or indexes) that policies can apply to.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -192,7 +192,7 @@ public class ListAccessPoliciesRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param resource
-     *        Resource filters (can be collection or indexes) that policies can apply to.
+     *        Resource filters (can be collections or indexes) that policies can apply to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -208,11 +208,11 @@ public class ListAccessPoliciesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Resource filters (can be collection or indexes) that policies can apply to.
+     * Resource filters (can be collections or indexes) that policies can apply to.
      * </p>
      * 
      * @param resource
-     *        Resource filters (can be collection or indexes) that policies can apply to.
+     *        Resource filters (can be collections or indexes) that policies can apply to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

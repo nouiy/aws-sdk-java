@@ -45,7 +45,8 @@ public class CreateSecurityConfigRequest extends com.amazonaws.AmazonWebServiceR
     private String name;
     /**
      * <p>
-     * Describes SAML options in in the form of a key-value map.
+     * Describes SAML options in in the form of a key-value map. This field is required if you specify <code>saml</code>
+     * for the <code>type</code> parameter.
      * </p>
      */
     private SamlConfigOptions samlOptions;
@@ -178,11 +179,13 @@ public class CreateSecurityConfigRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Describes SAML options in in the form of a key-value map.
+     * Describes SAML options in in the form of a key-value map. This field is required if you specify <code>saml</code>
+     * for the <code>type</code> parameter.
      * </p>
      * 
      * @param samlOptions
-     *        Describes SAML options in in the form of a key-value map.
+     *        Describes SAML options in in the form of a key-value map. This field is required if you specify
+     *        <code>saml</code> for the <code>type</code> parameter.
      */
 
     public void setSamlOptions(SamlConfigOptions samlOptions) {
@@ -191,10 +194,12 @@ public class CreateSecurityConfigRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Describes SAML options in in the form of a key-value map.
+     * Describes SAML options in in the form of a key-value map. This field is required if you specify <code>saml</code>
+     * for the <code>type</code> parameter.
      * </p>
      * 
-     * @return Describes SAML options in in the form of a key-value map.
+     * @return Describes SAML options in in the form of a key-value map. This field is required if you specify
+     *         <code>saml</code> for the <code>type</code> parameter.
      */
 
     public SamlConfigOptions getSamlOptions() {
@@ -203,11 +208,13 @@ public class CreateSecurityConfigRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Describes SAML options in in the form of a key-value map.
+     * Describes SAML options in in the form of a key-value map. This field is required if you specify <code>saml</code>
+     * for the <code>type</code> parameter.
      * </p>
      * 
      * @param samlOptions
-     *        Describes SAML options in in the form of a key-value map.
+     *        Describes SAML options in in the form of a key-value map. This field is required if you specify
+     *        <code>saml</code> for the <code>type</code> parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -751,6 +751,12 @@ public class DBInstance implements Serializable, Cloneable {
      * </p>
      */
     private CertificateDetails certificateDetails;
+    /**
+     * <p>
+     * Contains the identifier of the source DB cluster if this DB instance is a read replica.
+     * </p>
+     */
+    private String readReplicaSourceDBClusterIdentifier;
 
     /**
      * <p>
@@ -6166,6 +6172,46 @@ public class DBInstance implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Contains the identifier of the source DB cluster if this DB instance is a read replica.
+     * </p>
+     * 
+     * @param readReplicaSourceDBClusterIdentifier
+     *        Contains the identifier of the source DB cluster if this DB instance is a read replica.
+     */
+
+    public void setReadReplicaSourceDBClusterIdentifier(String readReplicaSourceDBClusterIdentifier) {
+        this.readReplicaSourceDBClusterIdentifier = readReplicaSourceDBClusterIdentifier;
+    }
+
+    /**
+     * <p>
+     * Contains the identifier of the source DB cluster if this DB instance is a read replica.
+     * </p>
+     * 
+     * @return Contains the identifier of the source DB cluster if this DB instance is a read replica.
+     */
+
+    public String getReadReplicaSourceDBClusterIdentifier() {
+        return this.readReplicaSourceDBClusterIdentifier;
+    }
+
+    /**
+     * <p>
+     * Contains the identifier of the source DB cluster if this DB instance is a read replica.
+     * </p>
+     * 
+     * @param readReplicaSourceDBClusterIdentifier
+     *        Contains the identifier of the source DB cluster if this DB instance is a read replica.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBInstance withReadReplicaSourceDBClusterIdentifier(String readReplicaSourceDBClusterIdentifier) {
+        setReadReplicaSourceDBClusterIdentifier(readReplicaSourceDBClusterIdentifier);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -6336,7 +6382,9 @@ public class DBInstance implements Serializable, Cloneable {
         if (getMasterUserSecret() != null)
             sb.append("MasterUserSecret: ").append(getMasterUserSecret()).append(",");
         if (getCertificateDetails() != null)
-            sb.append("CertificateDetails: ").append(getCertificateDetails());
+            sb.append("CertificateDetails: ").append(getCertificateDetails()).append(",");
+        if (getReadReplicaSourceDBClusterIdentifier() != null)
+            sb.append("ReadReplicaSourceDBClusterIdentifier: ").append(getReadReplicaSourceDBClusterIdentifier());
         sb.append("}");
         return sb.toString();
     }
@@ -6680,6 +6728,11 @@ public class DBInstance implements Serializable, Cloneable {
             return false;
         if (other.getCertificateDetails() != null && other.getCertificateDetails().equals(this.getCertificateDetails()) == false)
             return false;
+        if (other.getReadReplicaSourceDBClusterIdentifier() == null ^ this.getReadReplicaSourceDBClusterIdentifier() == null)
+            return false;
+        if (other.getReadReplicaSourceDBClusterIdentifier() != null
+                && other.getReadReplicaSourceDBClusterIdentifier().equals(this.getReadReplicaSourceDBClusterIdentifier()) == false)
+            return false;
         return true;
     }
 
@@ -6769,6 +6822,7 @@ public class DBInstance implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getDBSystemId() == null) ? 0 : getDBSystemId().hashCode());
         hashCode = prime * hashCode + ((getMasterUserSecret() == null) ? 0 : getMasterUserSecret().hashCode());
         hashCode = prime * hashCode + ((getCertificateDetails() == null) ? 0 : getCertificateDetails().hashCode());
+        hashCode = prime * hashCode + ((getReadReplicaSourceDBClusterIdentifier() == null) ? 0 : getReadReplicaSourceDBClusterIdentifier().hashCode());
         return hashCode;
     }
 

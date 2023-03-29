@@ -42,8 +42,7 @@ public class SamlConfigOptions implements Serializable, Cloneable, StructuredPoj
     private String metadata;
     /**
      * <p>
-     * The session timeout, in minutes. Minimum is 15 minutes and maximum is 1440 minutes (24 hours or 1 day). Default
-     * is 60 minutes.
+     * The session timeout, in minutes. Default is 60 minutes (12 hours).
      * </p>
      */
     private Integer sessionTimeout;
@@ -136,13 +135,11 @@ public class SamlConfigOptions implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The session timeout, in minutes. Minimum is 15 minutes and maximum is 1440 minutes (24 hours or 1 day). Default
-     * is 60 minutes.
+     * The session timeout, in minutes. Default is 60 minutes (12 hours).
      * </p>
      * 
      * @param sessionTimeout
-     *        The session timeout, in minutes. Minimum is 15 minutes and maximum is 1440 minutes (24 hours or 1 day).
-     *        Default is 60 minutes.
+     *        The session timeout, in minutes. Default is 60 minutes (12 hours).
      */
 
     public void setSessionTimeout(Integer sessionTimeout) {
@@ -151,12 +148,10 @@ public class SamlConfigOptions implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The session timeout, in minutes. Minimum is 15 minutes and maximum is 1440 minutes (24 hours or 1 day). Default
-     * is 60 minutes.
+     * The session timeout, in minutes. Default is 60 minutes (12 hours).
      * </p>
      * 
-     * @return The session timeout, in minutes. Minimum is 15 minutes and maximum is 1440 minutes (24 hours or 1 day).
-     *         Default is 60 minutes.
+     * @return The session timeout, in minutes. Default is 60 minutes (12 hours).
      */
 
     public Integer getSessionTimeout() {
@@ -165,13 +160,11 @@ public class SamlConfigOptions implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The session timeout, in minutes. Minimum is 15 minutes and maximum is 1440 minutes (24 hours or 1 day). Default
-     * is 60 minutes.
+     * The session timeout, in minutes. Default is 60 minutes (12 hours).
      * </p>
      * 
      * @param sessionTimeout
-     *        The session timeout, in minutes. Minimum is 15 minutes and maximum is 1440 minutes (24 hours or 1 day).
-     *        Default is 60 minutes.
+     *        The session timeout, in minutes. Default is 60 minutes (12 hours).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

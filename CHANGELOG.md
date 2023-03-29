@@ -1,3 +1,12 @@
+# __1.12.438__ __2023-03-29__
+## __Amazon Relational Database Service__
+  - ### Features
+    - Add support for creating a read replica DB instance from a Multi-AZ DB cluster.
+
+## __OpenSearch Service Serverless__
+  - ### Features
+    - This release includes two new exception types "ServiceQuotaExceededException" and "OcuLimitExceededException".
+
 # __1.12.437__ __2023-03-28__
 ## __AWS IoT Data Plane__
   - ### Features

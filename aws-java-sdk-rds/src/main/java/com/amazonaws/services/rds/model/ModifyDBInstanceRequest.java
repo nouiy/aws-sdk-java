@@ -400,6 +400,10 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * or call <code>DescribeDBEngineVersions</code>.
      * </p>
      * <p>
+     * If the instance that you're modifying is acting as a read replica, the engine version that you specify must be
+     * the same or later than the version that the source DB instance or cluster is running.
+     * </p>
+     * <p>
      * In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      * <code>PATCH_DB_FAILURE</code> lifecycle.
      * </p>
@@ -3596,6 +3600,10 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * or call <code>DescribeDBEngineVersions</code>.
      * </p>
      * <p>
+     * If the instance that you're modifying is acting as a read replica, the engine version that you specify must be
+     * the same or later than the version that the source DB instance or cluster is running.
+     * </p>
+     * <p>
      * In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      * <code>PATCH_DB_FAILURE</code> lifecycle.
      * </p>
@@ -3613,6 +3621,10 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        If you specify only a major version, Amazon RDS will update the DB instance to the default minor version
      *        if the current minor version is lower. For information about valid engine versions, see
      *        <code>CreateDBInstance</code>, or call <code>DescribeDBEngineVersions</code>.
+     *        </p>
+     *        <p>
+     *        If the instance that you're modifying is acting as a read replica, the engine version that you specify
+     *        must be the same or later than the version that the source DB instance or cluster is running.
      *        </p>
      *        <p>
      *        In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
@@ -3640,6 +3652,10 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * or call <code>DescribeDBEngineVersions</code>.
      * </p>
      * <p>
+     * If the instance that you're modifying is acting as a read replica, the engine version that you specify must be
+     * the same or later than the version that the source DB instance or cluster is running.
+     * </p>
+     * <p>
      * In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      * <code>PATCH_DB_FAILURE</code> lifecycle.
      * </p>
@@ -3656,6 +3672,10 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         If you specify only a major version, Amazon RDS will update the DB instance to the default minor version
      *         if the current minor version is lower. For information about valid engine versions, see
      *         <code>CreateDBInstance</code>, or call <code>DescribeDBEngineVersions</code>.
+     *         </p>
+     *         <p>
+     *         If the instance that you're modifying is acting as a read replica, the engine version that you specify
+     *         must be the same or later than the version that the source DB instance or cluster is running.
      *         </p>
      *         <p>
      *         In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
@@ -3683,6 +3703,10 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * or call <code>DescribeDBEngineVersions</code>.
      * </p>
      * <p>
+     * If the instance that you're modifying is acting as a read replica, the engine version that you specify must be
+     * the same or later than the version that the source DB instance or cluster is running.
+     * </p>
+     * <p>
      * In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      * <code>PATCH_DB_FAILURE</code> lifecycle.
      * </p>
@@ -3700,6 +3724,10 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        If you specify only a major version, Amazon RDS will update the DB instance to the default minor version
      *        if the current minor version is lower. For information about valid engine versions, see
      *        <code>CreateDBInstance</code>, or call <code>DescribeDBEngineVersions</code>.
+     *        </p>
+     *        <p>
+     *        If the instance that you're modifying is acting as a read replica, the engine version that you specify
+     *        must be the same or later than the version that the source DB instance or cluster is running.
      *        </p>
      *        <p>
      *        In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
